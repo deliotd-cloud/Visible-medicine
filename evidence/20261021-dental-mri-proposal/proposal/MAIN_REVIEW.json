@@ -1,0 +1,73 @@
+{
+  "at": "2026-10-21T00:00:39.038Z",
+  "phase": "exact-bound teaching draft proposal; not installed",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+  "sourceRoot": "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+  "sourceClean": true,
+  "sourceFiles": [
+    {
+      "path": "app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 3197,
+      "sha256": "ae0c9cef8b7daa9810b9fa74dc96d97b5b63fb1ee8bba9e880e7a92d225d8261"
+    },
+    {
+      "path": "tests/test-dental-mri-content.mjs",
+      "bytes": 3386,
+      "sha256": "569ca0c81f955e5a7a02382a996aa8791f38b628a3d694ac38e521c09b14e47f"
+    },
+    {
+      "path": "tests/test-dental-mri-binding.mjs",
+      "bytes": 6191,
+      "sha256": "1a3f4a495be9acf0a5ee3cfae8bda9410fe51f4b3af77d8edb490b2322b2bfb4"
+    }
+  ],
+  "pins": 28,
+  "sharedMethodGroups": 4,
+  "actualFocusedTests": 6,
+  "wrongTabAndWholeRecordMutationsRefused": 868,
+  "workerPreimagesPreserved": true,
+  "unchangedOriginalDispatcherInverse": true,
+  "actualCurrentResolverHookPrepared": true,
+  "actualCurrentResolverExecuted": false,
+  "fullTransitionPass": false,
+  "sourceCommitted": false,
+  "reviewPacketGenerated": false,
+  "learnerExported": false,
+  "websiteImported": false,
+  "canonicalInstalled": false,
+  "coverageCountsChanged": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullSuitePass": false,
+  "fullGoalActive": true,
+  "evidence": "Original factual paraphrases of three primary dental MRI studies, preserving protocol/ex-vivo/subject/side limitations. Whole exterior source records only, not separately segmented dental layers. No figures/scans/datasets/new model/font/texture/dependency or service supplied. Existing CC-BY-4.0 attribution remains. Four shared notes are not28unique lessons.",
+  "mainRefinements": [
+    "Signal absence alone is not proof of tooth absence; no implication every dark MRI area is merely a limitation",
+    "External tooth surfaces do not separately segment enamel/dentine/pulp/canals/periodontium; do not say those tissues are absent from the represented tooth",
+    "Preserve independent Atlas/case/lecture access and exact source/geometry/unvalidated-state refusal",
+    "Complete existing dispatcher body preserved with only one import and one MRI-only exact-binding hook"
+  ],
+  "limits": "Source-only isolated package and proposed hook, not complete historical/current transition, generated Review/learner/Website/browser or clinical acceptance. Canonical98d7 and frozen Website5053/source485 remain unchanged. All existing coverage counts remain authoritative until coherent stock admission."
+}

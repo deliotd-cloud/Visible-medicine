@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: 28 exact pending identities produce four shared MRI drafts with independent result arrays
+ok 1 - 28 exact pending identities produce four shared MRI drafts with independent result arrays
+  ---
+  duration_ms: 2.2649
+  type: 'test'
+  ...
+# Subtest: other tabs and whole-record identity/source/geometry/approval mutations refuse the draft
+ok 2 - other tabs and whole-record identity/source/geometry/approval mutations refuse the draft
+  ---
+  duration_ms: 10.086
+  type: 'test'
+  ...
+# Subtest: every other root catalogue identity is out of scope, including a lookalike name
+ok 3 - every other root catalogue identity is out of scope, including a lookalike name
+  ---
+  duration_ms: 8.1713
+  type: 'test'
+  ...
+# Subtest: four exact FMA groups match frozen source and pending MRI placements
+ok 4 - four exact FMA groups match frozen source and pending MRI placements
+  ---
+  duration_ms: 2.5573
+  type: 'test'
+  ...
+# Subtest: each group has original bounded draft text and primary citations
+ok 5 - each group has original bounded draft text and primary citations
+  ---
+  duration_ms: 0.3889
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 193.3049

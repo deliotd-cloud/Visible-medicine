@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: four exact FMA groups match frozen source and pending MRI placements
+ok 1 - four exact FMA groups match frozen source and pending MRI placements
+  ---
+  duration_ms: 2.5947
+  type: 'test'
+  ...
+# Subtest: each group has original bounded draft text and primary citations
+ok 2 - each group has original bounded draft text and primary citations
+  ---
+  duration_ms: 0.4751
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 116.0627

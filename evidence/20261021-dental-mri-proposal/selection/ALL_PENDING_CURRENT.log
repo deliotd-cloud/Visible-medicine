@@ -1,0 +1,5188 @@
+{
+  "schemaVersion": 1,
+  "scope": "root-body",
+  "sourceRevision": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "structureCount": 1104,
+  "placementCount": 9936,
+  "topics": [
+    "anatomy",
+    "clinical",
+    "ct",
+    "function",
+    "mri",
+    "pathology",
+    "quiz",
+    "ultrasound",
+    "xray"
+  ],
+  "totals": {
+    "draft": 9347,
+    "identity-only": 0,
+    "pending": 558,
+    "generated-identification": 31
+  },
+  "byRegion": {
+    "abdomen": {
+      "draft": 646,
+      "identity-only": 0,
+      "pending": 20,
+      "generated-identification": 0
+    },
+    "foot": {
+      "draft": 954,
+      "identity-only": 0,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "forearm": {
+      "draft": 648,
+      "identity-only": 0,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "hand": {
+      "draft": 1050,
+      "identity-only": 0,
+      "pending": 12,
+      "generated-identification": 0
+    },
+    "head-neck": {
+      "draft": 1815,
+      "identity-only": 0,
+      "pending": 513,
+      "generated-identification": 30
+    },
+    "leg": {
+      "draft": 558,
+      "identity-only": 0,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "pelvis": {
+      "draft": 350,
+      "identity-only": 0,
+      "pending": 9,
+      "generated-identification": 1
+    },
+    "shoulder-arm": {
+      "draft": 826,
+      "identity-only": 0,
+      "pending": 2,
+      "generated-identification": 0
+    },
+    "spine": {
+      "draft": 1008,
+      "identity-only": 0,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "thigh": {
+      "draft": 612,
+      "identity-only": 0,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "thorax": {
+      "draft": 880,
+      "identity-only": 0,
+      "pending": 2,
+      "generated-identification": 0
+    }
+  },
+  "byTopic": {
+    "anatomy": {
+      "draft": 1104,
+      "identity-only": 0,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "clinical": {
+      "draft": 1103,
+      "identity-only": 0,
+      "pending": 1,
+      "generated-identification": 0
+    },
+    "ct": {
+      "draft": 1027,
+      "identity-only": 0,
+      "pending": 77,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 1103,
+      "identity-only": 0,
+      "pending": 1,
+      "generated-identification": 0
+    },
+    "mri": {
+      "draft": 1056,
+      "identity-only": 0,
+      "pending": 48,
+      "generated-identification": 0
+    },
+    "pathology": {
+      "draft": 1103,
+      "identity-only": 0,
+      "pending": 1,
+      "generated-identification": 0
+    },
+    "quiz": {
+      "draft": 1073,
+      "identity-only": 0,
+      "pending": 0,
+      "generated-identification": 31
+    },
+    "ultrasound": {
+      "draft": 899,
+      "identity-only": 0,
+      "pending": 205,
+      "generated-identification": 0
+    },
+    "xray": {
+      "draft": 879,
+      "identity-only": 0,
+      "pending": 225,
+      "generated-identification": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+      "name": "Anterior inferior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA70479",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+      "name": "Anterior superior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14782",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+      "name": "Appendicular artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14818",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+      "name": "Ascending branch of inferior branch of ileocolic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14820",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+      "name": "Ascending branch of left colic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14828",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+      "name": "Caudal pancreatic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14793",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+      "name": "Descending branch of left colic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14829",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+      "name": "Dorsal pancreatic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14787",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+      "name": "Great pancreatic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14792",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+      "name": "Ileal vein",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA15405",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+      "name": "Inferior pancreatic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14790",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+      "name": "Inferior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14805",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+      "name": "Left colic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14826",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+      "name": "Marginal colic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14824",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+      "name": "Middle colic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14810",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+      "name": "Pancreaticoduodenal vein",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA15398",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+      "name": "Posterior inferior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA70480",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+      "name": "Posterior superior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14784",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+      "name": "Right colic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA14811",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+      "name": "Right gastric vein",
+      "region": "abdomen",
+      "system": "vessels",
+      "fmaId": "FMA15400",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+      "name": "Left deep palmar venous arch",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA22913",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+      "name": "Left palmar metacarpal vein",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA22921",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+      "name": "Left superficial palmar venous arch",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA22916",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+      "name": "Proper palmar digital vein of left index finger",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA85097",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+      "name": "Proper palmar digital vein of left middle finger",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA85099",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger",
+      "name": "Proper palmar digital vein of left ring finger",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA85101",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+      "name": "Proper palmar digital vein of right index finger",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA85096",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+      "name": "Proper palmar digital vein of right middle finger",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA85098",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+      "name": "Proper palmar digital vein of right ring finger",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA85100",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+      "name": "Right deep palmar venous arch",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA22912",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+      "name": "Right palmar metacarpal vein",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA22920",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+      "name": "Right superficial palmar venous arch",
+      "region": "hand",
+      "system": "vessels",
+      "fmaId": "FMA22915",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
+      "name": "Check ligament of left lateral rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49145",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
+      "name": "Check ligament of left medial rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49148",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
+      "name": "Check ligament of right lateral rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49144",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
+      "name": "Check ligament of right medial rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49147",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+      "name": "Communicating branch of left nasociliary nerve with left ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52674",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+      "name": "Communicating branch of right nasociliary nerve with right ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52673",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+      "name": "Left anterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52677",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "name": "Left ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA53550",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
+      "name": "Left genioglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46702",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-hyoglossus",
+      "name": "Left hyoglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46704",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+      "name": "Left infratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52699",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+      "name": "Left lateral nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59513",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
+      "name": "Left levator veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46729",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+      "name": "Left long ciliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA82735",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+      "name": "Left lower central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57143",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+      "name": "Left lower first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55704",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+      "name": "Left lower first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55693",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+      "name": "Left lower lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57141",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+      "name": "Left lower second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55703",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+      "name": "Left lower second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55692",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+      "name": "Left lower secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55687",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+      "name": "Left major alar cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59506",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-ophthalmic-nerve",
+      "name": "Left ophthalmic nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52623",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+      "name": "Left palatopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46672",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+      "name": "Left posterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52716",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+      "name": "Left salpingopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46670",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+      "name": "Left stylopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46668",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+      "name": "Left supra-orbital nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52657",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+      "name": "Left supratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52644",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
+      "name": "Left tensor veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46732",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+      "name": "Left upper central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55682",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+      "name": "Left upper first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55699",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+      "name": "Left upper first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55690",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+      "name": "Left upper lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55683",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+      "name": "Left upper second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55700",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+      "name": "Left upper second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55691",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+      "name": "Left upper secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55799",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+      "name": "Right anterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52676",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "name": "Right ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA53549",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
+      "name": "Right genioglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46698",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-hyoglossus",
+      "name": "Right hyoglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46703",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+      "name": "Right infratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52698",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+      "name": "Right lateral nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59512",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-veli-palatini",
+      "name": "Right levator veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46728",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+      "name": "Right long ciliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA82734",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+      "name": "Right lower central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57142",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+      "name": "Right lower first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55705",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+      "name": "Right lower first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55694",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+      "name": "Right lower lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57140",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+      "name": "Right lower second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55706",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+      "name": "Right lower second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55695",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+      "name": "Right lower secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55686",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+      "name": "Right major alar cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59505",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-ophthalmic-nerve",
+      "name": "Right ophthalmic nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52622",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+      "name": "Right palatopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46671",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+      "name": "Right posterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52715",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+      "name": "Right salpingopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46669",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+      "name": "Right stylopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46667",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+      "name": "Right supra-orbital nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52656",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+      "name": "Right supratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52643",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-tensor-veli-palatini",
+      "name": "Right tensor veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46731",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+      "name": "Right upper central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55681",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+      "name": "Right upper first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55698",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+      "name": "Right upper first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55689",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+      "name": "Right upper lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55680",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+      "name": "Right upper second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55697",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+      "name": "Right upper second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55688",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+      "name": "Right upper secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55798",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+      "name": "Septal nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59503",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+      "name": "Short ciliary nerve · source group",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA7041",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+      "name": "Tarsal plate of left lower eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59090",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+      "name": "Tarsal plate of left upper eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59092",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+      "name": "Tarsal plate of right lower eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59089",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+      "name": "Tarsal plate of right upper eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59091",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "name": "Tongue",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA54640",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+      "name": "Uvular muscle",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46733",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
+      "name": "Left genioglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46702",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-hyoglossus",
+      "name": "Left hyoglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46704",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+      "name": "Left inferior thyroid artery",
+      "region": "head-neck",
+      "system": "vessels",
+      "fmaId": "FMA10680",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
+      "name": "Left levator veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46729",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+      "name": "Left lower central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57143",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+      "name": "Left lower first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55704",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+      "name": "Left lower first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55693",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+      "name": "Left lower lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57141",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+      "name": "Left lower second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55703",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+      "name": "Left lower second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55692",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+      "name": "Left lower secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55687",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+      "name": "Left palatopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46672",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+      "name": "Left stylohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA72311",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+      "name": "Left stylopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46668",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
+      "name": "Left tensor veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46732",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+      "name": "Left upper central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55682",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+      "name": "Left upper first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55699",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+      "name": "Left upper first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55690",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+      "name": "Left upper lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55683",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+      "name": "Left upper second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55700",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+      "name": "Left upper second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55691",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+      "name": "Left upper secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55799",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
+      "name": "Right genioglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46698",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-hyoglossus",
+      "name": "Right hyoglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46703",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+      "name": "Right inferior thyroid artery",
+      "region": "head-neck",
+      "system": "vessels",
+      "fmaId": "FMA10697",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-veli-palatini",
+      "name": "Right levator veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46728",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+      "name": "Right lower central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57142",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+      "name": "Right lower first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55705",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+      "name": "Right lower first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55694",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+      "name": "Right lower lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57140",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+      "name": "Right lower second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55706",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+      "name": "Right lower second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55695",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+      "name": "Right lower secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55686",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+      "name": "Right palatopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46671",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+      "name": "Right stylohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA72309",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+      "name": "Right stylopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46667",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-tensor-veli-palatini",
+      "name": "Right tensor veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46731",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+      "name": "Right upper central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55681",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+      "name": "Right upper first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55698",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+      "name": "Right upper first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55689",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+      "name": "Right upper lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55680",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+      "name": "Right upper second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55697",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+      "name": "Right upper second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55688",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+      "name": "Right upper secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55798",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+      "name": "Short ciliary nerve · source group",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA7041",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "name": "Tongue",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA54640",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+      "name": "Uvular muscle",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46733",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+      "name": "Anterior commissure",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61961",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "name": "Brain",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA50801",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
+      "name": "Check ligament of left lateral rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49145",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
+      "name": "Check ligament of left medial rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49148",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
+      "name": "Check ligament of right lateral rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49144",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
+      "name": "Check ligament of right medial rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49147",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+      "name": "Commissure of fornix of forebrain",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61970",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+      "name": "Communicating branch of left nasociliary nerve with left ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52674",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+      "name": "Communicating branch of right nasociliary nerve with right ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52673",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:ethmoid",
+      "name": "Ethmoid",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52740",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:frontal-bone",
+      "name": "Frontal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52734",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+      "name": "Hyo-epiglottic ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55227",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
+      "name": "Inferior branch of left oculomotor nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52577",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:inferior-branch-of-right-oculomotor-nerve",
+      "name": "Inferior branch of right oculomotor nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52576",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
+      "name": "Inferior oblique part of left longus colli",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46288",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+      "name": "Lamina terminalis",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61975",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+      "name": "Left amygdala",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72833",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+      "name": "Left anterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52677",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "name": "Left ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA53550",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+      "name": "Left common tendinous ring",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49073",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+      "name": "Left corniculate cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55116",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+      "name": "Left cuneiform cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55118",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "name": "Left fornix of forebrain",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72925",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+      "name": "Left frontal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52640",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
+      "name": "Left genioglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46702",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-hyoglossus",
+      "name": "Left hyoglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46704",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+      "name": "Left inferior nasal concha",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA54738",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-pharyngeal-constrictor",
+      "name": "Left inferior pharyngeal constrictor",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46636",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+      "name": "Left infratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52699",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+      "name": "Left lacrimal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53646",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+      "name": "Left lacrimal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52630",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+      "name": "Left lateral geniculate body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73304",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+      "name": "Left lateral nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59513",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+      "name": "Left lateral thyrohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55141",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
+      "name": "Left levator veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46729",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+      "name": "Left long ciliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA82735",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+      "name": "Left lower central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57143",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+      "name": "Left lower first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55704",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+      "name": "Left lower first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55693",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+      "name": "Left lower lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57141",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+      "name": "Left lower second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55703",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+      "name": "Left lower second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55692",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+      "name": "Left lower secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55687",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+      "name": "Left major alar cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59506",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+      "name": "Left maxilla",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53650",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+      "name": "Left medial geniculate body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73310",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-nasal-bone",
+      "name": "Left nasal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53648",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+      "name": "Left nasociliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52670",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+      "name": "Left nasolacrimal duct",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA59556",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-oblique-arytenoid",
+      "name": "Left oblique arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46585",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-ophthalmic-nerve",
+      "name": "Left ophthalmic nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52623",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-palatine-bone",
+      "name": "Left palatine bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53656",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+      "name": "Left palatopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46672",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-parietal-bone",
+      "name": "Left parietal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52789",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-posterior-crico-arytenoid",
+      "name": "Left posterior crico-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46578",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+      "name": "Left posterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52716",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "name": "Left posterior inferior cerebellar artery",
+      "region": "head-neck",
+      "system": "vessels",
+      "fmaId": "FMA50520",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+      "name": "Left salpingopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46670",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+      "name": "Left stria medullaris of thalamus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73414",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+      "name": "Left stylohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA72311",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+      "name": "Left stylopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46668",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+      "name": "Left superior cerebellar artery",
+      "region": "head-neck",
+      "system": "vessels",
+      "fmaId": "FMA50575",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-pharyngeal-constrictor",
+      "name": "Left superior pharyngeal constrictor",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46632",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+      "name": "Left supra-orbital nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52657",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+      "name": "Left supratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52644",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-temporal-bone",
+      "name": "Left temporal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52739",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
+      "name": "Left tensor veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46732",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-thyro-arytenoid",
+      "name": "Left thyro-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46590",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+      "name": "Left thyrohyoid membrane",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55134",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+      "name": "Left trochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA50882",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+      "name": "Left upper central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55682",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+      "name": "Left upper first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55699",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+      "name": "Left upper first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55690",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+      "name": "Left upper lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55683",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+      "name": "Left upper second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55700",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+      "name": "Left upper second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55691",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+      "name": "Left upper secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55799",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+      "name": "Left vocal ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55246",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+      "name": "Left vocalis",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46593",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+      "name": "Left zygomatic bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52893",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+      "name": "Mammillary body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA74877",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:mandible",
+      "name": "Mandible",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52748",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
+      "name": "Median cricothyroid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55237",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+      "name": "Median thyrohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55138",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+      "name": "Occipital bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52735",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "name": "Posterior commissure",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA62072",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+      "name": "Right amygdala",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72832",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+      "name": "Right anterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52676",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "name": "Right ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA53549",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+      "name": "Right common tendinous ring",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49072",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+      "name": "Right corniculate cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55115",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+      "name": "Right cuneiform cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55117",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "name": "Right fornix of forebrain",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72924",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+      "name": "Right frontal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52639",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
+      "name": "Right genioglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46698",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-hyoglossus",
+      "name": "Right hyoglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46703",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+      "name": "Right inferior nasal concha",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA54737",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-pharyngeal-constrictor",
+      "name": "Right inferior pharyngeal constrictor",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46635",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+      "name": "Right infratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52698",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+      "name": "Right lacrimal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53645",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+      "name": "Right lacrimal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52629",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+      "name": "Right lateral geniculate body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73303",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+      "name": "Right lateral nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59512",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+      "name": "Right lateral thyrohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55140",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-veli-palatini",
+      "name": "Right levator veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46728",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+      "name": "Right long ciliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA82734",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+      "name": "Right lower central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57142",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+      "name": "Right lower first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55705",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+      "name": "Right lower first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55694",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+      "name": "Right lower lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57140",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+      "name": "Right lower second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55706",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+      "name": "Right lower second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55695",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+      "name": "Right lower secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55686",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+      "name": "Right major alar cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59505",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+      "name": "Right maxilla",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53649",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+      "name": "Right medial geniculate body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73309",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-nasal-bone",
+      "name": "Right nasal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53647",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+      "name": "Right nasociliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52669",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+      "name": "Right nasolacrimal duct",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA59555",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-oblique-arytenoid",
+      "name": "Right oblique arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46584",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-ophthalmic-nerve",
+      "name": "Right ophthalmic nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52622",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-palatine-bone",
+      "name": "Right palatine bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53655",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+      "name": "Right palatopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46671",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-parietal-bone",
+      "name": "Right parietal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52788",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-posterior-crico-arytenoid",
+      "name": "Right posterior crico-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46577",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+      "name": "Right posterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52715",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "name": "Right posterior inferior cerebellar artery",
+      "region": "head-neck",
+      "system": "vessels",
+      "fmaId": "FMA50519",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+      "name": "Right salpingopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46669",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+      "name": "Right stria medullaris of thalamus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73413",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+      "name": "Right stylohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA72309",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+      "name": "Right stylopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46667",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+      "name": "Right superior cerebellar artery",
+      "region": "head-neck",
+      "system": "vessels",
+      "fmaId": "FMA50574",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
+      "name": "Right superior pharyngeal constrictor",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46631",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+      "name": "Right supra-orbital nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52656",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+      "name": "Right supratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52643",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
+      "name": "Right temporal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52738",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-tensor-veli-palatini",
+      "name": "Right tensor veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46731",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-thyro-arytenoid",
+      "name": "Right thyro-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46589",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+      "name": "Right thyrohyoid membrane",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55133",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+      "name": "Right trochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA50881",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+      "name": "Right upper central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55681",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+      "name": "Right upper first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55698",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+      "name": "Right upper first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55689",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+      "name": "Right upper lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55680",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+      "name": "Right upper second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55697",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+      "name": "Right upper second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55688",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+      "name": "Right upper secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55798",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+      "name": "Right vocal ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55245",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+      "name": "Right vocalis",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46592",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+      "name": "Right zygomatic bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52892",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+      "name": "Septal nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59503",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+      "name": "Septum of telencephalon",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61842",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+      "name": "Short ciliary nerve · source group",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA7041",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+      "name": "Sphenoid bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52736",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+      "name": "Superior branch of left oculomotor nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52575",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+      "name": "Superior branch of right oculomotor nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52574",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+      "name": "Superior oblique part of left longus colli",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46284",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+      "name": "Tarsal plate of left lower eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59090",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+      "name": "Tarsal plate of left upper eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59092",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+      "name": "Tarsal plate of right lower eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59089",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+      "name": "Tarsal plate of right upper eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59091",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+      "name": "Tentorium cerebelli (right-sided source only)",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA83966",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+      "name": "Thyro-epiglottic ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55230",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "name": "Tongue",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA54640",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
+      "name": "Transverse arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46582",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+      "name": "Trochlea of left superior oblique",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49068",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+      "name": "Trochlea of right superior oblique",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49067",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+      "name": "Uvular muscle",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46733",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+      "name": "Vertical intermediate part of left longus colli",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46286",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:vomer",
+      "name": "Vomer",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA9710",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+      "name": "Anterior commissure",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61961",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "name": "Brain",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA50801",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
+      "name": "Check ligament of left lateral rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49145",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
+      "name": "Check ligament of left medial rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49148",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
+      "name": "Check ligament of right lateral rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49144",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
+      "name": "Check ligament of right medial rectus",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49147",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "name": "Choroid plexus of cerebral hemisphere",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61934",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+      "name": "Commissure of fornix of forebrain",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61970",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+      "name": "Communicating branch of left nasociliary nerve with left ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52674",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+      "name": "Communicating branch of right nasociliary nerve with right ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52673",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "name": "Corpus callosum",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA86464",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+      "name": "Cricoid cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA9615",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+      "name": "Epiglottis",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55130",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+      "name": "Hyo-epiglottic ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55227",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+      "name": "Hyoid bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52749",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
+      "name": "Inferior branch of left oculomotor nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52577",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:inferior-branch-of-right-oculomotor-nerve",
+      "name": "Inferior branch of right oculomotor nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52576",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
+      "name": "Inferior oblique part of left longus colli",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46288",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+      "name": "Lamina terminalis",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61975",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+      "name": "Left amygdala",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72833",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+      "name": "Left anterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52677",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+      "name": "Left arytenoid cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55114",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+      "name": "Left caudate nucleus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72827",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "name": "Left ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA53550",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+      "name": "Left common tendinous ring",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49073",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+      "name": "Left corniculate cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55116",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+      "name": "Left cuneiform cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55118",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-digastric",
+      "name": "Left digastric",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46293",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "name": "Left fornix of forebrain",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72925",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+      "name": "Left frontal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52640",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
+      "name": "Left genioglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46702",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
+      "name": "Left geniohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46327",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+      "name": "Left globus pallidus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72831",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-hyoglossus",
+      "name": "Left hyoglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46704",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+      "name": "Left inferior nasal concha",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA54738",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-oblique",
+      "name": "Left inferior oblique",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49051",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-pharyngeal-constrictor",
+      "name": "Left inferior pharyngeal constrictor",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46636",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-rectus",
+      "name": "Left inferior rectus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49047",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+      "name": "Left inferior thyroid artery",
+      "region": "head-neck",
+      "system": "vessels",
+      "fmaId": "FMA10680",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+      "name": "Left infratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52699",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+      "name": "Left lacrimal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53646",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+      "name": "Left lacrimal canaliculus",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA59583",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+      "name": "Left lacrimal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52630",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+      "name": "Left lacrimal sac",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA59546",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-crico-arytenoid",
+      "name": "Left lateral crico-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46581",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+      "name": "Left lateral geniculate body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73304",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+      "name": "Left lateral nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59513",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-rectus",
+      "name": "Left lateral rectus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49055",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+      "name": "Left lateral thyrohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55141",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+      "name": "Left levator palpebrae superioris",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49049",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
+      "name": "Left levator veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46729",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+      "name": "Left long ciliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA82735",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+      "name": "Left lower central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57143",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+      "name": "Left lower first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55704",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+      "name": "Left lower first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55693",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+      "name": "Left lower lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57141",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+      "name": "Left lower second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55703",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+      "name": "Left lower second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55692",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+      "name": "Left lower secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55687",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+      "name": "Left major alar cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59506",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+      "name": "Left medial geniculate body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73310",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-medial-rectus",
+      "name": "Left medial rectus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49057",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-mylohyoid",
+      "name": "Left mylohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46322",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-nasal-bone",
+      "name": "Left nasal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53648",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+      "name": "Left nasociliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52670",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+      "name": "Left nasolacrimal duct",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA59556",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-oblique-arytenoid",
+      "name": "Left oblique arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46585",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-omohyoid",
+      "name": "Left omohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13349",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-ophthalmic-nerve",
+      "name": "Left ophthalmic nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52623",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-palatine-bone",
+      "name": "Left palatine bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53656",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+      "name": "Left palatopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46672",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-platysma",
+      "name": "Left platysma",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA45740",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-posterior-crico-arytenoid",
+      "name": "Left posterior crico-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46578",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+      "name": "Left posterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52716",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-putamen",
+      "name": "Left putamen",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72829",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+      "name": "Left salpingopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46670",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+      "name": "Left scalenus anterior",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13393",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+      "name": "Left scalenus medius",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13391",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+      "name": "Left scalenus posterior",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13389",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+      "name": "Left sternocleidomastoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13409",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternohyoid",
+      "name": "Left sternohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13347",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternothyroid",
+      "name": "Left sternothyroid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13351",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+      "name": "Left stria medullaris of thalamus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73414",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-stylohyoid",
+      "name": "Left stylohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA45827",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+      "name": "Left stylohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA72311",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+      "name": "Left stylopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46668",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
+      "name": "Left subclavius",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13411",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-oblique",
+      "name": "Left superior oblique",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49053",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-pharyngeal-constrictor",
+      "name": "Left superior pharyngeal constrictor",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46632",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-rectus",
+      "name": "Left superior rectus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49045",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+      "name": "Left supra-orbital nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52657",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+      "name": "Left supratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52644",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
+      "name": "Left tensor veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46732",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+      "name": "Left thalamus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA258716",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-thyro-arytenoid",
+      "name": "Left thyro-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46590",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-thyrohyoid",
+      "name": "Left thyrohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13353",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+      "name": "Left thyrohyoid membrane",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55134",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+      "name": "Left trochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA50882",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+      "name": "Left upper central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55682",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+      "name": "Left upper first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55699",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+      "name": "Left upper first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55690",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+      "name": "Left upper lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55683",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+      "name": "Left upper second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55700",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+      "name": "Left upper second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55691",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+      "name": "Left upper secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55799",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+      "name": "Left vocal ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55246",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+      "name": "Left vocalis",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46593",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+      "name": "Mammillary body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA74877",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:mandible",
+      "name": "Mandible",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA52748",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
+      "name": "Median cricothyroid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55237",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+      "name": "Median thyrohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55138",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "name": "Posterior commissure",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA62072",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+      "name": "Right amygdala",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72832",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+      "name": "Right anterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52676",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+      "name": "Right arytenoid cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55113",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+      "name": "Right caudate nucleus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72826",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "name": "Right ciliary ganglion",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA53549",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+      "name": "Right common tendinous ring",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49072",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+      "name": "Right corniculate cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55115",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+      "name": "Right cuneiform cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55117",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-digastric",
+      "name": "Right digastric",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46292",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "name": "Right fornix of forebrain",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72924",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+      "name": "Right frontal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52639",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
+      "name": "Right genioglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46698",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
+      "name": "Right geniohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46326",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+      "name": "Right globus pallidus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72830",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-hyoglossus",
+      "name": "Right hyoglossus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46703",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+      "name": "Right inferior nasal concha",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA54737",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-oblique",
+      "name": "Right inferior oblique",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49050",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-pharyngeal-constrictor",
+      "name": "Right inferior pharyngeal constrictor",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46635",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-rectus",
+      "name": "Right inferior rectus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49046",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+      "name": "Right inferior thyroid artery",
+      "region": "head-neck",
+      "system": "vessels",
+      "fmaId": "FMA10697",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+      "name": "Right infratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52698",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+      "name": "Right lacrimal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53645",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+      "name": "Right lacrimal canaliculus",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA59582",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+      "name": "Right lacrimal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52629",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+      "name": "Right lacrimal sac",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA59545",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-crico-arytenoid",
+      "name": "Right lateral crico-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46580",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+      "name": "Right lateral geniculate body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73303",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+      "name": "Right lateral nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59512",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-rectus",
+      "name": "Right lateral rectus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49054",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+      "name": "Right lateral thyrohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55140",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+      "name": "Right levator palpebrae superioris",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49048",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-veli-palatini",
+      "name": "Right levator veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46728",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+      "name": "Right long ciliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA82734",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+      "name": "Right lower central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57142",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+      "name": "Right lower first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55705",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+      "name": "Right lower first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55694",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+      "name": "Right lower lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA57140",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+      "name": "Right lower second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55706",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+      "name": "Right lower second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55695",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+      "name": "Right lower secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55686",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+      "name": "Right major alar cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59505",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+      "name": "Right medial geniculate body",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73309",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-medial-rectus",
+      "name": "Right medial rectus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49056",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-mylohyoid",
+      "name": "Right mylohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46321",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-nasal-bone",
+      "name": "Right nasal bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53647",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+      "name": "Right nasociliary nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52669",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+      "name": "Right nasolacrimal duct",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA59555",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-oblique-arytenoid",
+      "name": "Right oblique arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46584",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-omohyoid",
+      "name": "Right omohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13348",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-ophthalmic-nerve",
+      "name": "Right ophthalmic nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52622",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-palatine-bone",
+      "name": "Right palatine bone",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA53655",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+      "name": "Right palatopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46671",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-platysma",
+      "name": "Right platysma",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA45739",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-posterior-crico-arytenoid",
+      "name": "Right posterior crico-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46577",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+      "name": "Right posterior ethmoidal nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52715",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-putamen",
+      "name": "Right putamen",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA72828",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+      "name": "Right salpingopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46669",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+      "name": "Right scalenus anterior",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13392",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+      "name": "Right scalenus medius",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13390",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+      "name": "Right scalenus posterior",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13388",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+      "name": "Right sternocleidomastoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13408",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternohyoid",
+      "name": "Right sternohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13346",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternothyroid",
+      "name": "Right sternothyroid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13350",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+      "name": "Right stria medullaris of thalamus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA73413",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-stylohyoid",
+      "name": "Right stylohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA45826",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+      "name": "Right stylohyoid ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA72309",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+      "name": "Right stylopharyngeus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46667",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
+      "name": "Right subclavius",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13412",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-oblique",
+      "name": "Right superior oblique",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49052",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
+      "name": "Right superior pharyngeal constrictor",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46631",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-rectus",
+      "name": "Right superior rectus",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA49044",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+      "name": "Right supra-orbital nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52656",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+      "name": "Right supratrochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52643",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-tensor-veli-palatini",
+      "name": "Right tensor veli palatini",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46731",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+      "name": "Right thalamus",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA258714",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-thyro-arytenoid",
+      "name": "Right thyro-arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46589",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-thyrohyoid",
+      "name": "Right thyrohyoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA13352",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+      "name": "Right thyrohyoid membrane",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55133",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+      "name": "Right trochlear nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA50881",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+      "name": "Right upper central secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55681",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+      "name": "Right upper first secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55698",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+      "name": "Right upper first secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55689",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+      "name": "Right upper lateral secondary incisor tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55680",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+      "name": "Right upper second secondary molar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55697",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+      "name": "Right upper second secondary premolar tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55688",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+      "name": "Right upper secondary canine tooth",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA55798",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+      "name": "Right vocal ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55245",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+      "name": "Right vocalis",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46592",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+      "name": "Septal nasal cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59503",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+      "name": "Septum of telencephalon",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA61842",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+      "name": "Short ciliary nerve · source group",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA7041",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+      "name": "Superior branch of left oculomotor nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52575",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+      "name": "Superior branch of right oculomotor nerve",
+      "region": "head-neck",
+      "system": "nerves",
+      "fmaId": "FMA52574",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+      "name": "Superior oblique part of left longus colli",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46284",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+      "name": "Tarsal plate of left lower eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59090",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+      "name": "Tarsal plate of left upper eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59092",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+      "name": "Tarsal plate of right lower eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59089",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+      "name": "Tarsal plate of right upper eyelid",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA59091",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+      "name": "Tentorium cerebelli (right-sided source only)",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA83966",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+      "name": "Thyro-epiglottic ligament",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55230",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "name": "Thyroid cartilage",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA55099",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "name": "Tongue",
+      "region": "head-neck",
+      "system": "organs",
+      "fmaId": "FMA54640",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
+      "name": "Transverse arytenoid",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46582",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+      "name": "Trochlea of left superior oblique",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49068",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+      "name": "Trochlea of right superior oblique",
+      "region": "head-neck",
+      "system": "connective",
+      "fmaId": "FMA49067",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+      "name": "Uvular muscle",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46733",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+      "name": "Vertical intermediate part of left longus colli",
+      "region": "head-neck",
+      "system": "muscles",
+      "fmaId": "FMA46286",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:vomer",
+      "name": "Vomer",
+      "region": "head-neck",
+      "system": "skeleton",
+      "fmaId": "FMA9710",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "name": "Superficial perineal muscle",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA19728",
+      "topic": "clinical",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "name": "Superficial perineal muscle",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA19728",
+      "topic": "ct",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "name": "Superficial perineal muscle",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA19728",
+      "topic": "function",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "name": "Superficial perineal muscle",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA19728",
+      "topic": "mri",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "name": "Superficial perineal muscle",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA19728",
+      "topic": "pathology",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "name": "Superficial perineal muscle",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA19728",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:muscle:left-coccygeus",
+      "name": "Left coccygeus",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA46444",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:muscle:right-coccygeus",
+      "name": "Right coccygeus",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA46443",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "name": "Superficial perineal muscle",
+      "region": "pelvis",
+      "system": "muscles",
+      "fmaId": "FMA19728",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+      "name": "Middle collateral branch of left deep brachial artery",
+      "region": "shoulder-arm",
+      "system": "vessels",
+      "fmaId": "FMA23125",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+      "name": "Middle collateral branch of right deep brachial artery",
+      "region": "shoulder-arm",
+      "system": "vessels",
+      "fmaId": "FMA23124",
+      "topic": "ultrasound",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+      "name": "Left musculophrenic vein",
+      "region": "thorax",
+      "system": "vessels",
+      "fmaId": "FMA4786",
+      "topic": "xray",
+      "readiness": "pending"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+      "name": "Right musculophrenic vein",
+      "region": "thorax",
+      "system": "vessels",
+      "fmaId": "FMA4772",
+      "topic": "xray",
+      "readiness": "pending"
+    }
+  ],
+  "limitation": "Editorial readiness for displayed root-body selections only; not anatomy completeness, imaging correspondence or clinical approval.",
+  "evidence": {
+    "sourceRevision": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "workingTreeDirty": false,
+    "resolverSha256": "4b77184618db2996729c2b6d60f37ae88d8f9c2159e927d20588ac81a6487604",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "displayedStructuresSha256": "a4655f9eb02d8f43cbc972377259c1bfca2080cff559fce40c6eb862cdc69178",
+    "inventorySha256": "7954c5488fa30488866f4e1b269241050c28c2676753d64faa7b1a696d5e99e1",
+    "runnerSha256": "6ff2f5fd3fe298766c6618fd3a4158af39b445260861bdb6b46a1a6d9e156ec7",
+    "note": "Working-copy snapshot, not a clean-commit attestation. Hashes identify evaluated inputs; filters never alter full-scope totals."
+  },
+  "filters": {
+    "readiness": "pending",
+    "limit": "600"
+  },
+  "matchingRows": 558
+}

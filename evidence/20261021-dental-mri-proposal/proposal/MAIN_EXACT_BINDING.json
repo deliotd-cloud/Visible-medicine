@@ -1,0 +1,23 @@
+{
+  "label": "MAIN_EXACT_BINDING",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-reporter=tap",
+    "tests/test-dental-mri-content.mjs",
+    "tests/test-dental-mri-binding.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-dental-mri-draft/MAIN_EXACT_BINDING.log",
+  "logSha256": "0ef1878fbb189b1a4c46ab0ab4bf6e940d6d1ad39ac1b434e7cc8f6835ae8c55",
+  "footer": [
+    "# tests 5",
+    "# pass 5",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0"
+  ],
+  "canonicalInstalled": false
+}

@@ -1,15 +1,52 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T23:46:45.919Z",
+  "at": "2026-10-21T00:00:41.196Z",
   "sourceIdentity": {
-    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "canonicalAtlas": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
-    "candidateAtlas": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "baseline": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+    "stagedSourceFiles": [
+      {
+        "path": "app/body-content.ts",
+        "bytes": 82603,
+        "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+      },
+      {
+        "path": "content/dental-mri.ts",
+        "bytes": 3508,
+        "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+      },
+      {
+        "path": "content/dental-mri-pins.json",
+        "bytes": 57639,
+        "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+      },
+      {
+        "path": "lib/dental-mri.ts",
+        "bytes": 1866,
+        "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+      },
+      {
+        "path": "docs/DENTAL_MRI_EVIDENCE.md",
+        "bytes": 3197,
+        "sha256": "ae0c9cef8b7daa9810b9fa74dc96d97b5b63fb1ee8bba9e880e7a92d225d8261"
+      },
+      {
+        "path": "tests/test-dental-mri-content.mjs",
+        "bytes": 3386,
+        "sha256": "569ca0c81f955e5a7a02382a996aa8791f38b628a3d694ac38e521c09b14e47f"
+      },
+      {
+        "path": "tests/test-dental-mri-binding.mjs",
+        "bytes": 6191,
+        "sha256": "1a3f4a495be9acf0a5ee3cfae8bda9410fe51f4b3af77d8edb490b2322b2bfb4"
+      }
+    ],
     "proposalOnly": true,
-    "canonicalInstalled": false
+    "canonicalInstalled": false,
+    "sourceCommitted": false
   },
-  "parent": "65b525b956677649b9075a89585f49b15e116f8a",
-  "gitParent": "65b525b956677649b9075a89585f49b15e116f8a",
+  "parent": "eb001e20746f58f5b871f7816cae8e08e9ed2ede",
+  "gitParent": "eb001e20746f58f5b871f7816cae8e08e9ed2ede",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -425,6 +462,131 @@
       "path": "evidence/20261021-ct-delivery-history-repair/SOURCE_INPUTS_AFTER.json",
       "bytes": 868413,
       "sha256": "9901c70f1e6b148c5b6eae4bdccfb2f8a95051a458a75904b749e0f7234120ab"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 3197,
+      "sha256": "ae0c9cef8b7daa9810b9fa74dc96d97b5b63fb1ee8bba9e880e7a92d225d8261"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/HANDOFF.md",
+      "bytes": 1385,
+      "sha256": "60763d6a2b1e66eb66a7a55728fa713e7c337cd4c5bdcd7925ba821ddb3a43b6"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/MAIN_CONTENT_BINDING.json",
+      "bytes": 559,
+      "sha256": "076f26dbea01a44c553d21c01285926de1d2185a50a7174062ea60fa0f99febe"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/MAIN_CONTENT_BINDING.log",
+      "bytes": 1238,
+      "sha256": "26b5ba3bdecf14df7c85a4e7b00d929bfc5d4e1b322924e3731d8d51c5fc2681"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/MAIN_DISPATCH_BINDING.json",
+      "bytes": 561,
+      "sha256": "f016ea519314d9d9e9ac57509794f11d01e53d2ac411a8666bef39204d137084"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/MAIN_DISPATCH_BINDING.log",
+      "bytes": 1488,
+      "sha256": "3ce5edd7067148b644f55d663beb73b8350539a29cab7906cc66c9840126560e"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/MAIN_EXACT_BINDING.json",
+      "bytes": 555,
+      "sha256": "e41cd7d69b2898ba13a93e36538f120de12a376ec4db5f6b603aadee7024196c"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/MAIN_EXACT_BINDING.log",
+      "bytes": 1249,
+      "sha256": "0ef1878fbb189b1a4c46ab0ab4bf6e940d6d1ad39ac1b434e7cc8f6835ae8c55"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/MAIN_REVIEW.json",
+      "bytes": 3319,
+      "sha256": "74a8e4eef6eaf47fc8c9ea62fb78f10984430545efe2d90197814f82ddf88c7c"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/originals/app/body-content.ts.raw",
+      "bytes": 82477,
+      "sha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/PREPARATION.json",
+      "bytes": 369,
+      "sha256": "71fccec1ee2d872259e19706e15f7b47f8c340ad324e44f712377b02c3d4e2d5"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/SOURCE_PIN_PROOF.json",
+      "bytes": 1209,
+      "sha256": "1630e18e0c792f9783c56b0053161136e1f9fe142c58ab85a9e34c7fa21c7bfe"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/tests/test-dental-mri-binding.mjs",
+      "bytes": 6191,
+      "sha256": "1a3f4a495be9acf0a5ee3cfae8bda9410fe51f4b3af77d8edb490b2322b2bfb4"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/proposal/tests/test-dental-mri-content.mjs",
+      "bytes": 3386,
+      "sha256": "569ca0c81f955e5a7a02382a996aa8791f38b628a3d694ac38e521c09b14e47f"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/selection/ALL_PENDING_CURRENT.json",
+      "bytes": 420,
+      "sha256": "96ec5e372e3b2c6b3129e4dc4c7b064b554c0e1c0af9e2bf479f04143df01f48"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/selection/ALL_PENDING_CURRENT.log",
+      "bytes": 159652,
+      "sha256": "b75a5cbee4ebbb93c5f37e20333e60b1ef13b855b04cd659d2401e89fdbd3b55"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/worker-original/content/dental-mri.ts",
+      "bytes": 3430,
+      "sha256": "656ed2515645af4d5daf3efaa84177298aa3e7d7d8b5ee159331c47e74c61d71"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/worker-original/docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 1854,
+      "sha256": "6d9878610dfc65bf7f2deba1644da267e960ad55a0f4a39c971b2a2b44e2c5b1"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/worker-original/FILES.json",
+      "bytes": 911,
+      "sha256": "dc74c729fecc26a306ea5a50778cfd68e0a65c5a2ea1e92ea34065c1341c02db"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/worker-original/logs/content-test.tap",
+      "bytes": 541,
+      "sha256": "a7840d22db5718db7e393404de1323d867452a4a8d68ba5ad16719e1d45ea386"
+    },
+    {
+      "path": "evidence/20261021-dental-mri-proposal/worker-original/tests/test-dental-mri-content.mjs",
+      "bytes": 3386,
+      "sha256": "569ca0c81f955e5a7a02382a996aa8791f38b628a3d694ac38e521c09b14e47f"
     },
     {
       "path": "evidence/20261021-desktop-qa/native-proof/COVERAGE_ARTERIAL_PURE.json",
@@ -1608,13 +1770,15 @@
     }
   ],
   "removed": [],
-  "scope": "Reviewed uninstalled header and two test-contract proposals, their original bytes and focused proof; previously filtered selected-source ancestry only. Browser observations/pixels remain F-local. No raw canonical ancestry, scans/masks/models/private modules/reviews/databases/secrets. Not full/runnable/private-data backup or application release.",
+  "scope": "Selected uninstalled original teaching/code/source-identity pins, worker preimages and proof on previously filtered source ancestry only. No raw canonical ancestry, scans/masks/meshes/figures/textures/private modules/review records/databases/secrets. Not complete/runnable/private-data backup or admitted application release.",
   "proof": {
-    "headerHandlerTests": 2,
-    "wholeOriginalHeaderInverse": true,
-    "contractPureProof": true,
-    "focusedContractModulesPass": false,
-    "newHeaderBrowserAccepted": false
+    "focusedTests": 6,
+    "exactRecords": 28,
+    "sharedGroups": 4,
+    "refusals": 868,
+    "wholeDispatcherInverse": true,
+    "fullTransitionPass": false,
+    "clinicalApproval": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

@@ -1,0 +1,15 @@
+{
+  "label": "ALL_PENDING_CURRENT",
+  "command": "node",
+  "args": [
+    "scripts/report-teaching-gaps.mjs",
+    "--readiness=pending",
+    "--limit=600"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-head-teaching-selection/ALL_PENDING_CURRENT.log",
+  "logSha256": "b75a5cbee4ebbb93c5f37e20333e60b1ef13b855b04cd659d2401e89fdbd3b55",
+  "footer": [],
+  "canonicalInstalled": false
+}

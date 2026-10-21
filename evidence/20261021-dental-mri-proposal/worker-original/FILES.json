@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "scope": "source-only dental MRI teaching draft",
+  "frozenSourceRevision": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "files": [
+    { "path": "content/dental-mri.ts", "sha256": "656ed2515645af4d5daf3efaa84177298aa3e7d7d8b5ee159331c47e74c61d71" },
+    { "path": "docs/DENTAL_MRI_EVIDENCE.md", "sha256": "6d9878610dfc65bf7f2deba1644da267e960ad55a0f4a39c971b2a2b44e2c5b1" },
+    { "path": "tests/test-dental-mri-content.mjs", "sha256": "569ca0c81f955e5a7a02382a996aa8791f38b628a3d694ac38e521c09b14e47f" },
+    { "path": "logs/content-test.tap", "sha256": "a7840d22db5718db7e393404de1323d867452a4a8d68ba5ad16719e1d45ea386" }
+  ],
+  "focusedCheck": {
+    "command": "node --test --test-reporter=tap F:/VisibleMedicine/staging/20261021-dental-mri-draft/tests/test-dental-mri-content.mjs",
+    "exitCode": 0,
+    "rawLog": "logs/content-test.tap",
+    "passed": 2,
+    "failed": 0
+  }
+}
