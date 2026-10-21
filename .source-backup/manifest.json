@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T12:03:06.782Z",
+  "at": "2026-10-21T12:17:52.626Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalNamedInputs": 5169,
-    "canonicalInstalled": true
+    "canonicalInstalled": true,
+    "reviewCopyPreviewBuildPending": true
   },
-  "parent": "801a095dbb50709a24699a9fe579857094838fdf",
-  "gitParent": "801a095dbb50709a24699a9fe579857094838fdf",
+  "parent": "d49fbd761c5b5a81137300a5f1f119616aa7bbb3",
+  "gitParent": "d49fbd761c5b5a81137300a5f1f119616aa7bbb3",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3094,6 +3095,71 @@
       "path": "evidence/20261021-desktop-qa/proposals/header-keyboard/tests/header-keyboard.test.mjs",
       "bytes": 8808,
       "sha256": "522a2f8e40437bbb9a08bcb98e9c721fade9e92c621e9d5cc0a740d6c586ff91"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/controls/checkpoint-desktop-review-tour-20261021.mjs",
+      "bytes": 7450,
+      "sha256": "6be7e58051a1062f5ebd4849cc426d06ecce3abe3d47aac81b9c17f4462eaf6c"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/controls/verify-desktop-review-copy-20261021.mjs",
+      "bytes": 5480,
+      "sha256": "9d25f36b1628c26e4bde7b2a58a6ebb84bbce84f349c248788e6ce013ed0e5ce"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/APPLICATION.json",
+      "bytes": 2498,
+      "sha256": "153ddae00c94674746c16604e6021fe573bc7d2e40377194f4bc91ad93f03089"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/browser-observations.json",
+      "bytes": 2267,
+      "sha256": "cc0aab6b9e329da9fbcb6dde5853c9ce68ca89e8ed16424fa847b9cd67ebd647"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/native.json",
+      "bytes": 868,
+      "sha256": "12af129c38678f5ada8ddbd00d532c9164e804039e719c47cc6d2bcffbde0465"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/native.log",
+      "bytes": 10970,
+      "sha256": "b5aea0fba2cd0a0d2b2a4e441bc7ae357496461c8ecdce9185f17aa49a979570"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/PROOF.json",
+      "bytes": 5999,
+      "sha256": "5edb3f192c98d2781035528805bd4d2d355741a63fa7fa5040e5619db4fb8228"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/types.json",
+      "bytes": 364,
+      "sha256": "3cddea949b23dbf83926733eb74bc6bb1c10223db8deb98d31d5a74cca3c3043"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/types.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/installed-website/components/ClinicalReviewInbox.tsx",
+      "bytes": 29415,
+      "sha256": "9e0f81a3203c564db7d184ff885140312f00609d481086588daad56f852b9c55"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/installed-website/tests/clinical-review-inbox-ui.test.mjs",
+      "bytes": 19013,
+      "sha256": "15becf13c624c4584ca391e8b288bae109387b8c747182601b8cb5ffea0eb04d"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/preimages/components/ClinicalReviewInbox.tsx",
+      "bytes": 29392,
+      "sha256": "f7324e4be67bb1027c403c89a85cb84579fa9f5fcf99a8944b27b11b8537642d"
+    },
+    {
+      "path": "evidence/20261021-desktop-review-copy-and-tour-qa/preimages/tests/clinical-review-inbox-ui.test.mjs",
+      "bytes": 17088,
+      "sha256": "04e2a4b8d847f29cf41519e408c2597238b1f7287d4a1a74b604a9fe4aaca0c3"
     },
     {
       "path": "evidence/20261021-four-modules-verified/atlas/.gitattributes",
@@ -8737,9 +8803,9 @@
     }
   ],
   "removed": [],
-  "scope": "Explicit twelve installed authored developer tests/adapters/full original test fixtures, small native/type receipts/logs, metadata-only nine-path source-byte audit and guarded controls. Previously filtered source-only ancestry only. No raw canonical ancestry, full project, private scans/masks/models/media/datasets/records/references/env/dependencies/browser DOM or full native matrix TAP. Partial source recovery only; not full/private/runnable backup, clinical approval, registration or public deployment.",
+  "scope": "Two exact installed authored Website/component/test files, their source preimages, small actual native/type receipts and sanitized text-only browser observations, plus guarded controls. Prior filtered source ancestry only. No raw canonical history, scans, masks, models, image/media pixels, private decisions/notes/identifiers/references/env/dependencies or raw browser DOM. Partial source recovery only, not a full/private/runnable backup or proof that pending review copy is running in the owner preview. No clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T12:03:00.234Z",
+    "at": "2026-10-21T12:17:46.245Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -8758,63 +8824,47 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-psoas-salivary-epoch-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "3ee0b40b6df9802bac7c06f2cb6db2558e887808d4fd3ba15515395cb9ffa043",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-psoas-salivary-epoch-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "9d051dedea70235263d3a427e71ddef39a2d503117aee7c7ec6f2627aeb36927",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "0ab8d696fbc56868d7c7b6366a43072872c32efe52134ee3344f4abf8859ab01",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "f4ec510e7892e61baa33613755f8a83bf5c89665dbadc6bd4ce76dc3e2b352d9",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestPaths": 12,
-    "addedTestPaths": 8,
-    "existingTestPathsChanged": 4,
-    "actualTeachingNative": {
-      "receipt": "F:/VisibleMedicine/staging/20261021-psoas-salivary-epoch-application/native.json",
-      "receiptSha256": "34b6154439bca2303896ffe591a40232b13a0049baa121e27e62761107851ac5",
+    "reviewCopyCanonicalSourceInstalled": true,
+    "reviewCopyOwnerPreviewContainsNewBuild": false,
+    "previewBuildOrRestartRan": false,
+    "componentOnlyCopyChange": true,
+    "wholeOriginalTestPrefixRetained": true,
+    "focusedNative": {
+      "at": "2026-10-21T12:14:51.950Z",
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/clinical-review-inbox-ui.test.mjs",
+        "tests/clinical-review-inbox-workbench.test.mjs",
+        "tests/clinical-review-inbox-filter-recovery.test.mjs",
+        "tests/clinical-review-inbox-scan-focus.test.mjs",
+        "tests/clinical-review-inbox-pagination-focus.test.mjs",
+        "tests/clinical-review-inbox-return-context.test.mjs",
+        "tests/clinical-review-inbox-signin.test.ts"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/native.log",
+      "logSha256": "b5aea0fba2cd0a0d2b2a4e441bc7ae357496461c8ecdce9185f17aa49a979570",
       "counts": {
-        "tests": 17,
-        "pass": 16,
-        "fail": 1,
+        "tests": 47,
+        "pass": 47,
+        "fail": 0,
         "cancelled": 0,
         "skipped": 0,
         "todo": 0
-      },
-      "allInputsUnchanged": true,
-      "unresolvedCaseAtThatTerminal": "strict Atlas working source bytes; separately corrected without changing tests"
-    },
-    "strictSourceCorrection": {
-      "receipt": "F:/VisibleMedicine/staging/20261021-atlas-source-eol-restoration/RESTORATION.json",
-      "receiptSha256": "bbbb7c1e428a4e35e326e6e0f4fa1953df83339def099cc96fcf4ea1f3b2852a",
-      "atlasPaths": 9,
-      "strictlyCrlfInsertionRemoval": true,
-      "semanticEdits": false,
-      "committedSourceAdvanced": false,
-      "indexStatRefreshWithoutStagedContent": true,
-      "all1553WorkingSourceHashesExact": true,
-      "native": {
-        "at": "2026-10-21T12:01:28.673Z",
-        "args": [
-          "--test",
-          "--experimental-strip-types",
-          "--test-reporter=tap",
-          "--test-concurrency=1",
-          "tests/atlas190-current-delivery.test.mjs"
-        ],
-        "code": 0,
-        "signal": null,
-        "log": "F:/VisibleMedicine/staging/20261021-atlas-source-eol-restoration/native.log",
-        "logSha256": "c69c1856f25a8bd2b8835ed989554cf5397ac4e23ff263e3cc637b27ac428fcd",
-        "counts": {
-          "tests": 4,
-          "pass": 4,
-          "fail": 0,
-          "cancelled": 0,
-          "skipped": 0,
-          "todo": 0
-        }
       }
     },
     "freshFullTypes": {
-      "at": "2026-10-21T12:02:17.843Z",
+      "at": "2026-10-21T12:15:35.450Z",
       "args": [
         "node_modules/typescript/bin/tsc",
         "--noEmit",
@@ -8823,29 +8873,58 @@
       ],
       "code": 0,
       "signal": null,
-      "log": "F:/VisibleMedicine/staging/20261021-atlas-source-eol-restoration/types.log",
+      "log": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/types.log",
       "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "counts": {}
     },
-    "wholeOriginalSourcesAndAssertionsRetained": true,
-    "historicalAndCurrentContextsSeparate": true,
-    "forgedAndStaleRefusalsPreserved": true,
-    "noDecisionSaved": true,
-    "productionBuildRerun": false,
-    "previousPackaging24AndAllGatesStillSeparateEvidence": true,
+    "tourBrowserObservation": {
+      "schema": "vm-local-desktop-tour-observation-1",
+      "date": "2026-10-21",
+      "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+      "route": "/atlas/3d",
+      "browser": "Codex in-app browser",
+      "temporaryOwnedTab": "94",
+      "temporaryOwnedTabClosed": true,
+      "ownerTabsReloadedOrClosed": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "outerDocumentWidth": 1280
+      },
+      "observations": [
+        "Whole-body reference skeleton visibly rendered; compact region picker, four learning modes and both side panels remained available without outer horizontal overflow.",
+        "Guided learning initially disabled Play full tour while tour anatomy was preparing; the button became enabled after loading.",
+        "Tour speed offered 0.5x, 1x, 1.5x, 2x and 3x. Selected 3x and clicked Play full tour once.",
+        "Without further play/next actions, observed Step1of7 Right hip bone/Acetabulum, Step4of7 Tibia/Medial leg, then Step7of7 Calcaneus/Heel; the heading/notes changed and final stop remained available with Finish.",
+        "A first Pause lookup expired because autoplay had already reached the final hold; this is retained, not called a pause defect.",
+        "At 0.5x, Back returned to Step6of7 Talus/Ankle. Space activated Play then Pause. Play regained focus, and a later independent snapshot retained Step6of7 rather than advancing.",
+        "Closed only the temporary test tab. No review, lecture, quiz-attempt or clinical-decision submission was made."
+      ],
+      "limits": [
+        "No camera frame-time/smoothness benchmark, 200-percent text or full assistive-technology acceptance is established.",
+        "One MutationObserver TypeError remains unattributed in this in-app browser, with no application script URL/stack. It is not suppressed or called fixed.",
+        "The protected Education transport, CT/MRI pixel coverage and patient-space registration were not tested by this whole-body tour check.",
+        "This observation covers the unchanged installed viewer, not the new review empty-state source wording; the stable owner preview still uses its prior build."
+      ],
+      "clinicalApproval": false,
+      "publicDeployment": false,
+      "privateDataUploaded": false,
+      "wholeDesktopAcceptanceClaim": false
+    },
+    "allOtherSourceInputsAndBindingsUnchanged": true,
+    "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "subset289_202_87Retained": true,
-    "subsetFailuresNotSubtracted": true,
     "originalFullFailureBaseline": 136,
     "originalFullSkips": 3,
     "earlierDifferentSourceBaseline": 144,
+    "subset289_202_87Retained": true,
     "allNativeFailuresResolved": false,
     "fullSuitePassingClaim": false,
     "ownerPreviewPid": 266712,
     "ownerPreviewSession": 32652,
-    "ownerPreviewRestarted": false,
-    "ownerTabsReloaded": false,
+    "ownerFormsRefreshed": false,
     "ownerDecisionsChanged": false,
     "unresolvedBrowserErrorKinds": 1,
     "clinicalApproval": false,

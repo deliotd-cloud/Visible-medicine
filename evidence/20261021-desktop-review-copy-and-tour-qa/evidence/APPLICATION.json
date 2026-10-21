@@ -1,0 +1,70 @@
+{
+  "at": "2026-10-21T12:15:39.084Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewContainsNewCopy": false,
+  "previewRestarted": false,
+  "paths": [
+    "components/ClinicalReviewInbox.tsx",
+    "tests/clinical-review-inbox-ui.test.mjs"
+  ],
+  "controlledInputs": 5162,
+  "preservedInputs": 7,
+  "namedInputs": 5169,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "0ab8d696fbc56868d7c7b6366a43072872c32efe52134ee3344f4abf8859ab01",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/PRESERVED_SOURCE_AFTER.json",
+  "receipts": [
+    {
+      "at": "2026-10-21T12:14:51.950Z",
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/clinical-review-inbox-ui.test.mjs",
+        "tests/clinical-review-inbox-workbench.test.mjs",
+        "tests/clinical-review-inbox-filter-recovery.test.mjs",
+        "tests/clinical-review-inbox-scan-focus.test.mjs",
+        "tests/clinical-review-inbox-pagination-focus.test.mjs",
+        "tests/clinical-review-inbox-return-context.test.mjs",
+        "tests/clinical-review-inbox-signin.test.ts"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/native.log",
+      "logSha256": "b5aea0fba2cd0a0d2b2a4e441bc7ae357496461c8ecdce9185f17aa49a979570",
+      "counts": {
+        "tests": 47,
+        "pass": 47,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "at": "2026-10-21T12:15:35.450Z",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/types.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "counts": {}
+    }
+  ],
+  "oldSourceTestPrefixExact": true,
+  "copyOnlyComponentChange": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "ownerDecisionsChanged": false,
+  "ownerFormsRefreshed": false,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false
+}

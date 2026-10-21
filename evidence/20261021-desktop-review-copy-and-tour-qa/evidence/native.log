@@ -1,0 +1,292 @@
+TAP version 13
+# Subtest: reset restores exact defaults and page one from each filter, with committed search focus and no fetch
+ok 1 - reset restores exact defaults and page one from each filter, with committed search focus and no fetch
+  ---
+  duration_ms: 94.1688
+  type: 'test'
+  ...
+# Subtest: default view has no reset and typing or background append does not move focus
+ok 2 - default view has no reset and typing or background append does not move focus
+  ---
+  duration_ms: 9.9338
+  type: 'test'
+  ...
+# Subtest: empty states distinguish filters, complete default scan, and incomplete scans
+ok 3 - empty states distinguish filters, complete default scan, and incomplete scans
+  ---
+  duration_ms: 4.1766
+  type: 'test'
+  ...
+# Subtest: stale reset cannot cross filter epoch, refresh, invalid context or unmount
+ok 4 - stale reset cannot cross filter epoch, refresh, invalid context or unmount
+  ---
+  duration_ms: 9.9628
+  type: 'test'
+  ...
+# Subtest: pending reset focus is retired by refresh before a reset commit
+ok 5 - pending reset focus is retired by refresh before a reset commit
+  ---
+  duration_ms: 2.5472
+  type: 'test'
+  ...
+# Subtest: pagination focuses and announces the new committed results, not an abandoned render
+ok 6 - pagination focuses and announces the new committed results, not an abandoned render
+  ---
+  duration_ms: 23.4749
+  type: 'test'
+  ...
+# Subtest: last page is bounded and repeated clicks before commit do not skip pages
+ok 7 - last page is bounded and repeated clicks before commit do not skip pages
+  ---
+  duration_ms: 11.8436
+  type: 'test'
+  ...
+# Subtest: background appends and completion do not steal focus or discard an explicit page request
+ok 8 - background appends and completion do not steal focus or discard an explicit page request
+  ---
+  duration_ms: 21.8965
+  type: 'test'
+  ...
+# Subtest: filter changes reset pagination without moving focus and invalidate pending or retained controls
+ok 9 - filter changes reset pagination without moving focus and invalidate pending or retained controls
+  ---
+  duration_ms: 35.7123
+  type: 'test'
+  ...
+# Subtest: refresh invalidates old controls before commit and ignores late scan responses
+ok 10 - refresh invalidates old controls before commit and ignores late scan responses
+  ---
+  duration_ms: 9.967
+  type: 'test'
+  ...
+# Subtest: account or source invalidation cannot reuse old pagination or focus loaded rows
+ok 11 - account or source invalidation cannot reuse old pagination or focus loaded rows
+  ---
+  duration_ms: 3.6326
+  type: 'test'
+  ...
+# Subtest: unmount retires retained controls before ref detachment
+ok 12 - unmount retires retained controls before ref detachment
+  ---
+  duration_ms: 1.583
+  type: 'test'
+  ...
+# Subtest: server render has defaults; hydration waits until commit and retains requested page during a partial scan
+ok 13 - server render has defaults; hydration waits until commit and retains requested page during a partial scan
+  ---
+  duration_ms: 17.234
+  type: 'test'
+  ...
+# Subtest: filter and page controls replace current entry, preserve unrelated URL, hash and history state
+ok 14 - filter and page controls replace current entry, preserve unrelated URL, hash and history state
+  ---
+  duration_ms: 12.5209
+  type: 'test'
+  ...
+# Subtest: popstate and remount restore only display state, with fresh status fetch
+ok 15 - popstate and remount restore only display state, with fresh status fetch
+  ---
+  duration_ms: 8.2963
+  type: 'test'
+  ...
+# Subtest: malformed, duplicated, off-path and overlong values fail to defaults; history failure leaves filters usable
+ok 16 - malformed, duplicated, off-path and overlong values fail to defaults; history failure leaves filters usable
+  ---
+  duration_ms: 20.3936
+  type: 'test'
+  ...
+# Subtest: retained handlers and popstate cannot write after unmount, context change or invalidation
+ok 17 - retained handlers and popstate cannot write after unmount, context change or invalidation
+  ---
+  duration_ms: 4.2606
+  type: 'test'
+  ...
+# Subtest: Pause and Resume keep the same keyed button position and explicit generation-bound actions
+ok 18 - Pause and Resume keep the same keyed button position and explicit generation-bound actions
+  ---
+  duration_ms: 17.7304
+  type: 'test'
+  ...
+# Subtest: successful completion hands owned scan focus to existing Refresh exactly once without scrolling
+ok 19 - successful completion hands owned scan focus to existing Refresh exactly once without scrolling
+  ---
+  duration_ms: 10.1727
+  type: 'test'
+  ...
+# Subtest: background completion never takes focus from a different control
+ok 20 - background completion never takes focus from a different control
+  ---
+  duration_ms: 9.2238
+  type: 'test'
+  ...
+# Subtest: invalid access or source context removes rows without a completion focus handoff
+ok 21 - invalid access or source context removes rows without a completion focus handoff
+  ---
+  duration_ms: 12.9664
+  type: 'test'
+  ...
+# Subtest: HTTP failure retains the same Resume node and retry cursor rather than resetting the scan
+ok 22 - HTTP failure retains the same Resume node and retry cursor rather than resetting the scan
+  ---
+  duration_ms: 13.4189
+  type: 'test'
+  ...
+# Subtest: retained Refresh and scan callbacks are retired by generation changes and unmount
+ok 23 - retained Refresh and scan callbacks are retired by generation changes and unmount
+  ---
+  duration_ms: 9.3865
+  type: 'test'
+  ...
+# Subtest: one bounded pager follows its live summary and precedes the 24 review rows
+ok 24 - one bounded pager follows its live summary and precedes the 24 review rows
+  ---
+  duration_ms: 5.387
+  type: 'test'
+  ...
+# Subtest: anonymous inbox sign-in returns to the inbox with top-level navigation
+ok 25 - anonymous inbox sign-in returns to the inbox with top-level navigation
+  ---
+  duration_ms: 16.1417
+  type: 'test'
+  ...
+# Subtest: inbox denial and storage errors never render private rows or offer a sign-in bypass
+ok 26 - inbox denial and storage errors never render private rows or offer a sign-in bypass
+  ---
+  duration_ms: 12.0797
+  type: 'test'
+  ...
+# Subtest: authorized inbox preserves the personal-review limitation and its original child
+ok 27 - authorized inbox preserves the personal-review limitation and its original child
+  ---
+  duration_ms: 3.2249
+  type: 'test'
+  ...
+# Subtest: inbox route uses its dedicated guarded layout while general Review remains unchanged
+ok 28 - inbox route uses its dedicated guarded layout while general Review remains unchanged
+  ---
+  duration_ms: 7.0488
+  type: 'test'
+  ...
+# Subtest: every inbox access outcome exposes exactly one main landmark without exposing denied content
+ok 29 - every inbox access outcome exposes exactly one main landmark without exposing denied content
+  ---
+  duration_ms: 14.1807
+  type: 'test'
+  ...
+# Subtest: automatic sequential load shows loaded-only progress, honest statuses and new-tab links
+ok 30 - automatic sequential load shows loaded-only progress, honest statuses and new-tab links
+  ---
+  duration_ms: 8.7798
+  type: 'test'
+  ...
+# Subtest: request failure preserves cursor; pause and restart refuse late response
+ok 31 - request failure preserves cursor; pause and restart refuse late response
+  ---
+  duration_ms: 7.342
+  type: 'test'
+  ...
+# Subtest: cross-page duplicate, changed catalogue and malformed scope invalidate all loaded rows
+ok 32 - cross-page duplicate, changed catalogue and malformed scope invalidate all loaded rows
+  ---
+  duration_ms: 9.1428
+  type: 'test'
+  ...
+# Subtest: missing or changed context, and unmount during body parse, cannot commit statuses
+ok 33 - missing or changed context, and unmount during body parse, cannot commit statuses
+  ---
+  duration_ms: 5.0307
+  type: 'test'
+  ...
+# Subtest: 401, 403 and 409 invalidate loaded rows and require native document reload
+ok 34 - 401, 403 and 409 invalidate loaded rows and require native document reload
+  ---
+  duration_ms: 9.5206
+  type: 'test'
+  ...
+# Subtest: pageCount and cursor changes invalidate rather than displaying partial rows
+ok 35 - pageCount and cursor changes invalidate rather than displaying partial rows
+  ---
+  duration_ms: 6.725
+  type: 'test'
+  ...
+# Subtest: late old page body cannot repopulate an invalidated restart
+ok 36 - late old page body cannot repopulate an invalidated restart
+  ---
+  duration_ms: 3.3077
+  type: 'test'
+  ...
+# Subtest: filters and bounded row pagination include unavailable only on request
+ok 37 - filters and bounded row pagination include unavailable only on request
+  ---
+  duration_ms: 22.6748
+  type: 'test'
+  ...
+# Subtest: other guarded workflows stay in a closed disclosure outside inbox counts
+ok 38 - other guarded workflows stay in a closed disclosure outside inbox counts
+  ---
+  duration_ms: 1.7957
+  type: 'test'
+  ...
+# Subtest: inbox area links remain available during automatic loading and preserve an in-flight status scan
+ok 39 - inbox area links remain available during automatic loading and preserve an in-flight status scan
+  ---
+  duration_ms: 4.8917
+  type: 'test'
+  ...
+# Subtest: mount loads once, rerenders do not reload, and effect replay retires the old request
+ok 40 - mount loads once, rerenders do not reload, and effect replay retires the old request
+  ---
+  duration_ms: 4.9611
+  type: 'test'
+  ...
+# Subtest: ordinary region spacing, punctuation and word order search only the authorized loaded rows
+ok 41 - ordinary region spacing, punctuation and word order search only the authorized loaded rows
+  ---
+  duration_ms: 23.6427
+  type: 'test'
+  ...
+# Subtest: partial default empty results distinguish loaded statuses from rows needing review
+ok 42 - partial default empty results distinguish loaded statuses from rows needing review
+  ---
+  duration_ms: 1.5993
+  type: 'test'
+  ...
+# Subtest: complete and filtered empty results retain their separate approval and reset guidance
+ok 43 - complete and filtered empty results retain their separate approval and reset guidance
+  ---
+  duration_ms: 0.7788
+  type: 'test'
+  ...
+# Subtest: desktop workbench keeps controls and accessible results as separate panes
+ok 44 - desktop workbench keeps controls and accessible results as separate panes
+  ---
+  duration_ms: 13.2706
+  type: 'test'
+  ...
+# Subtest: revision disclosures name their own row across keyboard pagination
+ok 45 - revision disclosures name their own row across keyboard pagination
+  ---
+  duration_ms: 5.5533
+  type: 'test'
+  ...
+# Subtest: only committed explicit pagination resets the scrollable list
+ok 46 - only committed explicit pagination resets the scrollable list
+  ---
+  duration_ms: 23.793
+  type: 'test'
+  ...
+# Subtest: scroll containment applies only above desktop width and height thresholds
+ok 47 - scroll containment applies only above desktop width and height thresholds
+  ---
+  duration_ms: 0.4097
+  type: 'test'
+  ...
+1..47
+# tests 47
+# suites 0
+# pass 47
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1976.5931

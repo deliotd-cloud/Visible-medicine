@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-21T12:14:51.950Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/clinical-review-inbox-ui.test.mjs",
+    "tests/clinical-review-inbox-workbench.test.mjs",
+    "tests/clinical-review-inbox-filter-recovery.test.mjs",
+    "tests/clinical-review-inbox-scan-focus.test.mjs",
+    "tests/clinical-review-inbox-pagination-focus.test.mjs",
+    "tests/clinical-review-inbox-return-context.test.mjs",
+    "tests/clinical-review-inbox-signin.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/native.log",
+  "logSha256": "b5aea0fba2cd0a0d2b2a4e441bc7ae357496461c8ecdce9185f17aa49a979570",
+  "counts": {
+    "tests": 47,
+    "pass": 47,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  }
+}

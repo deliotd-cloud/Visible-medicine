@@ -1,0 +1,31 @@
+{
+  "schema": "vm-local-desktop-tour-observation-1",
+  "date": "2026-10-21",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "route": "/atlas/3d",
+  "browser": "Codex in-app browser",
+  "temporaryOwnedTab": "94",
+  "temporaryOwnedTabClosed": true,
+  "ownerTabsReloadedOrClosed": false,
+  "viewport": { "width": 1280, "height": 720, "outerDocumentWidth": 1280 },
+  "observations": [
+    "Whole-body reference skeleton visibly rendered; compact region picker, four learning modes and both side panels remained available without outer horizontal overflow.",
+    "Guided learning initially disabled Play full tour while tour anatomy was preparing; the button became enabled after loading.",
+    "Tour speed offered 0.5x, 1x, 1.5x, 2x and 3x. Selected 3x and clicked Play full tour once.",
+    "Without further play/next actions, observed Step1of7 Right hip bone/Acetabulum, Step4of7 Tibia/Medial leg, then Step7of7 Calcaneus/Heel; the heading/notes changed and final stop remained available with Finish.",
+    "A first Pause lookup expired because autoplay had already reached the final hold; this is retained, not called a pause defect.",
+    "At 0.5x, Back returned to Step6of7 Talus/Ankle. Space activated Play then Pause. Play regained focus, and a later independent snapshot retained Step6of7 rather than advancing.",
+    "Closed only the temporary test tab. No review, lecture, quiz-attempt or clinical-decision submission was made."
+  ],
+  "limits": [
+    "No camera frame-time/smoothness benchmark, 200-percent text or full assistive-technology acceptance is established.",
+    "One MutationObserver TypeError remains unattributed in this in-app browser, with no application script URL/stack. It is not suppressed or called fixed.",
+    "The protected Education transport, CT/MRI pixel coverage and patient-space registration were not tested by this whole-body tour check.",
+    "This observation covers the unchanged installed viewer, not the new review empty-state source wording; the stable owner preview still uses its prior build."
+  ],
+  "clinicalApproval": false,
+  "publicDeployment": false,
+  "privateDataUploaded": false,
+  "wholeDesktopAcceptanceClaim": false
+}
