@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-21T14:04:48.918Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/posterior-fossa-coverage.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/head-disclosure-current-delivery.test.mjs",
+    "tests/head-disclosure-role-preservation-20261021.test.mjs",
+    "tests/exact-test-fixture-eol.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application/native.tap",
+  "logSha256": "334cb0325ec22153a5041b8a11fab05dd78433b91a5368f79b40a980cb5d1790",
+  "counts": {
+    "tests": 43,
+    "pass": 43,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

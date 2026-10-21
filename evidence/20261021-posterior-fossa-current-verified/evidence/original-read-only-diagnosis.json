@@ -1,0 +1,120 @@
+{
+  "schema": "visible-medicine-read-only-behavior-failure-diagnosis-v1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "websiteWorktree": "intentionally dirty; selected twelve test-root hashes still equal their failing-run hashes",
+  "atlasSource": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "reviewBinding": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "originalInventory": {
+    "path": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix/POST_MATRIX_TRIAGE.json",
+    "sha256": "47964a18ec2c36f203a5863f29eff35a874b1494a71d80e73f6e1aad032780f6",
+    "rawTapPathLocalOnly": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix/native.tap",
+    "rawTapSha256": "ec99b37d879e15ebfd8b2148226e8cbade08d0953dee014776698744050fe6b8",
+    "runCounts": {"tests": 289, "pass": 202, "fail": 87, "skipped": 0}
+  },
+  "scope": "Read-only source diagnosis. B's active corpus/UI closure, the later 88/88 and 52/52 roots, and already verified focused roots are excluded. These original failures are historical observations, not proof that downstream behavior still fails or passes.",
+  "classifications": {
+    "stale-current-seam": "The actual assertion compares a retained prior Atlas revision with the installed 190 source; the test stops before the behavior named by its title. Preserve the old epoch separately and verify current source and behavior independently.",
+    "coverage-input-drift": "The coverage snapshot/package evidence is stale relative to a newer source input; exact cause and current gate status require a guarded source refresh/check.",
+    "genuine-behavior-bug": "None established by these twelve fail-fast assertions."
+  },
+  "findings": [
+    {
+      "rank": 1, "case": 220, "root": "tests/posterior-fossa-coverage.test.mjs", "rootSha256": "cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8",
+      "failure": "strictEqual package.json source-input hash: expected 5594ae675dae99abe6fa1ac6f1a74af740d802adccd5afa0fc5da1908b6cb5ba; TAP actual f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6",
+      "classification": "coverage-input-drift",
+      "currentSource": "The 190 coverage snapshot still records package.json=f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6; current dirty package.json hashes 709f273fb3fca47974c0da8cb095a219d72b2c7c60b3a8bbd3e59b4fc135dec6. The test's hardcoded 5594 hash is a still earlier epoch.",
+      "codePaths": ["tests/posterior-fossa-coverage.test.mjs", "docs/anatomy-coverage/index.json", "scripts/check-anatomy-coverage.mjs", "lib/anatomy-coverage-view.ts", "package.json"],
+      "next": "First identify the authorized package.json change and exact snapshot dependency. Then refresh or separately archive the coverage evidence through its existing source gate and verify current projectCoverageView behavior; keep the earlier source/hash contract as historical evidence.",
+      "limit": "No current coverage verifier run. This is source-evidence drift, not evidence of missing posterior-fossa teaching or clinical clearance."
+    },
+    {
+      "rank": 2, "case": 235, "root": "tests/regional-learning-catalogue.test.ts", "rootSha256": "5e6d1ebabeb635cacffa1de78485cad254655a42bcf964285650e51595be698c",
+      "failure": "strictEqual current catalogue sourceRevision: expected 87ed7e343260c7df48a40d53503f25bbfd34cfa5; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/regional-learning-catalogue.test.ts", "tests/regional-learning-catalogue-history.ts", "lib/regional-learning-catalogue.ts", "atlas-review/lib/regional-tours.ts"],
+      "next": "Keep the 87ed catalogue as historical; bind the current test to the exact 190 Review source, then execute all tour availability, stop-count, selected-ID and frame checks against the current imported graph.",
+      "limit": "The assertion fails after source-closure setup, before current tour graph behavior is assessed."
+    },
+    {
+      "rank": 3, "case": 252, "root": "tests/regional-reference-review-index.test.ts", "rootSha256": "508a9df7dda87e65ccf6cee49fc289d88ad2d3ca26e1388896b35563865320ad",
+      "failure": "strictEqual catalogue.atlasRevision: expected 408759d57644b05402e98a937e7cf6338b5509cf; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/regional-reference-review-index.test.ts", "lib/regional-mri-3d-catalogue.ts", "lib/regional-reference-review-index.ts", "lib/regional-reference-review-index-contract.ts"],
+      "next": "Freeze the 408/9f/ac714 mapping proofs as historical and verify the 190 index's revision-bound links, exact 35-row identities and topic totals against current source; investigate any later failed row/content assertion on its own evidence.",
+      "limit": "The original run had already checked 35 rows and approval=false, then stopped at the old revision; later link/topic assertions did not run."
+    },
+    {
+      "rank": 4, "case": 243, "root": "tests/regional-mri-inline-inspection.test.ts", "rootSha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f",
+      "failure": "strictEqual validateCurrentAtlasDelivery().source: expected 87ed7e343260c7df48a40d53503f25bbfd34cfa5; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/regional-mri-inline-inspection.test.ts", "lib/regional-mri-inline-inspection.ts", "public/atlas-runtime/head-neck/manifest.json", "public/atlas-runtime/lower-limb/manifest.json"],
+      "next": "Keep the archived 408 manifest comparison separate. Bind the current-manifest gate to exact 190 source and confirm public URL transport, scope and review-revision handling with the existing synthetic fixture; never use private images for this repair.",
+      "limit": "The first current-source assertion fails; the synthetic inspection behavior was not reached by this case."
+    },
+    {
+      "rank": 5, "case": 59, "root": "tests/clinical-review-reasoning.test.ts", "rootSha256": "43b62ba1b12c400b7ac964aa94e9b317874fef009d0e98ac025f4e6e304491a8",
+      "failure": "strictEqual Review revision: expected 9fba9a1e24b6669aafd48e945d55fc0939d50ab2; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/clinical-review-reasoning.test.ts", "atlas-review/lib/body-review-material.ts", "atlas-review/lib/body-review-response.ts", "atlas-review/lib/reasoning-questions.ts"],
+      "next": "Preserve 9f source proof, then bind current190 Review/learner source and check all eight actual reasoning packets, draft/no-approval status, answer evidence, and forged-response refusal.",
+      "limit": "The test failed at its first revision assertion, before any reasoning packet was checked."
+    },
+    {
+      "rank": 6, "case": 63, "root": "tests/clinical-review-regional-tour.test.ts", "rootSha256": "2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee",
+      "failure": "strictEqual shoulder learner sourceCommit: expected 9fba9a1e24b6669aafd48e945d55fc0939d50ab2; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/clinical-review-regional-tour.test.ts", "atlas-review/app/structure-quick-check.tsx", "public/atlas-runtime/shoulder/manifest.json", "public/atlas-runtime/head-neck/manifest.json"],
+      "next": "Pin the old tour epoch separately and test exact current190 quick-check import hashes and emitted success/retry text for both actual learner hosts, retaining exclusions for independent specimen viewers.",
+      "limit": "The test had checked the imported component's retry wording, but stopped at the first old shoulder sourceCommit before emitted host coverage."
+    },
+    {
+      "rank": 7, "case": 60, "root": "tests/clinical-review-regional-muscle-completion-quiz.test.ts", "rootSha256": "3c8c56aa397436b743f7b0b067bb59cafcb4b89f413a0f21f97e5b2d45047f9c",
+      "failure": "strictEqual learner manifest sourceCommit: expected 9fba9a1e24b6669aafd48e945d55fc0939d50ab2; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/clinical-review-regional-muscle-completion-quiz.test.ts", "atlas-review/content/regional-muscle-completion-quiz-pins.json", "atlas-review/lib/regional-muscle-completion-quiz.ts", "public/atlas-runtime/head-neck/manifest.json"],
+      "next": "Retain exact older pin/source proof, then test twelve current learner and protected Review draft questions, source citations and emitted bundle hashes against source190.",
+      "limit": "The first module manifest check stops the case; no current question or Review packet was assessed."
+    },
+    {
+      "rank": 8, "case": 66, "root": "tests/clinical-review-short-ciliary-quiz.test.ts", "rootSha256": "784380594d03080efbe80229329dadc93adcf2a09c7602fa35c12fca06f4078c",
+      "failure": "strictEqual Atlas git HEAD against liveCommit: expected 9fba9a1e24b6669aafd48e945d55fc0939d50ab2; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/clinical-review-short-ciliary-quiz.test.ts", "atlas-review/content/short-ciliary-quiz.ts", "atlas-review/lib/short-ciliary-quiz.ts", "atlas-review/app/body-content.ts"],
+      "next": "Treat 9f source as immutable historical evidence; separately bind current190 committed/imported bytes and execute the four answer, laterality, draft-status and stale/forged-review refusals.",
+      "limit": "The case stops at Atlas HEAD before source or learner behavior."
+    },
+    {
+      "rank": 9, "case": 69, "root": "tests/clinical-review-shoulder-ct.test.ts", "rootSha256": "00be69c54d4d6fe7cf98a089d7b0e444efd508452a9e3a5f11fc95e86391b3a7",
+      "failure": "strictEqual Review revision: expected 9fba9a1e24b6669aafd48e945d55fc0939d50ab2; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/clinical-review-shoulder-ct.test.ts", "atlas-review/content/shoulder-arterial-ct-pins.json", "atlas-review/lib/shoulder-arterial-ct.ts", "public/atlas-runtime/head-neck/manifest.json"],
+      "next": "Preserve source-era pins and independently check current190 eight draft CT lessons in emitted learner and protected Review, including no patient images, no approval and forged identity refusal.",
+      "limit": "Revision fails before source hashes, emitted bundle and draft assertions."
+    },
+    {
+      "rank": 10, "case": 73, "root": "tests/clinical-review-spinal-disc-ultrasound.test.ts", "rootSha256": "36cef6295314eaafe9413a01ff0568e63c4369032edfbb2af49661d4c13ac4ee",
+      "failure": "strictEqual Review revision: expected 9fba9a1e24b6669aafd48e945d55fc0939d50ab2; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/clinical-review-spinal-disc-ultrasound.test.ts", "atlas-review/content/spine-imaging-pins.json", "atlas-review/content/spinal-disc-ultrasound.ts", "atlas-review/lib/spinal-disc-ultrasound.ts"],
+      "next": "Preserve the 19 historical source identities, then verify exact current190 imported pins and 19 learner/Review draft lessons, emitted bytes and no-approval boundaries.",
+      "limit": "The first Review revision gate fails; none of the 19 current lessons were evaluated."
+    },
+    {
+      "rank": 11, "case": 80, "root": "tests/clinical-review-thoracic-quiz.test.ts", "rootSha256": "87acd111d474a2791105f841b6e9e431869d22b29b7b851df05701b0f829b630",
+      "failure": "strictEqual Review revision: expected 9fba9a1e24b6669aafd48e945d55fc0939d50ab2; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/clinical-review-thoracic-quiz.test.ts", "atlas-review/content/thoracic-quiz-pins.json", "atlas-review/lib/thoracic-quiz.ts", "atlas-review/app/review/body/review-dashboard.tsx"],
+      "next": "Archive the old revision assertion and verify current190 seven exact question/answer identities and Review markup using actual imported source, preserving draft/no-approval limits.",
+      "limit": "The revision assertion fails before any question or rendered learner/Review check."
+    },
+    {
+      "rank": 12, "case": 93, "root": "tests/clinical-review-um-ankle-imaging.test.ts", "rootSha256": "e453387dfd045a0dcd744996165fd949d08446ef0afd5b6adaaf4e8c49e9176b",
+      "failure": "strictEqual Review revision: expected 9fba9a1e24b6669aafd48e945d55fc0939d50ab2; actual 190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "classification": "stale-current-seam",
+      "codePaths": ["tests/clinical-review-um-ankle-imaging.test.ts", "atlas-review/content/um-calf-foot-clinical.ts", "atlas-review/content/um-limb-teaching-bindings.v1.json", "atlas-review/lib/specimen-review-material.ts", "public/atlas-runtime/lower-limb/manifest.json"],
+      "next": "Preserve the old ankle source proof and verify seven current190 learner/specimen Review draft topics across the two runtime modules, including exact bindings and no-approval flags.",
+      "limit": "The test fails before any current ankle source or specimen packet assertion."
+    }
+  ],
+  "overallLimit": "No new native, build, browser, clinical or private-data check was run. Source190 and Review34c1 identities alone do not establish these behavior cases as passing. No scans, masks, coordinates, identifiers or full TAP were copied into this report."
+}

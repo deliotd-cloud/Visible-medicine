@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-21T14:04:53.633Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/posterior-fossa-coverage.test.mjs",
+      "preimageSha256": "cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8",
+      "candidateSha256": "fa353e5842870501f2d6a69c267525e9bc3d57556d12110839a2792980fb372c",
+      "candidateBytes": 6407
+    },
+    {
+      "path": "tests/fixtures/posterior-fossa-coverage-before190-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8",
+      "candidateBytes": 3778
+    }
+  ],
+  "controlledInputs": 5186,
+  "preservedInputs": 7,
+  "namedInputs": 5193,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "9c2b975a4c92eb7c2201390a3cb7bcd76d3b9c8ec5987a9c87b201132da96032",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:04:48.918Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/posterior-fossa-coverage.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/head-disclosure-current-delivery.test.mjs",
+      "tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "tests/exact-test-fixture-eol.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application/native.tap",
+    "logSha256": "334cb0325ec22153a5041b8a11fab05dd78433b91a5368f79b40a980cb5d1790",
+    "counts": {
+      "tests": 43,
+      "pass": 43,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

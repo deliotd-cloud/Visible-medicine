@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T13:45:44.837Z",
+  "at": "2026-10-21T14:06:15.349Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5192,
+    "canonicalNamedInputs": 5193,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "74e106e0d1a74f5fa0208826c23b5f917cc61fc6",
-  "gitParent": "74e106e0d1a74f5fa0208826c23b5f917cc61fc6",
+  "parent": "a78c665e4107d70fb177693c619b2ada88beed92",
+  "gitParent": "a78c665e4107d70fb177693c619b2ada88beed92",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -5572,6 +5572,76 @@
       "sha256": "e10677129e441c7d962b997f89bb957c75eb6e6e74d449142d1752dbfdf342cc"
     },
     {
+      "path": "evidence/20261021-posterior-fossa-current-verified/controls/admission-config.json",
+      "bytes": 730,
+      "sha256": "6997b143da456a9436636cafcb6fc3a5c30c1c896140469c4ade95fb4b2f25a3"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/controls/admission.mjs",
+      "bytes": 9768,
+      "sha256": "31e8d86755d16d4402ca239b5d6dc6ebaee401f9fdd75879178a3eaf0f0f3017"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/controls/checkpoint-config.json",
+      "bytes": 2487,
+      "sha256": "1e9a0a364daa493c49fb08a6d052f92288980574d9f0cda2086fcfbbb87e2635"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7636,
+      "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7627,
+      "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/evidence/APPLICATION.json",
+      "bytes": 2544,
+      "sha256": "6c460cd6ed8e3b68c95dddc7a82c740581b1634f8876d4245781fe13411280b0"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/evidence/CORRECTION.json",
+      "bytes": 1813,
+      "sha256": "837f33ea119a1aff52043322bff46636b48deec4bb9d0a1c5ba866daa8a0c657"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/evidence/native.json",
+      "bytes": 805,
+      "sha256": "d9a3aee1d00e4bef80052c5600649fdb03673f37df3697ff54979136689461b8"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/evidence/original-read-only-diagnosis.json",
+      "bytes": 13582,
+      "sha256": "9d083b95ea1f275dde256bea6652434d6f8ca514afce0e5af66cfe5bfa270e8e"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/evidence/PROOF.json",
+      "bytes": 2921,
+      "sha256": "0d00b829e0d3cd4431062946181f384fa0f5826855e127f96c75e6954c7500dc"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/installed-website/tests/fixtures/posterior-fossa-coverage-before190-20261021.mjs.raw",
+      "bytes": 3778,
+      "sha256": "cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/installed-website/tests/posterior-fossa-coverage.test.mjs",
+      "bytes": 6407,
+      "sha256": "fa353e5842870501f2d6a69c267525e9bc3d57556d12110839a2792980fb372c"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/preimages/tests/posterior-fossa-coverage.test.mjs",
+      "bytes": 3778,
+      "sha256": "cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8"
+    },
+    {
+      "path": "evidence/20261021-posterior-fossa-current-verified/proposal/PROPOSAL.json",
+      "bytes": 1880,
+      "sha256": "34394c33a6505521690e0db09c70bdd6e55605cd4639d3f96a2c7253c77bdf17"
+    },
+    {
       "path": "evidence/20261021-psoas-salivary-source-bytes-verified/controls/admit-psoas-salivary-epochs-20261021.mjs",
       "bytes": 10926,
       "sha256": "5a35e217c5deeeb4349fa12ed2b120b230f763bbaa9539fdb213a0b903cee9a6"
@@ -9313,9 +9383,9 @@
     }
   ],
   "removed": [],
-  "scope": "Ten exact coupled test/raw-witness paths, three original preimages, both worker/main proposal provenance, actual52/52 native receipts, separate17/17 camera/tour receipt, sanitized narrow-reflow keyboard observations and guarded controls. Prior filtered source ancestry only. No scans, masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Two exact installed test/raw-witness paths, original preimage, actual43/43 native receipt, corrected read-only coverage diagnosis, main reviewed proposal and guarded recovery controls. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T13:45:37.606Z",
+    "at": "2026-10-21T14:06:06.274Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -9323,8 +9393,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5192,
-    "controlledSourceInputs": 5185,
+    "currentNamedInputs": 5193,
+    "controlledSourceInputs": 5186,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -9334,57 +9404,41 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-role-union-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "f37794894656799e7b12589ff4b40de5e878a0f3f27b12252f928259fcd13c54",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-role-union-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "37b5354acced41fb59455ce89f220564d68fed3ee3125c397c786825ab3493f6",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "9c2b975a4c92eb7c2201390a3cb7bcd76d3b9c8ec5987a9c87b201132da96032",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "15f3c54a8b923e253981fbe70acc1aefb0b1be2a726eacd64c7c66ef50c5b5fb",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 10,
-    "existingEditedTestPaths": 3,
-    "coupledDirectReaderAdmission": true,
-    "authenticWholeHistoricalDeliveryPortalCorpusAndUiWitnesses": true,
-    "wholeOriginalAndRoleInverseMutationProofsPassed": true,
-    "actualEightRootNativeCounts": {
-      "tests": 52,
-      "pass": 52,
+    "installedTestOnlyPaths": 2,
+    "existingEditedTestPaths": 1,
+    "actualNativeCode": 0,
+    "actualNativeCounts": {
+      "tests": 43,
+      "pass": 43,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "actualEightRootNativeCode": 0,
-    "currentNativeFailures": [],
-    "separateTourCameraNativeCounts": {
-      "tests": 17,
-      "pass": 17,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "separateTourCameraDifferentTestInputSnapshot": true,
-    "narrow640ReflowKeyboardSearchAndEscapeVerified": true,
-    "true200PercentTextZoomOrFullATClaim": false,
-    "rawNativeLogExcludedFromBackup": true,
-    "currentValidatorAndFixtureUnchanged": true,
-    "currentTestNowChecksExact190": true,
-    "allOtherSourceInputsAndBindingsUnchanged": true,
-    "all1553AtlasWorkingSourceBytesExact": true,
-    "all71ItemsAndEightIdeasUnchanged": true,
-    "wholeAuditBaselineUnchanged": true,
+    "actualNativeFailures": [],
     "originalFullFailureBaseline": 136,
     "originalFullSkips": 3,
     "earlierDifferentSourceBaseline": 144,
     "subset289_202_87Retained": true,
-    "allNativeFailuresResolved": false,
+    "allOtherSourceInputsAndBindingsUnchanged": true,
+    "all1553AtlasWorkingSourceBytesExact": true,
+    "all71ItemsAndEightIdeasUnchanged": true,
+    "wholeAuditBaselineUnchanged": true,
+    "milestone": "Posterior-fossa current coverage uses Atlas190 and its exact f06f package rather than the old7b/5594 epoch. Every original count/privacy/import/refusal assertion survives a complete four-seam forward/inverse. Actual source gate now verifies all committed/working Atlas inputs. Website package709f is separate; coverage data is already correct and is not regenerated. Five native roots pass43/43; separate prior52/17/88 receipts and full failure baselines remain.",
     "fullSuitePassingClaim": false,
+    "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,
     "ownerPreviewSession": 32652,
     "ownerFormsRefreshed": false,
     "ownerDecisionsChanged": false,
-    "reviewCopyPreviewBuildPending": true,
     "previewBuildOrRestartRan": false,
+    "reviewCopyPreviewBuildPending": true,
     "productSourceChangedByThisRepair": false,
     "unresolvedBrowserErrorKinds": 1,
     "clinicalApproval": false,

@@ -1,0 +1,20 @@
+{
+  "schema": "vm-main-reviewed-test-role-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "proposedPaths": [
+    {"path":"tests/posterior-fossa-coverage.test.mjs","preimageSha256":"cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8","candidateSha256":"fa353e5842870501f2d6a69c267525e9bc3d57556d12110839a2792980fb372c","candidateBytes":6407},
+    {"path":"tests/fixtures/posterior-fossa-coverage-before190-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8","candidateBytes":3778}
+  ],
+  "diagnosis": "The original posterior-fossa current test pins historical Atlas7b and its5594 package. Current coverage is already correctly bound to Atlas190/f06f. Website package709f is separate and correctly recorded by the current Website snapshot; no coverage-data drift or refresh is indicated.",
+  "change": "Advance only the current source/package assertions. Retain the entire exact original test in a byte-authentic witness, with an executing four-seam forward/inverse and assertion-mutation guard. Also check all actual committed and working Atlas inputs through the existing read-only source gate and explicitly read the Atlas package, not Website package.",
+  "sourceOnlyChecks": "Syntax passes; candidate and exact raw preimage hashes verified. No actual native test or coverage source-gate run yet.",
+  "directReaderClosure": "No direct literal reader of posterior-fossa-coverage.test.mjs found among registered test roots.",
+  "canonicalChanged": false,
+  "productFilesChanged": false,
+  "coverageDataRegenerated": false,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

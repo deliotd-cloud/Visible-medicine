@@ -1,0 +1,18 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application",
+  "manifestSha256": "34394c33a6505521690e0db09c70bdd6e55605cd4639d3f96a2c7253c77bdf17",
+  "beforeInputs": 5185,
+  "afterInputs": 5186,
+  "expectedPaths": [
+    "tests/posterior-fossa-coverage.test.mjs",
+    "tests/fixtures/posterior-fossa-coverage-before190-20261021.mjs.raw"
+  ],
+  "roots": [
+    "tests/posterior-fossa-coverage.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/head-disclosure-current-delivery.test.mjs",
+    "tests/head-disclosure-role-preservation-20261021.test.mjs",
+    "tests/exact-test-fixture-eol.test.mjs"
+  ]
+}

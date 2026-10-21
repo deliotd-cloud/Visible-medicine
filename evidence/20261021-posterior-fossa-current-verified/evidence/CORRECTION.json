@@ -1,0 +1,20 @@
+{
+  "schema": "visible-medicine-coverage-case220-correction-v1",
+  "corrects": "DIAGNOSIS.json finding case 220 only; original report retained for audit",
+  "originalCase": 220,
+  "sourceRevision": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "evidence": {
+    "sourceGate": "scripts/check-anatomy-coverage.mjs checkCoverage({sourceRoot}) passes readSource:path=>read(root,path) and committedSource:path=>git show sourceRevision:path to verifyCoverageSources; root is Atlas sourceRoot, not Website.",
+    "atlasPackagePath": "F:/VisibleMedicine/atlas/package.json",
+    "atlasPackageSha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6",
+    "savedCoverageInputSha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6",
+    "websitePackagePath": "F:/VisibleMedicine/website/package.json",
+    "websitePackageSha256": "709f273fb3fca47974c0da8cb095a219d72b2c7c60b3a8bbd3e59b4fc135dec6",
+    "websiteSnapshot": "F:/VisibleMedicine/staging/20261021-head-role-union-application/SOURCE_INPUTS_AFTER.json",
+    "websiteSnapshotSha256": "f37794894656799e7b12589ff4b40de5e878a0f3f27b12252f928259fcd13c54",
+    "websiteSnapshotRecordsWebsitePackage": true
+  },
+  "correctClassification": "stale hardcoded historical package hash in test, not unexplained current input drift",
+  "conclusion": "No coverage snapshot refresh is indicated by this evidence. Preserve the historical 5594 package expectation separately, bind the current test to the exact Atlas190 package input f06f, and keep the Website709f package under its separate source/prebuild gate. Subsequent coverage assertions remain untested by the old fail-fast case; no passing native result or clinical approval is inferred.",
+  "scope": "Read-only correction; no source, snapshot, validator or canonical test changed."
+}
