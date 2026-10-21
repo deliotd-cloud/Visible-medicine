@@ -1,0 +1,97 @@
+@@ -10,0 +11,3 @@ import {bodyChannelBaseline,bodyChannelEntrypoint} from './body-channel-source-e
++import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
++import {boundLiveAtlasHistory} from './atlas-bound-live-history.mjs';
+@@ -12,2 +15,6 @@ import {bodyChannelBaseline,bodyChannelEntrypoint} from './body-channel-source-e
+-const atlas='F:/VisibleMedicine/atlas';
+-const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const atlas=currentAtlasDeliveryRoot();
++const historicalRevision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const portalTourRevision='47a851db0fb3369ad056fb8a8fcc3f3ba73656ea';
++const portalTourBlob='c832b8cafa2a53a79d244dfa223288b7fd255be6';
++const currentTourBlob='fb65a9c68d8753fc1789c7e6281e36c2889e0136';
++const revision=CURRENT_ATLAS_REVISION;
+@@ -15 +22,3 @@ const parent='c57449c1107a912442c6b0af23e270df41032522';
+-const tree='a84ecc18997c80b7f68917425164ea24993020dd';
++const priorTreeOwner='6b6d9bba99985dfc5ca8deb52ca9e2632b837d25';
++const priorTree='a84ecc18997c80b7f68917425164ea24993020dd';
++const historicalTree='1bd327fb20a52b35bec584675c457173c548e24b';
+@@ -47,0 +57,3 @@ const expected=new Map(selections.map(([family,side,slug,fma])=>[
++const laterPlaybackTours=new Map([
++  ['vm:anatomy:body:head-neck:midline:organ:corpus-callosum','deep-brain-commissures-limbic-landmarks'],
++]);
+@@ -83,0 +96,9 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++  assert.equal(checkedAtlasHistoryRepo(historicalRevision),atlas);
++  assert.equal(git(['rev-parse',priorTreeOwner+'^{tree}']).toString().trim(),priorTree,
++    'Earlier a84 tree remains bound to its actual 6b6d source epoch');
++  assert.equal(git(['merge-base',priorTreeOwner,historicalRevision]).toString().trim(),priorTreeOwner);
++  assert.equal(git(['merge-base',portalTourRevision,historicalRevision]).toString().trim(),portalTourRevision);
++  assert.equal(git(['merge-base',historicalRevision,revision]).toString().trim(),historicalRevision);
++  assert.equal(git(['rev-parse',portalTourRevision+':lib/regional-tours.ts']).toString().trim(),portalTourBlob);
++  assert.equal(git(['rev-parse',historicalRevision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
++  assert.equal(git(['rev-parse',revision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
+@@ -85 +106 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-  assert.equal(git(['rev-parse','HEAD^{tree}']).toString().trim(),tree);
++  assert.equal(git(['rev-parse',historicalRevision+'^{tree}']).toString().trim(),historicalTree);
+@@ -88,0 +110 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++  assert.equal(laterPlaybackTours.size,1);
+@@ -113,0 +136 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++    assert.deepEqual(source,committed(historicalRevision,path),`${name}: immutable channel entrypoint`);
+@@ -144 +167 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-  assert.equal(liveApi.regionalTours.length,48);assert.equal(liveApi.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),290);
++  assert.equal(liveApi.regionalTours.length,51);assert.equal(liveApi.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),309);
+@@ -145,0 +169,7 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++  const currentSource=await boundLiveAtlasHistory(revision);
++  const portalTourEpoch=await prior.exactSourceHistoryApi(portalTourRevision,'review-security');
++  assert.equal(portalTourEpoch.regionalTours.length,48);
++  assert.equal(portalTourEpoch.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),290);
++  const firstDelivery=await prior.exactSourceHistoryApi(historicalRevision,'review-security');
++  assert.equal(firstDelivery.regionalTours.length,51);
++  assert.equal(firstDelivery.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),309);
+@@ -149 +179,3 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-    assert.equal(sha(committed(revision,path)),sha(committed(completedSource,path)),`${path}: neonatal source preserved since completed epoch`);
++    assert.equal(sha(committed(historicalRevision,path)),sha(committed(completedSource,path)),`${path}: neonatal source preserved at first delivery`);
++  for(const path of sourcePaths)
++    assert.deepEqual(committed(revision,path),committed(historicalRevision,path),`${path}: neonatal source retained at current delivery`);
+@@ -218 +250,20 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-    assert.deepEqual(livePacket,packet,`${s.id}: current neonatal Review packet preserved`);
++    assert.deepEqual(livePacket,wire(await currentSource.bodyReviewMaterial(s.id)),`${s.id}: complete current190 Review packet`);
++    assert.deepEqual(livePacket.source,packet.source,`${s.id}: neonatal source identity retained`);
++    assert.deepEqual(livePacket.topics.find((row:any)=>row.tab==='ultrasound'),
++      packet.topics.find((row:any)=>row.tab==='ultrasound'),`${s.id}: neonatal teaching retained`);
++    const laterTour=laterPlaybackTours.get(s.id);
++    const tourIds=laterTour?[laterTour]:[];
++    assert.deepEqual(packet.guidedTours.map((row:any)=>row.tour.id),tourIds,`${s.id}: completed tour membership`);
++    assert.deepEqual(livePacket.guidedTours.map((row:any)=>row.tour.id),tourIds,`${s.id}: current tour membership`);
++    for(const key of Object.keys(packet).filter(key=>!['guidedTours','fingerprints','materialHash'].includes(key)))
++      assert.deepEqual(livePacket[key],packet[key],`${s.id}: complete non-tour field ${key}`);
++    for(const key of ['source','checklist'])
++      assert.equal(livePacket.fingerprints[key],packet.fingerprints[key],`${s.id}: stable ${key} fingerprint`);
++    if(laterTour){
++      const {continuousPlayback,...prePlayback}=livePacket.guidedTours[0];
++      assert.deepEqual(prePlayback,packet.guidedTours[0],`${s.id}: complete pre-playback evidence`);
++      assert.equal(continuousPlayback.version,1);
++      assert.equal(continuousPlayback.stepDurationsMs.length,prePlayback.tour.steps.length);
++      assert.notEqual(livePacket.fingerprints.teaching,packet.fingerprints.teaching);
++      assert.notEqual(livePacket.materialHash,packet.materialHash);
++    }else assert.deepEqual(livePacket,packet,`${s.id}: complete unchanged current packet`);
+@@ -245,3 +296,10 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-    for(const key of ['sourceHash','teachingHash','materialHash','checklistVersion'])
+-      assert.equal(liveContext[key],context[key],`${s.id}: current ${key} preserved`);
+-    assert.equal(liveContext.revisions.teaching,context.revisions.teaching,`${s.id}: current teaching decision revision preserved`);
++    assert.deepEqual(liveContext,await currentSource.bodyReviewContext(s.id),`${s.id}: complete current190 context`);
++    for(const key of ['sourceHash','checklistVersion'])
++      assert.equal(liveContext[key],context[key],`${s.id}: stable ${key}`);
++    for(const key of ['teachingHash','materialHash'])
++      if(laterTour)assert.notEqual(liveContext[key],context[key],`${s.id}: playback changes ${key}`);
++      else assert.equal(liveContext[key],context[key],`${s.id}: no tour preserves ${key}`);
++    if(laterTour)assert.notEqual(liveContext.revisions.teaching,context.revisions.teaching,
++      `${s.id}: playback changes teaching decision revision`);
++    else assert.equal(liveContext.revisions.teaching,context.revisions.teaching,
++      `${s.id}: no tour preserves teaching decision revision`);
+@@ -317 +375,4 @@ test('private inbox shows ten new teaching revisions and rejects stale continuat
+-    assert.equal(row.href,'/workspace/atlas-review/body?structure='+encodeURIComponent(entry.id));
++    assert.equal(saved.href,'/workspace/atlas-review/body?structure='+encodeURIComponent(entry.id),
++      `${entry.id}: immutable historical inbox URL`);
++    assert.equal(row.href,'/workspace/atlas-review/body?structure='+encodeURIComponent(entry.id)+'&t=teaching',
++      `${entry.id}: current teaching-track selection`);

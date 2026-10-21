@@ -1,0 +1,42 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-specimen-playback-history-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-specimen-playback-history-native-proof/native-check",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourceSite": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-specimen-playback-history-proposal",
+  "guard": "tests/specimen-playback-whole-source-inverse.test.mjs",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-source190-complete-suite/SOURCE_INPUTS.json",
+  "sourceSnapshotSha256": "2d3d4544ca39cb357edcf82dcbe414ea0ec77b619df69135fca983a5ece7b5f4",
+  "proposed": [
+    {
+      "path": "tests/clinical-review-specimen-continuous-playback.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-specimen-playback-history-proposal/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "sha256": "3076ac33f3096b47f09dbf9364f92687d74d8ffb5899b4c612e8134f3db1ba1c",
+      "beforeSha256": "34f0869e7319915cefcd0e4746d0563173e9a83c25e47388ba06098c148ceca3",
+      "bytes": 19788
+    },
+    {
+      "path": "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-specimen-playback-history-proposal/tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+      "sha256": "34f0869e7319915cefcd0e4746d0563173e9a83c25e47388ba06098c148ceca3",
+      "beforeSha256": null,
+      "bytes": 18304
+    },
+    {
+      "path": "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+      "from": "F:/VisibleMedicine/staging/20261021-specimen-playback-history-proposal/tests/fixtures/specimen-playback-original/inverse-hunks.json",
+      "sha256": "82cefd21ea512d477afe334076f3d4880d79d222ed970b3ec4e5e99e98eb6d77",
+      "beforeSha256": null,
+      "bytes": 9535
+    },
+    {
+      "path": "tests/specimen-playback-whole-source-inverse.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-specimen-playback-history-proposal/tests/specimen-playback-whole-source-inverse.test.mjs",
+      "sha256": "8962aac6ed256b5e41ebfe2136dee07c28f02311cdf5d4ca90abcd823a2238d0",
+      "beforeSha256": null,
+      "bytes": 2295
+    }
+  ],
+  "unchangedExistingTests": [],
+  "scope": "Only the named, main-reviewed native FS/hash guard is to be executed. Copied TS subjects are not executed; no dependencies/junctions/build/types/corpus/clinical/browser acceptance or source installation."
+}

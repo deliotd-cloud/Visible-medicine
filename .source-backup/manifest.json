@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T09:18:14.052Z",
+  "at": "2026-10-21T09:44:59.943Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "websiteInputCount": 5107,
     "proposalOnly": true
   },
-  "parent": "e907bb45af7308746183ed9a53c95bdca24f64d7",
-  "gitParent": "e907bb45af7308746183ed9a53c95bdca24f64d7",
+  "parent": "60de7a4bc772532df01dfa1fe158bebcb9c94edd",
+  "gitParent": "60de7a4bc772532df01dfa1fe158bebcb9c94edd",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3464,6 +3464,371 @@
       "path": "evidence/20261021-hip-history-guard-proposal/WRAPPER_PROPOSAL.json",
       "bytes": 3014,
       "sha256": "de0c3c7c341310ea5d57b2e29d6052f47b76467623f8a9ec826e663c925a0766"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-clinical-epoch-batch-c-v5-native-proof/PREPARATION.json",
+      "bytes": 8366,
+      "sha256": "e7b3ad62e147044e41764d538be9c4f3dc6d9667034700f5a2ed228e44d82651"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-clinical-epoch-batch-c-v5-native-proof/receipt.json",
+      "bytes": 545,
+      "sha256": "4761d681eb8312ccb1896db0aa598d603134759a25f692b9e22194efcd1bc02c"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-clinical-epoch-batch-c-v6-native-proof/PREPARATION.json",
+      "bytes": 8366,
+      "sha256": "9bbbeedbdf7819ccf48f52de1c28726a1437c4760dee6abe3607ac0fcda7e3c1"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-clinical-epoch-batch-c-v6-native-proof/receipt.json",
+      "bytes": 545,
+      "sha256": "82428b3c05d989fc8fd3f36e11b1034d2f32177bcf8f0cc4b31160c719fa3228"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-clinical-epoch-batch-e-v6-native-proof/PREPARATION.json",
+      "bytes": 7436,
+      "sha256": "bc8c4ebc795880f5e8710a6a19380db36a4f52f23b1186012781e27883546c06"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-clinical-epoch-batch-e-v6-native-proof/receipt.json",
+      "bytes": 550,
+      "sha256": "e23f6a43737a92c266970f40ba0a01f54596fe8fddf1781fe14cd4110dea7ab8"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-clinical-epoch-batch-e-v7-native-proof/PREPARATION.json",
+      "bytes": 7436,
+      "sha256": "84026a8ca1c4797783c9462fb3b78ac1c083bac967c16e6f5c1ff2a97e126e69"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-clinical-epoch-batch-e-v7-native-proof/receipt.json",
+      "bytes": 550,
+      "sha256": "9f55d9a611eea5ec0a86ede4431de4c81832db36e32797a3f8e14eeec198a8cd"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-head-neck-pilot-history-native-proof/PREPARATION.json",
+      "bytes": 3494,
+      "sha256": "f4748cbc7e90c311919a5d223ce0346c05ebe883fdbdc35a0f97a54e5525c405"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-head-neck-pilot-history-native-proof/receipt.json",
+      "bytes": 545,
+      "sha256": "9544530c552bd5107dddb656b58193eeafdc158c9a4604f73ddf43e4d9a68ea9"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-specimen-playback-history-native-proof/PREPARATION.json",
+      "bytes": 2579,
+      "sha256": "96b52348229cffdf6f0c39e78656908cfe83de0a48a7f8c1a56e45a446b849fb"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/20261021-specimen-playback-history-native-proof/receipt.json",
+      "bytes": 547,
+      "sha256": "51126e57f5159f587fbda454d53a84dd6f0651d34ca83f82158ce4fe8f732639"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/BATCH.json",
+      "bytes": 46886,
+      "sha256": "9ba0e5ad411a45187c52ebdac9e64f0ae1f737f24a3c939baef7f2e3fe3eec21"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/C6_HANDOFF.md",
+      "bytes": 2721,
+      "sha256": "0725ccd5fcbf60b4ac9116e38692b9f149a955365b0c2dc5db72ce4cb2a1a9b2"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/E7_HANDOFF.md",
+      "bytes": 3351,
+      "sha256": "08f723b905fd3a13975ddb9720061a4678cc3908eb6b86e342919dc6d02135d0"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/E7_SELECTED_SOURCE_PROBE_RESULT.json",
+      "bytes": 2952,
+      "sha256": "d08f8987531214d6e9b48c513df6b8051f41957561b2f27814f467a7a7029e8b"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/E7_SELECTED_SOURCE_PROBE.mjs",
+      "bytes": 4158,
+      "sha256": "d36439f37c0d98e6c8839e39fbb88f6346d5d802c1bd6d169f81113a06a0d4b4"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/FIRST_FOLLOWUP_PREPARATION.json",
+      "bytes": 16449,
+      "sha256": "d4d6be24ab147c514951c1d8d9bbb3fc4958dc24e1414615797e81d1655fb586"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/FIRST_FOLLOWUP_TERMINAL.json",
+      "bytes": 1386,
+      "sha256": "1cff2c28ac42d569ed4061a956f66b237176e61e018c2b880a1f58a75a5612c9"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/FIRST_MATRIX_TERMINAL.json",
+      "bytes": 2226,
+      "sha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/HEAD_HARNESS_CONTEXT.json",
+      "bytes": 890,
+      "sha256": "4b5333a05ff782f4dc7555853ee81065b61f80d6bd265af6941717a2347d58c9"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/HEAD_PILOT_ACTUAL.json",
+      "bytes": 566,
+      "sha256": "21df3ef81d7ac1d659c38eb92ae8f5b45a49ab7a3bf7d21a947189af9bb9f67e"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/HEAD_PILOT_HANDOFF.md",
+      "bytes": 2891,
+      "sha256": "a3a4ff6bea202e82d2f43a1187b372cbeaa0bbfb75b488cb8b430627afb1fa38"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/LOCAL_HISTORICAL_ASSET_RECEIPT.json",
+      "bytes": 841,
+      "sha256": "ce2cd641defc762da298b2e64ceb4c0a8cbb6e3cca1c6a54fdc290a44bf24ae0"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/PROOF.json",
+      "bytes": 3112,
+      "sha256": "e07ae510588207e26ae0f688e08960bd4660fc3e4532f45ebe36deb03ca47ab5"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/SECOND_FOLLOWUP_PREPARATION.json",
+      "bytes": 16414,
+      "sha256": "9ee323d0fd2fd4eea3ff221bd73dad08481bdefd5c21a75005c3cd8669710a50"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/SECOND_FOLLOWUP_STARTED.json",
+      "bytes": 832,
+      "sha256": "ea61950279bf1c354e2a8c331584f560fb3dc3d4980f9535e0f359265894aa90"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/SPECIMEN_HANDOFF.md",
+      "bytes": 2519,
+      "sha256": "61311f19633e9bf9d4043271a2d190633ac52119fa4a0884908ee23b1877d038"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/evidence/SPECIMEN_PASS_HEAD_HARNESS_FAILURE.json",
+      "bytes": 1207,
+      "sha256": "aae418a02c8038253b6e63c57f1c72b10f8e745f67477e03eb6800709023bb79"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/first-followup-sources/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 17791,
+      "sha256": "48507121d59dec2e3c8ad16037ea2698953f0fab33576012ca40ae40222143d0"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/first-followup-sources/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "bytes": 18472,
+      "sha256": "11c198dd4065d017b4fb50a2a21351d21548b4a0a5da5ea87c90b8145b8ee7bd"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/first-followup-sources/20261021-clinical-epoch-batch-e-v6/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 27675,
+      "sha256": "91334d1f7f512c7b7032f2d1110941d1f996352cfe029817b1f13c1a9ec7ba2b"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/first-followup-sources/20261021-clinical-epoch-batch-e-v6/tests/clinical-review-orbital-apex-ct.test.ts",
+      "bytes": 21965,
+      "sha256": "adde0fec2edb29e713b439cd28cdca2b4fd1d4bcf59a133bab17d12365a397f1"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/first-followup-sources/20261021-clinical-epoch-batch-e-v6/tests/clinical-review-orbital-ring-ct.test.ts",
+      "bytes": 19667,
+      "sha256": "1408d09004e4277d15e2d05c7a84207767892b5724dcdb40463808b23d1821bc"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/preimages/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 16253,
+      "sha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/preimages/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "bytes": 15632,
+      "sha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/preimages/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 24520,
+      "sha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/preimages/tests/clinical-review-orbital-apex-ct.test.ts",
+      "bytes": 19663,
+      "sha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/preimages/tests/clinical-review-orbital-ring-ct.test.ts",
+      "bytes": 15391,
+      "sha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/preimages/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "bytes": 18304,
+      "sha256": "34f0869e7319915cefcd0e4746d0563173e9a83c25e47388ba06098c148ceca3"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/preimages/tests/head-neck-pilot.test.ts",
+      "bytes": 22253,
+      "sha256": "98ed1e8bba232320894aec053adb06083d03226ea3fbc47280e7f6b82ca3c6f7"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/preimages/tests/historical-head-pilot-read.mjs",
+      "bytes": 8972,
+      "sha256": "f20ac1ff485bb2fefdb3b00b3a7b98d35faaf9d002351893cc65903ddbcadb66"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/clinical-epoch-batch-c-originals.test.mjs",
+      "bytes": 4384,
+      "sha256": "d3f5a72b343c8856a030ccdefd8a2d6fe733248f3cf892dcf77855bb3d0120f5"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "bytes": 4838,
+      "sha256": "7353db1796864e789361ca3f13fef88e5d139aaea5331e3ae0b3e08c65d49425"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 18299,
+      "sha256": "74a100863fb33a27b94e7e56847c225fab618b500bfeb5f0d37971faff5781d9"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "bytes": 20464,
+      "sha256": "f52a3fd3ba12fc9836344febb9ab59a0a6c3f2b9bd6199595e0def5ef74ad4ae"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 29408,
+      "sha256": "c5e2992e968bab7e51a9df52594ef05edca9b828847d9f788c93ae215391cfd7"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/clinical-review-orbital-apex-ct.test.ts",
+      "bytes": 23417,
+      "sha256": "8f4a7e1eb6af862ff9643c08972c02f45dc9502db20ef03898b3723b78b05cc5"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/clinical-review-orbital-ring-ct.test.ts",
+      "bytes": 19667,
+      "sha256": "1408d09004e4277d15e2d05c7a84207767892b5724dcdb40463808b23d1821bc"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "bytes": 19788,
+      "sha256": "3076ac33f3096b47f09dbf9364f92687d74d8ffb5899b4c612e8134f3db1ba1c"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "bytes": 69651,
+      "sha256": "a302b465f4caf1b89898bee80ea175e04e9cf15b6bd15fca0ccfbe807129ecce"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+      "bytes": 1427,
+      "sha256": "c079bcf8d72f00e70b112a8ea54ca5d671800d79dd99cd1008291962dff69cfa"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/head-neck-pilot.test.ts.original.raw",
+      "bytes": 22253,
+      "sha256": "98ed1e8bba232320894aec053adb06083d03226ea3fbc47280e7f6b82ca3c6f7"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+      "bytes": 1265,
+      "sha256": "0f47f35ab70c321b87e26a83b02d3002f9ddfce60d7dc9458849c96283c3c4bf"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+      "bytes": 8972,
+      "sha256": "f20ac1ff485bb2fefdb3b00b3a7b98d35faaf9d002351893cc65903ddbcadb66"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/neonatal-cranial-us.delta.raw",
+      "bytes": 8364,
+      "sha256": "f0c17a9915ff97c9581b8ea22490caa015385e9be2a5db2555b664925c1dd56e"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/orbital-apex-ct.delta.raw",
+      "bytes": 5879,
+      "sha256": "b12a5d593536d0065867d9c93d49f4df47f512bf040c3d0cc7b828cb673e03d4"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/orbital-ring-ct.delta.raw",
+      "bytes": 6240,
+      "sha256": "3f0a6a1ab81191cd479861fb2562fa2d2db0698997e9629a8a1b89acb05b08c0"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+      "bytes": 18304,
+      "sha256": "34f0869e7319915cefcd0e4746d0563173e9a83c25e47388ba06098c148ceca3"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/fixtures/specimen-playback-original/inverse-hunks.json",
+      "bytes": 9535,
+      "sha256": "82cefd21ea512d477afe334076f3d4880d79d222ed970b3ec4e5e99e98eb6d77"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/head-neck-pilot-history-preservation.test.mjs",
+      "bytes": 3809,
+      "sha256": "cb402999742a1e04e5603e0e613d6a407e8e2a83f2e6f720053ca2c34447aab1"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/head-neck-pilot.test.ts",
+      "bytes": 23508,
+      "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/historical-head-pilot-read.mjs",
+      "bytes": 10042,
+      "sha256": "155580d27d857afca4622fd286c4ef9419ea3883b5a2484095a3eb076b074443"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/proposed-website/tests/specimen-playback-whole-source-inverse.test.mjs",
+      "bytes": 2295,
+      "sha256": "8962aac6ed256b5e41ebfe2136dee07c28f02311cdf5d4ca90abcd823a2238d0"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/attach-head-pilot-harness-git-context-20261021.mjs",
+      "bytes": 2372,
+      "sha256": "feeb4b79549a863380b410d3d360a84ab965ac0a66bbee7b12052746ff2a2270"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/emit-coordination-checkpoint.mjs",
+      "bytes": 5460,
+      "sha256": "23336ffe34f779f5d434fcf3c8c341ac996eb949ea162d5c0988595d05b8faa3"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/prepare-corrected-matrix-followup-20261021.mjs",
+      "bytes": 4863,
+      "sha256": "76639e62e7d8ad8fef31ea230347ca105f3d3aca069a5a8c6a2a6790dd6678cc"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/prepare-head-specimen-actual-20261021.mjs",
+      "bytes": 3854,
+      "sha256": "aaec7f2b1b049739055309096da62fbc07277d47c04f5ce1a82200dada04ec0c"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/prepare-historical-current-native-checkpoint-20261021.mjs",
+      "bytes": 7778,
+      "sha256": "117fecfae8423c2908f77c09efc1d3621f1ffe212dc41dc886bd9aa1d07e77b5"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/prepare-owned-source-guard-harness.mjs",
+      "bytes": 3398,
+      "sha256": "1d6a048356d0f2c6999258c10763c5b5b3cbbb43abc5ca2ae479898438c3d840"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/prepare-revision-guard-batch-v9-20261021.mjs",
+      "bytes": 4414,
+      "sha256": "2ad7da0ef0d415a74081390f3a4328c7178b1054a4a442645b609c32643ee61c"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/preserve-head-neck-historical-scene-20261021.mjs",
+      "bytes": 1727,
+      "sha256": "be49f608e1a22a9164e05f97b3e7ff6460d95e3ce3ef1dbaa4078a38fe782e30"
+    },
+    {
+      "path": "evidence/20261021-historical-current-native-verified/scripts/run-current-source-matrix-20261021.mjs",
+      "bytes": 3571,
+      "sha256": "54b499b0e850adc6ad63f32e0c9a7a419389ff0e9c16d6adfbaff0f70f5b4056"
     },
     {
       "path": "evidence/20261021-keyboard-epoch-proposals-verified/coverage-prose/candidate-before.raw",
@@ -7064,13 +7429,13 @@
   "removed": [],
   "scope": "Explicit owned test-source proposals/exact preimages, small receipts, read-only cutover summary and controls on previously filtered ancestry. NOT installed or a full-suite pass. No raw canonical history, full private modules/manifests, model geometry/full runtimes, private DB/records/identities/decisions/env, scans/masks, dependencies or browser media/DOM. No test harness junctions packaged. Not a complete runnable/private backup, release or clinical/spatial approval.",
   "proof": {
-    "summary": "Genuine full native source190 run TERMINAL5547tests/5408pass/136fail/3skip/0cancelled, no frozen-source or preview-asset drift. Every136failure individually accounted for:45covered by staged V8 paths,91first-failure diagnoses in67other modules, NOT resolved or permission to repin. V8 has74test-only proposed paths/35existing/39new/projected5146inputs; actual source5107/Review1710 unchanged. C4 source inverse1 and E5guards10pass; V8total66bounded outer registrations across13distinct runs,4coverage historical children separate. E4first9pass/1fail retained: RegExp.test was mistaken for a Node registration; only new guard corrected. Renderer729B metadata reconstructs206963B exact independent old artifact locally; full renderer/dependency manifest excluded. Main-owned isolated20-module current matrix is executing source/Review/emitted-teaching/corpus/refusal proofs. It is not whole-suite green, application install or clinical/spatial approval.",
+    "summary": "Historical/current source-role repair advances without changing the Website/Atlas candidate or owner preview. V10 has85test-only proposed paths,38existing/47new,5154projected inputs; actual5107/Review1710 frozen. Pure original preservation and bounded native receipts total97outer registrations across20distinct successful runs, historical coverage4children separate, not a whole-suite pass. First actual20module matrix33/28pass/5fail and followup5modules10/6pass/4fail are retained. Full orbital-ring historical/current theorem, head-neck4 and specimen playback/356-row2 cases now pass at exact sources. First head harness import failure retained and fixed only by explicit object-store read context; historical scene checksum copied F-local, not uploaded. C6 restores true quiz introduction51de and independently bound628 Website source; E7 selected22-ID probe proves only4tour-backed revision changes,18unchanged packets. The four affected actual modules are running in a source-guarded final followup. Separate40-case Review-return UI remains staged; types/build/browser/cutover still pending. No clinical/spatial/public/full-backup claim.",
     "canonicalDeveloperToolingInstalled": true,
     "canonicalDeveloperToolingUnchangedFromParent": true,
     "canonicalAtlasUiInstalled": false,
     "reviewQueueUiInstalled": false,
     "reviewQueueNativePasses": 40,
-    "correctedComponentBrowserAcceptance": false,
+    "originalFailureBaselineRetained": 144,
     "fullNativeCounts": {
       "tests": 5547,
       "pass": 5408,
@@ -7081,37 +7446,46 @@
     },
     "allNativeFailuresAccountedFor": true,
     "allNativeFailuresResolved": false,
-    "originalFailureBaselineRetained": 144,
     "baselineComparable": false,
-    "sourceCandidateAndReviewBindingsUnchanged": true,
+    "actualFirstMatrix": {
+      "tests": 33,
+      "pass": 28,
+      "fail": 5
+    },
+    "actualFirstFollowup": {
+      "tests": 10,
+      "pass": 6,
+      "fail": 4
+    },
+    "headActualPasses": 4,
+    "specimenActualPasses": 2,
+    "currentSourceUnchanged": true,
     "unchangedModelObjects": 137,
     "all71ItemsAndEightIdeasPreserved": true,
-    "focusedMatrixSession": 55850,
-    "focusedMatrixDriver": 278608,
-    "focusedMatrixTestPid": 259616,
+    "correctedComponentBrowserAcceptance": false,
     "ownerPreviewPid": 260328,
-    "at": "2026-10-21T09:18:08.798Z",
+    "at": "2026-10-21T09:44:54.616Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "currentNamedInputs": 5107,
-    "proposedNamedInputs": 5146,
+    "proposedNamedInputs": 5154,
     "reviewInputs": 1710,
-    "testOnlyPaths": 74,
-    "existingTestChanges": 35,
-    "newCurrentTestOrOriginalFixturePaths": 39,
-    "boundedNativeRegistrationsPassed": 66,
-    "boundedNativeRuns": 13,
+    "testOnlyPaths": 85,
+    "existingTestChanges": 38,
+    "newCurrentTestOrOriginalFixturePaths": 47,
+    "boundedNativeRegistrationsPassed": 97,
+    "boundedNativeRuns": 20,
     "originalHistoricalChildTestsPassed": 4,
     "canonicalInstalled": false,
     "candidateChanged": false,
     "ownerPagesTouched": false,
     "fullSuiteRunningAtObservation": false,
     "nativeWorkAtObservation": {
-      "at": "2026-10-21T09:18:08.755Z",
+      "at": "2026-10-21T09:44:54.556Z",
       "state": "running",
-      "started": "F:/VisibleMedicine/staging/20261021-current-source-matrix/STARTED.json",
-      "driver": 278608,
-      "pid": 259616
+      "started": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/STARTED.json",
+      "driver": 267516,
+      "pid": 266844
     },
     "fullSuitePassingClaim": false,
     "originalFullFailureBaseline": 144,

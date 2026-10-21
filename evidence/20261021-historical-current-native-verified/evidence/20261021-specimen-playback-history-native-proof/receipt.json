@@ -1,0 +1,21 @@
+{
+  "label": "SPECIMEN_WHOLE_SOURCE",
+  "command": "node",
+  "args": [
+    "--test",
+    "tests/specimen-playback-whole-source-inverse.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-specimen-playback-history-native-proof/SPECIMEN_WHOLE_SOURCE.log",
+  "logSha256": "a34b9ceb3375a605ce04cc2af382809cdea98763b62d8e17be77f9a5ebc0be7a",
+  "footer": [
+    "ℹ tests 1",
+    "ℹ pass 1",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

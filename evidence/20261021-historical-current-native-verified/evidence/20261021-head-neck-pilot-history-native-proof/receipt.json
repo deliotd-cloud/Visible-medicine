@@ -1,0 +1,21 @@
+{
+  "label": "HEAD_NECK_WHOLE_SOURCE",
+  "command": "node",
+  "args": [
+    "--test",
+    "tests/head-neck-pilot-history-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-head-neck-pilot-history-native-proof/HEAD_NECK_WHOLE_SOURCE.log",
+  "logSha256": "26a308ce8db9a5e752d374f891132b28a067740f0e29382dcd7ec57573445f40",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

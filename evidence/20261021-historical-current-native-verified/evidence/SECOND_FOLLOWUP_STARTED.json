@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-21T09:43:38.459Z",
+  "driver": 267516,
+  "pid": 266844,
+  "args": [
+    "--test",
+    "--test-reporter=spec",
+    "--test-reporter-destination=stdout",
+    "--test-reporter=tap",
+    "--test-reporter-destination=F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/child.tap",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/clinical-review-limb-nerve-quiz.test.ts",
+    "tests/clinical-review-lower-venous-tour-v2.test.ts",
+    "tests/clinical-review-neonatal-cranial-us.test.ts",
+    "tests/clinical-review-orbital-apex-ct.test.ts"
+  ],
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "effectiveInputsSha256": "b70292fd61d49eb7630498ba1355dff3cf46f566838a6ef857742d474976873b"
+}

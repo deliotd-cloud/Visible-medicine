@@ -1,0 +1,38 @@
+{
+  "code": 1,
+  "signal": null,
+  "at": "2026-10-21T09:26:41.390Z",
+  "log": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/child.log",
+  "logSha256": "e46df5bca3769735dfe616f57111a300044627e292bdf1862f69205aec69ff03",
+  "tap": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/child.tap",
+  "tapSha256": "9196d3b1a900cac78280fa2033efdcc40f837eadb7e9a8011c0151219554a40a",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 2",
+    "ℹ fail 1",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "counts": {
+    "tests": 3,
+    "pass": 2,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceInputsUnchanged": true,
+  "inputError": null,
+  "actualCurrentModules": [
+    "tests/head-neck-pilot.test.ts",
+    "tests/clinical-review-specimen-continuous-playback.test.ts"
+  ],
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "effectiveInputsSha256": "6244a8844c6ef5ae6d2bc4bfa61e3a75db005b3bb3db3b06a6ab74b4a53c21ab",
+  "canonicalInstalled": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "fullSuitePassingClaim": false
+}

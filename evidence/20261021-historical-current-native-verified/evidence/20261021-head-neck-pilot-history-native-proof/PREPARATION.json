@@ -1,0 +1,63 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-native-proof/native-check",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourceSite": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-proposal",
+  "guard": "tests/head-neck-pilot-history-preservation.test.mjs",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-source190-complete-suite/SOURCE_INPUTS.json",
+  "sourceSnapshotSha256": "2d3d4544ca39cb357edcf82dcbe414ea0ec77b619df69135fca983a5ece7b5f4",
+  "proposed": [
+    {
+      "path": "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-proposal/tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+      "sha256": "c079bcf8d72f00e70b112a8ea54ca5d671800d79dd99cd1008291962dff69cfa",
+      "beforeSha256": null,
+      "bytes": 1427
+    },
+    {
+      "path": "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-proposal/tests/fixtures/head-neck-pilot.test.ts.original.raw",
+      "sha256": "98ed1e8bba232320894aec053adb06083d03226ea3fbc47280e7f6b82ca3c6f7",
+      "beforeSha256": null,
+      "bytes": 22253
+    },
+    {
+      "path": "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-proposal/tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+      "sha256": "0f47f35ab70c321b87e26a83b02d3002f9ddfce60d7dc9458849c96283c3c4bf",
+      "beforeSha256": null,
+      "bytes": 1265
+    },
+    {
+      "path": "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-proposal/tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+      "sha256": "f20ac1ff485bb2fefdb3b00b3a7b98d35faaf9d002351893cc65903ddbcadb66",
+      "beforeSha256": null,
+      "bytes": 8972
+    },
+    {
+      "path": "tests/head-neck-pilot-history-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-proposal/tests/head-neck-pilot-history-preservation.test.mjs",
+      "sha256": "cb402999742a1e04e5603e0e613d6a407e8e2a83f2e6f720053ca2c34447aab1",
+      "beforeSha256": null,
+      "bytes": 3809
+    },
+    {
+      "path": "tests/head-neck-pilot.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-proposal/tests/head-neck-pilot.test.ts",
+      "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1",
+      "beforeSha256": "98ed1e8bba232320894aec053adb06083d03226ea3fbc47280e7f6b82ca3c6f7",
+      "bytes": 23508
+    },
+    {
+      "path": "tests/historical-head-pilot-read.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-head-neck-pilot-history-proposal/tests/historical-head-pilot-read.mjs",
+      "sha256": "155580d27d857afca4622fd286c4ef9419ea3883b5a2484095a3eb076b074443",
+      "beforeSha256": "f20ac1ff485bb2fefdb3b00b3a7b98d35faaf9d002351893cc65903ddbcadb66",
+      "bytes": 10042
+    }
+  ],
+  "unchangedExistingTests": [],
+  "scope": "Only the named, main-reviewed native FS/hash guard is to be executed. Copied TS subjects are not executed; no dependencies/junctions/build/types/corpus/clinical/browser acceptance or source installation."
+}

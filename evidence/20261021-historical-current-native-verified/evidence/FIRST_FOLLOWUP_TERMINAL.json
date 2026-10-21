@@ -1,0 +1,41 @@
+{
+  "code": 1,
+  "signal": null,
+  "at": "2026-10-21T09:36:37.500Z",
+  "log": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup/child.log",
+  "logSha256": "1cd6baefb1eb62f25b2e256b84a04d30e24afd188fc686b3d034b27b4c69bb75",
+  "tap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup/child.tap",
+  "tapSha256": "a684a7bbadc00af345fff906617f3244325161d4e307a490164e7d7e30868974",
+  "footer": [
+    "ℹ tests 10",
+    "ℹ pass 6",
+    "ℹ fail 4",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "counts": {
+    "tests": 10,
+    "pass": 6,
+    "fail": 4,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceInputsUnchanged": true,
+  "inputError": null,
+  "actualCurrentModules": [
+    "tests/clinical-review-limb-nerve-quiz.test.ts",
+    "tests/clinical-review-lower-venous-tour-v2.test.ts",
+    "tests/clinical-review-neonatal-cranial-us.test.ts",
+    "tests/clinical-review-orbital-apex-ct.test.ts",
+    "tests/clinical-review-orbital-ring-ct.test.ts"
+  ],
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "effectiveInputsSha256": "03ebba2b6843c3ace90adc8a858599f6ac9bc07adc49e1ff6c5f4e155700c522",
+  "canonicalInstalled": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "fullSuitePassingClaim": false
+}

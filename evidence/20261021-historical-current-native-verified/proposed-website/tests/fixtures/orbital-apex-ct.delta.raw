@@ -1,0 +1,78 @@
+@@ -1,0 +2,2 @@ import {boundLiveAtlasHistory} from './atlas-bound-live-history.mjs';
++import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+@@ -11,2 +13,6 @@ import {build} from 'esbuild';
+-const atlas='F:/VisibleMedicine/atlas';
+-const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const atlas=currentAtlasDeliveryRoot();
++const historicalRevision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const portalTourRevision='47a851db0fb3369ad056fb8a8fcc3f3ba73656ea';
++const portalTourBlob='c832b8cafa2a53a79d244dfa223288b7fd255be6';
++const currentTourBlob='fb65a9c68d8753fc1789c7e6281e36c2889e0136';
++const revision=CURRENT_ATLAS_REVISION;
+@@ -39,0 +46,5 @@ const expected=new Map(slots.map(([suffix,fma,file,group])=>[
++const laterPlaybackTours=new Map([
++  ['right:nerve:right-frontal-nerve','right-orbital-nerve-orientation'],
++  ['right:nerve:right-lacrimal-nerve','right-orbital-nerve-orientation'],
++  ['right:nerve:right-nasociliary-nerve','right-orbital-nerve-orientation'],
++].map(([suffix,tour])=>[prefix+suffix,tour]));
+@@ -80,0 +92,6 @@ test('twelve exact orbital-apex CT drafts reach the learner and protected Review
++  assert.equal(checkedAtlasHistoryRepo(historicalRevision),atlas);
++  assert.equal(git(['merge-base',historicalRevision,revision]).toString().trim(),historicalRevision);
++  assert.equal(git(['merge-base',portalTourRevision,historicalRevision]).toString().trim(),portalTourRevision);
++  assert.equal(git(['rev-parse',portalTourRevision+':lib/regional-tours.ts']).toString().trim(),portalTourBlob);
++  assert.equal(git(['rev-parse',historicalRevision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
++  assert.equal(git(['rev-parse',revision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
+@@ -98,0 +116 @@ test('twelve exact orbital-apex CT drafts reach the learner and protected Review
++    assert.deepEqual(source,committed(historicalRevision,path),`${path}: retained from first delivery`);
+@@ -228,0 +247,2 @@ test('current imported Review retains exact orbital CT material under the live t
++  const portalTourEpoch=await history(portalTourRevision);
++  const firstDelivery=await history(historicalRevision);
+@@ -237,2 +257,6 @@ test('current imported Review retains exact orbital CT material under the live t
+-  assert.equal(live.regionalTours.filter((tour:{id:string})=>tour.id!=='portal-hepatic-venous-relationships').length,47);
+-  assert.equal(live.regionalTours.length,48);
++  assert.equal(portalTourEpoch.regionalTours.filter((tour:{id:string})=>tour.id!=='portal-hepatic-venous-relationships').length,47);
++  assert.equal(portalTourEpoch.regionalTours.length,48);
++  assert.equal(firstDelivery.regionalTours.filter((tour:{id:string})=>tour.id!=='portal-hepatic-venous-relationships').length,50);
++  assert.equal(firstDelivery.regionalTours.length,51);
++  assert.equal(live.regionalTours.filter((tour:{id:string})=>tour.id!=='portal-hepatic-venous-relationships').length,50);
++  assert.equal(live.regionalTours.length,51);
+@@ -240,0 +265 @@ test('current imported Review retains exact orbital CT material under the live t
++  assert.equal(laterPlaybackTours.size,3);
+@@ -255 +280 @@ test('current imported Review retains exact orbital CT material under the live t
+-    for(const key of ['source','topics','reasoning','guidedTours','checklist','atlasLink','limits'])
++    for(const key of ['source','topics','reasoning','checklist','atlasLink','limits'])
+@@ -256,0 +282,14 @@ test('current imported Review retains exact orbital CT material under the live t
++    const laterTour=laterPlaybackTours.get(id);
++    assert.deepEqual(prior.guidedTours.map((evidence:any)=>evidence.tour.id),laterTour?[laterTour]:[],
++      `${id}: completed source-tour membership`);
++    assert.deepEqual(actual.guidedTours.map((evidence:any)=>evidence.tour.id),laterTour?[laterTour]:[],
++      `${id}: current source-tour membership`);
++    assert.equal(actual.guidedTours.length,prior.guidedTours.length,`${id}: same source tours`);
++    for(const [index,evidence] of actual.guidedTours.entries()){
++      const {continuousPlayback,...historicalShape}=evidence;
++      assert.deepEqual(historicalShape,prior.guidedTours[index],`${id}: complete pre-playback tour evidence`);
++      assert.equal(continuousPlayback.version,1,`${id}: current playback version`);
++      assert.equal(continuousPlayback.stepDurationsMs.length,evidence.tour.steps.length,
++        `${id}: every source-bound tour step timed`);
++    }
++    if(!laterTour)assert.deepEqual(actual,prior,`${id}: no tour and no material change`);
+@@ -274,2 +313,16 @@ test('current imported Review retains exact orbital CT material under the live t
+-    assert.equal(context.materialHash,historicalContext.materialHash);
+-    assert.equal(context.revisions.teaching,historicalContext.revisions.teaching);
++    assert.equal(context.checklistVersion,historicalContext.checklistVersion);
++    if(laterTour){
++      assert.notEqual(context.teachingHash,historicalContext.teachingHash,
++        `${id}: playback changes the teaching evidence`);
++      assert.notEqual(context.materialHash,historicalContext.materialHash,
++        `${id}: playback changes the review material`);
++      assert.notEqual(context.revisions.teaching,historicalContext.revisions.teaching,
++        `${id}: playback changes the teaching decision revision`);
++    }else{
++      assert.equal(context.teachingHash,historicalContext.teachingHash,
++        `${id}: unchanged teaching evidence without a tour`);
++      assert.equal(context.materialHash,historicalContext.materialHash,
++        `${id}: unchanged review material without a tour`);
++      assert.equal(context.revisions.teaching,historicalContext.revisions.teaching,
++        `${id}: unchanged teaching revision without a tour`);
++    }

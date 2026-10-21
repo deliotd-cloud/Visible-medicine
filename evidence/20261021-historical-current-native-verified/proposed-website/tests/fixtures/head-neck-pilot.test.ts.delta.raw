@@ -1,0 +1,18 @@
+@@ -4,0 +5 @@ import {createHash} from 'node:crypto';
++import {readFile as readCurrentFile} from 'node:fs/promises';
+@@ -189,0 +191,15 @@ test('head and neck uses the compact host layout and does not claim imaging acce
++test('current190 head-neck scene remains separately source-bound and non-clinical',async()=>{
++  const manifestBytes=await readCurrentFile(new URL('manifest.json',runtime));
++  assert.equal(sha(manifestBytes),'74ba7688c8dfd8939a160f56a04e7825b11183f947f1074c6825c0f39904d4ec');
++  const manifest=JSON.parse(manifestBytes.toString());
++  assert.equal(manifest.sourceCommit,'190a63238eadcf906abe89dcbb6a67c88afe70b9');
++  assert.equal(manifest.region,'head-neck');
++  assert.equal(manifest.structures,291);assert.equal(manifest.nestedSelections,77);
++  assert.equal(manifest.clinicalApproved,false);assert.equal(manifest.patientDataIncluded,false);
++  const scene=manifest.files.filter((file:{path:string})=>file.path.startsWith('assets/body-scene-')&&file.path.endsWith('.js'));
++  assert.deepEqual(scene,[{path:'assets/body-scene-Bzofy8VU.js',bytes:1119189,
++    sha256:'8d36d802cfb8690e9bceff8c061bd7fc9e764bb5a6f0efa5a8138ccf8c0a7d0c'}]);
++  const bytes=await readCurrentFile(new URL(scene[0].path,runtime));
++  assert.equal(bytes.length,scene[0].bytes);assert.equal(sha(bytes),scene[0].sha256);
++  assert.notEqual(scene[0].sha256,'1d5cca6d39e99fc8aa1e8c40b7cd10c10cd2b49654314632b66f4990c17d5fea');
++});

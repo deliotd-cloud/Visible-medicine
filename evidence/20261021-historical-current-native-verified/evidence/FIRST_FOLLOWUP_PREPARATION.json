@@ -1,0 +1,298 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup",
+  "site": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup/native-check",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourceSite": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "batch": "F:/VisibleMedicine/staging/20261021-revision-guard-batch-v8",
+  "batchSha256": "13d9d839eac2378ab4a5b81ac9862319e5da4450febbb91644e4593015bab11b",
+  "frozenSnapshot": "F:/VisibleMedicine/staging/20261021-source190-complete-suite/SOURCE_INPUTS.json",
+  "frozenSnapshotSha256": "2d3d4544ca39cb357edcf82dcbe414ea0ec77b619df69135fca983a5ece7b5f4",
+  "effectiveSnapshot": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup/EFFECTIVE_INPUTS.json",
+  "effectiveSnapshotSha256": "03ebba2b6843c3ace90adc8a858599f6ac9bc07adc49e1ff6c5f4e155700c522",
+  "copiedFiles": 2153,
+  "readOnlyJunctions": [
+    "app",
+    "atlas-review",
+    "components",
+    "db",
+    "docs",
+    "drizzle",
+    "lib",
+    "LICENSES",
+    "public",
+    "scripts",
+    "types",
+    "worker",
+    "node_modules"
+  ],
+  "actualCurrentModules": [
+    "tests/clinical-review-limb-nerve-quiz.test.ts",
+    "tests/clinical-review-lower-venous-tour-v2.test.ts",
+    "tests/clinical-review-neonatal-cranial-us.test.ts",
+    "tests/clinical-review-orbital-apex-ct.test.ts",
+    "tests/clinical-review-orbital-ring-ct.test.ts"
+  ],
+  "fullSuiteTerminal": "F:/VisibleMedicine/staging/20261021-source190-complete-suite/TERMINAL.json",
+  "fullSuiteTerminalSha256": "f6fdd8dda31bbf39a30d5ef2786952cd6c974a1a3c1ab87ca4461dfca7610063",
+  "fullNativeReceipt": "F:/VisibleMedicine/staging/20261021-source190-website/website/.local/website-test-runs/2026-10-21T05-37-11-497Z-a5ab569e-0361-46d1-91d6-64fd8586c1c0/receipt.json",
+  "fullNativeReceiptSha256": "907be84a1d28fd4b74846a82f74d138b35995da14e4e7776930dd764a5329729",
+  "scope": "Five affected actual test modules only after exact epoch/hash corrections. Retain previous33/28pass/5fail receipt and source-bound unchanged successes. No whole-suite/clinical/spatial acceptance or source installation. Never recursively delete or upload junction harness.",
+  "priorResult": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+  "priorResultSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+  "overlays": [
+    {
+      "path": "tests/clinical-epoch-batch-c-originals.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-epoch-batch-c-originals.test.mjs",
+      "sha256": "02e91874be8c0ef1608e6bdeddc879c9e18dd8a8bb238b910b52614c19d2aa00",
+      "beforeSha256": null,
+      "bytes": 4384
+    },
+    {
+      "path": "tests/clinical-review-iliac-venous-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-iliac-venous-xray.test.ts",
+      "sha256": "a55f6c33ee41cccc7720482124104b529bcdfa9336ee5760ff35ec49ce34be68",
+      "beforeSha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba",
+      "bytes": 9480
+    },
+    {
+      "path": "tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "sha256": "582b55d1960288b58f00cac0c2bf4b5be88df0dbe851a2e270e7522b3f9a91c8",
+      "beforeSha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740",
+      "bytes": 10554
+    },
+    {
+      "path": "tests/clinical-review-limb-nerve-quiz.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "sha256": "48507121d59dec2e3c8ad16037ea2698953f0fab33576012ca40ae40222143d0",
+      "beforeSha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432",
+      "bytes": 17791
+    },
+    {
+      "path": "tests/clinical-review-longus-colli-quiz.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-longus-colli-quiz.test.ts",
+      "sha256": "68589eca6ad26c87d2e46f57f55769b75f3e3ce0919fe5cc49ac50ae7fa32dd8",
+      "beforeSha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d",
+      "bytes": 8907
+    },
+    {
+      "path": "tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "sha256": "11c198dd4065d017b4fb50a2a21351d21548b4a0a5da5ea87c90b8145b8ee7bd",
+      "beforeSha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84",
+      "bytes": 18472
+    },
+    {
+      "path": "tests/clinical-review-medial-thigh-tour.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-medial-thigh-tour.test.ts",
+      "sha256": "03b265445b7937621a9d01ce849294ea170232c245f6f8c7a3f34b19325b4916",
+      "beforeSha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0",
+      "bytes": 17695
+    },
+    {
+      "path": "tests/clinical-review-median-cubital-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-median-cubital-xray.test.ts",
+      "sha256": "886db4ebcf56a04764fb9e416aaffd61c72f9487d5d18ddc63f66b0ed6e848a4",
+      "beforeSha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4",
+      "bytes": 23327
+    },
+    {
+      "path": "tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "sha256": "b677b62a8c142b7e0a07ed8d225e1ba040f1e675bc3402a77d71b0883ed140b4",
+      "beforeSha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c",
+      "bytes": 8950
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "sha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba",
+      "beforeSha256": null,
+      "bytes": 8867
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "sha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740",
+      "beforeSha256": null,
+      "bytes": 9941
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "sha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432",
+      "beforeSha256": null,
+      "bytes": 16253
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "sha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d",
+      "beforeSha256": null,
+      "bytes": 8090
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "sha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84",
+      "beforeSha256": null,
+      "bytes": 15632
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "sha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0",
+      "beforeSha256": null,
+      "bytes": 14837
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "sha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4",
+      "beforeSha256": null,
+      "bytes": 21757
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "sha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c",
+      "beforeSha256": null,
+      "bytes": 8522
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v5/tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "sha256": "4ddda8066305e084c19190d49c1d0ea5c039026b61142ad137ef776540239dc8",
+      "beforeSha256": null,
+      "bytes": 65716
+    },
+    {
+      "path": "tests/atlas9f-review-history.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/atlas9f-review-history.mjs",
+      "sha256": "176900387d90166dab84f8afc264d8c115c240a583aaead03d4d2ee7dd1ce910",
+      "beforeSha256": null,
+      "bytes": 3162
+    },
+    {
+      "path": "tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "sha256": "9272403aa0e70f333076334f47161832f171df967cf74e54295df37f9f435791",
+      "beforeSha256": null,
+      "bytes": 4838
+    },
+    {
+      "path": "tests/clinical-review-neonatal-cranial-us.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "sha256": "91334d1f7f512c7b7032f2d1110941d1f996352cfe029817b1f13c1a9ec7ba2b",
+      "beforeSha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9",
+      "bytes": 27675
+    },
+    {
+      "path": "tests/clinical-review-nested-duct-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/clinical-review-nested-duct-xray.test.ts",
+      "sha256": "9bbc43adfd820b25f2cb9ff7111b55649f0e809f86dbb62d0079b70e73f4ddc9",
+      "beforeSha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf",
+      "bytes": 29309
+    },
+    {
+      "path": "tests/clinical-review-orbital-apex-ct.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/clinical-review-orbital-apex-ct.test.ts",
+      "sha256": "adde0fec2edb29e713b439cd28cdca2b4fd1d4bcf59a133bab17d12365a397f1",
+      "beforeSha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b",
+      "bytes": 21965
+    },
+    {
+      "path": "tests/clinical-review-orbital-ring-ct.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/clinical-review-orbital-ring-ct.test.ts",
+      "sha256": "1408d09004e4277d15e2d05c7a84207767892b5724dcdb40463808b23d1821bc",
+      "beforeSha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d",
+      "bytes": 19667
+    },
+    {
+      "path": "tests/clinical-review-orbital-support-mri.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/clinical-review-orbital-support-mri.test.ts",
+      "sha256": "03467a60f9e863584cdecc34d6f217aa9222b938012c156c1ece2aeccf629495",
+      "beforeSha256": "c4829b9a32b117712aa85723e27517207f20dc13e769e1de360d965c581b5236",
+      "bytes": 14085
+    },
+    {
+      "path": "tests/fixtures/atlas9f-body-renderer-binding.json",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/atlas9f-body-renderer-binding.json",
+      "sha256": "61f25d832616a390d4fad778b4f3e7c867dde1526c117a39674072961d9636a8",
+      "beforeSha256": null,
+      "bytes": 729
+    },
+    {
+      "path": "tests/fixtures/clinical-review-neonatal-cranial-us-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/clinical-review-neonatal-cranial-us-original.ts.raw",
+      "sha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9",
+      "beforeSha256": null,
+      "bytes": 24520
+    },
+    {
+      "path": "tests/fixtures/clinical-review-nested-duct-xray-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/clinical-review-nested-duct-xray-original.ts.raw",
+      "sha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf",
+      "beforeSha256": null,
+      "bytes": 27718
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-apex-ct-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/clinical-review-orbital-apex-ct-original.ts.raw",
+      "sha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b",
+      "beforeSha256": null,
+      "bytes": 19663
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-ring-ct-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/clinical-review-orbital-ring-ct-original.ts.raw",
+      "sha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d",
+      "beforeSha256": null,
+      "bytes": 15391
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-support-mri-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/clinical-review-orbital-support-mri-original.ts.raw",
+      "sha256": "c4829b9a32b117712aa85723e27517207f20dc13e769e1de360d965c581b5236",
+      "beforeSha256": null,
+      "bytes": 11223
+    },
+    {
+      "path": "tests/fixtures/neonatal-cranial-us.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/neonatal-cranial-us.delta.raw",
+      "sha256": "3facf9379978feba6483be889150b3c158b76e0291e6a3578d26763e8b6c1401",
+      "beforeSha256": null,
+      "bytes": 6424
+    },
+    {
+      "path": "tests/fixtures/nested-duct-xray.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/nested-duct-xray.delta.raw",
+      "sha256": "bb0a1ae9467b561d713d46936ce4e958f82ae9859201b278b3fd644b4bf5e2ac",
+      "beforeSha256": null,
+      "bytes": 2242
+    },
+    {
+      "path": "tests/fixtures/orbital-apex-ct.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/orbital-apex-ct.delta.raw",
+      "sha256": "75489125937b780d0a5f3b49984c85e73112dd3e642870c5b91f440393ae4a3b",
+      "beforeSha256": null,
+      "bytes": 4222
+    },
+    {
+      "path": "tests/fixtures/orbital-ring-ct.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/orbital-ring-ct.delta.raw",
+      "sha256": "3f0a6a1ab81191cd479861fb2562fa2d2db0698997e9629a8a1b89acb05b08c0",
+      "beforeSha256": null,
+      "bytes": 6240
+    },
+    {
+      "path": "tests/fixtures/orbital-support-mri.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v6/tests/fixtures/orbital-support-mri.delta.raw",
+      "sha256": "438b2245b666cfb456cff0d6289b5cfc11def1e58772cc12d1458b373135d0f5",
+      "beforeSha256": null,
+      "bytes": 5196
+    }
+  ]
+}

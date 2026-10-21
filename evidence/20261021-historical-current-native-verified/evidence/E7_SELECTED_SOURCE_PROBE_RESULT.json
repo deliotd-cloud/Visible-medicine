@@ -1,0 +1,28 @@
+{
+  "schema": "e7-selected-source-replay-v1",
+  "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "atlasHead": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "method": "One bounded read-only exact-source replay of 10 neonatal and 12 active orbital-apex IDs; current190 uses boundLiveAtlasHistory and both completed epochs use exactSourceHistoryApi(review-security). The first launch stopped before replay because VM_ATLAS_SOURCE_REPO was unset; rerun with the verified source root completed.",
+  "gitBlobs": {
+    "neonatalCompleted2dba": {"renderer": "fe3706409b5c207f6afb174d0e01f9057f6e60ef", "regionalTours": "e219427a2f04e141f13a84ea22e82cd63b0b1b77", "bodyReviewMaterial": "5ff48fba8124a45d98fc494ab0253060b7ac2176"},
+    "apexCompletedA70": {"renderer": "2a7c43c0c0c35700a0adc90ee71df76afde99c72", "regionalTours": "a3ac15d0bd484b67d63f71f9e28bf967e1b27b07", "bodyReviewMaterial": "5ff48fba8124a45d98fc494ab0253060b7ac2176"},
+    "current190": {"renderer": "58cef9cd1274926a9fd357a35086face859df07f", "regionalTours": "fb65a9c68d8753fc1789c7e6281e36c2889e0136", "bodyReviewMaterial": "3aac9dc280d460249b23ce59ba60ffa8584f9831"}
+  },
+  "all22": {"sourceUnchanged": true, "topicsUnchanged": true, "reasoningUnchanged": true, "checklistUnchanged": true, "tourIdsUnchanged": true, "tourPayloadBeyondPlaybackUnchanged": true, "sourceHashUnchanged": true, "checklistVersionUnchanged": true},
+  "neonatal": {
+    "selected": 10,
+    "changedOnly": [{"id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum", "tour": "deep-brain-commissures-limbic-landmarks", "change": "continuousPlayback added; teaching/material/decision revision changed"}],
+    "unchanged": ["left-caudate-nucleus", "right-caudate-nucleus", "left-thalamus", "right-thalamus", "left-putamen", "right-putamen", "left-globus-pallidus", "right-globus-pallidus", "choroid-plexus-of-cerebral-hemisphere"]
+  },
+  "orbitalApex": {
+    "selectedActiveNerves": 12,
+    "changedOnly": [
+      {"id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve", "tour": "right-orbital-nerve-orientation", "change": "continuousPlayback added; teaching/material/decision revision changed"},
+      {"id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve", "tour": "right-orbital-nerve-orientation", "change": "continuousPlayback added; teaching/material/decision revision changed"},
+      {"id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve", "tour": "right-orbital-nerve-orientation", "change": "continuousPlayback added; teaching/material/decision revision changed"}
+    ],
+    "unchanged": ["superior-branch-of-left-oculomotor-nerve", "superior-branch-of-right-oculomotor-nerve", "inferior-branch-of-left-oculomotor-nerve", "inferior-branch-of-right-oculomotor-nerve", "left-trochlear-nerve", "right-trochlear-nerve", "left-frontal-nerve", "left-lacrimal-nerve", "left-nasociliary-nerve"]
+  },
+  "patientData": false,
+  "clinicalApproval": false
+}
