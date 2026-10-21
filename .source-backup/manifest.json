@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T02:42:13.552Z",
+  "at": "2026-10-21T03:03:52.443Z",
   "sourceIdentity": {
     "atlasBase": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "candidateManifest": "55edce0463c9066deb4a706091bcd8341fb6ddda98756360935987e2341538b1",
+    "manifestSha256": "f779ffe231ca860640c6452b236ad6f15338b5e28a77d6a6eddf271a2b67a12d",
     "installed": false
   },
-  "parent": "04408889aa476b87dd5e986895e130eb7cb4c299",
-  "gitParent": "04408889aa476b87dd5e986895e130eb7cb4c299",
+  "parent": "2d169576b82d5ec4701a04e57f6487108977d9cd",
+  "gitParent": "2d169576b82d5ec4701a04e57f6487108977d9cd",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -678,6 +678,551 @@
       "path": "evidence/20261021-atlas-source-assembly/source/scripts/test-regional-tour-player.mjs",
       "bytes": 126985,
       "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/ASSEMBLY_CHECKOUT_SYNTAX.json",
+      "bytes": 435,
+      "sha256": "abf0b81d1c65d31405e67bbbd66e1fd70a06d3322a082a91ee15cab89bd58197"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/CLINICAL_READY_HEPATIC_METADATA.json",
+      "bytes": 454,
+      "sha256": "38af9a8c3d082983441d8f592b44af68434f2d7a8df02982721a017ca38d9471"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/CLINICAL_READY_HEPATIC_METADATA.log",
+      "bytes": 180,
+      "sha256": "eb65d5a8063ec8444640f388b8c8020b3e9e8837656ac2ee7db27f70bca1d58d"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/CLINICAL_READY_IMAGING_METADATA.json",
+      "bytes": 452,
+      "sha256": "2d99a599a31848ec09b0fb1dde28acd14c37823b4b4073dfa69249f3c6fd3ee3"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/CLINICAL_READY_IMAGING_METADATA.log",
+      "bytes": 96,
+      "sha256": "0e330b5e64484555fcdf61e8cfb650c022e29133d718839c1c74699935f932c1"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/CLINICAL_READY_PRESERVATION.json",
+      "bytes": 1425,
+      "sha256": "46a3c42b96efd719c2b070ab1bf91c266ccf5d0b651ff5aad50b708e042c5cd4"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/CLINICAL_READY_PRESERVATION.log",
+      "bytes": 1133,
+      "sha256": "498beaaf2c83213d8f6b42a73d821ea41dc01f5b82f65e7214aa22b946cf5ebd"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-assurance-combined/FAILURE.json",
+      "bytes": 1006,
+      "sha256": "5ab295e199ab32a2143c6c5cadef51dc8f30207470885baad28736f0f7ffc474"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-current-imaging-batch/FILES.md",
+      "bytes": 1608,
+      "sha256": "d46913fad3a3957303ee8afbc22df6ab463c1578f033020d5d13d02ddbb9cc06"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-current-imaging-batch/HANDOFF.md",
+      "bytes": 2611,
+      "sha256": "2791fe4bd3c86b8c47003112234ce66f1febfbd31993d1d41da6ed15a079b71e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-current-imaging-batch/metadata-proof.mjs",
+      "bytes": 1703,
+      "sha256": "993c83aa797b7093890baf3c024e93db0326e7db0cf7becb6d48e94e0b3f0ebe"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-current-quiz-batch/FILES.md",
+      "bytes": 1882,
+      "sha256": "f20778e5aed9d8c9096f675cd474881b11efdede2e83f4d292611f425349cc7a"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-current-quiz-batch/HANDOFF.md",
+      "bytes": 2176,
+      "sha256": "f9a28ecf8e454782ac76dacd36b2c9b50bf2d10fdfaa70308e3cb0cf7cda943f"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-current-quiz-batch/metadata-proof.mjs",
+      "bytes": 1616,
+      "sha256": "cbd4b05f7e8bd09cdb6ff59d99f86fae1ade8e3b0df95f3411f318f5899cbd57"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-failure-triage/CORRECTION.json",
+      "bytes": 1189,
+      "sha256": "582eb0eefa3e53976cf23b28825cf729e667b220c63fabb9bb971193dc019b7f"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-failure-triage/FAILURES.json",
+      "bytes": 7575,
+      "sha256": "7154fa4b86def7e864e32e83a056d64b5d89af6b3118b31e8a45c49b66cf7129"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-failure-triage/MAIN_VERIFICATION.json",
+      "bytes": 542,
+      "sha256": "884012952a0c1d31e0e4517ae893727129f1787a74b068e0eb7fc3d25862bd8b"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-git-root-proposal/GIT_ROOT_METADATA.json",
+      "bytes": 422,
+      "sha256": "ba34920072ee4716803bbd250ff19a0b8a206d589e1d175ea2cba301749955f0"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-git-root-proposal/GIT_ROOT_PRESERVATION.json",
+      "bytes": 597,
+      "sha256": "de6764cf8af0fae66f95efbaa50c8c5dc05b8b5de85c258469d325e9d1eb416f"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-git-root-proposal/HANDOFF.md",
+      "bytes": 1893,
+      "sha256": "61f3e4e32c5c73ab5d693a0f6a7f9ea8fc2f9f4ae4bec958ec7cc855a97808ab"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/clinical-git-root-proposal/metadata-proof.mjs",
+      "bytes": 2413,
+      "sha256": "5104ce52e83a6936ff0b033367c75870bdc359b31a16f4863c86efe72bf8cd45"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/COMBINED_QUIZ_METADATA.json",
+      "bytes": 437,
+      "sha256": "b3724d633526f1375d748dd4ae7d073b7d773a899b814fba8c3dbbcea21384a0"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/COMBINED_QUIZ_METADATA.log",
+      "bytes": 87,
+      "sha256": "eb54f482c5c2f0f0d30e554f44846b95c583e3f086818543ff726437738fca29"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/GIT_ROOT_METADATA_BUFFERED.json",
+      "bytes": 440,
+      "sha256": "7ba377afc870271e3b206ec31e1ae025bc25b220b54d7d58b6e58f671f572fcd"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/GIT_ROOT_METADATA_BUFFERED.log",
+      "bytes": 252,
+      "sha256": "3ea231c65ca24e141e60ac5635a5f60f265f72950f7836c95c5598b5761955f7"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/hepatic-metadata-proof.mjs",
+      "bytes": 927,
+      "sha256": "6c76f04284a5c54489b63610c6cba4676f22f8be34e9fd41ec7a6fd536bf5b5c"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/hepatic-xray-contract-proposal/FILES.md",
+      "bytes": 1168,
+      "sha256": "8082f7c27db705f2d18da300136a3b1328a30a108d90fc085aee268934beb3c7"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/hepatic-xray-contract-proposal/HANDOFF.md",
+      "bytes": 3790,
+      "sha256": "1f95f8eb7389c136291060a832a3bd80e8ab708f9b3bda1bac54106570cdebc7"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/MAIN_REVIEW.json",
+      "bytes": 23703,
+      "sha256": "24bfc30cd29a0c9802bc7b1f16e00da0528855a7b068ee7a5cdd948cfb89de92"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/MANIFEST.json",
+      "bytes": 20124,
+      "sha256": "f779ffe231ca860640c6452b236ad6f15338b5e28a77d6a6eddf271a2b67a12d"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/README.md",
+      "bytes": 2232,
+      "sha256": "469d0f76a585bba48a3db7551459ffc17a6510cda06c504443055503e0305af2"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/source-closure-triage/FINDINGS.json",
+      "bytes": 4688,
+      "sha256": "8983b36ae1178e8af0ef4bcbdc65684f11468b6110df25054f9052113216bdfe"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/evidence/source-closure-triage/HANDOFF.md",
+      "bytes": 4146,
+      "sha256": "381472a7275aacdb20a06ba13aadeee6b959dae9a033d960864359334fb0de1d"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/.gitattributes",
+      "bytes": 17964,
+      "sha256": "4f5d1c31e7e089798fa300e6043d18d2e5aa074162dba58bc9a874e4a598ee62"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 19679,
+      "sha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-entry-track.test.mjs",
+      "bytes": 4068,
+      "sha256": "c82af1e3d4221b37b4876608950d9c312bf18b0ab5d6b26d2e94560e705b2f2c"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-foot-quiz.test.ts",
+      "bytes": 8224,
+      "sha256": "154d68039e1e7a44a126d1de942fdf48644a3da2dc59cbcb5f4d9edf2641feea"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 20110,
+      "sha256": "59af4032c50b8352a1664d9296f522d2dd63bb0fbda5653ccd7c26168103bc62"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-genicular-ultrasound.test.ts",
+      "bytes": 15115,
+      "sha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-girdle-ultrasound.test.ts",
+      "bytes": 6575,
+      "sha256": "109393c2242920ea67e2e97fc5c0d65a87b07b84b1a98934251e07f00619fc5d"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-hepatic-venous-xray.test.ts",
+      "bytes": 22824,
+      "sha256": "0e1caf978b937fc60ee32aa4410b2e5e99e706866c8be4d330181fcc3225c8b1"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-iliac-xray.test.ts",
+      "bytes": 10064,
+      "sha256": "a7286bfc1a0b77f08d55df7059d41a9a4ab7cf7d52e21cba04a7d179218fb77e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-internal-iliac-ultrasound.test.ts",
+      "bytes": 7231,
+      "sha256": "61cf9e46f449ff2f842d6c8e47da95b7fc2bcab49dd4a1c60e7115678f792e5a"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-lacrimal-quiz.test.ts",
+      "bytes": 10287,
+      "sha256": "3b51b64724f350e97be48685e093ad5c1db12b4feb0b7a66a6acace7fd92815e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "bytes": 11790,
+      "sha256": "b214fbac93ea5d89394ad35e2ad1eea2ee4a02cca74b9fdd2aaf643b33776d62"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "bytes": 11250,
+      "sha256": "bb5bc9c86e1e18ccbaae4a66a6e5d3f68a2ece9db2f4018e4d688989bc07ec8f"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-neuro-organ-quiz.test.ts",
+      "bytes": 7641,
+      "sha256": "81d41673fce49bca55901ccb9d374ae1fa8a62847563c2597b594be9729c10ef"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-ocular-support-quiz.test.ts",
+      "bytes": 12103,
+      "sha256": "c0b8e103a75f6e1cc4dfbcb120aabeb272fc2b1d5ac63d69695c5b4059845701"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-orbital-support-quiz.test.ts",
+      "bytes": 8857,
+      "sha256": "a32c560ec260c8e61d5323f3b2b6609fe835605c5787acc0165c5a218432d94a"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-pectoral-ultrasound.test.ts",
+      "bytes": 11766,
+      "sha256": "815c986d956ea88382005a5a5170d888f4f61903ed30ffe0fb0abebcd3193317"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-root-cuff-xray.test.ts",
+      "bytes": 8739,
+      "sha256": "2c93c2858c3182fca210eefd015354cb33649f33292b75fe8c41297293c5ebb5"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "bytes": 23485,
+      "sha256": "7ae70f87540ce1cefa82437e9578b13ec3fddfc5ff2a2a9ccdd23e5ba4ae30d2"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-scapular-muscle-quiz.test.ts",
+      "bytes": 8038,
+      "sha256": "2ef7cd0048c472defaee2062e510be0008dd9c88d3151fbd4f0738eb3b7c8f15"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/preimages/tests/clinical-review-teaching-heading.test.ts",
+      "bytes": 7700,
+      "sha256": "228eaa9986e7730815905d9ea11feb896a4effec5f1f64a1c0b1b1e25c8caef6"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/scripts/checkpoint-clinical-assurance-ready-20261021.mjs",
+      "bytes": 10088,
+      "sha256": "668db293f68346a058f29945902dc3157677b2ad54ca205ee6df76e22f053744"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/scripts/format-clinical-git-root-lf-20261021.mjs",
+      "bytes": 813,
+      "sha256": "71ad411734e456cb71852a2546b92524ee2ffc3f2349e059b622e22d5577b308"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/scripts/prepare-clinical-assurance-combined-20261021.mjs",
+      "bytes": 8581,
+      "sha256": "0abf0261725fad2988e3f4fd5a4745f244edeeda99012237cb32c957b09141fe"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/scripts/prepare-clinical-assurance-ready-20261021.mjs",
+      "bytes": 7625,
+      "sha256": "e05bcc986ce1451de873626fb90a6170f109efdcacde821a22c98ccfd5143bed"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/scripts/prepare-clinical-git-root-proposal-20261021.mjs",
+      "bytes": 1255,
+      "sha256": "541dc297a055c77b2458e03bba514db4899545d11635dff3754be7a64b051594"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/scripts/record-clinical-partial-triage-20261021.mjs",
+      "bytes": 2085,
+      "sha256": "40e77e82a86ac76c0bdecff25e31a7e63225d03493918ec29f0b219dea2c73d2"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/.gitattributes",
+      "bytes": 19905,
+      "sha256": "bc351b860e04390ca7fca4d62d7f77cb3f8583a738323898c6451ffcaff72b81"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-current-imaging-preservation.test.mjs",
+      "bytes": 4489,
+      "sha256": "4a975560f129067bc08d572efe500209363d8107a234df861214edd32824b56c"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-current-quiz-preservation.test.mjs",
+      "bytes": 6293,
+      "sha256": "b7ef46cdeb1c22340ce0f007b18cf02743fa5c81c21d58067743b2f0548587af"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 22798,
+      "sha256": "666eadec1b2b71bed584db21d022a5af97d4e6f5e8b589ab0c7d77704b63800e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-entry-track.test.mjs",
+      "bytes": 4679,
+      "sha256": "0eacc6627a7cac95757d50b5c860a3f8fd0137a9b6fba2002981257627a54baa"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-foot-quiz.test.ts",
+      "bytes": 8901,
+      "sha256": "5bb7ce5a0c6390fd7fa3d48d8c73ba7fe8695fb6a91da74e064bc6e4ca49ba06"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 23279,
+      "sha256": "1e609a7bd8a18d032a3d586c1bab99cc3ebed8f4c4b5477bcf0e055110eeb058"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-genicular-ultrasound.test.ts",
+      "bytes": 15734,
+      "sha256": "1383901d9479d17f9321eb97386ede8e1dc4ce59e3016b4d2899a00ac2fe229e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-girdle-ultrasound.test.ts",
+      "bytes": 11411,
+      "sha256": "722906110b3645683062088fd0cd7968ac6c574ae6b60d6079d3c1fdb019b676"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 3084,
+      "sha256": "872c394d575408abedc9a6944d2823451eb19edf865e5194508f4e022054f72e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-hepatic-venous-xray.test.ts",
+      "bytes": 27569,
+      "sha256": "182d5a2130226f0deaa4b32ae8458c804a8a05f72d44bb619fa62b786b29edb5"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-iliac-xray.test.ts",
+      "bytes": 10692,
+      "sha256": "421e61f85dce6d50bb7a1dff92d9e7e8af40f207e3f12650a5c741787e7b955b"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-internal-iliac-ultrasound.test.ts",
+      "bytes": 7456,
+      "sha256": "d463ac9cde2fe0ceeb1edf2a348c679b3ddc16bb644050aa8af228bf1874dc3d"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-lacrimal-quiz.test.ts",
+      "bytes": 10565,
+      "sha256": "2134305fe2af059f405b463dfa6158a5c2e05396628fde97ddd24210df695abe"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "bytes": 12035,
+      "sha256": "63cc3f0c56b554f6a7ca0030eaeef44ff919dc7ec3f0d3c66ac8354f57e91deb"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "bytes": 11834,
+      "sha256": "806646d125fa5772174a46f3976c162a095755e257d15b961536536eff8f0aec"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-neuro-organ-quiz.test.ts",
+      "bytes": 8210,
+      "sha256": "b9d7df5eea3dff6c4c363f9cd1fdbaceec472566c30bf81b4aa04ed2a6518e4b"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-ocular-support-quiz.test.ts",
+      "bytes": 12355,
+      "sha256": "a29ccee61b27faf00d925fafc8b00e0d5b64eda4ebd6481b8b1ff4d16b7e5101"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-orbital-support-quiz.test.ts",
+      "bytes": 9075,
+      "sha256": "fe12516289eb6a2c6d971d3d0e44b186d6cfba00beda3deda7bc95150a436954"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-pectoral-ultrasound.test.ts",
+      "bytes": 11985,
+      "sha256": "3d243b0041685bcaac16eb271be4f7d6891a2485f7fbfeff406e53b83ba0d1fc"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-root-cuff-xray.test.ts",
+      "bytes": 8964,
+      "sha256": "d2c4793602ca673a0ed31b050304a74f523941cd47730ed02fb4f900ae2b258e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "bytes": 23157,
+      "sha256": "13e34a676028b2f622f9f703d4f196da3810c4c3108475b82c2c5146155f124f"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-scapular-muscle-quiz.test.ts",
+      "bytes": 8619,
+      "sha256": "f85cabca7802609c6fd339256b87422922862a6cd235b75f8b7cbba8d9720b1a"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/clinical-review-teaching-heading.test.ts",
+      "bytes": 7667,
+      "sha256": "802d91134bc1cf1f39373cf33cd103dde8a78c92094386ab7051726366014d12"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/elbow-admission-import-history.mjs",
+      "bytes": 3938,
+      "sha256": "f994bb22c3e12330d82fe9c25d33e1a48a2bee8dd9ebf47a3b5d222ca004232d"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/elbow-us-followup-preservation.test.mjs",
+      "bytes": 5846,
+      "sha256": "b2127dac886e0811462cfef39cd885e3d118cb13db442e01a573d307d1a9dff5"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-elbow-us-followup.original.ts.raw",
+      "bytes": 19679,
+      "sha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-forearm-vascular-xray.original.ts.raw",
+      "bytes": 20110,
+      "sha256": "59af4032c50b8352a1664d9296f522d2dd63bb0fbda5653ccd7c26168103bc62"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-genicular-ultrasound-before-current.ts.raw",
+      "bytes": 15115,
+      "sha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-hepatic-venous-xray.original.ts.raw",
+      "bytes": 22824,
+      "sha256": "0e1caf978b937fc60ee32aa4410b2e5e99e706866c8be4d330181fcc3225c8b1"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-iliac-xray.original.ts.raw",
+      "bytes": 10064,
+      "sha256": "a7286bfc1a0b77f08d55df7059d41a9a4ab7cf7d52e21cba04a7d179218fb77e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-internal-iliac-ultrasound.original.ts.raw",
+      "bytes": 7231,
+      "sha256": "61cf9e46f449ff2f842d6c8e47da95b7fc2bcab49dd4a1c60e7115678f792e5a"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-lacrimal-quiz.original.ts.raw",
+      "bytes": 10287,
+      "sha256": "3b51b64724f350e97be48685e093ad5c1db12b4feb0b7a66a6acace7fd92815e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-laryngeal-framework-quiz.original.ts.raw",
+      "bytes": 11790,
+      "sha256": "b214fbac93ea5d89394ad35e2ad1eea2ee4a02cca74b9fdd2aaf643b33776d62"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-laryngeal-muscle-quiz.original.ts.raw",
+      "bytes": 11250,
+      "sha256": "bb5bc9c86e1e18ccbaae4a66a6e5d3f68a2ece9db2f4018e4d688989bc07ec8f"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-neuro-organ-quiz.original.ts.raw",
+      "bytes": 7641,
+      "sha256": "81d41673fce49bca55901ccb9d374ae1fa8a62847563c2597b594be9729c10ef"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-ocular-support-quiz.original.ts.raw",
+      "bytes": 12103,
+      "sha256": "c0b8e103a75f6e1cc4dfbcb120aabeb272fc2b1d5ac63d69695c5b4059845701"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-orbital-support-quiz.original.ts.raw",
+      "bytes": 8857,
+      "sha256": "a32c560ec260c8e61d5323f3b2b6609fe835605c5787acc0165c5a218432d94a"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-pectoral-ultrasound.original.ts.raw",
+      "bytes": 11766,
+      "sha256": "815c986d956ea88382005a5a5170d888f4f61903ed30ffe0fb0abebcd3193317"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-root-cuff-xray.original.ts.raw",
+      "bytes": 8739,
+      "sha256": "2c93c2858c3182fca210eefd015354cb33649f33292b75fe8c41297293c5ebb5"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-salivary-stylohyoid-quiz.before-git-root.ts.raw",
+      "bytes": 23485,
+      "sha256": "7ae70f87540ce1cefa82437e9578b13ec3fddfc5ff2a2a9ccdd23e5ba4ae30d2"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-scapular-muscle-quiz.original.ts.raw",
+      "bytes": 8038,
+      "sha256": "2ef7cd0048c472defaee2062e510be0008dd9c88d3151fbd4f0738eb3b7c8f15"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/fixtures/clinical-review-teaching-heading.before-git-root.ts.raw",
+      "bytes": 7700,
+      "sha256": "228eaa9986e7730815905d9ea11feb896a4effec5f1f64a1c0b1b1e25c8caef6"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/forearm-admission-import-history.mjs",
+      "bytes": 3932,
+      "sha256": "d6b519e7a24b27163b8417fa46829dd41dc8978a97b58df1b7ae453d75c86629"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/forearm-xray-preservation.test.mjs",
+      "bytes": 6340,
+      "sha256": "41b999b07c36480e8b4fa85a34e532218c9a2666022d5a6a4543aff3f0b2a791"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/genicular-current-preservation.test.mjs",
+      "bytes": 3347,
+      "sha256": "8ada261f1a0568b8afc4eb4b507a651419ae2680a719ea221d7ae8c4064c0279"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/girdle-admission-import-history.mjs",
+      "bytes": 3521,
+      "sha256": "b0939abb987a31cfaa07d656e9382d24af39f9bf23359a4b15bc9695b619a71e"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/hepatic-admission-import-history.mjs",
+      "bytes": 4056,
+      "sha256": "1b59db5168de418dc208334df0db8e53b907d270faed7df8144205536054148f"
+    },
+    {
+      "path": "evidence/20261021-clinical-assurance-ready/website/tests/hepatic-xray-preservation.test.mjs",
+      "bytes": 6721,
+      "sha256": "e425bc21bc5f8046da4a4d49b3f07af27486a24994a4546be332119cfbf7099d"
     },
     {
       "path": "evidence/20261021-clinical-review-contracts/evidence/ASSEMBLY_AND_CHECKOUT.json",
@@ -3291,10 +3836,10 @@
     }
   ],
   "removed": [],
-  "scope": "Reviewed12path test/fixture/attribute batch, byte-exact preimages, small source/metadata/provider/preservation proofs and explicit limits on prior filtered source-only ancestry. Process/queue snapshots, coordination, original imported delivery, old private inbox, models/scans/masks, dependencies and raw canonical ancestry stay local. No browser pixels/DOM or patient records. Not whole/runnable/private-data backup or full corpus test pass.",
+  "scope": "49reviewed test/fixture/attribute postimages, exact preimages, small pure/metadata/diagnosis proofs, explicit failures/limits and coordination helpers on prior filtered source-only ancestry. Full original import, private inbox/scans/masks/models/dependencies/raw canonical ancestry and long failed source-dump logs remain local; no browser pixels/DOM or patient records. Process/coordination local. Not whole/runnable/private-data backup or actual full corpus pass.",
   "proof": {
-    "shippingPaths": 12,
-    "nativePreservationCases": 3,
+    "shippingPaths": 49,
+    "nativePreservationCases": 10,
     "freshCheckoutByteIdentical": true,
     "actualCorpusModulesPassed": false,
     "canonicalInstalled": false,

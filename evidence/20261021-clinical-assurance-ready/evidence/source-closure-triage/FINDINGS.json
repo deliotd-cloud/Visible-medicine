@@ -1,0 +1,64 @@
+{
+  "schema": "visible-medicine-source-closure-triage-v1",
+  "readOnly": true,
+  "testsRun": false,
+  "classification": "stale test repository-root assumption; the two source artifacts are committed in the actual 485df97c source tree, not undeclared/generated-only artifacts",
+  "committedCurrentSource": "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+  "currentSourceCommit": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "currentSourceTree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+  "dirtyCombinedAtlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "frozenWebsite": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "wrongSourceRoot": {
+    "path": "F:/VisibleMedicine/atlas",
+    "head": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+    "485ObjectPresent": false,
+    "observation": "git cat-file -t 485df97c fails here; git show 485df97c:path emits a misleading path-exists-on-disk-but-not-in-commit message because this checkout has the file on disk but no 485 commit object."
+  },
+  "paths": [
+    {
+      "path": "content/regional-teaching/head-neck.json",
+      "firstFailingTest": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts:237 (first call :239; hardcoded atlas at :11, git helper :44)",
+      "gitTrackedAt485": true,
+      "gitIgnored": false,
+      "gitBlobAt485": "726b6a8925d1cae34feb34154e2b221c1d3d01ea",
+      "diskBlobEqualsGitBlob": true,
+      "introducedBy": "d2b41697231b40b1bcf10e49bf188f2373e71c27",
+      "lastChangeAt485": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "currentSha256": "8b85f64cfa63fe7e15ccf317c9d4efb544430c0175b8d329608a23d02665f3d3",
+      "currentDiskReviewSourceReviewImportSame": true,
+      "currentLearnerSourceInputs": ["head-neck", "shoulder"],
+      "historical9fReviewSha256": "c3287ed86330a9c4d41a5823ec27532bf66a9dfb41175979fa890a502acecc76",
+      "changedFrom9fTo485": true,
+      "unchangedSourceAdmissionAllowed": false,
+      "sourceRole": "Tracked source snapshot consumed by regional teaching and explicitly listed in body-renderer revision dependencies; not an absent or ignored output."
+    },
+    {
+      "path": "lib/teaching-heading.ts",
+      "firstFailingTests": ["tests/clinical-review-teaching-heading.test.ts:17 (source call :22)", "tests/clinical-review-teaching-heading.test.ts:96 (source call :98)"],
+      "gitTrackedAt485": true,
+      "gitIgnored": false,
+      "gitBlobAt485": "9d4e4bae6d739831f1a267fb39e13bd449ef0239",
+      "diskBlobEqualsGitBlob": true,
+      "introducedBy": "8ad2315816b83ea16ae77b4a2c060148b4bf9112",
+      "lastChangeAt485": "8ad2315816b83ea16ae77b4a2c060148b4bf9112",
+      "currentSha256": "167c480b486b97b89565dd34b9611bed0b7c7c59e3f9453983eec02af3ecd3e3",
+      "currentDiskReviewSourceReviewImportSame": true,
+      "currentLearnerSourceInputs": ["head-neck"],
+      "historical9fReviewSha256": "167c480b486b97b89565dd34b9611bed0b7c7c59e3f9453983eec02af3ecd3e3",
+      "changedFrom9fTo485": false,
+      "unchangedSourceAdmissionAllowed": "Only with a second explicitly unchanged relevant source path and full helper checks; no blanket admission."
+    }
+  ],
+  "history": {
+    "clean485ContainsCommits": ["325fc6aa50c4221691a1ee87de0d0ca91264ff04", "38f225ff2d4b6cd0f2e4434c0a2d3a759f1af875", "9fba9a1e24b6669aafd48e945d55fc0939d50ab2"],
+    "historicalExport": "F:/VisibleMedicine/staging/20261016-isolated-atlas-integration/canonical-original",
+    "historicalReviewRevision": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2"
+  },
+  "minimalRepair": [
+    "In the two owning test files only, take current Git reads from checkedAtlasSourceRepo/currentAtlasDeliveryRoot, which verifies committed 485 HEAD and clean source tree, instead of F:/VisibleMedicine/atlas or a separate unverified ATLAS_SOURCE_REPO variable.",
+    "For the salivary test, import exact-source-history-api.mjs from the checked clean source repository so its Git-only replay uses that repository's genuine baseline and completed-epoch commits; keep original registered history/count/refusal/forgery assertions and do not pass sourceOverrides into historical calls.",
+    "For teaching-heading, keep the historical 9f byte comparison and the current Review/source-input byte checks plus all four negative tamper cases. The helper is exactly unchanged across 9f and 485.",
+    "For head-neck.json, retain distinct historical and current hashes because source bytes changed; do not use unchanged-source admission or replace the old theorem with current bytes."
+  ],
+  "limits": ["Metadata and Git object checks only; no source/tests/build/resolver executed.", "No runtime correctness, suite pass, clinical approval, or deployment claim."]
+}

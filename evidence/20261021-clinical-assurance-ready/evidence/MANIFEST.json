@@ -1,0 +1,340 @@
+{
+  "schema": "vm-clinical-assurance-ready/1",
+  "at": "2026-10-21T03:01:53.127Z",
+  "site": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "atlas": "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "files": [
+    {
+      "path": "tests/clinical-review-entry-track.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-entry-track.test.mjs",
+      "beforeSha256": "c82af1e3d4221b37b4876608950d9c312bf18b0ab5d6b26d2e94560e705b2f2c",
+      "sha256": "0eacc6627a7cac95757d50b5c860a3f8fd0137a9b6fba2002981257627a54baa"
+    },
+    {
+      "path": "tests/clinical-review-elbow-us-followup.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-elbow-us-followup.test.ts",
+      "beforeSha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c",
+      "sha256": "666eadec1b2b71bed584db21d022a5af97d4e6f5e8b589ab0c7d77704b63800e"
+    },
+    {
+      "path": "tests/elbow-admission-import-history.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/elbow-admission-import-history.mjs",
+      "beforeSha256": null,
+      "sha256": "f994bb22c3e12330d82fe9c25d33e1a48a2bee8dd9ebf47a3b5d222ca004232d"
+    },
+    {
+      "path": "tests/elbow-us-followup-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/elbow-us-followup-preservation.test.mjs",
+      "beforeSha256": null,
+      "sha256": "b2127dac886e0811462cfef39cd885e3d118cb13db442e01a573d307d1a9dff5"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-elbow-us-followup.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-elbow-us-followup.original.ts.raw",
+      "beforeSha256": null,
+      "sha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c"
+    },
+    {
+      "path": "tests/clinical-review-foot-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-foot-quiz.test.ts",
+      "beforeSha256": "154d68039e1e7a44a126d1de942fdf48644a3da2dc59cbcb5f4d9edf2641feea",
+      "sha256": "5bb7ce5a0c6390fd7fa3d48d8c73ba7fe8695fb6a91da74e064bc6e4ca49ba06"
+    },
+    {
+      "path": "tests/clinical-review-girdle-ultrasound.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-girdle-ultrasound.test.ts",
+      "beforeSha256": "109393c2242920ea67e2e97fc5c0d65a87b07b84b1a98934251e07f00619fc5d",
+      "sha256": "722906110b3645683062088fd0cd7968ac6c574ae6b60d6079d3c1fdb019b676"
+    },
+    {
+      "path": "tests/girdle-admission-import-history.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/girdle-admission-import-history.mjs",
+      "beforeSha256": null,
+      "sha256": "b0939abb987a31cfaa07d656e9382d24af39f9bf23359a4b15bc9695b619a71e"
+    },
+    {
+      "path": "tests/clinical-review-genicular-ultrasound.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-genicular-ultrasound.test.ts",
+      "beforeSha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10",
+      "sha256": "1383901d9479d17f9321eb97386ede8e1dc4ce59e3016b4d2899a00ac2fe229e"
+    },
+    {
+      "path": "tests/genicular-current-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/genicular-current-preservation.test.mjs",
+      "beforeSha256": null,
+      "sha256": "8ada261f1a0568b8afc4eb4b507a651419ae2680a719ea221d7ae8c4064c0279"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-genicular-ultrasound-before-current.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-genicular-ultrasound-before-current.ts.raw",
+      "beforeSha256": null,
+      "sha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10"
+    },
+    {
+      "path": "tests/clinical-review-forearm-vascular-xray.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "sha256": "1e609a7bd8a18d032a3d586c1bab99cc3ebed8f4c4b5477bcf0e055110eeb058",
+      "beforeSha256": "59af4032c50b8352a1664d9296f522d2dd63bb0fbda5653ccd7c26168103bc62"
+    },
+    {
+      "path": "tests/forearm-admission-import-history.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/forearm-admission-import-history.mjs",
+      "sha256": "d6b519e7a24b27163b8417fa46829dd41dc8978a97b58df1b7ae453d75c86629",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/forearm-xray-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/forearm-xray-preservation.test.mjs",
+      "sha256": "41b999b07c36480e8b4fa85a34e532218c9a2666022d5a6a4543aff3f0b2a791",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/clinical-review-forearm-vascular-xray.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-forearm-vascular-xray.original.ts.raw",
+      "sha256": "59af4032c50b8352a1664d9296f522d2dd63bb0fbda5653ccd7c26168103bc62",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "sha256": "13e34a676028b2f622f9f703d4f196da3810c4c3108475b82c2c5146155f124f",
+      "beforeSha256": "7ae70f87540ce1cefa82437e9578b13ec3fddfc5ff2a2a9ccdd23e5ba4ae30d2"
+    },
+    {
+      "path": "tests/clinical-review-teaching-heading.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-teaching-heading.test.ts",
+      "sha256": "802d91134bc1cf1f39373cf33cd103dde8a78c92094386ab7051726366014d12",
+      "beforeSha256": "228eaa9986e7730815905d9ea11feb896a4effec5f1f64a1c0b1b1e25c8caef6"
+    },
+    {
+      "path": "tests/clinical-review-git-root-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-git-root-preservation.test.mjs",
+      "sha256": "872c394d575408abedc9a6944d2823451eb19edf865e5194508f4e022054f72e",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/clinical-review-salivary-stylohyoid-quiz.before-git-root.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-salivary-stylohyoid-quiz.before-git-root.ts.raw",
+      "sha256": "7ae70f87540ce1cefa82437e9578b13ec3fddfc5ff2a2a9ccdd23e5ba4ae30d2",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/clinical-review-teaching-heading.before-git-root.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-teaching-heading.before-git-root.ts.raw",
+      "sha256": "228eaa9986e7730815905d9ea11feb896a4effec5f1f64a1c0b1b1e25c8caef6",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-lacrimal-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-lacrimal-quiz.test.ts",
+      "sha256": "2134305fe2af059f405b463dfa6158a5c2e05396628fde97ddd24210df695abe",
+      "beforeSha256": "3b51b64724f350e97be48685e093ad5c1db12b4feb0b7a66a6acace7fd92815e"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-lacrimal-quiz.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-lacrimal-quiz.original.ts.raw",
+      "sha256": "3b51b64724f350e97be48685e093ad5c1db12b4feb0b7a66a6acace7fd92815e",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "sha256": "63cc3f0c56b554f6a7ca0030eaeef44ff919dc7ec3f0d3c66ac8354f57e91deb",
+      "beforeSha256": "b214fbac93ea5d89394ad35e2ad1eea2ee4a02cca74b9fdd2aaf643b33776d62"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-laryngeal-framework-quiz.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-laryngeal-framework-quiz.original.ts.raw",
+      "sha256": "b214fbac93ea5d89394ad35e2ad1eea2ee4a02cca74b9fdd2aaf643b33776d62",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "sha256": "806646d125fa5772174a46f3976c162a095755e257d15b961536536eff8f0aec",
+      "beforeSha256": "bb5bc9c86e1e18ccbaae4a66a6e5d3f68a2ece9db2f4018e4d688989bc07ec8f"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-laryngeal-muscle-quiz.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-laryngeal-muscle-quiz.original.ts.raw",
+      "sha256": "bb5bc9c86e1e18ccbaae4a66a6e5d3f68a2ece9db2f4018e4d688989bc07ec8f",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-neuro-organ-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-neuro-organ-quiz.test.ts",
+      "sha256": "b9d7df5eea3dff6c4c363f9cd1fdbaceec472566c30bf81b4aa04ed2a6518e4b",
+      "beforeSha256": "81d41673fce49bca55901ccb9d374ae1fa8a62847563c2597b594be9729c10ef"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-neuro-organ-quiz.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-neuro-organ-quiz.original.ts.raw",
+      "sha256": "81d41673fce49bca55901ccb9d374ae1fa8a62847563c2597b594be9729c10ef",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-ocular-support-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-ocular-support-quiz.test.ts",
+      "sha256": "a29ccee61b27faf00d925fafc8b00e0d5b64eda4ebd6481b8b1ff4d16b7e5101",
+      "beforeSha256": "c0b8e103a75f6e1cc4dfbcb120aabeb272fc2b1d5ac63d69695c5b4059845701"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-ocular-support-quiz.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-ocular-support-quiz.original.ts.raw",
+      "sha256": "c0b8e103a75f6e1cc4dfbcb120aabeb272fc2b1d5ac63d69695c5b4059845701",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-scapular-muscle-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-review-scapular-muscle-quiz.test.ts",
+      "sha256": "f85cabca7802609c6fd339256b87422922862a6cd235b75f8b7cbba8d9720b1a",
+      "beforeSha256": "2ef7cd0048c472defaee2062e510be0008dd9c88d3151fbd4f0738eb3b7c8f15"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-scapular-muscle-quiz.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/fixtures/clinical-review-scapular-muscle-quiz.original.ts.raw",
+      "sha256": "2ef7cd0048c472defaee2062e510be0008dd9c88d3151fbd4f0738eb3b7c8f15",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-current-quiz-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-assurance-combined-lf/files/tests/clinical-current-quiz-preservation.test.mjs",
+      "sha256": "b7ef46cdeb1c22340ce0f007b18cf02743fa5c81c21d58067743b2f0548587af",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-internal-iliac-ultrasound.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/clinical-review-internal-iliac-ultrasound.test.ts",
+      "sha256": "d463ac9cde2fe0ceeb1edf2a348c679b3ddc16bb644050aa8af228bf1874dc3d",
+      "beforeSha256": "61cf9e46f449ff2f842d6c8e47da95b7fc2bcab49dd4a1c60e7115678f792e5a"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-internal-iliac-ultrasound.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/fixtures/clinical-review-internal-iliac-ultrasound.original.ts.raw",
+      "sha256": "61cf9e46f449ff2f842d6c8e47da95b7fc2bcab49dd4a1c60e7115678f792e5a",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-pectoral-ultrasound.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/clinical-review-pectoral-ultrasound.test.ts",
+      "sha256": "3d243b0041685bcaac16eb271be4f7d6891a2485f7fbfeff406e53b83ba0d1fc",
+      "beforeSha256": "815c986d956ea88382005a5a5170d888f4f61903ed30ffe0fb0abebcd3193317"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-pectoral-ultrasound.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/fixtures/clinical-review-pectoral-ultrasound.original.ts.raw",
+      "sha256": "815c986d956ea88382005a5a5170d888f4f61903ed30ffe0fb0abebcd3193317",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-orbital-support-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/clinical-review-orbital-support-quiz.test.ts",
+      "sha256": "fe12516289eb6a2c6d971d3d0e44b186d6cfba00beda3deda7bc95150a436954",
+      "beforeSha256": "a32c560ec260c8e61d5323f3b2b6609fe835605c5787acc0165c5a218432d94a"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-support-quiz.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/fixtures/clinical-review-orbital-support-quiz.original.ts.raw",
+      "sha256": "a32c560ec260c8e61d5323f3b2b6609fe835605c5787acc0165c5a218432d94a",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-root-cuff-xray.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/clinical-review-root-cuff-xray.test.ts",
+      "sha256": "d2c4793602ca673a0ed31b050304a74f523941cd47730ed02fb4f900ae2b258e",
+      "beforeSha256": "2c93c2858c3182fca210eefd015354cb33649f33292b75fe8c41297293c5ebb5"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-root-cuff-xray.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/fixtures/clinical-review-root-cuff-xray.original.ts.raw",
+      "sha256": "2c93c2858c3182fca210eefd015354cb33649f33292b75fe8c41297293c5ebb5",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-iliac-xray.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/clinical-review-iliac-xray.test.ts",
+      "sha256": "421e61f85dce6d50bb7a1dff92d9e7e8af40f207e3f12650a5c741787e7b955b",
+      "beforeSha256": "a7286bfc1a0b77f08d55df7059d41a9a4ab7cf7d52e21cba04a7d179218fb77e"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-iliac-xray.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/fixtures/clinical-review-iliac-xray.original.ts.raw",
+      "sha256": "a7286bfc1a0b77f08d55df7059d41a9a4ab7cf7d52e21cba04a7d179218fb77e",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-current-imaging-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-clinical-current-imaging-batch/tests/clinical-current-imaging-preservation.test.mjs",
+      "sha256": "4a975560f129067bc08d572efe500209363d8107a234df861214edd32824b56c",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-hepatic-venous-xray.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-hepatic-xray-contract-proposal/tests/clinical-review-hepatic-venous-xray.test.ts",
+      "sha256": "182d5a2130226f0deaa4b32ae8458c804a8a05f72d44bb619fa62b786b29edb5",
+      "beforeSha256": "0e1caf978b937fc60ee32aa4410b2e5e99e706866c8be4d330181fcc3225c8b1"
+    },
+    {
+      "path": "tests/hepatic-admission-import-history.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-hepatic-xray-contract-proposal/tests/hepatic-admission-import-history.mjs",
+      "sha256": "1b59db5168de418dc208334df0db8e53b907d270faed7df8144205536054148f",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/hepatic-xray-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-hepatic-xray-contract-proposal/tests/hepatic-xray-preservation.test.mjs",
+      "sha256": "e425bc21bc5f8046da4a4d49b3f07af27486a24994a4546be332119cfbf7099d",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/clinical-review-hepatic-venous-xray.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-hepatic-xray-contract-proposal/tests/fixtures/clinical-review-hepatic-venous-xray.original.ts.raw",
+      "sha256": "0e1caf978b937fc60ee32aa4410b2e5e99e706866c8be4d330181fcc3225c8b1",
+      "beforeSha256": null
+    },
+    {
+      "path": ".gitattributes",
+      "beforeSha256": "4f5d1c31e7e089798fa300e6043d18d2e5aa074162dba58bc9a874e4a598ee62",
+      "sha256": "bc351b860e04390ca7fca4d62d7f77cb3f8583a738323898c6451ffcaff72b81",
+      "appendOnly": true
+    }
+  ],
+  "actualModules": [
+    "tests/clinical-review-elbow-us-followup.test.ts",
+    "tests/clinical-review-entry-track.test.mjs",
+    "tests/clinical-review-foot-quiz.test.ts",
+    "tests/clinical-review-forearm-vascular-xray.test.ts",
+    "tests/clinical-review-genicular-ultrasound.test.ts",
+    "tests/clinical-review-girdle-ultrasound.test.ts",
+    "tests/clinical-review-hepatic-venous-xray.test.ts",
+    "tests/clinical-review-iliac-xray.test.ts",
+    "tests/clinical-review-internal-iliac-ultrasound.test.ts",
+    "tests/clinical-review-lacrimal-quiz.test.ts",
+    "tests/clinical-review-laryngeal-framework-quiz.test.ts",
+    "tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+    "tests/clinical-review-neuro-organ-quiz.test.ts",
+    "tests/clinical-review-ocular-support-quiz.test.ts",
+    "tests/clinical-review-orbital-support-quiz.test.ts",
+    "tests/clinical-review-pectoral-ultrasound.test.ts",
+    "tests/clinical-review-root-cuff-xray.test.ts",
+    "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+    "tests/clinical-review-scapular-muscle-quiz.test.ts",
+    "tests/clinical-review-teaching-heading.test.ts"
+  ],
+  "pureModules": [
+    "tests/elbow-us-followup-preservation.test.mjs",
+    "tests/genicular-current-preservation.test.mjs",
+    "tests/forearm-xray-preservation.test.mjs",
+    "tests/clinical-review-git-root-preservation.test.mjs",
+    "tests/clinical-current-quiz-preservation.test.mjs",
+    "tests/clinical-current-imaging-preservation.test.mjs",
+    "tests/hepatic-xray-preservation.test.mjs"
+  ],
+  "scope": "49 exact before-hash guarded Website test/fixture/attribute paths.20real corpus modules,7pure guards,4strict historical helpers,17rawfixtures. No source/runtime/teaching/review data changes. Intracranial whole-catalogue test explicitly excluded, not silently repinned.",
+  "actualCorpusModulesPassed": false,
+  "canonicalInstalled": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "fullGoalActive": true
+}

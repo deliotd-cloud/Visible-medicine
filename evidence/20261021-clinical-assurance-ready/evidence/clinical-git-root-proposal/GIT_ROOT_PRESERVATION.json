@@ -1,0 +1,21 @@
+{
+  "label": "GIT_ROOT_PRESERVATION",
+  "command": "node",
+  "args": [
+    "--test",
+    "F:/VisibleMedicine/staging/20261021-clinical-git-root-proposal/tests/clinical-review-git-root-preservation.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-clinical-git-root-proposal/GIT_ROOT_PRESERVATION.log",
+  "logSha256": "95c9a6f61891105a678a23e16fd491dfd149b82182c091a5930bbe4d47c06502",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 1",
+    "ℹ fail 2",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

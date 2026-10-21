@@ -1,0 +1,28 @@
+{
+  "label": "CLINICAL_READY_PRESERVATION",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "F:/VisibleMedicine/staging/20261021-clinical-assurance-ready/checkout-proof/tests/elbow-us-followup-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-clinical-assurance-ready/checkout-proof/tests/genicular-current-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-clinical-assurance-ready/checkout-proof/tests/forearm-xray-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-clinical-assurance-ready/checkout-proof/tests/clinical-review-git-root-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-clinical-assurance-ready/checkout-proof/tests/clinical-current-quiz-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-clinical-assurance-ready/checkout-proof/tests/clinical-current-imaging-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-clinical-assurance-ready/checkout-proof/tests/hepatic-xray-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-clinical-assurance-ready/CLINICAL_READY_PRESERVATION.log",
+  "logSha256": "498beaaf2c83213d8f6b42a73d821ea41dc01f5b82f65e7214aa22b946cf5ebd",
+  "footer": [
+    "ℹ tests 10",
+    "ℹ pass 10",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,9 @@
+# Checked Git-root repair
+
+Both disputed source paths are committed in the clean checked 485 tree. They are not missing generated-only artifacts. The canonical 98d7 checkout used by the failing tests does not contain the 485 commit object; its `git show` diagnostic was misleading. The source-closure triage corrects that earlier partial classification.
+
+Only three semantic source lines change across two Website tests: one existing import is extended, and two Git repository declarations use the existing `currentAtlasDeliveryRoot()` validator. The salivary test was uniformly CRLF; the proposed executable uses LF. Its original raw SHA remains pinned, and the inverse reconstructs the exact declared original CRLF bytes. The heading original is uniformly LF. No registered test body, source/history assertion, lesson, count, forged-packet refusal, helper hash or raw title changes. The genuine historical and current bytes for `head-neck.json` remain different; the unchanged heading helper retains its exact original hash. There is no source override, generated fallback or authentication change.
+
+Shipping is five paths: two repaired tests, two byte-exact raw preimages under `tests/fixtures/`, and the pure `clinical-review-git-root-preservation.test.mjs`. The metadata proof and preparation script are local evidence, not shipping.
+
+The actual corpus-backed modules remain unrun while the original full Website suite and queued dental source steps retain the heavy slot. Pure inverse/negative and metadata checks do not prove their runtime behavior. No frozen/installed Website edit, review decision, refresh, commit or deployment has occurred. Before eventual application, verify exact preimages and combine with the other staged clinical repairs; preserve the raw evidence and scoped executable LF rules. Run both complete original modules against the clean source binding afterward.

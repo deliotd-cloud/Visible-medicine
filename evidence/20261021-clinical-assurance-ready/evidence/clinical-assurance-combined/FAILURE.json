@@ -1,0 +1,12 @@
+{
+  "phase": "fresh-autocrlf-checkout",
+  "passed": false,
+  "file": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+  "originalProposalSha256": "1293e6e5162ec8c6c1c10670c43b66cbd55c6c083133a1cec3dba5e66e97fed5",
+  "freshLfCheckoutSha256": "13e34a676028b2f622f9f703d4f196da3810c4c3108475b82c2c5146155f124f",
+  "cause": "apply_patch changed the two source lines to LF but retained other original CRLF lines, so the admitted postimage was mixed-EOL. Existing pure inverse compared declared normalized executable text and did not claim raw postimage hash. Actual Git LF rule correctly changed the mixed representation.",
+  "repair": "Formatting-only LF conversion of this one test, exact before/after hash guard. Raw original CRLF fixture retained, no original assertion change. Reassemble in separate create-only .../20261021-clinical-assurance-combined-lf and rerun fresh checkout plus pure proofs.",
+  "actualCorpusModulesRun": false,
+  "frozenOrCanonicalMutation": false,
+  "superseded": true
+}

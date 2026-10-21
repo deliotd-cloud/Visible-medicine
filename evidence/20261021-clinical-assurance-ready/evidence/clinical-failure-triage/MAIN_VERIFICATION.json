@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-21T02:46:10.953Z",
+  "workerObservationSha256": "7154fa4b86def7e864e32e83a056d64b5d89af6b3118b31e8a45c49b66cf7129",
+  "observedThrough": 1071,
+  "actualFailedMarkersVerified": 57,
+  "allObservedClinicalFailuresInScopeAccountedFor": true,
+  "limit": "First-failure source classification, not runtime diagnosis or a pass for assertions hidden behind initial gates. The live TAP may now contain later markers; this bounded observation is not terminal.",
+  "partial": true,
+  "testsRun": false,
+  "canonicalInstalled": false
+}

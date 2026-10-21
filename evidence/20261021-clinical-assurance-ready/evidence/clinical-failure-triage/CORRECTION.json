@@ -1,0 +1,14 @@
+{
+  "corrects": "missingCommittedSource classification for observed failures1029/1060/1061 only; original partial observation retained",
+  "source": "F:/VisibleMedicine/staging/20261021-source-closure-triage/FINDINGS.json",
+  "sourceSha256": "8983b36ae1178e8af0ef4bcbdc65684f11468b6110df25054f9052113216bdfe",
+  "mainMetadataReceipt": "F:/VisibleMedicine/staging/20261021-clinical-git-root-proposal/GIT_ROOT_METADATA_BUFFERED.json",
+  "mainMetadataLogSha256": "3ea231c65ca24e141e60ac5635a5f60f265f72950f7836c95c5598b5761955f7",
+  "actualSourceCommit": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "actualSourceRoot": "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+  "bothArtifactsCommittedAndByteBound": true,
+  "cause": "The canonical98d7checkout lacks the485commit object. Tests selected that wrong repository, not an absent source artifact. Both files are tracked, committed and equal to actual clean source/Review/learner inputs at485.",
+  "repair": "Use existing checked currentAtlasDeliveryRoot() in the owning Website tests; preserve genuine earlier source hashes and all original registered bodies.",
+  "actualCorpusModulesRun": false,
+  "clinicalApproval": false
+}
