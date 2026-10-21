@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawn} from 'node:child_process';
+import {read,json,sha} from './source-only-backup-20261019.mjs';
+const prep=json('F:/VisibleMedicine/staging/20261021-review-destination-application/PREPARATION.json');
+const rows=json('F:/VisibleMedicine/staging/20261021-review-destination-application/SOURCE_INPUTS_AFTER_NAV.json');
+const native='scripts/stage-clinical-review-candidate-local.mjs';
+const admission=json('F:/VisibleMedicine/staging/20261021-local-r2-persistence-application-v2/ADMISSION.json');
+for(const r of rows){const b=read(prep.site+'/'+r.path);if(r.path===native){assert.equal(r.sha256,admission.changes[0].beforeSha256);assert.equal(sha(b),admission.changes[0].proposedSha256);r.sha256=sha(b);r.bytes=b.length;}else assert.equal(sha(b),r.sha256,r.path);}
+assert.equal(rows.length,5103);
+for(const p of ['.gitignore','scripts/local-r2-persistence.mjs','tests/local-r2-persistence.test.mjs','tests/local-preview-data-boundaries.test.mjs']){assert(!rows.some(r=>r.path===p));const b=read(prep.site+'/'+p);rows.push({path:p,bytes:b.length,sha256:sha(b)});}rows.sort((a,b)=>a.path.localeCompare(b.path));assert.equal(rows.length,5107);
+const storage=json('F:/VisibleMedicine/staging/20261021-source190-persistent-models/RESULT.json');assert.equal(storage.reopened,137);assert(storage.exactFullReadbackAfterReopen);
+const binding=json(prep.site+'/atlas-review/integration-inputs.json');assert.equal(binding.sha256,prep.review);for(const r of binding.inputs)assert.equal(sha(read(prep.site+'/'+r.path)),r.sha256,r.path);
+const stage='F:/VisibleMedicine/staging/20261021-source190-loaded-qa-v2';assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+fs.writeFileSync(stage+'/SOURCE_INPUTS.json',JSON.stringify(rows,null,2)+'\n',{flag:'wx'});
+const envLines=read('F:/VisibleMedicine/website/.env.local').toString().split(/\r?\n/).filter(s=>/^VM_LOCAL_HEAD_ROOT=/.test(s));assert.equal(envLines.length,1);const headRoot=envLines[0].slice('VM_LOCAL_HEAD_ROOT='.length).trim().replace(/^(['"])(.*)\1$/,'$2');assert(headRoot&&!/[\r\n\0]/.test(headRoot));
+const stream=fs.createWriteStream(stage+'/PREVIEW.log',{flags:'wx'});
+const child=spawn(process.execPath,['node_modules/vinext/dist/cli.js','dev','-H','127.0.0.1','-p','3002'],{cwd:prep.site,windowsHide:true,env:{...process.env,VM_LOCAL_HEAD_ROOT:headRoot,VM_LOCAL_PREVIEW_STABLE:'1',GOMAXPROCS:'2',RAYON_NUM_THREADS:'1',NODE_OPTIONS:'--max-old-space-size=4096'},stdio:['ignore','pipe','pipe']});
+child.stdout.pipe(stream,{end:false});child.stderr.pipe(stream,{end:false});
+const started={at:new Date().toISOString(),pid:child.pid,launcher:process.pid,site:prep.site,source:prep.source,review:prep.review,namedInputs:5107,privateLocalDatabaseCopy:true,permissionsEdited:false,modelsReadBackAfterEmulatorRestart:137,approvedHeadPointerReused:true,port:3002,host:'127.0.0.1',hmr:false,ownerPort3000Untouched:true,canonicalInstalled:false};
+fs.writeFileSync(stage+'/STARTED.json',JSON.stringify(started,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(started));
+child.once('error',error=>console.error(String(error)));
+const result=await new Promise(resolve=>child.once('close',(code,signal)=>resolve({code,signal})));
+await new Promise(resolve=>stream.end(resolve));fs.writeFileSync(stage+'/STOPPED.json',JSON.stringify({...result,at:new Date().toISOString(),logSha256:sha(read(stage+'/PREVIEW.log'))},null,2)+'\n',{flag:'wx'});process.exitCode=result.code??1;

@@ -1,0 +1,26 @@
+{
+  "label": "STORAGE_DELIVERY_REGRESSION",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/local-r2-persistence.test.mjs",
+    "tests/local-preview-data-boundaries.test.mjs",
+    "tests/atlas-delivery-route.test.mjs",
+    "tests/atlas-delivery-policy-preflight.test.mjs",
+    "tests/education-media-access-server.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-local-r2-persistence-application-v2/STORAGE_DELIVERY_REGRESSION.log",
+  "logSha256": "8070d8446c8e8fbfd950227b5df0b8baa6d2517182fcda2ba4366f6cdf58f49e",
+  "footer": [
+    "ℹ tests 17",
+    "ℹ pass 17",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

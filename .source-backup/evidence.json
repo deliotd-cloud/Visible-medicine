@@ -1,8 +1,49 @@
 {
-  "focusedPassed": 138,
-  "wholeOriginalHeaderPassed": 6,
-  "freshTypes": true,
-  "productionBuild": true,
-  "all1710ReviewInputsPreserved": true,
-  "canonicalInstalled": false
+  "at": "2026-10-21T05:27:32.923Z",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "observed": [
+    "Whole-body skeleton renders with compact controls",
+    "Zoom in responds",
+    "Right lower limb: hip to heel opens as a loaded anatomical tour",
+    "Play full tour shows step 1 and its caption without a second Start click",
+    "Speed selector accepts 3x; playback advances automatically from step 1 to step 5",
+    "Pause changes the control to Play and retains step 5 and its caption"
+  ],
+  "unresolved": [
+    {
+      "message": "MutationObserver.observe: parameter 1 is not of type Node",
+      "count": 1,
+      "source": "Unclassified; console supplied no source URL or stack"
+    }
+  ],
+  "limits": [
+    "No frame-rate/smoothness benchmark",
+    "Not all tours or regions tested",
+    "Not clinical, spatial registration, hosted-release or full-suite acceptance"
+  ],
+  "modelsReadBackAcrossFreshEmulator": 137,
+  "modelBytes": 199072480,
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceInputs": 5107,
+  "tests": 17,
+  "passed": 17,
+  "skipped": 0,
+  "authenticationChanged": false,
+  "permissionsChanged": false,
+  "canonicalInstalled": false,
+  "publicDeployment": false,
+  "localOnlyPrivateDatabaseCopy": true,
+  "sourceDatabaseOpenedReadOnly": true,
+  "privateDataUploaded": false,
+  "ownerTabsTouched": false,
+  "ownerPort3000Untouched": true,
+  "temporaryPort3002Stopped": true,
+  "originalFullSuiteFailures": 144,
+  "fullSuiteAcceptance": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false
 }

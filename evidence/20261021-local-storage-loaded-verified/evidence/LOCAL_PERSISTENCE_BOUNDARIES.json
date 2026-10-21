@@ -1,0 +1,23 @@
+{
+  "label": "LOCAL_PERSISTENCE_BOUNDARIES",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/local-r2-persistence.test.mjs",
+    "tests/local-preview-data-boundaries.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-local-r2-persistence-application-v2/LOCAL_PERSISTENCE_BOUNDARIES.log",
+  "logSha256": "f0a40dec128833e49af6e18859f9a2718907c90ed0ed977a5e85987a5acf2066",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

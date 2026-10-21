@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T05:05:26.455Z",
+  "at": "2026-10-21T05:29:38.048Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "websiteInputCount": 5103
+    "websiteInputCount": 5107
   },
-  "parent": "773002c5b3cef91f9a68cc60bfa974c698971daf",
-  "gitParent": "773002c5b3cef91f9a68cc60bfa974c698971daf",
+  "parent": "e870cee0b1fa01cf39bdd97ebde8a9441c42dcc3",
+  "gitParent": "e870cee0b1fa01cf39bdd97ebde8a9441c42dcc3",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3335,6 +3335,96 @@
       "sha256": "0192f1a2056b1b176dafa1148a806ea3f63d341faa74bf2f3ba3a720c3ba9cab"
     },
     {
+      "path": "evidence/20261021-local-storage-loaded-verified/evidence/ADMISSION.json",
+      "bytes": 681,
+      "sha256": "61772a4da4c55081777f9fff33e6cb055f79ef367888f484a605929bee4b69d0"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/evidence/LOCAL_PERSISTENCE_BOUNDARIES.json",
+      "bytes": 620,
+      "sha256": "e81f3fb9c0360818096c977cbfa71ae15be1a00ec5be87399c98ccb74e576456"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/evidence/MODEL_ROUTE_PASS.json",
+      "bytes": 454,
+      "sha256": "88f5885be7e701c4ecbb894ca86a770430377d5bc846f8d675db1cdf22d4d2cb"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/evidence/STARTED.json",
+      "bytes": 580,
+      "sha256": "4bf530b07172643e1102e9ab0aeaaa2b9190da48aa2ab87bb5fe5b2fa149a313"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/evidence/STOPPED.json",
+      "bytes": 162,
+      "sha256": "6f3c11e49034ccf2d3e31161c332437e9251fdd65640bf8d5f2a788eaa95b1dd"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/evidence/STORAGE_DELIVERY_REGRESSION.json",
+      "bytes": 769,
+      "sha256": "7424c7cffc5eaf0762cf09b38dc5985e302c1a3051ded6098c5908ee72a0b536"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/observed-summary.json",
+      "bytes": 1641,
+      "sha256": "656856362e36e1fcef5c0d14d880dcf5ab9699b5dc11b01b84b2bfc98f680855"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/preimages/scripts/stage-clinical-review-candidate-local.mjs",
+      "bytes": 4096,
+      "sha256": "95a49ed55e773e157a2951422005e67171f9457709dc5f8bb283f25d4b79d5b5"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/scripts/admit-local-r2-persistence-20261021.mjs",
+      "bytes": 2408,
+      "sha256": "269dd957346b2b728e0e0289eb436cd63951d751f340627a8e8df8be84690d90"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/scripts/checkpoint-source190-loaded-storage-20261021.mjs",
+      "bytes": 9551,
+      "sha256": "2cfd622a9f4d5e13812070fb7d2674abc1cb7d0b9fbf5f73de59200849da9309"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/scripts/launch-source190-loaded-qa-v2-20261021.mjs",
+      "bytes": 3487,
+      "sha256": "e3819a8d02dd10e10546abfea09a8590751183565fefd7d74bc93570aa0dc8fd"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/scripts/stage-source190-persistent-models-20261021.mjs",
+      "bytes": 4053,
+      "sha256": "3117d3b1050a78fe6611cfa4a27b3716a6475572c17ff269669ca8f930131af9"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/scripts/verify-source190-loaded-preview-20261021.mjs",
+      "bytes": 3131,
+      "sha256": "f4b3e662f024764404002de5e644eae59947ee42274ac0f55f20c1c3280f6e26"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/website/.gitignore",
+      "bytes": 474,
+      "sha256": "01afbb89a9ca3ffaa5d0e6170ef0f462648882d62d6dfad9c1eebe78710386dd"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/website/scripts/local-r2-persistence.mjs",
+      "bytes": 688,
+      "sha256": "6e36899805273d4d8f916ace6605474c11e60c1c38c03b914a8886f07fc75c67"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/website/scripts/stage-clinical-review-candidate-local.mjs",
+      "bytes": 3861,
+      "sha256": "daf8450193dda4b64d798e5989d1988f46530c325c3f4d71e1f5a2e3ecf1c868"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/website/tests/local-preview-data-boundaries.test.mjs",
+      "bytes": 1127,
+      "sha256": "548542d2633abd2aec95e12709eb6611903417d9001a6f8c7195707264dbb435"
+    },
+    {
+      "path": "evidence/20261021-local-storage-loaded-verified/website/tests/local-r2-persistence.test.mjs",
+      "bytes": 3370,
+      "sha256": "e3c6aaa33544f2409b3df417bc2fab31f9de40fa7a7e4c6d20ba19f38ff62e37"
+    },
+    {
       "path": "evidence/20261021-plexus-history-verified/evidence/ACTUAL_PLEXUS_EOL.json",
       "bytes": 622,
       "sha256": "32f562ab1d58961e2037080a8d39719da4bff65f075d8b84c989fa892cea0d2e"
@@ -5551,14 +5641,55 @@
     }
   ],
   "removed": [],
-  "scope": "Selected owned navigation production/test source,exact preimages,whole owned historical UI/test fixtures and small metadata/proof/control scripts on previously filtered ancestry. Encoded fixtures decode only to4hash-verified owned UI/test preimages;no data-image/model encoding. No scans/masks/identifiers/private records/private manifests or modules/model geometry/full runtime/dist/node_modules/raw canonical Git ancestry/browser pixels/DOM. Not a complete runnable/private-data backup,clinical/spatial or hosted release.",
+  "scope": "Selected owned local developer storage helper, native stager fix, private-state Git ignore boundary, regression tests, exact stager preimage and small non-patient proof/control sources. Prior filtered ancestry only. No private SQLite/rows/cookies/identities, scans/masks, full private inventory/modules/manifests, geometry/full runtimes/dist/dependencies/raw canonical history/browser pixels or DOM. Not a whole runnable or private-data backup, public deployment or clinical/spatial acceptance.",
   "proof": {
-    "focusedPassed": 138,
-    "wholeOriginalHeaderPassed": 6,
-    "freshTypes": true,
-    "productionBuild": true,
-    "all1710ReviewInputsPreserved": true,
-    "canonicalInstalled": false
+    "at": "2026-10-21T05:27:32.923Z",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "observed": [
+      "Whole-body skeleton renders with compact controls",
+      "Zoom in responds",
+      "Right lower limb: hip to heel opens as a loaded anatomical tour",
+      "Play full tour shows step 1 and its caption without a second Start click",
+      "Speed selector accepts 3x; playback advances automatically from step 1 to step 5",
+      "Pause changes the control to Play and retains step 5 and its caption"
+    ],
+    "unresolved": [
+      {
+        "message": "MutationObserver.observe: parameter 1 is not of type Node",
+        "count": 1,
+        "source": "Unclassified; console supplied no source URL or stack"
+      }
+    ],
+    "limits": [
+      "No frame-rate/smoothness benchmark",
+      "Not all tours or regions tested",
+      "Not clinical, spatial registration, hosted-release or full-suite acceptance"
+    ],
+    "modelsReadBackAcrossFreshEmulator": 137,
+    "modelBytes": 199072480,
+    "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "sourceInputs": 5107,
+    "tests": 17,
+    "passed": 17,
+    "skipped": 0,
+    "authenticationChanged": false,
+    "permissionsChanged": false,
+    "canonicalInstalled": false,
+    "publicDeployment": false,
+    "localOnlyPrivateDatabaseCopy": true,
+    "sourceDatabaseOpenedReadOnly": true,
+    "privateDataUploaded": false,
+    "ownerTabsTouched": false,
+    "ownerPort3000Untouched": true,
+    "temporaryPort3002Stopped": true,
+    "originalFullSuiteFailures": 144,
+    "fullSuiteAcceptance": false,
+    "clinicalApproval": false,
+    "spatialRegistration": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

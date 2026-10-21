@@ -1,0 +1,20 @@
+{
+  "changes": [
+    {
+      "path": "scripts/stage-clinical-review-candidate-local.mjs",
+      "beforeSha256": "95a49ed55e773e157a2951422005e67171f9457709dc5f8bb283f25d4b79d5b5",
+      "proposedSha256": "daf8450193dda4b64d798e5989d1988f46530c325c3f4d71e1f5a2e3ecf1c868"
+    },
+    {
+      "path": "scripts/local-r2-persistence.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "6e36899805273d4d8f916ace6605474c11e60c1c38c03b914a8886f07fc75c67"
+    },
+    {
+      "path": "tests/local-r2-persistence.test.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "be5abd2e6aaf45c2c6423883d219bb84e7ae714baa0ebc4a3ccd6e9a3ca0edad"
+    }
+  ],
+  "canonicalInstalled": false
+}
