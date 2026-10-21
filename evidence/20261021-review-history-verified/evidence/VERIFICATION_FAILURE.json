@@ -1,0 +1,8 @@
+{
+  "at": "2026-10-21T17:47:50.734Z",
+  "commands": [],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n... Skipped lines\n\n  '// Client-side links do not fire beforeunload. Keep one capture listener per\\n' +\n    '// document so several mounted review forms still ask only once.\\n' +\n    'type Registration = {\\n' +\n    '  protectedCopies: Set<() => boolean>;\\n' +\n    '  onClick: (event: MouseEvent) => void;\\n' +\n...\n    \"    document.addEventListener('click', onClick, true);\\n\" +\n+   '\\n' +\n    '  }\\n' +\n    '  registration.protectedCopies.add(isProtected);\\n' +\n    '  return () => {\\n' +\n    '    const current = registrations.get(document);\\n' +\n    '    if (!current) return;\\n' +\n",
+  "canonicalInstalled": false,
+  "ownerFormsRefreshed": false,
+  "wholeSuitePassingClaim": false
+}

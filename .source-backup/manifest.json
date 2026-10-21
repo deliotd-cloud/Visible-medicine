@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T17:34:47.481Z",
+  "at": "2026-10-21T17:54:14.144Z",
   "sourceIdentity": {
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "ac872c4ac15e606794f963256c8617f7cef9001c4048e572bc2dbc1836a4c86b",
+    "review": "9cf639e08a25a4e649f06f6ff1a7fa580b5ba9d86528ab9d2c2d998ddc85ff1d",
     "canonicalInstalled": false
   },
-  "parent": "e79e56b3b3d46ee7e8ea36a14d68c196a6a5a9cb",
-  "gitParent": "e79e56b3b3d46ee7e8ea36a14d68c196a6a5a9cb",
+  "parent": "bb7c56c56616ce58d98c90af09e4bfac839af523",
+  "gitParent": "bb7c56c56616ce58d98c90af09e4bfac839af523",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -7400,6 +7400,156 @@
       "sha256": "5188a8f753997a07b7bd22883b3ee48b9f593c67b6c869b83889b228f08be40f"
     },
     {
+      "path": "evidence/20261021-review-history-verified/candidate/lib/clinical-review-navigation-guard.ts",
+      "bytes": 4346,
+      "sha256": "0826c7d11015b63939e0774e775d0964be9e215f9e63cd24f243c3c6a8c1d58b"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/candidate/scripts/rebind-plexus-review-history.mjs",
+      "bytes": 4638,
+      "sha256": "f2c64665c5c77b63374a19dfa0926158014b4c4734b3fd6d1df6d5a8aeb4f636"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/candidate/tests/clinical-review-history-guard.test.ts",
+      "bytes": 6916,
+      "sha256": "a2e4b7b4d1e6634358405db3c56ae2b6ff918a62dd7aceff0cf773eb91073bdf"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/candidate/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 1777,
+      "sha256": "76a3605c87acb0f60bd44800c32c1f482238034347c9e7c816ce31651edf062e"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/candidate/tests/fixtures/review-history-navigation-binding.test.mjs.raw",
+      "bytes": 6738,
+      "sha256": "f348dd25e815fafc9f37b10fc54a37fe5b6cafe9e4e500fcedb8d2c304ef662e"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/candidate/tests/plexus-review-history-binding.test.mjs",
+      "bytes": 6448,
+      "sha256": "1d2285d30bd5026576460bf5bbd4e5e072e9abfc7402223ece672008166a8231"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/candidate/tests/plexus-review-navigation-binding.test.mjs",
+      "bytes": 6813,
+      "sha256": "e011a2c4aa9c6803a88c6f5f7afb3739f0a98c991b94b7b7025546b2e6f3e3f4"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/controls/checkpoint-review-history-20261021.mjs",
+      "bytes": 9656,
+      "sha256": "1197a49b95d1025728db7fb4fc67024c22a940d5339b73be0158622c7136c2f0"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/controls/launch-review-history-qa-20261021.mjs",
+      "bytes": 5794,
+      "sha256": "1dadd170fbb4e3b0bae77f953b285540bfa5a2a6c36a134742c4691c271eae29"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/controls/prepare-review-history-candidate-20261021.mjs",
+      "bytes": 7426,
+      "sha256": "9c200bc0fdc2b399fbbb613819c56e8910b3c884425c07a08054a5c92c5aac96"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/controls/verification-driver-v1.mjs",
+      "bytes": 10967,
+      "sha256": "60ce1f3b9300a16a87e952a605446d69c9488c90bd0a64485dfbf9fdd49de4f8"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/controls/verify-review-history-candidate-20261021.mjs",
+      "bytes": 11414,
+      "sha256": "82b43ac218ad84aac9604713eee3288c7a8d98e5861362671cbf1d039c7007b2"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/bind-review.json",
+      "bytes": 368,
+      "sha256": "23b0cfc93022bda5ebad9024089a1a06800b321facbf98ac05909a42e8083078"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/BROWSER_CLICK_RECOVERY.json",
+      "bytes": 1445,
+      "sha256": "dbe5e9d86cc5a8afee4de32c6729606ec01ad04b55beaae7523a3deb50300eec"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/BROWSER_HISTORY_ACCEPTANCE.json",
+      "bytes": 1781,
+      "sha256": "96dd9c212397b28d5533f7417239ac4d07669cf2be4836f2037b6017ade9a965"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/build-review-viewer.json",
+      "bytes": 385,
+      "sha256": "0c083b861e1485d64aacf63924cf5c85c00c25bf64129b46f3211ef5f758838c"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/full-build.json",
+      "bytes": 380,
+      "sha256": "85ca6710739ff67c3782f197922f134cea10ae69ea87f7a13716e642719e6bd9"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/full-types.json",
+      "bytes": 417,
+      "sha256": "751aea6bb379fd865781cf9df09df5c316ce6185cece3c42f6eb6c4521fd856a"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/HISTORY_QA_SERVER.json",
+      "bytes": 428,
+      "sha256": "0abaa598c4e034727e89894c1a860b4351fee7a169440a40cc2f58989c702d81"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/native.json",
+      "bytes": 1844,
+      "sha256": "79c9f76f941226fb3cafc240713203dc5288c4012ca0b8c1bf46beefe7a68ae8"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/PRESENTATION_TRANSITION.json",
+      "bytes": 1783,
+      "sha256": "97d6b9d0ba3b861b39678af66e164f0003e0a8c164fa293a4a32ddf02152eaa6"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/PROOF.json",
+      "bytes": 3510,
+      "sha256": "494222a6363b970dc1f9ed0642faa0f04ae760f438b8e5cb7618f4c7df37e7b7"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/stock-review.json",
+      "bytes": 371,
+      "sha256": "09b67af77525d23c712815476fd8c3e1d9755c0f0334ed7d87cb788b9cf1e035"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/VERIFICATION_FAILURE.json",
+      "bytes": 876,
+      "sha256": "543520a71cd0e7c44e8a39015fc6ef103eaa525f83557ff32f5d3d292d0949a2"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/VERIFICATION_RETRY_STARTED.json",
+      "bytes": 268,
+      "sha256": "0ad1715e1349352436c971625aacbebf51fcbece38d52b2956fa59ac13e47123"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/VERIFIED.json",
+      "bytes": 7334,
+      "sha256": "ece614abf1e5aa291aa283efa5b9bc4a227725948d765c97b2458b63630d864a"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/evidence/worker-proposal.json",
+      "bytes": 1945,
+      "sha256": "f1fb62e4b7e18893a0873a89c4b97bae844b41967012d6ceb1380433a611e2c7"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/preimages/lib/clinical-review-navigation-guard.ts",
+      "bytes": 2332,
+      "sha256": "8c779ba3552af0423a5c724587e6fcb8f371572c0feb48aa1cc281b671725cbb"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/preimages/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 1777,
+      "sha256": "5c48102ebca7b03f3d99321b4a2f220e3123cdee68a538a6972c1d154fe48c65"
+    },
+    {
+      "path": "evidence/20261021-review-history-verified/preimages/tests/plexus-review-navigation-binding.test.mjs",
+      "bytes": 6738,
+      "sha256": "f348dd25e815fafc9f37b10fc54a37fe5b6cafe9e4e500fcedb8d2c304ef662e"
+    },
+    {
       "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/HeadCtBoneDecisionForm.tsx",
       "bytes": 14867,
       "sha256": "0c807b7cba1787aeba634b43cbff3e7049cebc47e4f9bd81f6da64cfbd68c019"
@@ -11661,58 +11811,79 @@
     }
   ],
   "removed": [],
-  "scope": "Two reviewed comparison-label source/test files, exact preimages and old/new generated-delivery fingerprints; compact focused native/types/build/stock-binding transition receipts and mechanical controls. Existing filtered parent sources are retained. No scans, masks, geometry, identifiers, private modules/references/notes/decisions/env/database, full candidate/private input inventories, dependencies, raw logs/DOM/media or raw canonical ancestry. Partial selected-source recovery only; not whole/private/runnable backup, clinical/spatial approval, whole-suite pass or public deployment.",
+  "scope": "Exact history-guard source/test, pure presentation rebind and its mutation/source-role tests, unchanged original preimages, old/new generated-delivery hash fingerprints, compact native/types/build/stock-binding and bounded synthetic/real-click browser receipts, mechanical controls. Prior filtered sources remain. No actual Plexus packet/private assets, scans/masks/geometry, identifiers/private references/notes/decisions/env/database, full candidate/private input inventories, dependencies, raw logs/DOM/media or raw canonical ancestry. Partial selected-source recovery only; not whole/private/runnable backup, native-dialog/full-app/whole-suite/clinical/spatial approval or public deployment.",
   "proof": {
-    "at": "2026-10-21T17:34:31.217Z",
+    "at": "2026-10-21T17:53:59.551Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "ac872c4ac15e606794f963256c8617f7cef9001c4048e572bc2dbc1836a4c86b",
-    "reviewBefore": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+    "review": "9cf639e08a25a4e649f06f6ff1a7fa580b5ba9d86528ab9d2c2d998ddc85ff1d",
+    "reviewBefore": "ac872c4ac15e606794f963256c8617f7cef9001c4048e572bc2dbc1836a4c86b",
     "reviewInputs": 1711,
-    "candidateFiles": 5466,
+    "candidateFiles": 5470,
     "actualFocusedNativeCounts": {
-      "tests": 65,
-      "pass": 65,
+      "tests": 172,
+      "pass": 172,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
     "nativeRoots": [
+      "tests/clinical-review-navigation-guard.test.ts",
+      "tests/clinical-review-navigation-preservation.test.mjs",
+      "tests/review-draft-autosave.test.mjs",
+      "tests/head-teaching-review-notes.test.ts",
+      "tests/head-mri-review-notes.test.ts",
+      "tests/head-review-working-copy.test.ts",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/plexus-review-navigation-binding.test.mjs",
+      "tests/review-navigation-harness-preservation.test.mjs",
+      "tests/review-navigation-delivery-preservation.test.mjs",
+      "tests/head-ct-bone-decision-form.test.ts",
+      "tests/head-ct-bone-teaching-decision-form.test.ts",
+      "tests/head-ct-facial-decision-form.test.ts",
+      "tests/head-paired-decision-form.test.ts",
+      "tests/regional-guide-review-ui.test.ts",
+      "tests/regional-reference-draft-ui.test.ts",
+      "tests/review-navigation-six-harness-preservation.test.mjs",
+      "tests/head-ct-facial-ui.test.mjs",
+      "tests/plexus-review-ui.test.ts",
       "tests/imaging-atlas-shell.test.ts",
       "tests/imaging-pane-navigation.test.ts",
       "tests/imaging-image-focus.test.mjs",
       "tests/head-inline-comparison.test.ts",
       "tests/head-atlas-navigation.test.ts",
-      "tests/review-navigation-delivery-preservation.test.mjs",
-      "tests/current-atlas-delivery.test.mjs"
+      "tests/clinical-review-history-guard.test.ts",
+      "tests/plexus-review-history-binding.test.mjs"
     ],
-    "newLabelScenarios": 12,
-    "realPaneNavigationUsed": true,
     "fullProjectTypesPassed": true,
     "fullLocalBuildPassed": true,
     "stockReviewPassed": true,
-    "wholePresentationTransitionExact": true,
-    "sourceInputChanges": [
-      "components/ImagingAtlasShell.tsx"
-    ],
-    "packagesAndLicensingInventoryUnchanged": true,
-    "privatePlexusPacketAndModuleUnchanged": true,
-    "canonicalInstalled": false,
-    "ownerFormsRefreshed": false,
-    "ownerPreviewRestarted": false,
-    "priorCandidateUnchanged": true,
+    "wholeOriginalHelperInverseExact": true,
+    "allOriginalClickAndBeforeUnloadHooksPreserved": true,
+    "exactPrivatePlexusPresentationTransitionPassed": true,
+    "plexusTopologyStudyNonHtmlAssetsPackagesChecklistsAndApprovalsUnchanged": true,
+    "dependenciesAndLicensingUnchanged": true,
+    "browserRealHistoryWithScriptedConfirmationsPassed": true,
+    "priorRealReviewCancelPreservedSyntheticNotes": true,
+    "priorRealReviewCleanNavigationPassed": true,
+    "nativeDirtyLeaveAcceptance": false,
+    "fullBrowserOrScreenReaderAcceptance": false,
     "all71ItemsAndEightIdeasUnchanged": true,
     "checklistRevision": 124,
-    "fullGoalActive": true,
+    "canonicalInstalled": false,
+    "ownerPreviewRestarted": false,
+    "ownerFormsRefreshed": false,
+    "ownedTabs101And105Closed": true,
+    "ownedSyntheticFixtureStopped": true,
     "privateDataUploaded": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
     "wholeSuitePassingClaim": false,
-    "browserAcceptancePassed": false,
+    "fullGoalActive": true,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "limits": "The CT/MRI-to-existing3D shortcut and learning landmark now name an open comparison. These are focused real-component SSR/behavior tests and a full build, not browser or screen-reader acceptance. Candidate is isolated, not installed in owner preview. Earlier Review Cancel/leave/clean-navigation acceptance remains unresolved; Back/Forward and imperative routing remain outside the click guard. No changes to clinical content, decisions, scans, masks, model assets, native imaging or desktopPACS."
+    "limits": "Only cancelable same-document path/query traversals in NavigationAPI browsers are additionally guarded. Browser support, child/cross-origin and repeated-Back cancellation limits remain. No imperative router interception or history trapping. Supplementary real prior-click Cancel/clean-navigation evidence remains separate from new history browser acceptance. Actual history browser proof uses scripted confirm responses in a separate fixture, not native dialogs or full app routing. Initial inverse-driver newline failure and original driver remain frozen; only that control seam was fixed, with product bytes unchanged."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

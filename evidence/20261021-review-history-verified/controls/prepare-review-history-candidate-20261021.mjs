@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {read,json,sha,runGit} from './source-only-backup-20261019.mjs';
+const baseline='F:/VisibleMedicine/staging/20261021-imaging-comparison-label-candidate',baselineWebsite=baseline+'/website';
+const stage='F:/VisibleMedicine/staging/20261021-review-history-candidate',site=stage+'/website';
+const before=json(baseline+'/VERIFIED.json'),rows=json(before.sourceSnapshot),canonical='F:/VisibleMedicine/website',pointer=json('CURRENT_CHECKPOINT.json');
+assert.equal(before.review,'ac872c4ac15e606794f963256c8617f7cef9001c4048e572bc2dbc1836a4c86b');assert(before.fullProjectTypesPassed&&before.fullLocalBuildPassed&&before.stockReviewPassed);assert.equal(before.actualNativeCounts.pass,65);
+assert.equal(sha(read(before.sourceSnapshot)),'34186bc2e340127b1fd13475e4e28ed7e78702fc231fb637be641b7c0fbcee1c');assert.equal(rows.length,5466);
+const canonicalRows=json(pointer.activeWork.sourceSnapshot),preserved=pointer.activeWork.preservedSourcePaths.map(path=>({path,bytes:read(canonical+'/'+path).length,sha256:sha(read(canonical+'/'+path))}));
+const history='F:/VisibleMedicine/staging/20261021-review-history-guard-proposal',binding='F:/VisibleMedicine/staging/20261021-review-history-binding-proposal';
+const additions=[['lib/clinical-review-navigation-guard.ts',history+'/candidate/lib/clinical-review-navigation-guard.ts','0826c7d11015b63939e0774e775d0964be9e215f9e63cd24f243c3c6a8c1d58b'],['tests/clinical-review-history-guard.test.ts',history+'/candidate/tests/clinical-review-history-guard.test.ts','a2e4b7b4d1e6634358405db3c56ae2b6ff918a62dd7aceff0cf773eb91073bdf'],['scripts/rebind-plexus-review-history.mjs',binding+'/candidate/scripts/rebind-plexus-review-history.mjs'],['tests/plexus-review-history-binding.test.mjs',binding+'/candidate/tests/plexus-review-history-binding.test.mjs'],['tests/fixtures/review-history-navigation-binding.test.mjs.raw',baselineWebsite+'/tests/plexus-review-navigation-binding.test.mjs','f348dd25e815fafc9f37b10fc54a37fe5b6cafe9e4e500fcedb8d2c304ef662e']];
+const rolePath='tests/plexus-review-navigation-binding.test.mjs',roleBefore='const candidate=process.env.PLEXUS_NAVIGATION_WEBSITE||stage;',roleAfter="const candidate=process.env.PLEXUS_NAVIGATION_WEBSITE||'F:/VisibleMedicine/staging/20261021-imaging-comparison-label-candidate/website';";
+const roleText=read(baselineWebsite+'/'+rolePath).toString();assert.equal(sha(roleText),'f348dd25e815fafc9f37b10fc54a37fe5b6cafe9e4e500fcedb8d2c304ef662e');assert.equal(roleText.split(roleBefore).length,2);
+const guard=()=>{
+ for(const r of rows)assert.equal(sha(read(baselineWebsite+'/'+r.path)),r.sha256,'Immutable baseline:'+r.path);
+ for(const r of [...canonicalRows,...preserved])assert.equal(sha(read(canonical+'/'+r.path)),r.sha256,'Owner source:'+r.path);
+ assert.equal(runGit(['-C',canonical,'rev-parse','HEAD']).toString().trim(),'b953ff3f5f1891599cb6e91cb91311d9d6006270');assert.equal(runGit(['-C','F:/VisibleMedicine/atlas','rev-parse','HEAD']).toString().trim(),before.source);assert.equal(runGit(['-C','F:/VisibleMedicine/atlas','status','--porcelain']).toString().trim(),'');process.kill(266712,0);process.kill(240632,0);
+};
+guard();assert(!fs.existsSync(stage));const stat=fs.statfsSync('F:/');assert(stat.bavail*stat.bsize>5*1024**3);fs.mkdirSync(site,{recursive:true});
+const save=(name,value)=>fs.writeFileSync(stage+'/'+name,JSON.stringify(value,null,2)+'\n',{flag:'wx'});
+save('STARTED.json',{at:new Date().toISOString(),driver:process.pid,canonicalInstalled:false,ownerFormsRefreshed:false});
+const choices=new Map(rows.map(r=>[r.path,{...r,from:baselineWebsite+'/'+r.path}]));
+for(const [file,from,hash]of additions){if(hash)assert.equal(sha(read(from)),hash);const bytes=read(from);choices.set(file,{path:file,from,bytes:bytes.length,sha256:sha(bytes)});}
+for(const r of choices.values()){assert(!path.isAbsolute(r.path)&&!r.path.includes('\\')&&r.path.split('/').every(v=>v&&v!=='.'&&v!=='..'));assert(!/(^|\/)(?:\.env(?:\.[^/]*)?|\.wrangler|\.git|node_modules)(\/|$)|\.(?:sqlite|db|dcm|dicom|nii|nrrd)$/i.test(r.path));const target=site+'/'+r.path;assert(fs.lstatSync(r.from).isFile()&&!fs.lstatSync(r.from).isSymbolicLink());fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(r.from,target,fs.constants.COPYFILE_EXCL);assert.equal(sha(read(target)),r.sha256);}
+assert.equal(choices.size,5470);
+for(const file of ['lib/clinical-review-navigation-guard.ts',rolePath]){const target=stage+'/preimages/'+file;fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(baselineWebsite+'/'+file,target,fs.constants.COPYFILE_EXCL);}
+console.log(JSON.stringify({phase:'sources-copied',files:choices.size}));
+const dependencies=baselineWebsite+'/node_modules',depRoot=fs.realpathSync(dependencies);assert(!fs.lstatSync(dependencies).isSymbolicLink());
+fs.cpSync(dependencies,site+'/node_modules',{recursive:true,errorOnExist:true,force:false,dereference:true,filter:from=>{if(['.vite','.vite-temp','.cache'].includes(path.basename(from)))return false;if(fs.lstatSync(from).isSymbolicLink()){const real=fs.realpathSync(from);assert(real===depRoot||real.startsWith(depRoot+path.sep));}return true;}});
+runGit(['init','-q',site]);const common=runGit(['-C',canonical,'rev-parse','--git-common-dir']).toString().trim();fs.mkdirSync(site+'/.git/objects/info',{recursive:true});fs.writeFileSync(site+'/.git/objects/info/alternates',path.resolve(canonical,common,'objects').replaceAll('\\','/')+'\n',{flag:'wx'});runGit(['-C',site,'update-ref','HEAD','b953ff3f5f1891599cb6e91cb91311d9d6006270']);runGit(['-C',site,'read-tree','HEAD']);assert.equal(runGit(['-C',site,'remote']).toString().trim(),'');
+const atlas='F:/VisibleMedicine/staging/20261021-atlas-combined-source';assert.equal(runGit(['-C',atlas,'rev-parse','HEAD']).toString().trim(),before.source);assert.equal(runGit(['-C',atlas,'status','--porcelain']).toString().trim(),'');fs.symlinkSync(atlas,stage+'/atlas','junction');
+guard();for(const r of choices.values())assert.equal(sha(read(site+'/'+r.path)),r.sha256);
+const roleChange={path:rolePath,before:roleBefore,after:roleAfter,preimageSha256:sha(roleText),candidateSha256:sha(roleText.replace(roleBefore,roleAfter))};
+const selected=[...choices.values()].map(r=>r.path===rolePath?{path:r.path,bytes:Buffer.byteLength(roleText.replace(roleBefore,roleAfter)),sha256:roleChange.candidateSha256}:{path:r.path,bytes:r.bytes,sha256:r.sha256});
+save('PREPARATION.json',{at:new Date().toISOString(),stage,site,baseline,baselineWebsite,baselineSnapshot:before.sourceSnapshot,baselineSnapshotSha256:before.sourceSnapshotSha256,source:before.source,reviewBefore:before.review,canonical,canonicalSnapshot:pointer.activeWork.sourceSnapshot,canonicalSnapshotSha256:pointer.activeWork.sourceSnapshotSha256,preserved,rows:selected,additions:additions.map(([path,from])=>({path,sha256:sha(read(from))})),pendingSourcePatch:roleChange,originalHelperSha256:'8c779ba3552af0423a5c724587e6fcb8f371572c0feb48aa1cc281b671725cbb',helperSha256:'0826c7d11015b63939e0774e775d0964be9e215f9e63cd24f243c3c6a8c1d58b',independentDependencies:true,privateContextsFOnly:true,privateDatabaseCopied:false,canonicalInstalled:false,ownerFormsRefreshed:false,publicDeployment:false});
+console.log(JSON.stringify({prepared:stage+'/PREPARATION.json',files:selected.length,pendingHistoricalRolePatch:true,canonicalInstalled:false}));

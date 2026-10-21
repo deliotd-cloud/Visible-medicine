@@ -1,0 +1,32 @@
+{
+  "kind": "clinical-review-history-guard-proposal",
+  "date": "2026-10-21",
+  "baseline": {
+    "website": "F:/VisibleMedicine/staging/20261021-imaging-comparison-label-candidate/website",
+    "atlasCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "reviewCommit": "ac872c4ac15e606794f963256c8617f7cef9001c4048e572bc2dbc1836a4c86b",
+    "helperSha256": "8c779ba3552af0423a5c724587e6fcb8f371572c0feb48aa1cc281b671725cbb"
+  },
+  "candidate": {
+    "helper": "candidate/lib/clinical-review-navigation-guard.ts",
+    "helperSha256": "0826c7d11015b63939e0774e775d0964be9e215f9e63cd24f243c3c6a8c1d58b",
+    "test": "candidate/tests/clinical-review-history-guard.test.ts",
+    "testSha256": "a2e4b7b4d1e6634358405db3c56ae2b6ff918a62dd7aceff0cf773eb91073bdf"
+  },
+  "checks": [
+    {
+      "command": "node --experimental-strip-types --test F:/VisibleMedicine/staging/20261021-review-history-guard-proposal/candidate/tests/clinical-review-history-guard.test.ts",
+      "result": "pass, 4 tests"
+    },
+    {
+      "command": "tsc --noEmit --strict --target es2022 --module esnext --moduleResolution bundler --lib es2022,dom candidate/lib/clinical-review-navigation-guard.ts",
+      "result": "pass"
+    }
+  ],
+  "scope": "Optional Navigation API navigate listener on the existing per-document registration; cancelable same-document traverse only, same-origin path or query change, with current dirty or uncertain callback evaluation. Existing click guard remains unchanged.",
+  "limitations": [
+    "The browser may not expose the Navigation API or may make a traversal uncancelable, including some repeated Back traversals; this is not universal Back protection.",
+    "This listener does not intercept imperative routes, history pushState or replaceState, cross-document navigations, or router behavior.",
+    "No integration, full build, browser verification, deployment, or clinical sign-off was performed in this isolated proposal."
+  ]
+}
