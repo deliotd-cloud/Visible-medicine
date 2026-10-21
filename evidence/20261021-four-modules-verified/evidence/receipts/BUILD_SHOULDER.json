@@ -1,0 +1,16 @@
+{
+  "label": "BUILD_SHOULDER",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "node_modules/vite/bin/vite.js",
+    "build",
+    "--config",
+    "integration/shoulder/vite.config.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/BUILD_SHOULDER.log",
+  "logSha256": "08016b68c3379db26952ca9ab7828ed7cc9c81b909d20b64cf5e18eff823b147",
+  "footer": [],
+  "canonicalInstalled": false
+}

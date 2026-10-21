@@ -1,0 +1,14 @@
+{
+  "label": "EXPORT_LOWER_LIMB",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/export-lower-limb-module.mjs",
+    "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\lower-limb"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/EXPORT_LOWER_LIMB.log",
+  "logSha256": "76d09960b0a3c892077792a891979c6559bdc02ec6b16cd5b0b870fc5db9eae2",
+  "footer": [],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,14 @@
+{
+  "label": "CHECK_FINAL_BODY_RENDERER",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/body-renderer-revisions.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/CHECK_FINAL_BODY_RENDERER.log",
+  "logSha256": "ebcdca1f373d11936a429aeda8715f9025f4e85724fb509fc3426c18b45c6794",
+  "footer": [],
+  "canonicalInstalled": false
+}

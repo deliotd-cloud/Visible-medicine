@@ -1,0 +1,14 @@
+{
+  "label": "CHECK_FINAL_NESTED_BINDINGS",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/generate-nested-review-bindings.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/CHECK_FINAL_NESTED_BINDINGS.log",
+  "logSha256": "2a97e792cf1344816169efa6e4c87324d5f319018d8309620f8860bfa3229bc4",
+  "footer": [],
+  "canonicalInstalled": false
+}

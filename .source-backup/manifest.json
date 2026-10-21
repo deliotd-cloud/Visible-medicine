@@ -1,17 +1,17 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T03:54:00.272Z",
+  "at": "2026-10-21T04:07:06.431Z",
   "sourceIdentity": {
-    "commit": "5c7ed0612f94b9a3ad99d9e49566c655495b98a6",
-    "tree": "ab34d6ce706b690edd6abe8bec585d348b0a5fe0",
-    "parent": "30135cdd1849115a75c036dd6897d76e3d91e231",
+    "commit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "tree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+    "parent": "5c7ed0612f94b9a3ad99d9e49566c655495b98a6",
     "introduction": "30135cdd1849115a75c036dd6897d76e3d91e231",
-    "baseline": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "changedSourcePaths": 22,
-    "clean": true
+    "base": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "clean": true,
+    "paths": 23
   },
-  "parent": "73043aeb010c75e4ba19efaf6a3d1732194dff44",
-  "gitParent": "73043aeb010c75e4ba19efaf6a3d1732194dff44",
+  "parent": "69d6458384ad5dc5250adffb441f4c98ca605505",
+  "gitParent": "69d6458384ad5dc5250adffb441f4c98ca605505",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2379,6 +2379,266 @@
       "sha256": "522a2f8e40437bbb9a08bcb98e9c721fade9e92c621e9d5cc0a740d6c586ff91"
     },
     {
+      "path": "evidence/20261021-four-modules-verified/atlas/.gitattributes",
+      "bytes": 4314,
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "9cc6ab78835523e71bbdfe10f5682bdc6f9a2279956d588d8570b67f1700ce72"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "37c64990ca92b3c5c2eaef7676812661deb5cc2f7be4353d3e7d665928685905"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/content/regional-teaching/head-neck.json",
+      "bytes": 2457934,
+      "sha256": "e6a486cc4ab9745eae110615b340fa1797bb0e6e0b72195f083bec766543da25"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/content/review-revisions.json",
+      "bytes": 10204,
+      "sha256": "e13145d687b09df0557311d40ed7a24d05ad98157236d0b289b0e21ddb5367b3"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 4542,
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 354693,
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11426,
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/scripts/test-dental-mri-native.mjs",
+      "bytes": 8870,
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6786,
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/atlas/scripts/verify-dental-mri-transition.mjs",
+      "bytes": 17132,
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/COMMITTED.json",
+      "bytes": 590,
+      "sha256": "7410d8f6ec8fb1245f0a6b5d38b5db5f589995da5cda6bae147541089dd3c80b"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/MAIN_REVIEW.json",
+      "bytes": 8136,
+      "sha256": "4eda021ef8c86037ae423c1bde71b49fa089c05d128e53fbf5ecf41d41872fbf"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/module-manifests/female-pelvis.json",
+      "bytes": 6208,
+      "sha256": "125edab490e1805458d7d8c3f512979cb107b3cfbb5fbeede1679a820f0336fa"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/module-manifests/head-neck.json",
+      "bytes": 627564,
+      "sha256": "74ba7688c8dfd8939a160f56a04e7825b11183f947f1074c6825c0f39904d4ec"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/module-manifests/lower-limb.json",
+      "bytes": 3436,
+      "sha256": "1c7b13b5045fb9095a01fb61f94c4a9cbaad6303f59873e72d324515f80fcd4f"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/module-manifests/shoulder.json",
+      "bytes": 4795,
+      "sha256": "85230df1327b2913bf35cd7071d1a488f47ad7f0885b8640f25ba688895b5bca"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/PRESERVED_BUILD.json",
+      "bytes": 295,
+      "sha256": "a5cf000cf098a80af00904812947d8fa3522815f7fbd256a4bb5a3346caaf368"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/BUILD_FEMALE_PELVIS.json",
+      "bytes": 481,
+      "sha256": "a909f526858cca7922ef8dd04642aa0c769eaa3bef227c20deb92f3244d97e89"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/BUILD_HEAD_NECK.json",
+      "bytes": 469,
+      "sha256": "b66468f7c33893138395625bbf57ff191fd8af6682d972dca58d9ce8f274b656"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/BUILD_LOWER_LIMB.json",
+      "bytes": 472,
+      "sha256": "889cac8985e8e9d85da7ef4bc72755611ceadd183c927b9ebdffb0e212f3ae43"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/BUILD_SHOULDER.json",
+      "bytes": 466,
+      "sha256": "612dbbf4f4c4058ba31fc2ea47753e6ecf9f3957810693b1e130365b7af35720"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/CHECK_FINAL_BODY_RENDERER.json",
+      "bytes": 436,
+      "sha256": "31d861fb72ea5fed63fa468dc0cb283f1c257989a355c95f6c7c16a145451de9"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/CHECK_FINAL_DISPLAY_PINS.json",
+      "bytes": 444,
+      "sha256": "63036a92493fe1907d21d91589f6f8949e7e259c5ac8398e0b0707cf76a1341a"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/CHECK_FINAL_NESTED_BINDINGS.json",
+      "bytes": 448,
+      "sha256": "12db13cffdbe832830e4f404b8a7615ce8b74fb408ed5c1eba2e2c159090a8e8"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/CHECK_FINAL_TEACHING_SNAPSHOTS.json",
+      "bytes": 450,
+      "sha256": "b3af484ec63923217af52a641d2ca48eaebd28f508761935f83ba52e3b14c15c"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/CHECK_SHOULDER_REVISIONS.json",
+      "bytes": 427,
+      "sha256": "bc748eedae7b516a2b1fadda9ac292337e2da35e1217e9cd361606dd02bad197"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/EXPORT_FEMALE_PELVIS.json",
+      "bytes": 532,
+      "sha256": "7611fe6a2ae9e479c7e08179318d992887a4bfa53db01e4914a2ca86a6a8ca2e"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/EXPORT_HEAD_NECK.json",
+      "bytes": 516,
+      "sha256": "1475d41f290a144a009c7bfb5eb63b70baf807e4ff62cd585364fa51438920b7"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/EXPORT_LOWER_LIMB.json",
+      "bytes": 520,
+      "sha256": "57e7a2736b4309c6cb0be4cc687fec6dc49f4d0bb2cc5b344076ee39fbcfb920"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/EXPORT_SHOULDER.json",
+      "bytes": 512,
+      "sha256": "bec6298f8433f233db4ae28d99725e9e83b21c638eb2573d2b4efa6a364cf399"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/GENERATE_FINAL_BODY_RENDERER.json",
+      "bytes": 427,
+      "sha256": "ba45d98c909e669afcef1fda153169009fe20100a15a93b34c8f25357ee699b3"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/receipts/GENERATE_SHOULDER_REVISIONS_REUSED.json",
+      "bytes": 415,
+      "sha256": "77c935ac0bc761d1afc2e46813455733ed90037b5238154a2f9aa3c9d839ecac"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/RESULT.json",
+      "bytes": 5263,
+      "sha256": "2749a8bc30f8bce2a64738d8b8f6464c8886a558cf23a562401860e1d7c4575b"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/retained-control-file-collision.json",
+      "bytes": 431,
+      "sha256": "b368f55088f88b0db6ea1a7af4623f14adc4e19ae1becfb5e50c5c1abb1ffe85"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/evidence/SHOULDER_INVERSE.json",
+      "bytes": 772,
+      "sha256": "acb7c1191392161ac456a35d04e146830997bd68ac5d9fb37bc93bc87e89f660"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/preimages/content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "ff43508e300d8f6e12c138c300e1e4adabba0104f180aaf09ec6dcf2e6fab0c7"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/preimages/content/review-revisions.json",
+      "bytes": 10204,
+      "sha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/scripts/checkpoint-four-module-exports-20261021.mjs",
+      "bytes": 8412,
+      "sha256": "b74a06e718705e7a4e3e27f3cec6e760118f20694a20f1fcd0fa00693c8bf9f6"
+    },
+    {
+      "path": "evidence/20261021-four-modules-verified/scripts/close-shoulder-and-export-modules-20261021.mjs",
+      "bytes": 10230,
+      "sha256": "1045cc614db2782b2435ee7000cfbc266ebc7a1d331698c2f5b7faea9d5c4c13"
+    },
+    {
       "path": "evidence/20261021-header-joint-evidence/checkpoint-header-inventory-20261021.mjs",
       "bytes": 10052,
       "sha256": "be574b9d51006791c76c4b2e3fde18e10d872b49530aa50152bcfa8b6f244046"
@@ -4635,16 +4895,15 @@
     }
   ],
   "removed": [],
-  "scope": "Selected22committed Atlas source/code/generated-teaching paths,review test postimages/exact preimages,small structured receipts/main scripts on prior filtered ancestry. No raw canonical Git ancestry,models,fonts/textures,publisher figures,scans/masks/patient data/private decisions/inbox or private plexus metadata,browser pixels/DOM,long failed source-dump logs,dependencies. Full current-input/plexus/coordination details stay local. Not whole runnable/private-data backup or clinical/public release.",
+  "scope": "Selected23Atlas source/generated-teaching/revision paths,exact2metadata preimages,4module MANIFESTS ONLY,small actual receipts/main scripts on prior filtered source-only ancestry. Full runtime files/model geometry and all private artifacts,patient scans/masks/decisions/inbox,raw canonical ancestry,dependencies and browser media remain local/excluded. Not a complete runnable/private-data backup,hosted release or clinical/spatial approval.",
   "proof": {
-    "actualFinalRetryPass": true,
-    "tourPlayerCases": 75,
-    "wholeHipPass": true,
-    "freshTypesPass": true,
-    "genuineSourceIntroduction": true,
-    "committedTransitionAndRegionalBuildPass": true,
-    "canonicalInstalled": false,
-    "clinicalApproval": false
+    "fourBuildsPass": true,
+    "fourStockExportsPass": true,
+    "allLocalExportedFilesByteVerified": true,
+    "geometryUnchanged": true,
+    "noApprovalMigration": true,
+    "websiteImported": false,
+    "canonicalInstalled": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

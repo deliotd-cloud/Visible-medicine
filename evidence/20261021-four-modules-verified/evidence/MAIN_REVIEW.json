@@ -1,0 +1,180 @@
+{
+  "at": "2026-10-21T04:07:01.716Z",
+  "source": {
+    "commit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "tree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+    "parent": "5c7ed0612f94b9a3ad99d9e49566c655495b98a6",
+    "introduction": "30135cdd1849115a75c036dd6897d76e3d91e231",
+    "base": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "clean": true,
+    "paths": 23
+  },
+  "sourceFiles": [
+    {
+      "path": ".gitattributes",
+      "bytes": 4314,
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 354693,
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "9cc6ab78835523e71bbdfe10f5682bdc6f9a2279956d588d8570b67f1700ce72"
+    },
+    {
+      "path": "content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "37c64990ca92b3c5c2eaef7676812661deb5cc2f7be4353d3e7d665928685905"
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "content/regional-teaching/head-neck.json",
+      "bytes": 2457934,
+      "sha256": "e6a486cc4ab9745eae110615b340fa1797bb0e6e0b72195f083bec766543da25"
+    },
+    {
+      "path": "content/review-revisions.json",
+      "bytes": 10204,
+      "sha256": "e13145d687b09df0557311d40ed7a24d05ad98157236d0b289b0e21ddb5367b3"
+    },
+    {
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 4542,
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11426,
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "scripts/test-dental-mri-native.mjs",
+      "bytes": 8870,
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6786,
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "scripts/verify-dental-mri-transition.mjs",
+      "bytes": 17132,
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    }
+  ],
+  "progress": "Stock shoulder revision generation updates exact verified display-source rows and9geometry renderer fingerprints only. Model hash,all9teaching revisions and absent imaging revisions preserved; no review decision changed. Body renderer,nested source bindings,display pins and regional teaching gates pass. All4Vite module builds and4stock create-only exports pass at the same real source190a6323;every recorded exported file byte/hash checked. Prior5c regional build preserved locally by confined rename,not deleted. Source model geometry unchanged; no scan/mask/private decisions exported.",
+  "priorVerified": "Whole original hip,75tour-player cases,fresh types; complete old/current elbow/private-storage and MRI form7case retry,spinal2case retry and full dental28/9908topic/28/1076packet transition remain scoped passes from prior checkpoint. New changes are generated revision metadata only,not new teaching,geometry or clinical approval. Original full5502/5355pass/144fail/3skip is retained and not a pass.",
+  "exportedModules": [
+    {
+      "kind": "head-neck",
+      "target": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\head-neck",
+      "sourceCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "manifestSha256": "74ba7688c8dfd8939a160f56a04e7825b11183f947f1074c6825c0f39904d4ec",
+      "files": 216,
+      "bytes": 228443944,
+      "patientDataIncluded": false
+    },
+    {
+      "kind": "shoulder",
+      "target": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\shoulder",
+      "sourceCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "manifestSha256": "85230df1327b2913bf35cd7071d1a488f47ad7f0885b8640f25ba688895b5bca",
+      "files": 28,
+      "bytes": 23018224,
+      "patientDataIncluded": false
+    },
+    {
+      "kind": "female-pelvis",
+      "target": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\female-pelvis",
+      "sourceCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "manifestSha256": "125edab490e1805458d7d8c3f512979cb107b3cfbb5fbeede1679a820f0336fa",
+      "files": 15,
+      "bytes": 10975031,
+      "patientDataIncluded": false
+    },
+    {
+      "kind": "lower-limb",
+      "target": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\lower-limb",
+      "sourceCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "manifestSha256": "1c7b13b5045fb9095a01fb61f94c4a9cbaad6303f59873e72d324515f80fcd4f",
+      "files": 19,
+      "bytes": 51316372,
+      "patientDataIncluded": false
+    }
+  ],
+  "correction": "First delivery driver stopped on create-only CURRENT_STEP collision after successful stock generator; failure retained. No other process was left live at retry. Reused the verified terminal generator result,read genuine parent preimage,changed control to immutable per-step events plus own mutable pointer. V2 actual remaining gates/builds/exports pass. No safety gate skipped.",
+  "next": "Preserve closed485Website import for historical tests,then stock export Review and import all4new source190runtimes into an unpublished Website candidate with source/revision/protected-model/inventory checks. Keep owner3000/forms/98d7 unchanged. Continue exact current/historical test-contract repairs and full Website/type/build/browser gates,including semantic CT/MRI/3D links,without claiming spatial registration. Worker plexus historical-replay proposal is local-only,not admitted; read actual handoff before any overlap. Keep all71/eight roadmap items intact.",
+  "sourceOnlyLocalRecovery": true,
+  "fourModulesExported": true,
+  "websiteImported": false,
+  "canonicalInstalled": false,
+  "fullWebsiteSuitePass": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true
+}

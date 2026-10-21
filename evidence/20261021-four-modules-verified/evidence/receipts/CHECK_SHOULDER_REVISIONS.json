@@ -1,0 +1,14 @@
+{
+  "label": "CHECK_SHOULDER_REVISIONS",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/review-revisions.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/CHECK_SHOULDER_REVISIONS.log",
+  "logSha256": "2ab7b1f4dcfd3004f4061d681b250989eb9298f5962de099aa85b76e402f5d34",
+  "footer": [],
+  "canonicalInstalled": false
+}

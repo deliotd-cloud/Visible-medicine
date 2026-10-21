@@ -1,0 +1,14 @@
+{
+  "label": "CHECK_FINAL_DISPLAY_PINS",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/generate-body-review-display-pins.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/CHECK_FINAL_DISPLAY_PINS.log",
+  "logSha256": "711494e99be52fa1deae48b864796958be3efa7481dd22754ac9ef37abc07a20",
+  "footer": [],
+  "canonicalInstalled": false
+}

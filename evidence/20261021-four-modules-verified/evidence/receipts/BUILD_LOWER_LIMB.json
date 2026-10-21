@@ -1,0 +1,16 @@
+{
+  "label": "BUILD_LOWER_LIMB",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "node_modules/vite/bin/vite.js",
+    "build",
+    "--config",
+    "integration/lower-limb/vite.config.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/BUILD_LOWER_LIMB.log",
+  "logSha256": "933b49a1a1678afeb6f0b06b360294a362ea373c442884af861bcc5dd3c32128",
+  "footer": [],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,14 @@
+{
+  "label": "EXPORT_HEAD_NECK",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/export-head-neck-module.mjs",
+    "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\head-neck"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/EXPORT_HEAD_NECK.log",
+  "logSha256": "801e8d54e0323100ee6198b5a01938d85b971a420466e453fb00cd9ab9971509",
+  "footer": [],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,156 @@
+{
+  "at": "2026-10-21T04:05:27.931Z",
+  "commit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "tree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "parent": "5c7ed0612f94b9a3ad99d9e49566c655495b98a6",
+  "files": [
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "9cc6ab78835523e71bbdfe10f5682bdc6f9a2279956d588d8570b67f1700ce72"
+    },
+    {
+      "path": "content/review-revisions.json",
+      "bytes": 10204,
+      "sha256": "e13145d687b09df0557311d40ed7a24d05ad98157236d0b289b0e21ddb5367b3"
+    }
+  ],
+  "steps": [
+    {
+      "label": "GENERATE_SHOULDER_REVISIONS_REUSED",
+      "code": 0,
+      "signal": null,
+      "receipt": "F:/VisibleMedicine/staging/20261021-four-module-admission/GENERATE_SHOULDER_REVISIONS.json",
+      "receiptSha256": "77c935ac0bc761d1afc2e46813455733ed90037b5238154a2f9aa3c9d839ecac"
+    },
+    {
+      "label": "CHECK_SHOULDER_REVISIONS",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "bc748eedae7b516a2b1fadda9ac292337e2da35e1217e9cd361606dd02bad197"
+    },
+    {
+      "label": "GENERATE_FINAL_BODY_RENDERER",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "ba45d98c909e669afcef1fda153169009fe20100a15a93b34c8f25357ee699b3"
+    },
+    {
+      "label": "CHECK_FINAL_BODY_RENDERER",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "31d861fb72ea5fed63fa468dc0cb283f1c257989a355c95f6c7c16a145451de9"
+    },
+    {
+      "label": "CHECK_FINAL_NESTED_BINDINGS",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "12db13cffdbe832830e4f404b8a7615ce8b74fb408ed5c1eba2e2c159090a8e8"
+    },
+    {
+      "label": "CHECK_FINAL_DISPLAY_PINS",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "63036a92493fe1907d21d91589f6f8949e7e259c5ac8398e0b0707cf76a1341a"
+    },
+    {
+      "label": "CHECK_FINAL_TEACHING_SNAPSHOTS",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "b3af484ec63923217af52a641d2ca48eaebd28f508761935f83ba52e3b14c15c"
+    },
+    {
+      "label": "BUILD_HEAD_NECK",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "b66468f7c33893138395625bbf57ff191fd8af6682d972dca58d9ce8f274b656"
+    },
+    {
+      "label": "BUILD_SHOULDER",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "612dbbf4f4c4058ba31fc2ea47753e6ecf9f3957810693b1e130365b7af35720"
+    },
+    {
+      "label": "BUILD_FEMALE_PELVIS",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "a909f526858cca7922ef8dd04642aa0c769eaa3bef227c20deb92f3244d97e89"
+    },
+    {
+      "label": "BUILD_LOWER_LIMB",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "889cac8985e8e9d85da7ef4bc72755611ceadd183c927b9ebdffb0e212f3ae43"
+    },
+    {
+      "label": "EXPORT_HEAD_NECK",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "1475d41f290a144a009c7bfb5eb63b70baf807e4ff62cd585364fa51438920b7"
+    },
+    {
+      "label": "EXPORT_SHOULDER",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "bec6298f8433f233db4ae28d99725e9e83b21c638eb2573d2b4efa6a364cf399"
+    },
+    {
+      "label": "EXPORT_FEMALE_PELVIS",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "7611fe6a2ae9e479c7e08179318d992887a4bfa53db01e4914a2ca86a6a8ca2e"
+    },
+    {
+      "label": "EXPORT_LOWER_LIMB",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "57e7a2736b4309c6cb0be4cc687fec6dc49f4d0bb2cc5b344076ee39fbcfb920"
+    }
+  ],
+  "exports": [
+    {
+      "kind": "head-neck",
+      "target": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\head-neck",
+      "sourceCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "manifestSha256": "74ba7688c8dfd8939a160f56a04e7825b11183f947f1074c6825c0f39904d4ec",
+      "files": 216,
+      "bytes": 228443944,
+      "patientDataIncluded": false
+    },
+    {
+      "kind": "shoulder",
+      "target": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\shoulder",
+      "sourceCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "manifestSha256": "85230df1327b2913bf35cd7071d1a488f47ad7f0885b8640f25ba688895b5bca",
+      "files": 28,
+      "bytes": 23018224,
+      "patientDataIncluded": false
+    },
+    {
+      "kind": "female-pelvis",
+      "target": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\female-pelvis",
+      "sourceCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "manifestSha256": "125edab490e1805458d7d8c3f512979cb107b3cfbb5fbeede1679a820f0336fa",
+      "files": 15,
+      "bytes": 10975031,
+      "patientDataIncluded": false
+    },
+    {
+      "kind": "lower-limb",
+      "target": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\lower-limb",
+      "sourceCommit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "manifestSha256": "1c7b13b5045fb9095a01fb61f94c4a9cbaad6303f59873e72d324515f80fcd4f",
+      "files": 19,
+      "bytes": 51316372,
+      "patientDataIncluded": false
+    }
+  ],
+  "passed": true,
+  "canonicalInstalled": false,
+  "websiteImported": false,
+  "fullWebsiteSuitePass": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false
+}

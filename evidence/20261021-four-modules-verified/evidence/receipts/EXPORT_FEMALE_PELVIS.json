@@ -1,0 +1,14 @@
+{
+  "label": "EXPORT_FEMALE_PELVIS",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/export-female-pelvis-module.mjs",
+    "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2\\export\\public\\atlas-runtime\\female-pelvis"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-four-module-admission-v2/EXPORT_FEMALE_PELVIS.log",
+  "logSha256": "2f4af0ca63818d31cacf3926866991f7e2cd5c2d5d780002b4f87c0690c345d7",
+  "footer": [],
+  "canonicalInstalled": false
+}

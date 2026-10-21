@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-21T03:59:58.449Z",
+  "steps": [
+    {
+      "label": "GENERATE_SHOULDER_REVISIONS",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "77c935ac0bc761d1afc2e46813455733ed90037b5238154a2f9aa3c9d839ecac"
+    }
+  ],
+  "error": "Error: EEXIST: file already exists, open 'F:\\VisibleMedicine\\staging\\20261021-four-module-admission\\CURRENT_STEP.json'",
+  "passed": false,
+  "canonicalInstalled": false
+}
