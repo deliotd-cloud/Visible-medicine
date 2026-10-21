@@ -1,0 +1,15 @@
+{
+  "label": "GENICULAR_SYNTAX",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--check",
+    "F:/VisibleMedicine/staging/20261021-genicular-contract-proposal/tests/clinical-review-genicular-ultrasound.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-genicular-contract-proposal/GENICULAR_SYNTAX.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "footer": [],
+  "canonicalInstalled": false
+}

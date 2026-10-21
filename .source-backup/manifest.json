@@ -1,26 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T02:10:10.681Z",
+  "at": "2026-10-21T02:42:13.552Z",
   "sourceIdentity": {
     "atlasBase": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "queueScripts": [
-      {
-        "path": "queue-dental-after-suite-20261021.mjs",
-        "sha256": "6eea1346270a81ced888b558de7941f1145207b8c40c739f51e4e01a8482b519"
-      },
-      {
-        "path": "test-dental-after-suite-queue-20261021.mjs",
-        "sha256": "d4688f071ac87215b52c72226b502061d60668a1dfdadcf719054ebe35077ce4"
-      },
-      {
-        "path": "checkpoint-after-suite-queue-20261021.mjs",
-        "sha256": "9072c4c90cefb2ca0f39d44f609933fc929e3f8e96a7a168183db821d3a9029c"
-      }
-    ],
-    "canonicalInstalled": false
+    "candidateManifest": "55edce0463c9066deb4a706091bcd8341fb6ddda98756360935987e2341538b1",
+    "installed": false
   },
-  "parent": "ee8edccb1d4d3bc24f802dfcf857a73fa343f3cc",
-  "gitParent": "ee8edccb1d4d3bc24f802dfcf857a73fa343f3cc",
+  "parent": "04408889aa476b87dd5e986895e130eb7cb4c299",
+  "gitParent": "04408889aa476b87dd5e986895e130eb7cb4c299",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -691,6 +678,251 @@
       "path": "evidence/20261021-atlas-source-assembly/source/scripts/test-regional-tour-player.mjs",
       "bytes": 126985,
       "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/ASSEMBLY_AND_CHECKOUT.json",
+      "bytes": 387,
+      "sha256": "0f156952be014243cd20ea3d963dd61c0015eebac623d3b397ae36c77c9a192e"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/CLINICAL_PRESERVATION_BATCH.json",
+      "bytes": 742,
+      "sha256": "92ba020467120f103e4a606314aa13750493b4f0b676c4419c91164c5a0917f1"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/CLINICAL_PRESERVATION_BATCH.log",
+      "bytes": 413,
+      "sha256": "29d73e03c9400ad793be47add01eb7f85648a8e34cf3bbaa169ce0a5fbd16446"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/FOOT_GIRDLE_MAIN_INVERSE.json",
+      "bytes": 442,
+      "sha256": "fbbaa67f59b8d865664e992b38a340e0164e924b25b8538e274ccda495faecce"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/FOOT_GIRDLE_MAIN_INVERSE.log",
+      "bytes": 186,
+      "sha256": "7fad2f6aa08f63aa5798e2f1c84f8770fb8e8384cbf9dc38b2ade852455c6902"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/FOOT_GIRDLE_MAIN_METADATA.json",
+      "bytes": 443,
+      "sha256": "ea6aa68a9ccab3fc90c7ddb1e50210b139924750e3b2570ce748b9afff31b033"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/FOOT_GIRDLE_MAIN_METADATA.log",
+      "bytes": 112,
+      "sha256": "1ab1aad820eb825c6a961b5cf05a537bf5eae833f88e91323510e628f5056b2c"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/GENICULAR_METADATA_REFUSALS.json",
+      "bytes": 444,
+      "sha256": "19047453b5c24aec146893d983714073cb308132744868ab000b1f9dac449a38"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/GENICULAR_METADATA_REFUSALS.log",
+      "bytes": 496,
+      "sha256": "6a8464331c07a5b218a33ba15f13f3d318670cf175e31f03bea4b6ea1e9c7170"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/GENICULAR_SYNTAX.json",
+      "bytes": 503,
+      "sha256": "5e9eb13b33d03fb2d8b7ad0a428cc98f923415ec54df25a6d67e31cd71870f9a"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/GENICULAR_SYNTAX.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/MAIN_REVIEW.json",
+      "bytes": 8401,
+      "sha256": "ae45e66bd4c11382924690b115a4c268ca7fa4e132d808288f82f849713a1c19"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/MANIFEST.json",
+      "bytes": 4936,
+      "sha256": "55edce0463c9066deb4a706091bcd8341fb6ddda98756360935987e2341538b1"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/README.md",
+      "bytes": 2077,
+      "sha256": "b2ee6513a52016a6a37b4cacf77b1b8d2959ef52393118dc37d9fd58f65f02b1"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/REVIEW_ENTRY_ROUTER_PROVIDER.json",
+      "bytes": 441,
+      "sha256": "463b4b6b329ddc47335ea75020a20cfabacec859cf4d7eb23113f6ad6b687230"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/REVIEW_ENTRY_ROUTER_PROVIDER.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/REVIEW_ENTRY_ROUTER_STATIC.json",
+      "bytes": 480,
+      "sha256": "52c699b758ca1ea40e9353d0527542c2879c1036039291ab395f8cef8c2210d4"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/REVIEW_ENTRY_ROUTER_STATIC.log",
+      "bytes": 824,
+      "sha256": "64e895caae5bed70792952f0a22a9ffa9a526c1191bf5a1929321e8f89ad950f"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/REVIEW_ENTRY_ROUTER_SYNTAX.json",
+      "bytes": 476,
+      "sha256": "3f355b9f66a875c620d3b577d8b74487125f7ce5a18e2330cb9c533f87e1612d"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/evidence/REVIEW_ENTRY_ROUTER_SYNTAX.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/preimages/.gitattributes",
+      "bytes": 17964,
+      "sha256": "4f5d1c31e7e089798fa300e6043d18d2e5aa074162dba58bc9a874e4a598ee62"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/preimages/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 19679,
+      "sha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/preimages/tests/clinical-review-entry-track.test.mjs",
+      "bytes": 4068,
+      "sha256": "c82af1e3d4221b37b4876608950d9c312bf18b0ab5d6b26d2e94560e705b2f2c"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/preimages/tests/clinical-review-foot-quiz.test.ts",
+      "bytes": 8224,
+      "sha256": "154d68039e1e7a44a126d1de942fdf48644a3da2dc59cbcb5f4d9edf2641feea"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/preimages/tests/clinical-review-genicular-ultrasound.test.ts",
+      "bytes": 15115,
+      "sha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/preimages/tests/clinical-review-girdle-ultrasound.test.ts",
+      "bytes": 6575,
+      "sha256": "109393c2242920ea67e2e97fc5c0d65a87b07b84b1a98934251e07f00619fc5d"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/proposal-proofs/elbow-review-contract-proposal/HANDOFF.md",
+      "bytes": 1934,
+      "sha256": "470f7a538d5d4903ddfb669745ea3cff163cc1646d6cc543b79a42eff41397df"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/proposal-proofs/elbow-review-contract-proposal/PROPOSAL.md",
+      "bytes": 4235,
+      "sha256": "5890c0bb364bd9df01e5ff096f4c2879752e686e4404b87c582f8dd9daca7514"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/proposal-proofs/foot-girdle-contract-proposal/FILES.md",
+      "bytes": 968,
+      "sha256": "5a09dc96a3f657acff1cdf7cda241e3145b03d8be326f00e292916d0882ac841"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/proposal-proofs/foot-girdle-contract-proposal/HANDOFF.md",
+      "bytes": 3054,
+      "sha256": "b5f12e873c9f81ff161da1899a88aa17a3bebac338dff60eb3ab75ee510c7879"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/proposal-proofs/foot-girdle-contract-proposal/inverse-check.mjs",
+      "bytes": 3741,
+      "sha256": "c6960292d91ecafa61606e72104c16dd70b471b9769b2219dc4ce3782af287a1"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/proposal-proofs/foot-girdle-contract-proposal/static-proof.mjs",
+      "bytes": 4576,
+      "sha256": "b1dbf8120f8ea36a285a872e8475629e67c912245c84e8d2e050ccb8f9cc12bb"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/proposal-proofs/genicular-contract-proposal/HANDOFF.md",
+      "bytes": 2199,
+      "sha256": "52e6d2fff2fcca58f443c5cc7d4cb51deb3434ca26db7720794787c39a70bb96"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/proposal-proofs/genicular-contract-proposal/metadata-proof.mjs",
+      "bytes": 1701,
+      "sha256": "fcb52be9f12583c1713a2d10fc7f8932f7218be2dbdd30dcea20d816085ca086"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/scripts/checkpoint-clinical-review-contracts-20261021.mjs",
+      "bytes": 9526,
+      "sha256": "71a0eceab35438838fbc247bbd8fbdb0767ee6d7215c58534354383cb5bba1c9"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/scripts/prepare-clinical-review-contract-batch-20261021.mjs",
+      "bytes": 6926,
+      "sha256": "f9779e6b0c171001bce97ad05d0919249ccfb9a85d137c81d09a7897ac66fea2"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/scripts/verify-review-entry-router-20261021.mjs",
+      "bytes": 3058,
+      "sha256": "1b97c74bb7c12cf522c0676f0d275e3ead8817f758563d2aceff976970d9d014"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/.gitattributes",
+      "bytes": 18562,
+      "sha256": "14693a80a7ddecfeb871071437e6d9ed7c704066fe862e0febb51c850e6322b3"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 22798,
+      "sha256": "666eadec1b2b71bed584db21d022a5af97d4e6f5e8b589ab0c7d77704b63800e"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/clinical-review-entry-track.test.mjs",
+      "bytes": 4679,
+      "sha256": "0eacc6627a7cac95757d50b5c860a3f8fd0137a9b6fba2002981257627a54baa"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/clinical-review-foot-quiz.test.ts",
+      "bytes": 8901,
+      "sha256": "5bb7ce5a0c6390fd7fa3d48d8c73ba7fe8695fb6a91da74e064bc6e4ca49ba06"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/clinical-review-genicular-ultrasound.test.ts",
+      "bytes": 15734,
+      "sha256": "1383901d9479d17f9321eb97386ede8e1dc4ce59e3016b4d2899a00ac2fe229e"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/clinical-review-girdle-ultrasound.test.ts",
+      "bytes": 11411,
+      "sha256": "722906110b3645683062088fd0cd7968ac6c574ae6b60d6079d3c1fdb019b676"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/elbow-admission-import-history.mjs",
+      "bytes": 3938,
+      "sha256": "f994bb22c3e12330d82fe9c25d33e1a48a2bee8dd9ebf47a3b5d222ca004232d"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/elbow-us-followup-preservation.test.mjs",
+      "bytes": 5846,
+      "sha256": "b2127dac886e0811462cfef39cd885e3d118cb13db442e01a573d307d1a9dff5"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/fixtures/clinical-review-elbow-us-followup.original.ts.raw",
+      "bytes": 19679,
+      "sha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/fixtures/clinical-review-genicular-ultrasound-before-current.ts.raw",
+      "bytes": 15115,
+      "sha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/genicular-current-preservation.test.mjs",
+      "bytes": 3347,
+      "sha256": "8ada261f1a0568b8afc4eb4b507a651419ae2680a719ea221d7ae8c4064c0279"
+    },
+    {
+      "path": "evidence/20261021-clinical-review-contracts/website/tests/girdle-admission-import-history.mjs",
+      "bytes": 3521,
+      "sha256": "b0939abb987a31cfaa07d656e9382d24af39f9bf23359a4b15bc9695b619a71e"
     },
     {
       "path": "evidence/20261021-combined-integration-batch/batch/atlas/app/body-content.ts",
@@ -3059,11 +3291,13 @@
     }
   ],
   "removed": [],
-  "scope": "Three local bounded successor/checkpoint scripts, six-case protocol test receipts and explicit limits on prior filtered source ancestry. Queue/process snapshots and coordination stay F-local. No full source/raw canonical ancestry/models/dependencies/scans/masks/private data/browser pixels/DOM. Not whole/runnable/private-data backup or actual full transition pass.",
+  "scope": "Reviewed12path test/fixture/attribute batch, byte-exact preimages, small source/metadata/provider/preservation proofs and explicit limits on prior filtered source-only ancestry. Process/queue snapshots, coordination, original imported delivery, old private inbox, models/scans/masks, dependencies and raw canonical ancestry stay local. No browser pixels/DOM or patient records. Not whole/runnable/private-data backup or full corpus test pass.",
   "proof": {
-    "protocolCases": 6,
-    "actualQueuedSourceStepsExecuted": 0,
-    "fullSuitePass": false,
+    "shippingPaths": 12,
+    "nativePreservationCases": 3,
+    "freshCheckoutByteIdentical": true,
+    "actualCorpusModulesPassed": false,
+    "canonicalInstalled": false,
     "clinicalApproval": false
   },
   "wholeProjectBackup": false,

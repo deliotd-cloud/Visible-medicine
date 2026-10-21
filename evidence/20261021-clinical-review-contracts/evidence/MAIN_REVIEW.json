@@ -1,0 +1,151 @@
+{
+  "at": "2026-10-21T02:42:11.720Z",
+  "stage": "F:/VisibleMedicine/staging/20261021-clinical-review-contract-batch",
+  "manifestSha256": "55edce0463c9066deb4a706091bcd8341fb6ddda98756360935987e2341538b1",
+  "shippingPaths": 12,
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "files": [
+    {
+      "path": "tests/clinical-review-entry-track.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-review-entry-router-proposal/tests/clinical-review-entry-track.test.mjs",
+      "beforeSha256": "c82af1e3d4221b37b4876608950d9c312bf18b0ab5d6b26d2e94560e705b2f2c",
+      "sha256": "0eacc6627a7cac95757d50b5c860a3f8fd0137a9b6fba2002981257627a54baa"
+    },
+    {
+      "path": "tests/clinical-review-elbow-us-followup.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-review-contract-proposal/tests/clinical-review-elbow-us-followup.test.ts",
+      "beforeSha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c",
+      "sha256": "666eadec1b2b71bed584db21d022a5af97d4e6f5e8b589ab0c7d77704b63800e"
+    },
+    {
+      "path": "tests/elbow-admission-import-history.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-review-contract-proposal/tests/elbow-admission-import-history.mjs",
+      "beforeSha256": null,
+      "sha256": "f994bb22c3e12330d82fe9c25d33e1a48a2bee8dd9ebf47a3b5d222ca004232d"
+    },
+    {
+      "path": "tests/elbow-us-followup-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-review-contract-proposal/tests/elbow-us-followup-preservation.test.mjs",
+      "beforeSha256": null,
+      "sha256": "b2127dac886e0811462cfef39cd885e3d118cb13db442e01a573d307d1a9dff5"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-elbow-us-followup.original.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-review-contract-proposal/tests/fixtures/clinical-review-elbow-us-followup.original.ts.raw",
+      "beforeSha256": null,
+      "sha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c"
+    },
+    {
+      "path": "tests/clinical-review-foot-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-foot-girdle-contract-proposal/tests/clinical-review-foot-quiz.test.ts",
+      "beforeSha256": "154d68039e1e7a44a126d1de942fdf48644a3da2dc59cbcb5f4d9edf2641feea",
+      "sha256": "5bb7ce5a0c6390fd7fa3d48d8c73ba7fe8695fb6a91da74e064bc6e4ca49ba06"
+    },
+    {
+      "path": "tests/clinical-review-girdle-ultrasound.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-foot-girdle-contract-proposal/tests/clinical-review-girdle-ultrasound.test.ts",
+      "beforeSha256": "109393c2242920ea67e2e97fc5c0d65a87b07b84b1a98934251e07f00619fc5d",
+      "sha256": "722906110b3645683062088fd0cd7968ac6c574ae6b60d6079d3c1fdb019b676"
+    },
+    {
+      "path": "tests/girdle-admission-import-history.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-foot-girdle-contract-proposal/tests/girdle-admission-import-history.mjs",
+      "beforeSha256": null,
+      "sha256": "b0939abb987a31cfaa07d656e9382d24af39f9bf23359a4b15bc9695b619a71e"
+    },
+    {
+      "path": "tests/clinical-review-genicular-ultrasound.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-genicular-contract-proposal/tests/clinical-review-genicular-ultrasound.test.ts",
+      "beforeSha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10",
+      "sha256": "1383901d9479d17f9321eb97386ede8e1dc4ce59e3016b4d2899a00ac2fe229e"
+    },
+    {
+      "path": "tests/genicular-current-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-genicular-contract-proposal/tests/genicular-current-preservation.test.mjs",
+      "beforeSha256": null,
+      "sha256": "8ada261f1a0568b8afc4eb4b507a651419ae2680a719ea221d7ae8c4064c0279"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-genicular-ultrasound-before-current.ts.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-genicular-contract-proposal/tests/fixtures/clinical-review-genicular-ultrasound-before-current.ts.raw",
+      "beforeSha256": null,
+      "sha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10"
+    },
+    {
+      "path": ".gitattributes",
+      "beforeSha256": "4f5d1c31e7e089798fa300e6043d18d2e5aa074162dba58bc9a874e4a598ee62",
+      "sha256": "14693a80a7ddecfeb871071437e6d9ed7c704066fe862e0febb51c850e6322b3",
+      "appendOnly": true
+    }
+  ],
+  "receipts": [
+    {
+      "dir": "F:/VisibleMedicine/staging/20261021-clinical-review-contract-batch",
+      "label": "CLINICAL_PRESERVATION_BATCH",
+      "logSha256": "29d73e03c9400ad793be47add01eb7f85648a8e34cf3bbaa169ce0a5fbd16446"
+    },
+    {
+      "dir": "F:/VisibleMedicine/staging/20261021-clinical-review-contract-batch",
+      "label": "FOOT_GIRDLE_MAIN_INVERSE",
+      "logSha256": "7fad2f6aa08f63aa5798e2f1c84f8770fb8e8384cbf9dc38b2ade852455c6902"
+    },
+    {
+      "dir": "F:/VisibleMedicine/staging/20261021-clinical-review-contract-batch",
+      "label": "FOOT_GIRDLE_MAIN_METADATA",
+      "logSha256": "1ab1aad820eb825c6a961b5cf05a537bf5eae833f88e91323510e628f5056b2c"
+    },
+    {
+      "dir": "F:/VisibleMedicine/staging/20261021-atlas-source-assembly",
+      "label": "REVIEW_ENTRY_ROUTER_STATIC",
+      "logSha256": "64e895caae5bed70792952f0a22a9ffa9a526c1191bf5a1929321e8f89ad950f"
+    },
+    {
+      "dir": "F:/VisibleMedicine/staging/20261021-atlas-source-assembly",
+      "label": "REVIEW_ENTRY_ROUTER_PROVIDER",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "dir": "F:/VisibleMedicine/staging/20261021-atlas-source-assembly",
+      "label": "REVIEW_ENTRY_ROUTER_SYNTAX",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "dir": "F:/VisibleMedicine/staging/20261021-genicular-contract-proposal",
+      "label": "GENICULAR_METADATA_REFUSALS",
+      "logSha256": "6a8464331c07a5b218a33ba15f13f3d318670cf175e31f03bea4b6ea1e9c7170"
+    },
+    {
+      "dir": "F:/VisibleMedicine/staging/20261021-genicular-contract-proposal",
+      "label": "GENICULAR_SYNTAX",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "progress": "Twelve before-hash-guarded clinical assurance paths assembled. Router real-provider harness, genuine original9f elbow/girdle versus checked-current admission, preserved foot/genicular assertions. Three native source-preservation cases, whole foot/girdle inverse, actual current metadata/refusals and real12path fresh autocrlf checkout pass. Original attributes retained;9scoped LF rules,2raw fixtures unchanged.",
+  "limits": "Actual five affected corpus test modules and strict historical loader closure still unrun behind the live full Website suite and real queued dental successor. No proposed Website or canonical installation, review database write, owner tab refresh, authentication change, clinical approval or spatial registration. Later partial failures are triaged separately, not a terminal inventory.",
+  "observedFullSuite": {
+    "path": "F:/VisibleMedicine/staging/20261021-complete-website-assurance/observations/2026-10-21T02-40-16.767Z/observation.json",
+    "sha256": "d61ceb0c6f193ff6f1022e3088ff6547eecd974c644ea07246ebc4fb3c2e6a11",
+    "liveAtObservation": true,
+    "terminalAtObservation": false,
+    "namedInputs": 5053,
+    "entryCount": 1050
+  },
+  "activeDelegation": [
+    {
+      "owner": "/root/elbow_review_contract_1021",
+      "scope": "read-only partial clinical failures850onwards; local failure map only"
+    },
+    {
+      "owner": "/root/review_entry_router_1021",
+      "scope": "separate forearm X-ray proposal,4paths; no frozen mutation/heavy tests"
+    }
+  ],
+  "next": "Read actual full-suite and queued-source terminal receipts before any heavy check or frozen mutation. Retain whole partial/final failure inventory, execute original485assurance and all real staged corpus modules without weakening original historical theorems. Continue combined Atlas source/renderer/display/Review/exports/types/build/Website/browser admission; no source commit/intro replay predicted. Preserve full71/eight roadmap.",
+  "actualCorpusModulesPassed": false,
+  "canonicalInstalled": false,
+  "fullSuitePass": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true
+}

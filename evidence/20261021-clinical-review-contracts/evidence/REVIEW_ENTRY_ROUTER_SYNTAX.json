@@ -1,0 +1,14 @@
+{
+  "label": "REVIEW_ENTRY_ROUTER_SYNTAX",
+  "command": "node",
+  "args": [
+    "--check",
+    "F:/VisibleMedicine/staging/20261021-review-entry-router-proposal/tests/clinical-review-entry-track.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/REVIEW_ENTRY_ROUTER_SYNTAX.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "footer": [],
+  "canonicalInstalled": false
+}

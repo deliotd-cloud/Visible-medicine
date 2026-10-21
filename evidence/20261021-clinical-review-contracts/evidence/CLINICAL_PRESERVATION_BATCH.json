@@ -1,0 +1,22 @@
+{
+  "label": "CLINICAL_PRESERVATION_BATCH",
+  "command": "node",
+  "args": [
+    "--test",
+    "F:/VisibleMedicine/staging/20261021-clinical-review-contract-batch/files/tests/elbow-us-followup-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-clinical-review-contract-batch/files/tests/genicular-current-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-clinical-review-contract-batch/CLINICAL_PRESERVATION_BATCH.log",
+  "logSha256": "29d73e03c9400ad793be47add01eb7f85648a8e34cf3bbaa169ce0a5fbd16446",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 3",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

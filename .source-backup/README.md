@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Three local bounded successor/checkpoint scripts, six-case protocol test receipts and explicit limits on prior filtered source ancestry. Queue/process snapshots and coordination stay F-local. No full source/raw canonical ancestry/models/dependencies/scans/masks/private data/browser pixels/DOM. Not whole/runnable/private-data backup or actual full transition pass.
+Reviewed12path test/fixture/attribute batch, byte-exact preimages, small source/metadata/provider/preservation proofs and explicit limits on prior filtered source-only ancestry. Process/queue snapshots, coordination, original imported delivery, old private inbox, models/scans/masks, dependencies and raw canonical ancestry stay local. No browser pixels/DOM or patient records. Not whole/runnable/private-data backup or full corpus test pass.
