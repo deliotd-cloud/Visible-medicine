@@ -1,8 +1,59 @@
 {
-  "shippingPaths": 49,
-  "nativePreservationCases": 10,
-  "freshCheckoutByteIdentical": true,
-  "actualCorpusModulesPassed": false,
+  "actualRuns": [
+    {
+      "name": "current-contract-application",
+      "result": {
+        "at": "2026-10-21T03:18:21.872Z",
+        "code": 1,
+        "signal": null,
+        "inputDrift": false,
+        "error": null,
+        "footer": [
+          "ℹ tests 11",
+          "ℹ pass 10",
+          "ℹ fail 1",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0"
+        ],
+        "receiptSha256": "20c449a192f876ad14d933900e47dd255581742ea42c0fae0210f70bc3ddf1bc",
+        "actualCurrentContractsPass": false,
+        "wholeWebsiteSuitePass": false,
+        "canonicalInstalled": false
+      },
+      "terminal": true
+    },
+    {
+      "name": "clinical-retry",
+      "result": {
+        "at": "2026-10-21T03:29:47.429Z",
+        "code": 1,
+        "signal": null,
+        "inputDrift": false,
+        "error": null,
+        "footer": [
+          "ℹ tests 15",
+          "ℹ pass 14",
+          "ℹ fail 1",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0"
+        ],
+        "receiptSha256": "5c87f9436daf9a81610df70ecefe219a74e5ffa43354906f91a0cc29f6462806",
+        "actualFourClinicalRepairsPass": false,
+        "wholeWebsiteSuitePass": false,
+        "canonicalInstalled": false,
+        "clinicalApproval": false
+      },
+      "terminal": true
+    },
+    {
+      "name": "spinal-save-application",
+      "result": null,
+      "terminal": false
+    }
+  ],
+  "actualFullDentalGatePass": true,
   "canonicalInstalled": false,
   "clinicalApproval": false
 }

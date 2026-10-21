@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-49reviewed test/fixture/attribute postimages, exact preimages, small pure/metadata/diagnosis proofs, explicit failures/limits and coordination helpers on prior filtered source-only ancestry. Full original import, private inbox/scans/masks/models/dependencies/raw canonical ancestry and long failed source-dump logs remain local; no browser pixels/DOM or patient records. Process/coordination local. Not whole/runnable/private-data backup or actual full corpus pass.
+Selected admitted Website test postimages/exact preimages,21assembled Atlas code/evidence/pin paths, concise actual receipts and main-controlled scripts on previous filtered source-only ancestry. No whole private imports/inbox/patient scans/masks/models/dependencies/raw canonical Git ancestry/browser pixels or DOM/long failed source-dump logs. Source-input/process/coordination snapshots stay local. Not a complete runnable/private-data backup or clinical release.

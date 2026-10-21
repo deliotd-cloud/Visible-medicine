@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-21T03:14:18.020Z",
+  "driverPid": 248332,
+  "wrapperPid": 261020,
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/anatomy-coverage-revision-admission.test.mjs",
+    "tests/atlas-arterial-evidence-limits.test.mjs",
+    "tests/atlas-spinal-muscle-xray.test.mjs"
+  ],
+  "sourceInputs": 5082,
+  "files": [
+    {
+      "path": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-coverage-arterial-contract-proposal/tests/anatomy-coverage-revision-admission.test.mjs",
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1",
+      "beforeSha256": "3611dc20929cac9bb27c5ac4aac85c27498d4862b2feb5a5a716f3ed4f2b95a0"
+    },
+    {
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-coverage-arterial-contract-proposal/tests/atlas-arterial-evidence-limits.test.mjs",
+      "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a",
+      "beforeSha256": "7b105f5146aab1653aedca9a7150a73733575f87e7e848063cb07e8faea9b843"
+    },
+    {
+      "path": "tests/atlas-spinal-muscle-xray.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-spinal-ct-contract-proposal/tests/atlas-spinal-muscle-xray.test.mjs",
+      "sha256": "c0fee664ecbf5bbbc1665138891eb2253bf71d6d7aff083757fe39b6095c9faa",
+      "beforeSha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13"
+    },
+    {
+      "path": "tests/fixtures/atlas-spinal-muscle-xray-original.raw",
+      "origin": "F:/VisibleMedicine/staging/20261021-spinal-ct-contract-proposal/tests/fixtures/atlas-spinal-muscle-xray-original.raw",
+      "sha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13",
+      "beforeSha256": null
+    }
+  ],
+  "attributesSha256": "3fc2f92614ab292f558b9fdb91317780fac19553bc5d975db7d7dc9c14a7b77b",
+  "canonicalInstalled": false
+}

@@ -1,0 +1,70 @@
+{
+  "at": "2026-10-21T03:23:21.163Z",
+  "driverPid": 275816,
+  "wrapperPid": 245456,
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/clinical-review-elbow-us-followup.test.ts",
+    "tests/clinical-review-forearm-vascular-xray.test.ts",
+    "tests/elbow-us-followup-preservation.test.mjs",
+    "tests/forearm-xray-preservation.test.mjs",
+    "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+    "tests/clinical-review-git-root-preservation.test.mjs",
+    "tests/clinical-review-hepatic-venous-xray.test.ts",
+    "tests/hepatic-xray-preservation.test.mjs"
+  ],
+  "files": [
+    {
+      "path": "tests/clinical-review-elbow-us-followup.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-forearm-tour-epoch-repair/tests/clinical-review-elbow-us-followup.test.ts",
+      "sha256": "9b0b950ead7cc57f0dfe069d1a359a65b96e15a51aa004dca536f52e0ed3b443",
+      "beforeSha256": "666eadec1b2b71bed584db21d022a5af97d4e6f5e8b589ab0c7d77704b63800e"
+    },
+    {
+      "path": "tests/clinical-review-forearm-vascular-xray.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-forearm-tour-epoch-repair/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "sha256": "108d94b7a5b0ead7e302ab576b2f295d44eb7cd7c2229de686115402379b6778",
+      "beforeSha256": "1e609a7bd8a18d032a3d586c1bab99cc3ebed8f4c4b5477bcf0e055110eeb058"
+    },
+    {
+      "path": "tests/elbow-us-followup-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-forearm-tour-epoch-repair/tests/elbow-us-followup-preservation.test.mjs",
+      "sha256": "00c2bbcf29ab8ad3dfa3f1032643e302a17bb4bf70e9fe59a12b7ed3dcd1b166",
+      "beforeSha256": "b2127dac886e0811462cfef39cd885e3d118cb13db442e01a573d307d1a9dff5"
+    },
+    {
+      "path": "tests/forearm-xray-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-forearm-tour-epoch-repair/tests/forearm-xray-preservation.test.mjs",
+      "sha256": "3d9822101754c23bd6a7d7e3645a30743f0ce0fc0299771c630634032f16a205",
+      "beforeSha256": "41b999b07c36480e8b4fa85a34e532218c9a2666022d5a6a4543aff3f0b2a791"
+    },
+    {
+      "path": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-salivary-later-ct-repair/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "sha256": "fe9bbfe9e64286d36f1f373fd18475e91cdaf7a2ba6c504a0a71c7e483666dd5",
+      "beforeSha256": "13e34a676028b2f622f9f703d4f196da3810c4c3108475b82c2c5146155f124f"
+    },
+    {
+      "path": "tests/clinical-review-git-root-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-salivary-later-ct-repair/tests/clinical-review-git-root-preservation.test.mjs",
+      "sha256": "0e244cfc0601dd9fd085e27e1ed6e75d04c30b1fac2fb6d2a0af18dff58b9c7d",
+      "beforeSha256": "872c394d575408abedc9a6944d2823451eb19edf865e5194508f4e022054f72e"
+    },
+    {
+      "path": "tests/clinical-review-hepatic-venous-xray.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-hepatic-xray-contract-proposal/tests/clinical-review-hepatic-venous-xray.test.ts",
+      "sha256": "9d598a559ec9543a6be1bfa9521559c61d9531519aadc2483efc8b1f529e0b6c",
+      "beforeSha256": "182d5a2130226f0deaa4b32ae8458c804a8a05f72d44bb619fa62b786b29edb5"
+    },
+    {
+      "path": "tests/hepatic-xray-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-hepatic-xray-contract-proposal/tests/hepatic-xray-preservation.test.mjs",
+      "sha256": "528541621527a51ddb49af89aa24761c27778835df0445c00f5eafe14aef3a23",
+      "beforeSha256": "e425bc21bc5f8046da4a4d49b3f07af27486a24994a4546be332119cfbf7099d"
+    }
+  ],
+  "sourceInputs": 5082,
+  "canonicalInstalled": false
+}

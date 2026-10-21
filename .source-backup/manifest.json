@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T03:03:52.443Z",
+  "at": "2026-10-21T03:33:07.313Z",
   "sourceIdentity": {
     "atlasBase": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "manifestSha256": "f779ffe231ca860640c6452b236ad6f15338b5e28a77d6a6eddf271a2b67a12d",
-    "installed": false
+    "namedWebsiteInputs": 5083,
+    "canonicalInstalled": false
   },
-  "parent": "2d169576b82d5ec4701a04e57f6487108977d9cd",
-  "gitParent": "2d169576b82d5ec4701a04e57f6487108977d9cd",
+  "parent": "810c3488cf8aed7871ce0af328944b3689763a16",
+  "gitParent": "810c3488cf8aed7871ce0af328944b3689763a16",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2280,6 +2280,386 @@
       "sha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd"
     },
     {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/.gitattributes",
+      "bytes": 4314,
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "af5cd7cda4fde0f48e04db9844513c9b8a3f75b5b7ca4e72251bad80a13b94e4"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "37c64990ca92b3c5c2eaef7676812661deb5cc2f7be4353d3e7d665928685905"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 4542,
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 354693,
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11426,
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/scripts/test-dental-mri-native.mjs",
+      "bytes": 8870,
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6786,
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/atlas/scripts/verify-dental-mri-transition.mjs",
+      "bytes": 17132,
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/backup-preparation-correction.md",
+      "bytes": 535,
+      "sha256": "0d78ce2c4d6b1bbc8bc15e098497c3dc7397dc844aac520dfef0e99e44e1b8bc"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/clinical-retry/ACTUAL_CLINICAL_REPAIRS.json",
+      "bytes": 1003,
+      "sha256": "5c87f9436daf9a81610df70ecefe219a74e5ffa43354906f91a0cc29f6462806"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/clinical-retry/RESULT.json",
+      "bytes": 470,
+      "sha256": "dbb5be435463a47d1cc88e305f079c02a1aae76bb89fbb90d87ba958f2f02398"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/clinical-retry/STARTED.json",
+      "bytes": 3768,
+      "sha256": "85982108c07c1ffdea58d65bf11dec3dda51400133d75190adaf1d8354bd8b01"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/current-contract-application/ACTUAL_CURRENT_CONTRACTS.json",
+      "bytes": 701,
+      "sha256": "20c449a192f876ad14d933900e47dd255581742ea42c0fae0210f70bc3ddf1bc"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/current-contract-application/RESULT.json",
+      "bytes": 438,
+      "sha256": "39fb7f89dd6773ba24547a635c5aeefc5c472a7e47a0b8424a5b52a38930c278"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/current-contract-application/STARTED.json",
+      "bytes": 1942,
+      "sha256": "978e1722208d4534a85764685fb8d30dc1bb92ad47e26a6ac5a239a5b7d8707e"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/dental/actual-transition-summary.log",
+      "bytes": 483,
+      "sha256": "81f0a3454fa1875bafcd75e47d95daacda3ca9cd5e056d0b46efbc3cc9e81382"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/dental/QUEUED_DENTAL_DISPLAY_PINS.json",
+      "bytes": 430,
+      "sha256": "64fc6a10909babab48a204e3b207ac8052cc0c45e61cf0064d37b9923f4f37ef"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/dental/QUEUED_DENTAL_FULL_TRANSITION.json",
+      "bytes": 431,
+      "sha256": "92421fb93f10097570a651a69ff54578f078f5d8d5788605125f6300df6ad9b5"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/dental/QUEUED_DENTAL_RENDERER_CHECK.json",
+      "bytes": 439,
+      "sha256": "6a6faa5b70e0b895db0cc31daa8d2bf10d620896ccad2d7ab93f2e14837854db"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/elbow-forearm-tour-epoch-repair/HANDOFF.md",
+      "bytes": 3994,
+      "sha256": "74b1d15720234ffdf8829cff50019e0d3025e1620f1556659839c7ca89abe2e2"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/hepatic-xray-contract-proposal/FILES.md",
+      "bytes": 1209,
+      "sha256": "bbf88170b6cb46b0777b4b14d2ce6d1c95d8a09687f8d944f73247e167c1436a"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/hepatic-xray-contract-proposal/HANDOFF.md",
+      "bytes": 4261,
+      "sha256": "638cd53753b042b313a3cfb83f53c875b816b22c69c39c35a78dac574e0f1035"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/MAIN_REVIEW.json",
+      "bytes": 19103,
+      "sha256": "9a22eb7656e54d2464d84533f2f124d585f15ed39f134845137cc3815003f240"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/salivary-later-ct-repair/FILES.md",
+      "bytes": 1120,
+      "sha256": "ed242cae54c6e5de3a8c0aa8bf7ba0a6f85eb6be8c5ab6c7e815ae84a4539e94"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/salivary-later-ct-repair/HANDOFF.md",
+      "bytes": 2436,
+      "sha256": "25d9d6ce4f4f01808140293d4df5e2e0074bd6a536412e7aabfb48691b70e237"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/spinal-ct-save-refusal-proposal/FILES.md",
+      "bytes": 631,
+      "sha256": "99003bbc325607fe8a7df0b41270a099749a8fef3d81230662cba6f9f9c43495"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/spinal-ct-save-refusal-proposal/HANDOFF.md",
+      "bytes": 1839,
+      "sha256": "3ed82a80a718de1cc18e486c1eb8a38ad9e9e7713782e9f1cc0b30a0989aa0db"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/spinal-save-application/STARTED.json",
+      "bytes": 1008,
+      "sha256": "760baccb7ac0181c9c2d1cf2da9671939362d1806adcf59b14cf5bf8fc6222de"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/evidence/terminal-full-suite-classification.md",
+      "bytes": 6204,
+      "sha256": "8f1e067a8cc713bee5e3a9ee962f9fd1ea5cb8cfbb8424030e996c037ffb2748"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/clinical-retry/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 22798,
+      "sha256": "666eadec1b2b71bed584db21d022a5af97d4e6f5e8b589ab0c7d77704b63800e"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/clinical-retry/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 23279,
+      "sha256": "1e609a7bd8a18d032a3d586c1bab99cc3ebed8f4c4b5477bcf0e055110eeb058"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/clinical-retry/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 3084,
+      "sha256": "872c394d575408abedc9a6944d2823451eb19edf865e5194508f4e022054f72e"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/clinical-retry/tests/clinical-review-hepatic-venous-xray.test.ts",
+      "bytes": 27569,
+      "sha256": "182d5a2130226f0deaa4b32ae8458c804a8a05f72d44bb619fa62b786b29edb5"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/clinical-retry/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "bytes": 23157,
+      "sha256": "13e34a676028b2f622f9f703d4f196da3810c4c3108475b82c2c5146155f124f"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/clinical-retry/tests/elbow-us-followup-preservation.test.mjs",
+      "bytes": 5846,
+      "sha256": "b2127dac886e0811462cfef39cd885e3d118cb13db442e01a573d307d1a9dff5"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/clinical-retry/tests/forearm-xray-preservation.test.mjs",
+      "bytes": 6340,
+      "sha256": "41b999b07c36480e8b4fa85a34e532218c9a2666022d5a6a4543aff3f0b2a791"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/clinical-retry/tests/hepatic-xray-preservation.test.mjs",
+      "bytes": 6721,
+      "sha256": "e425bc21bc5f8046da4a4d49b3f07af27486a24994a4546be332119cfbf7099d"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/current-contract-application/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 14371,
+      "sha256": "3611dc20929cac9bb27c5ac4aac85c27498d4862b2feb5a5a716f3ed4f2b95a0"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/current-contract-application/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "7b105f5146aab1653aedca9a7150a73733575f87e7e848063cb07e8faea9b843"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/current-contract-application/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 70097,
+      "sha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/spinal-save-application/.gitattributes",
+      "bytes": 20042,
+      "sha256": "3fc2f92614ab292f558b9fdb91317780fac19553bc5d975db7d7dc9c14a7b77b"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/preimages/spinal-save-application/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 77488,
+      "sha256": "c0fee664ecbf5bbbc1665138891eb2253bf71d6d7aff083757fe39b6095c9faa"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/scripts/admit-and-test-clinical-repairs-20261021.mjs",
+      "bytes": 5816,
+      "sha256": "bb4ef395bbcda0e78b5af016715ba366378e4805c65c51fda4eb0281a67e513e"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/scripts/admit-and-test-coverage-contracts-20261021.mjs",
+      "bytes": 5254,
+      "sha256": "356e2e2f271631acbe9b064a0030466c6280eec6534f786ccb1136ec97f44e11"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/scripts/admit-and-test-spinal-save-20261021.mjs",
+      "bytes": 5610,
+      "sha256": "9e4c7c5efe9d2676bf7f0af5e52f24fbef0da24bb912b10a1a73351f759c311b"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/scripts/admit-clinical-assurance-candidate-20261021.mjs",
+      "bytes": 6144,
+      "sha256": "ee351219ec083db107e298bf1f9d2eb50a7b47ce95c1d85a515189776162dba2"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/scripts/checkpoint-lifecycle-repair-progress-20261021.mjs",
+      "bytes": 8842,
+      "sha256": "5de32ae5430a633d1eef281ea1709b9514ad68ce586c7d57288a07589e8f2c18"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/scripts/prepare-hepatic-proof-import-fix-20261021.mjs",
+      "bytes": 3259,
+      "sha256": "8b0beb4af2837f68c59bde7febc46ede6a75c3950515c380c69128e7cc322899"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/scripts/run-admitted-clinical-tests-20261021.mjs",
+      "bytes": 3053,
+      "sha256": "0f9d6a9bd36c677f866cbee09654a33e89758e84d1e238eb313d8a8644c37ab7"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/.gitattributes",
+      "bytes": 20105,
+      "sha256": "59c8051bb5060e03f664c7af670f440cb59eb5abba34295611c1c9a45721d9ef"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 17502,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 79677,
+      "sha256": "075354d9e1da283b5209c39478eb89e6f5fc9243441d0cd25701f84f43ea564a"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 27096,
+      "sha256": "9b0b950ead7cc57f0dfe069d1a359a65b96e15a51aa004dca536f52e0ed3b443"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 27738,
+      "sha256": "108d94b7a5b0ead7e302ab576b2f295d44eb7cd7c2229de686115402379b6778"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 5178,
+      "sha256": "0e244cfc0601dd9fd085e27e1ed6e75d04c30b1fac2fb6d2a0af18dff58b9c7d"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/clinical-review-hepatic-venous-xray.test.ts",
+      "bytes": 27569,
+      "sha256": "9d598a559ec9543a6be1bfa9521559c61d9531519aadc2483efc8b1f529e0b6c"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "bytes": 29052,
+      "sha256": "fe9bbfe9e64286d36f1f373fd18475e91cdaf7a2ba6c504a0a71c7e483666dd5"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/elbow-us-followup-preservation.test.mjs",
+      "bytes": 6278,
+      "sha256": "00c2bbcf29ab8ad3dfa3f1032643e302a17bb4bf70e9fe59a12b7ed3dcd1b166"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/fixtures/atlas-spinal-muscle-xray-original.raw",
+      "bytes": 70097,
+      "sha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/forearm-xray-preservation.test.mjs",
+      "bytes": 6548,
+      "sha256": "3d9822101754c23bd6a7d7e3645a30743f0ce0fc0299771c630634032f16a205"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/hepatic-xray-preservation.test.mjs",
+      "bytes": 6721,
+      "sha256": "528541621527a51ddb49af89aa24761c27778835df0445c00f5eafe14aef3a23"
+    },
+    {
+      "path": "evidence/20261021-lifecycle-repair-progress/website/tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "bytes": 3561,
+      "sha256": "0192f1a2056b1b176dafa1148a806ea3f63d341faa74bf2f3ba3a720c3ba9cab"
+    },
+    {
       "path": "evidence/20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.json",
       "bytes": 769,
       "sha256": "2358d74b7d8558de66a2bd4a0740294b0bee0c1b507aaf795294d1701f954f9d"
@@ -3836,12 +4216,63 @@
     }
   ],
   "removed": [],
-  "scope": "49reviewed test/fixture/attribute postimages, exact preimages, small pure/metadata/diagnosis proofs, explicit failures/limits and coordination helpers on prior filtered source-only ancestry. Full original import, private inbox/scans/masks/models/dependencies/raw canonical ancestry and long failed source-dump logs remain local; no browser pixels/DOM or patient records. Process/coordination local. Not whole/runnable/private-data backup or actual full corpus pass.",
+  "scope": "Selected admitted Website test postimages/exact preimages,21assembled Atlas code/evidence/pin paths, concise actual receipts and main-controlled scripts on previous filtered source-only ancestry. No whole private imports/inbox/patient scans/masks/models/dependencies/raw canonical Git ancestry/browser pixels or DOM/long failed source-dump logs. Source-input/process/coordination snapshots stay local. Not a complete runnable/private-data backup or clinical release.",
   "proof": {
-    "shippingPaths": 49,
-    "nativePreservationCases": 10,
-    "freshCheckoutByteIdentical": true,
-    "actualCorpusModulesPassed": false,
+    "actualRuns": [
+      {
+        "name": "current-contract-application",
+        "result": {
+          "at": "2026-10-21T03:18:21.872Z",
+          "code": 1,
+          "signal": null,
+          "inputDrift": false,
+          "error": null,
+          "footer": [
+            "ℹ tests 11",
+            "ℹ pass 10",
+            "ℹ fail 1",
+            "ℹ cancelled 0",
+            "ℹ skipped 0",
+            "ℹ todo 0"
+          ],
+          "receiptSha256": "20c449a192f876ad14d933900e47dd255581742ea42c0fae0210f70bc3ddf1bc",
+          "actualCurrentContractsPass": false,
+          "wholeWebsiteSuitePass": false,
+          "canonicalInstalled": false
+        },
+        "terminal": true
+      },
+      {
+        "name": "clinical-retry",
+        "result": {
+          "at": "2026-10-21T03:29:47.429Z",
+          "code": 1,
+          "signal": null,
+          "inputDrift": false,
+          "error": null,
+          "footer": [
+            "ℹ tests 15",
+            "ℹ pass 14",
+            "ℹ fail 1",
+            "ℹ cancelled 0",
+            "ℹ skipped 0",
+            "ℹ todo 0"
+          ],
+          "receiptSha256": "5c87f9436daf9a81610df70ecefe219a74e5ffa43354906f91a0cc29f6462806",
+          "actualFourClinicalRepairsPass": false,
+          "wholeWebsiteSuitePass": false,
+          "canonicalInstalled": false,
+          "clinicalApproval": false
+        },
+        "terminal": true
+      },
+      {
+        "name": "spinal-save-application",
+        "result": null,
+        "terminal": false
+      }
+    ],
+    "actualFullDentalGatePass": true,
     "canonicalInstalled": false,
     "clinicalApproval": false
   },

@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-21T03:30:25.083Z",
+  "driverPid": 254664,
+  "wrapperPid": 258196,
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/atlas-spinal-muscle-xray.test.mjs",
+    "tests/spinal-ct-save-refusal-preservation.test.mjs"
+  ],
+  "files": [
+    {
+      "path": "tests/atlas-spinal-muscle-xray.test.mjs",
+      "sha256": "075354d9e1da283b5209c39478eb89e6f5fc9243441d0cd25701f84f43ea564a",
+      "beforeSha256": "c0fee664ecbf5bbbc1665138891eb2253bf71d6d7aff083757fe39b6095c9faa"
+    },
+    {
+      "path": "tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "sha256": "0192f1a2056b1b176dafa1148a806ea3f63d341faa74bf2f3ba3a720c3ba9cab",
+      "beforeSha256": null
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "59c8051bb5060e03f664c7af670f440cb59eb5abba34295611c1c9a45721d9ef",
+      "beforeSha256": "3fc2f92614ab292f558b9fdb91317780fac19553bc5d975db7d7dc9c14a7b77b"
+    }
+  ],
+  "sourceInputs": 5083,
+  "canonicalInstalled": false
+}

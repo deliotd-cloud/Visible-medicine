@@ -1,0 +1,24 @@
+{
+  "label": "ACTUAL_CURRENT_CONTRACTS",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/anatomy-coverage-revision-admission.test.mjs",
+    "tests/atlas-arterial-evidence-limits.test.mjs",
+    "tests/atlas-spinal-muscle-xray.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-current-contract-application/ACTUAL_CURRENT_CONTRACTS.log",
+  "logSha256": "41b7dc35cc490c21c764c029850b9f3f89653eede85bab5eea68b0a1e779f4de",
+  "footer": [
+    "ℹ tests 11",
+    "ℹ pass 10",
+    "ℹ fail 1",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}
