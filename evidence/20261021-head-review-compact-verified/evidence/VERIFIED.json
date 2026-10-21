@@ -1,0 +1,150 @@
+{
+  "at": "2026-10-21T18:17:24.009Z",
+  "stage": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate",
+  "site": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/website",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
+  "reviewBefore": "9cf639e08a25a4e649f06f6ff1a7fa580b5ba9d86528ab9d2c2d998ddc85ff1d",
+  "reviewInputs": 1712,
+  "sourceFiles": 5479,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/FINAL_SOURCE_INPUTS.json",
+  "sourceSnapshotSha256": "3da619c2dad3cf02655b49a08bb1a131603cdd0389a82e083b61e22871a49af7",
+  "commands": [
+    {
+      "at": "2026-10-21T18:13:42.285Z",
+      "args": [
+        "scripts/bind-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 1379,
+      "log": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/bind-review.log",
+      "logSha256": "061f1f2defbeb4a0281c271a1a84ceee1b645dc82517452672a9d96c0c6219fd"
+    },
+    {
+      "at": "2026-10-21T18:14:10.468Z",
+      "args": [
+        "scripts/build-clinical-review-viewer.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 15763,
+      "log": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/build-review-viewer.log",
+      "logSha256": "fb8162f3a0e5a0f9ae7fed13cfe53cd9f28ffc8ebab7b7d84514649d6e621b9b"
+    },
+    {
+      "at": "2026-10-21T18:14:34.455Z",
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 3090,
+      "log": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/stock-review.log",
+      "logSha256": "51c61688b22897b2e563b4d0bbda9f75df742378bb5c381a1c2cddc45df732c7"
+    },
+    {
+      "at": "2026-10-21T18:14:54.618Z",
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/head-review-compact-navigation.test.ts",
+        "tests/head-review-compact-preservation.test.mjs",
+        "tests/head-teaching-review-navigation.test.ts",
+        "tests/head-teaching-review-notes.test.ts",
+        "tests/head-ct-facial-ui.test.mjs",
+        "tests/head-ct-facial-navigation-status.test.mjs",
+        "tests/current-atlas-delivery.test.mjs",
+        "tests/review-navigation-delivery-preservation.test.mjs",
+        "tests/clinical-review-navigation-preservation.test.mjs",
+        "tests/clinical-review-history-guard.test.ts",
+        "tests/plexus-review-history-binding.test.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 7315,
+      "log": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/native.log",
+      "logSha256": "923610d8e58fa49f675473f2c70b8b676ad1731a81af2f805fa1c454ce2c3ca7",
+      "counts": {
+        "tests": 65,
+        "pass": 65,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": []
+    },
+    {
+      "at": "2026-10-21T18:15:49.483Z",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 42477,
+      "log": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/full-types.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at": "2026-10-21T18:16:53.726Z",
+      "args": [
+        "node_modules/vinext/dist/cli.js",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 50169,
+      "log": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/full-build.log",
+      "logSha256": "e2003860e8ff446a2ad9d18f471e2a19701910baad609613b88604e7a4a9792f"
+    }
+  ],
+  "nativeRoots": [
+    "tests/head-review-compact-navigation.test.ts",
+    "tests/head-review-compact-preservation.test.mjs",
+    "tests/head-teaching-review-navigation.test.ts",
+    "tests/head-teaching-review-notes.test.ts",
+    "tests/head-ct-facial-ui.test.mjs",
+    "tests/head-ct-facial-navigation-status.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/review-navigation-delivery-preservation.test.mjs",
+    "tests/clinical-review-navigation-preservation.test.mjs",
+    "tests/clinical-review-history-guard.test.ts",
+    "tests/plexus-review-history-binding.test.mjs"
+  ],
+  "actualNativeCounts": {
+    "tests": 65,
+    "pass": 65,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "stockReviewPassed": true,
+  "fullProjectTypesPassed": true,
+  "fullLocalBuildPassed": true,
+  "allMedicalContentIdsScopesAndDecisionsPreserved": true,
+  "allOriginalAssertionsPreservedExceptDeclaredSectionSupport": true,
+  "plexusHelperDependenciesAndLicensingUnchanged": true,
+  "canonicalInstalled": false,
+  "ownerFormsRefreshed": false,
+  "ownerPreviewRestarted": false,
+  "privateDatabaseCopied": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "browserAcceptancePassed": false,
+  "wholeSuitePassingClaim": false,
+  "fullGoalActive": true
+}

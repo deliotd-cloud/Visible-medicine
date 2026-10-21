@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-21T18:14:54.618Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/head-review-compact-navigation.test.ts",
+    "tests/head-review-compact-preservation.test.mjs",
+    "tests/head-teaching-review-navigation.test.ts",
+    "tests/head-teaching-review-notes.test.ts",
+    "tests/head-ct-facial-ui.test.mjs",
+    "tests/head-ct-facial-navigation-status.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/review-navigation-delivery-preservation.test.mjs",
+    "tests/clinical-review-navigation-preservation.test.mjs",
+    "tests/clinical-review-history-guard.test.ts",
+    "tests/plexus-review-history-binding.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "durationMs": 7315,
+  "log": "F:/VisibleMedicine/staging/20261021-head-review-compact-candidate/native.log",
+  "logSha256": "923610d8e58fa49f675473f2c70b8b676ad1731a81af2f805fa1c454ce2c3ca7",
+  "counts": {
+    "tests": 65,
+    "pass": 65,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": []
+}

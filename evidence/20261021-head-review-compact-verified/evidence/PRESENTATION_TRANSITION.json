@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-21T18:14:31.365Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "reviewBefore": "9cf639e08a25a4e649f06f6ff1a7fa580b5ba9d86528ab9d2c2d998ddc85ff1d",
+  "reviewAfter": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
+  "beforeInputs": 1711,
+  "afterInputs": 1712,
+  "existingInputChanges": [
+    "components/HeadAtlasTeachingReview.tsx",
+    "components/HeadCtFacialTeachingReview.tsx",
+    "scripts/bind-clinical-review.mjs"
+  ],
+  "newInput": "components/HeadTeachingReviewNavigator.tsx",
+  "allOtherInputsExact": true,
+  "plexusPacketAssetsAndHelperUnchanged": true,
+  "dependenciesAndLicensingUnchanged": true,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "canonicalInstalled": false
+}

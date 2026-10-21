@@ -1,0 +1,17 @@
+{
+  "kind": "isolated-head-review-compact-navigation-proposal",
+  "baseline": "F:/VisibleMedicine/staging/20261021-review-history-candidate/website",
+  "sourceIdentities": {
+    "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "review": "9cf639e08a25a4e649f06f6ff1a7fa580b5ba9d86528ab9d2c2d998ddc85ff1d"
+  },
+  "files": [
+    {"path":"components/HeadTeachingReviewNavigator.tsx","preimageSha256":"5ba595293bc39f08c86df45dda2f9e4d460ca27db9ee3a7bde336c3f1217a6ed","candidateSha256":"f5637bcb8e4385b86bcb5490ec10e6244baa6e38c051345ba5a95bd028d2b079"},
+    {"path":"components/HeadAtlasTeachingReview.tsx","preimageSha256":"50b0cec76bf51624521006e4e46d366f6f40f7bdd7752547ac35963d607f087a","candidateSha256":"d5057f619b8d2f492a38fe3f6bd247a37a4042c61bb383f77f75464092ab44cf"},
+    {"path":"components/HeadCtFacialTeachingReview.tsx","preimageSha256":"82d2b3d249128a16f39440dfed705eb5341003d5b0d93473c534039007cc51b7","candidateSha256":"fe0a6c31ee3f6e83c8b28ec6ac765310127344b8870f2d72afea0f13a75862c0"},
+    {"path":"tests/head-review-compact-navigation.test.ts","preimageSha256":null,"candidateSha256":"c6c9a17dd44728d36a4389d152fa941b84bcd3fa45956454f96788224ccbc0bb"}
+  ],
+  "changes": "Navigation accepts only explicitly listed existing IDs within the current main, opens ancestor disclosures, focuses the selected summary or direct heading/target with preventScroll, then scrolls instantly. Private notes render once after the checklist. The valid facial review is a closed native disclosure retaining all prior content, IDs, keyed decisions, and gate; the invalid-source alert section is unchanged.",
+  "verification": "TypeScript transpileModule reported zero diagnostics for all four proposed files. Focused real-component SSR and direct handler fixture tests are supplied but not executed against a full website dependency tree in this isolated candidate.",
+  "limits": "No canonical write, commit, push, deployment, browser acceptance, clinical sign-off, or alteration of existing tests or Review binder. Main task owns integration, stock binder expansion, existing test adaptation, types/build and browser checks."
+}
