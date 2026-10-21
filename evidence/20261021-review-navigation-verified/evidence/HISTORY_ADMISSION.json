@@ -1,0 +1,56 @@
+{
+  "changes": [
+    {
+      "path": "tests/header-session.test.ts",
+      "beforeSha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2",
+      "proposedSha256": "4d0d921ccfd799238e3a1525487ea169875efc754fb488fc6699ef4e49b2ff00",
+      "source": "header current proposal, exact fixture fallback removed"
+    },
+    {
+      "path": "tests/header-workspace-destination.test.mjs",
+      "beforeSha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0",
+      "proposedSha256": "77a244bbbfbf7cfb57e2d09f6d8007e93954632481997213c2d0589c8935a695",
+      "source": "two-test proposal, exact harness rename only"
+    },
+    {
+      "path": "tests/clinical-review-wayfinding.test.mjs",
+      "beforeSha256": "c04a8ca76716126748a8030885063451742ce6a7977a3b79db7dc5fa8c61cf25",
+      "proposedSha256": "40ae94688032f809077c1c1e6b9e68fb3ee2845d195590241b1f5ac534cc2aa3",
+      "source": "two-test proposal, exact harness rename only"
+    },
+    {
+      "path": "tests/review-navigation-history-harness.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "8d8b8bfe7f7db2b419f4c894abfdcc8d4ded2ade41be7bba583705634a84e696",
+      "source": "two-test proposal; portable checkout root and scoped fixture path"
+    },
+    {
+      "path": "tests/fixtures/review-navigation-before/header-workspace-destination.test.mjs.b64",
+      "beforeSha256": null,
+      "proposedSha256": "689c65e186395babdc519c140ca676be3e1daac26ca102a24d01e977d1cd2e16",
+      "source": "hash-verified whole original owned UI/test bytes"
+    },
+    {
+      "path": "tests/fixtures/review-navigation-before/clinical-review-wayfinding.test.mjs.b64",
+      "beforeSha256": null,
+      "proposedSha256": "ab549fae62606fe7d7c6073ebae3d341597c356fd65d6b1058d312fde10e54b3",
+      "source": "hash-verified whole original owned UI/test bytes"
+    },
+    {
+      "path": "tests/fixtures/review-navigation-before/SiteHeader.tsx.b64",
+      "beforeSha256": null,
+      "proposedSha256": "59d42fa4a232734ef157b9401935d2a1a3e92cdbf3db26eea20fd07d4f22a8fd",
+      "source": "hash-verified whole original owned UI/test bytes"
+    },
+    {
+      "path": "tests/fixtures/review-navigation-before/SiteFrame.tsx.b64",
+      "beforeSha256": null,
+      "proposedSha256": "3e8fe2a0fc0a54b466f95b602f3c8584bfc51fce539d603e673d386991cd2a3c",
+      "source": "hash-verified whole original owned UI/test bytes"
+    }
+  ],
+  "exactHistoricalFixtures": true,
+  "shippingSourceFallbackRemoved": true,
+  "portableHarness": true,
+  "canonicalInstalled": false
+}

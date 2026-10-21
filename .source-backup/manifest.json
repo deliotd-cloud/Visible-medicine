@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T04:36:22.869Z",
+  "at": "2026-10-21T05:05:26.455Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "tree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "websiteInputCount": 5095
+    "websiteInputCount": 5103
   },
-  "parent": "6b867cb1d3878742db325ef18504bd5beb3eb51e",
-  "gitParent": "6b867cb1d3878742db325ef18504bd5beb3eb51e",
+  "parent": "773002c5b3cef91f9a68cc60bfa974c698971daf",
+  "gitParent": "773002c5b3cef91f9a68cc60bfa974c698971daf",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3436,6 +3435,301 @@
       "sha256": "5188a8f753997a07b7bd22883b3ee48b9f593c67b6c869b83889b228f08be40f"
     },
     {
+      "path": "evidence/20261021-review-navigation-verified/evidence/desktop/OBSERVATION.json",
+      "bytes": 1621,
+      "sha256": "8b8bec5829e02db3506d2e19e93c1a9607feb473dff1a65e596e97320f74081a"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/desktop/STOPPED.json",
+      "bytes": 162,
+      "sha256": "24cdb3838e5e95335afdc7a44de9e46d793ea97af926b0ae54a58004c4853274"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/FINAL_NAVIGATION.json",
+      "bytes": 5817,
+      "sha256": "3bf7d73d8fb4f50c7cbcd11ae63f838f39d37a59a4a09df8ac9668dfefe0022b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/HARNESS_ADMISSION.json",
+      "bytes": 1065,
+      "sha256": "b1b8d533fde94127ba8b277741f7000513f43a48c26a4a98e398d1f5480c7f7b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/HISTORY_ADMISSION.json",
+      "bytes": 2532,
+      "sha256": "79105a707c608e1580b5ed6d601a7f99b3ebe47633fe7ba9d578db45597ac974"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/NAV_HISTORY_PROPOSAL.md",
+      "bytes": 2877,
+      "sha256": "ae98249e7e75be9e281fd3223636edfaabd887d1ca48af3f80e7b96d5cc29a2b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/ORIGINAL_HEADER_SESSION.json",
+      "bytes": 556,
+      "sha256": "61d9a0e04858340a86ddb1457147270266bfd5325eb5f78d43bb4b2db80955d1"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/PREPARATION.json",
+      "bytes": 1382,
+      "sha256": "052501f99efb73286d108941fa205688282efced06c7284aac17e218bd32420b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/REVIEW_NAVIGATION_ALL_CURRENT_HISTORY.json",
+      "bytes": 1367,
+      "sha256": "952d9991fa2075898ba73980c4d944bd5ae3247c530da2c89ca176c6a985b63b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/REVIEW_NAVIGATION_BUILD.json",
+      "bytes": 436,
+      "sha256": "739c626c7fa7cacdd3af4c6bf9027fe804a8623cae627a3764e3f75545064fec"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/REVIEW_NAVIGATION_FINAL_TYPES.json",
+      "bytes": 450,
+      "sha256": "b1e711dbd5a54305873da830f9952ee631eadef97b515b4b4cf5ad8b6df83c6d"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/REVIEW_NAVIGATION_TYPES.json",
+      "bytes": 438,
+      "sha256": "8da58fc531b0f2b6d4c0404d6e18efe8793bd8679f98549988e491ab179c7db7"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/evidence/ROOT_TEACHING_COUNTS.json",
+      "bytes": 539,
+      "sha256": "6edb859da3b3d6f299e828d1ccf18ef842dc884ac09ba5ff6dc897294e1daa72"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proof/ORIGINAL_HEADER_SESSION.json",
+      "bytes": 556,
+      "sha256": "61d9a0e04858340a86ddb1457147270266bfd5325eb5f78d43bb4b2db80955d1"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proof/PREPARATION.json",
+      "bytes": 377,
+      "sha256": "626d368d7af82ca398f93b8e0370babef04ac9e92bc1ef3e567c401ae17c6237"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proposal/historical/app/layout.tsx",
+      "bytes": 2768,
+      "sha256": "ea5fa4acdb32e28b27b453e71817ae3b3decf9f63a53154cfa3d561956d7d513"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proposal/historical/components/SiteFrame.tsx",
+      "bytes": 12061,
+      "sha256": "8a507e7acbbd860ac69e64ff54a7253b92e357c0d4a3ab58e878570ff3007c10"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proposal/historical/components/SiteHeader.tsx",
+      "bytes": 14391,
+      "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proposal/historical/lib/public-route-focus.ts",
+      "bytes": 1754,
+      "sha256": "613421b7982da287b87e1b670fb9dd2c1e1bc5f7d5bf0a55e2fb113957aa956b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proposal/historical/tests/header-session.test.ts",
+      "bytes": 17803,
+      "sha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proposal/MANIFEST.json",
+      "bytes": 3154,
+      "sha256": "225dd09d7d1be6277b042b1c293a71a7ba102d07a8f57402e879053f79c8dbc7"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/historical-header-proposal/package.json",
+      "bytes": 33,
+      "sha256": "89c47db7851f89caec72da4f215ebc21cf1e294aeef3b45d2583562d846ab035"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/app/layout.tsx",
+      "bytes": 2768,
+      "sha256": "ea5fa4acdb32e28b27b453e71817ae3b3decf9f63a53154cfa3d561956d7d513"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/components/SiteFrame.tsx",
+      "bytes": 12061,
+      "sha256": "8a507e7acbbd860ac69e64ff54a7253b92e357c0d4a3ab58e878570ff3007c10"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/components/SiteHeader.tsx",
+      "bytes": 14391,
+      "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/tests/atlas-region-picker.test.ts",
+      "bytes": 16527,
+      "sha256": "5ba45ca88c427c30d33b548f905a0fb01cd23aa131b85da37ffdcf65b44734b3"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/tests/clinical-review-wayfinding.test.mjs",
+      "bytes": 6758,
+      "sha256": "c04a8ca76716126748a8030885063451742ce6a7977a3b79db7dc5fa8c61cf25"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/tests/desktop-workspace-simplification.test.ts",
+      "bytes": 10404,
+      "sha256": "9a1f3e90e1a895c37d06f4ab61510ea2bd0296422b1448b916d9cea6d47f0036"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/tests/disc-comparison.test.ts",
+      "bytes": 14875,
+      "sha256": "fcd88b100d6de2ad8a615079a0f153631bb581900b2ee51706c7f30a06277504"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/tests/header-session.test.ts",
+      "bytes": 17803,
+      "sha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/tests/header-workspace-destination.test.mjs",
+      "bytes": 3146,
+      "sha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/tests/siteframe-focus-lifecycle.test.mjs",
+      "bytes": 17468,
+      "sha256": "a4ce563e5e725d7b1e71906d5f1968dcb962fa78c85e24869187f80adb1dc908"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/preimages/tests/workspace-utilities-dismissal.test.mjs",
+      "bytes": 4143,
+      "sha256": "e51e1c845ec7f64946cb860f154d9c5bda1d0063e3ac4d626e7150078b449202"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/scripts/admit-review-navigation-harness-20261021.mjs",
+      "bytes": 2366,
+      "sha256": "2605c12889365f5df1ff3d00e9538e542b536a630a8f4991e9cbadd97a919f8d"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/scripts/admit-review-navigation-history-20261021.mjs",
+      "bytes": 5255,
+      "sha256": "b0bcedb6740668c715ec67a41b6f149a1cfa9dcfc9b1b98ab89e8cda49810152"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/scripts/checkpoint-review-navigation-20261021.mjs",
+      "bytes": 12357,
+      "sha256": "3ee6640482cc4c2201db8ec2a5cb4885da636f643c7b63e36f3884adaef92c9b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/scripts/freeze-source190-desktop-observation-20261021.mjs",
+      "bytes": 2159,
+      "sha256": "e9113c8755b5b8f3c70e8a1027afa7b07ff44cc45bf8a7329d264bb3ef7f92e0"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/scripts/launch-source190-desktop-qa-20261021.mjs",
+      "bytes": 1861,
+      "sha256": "767461a0563442055cf55ddc47521045e0a027506b1e1baf1e5fb841cc07f25a"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/scripts/measure-source190-teaching-counts-20261021.mjs",
+      "bytes": 1682,
+      "sha256": "a765a17c4ec283de745947ca2bb798f8a32aca0b2cc9595bbd9667509bf6e33e"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/scripts/prepare-review-destination-admission-20261021.mjs",
+      "bytes": 3587,
+      "sha256": "4b0fe29d5179c24a007fe0bb411b9bc163890006a76f1207a9dc07fbcae1548d"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/app/layout.tsx",
+      "bytes": 3215,
+      "sha256": "e99b6206d0554964d022640760a5abefa573b76d910a71c3586a21536315a1be"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/components/SiteFrame.tsx",
+      "bytes": 12406,
+      "sha256": "e5190dfb36a052656ce2e57ea2317f6f59fef210bf04572854aa25c66f15b6a8"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/components/SiteHeader.tsx",
+      "bytes": 15031,
+      "sha256": "f989c863450e3338c5b9d757016afe927013489e662edc587b86e0a0f3d5011a"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/lib/review-destination.ts",
+      "bytes": 1267,
+      "sha256": "3b1330cfe70b22b5b299db780e4558a8ca82fc4bcc0477040379888893b2b27b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/atlas-region-picker.test.ts",
+      "bytes": 16646,
+      "sha256": "734c694d378bb6111fe10b5526349c882b0ddd54f71e7b382e323d5c40b7fa9f"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/clinical-review-wayfinding.test.mjs",
+      "bytes": 5178,
+      "sha256": "40ae94688032f809077c1c1e6b9e68fb3ee2845d195590241b1f5ac534cc2aa3"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/desktop-workspace-simplification.test.ts",
+      "bytes": 10671,
+      "sha256": "0b30894747d65a9da04e07c443fb367d7f838283291dbbac6295db01ac6bd02b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/disc-comparison.test.ts",
+      "bytes": 14998,
+      "sha256": "40a164d650c18f49f109c73201ce1e74be529b0c32c1c0daca22b0e30aabbb51"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/fixtures/review-navigation-before/clinical-review-wayfinding.test.mjs.b64",
+      "bytes": 9088,
+      "sha256": "ab549fae62606fe7d7c6073ebae3d341597c356fd65d6b1058d312fde10e54b3"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/fixtures/review-navigation-before/header-workspace-destination.test.mjs.b64",
+      "bytes": 4231,
+      "sha256": "689c65e186395babdc519c140ca676be3e1daac26ca102a24d01e977d1cd2e16"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/fixtures/review-navigation-before/SiteFrame.tsx.b64",
+      "bytes": 16219,
+      "sha256": "3e8fe2a0fc0a54b466f95b602f3c8584bfc51fce539d603e673d386991cd2a3c"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/fixtures/review-navigation-before/SiteHeader.tsx.b64",
+      "bytes": 19348,
+      "sha256": "59d42fa4a232734ef157b9401935d2a1a3e92cdbf3db26eea20fd07d4f22a8fd"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/header-session.test.ts",
+      "bytes": 22736,
+      "sha256": "4d0d921ccfd799238e3a1525487ea169875efc754fb488fc6699ef4e49b2ff00"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/header-workspace-destination.test.mjs",
+      "bytes": 3116,
+      "sha256": "77a244bbbfbf7cfb57e2d09f6d8007e93954632481997213c2d0589c8935a695"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/review-destination.test.mjs",
+      "bytes": 3603,
+      "sha256": "7df4a2d108cb2191114105e66f3d772c48ca14cc83fdc2e899ccdd6097d08983"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/review-navigation-history-harness.mjs",
+      "bytes": 2604,
+      "sha256": "8d8b8bfe7f7db2b419f4c894abfdcc8d4ded2ade41be7bba583705634a84e696"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/review-navigation-render.test.mjs",
+      "bytes": 7241,
+      "sha256": "e1070ffd2abf63b709b0271513775c7db63f64e749570f75f56f9c0c8610ea0f"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/siteframe-focus-lifecycle.test.mjs",
+      "bytes": 17631,
+      "sha256": "6b21f953f8eb654c1c2ed3cc122741ccf4b2d0e26929d63ee809e20a28b63b5b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-verified/website/tests/workspace-utilities-dismissal.test.mjs",
+      "bytes": 4306,
+      "sha256": "0b06f9be790ceb6f9e2bad8d984d78dd279c9502227197b1742c328c486f6cf4"
+    },
+    {
       "path": "evidence/20261021-source-credits-notices/audit/MAIN_FINDINGS.json",
       "bytes": 8301,
       "sha256": "0a17af73ae4896b1f5eefad40796be7fd3657a31aa28fe8f813a61088dee286e"
@@ -5257,16 +5551,13 @@
     }
   ],
   "removed": [],
-  "scope": "Selected13native Website pin/coverage/test/attribute postimages and exact preimages,5new test/evidence fixtures,3exact new imported dental text/metadata paths,source-only delivery manifests,small results/check receipts/control scripts on prior filtered ancestry. No model geometry/full runtime/dist binaries,private modules/manifests/review records/scans/masks/identifiers,deps,raw canonical Git ancestry or browser media/DOM. Local existing source190and closed485 remain independently staged;not a complete runnable/private-data backup or hosted/clinical/spatial release.",
+  "scope": "Selected owned navigation production/test source,exact preimages,whole owned historical UI/test fixtures and small metadata/proof/control scripts on previously filtered ancestry. Encoded fixtures decode only to4hash-verified owned UI/test preimages;no data-image/model encoding. No scans/masks/identifiers/private records/private manifests or modules/model geometry/full runtime/dist/node_modules/raw canonical Git ancestry/browser pixels/DOM. Not a complete runnable/private-data backup,clinical/spatial or hosted release.",
   "proof": {
-    "fourRuntimesAndReviewImported": true,
-    "all137ModelsUnchanged": true,
-    "all22ViewerPackagesUnchanged": true,
-    "freshTypesPass": true,
-    "fullProductionBuildPass": true,
-    "actualFocusedPass": 29,
-    "skipped": 0,
-    "original485Preserved": true,
+    "focusedPassed": 138,
+    "wholeOriginalHeaderPassed": 6,
+    "freshTypes": true,
+    "productionBuild": true,
+    "all1710ReviewInputsPreserved": true,
     "canonicalInstalled": false
   },
   "wholeProjectBackup": false,

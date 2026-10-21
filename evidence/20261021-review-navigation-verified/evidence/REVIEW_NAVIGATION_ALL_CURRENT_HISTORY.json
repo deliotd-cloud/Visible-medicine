@@ -1,0 +1,40 @@
+{
+  "label": "REVIEW_NAVIGATION_ALL_CURRENT_HISTORY",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "tests/review-destination.test.mjs",
+    "tests/review-navigation-render.test.mjs",
+    "tests/siteframe-focus-lifecycle.test.mjs",
+    "tests/workspace-utilities-dismissal.test.mjs",
+    "tests/desktop-workspace-simplification.test.ts",
+    "tests/header-session.test.ts",
+    "tests/header-workspace-destination.test.mjs",
+    "tests/clinical-review-wayfinding.test.mjs",
+    "tests/atlas-region-picker.test.ts",
+    "tests/disc-comparison.test.ts",
+    "tests/font-alias-scope.test.mjs",
+    "tests/local-font-distribution.test.mjs",
+    "tests/local-atlas-diagnostics.test.ts",
+    "tests/atlas-navigation.test.ts",
+    "tests/lecture-routing.test.ts",
+    "tests/guided-lecture-ui.test.ts",
+    "tests/workbook-correction-lineage-ui.test.mjs",
+    "tests/related-lectures.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-review-destination-application/REVIEW_NAVIGATION_ALL_CURRENT_HISTORY.log",
+  "logSha256": "3ce1187bc29de78545bc7e13901940eaa63adb657809ffd4ba275022924b99ae",
+  "footer": [
+    "ℹ tests 138",
+    "ℹ pass 138",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

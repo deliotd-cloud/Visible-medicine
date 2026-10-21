@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-21T05:05:19.911Z",
+  "stage": "F:/VisibleMedicine/staging/20261021-review-destination-application",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "namedInputs": 5103,
+  "changedExisting": [
+    {
+      "path": "app/layout.tsx",
+      "beforeSha256": "ea5fa4acdb32e28b27b453e71817ae3b3decf9f63a53154cfa3d561956d7d513",
+      "sha256": "e99b6206d0554964d022640760a5abefa573b76d910a71c3586a21536315a1be"
+    },
+    {
+      "path": "components/SiteFrame.tsx",
+      "beforeSha256": "8a507e7acbbd860ac69e64ff54a7253b92e357c0d4a3ab58e878570ff3007c10",
+      "sha256": "e5190dfb36a052656ce2e57ea2317f6f59fef210bf04572854aa25c66f15b6a8"
+    },
+    {
+      "path": "components/SiteHeader.tsx",
+      "beforeSha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec",
+      "sha256": "f989c863450e3338c5b9d757016afe927013489e662edc587b86e0a0f3d5011a"
+    },
+    {
+      "path": "tests/atlas-region-picker.test.ts",
+      "beforeSha256": "5ba45ca88c427c30d33b548f905a0fb01cd23aa131b85da37ffdcf65b44734b3",
+      "sha256": "734c694d378bb6111fe10b5526349c882b0ddd54f71e7b382e323d5c40b7fa9f"
+    },
+    {
+      "path": "tests/clinical-review-wayfinding.test.mjs",
+      "beforeSha256": "c04a8ca76716126748a8030885063451742ce6a7977a3b79db7dc5fa8c61cf25",
+      "sha256": "40ae94688032f809077c1c1e6b9e68fb3ee2845d195590241b1f5ac534cc2aa3"
+    },
+    {
+      "path": "tests/desktop-workspace-simplification.test.ts",
+      "beforeSha256": "9a1f3e90e1a895c37d06f4ab61510ea2bd0296422b1448b916d9cea6d47f0036",
+      "sha256": "0b30894747d65a9da04e07c443fb367d7f838283291dbbac6295db01ac6bd02b"
+    },
+    {
+      "path": "tests/disc-comparison.test.ts",
+      "beforeSha256": "fcd88b100d6de2ad8a615079a0f153631bb581900b2ee51706c7f30a06277504",
+      "sha256": "40a164d650c18f49f109c73201ce1e74be529b0c32c1c0daca22b0e30aabbb51"
+    },
+    {
+      "path": "tests/header-session.test.ts",
+      "beforeSha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2",
+      "sha256": "4d0d921ccfd799238e3a1525487ea169875efc754fb488fc6699ef4e49b2ff00"
+    },
+    {
+      "path": "tests/header-workspace-destination.test.mjs",
+      "beforeSha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0",
+      "sha256": "77a244bbbfbf7cfb57e2d09f6d8007e93954632481997213c2d0589c8935a695"
+    },
+    {
+      "path": "tests/siteframe-focus-lifecycle.test.mjs",
+      "beforeSha256": "a4ce563e5e725d7b1e71906d5f1968dcb962fa78c85e24869187f80adb1dc908",
+      "sha256": "6b21f953f8eb654c1c2ed3cc122741ccf4b2d0e26929d63ee809e20a28b63b5b"
+    },
+    {
+      "path": "tests/workspace-utilities-dismissal.test.mjs",
+      "beforeSha256": "e51e1c845ec7f64946cb860f154d9c5bda1d0063e3ac4d626e7150078b449202",
+      "sha256": "0b06f9be790ceb6f9e2bad8d984d78dd279c9502227197b1742c328c486f6cf4"
+    }
+  ],
+  "newSourcePaths": [
+    "lib/review-destination.ts",
+    "tests/review-destination.test.mjs",
+    "tests/review-navigation-render.test.mjs",
+    "tests/review-navigation-history-harness.mjs",
+    "tests/fixtures/review-navigation-before/header-workspace-destination.test.mjs.b64",
+    "tests/fixtures/review-navigation-before/clinical-review-wayfinding.test.mjs.b64",
+    "tests/fixtures/review-navigation-before/SiteHeader.tsx.b64",
+    "tests/fixtures/review-navigation-before/SiteFrame.tsx.b64"
+  ],
+  "progress": "Request-scoped direct Clinical Review for authorized reviewers in public switcher and Studio/context bar;Administration secondary,unavailable/anonymous fallback Workspace. Embedded lesson/editor toolbars retain defaultfalse. Only UI booleans reach clients,actual destination guards and independent Atlas/case/lecture access unchanged. All11existing edits scoped;all other5095inputs and original4855087inputs preserved. All1710Review inputs and4source190runtimes remain coherent.",
+  "verification": {
+    "currentAndHistoricalCases": 138,
+    "currentAndHistoricalPass": 138,
+    "skipped": 0,
+    "wholeOriginalHeaderCases": 6,
+    "wholeOriginalHeaderPass": 6,
+    "productionBuild": true,
+    "freshTypes": true,
+    "productionBytesUnchangedAfterBuild": true,
+    "all1710ReviewBindingInputsPreserved": true,
+    "allOtherOldInputsPreserved": true,
+    "allOriginal485InputsPreserved": true,
+    "originalFullFailureBaseline": 144,
+    "fullSuitePass": false
+  },
+  "sourceOnlyRecovery": true,
+  "canonicalInstalled": false,
+  "ownerPreviewUnchanged": true,
+  "ownerFormsRefreshed": false,
+  "authenticationChanged": false,
+  "permissionsGranted": false,
+  "privateStateCopied": false,
+  "loadedModelAcceptance": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true,
+  "desktop": "Actual1280x720isolated QA shows compact layout but protected model503. Agent QA tab closed/owned3002stopped;owner3000untouched. No storage bypass/account grant/private-state copy. Actual loaded-model acceptance remains open.",
+  "limits": "Targeted tests/types/production build are not a fresh full-suite,clinical/rights/spatial/browser or hosted release. Initial four type diagnostics retained; explicit boolean return and fail-closed embedded default resolve them. Whole historical tests replay against exact pre-change owned source;current behavior asserted separately. Earlier144full-suite failures remain recorded,not subtracted or waived.",
+  "next": "Preserve current owner session. Native private model binding setup and loaded-model/camera/tour acceptance remain to verify. Continue highest-value saved roadmap,semantic CT/MRI/3D comparison and source-backed drafts without awaiting clinical signoff;no patient-space synchronization claim."
+}

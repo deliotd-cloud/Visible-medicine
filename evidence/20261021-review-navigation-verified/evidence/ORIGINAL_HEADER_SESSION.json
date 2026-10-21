@@ -1,0 +1,22 @@
+{
+  "label": "ORIGINAL_HEADER_SESSION",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "tests/header-session.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-review-navigation-historical-proof/ORIGINAL_HEADER_SESSION.log",
+  "logSha256": "870198d6f07b317984e89ab7bfb8476bead7a227eda146c98a221ac169f9e939",
+  "footer": [
+    "ℹ tests 6",
+    "ℹ pass 6",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

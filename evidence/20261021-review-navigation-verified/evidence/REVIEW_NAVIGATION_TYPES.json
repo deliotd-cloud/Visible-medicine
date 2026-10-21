@@ -1,0 +1,16 @@
+{
+  "label": "REVIEW_NAVIGATION_TYPES",
+  "command": "node",
+  "args": [
+    "node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "--incremental",
+    "false"
+  ],
+  "code": 2,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-review-destination-application/REVIEW_NAVIGATION_TYPES.log",
+  "logSha256": "8e3336434acab76115bc66dd5219b1002d5b57f9576f33115c6c1dd53b1b9878",
+  "footer": [],
+  "canonicalInstalled": false
+}

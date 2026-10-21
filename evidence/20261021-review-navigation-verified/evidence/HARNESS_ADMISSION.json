@@ -1,0 +1,24 @@
+{
+  "changes": [
+    {
+      "path": "tests/siteframe-focus-lifecycle.test.mjs",
+      "beforeSha256": "a4ce563e5e725d7b1e71906d5f1968dcb962fa78c85e24869187f80adb1dc908",
+      "sha256": "6b21f953f8eb654c1c2ed3cc122741ccf4b2d0e26929d63ee809e20a28b63b5b"
+    },
+    {
+      "path": "tests/workspace-utilities-dismissal.test.mjs",
+      "beforeSha256": "e51e1c845ec7f64946cb860f154d9c5bda1d0063e3ac4d626e7150078b449202",
+      "sha256": "0b06f9be790ceb6f9e2bad8d984d78dd279c9502227197b1742c328c486f6cf4"
+    },
+    {
+      "path": "tests/desktop-workspace-simplification.test.ts",
+      "beforeSha256": "9a1f3e90e1a895c37d06f4ab61510ea2bd0296422b1448b916d9cea6d47f0036",
+      "sha256": "0b30894747d65a9da04e07c443fb367d7f838283291dbbac6295db01ac6bd02b"
+    }
+  ],
+  "wholeOriginalInversesPassed": true,
+  "inverseVerifierSha256": "e2a4651dbaaf46891919aad2bb334a8fd6ac862ef1dd15979287fae20ef777f7",
+  "outputSha256": "52b23897f565d6a5a13b34b8f969ae990b098121e27d7240570d0cd7cd140a9f",
+  "allRegistrationsAndAssertionsPreserved": true,
+  "canonicalInstalled": false
+}

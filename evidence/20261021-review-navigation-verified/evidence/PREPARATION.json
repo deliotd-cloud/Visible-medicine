@@ -1,0 +1,33 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-review-destination-application",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "originalInputs": 5095,
+  "changes": [
+    {
+      "path": "app/layout.tsx",
+      "beforeSha256": "ea5fa4acdb32e28b27b453e71817ae3b3decf9f63a53154cfa3d561956d7d513",
+      "proposedSha256": "27fe8a8ba3ea547d88f0e2f5f489bad1380ebe5f53507e8ef4cad2e97fb2ac15"
+    },
+    {
+      "path": "components/SiteHeader.tsx",
+      "beforeSha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec",
+      "proposedSha256": "f989c863450e3338c5b9d757016afe927013489e662edc587b86e0a0f3d5011a"
+    },
+    {
+      "path": "components/SiteFrame.tsx",
+      "beforeSha256": "8a507e7acbbd860ac69e64ff54a7253b92e357c0d4a3ab58e878570ff3007c10",
+      "proposedSha256": "95f085172adcc7ae788a35c14092fac67e2bcf8bdeb8b01733fb0b0d95bd3f57"
+    },
+    {
+      "path": "lib/review-destination.ts",
+      "beforeSha256": null,
+      "proposedSha256": "232bcb96a6737dfe0e85752e7f467681cbbcf605fb0f6e5e07b74449bbc5bd3b"
+    }
+  ],
+  "proposalTestBridgeOnly": true,
+  "privateStateCopied": false,
+  "canonicalInstalled": false
+}

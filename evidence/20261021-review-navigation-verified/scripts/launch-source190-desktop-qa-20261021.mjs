@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawn} from 'node:child_process';
+import {read,json,sha} from './source-only-backup-20261019.mjs';
+const candidate='F:/VisibleMedicine/staging/20261021-source190-website',prep=json(candidate+'/PREPARATION.json'),rows=json(candidate+'/SOURCE_INPUTS_AFTER.json');
+assert.equal(rows.length,5095);for(const r of rows)assert.equal(sha(read(prep.site+'/'+r.path)),r.sha256,r.path);
+const stage='F:/VisibleMedicine/staging/20261021-source190-desktop-qa';assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+const stream=fs.createWriteStream(stage+'/PREVIEW.log',{flags:'wx'});
+const child=spawn(process.execPath,['node_modules/vinext/dist/cli.js','dev','-H','127.0.0.1','-p','3002'],{cwd:prep.site,windowsHide:true,env:{...process.env,VM_LOCAL_PREVIEW_STABLE:'1',GOMAXPROCS:'2',RAYON_NUM_THREADS:'1',NODE_OPTIONS:'--max-old-space-size=4096'},stdio:['ignore','pipe','pipe']});
+child.stdout.pipe(stream,{end:false});child.stderr.pipe(stream,{end:false});
+const started={at:new Date().toISOString(),pid:child.pid,launcher:process.pid,site:prep.site,source:prep.sourceCommit,review:json(prep.site+'/atlas-review/manifest.json').websiteIntegrationSha256,port:3002,host:'127.0.0.1',hmr:false,authenticationChanged:false,ownerPort3000Untouched:true,canonicalInstalled:false};
+fs.writeFileSync(stage+'/STARTED.json',JSON.stringify(started,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(started));
+child.once('error',error=>console.error(String(error)));
+const result=await new Promise(resolve=>child.once('close',(code,signal)=>resolve({code,signal})));
+await new Promise(resolve=>stream.end(resolve));fs.writeFileSync(stage+'/STOPPED.json',JSON.stringify({...result,at:new Date().toISOString(),logSha256:sha(read(stage+'/PREVIEW.log'))},null,2)+'\n',{flag:'wx'});process.exitCode=result.code??1;

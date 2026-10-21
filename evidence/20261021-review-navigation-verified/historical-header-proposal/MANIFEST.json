@@ -1,0 +1,49 @@
+{
+  "schema": "visible-medicine.header-session-proposal/1",
+  "scope": "proposal-only; no website checkout edits, commit, push or deployment",
+  "candidate": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "websiteHeadObserved": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "originalTest": {
+    "source": "candidate/tests/header-session.test.ts",
+    "fixture": "historical/tests/header-session.test.ts",
+    "sha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2",
+    "unchangedWholeFile": true
+  },
+  "proposalTest": {
+    "path": "tests/header-session.test.ts",
+    "sha256": "17fdb1497f7db68829538224cef08fa3296e7d2f3e877c940c3ccd5c15ed267d",
+    "admission": "When placed in candidate/tests, compile reads actual candidate .tsx paths. In this isolated proposal it reads exact .tsx.raw fixtures."
+  },
+  "currentExactFixtures": {
+    "app/layout.tsx.raw": "e99b6206d0554964d022640760a5abefa573b76d910a71c3586a21536315a1be",
+    "components/SiteHeader.tsx.raw": "f989c863450e3338c5b9d757016afe927013489e662edc587b86e0a0f3d5011a",
+    "components/SiteFrame.tsx.raw": "e5190dfb36a052656ce2e57ea2317f6f59fef210bf04572854aa25c66f15b6a8",
+    "lib/review-destination.ts": "3b1330cfe70b22b5b299db780e4558a8ca82fc4bcc0477040379888893b2b27b",
+    "lib/public-route-focus.ts": "613421b7982da287b87e1b670fb9dd2c1e1bc5f7d5bf0a55e2fb113957aa956b"
+  },
+  "historicalExactFixtures": {
+    "provenance": "F:/VisibleMedicine/staging/20261021-review-destination-application/preimages",
+    "app/layout.tsx.raw": "ea5fa4acdb32e28b27b453e71817ae3b3decf9f63a53154cfa3d561956d7d513",
+    "components/SiteHeader.tsx.raw": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec",
+    "components/SiteFrame.tsx.raw": "8a507e7acbbd860ac69e64ff54a7253b92e357c0d4a3ab58e878570ff3007c10",
+    "executionCopies": "The sibling .tsx files are byte-identical to these .tsx.raw fixtures so the untouched original test reads its original paths.",
+    "lib/public-route-focus.ts": "613421b7982da287b87e1b670fb9dd2c1e1bc5f7d5bf0a55e2fb113957aa956b"
+  },
+  "harness": {
+    "package.json": "89c47db7851f89caec72da4f215ebc21cf1e294aeef3b45d2583562d846ab035",
+    "nodeModules": "local junctions to candidate/node_modules; dependencies are not copied into proposal"
+  },
+  "executions": [
+    {
+      "cwd": "F:/VisibleMedicine/staging/20261021-header-session-contract-proposal/historical",
+      "command": "node --experimental-strip-types --test tests/header-session.test.ts",
+      "result": "exit 0; 6 tests, 6 pass, 0 fail, 0 skip; whole original test file"
+    },
+    {
+      "cwd": "F:/VisibleMedicine/staging/20261021-header-session-contract-proposal",
+      "command": "node --experimental-strip-types --test tests/header-session.test.ts",
+      "result": "exit 0; 9 tests, 9 pass, 0 fail, 0 skip; current proposal test"
+    }
+  ],
+  "limits": "Navigation is presentation only. The test mocks the server guard solely at the root layout boundary. Destination authorization remains separate and was not exercised here. No types, build, broad suite, browser, clinical sign-off, canonical installation or deployment is claimed."
+}
