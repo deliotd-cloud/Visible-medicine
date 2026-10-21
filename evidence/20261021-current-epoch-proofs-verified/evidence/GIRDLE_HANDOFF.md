@@ -1,0 +1,13 @@
+# Clinical girdle and Git-root epoch proposal — 21 October 2026
+
+Proposal only. Source Website `b953ff3f5f1891599cb6e91cb91311d9d6006270`; source Atlas `190a63238eadcf906abe89dcbb6a67c88afe70b9`. Canonical Atlas is a separate, older checkout. No source checkout was edited or tested.
+
+Copy the three proposed `tests/*.test.*` files and one `tests/fixtures/*.raw` file to the same relative paths only after main's preimage and ownership review. Existing girdle preimage SHA-256 `0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77`; proposed `aad3d4eb21f3fe6f2c8a5bffce816f140276d8582142667f2aab25e3f88be339`. Existing Git-root guard preimage `0e244cfc0601dd9fd085e27e1ed6e75d04c30b1fac2fb6d2a0af18dff58b9c7d`; proposed `d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1`. New preservation test SHA `d9f795ed98c2c58be3cfa3ec6cc0d3b39d5926607cde4b7251ee530095a2a011`; original raw fixture equals the girdle preimage.
+
+Girdle: `9fba9a1e24b6669aafd48e945d55fc0939d50ab2` remains immutable Git-only history. Current Review/runtime are bound to checked `CURRENT_ATLAS_REVISION` and the clean current source root. The original introduction, 16 identities, 9,936-placement/1,104-packet loops, all mutation/refusal and storage-zero assertions remain. Additional comparisons require the 16 historical girdle lessons and X-ray worksheet topics to survive into current delivery. The preservation test declares every source edit and reverses the whole proposed file to the exact original fixture; its mutation case refuses changed assertions or epoch.
+
+Git-root guard: current salivary file SHA `c4e18aeb9ce2056cb50fcef3a665de0356f91b88ff78992a928b7346f3ca2362` differs from its previously pinned `fe9bbfe9e64286d36f1f373fd18475e91cdaf7a2ba6c504a0a71c7e483666dd5` only at the documented `Map<string,any>` type annotation. The new inverse checks both whole-file hashes before the existing exact later-CT inverse and original CRLF restoration. `atlas190-current-delivery.test.mjs` independently pins the earlier raw postimage and needs no change.
+
+A focused source search found no other Website test/script/package caller pinning either modified test by path or original whole-file SHA.
+
+Deferred, run once after session 37113 is terminal and after admission: `node --test tests/clinical-review-girdle-history-preservation.test.mjs tests/clinical-review-git-root-preservation.test.mjs`; then run the project TypeScript test runner's focused girdle module. The 9,936-placement current theorem can be expensive. No full-suite, type, build, source checkout or clinical result is claimed here.

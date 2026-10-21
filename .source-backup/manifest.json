@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T08:21:38.119Z",
+  "at": "2026-10-21T08:40:39.560Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "websiteInputCount": 5107,
     "proposalOnly": true
   },
-  "parent": "140414102dc5b1f378bc436bedef7f83cabaac44",
-  "gitParent": "140414102dc5b1f378bc436bedef7f83cabaac44",
+  "parent": "2ff71885ec8b8aab14c66408a6a155e9b138171a",
+  "gitParent": "2ff71885ec8b8aab14c66408a6a155e9b138171a",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2239,6 +2239,216 @@
       "path": "evidence/20261021-ct-delivery-history-repair/SOURCE_INPUTS_AFTER.json",
       "bytes": 868413,
       "sha256": "9901c70f1e6b148c5b6eae4bdccfb2f8a95051a458a75904b749e0f7234120ab"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/20261021-clinical-desktop-epoch-native-proof/PREPARATION.json",
+      "bytes": 1504,
+      "sha256": "c5e1e1014e10e42c1eaa2596fc216f6c0da1297611dce682c5aa291ab12a1157"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/20261021-clinical-desktop-epoch-native-proof/receipt.json",
+      "bytes": 534,
+      "sha256": "e29e231a303cd5afedb0ed05cbe4435693ca27ea0f9e9dfba4f2b0597a5caaf6"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/20261021-clinical-epoch-batch-d-native-proof/PREPARATION.json",
+      "bytes": 3348,
+      "sha256": "33b4c02deb359dc15c703e228ba6c277be4e823000c67a63ac4b5fd534dcd654"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/20261021-clinical-epoch-batch-d-native-proof/receipt.json",
+      "bytes": 608,
+      "sha256": "83a825b5d3fd751111d972f0734f1707e15743441993b74fa6a84716f2a1e7cb"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/20261021-clinical-girdle-history-native-proof/PREPARATION.json",
+      "bytes": 2298,
+      "sha256": "7bac18ad0e48ccf0c66b0c2341aba3872e9166bc1c5d0ed481ae0fbcf8667a4e"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/20261021-clinical-girdle-history-native-proof/receipt.json",
+      "bytes": 614,
+      "sha256": "08067a12a589e9bc7f0e2afe379f47cf38449ad48a37df6f6b615c2093fc9d87"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/BATCH_D_HANDOFF.md",
+      "bytes": 2319,
+      "sha256": "17e1560be95ccf1feb7feab67b9cda8c8d77c721f64d59880914866e5a74aab0"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/BATCH.json",
+      "bytes": 23237,
+      "sha256": "ed19c60fa0dfec03d4e7903174348acb5a290a1f7de53198ac0c4f0090a02afc"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/GIRDLE_HANDOFF.md",
+      "bytes": 2605,
+      "sha256": "ae8a45892d27f21880cafb4df8e66a596e0cf00e2b48a4e4432f08954753b122"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/evidence/PROOF.json",
+      "bytes": 2444,
+      "sha256": "0ab4f3c01fb3c54718ff95933e1e15529101c3e895f9d656093ca001fd2a7078"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 10666,
+      "sha256": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-elbow-arterial-tour.test.ts",
+      "bytes": 24691,
+      "sha256": "ecdaa555bffb332aab67d481c6873e0dc7ea28bc25cb3459ae1b4b8dd6e9df72"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 35278,
+      "sha256": "52ebcddab39cc165bf4c3c94dee0659abfea6814c92e55f85bf86f25eb6c57d8"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 27738,
+      "sha256": "108d94b7a5b0ead7e302ab576b2f295d44eb7cd7c2229de686115402379b6778"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-girdle-muscle-xray.test.ts",
+      "bytes": 21356,
+      "sha256": "0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 5178,
+      "sha256": "0e244cfc0601dd9fd085e27e1ed6e75d04c30b1fac2fb6d2a0af18dff58b9c7d"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-model-inspection.test.mjs",
+      "bytes": 5809,
+      "sha256": "c1f906808fdf36a4dc76209df0a47f53e575235f02cfc531adbdafb931e3579a"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-orbital-sensory-mri.test.ts",
+      "bytes": 11258,
+      "sha256": "1127b1186b5339a0a4be8d21ca1361cb61a338c93083c571f0e2705b61e86e64"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+      "bytes": 8966,
+      "sha256": "6c0240e376991077706fb4ffddd2fab6fc53631259fade28bdc0b36f8be5e81e"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-epoch-batch-d-preservation.test.mjs",
+      "bytes": 4357,
+      "sha256": "c934a01dff830c1277b5648d7de81a86d60dfd1f977673779fa371d1f35d3746"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 11478,
+      "sha256": "afc346bc245238ecc9469b64a39b9db472f9d7e1d4aa12389d25031e1ae29de3"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-elbow-arterial-tour.test.ts",
+      "bytes": 25432,
+      "sha256": "deff0b510f8603a71c9d13910557dee9557a513ee1a19cf0bc0e6bd2e9fb7d1d"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 36205,
+      "sha256": "dfe5b2522ed20791134dadd37a35e6fff235b4b7d8b139953a00252595159b7a"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 28665,
+      "sha256": "fca614cc591eb44623f87e36dd35cea42aa3ea0e755ede1118b368e871f06861"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-girdle-history-preservation.test.mjs",
+      "bytes": 5175,
+      "sha256": "d9f795ed98c2c58be3cfa3ec6cc0d3b39d5926607cde4b7251ee530095a2a011"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-girdle-muscle-xray.test.ts",
+      "bytes": 22602,
+      "sha256": "aad3d4eb21f3fe6f2c8a5bffce816f140276d8582142667f2aab25e3f88be339"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 5683,
+      "sha256": "d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-model-inspection.test.mjs",
+      "bytes": 6032,
+      "sha256": "f1fc322c26f68ad264148f36436f0a13a4d034324dbb193a1d0fe24b09f4c627"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-orbital-sensory-mri.test.ts",
+      "bytes": 12079,
+      "sha256": "0fa989b29a130f39264b192358545f9b9d56d602a84c215e82bc76bb875ea28b"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+      "bytes": 9497,
+      "sha256": "6b22c076adf1371ff6f7c4b5cd550b0ca9c66edd033bda9156284c7a727fc1a4"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-girdle-muscle-xray-original.ts.raw",
+      "bytes": 21356,
+      "sha256": "0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-model-inspection.test.mjs.raw",
+      "bytes": 5809,
+      "sha256": "c1f906808fdf36a4dc76209df0a47f53e575235f02cfc531adbdafb931e3579a"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-orbital-sensory-mri.test.ts.raw",
+      "bytes": 11258,
+      "sha256": "1127b1186b5339a0a4be8d21ca1361cb61a338c93083c571f0e2705b61e86e64"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-pancreatic-vessel-teaching.test.ts.raw",
+      "bytes": 8966,
+      "sha256": "6c0240e376991077706fb4ffddd2fab6fc53631259fade28bdc0b36f8be5e81e"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/rights-candidates/SEARCH_SCREENING.json",
+      "bytes": 2076,
+      "sha256": "f8aa6054024682db61e86da469bdd73b5d4a7cc5512898abd80293160d0cd6e2"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/scripts/admit-revision-guard-batch-20261021.mjs",
+      "bytes": 3996,
+      "sha256": "006b10684eb3929f505dcf82ba921de108b37fa766d05c6209bbf7e7abef7077"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/scripts/prepare-clinical-batch-d-proof-20261021.mjs",
+      "bytes": 2617,
+      "sha256": "b3b3e733e62d6bb0338ce20836997c187e59f6f4fcbaf3345d08c7036889d5fc"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/scripts/prepare-clinical-desktop-epoch-proof-20261021.mjs",
+      "bytes": 2446,
+      "sha256": "78c07ab1006ef7d222d5b819aa85d4c70a49bd63131dfb8f093a706107f7db3b"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/scripts/prepare-clinical-girdle-history-proof-20261021.mjs",
+      "bytes": 3091,
+      "sha256": "ab38c218c61d27f0ece3c9e9a6b424c9cc2b4fed47cc85493f27993c30d66370"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/scripts/prepare-current-epoch-checkpoint-20261021.mjs",
+      "bytes": 5155,
+      "sha256": "fb05494690fe628a2198f471c11bc459da7d3d87d93f1bf7806f5feed00baee2"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/scripts/prepare-revision-guard-batch-v6-20261021.mjs",
+      "bytes": 3963,
+      "sha256": "6071d10b1185feb09987a60a048c820b95b5572a30ef88c1053860fb1ea6510b"
+    },
+    {
+      "path": "evidence/20261021-current-epoch-proofs-verified/scripts/prepare-revision-guard-batch-v7-20261021.mjs",
+      "bytes": 2839,
+      "sha256": "ce7f2e53b8dedd51753dba4bbf3cbb8f5776f04786fabfb07cbe653668f139bb"
     },
     {
       "path": "evidence/20261021-dental-mri-proposal/proposal/app/body-content.ts",
@@ -6484,36 +6694,33 @@
   "removed": [],
   "scope": "Explicit owned test-source proposals/exact preimages, small receipts, read-only cutover summary and controls on previously filtered ancestry. NOT installed or a full-suite pass. No raw canonical history, full private modules/manifests, model geometry/full runtimes, private DB/records/identities/decisions/env, scans/masks, dependencies or browser media/DOM. No test harness junctions packaged. Not a complete runnable/private backup, release or clinical/spatial approval.",
   "proof": {
-    "summary": "Actual canonical1280x720 browser check found lost queue filter context after navigating My Learning and Back. Ownedtab89closed/ownerforms untouched. Two-path UI proposal restores bounded same-path URL view state while preserving router history state, fresh authorized status loads and existing source/account/focus/refusal gates. Forty focused native cases pass across new5 and original35; same component tested against five byte-unchanged existing test files. First8pass/32fail retained: isolated missing react-jsx config and new one-page pager expectation corrected, not application assertions removed. No browser acceptance of the corrected component, fresh full types, whole-suite green or install claimed.",
+    "summary": "Seventeen new bounded native checks pass in three distinct runs:7 desktop metadata/layout,5 girdle/Git-root whole-source inverses,3 batch-D exact historical inverses and2 actual-source controlled model-inspection cases. V7 has38test-only proposed paths,22existing/16new,projected5123inputs. Source candidate5107/1710 stays frozen. Fifty-five outer native registrations across11 distinct runs plus4 coverage historical children are not a whole-suite result; UI40 is a separate already-verified scope. Expensive current dental/spinal,girdle,elbow/forearm,orbital sensory and pancreatic actual teaching modules remain unrun and explicitly gate admission. New C/E worker proposals remain separate, incomplete and unadmitted. No learner/UI/runtime/model/auth/clinical edits or owner refresh.",
     "canonicalDeveloperToolingInstalled": true,
     "canonicalDeveloperToolingUnchangedFromParent": true,
     "canonicalAtlasUiInstalled": false,
     "reviewQueueUiInstalled": false,
     "reviewQueueNativePasses": 40,
-    "reviewQueueNativeLogSha256": "9a3473862f318c3cd15e2c89323924d0132a3994694c1984eb9be3edd2d655af",
-    "browserBaselineVerified": true,
     "correctedComponentBrowserAcceptance": false,
-    "countingNote": "UI40 is a separate controlled-component scope, not merged with38 registrations from8 source-epoch repair runs. Original144failure baseline remains;24 markers currently observed in the live full-suite prefix are not terminal counts.",
-    "ultrasoundRightsCandidate": "One metadata-only normal-liver candidate has file-specific CC0 declaration and original declared checksum recorded. No download, pixel/metadata review, privacy/clinical clearance, matching annotation, website install or asset release. Source-specific rights page and official CC0 caveats linked; no Commons-footer inference.",
+    "sourceCandidateAndReviewBindingsUnchanged": true,
+    "unchangedModelObjects": 137,
+    "all71ItemsAndEightIdeasPreserved": true,
     "fullSuiteSession": 37113,
     "runnerPid": 263984,
     "testPid": 271752,
     "ownerPreviewPid": 260328,
-    "sourceCandidateAndReviewBindingsUnchanged": true,
-    "unchangedModelObjects": 137,
-    "all71ItemsAndEightIdeasPreserved": true,
-    "fullSuitePrefixFailureMarkersAtObservation": 24,
-    "at": "2026-10-21T08:21:32.382Z",
+    "fullSuitePrefixFailureMarkersAtObservation": 60,
+    "countingNote": "60 is a buffered prefix observation, not final counts and not a reduction of the original144-failure baseline. V7 is a proposal batch only. New screening metadata rejects Commons-footer false positives; no image or other asset acquired, accepted or installed.",
+    "at": "2026-10-21T08:40:34.347Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "currentNamedInputs": 5107,
-    "proposedNamedInputs": 5117,
+    "proposedNamedInputs": 5123,
     "reviewInputs": 1710,
-    "testOnlyPaths": 23,
-    "existingTestChanges": 13,
-    "newCurrentTestOrOriginalFixturePaths": 10,
-    "boundedNativeRegistrationsPassed": 38,
-    "boundedNativeRuns": 8,
+    "testOnlyPaths": 38,
+    "existingTestChanges": 22,
+    "newCurrentTestOrOriginalFixturePaths": 16,
+    "boundedNativeRegistrationsPassed": 55,
+    "boundedNativeRuns": 11,
     "originalHistoricalChildTestsPassed": 4,
     "canonicalInstalled": false,
     "candidateChanged": false,

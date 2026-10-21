@@ -1,0 +1,22 @@
+{
+  "label": "GIRDLE_GIT_WHOLE_SOURCE",
+  "command": "node",
+  "args": [
+    "--test",
+    "tests/clinical-review-girdle-history-preservation.test.mjs",
+    "tests/clinical-review-git-root-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-clinical-girdle-history-native-proof/GIRDLE_GIT_WHOLE_SOURCE.log",
+  "logSha256": "e8b5fef27081029a5b79d901d06d93e4341fb5f87e0460414bce5e92230ae9c9",
+  "footer": [
+    "ℹ tests 5",
+    "ℹ pass 5",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

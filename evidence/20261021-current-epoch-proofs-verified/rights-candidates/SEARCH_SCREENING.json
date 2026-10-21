@@ -1,0 +1,17 @@
+{
+  "schema":"vm-ultrasound-search-screening/1",
+  "observedAt":"2026-10-21",
+  "purpose":"Retain file-specific screening decisions so a search-result CC0 footer is not mistaken for the image licence. No new asset is accepted by this record.",
+  "entries":[
+    {"page":"https://commons.wikimedia.org/wiki/File:Gallbladder_Ultrasound.webm","pageRevisionId":1266455233,"declaredFileLicence":"CC-BY-SA-4.0","decision":"not-selected","reason":"File-specific terms require attribution and share-alike handling; the Commons structured-data CC0 footer does not license the video. Do not describe it as royalty-free CC0 or assume product compatibility."},
+    {"page":"https://commons.wikimedia.org/wiki/File:Kidney_ultrasound_110302110501_1109320.jpg","pageRevisionId":956875102,"declaredFileLicences":["GFDL-1.2-or-later","CC-BY-SA-3.0"],"decision":"not-selected","reason":"Search matched a metadata footer. These are the file-specific declarations, not CC0; no attribution, privacy or product-compatibility clearance has been recorded."},
+    {"page":"https://commons.wikimedia.org/wiki/File:Kidney_02.jpg","declaredFileLicence":"CC0-1.0","decision":"modality-unverified-not-selected","reason":"The description identifies a kidney but not ultrasound, scan plane or normality. A permissive copyright declaration alone is insufficient to accept it as an ultrasound anatomy image. Pixels and metadata have not been reviewed."},
+    {"page":"https://commons.wikimedia.org/wiki/File:Gallbladder.gif","declaredFileLicence":"public-domain-holder-release","decision":"wrong-medium-not-selected","reason":"File description identifies an organ diagram; it is not evidence of an ultrasound acquisition."}
+  ],
+  "limitations":"Search and file-page metadata only. CC-BY and CC-BY-SA can permit commercial use subject to their terms; not-selected is not a legal conclusion that commercial use is forbidden. No privacy, clinical or registration approval.",
+  "mediaDownloaded":false,
+  "pixelsReviewed":false,
+  "websiteInstalled":false,
+  "publicDeployment":false,
+  "newFeesIncurred":false
+}

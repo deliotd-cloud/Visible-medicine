@@ -1,0 +1,21 @@
+{
+  "label": "DESKTOP_EPOCH_NATIVE",
+  "command": "node",
+  "args": [
+    "--test",
+    "tests/clinical-review-desktop-layout.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-clinical-desktop-epoch-native-proof/DESKTOP_EPOCH_NATIVE.log",
+  "logSha256": "4408e5e66c70c31aa2cbaa5046cbc4d809e7f272bca23f0c5c789422225319d7",
+  "footer": [
+    "ℹ tests 7",
+    "ℹ pass 7",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

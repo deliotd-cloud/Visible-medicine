@@ -1,0 +1,49 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-clinical-girdle-history-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-clinical-girdle-history-native-proof/native-check",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourceSite": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-clinical-girdle-history-epoch-proposal",
+  "proposed": [
+    {
+      "path": "tests/clinical-review-girdle-muscle-xray.test.ts",
+      "beforeSha256": "0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77",
+      "sha256": "aad3d4eb21f3fe6f2c8a5bffce816f140276d8582142667f2aab25e3f88be339"
+    },
+    {
+      "path": "tests/clinical-review-git-root-preservation.test.mjs",
+      "beforeSha256": "0e244cfc0601dd9fd085e27e1ed6e75d04c30b1fac2fb6d2a0af18dff58b9c7d",
+      "sha256": "d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1"
+    },
+    {
+      "path": "tests/clinical-review-girdle-history-preservation.test.mjs",
+      "beforeSha256": null,
+      "sha256": "d9f795ed98c2c58be3cfa3ec6cc0d3b39d5926607cde4b7251ee530095a2a011"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-girdle-muscle-xray-original.ts.raw",
+      "beforeSha256": null,
+      "sha256": "0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77"
+    }
+  ],
+  "unchanged": [
+    {
+      "path": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "sha256": "c4e18aeb9ce2056cb50fcef3a665de0356f91b88ff78992a928b7346f3ca2362"
+    },
+    {
+      "path": "tests/clinical-review-teaching-heading.test.ts",
+      "sha256": "802d91134bc1cf1f39373cf33cd103dde8a78c92094386ab7051726366014d12"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-salivary-stylohyoid-quiz.before-git-root.ts.raw",
+      "sha256": "7ae70f87540ce1cefa82437e9578b13ec3fddfc5ff2a2a9ccdd23e5ba4ae30d2"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-teaching-heading.before-git-root.ts.raw",
+      "sha256": "228eaa9986e7730815905d9ea11feb896a4effec5f1f64a1c0b1b1e25c8caef6"
+    }
+  ],
+  "frozenInputs": 5107,
+  "scope": "Only native FS/hash whole-source guards run here. No TypeScript subject execution, current girdle9936/1104 theorem, build or typecheck. No source edits or junctions."
+}

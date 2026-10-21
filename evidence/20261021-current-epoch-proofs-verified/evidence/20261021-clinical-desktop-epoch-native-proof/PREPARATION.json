@@ -1,0 +1,36 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-clinical-desktop-epoch-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-clinical-desktop-epoch-native-proof/native-check",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourceSite": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-clinical-viewer-epoch-proposal",
+  "subject": "tests/clinical-review-desktop-layout.test.mjs",
+  "beforeSha256": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf",
+  "sha256": "afc346bc245238ecc9469b64a39b9db472f9d7e1d4aa12389d25031e1ae29de3",
+  "unchanged": [
+    {
+      "path": "tests/current-atlas-delivery.mjs",
+      "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
+    },
+    {
+      "path": "tests/atlas-source-repo.mjs",
+      "sha256": "45be52da6f2a93fdff2276235b357d6e491385af8a84ab8e0193905f6d49f356"
+    },
+    {
+      "path": "package.json",
+      "sha256": "a565ae86769901977a232427dc1669936959bbe04ccf283e0b233f1865886cd0"
+    }
+  ],
+  "readOnlyJunctions": [
+    "tests/fixtures",
+    "components",
+    "app",
+    "scripts",
+    "docs",
+    "lib",
+    "atlas-review",
+    "public",
+    "node_modules"
+  ],
+  "scope": "Only seven native desktop CSS/context/current-delivery metadata tests. No TypeScript corpus subjects, full application build/typecheck, browser or clinical acceptance. Junction harness must never be recursively deleted or packaged."
+}

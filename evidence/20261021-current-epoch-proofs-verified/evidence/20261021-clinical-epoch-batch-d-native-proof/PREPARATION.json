@@ -1,0 +1,57 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d-native-proof/native-check",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourceSite": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d",
+  "proposed": [
+    {
+      "path": "tests/clinical-review-model-inspection.test.mjs",
+      "sha256": "f1fc322c26f68ad264148f36436f0a13a4d034324dbb193a1d0fe24b09f4c627",
+      "beforeSha256": "c1f906808fdf36a4dc76209df0a47f53e575235f02cfc531adbdafb931e3579a",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/clinical-review-model-inspection.test.mjs"
+    },
+    {
+      "path": "tests/clinical-review-orbital-sensory-mri.test.ts",
+      "sha256": "0fa989b29a130f39264b192358545f9b9d56d602a84c215e82bc76bb875ea28b",
+      "beforeSha256": "1127b1186b5339a0a4be8d21ca1361cb61a338c93083c571f0e2705b61e86e64",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/clinical-review-orbital-sensory-mri.test.ts"
+    },
+    {
+      "path": "tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+      "sha256": "6b22c076adf1371ff6f7c4b5cd550b0ca9c66edd033bda9156284c7a727fc1a4",
+      "beforeSha256": "6c0240e376991077706fb4ffddd2fab6fc53631259fade28bdc0b36f8be5e81e",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/clinical-review-pancreatic-vessel-teaching.test.ts"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-model-inspection.test.mjs.raw",
+      "sha256": "c1f906808fdf36a4dc76209df0a47f53e575235f02cfc531adbdafb931e3579a",
+      "beforeSha256": null,
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/fixtures/clinical-review-model-inspection.test.mjs.raw"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-sensory-mri.test.ts.raw",
+      "sha256": "1127b1186b5339a0a4be8d21ca1361cb61a338c93083c571f0e2705b61e86e64",
+      "beforeSha256": null,
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/fixtures/clinical-review-orbital-sensory-mri.test.ts.raw"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-pancreatic-vessel-teaching.test.ts.raw",
+      "sha256": "6c0240e376991077706fb4ffddd2fab6fc53631259fade28bdc0b36f8be5e81e",
+      "beforeSha256": null,
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/fixtures/clinical-review-pancreatic-vessel-teaching.test.ts.raw"
+    },
+    {
+      "path": "tests/clinical-epoch-batch-d-preservation.test.mjs",
+      "sha256": "c934a01dff830c1277b5648d7de81a86d60dfd1f977673779fa371d1f35d3746",
+      "beforeSha256": null,
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/clinical-epoch-batch-d-preservation.test.mjs"
+    }
+  ],
+  "readOnlyJunctions": [
+    "node_modules",
+    "lib",
+    "atlas-review"
+  ],
+  "scope": "Only3 native whole-source inverses and2 real-source controlled model-inspection cases. Source-bound orbital and pancreatic teaching tests are copied but NOT executed. No full build/types/browser/authentication/clinical acceptance; no source edits. Retain junction harness without recursive deletion or packaging."
+}
