@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Selected uninstalled anatomical-camera/test/docs/package-script source, original preimages and actual focused proof on prior filtered ancestry only. Full native context remains F-local. No raw canonical ancestry, scans/masks/models, browser pixels/DOM, private modules/reviews/databases/secrets. Not whole/runnable/private-data backup or new renderer/application/clinical acceptance.
+Selected uninstalled28-path staged source/test/UI batch, native gate, notices, exact preimages and focused proof on prior filtered ancestry.112-file partial native metadata context remains F-local. No raw canonical ancestry, models/scans/masks, private modules/reviews/databases/secrets or browser media/DOM. Not whole/runnable/private-data backup, generated source admission or clinical acceptance.

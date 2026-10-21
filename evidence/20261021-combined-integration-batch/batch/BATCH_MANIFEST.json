@@ -1,0 +1,392 @@
+{
+  "schema": "visible-medicine.combined-staged-batch-seal/1",
+  "at": "2026-10-21T01:02:16.921Z",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "preparationSha256": "79d69dbb487cd599e29da3907fb5b78896b40bfc7ae3747d9ffa877018f0dced",
+  "paths": [
+    {
+      "lane": "atlas",
+      "path": "scripts/test-hip-quick-check-history.mjs",
+      "beforeSha256": "9a4bb88915f40c80ca77b6b40a665813c7aa56adfe5b419d2f5f88c1a048dcd5",
+      "proposedSha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-hip-history-guard-proposal/checkpoint.json",
+        "path": "source/scripts/test-hip-quick-check-history.mjs",
+        "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+      },
+      "finalSha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e",
+      "bytes": 4609
+    },
+    {
+      "lane": "atlas",
+      "path": "scripts/hip-quick-check-history-context.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-hip-history-guard-proposal/checkpoint.json",
+        "path": "source/scripts/hip-quick-check-history-context.mjs",
+        "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+      },
+      "finalSha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe",
+      "bytes": 9024
+    },
+    {
+      "lane": "atlas",
+      "path": "scripts/test-hip-history-entry-refusals.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-hip-history-guard-proposal/checkpoint.json",
+        "path": "source/scripts/test-hip-history-entry-refusals.mjs",
+        "sha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950"
+      },
+      "finalSha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950",
+      "bytes": 6511
+    },
+    {
+      "lane": "atlas",
+      "path": "app/body-content.ts",
+      "beforeSha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6",
+      "proposedSha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-dental-mri-proposal/checkpoint.json",
+        "path": "proposal/app/body-content.ts",
+        "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+      },
+      "finalSha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2",
+      "bytes": 82603
+    },
+    {
+      "lane": "atlas",
+      "path": "content/dental-mri.ts",
+      "beforeSha256": null,
+      "proposedSha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-dental-mri-proposal/checkpoint.json",
+        "path": "proposal/content/dental-mri.ts",
+        "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+      },
+      "finalSha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d",
+      "bytes": 3508
+    },
+    {
+      "lane": "atlas",
+      "path": "content/dental-mri-pins.json",
+      "beforeSha256": null,
+      "proposedSha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-dental-mri-proposal/checkpoint.json",
+        "path": "proposal/content/dental-mri-pins.json",
+        "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+      },
+      "finalSha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af",
+      "bytes": 57639
+    },
+    {
+      "lane": "atlas",
+      "path": "lib/dental-mri.ts",
+      "beforeSha256": null,
+      "proposedSha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-dental-mri-proposal/checkpoint.json",
+        "path": "proposal/lib/dental-mri.ts",
+        "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+      },
+      "finalSha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e",
+      "bytes": 1866
+    },
+    {
+      "lane": "atlas",
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "beforeSha256": null,
+      "proposedSha256": "ae0c9cef8b7daa9810b9fa74dc96d97b5b63fb1ee8bba9e880e7a92d225d8261",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-dental-mri-proposal/checkpoint.json",
+        "path": "proposal/docs/DENTAL_MRI_EVIDENCE.md",
+        "sha256": "ae0c9cef8b7daa9810b9fa74dc96d97b5b63fb1ee8bba9e880e7a92d225d8261"
+      },
+      "finalSha256": "7a9f7ab8aed07dd51267b4b8e92efaa99ed65241efadc2a94d41be7a9962e48c",
+      "bytes": 3849
+    },
+    {
+      "lane": "atlas",
+      "path": "app/fitted-camera.tsx",
+      "beforeSha256": "9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0",
+      "proposedSha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-keyboard-zoom-proposal-ready/checkpoint.json",
+        "path": "proposal/app/fitted-camera.tsx",
+        "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+      },
+      "finalSha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6",
+      "bytes": 12876
+    },
+    {
+      "lane": "atlas",
+      "path": "lib/camera-keyboard.ts",
+      "beforeSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220",
+      "proposedSha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-keyboard-zoom-proposal-ready/checkpoint.json",
+        "path": "proposal/lib/camera-keyboard.ts",
+        "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+      },
+      "finalSha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e",
+      "bytes": 9666
+    },
+    {
+      "lane": "atlas",
+      "path": "package.json",
+      "beforeSha256": "9786b30019f418881824a20026ee66c2d3e16d4a3231f6cea85975687cbe6d1a",
+      "proposedSha256": "2c37e96fb78409ae265166a4245dfe0157d487772535bce1b67e7ff20262164a",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-keyboard-zoom-proposal-ready/checkpoint.json",
+        "path": "proposal/package.json",
+        "sha256": "2c37e96fb78409ae265166a4245dfe0157d487772535bce1b67e7ff20262164a"
+      },
+      "finalSha256": "5fbc8085737a4028af87ccaad75c8973f8424927bffe956637e68d0a5eb75408",
+      "bytes": 86656
+    },
+    {
+      "lane": "atlas",
+      "path": "scripts/test-camera-keyboard-zoom.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-keyboard-zoom-proposal-ready/checkpoint.json",
+        "path": "proposal/scripts/test-camera-keyboard-zoom.mjs",
+        "sha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd"
+      },
+      "finalSha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd",
+      "bytes": 11197
+    },
+    {
+      "lane": "atlas",
+      "path": "docs/KEYBOARD_ZOOM.md",
+      "beforeSha256": null,
+      "proposedSha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-keyboard-zoom-proposal-ready/checkpoint.json",
+        "path": "proposal/docs/KEYBOARD_ZOOM.md",
+        "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+      },
+      "finalSha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f",
+      "bytes": 1456
+    },
+    {
+      "lane": "atlas",
+      "path": "scripts/test-dental-mri-native.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad",
+      "provenance": {
+        "workerManifest": "F:/VisibleMedicine/staging/20261021-dental-native-gate/worker/FILES.json",
+        "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+      },
+      "finalSha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad",
+      "bytes": 8870
+    },
+    {
+      "lane": "atlas",
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "beforeSha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
+      "proposedSha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
+      "provenance": {
+        "role": "Exact baseline; main will prepend an original-draft reference notice"
+      },
+      "finalSha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd",
+      "bytes": 354693
+    },
+    {
+      "lane": "website-ui",
+      "path": "components/SiteHeader.tsx",
+      "beforeSha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec",
+      "proposedSha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-header-joint-evidence/checkpoint.json",
+        "path": "header/components/SiteHeader.tsx",
+        "sha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b"
+      },
+      "finalSha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b",
+      "bytes": 14418
+    },
+    {
+      "lane": "website-ui",
+      "path": "tests/header-workspace-destination.test.mjs",
+      "beforeSha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0",
+      "proposedSha256": "684829e24ac04ea18539d669e29f3f4491670f49537144c45077226e83cb774c",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-header-joint-evidence/checkpoint.json",
+        "path": "header/tests/header-workspace-destination.test.mjs",
+        "sha256": "684829e24ac04ea18539d669e29f3f4491670f49537144c45077226e83cb774c"
+      },
+      "finalSha256": "684829e24ac04ea18539d669e29f3f4491670f49537144c45077226e83cb774c",
+      "bytes": 4735
+    },
+    {
+      "lane": "website-ui",
+      "path": "tests/header-tab-focus.test.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "895bbdbd4cee6b8abf46e79da84b3a1fceb691b8f2a7c093f74fb008ad2567dd",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-header-joint-evidence/checkpoint.json",
+        "path": "header/tests/header-tab-focus.test.mjs",
+        "sha256": "895bbdbd4cee6b8abf46e79da84b3a1fceb691b8f2a7c093f74fb008ad2567dd"
+      },
+      "finalSha256": "895bbdbd4cee6b8abf46e79da84b3a1fceb691b8f2a7c093f74fb008ad2567dd",
+      "bytes": 8523
+    },
+    {
+      "lane": "website-ui",
+      "path": "tests/fixtures/header-before-keyboard-focus/SiteHeader.tsx.raw",
+      "beforeSha256": null,
+      "proposedSha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-header-joint-evidence/checkpoint.json",
+        "path": "header/tests/fixtures/header-before-keyboard-focus/SiteHeader.tsx.raw",
+        "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+      },
+      "finalSha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec",
+      "bytes": 14391
+    },
+    {
+      "lane": "website-ui",
+      "path": "tests/fixtures/header-before-keyboard-focus/header-workspace-destination.test.mjs.raw",
+      "beforeSha256": null,
+      "proposedSha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-header-joint-evidence/checkpoint.json",
+        "path": "header/tests/fixtures/header-before-keyboard-focus/header-workspace-destination.test.mjs.raw",
+        "sha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0"
+      },
+      "finalSha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0",
+      "bytes": 3146
+    },
+    {
+      "lane": "website-ui",
+      "path": "app/credits/page.tsx",
+      "beforeSha256": null,
+      "proposedSha256": "12d197e2c9e7ebd2b311b9e8d141f8e0377c314aaf489a96d84c5bf0e2d7b409",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-source-credits-notices/checkpoint.json",
+        "path": "page/app/credits/page.tsx",
+        "sha256": "12d197e2c9e7ebd2b311b9e8d141f8e0377c314aaf489a96d84c5bf0e2d7b409"
+      },
+      "finalSha256": "12d197e2c9e7ebd2b311b9e8d141f8e0377c314aaf489a96d84c5bf0e2d7b409",
+      "bytes": 4194
+    },
+    {
+      "lane": "website-ui",
+      "path": "app/credits/source-credits.css",
+      "beforeSha256": null,
+      "proposedSha256": "5c5788fa35fd32ad9093ab5b2655380fe1a4ec06a24fded2354fd5f23e1fd47c",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-source-credits-notices/checkpoint.json",
+        "path": "page/app/credits/source-credits.css",
+        "sha256": "5c5788fa35fd32ad9093ab5b2655380fe1a4ec06a24fded2354fd5f23e1fd47c"
+      },
+      "finalSha256": "5c5788fa35fd32ad9093ab5b2655380fe1a4ec06a24fded2354fd5f23e1fd47c",
+      "bytes": 1685
+    },
+    {
+      "lane": "website-ui",
+      "path": "lib/source-credits.ts",
+      "beforeSha256": null,
+      "proposedSha256": "e422fa2081112f8886df2ab6d514691a0e77c07fe69fab636c05619de68ac64b",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-source-credits-notices/checkpoint.json",
+        "path": "page/lib/source-credits.ts",
+        "sha256": "e422fa2081112f8886df2ab6d514691a0e77c07fe69fab636c05619de68ac64b"
+      },
+      "finalSha256": "e422fa2081112f8886df2ab6d514691a0e77c07fe69fab636c05619de68ac64b",
+      "bytes": 1855
+    },
+    {
+      "lane": "website-ui",
+      "path": "components/SiteFooter.tsx",
+      "beforeSha256": "e24b578934daeb60c1f13ee22f3c31a5e0f555cf6b10dd070a19e67ab2148e8a",
+      "proposedSha256": "df34a62c94bba10970aea6c5d1e51650a3bc4bdc4af5acf4c9d1001a71f8314a",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-source-credits-notices/checkpoint.json",
+        "path": "page/components/SiteFooter.tsx",
+        "sha256": "df34a62c94bba10970aea6c5d1e51650a3bc4bdc4af5acf4c9d1001a71f8314a"
+      },
+      "finalSha256": "df34a62c94bba10970aea6c5d1e51650a3bc4bdc4af5acf4c9d1001a71f8314a",
+      "bytes": 1945
+    },
+    {
+      "lane": "website-ui",
+      "path": "tests/source-credits.test.mjs",
+      "beforeSha256": null,
+      "proposedSha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-source-credits-notices/checkpoint.json",
+        "path": "page/tests/source-credits.test.mjs",
+        "sha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a"
+      },
+      "finalSha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a",
+      "bytes": 5189
+    },
+    {
+      "lane": "website-ui",
+      "path": "tests/fixtures/source-credits/SiteFooter.tsx.raw",
+      "beforeSha256": null,
+      "proposedSha256": "e24b578934daeb60c1f13ee22f3c31a5e0f555cf6b10dd070a19e67ab2148e8a",
+      "provenance": {
+        "checkpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-source-credits-notices/checkpoint.json",
+        "path": "page/tests/fixtures/source-credits/SiteFooter.tsx.raw",
+        "sha256": "e24b578934daeb60c1f13ee22f3c31a5e0f555cf6b10dd070a19e67ab2148e8a"
+      },
+      "finalSha256": "e24b578934daeb60c1f13ee22f3c31a5e0f555cf6b10dd070a19e67ab2148e8a",
+      "bytes": 1902
+    },
+    {
+      "lane": "website-485-assurance",
+      "path": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "beforeSha256": "3611dc20929cac9bb27c5ac4aac85c27498d4862b2feb5a5a716f3ed4f2b95a0",
+      "proposedSha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1",
+      "provenance": {
+        "manifest": "F:/VisibleMedicine/staging/20261021-coverage-arterial-contract-proposal/FILES.json",
+        "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+      },
+      "finalSha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1",
+      "bytes": 17502
+    },
+    {
+      "lane": "website-485-assurance",
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "beforeSha256": "7b105f5146aab1653aedca9a7150a73733575f87e7e848063cb07e8faea9b843",
+      "proposedSha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a",
+      "provenance": {
+        "manifest": "F:/VisibleMedicine/staging/20261021-coverage-arterial-contract-proposal/FILES.json",
+        "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"
+      },
+      "finalSha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a",
+      "bytes": 17250
+    }
+  ],
+  "separateLanes": [
+    "website-485-assurance",
+    "atlas",
+    "website-ui"
+  ],
+  "nativeGate": {
+    "cases": 4,
+    "actualPackageAliasPass": true,
+    "logSha256": "1182b6014158582632e34c03877b128a70f8219587ec9723a9a9b170e507d4ca",
+    "contextInputs": 112,
+    "contextBytes": 2729376
+  },
+  "bodyDispatcherInverse": true,
+  "packageOtherFieldsPreserved": true,
+  "earlierNoticesPreserved": true,
+  "sourceCommitted": false,
+  "fullResolverTransitionPass": false,
+  "newHipWrapperEndToEndPass": false,
+  "stockExportsGenerated": false,
+  "websiteImported": false,
+  "canonicalInstalled": false,
+  "newIntegratedBrowserAcceptance": false,
+  "fullSuitePass": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false
+}

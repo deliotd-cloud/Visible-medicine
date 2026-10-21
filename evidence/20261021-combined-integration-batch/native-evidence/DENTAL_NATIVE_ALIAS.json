@@ -1,0 +1,22 @@
+{
+  "label": "DENTAL_NATIVE_ALIAS",
+  "command": "node",
+  "args": [
+    "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+    "run",
+    "dental-mri:test"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-combined-integration-batch\\native-dental-context/DENTAL_NATIVE_ALIAS.log",
+  "logSha256": "1182b6014158582632e34c03877b128a70f8219587ec9723a9a9b170e507d4ca",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

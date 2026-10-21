@@ -1,0 +1,681 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-combined-integration-batch/native-dental-context",
+  "site": "F:/VisibleMedicine/staging/20261021-combined-integration-batch/native-dental-context",
+  "atlas": "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+  "head": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "copiedInputs": [
+    {
+      "path": "app/anatomy-data.ts",
+      "sha256": "75a91a07a3bf268088f7b6e011e71ffd27bbc0366d2d01a3dbbd7f28da64a4cb",
+      "bytes": 25438,
+      "proposed": false
+    },
+    {
+      "path": "app/body-types.ts",
+      "sha256": "22ca77fb0b3e20471db8cb5bd7c250149c7f6f9ba391f74c69a897b05f72f87f",
+      "bytes": 2737,
+      "proposed": false
+    },
+    {
+      "path": "app/dissection-data.ts",
+      "sha256": "b2de5ed8fa35e71c62f6233b570874705f0950e33ee24b281bb3a2aa2e10f139",
+      "bytes": 68605,
+      "proposed": false
+    },
+    {
+      "path": "content/arm-vascular-studies.ts",
+      "sha256": "4def11852e5843a9ee57a298d4f69758f0b7bd2451f627a951985ca90bb15d0d",
+      "bytes": 3343,
+      "proposed": false
+    },
+    {
+      "path": "content/coronary-arterial-study-pins.json",
+      "sha256": "df4e237a595a6c421c2e5087bc5b7a1ca664f3f0cde491da4441cf2d22137caf",
+      "bytes": 20182,
+      "proposed": false
+    },
+    {
+      "path": "content/corpus-clinical.ts",
+      "sha256": "1f3af47828e50ba6ef9b7a32c9f877ed1aa5e323be6bb1285bc26028fb6b4b4c",
+      "bytes": 2213,
+      "proposed": false
+    },
+    {
+      "path": "content/cubital-studies.ts",
+      "sha256": "d64d5fc98ed1a8f91d3143b41e7945f013beaeb232d90e54ef0fb8f285bb1986",
+      "bytes": 2962,
+      "proposed": false
+    },
+    {
+      "path": "content/deferent-duct-study.ts",
+      "sha256": "175762062c00f6d92dbf5505cd50b4ab1b483f12e7d69161c0b53735dad66120",
+      "bytes": 1235,
+      "proposed": false
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af",
+      "bytes": 57639,
+      "proposed": true
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d",
+      "bytes": 3508,
+      "proposed": true
+    },
+    {
+      "path": "content/elbow-arterial.ts",
+      "sha256": "9550d3887134e04f289cb3d7e39ab710340e0fcfec59c64419441fa4f4779c6e",
+      "bytes": 3475,
+      "proposed": false
+    },
+    {
+      "path": "content/elbow-studies.ts",
+      "sha256": "57f958516bc4750cfb7863c5c642fe4612b2c5b7deab09f7a455b57b4fbe71a1",
+      "bytes": 4233,
+      "proposed": false
+    },
+    {
+      "path": "content/forearm-superficial-vein-study.ts",
+      "sha256": "6ad60f58f4131df71d35580d086729b27c39cd4d2f0819a5464df43293960053",
+      "bytes": 1627,
+      "proposed": false
+    },
+    {
+      "path": "content/genicular-study.ts",
+      "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa",
+      "bytes": 1743,
+      "proposed": false
+    },
+    {
+      "path": "content/hand-intrinsic-studies.ts",
+      "sha256": "52e2b0d6e28648493f16f9fffb2fa56b5d54f2889c76d866f22bb49041979b85",
+      "bytes": 2528,
+      "proposed": false
+    },
+    {
+      "path": "content/inferior-epigastric-study.ts",
+      "sha256": "6dcae13f43d2ec4279f89f17bc277e1ca0a45c0f7949fb4cf88bb4415eeaed47",
+      "bytes": 1433,
+      "proposed": false
+    },
+    {
+      "path": "content/infrahyoid-layer-study.ts",
+      "sha256": "fc769248ed0ebe18572288b09793ebc37810d959ab333cde18a58e1f38d10e02",
+      "bytes": 3686,
+      "proposed": false
+    },
+    {
+      "path": "content/limb-vascular-studies.ts",
+      "sha256": "825f08810f16ae4d409e89a6579f78f739843d192cdb2f9946314c1c30227908",
+      "bytes": 4071,
+      "proposed": false
+    },
+    {
+      "path": "content/limbic-landmark-study.ts",
+      "sha256": "61af256e33919e18b87b456e57fff9f8020832fbf7e36a3c3154f42375e5c948",
+      "bytes": 1435,
+      "proposed": false
+    },
+    {
+      "path": "content/longus-colli-quiz.ts",
+      "sha256": "62da8e806aae6846f78b3ade3f3385b6db661a8a578fcd0d225545fb7726836d",
+      "bytes": 1628,
+      "proposed": false
+    },
+    {
+      "path": "content/longus-colli-studies.ts",
+      "sha256": "586cde809529f252ff037874a5b756228ccc463128616b0c160a82a1f4797216",
+      "bytes": 1771,
+      "proposed": false
+    },
+    {
+      "path": "content/lower-neck-study.ts",
+      "sha256": "792618b31ed43df22c4bff4c1ff8a1649166a6353044a9b4ae75289bfe79cb0d",
+      "bytes": 1576,
+      "proposed": false
+    },
+    {
+      "path": "content/mediastinal-organ-study.ts",
+      "sha256": "4307af9d54321db061a743e24faab1838487c220b3cc110528bf860002200767",
+      "bytes": 1906,
+      "proposed": false
+    },
+    {
+      "path": "content/ophthalmic-nerve-studies.ts",
+      "sha256": "4dad953a18972048d20d756a4358a52fb3742f4fefe6502e747df7900822581a",
+      "bytes": 5791,
+      "proposed": false
+    },
+    {
+      "path": "content/pelvic-urethral-study.ts",
+      "sha256": "bda972aa5764d853abf80b2a23596efa27d06141f789a116080d3d0bc4559afe",
+      "bytes": 1401,
+      "proposed": false
+    },
+    {
+      "path": "content/pelvic-vein-study.ts",
+      "sha256": "3a998bf0de20529cfef1026a728316ac8a686d903645c8e16f82355645e242fd",
+      "bytes": 1451,
+      "proposed": false
+    },
+    {
+      "path": "content/pelvic-vein-teaching.ts",
+      "sha256": "bfb85f8ecdea32105d9db39d8cc5e7466d0003347afa98c45adcb0b0b000c8db",
+      "bytes": 11742,
+      "proposed": false
+    },
+    {
+      "path": "content/pes-anserine-study.ts",
+      "sha256": "5de0780dc9640509da5cc0231b70e6186030e5b858821b0f2b4ea34d8d023388",
+      "bytes": 4018,
+      "proposed": false
+    },
+    {
+      "path": "content/popliteal-vessel-study-pins.json",
+      "sha256": "d0f4f1875c2f3a9b281a90c8d6675f063c7427d4648cda7b3961106ad71eb1f8",
+      "bytes": 21344,
+      "proposed": false
+    },
+    {
+      "path": "content/popliteal-vessel-study.ts",
+      "sha256": "abc5e21efacfde75edb96b34e3a7e218968983d323f078f5381fe3c950a366f3",
+      "bytes": 1903,
+      "proposed": false
+    },
+    {
+      "path": "content/portal-hepatic-study.ts",
+      "sha256": "be65b83468eb1d9f15a91ebcf2c3426ceafc5ebd6560c9e285aac91dffa88b54",
+      "bytes": 1441,
+      "proposed": false
+    },
+    {
+      "path": "content/posterior-mediastinal-study.ts",
+      "sha256": "d07a11bda4ab63ad6ba2098efa80d5afa676aece071352599385b37549516924",
+      "bytes": 2706,
+      "proposed": false
+    },
+    {
+      "path": "content/short-ciliary-teaching.ts",
+      "sha256": "fb2889d7dcec287401b5b633c75b1b6999e3d0abbd9fc749d5c8c7ae60913f40",
+      "bytes": 2613,
+      "proposed": false
+    },
+    {
+      "path": "content/shoulder-xray-bindings.json",
+      "sha256": "f3e544bf002d4bf8ab0101f5e300e207fff74296f156378667ecc7fe3de10975",
+      "bytes": 8452,
+      "proposed": false
+    },
+    {
+      "path": "content/tentorium-studies.ts",
+      "sha256": "7dc07b8f6ff0b466a9f184923860c80a249dde8f39edd0f1b27b86f01e5494d0",
+      "bytes": 1011,
+      "proposed": false
+    },
+    {
+      "path": "content/thoracic-hilar-study.ts",
+      "sha256": "29337537b45c066543ef0ee4010c4d6dfe2ca985b09726f3fc894535c34c4ac8",
+      "bytes": 4677,
+      "proposed": false
+    },
+    {
+      "path": "content/thorax-central-airway-study.ts",
+      "sha256": "140b9bcd802fdf31e5498bc822b9691022fdcb7898730da22406fdd00b128888",
+      "bytes": 1583,
+      "proposed": false
+    },
+    {
+      "path": "content/thorax-respiratory-study.ts",
+      "sha256": "4631768eb5bf6e210231e0e3e9e3ba43a2fd6eccb23fda415c2964c964e9c0ba",
+      "bytes": 3141,
+      "proposed": false
+    },
+    {
+      "path": "lib/acral-bone-studies.ts",
+      "sha256": "f8c8a593b64a10b09c85782360008713ce58edcbb511291121e4bc75eb60d6da",
+      "bytes": 3603,
+      "proposed": false
+    },
+    {
+      "path": "lib/anatomy-coordinates.ts",
+      "sha256": "211009737314d001b8c48034afa28fbec91481c55ce22a4bbc83b0fa80bcc1bf",
+      "bytes": 2818,
+      "proposed": false
+    },
+    {
+      "path": "lib/anterior-cardiac-vein.ts",
+      "sha256": "65e542313743aa1b81e0bd6b131dd3bd9492830043631504ee59e4ff7cd5ff49",
+      "bytes": 4355,
+      "proposed": false
+    },
+    {
+      "path": "lib/axial-anatomy.ts",
+      "sha256": "395f878dbe308e771a098bd5bcfd08336ba0e180d56c2f23133c100e52fcd413",
+      "bytes": 9114,
+      "proposed": false
+    },
+    {
+      "path": "lib/body-display-catalog.ts",
+      "sha256": "b5dc9cf1cf661bda6a232cfaeccf8473c6eba19da2975107d91e29ac21bcdef8",
+      "bytes": 5987,
+      "proposed": false
+    },
+    {
+      "path": "lib/body-presentation-parts.ts",
+      "sha256": "bb62c2e2a36300d1ba8e214e58b92a40300b958d426ba59ad5d8c1a3a4fa20e0",
+      "bytes": 2936,
+      "proposed": false
+    },
+    {
+      "path": "lib/body-source-additions.ts",
+      "sha256": "3e19f6a5c2bc36facfea90dd886cb0cb0447ef47cae5eb0c5b951ebcca095948",
+      "bytes": 3580,
+      "proposed": false
+    },
+    {
+      "path": "lib/brachial-veins.ts",
+      "sha256": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c",
+      "bytes": 4391,
+      "proposed": false
+    },
+    {
+      "path": "lib/circumflex-femoral.ts",
+      "sha256": "71313635f2ae5a4fa5f7726adf6f6e92fb48a4ae2e43fd7a721860c062a7ccf4",
+      "bytes": 2703,
+      "proposed": false
+    },
+    {
+      "path": "lib/content-types.ts",
+      "sha256": "47ac24cbf05c1061238305589df148e3849265e33c728fce4bdc9c6912e4c3a6",
+      "bytes": 641,
+      "proposed": false
+    },
+    {
+      "path": "lib/coronary-arterial-study.ts",
+      "sha256": "608ca9032a442c39cdf80358f6f950900630a36b98398cdf168d800e72448e7c",
+      "bytes": 4923,
+      "proposed": false
+    },
+    {
+      "path": "lib/corpus-spongiosum.ts",
+      "sha256": "e8160f2ae0be2de646b4cebba199b67ea8e96f98f2809c877c70022c27da4972",
+      "bytes": 3442,
+      "proposed": false
+    },
+    {
+      "path": "lib/cranial-arteries.ts",
+      "sha256": "503181d76e2a323134da111234bd3842c85026ecf8cae460138271b7279f3804",
+      "bytes": 2533,
+      "proposed": false
+    },
+    {
+      "path": "lib/cubital-veins.ts",
+      "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6",
+      "bytes": 3399,
+      "proposed": false
+    },
+    {
+      "path": "lib/deep-leg-veins.ts",
+      "sha256": "2faa7dd187bc9bd00b48b4de00acea4ebdbd12d8f07a827ff3a63f8a214ed2a2",
+      "bytes": 2534,
+      "proposed": false
+    },
+    {
+      "path": "lib/deferent-ducts.ts",
+      "sha256": "23531f8eb7664f8d758998b0c0af47670c420168022af048306d03558f5c43e6",
+      "bytes": 3652,
+      "proposed": false
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e",
+      "bytes": 1866,
+      "proposed": true
+    },
+    {
+      "path": "lib/elbow-arteries.ts",
+      "sha256": "6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c",
+      "bytes": 3291,
+      "proposed": false
+    },
+    {
+      "path": "lib/foot-vascular-anatomy.ts",
+      "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4",
+      "bytes": 6733,
+      "proposed": false
+    },
+    {
+      "path": "lib/forearm-vascular-anatomy.ts",
+      "sha256": "2313c21bd2efed6048baad038739009cbd0fcad1eb2b2aed55fb009563bf6f99",
+      "bytes": 4531,
+      "proposed": false
+    },
+    {
+      "path": "lib/genicular-arteries.ts",
+      "sha256": "c9c38677221dc5076d3aa0f55f4ec08b53e307234cc78426b765c93cf4c39322",
+      "bytes": 3657,
+      "proposed": false
+    },
+    {
+      "path": "lib/hand-vascular-anatomy.ts",
+      "sha256": "a6fd0906ea69be303e170dd915a0ef4a6d4ecb073d6d50886a00b7dfe8f4e560",
+      "bytes": 6950,
+      "proposed": false
+    },
+    {
+      "path": "lib/hand-venous-anatomy.ts",
+      "sha256": "ba058b19095e8c43a1714b2da6001d8d53601e7aa27bcdb4e1ea26cb87501b89",
+      "bytes": 6636,
+      "proposed": false
+    },
+    {
+      "path": "lib/head-detail.ts",
+      "sha256": "74777dee9c5bbf4901956fda8d12d83c3b38c81569b1a35544f59be411e4fd1a",
+      "bytes": 7840,
+      "proposed": false
+    },
+    {
+      "path": "lib/hepatic-veins.ts",
+      "sha256": "c0540137e37b35f37d85b9ffa07aa756ad76bea24b95264f155aea8bfe56523d",
+      "bytes": 2918,
+      "proposed": false
+    },
+    {
+      "path": "lib/inferior-epigastric-vessels.ts",
+      "sha256": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997",
+      "bytes": 4815,
+      "proposed": false
+    },
+    {
+      "path": "lib/inferior-thyroid-arteries.ts",
+      "sha256": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0",
+      "bytes": 2647,
+      "proposed": false
+    },
+    {
+      "path": "lib/knee-studies.ts",
+      "sha256": "7407dded372f4e6cde674e9846fde5492bced8659191c4de0feb46bbd7011fd8",
+      "bytes": 4790,
+      "proposed": false
+    },
+    {
+      "path": "lib/laryngeal-anatomy.ts",
+      "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3",
+      "bytes": 6059,
+      "proposed": false
+    },
+    {
+      "path": "lib/limbic-landmarks.ts",
+      "sha256": "d31ea68bd362db13907de78743f138c8f7cae518895303cefc03370a821c650f",
+      "bytes": 4766,
+      "proposed": false
+    },
+    {
+      "path": "lib/longus-colli.ts",
+      "sha256": "1983d9be0bbdcf897ec1cf466e2f93f9307cd1bda7393bd0f33776edf0eb848f",
+      "bytes": 4400,
+      "proposed": false
+    },
+    {
+      "path": "lib/mesenteric-anatomy.ts",
+      "sha256": "922f748bf87850c9e344943ae9980bfc65701a7d8cf3f97c80ec8ab01d28a6a1",
+      "bytes": 6651,
+      "proposed": false
+    },
+    {
+      "path": "lib/neuroanatomy.ts",
+      "sha256": "24f93b5edfa14386573decf889ad4ac62c1ef9463432c90cc5893bb39587d23f",
+      "bytes": 9317,
+      "proposed": false
+    },
+    {
+      "path": "lib/ocular-anatomy.ts",
+      "sha256": "91b5c78985548fe16ad7dafda5df06ec92667eeec71d6857930d44b98312438b",
+      "bytes": 4919,
+      "proposed": false
+    },
+    {
+      "path": "lib/orbital-motor-studies.ts",
+      "sha256": "1fded41a546a647e2c0db94ad1537bad6b1cacd62d2ff4ad14413707b98e3c23",
+      "bytes": 2883,
+      "proposed": false
+    },
+    {
+      "path": "lib/pancreatic-anatomy.ts",
+      "sha256": "8517037505ebb927ba2e6aab55cb7e23fe406327b3a27ba21d6906260241ba91",
+      "bytes": 7361,
+      "proposed": false
+    },
+    {
+      "path": "lib/pelvic-veins.ts",
+      "sha256": "c7bfabbe5d9f05f61c1dd729c3378bdf32b3055452342da33b2a54d9b480fa33",
+      "bytes": 6590,
+      "proposed": false
+    },
+    {
+      "path": "lib/portal-veins.ts",
+      "sha256": "ea4d982449805f6546b8c8bd856ee8b30cead28f6bd144134170de9f96ae8853",
+      "bytes": 2974,
+      "proposed": false
+    },
+    {
+      "path": "lib/regional-arterial.ts",
+      "sha256": "093b8479366d151f86ef993b896cbbb2e38df781ebbaf0a5234627a2909402ed",
+      "bytes": 6580,
+      "proposed": false
+    },
+    {
+      "path": "lib/renal-studies.ts",
+      "sha256": "bc44af653a69733ff82ef7cbad2db054cdf57f43319193cfc3e69b555968a9f5",
+      "bytes": 3411,
+      "proposed": false
+    },
+    {
+      "path": "lib/short-ciliary.ts",
+      "sha256": "66d24af31dbc035fd4df5ac322ca881f2182aaae2aa7865ae992a71960f99f88",
+      "bytes": 2740,
+      "proposed": false
+    },
+    {
+      "path": "lib/shoulder-soft-tissue-xray.ts",
+      "sha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd",
+      "bytes": 4016,
+      "proposed": false
+    },
+    {
+      "path": "lib/spinal-level-studies.ts",
+      "sha256": "f41576f081a47a2df247c8ec95bcb295c1a0b4461cb7c432a597ae9d7c10ddee",
+      "bytes": 5160,
+      "proposed": false
+    },
+    {
+      "path": "lib/subscapular-arteries.ts",
+      "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db",
+      "bytes": 2613,
+      "proposed": false
+    },
+    {
+      "path": "lib/tentorium.ts",
+      "sha256": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab",
+      "bytes": 2241,
+      "proposed": false
+    },
+    {
+      "path": "lib/thoracic-anatomy.ts",
+      "sha256": "5da4967636bc9f4979a20b8db0ce3b4e5921d318a0f1052500a3667ba01cffe9",
+      "bytes": 4673,
+      "proposed": false
+    },
+    {
+      "path": "lib/xray-teaching.ts",
+      "sha256": "7a38c62a92467401cf5192adef611efdf21ad9ceb213371a984ee44fd425a6d1",
+      "bytes": 4830,
+      "proposed": false
+    },
+    {
+      "path": "package.json",
+      "sha256": "5fbc8085737a4028af87ccaad75c8973f8424927bffe956637e68d0a5eb75408",
+      "bytes": 86656,
+      "proposed": true
+    },
+    {
+      "path": "public/models/bodyparts3d/anterior-cardiac-vein/catalog.json",
+      "sha256": "930539839a9b2a1c4a83f13309277aff6b90018cc2554b76010f3c4d3c351e2d",
+      "bytes": 19803,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/brachial-veins/catalog.json",
+      "sha256": "d0fc1d879d8f7158d84fc70f1e6e1fc1b8ef71ba761bf22abe4407d4b6c73aa3",
+      "bytes": 18975,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/celiac-display/display-correction.json",
+      "sha256": "d71a1bccdbd2c18e1d5a9f6537170e1acbb66c832fa6fbee68e25c7a0ad3ca82",
+      "bytes": 6073,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/circumflex-femoral/catalog.json",
+      "sha256": "6d74b75f7ace9cf7b6cb86a52c6f4285ef213876b71cb91c28a67e69ad8acf93",
+      "bytes": 16343,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/corpus-spongiosum/catalog.json",
+      "sha256": "edfe15182492244336b7cbddad0762f80e2e282e871f710c88afd6246453ce23",
+      "bytes": 12172,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/cranial-arteries/catalog.json",
+      "sha256": "b9505be9ffd9e7a46348e76e65a4d421a77f57fd5bd2e7252ed685282a0b5ee7",
+      "bytes": 22833,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/cubital-veins/catalog.json",
+      "sha256": "623c140cea4f9273a4b0f0233274e617c2d705138a19cb4d7dc69e48054ff2be",
+      "bytes": 22511,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/deep-leg-veins/catalog.json",
+      "sha256": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a",
+      "bytes": 27738,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/deferent-ducts/catalog.json",
+      "sha256": "7af85fbe970f87143697c069bbdfefaa3759374a031e0e6d36d65fcfe6761af1",
+      "bytes": 18137,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/elbow-arteries/catalog.json",
+      "sha256": "2d36e29240315db1d4c1b783013dc73c9f4c329d0811c1540f2ad4c911af81d0",
+      "bytes": 44123,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/eye-layers/display-correction.json",
+      "sha256": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2",
+      "bytes": 10414,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/full-body/catalog.json",
+      "sha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+      "bytes": 1651755,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/genicular-arteries/catalog.json",
+      "sha256": "45f141823a7d5fea53b490a718e8401ea1a627f89cb05bc4e9dd68f9020b292b",
+      "bytes": 31471,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/hepatic-veins/catalog.json",
+      "sha256": "493a2070ab758dd6afd0ccfd8ecd6fe3bb2b855b2ecd34b067806b5b8a465039",
+      "bytes": 30197,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json",
+      "sha256": "8dd5cb1106d10b06bd731b637183dbaa353d466e45bb65157db4209463009b60",
+      "bytes": 20224,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json",
+      "sha256": "c1887d76f71de08c25fb9277b00d5edc678affd43995faab4121bd347fc8a6b4",
+      "bytes": 16492,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/limbic-landmarks/catalog.json",
+      "sha256": "785cbeba0b441d16bc3941fb406d27c49253eb2055f03d81aad47ad686a72f42",
+      "bytes": 21412,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/longus-colli/catalog.json",
+      "sha256": "4dbf0fd67b985d5aa9ca910ab2757bc8fecf26c4b1315c98acab86d07fed5b38",
+      "bytes": 24950,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/pancreas/display-correction.json",
+      "sha256": "a7add6d985798dedd1dd78c3879b2fc91f8a6cacc126d2a526f7ba8c4b03fc1a",
+      "bytes": 6099,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/pelvic-veins/catalog.json",
+      "sha256": "8bfec9b7bd1aa92de9ec9d91ef2b5738db493c45dfdc5f6da3665c3e72d6b814",
+      "bytes": 33282,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/portal-veins/catalog.json",
+      "sha256": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8",
+      "bytes": 28320,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/short-ciliary/catalog.json",
+      "sha256": "ddad34e031b761c168b44b07d22986f76278a0a2f2bca04c6274f0d9bf382ea1",
+      "bytes": 11867,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/subscapular-arteries/catalog.json",
+      "sha256": "2d8a47fb5a9a1e856a071d404690d862348c405aac81620c320ce088a8d7d89f",
+      "bytes": 15595,
+      "proposed": false
+    },
+    {
+      "path": "public/models/bodyparts3d/tentorium/catalog.json",
+      "sha256": "42f4720ad54a07d7e1f89c5eeb13e68673f4c8242aae353c7f4435bb48a7645e",
+      "bytes": 18244,
+      "proposed": false
+    },
+    {
+      "path": "scripts/test-dental-mri-native.mjs",
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad",
+      "bytes": 8870,
+      "proposed": true
+    },
+    {
+      "path": "scripts/workspace-test-build.mjs",
+      "sha256": "c30102bdcfa2d33ae997ef749b8077f6c182e297fed0d312dafa210f73e10412",
+      "bytes": 3103,
+      "proposed": false
+    }
+  ],
+  "scope": "Focused real dental helper and bodyDisplayCatalog dependency closure, raw public metadata and existing hermetic builder; no geometry/scans/private data/full resolver. Dependencies reused, not installed or lockfile-byte attested."
+}
