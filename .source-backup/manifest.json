@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T13:15:07.922Z",
+  "at": "2026-10-21T13:34:12.409Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5181,
+    "canonicalNamedInputs": 5185,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "5ee0a5f0adc3ec427f17d4d71e245bffeac16731",
-  "gitParent": "5ee0a5f0adc3ec427f17d4d71e245bffeac16731",
+  "parent": "a9e7c368d5ed5b59f5f592da2a9b2329dfcd8327",
+  "gitParent": "a9e7c368d5ed5b59f5f592da2a9b2329dfcd8327",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -410,6 +410,101 @@
       "path": "evidence/20261020-inbox-material-website-integration/VERIFICATION.json",
       "bytes": 4331,
       "sha256": "a69917d04d1e9f64a56eb9a78f1108f01d47d5fa7ee1b2b1f03e85c23d94cd58"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/controls/admission485-final-admission-20261021.json",
+      "bytes": 1432,
+      "sha256": "b656ccc1c0b37e74bd011df6d00930882f48984427b10b1c2ffa15b6cc2cfad4"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/controls/admit-closed56-role-repair-20261021.mjs",
+      "bytes": 9768,
+      "sha256": "31e8d86755d16d4402ca239b5d6dc6ebaee401f9fdd75879178a3eaf0f0f3017"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/controls/checkpoint-admission485-roles-20261021.mjs",
+      "bytes": 8667,
+      "sha256": "6a53a5ef454b1c112b0ab6a7dfd6d3a592ddcfdd922a45e6263a280276da1427"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/controls/emit-inflight-patch.mjs",
+      "bytes": 2453,
+      "sha256": "3989cdfc285c66930aec8320a4b5d7b80d8b464dff489b8c263b23b8fe2d7d5f"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/controls/route-regressions-after88-20261021.mjs",
+      "bytes": 3540,
+      "sha256": "92693a77eac39a801a83b06d240123c24161f42d69d9e8462db88a617459e0e6"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/evidence/APPLICATION.json",
+      "bytes": 4223,
+      "sha256": "97a6cde6c05d4fba206936643c183f65e8e6d3098a5a881ae8ffea1bc3584d15"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/evidence/native.json",
+      "bytes": 1168,
+      "sha256": "d2654f38d2db757ed92648ecef79138d6d42de56d2b792ec38683e854453998a"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/evidence/PROOF.json",
+      "bytes": 2934,
+      "sha256": "b502c502dc01b8d211876a95bdc6aded1a986c848d6164ff57e5b9cb21a30af7"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/evidence/ROUTING.json",
+      "bytes": 44476,
+      "sha256": "3e4eb8c80d95406f3756355c2f61773d82a0d168fe771436b4a8588e4023f3f1"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/installed-website/tests/admission485-final-role-transition-20261021.test.mjs",
+      "bytes": 8867,
+      "sha256": "45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/installed-website/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 5305,
+      "sha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/installed-website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 11708,
+      "sha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/installed-website/tests/fixtures/clinical-review-desktop-layout-actual485-20261020.mjs.raw",
+      "bytes": 10666,
+      "sha256": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/installed-website/tests/fixtures/current-delivery-admission-485-before-final-role-20261021.mjs.raw",
+      "bytes": 3873,
+      "sha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/installed-website/tests/fixtures/current-head-index-whole-role-transition-before-final-role-20261021.mjs.raw",
+      "bytes": 8362,
+      "sha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/preimages/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 3873,
+      "sha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/preimages/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 8362,
+      "sha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/proposal/main-portable-PROPOSAL.json",
+      "bytes": 3688,
+      "sha256": "97326a654b2eba2adba844d06876df5e54db88a290d882b79043b4f8cdc6dbb2"
+    },
+    {
+      "path": "evidence/20261021-admission485-roles-verified/proposal/original-worker-PROPOSAL.json",
+      "bytes": 3204,
+      "sha256": "ba8f2d05b8de5af9eb00d79cd878c3668a94e5adb617ce5560196e4541244df3"
     },
     {
       "path": "evidence/20261021-after-suite-dental-queue/evidence/AFTER_SUITE_QUEUE_SYNTAX.json",
@@ -9078,9 +9173,9 @@
     }
   ],
   "removed": [],
-  "scope": "Thirteen exact installed test/raw-proof paths, six originals, reviewed dependency audit, compact84/82/2 native receipts, sanitized public-model keyboard QA and report-only framing diagnosis with unretained terminal-output limits. Guarded controls and prior filtered source ancestry only. No native masks, scan pixels, private reports/coordinates/identifiers/notes/decisions/env/dependencies, model assets, full native TAP, raw browser DOM/media or raw canonical ancestry. Partial source recovery only, not whole/private/runnable backup or full-suite/clinical/spatial/public-release approval.",
+  "scope": "Six exact test/raw-witness paths, two original preimages, worker/main proposal provenance, compact actual88/88 native receipts,87-row regression routing and guarded controls. Prior filtered source ancestry only. No scans, masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T13:15:01.353Z",
+    "at": "2026-10-21T13:34:05.176Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -9088,8 +9183,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5181,
-    "controlledSourceInputs": 5174,
+    "currentNamedInputs": 5185,
+    "controlledSourceInputs": 5178,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -9099,38 +9194,34 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "09a180538a8da65b7e06aed708062ab4b610938bc4709cfd1f32024bf07bcb86",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "7c2657294d3973d33059d9fa8ba40a5c9fba0c077f6727d22d81e538607e6698",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "4347d68eb5895f949bd061e1bcc007aa1a8e983efc28e97a7b1ac7af921a4a99",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "f1d82b4ca339d963994fc60044c50110abf0fb955c7da515280169d29a0867ac",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 13,
-    "existingEditedTestPaths": 6,
+    "installedTestOnlyPaths": 6,
+    "existingEditedTestPaths": 2,
+    "mainPortableRootCorrection": true,
     "wholeOriginalAndRoleInverseMutationProofsPassed": true,
-    "actualElevenRootNativeCounts": {
-      "tests": 84,
-      "pass": 82,
-      "fail": 2,
+    "actualTwelveRootNativeCounts": {
+      "tests": 88,
+      "pass": 88,
+      "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "actualElevenRootNativeCode": 1,
-    "remainingCases": [
-      {
-        "number": 61,
-        "title": "original complete clinical-review-desktop-layout.test.mjs reconstructs with only reviewed current-admission edits"
-      },
-      {
-        "number": 62,
-        "title": "admitted current scope agrees with exact source and bound imported bytes"
-      }
-    ],
-    "remainingDiagnosis": "The two genuine remaining cases both belong to the unchanged485source-role assertions in current-delivery-admission-485: its clinical-desktop inverse reads later current source, and its actual-current scope still expects485. All original failure inventories remain; a further bounded proposal is not installed.",
-    "thoraxKeyboardAndLayoutObservation": "thorax-desktop-keyboard-qa-20261021.json",
-    "cameraPatchNotJustified": true,
-    "cameraAuditTerminalOutputsNotRetained": true,
+    "actualTwelveRootNativeCode": 0,
+    "currentNativeFailures": [],
+    "routing": {
+      "file": "evidence/ROUTING.json",
+      "sha256": "3e4eb8c80d95406f3756355c2f61773d82a0d168fe771436b4a8588e4023f3f1",
+      "originalRows": 87,
+      "notExercised": 79,
+      "rootPassedTitleNotComparable": 2,
+      "laterScopedExactTitlePass": 6
+    },
     "rawNativeLogExcludedFromBackup": true,
     "currentValidatorAndFixtureUnchanged": true,
     "currentTestNowChecksExact190": true,

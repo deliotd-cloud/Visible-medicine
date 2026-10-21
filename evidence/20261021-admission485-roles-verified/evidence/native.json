@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-21T13:21:32.822Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/head-index-tab-stop.test.mjs",
+    "tests/head-filtered-layout.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/atlas190-current-delivery.test.mjs",
+    "tests/salivary-cache-guard-adaptation.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/closed56-live-preservation.test.mjs",
+    "tests/closed56-original-tests.test.mjs",
+    "tests/closed56-whole-role-transition-20261021.test.mjs",
+    "tests/exact-test-fixture-eol.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-admission485-final-application/native.tap",
+  "logSha256": "efe788aebd47c0b75ddd087e7fd1c321281e48833c93249d35e6cc44e7c21884",
+  "counts": {
+    "tests": 88,
+    "pass": 88,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

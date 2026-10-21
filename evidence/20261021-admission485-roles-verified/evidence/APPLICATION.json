@@ -1,0 +1,101 @@
+{
+  "at": "2026-10-21T13:21:35.544Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/current-delivery-admission-485.test.mjs",
+      "preimageSha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0",
+      "preimageBytes": 3873,
+      "candidateSha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611",
+      "candidateBytes": 5305
+    },
+    {
+      "path": "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "preimageSha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33",
+      "preimageBytes": 8362,
+      "candidateSha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11",
+      "candidateBytes": 11708
+    },
+    {
+      "path": "tests/admission485-final-role-transition-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af",
+      "candidateBytes": 8867
+    },
+    {
+      "path": "tests/fixtures/current-delivery-admission-485-before-final-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0",
+      "candidateBytes": 3873
+    },
+    {
+      "path": "tests/fixtures/current-head-index-whole-role-transition-before-final-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33",
+      "candidateBytes": 8362
+    },
+    {
+      "path": "tests/fixtures/clinical-review-desktop-layout-actual485-20261020.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf",
+      "candidateBytes": 10666,
+      "provenance": "byte-exact copy from F:/VisibleMedicine/staging/20261020-combined-website-ui/website/tests/clinical-review-desktop-layout.test.mjs"
+    }
+  ],
+  "controlledInputs": 5178,
+  "preservedInputs": 7,
+  "namedInputs": 5185,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "4347d68eb5895f949bd061e1bcc007aa1a8e983efc28e97a7b1ac7af921a4a99",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T13:21:32.822Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/head-index-tab-stop.test.mjs",
+      "tests/head-filtered-layout.test.mjs",
+      "tests/current-delivery-admission-485.test.mjs",
+      "tests/atlas190-current-delivery.test.mjs",
+      "tests/salivary-cache-guard-adaptation.test.mjs",
+      "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "tests/admission485-final-role-transition-20261021.test.mjs",
+      "tests/closed56-live-preservation.test.mjs",
+      "tests/closed56-original-tests.test.mjs",
+      "tests/closed56-whole-role-transition-20261021.test.mjs",
+      "tests/exact-test-fixture-eol.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-admission485-final-application/native.tap",
+    "logSha256": "efe788aebd47c0b75ddd087e7fd1c321281e48833c93249d35e6cc44e7c21884",
+    "counts": {
+      "tests": 88,
+      "pass": 88,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,29 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-admission485-main-portable-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-admission485-final-application",
+  "manifestSha256": "97326a654b2eba2adba844d06876df5e54db88a290d882b79043b4f8cdc6dbb2",
+  "beforeInputs": 5174,
+  "afterInputs": 5178,
+  "expectedPaths": [
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/fixtures/current-delivery-admission-485-before-final-role-20261021.mjs.raw",
+    "tests/fixtures/current-head-index-whole-role-transition-before-final-role-20261021.mjs.raw",
+    "tests/fixtures/clinical-review-desktop-layout-actual485-20261020.mjs.raw"
+  ],
+  "roots": [
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/head-index-tab-stop.test.mjs",
+    "tests/head-filtered-layout.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/atlas190-current-delivery.test.mjs",
+    "tests/salivary-cache-guard-adaptation.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/closed56-live-preservation.test.mjs",
+    "tests/closed56-original-tests.test.mjs",
+    "tests/closed56-whole-role-transition-20261021.test.mjs",
+    "tests/exact-test-fixture-eol.test.mjs"
+  ]
+}

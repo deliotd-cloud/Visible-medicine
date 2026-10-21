@@ -1,0 +1,17 @@
+// Routing evidence only: a later focused pass is never a new whole-suite result.
+import assert from 'node:assert/strict';import fs from 'node:fs';
+import {read,json,sha,runGit} from './source-only-backup-20261019.mjs';
+const site='F:/VisibleMedicine/website',stage='F:/VisibleMedicine/staging/20261021-admission485-final-application';
+const original='F:/VisibleMedicine/staging/20261021-remaining-native-matrix/POST_MATRIX_TRIAGE.json';
+const root='F:/VisibleMedicine/staging/20261021-regression-routing-after88';
+const app=json(stage+'/APPLICATION.json'),receipt=app.native,inventory=json(original),inputs=new Map(json(app.sourceSnapshot).map(r=>[r.path,r]));
+assert.equal(app.sourceInputsUnchangedDuringRun,true);assert.equal(receipt.code,0);assert.equal(receipt.counts.tests,88);assert.equal(receipt.counts.pass,88);assert.equal(receipt.counts.fail,0);assert.equal(receipt.counts.skipped,0);assert.equal(receipt.counts.cancelled,0);assert.equal(sha(read(receipt.log)),receipt.logSha256);
+assert.equal(inventory.failures.length,87);assert.equal(runGit(['-C','F:/VisibleMedicine/atlas','rev-parse','HEAD']).toString().trim(),app.source);assert.equal(json(site+'/atlas-review/integration-inputs.json').sha256,app.review);
+const roots=receipt.args.filter(p=>p.startsWith('tests/')&&p.endsWith('.test.mjs'));
+assert.equal(roots.length,12);assert.equal(new Set(roots).size,12);
+for(const p of roots)assert.equal(sha(read(site+'/'+p)),inputs.get(p)?.sha256,p+' changed since actual native pass');
+const titles=new Map();for(const m of read(receipt.log).toString().matchAll(/^# Subtest: (.+)\r?$/gm)){const title=m[1].trim();titles.set(title,(titles.get(title)??0)+1);}
+const rows=inventory.failures.map(row=>{const exercised=roots.includes(row.file),uniqueTitle=titles.get(row.title)===1;return{originalNumber:row.number,file:row.file,title:row.title,originalTestSha256:row.testSha256,currentTestSha256:inputs.get(row.file)?.sha256??null,status:exercised&&uniqueTitle?'later-scoped-pass-with-exact-title':exercised?'root-passed-but-title-not-directly-comparable':'not-exercised-by-this-run',wholeSuiteResolved:false};});
+const report={at:new Date().toISOString(),source:app.source,review:app.review,originalInventory:original,originalInventorySha256:sha(read(original)),originalCounts:inventory.counts,laterNativeResult:stage+'/native.json',laterNativeResultSha256:sha(read(stage+'/native.json')),laterNativeCounts:receipt.counts,currentSourceSnapshot:app.sourceSnapshot,currentSourceSnapshotSha256:app.sourceSnapshotSha256,actualRootHashesStillMatch:true,roots,rows,summary:Object.fromEntries([...new Set(rows.map(r=>r.status))].map(status=>[status,rows.filter(r=>r.status===status).length])),limits:'This routes all87original subset failures without subtracting them from the original136full baseline. Different sources/counts are not comparable full-suite results. Exact title plus an exercised all-pass root is later scoped evidence, not a declaration that every historical assertion or full release requirement is complete. Original inventory and raw native logs are unchanged; no private scan/mask data is read.',fullSuitePassingClaim:false,clinicalApproval:false,spatialRegistration:false,publicDeployment:false};
+assert(!fs.existsSync(root));fs.mkdirSync(root);fs.writeFileSync(root+'/ROUTING.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({report:root+'/ROUTING.json',sha256:sha(read(root+'/ROUTING.json')),summary:report.summary,originalFailuresRetained:rows.length,fullSuitePassingClaim:false}));

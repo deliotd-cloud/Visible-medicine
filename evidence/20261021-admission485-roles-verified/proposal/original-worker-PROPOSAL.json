@@ -1,0 +1,58 @@
+{
+  "scope": "Final historical485/current190 admission source-role follow-up; stage only, no canonical writes",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalRoot": "F:/VisibleMedicine/website",
+  "stageRoot": "F:/VisibleMedicine/staging/20261021-admission485-role-followup",
+  "proposedPaths": [
+    {
+      "path": "tests/current-delivery-admission-485.test.mjs",
+      "preimageSha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0",
+      "preimageBytes": 3873,
+      "candidateSha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611",
+      "candidateBytes": 5305
+    },
+    {
+      "path": "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "preimageSha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33",
+      "preimageBytes": 8362,
+      "candidateSha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11",
+      "candidateBytes": 11708
+    },
+    {
+      "path": "tests/admission485-final-role-transition-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "ed41b43931f53dc9a2fd15a5711bb1cf6a31c21aaf8db8175ceb531429d0029e",
+      "candidateBytes": 8934
+    },
+    {
+      "path": "tests/fixtures/current-delivery-admission-485-before-final-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0",
+      "candidateBytes": 3873
+    },
+    {
+      "path": "tests/fixtures/current-head-index-whole-role-transition-before-final-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33",
+      "candidateBytes": 8362
+    },
+    {
+      "path": "tests/fixtures/clinical-review-desktop-layout-actual485-20261020.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf",
+      "candidateBytes": 10666,
+      "provenance": "byte-exact copy from F:/VisibleMedicine/staging/20261020-combined-website-ui/website/tests/clinical-review-desktop-layout.test.mjs"
+    }
+  ],
+  "canonicalUnchanged": true,
+  "sourceOnlyProof": {
+    "command": "node --test F:/VisibleMedicine/staging/20261021-admission485-role-followup/tests/admission485-final-role-transition-20261021.test.mjs",
+    "cwd": "F:/VisibleMedicine/website",
+    "result": "3 tests, 3 pass, 0 fail; exact whole-file forward/inverse and negative mutation refusals"
+  },
+  "notRun": "Actual affected native roots, broad native corpus, types, build, browser; main owns integration",
+  "sourceRoles": "Authentic archived 485 desktop source inverses exactly to immutable87ed; previous-current.json preserves 485 source/tree/Review/binding; live validator independently binds 190 source/tree/Review/1553 and actual 1710-input emitted binding. Existing atlas190-current-delivery test retains exact emitted-byte/model/licence verification."
+}
