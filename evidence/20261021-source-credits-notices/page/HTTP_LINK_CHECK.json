@@ -1,0 +1,20 @@
+{
+  "componentPreviewOnly": true,
+  "checks": [
+    {
+      "path": "/credits",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7379,
+      "sha256": "1dd7d28eb05bc54b220f490e6b1a6143517bc814da8e35cf1fd95fbadfdbfebd"
+    },
+    {
+      "path": "/licenses/geist-mono-OFL.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 4387,
+      "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+    }
+  ],
+  "browserFontDocumentReadVerified": false
+}

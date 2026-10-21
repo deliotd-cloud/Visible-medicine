@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: credits remain a compact public page with one heading and native grouped disclosures
+ok 1 - credits remain a compact public page with one heading and native grouped disclosures
+  ---
+  duration_ms: 0.5735
+  type: 'test'
+  ...
+# Subtest: retains source attribution and makes preview, teaching, private-data and entitlement limits explicit
+ok 2 - retains source attribution and makes preview, teaching, private-data and entitlement limits explicit
+  ---
+  duration_ms: 0.1367
+  type: 'test'
+  ...
+# Subtest: notice destinations exist in the actual frozen delivery without accessing private resources
+ok 3 - notice destinations exist in the actual frozen delivery without accessing private resources
+  ---
+  duration_ms: 0.6788
+  type: 'test'
+  ...
+# Subtest: footer adds exactly one credits link while preserving its complete original bytes and all destinations
+ok 4 - footer adds exactly one credits link while preserving its complete original bytes and all destinations
+  ---
+  duration_ms: 10.1892
+  type: 'test'
+  ...
+# Subtest: new page is static, styles are scoped, and no new remote font, image, auth or persistence is introduced
+ok 5 - new page is static, styles are scoped, and no new remote font, image, auth or persistence is introduced
+  ---
+  duration_ms: 0.7887
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 295.8153

@@ -1,0 +1,59 @@
+{
+  "checks": {
+    "scope": "Isolated static component, mocked Link/BrandLockup; not native Website/router/auth/app-shell acceptance",
+    "metrics": {
+      "clientWidth": 1265,
+      "heading": "Source credits",
+      "height": 720,
+      "main": 1,
+      "open": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "scrollWidth": 1265,
+      "summaryFocusOutline": "none",
+      "width": 1280
+    },
+    "keyboard": {
+      "enterExpandsPreview": true,
+      "spaceCollapsesPreview": true,
+      "enterTogglesTypography": true
+    },
+    "fontNoticeActivation": {
+      "href": "/licenses/geist-mono-OFL.txt",
+      "urlRemainedCredits": true,
+      "documentReadNotVerified": true
+    },
+    "screenshot": "credits-component-preview.png",
+    "ownerFormsUntouched": true,
+    "canonicalInstalled": false
+  },
+  "publicFontHttp": {
+    "componentPreviewOnly": true,
+    "checks": [
+      {
+        "path": "/credits",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 7379,
+        "sha256": "1dd7d28eb05bc54b220f490e6b1a6143517bc814da8e35cf1fd95fbadfdbfebd"
+      },
+      {
+        "path": "/licenses/geist-mono-OFL.txt",
+        "status": 200,
+        "contentType": "text/plain; charset=utf-8",
+        "bytes": 4387,
+        "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+      }
+    ],
+    "browserFontDocumentReadVerified": false
+  },
+  "previewStopped": true,
+  "onlyOwnedTab83Closed": true,
+  "viewportOverrideChanged": false,
+  "canonicalPreviewMustRemainRunning": true,
+  "limit": "Actual1280x720 static component layout and Enter/Space disclosures only. Direct font-link browser activation stayed on component page; font document read not verified, though literal public endpoint returns200 and exact retained OFL bytes. No native Website/router/auth/app-shell/generated stylesheet acceptance."
+}

@@ -1,0 +1,22 @@
+{
+  "label": "NOTICE_NATIVE",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-reporter=tap",
+    "audit.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-runtime-notice-audit/NOTICE_NATIVE.log",
+  "logSha256": "ab77caafbb9225c0e0983509ef1116ced3d4db27312af522ce28efcd4d939b91",
+  "footer": [
+    "# tests 9",
+    "# pass 9",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0"
+  ],
+  "canonicalInstalled": false
+}

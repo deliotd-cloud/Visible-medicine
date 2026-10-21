@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: retains exact scoped identity and licence expression
+ok 1 - retains exact scoped identity and licence expression
+  ---
+  duration_ms: 1.0283
+  type: 'test'
+  ...
+# Subtest: missing, wrong version and changed licence fail
+ok 2 - missing, wrong version and changed licence fail
+  ---
+  duration_ms: 0.1912
+  type: 'test'
+  ...
+# Subtest: duplicate and empty notices fail
+ok 3 - duplicate and empty notices fail
+  ---
+  duration_ms: 0.107
+  type: 'test'
+  ...
+# Subtest: manifest schema refuses duplicate and malformed package declarations
+ok 4 - manifest schema refuses duplicate and malformed package declarations
+  ---
+  duration_ms: 0.3001
+  type: 'test'
+  ...
+# Subtest: Review package heading stays separate from prose headings
+ok 5 - Review package heading stays separate from prose headings
+  ---
+  duration_ms: 0.1855
+  type: 'test'
+  ...
+# Subtest: Review manifest packages match exact notice identity and licence expression
+ok 6 - Review manifest packages match exact notice identity and licence expression
+  ---
+  duration_ms: 0.1041
+  type: 'test'
+  ...
+# Subtest: Review missing and wrong-version notices fail closed
+ok 7 - Review missing and wrong-version notices fail closed
+  ---
+  duration_ms: 0.1285
+  type: 'test'
+  ...
+# Subtest: Review licence mismatch fails closed
+ok 8 - Review licence mismatch fails closed
+  ---
+  duration_ms: 0.0837
+  type: 'test'
+  ...
+# Subtest: Review duplicate declarations and missing declaration fail closed
+ok 9 - Review duplicate declarations and missing declaration fail closed
+  ---
+  duration_ms: 0.1145
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 81.5897

@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Selected uninstalled public header/test source, exact-revision named metadata, original fixtures and actual focused proof, retaining previously filtered source ancestry only. No raw canonical ancestry, scans, masks, geometry, browser pixels/DOM, private modules/reviews/databases or secrets. Not a complete/runnable/private-data backup, source admission or release.
+Selected uninstalled source-credits/footer/test code, notice-checker source/originals/hash-only current findings and focused evidence on previously filtered source ancestry. Browser screenshot stays F-local; no browser DOM, raw canonical ancestry, scans, masks, meshes, private modules/reviews/databases/secrets. Not a whole/runnable/private-data backup or legal/release acceptance.

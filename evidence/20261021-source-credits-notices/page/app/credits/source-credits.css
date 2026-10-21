@@ -1,0 +1,20 @@
+.source-credits-page { max-width: 64rem; margin-inline: auto; padding: 2.5rem clamp(1rem, 4vw, 2.5rem) 4rem; }
+.source-credits-page .source-credits-heading { margin-bottom: 1.5rem; }
+.source-credits-page .eyebrow { margin-bottom: 1rem; }
+.source-credits-page h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.035em; }
+.source-credits-page p, .source-credits-page li, .source-credits-page dd { font-size: 1rem; line-height: 1.65; }
+.source-credits-page p { color: var(--muted); }
+.source-credits-page a { color: var(--green); text-decoration: underline; text-underline-offset: .2em; overflow-wrap: anywhere; }
+.source-credits-page a:focus-visible, .source-credits-page summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; border-radius: 3px; }
+.source-credits-page .source-credits-sections { display: grid; gap: .75rem; }
+.source-credits-page details { min-width: 0; border: 1px solid var(--line); border-radius: .6rem; background: var(--panel); padding: 1rem 1.25rem; }
+.source-credits-page summary { cursor: pointer; font-weight: 650; line-height: 1.5; }
+.source-credits-page details > :last-child { margin-bottom: .25rem; }
+.source-credits-page ul { padding-left: 1.25rem; }
+.source-credits-page li + li { margin-top: .4rem; }
+.source-credits-page dl > div + div { margin-top: 1rem; }
+.source-credits-page dt { font-weight: 650; }
+.source-credits-page dd { margin: .35rem 0 0; }
+.source-credits-page dd p { margin: .25rem 0 0; }
+.source-credits-page .source-credits-boundary { font-size: .875rem; margin-top: 1.5rem; }
+.source-credits-page .source-credits-back { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 1.5rem; }

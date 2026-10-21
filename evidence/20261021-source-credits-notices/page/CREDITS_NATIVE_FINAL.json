@@ -1,0 +1,22 @@
+{
+  "label": "CREDITS_NATIVE_FINAL",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-reporter=tap",
+    "tests/source-credits.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-source-credits-proposal/CREDITS_NATIVE_FINAL.log",
+  "logSha256": "ff75c8742bd84274904f6052e45be703869d61e27fe5c938ab104ff0733ec49b",
+  "footer": [
+    "# tests 5",
+    "# pass 5",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0"
+  ],
+  "canonicalInstalled": false
+}

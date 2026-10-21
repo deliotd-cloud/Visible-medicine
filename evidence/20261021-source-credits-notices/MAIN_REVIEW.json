@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-21T00:28:37.310Z",
+  "phase": "uninstalled source credits page and verified declared-viewer-notice audit",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "sourceFiles": [
+    {
+      "path": "app/credits/page.tsx",
+      "sha256": "12d197e2c9e7ebd2b311b9e8d141f8e0377c314aaf489a96d84c5bf0e2d7b409"
+    },
+    {
+      "path": "app/credits/source-credits.css",
+      "sha256": "5c5788fa35fd32ad9093ab5b2655380fe1a4ec06a24fded2354fd5f23e1fd47c"
+    },
+    {
+      "path": "lib/source-credits.ts",
+      "sha256": "e422fa2081112f8886df2ab6d514691a0e77c07fe69fab636c05619de68ac64b"
+    },
+    {
+      "path": "components/SiteFooter.tsx",
+      "sha256": "df34a62c94bba10970aea6c5d1e51650a3bc4bdc4af5acf4c9d1001a71f8314a"
+    },
+    {
+      "path": "tests/source-credits.test.mjs",
+      "sha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a"
+    },
+    {
+      "path": "tests/fixtures/source-credits/SiteFooter.tsx.raw",
+      "sha256": "e24b578934daeb60c1f13ee22f3c31a5e0f555cf6b10dd070a19e67ab2148e8a"
+    }
+  ],
+  "actualPageTests": 5,
+  "actualNoticeTests": 9,
+  "pageProof": "ff75c8742bd84274904f6052e45be703869d61e27fe5c938ab104ff0733ec49b",
+  "noticeProof": "ab77caafbb9225c0e0983509ef1116ced3d4db27312af522ce28efcd4d939b91",
+  "publicPage": "One Governance footer link and five native grouped disclosures. No new main navigation, media/font/dependency/service or licence grant. Existing exact public notice destinations, credit/adaptation/source/preview/private-imaging limits retained.",
+  "notices": "34 inspected file hashes. Four learner dependency files and the existing Review manifest.packages each declare22packages, each with matching name/version/licence-expression notice. This is per-bundle declaration-to-notice consistency, not110unique packages, independent bundle closure or rights clearance.",
+  "reviewCorrection": "Worker initially inferred missing Review declaration from absence of a standalone dependency JSON. Main found the existing generated manifest.packages; worker corrected parser and added refusal tests. Initial complete files/findings are retained. Cross-bundle use-sync-external-store1.6/1.7 difference is not an error by itself.",
+  "pageCorrection": "First4/5 run preserved. Formatting-only repair restores one changed newline in the mixed-newline original footer; final5/5 retains whole original byte inverse. Native project default root works without sandbox-specific environment.",
+  "browser": {
+    "localEvidence": "F:/VisibleMedicine/staging/20261021-source-credits-proposal/BROWSER_LIMITS.json",
+    "screenshot": "F:/VisibleMedicine/staging/20261021-source-credits-proposal/credits-component-preview.png",
+    "screenshotSha256": "727f2d3833bcaddc914e78d05846fd038c4e8b7bf9ae48ee1f5228b9c112b966",
+    "scope": "Actual1280x720 static component layout and Enter/Space disclosures only. Direct font-link browser activation stayed on component page; font document read not verified, though literal public endpoint returns200 and exact retained OFL bytes. No native Website/router/auth/app-shell/generated stylesheet acceptance.",
+    "previewStopped": true,
+    "ownedTabClosed": true,
+    "ownerFormsUntouched": true
+  },
+  "fullSuiteObservation": {
+    "path": "F:/VisibleMedicine/staging/20261021-complete-website-assurance/observations/2026-10-21T00-26-49.461Z/observation.json",
+    "sha256": "1efdddea72369294d1f92c29470fc739c049d2ff3b1e7c0293c9b40a2162a12a",
+    "liveAtObservation": true,
+    "terminalAtObservation": false,
+    "frozenInputs": 5053
+  },
+  "canonicalInstalled": false,
+  "frozenCandidateChanged": false,
+  "sourceAdmission": false,
+  "newNativeWebsiteBrowserAcceptance": false,
+  "fullSuitePass": false,
+  "exhaustiveRightsClearance": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true,
+  "limits": "Staged source and read-only notice evidence. Static component browser check mocks Link/brand and omits app shell/generated styles. Font-link activation stayed in the component; direct HTTP200 and exact OFL bytes pass, browser document read not verified. No private content/decision reads, generated renderer rebind, type/build/native full-browser or clinical acceptance."
+}

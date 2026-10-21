@@ -1,14 +1,40 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T00:13:24.894Z",
+  "at": "2026-10-21T00:28:39.136Z",
   "sourceIdentity": {
     "atlas": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "uninstalledHeaderSha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b",
-    "proposalOnly": true,
+    "website": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "uninstalled": true,
+    "sourceFiles": [
+      {
+        "path": "app/credits/page.tsx",
+        "sha256": "12d197e2c9e7ebd2b311b9e8d141f8e0377c314aaf489a96d84c5bf0e2d7b409"
+      },
+      {
+        "path": "app/credits/source-credits.css",
+        "sha256": "5c5788fa35fd32ad9093ab5b2655380fe1a4ec06a24fded2354fd5f23e1fd47c"
+      },
+      {
+        "path": "lib/source-credits.ts",
+        "sha256": "e422fa2081112f8886df2ab6d514691a0e77c07fe69fab636c05619de68ac64b"
+      },
+      {
+        "path": "components/SiteFooter.tsx",
+        "sha256": "df34a62c94bba10970aea6c5d1e51650a3bc4bdc4af5acf4c9d1001a71f8314a"
+      },
+      {
+        "path": "tests/source-credits.test.mjs",
+        "sha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a"
+      },
+      {
+        "path": "tests/fixtures/source-credits/SiteFooter.tsx.raw",
+        "sha256": "e24b578934daeb60c1f13ee22f3c31a5e0f555cf6b10dd070a19e67ab2148e8a"
+      }
+    ],
     "canonicalInstalled": false
   },
-  "parent": "412ffbc336bf99a40d8d5ee0a8d2aad449ca781f",
-  "gitParent": "412ffbc336bf99a40d8d5ee0a8d2aad449ca781f",
+  "parent": "428fe80f0a4a0281c60ccc3dd73d787ecefe3822",
+  "gitParent": "428fe80f0a4a0281c60ccc3dd73d787ecefe3822",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -839,6 +865,201 @@
       "path": "evidence/20261021-release-current-contracts/SOURCE_INPUTS_AFTER.json",
       "bytes": 869224,
       "sha256": "5188a8f753997a07b7bd22883b3ee48b9f593c67b6c869b83889b228f08be40f"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/MAIN_FINDINGS.json",
+      "bytes": 8301,
+      "sha256": "0a17af73ae4896b1f5eefad40796be7fd3657a31aa28fe8f813a61088dee286e"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/NOTICE_CURRENT.json",
+      "bytes": 540,
+      "sha256": "f300ad270b950757a73cc17367129d7b586e2dea25e76c5a6b1c3021f63b1473"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/NOTICE_CURRENT.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/NOTICE_NATIVE.json",
+      "bytes": 489,
+      "sha256": "29aa304aa60e00cada324eddce02884a3f0cacf04febd7633a0f5c6e4b8cbdbf"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/NOTICE_NATIVE.log",
+      "bytes": 1704,
+      "sha256": "ab77caafbb9225c0e0983509ef1116ced3d4db27312af522ce28efcd4d939b91"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/PREPARATION.json",
+      "bytes": 377,
+      "sha256": "173f8c0cbb9ea482b4d2160b9240df0af643db97241b676a50d15ed314da7635"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/audit.mjs",
+      "bytes": 10952,
+      "sha256": "5080444d84ee71aa2bc3a07d998367aa502fa5282339150c6dd9857a7833e044"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/audit.test.mjs",
+      "bytes": 3342,
+      "sha256": "7b9c43125bb72072e4c512399004ceb21dab284baf7ad83c6c1e468bb1dbd550"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/FILES.md",
+      "bytes": 824,
+      "sha256": "745fc09eb8ec123bcf3adb5a50326ee0c09a14324f867595e3009b302ced6641"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/findings-reviewed.json",
+      "bytes": 8301,
+      "sha256": "0a17af73ae4896b1f5eefad40796be7fd3657a31aa28fe8f813a61088dee286e"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/findings.json",
+      "bytes": 8511,
+      "sha256": "fa26404ce5f46e5f33c4c118e834839ad8c428f967cf795256a01e5c223945e4"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/HANDOFF.md",
+      "bytes": 2372,
+      "sha256": "200c4ae1a993ce7fe4c494df5b2c63afb1af519c019e1cc5bffabe4b7b149fe8"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/originals/audit.mjs",
+      "bytes": 10692,
+      "sha256": "7fa34c0b6960d0f7f774610925224f0b18cc29292894f5e1982a3d56b4c2a055"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/originals/audit.test.mjs",
+      "bytes": 2161,
+      "sha256": "ada53c8f27963ab8677bb39423dd54807387bbcdc2457ad09a593e88073ed0cd"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/originals/FILES.md",
+      "bytes": 663,
+      "sha256": "d7ffc0178d1e2a69717c4b6c914465eae60879965d8eed32d9632ebdbf8c2c4e"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/originals/findings.json",
+      "bytes": 8511,
+      "sha256": "fa26404ce5f46e5f33c4c118e834839ad8c428f967cf795256a01e5c223945e4"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/audit/worker/originals/HANDOFF.md",
+      "bytes": 2006,
+      "sha256": "8c8a9a632cf3b85eae97f8e388b55c614c6d3b1ff8012121045f39b1ca5e106a"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/checkpoint-source-credits-20261021.mjs",
+      "bytes": 11029,
+      "sha256": "1a82caae259c669ddb3b7e0edaa5e75c1de75d72877dc8f90e8d71e37c11ef07"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/full-suite/observation.json",
+      "bytes": 1798,
+      "sha256": "1efdddea72369294d1f92c29470fc739c049d2ff3b1e7c0293c9b40a2162a12a"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/MAIN_REVIEW.json",
+      "bytes": 4348,
+      "sha256": "db6f8647be05f3048e84f77c8ea2e46dc9a885c16b493d286dbb2c2f5405258b"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/app/credits/page.tsx",
+      "bytes": 4194,
+      "sha256": "12d197e2c9e7ebd2b311b9e8d141f8e0377c314aaf489a96d84c5bf0e2d7b409"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/app/credits/source-credits.css",
+      "bytes": 1685,
+      "sha256": "5c5788fa35fd32ad9093ab5b2655380fe1a4ec06a24fded2354fd5f23e1fd47c"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/BROWSER_COMPONENT.json",
+      "bytes": 775,
+      "sha256": "ce49a7538ea7d0f882dabe1cdc69714448bb63d7d7a435fd9f0905e24e7acea5"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/BROWSER_LIMITS.json",
+      "bytes": 1922,
+      "sha256": "e255646f5b7231a652bc8f7c52ddb4a304d536769d24c0fc6ea53a5fa7a8e3b2"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/components/SiteFooter.tsx",
+      "bytes": 1945,
+      "sha256": "df34a62c94bba10970aea6c5d1e51650a3bc4bdc4af5acf4c9d1001a71f8314a"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/CREDITS_NATIVE_FINAL.json",
+      "bytes": 521,
+      "sha256": "7e850fa64b367629061b94859fd58d7f519a6ff3fa0dbf09cfde4d22b0930363"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/CREDITS_NATIVE_FINAL.log",
+      "bytes": 1422,
+      "sha256": "ff75c8742bd84274904f6052e45be703869d61e27fe5c938ab104ff0733ec49b"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/CREDITS_NATIVE_FIXED.json",
+      "bytes": 521,
+      "sha256": "ac4ad778718a85bb3df2bb7d8024ed1c5b1d9a6ae75daf4a4d1735147db0bedc"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/CREDITS_NATIVE_FIXED.log",
+      "bytes": 1423,
+      "sha256": "3f14e2e1693090eacaa3b38c1e88f62cfd4f7beeb4e2ab2bcd368643f0c3e5a3"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/CREDITS_NATIVE.json",
+      "bytes": 509,
+      "sha256": "70fe4cb2f3c4785681f174c9a39778c994e5d0bdf9539fd8adb3ebee6df5f3a3"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/CREDITS_NATIVE.log",
+      "bytes": 7797,
+      "sha256": "ceb60d7bdddb391f25e96715fd91a765771990ec181ff175355e87521d637e4d"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/HANDOFF.md",
+      "bytes": 2636,
+      "sha256": "2ad6453dc7cc25be7e90c6d7cf1e91fbf118e6be0b152066ef69d4cec0a8c2d4"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/HTTP_LINK_CHECK.json",
+      "bytes": 544,
+      "sha256": "302b70460dd92172e31b22a7ddaf0787afde188b67c85f5bd5e4a0da59653934"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/lib/source-credits.ts",
+      "bytes": 1855,
+      "sha256": "e422fa2081112f8886df2ab6d514691a0e77c07fe69fab636c05619de68ac64b"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/package.json",
+      "bytes": 83,
+      "sha256": "16b4a5c9abc9dfb96022ebe9fe39ba4ed035105f7c6be75a419752eb796580c8"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/PREPARATION.json",
+      "bytes": 522,
+      "sha256": "75fc86a909e027f7551a725b8f478aa48bd3beb56df18b126aaf98cfc4ff9d2d"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/preview.mjs",
+      "bytes": 3978,
+      "sha256": "ed9931a4171b7e2db6253a7da409731b4b608f4af5752a16494ad62b29acfbcd"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/tests/fixtures/source-credits/SiteFooter.tsx.raw",
+      "bytes": 1902,
+      "sha256": "e24b578934daeb60c1f13ee22f3c31a5e0f555cf6b10dd070a19e67ab2148e8a"
+    },
+    {
+      "path": "evidence/20261021-source-credits-notices/page/tests/source-credits.test.mjs",
+      "bytes": 5189,
+      "sha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a"
     },
     {
       "path": "evidence/archived-delivery-verification.json",
@@ -1877,15 +2098,14 @@
     }
   ],
   "removed": [],
-  "scope": "Selected uninstalled public header/test source, exact-revision named metadata, original fixtures and actual focused proof, retaining previously filtered source ancestry only. No raw canonical ancestry, scans, masks, geometry, browser pixels/DOM, private modules/reviews/databases or secrets. Not a complete/runnable/private-data backup, source admission or release.",
+  "scope": "Selected uninstalled source-credits/footer/test code, notice-checker source/originals/hash-only current findings and focused evidence on previously filtered source ancestry. Browser screenshot stays F-local; no browser DOM, raw canonical ancestry, scans, masks, meshes, private modules/reviews/databases/secrets. Not a whole/runnable/private-data backup or legal/release acceptance.",
   "proof": {
-    "actualHeaderTests": 13,
-    "actualInventoryTests": 13,
-    "namedRecords": 22,
-    "wholeOriginalInverses": true,
-    "fullSuitePass": false,
-    "clinicalApproval": false,
-    "sourceAdmission": false
+    "pageTests": 5,
+    "noticeTests": 9,
+    "inspectedNoticeFiles": 34,
+    "consistentDeclaredScopes": 5,
+    "exhaustiveRightsClearance": false,
+    "clinicalApproval": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

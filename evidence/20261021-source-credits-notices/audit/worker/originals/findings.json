@@ -1,0 +1,237 @@
+{
+  "schema": "visible-medicine.runtime-notice-audit/1",
+  "websiteRoot": "F:\\VisibleMedicine\\staging\\20261020-combined-website-ui\\website",
+  "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "websiteHeadExpected": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "sourceCommit": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "inspectedFiles": [
+    {
+      "path": "public/atlas-review-viewer/manifest.json",
+      "sha256": "31fcef7c1bb8acbdeb8d16e9a3de1681c79ff604e845e89cc231fe43775a7e19",
+      "bytes": 9033
+    },
+    {
+      "path": "public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
+      "sha256": "a794eaf3d319319de92607003e4d85cf3ac575e7ce1a81bf1544724c366e2e08",
+      "bytes": 390115
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/BUNDLED_NOTICES.txt",
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567",
+      "bytes": 36869
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/bundled-dependencies.json",
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841",
+      "bytes": 1862
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/LICENSE",
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "bytes": 1467
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/LICENSES/CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "bytes": 18657
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/LICENSES/THIRD_PARTY_NOTICES.md",
+      "sha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
+      "bytes": 353618
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/manifest.json",
+      "sha256": "b9cd61d99415ced432667125606e721cd9e6dfb0a194912968125923cb46f4fe",
+      "bytes": 6208
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/BUNDLED_NOTICES.txt",
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567",
+      "bytes": 36869
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/bundled-dependencies.json",
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841",
+      "bytes": 1862
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSE",
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "bytes": 1467
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/BODYPARTS3D_FULL_BODY.md",
+      "sha256": "5c958b307fa0d041561c99cabd4895045b81381de214ea571958a736ffedb25b",
+      "bytes": 20504
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/bodyparts3d-license-evidence.html",
+      "sha256": "7a873d9c6ed62578a7ee5603d68d6a8fbf6e3ccc0b52db6a3ad8b952f8cf7271",
+      "bytes": 14682
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/BODYPARTS3D.md",
+      "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6",
+      "bytes": 2903
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "bytes": 18657
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/THIRD_PARTY_NOTICES.md",
+      "sha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
+      "bytes": 353618
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/um-lower-limb-v1-2/dataverse.json",
+      "sha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375",
+      "bytes": 12272
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/um-lower-limb-v1-2/readme.txt",
+      "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967",
+      "bytes": 7540
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/manifest.json",
+      "sha256": "7852d4f48d4768a7e63373f8fdc9bd88aa95d1677ebc84b3d4ea57bc83569014",
+      "bytes": 627564
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/BUNDLED_NOTICES.txt",
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567",
+      "bytes": 36869
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/bundled-dependencies.json",
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841",
+      "bytes": 1862
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/LICENSE",
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "bytes": 1467
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/LICENSES/THIRD_PARTY_NOTICES.md",
+      "sha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
+      "bytes": 353618
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/LICENSES/um-lower-limb-v1-2/dataverse.json",
+      "sha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375",
+      "bytes": 12272
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/LICENSES/um-lower-limb-v1-2/readme.txt",
+      "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967",
+      "bytes": 7540
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/manifest.json",
+      "sha256": "5ae83144eea3ac9e40c6ff776b730f971d492fba846bac18c729375194ce8a39",
+      "bytes": 3436
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/BUNDLED_NOTICES.txt",
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567",
+      "bytes": 36869
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/bundled-dependencies.json",
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841",
+      "bytes": 1862
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSE",
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "bytes": 1467
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/BODYPARTS3D.md",
+      "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6",
+      "bytes": 2903
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "bytes": 18657
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/dependency-license-audit.json",
+      "sha256": "46202b5f237c1ac0202f3fde0e74647abd84da6f2fc1b430b44723faca88b58e",
+      "bytes": 162634
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/THIRD_PARTY_NOTICES.md",
+      "sha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
+      "bytes": 353618
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/manifest.json",
+      "sha256": "8d0c46898eea3aaed5bd1ec2906511947057a2a2600696102b02c2cea33a4ed8",
+      "bytes": 4795
+    }
+  ],
+  "scopes": [
+    {
+      "scope": "head-neck",
+      "declaredPackages": 22,
+      "parsedNotices": 22,
+      "licenseFiles": 7,
+      "problems": []
+    },
+    {
+      "scope": "shoulder",
+      "declaredPackages": 22,
+      "parsedNotices": 22,
+      "licenseFiles": 4,
+      "problems": []
+    },
+    {
+      "scope": "female-pelvis",
+      "declaredPackages": 22,
+      "parsedNotices": 22,
+      "licenseFiles": 2,
+      "problems": []
+    },
+    {
+      "scope": "lower-limb",
+      "declaredPackages": 22,
+      "parsedNotices": 22,
+      "licenseFiles": 3,
+      "problems": []
+    },
+    {
+      "scope": "review",
+      "declaredPackages": null,
+      "parsedNotices": 22,
+      "licenseFiles": null,
+      "problems": [
+        {
+          "code": "unknown-review-bundle-dependencies",
+          "detail": "No emitted bundled-dependencies.json exists for Review; package notice completeness cannot be verified against a declared inventory."
+        }
+      ],
+      "observations": [
+        {
+          "code": "review-package-differs-from-learner",
+          "detail": "use-sync-external-store@1.6.0"
+        },
+        {
+          "code": "review-only-package",
+          "detail": "use-sync-external-store@1.7.0"
+        }
+      ],
+      "limitation": "Review has no emitted bundled-dependencies.json; cross-check against learner package notices is an observation, not bundle proof."
+    }
+  ],
+  "globalProblems": [],
+  "allConsistent": false,
+  "limits": [
+    "Notice text and declared package consistency only; no code bundle graph, source rights, attribution sufficiency, downstream licence obligations, clinical or release clearance."
+  ]
+}

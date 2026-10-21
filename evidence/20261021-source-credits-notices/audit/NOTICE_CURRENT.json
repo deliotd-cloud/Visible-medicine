@@ -1,0 +1,16 @@
+{
+  "label": "NOTICE_CURRENT",
+  "command": "node",
+  "args": [
+    "audit.mjs",
+    "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+    "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "F:/VisibleMedicine/staging/20261021-runtime-notice-audit/MAIN_FINDINGS.json"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-runtime-notice-audit/NOTICE_CURRENT.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "footer": [],
+  "canonicalInstalled": false
+}
