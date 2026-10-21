@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-21T11:17:10.468Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/clinical-review-lower-limb-connective-xray.test.ts",
+    "tests/connective-xray-original-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:/VisibleMedicine/staging/20261021-connective-epoch-application/native.log",
+  "logSha256": "c4c4478e27854c2fd3351029236fcff212c99d2e9f8975c148d642874da0e90b"
+}

@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-21T11:15:56.426Z",
+  "site": "F:/VisibleMedicine/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-connective-epoch-proposal",
+  "priorPath": "F:/VisibleMedicine/staging/20261021-pelvic-portal-epoch-application/SOURCE_INPUTS_AFTER.json",
+  "priorSha256": "d36e468c6a85239eadc35b8a8ba4e1e2f35f760b8849bcbbcd6d31f424bb9844",
+  "changes": [
+    {
+      "path": "tests/clinical-review-lower-limb-connective-xray.test.ts",
+      "before": "45edaee10adc1dd2bcd5da4461832a4878431ac0c3cfca18624c84bf95fcc074",
+      "after": "eb7e626855026127c0c02927a8b4c7ad7cc31da4637681dc5efa11c281bdd4f7"
+    },
+    {
+      "path": "tests/connective-xray-original-preservation.test.mjs",
+      "before": null,
+      "after": "95155898472c71789a4cc9cbd38236dca47d64c831c765eba05cceb76ca69c7f"
+    },
+    {
+      "path": "tests/fixtures/connective-xray-9f-original.test.ts.raw",
+      "before": null,
+      "after": "45edaee10adc1dd2bcd5da4461832a4878431ac0c3cfca18624c84bf95fcc074"
+    }
+  ],
+  "actualFeatureRun": false
+}

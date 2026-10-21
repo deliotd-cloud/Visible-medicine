@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T11:12:27.054Z",
+  "at": "2026-10-21T11:18:42.356Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5158,
+    "canonicalNamedInputs": 5160,
     "canonicalInstalled": true
   },
-  "parent": "dcea2196f67f1324e58257287cddbf9afb966545",
-  "gitParent": "dcea2196f67f1324e58257287cddbf9afb966545",
+  "parent": "2a87734590df9594320159c824adff65f8de7d0a",
+  "gitParent": "2a87734590df9594320159c824adff65f8de7d0a",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2224,6 +2224,71 @@
       "path": "evidence/20261021-combined-source-verified/website/tests/head-ventricular-review.test.ts",
       "bytes": 11794,
       "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/controls/admit-connective-epoch-20261021.mjs",
+      "bytes": 4961,
+      "sha256": "a20b4c01e3288b8f9623881b62f54a40b7e4022ad67bb191d8a93aa17e553a0b"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/controls/checkpoint-connective-keyboard-20261021.mjs",
+      "bytes": 6811,
+      "sha256": "3bbe81ae0b3bd8e5926ef022f967d14f9942c906a659bbc8d649b30b67d6219a"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/evidence/connective/APPLICATION.json",
+      "bytes": 2414,
+      "sha256": "619e381b570d179b9d1cb21499b99430322e67fc65496a85cebbf4f55361e902"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/evidence/connective/HANDOFF.md",
+      "bytes": 2208,
+      "sha256": "16c07dadc38bbbd91e3e55213e0a3f9227a7d5b6d8849c9f92d8bee2e7408362"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/evidence/connective/native.json",
+      "bytes": 484,
+      "sha256": "7a3d640f283f5a6777b341f3cd4c96675c1303e41c3dea3a5e31a10c67b5c95f"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/evidence/connective/native.log",
+      "bytes": 595,
+      "sha256": "c4c4478e27854c2fd3351029236fcff212c99d2e9f8975c148d642874da0e90b"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/evidence/connective/PREPARATION.json",
+      "bytes": 1031,
+      "sha256": "443427ee410849afbaabca20b5462788abb1e165d94f0ef7ddfdcda767499d20"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/evidence/connective/pure-original.log",
+      "bytes": 355,
+      "sha256": "ab62b0b19bbc482e70da136c30fa47ae876ad39c4524bd58f118cc89a114fcf0"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/evidence/connective/types.json",
+      "bytes": 345,
+      "sha256": "33d4bdee0dd649b8c466a3779613981087908625cb924e68916dd16bbb60b1b2"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/evidence/PROOF.json",
+      "bytes": 2462,
+      "sha256": "7bcbd3af7ce5e123de25ef9d9a06cad15f3356d4a1005d7a478be681e6c7873b"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/installed-website/tests/clinical-review-lower-limb-connective-xray.test.ts",
+      "bytes": 19438,
+      "sha256": "eb7e626855026127c0c02927a8b4c7ad7cc31da4637681dc5efa11c281bdd4f7"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/installed-website/tests/connective-xray-original-preservation.test.mjs",
+      "bytes": 2591,
+      "sha256": "95155898472c71789a4cc9cbd38236dca47d64c831c765eba05cceb76ca69c7f"
+    },
+    {
+      "path": "evidence/20261021-connective-and-review-keyboard/installed-website/tests/fixtures/connective-xray-9f-original.test.ts.raw",
+      "bytes": 16331,
+      "sha256": "45edaee10adc1dd2bcd5da4461832a4878431ac0c3cfca18624c84bf95fcc074"
     },
     {
       "path": "evidence/20261021-ct-delivery-history-repair/CT_DELIVERY_HISTORY.json",
@@ -8357,9 +8422,9 @@
     }
   ],
   "removed": [],
-  "scope": "Explicit four own Website test/tool paths, source checklist metadata, small nonclinical verification receipts and controls on previously filtered source-only ancestry. No raw canonical ancestry, complete manifests/datasets/runtime/models, private DB/R2/env/notes/decisions, scans/masks, browser raw DOM/logs/media or uncleared private references. Partial selected-source backup only, not full/private/runnable recovery, clinical sign-off, spatial registration or public deployment.",
+  "scope": "Only explicitly selected own Website test/fixture paths, small nonclinical receipts and controls on already filtered source-only ancestry. No raw canonical ancestry/full source/data/runtime/geometry/private records, scan/mask/media/browser DOM or private reference uploads. Partial source recovery only, not complete/private/runnable backup, clinical approval, registration or public deployment.",
   "proof": {
-    "at": "2026-10-21T11:12:21.599Z",
+    "at": "2026-10-21T11:18:36.951Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -8367,8 +8432,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5158,
-    "controlledSourceInputs": 5151,
+    "currentNamedInputs": 5160,
+    "controlledSourceInputs": 5153,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -8378,36 +8443,39 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-pelvic-portal-epoch-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "d36e468c6a85239eadc35b8a8ba4e1e2f35f760b8849bcbbcd6d31f424bb9844",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-connective-epoch-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "56920b68f2c92bd614492aa93d266aa2119737a1678c0242cfaad7a8eddf6615",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "checklistActualPasses": 50,
-    "tourActualPasses": 3,
+    "connectiveActualCases": 2,
     "fullTypesPassed": true,
+    "wholeOriginalPreserved": true,
+    "historicalContextExplicitlySynthetic": true,
+    "selectedCurrentTeachingAndRefusalsVerified": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "allOtherControlledSourcesUnchanged": true,
     "ownerPreviewPid": 266712,
     "ownerPreviewSession": 32652,
     "ownerPreviewRestarted": false,
     "ownerTabsReloaded": false,
     "ownerDecisionsChanged": false,
-    "browserErrorFollowup": {
-      "temporaryTab": "92",
+    "reviewKeyboardBrowser": {
+      "temporaryTab": "93",
       "closed": true,
-      "route": "/atlas/3d",
-      "error": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
-      "observedAt": "2026-10-21T11:10:48.147Z",
-      "sourceUrl": null,
-      "stack": null,
-      "reproduced": true,
-      "attributed": false,
-      "suppressed": false,
-      "scanDataExported": false
+      "route": "/workspace/clinical-review-inbox?area=head-learning&q=pons",
+      "authorizedAutomaticScan": true,
+      "pausedFromKeyboard": true,
+      "focusAfterPause": "Resume from page 23",
+      "resumedFromKeyboard": true,
+      "focusAfterResume": "Pause",
+      "clientWidth": 1265,
+      "horizontalOverflow": false,
+      "decisionsSubmitted": false,
+      "rawDomOrPrivateRecordsExported": false,
+      "allDesktopOrAssistiveTechnologyAcceptance": false
     },
-    "connectiveRoleClarified": true,
-    "connectiveProposalInstalled": false,
+    "unresolvedBrowserErrorKinds": 1,
+    "browserErrorAttributed": false,
     "originalFullFailureBaseline": 144,
     "currentFullNativeFailureBaseline": 136,
     "fullSuitePassingClaim": false,
