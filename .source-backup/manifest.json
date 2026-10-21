@@ -1,115 +1,26 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T01:59:10.902Z",
+  "at": "2026-10-21T02:10:10.681Z",
   "sourceIdentity": {
     "atlasBase": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "sourcePaths": [
+    "queueScripts": [
       {
-        "path": ".gitattributes",
-        "bytes": 4314,
-        "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+        "path": "queue-dental-after-suite-20261021.mjs",
+        "sha256": "6eea1346270a81ced888b558de7941f1145207b8c40c739f51e4e01a8482b519"
       },
       {
-        "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-        "bytes": 354693,
-        "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+        "path": "test-dental-after-suite-queue-20261021.mjs",
+        "sha256": "d4688f071ac87215b52c72226b502061d60668a1dfdadcf719054ebe35077ce4"
       },
       {
-        "path": "app/body-content.ts",
-        "bytes": 82603,
-        "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
-      },
-      {
-        "path": "app/fitted-camera.tsx",
-        "bytes": 12876,
-        "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
-      },
-      {
-        "path": "app/regional-guided-learning.tsx",
-        "bytes": 15876,
-        "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
-      },
-      {
-        "path": "content/body-renderer-revision.json",
-        "bytes": 214791,
-        "sha256": "af5cd7cda4fde0f48e04db9844513c9b8a3f75b5b7ca4e72251bad80a13b94e4"
-      },
-      {
-        "path": "content/dental-mri-pins.json",
-        "bytes": 57639,
-        "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
-      },
-      {
-        "path": "content/dental-mri.ts",
-        "bytes": 3508,
-        "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
-      },
-      {
-        "path": "docs/DENTAL_MRI_EVIDENCE.md",
-        "bytes": 4542,
-        "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
-      },
-      {
-        "path": "docs/KEYBOARD_ZOOM.md",
-        "bytes": 1456,
-        "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
-      },
-      {
-        "path": "lib/camera-keyboard.ts",
-        "bytes": 9666,
-        "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
-      },
-      {
-        "path": "lib/dental-mri.ts",
-        "bytes": 1866,
-        "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
-      },
-      {
-        "path": "package.json",
-        "bytes": 86739,
-        "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
-      },
-      {
-        "path": "scripts/hip-quick-check-history-context.mjs",
-        "bytes": 9024,
-        "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
-      },
-      {
-        "path": "scripts/test-camera-keyboard-zoom.mjs",
-        "bytes": 11426,
-        "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
-      },
-      {
-        "path": "scripts/test-dental-mri-native.mjs",
-        "bytes": 8870,
-        "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
-      },
-      {
-        "path": "scripts/test-hip-history-entry-refusals.mjs",
-        "bytes": 6786,
-        "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
-      },
-      {
-        "path": "scripts/test-hip-quick-check-history.mjs",
-        "bytes": 4609,
-        "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
-      },
-      {
-        "path": "scripts/test-regional-tour-player.mjs",
-        "bytes": 126985,
-        "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
-      },
-      {
-        "path": "scripts/verify-dental-mri-transition.mjs",
-        "bytes": 17132,
-        "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+        "path": "checkpoint-after-suite-queue-20261021.mjs",
+        "sha256": "9072c4c90cefb2ca0f39d44f609933fc929e3f8e96a7a168183db821d3a9029c"
       }
     ],
-    "sourceCommitted": false,
     "canonicalInstalled": false
   },
-  "parent": "e00ef31426da298da2f67391c53b18d0a02ae68c",
-  "gitParent": "e00ef31426da298da2f67391c53b18d0a02ae68c",
+  "parent": "ee8edccb1d4d3bc24f802dfcf857a73fa343f3cc",
+  "gitParent": "ee8edccb1d4d3bc24f802dfcf857a73fa343f3cc",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -510,6 +421,46 @@
       "path": "evidence/20261020-inbox-material-website-integration/VERIFICATION.json",
       "bytes": 4331,
       "sha256": "a69917d04d1e9f64a56eb9a78f1108f01d47d5fa7ee1b2b1f03e85c23d94cd58"
+    },
+    {
+      "path": "evidence/20261021-after-suite-dental-queue/evidence/AFTER_SUITE_QUEUE_SYNTAX.json",
+      "bytes": 489,
+      "sha256": "fc2f9530134416473fb9916f84a5dbe79da9f4741c92bf6ca0e9e1290f26259e"
+    },
+    {
+      "path": "evidence/20261021-after-suite-dental-queue/evidence/AFTER_SUITE_QUEUE_SYNTAX.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-after-suite-dental-queue/evidence/AFTER_SUITE_QUEUE_TEST.json",
+      "bytes": 608,
+      "sha256": "b87e300526a342793c66eedc2841f585515e70c01a87fe5effd3557d03ebb322"
+    },
+    {
+      "path": "evidence/20261021-after-suite-dental-queue/evidence/AFTER_SUITE_QUEUE_TEST.log",
+      "bytes": 662,
+      "sha256": "138ff5b9c4d9ff9312e1d6a0f76b172e13af44e81e52f70d4dd4c6611c5f7c06"
+    },
+    {
+      "path": "evidence/20261021-after-suite-dental-queue/evidence/MAIN_REVIEW.json",
+      "bytes": 8391,
+      "sha256": "dc88105d98371fdc253bd596799bbab34ca67618e65eaa14d970ccb6e9ffd8eb"
+    },
+    {
+      "path": "evidence/20261021-after-suite-dental-queue/scripts/checkpoint-after-suite-queue-20261021.mjs",
+      "bytes": 9138,
+      "sha256": "9072c4c90cefb2ca0f39d44f609933fc929e3f8e96a7a168183db821d3a9029c"
+    },
+    {
+      "path": "evidence/20261021-after-suite-dental-queue/scripts/queue-dental-after-suite-20261021.mjs",
+      "bytes": 11341,
+      "sha256": "6eea1346270a81ced888b558de7941f1145207b8c40c739f51e4e01a8482b519"
+    },
+    {
+      "path": "evidence/20261021-after-suite-dental-queue/scripts/test-dental-after-suite-queue-20261021.mjs",
+      "bytes": 3961,
+      "sha256": "d4688f071ac87215b52c72226b502061d60668a1dfdadcf719054ebe35077ce4"
     },
     {
       "path": "evidence/20261021-atlas-source-assembly/evidence/ASSEMBLED_CAMERA_KEYBOARD_PORTABLE.json",
@@ -3108,14 +3059,10 @@
     }
   ],
   "removed": [],
-  "scope": "Selected20actual uncommitted source paths,2Website assurance proposal paths, source preimages and bounded main-review/renderer/syntax/inverse proof on filtered ancestry. No full clone/raw canonical Git history, geometry, dependencies, scans/masks/private modules/reviews/databases/secrets/browser pixels/DOM. Observation/coordination local only. Not whole/runnable/private-data backup or generated/clinical admission.",
+  "scope": "Three local bounded successor/checkpoint scripts, six-case protocol test receipts and explicit limits on prior filtered source ancestry. Queue/process snapshots and coordination stay F-local. No full source/raw canonical ancestry/models/dependencies/scans/masks/private data/browser pixels/DOM. Not whole/runnable/private-data backup or actual full transition pass.",
   "proof": {
-    "staticGateInversePass": true,
-    "rendererGenerateAndCheckPass": true,
-    "rendererFiles": 1479,
-    "spinalWholeInverseHunks": 20,
-    "actualFullTransitionPass": false,
-    "actualWebsiteModulePass": false,
+    "protocolCases": 6,
+    "actualQueuedSourceStepsExecuted": 0,
     "fullSuitePass": false,
     "clinicalApproval": false
   },

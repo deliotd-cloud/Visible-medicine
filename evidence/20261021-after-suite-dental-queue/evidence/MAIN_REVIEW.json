@@ -1,0 +1,195 @@
+{
+  "at": "2026-10-21T02:10:08.879Z",
+  "phase": "bounded local successor actually running and waiting for live full Website run",
+  "previousGoalTurnClassification": "progress: separate full dental gate, stock1479input renderer generation/check, exact corpus CT contract proposal and verified602blob filtered backup",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "target": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourcePaths": [
+    {
+      "path": ".gitattributes",
+      "bytes": 4314,
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 354693,
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "af5cd7cda4fde0f48e04db9844513c9b8a3f75b5b7ca4e72251bad80a13b94e4"
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 4542,
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11426,
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "scripts/test-dental-mri-native.mjs",
+      "bytes": 8870,
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6786,
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "scripts/verify-dental-mri-transition.mjs",
+      "bytes": 17132,
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    }
+  ],
+  "sourceCheckpoint": "F:/VisibleMedicine/recovery/checkpoints/20261021-transition-contracts-ready/checkpoint.json",
+  "queue": {
+    "stage": "F:/VisibleMedicine/staging/20261021-after-suite-dental",
+    "pid": 238208,
+    "parentPid": 232948,
+    "execSessionId": 20530,
+    "phaseAtCheckpoint": "waiting-specific-live-run",
+    "liveProcessConfirmed": true,
+    "statePath": "F:/VisibleMedicine/staging/20261021-after-suite-dental/state.json",
+    "lastVerifiedWebsiteLiveAt": "2026-10-21T02:09:23.801Z",
+    "scripts": [
+      {
+        "path": "queue-dental-after-suite-20261021.mjs",
+        "sha256": "6eea1346270a81ced888b558de7941f1145207b8c40c739f51e4e01a8482b519"
+      },
+      {
+        "path": "test-dental-after-suite-queue-20261021.mjs",
+        "sha256": "d4688f071ac87215b52c72226b502061d60668a1dfdadcf719054ebe35077ce4"
+      },
+      {
+        "path": "checkpoint-after-suite-queue-20261021.mjs",
+        "sha256": "9072c4c90cefb2ca0f39d44f609933fc929e3f8e96a7a168183db821d3a9029c"
+      }
+    ],
+    "action": "After exact runner/test PID+command+parent+creation identities have exited and the stock terminal receipt proves no input/asset drift or interruption, verify5053frozen bytes, then run stock trusted display-pin generation, stock renderer --check and actual full dental transition sequentially. Preserve nonzero Website result. Assert exactly28changed/1076unchanged display pins; stop at first failure. No automatic commit/import/site cutover/review decision.",
+    "pause": "On explicit owner pause, create STOP_REQUESTED at queue root; waiting job exits before mutation, or current admitted gate finishes and no next step starts. Do not kill/restart the original full suite on observation timeout.",
+    "actualQueuedSourceStepsExecuted": 0,
+    "actualFullDentalGatePass": false,
+    "sourceMayLaterHaveOneAdditionalGeneratedPinFile": true,
+    "nextTurn": "Revalidate actual PID238208/command and exact state/receipts, not this snapshot alone. While it is live, do not start another heavy check or duplicate generator. Once terminal, inspect actual full Website inventory and queued theorem/failure logs. Source21pin identity must come from actual state after generation, not prior20hash assumption."
+  },
+  "receipts": [
+    {
+      "label": "AFTER_SUITE_QUEUE_TEST",
+      "command": "node",
+      "args": [
+        "--test",
+        "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/test-dental-after-suite-queue-20261021.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/AFTER_SUITE_QUEUE_TEST.log",
+      "logSha256": "138ff5b9c4d9ff9312e1d6a0f76b172e13af44e81e52f70d4dd4c6611c5f7c06",
+      "footer": [
+        "ℹ tests 6",
+        "ℹ pass 6",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "AFTER_SUITE_QUEUE_SYNTAX",
+      "command": "node",
+      "args": [
+        "--check",
+        "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/queue-dental-after-suite-20261021.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/AFTER_SUITE_QUEUE_SYNTAX.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "footer": [],
+      "canonicalInstalled": false
+    }
+  ],
+  "protocolUnitCases": 6,
+  "fullSuiteObservation": {
+    "path": "F:/VisibleMedicine/staging/20261021-complete-website-assurance/observations/2026-10-21T02-09-12.957Z/observation.json",
+    "sha256": "82a1bd440474393482f9c97952a7452006c2122e1e9fa6c6aebd2cd705aedb52",
+    "live": true,
+    "terminal": false,
+    "namedInputs": 5053
+  },
+  "resourceObservation": "Windows available physical memory was359336KiB during delayed light-driver startups and later4514704KiB. Original live handles were retained; both original light checks eventually passed without retry/termination. No unrelated app closed and no memory/pagefile/security setting changed. This correlation is not a diagnosed causal claim.",
+  "testsScope": "Six scheduler-only protocol cases prove identity/reuse/terminal/drift/interruption/pin-delta refusal; they do not execute or substitute the actual full dental/theory/Website tests.",
+  "sourceCommitted": false,
+  "websiteImported": false,
+  "canonicalInstalled": false,
+  "fullSuitePass": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true
+}

@@ -1,0 +1,21 @@
+{
+  "label": "AFTER_SUITE_QUEUE_TEST",
+  "command": "node",
+  "args": [
+    "--test",
+    "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/test-dental-after-suite-queue-20261021.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/AFTER_SUITE_QUEUE_TEST.log",
+  "logSha256": "138ff5b9c4d9ff9312e1d6a0f76b172e13af44e81e52f70d4dd4c6611c5f7c06",
+  "footer": [
+    "ℹ tests 6",
+    "ℹ pass 6",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

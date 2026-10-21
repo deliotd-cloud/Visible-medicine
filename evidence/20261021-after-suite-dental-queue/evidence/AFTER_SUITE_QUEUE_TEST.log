@@ -1,0 +1,14 @@
+✔ real run identities hold slot, even if a receipt appears before process exit (1.1502ms)
+✔ wrong process identity and parent cannot release or occupy the admitted slot (12.5883ms)
+✔ vanished run without a terminal receipt refuses; genuine failure remains a failure (0.1433ms)
+✔ drift, cancellation, resource exit, missing counts and wrong inventory require triage (1.151ms)
+✔ exact28pin delta conserves all1104ordered identities and metadata (4.0299ms)
+✔ unrelated, missing, unchanged, reordered or malformed pins refuse (126.4582ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 24972.8729
