@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T11:47:09.932Z",
+  "at": "2026-10-21T12:03:06.782Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5161,
+    "canonicalNamedInputs": 5169,
     "canonicalInstalled": true
   },
-  "parent": "f7d604f1340d6ab37d8c3ee1cd0b179ba5b4ed89",
-  "gitParent": "f7d604f1340d6ab37d8c3ee1cd0b179ba5b4ed89",
+  "parent": "801a095dbb50709a24699a9fe579857094838fdf",
+  "gitParent": "801a095dbb50709a24699a9fe579857094838fdf",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4996,6 +4996,136 @@
       "sha256": "e10677129e441c7d962b997f89bb957c75eb6e6e74d449142d1752dbfdf342cc"
     },
     {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/controls/admit-psoas-salivary-epochs-20261021.mjs",
+      "bytes": 10926,
+      "sha256": "5a35e217c5deeeb4349fa12ed2b120b230f763bbaa9539fdb213a0b903cee9a6"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/controls/checkpoint-psoas-salivary-source-bytes-20261021.mjs",
+      "bytes": 8744,
+      "sha256": "2d890366a7424175a4b7cb1d599a72d768de26848368a56b98a1cd171e2cb9b0"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/controls/restore-atlas-source-eol-20261021.mjs",
+      "bytes": 8187,
+      "sha256": "4b3ce38e685def48f2498a368d504984a0bccdaa96a8a27cfeed6fd2257d611a"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/PROOF.json",
+      "bytes": 4365,
+      "sha256": "f9d19b779c654893e4d01cdfad47c9d70f990362f9fe7f1b4cf104ad474a2673"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/source-bytes/APPLICATION.json",
+      "bytes": 2331,
+      "sha256": "aaea5af92b71b9d3b0a0a4329732652248065dab203b1b72c5823c29cd7c166d"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/source-bytes/AUDIT.md",
+      "bytes": 4378,
+      "sha256": "377ba2b0e3c6a54a1a47ebadb1c23bcfe5f5192533af8f7c667b7a8bf855a524"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/source-bytes/native.json",
+      "bytes": 525,
+      "sha256": "1d673c09cac3e3e74167c917269bdcd55c8583ae1bf553e87338305a7016a313"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/source-bytes/native.log",
+      "bytes": 1150,
+      "sha256": "c69c1856f25a8bd2b8835ed989554cf5397ac4e23ff263e3cc637b27ac428fcd"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/source-bytes/RESTORATION.json",
+      "bytes": 3260,
+      "sha256": "bbbb7c1e428a4e35e326e6e0f4fa1953df83339def099cc96fcf4ea1f3b2852a"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/source-bytes/types.json",
+      "bytes": 361,
+      "sha256": "bd520c1805baa615a476a3b14f8e35431273be19e718d57c4335e05863efb1ef"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/source-bytes/types.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/teaching/native.json",
+      "bytes": 578,
+      "sha256": "34b6154439bca2303896ffe591a40232b13a0049baa121e27e62761107851ac5"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/teaching/native.log",
+      "bytes": 5613,
+      "sha256": "7a48ded4dc63374b643e173b5db587c65a37cf46e2be4675168436faef24f1cc"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/evidence/teaching/PREPARATION.json",
+      "bytes": 5911,
+      "sha256": "3e387371a15c14ba2509524ca7e461daef6fb3a9087f8875a7c80052d6303a65"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 5172,
+      "sha256": "8b6e741d1565be147f25258163ffdc00830aafcca2f4a04b39a0f4edbd5e62cf"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 5850,
+      "sha256": "59bf61933c8a8944bb7da9bd10cdb517c93ddd65af74ef34b0934c66389397a2"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/clinical-review-psoas-current-preservation.test.mjs",
+      "bytes": 2345,
+      "sha256": "ce84fc5cc359907e07bffd364cb00de7c9c2b3a232254956d04d35fd60aece51"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/clinical-review-psoas-xray.test.ts",
+      "bytes": 19824,
+      "sha256": "48bd7232dc16e830cd5f8a7be95ab6ead9de41d9365ff55815457360f49dff16"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "bytes": 33077,
+      "sha256": "a6fea25a4dd1bde5c87d02cf993459a44c255a735e73ef9e0e7b20331309696a"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/fixtures/clinical-review-psoas-xray.original.raw",
+      "bytes": 18282,
+      "sha256": "7687a4b56ee61dcb46603cdcab5b7e273b2f7cfa7456a854f859b37cb2cf9af4"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/fixtures/salivary-cache-epoch-20261021/atlas190-current-delivery.original.mjs.raw",
+      "bytes": 5077,
+      "sha256": "1788fce7a307bc36145b20a570e3783a4c496cb1f06e26f8faf1b38195db93ef"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/fixtures/salivary-cache-epoch-20261021/git-root-preservation.original.mjs.raw",
+      "bytes": 5683,
+      "sha256": "d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/fixtures/salivary-cache-epoch-20261021/original.ts.raw",
+      "bytes": 29064,
+      "sha256": "c4e18aeb9ce2056cb50fcef3a665de0356f91b88ff78992a928b7346f3ca2362"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/salivary-cache-epoch-adapter.mjs",
+      "bytes": 2001,
+      "sha256": "8a84ac8dfe143a07113ca237e31ab1443ffe8a80a79c6a9559adef4362aedab0"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/salivary-cache-epoch-preservation.test.mjs",
+      "bytes": 2589,
+      "sha256": "f17f2181b380bae251927bda8feeca6e214a251444e8c0e8fb50bf29121cd1e4"
+    },
+    {
+      "path": "evidence/20261021-psoas-salivary-source-bytes-verified/installed-website/tests/salivary-cache-guard-adaptation.test.mjs",
+      "bytes": 3586,
+      "sha256": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468"
+    },
+    {
       "path": "evidence/20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.json",
       "bytes": 769,
       "sha256": "2358d74b7d8558de66a2bd4a0740294b0bee0c1b507aaf795294d1701f954f9d"
@@ -8607,9 +8737,9 @@
     }
   ],
   "removed": [],
-  "scope": "Explicit installed package/test/four MIT-and-third-party-carveout text files, small metadata-only native/packaging proofs and controls, plus clearly proposal-only authored tests/original-test fixtures. Previously filtered source-only ancestry only. No raw canonical ancestry/full project, scans/masks/models/media/datasets/private records or references/env/dependencies/native full TAP/browser DOM. Partial source recovery, not full/private/runnable backup, clinical sign-off, spatial registration or public deployment.",
+  "scope": "Explicit twelve installed authored developer tests/adapters/full original test fixtures, small native/type receipts/logs, metadata-only nine-path source-byte audit and guarded controls. Previously filtered source-only ancestry only. No raw canonical ancestry, full project, private scans/masks/models/media/datasets/records/references/env/dependencies/browser DOM or full native matrix TAP. Partial source recovery only; not full/private/runnable backup, clinical approval, registration or public deployment.",
   "proof": {
-    "at": "2026-10-21T11:47:04.752Z",
+    "at": "2026-10-21T12:03:00.234Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -8617,8 +8747,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5161,
-    "controlledSourceInputs": 5154,
+    "currentNamedInputs": 5169,
+    "controlledSourceInputs": 5162,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -8628,59 +8758,96 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "1b6149e6acea7e37df75085566d934b38ac818b91fa85b5585cd51a901a4ea4b",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "3408adbc6325b7f62e5f274e57a507f4478cc1fb76c10f0d5838ddd57293881b",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-psoas-salivary-epoch-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "3ee0b40b6df9802bac7c06f2cb6db2558e887808d4fd3ba15515395cb9ffa043",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-psoas-salivary-epoch-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "9d051dedea70235263d3a427e71ddef39a2d503117aee7c7ec6f2627aeb36927",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "actualPackagingPasses": 24,
-    "allThreeReadOnlyPrebuildGatesPassed": true,
-    "licenseChangesStrictlyEolOnly": true,
-    "legalTextChanged": false,
-    "allCompanionRuntimeAndModelBytesVerified": true,
-    "modelIdentities": 137,
-    "modelPaths": 144,
-    "dependenciesChanged": false,
-    "typedInputsUnchanged": true,
-    "previousFullTypesOnIdenticalTypedInputs": true,
-    "productionBuildRerun": false,
-    "all71ItemsAndEightIdeasUnchanged": true,
-    "wholeAuditBaselineUnchanged": true,
-    "subsetNative": {
-      "terminal": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix/RESULT.json",
-      "terminalSha256": "643bd0898cad98aa18b764834df3afba68a04aadc07062b0b323b00ab54e6f9c",
+    "installedTestPaths": 12,
+    "addedTestPaths": 8,
+    "existingTestPathsChanged": 4,
+    "actualTeachingNative": {
+      "receipt": "F:/VisibleMedicine/staging/20261021-psoas-salivary-epoch-application/native.json",
+      "receiptSha256": "34b6154439bca2303896ffe591a40232b13a0049baa121e27e62761107851ac5",
       "counts": {
-        "tests": 289,
-        "pass": 202,
-        "fail": 87,
+        "tests": 17,
+        "pass": 16,
+        "fail": 1,
         "cancelled": 0,
         "skipped": 0,
         "todo": 0
       },
-      "entries": 80,
-      "sourceInputsUnchanged": true,
-      "failureInventory": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix/POST_MATRIX_TRIAGE.json",
-      "failureInventorySha256": "47964a18ec2c36f203a5863f29eff35a874b1494a71d80e73f6e1aad032780f6",
-      "all87FailuresMapped": true,
-      "failedFiles": 62,
-      "rootCauseDiagnosisComplete": false,
-      "packagingPassesNotSubtractedFromOldSubset": true
+      "allInputsUnchanged": true,
+      "unresolvedCaseAtThatTerminal": "strict Atlas working source bytes; separately corrected without changing tests"
     },
-    "proposalsUnrun": [
-      "psoas-current-epoch",
-      "salivary-cache-plus-two-coupled-guards"
-    ],
+    "strictSourceCorrection": {
+      "receipt": "F:/VisibleMedicine/staging/20261021-atlas-source-eol-restoration/RESTORATION.json",
+      "receiptSha256": "bbbb7c1e428a4e35e326e6e0f4fa1953df83339def099cc96fcf4ea1f3b2852a",
+      "atlasPaths": 9,
+      "strictlyCrlfInsertionRemoval": true,
+      "semanticEdits": false,
+      "committedSourceAdvanced": false,
+      "indexStatRefreshWithoutStagedContent": true,
+      "all1553WorkingSourceHashesExact": true,
+      "native": {
+        "at": "2026-10-21T12:01:28.673Z",
+        "args": [
+          "--test",
+          "--experimental-strip-types",
+          "--test-reporter=tap",
+          "--test-concurrency=1",
+          "tests/atlas190-current-delivery.test.mjs"
+        ],
+        "code": 0,
+        "signal": null,
+        "log": "F:/VisibleMedicine/staging/20261021-atlas-source-eol-restoration/native.log",
+        "logSha256": "c69c1856f25a8bd2b8835ed989554cf5397ac4e23ff263e3cc637b27ac428fcd",
+        "counts": {
+          "tests": 4,
+          "pass": 4,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        }
+      }
+    },
+    "freshFullTypes": {
+      "at": "2026-10-21T12:02:17.843Z",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-atlas-source-eol-restoration/types.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "counts": {}
+    },
+    "wholeOriginalSourcesAndAssertionsRetained": true,
+    "historicalAndCurrentContextsSeparate": true,
+    "forgedAndStaleRefusalsPreserved": true,
+    "noDecisionSaved": true,
+    "productionBuildRerun": false,
+    "previousPackaging24AndAllGatesStillSeparateEvidence": true,
+    "all71ItemsAndEightIdeasUnchanged": true,
+    "wholeAuditBaselineUnchanged": true,
+    "subset289_202_87Retained": true,
+    "subsetFailuresNotSubtracted": true,
+    "originalFullFailureBaseline": 136,
+    "originalFullSkips": 3,
+    "earlierDifferentSourceBaseline": 144,
+    "allNativeFailuresResolved": false,
+    "fullSuitePassingClaim": false,
     "ownerPreviewPid": 266712,
     "ownerPreviewSession": 32652,
     "ownerPreviewRestarted": false,
     "ownerTabsReloaded": false,
     "ownerDecisionsChanged": false,
     "unresolvedBrowserErrorKinds": 1,
-    "originalFullFailureBaseline": 136,
-    "earlierDifferentSourceBaseline": 144,
-    "fullSuitePassingClaim": false,
-    "allNativeFailuresResolved": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,

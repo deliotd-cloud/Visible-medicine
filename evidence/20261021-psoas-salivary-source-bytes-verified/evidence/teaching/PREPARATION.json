@@ -1,0 +1,121 @@
+{
+  "at": "2026-10-21T11:52:47.882Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "priorPath": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/SOURCE_INPUTS_AFTER.json",
+  "priorSha256": "1b6149e6acea7e37df75085566d934b38ac818b91fa85b5585cd51a901a4ea4b",
+  "preserved": [
+    {
+      "path": ".gitignore",
+      "bytes": 512,
+      "sha256": "837b4b1443e47990ea694e62bc42d2632318f194d87de8cda73054ca9b3b989b"
+    },
+    {
+      "path": "docs/completion-checklist.json",
+      "bytes": 166561,
+      "sha256": "d80adecc78cb59a3aabd69e09e1df6987da1fcce1718e617a7f5d1427d98dde8"
+    },
+    {
+      "path": "docs/completion-checklist.md",
+      "bytes": 163505,
+      "sha256": "10562770025c0302924c92e729d48d2e06d8b6473fd1a0287585822ef182714e"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    }
+  ],
+  "paths": [
+    {
+      "path": "tests/clinical-review-psoas-xray.test.ts",
+      "proposal": "F:/VisibleMedicine/staging/20261021-psoas-current-epoch-proposal/tests/clinical-review-psoas-xray.test.ts",
+      "before": "7687a4b56ee61dcb46603cdcab5b7e273b2f7cfa7456a854f859b37cb2cf9af4",
+      "after": "48bd7232dc16e830cd5f8a7be95ab6ead9de41d9365ff55815457360f49dff16"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-psoas-xray.original.raw",
+      "proposal": "F:/VisibleMedicine/staging/20261021-psoas-current-epoch-proposal/tests/fixtures/clinical-review-psoas-xray.original.raw",
+      "before": null,
+      "after": "7687a4b56ee61dcb46603cdcab5b7e273b2f7cfa7456a854f859b37cb2cf9af4"
+    },
+    {
+      "path": "tests/clinical-review-psoas-current-preservation.test.mjs",
+      "proposal": "F:/VisibleMedicine/staging/20261021-psoas-current-epoch-proposal/tests/clinical-review-psoas-current-preservation.test.mjs",
+      "before": null,
+      "after": "ce84fc5cc359907e07bffd364cb00de7c9c2b3a232254956d04d35fd60aece51"
+    },
+    {
+      "path": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "before": "c4e18aeb9ce2056cb50fcef3a665de0356f91b88ff78992a928b7346f3ca2362",
+      "after": "a6fea25a4dd1bde5c87d02cf993459a44c255a735e73ef9e0e7b20331309696a"
+    },
+    {
+      "path": "tests/clinical-review-git-root-preservation.test.mjs",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/clinical-review-git-root-preservation.test.mjs",
+      "before": "d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1",
+      "after": "59bf61933c8a8944bb7da9bd10cdb517c93ddd65af74ef34b0934c66389397a2"
+    },
+    {
+      "path": "tests/atlas190-current-delivery.test.mjs",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/atlas190-current-delivery.test.mjs",
+      "before": "1788fce7a307bc36145b20a570e3783a4c496cb1f06e26f8faf1b38195db93ef",
+      "after": "8b6e741d1565be147f25258163ffdc00830aafcca2f4a04b39a0f4edbd5e62cf"
+    },
+    {
+      "path": "tests/fixtures/salivary-cache-epoch-20261021/original.ts.raw",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/fixtures/salivary-cache-epoch-20261021/original.ts.raw",
+      "before": null,
+      "after": "c4e18aeb9ce2056cb50fcef3a665de0356f91b88ff78992a928b7346f3ca2362"
+    },
+    {
+      "path": "tests/fixtures/salivary-cache-epoch-20261021/git-root-preservation.original.mjs.raw",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/fixtures/salivary-cache-epoch-20261021/git-root-preservation.original.mjs.raw",
+      "before": null,
+      "after": "d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1"
+    },
+    {
+      "path": "tests/fixtures/salivary-cache-epoch-20261021/atlas190-current-delivery.original.mjs.raw",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/fixtures/salivary-cache-epoch-20261021/atlas190-current-delivery.original.mjs.raw",
+      "before": null,
+      "after": "1788fce7a307bc36145b20a570e3783a4c496cb1f06e26f8faf1b38195db93ef"
+    },
+    {
+      "path": "tests/salivary-cache-epoch-adapter.mjs",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/salivary-cache-epoch-adapter.mjs",
+      "before": null,
+      "after": "8a84ac8dfe143a07113ca237e31ab1443ffe8a80a79c6a9559adef4362aedab0"
+    },
+    {
+      "path": "tests/salivary-cache-epoch-preservation.test.mjs",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/salivary-cache-epoch-preservation.test.mjs",
+      "before": null,
+      "after": "f17f2181b380bae251927bda8feeca6e214a251444e8c0e8fb50bf29121cd1e4"
+    },
+    {
+      "path": "tests/salivary-cache-guard-adaptation.test.mjs",
+      "proposal": "F:/VisibleMedicine/staging/20261021-salivary-cache-epoch-proposal/tests/salivary-cache-guard-adaptation.test.mjs",
+      "before": null,
+      "after": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468"
+    }
+  ],
+  "ownerPreviewPid": 266712,
+  "canonicalApplied": false,
+  "nativeExecuted": false
+}

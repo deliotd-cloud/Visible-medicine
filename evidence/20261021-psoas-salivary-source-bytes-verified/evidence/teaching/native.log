@@ -1,0 +1,135 @@
+TAP version 13
+# Subtest: salivary Map typing correction has an exact whole-source inverse and identical executable output
+ok 1 - salivary Map typing correction has an exact whole-source inverse and identical executable output
+  ---
+  duration_ms: 41.7976
+  type: 'test'
+  ...
+# Subtest: source190 admission preserves the complete previous current contract as a separate epoch
+ok 2 - source190 admission preserves the complete previous current contract as a separate epoch
+  ---
+  duration_ms: 4.2977
+  type: 'test'
+  ...
+# Subtest: source190 Review and every emitted learner file match their exact committed source and binding
+not ok 3 - source190 Review and every emitted learner file match their exact committed source and binding
+  ---
+  duration_ms: 217.3527
+  type: 'test'
+  location: 'F:\\VisibleMedicine\\website\\tests\\atlas190-current-delivery.test.mjs:37:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    app/review/overview/page.tsx source
+    + actual - expected
+    
+    + 'ddafaa8e8aa91abcf1ac942f7089cc5adfecb07495fbca5d5648a1003f12e554'
+    - 'ebf6ddd5925a250be9e089c6462dbb088b3f40a22bbe184c277064e2a4e6c8f4'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'ebf6ddd5925a250be9e089c6462dbb088b3f40a22bbe184c277064e2a4e6c8f4'
+  actual: 'ddafaa8e8aa91abcf1ac942f7089cc5adfecb07495fbca5d5648a1003f12e554'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///F:/VisibleMedicine/website/tests/atlas190-current-delivery.test.mjs:40:110)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1325:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+    Test.postRun (node:internal/test_runner/test:1465:19)
+    Test.run (node:internal/test_runner/test:1390:12)
+    process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+  ...
+# Subtest: source190 protected model bytes and licence package set remain identical to the previous candidate
+ok 4 - source190 protected model bytes and licence package set remain identical to the previous candidate
+  ---
+  duration_ms: 33.6378
+  type: 'test'
+  ...
+# Subtest: clinical-review-salivary-stylohyoid-quiz retains every original assertion and historical/current theorem
+ok 5 - clinical-review-salivary-stylohyoid-quiz retains every original assertion and historical/current theorem
+  ---
+  duration_ms: 2.3447
+  type: 'test'
+  ...
+# Subtest: clinical-review-teaching-heading retains every original assertion and historical/current theorem
+ok 6 - clinical-review-teaching-heading retains every original assertion and historical/current theorem
+  ---
+  duration_ms: 1.8672
+  type: 'test'
+  ...
+# Subtest: a changed historical epoch, removed assertion or unchecked root cannot pass as a root-only repair
+ok 7 - a changed historical epoch, removed assertion or unchecked root cannot pass as a root-only repair
+  ---
+  duration_ms: 5.8774
+  type: 'test'
+  ...
+# Subtest: psoas historical/current proposal retains the complete original and rejects source mutations
+ok 8 - psoas historical/current proposal retains the complete original and rejects source mutations
+  ---
+  duration_ms: 3.8099
+  type: 'test'
+  ...
+# Subtest: exact source psoas X-ray drafts reach the learner and protected Review
+ok 9 - exact source psoas X-ray drafts reach the learner and protected Review
+  ---
+  duration_ms: 1525.4973
+  type: 'test'
+  ...
+# Subtest: 9,936 historical placements and 1,104 packets change only for two psoas X-ray drafts; current delivery remains source-bound
+ok 10 - 9,936 historical placements and 1,104 packets change only for two psoas X-ray drafts; current delivery remains source-bound
+  ---
+  duration_ms: 86649.1983
+  type: 'test'
+  ...
+# Subtest: six exact salivary and stylohyoid quiz drafts reach both learners and protected Review
+ok 11 - six exact salivary and stylohyoid quiz drafts reach both learners and protected Review
+  ---
+  duration_ms: 19408.4631
+  type: 'test'
+  ...
+# Subtest: immutable 9,936 lessons and 1,104 packets match imported source and refuse forged decisions
+ok 12 - immutable 9,936 lessons and 1,104 packets match imported source and refuse forged decisions
+  ---
+  duration_ms: 86934.5159
+  type: 'test'
+  ...
+# Subtest: salivary cache epochs retain the complete original source and both registered cases
+ok 13 - salivary cache epochs retain the complete original source and both registered cases
+  ---
+  duration_ms: 1.5891
+  type: 'test'
+  ...
+# Subtest: altering an epoch, an original assertion, or wrapping the cases fails preservation
+ok 14 - altering an epoch, an original assertion, or wrapping the cases fails preservation
+  ---
+  duration_ms: 0.5386
+  type: 'test'
+  ...
+# Subtest: both original preservation guards reconstruct exactly and their cases remain registered
+ok 15 - both original preservation guards reconstruct exactly and their cases remain registered
+  ---
+  duration_ms: 2.6032
+  type: 'test'
+  ...
+# Subtest: the adapter refuses arbitrary current edits and keeps the exact prior typed/root/CT witness
+ok 16 - the adapter refuses arbitrary current edits and keeps the exact prior typed/root/CT witness
+  ---
+  duration_ms: 2.0428
+  type: 'test'
+  ...
+# Subtest: mutating a guard assertion or registration violates its independently pinned postimage
+ok 17 - mutating a guard assertion or registration violates its independently pinned postimage
+  ---
+  duration_ms: 0.3373
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 16
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 196258.4194

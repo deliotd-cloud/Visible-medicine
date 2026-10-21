@@ -1,0 +1,80 @@
+{
+  "at": "2026-10-21T12:01:23.018Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "report": "F:/VisibleMedicine/staging/20261021-atlas-source-eol-audit/REPORT.md",
+  "reportSha256": "377ba2b0e3c6a54a1a47ebadb1c23bcfe5f5192533af8f7c667b7a8bf855a524",
+  "paths": [
+    {
+      "path": "app/review/overview/page.tsx",
+      "beforeSha256": "ddafaa8e8aa91abcf1ac942f7089cc5adfecb07495fbca5d5648a1003f12e554",
+      "afterSha256": "ebf6ddd5925a250be9e089c6462dbb088b3f40a22bbe184c277064e2a4e6c8f4",
+      "beforeBytes": 6216,
+      "afterBytes": 6125
+    },
+    {
+      "path": "content/abdominal-branch-imaging-pins.json",
+      "beforeSha256": "735ff50192908a217378920c0f2875b83611ab2d579e41d9a75ea2b6fab370e1",
+      "afterSha256": "5daaecd50fae68d64ef88d39237b6700b9f2bac3fa84f1a4792cbc05b3228d61",
+      "beforeBytes": 133615,
+      "afterBytes": 130562
+    },
+    {
+      "path": "content/coronary-arterial-us-pins.json",
+      "beforeSha256": "8fe899c4cc342ee61afa2b086d2920b4eb46cc62bb52ae3583ce9f9e35e74435",
+      "afterSha256": "9277caac4d2b97c75fced2f393b481f0c84800897a9faa9b28bd9c12e8854a18",
+      "beforeBytes": 13749,
+      "afterBytes": 13342
+    },
+    {
+      "path": "lib/coronary-arterial-us.ts",
+      "beforeSha256": "6ca30f92e3085c431325c681b2bcd17ab867da6e3dd8a935acb38470332bfe59",
+      "afterSha256": "fa2eae6fdab9639f5d971c146bae925342bd1caf4aca19d42076eb01cef4ed0b",
+      "beforeBytes": 1865,
+      "afterBytes": 1843
+    },
+    {
+      "path": "content/coronary-arterial-us.ts",
+      "beforeSha256": "4ba07709b49b9c72f5d9e42f12495bc2a8439cc3505a7a5132018ca0fa290307",
+      "afterSha256": "64598a6dcb26aa59123b20539911faa9e3eabebb2015ad7198e105d341865efb",
+      "beforeBytes": 1759,
+      "afterBytes": 1742
+    },
+    {
+      "path": "lib/abdominal-branch-imaging.ts",
+      "beforeSha256": "c93f1b7ea40b7d2646b51d84632b3388b32b957351370ea78b948808a99631ae",
+      "afterSha256": "3d4c1a7604c3277cdc31b1db77adbcd15b55345848e3345b7f322a1be5eadcf3",
+      "beforeBytes": 1958,
+      "afterBytes": 1935
+    },
+    {
+      "path": "content/abdominal-branch-imaging.ts",
+      "beforeSha256": "ec3c59407eb763814afa4a9bd749ea801a39931d0dc884fbe294a165fc083d67",
+      "afterSha256": "5976ad5d71b7aceedb81e4bff184ac40486c051cd0d69efb128d81c3124b6bff",
+      "beforeBytes": 15266,
+      "afterBytes": 15184
+    },
+    {
+      "path": "lib/imaging-sync.ts",
+      "beforeSha256": "337351363197184239a62ff840bc9f6f1f260ce0d9fc61fa9adddf433f7b3331",
+      "afterSha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147",
+      "beforeBytes": 7784,
+      "afterBytes": 7558
+    },
+    {
+      "path": "lib/didanix-atlas-adapter.ts",
+      "beforeSha256": "54d3483448a4cebce88a15eefd9ad43782e9d4cc0fb2d41b971d2278d614c382",
+      "afterSha256": "a3035a986d57d6d261d61f9f2a4c28c1ae5b74869e016a97412bcf0ab6947b11",
+      "beforeBytes": 7636,
+      "afterBytes": 7542
+    }
+  ],
+  "all1553WorkingSourceHashesExact": true,
+  "wholeTextPreserved": true,
+  "atlasHeadAdvanced": false,
+  "atlasGitClean": true,
+  "websiteInputsUnchanged": true,
+  "testsOrManifestRepinned": false,
+  "ownerPreviewRestarted": false,
+  "indexStatRefreshWithoutStagedContent": true,
+  "resumedAfterInitialStrictDirtyStatRefusal": true
+}
