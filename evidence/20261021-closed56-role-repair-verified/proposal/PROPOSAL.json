@@ -1,0 +1,26 @@
+{
+  "schema": "vm-closed56-historical-role-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalUnchangedByWorker": true,
+  "proposedPaths": [
+    {"path":"tests/closed56-femoral-epoch.test.mjs","preimageSha256":"bb6a8d631f190915f55d5ac4b5cdceb214691079b6502086f0d07c168026f037","candidateSha256":"61e2886316e369954d6902709d885357b1f6c62318eb4c5056260eb6d40ab718","candidateBytes":8476},
+    {"path":"tests/closed56-live-preservation.test.mjs","preimageSha256":"49bd6c57054d9e2788d41906b66415ddb5325c59c8a63f3321313a394ee935b7","candidateSha256":"8b550a7c9c6fabfd66a4ed873a6eacb89c2821d0602028e3668ad711f9c61c7f","candidateBytes":6019},
+    {"path":"tests/closed56-live-preservation.mjs","preimageSha256":"91db3ee295c49991dcd1943e97ddb0e40c5d943697e64854bc7dd34c0f2df242","candidateSha256":"fa573561406fb1bc2cb7d33e9526e1a8e0fba608366d101ce50de842876cbee9","candidateBytes":5251},
+    {"path":"tests/closed56-live-context-repair-contract.test.mjs","preimageSha256":"e44381435701b71f17cf3144f2d7d017e03fede6b012a1e6b6f7473a3391bff5","candidateSha256":"6bfd1e38702c527eb6b9bbfdd0a4ab4f3ea8d54e5a8c4fcae2b9f7878426f859","candidateBytes":3692},
+    {"path":"tests/closed56-whole-role-transition-20261021.test.mjs","preimageSha256":null,"candidateSha256":"1e416bf0b40fbfd09be0389cc7341325307b9a84684594db449f60094394657c","candidateBytes":10866},
+    {"path":"tests/fixtures/closed56-live-preservation-before-role-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"91db3ee295c49991dcd1943e97ddb0e40c5d943697e64854bc7dd34c0f2df242","candidateBytes":5287},
+    {"path":"tests/fixtures/closed56-live-preservation-test-before-role-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"49bd6c57054d9e2788d41906b66415ddb5325c59c8a63f3321313a394ee935b7","candidateBytes":5256},
+    {"path":"tests/fixtures/closed56-femoral-epoch-before-role-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"bb6a8d631f190915f55d5ac4b5cdceb214691079b6502086f0d07c168026f037","candidateBytes":8172},
+    {"path":"tests/fixtures/closed56-live-context-repair-contract-before-role-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"e44381435701b71f17cf3144f2d7d017e03fede6b012a1e6b6f7473a3391bff5","candidateBytes":3299}
+  ],
+  "proof": {
+    "command": "node --test F:/VisibleMedicine/staging/20261021-closed56-historical-role-proposal/tests/closed56-whole-role-transition-20261021.test.mjs",
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "scope": "whole-file exact declared seams and inverse, original-negative removal, unknown append; staged source only"
+  },
+  "notProposed": ["verification-root/", "verify-source-only.mjs", "PROPOSAL.md", "PROPOSAL.json"]
+}

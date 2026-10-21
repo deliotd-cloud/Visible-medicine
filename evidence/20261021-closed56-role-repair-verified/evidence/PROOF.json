@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-21T12:53:22.863Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalInstalled": true,
+  "installation": {
+    "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
+    "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
+  },
+  "currentNamedInputs": 5174,
+  "controlledSourceInputs": 5167,
+  "preservedSourcePaths": [
+    ".gitignore",
+    "docs/completion-checklist.json",
+    "docs/completion-checklist.md",
+    "public/atlas-runtime/female-pelvis/LICENSE",
+    "public/atlas-runtime/head-neck/LICENSE",
+    "public/atlas-runtime/lower-limb/LICENSE",
+    "public/atlas-runtime/shoulder/LICENSE"
+  ],
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-closed56-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "592f2631ca857608175102874b5625f99d4c39beee4305de4937715e3486c2f0",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-closed56-role-application/PRESERVED_SOURCE_AFTER.json",
+  "preservedSnapshotSha256": "1d189e98289cfb9e1aa0a7c60d65101741816954a1716d69bded29ba7e9b0c81",
+  "reviewInputs": 1710,
+  "canonicalDeveloperToolingInstalled": true,
+  "closed56ExactInstalledPaths": 9,
+  "closed56ExistingEditedPaths": 4,
+  "wholeOriginalAndRoleInverseMutationProofsPassed": true,
+  "affectedClosed56ActualNativeCases": 30,
+  "affectedClosed56ActualNativePasses": 30,
+  "allSevenRootActualNativeCounts": {
+    "tests": 67,
+    "pass": 64,
+    "fail": 3,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "allSevenRootActualNativeCode": 1,
+  "remainingCases": [
+    {
+      "number": 34,
+      "title": "one current fixture binds exact source tree, four learners, protected Review and model registry"
+    },
+    {
+      "number": 35,
+      "title": "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs"
+    },
+    {
+      "number": 67,
+      "title": "current delivery retains every prior assertion outside the one-input count and historical context seams"
+    }
+  ],
+  "remainingDiagnosis": "Two unchanged current-atlas-delivery assertions still expect485/1550 rather than exact190/1553; unchanged head-index whole-current assertion still equates the moving current test to its87ed archive. These are the three actual failures, not silently repinned or counted as passes.",
+  "rawNativeLogExcludedFromBackup": true,
+  "currentValidatorAndFixtureUnchanged": true,
+  "allOtherSourceInputsAndBindingsUnchanged": true,
+  "all1553AtlasWorkingSourceBytesExact": true,
+  "all71ItemsAndEightIdeasUnchanged": true,
+  "wholeAuditBaselineUnchanged": true,
+  "originalFullFailureBaseline": 136,
+  "originalFullSkips": 3,
+  "earlierDifferentSourceBaseline": 144,
+  "subset289_202_87Retained": true,
+  "allNativeFailuresResolved": false,
+  "fullSuitePassingClaim": false,
+  "ownerPreviewPid": 266712,
+  "ownerPreviewSession": 32652,
+  "ownerFormsRefreshed": false,
+  "ownerDecisionsChanged": false,
+  "reviewCopyPreviewBuildPending": true,
+  "previewBuildOrRestartRan": false,
+  "productSourceChangedByThisRepair": false,
+  "unresolvedBrowserErrorKinds": 1,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "privateDataUploaded": false,
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "fullGoalActive": true
+}

@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-21T12:50:53.585Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/closed56-femoral-epoch.test.mjs",
+    "tests/closed56-live-preservation.test.mjs",
+    "tests/closed56-original-tests.test.mjs",
+    "tests/closed56-live-context-repair-contract.test.mjs",
+    "tests/closed56-whole-role-transition-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/head-index-tab-stop.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-closed56-role-application/native.tap",
+  "logSha256": "9477201ef8a423e503aff670d9d2b33399e88ae0c6e9286c9079cc1a2ce7b408",
+  "counts": {
+    "tests": 67,
+    "pass": 64,
+    "fail": 3,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [
+    {
+      "number": 34,
+      "title": "one current fixture binds exact source tree, four learners, protected Review and model registry"
+    },
+    {
+      "number": 35,
+      "title": "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs"
+    },
+    {
+      "number": 67,
+      "title": "current delivery retains every prior assertion outside the one-input count and historical context seams"
+    }
+  ],
+  "rawLogLocalOnly": true
+}

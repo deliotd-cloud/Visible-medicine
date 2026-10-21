@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T12:44:57.696Z",
+  "at": "2026-10-21T12:53:29.374Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5169,
+    "canonicalNamedInputs": 5174,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "3746c17a6ee35361fd85f1f2db32322ed358860c",
-  "gitParent": "3746c17a6ee35361fd85f1f2db32322ed358860c",
+  "parent": "efef8af7e643068e15efcb4483687167081c837e",
+  "gitParent": "efef8af7e643068e15efcb4483687167081c837e",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -1545,6 +1545,106 @@
       "path": "evidence/20261021-clinical-review-contracts/website/tests/girdle-admission-import-history.mjs",
       "bytes": 3521,
       "sha256": "b0939abb987a31cfaa07d656e9382d24af39f9bf23359a4b15bc9695b619a71e"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/controls/admit-closed56-role-repair-20261021.mjs",
+      "bytes": 8776,
+      "sha256": "24bde781429394a5771448e5aec3ad4c5e457a39d26235236cc1e713c449a094"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/controls/checkpoint-closed56-role-repair-20261021.mjs",
+      "bytes": 8362,
+      "sha256": "735b8fa8cc50365ccdc302ff2507375c1d5413dd4f97f598b8d7407210564bca"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/evidence/APPLICATION.json",
+      "bytes": 4913,
+      "sha256": "6b33f7b51c85f9addff4f416505da349bf0274d4c6462684794ffcea7b1d23b4"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/evidence/native.json",
+      "bytes": 1337,
+      "sha256": "cf9da868166a3e74f39549c895876014b5f5d913c3f277d8b71cd58399741bac"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/evidence/PROOF.json",
+      "bytes": 3435,
+      "sha256": "c578d4ba52773400d77dfd4bc86207a7b0add605d937eaa1d923733c75452257"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8476,
+      "sha256": "61e2886316e369954d6902709d885357b1f6c62318eb4c5056260eb6d40ab718"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/closed56-live-context-repair-contract.test.mjs",
+      "bytes": 3692,
+      "sha256": "6bfd1e38702c527eb6b9bbfdd0a4ab4f3ea8d54e5a8c4fcae2b9f7878426f859"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/closed56-live-preservation.mjs",
+      "bytes": 5251,
+      "sha256": "fa573561406fb1bc2cb7d33e9526e1a8e0fba608366d101ce50de842876cbee9"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/closed56-live-preservation.test.mjs",
+      "bytes": 6019,
+      "sha256": "8b550a7c9c6fabfd66a4ed873a6eacb89c2821d0602028e3668ad711f9c61c7f"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/closed56-whole-role-transition-20261021.test.mjs",
+      "bytes": 10866,
+      "sha256": "1e416bf0b40fbfd09be0389cc7341325307b9a84684594db449f60094394657c"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/fixtures/closed56-femoral-epoch-before-role-20261021.mjs.raw",
+      "bytes": 8172,
+      "sha256": "bb6a8d631f190915f55d5ac4b5cdceb214691079b6502086f0d07c168026f037"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/fixtures/closed56-live-context-repair-contract-before-role-20261021.mjs.raw",
+      "bytes": 3299,
+      "sha256": "e44381435701b71f17cf3144f2d7d017e03fede6b012a1e6b6f7473a3391bff5"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/fixtures/closed56-live-preservation-before-role-20261021.mjs.raw",
+      "bytes": 5287,
+      "sha256": "91db3ee295c49991dcd1943e97ddb0e40c5d943697e64854bc7dd34c0f2df242"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/installed-website/tests/fixtures/closed56-live-preservation-test-before-role-20261021.mjs.raw",
+      "bytes": 5256,
+      "sha256": "49bd6c57054d9e2788d41906b66415ddb5325c59c8a63f3321313a394ee935b7"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/preimages/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8172,
+      "sha256": "bb6a8d631f190915f55d5ac4b5cdceb214691079b6502086f0d07c168026f037"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/preimages/tests/closed56-live-context-repair-contract.test.mjs",
+      "bytes": 3299,
+      "sha256": "e44381435701b71f17cf3144f2d7d017e03fede6b012a1e6b6f7473a3391bff5"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/preimages/tests/closed56-live-preservation.mjs",
+      "bytes": 5287,
+      "sha256": "91db3ee295c49991dcd1943e97ddb0e40c5d943697e64854bc7dd34c0f2df242"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/preimages/tests/closed56-live-preservation.test.mjs",
+      "bytes": 5256,
+      "sha256": "49bd6c57054d9e2788d41906b66415ddb5325c59c8a63f3321313a394ee935b7"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/proposal/PROPOSAL.json",
+      "bytes": 2845,
+      "sha256": "3a459cd787522409548587c9c1251c62d6893d6ccc5216734911afe414c95507"
+    },
+    {
+      "path": "evidence/20261021-closed56-role-repair-verified/proposal/PROPOSAL.md",
+      "bytes": 5200,
+      "sha256": "e55ce7b1abe4639368a36955e0ce2a2fa68e5dddd36acaf94eaae3dae419d14c"
     },
     {
       "path": "evidence/20261021-combined-integration-batch/batch/atlas/app/body-content.ts",
@@ -8828,9 +8928,9 @@
     }
   ],
   "removed": [],
-  "scope": "Generic read-only QA controllers and sanitized text-only native practice/handoff/scrolling observations on prior filtered source ancestry. No private audit report, native coordinates/slices/movement plans, masks, pixels, private filenames, scans, models, review decisions/notes/identifiers/references/env/dependencies, raw canonical Git ancestry or raw browser DOM/media. Partial source recovery only, not whole/private/runnable backup, clinical or spatial approval, whole-suite acceptance or public deployment.",
+  "scope": "Nine exact installed test/helper/raw-source-proof paths, four original preimages, reviewed manifest/proposal, compact actual terminal receipts and guarded controls on prior filtered source ancestry. Full native log stays local. No native image/mask data, private audit or coordinates, scans, models, identifiers, decisions, notes, private references/env/dependencies, raw canonical Git ancestry, browser DOM/media or complete project/private recovery. All67actual cases include3retained failures; no whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T12:44:50.113Z",
+    "at": "2026-10-21T12:53:22.863Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -8838,8 +8938,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5169,
-    "controlledSourceInputs": 5162,
+    "currentNamedInputs": 5174,
+    "controlledSourceInputs": 5167,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -8849,25 +8949,43 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-desktop-review-copy-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "0ab8d696fbc56868d7c7b6366a43072872c32efe52134ee3344f4abf8859ab01",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-positive-mask-browser/PRESERVED_SOURCE_AT_QA.json",
-    "preservedSnapshotSha256": "37d07e92d8723c4702600aa850c6de637572fc6b3a47e7d46daaf1ba31fc55d0",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-closed56-role-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "592f2631ca857608175102874b5625f99d4c39beee4305de4937715e3486c2f0",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-closed56-role-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "1d189e98289cfb9e1aa0a7c60d65101741816954a1716d69bded29ba7e9b0c81",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "nativePositiveLocateBrowserJourneys": 2,
-    "semanticRevisionBoundHandoffObserved": true,
-    "studyQuizResultsIsolated": true,
-    "focusedCorrectFeedbackObserved": true,
-    "pointerCentredSliceScrollWithoutPageScrollObserved": true,
-    "keyboardSliceScrollWithoutPageScrollObserved": true,
-    "nativeAllEligibleMaskScoringAuditPassed": true,
-    "privateAuditDetailsExcludedFromBackup": true,
-    "sourceFilesChanged": false,
-    "tourBrowserObservationRetained": true,
-    "reviewCopyCanonicalSourceInstalled": true,
-    "reviewCopyOwnerPreviewContainsNewBuild": false,
-    "previewBuildOrRestartRan": false,
+    "closed56ExactInstalledPaths": 9,
+    "closed56ExistingEditedPaths": 4,
+    "wholeOriginalAndRoleInverseMutationProofsPassed": true,
+    "affectedClosed56ActualNativeCases": 30,
+    "affectedClosed56ActualNativePasses": 30,
+    "allSevenRootActualNativeCounts": {
+      "tests": 67,
+      "pass": 64,
+      "fail": 3,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "allSevenRootActualNativeCode": 1,
+    "remainingCases": [
+      {
+        "number": 34,
+        "title": "one current fixture binds exact source tree, four learners, protected Review and model registry"
+      },
+      {
+        "number": 35,
+        "title": "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs"
+      },
+      {
+        "number": 67,
+        "title": "current delivery retains every prior assertion outside the one-input count and historical context seams"
+      }
+    ],
+    "remainingDiagnosis": "Two unchanged current-atlas-delivery assertions still expect485/1550 rather than exact190/1553; unchanged head-index whole-current assertion still equates the moving current test to its87ed archive. These are the three actual failures, not silently repinned or counted as passes.",
+    "rawNativeLogExcludedFromBackup": true,
+    "currentValidatorAndFixtureUnchanged": true,
     "allOtherSourceInputsAndBindingsUnchanged": true,
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
@@ -8882,6 +9000,9 @@
     "ownerPreviewSession": 32652,
     "ownerFormsRefreshed": false,
     "ownerDecisionsChanged": false,
+    "reviewCopyPreviewBuildPending": true,
+    "previewBuildOrRestartRan": false,
+    "productSourceChangedByThisRepair": false,
     "unresolvedBrowserErrorKinds": 1,
     "clinicalApproval": false,
     "spatialRegistration": false,
