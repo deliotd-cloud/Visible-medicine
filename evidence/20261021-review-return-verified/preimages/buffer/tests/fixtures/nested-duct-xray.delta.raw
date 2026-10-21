@@ -1,0 +1,31 @@
+@@ -8,0 +9,2 @@ import {build} from 'esbuild';
++import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+@@ -11,2 +13,3 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
+-const atlas='F:/VisibleMedicine/atlas';
+-const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const atlas=currentAtlasDeliveryRoot();
++const historicalRevision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const revision=CURRENT_ATLAS_REVISION;
+@@ -34,0 +38,15 @@ const git=(commit:string,path:string)=>execFileSync('git',['--no-replace-objects
++function exactPosteriorFossaInverse(current:Buffer){
++ let restored=current.toString('utf8');
++ assert.deepEqual(Buffer.from(restored),current,'Lossless current nested source');
++ const seams:[string,string][]=[
++  ["import { posteriorFossaUltrasoundTeaching, posteriorFossaUltrasoundReferences } from './posterior-fossa-ultrasound.ts';\n",''],
++  ['  ...posteriorFossaUltrasoundReferences,\n',''],
++  ...(['midbrain','pons','medulla','cerebellum'] as const).map(name=>[
++   `imaging: { ...brainImagingTeaching.${name}, ultrasound: posteriorFossaUltrasoundTeaching.${name} },`,
++   `imaging: brainImagingTeaching.${name},`,
++  ] as [string,string]),
++ ];
++ for(const [after,before] of seams){assert.equal(restored.split(after).length,2,`One posterior-fossa seam: ${after}`);restored=restored.replace(after,before);}
++ assert.deepEqual(Buffer.from(restored),git(historicalRevision,'content/nested-teaching.ts'),
++  'Entire old9f nested source restored after six exact current inverses');
++}
+@@ -84,0 +103,2 @@ test('current four nested duct X-ray drafts and exact completed-era corpus repla
++ assert.equal(checkedAtlasHistoryRepo(historicalRevision),atlas);
++ assert.equal(execFileSync('git',['merge-base',historicalRevision,revision],{cwd:atlas,windowsHide:true}).toString().trim(),historicalRevision);
+@@ -104,0 +125,2 @@ test('current four nested duct X-ray drafts and exact completed-era corpus repla
++  if(path==='content/nested-teaching.ts')exactPosteriorFossaInverse(git(revision,path));
++  else assert.deepEqual(git(revision,path),git(historicalRevision,path),`${path}: immutable duct source`);

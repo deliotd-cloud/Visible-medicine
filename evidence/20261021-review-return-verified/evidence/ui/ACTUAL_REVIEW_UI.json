@@ -1,0 +1,25 @@
+{
+  "label": "ACTUAL_REVIEW_UI",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/clinical-review-inbox-return-context.test.mjs",
+    "tests/clinical-review-inbox-filter-recovery.test.mjs",
+    "tests/clinical-review-inbox-scan-focus.test.mjs",
+    "tests/clinical-review-inbox-pagination-focus.test.mjs",
+    "tests/clinical-review-inbox-workbench.test.mjs",
+    "tests/clinical-review-inbox-ui.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 3739,
+  "log": "F:/VisibleMedicine/staging/20261021-review-return-application/ACTUAL_REVIEW_UI.log",
+  "logSha256": "2f1505a58bfd16983a2f288d78fc7fab0fd6416d6054a91280457e6f9e90caa3",
+  "sourceInputsUnchanged": true,
+  "inputError": null,
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "namedInputs": 5155,
+  "canonicalInstalled": false,
+  "ownerPreviewChanged": false
+}

@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T09:44:59.943Z",
+  "at": "2026-10-21T10:23:40.750Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "websiteInputCount": 5107,
-    "proposalOnly": true
+    "websiteInputCount": 5155,
+    "canonicalInstalled": false
   },
-  "parent": "60de7a4bc772532df01dfa1fe158bebcb9c94edd",
-  "gitParent": "60de7a4bc772532df01dfa1fe158bebcb9c94edd",
+  "parent": "0220c554b83249e8c4fdf39f1304bcfebbe8b92a",
+  "gitParent": "0220c554b83249e8c4fdf39f1304bcfebbe8b92a",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -5046,6 +5046,631 @@
       "sha256": "33a504f6591a60f213d6d815dcbbe92aa670e541b215ab3ea9324694ed341818"
     },
     {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/components/ClinicalReviewInbox.tsx",
+      "bytes": 29392,
+      "sha256": "f7324e4be67bb1027c403c89a85cb84579fa9f5fcf99a8944b27b11b8537642d"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 4090,
+      "sha256": "7484378b8c4e8dc91d2d4a3c7f5d58b772c90e8d9b2b2aeaf8f8ebe4ae9dc8da"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/arterial-history-preservation.test.mjs",
+      "bytes": 3838,
+      "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-guided-camera.test.ts",
+      "bytes": 9477,
+      "sha256": "31ca6f0b7bc7aa2fd079ac3ad50617de491e4fd2723cc20560d65395d156506c"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-keyboard-modules.test.ts",
+      "bytes": 7003,
+      "sha256": "6988cd068f47729143dffa7ff33f16db9293d78c098a54ca9961821485e9fa70"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-label-keyboard.test.ts",
+      "bytes": 5368,
+      "sha256": "3c96b803580556775d34863291a0043f233c1e663be93dcc4d65a50230269f19"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-shared-viewer-accessibility.test.ts",
+      "bytes": 7307,
+      "sha256": "bf37a2e16233e47cde10ce15cc03c52ecf8a6033047dfdba09f73703f86ca5e6"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 85652,
+      "sha256": "6c202daf177a84a4cfd210673dd8a3975bc47cd77bcd47754139a9bffd6bdddc"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-tour-completion.test.mjs",
+      "bytes": 11268,
+      "sha256": "29eabe4a82543be6cb4616f2092f80d005a07373e6eb51b94dbb2b2cf53116d1"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-tour-library-pause.test.ts",
+      "bytes": 8221,
+      "sha256": "93ffb5bdfef11012bbfeef8adfbac003fb6d0aef53c99141786521497a5dc917"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-tour-reading-focus.test.ts",
+      "bytes": 5669,
+      "sha256": "fa381c5f25bb9b9877bbba0bab615c2b4a2b96d02005c01bce2c7a75bf5d3246"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas9f-review-history.mjs",
+      "bytes": 3162,
+      "sha256": "176900387d90166dab84f8afc264d8c115c240a583aaead03d4d2ee7dd1ce910"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-epoch-batch-c-originals.test.mjs",
+      "bytes": 4384,
+      "sha256": "d3f5a72b343c8856a030ccdefd8a2d6fe733248f3cf892dcf77855bb3d0120f5"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-epoch-batch-d-preservation.test.mjs",
+      "bytes": 4357,
+      "sha256": "c934a01dff830c1277b5648d7de81a86d60dfd1f977673779fa371d1f35d3746"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "bytes": 4838,
+      "sha256": "9ed46d5dd3e42328fb7af752d8aa11da962ed7d8e1c1c1968aefc60b2d61afbb"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 11478,
+      "sha256": "afc346bc245238ecc9469b64a39b9db472f9d7e1d4aa12389d25031e1ae29de3"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-elbow-arterial-tour.test.ts",
+      "bytes": 25445,
+      "sha256": "1b2f22d6bee38da836cc3e491b1b16fec3c0bc4fca0b577cf9e127cf0d081490"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 36205,
+      "sha256": "dfe5b2522ed20791134dadd37a35e6fff235b4b7d8b139953a00252595159b7a"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 28665,
+      "sha256": "fca614cc591eb44623f87e36dd35cea42aa3ea0e755ede1118b368e871f06861"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-girdle-history-preservation.test.mjs",
+      "bytes": 5175,
+      "sha256": "d9f795ed98c2c58be3cfa3ec6cc0d3b39d5926607cde4b7251ee530095a2a011"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-girdle-muscle-xray.test.ts",
+      "bytes": 22602,
+      "sha256": "aad3d4eb21f3fe6f2c8a5bffce816f140276d8582142667f2aab25e3f88be339"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 5683,
+      "sha256": "d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-iliac-venous-xray.test.ts",
+      "bytes": 9480,
+      "sha256": "a55f6c33ee41cccc7720482124104b529bcdfa9336ee5760ff35ec49ce34be68"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-inbox-return-context.test.mjs",
+      "bytes": 11056,
+      "sha256": "6d7e4d25b01ddb5a0576d6af8a23ffb527a98b70bce5ae72ebf71cd3c26d0e89"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "bytes": 10554,
+      "sha256": "582b55d1960288b58f00cac0c2bf4b5be88df0dbe851a2e270e7522b3f9a91c8"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 18299,
+      "sha256": "74a100863fb33a27b94e7e56847c225fab618b500bfeb5f0d37971faff5781d9"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-longus-colli-quiz.test.ts",
+      "bytes": 8907,
+      "sha256": "68589eca6ad26c87d2e46f57f55769b75f3e3ce0919fe5cc49ac50ae7fa32dd8"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "bytes": 20464,
+      "sha256": "f52a3fd3ba12fc9836344febb9ab59a0a6c3f2b9bd6199595e0def5ef74ad4ae"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-medial-thigh-tour.test.ts",
+      "bytes": 17695,
+      "sha256": "03b265445b7937621a9d01ce849294ea170232c245f6f8c7a3f34b19325b4916"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 23327,
+      "sha256": "886db4ebcf56a04764fb9e416aaffd61c72f9487d5d18ddc63f66b0ed6e848a4"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "bytes": 8950,
+      "sha256": "b677b62a8c142b7e0a07ed8d225e1ba040f1e675bc3402a77d71b0883ed140b4"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-model-inspection.test.mjs",
+      "bytes": 6032,
+      "sha256": "f1fc322c26f68ad264148f36436f0a13a4d034324dbb193a1d0fe24b09f4c627"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 30026,
+      "sha256": "356212d081e871bf7998e590cdfa61afaa9644cfb7fd9a7de4ecc77bdb1e9660"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-nested-duct-xray.test.ts",
+      "bytes": 29322,
+      "sha256": "3a5ed2c844734b3363b1b86e903c06ebf3a4799ac9d06754755e846bcf6c003d"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-orbital-apex-ct.test.ts",
+      "bytes": 23417,
+      "sha256": "8f4a7e1eb6af862ff9643c08972c02f45dc9502db20ef03898b3723b78b05cc5"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-orbital-ring-ct.test.ts",
+      "bytes": 19667,
+      "sha256": "1408d09004e4277d15e2d05c7a84207767892b5724dcdb40463808b23d1821bc"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-orbital-sensory-mri.test.ts",
+      "bytes": 12079,
+      "sha256": "0fa989b29a130f39264b192358545f9b9d56d602a84c215e82bc76bb875ea28b"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-orbital-support-mri.test.ts",
+      "bytes": 14085,
+      "sha256": "03467a60f9e863584cdecc34d6f217aa9222b938012c156c1ece2aeccf629495"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+      "bytes": 9497,
+      "sha256": "6b22c076adf1371ff6f7c4b5cd550b0ca9c66edd033bda9156284c7a727fc1a4"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "bytes": 19788,
+      "sha256": "3076ac33f3096b47f09dbf9364f92687d74d8ffb5899b4c612e8134f3db1ba1c"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/current-190-coverage.test.mjs",
+      "bytes": 4633,
+      "sha256": "5ec7577052250b5e6cc7a772b2e4b7fdedc04bf0091a85317dcbb96253718234"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/01-tongue-palate.patch.raw",
+      "bytes": 13425,
+      "sha256": "c0b2f371ca8f918a5c5ebebbea0a40039ac9e4c3aa2dc025693c3951d0d0c144"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/02-ileocolic.patch.raw",
+      "bytes": 16609,
+      "sha256": "ad6e3d2a0d6b331d7e273cc95e81edf1bfed54d85c3c2d222e0bf15194429a78"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/03-corpus-current.patch.raw",
+      "bytes": 19142,
+      "sha256": "ff3a9d6a93c7a4053b611e21abad10603bbad42471a8406a9d738f6de97c6519"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/04-corpus-ct.patch.raw",
+      "bytes": 17942,
+      "sha256": "d9cc55c0486228e18a8b768596a17c578e42caf7d7e4b5e0a98293d0e1210cc2"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/05-ct-save.patch.raw",
+      "bytes": 4042,
+      "sha256": "fe2b28f5b14c26bbffd869965542c9bab13f955cc97ad3f094acc8165bd960ba"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/06-dental.patch.raw",
+      "bytes": 14433,
+      "sha256": "dcf154ab70f4b1a0df353d816ab227814471d189179d254f58ffafbeb2e42dcd"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/atlas9f-body-renderer-binding.json",
+      "bytes": 729,
+      "sha256": "61f25d832616a390d4fad778b4f3e7c867dde1526c117a39674072961d9636a8"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "bytes": 8867,
+      "sha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "bytes": 9941,
+      "sha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "bytes": 16253,
+      "sha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "bytes": 8090,
+      "sha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "bytes": 15632,
+      "sha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "bytes": 14837,
+      "sha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "bytes": 21757,
+      "sha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "bytes": 8522,
+      "sha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "bytes": 69651,
+      "sha256": "a302b465f4caf1b89898bee80ea175e04e9cf15b6bd15fca0ccfbe807129ecce"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-girdle-muscle-xray-original.ts.raw",
+      "bytes": 21356,
+      "sha256": "0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-model-inspection.test.mjs.raw",
+      "bytes": 5809,
+      "sha256": "c1f906808fdf36a4dc76209df0a47f53e575235f02cfc531adbdafb931e3579a"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-neonatal-cranial-us-original.ts.raw",
+      "bytes": 24520,
+      "sha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-nested-duct-xray-original.ts.raw",
+      "bytes": 27718,
+      "sha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-orbital-apex-ct-original.ts.raw",
+      "bytes": 19663,
+      "sha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-orbital-ring-ct-original.ts.raw",
+      "bytes": 15391,
+      "sha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-orbital-sensory-mri.test.ts.raw",
+      "bytes": 11258,
+      "sha256": "1127b1186b5339a0a4be8d21ca1361cb61a338c93083c571f0e2705b61e86e64"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-orbital-support-mri-original.ts.raw",
+      "bytes": 11223,
+      "sha256": "c4829b9a32b117712aa85723e27517207f20dc13e769e1de360d965c581b5236"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/clinical-review-pancreatic-vessel-teaching.test.ts.raw",
+      "bytes": 8966,
+      "sha256": "6c0240e376991077706fb4ffddd2fab6fc53631259fade28bdc0b36f8be5e81e"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/closed485-original/anatomy-coverage-revision-admission.test.mjs.raw",
+      "bytes": 17502,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+      "bytes": 1427,
+      "sha256": "c079bcf8d72f00e70b112a8ea54ca5d671800d79dd99cd1008291962dff69cfa"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/head-neck-pilot.test.ts.original.raw",
+      "bytes": 22253,
+      "sha256": "98ed1e8bba232320894aec053adb06083d03226ea3fbc47280e7f6b82ca3c6f7"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+      "bytes": 1265,
+      "sha256": "0f47f35ab70c321b87e26a83b02d3002f9ddfce60d7dc9458849c96283c3c4bf"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+      "bytes": 8972,
+      "sha256": "f20ac1ff485bb2fefdb3b00b3a7b98d35faaf9d002351893cc65903ddbcadb66"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/neonatal-cranial-us.delta.raw",
+      "bytes": 9520,
+      "sha256": "8c2b85f724820657426667f4e818050eddee242f9e687cb84eb78afe44d00b35"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/nested-duct-xray.delta.raw",
+      "bytes": 2255,
+      "sha256": "672eeadaaf628b8f8c5fec391777085de7c049348976eb11e0fb80dc394c417c"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/orbital-apex-ct.delta.raw",
+      "bytes": 5879,
+      "sha256": "b12a5d593536d0065867d9c93d49f4df47f512bf040c3d0cc7b828cb673e03d4"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/orbital-ring-ct.delta.raw",
+      "bytes": 6240,
+      "sha256": "3f0a6a1ab81191cd479861fb2562fa2d2db0698997e9629a8a1b89acb05b08c0"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/orbital-support-mri.delta.raw",
+      "bytes": 5196,
+      "sha256": "438b2245b666cfb456cff0d6289b5cfc11def1e58772cc12d1458b373135d0f5"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+      "bytes": 18304,
+      "sha256": "34f0869e7319915cefcd0e4746d0563173e9a83c25e47388ba06098c148ceca3"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/specimen-playback-original/inverse-hunks.json",
+      "bytes": 9535,
+      "sha256": "82cefd21ea512d477afe334076f3d4880d79d222ed970b3ec4e5e99e98eb6d77"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/fixtures/spinal-later-six-current-3824.mjs.raw",
+      "bytes": 53311,
+      "sha256": "3824e78ca19ff6f1a2745232142b9df53278393afdcf8a2e50cea82e0cd5b865"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/head-neck-pilot-history-preservation.test.mjs",
+      "bytes": 3809,
+      "sha256": "cb402999742a1e04e5603e0e613d6a407e8e2a83f2e6f720053ca2c34447aab1"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/head-neck-pilot.test.ts",
+      "bytes": 23508,
+      "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/historical-head-pilot-read.mjs",
+      "bytes": 10042,
+      "sha256": "155580d27d857afca4622fd286c4ef9419ea3883b5a2484095a3eb076b074443"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/specimen-playback-whole-source-inverse.test.mjs",
+      "bytes": 2295,
+      "sha256": "8962aac6ed256b5e41ebfe2136dee07c28f02311cdf5d4ca90abcd823a2238d0"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "bytes": 3725,
+      "sha256": "ecfabedbe25abf58a093caefa5d4df3ad89049ce402d7dfacf6b2ba430ea8833"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/spinal-current-source-inverse.mjs",
+      "bytes": 5068,
+      "sha256": "c0c6f035f2564743d80bd827fe98703b192bb38086df1b639f28b786802651c8"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/applied-candidate/tests/spinal-later-six-preservation.test.mjs",
+      "bytes": 4555,
+      "sha256": "33c5f117fcc5169b1b2c85c924244e064da3146d5daec62cd3820e3ee38c9385"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/apply-buffer-type-batch-20261021.mjs",
+      "bytes": 3772,
+      "sha256": "63b2cd55d30688c8a05bcb04181fa0b8590332a7473a64b4b2996b1dac507e09"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/checkpoint-review-return-verified-20261021.mjs",
+      "bytes": 9732,
+      "sha256": "5952702299635048a60e51b7736c71e4ec3678cb50fe62f8578391e85109d1a5"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 5923,
+      "sha256": "e31c5a2abf89403af851555775ab034ac3ca3cf382e93998ea171a1f4dcbbfba"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/finish-current-epoch-batch-20261021.mjs",
+      "bytes": 1981,
+      "sha256": "83f6bc1be1fdd2e38f46e2fddaa601f8a747886cc467bdd51ee91ab47515c07a"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/finish-review-return-application-20261021.mjs",
+      "bytes": 2295,
+      "sha256": "e651c9b8e90baaa6e6dc8b2a8b7a1238f10453612ad0eda0d6563d9f182afd0a"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/prepare-review-return-application-20261021.mjs",
+      "bytes": 2947,
+      "sha256": "f5d302c027f21a7a231ddfae28f35ca236a7d9f88fdd48c7338c444269726063"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/record-current-module-admission-20261021.mjs",
+      "bytes": 8711,
+      "sha256": "a2de62df61f5006c74ba5a764b07a8a7c90d1544f5deb479567a88e84f96ec8f"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/record-review-return-browser-20261021.mjs",
+      "bytes": 1757,
+      "sha256": "01e7063e615c89438d19965315560e2f145632608c08ca8a65d57ad356cd9172"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/verify-buffer-type-batch-20261021.mjs",
+      "bytes": 3515,
+      "sha256": "8c28e1ac2b6935946e4b9434a042d35eb2216915ec3a8673fe2c332bb76c9ee5"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/controls/verify-review-return-site-20261021.mjs",
+      "bytes": 3237,
+      "sha256": "362eb34e8e78787b597e90981263b3e26907680135cc6bdac64ae7913c39ba60"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/baseline/TERMINAL_FAILURE_CLASSIFICATION.json",
+      "bytes": 71092,
+      "sha256": "37ac61d8b40a42c2ef127105249c9e3654842f5cfff8b8ada4d11339405c359f"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/browser/OBSERVATION.json",
+      "bytes": 1328,
+      "sha256": "5c497f26e89a62037349aa1a81c0789a530ab6da5a970e97716f0133ce22f9bb"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/AFFECTED_NATIVE.json",
+      "bytes": 1058,
+      "sha256": "a8761da95c199028a5487e896a09e7c4d518d92057c248f0972401a6b3622684"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/APPLICATION.json",
+      "bytes": 410,
+      "sha256": "ad96e113bd9952f47f80a20bc34601d47b79b060dafe17f783b80b2d4372342b"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/FRESH_FULL_TYPES.json",
+      "bytes": 662,
+      "sha256": "ceacd92d79d40fca4adc82e62ee762cc000896a46567b9f1f19f1ad24cfaa497"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/PREPARATION.json",
+      "bytes": 3154,
+      "sha256": "a5e080e78e20c704cf275272cc1ee9eacc729c44a010f5ba8b802cd50a710033"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/PRODUCTION_BUILD.json",
+      "bytes": 625,
+      "sha256": "3db63bb26a4d2847d18b0135cb966db29f5827041a482a8fc96e7464d7acbd80"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/STAGING_EVIDENCE.json",
+      "bytes": 2076,
+      "sha256": "098c22725be49c25e1ae8cf24399a5ed97493886e7f4461a5b896066a5c63bb3"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/VERIFICATION.json",
+      "bytes": 4421,
+      "sha256": "58fc4b05196377b1e8551daafc78eb503462f89d273fc0dbf6fc8a0547040444"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/VERIFY_DELIVERY.json",
+      "bytes": 618,
+      "sha256": "d06e0d2b69e756adeda91b65225f998c1c256a22443abb3beda33684b1c0ae57"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/buffer/VERIFY_REVIEW.json",
+      "bytes": 608,
+      "sha256": "26faaf1aec6ccf709dcac7f1647098db3c5f9e4056cbc8f7199e6ac33b497110"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/cutover/COVERAGE_OVERLAY_V3.json",
+      "bytes": 2947,
+      "sha256": "ea9ed4ce5d6e0126befacaccf6430ae4ab7174d5fb0a6b82ea8089e6f617f2cf"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/cutover/SUMMARY_V4.json",
+      "bytes": 3567,
+      "sha256": "f54bc16ab2678a861f22e7b974213dcb4deb1d1742c706a0489f954ee534ebfa"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/PROOF.json",
+      "bytes": 1187,
+      "sha256": "2e26bf2945932cdf6e23c616301c60627e5c3fad964f117b75380e78e2fb215e"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/ui/ACTUAL_REVIEW_UI.json",
+      "bytes": 936,
+      "sha256": "2747a136d095f7b3fb8bee0f7fe953c59be0a145e3e251adae7c85d16bd1d9eb"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/ui/APPLICATION.json",
+      "bytes": 869,
+      "sha256": "1322b57e7f36256e21c603babec7c6c935d9984040f7498b6a45eee314d971e9"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/ui/FIRST_BUILD_VERIFICATION.json",
+      "bytes": 2429,
+      "sha256": "41a299ac67a752808a1cf344ea833e4f7dd27f0399e9d79fe86839c0dd647ef3"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/ui/FIRST_TYPES_FAILED.json",
+      "bytes": 648,
+      "sha256": "0ee7e7aab02323e16375fab0392c383f0f63f3de2bcd989cd9e33906a739127d"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/v11/ADMISSION_RESULT.json",
+      "bytes": 991,
+      "sha256": "21b00e39552ae8708321270454ad321d8070f269d09de0e59028a37b8b6e34c7"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/v11/CURRENT_MODULES_ADMISSION.json",
+      "bytes": 52252,
+      "sha256": "37982af5115d65fb657d5f35091f771e9c382b724a525405c48965c0f18b2797"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/evidence/v11/PREPARATION.json",
+      "bytes": 47691,
+      "sha256": "88926b677d347a4862980386d3b8dcad39b530d3c43f55d34231ebc7f277ca62"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/preimages/buffer/tests/atlas-tour-library-pause.test.ts",
+      "bytes": 8208,
+      "sha256": "afe577ade8afc43e0bdc3f07192913e6f9d3c481e249a64274cd3152812366c7"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/preimages/buffer/tests/atlas-tour-reading-focus.test.ts",
+      "bytes": 5643,
+      "sha256": "bea48a12d979c106fa5332d8d278d3493c7280b1ced2d35bb448050b147d9855"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/preimages/buffer/tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "bytes": 4838,
+      "sha256": "4618d866ed7d5392231866149d7a7fa63d63604852d4a64c433de33c634d5fec"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/preimages/buffer/tests/clinical-review-elbow-arterial-tour.test.ts",
+      "bytes": 25432,
+      "sha256": "deff0b510f8603a71c9d13910557dee9557a513ee1a19cf0bc0e6bd2e9fb7d1d"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/preimages/buffer/tests/clinical-review-nested-duct-xray.test.ts",
+      "bytes": 29309,
+      "sha256": "9bbc43adfd820b25f2cb9ff7111b55649f0e809f86dbb62d0079b70e73f4ddc9"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/preimages/buffer/tests/fixtures/nested-duct-xray.delta.raw",
+      "bytes": 2242,
+      "sha256": "bb0a1ae9467b561d713d46936ce4e958f82ae9859201b278b3fd644b4bf5e2ac"
+    },
+    {
+      "path": "evidence/20261021-review-return-verified/preimages/ui/components/ClinicalReviewInbox.tsx",
+      "bytes": 24298,
+      "sha256": "59605fcb29edecede8f6412842ad8ba760161b928b78657045c52388894984cd"
+    },
+    {
       "path": "evidence/20261021-revision-guard-proposals-verified/arterial190/PREPARATION.json",
       "bytes": 1676,
       "sha256": "2ff4dadb7759c3cc1960defb3f80bf9d1cd88b2ebb87fdbc49560f5ae9d85e39"
@@ -7427,72 +8052,44 @@
     }
   ],
   "removed": [],
-  "scope": "Explicit owned test-source proposals/exact preimages, small receipts, read-only cutover summary and controls on previously filtered ancestry. NOT installed or a full-suite pass. No raw canonical history, full private modules/manifests, model geometry/full runtimes, private DB/records/identities/decisions/env, scans/masks, dependencies or browser media/DOM. No test harness junctions packaged. Not a complete runnable/private backup, release or clinical/spatial approval.",
+  "scope": "Explicit applied candidate test/UI source, six prior test preimages, small source-bound proof and main controls only, on already filtered source-only ancestry. No complete source-input manifests, raw canonical history, scans/masks, private DB/identifiers/decisions/env, full runtimes/models, dependencies or browser media/DOM. Not a complete runnable/private backup, public release, clinical approval or spatial registration.",
   "proof": {
-    "summary": "Historical/current source-role repair advances without changing the Website/Atlas candidate or owner preview. V10 has85test-only proposed paths,38existing/47new,5154projected inputs; actual5107/Review1710 frozen. Pure original preservation and bounded native receipts total97outer registrations across20distinct successful runs, historical coverage4children separate, not a whole-suite pass. First actual20module matrix33/28pass/5fail and followup5modules10/6pass/4fail are retained. Full orbital-ring historical/current theorem, head-neck4 and specimen playback/356-row2 cases now pass at exact sources. First head harness import failure retained and fixed only by explicit object-store read context; historical scene checksum copied F-local, not uploaded. C6 restores true quiz introduction51de and independently bound628 Website source; E7 selected22-ID probe proves only4tour-backed revision changes,18unchanged packets. The four affected actual modules are running in a source-guarded final followup. Separate40-case Review-return UI remains staged; types/build/browser/cutover still pending. No clinical/spatial/public/full-backup claim.",
-    "canonicalDeveloperToolingInstalled": true,
-    "canonicalDeveloperToolingUnchangedFromParent": true,
-    "canonicalAtlasUiInstalled": false,
-    "reviewQueueUiInstalled": false,
-    "reviewQueueNativePasses": 40,
-    "originalFailureBaselineRetained": 144,
-    "fullNativeCounts": {
-      "tests": 5547,
-      "pass": 5408,
-      "fail": 136,
-      "cancelled": 0,
-      "skipped": 3,
-      "todo": 0
-    },
-    "allNativeFailuresAccountedFor": true,
-    "allNativeFailuresResolved": false,
-    "baselineComparable": false,
-    "actualFirstMatrix": {
-      "tests": 33,
-      "pass": 28,
-      "fail": 5
-    },
-    "actualFirstFollowup": {
-      "tests": 10,
-      "pass": 6,
-      "fail": 4
-    },
-    "headActualPasses": 4,
-    "specimenActualPasses": 2,
-    "currentSourceUnchanged": true,
-    "unchangedModelObjects": 137,
-    "all71ItemsAndEightIdeasPreserved": true,
-    "correctedComponentBrowserAcceptance": false,
-    "ownerPreviewPid": 260328,
-    "at": "2026-10-21T09:44:54.616Z",
+    "at": "2026-10-21T10:23:34.854Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "currentNamedInputs": 5107,
-    "proposedNamedInputs": 5154,
+    "currentNamedInputs": 5155,
     "reviewInputs": 1710,
-    "testOnlyPaths": 85,
-    "existingTestChanges": 38,
-    "newCurrentTestOrOriginalFixturePaths": 47,
-    "boundedNativeRegistrationsPassed": 97,
-    "boundedNativeRuns": 20,
-    "originalHistoricalChildTestsPassed": 4,
-    "canonicalInstalled": false,
-    "candidateChanged": false,
-    "ownerPagesTouched": false,
-    "fullSuiteRunningAtObservation": false,
-    "nativeWorkAtObservation": {
-      "at": "2026-10-21T09:44:54.556Z",
-      "state": "running",
-      "started": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/STARTED.json",
-      "driver": 267516,
-      "pid": 266844
-    },
-    "fullSuitePassingClaim": false,
+    "candidateTestPathsApplied": 85,
+    "reviewUiPathsApplied": 2,
+    "bufferRepairPathsApplied": 6,
+    "actualReviewUiPasses": 40,
+    "affectedNativeFooter": [
+      "ℹ tests 17",
+      "ℹ pass 17",
+      "ℹ fail 0",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ],
+    "freshFullTypes": true,
+    "productionBuild": true,
+    "reviewAndDeliveryChecks": true,
+    "browserReturnContext": true,
+    "browserApplicationSourceUnchangedAfterTestOnlyFix": true,
     "originalFullFailureBaseline": 144,
+    "currentFullRunFailuresRetained": 136,
+    "fullSuitePassingClaim": false,
+    "allNativeFailuresResolved": false,
+    "canonicalInstalled": false,
+    "canonicalDeveloperToolingInstalled": true,
+    "ownerPreviewChanged": false,
+    "ownerFormsTouched": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
     "privateDataUploaded": false,
+    "wholeProjectBackup": false,
+    "privateDataBackup": false,
     "fullGoalActive": true
   },
   "wholeProjectBackup": false,

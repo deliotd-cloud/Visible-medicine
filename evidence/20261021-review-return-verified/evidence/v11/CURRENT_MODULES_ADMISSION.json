@@ -1,0 +1,926 @@
+{
+  "schema": "vm-source-bound-current-module-composition/1",
+  "at": "2026-10-21T09:53:34.287Z",
+  "verdict": "passed",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceCandidateInputs": 5107,
+  "projectedInputs": 5154,
+  "reviewBindings": 1710,
+  "modules": 22,
+  "selectedActualCases": 39,
+  "records": [
+    {
+      "module": "tests/atlas-spinal-muscle-xray.test.mjs",
+      "sha256": "6c202daf177a84a4cfd210673dd8a3975bc47cd77bcd47754139a9bffd6bdddc",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 1,
+          "title": "spinal X-ray source, Review, four runtime manifests and emitted teaching remain exact",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "sha256": "deff0b510f8603a71c9d13910557dee9557a513ee1a19cf0bc0e6bd2e9fb7d1d",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 2,
+          "title": "right elbow guide binds eleven exact records, four bundles, learner captions and draft Review packets",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 3,
+          "title": "private inbox rejects the old catalogue before reads and binds eleven current teaching worksheets",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-elbow-us-followup.test.ts",
+      "sha256": "dfe5b2522ed20791134dadd37a35e6fff235b4b7d8b139953a00252595159b7a",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 4,
+          "title": "six exact elbow arterial ultrasound drafts reach protected Review and two learner modules",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 5,
+          "title": "private inbox binds six new teaching revisions and refuses stale continuation before database reads",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-forearm-vascular-xray.test.ts",
+      "sha256": "fca614cc591eb44623f87e36dd35cea42aa3ea0e755ede1118b368e871f06861",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 6,
+          "title": "eight exact forearm vascular X-ray drafts reach protected Review and two learner modules",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 7,
+          "title": "private inbox binds eight new teaching revisions and refuses stale continuation before database reads",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-girdle-muscle-xray.test.ts",
+      "sha256": "aad3d4eb21f3fe6f2c8a5bffce816f140276d8582142667f2aab25e3f88be339",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 8,
+          "title": "exact girdle muscle pins, four learner exports, Review and emitted drafts",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 9,
+          "title": "immutable 16-topic transition, current 9,936 placements and 1,104 Review packets",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-orbital-sensory-mri.test.ts",
+      "sha256": "0fa989b29a130f39264b192358545f9b9d56d602a84c215e82bc76bb875ea28b",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 30,
+          "title": "16 orbital sensory MRI drafts bind exact learner and protected Review evidence",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+      "sha256": "6b22c076adf1371ff6f7c4b5cd550b0ca9c66edd033bda9156284c7a727fc1a4",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 32,
+          "title": "11 exact pancreatic-vessel identities bind 33 draft learner and Review topics",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 33,
+          "title": "head-neck and shoulder learner bundles carry the exact imported pancreatic teaching",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-iliac-venous-xray.test.ts",
+      "sha256": "a55f6c33ee41cccc7720482124104b529bcdfa9336ee5760ff35ec49ce34be68",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 10,
+          "title": "six exact iliac venous X-ray drafts reach learner and protected Review",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "sha256": "582b55d1960288b58f00cac0c2bf4b5be88df0dbe851a2e270e7522b3f9a91c8",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 11,
+          "title": "twelve source-bound intracranial arterial X-ray drafts reach learner and protected Review",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-limb-nerve-quiz.test.ts",
+      "sha256": "74a100863fb33a27b94e7e56847c225fab618b500bfeb5f0d37971faff5781d9",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/MATRIX_RESULT.json",
+      "proofSha256": "427a4078134bb3accce776b48d1964f70f821a7777c980ebc317d76d10921e23",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 1,
+          "title": "18 original Quiz questions survive with exact additional learner and Review checks",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 2,
+          "title": "private inbox binds all 18 current teaching revisions and rejects stale scans before database reads",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-longus-colli-quiz.test.ts",
+      "sha256": "68589eca6ad26c87d2e46f57f55769b75f3e3ce0919fe5cc49ac50ae7fa32dd8",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 14,
+          "title": "three supplied left longus colli attachment quizzes bind learner runtimes and protected Review",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "sha256": "f52a3fd3ba12fc9836344febb9ab59a0a6c3f2b9bd6199595e0def5ef74ad4ae",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/MATRIX_RESULT.json",
+      "proofSha256": "427a4078134bb3accce776b48d1964f70f821a7777c980ebc317d76d10921e23",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 3,
+          "title": "right lower limb venous v2 is an exact source-bound draft in learners and protected Review",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 4,
+          "title": "checked source190 retains the historical venous v2 tour and exact current bindings",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-medial-thigh-tour.test.ts",
+      "sha256": "03b265445b7937621a9d01ce849294ea170232c245f6f8c7a3f34b19325b4916",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 17,
+          "title": "medial-thigh source reaches exact learner and protected Review imports",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 18,
+          "title": "checked source190 retains the historical medial-thigh tour and current Review bindings",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-median-cubital-xray.test.ts",
+      "sha256": "886db4ebcf56a04764fb9e416aaffd61c72f9487d5d18ddc63f66b0ed6e848a4",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 19,
+          "title": "two exact median cubital X-ray drafts reach protected Review and two learner modules",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 20,
+          "title": "private inbox binds two new teaching revisions and refuses stale continuation before database reads",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "sha256": "b677b62a8c142b7e0a07ed8d225e1ba040f1e675bc3402a77d71b0883ed140b4",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 21,
+          "title": "all 14 imported mesenteric identities bind 42 source-specific draft topics and Review packets",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 22,
+          "title": "head-neck and shoulder learners contain the exact imported mesenteric teaching source",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-neonatal-cranial-us.test.ts",
+      "sha256": "356212d081e871bf7998e590cdfa61afaa9644cfb7fd9a7de4ecc77bdb1e9660",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v3/MATRIX_RESULT.json",
+      "proofSha256": "b6d82cfd61f34077e0c45440dea4f2484201735b96f64b016ffc16e68d5d9ace",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 1,
+          "title": "ten exact infant cranial Ultrasound drafts bind to Review and the scoped learners",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 2,
+          "title": "private inbox shows ten new teaching revisions and rejects stale continuation before reads",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-nested-duct-xray.test.ts",
+      "sha256": "9bbc43adfd820b25f2cb9ff7111b55649f0e809f86dbb62d0079b70e73f4ddc9",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 25,
+          "title": "current four nested duct X-ray drafts and exact completed-era corpus replay",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-orbital-apex-ct.test.ts",
+      "sha256": "8f4a7e1eb6af862ff9643c08972c02f45dc9502db20ef03898b3723b78b05cc5",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/MATRIX_RESULT.json",
+      "proofSha256": "427a4078134bb3accce776b48d1964f70f821a7777c980ebc317d76d10921e23",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 7,
+          "title": "twelve exact orbital-apex CT drafts reach the learner and protected Review exports",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 8,
+          "title": "completed orbital CT epoch changes exactly twelve lessons and packets, with historical refusal gates",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 9,
+          "title": "current imported Review retains exact orbital CT material under the live tour registry",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-orbital-ring-ct.test.ts",
+      "sha256": "1408d09004e4277d15e2d05c7a84207767892b5724dcdb40463808b23d1821bc",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup/MATRIX_RESULT.json",
+      "proofSha256": "1cff2c28ac42d569ed4061a956f66b237176e61e018c2b880a1f58a75a5612c9",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 10,
+          "title": "two exact orbital-ring CT drafts reach learner and private Review bindings",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-orbital-support-mri.test.ts",
+      "sha256": "03467a60f9e863584cdecc34d6f217aa9222b938012c156c1ece2aeccf629495",
+      "proof": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+      "proofSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 31,
+          "title": "twelve orbital support MRI drafts retain exact learner and Review bindings",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-review-specimen-continuous-playback.test.ts",
+        "tests/head-neck-pilot.test.ts",
+        "tests/historical-head-pilot-read.mjs",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.delta.raw",
+        "tests/fixtures/head-neck-pilot.test.ts.original.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.delta.raw",
+        "tests/fixtures/historical-head-pilot-read.mjs.original.raw",
+        "tests/head-neck-pilot-history-preservation.test.mjs",
+        "tests/fixtures/specimen-playback-original/clinical-review-specimen-continuous-playback.test.ts.raw",
+        "tests/fixtures/specimen-playback-original/inverse-hunks.json",
+        "tests/specimen-playback-whole-source-inverse.test.mjs"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/head-neck-pilot.test.ts",
+      "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1",
+      "proof": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/MATRIX_RESULT.json",
+      "proofSha256": "aae418a02c8038253b6e63c57f1c72b10f8e745f67477e03eb6800709023bb79",
+      "selectedCases": [
+        {
+          "title": "head and neck delivery preserves the complete audited regional and nested scope",
+          "pass": true,
+          "complete": true,
+          "receipt": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/HEAD_PILOT_ACTUAL.json"
+        },
+        {
+          "title": "head and neck keeps exact generated bytes and compatible full notices",
+          "pass": true,
+          "complete": true,
+          "receipt": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/HEAD_PILOT_ACTUAL.json"
+        },
+        {
+          "title": "head and neck uses the compact host layout and does not claim imaging access",
+          "pass": true,
+          "complete": true,
+          "receipt": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/HEAD_PILOT_ACTUAL.json"
+        },
+        {
+          "title": "current190 head-neck scene remains separately source-bound and non-clinical",
+          "pass": true,
+          "complete": true,
+          "receipt": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/HEAD_PILOT_ACTUAL.json"
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    },
+    {
+      "module": "tests/clinical-review-specimen-continuous-playback.test.ts",
+      "sha256": "3076ac33f3096b47f09dbf9364f92687d74d8ffb5899b4c612e8134f3db1ba1c",
+      "proof": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/MATRIX_RESULT.json",
+      "proofSha256": "aae418a02c8038253b6e63c57f1c72b10f8e745f67477e03eb6800709023bb79",
+      "selectedCases": [
+        {
+          "pass": true,
+          "number": 1,
+          "title": "nine independent guides and all four emitted learners bind to the committed shared policy",
+          "complete": true
+        },
+        {
+          "pass": true,
+          "number": 2,
+          "title": "all 356 specimen Review rows retain source identity and reject stale or forged teaching before storage",
+          "complete": true
+        }
+      ],
+      "unrelatedTestOnlyInputDifferences": [
+        "tests/clinical-review-limb-nerve-quiz.test.ts",
+        "tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "tests/clinical-review-neonatal-cranial-us.test.ts",
+        "tests/clinical-review-orbital-apex-ct.test.ts",
+        "tests/clinical-review-orbital-ring-ct.test.ts",
+        "tests/clinical-epoch-batch-c-originals.test.mjs",
+        "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs",
+        "tests/fixtures/neonatal-cranial-us.delta.raw",
+        "tests/fixtures/orbital-apex-ct.delta.raw",
+        "tests/fixtures/orbital-ring-ct.delta.raw"
+      ],
+      "reuseBoundary": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+    }
+  ],
+  "originalFailuresRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "canonicalInstalled": false,
+  "fullNativeTriage": {
+    "receipt": "F:/VisibleMedicine/staging/20261021-source190-complete-suite/TERMINAL_FAILURE_CLASSIFICATION.json",
+    "sha256": "37ac61d8b40a42c2ef127105249c9e3654842f5cfff8b8ada4d11339405c359f",
+    "classificationOnly": true
+  },
+  "scope": "39 byte-bound successful actual cases across separately recorded runs, not one green native run or the complete Website suite. Original failed runs remain. Candidate test admission only; fresh UI types/build/browser and recoverable owner cutover still required."
+}

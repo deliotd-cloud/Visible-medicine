@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-21T10:21:11.720Z",
+  "kind": "read-only-installer-ready-operation-plan",
+  "source": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "target": "F:/VisibleMedicine/website",
+  "snapshot": "F:/VisibleMedicine/staging/20261021-buffer-type-application/SOURCE_INPUTS_AFTER.json",
+  "snapshotSha256": "2108f66d22ceadfc93ed5a237a44279bc744d9f035c77ad9c24c6c9156383280",
+  "previousSnapshotSha256": "d005374ca026576f4162199ea6cc4ee6e896f5d08ea9148b3371a88cc4474cc1",
+  "bufferPreparationSha256": "a5e080e78e20c704cf275272cc1ee9eacc729c44a010f5ba8b802cd50a710033",
+  "coverageOverlaySha256": "ea9ed4ce5d6e0126befacaccf6430ae4ab7174d5fb0a6b82ea8089e6f617f2cf",
+  "namedPaths": 5155,
+  "sixBufferChanges": [
+    "tests/atlas-tour-library-pause.test.ts",
+    "tests/atlas-tour-reading-focus.test.ts",
+    "tests/clinical-epoch-batch-e-preservation.test.mjs",
+    "tests/clinical-review-elbow-arterial-tour.test.ts",
+    "tests/clinical-review-nested-duct-xray.test.ts",
+    "tests/fixtures/nested-duct-xray.delta.raw"
+  ],
+  "counts": {
+    "same": 4870,
+    "replace": 127,
+    "add": 151,
+    "preserve": 7
+  },
+  "blockers": [],
+  "generatedScopes": 6,
+  "generatedModelPaths": 144,
+  "modelIdentities": 137,
+  "revisions": {
+    "website": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlas": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+    "sourceAtlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "atlasClean": true
+  },
+  "preservedNamedPaths": [
+    ".gitignore",
+    "docs/completion-checklist.json",
+    "docs/completion-checklist.md",
+    "public/atlas-runtime/female-pelvis/LICENSE",
+    "public/atlas-runtime/head-neck/LICENSE",
+    "public/atlas-runtime/lower-limb/LICENSE",
+    "public/atlas-runtime/shoulder/LICENSE"
+  ],
+  "preservedCoordination": [
+    {
+      "path": "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/CURRENT_CHECKPOINT.json",
+      "atPlanSha256": "5607dca18997e1d0eb771766042bc5679887f55dd33776310575c918972e50a0",
+      "action": "preserve; refresh hash at actual cutover"
+    },
+    {
+      "path": "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/WORKSPACE_MAP.md",
+      "atPlanSha256": "9be4c21a9b0ba97f2db99da0355316026721b956b215aa69e0ffad413fb3b9a5",
+      "action": "preserve; refresh hash at actual cutover"
+    },
+    {
+      "path": "F:/VisibleMedicine/website/docs/master-plan.md",
+      "atPlanSha256": "6f5302f87a983df85a8ade03600b65e1b9add7be90eda6e200c77484b92eed17",
+      "action": "preserve; refresh hash at actual cutover"
+    },
+    {
+      "path": "F:/VisibleMedicine/website/docs/completion-checklist.json",
+      "atPlanSha256": "c621bb25ffa885fe690cc80f4690a2bc5a72ecd7245cd5d863f208c7d0940dcd",
+      "action": "preserve; refresh hash at actual cutover"
+    },
+    {
+      "path": "F:/VisibleMedicine/website/docs/completion-checklist.md",
+      "atPlanSha256": "5a42626274dcd334138e0a225594695db717aec8c495c76f575403243a77910e",
+      "action": "preserve; refresh hash at actual cutover"
+    }
+  ],
+  "nativeVerification": {
+    "run": "55538",
+    "status": "running-at-plan-time",
+    "resultClaimed": false
+  },
+  "installerExecuted": false,
+  "canonicalChanged": false,
+  "candidateChanged": false,
+  "previewStopped": false,
+  "authChanged": false,
+  "planSha256": "6c621cafde36f277e98034064a9699131db2ec78b1aa63bff8c4cc074acf483c",
+  "plannedFileOperations": 195,
+  "plannedGeneratedMemberRows": 83
+}

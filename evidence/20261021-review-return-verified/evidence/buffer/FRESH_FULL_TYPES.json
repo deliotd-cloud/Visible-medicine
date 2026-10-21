@@ -1,0 +1,22 @@
+{
+  "label": "FRESH_FULL_TYPES",
+  "args": [
+    "node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "--incremental",
+    "false"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 43437,
+  "log": "F:/VisibleMedicine/staging/20261021-buffer-type-application/FRESH_FULL_TYPES.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "footer": [],
+  "sourceInputsUnchanged": true,
+  "inputError": null,
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "namedInputs": 5155,
+  "canonicalInstalled": false,
+  "ownerPreviewChanged": false
+}

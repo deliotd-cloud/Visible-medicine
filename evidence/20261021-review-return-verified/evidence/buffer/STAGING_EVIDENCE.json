@@ -1,0 +1,43 @@
+{
+  "schema": "vm-buffer-type-stage/1",
+  "source": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "stage": "F:/VisibleMedicine/staging/20261021-buffer-type-proposal",
+  "rows": [
+    {
+      "path": "tests/atlas-tour-library-pause.test.ts",
+      "preSha256": "afe577ade8afc43e0bdc3f07192913e6f9d3c481e249a64274cd3152812366c7",
+      "postSha256": "93ffb5bdfef11012bbfeef8adfbac003fb6d0aef53c99141786521497a5dc917",
+      "edits": 1
+    },
+    {
+      "path": "tests/atlas-tour-reading-focus.test.ts",
+      "preSha256": "bea48a12d979c106fa5332d8d278d3493c7280b1ced2d35bb448050b147d9855",
+      "postSha256": "fa381c5f25bb9b9877bbba0bab615c2b4a2b96d02005c01bce2c7a75bf5d3246",
+      "edits": 2
+    },
+    {
+      "path": "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "preSha256": "deff0b510f8603a71c9d13910557dee9557a513ee1a19cf0bc0e6bd2e9fb7d1d",
+      "postSha256": "1b2f22d6bee38da836cc3e491b1b16fec3c0bc4fca0b577cf9e127cf0d081490",
+      "edits": 1
+    },
+    {
+      "path": "tests/clinical-review-nested-duct-xray.test.ts",
+      "preSha256": "9bbc43adfd820b25f2cb9ff7111b55649f0e809f86dbb62d0079b70e73f4ddc9",
+      "postSha256": "3a5ed2c844734b3363b1b86e903c06ebf3a4799ac9d06754755e846bcf6c003d",
+      "edits": 1
+    }
+  ],
+  "nested": {
+    "deltaPreSha256": "bb0a1ae9467b561d713d46936ce4e958f82ae9859201b278b3fd644b4bf5e2ac",
+    "deltaPostSha256": "672eeadaaf628b8f8c5fec391777085de7c049348976eb11e0fb80dc394c417c",
+    "guardPreSha256": "4618d866ed7d5392231866149d7a7fa63d63604852d4a64c433de33c634d5fec",
+    "guardPostSha256": "9ed46d5dd3e42328fb7af752d8aa11da962ed7d8e1c1c1968aefc60b2d61afbb",
+    "originalFixtureSha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf"
+  },
+  "excludedPreexistingElbowGuard": {
+    "guardSha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105",
+    "guardPinnedCandidateSha256": "ecdaa555bffb332aab67d481c6873e0dc7ea28bc25cb3459ae1b4b8dd6e9df72",
+    "actualBeforeTypeFixSha256": "deff0b510f8603a71c9d13910557dee9557a513ee1a19cf0bc0e6bd2e9fb7d1d"
+  }
+}

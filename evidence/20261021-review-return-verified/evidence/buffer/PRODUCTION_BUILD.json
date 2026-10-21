@@ -1,0 +1,20 @@
+{
+  "label": "PRODUCTION_BUILD",
+  "args": [
+    "node_modules/vinext/dist/cli.js",
+    "build"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 56630,
+  "log": "F:/VisibleMedicine/staging/20261021-buffer-type-application/PRODUCTION_BUILD.log",
+  "logSha256": "57540e58be1a92f775a981de26f4b9a7f192a6027c7509700d85383207f5322b",
+  "footer": [],
+  "sourceInputsUnchanged": true,
+  "inputError": null,
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "namedInputs": 5155,
+  "canonicalInstalled": false,
+  "ownerPreviewChanged": false
+}

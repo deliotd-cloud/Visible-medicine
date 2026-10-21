@@ -1,0 +1,19 @@
+{
+  "label": "VERIFY_DELIVERY",
+  "args": [
+    "scripts/verify-atlas-delivery-policy.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 2852,
+  "log": "F:/VisibleMedicine/staging/20261021-buffer-type-application/VERIFY_DELIVERY.log",
+  "logSha256": "ba39aa3f33daad707764993fd3b56d947f738c85cc60029c294612b4351df0a3",
+  "footer": [],
+  "sourceInputsUnchanged": true,
+  "inputError": null,
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "namedInputs": 5155,
+  "canonicalInstalled": false,
+  "ownerPreviewChanged": false
+}

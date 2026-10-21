@@ -1,0 +1,125 @@
+{
+  "at": "2026-10-21T10:23:09.229Z",
+  "results": [
+    {
+      "label": "AFFECTED_NATIVE",
+      "args": [
+        "--test",
+        "--test-reporter=spec",
+        "--experimental-strip-types",
+        "--test-concurrency=1",
+        "tests/atlas-tour-library-pause.test.ts",
+        "tests/atlas-tour-reading-focus.test.ts",
+        "tests/clinical-review-elbow-arterial-tour.test.ts",
+        "tests/clinical-review-nested-duct-xray.test.ts",
+        "tests/clinical-epoch-batch-e-preservation.test.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 144776,
+      "log": "F:/VisibleMedicine/staging/20261021-buffer-type-application/AFFECTED_NATIVE.log",
+      "logSha256": "c12b5c91169e7fe2bc2e42fa6f9bdbb2d192f27a03d148cb4a435844aff13ec0",
+      "footer": [
+        "ℹ tests 17",
+        "ℹ pass 17",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "sourceInputsUnchanged": true,
+      "inputError": null,
+      "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+      "namedInputs": 5155,
+      "canonicalInstalled": false,
+      "ownerPreviewChanged": false
+    },
+    {
+      "label": "FRESH_FULL_TYPES",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 43437,
+      "log": "F:/VisibleMedicine/staging/20261021-buffer-type-application/FRESH_FULL_TYPES.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "footer": [],
+      "sourceInputsUnchanged": true,
+      "inputError": null,
+      "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+      "namedInputs": 5155,
+      "canonicalInstalled": false,
+      "ownerPreviewChanged": false
+    },
+    {
+      "label": "VERIFY_REVIEW",
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 3519,
+      "log": "F:/VisibleMedicine/staging/20261021-buffer-type-application/VERIFY_REVIEW.log",
+      "logSha256": "80476937ca63598db3ed11c85846b316423e22877d3d3a3ad7311d267d581b73",
+      "footer": [],
+      "sourceInputsUnchanged": true,
+      "inputError": null,
+      "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+      "namedInputs": 5155,
+      "canonicalInstalled": false,
+      "ownerPreviewChanged": false
+    },
+    {
+      "label": "VERIFY_DELIVERY",
+      "args": [
+        "scripts/verify-atlas-delivery-policy.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 2852,
+      "log": "F:/VisibleMedicine/staging/20261021-buffer-type-application/VERIFY_DELIVERY.log",
+      "logSha256": "ba39aa3f33daad707764993fd3b56d947f738c85cc60029c294612b4351df0a3",
+      "footer": [],
+      "sourceInputsUnchanged": true,
+      "inputError": null,
+      "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+      "namedInputs": 5155,
+      "canonicalInstalled": false,
+      "ownerPreviewChanged": false
+    },
+    {
+      "label": "PRODUCTION_BUILD",
+      "args": [
+        "node_modules/vinext/dist/cli.js",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 56630,
+      "log": "F:/VisibleMedicine/staging/20261021-buffer-type-application/PRODUCTION_BUILD.log",
+      "logSha256": "57540e58be1a92f775a981de26f4b9a7f192a6027c7509700d85383207f5322b",
+      "footer": [],
+      "sourceInputsUnchanged": true,
+      "inputError": null,
+      "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+      "namedInputs": 5155,
+      "canonicalInstalled": false,
+      "ownerPreviewChanged": false
+    }
+  ],
+  "passed": true,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-buffer-type-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "2108f66d22ceadfc93ed5a237a44279bc744d9f035c77ad9c24c6c9156383280",
+  "historicalFullSuiteFailuresRetained": 136,
+  "fullSuitePassingClaim": false,
+  "canonicalInstalled": false
+}

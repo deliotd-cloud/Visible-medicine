@@ -1,0 +1,73 @@
+{
+  "at": "2026-10-21T10:08:42.236Z",
+  "kind": "read-only-scoped-ownership-overlay",
+  "basePlan": "F:/VisibleMedicine/staging/20261021-cutover-plan-5155/PLAN_V2.json",
+  "basePlanSha256": "1a491c02c19995c56ec6d35ec6d1436b2c8c3ba66cb0a647bf52410031740e1e",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-review-return-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "d005374ca026576f4162199ea6cc4ee6e896f5d08ea9148b3371a88cc4474cc1",
+  "notFinalInstallerPlan": true,
+  "pendingCandidateTestOnlyRepairMayChangeFourPaths": true,
+  "onlyAcceptedPair": {
+    "path": "docs/anatomy-coverage/README.md",
+    "exactCanonicalBeforeSha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39",
+    "exactCandidateREADMEsha256": "e1ed5267f1d8903173948fa67befea4b65fa36d0f48166bb75671a0a970388f8",
+    "mergedProposedSha256": "4a9578c06d6a6733a3b07cc2d61562357548c45fb5008bc3ca4c711c9d2775ef",
+    "mergedProposal": "F:/VisibleMedicine/staging/20261021-coverage-prose-merge/README.md",
+    "condition": "Recheck exact canonical before hash and merged proposal hash at cutover; install merged proposal only with coherent source190 runtime, Review, and coverage; never replace with unmerged candidate README."
+  },
+  "proof": {
+    "canonicalRawMatchesCurrent": true,
+    "candidateRawMatchesCurrent": true,
+    "normalizedCanonicalProseLength": 4810,
+    "normalizedCanonicalProseOccurrencesInProposal": 1,
+    "sourceArtifacts": [
+      {
+        "scope": "root",
+        "path": "docs/anatomy-coverage/root.json",
+        "sha256": "00b01e9a701c01d8efbf544be05ccdc88d84ad4c20e8e2d7e6e8fd9ecd1ca5c1"
+      },
+      {
+        "scope": "nested",
+        "path": "docs/anatomy-coverage/nested.json",
+        "sha256": "ca6065b5efc7468a46e6194066229cf358948e48a5794554b100f769355d524d"
+      },
+      {
+        "scope": "independent",
+        "path": "docs/anatomy-coverage/independent.json",
+        "sha256": "801b972b74415a62eac521028fb2305ce0176a8324cc847a34621e6463adc66b"
+      },
+      {
+        "scope": "reference",
+        "path": "docs/anatomy-coverage/reference.json",
+        "sha256": "b32ea543f12479402186b669979f459507bcc1be75c141414ba2134410b66700"
+      }
+    ],
+    "sourceDependencies": 168,
+    "importedReviewPaths": 142,
+    "sourceOnlyMetadataPaths": 26,
+    "allDependencyHashesMatchCandidate": true,
+    "allImportedSourceHashesMatchReviewManifest": true
+  },
+  "revisedNamedPathCounts": {
+    "same": 4870,
+    "replace": 127,
+    "add": 151,
+    "preserve": 7,
+    "blocked": 0,
+    "total": 5155
+  },
+  "unchangedGates": {
+    "sevenPreservedNamedPaths": 7,
+    "dynamicCheckpointPreserved": true,
+    "coordinatorRevision102Preserved": true,
+    "sixGeneratedScopes": 6,
+    "generatedIssues": [],
+    "modelPaths": 144,
+    "modelIdentities": 137,
+    "privateCodeUnchanged": true
+  },
+  "noInstaller": true,
+  "noCanonicalEdit": true,
+  "noCandidateEdit": true,
+  "noServerStop": true
+}

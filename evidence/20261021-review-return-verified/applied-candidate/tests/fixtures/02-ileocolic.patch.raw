@@ -1,0 +1,229 @@
+diff --git a/F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/atlas-spinal-muscle-xray.test.mjs b/F:/VisibleMedicine/staging/20261020-postterminal-test-overlay/website/tests/atlas-spinal-muscle-xray.test.mjs
+index ace796a..7bf4662 100644
+--- a/F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/atlas-spinal-muscle-xray.test.mjs
++++ b/F:/VisibleMedicine/staging/20261020-postterminal-test-overlay/website/tests/atlas-spinal-muscle-xray.test.mjs
+@@ -8,6 +8,7 @@ import { pathToFileURL } from 'node:url';
+ import { runInNewContext } from 'node:vm';
+ import test from 'node:test';
+ import {assertTonguePalateQuizTransition} from './tongue-palate-quiz-transition.mjs';
++import {assertIleocolicUltrasoundTransition,ileocolicIdentity} from './ileocolic-ultrasound-transition.mjs';
+ import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+ 
+ // Run with `node --test <this file>` from the imported candidate or canonical site.
+@@ -40,6 +41,8 @@ const archXrayParent=checkMriEpoch;
+ const archXrayEpoch='f5097af8493701d64a8e2a2b5797df380f3b348a';
+ const tonguePalateParent='a2475a37201bdd5fdd12f5849fc8ee043412d02f';
+ const tonguePalateEpoch='6036a7a59dcc1fd75eee4a23af34ca2a568d86b6';
++const ileocolicParent='bd5465ee3b94c66c3d5701e7749099d07e8f40d3';
++const ileocolicEpoch='aaa8a6a428e74a2055310630f9dfee8731fe0eee';
+ assert.match(source.source, /^[a-f0-9]{40}$/);
+ assert.match(source.sourceTree, /^[a-f0-9]{40}$/);
+ assert.equal(source.baseline, '4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad');
+@@ -89,6 +92,14 @@ assert.equal(git('rev-parse',`${tonguePalateParent}^{tree}`).toString().trim(),
+   '97957a35788028b319df4f5d60c68a95e71320d7','exact a247 predecessor tree');
+ assert.equal(git('merge-base',tonguePalateEpoch,source.source).toString().trim(),
+   tonguePalateEpoch,'quiz introduction precedes current delivery');
++assert.equal(git('rev-parse',`${ileocolicEpoch}^`).toString().trim(),ileocolicParent,
++  'ileocolic lesson has exact immediate parent');
++assert.equal(git('rev-parse',`${ileocolicEpoch}^{tree}`).toString().trim(),
++  '7c0b886d66d2adf64d6d29e44938f39d8cd61046','ileocolic introduction tree');
++assert.equal(git('rev-parse',`${ileocolicParent}^{tree}`).toString().trim(),
++  '44ca83bf391164c09f43f4169d25dcacf4b2559d','ileocolic predecessor tree');
++assert.equal(git('merge-base',ileocolicEpoch,source.source).toString().trim(),
++  ileocolicEpoch,'ileocolic introduction precedes current delivery');
+ assert.equal(git('rev-parse',`${ctEpoch}^`).toString().trim(),ctParent);
+ assert.equal(git('rev-parse',`${ctEpoch}^{tree}`).toString().trim(),
+   '64776e3c967cbca29577b8db2bc01a129d31da3e');
+@@ -130,7 +141,8 @@ const treeByCommit = new Map([[source.source, currentTree], [source.baseline, pr
+   ...[ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch,
+     ctParent,ctEpoch,medianParent,medianEpoch,deepPlantarParent,deepPlantarEpoch,
+     lacrimalEpoch,abdominalEusEpoch,superficialPlantarEpoch,
+-    checkMriParent,checkMriEpoch,archXrayEpoch,tonguePalateEpoch]
++    checkMriParent,checkMriEpoch,archXrayEpoch,tonguePalateEpoch,
++    ileocolicParent,ileocolicEpoch]
+     .map(epoch=>[epoch,tree(epoch)])]);
+ function batch(commit, paths) {
+   const ids = [...new Set(paths.map(path => {
+@@ -187,6 +199,7 @@ const apiEntry = [
+   "export {orbitalSupportMriLesson} from './lib/orbital-support-mri';",
+   "export {footVenousArchXrayLesson} from './lib/foot-venous-arch-xray';",
+   "export {tonguePalateQuizLesson} from './lib/tongue-palate-quiz';",
++  "export {ileocolicArteryUltrasoundLesson} from './lib/ileocolic-artery-ultrasound';",
+   "export {bodyReviewMaterial} from './lib/body-review-material';",
+   "export {bodyReviewContext} from './lib/body-review-context';",
+   "export {parseBodyReviewResponse} from './lib/body-review-response';",
+@@ -294,6 +307,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+   const archXrayAtCommit=await sourceHistory.exactSourceHistoryApi(archXrayEpoch,'review-security');
+   const tonguePalateBefore=await sourceHistory.exactSourceHistoryApi(tonguePalateParent,'review-security');
+   const tonguePalateAtCommit=await sourceHistory.exactSourceHistoryApi(tonguePalateEpoch,'review-security');
++  const ileocolicBefore=await sourceHistory.exactSourceHistoryApi(ileocolicParent,'review-security');
++  const ileocolicAtCommit=await sourceHistory.exactSourceHistoryApi(ileocolicEpoch,'review-security');
+   const additionalUsEpochs=[
+     {name:'deep-plantar-ultrasound',parent:deepPlantarParent,epoch:deepPlantarEpoch,
+       count:2,resolver:api.deepPlantarUltrasoundLesson},
+@@ -431,6 +446,27 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+   featureBytes(archXrayEpoch,['content/foot-venous-arch-xray.ts','lib/foot-venous-arch-xray.ts']);
+   featureBytes(tonguePalateEpoch,['content/tongue-palate-quiz-pins.json',
+     'content/tongue-palate-quiz.ts','lib/tongue-palate-quiz.ts']);
++  featureBytes(ileocolicEpoch,['lib/ileocolic-artery-ultrasound.ts']);
++  assert.equal(sha(blob(ileocolicEpoch,'lib/ileocolic-artery-ultrasound.ts')),
++    sha(blob(source.source,'lib/ileocolic-artery-ultrasound.ts')),
++    'original authored ileocolic bytes retained in current Atlas');
++  batch(ileocolicParent,['app/body-content.ts']);
++  batch(ileocolicEpoch,['app/body-content.ts']);
++  const ileocolicImport="import { ileocolicArteryUltrasoundLesson } from '../lib/ileocolic-artery-ultrasound';\n";
++  const ileocolicBranch='  const ileocolicUltrasound = ileocolicArteryUltrasoundLesson(s, tab);\n  if (ileocolicUltrasound) return ileocolicUltrasound;\n';
++  const parentDispatch=blob(ileocolicParent,'app/body-content.ts').toString().replaceAll('\r\n','\n');
++  const introducedDispatch=blob(ileocolicEpoch,'app/body-content.ts').toString().replaceAll('\r\n','\n');
++  assert.equal(introducedDispatch.split(ileocolicImport).length,2,'single authored import');
++  assert.equal(introducedDispatch.split(ileocolicBranch).length,2,'single authored branch');
++  assert.equal(introducedDispatch.replace(ileocolicImport,'').replace(ileocolicBranch,''),
++    parentDispatch,'complete prior dispatch restored by exact source inverse');
++  assert.ok(introducedDispatch.indexOf('if(arterialEvidenceLimit)return arterialEvidenceLimit;')<
++    introducedDispatch.indexOf(ileocolicBranch),'source evidence holds remain first');
++  const currentDispatch=blob(source.source,'app/body-content.ts').toString().replaceAll('\r\n','\n');
++  assert.equal(currentDispatch.split(ileocolicImport).length,2,'current dispatch retains import');
++  assert.equal(currentDispatch.split(ileocolicBranch).length,2,'current dispatch retains branch');
++  assert.ok(currentDispatch.indexOf('if(arterialEvidenceLimit)return arterialEvidenceLimit;')<
++    currentDispatch.indexOf(ileocolicBranch),'current source evidence holds remain first');
+   const tonguePalatePins=exactPins('content/tongue-palate-quiz-pins.json',tonguePalateEpoch);
+   assert.equal(sha(blob(tonguePalateEpoch,'content/tongue-palate-quiz-pins.json')),
+     '150fae10b5b29dd10659040a820de8ff0a9eeccd7012406b2d0ed0bd9200ab32',
+@@ -439,6 +475,10 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+   assert.equal(tonguePalatePins.entries.length,8);
+   const tonguePalateSelected=new Map(tonguePalatePins.entries.map(row=>[row.identity.id,row]));
+   assert.equal(tonguePalateSelected.size,8,'eight distinct tongue and palate identities');
++  const ileocolicId=ileocolicIdentity.id;
++  const ileocolicMatches=catalog.structures.filter(row=>row.id===ileocolicId);
++  assert.equal(ileocolicMatches.length,1,'one named ileocolic source structure');
++  same(ileocolicMatches[0],ileocolicIdentity,'complete fixed ileocolic catalogue identity');
+   for(const row of tonguePalatePins.entries)
+     assert.equal(row.previous.readiness,'generated-identification',
+       `${row.identity.id} pinned generated-identification predecessor`);
+@@ -473,6 +513,7 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+   const laterSixCells=[...checkMriSelected.keys()].map(id=>`${id}/mri`)
+     .concat([...archXraySelected.keys()].map(id=>`${id}/xray`));
+   const tonguePalateCells=[...tonguePalateSelected.keys()].map(id=>`${id}/quiz`);
++  const ileocolicCell=`${ileocolicId}/ultrasound`;
+   assert.equal(new Set([...selected.keys(),...handSelected.keys(),...usSelected.keys(),
+     ...footSelected.keys(),...evidenceSelected.keys(),...mriSelected.keys(),
+     ...ctSelected.keys(),...medianSelected.keys(),...additionalUsSelected.keys(),
+@@ -483,12 +524,15 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+     118+18+6,'the later six cells are disjoint from all earlier protected cells');
+   assert.equal(new Set([...protectedCells,...introducedCells,...laterSixCells,...tonguePalateCells]).size,
+     118+18+6+8,'the eight quiz cells do not overlap any other protected transition');
++  assert.equal(new Set([...protectedCells,...introducedCells,...laterSixCells,
++    ...tonguePalateCells,ileocolicCell]).size,118+18+6+8+1,
++    'the single ileocolic ultrasound cell is distinct');
+   const spine = api.decodeRegionalTeachingSnapshot(json('atlas-review/content/regional-teaching/spine.json'), 'spine');
+   let changed = 0, preserved = 0, changedWorksheets = 0, handChanges=0, handWorksheets=0;
+   let usChanges=0,usWorksheets=0,currentPreserved=0,currentVsOldPreserved=0;
+   let footChanges=0,evidenceChanges=0,mriChanges=0;
+   let ctChanges=0,medianChanges=0,additionalUsChanges=0,checkMriChanges=0,archXrayChanges=0;
+-  let tonguePalateChanges=0;
++  let tonguePalateChanges=0,ileocolicChanges=0;
+   const additionalUsCounts=new Map(additionalUsEpochs.map(group=>[group.name,0]));
+   for (const structure of catalog.structures) {
+     const oldWorksheet = await old.bodyReviewMaterial(structure.id);
+@@ -683,6 +727,19 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+           currentResolver:api.tonguePalateQuizLesson,worksheet});
+         assert.notDeepEqual(topic,priorCurrentTopic);
+         tonguePalateChanges++;
++      }else if(structure.id===ileocolicId&&tab==='ultrasound'){
++        const predecessor=ileocolicBefore.bodyLesson(structure,tab);
++        const introduced=ileocolicAtCommit.bodyLesson(structure,tab);
++        const predecessorTopic=(await ileocolicBefore.bodyReviewMaterial(structure.id))
++          .topics.find(item=>item.tab===tab);
++        const introducedTopic=(await ileocolicAtCommit.bodyReviewMaterial(structure.id))
++          .topics.find(item=>item.tab===tab);
++        assertIleocolicUltrasoundTransition({structure,tab,priorLesson,before,
++          predecessor,predecessorTopic,after,introduced,topic,introducedTopic,
++          currentResolver:api.ileocolicArteryUltrasoundLesson,worksheet});
++        assert.notDeepEqual(topic,priorCurrentTopic);
++        assert.notDeepEqual(topic,historicalTopic);
++        ileocolicChanges++;
+       }else{
+         same(after,priorLesson,`${structure.id}/${tab} current lesson unchanged since f1`);
+         same(topic,priorCurrentTopic,`${structure.id}/${tab} current worksheet unchanged since f1`);
+@@ -726,7 +783,7 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+         (footRow&&tab==='xray')||(evidenceRow&&tab===evidenceRow.tab)||(mriRow&&tab==='mri')||
+         (ctRow&&tab==='ct')||(medianRow&&tab==='xray')||(additionalUs&&tab==='ultrasound')||
+         (checkMriRow&&tab==='mri')||(archXrayRow&&tab==='xray')||
+-        (tonguePalateRow&&tab==='quiz')) {
++        (tonguePalateRow&&tab==='quiz')||(structure.id===ileocolicId&&tab==='ultrasound')) {
+         // Each exact feature transition and its worksheet were checked above.
+       } else {
+         same(after,before,`${structure.id}/${tab} current lesson preserved versus baseline`);
+@@ -750,17 +807,18 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+   assert.equal(checkMriChanges,4);
+   assert.equal(archXrayChanges,2);
+   assert.equal(tonguePalateChanges,8);
++  assert.equal(ileocolicChanges,1);
+   for(const group of additionalUsEpochs)assert.equal(additionalUsCounts.get(group.name),group.count,
+     `${group.name} exact introduced cells visited`);
+-  assert.equal(currentPreserved,9878);
++  assert.equal(currentPreserved,9877);
+   assert.equal(currentPreserved+ctChanges+medianChanges+additionalUsChanges+
+-    checkMriChanges+archXrayChanges+tonguePalateChanges,9910,
+-    '9910 current-preservation cells partition into eighteen prior, six later and eight exact quiz changes');
++    checkMriChanges+archXrayChanges+tonguePalateChanges+ileocolicChanges,9910,
++    '9910 current-preservation cells include one exact ileocolic change');
+   assert.equal(preserved, 9836);
+-  assert.equal(currentVsOldPreserved,9786);
++  assert.equal(currentVsOldPreserved,9785);
+   assert.equal(currentVsOldPreserved+ctChanges+medianChanges+additionalUsChanges+
+-    checkMriChanges+archXrayChanges+tonguePalateChanges,9818,
+-    '9818 baseline-preservation cells partition into eighteen prior, six later and eight exact quiz changes');
++    checkMriChanges+archXrayChanges+tonguePalateChanges+ileocolicChanges,9818,
++    '9818 baseline-preservation cells include one exact ileocolic change');
+   assert.equal(changedWorksheets, 56);
+   assert.equal(handWorksheets,36);
+   assert.equal(usWorksheets,8);
+@@ -790,6 +848,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+     [checkMriSelected,'mri',api.orbitalSupportMriLesson],
+     [archXraySelected,'xray',api.footVenousArchXrayLesson],
+     [tonguePalateSelected,'quiz',api.tonguePalateQuizLesson],
++    [new Map([[ileocolicId,{identity:ileocolicIdentity}]]),'ultrasound',
++      api.ileocolicArteryUltrasoundLesson],
+     ...additionalUsEpochs.map(group=>[group.rows,'ultrasound',group.resolver]),
+   ])for(const row of selectedSet.values()){
+     const id=row.identity.id;
+@@ -800,6 +860,21 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+     const altered=structuredClone(packet);
+     altered.topics.find(topic=>topic.tab===tab).body+=' altered';
+     assert.equal(await api.parseBodyReviewResponse(altered,id),null,`${id} tampered teaching refused`);
++    if(id===ileocolicId){
++      const stale=await ileocolicBefore.bodyReviewMaterial(id);
++      assert.equal(await api.parseBodyReviewResponse(stale,id),null,
++        'pre-introduction ileocolic worksheet cannot carry approval');
++      for(const mutate of [
++        topic=>{topic.citations[0]='https://invalid.example/';},
++        topic=>{topic.readiness='approved';},
++        topic=>{topic.extra='foreign';},
++      ]){
++        const changed=structuredClone(packet);
++        mutate(changed.topics.find(topic=>topic.tab===tab));
++        assert.equal(await api.parseBodyReviewResponse(changed,id),null,
++          'altered ileocolic Review material refused');
++      }
++    }
+     assert.equal(resolver({id,name:row.identity.name,fmaId:row.identity.fmaId},tab),undefined,
+       `${id} partial source identity refused`);
+     const changedIdentity=structuredClone(row.identity);
+@@ -824,6 +899,7 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+       path=>readFileSync(resolve(root,path))))];
+   for(const [selectedSet,tab] of [[ctSelected,'ct'],[medianSelected,'xray'],
+     [checkMriSelected,'mri'],[archXraySelected,'xray'],
++    [new Map([[ileocolicId,{identity:ileocolicIdentity}]]),'ultrasound'],
+     ...additionalUsEpochs.map(group=>[group.rows,'ultrasound'])])
+     for(const row of selectedSet.values()){
+       const lesson=api.bodyLesson(row.identity,tab);
+@@ -851,7 +927,7 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+   console.log(JSON.stringify({ source: source.source, sourceTree: source.sourceTree, changed,
+     preserved, changedWorksheets, handChanges, handWorksheets,usChanges,usWorksheets,currentPreserved,
+     footChanges,evidenceChanges,mriChanges,ctChanges,medianChanges,additionalUsChanges,
+-    checkMriChanges,archXrayChanges,tonguePalateChanges,
++    checkMriChanges,archXrayChanges,tonguePalateChanges,ileocolicChanges,
+     additionalUsCounts:Object.fromEntries(additionalUsCounts),currentVsOldPreserved,
+     families: 32, pins: 56, cervicalUnchanged: 6,
+     runtimes: regions.length, reviewFiles: review.files.length, modelBundlesUnchanged: 86,

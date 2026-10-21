@@ -1,0 +1,67 @@
+@@ -2,0 +3 @@ import {createHash} from 'node:crypto';
++import {execFileSync} from 'node:child_process';
+@@ -3,0 +5 @@ import {readFileSync} from 'node:fs';
++import {pathToFileURL} from 'node:url';
+@@ -5,0 +8,2 @@ import {build} from 'esbuild';
++import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+@@ -7 +11,2 @@ import {build} from 'esbuild';
+-const sourceCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const historicalCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const sourceCommit=CURRENT_ATLAS_REVISION;
+@@ -14,0 +20,5 @@ const sourceFiles={
++const currentSourceFiles={
++ 'content/orbital-support-mri-pins.json':'51bb8a5fa92edb063e1003f503dc445f029ae6289ea1e6fb7fe81d0d185e55b0',
++ 'content/orbital-support-mri.ts':'1f83b660c407eda46403a51b321cf2701b9ad1137237753f25b057348d8aa78f',
++ 'lib/orbital-support-mri.ts':'002160fb862a38496a0df3e0184625d4744324ab617250b88d266113ec93db1d',
++} as const;
+@@ -33,0 +44,15 @@ test('twelve orbital support MRI drafts retain exact learner and Review bindings
++ const atlas=currentAtlasDeliveryRoot();
++ assert.equal(checkedAtlasHistoryRepo(historicalCommit),atlas);
++ const git=(commit:string,path:string)=>execFileSync('git',['show',`${commit}:${path}`],
++  {cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
++ const gitMeta=(...args:string[])=>execFileSync('git',args,
++  {cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString().trim();
++ assert.equal(gitMeta('merge-base',historicalCommit,sourceCommit),historicalCommit);
++ const evidenceEpoch='f5052a1906bf9b87e5235bda57d367b1103729db';
++ assert.equal(gitMeta('merge-base',evidenceEpoch,sourceCommit),evidenceEpoch);
++ assert.deepEqual(gitMeta('diff','--name-only',historicalCommit,evidenceEpoch,'--',
++  ...Object.keys(sourceFiles)).split(/\r?\n/),
++  ['content/orbital-support-mri.ts','lib/orbital-support-mri.ts'],
++  'Only the two authored orbital-support source paths changed at the evidence epoch');
++ const {exactSourceHistoryApi}=await import(pathToFileURL(atlas+'/scripts/exact-source-history-api.mjs').href);
++ const original=await exactSourceHistoryApi(historicalCommit,'review-security');
+@@ -47,0 +73 @@ test('twelve orbital support MRI drafts retain exact learner and Review bindings
++  assert.equal(sha(git(historicalCommit,path)),digest,`${path}: immutable first-delivery source`);
+@@ -50,3 +76,6 @@ test('twelve orbital support MRI drafts retain exact learner and Review bindings
+-  assert.equal(imported.sourceSha256,digest,path);
+-  assert.equal(imported.importedSha256,digest,path);
+-  assert.equal(sha(readFileSync('atlas-review/'+path)),digest,path);
++  const currentDigest=currentSourceFiles[path as keyof typeof currentSourceFiles];
++  assert.equal(sha(git(sourceCommit,path)),currentDigest,`${path}: current committed source`);
++  assert.deepEqual(git(sourceCommit,path),git(evidenceEpoch,path),`${path}: evidence epoch retained`);
++  assert.equal(imported.sourceSha256,currentDigest,path);
++  assert.equal(imported.importedSha256,currentDigest,path);
++  assert.equal(sha(readFileSync('atlas-review/'+path)),currentDigest,path);
+@@ -63 +92 @@ test('twelve orbital support MRI drafts retain exact learner and Review bindings
+-  for(const [path,digest] of Object.entries(sourceFiles))
++  for(const [path,digest] of Object.entries(currentSourceFiles))
+@@ -75 +104 @@ test('twelve orbital support MRI drafts retain exact learner and Review bindings
+-  "export {orbitalSupportMriFacts,orbitalSupportMriLimitations,orbitalSupportMriReferences} from './atlas-review/content/orbital-support-mri';",
++  "export {orbitalSupportMriCheckEvidence,orbitalSupportMriFacts,orbitalSupportMriLimitations,orbitalSupportMriReferences} from './atlas-review/content/orbital-support-mri';",
+@@ -93,0 +123 @@ test('twelve orbital support MRI drafts retain exact learner and Review bindings
++  const firstDelivery=original.bodyLesson(identity,'mri');
+@@ -94,0 +125 @@ test('twelve orbital support MRI drafts retain exact learner and Review bindings
++  assert(firstDelivery,id);
+@@ -99,2 +130,9 @@ test('twelve orbital support MRI drafts retain exact learner and Review bindings
+-  assert.deepEqual(lesson.bullets,[api.orbitalSupportMriFacts[family].distinction,...api.orbitalSupportMriLimitations]);
+-  assert.deepEqual(lesson.citations,api.orbitalSupportMriReferences);
++  const checkLigament=family==='lateralCheck'||family==='medialCheck';
++  assert.deepEqual(firstDelivery.bullets,[api.orbitalSupportMriFacts[family].distinction,...api.orbitalSupportMriLimitations],
++   `${id}: original MRI limitations`);
++  assert.deepEqual(firstDelivery.citations,api.orbitalSupportMriReferences,`${id}: original MRI references`);
++  assert.deepEqual(lesson.bullets,[...firstDelivery.bullets,
++   ...(checkLigament?[api.orbitalSupportMriCheckEvidence.note]:[])]);
++  assert.deepEqual(lesson.citations,[...firstDelivery.citations,
++   ...(checkLigament?[api.orbitalSupportMriCheckEvidence.reference]:[])]);
++  if(!checkLigament)assert.deepEqual(lesson,firstDelivery,`${id}: untouched original lesson`);

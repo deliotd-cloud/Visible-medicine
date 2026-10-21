@@ -1,0 +1,21 @@
+@@ -1,0 +2 @@ import assert from 'node:assert/strict';
++import {execFileSync} from 'node:child_process';
+@@ -80 +81,17 @@ for(const [name,url] of historicalSupport){
+-assert.equal(support.size,3);
++// The 9f scene chunk is no longer in the 190 runtime. Replay its exact local
++// Git object; never substitute a similarly named current chunk.
++const sceneName='assets/body-scene-CcFnIl_v.js';
++const sceneObject='e87f3e7fe1e50735ff9a9a9ba8c989be8bd8b26b';
++assert(!frozen.has(sceneName)&&!support.has(sceneName));
++const sceneExpected=allowed.get(sceneName);
++assert.deepEqual(sceneExpected,{bytes:1117521,
++ sha256:'1d5cca6d39e99fc8aa1e8c40b7cd10c10cd2b49654314632b66f4990c17d5fea'});
++const gitOptions={cwd:workRoot,windowsHide:true,maxBuffer:2_000_000,
++ env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}};
++assert.equal(execFileSync('git',['cat-file','-t',sceneObject],gitOptions).toString().trim(),'blob');
++const scene=execFileSync('git',['cat-file','blob',sceneObject],gitOptions);
++assert.equal(execFileSync('git',['hash-object','--stdin'],{...gitOptions,input:scene}).toString().trim(),sceneObject);
++assert.equal(scene.length,sceneExpected.bytes);
++assert.equal(sha(scene),sceneExpected.sha256);
++support.set(sceneName,scene);
++assert.equal(support.size,4);
