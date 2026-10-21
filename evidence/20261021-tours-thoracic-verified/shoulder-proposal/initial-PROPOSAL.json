@@ -1,0 +1,28 @@
+{
+  "schema": "visible-medicine.main-shoulder-muscle-role-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "proposedPaths": [
+    {
+      "path": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "preimageSha256": "8267d8e7f5122069157815b17290d58b5f614937d182a5ca93529c881309d352",
+      "candidateSha256": "e6ea550a8eee3c1e491ac62a11e225ac0e938704079653f74955322bee9c6a08",
+      "candidateBytes": 23440
+    },
+    {
+      "path": "tests/fixtures/shoulder-muscle-before-role-20261021.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "8267d8e7f5122069157815b17290d58b5f614937d182a5ca93529c881309d352",
+      "candidateBytes": 23133
+    },
+    {
+      "path": "tests/shoulder-muscle-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "a2d7a3887d3a585177be04facefa1eb03f8f50a7ad551e1a283df0c061e78344",
+      "candidateBytes": 3340
+    }
+  ],
+  "diagnosis": "Keep immutable eb34 introduction and c978 baseline. Historical51-tour/309-stop graph and unchanged non-Xray fields belong to the introduction epoch, not later current190. Current full catalogue,1104packets,all answers/topics and synthetic refusals remain compared with independent Website-bound current Git replay. Every original source/model pin,146mesh check,9936placement/16change count and64malformed/16stale/16forged/16approval refusal totals remain. No observed count or fingerprint repin.",
+  "limits": "Main-authored staged proposal only; no source-only guard or actual native pass yet. No product/content/model/private or approval edit."
+}

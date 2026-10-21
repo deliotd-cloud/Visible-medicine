@@ -1,0 +1,111 @@
+{
+  "at": "2026-10-21T14:59:30.550Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/clinical-review-thoracic-eus.test.ts",
+      "preimageSha256": "f2779287a51c847d087e6fd22097d65d644c9b76c62c8d6633cce163cbe2f36b",
+      "candidateSha256": "ec671a5e732fc1919c746dc9ffd79b8b26e622ac971289976039733e813e89ca",
+      "candidateBytes": 12889
+    },
+    {
+      "path": "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+      "preimageSha256": "46a83e58c6a04bdb2c6516beb94662b765f80cc32172dd51b4dd072a47bbc00b",
+      "candidateSha256": "7b5a119205d5f9c20e36a5c4c1d3f9e0559c85e3fe6ff020238e954ae9ff1be5",
+      "candidateBytes": 7747
+    },
+    {
+      "path": "tests/clinical-review-thoracic-wall-xray.test.ts",
+      "preimageSha256": "97cae6bdb01fcb68757c7cbba433cdc5b8caa4e84b2f84077fcb19b2ae18385b",
+      "candidateSha256": "4623f417f1849ae39266bae4bec43a596171269ec310189be4a4c5d16bfed7d2",
+      "candidateBytes": 7025
+    },
+    {
+      "path": "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "preimageSha256": "7c395e4ceed1630061a62f3032b8cd660e0518ad8ea8f21a48a6aaa777fc3222",
+      "candidateSha256": "95e0cf5da289ced211518a5b6056dd3c221d502b2770253ccee9c63c3c1425c1",
+      "candidateBytes": 12620
+    },
+    {
+      "path": "tests/thoracic-teaching-role-preservation.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "f039d55de30426540fae3c2f8aecaab1cdc9b5ad7e6004e8639a3336f8c14855",
+      "candidateBytes": 11280
+    },
+    {
+      "path": "tests/fixtures/clinical-review-thoracic-eus-before-current190.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "f2779287a51c847d087e6fd22097d65d644c9b76c62c8d6633cce163cbe2f36b",
+      "candidateBytes": 11694
+    },
+    {
+      "path": "tests/fixtures/clinical-review-thoracic-systemic-teaching-before-current190.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "46a83e58c6a04bdb2c6516beb94662b765f80cc32172dd51b4dd072a47bbc00b",
+      "candidateBytes": 6291
+    },
+    {
+      "path": "tests/fixtures/clinical-review-thoracic-wall-xray-before-current190.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "97cae6bdb01fcb68757c7cbba433cdc5b8caa4e84b2f84077fcb19b2ae18385b",
+      "candidateBytes": 5903
+    },
+    {
+      "path": "tests/fixtures/clinical-review-thoracoacromial-ultrasound-before-current190.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "7c395e4ceed1630061a62f3032b8cd660e0518ad8ea8f21a48a6aaa777fc3222",
+      "candidateBytes": 11353
+    }
+  ],
+  "controlledInputs": 5228,
+  "preservedInputs": 7,
+  "namedInputs": 5235,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "1984f521830b24fb9a3823b57b7f720371a96d4924ced4aa0b745023180e7ebd",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:59:27.928Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/clinical-review-thoracic-eus.test.ts",
+      "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+      "tests/clinical-review-thoracic-wall-xray.test.ts",
+      "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "tests/thoracic-teaching-role-preservation.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/posterior-fossa-coverage.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/native.tap",
+    "logSha256": "dd3d943d15b64da0de579d34fe123caf5cba877ee72956aece6ace3bc65d2f0b",
+    "counts": {
+      "tests": 44,
+      "pass": 44,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

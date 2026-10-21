@@ -1,0 +1,27 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application",
+  "manifestSha256": "9cac34f780d5d16c9978137c698f478a3dfa93d59093996b434d93c93119591d",
+  "beforeInputs": 5223,
+  "afterInputs": 5228,
+  "expectedPaths": [
+    "tests/clinical-review-thoracic-eus.test.ts",
+    "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+    "tests/clinical-review-thoracic-wall-xray.test.ts",
+    "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+    "tests/thoracic-teaching-role-preservation.test.mjs",
+    "tests/fixtures/clinical-review-thoracic-eus-before-current190.test.ts.raw",
+    "tests/fixtures/clinical-review-thoracic-systemic-teaching-before-current190.test.ts.raw",
+    "tests/fixtures/clinical-review-thoracic-wall-xray-before-current190.test.ts.raw",
+    "tests/fixtures/clinical-review-thoracoacromial-ultrasound-before-current190.test.ts.raw"
+  ],
+  "roots": [
+    "tests/clinical-review-thoracic-eus.test.ts",
+    "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+    "tests/clinical-review-thoracic-wall-xray.test.ts",
+    "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+    "tests/thoracic-teaching-role-preservation.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "at": "2026-10-21T14:58:39.313Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/clinical-review-regional-tour.test.ts",
+      "preimageSha256": "2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee",
+      "candidateSha256": "af4d4f3efee33d61db8c1769632909680bf07e89d46e514c97601499097ea7ff",
+      "candidateBytes": 27127
+    },
+    {
+      "path": "tests/clinical-review-tour-imaging.test.ts",
+      "preimageSha256": "15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b",
+      "candidateSha256": "5b6973bb2241ab63ffccb4a911a48e5c2ee9adef3f7ce8c6cfb1345d3deb4be4",
+      "candidateBytes": 32924
+    },
+    {
+      "path": "tests/regional-tour-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "60d340be22a36780958c15a76fef4823d4f1c028f3279dedfe60132a3dc53645",
+      "candidateBytes": 14950
+    },
+    {
+      "path": "tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-regional-tour.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee",
+      "candidateBytes": 25175
+    },
+    {
+      "path": "tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-tour-imaging.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b",
+      "candidateBytes": 32447
+    }
+  ],
+  "controlledInputs": 5223,
+  "preservedInputs": 7,
+  "namedInputs": 5230,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-regional-tour-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "4e2ed97fc31d40ec34701b216beb9d981aaca8204b80ce83d3b54e65f8a5abff",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-regional-tour-role-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:58:35.976Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/clinical-review-regional-tour.test.ts",
+      "tests/clinical-review-tour-imaging.test.ts",
+      "tests/regional-tour-role-preservation-20261021.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/posterior-fossa-coverage.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-regional-tour-role-application/native.tap",
+    "logSha256": "178e5dc8a99be69725461fec3d6beddb779a01f0f755db32e42af1440a24b1ed",
+    "counts": {
+      "tests": 45,
+      "pass": 45,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

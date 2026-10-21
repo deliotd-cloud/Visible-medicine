@@ -1,0 +1,18 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-application",
+  "manifestSha256": "212bd0c845095a00f407f5fe8201a03cb219a5099931d7ad5f7a75e1308580fc",
+  "beforeInputs": 5218,
+  "afterInputs": 5220,
+  "expectedPaths": [
+    "tests/clinical-review-shoulder-muscle-xray.test.ts",
+    "tests/fixtures/shoulder-muscle-before-role-20261021.test.ts.raw",
+    "tests/shoulder-muscle-role-preservation-20261021.test.mjs"
+  ],
+  "roots": [
+    "tests/clinical-review-shoulder-muscle-xray.test.ts",
+    "tests/shoulder-muscle-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}

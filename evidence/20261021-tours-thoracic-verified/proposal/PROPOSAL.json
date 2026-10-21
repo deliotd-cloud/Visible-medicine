@@ -1,0 +1,39 @@
+{
+  "schema": "vm-source-only-role-proposal/1",
+  "state": "candidate-needs-main-review-and-native-admission",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "5c20a07e40627f2576d2a891584c801d308ea76810f98daf6e31f586e25c46a2",
+  "diagnosis": [
+    "Original 87-case failures 77,82,85,86 stop at authored9f source-role assertions while Review and learner manifests are current190. Read-only Atlas old9f→190 comparison of these tests' relevant sources finds their teaching-specific pins and lesson modules unchanged; only shared app/body-content.ts changed among the named source paths.",
+    "Each staged root preserves its complete learner, emitted teaching, identity/side, no-approval, stale, forged, and no-storage assertions. The old9f authored role is checked against exact Git source bytes and authored application packet/topic via exactSourceHistoryApi; the moving current role checks complete Website-imported Review packet against boundLiveAtlasHistory(190), which verifies the Website renderer adapter and full integration binding before source replay.",
+    "No observed current whole-packet fingerprint is repinned. The exact reviewed source modules remain hash-bound or byte-equal; later unrelated CT or generic topic changes may change whole packet fingerprints and are checked by independent current replay."
+  ],
+  "proposedPaths": [
+    {"path":"tests/clinical-review-thoracic-eus.test.ts","preimageSha256":"f2779287a51c847d087e6fd22097d65d644c9b76c62c8d6633cce163cbe2f36b","candidateSha256":"ec671a5e732fc1919c746dc9ffd79b8b26e622ac971289976039733e813e89ca","candidateBytes":12889},
+    {"path":"tests/clinical-review-thoracic-systemic-teaching.test.ts","preimageSha256":"46a83e58c6a04bdb2c6516beb94662b765f80cc32172dd51b4dd072a47bbc00b","candidateSha256":"7b5a119205d5f9c20e36a5c4c1d3f9e0559c85e3fe6ff020238e954ae9ff1be5","candidateBytes":7747},
+    {"path":"tests/clinical-review-thoracic-wall-xray.test.ts","preimageSha256":"97cae6bdb01fcb68757c7cbba433cdc5b8caa4e84b2f84077fcb19b2ae18385b","candidateSha256":"4623f417f1849ae39266bae4bec43a596171269ec310189be4a4c5d16bfed7d2","candidateBytes":7025},
+    {"path":"tests/clinical-review-thoracoacromial-ultrasound.test.ts","preimageSha256":"7c395e4ceed1630061a62f3032b8cd660e0518ad8ea8f21a48a6aaa777fc3222","candidateSha256":"95e0cf5da289ced211518a5b6056dd3c221d502b2770253ccee9c63c3c1425c1","candidateBytes":12620},
+    {"path":"tests/thoracic-teaching-role-preservation.test.mjs","preimageSha256":null,"candidateSha256":"f039d55de30426540fae3c2f8aecaab1cdc9b5ad7e6004e8639a3336f8c14855","candidateBytes":11280},
+    {"path":"tests/fixtures/clinical-review-thoracic-eus-before-current190.test.ts.raw","preimageSha256":null,"candidateSha256":"f2779287a51c847d087e6fd22097d65d644c9b76c62c8d6633cce163cbe2f36b","candidateBytes":11694},
+    {"path":"tests/fixtures/clinical-review-thoracic-systemic-teaching-before-current190.test.ts.raw","preimageSha256":null,"candidateSha256":"46a83e58c6a04bdb2c6516beb94662b765f80cc32172dd51b4dd072a47bbc00b","candidateBytes":6291},
+    {"path":"tests/fixtures/clinical-review-thoracic-wall-xray-before-current190.test.ts.raw","preimageSha256":null,"candidateSha256":"97cae6bdb01fcb68757c7cbba433cdc5b8caa4e84b2f84077fcb19b2ae18385b","candidateBytes":5903},
+    {"path":"tests/fixtures/clinical-review-thoracoacromial-ultrasound-before-current190.test.ts.raw","preimageSha256":null,"candidateSha256":"7c395e4ceed1630061a62f3032b8cd660e0518ad8ea8f21a48a6aaa777fc3222","candidateBytes":11353}
+  ],
+  "sourceOnlyChecks": {
+    "passed": [
+      "Four raw witnesses SHA-match the complete canonical preimages at observation.",
+      "Atlas old9f-to-current190 name diff across all named teaching-specific source paths: only app/body-content.ts changed; pins/lesson files are byte-identical.",
+      "node --experimental-strip-types --check four staged .ts files and node --check bounded guard: pass.",
+      "node --test staged thoracic-teaching-role-preservation.test.mjs: 4/4 pass, four exact full-file forwards and byte-exact inverses; negative assertion removal and unknown append refused in each."
+    ],
+    "proofCommand": "node --test F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-proposal/tests/thoracic-teaching-role-preservation.test.mjs",
+    "deferredNativeCommands": [
+      "node --test --experimental-strip-types --test-concurrency=1 tests/clinical-review-thoracic-eus.test.ts tests/clinical-review-thoracic-systemic-teaching.test.ts tests/clinical-review-thoracic-wall-xray.test.ts tests/clinical-review-thoracoacromial-ultrasound.test.ts tests/thoracic-teaching-role-preservation.test.mjs"
+    ]
+  },
+  "limits": "Staged source-only proposal. Authored/current packet replays and emitted/no-storage behavior require main's actual native run; no native/build/browser or clinical/spatial approval claimed. No canonical, product, generated, data, fixture JSON or validator edit."
+}

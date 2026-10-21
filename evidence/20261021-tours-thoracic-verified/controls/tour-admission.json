@@ -1,0 +1,21 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-regional-tour-role-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-regional-tour-role-application",
+  "manifestSha256": "836b1631320a243839599a5947bb884579200dec9c909258c1bacd9a6151b6b5",
+  "beforeInputs": 5220,
+  "afterInputs": 5223,
+  "expectedPaths": [
+    "tests/clinical-review-regional-tour.test.ts",
+    "tests/clinical-review-tour-imaging.test.ts",
+    "tests/regional-tour-role-preservation-20261021.test.mjs",
+    "tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-regional-tour.test.ts.raw",
+    "tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-tour-imaging.test.ts.raw"
+  ],
+  "roots": [
+    "tests/clinical-review-regional-tour.test.ts",
+    "tests/clinical-review-tour-imaging.test.ts",
+    "tests/regional-tour-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}

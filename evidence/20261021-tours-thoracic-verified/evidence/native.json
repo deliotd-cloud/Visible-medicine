@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-21T14:59:27.928Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/clinical-review-thoracic-eus.test.ts",
+    "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+    "tests/clinical-review-thoracic-wall-xray.test.ts",
+    "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+    "tests/thoracic-teaching-role-preservation.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/native.tap",
+  "logSha256": "dd3d943d15b64da0de579d34fe123caf5cba877ee72956aece6ace3bc65d2f0b",
+  "counts": {
+    "tests": 44,
+    "pass": 44,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

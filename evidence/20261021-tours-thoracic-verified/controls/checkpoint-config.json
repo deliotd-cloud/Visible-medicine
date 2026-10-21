@@ -1,0 +1,146 @@
+{
+  "root": "F:/VisibleMedicine/recovery/checkpoints/20261021-tours-thoracic-verified",
+  "stage": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application",
+  "previous": "F:/VisibleMedicine/recovery/checkpoints/20261021-corpus-current-verified",
+  "proposal": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-proposal",
+  "changedPaths": 9,
+  "controlledInputs": 5228,
+  "checklistRevision": 119,
+  "nativeCode": 0,
+  "nativeCounts": {
+    "tests": 44,
+    "pass": 44,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "parentHead": "ebc25b451a183bb4950c710a50459596cfff992d",
+  "repo": "F:/VisibleMedicine/history/website-work/github-tours-thoracic-20261021.git",
+  "branch": "backup/tours-thoracic-20261021",
+  "milestone": "Seventeen final test/raw paths across three source-role batches. Separate actual shoulder38/38 verifies original146mesh,9936placement,1104packet and refusal obligations; tour45/45 verifies authentic77ac/saved9f history,current190 imaging notes and corrected quick-check hosts; thoracic44/44 verifies four authored/current teaching modules, complete Website-bound packets and all original refusals. Main initial38/37/1 is retained: an added chronological-staleness assertion was false for identical material and was removed; complete original shoulder assertions now differ only at three current-source/root seams. Bounded routing retains87original failures:39later exact-title passes,8root passes with incomparable titles,40not covered by listed complete-pass runs, not40remaining failures. No product/clinical/private/owner-preview changes or whole-suite claim.",
+  "scope": "Nine current thoracic test/raw paths plus explicit five tour and three final shoulder paths, originals, reviewed proposals, separate actual native receipts including main correction, and bounded routing evidence. No raw TAP or private data.",
+  "extraFiles": [
+    {
+      "from": "admit-closed56-role-repair-20261021.mjs",
+      "to": "controls/admission.mjs"
+    },
+    {
+      "from": "thoracic-teaching-role-admission-20261021.json",
+      "to": "controls/thoracic-admission.json"
+    },
+    {
+      "from": "regional-tour-role-admission-20261021.json",
+      "to": "controls/tour-admission.json"
+    },
+    {
+      "from": "shoulder-muscle-role-admission-20261021.json",
+      "to": "controls/initial-shoulder-admission.json"
+    },
+    {
+      "from": "shoulder-muscle-minimal-admission-20261021.json",
+      "to": "controls/corrected-shoulder-admission.json"
+    },
+    {
+      "from": "prepare-shoulder-muscle-role-20261021.mjs",
+      "to": "controls/initial-shoulder-proposal-emitter.mjs"
+    },
+    {
+      "from": "prepare-shoulder-muscle-minimal-20261021.mjs",
+      "to": "controls/corrected-shoulder-proposal-emitter.mjs"
+    },
+    {
+      "from": "route-current-learning-receipts-20261021.mjs",
+      "to": "controls/route-current-learning-receipts.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-regression-routing-after-learning/ROUTING.json",
+      "to": "routing/ROUTING.json"
+    },
+    {
+      "from": "emit-coordination-checkpoint.mjs",
+      "to": "controls/emit-coordination-checkpoint.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-application/APPLICATION.json",
+      "to": "shoulder-evidence/initial-APPLICATION.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-application/native.json",
+      "to": "shoulder-evidence/initial-native.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-minimal-application/APPLICATION.json",
+      "to": "shoulder-evidence/corrected-APPLICATION.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-minimal-application/native.json",
+      "to": "shoulder-evidence/corrected-native.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-proposal/PROPOSAL.json",
+      "to": "shoulder-proposal/initial-PROPOSAL.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-minimal-proposal/PROPOSAL.json",
+      "to": "shoulder-proposal/corrected-PROPOSAL.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-application/preimages/tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "to": "shoulder-preimages/clinical-review-shoulder-muscle-xray.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "to": "installed-website/tests/clinical-review-shoulder-muscle-xray.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/shoulder-muscle-before-role-20261021.test.ts.raw",
+      "to": "installed-website/tests/fixtures/shoulder-muscle-before-role-20261021.test.ts.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/shoulder-muscle-role-preservation-20261021.test.mjs",
+      "to": "installed-website/tests/shoulder-muscle-role-preservation-20261021.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/clinical-review-regional-tour.test.ts",
+      "to": "installed-website/tests/clinical-review-regional-tour.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-regional-tour-role-application/preimages/tests/clinical-review-regional-tour.test.ts",
+      "to": "tour-preimages/tests/clinical-review-regional-tour.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/clinical-review-tour-imaging.test.ts",
+      "to": "installed-website/tests/clinical-review-tour-imaging.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-regional-tour-role-application/preimages/tests/clinical-review-tour-imaging.test.ts",
+      "to": "tour-preimages/tests/clinical-review-tour-imaging.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/regional-tour-role-preservation-20261021.test.mjs",
+      "to": "installed-website/tests/regional-tour-role-preservation-20261021.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-regional-tour.test.ts.raw",
+      "to": "installed-website/tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-regional-tour.test.ts.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-tour-imaging.test.ts.raw",
+      "to": "installed-website/tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-tour-imaging.test.ts.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-regional-tour-role-application/APPLICATION.json",
+      "to": "tour-evidence/APPLICATION.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-regional-tour-role-application/native.json",
+      "to": "tour-evidence/native.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-regional-tour-role-proposal/PROPOSAL.json",
+      "to": "tour-proposal/PROPOSAL.json"
+    }
+  ],
+  "next": "Use bounded routing to choose unverified release roots without rerunning unchanged passing batches; preserve original87/136/144failure baselines. Prioritize remaining head/loading/practice and source-role contracts, then actual desktop/CT/MRI/existing3D acceptance and the full71-item roadmap. Owner clinical review is independent; do not refresh forms,deploy publicly,incur fees or edit desktopPACS."
+}

@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T14:42:37.346Z",
+  "at": "2026-10-21T15:01:44.881Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5225,
+    "canonicalNamedInputs": 5235,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "fc76680a197f19062982d8dd991297cf69a2d301",
-  "gitParent": "fc76680a197f19062982d8dd991297cf69a2d301",
+  "parent": "ebc25b451a183bb4950c710a50459596cfff992d",
+  "gitParent": "ebc25b451a183bb4950c710a50459596cfff992d",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -8772,6 +8772,251 @@
       "sha256": "cd22334b9152895e73ba94138a92947d59eb4d5926a3d108939d8b8fd795169c"
     },
     {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/admission.mjs",
+      "bytes": 10037,
+      "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/checkpoint-config.json",
+      "bytes": 7511,
+      "sha256": "2b72c3a0dd1876851bf1ce59f2f380e22ce345ca30b66478de185c1a29294568"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7636,
+      "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/corrected-shoulder-admission.json",
+      "bytes": 690,
+      "sha256": "c20105c6d4e457eec724ef62ae32001b7aaf13e2f02473a9980ba6c35bca7455"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/corrected-shoulder-proposal-emitter.mjs",
+      "bytes": 4042,
+      "sha256": "cbc00936363a27084abd10d551ede8c5f73d84e3871a8ece47ac370e279a74e2"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7627,
+      "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/initial-shoulder-admission.json",
+      "bytes": 755,
+      "sha256": "565e076508558b6b5902a928a7685a637943478f3bda42a325cc566c51ab9f75"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/initial-shoulder-proposal-emitter.mjs",
+      "bytes": 5641,
+      "sha256": "3aaa550724752b20db1d7bf3f5f4b703d0c2fca88dac6c4c4003512abefb0765"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/route-current-learning-receipts.mjs",
+      "bytes": 3962,
+      "sha256": "92ab28fa7d45699fbac64fa4dd72fb89056e1a093de485c25711a4338ba967d4"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/thoracic-admission.json",
+      "bytes": 1384,
+      "sha256": "4878e2886f5727e9f0452df40dd21a37971e4c6dc08970f7bafea5c04001f7d7"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/controls/tour-admission.json",
+      "bytes": 971,
+      "sha256": "0ca433dd8637f99cf87f08f73819045a8b16e519ac0a122dfde9f8ac7fabea62"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/evidence/APPLICATION.json",
+      "bytes": 4617,
+      "sha256": "361a9948398f346af603932b67223e158c0f133e4a5432f7e31c9ea63caf6353"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/evidence/native.json",
+      "bytes": 931,
+      "sha256": "490cb487c9726ac153f1ebe2e2f73798d1afa3462f8ede818343060062753992"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/evidence/PROOF.json",
+      "bytes": 3319,
+      "sha256": "d831cb119f28db0e860c5099ed8b231fb9fa4b5fcc35eb92f29c78ba3b52dbd9"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/clinical-review-regional-tour.test.ts",
+      "bytes": 27127,
+      "sha256": "af4d4f3efee33d61db8c1769632909680bf07e89d46e514c97601499097ea7ff"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "bytes": 23204,
+      "sha256": "96c629bb05433675fc44cb92f60604fb6bb83f76b40829b4750782e4d7db61b4"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/clinical-review-thoracic-eus.test.ts",
+      "bytes": 12889,
+      "sha256": "ec671a5e732fc1919c746dc9ffd79b8b26e622ac971289976039733e813e89ca"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/clinical-review-thoracic-systemic-teaching.test.ts",
+      "bytes": 7747,
+      "sha256": "7b5a119205d5f9c20e36a5c4c1d3f9e0559c85e3fe6ff020238e954ae9ff1be5"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/clinical-review-thoracic-wall-xray.test.ts",
+      "bytes": 7025,
+      "sha256": "4623f417f1849ae39266bae4bec43a596171269ec310189be4a4c5d16bfed7d2"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "bytes": 12620,
+      "sha256": "95e0cf5da289ced211518a5b6056dd3c221d502b2770253ccee9c63c3c1425c1"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/clinical-review-tour-imaging.test.ts",
+      "bytes": 32924,
+      "sha256": "5b6973bb2241ab63ffccb4a911a48e5c2ee9adef3f7ce8c6cfb1345d3deb4be4"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/fixtures/clinical-review-thoracic-eus-before-current190.test.ts.raw",
+      "bytes": 11694,
+      "sha256": "f2779287a51c847d087e6fd22097d65d644c9b76c62c8d6633cce163cbe2f36b"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/fixtures/clinical-review-thoracic-systemic-teaching-before-current190.test.ts.raw",
+      "bytes": 6291,
+      "sha256": "46a83e58c6a04bdb2c6516beb94662b765f80cc32172dd51b4dd072a47bbc00b"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/fixtures/clinical-review-thoracic-wall-xray-before-current190.test.ts.raw",
+      "bytes": 5903,
+      "sha256": "97cae6bdb01fcb68757c7cbba433cdc5b8caa4e84b2f84077fcb19b2ae18385b"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/fixtures/clinical-review-thoracoacromial-ultrasound-before-current190.test.ts.raw",
+      "bytes": 11353,
+      "sha256": "7c395e4ceed1630061a62f3032b8cd660e0518ad8ea8f21a48a6aaa777fc3222"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-regional-tour.test.ts.raw",
+      "bytes": 25175,
+      "sha256": "2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-tour-imaging.test.ts.raw",
+      "bytes": 32447,
+      "sha256": "15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/fixtures/shoulder-muscle-before-role-20261021.test.ts.raw",
+      "bytes": 23133,
+      "sha256": "8267d8e7f5122069157815b17290d58b5f614937d182a5ca93529c881309d352"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/regional-tour-role-preservation-20261021.test.mjs",
+      "bytes": 14950,
+      "sha256": "60d340be22a36780958c15a76fef4823d4f1c028f3279dedfe60132a3dc53645"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/shoulder-muscle-role-preservation-20261021.test.mjs",
+      "bytes": 1797,
+      "sha256": "7490e8b83eb1fa80a583f52dcaa163683606680d9617a12c464a0c450f9f92ce"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/installed-website/tests/thoracic-teaching-role-preservation.test.mjs",
+      "bytes": 11280,
+      "sha256": "f039d55de30426540fae3c2f8aecaab1cdc9b5ad7e6004e8639a3336f8c14855"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/preimages/tests/clinical-review-thoracic-eus.test.ts",
+      "bytes": 11694,
+      "sha256": "f2779287a51c847d087e6fd22097d65d644c9b76c62c8d6633cce163cbe2f36b"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/preimages/tests/clinical-review-thoracic-systemic-teaching.test.ts",
+      "bytes": 6291,
+      "sha256": "46a83e58c6a04bdb2c6516beb94662b765f80cc32172dd51b4dd072a47bbc00b"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/preimages/tests/clinical-review-thoracic-wall-xray.test.ts",
+      "bytes": 5903,
+      "sha256": "97cae6bdb01fcb68757c7cbba433cdc5b8caa4e84b2f84077fcb19b2ae18385b"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/preimages/tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "bytes": 11353,
+      "sha256": "7c395e4ceed1630061a62f3032b8cd660e0518ad8ea8f21a48a6aaa777fc3222"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/proposal/PROPOSAL.json",
+      "bytes": 5274,
+      "sha256": "9cac34f780d5d16c9978137c698f478a3dfa93d59093996b434d93c93119591d"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/routing/ROUTING.json",
+      "bytes": 66129,
+      "sha256": "81ff114ee870e60318fcad2c678dc87fa38745cb379c272e44f4807015b753b9"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/shoulder-evidence/corrected-APPLICATION.json",
+      "bytes": 2565,
+      "sha256": "dedafbe9807434c74fb4674c2f0ac37403d34734002ffdad8d0d6007d7cd9094"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/shoulder-evidence/corrected-native.json",
+      "bytes": 763,
+      "sha256": "edfd0f08aeb92d9b87ba0d9badc52e95baca552c3d51976deea31e4219be2796"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/shoulder-evidence/initial-APPLICATION.json",
+      "bytes": 2884,
+      "sha256": "252898840bdab5fb09ad381b190505704af5e73acd7589652c852ffed9b6bf5d"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/shoulder-evidence/initial-native.json",
+      "bytes": 893,
+      "sha256": "4fcbf231b2ec0971af0efa62a6007565bec059034f28f30c11a6fb3465ea79d2"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/shoulder-preimages/clinical-review-shoulder-muscle-xray.test.ts",
+      "bytes": 23133,
+      "sha256": "8267d8e7f5122069157815b17290d58b5f614937d182a5ca93529c881309d352"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/shoulder-proposal/corrected-PROPOSAL.json",
+      "bytes": 1474,
+      "sha256": "b8b0046536e8589e749c18c4c7b1d007cd79238d71efadafd28d8a73017446da"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/shoulder-proposal/initial-PROPOSAL.json",
+      "bytes": 1754,
+      "sha256": "212bd0c845095a00f407f5fe8201a03cb219a5099931d7ad5f7a75e1308580fc"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/tour-evidence/APPLICATION.json",
+      "bytes": 3372,
+      "sha256": "56a21e372ee9ca8250676b0ef8ece99d65b72f370c6d48abb2b4832a20863bd1"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/tour-evidence/native.json",
+      "bytes": 799,
+      "sha256": "20677f5b814a7b0af074667e5d375daef53cde7d1d5f0e3823b25f5d066f7db8"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/tour-preimages/tests/clinical-review-regional-tour.test.ts",
+      "bytes": 25175,
+      "sha256": "2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/tour-preimages/tests/clinical-review-tour-imaging.test.ts",
+      "bytes": 32447,
+      "sha256": "15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b"
+    },
+    {
+      "path": "evidence/20261021-tours-thoracic-verified/tour-proposal/PROPOSAL.json",
+      "bytes": 3623,
+      "sha256": "836b1631320a243839599a5947bb884579200dec9c909258c1bacd9a6151b6b5"
+    },
+    {
       "path": "evidence/20261021-transition-contracts/evidence/ASSEMBLED_RENDERER_CHECK.json",
       "bytes": 400,
       "sha256": "9d64e3277882891bbe94ed086805ad30fd888089ed2eebc994a1b0d0162287e1"
@@ -10043,9 +10288,9 @@
     }
   ],
   "removed": [],
-  "scope": "Six exact installed test/raw paths, three original preimages, main-reviewed proposal, actual65/65 native receipt and explicit admission controls; earlier partial failure and all historical source evidence retained through filtered parent ancestry. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Nine current thoracic test/raw paths plus explicit five tour and three final shoulder paths, originals, reviewed proposals, separate actual native receipts including main correction, and bounded routing evidence. No raw TAP or private data. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T14:42:30.372Z",
+    "at": "2026-10-21T15:01:38.439Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -10053,8 +10298,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5225,
-    "controlledSourceInputs": 5218,
+    "currentNamedInputs": 5235,
+    "controlledSourceInputs": 5228,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -10064,18 +10309,18 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "5c20a07e40627f2576d2a891584c801d308ea76810f98daf6e31f586e25c46a2",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "74445226d33da0838e868640870f6c70400d5118f829acb143dddd31aa160bb0",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "1984f521830b24fb9a3823b57b7f720371a96d4924ced4aa0b745023180e7ebd",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "98f93666687d8b47aff045bf8929fd209c3c0a6e36ca72eb0f21252a0c5ad186",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 6,
-    "existingEditedTestPaths": 3,
+    "installedTestOnlyPaths": 9,
+    "existingEditedTestPaths": 4,
     "actualNativeCode": 0,
     "actualNativeCounts": {
-      "tests": 65,
-      "pass": 65,
+      "tests": 44,
+      "pass": 44,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
@@ -10090,7 +10335,7 @@
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "milestone": "Six exact corpus test/witness paths separate the authored bd historical teaching theorem from current190 Website-bound packet behavior. Git-backed source comparison identifies CT pending-to-draft as the only changed lesson for the exact identity; X-ray and all other lessons remain exact. Main also repaired the historical self-reader before admission and required the checked Website renderer adapter. Actual11-root65/65/0skip/0cancel now verifies current learner/Review packet, historical fingerprints, old/authored/forged no-storage refusals, UI delivery, complete source inverses and mutation gates. Original63/62/1 remains in prior checkpoint; no expected fingerprint was repinned to an observed hash. No product/content/private/owner-preview changes and no whole-suite claim.",
+    "milestone": "Seventeen final test/raw paths across three source-role batches. Separate actual shoulder38/38 verifies original146mesh,9936placement,1104packet and refusal obligations; tour45/45 verifies authentic77ac/saved9f history,current190 imaging notes and corrected quick-check hosts; thoracic44/44 verifies four authored/current teaching modules, complete Website-bound packets and all original refusals. Main initial38/37/1 is retained: an added chronological-staleness assertion was false for identical material and was removed; complete original shoulder assertions now differ only at three current-source/root seams. Bounded routing retains87original failures:39later exact-title passes,8root passes with incomparable titles,40not covered by listed complete-pass runs, not40remaining failures. No product/clinical/private/owner-preview changes or whole-suite claim.",
     "fullSuitePassingClaim": false,
     "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,

@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-21T14:49:32.997Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "preimageSha256": "8267d8e7f5122069157815b17290d58b5f614937d182a5ca93529c881309d352",
+      "candidateSha256": "e6ea550a8eee3c1e491ac62a11e225ac0e938704079653f74955322bee9c6a08",
+      "candidateBytes": 23440
+    },
+    {
+      "path": "tests/fixtures/shoulder-muscle-before-role-20261021.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "8267d8e7f5122069157815b17290d58b5f614937d182a5ca93529c881309d352",
+      "candidateBytes": 23133
+    },
+    {
+      "path": "tests/shoulder-muscle-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "a2d7a3887d3a585177be04facefa1eb03f8f50a7ad551e1a283df0c061e78344",
+      "candidateBytes": 3340
+    }
+  ],
+  "controlledInputs": 5220,
+  "preservedInputs": 7,
+  "namedInputs": 5227,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "af71d82c4ba2dcebbe34d6f332fa76e8abb8f01746df681e0780ae63c38df188",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:49:30.048Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "tests/shoulder-muscle-role-preservation-20261021.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/posterior-fossa-coverage.test.mjs"
+    ],
+    "code": 1,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-role-application/native.tap",
+    "logSha256": "9b109f58779be41e5ab6365eb35e3b4fb1e9bd5b760b8aa676578c5cdf886602",
+    "counts": {
+      "tests": 38,
+      "pass": 37,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [
+      {
+        "number": 2,
+        "title": "historical 16-topic transition, current 9,936 placements and 1,104 Review packets"
+      }
+    ],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-21T14:53:50.002Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/clinical-review-shoulder-muscle-xray.test.ts",
+    "tests/shoulder-muscle-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-shoulder-muscle-minimal-application/native.tap",
+  "logSha256": "ae1901c1d06ad290440b0367694614c91156b78d4cc6b4c40b10b92b85eea8bc",
+  "counts": {
+    "tests": 38,
+    "pass": 38,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

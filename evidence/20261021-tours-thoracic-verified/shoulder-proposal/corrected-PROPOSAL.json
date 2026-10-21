@@ -1,0 +1,22 @@
+{
+  "schema": "visible-medicine.main-shoulder-muscle-minimal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "proposedPaths": [
+    {
+      "path": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "preimageSha256": "e6ea550a8eee3c1e491ac62a11e225ac0e938704079653f74955322bee9c6a08",
+      "candidateSha256": "96c629bb05433675fc44cb92f60604fb6bb83f76b40829b4750782e4d7db61b4",
+      "candidateBytes": 23204
+    },
+    {
+      "path": "tests/shoulder-muscle-role-preservation-20261021.test.mjs",
+      "preimageSha256": "a2d7a3887d3a585177be04facefa1eb03f8f50a7ad551e1a283df0c061e78344",
+      "candidateSha256": "7490e8b83eb1fa80a583f52dcaa163683606680d9617a12c464a0c450f9f92ce",
+      "candidateBytes": 1797
+    }
+  ],
+  "diagnosis": "Actual38/37/1 exposed an unnecessary assertion added by main, not a product failure: unchanged source/content/checklist packets can remain identical across commits and must not be labelled stale solely by chronology. Restore every original historical/current graph, full-packet equality and refusal assertion. Only live190 pin, checked source root and its import differ from the complete original. Original38/37/1 receipt retained.",
+  "scope": "Two test-only paths; original raw witness unchanged. No product, source teaching, clinical or permission edit."
+}

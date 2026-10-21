@@ -1,0 +1,28 @@
+{
+  "schema": "visible-medicine.staged-regional-tour-role-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "controlledSnapshot": {
+    "path": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/SOURCE_INPUTS_AFTER.json",
+    "sha256": "5c20a07e40627f2576d2a891584c801d308ea76810f98daf6e31f586e25c46a2"
+  },
+  "diagnosis": [
+    "Prior triage cases61/63 fail at moving 9f learner/quick-check host assertions; the authentic77ac thirty-tour exact Git replay and its full counts, frames, laterality, Review packets and refusal mutations are historical and unchanged. Current190 manifest/Review bindings are checked separately. lib/regional-tours.ts and app/structure-quick-check.tsx have equal 9f/190 Git blobs; changed app/regional-guided-learning.tsx is authenticated only as current190 rather than falsely equated to9f.",
+    "Prior case89 fails at current87ed source pin. The saved imported9f archive, source allowlist, mutation refusals and d52d/completed/portal/lower-venous whole-epoch milestones remain unchanged. Current notes and learner delivery now bind190 through checked currentAtlasDeliveryRoot and boundLiveAtlasHistory, with whole current Website packets and lessons compared to the renderer-bound exact190 replay; note source Git blobs remain equal between9f and190."
+  ],
+  "proposedPaths": [
+    {"path":"tests/clinical-review-regional-tour.test.ts","preimageSha256":"2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee","candidateSha256":"af4d4f3efee33d61db8c1769632909680bf07e89d46e514c97601499097ea7ff","candidateBytes":27127},
+    {"path":"tests/clinical-review-tour-imaging.test.ts","preimageSha256":"15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b","candidateSha256":"5b6973bb2241ab63ffccb4a911a48e5c2ee9adef3f7ce8c6cfb1345d3deb4be4","candidateBytes":32924},
+    {"path":"tests/regional-tour-role-preservation-20261021.test.mjs","preimageSha256":null,"candidateSha256":"60d340be22a36780958c15a76fef4823d4f1c028f3279dedfe60132a3dc53645","candidateBytes":14950},
+    {"path":"tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-regional-tour.test.ts.raw","preimageSha256":null,"candidateSha256":"2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee","candidateBytes":25175},
+    {"path":"tests/fixtures/regional-tour-before-role-batch-20261021/clinical-review-tour-imaging.test.ts.raw","preimageSha256":null,"candidateSha256":"15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b","candidateBytes":32447}
+  ],
+  "focusedSourceOnlyProof": {
+    "rawPreimagesMatchCanonical": true,
+    "wholeFileGuard": "node --check and node --test tests/regional-tour-role-preservation-20261021.test.mjs: 1/1 pass",
+    "gitBlobReview": "9f/current190 lib/regional-tours.ts, app/structure-quick-check.tsx and app/tour-imaging-notes.tsx/css Git blob IDs match; app/regional-guided-learning.tsx Git blob IDs differ. Historical77ac and saved9f proofs remain source-backed, not relabelled current.",
+    "limits": "No native roots, typecheck, build, browser or whole suite ran in this stage. Main must execute the two actual roots after guarded admission, including complete packet comparison and all historical/refusal behavior; the source-only guard does not prove those pass."
+  },
+  "scope": "F-local staged tests, exact raw witnesses and guard only; no canonical, product, generated, data, fixture JSON, validator, clinical or deployment writes."
+}
