@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T22:04:16.746Z",
+  "at": "2026-10-21T22:28:40.148Z",
   "sourceIdentity": {
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "installedAtlas": "0dfce15890cafc0a2b8e309193531daa29a672ed",
-    "candidateAtlas": "fa1bf9a233c6989fef42b533bbbac9d6ab034311",
-    "candidateTree": "5418fc0ba22673c086edea7afe13617e34e69f98",
-    "installedReview": "c4a5647ec3e0047013747d1810b87939a1b8472cb5e334659f5f64ae961d5db3"
+    "atlasHead": "fa1bf9a233c6989fef42b533bbbac9d6ab034311",
+    "atlasTree": "5418fc0ba22673c086edea7afe13617e34e69f98",
+    "review": "0931a6f0042f2973a0d766c1c55f177f76bb3000867dad197e2bcc2ce6461823"
   },
-  "parent": "5882184f3ec7d20ab9a5529aefbe2b8717bb05f3",
-  "gitParent": "5882184f3ec7d20ab9a5529aefbe2b8717bb05f3",
+  "parent": "0ffd3d00fcb4f7ff9216b7a4bd5f2412c31ce193",
+  "gitParent": "0ffd3d00fcb4f7ff9216b7a4bd5f2412c31ce193",
   "files": [
     {
       "path": "app/globals.css",
@@ -12307,6 +12306,96 @@
       "sha256": "16f289693d8434b0697fcb8f2efb186ac9c2b452c383a8c4399fa500d2428cba"
     },
     {
+      "path": "pending/desktop-drawable-space-20261021/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "3d5b8c5bba0a00eee1da99224a2d06d2946356700c3d55e48d1c2dfde6c71785"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "7e2a47ce5b84749d36b85f8d102914c2f565496f56e0158cf3ebc840cbe75597"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "3515376775314948d514232e0c9bb8302cebe4883292c37e1f63cf4e27adcf0e"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "6e2d69b70dde4b6efef3bf63036e043be900c729314386ca60ff477ae5733cbc"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 7651,
+      "sha256": "68f170aa438a01fc548ebe009e780190cfafcf7a0704506b5b6d6add4dd1dee2"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/body-learning-current-admission.test.mjs",
+      "bytes": 6333,
+      "sha256": "cce010099839e867ebdd1fd379da1da99b7ca5681c8563b2db5d7a28ec051755"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/body-learning-epoch-history-preservation.test.mjs",
+      "bytes": 7929,
+      "sha256": "28c825e3bbdd69ef9b90f5b722e55727ecd9a40e2c065a9d8efd038f27af5f87"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/body-learning-layout-history-preservation.test.mjs",
+      "bytes": 8293,
+      "sha256": "de95cdf5b16db2679b45b915fb7933ccbb42bdc3c83e06548fd700858f60e530"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 12027,
+      "sha256": "218948fa1d5e7e5a42a2de03a540ce122feeda87d599012a49dd367d634cc1fb"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/current-190-coverage.test.mjs",
+      "bytes": 6612,
+      "sha256": "902e58cb7c44ea29a56f21fbf91648df059d25870ea7250925c6de471b07c457"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "9d17e32eced75ffd5b6f670251bd6f36983e6e21d5654b7dec9bc8ed5fc1ab91"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 3867,
+      "sha256": "837fa885e9f71db663a87016f460235248f698faf3fc0d02c0bca117b994e9a1"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/drawable-epoch-adapter-inverse.test.mjs",
+      "bytes": 4078,
+      "sha256": "a4c39facc63df9e987bba44aaec677d9382f542e4f1689fa0e7de3dfa2fda780"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 5597,
+      "sha256": "bcf5aae29cf8dcabd824682f2592bda8064f2957ece3e0104d000d3a7cb3b78a"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/drawable-epoch-historical-closure.test.mjs",
+      "bytes": 4129,
+      "sha256": "cfeba268a313baab1ccf63858a4da09bd61e78354e86b3d0b090a4329e1a68d5"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "df332899853867a1f36f5da5afdcf80a1a9b1868e9b26f29885df45f2583fde6"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/head-neck-pilot-current.test.mjs",
+      "bytes": 15405,
+      "sha256": "fdfdbaad3d26b8b6d5e4f137718563ef3e5b242b7dbd15fe049e131eb941cc2a"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/website/tests/head-neck-pilot.test.ts",
+      "bytes": 23508,
+      "sha256": "520649d10168b76fe7e78f28738deebb8f0472ae58bc91eacda24f4dc46aedd8"
+    },
+    {
       "path": "pending/desktop-learning-row-20261021/website/components/atlas-body-learning.css",
       "bytes": 2339,
       "sha256": "e67cb7c1ef4952eb6d94027a24b040d748de8feb4e4795f2757e71c5a3c42ea9"
@@ -13068,20 +13157,36 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently restored filtered selection plus four explicit staged Atlas CSS, renderer-relative hash metadata and regression-test/raw CSS paths. Partial source recovery only, not whole/private/runnable recovery. Candidate not installed. No scans, masks, pixels, model meshes, identifiers, private runtime modules, notes, decisions, credentials, environment, databases, raw logs, media or raw canonical Git ancestry.",
+  "scope": "Inherited independently restored filtered source selection (including four new Atlas source/proof paths) plus eighteen explicit website source/test/current-pin paths. No new frozen runtime-document witnesses or generated/private derivatives are uploaded. Partial selected-source recovery only, not whole/private/runnable recovery. No scans, masks, pixels, model meshes, identifiers, private runtime modules, private references, notes, decisions, credentials, environment, databases, raw logs, media or raw canonical Git ancestry.",
   "proof": {
-    "installedLocally": false,
-    "stagedSourceVerified": true,
-    "densityAndChannelTests": 9,
-    "cameraResizeInternalChecks": 27,
-    "cameraZoomInternalChecks": 414,
+    "installedLocally": true,
+    "combinedCanonicalTests": {
+      "tests": 139,
+      "pass": 139,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "sourceDensityTests": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
     "fullTypes": true,
-    "containedBuild": true,
-    "officialContainedExport": true,
-    "sourcePaths": 4,
-    "exactCommittedInputs": 6245,
-    "modelFilesUnchanged": 136,
-    "modelMembershipAndBundlesUnchanged": true,
+    "fullBuild": true,
+    "stockReview": true,
+    "reviewBindings": 1719,
+    "importedSources": 1556,
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "exactSourceRows": 5667,
+    "preservedSourcePaths": 7,
+    "geometryModelsAndAccessScopeUnchanged": true,
+    "sourceOnlyPartialRecovery": true,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
