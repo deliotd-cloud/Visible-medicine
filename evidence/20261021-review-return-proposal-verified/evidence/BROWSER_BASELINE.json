@@ -1,0 +1,47 @@
+{
+  "schema": "vm-manual-browser-observation/1",
+  "at": "2026-10-21T08:05:25.164Z",
+  "site": "F:/VisibleMedicine/website",
+  "ownerPort": 3000,
+  "agentOwnedTab": "89",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "viewportOverrideApplied": false,
+  "sourceInputs": [
+    {
+      "path": "components/ClinicalReviewInbox.tsx",
+      "sha256": "59605fcb29edecede8f6412842ad8ba760161b928b78657045c52388894984cd"
+    },
+    {
+      "path": "components/clinical-review-inbox.css",
+      "sha256": "9969208767f08bd789456949ccb4b25501f23d597893e5ab155be5624901b43b"
+    },
+    {
+      "path": "app/workspace/clinical-review-inbox/page.tsx",
+      "sha256": "91ec6abcacc6b83914e2c488c518df994dfd1fd316381945640d7143ae504140"
+    }
+  ],
+  "observed": [
+    "Authenticated existing inbox opens and starts read-only status discovery automatically after hydration.",
+    "First physical Tab focuses Skip to content; Enter moves focus to main-content.",
+    "Browse review areas summary opens/closes with Enter, retaining summary focus and a visible3px focus outline.",
+    "No horizontal page overflow at1280x720. Lower filter controls extend below the initial fold; this is not all-layout acceptance.",
+    "Search pons and head-learning Area selection apply; URL remains inbox without filter query parameters.",
+    "My Learning navigation reaches /my-learning. Browser Back reaches inbox#main-content but search is empty and area is all: return context is lost."
+  ],
+  "infrastructureLimits": [
+    "Strict Playwright button/label selectors did not match native summary/implicit select labels; fresh DOM inspection and actual summary/select controls were used, not a claimed application failure.",
+    "An exact Back URL wait without fragment timed out; fresh state confirmed the legitimate #main-content return and the filter reset.",
+    "No200%text/assistive-technology/user-approval or full desktop acceptance claim."
+  ],
+  "decisionSubmitted": false,
+  "reviewOrLectureDraftEdited": false,
+  "ownerExistingTabsChanged": false,
+  "sourceChanged": false,
+  "privateRecordsCopied": false,
+  "rawDomExported": false,
+  "screenshotsMayBeLocalOnly": true,
+  "next": "Propose same-path bounded view URL state with fresh authorized status reloads and unchanged revision/account/focus gates. Do not persist review authority, status rows or answers."
+}

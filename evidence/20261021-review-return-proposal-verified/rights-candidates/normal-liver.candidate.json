@@ -1,0 +1,63 @@
+{
+  "schema":"vm-ultrasound-rights-candidate/1",
+  "id":"us-rights-normal-liver-commons-2017",
+  "status":"metadata-candidate-only-no-media",
+  "observedAt":"2026-10-21",
+  "purpose":"Potential ultrasound anatomy still for later source-bound teaching; not an installed learning resource.",
+  "source":{
+    "title":"Ultrasonography of a normal liver.jpg",
+    "author":"Mikael Häggström",
+    "declaration":"Own work, copyright holder declaration on the file page",
+    "page":"https://commons.wikimedia.org/wiki/File:Ultrasonography_of_a_normal_liver.jpg",
+    "pageRevision":"https://commons.wikimedia.org/w/index.php?title=File:Ultrasonography_of_a_normal_liver.jpg&oldid=1177602304",
+    "fileDate":"2017-12-20",
+    "declaredMime":"image/jpeg",
+    "declaredWidth":794,
+    "declaredHeight":585,
+    "declaredBytes":97207,
+    "declaredSha1":"85dec103d41f64c1e4ee93cd282962a460dc28ed",
+    "declaredChecksumIsNotLocalReadback":true
+  },
+  "copyrightAssessment":{
+    "fileLicenseDeclared":"CC0-1.0",
+    "licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/",
+    "fileSpecificDeclarationChecked":true,
+    "notInferredFromCommonsFooter":true,
+    "copyrightCommercialUsePermittedByDeclaredTerms":true,
+    "mandatoryCopyrightAttribution":false,
+    "plannedCourtesyCredit":"Mikael Häggström, via Wikimedia Commons; CC0 1.0",
+    "noEndorsementClaim":true,
+    "scope":"The file-specific copyright declaration is compatible in principle with commercial use without copyright royalties. This is not a guarantee of ownership, patient/privacy permission, clinical accuracy, worldwide legal clearance or hosting costs.",
+    "privacyCaveatSource":"https://creativecommons.org/publicdomain/zero/1.0/#ref-publicity-or-privacy"
+  },
+  "teachingAssessment":{
+    "sourceDescribes":"Sagittal liver view in a midclavicular plane",
+    "intendedPopulation":"adult-source-description-only",
+    "normality":"source-described-not-owner-validated",
+    "candidateConcept":"liver",
+    "anatomicalStructureId":null,
+    "sourceRevisionBinding":null,
+    "annotations":[],
+    "patientSpaceTransform":null,
+    "mappingState":"not-mapped-or-registered",
+    "limits":"One still is not a full examination, validated probe simulation, quantitative calibration, universal normality standard, labelled vessel atlas or same-subject3D correspondence. No demographics or presenting history are copied."
+  },
+  "mediaDownloaded":false,
+  "localMediaPath":null,
+  "localSha256":null,
+  "pixelsReviewed":false,
+  "embeddedIdentifiersAndMetadataCleared":false,
+  "patientPrivacyReleaseCleared":false,
+  "clinicalApproved":false,
+  "websiteInstalled":false,
+  "publicDeployment":false,
+  "noNewFeesIncurred":true,
+  "nextChecks":[
+    "Revalidate the same file-specific declaration and original binary identity before any acquisition.",
+    "If acquired for local review, verify declared identity and record a local SHA256; inspect pixels and all metadata for identifiers or other restrictions. Do not upload uncleared media.",
+    "Resolve patient/privacy and any non-copyright rights separately; CC0 expressly does not waive other persons' privacy/publicity rights.",
+    "Radiologist checks image quality, actual structures/plane and normality claim; do not inherit source-page assertions as clinical approval.",
+    "Bind any accepted annotations and existing3D semantic link to exact source/revision with independent access; never infer registration.",
+    "Add scoped media notices and original/derivative provenance only after the above gates; no clinical or public-release approval is recorded here."
+  ]
+}

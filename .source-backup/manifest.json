@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T07:54:11.025Z",
+  "at": "2026-10-21T08:21:38.119Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "websiteInputCount": 5107,
     "proposalOnly": true
   },
-  "parent": "09d7a6a7230bcacfa60444c4c0a070cb01b9c10e",
-  "gitParent": "09d7a6a7230bcacfa60444c4c0a070cb01b9c10e",
+  "parent": "140414102dc5b1f378bc436bedef7f83cabaac44",
+  "gitParent": "140414102dc5b1f378bc436bedef7f83cabaac44",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4006,6 +4006,101 @@
       "sha256": "0b06f9be790ceb6f9e2bad8d984d78dd279c9502227197b1742c328c486f6cf4"
     },
     {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/BATCH.json",
+      "bytes": 15488,
+      "sha256": "52b0196f28c045f5c764c21ce9de6a86f534ad4cf17e67c811c41c1462248388"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/BROWSER_BASELINE.json",
+      "bytes": 2358,
+      "sha256": "d93f38d2f612471c9de7d33f5b0d07297a3aeb7c3bac898e99413b2527daa64d"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/BROWSER_CLOSED.json",
+      "bytes": 318,
+      "sha256": "488ffa312f2d9234b177279aa66009dc37933d7824d76e842b1906a63f37456f"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/NATIVE_V1_FAILURE.json",
+      "bytes": 846,
+      "sha256": "9dbeb231517cf3aa3e3e8d474253f9df5d3042c97123e7f4e55dedbf78ef8e26"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/NATIVE_V1_PREPARATION.json",
+      "bytes": 2250,
+      "sha256": "eccfe6d8d12cbd18b1cad1281da5c955df116fbdae7903b12ebc3987a4a84fdf"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/NATIVE_V2_PASS.json",
+      "bytes": 855,
+      "sha256": "b6e19f574f163b38fcdf8c48b2e3ec1cc1fc057c5c448d16805228e8475780e2"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/NATIVE_V2_PREPARATION.json",
+      "bytes": 2837,
+      "sha256": "63dd87f988ba05373462cca24d6cd4e133b131c6e098a4b01ae60ffdcc7130b4"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/PROOF.json",
+      "bytes": 2833,
+      "sha256": "dc3e8ecbf9b03079bedfa10d1da5e380ec77152ca03eac49c260c7f2c8141607"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/evidence/PROPOSAL_NOTES.md",
+      "bytes": 3392,
+      "sha256": "03664adcf9b05bf01034d39fdc994ee9fb2092114195a01cffd8a447954f6ef1"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/preimages/components/ClinicalReviewInbox.tsx",
+      "bytes": 24298,
+      "sha256": "59605fcb29edecede8f6412842ad8ba760161b928b78657045c52388894984cd"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/preimages/new-test-v1.mjs.raw",
+      "bytes": 10938,
+      "sha256": "831100d168ece1e3009f5ac1525ea52545d3b17aaa528086b781c5bb6c5d012c"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/proposed-website/components/ClinicalReviewInbox.tsx",
+      "bytes": 29392,
+      "sha256": "f7324e4be67bb1027c403c89a85cb84579fa9f5fcf99a8944b27b11b8537642d"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/proposed-website/tests/clinical-review-inbox-return-context.test.mjs",
+      "bytes": 11056,
+      "sha256": "6d7e4d25b01ddb5a0576d6af8a23ffb527a98b70bce5ae72ebf71cd3c26d0e89"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/rights-candidates/normal-liver.candidate.json",
+      "bytes": 3607,
+      "sha256": "d483a3970e9ff851da8187683757218f6eb1490f735e6a2b1b68d5af793a8772"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/scripts/checkpoint-owned-proposal-batch.mjs",
+      "bytes": 8183,
+      "sha256": "93f2b0482f723b3a6d3e1d5f8e21a2e2d4118fc6602d8971c73510e6ffd016a1"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/scripts/prepare-review-queue-return-native-proof-20261021.mjs",
+      "bytes": 3408,
+      "sha256": "b0bc4776172c49f84e9a735a05af80477e64e2ebc10833375b759883bca81def"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/scripts/prepare-review-queue-return-native-proof-v2-20261021.mjs",
+      "bytes": 3074,
+      "sha256": "40ab2ad7f95b11141e5da1e217b5fc363de48bbabc831560818eebe095610f8a"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/scripts/record-review-queue-context-browser-20261021.mjs",
+      "bytes": 3133,
+      "sha256": "8a9a6d9c67b8510edadf533523a69f98d1251438d3d79f7199bc0ff75d707181"
+    },
+    {
+      "path": "evidence/20261021-review-return-proposal-verified/scripts/review-return-proposal-checkpoint-20261021.json",
+      "bytes": 6783,
+      "sha256": "33a504f6591a60f213d6d815dcbbe92aa670e541b215ab3ea9324694ed341818"
+    },
+    {
       "path": "evidence/20261021-revision-guard-proposals-verified/arterial190/PREPARATION.json",
       "bytes": 1676,
       "sha256": "2ff4dadb7759c3cc1960defb3f80bf9d1cd88b2ebb87fdbc49560f5ae9d85e39"
@@ -6389,13 +6484,17 @@
   "removed": [],
   "scope": "Explicit owned test-source proposals/exact preimages, small receipts, read-only cutover summary and controls on previously filtered ancestry. NOT installed or a full-suite pass. No raw canonical history, full private modules/manifests, model geometry/full runtimes, private DB/records/identities/decisions/env, scans/masks, dependencies or browser media/DOM. No test harness junctions packaged. Not a complete runnable/private backup, release or clinical/spatial approval.",
   "proof": {
-    "summary": "Three tour test proposals now pass17 native checks with full historical regional source reconstructed by removing exactly the new186-byte hint. Two spinal history guards pass3 native registrations with their complete original verifier bodies unchanged; six exact inverse stages restore075354 and3824 historical source bytes. The current28-dental-MRI/9936-topic spinal teaching theorem is staged but unexecuted, explicitly blocking V5 admission. No attributes change needed; frozen raw policy verified. Native prefix observer passes3 metadata tests and cannot turn a buffered footer into full-suite acceptance.",
+    "summary": "Actual canonical1280x720 browser check found lost queue filter context after navigating My Learning and Back. Ownedtab89closed/ownerforms untouched. Two-path UI proposal restores bounded same-path URL view state while preserving router history state, fresh authorized status loads and existing source/account/focus/refusal gates. Forty focused native cases pass across new5 and original35; same component tested against five byte-unchanged existing test files. First8pass/32fail retained: isolated missing react-jsx config and new one-page pager expectation corrected, not application assertions removed. No browser acceptance of the corrected component, fresh full types, whole-suite green or install claimed.",
     "canonicalDeveloperToolingInstalled": true,
     "canonicalDeveloperToolingUnchangedFromParent": true,
     "canonicalAtlasUiInstalled": false,
-    "currentSpinalDentalTheoremPassed": false,
-    "v5AdmissionReady": false,
-    "countingNote": "38 outer registrations across8 separate proposal native runs; coverage wrapper separately4 historical children. Prefix parser3 and previously installed developer4 remain separate. No flat full-suite total or baseline reduction.",
+    "reviewQueueUiInstalled": false,
+    "reviewQueueNativePasses": 40,
+    "reviewQueueNativeLogSha256": "9a3473862f318c3cd15e2c89323924d0132a3994694c1984eb9be3edd2d655af",
+    "browserBaselineVerified": true,
+    "correctedComponentBrowserAcceptance": false,
+    "countingNote": "UI40 is a separate controlled-component scope, not merged with38 registrations from8 source-epoch repair runs. Original144failure baseline remains;24 markers currently observed in the live full-suite prefix are not terminal counts.",
+    "ultrasoundRightsCandidate": "One metadata-only normal-liver candidate has file-specific CC0 declaration and original declared checksum recorded. No download, pixel/metadata review, privacy/clinical clearance, matching annotation, website install or asset release. Source-specific rights page and official CC0 caveats linked; no Commons-footer inference.",
     "fullSuiteSession": 37113,
     "runnerPid": 263984,
     "testPid": 271752,
@@ -6403,9 +6502,8 @@
     "sourceCandidateAndReviewBindingsUnchanged": true,
     "unchangedModelObjects": 137,
     "all71ItemsAndEightIdeasPreserved": true,
-    "excludedExploratoryAttributeCopy": true,
-    "fullSuitePrefixFailureMarkersAtObservation": 16,
-    "at": "2026-10-21T07:54:04.758Z",
+    "fullSuitePrefixFailureMarkersAtObservation": 24,
+    "at": "2026-10-21T08:21:32.382Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "currentNamedInputs": 5107,

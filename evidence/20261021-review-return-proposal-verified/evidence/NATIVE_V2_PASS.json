@@ -1,0 +1,27 @@
+{
+  "label": "REVIEW_RETURN_CONTEXT_V2",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/clinical-review-inbox-return-context.test.mjs",
+    "tests/clinical-review-inbox-filter-recovery.test.mjs",
+    "tests/clinical-review-inbox-scan-focus.test.mjs",
+    "tests/clinical-review-inbox-pagination-focus.test.mjs",
+    "tests/clinical-review-inbox-workbench.test.mjs",
+    "tests/clinical-review-inbox-ui.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-review-queue-return-native-proof-v2/REVIEW_RETURN_CONTEXT_V2.log",
+  "logSha256": "9a3473862f318c3cd15e2c89323924d0132a3994694c1984eb9be3edd2d655af",
+  "footer": [
+    "ℹ tests 40",
+    "ℹ pass 40",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

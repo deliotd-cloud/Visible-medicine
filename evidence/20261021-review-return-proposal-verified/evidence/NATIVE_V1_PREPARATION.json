@@ -1,0 +1,46 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-review-queue-return-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-review-queue-return-native-proof/native-check",
+  "sourceSite": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "proposed": [
+    {
+      "path": "components/ClinicalReviewInbox.tsx",
+      "from": "F:/VisibleMedicine/staging/20261021-review-queue-return-proposal/components/ClinicalReviewInbox.tsx",
+      "sha256": "f7324e4be67bb1027c403c89a85cb84579fa9f5fcf99a8944b27b11b8537642d"
+    },
+    {
+      "path": "tests/clinical-review-inbox-return-context.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-review-queue-return-proposal/tests/clinical-review-inbox-return-context.test.mjs",
+      "sha256": "831100d168ece1e3009f5ac1525ea52545d3b17aaa528086b781c5bb6c5d012c"
+    }
+  ],
+  "unchangedExistingTests": [
+    {
+      "path": "tests/clinical-review-inbox-filter-recovery.test.mjs",
+      "sha256": "b26cd1809de53e92222d4cca22cd68328d1d5f9c3dd614a6e2651d9e3df1e524"
+    },
+    {
+      "path": "tests/clinical-review-inbox-scan-focus.test.mjs",
+      "sha256": "c34ef03b6b6f70d86cfdbdd4a726a961f8021b2d966f5add106fa10c5f58d323"
+    },
+    {
+      "path": "tests/clinical-review-inbox-pagination-focus.test.mjs",
+      "sha256": "6b6e52f6f6a04731e6b21018b750f634863e927bd96ab602aa6618911c9b17b9"
+    },
+    {
+      "path": "tests/clinical-review-inbox-workbench.test.mjs",
+      "sha256": "7b45fad50e57c85c9c91cc40fcaf2e560229e9de50088e0c5d9a8dcd902db55a"
+    },
+    {
+      "path": "tests/clinical-review-inbox-ui.test.mjs",
+      "sha256": "04e2a4b8d847f29cf41519e408c2597238b1f7287d4a1a74b604a9fe4aaca0c3"
+    }
+  ],
+  "readOnlyJunctions": [
+    "lib",
+    "node_modules"
+  ],
+  "frozenInputsUnchanged": 5107,
+  "scope": "Six focused controlled-component files only. Existing tests execute against proposed component in this isolated root, not the original component. Small in-process component transforms only, no production build, full TypeScript, broad validator or second whole-suite job. No owner preview/draft or private data changes. Do not recursively delete/package the harness through junctions."
+}
