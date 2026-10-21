@@ -1,49 +1,34 @@
 {
-  "at": "2026-10-21T05:27:32.923Z",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  },
-  "observed": [
-    "Whole-body skeleton renders with compact controls",
-    "Zoom in responds",
-    "Right lower limb: hip to heel opens as a loaded anatomical tour",
-    "Play full tour shows step 1 and its caption without a second Start click",
-    "Speed selector accepts 3x; playback advances automatically from step 1 to step 5",
-    "Pause changes the control to Play and retains step 5 and its caption"
-  ],
-  "unresolved": [
-    {
-      "message": "MutationObserver.observe: parameter 1 is not of type Node",
-      "count": 1,
-      "source": "Unclassified; console supplied no source URL or stack"
-    }
-  ],
-  "limits": [
-    "No frame-rate/smoothness benchmark",
-    "Not all tours or regions tested",
-    "Not clinical, spatial registration, hosted-release or full-suite acceptance"
-  ],
-  "modelsReadBackAcrossFreshEmulator": 137,
-  "modelBytes": 199072480,
+  "at": "2026-10-21T06:33:04.178Z",
   "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
   "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-  "sourceInputs": 5107,
-  "tests": 17,
-  "passed": 17,
-  "skipped": 0,
-  "authenticationChanged": false,
-  "permissionsChanged": false,
+  "currentWebsiteInputs": 5107,
+  "proposedWebsiteInputs": 5109,
+  "changes": {
+    "existing": 4,
+    "added": 2
+  },
+  "boundedNativeRegistrationsPassed": 9,
+  "boundedNativeSkipped": 0,
+  "originalHistoricalChildTestsPassed": 4,
+  "countingNote": "Nine outer registrations across four bounded native runs; one wrapper strictly verifies four unchanged original child tests. Distinct units, not one full-suite count.",
+  "sourcePrefixAndWholeInverses": true,
+  "all1710ReviewInputsPreserved": true,
+  "candidateEdited": false,
   "canonicalInstalled": false,
-  "publicDeployment": false,
-  "localOnlyPrivateDatabaseCopy": true,
-  "sourceDatabaseOpenedReadOnly": true,
+  "freshTypesRequiredBeforeCutover": true,
+  "fullSuiteStillRequiresActualTerminalReceipt": true,
+  "originalFullFailureBaseline": 144,
+  "wholeSuitePassingClaim": false,
   "privateDataUploaded": false,
-  "ownerTabsTouched": false,
-  "ownerPort3000Untouched": true,
-  "temporaryPort3002Stopped": true,
-  "originalFullSuiteFailures": 144,
-  "fullSuiteAcceptance": false,
   "clinicalApproval": false,
-  "spatialRegistration": false
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "cutover": {
+    "existingPaths": 97,
+    "knownExactOwnedPreimages": 96,
+    "remaining": "Previously preserved coverage README; deliberately preserve/merge, no blind overwrite",
+    "unchangedModelObjects": 137
+  },
+  "limits": "Test-only proposals, not installed fixes or post-fix full-suite acceptance. Current models, teaching, actual access and user review forms unchanged. No new browser check from these native tests. Earlier source backups remain partial; no model, private-data, raw canonical ancestry or complete runnable-project backup."
 }

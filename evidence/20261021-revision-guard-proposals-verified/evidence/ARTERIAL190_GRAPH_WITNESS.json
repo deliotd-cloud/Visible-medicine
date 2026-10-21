@@ -1,0 +1,22 @@
+{
+  "label": "ARTERIAL190_GRAPH_WITNESS",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-name-pattern=^original",
+    "tests/atlas-arterial-evidence-limits.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-coverage-epoch-proposal\\native-check/ARTERIAL190_GRAPH_WITNESS.log",
+  "logSha256": "be6cd12fdb9f860e4ed8ad08b1cff251ca666dc8d6a222c820c3684db6afea2a",
+  "footer": [
+    "ℹ tests 1",
+    "ℹ pass 1",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

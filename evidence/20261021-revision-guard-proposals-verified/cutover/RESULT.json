@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-21T05:52:00.172Z",
+  "source": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "target": "F:/VisibleMedicine/website",
+  "namedInputs": 5107,
+  "counts": {
+    "identical": 4897,
+    "requires-exact-preimage-admission": 203,
+    "preserve-local-configuration": 1,
+    "preserve-canonical-coordination": 2,
+    "preserve-line-ending-only": 4
+  },
+  "changeDirectories": {
+    ".gitattributes": 1,
+    "app": 1,
+    "atlas-review": 18,
+    "components": 2,
+    "docs": 6,
+    "lib": 5,
+    "public": 65,
+    "scripts": 4,
+    "tests": 101
+  },
+  "additions": 106,
+  "existingChanges": 97,
+  "unchangedModelObjects": 137,
+  "modelIdentityUnchanged": true,
+  "namedPathPlanSha256": "c00cdc6d561812d672012f4e3eb37fa61134ee82e53bbb890290d1d83e22778c",
+  "policy": "Read-only inventory, NOT approval to overwrite. Guard exact current preimages again at any future local cutover; compare against known prior owned source before replacing overlapping dirty work. Preserve current coordination, configuration, all unlisted paths and private state. No material file deletion, Git reset/clean or raw-repo push.",
+  "excludes": "No environment, database, scan, mask, private decision, geometry, node_modules or Git ancestry copied. No candidate/canonical edits or preview restart.",
+  "fullSuiteStatus": "still pending; read actual native receipt, do not infer acceptance from this inventory",
+  "candidateChanged": false,
+  "canonicalChanged": false,
+  "canonicalInstalled": false,
+  "publicDeployment": false,
+  "privateDataUploaded": false
+}

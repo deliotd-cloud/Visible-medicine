@@ -1,0 +1,37 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-arterial190-epoch-proposal",
+  "site": "F:/VisibleMedicine/staging/20261021-arterial190-epoch-proposal",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "actualCandidate": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "subjectVersionChange": {
+    "before": "  assert.equal(CURRENT_ATLAS_REVISION,'485df97c2530e8e81a8d39a5ee61073ce76d93db');",
+    "after": "  assert.equal(CURRENT_ATLAS_REVISION,'190a63238eadcf906abe89dcbb6a67c88afe70b9');",
+    "exactWholeSourceInverse": true
+  },
+  "copies": [
+    {
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"
+    },
+    {
+      "path": "tests/arterial-history-preservation.test.mjs",
+      "sha256": "5333cc9866b6d7bbf84d3c3790d8012cd9189f1639030f6812e62c9f56225225"
+    }
+  ],
+  "proposed": [
+    {
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6"
+    },
+    {
+      "path": "tests/arterial-history-preservation.test.mjs",
+      "bytes": 3838,
+      "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596"
+    }
+  ],
+  "purpose": "Actual full suite exposed a second stale485 assertion inside the arterial subject. One exact source190 assertion replaces it; the separate guard reconstructs the complete485,87ed,d44,b15 historical subjects. No behavior/assertion removal or duplicate9936-topic computation.",
+  "candidateEdited": false,
+  "canonicalInstalled": false,
+  "privateDataCopied": false
+}

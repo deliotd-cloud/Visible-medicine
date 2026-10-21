@@ -1,0 +1,13 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-camera-zoom-contract-proposal",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "path": "tests/atlas-guided-camera.test.ts",
+  "beforeSha256": "a16d5b0ff30905c035a327752e9a4829449fab0eb6c470d308cfd74a8f501221",
+  "sha256": "31ca6f0b7bc7aa2fd079ac3ad50617de491e4fd2723cc20560d65395d156506c",
+  "exactWholeSourceInverse": true,
+  "reason": "Actual full-suite failure is an obsolete three-argument source regex; source190 supplies its camera for keyboard zoom. Historical contract is unchanged; current contract strictly requires the fourth camera argument before applying every prior sweep/capture assertion. A negative case refuses its removal.",
+  "candidateEdited": false,
+  "canonicalInstalled": false,
+  "privateDataCopied": false
+}

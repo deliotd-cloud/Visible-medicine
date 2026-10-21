@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-21T05:52:26.375Z",
+  "scope": "Isolated tiny history guard only; not the seven integrated arterial registrations or complete suite",
+  "outcomes": [
+    {
+      "name": "subject-drift",
+      "expectedRefusal": true,
+      "childStatus": 1,
+      "footer": {
+        "tests": 1,
+        "pass": 0,
+        "fail": 1,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "d117b123e94e06ea33c1b746c80ff386ec7b2a1041165fe1919514e11835b7be"
+    },
+    {
+      "name": "original-drift",
+      "expectedRefusal": true,
+      "childStatus": 1,
+      "footer": {
+        "tests": 1,
+        "pass": 0,
+        "fail": 1,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "logSha256": "06a8c88f8895650f0cb846de4a2bc2eb402bbfd690b9ed2d98272df5998fe1d7"
+    }
+  ],
+  "candidateEdited": false,
+  "canonicalEdited": false,
+  "sourceFilesReadOnly": true,
+  "privateDataCopied": false
+}

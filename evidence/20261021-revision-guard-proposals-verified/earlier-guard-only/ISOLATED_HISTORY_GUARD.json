@@ -1,0 +1,21 @@
+{
+  "label": "ISOLATED_HISTORY_GUARD",
+  "command": "node",
+  "args": [
+    "--test",
+    "tests/arterial-history-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-arterial-history-epoch-proposal/ISOLATED_HISTORY_GUARD.log",
+  "logSha256": "15894f7481fdf440482359f3d5cf738ad6d66909eb8d2b7259dfb8b39df6201e",
+  "footer": [
+    "ℹ tests 1",
+    "ℹ pass 1",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,21 @@
+{
+  "label": "CAMERA_LEGACY_CURRENT_ZOOM",
+  "command": "node",
+  "args": [
+    "--test",
+    "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-guided-camera.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-camera-zoom-contract-proposal/CAMERA_LEGACY_CURRENT_ZOOM.log",
+  "logSha256": "40c709ca7a2bed7d94eac3bdd77535400787ee785cf5ba18a1e9b6147d188a01",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,519 @@
+{
+  "at": "2026-10-21T05:59:57.203Z",
+  "existingPaths": 97,
+  "counts": {
+    "exact-owner-authorized-installed-b2bd-inventory": 57,
+    "exact-closed485-owned-preimage": 20,
+    "exact-installed-review-producer": 8,
+    "unresolved-overlap": 1,
+    "exact-installed-runtime-producer": 11
+  },
+  "unresolved": [
+    {
+      "path": "docs/anatomy-coverage/README.md",
+      "beforeSha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39",
+      "provenance": "unresolved-overlap"
+    }
+  ],
+  "classifications": [
+    {
+      "path": ".gitattributes",
+      "beforeSha256": "4f5d1c31e7e089798fa300e6043d18d2e5aa074162dba58bc9a874e4a598ee62",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "app/layout.tsx",
+      "beforeSha256": "ea5fa4acdb32e28b27b453e71817ae3b3decf9f63a53154cfa3d561956d7d513",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "atlas-review/app/body-content.ts",
+      "beforeSha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "atlas-review/app/fitted-camera.tsx",
+      "beforeSha256": "c4c105b7b099375cb4c8ca797476e8c4c54362c06295b2bcfca2f788421f2543",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "atlas-review/app/regional-guided-learning.tsx",
+      "beforeSha256": "5b082b5ad50ddfeb516186f685b77262315dd0a8f863eb861ac87afeb5ad9b88",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "atlas-review/content/body-renderer-revision.json",
+      "beforeSha256": "1f2713c39ea5f4fe8b7717188b8ae7dce852fe197b495db6414008218ff7d430",
+      "provenance": "exact-installed-review-producer"
+    },
+    {
+      "path": "atlas-review/content/body-review-display-pins.json",
+      "beforeSha256": "dd926d72567359de88bf526d36a611eb4e8dcd2ef73f5d662760132cd4e5c607",
+      "provenance": "exact-installed-review-producer"
+    },
+    {
+      "path": "atlas-review/content/corpus-imaging.ts",
+      "beforeSha256": "c6e45f351156738a2175bd3b759e38b948bd4d63c4719ace21a96cb8c027229b",
+      "provenance": "exact-installed-review-producer"
+    },
+    {
+      "path": "atlas-review/content/regional-teaching/head-neck.json",
+      "beforeSha256": "8b85f64cfa63fe7e15ccf317c9d4efb544430c0175b8d329608a23d02665f3d3",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "atlas-review/content/regional-teaching/pelvis.json",
+      "beforeSha256": "5eef430cbd99143ad46911b8bbbd6ad7d997ba19f66fd92d846f81fc269b517a",
+      "provenance": "exact-installed-review-producer"
+    },
+    {
+      "path": "atlas-review/content/review-revisions.json",
+      "beforeSha256": "c23dc568d01c54ded87bc0e3ab69eadd2a35c56316a60051d852d8fe6e24f193",
+      "provenance": "exact-installed-review-producer"
+    },
+    {
+      "path": "atlas-review/integration-inputs.json",
+      "beforeSha256": "bde024719a91e52fb260d3aa1912978988a860a58be89b22ff6caa5393635d9d",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "atlas-review/lib/camera-keyboard.ts",
+      "beforeSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "atlas-review/lib/clinical-review-queue.ts",
+      "beforeSha256": "8ce3997054e750c7427d694e67b9f08159d13f964cd277d81e089e124729b2cb",
+      "provenance": "exact-installed-review-producer"
+    },
+    {
+      "path": "atlas-review/lib/corpus-imaging.ts",
+      "beforeSha256": "c5f100e44a819ebe7f532d1960c90be3936c084dad7e1651a9af9e34af1acea9",
+      "provenance": "exact-installed-review-producer"
+    },
+    {
+      "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
+      "beforeSha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa",
+      "provenance": "exact-installed-review-producer"
+    },
+    {
+      "path": "atlas-review/manifest.json",
+      "beforeSha256": "560ce9c0d9f7bb88c6e1a37506fd1fe4d0f5346a2d5dc826ef10930bf44e0634",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "components/SiteFrame.tsx",
+      "beforeSha256": "8a507e7acbbd860ac69e64ff54a7253b92e357c0d4a3ab58e878570ff3007c10",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "components/SiteHeader.tsx",
+      "beforeSha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "docs/anatomy-coverage/independent.json",
+      "beforeSha256": "df797ad979f3cd67d9da086b3e3b781da8ffdc677f282c7f648b2e4d8a86a8f2",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "docs/anatomy-coverage/index.json",
+      "beforeSha256": "2f827877facf6d66fe7670a171d67f54dcb6cade0a5b0e457bc79cd63be0d8de",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "docs/anatomy-coverage/nested.json",
+      "beforeSha256": "caaa2b04d67cda638212992691adf7cc6774f0ad78b645982f7d059d01d4e882",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "docs/anatomy-coverage/README.md",
+      "beforeSha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39",
+      "provenance": "unresolved-overlap"
+    },
+    {
+      "path": "docs/anatomy-coverage/reference.json",
+      "beforeSha256": "5d20c3b4d1b6fde64eacab91cab941c803f0ec03815701b94fa8894ad9c4bbf1",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "docs/anatomy-coverage/root.json",
+      "beforeSha256": "39c184f2ea1d585eb7bcf81e0ea451dca24ab2701f8aab617f421527a2ec5f98",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "lib/anatomy-coverage-view.ts",
+      "beforeSha256": "521b5e7b1600147f1ce0fd3dfb48060638864a5deee46139f4a3082f84742e9c",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "lib/atlas-delivery-policy.ts",
+      "beforeSha256": "244d185990685646101769c72699f1dc135c3d885a0a547d7c25d584c4e9998c",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "lib/atlas-model-inventory.json",
+      "beforeSha256": "2e3fc777ec3e740a163698dad849ddbea7f90feb61bfb29a6c3e272b2849f052",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "lib/clinical-review-inbox.ts",
+      "beforeSha256": "ecfac64ead278ec2e7798a523bc847ff15db9690d00b8d9fb7cc362b7923ef4c",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "public/atlas-review-viewer/index.html",
+      "beforeSha256": "1fa072be4aeeea163892d3a9df8f19477f22e3d7c9f4f88965e0f4d8d9365e90",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "public/atlas-review-viewer/manifest.json",
+      "beforeSha256": "ba6586d00813d69deb4f200d714f79515bbe02136fbf7ebdc9d5d69febac72df",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
+      "beforeSha256": "17011045502f8911d823fe540d1ba41eb9780f91a4bcabf70c61ef64d2bdd00f",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/index.html",
+      "beforeSha256": "5a716cc5636bd22fc35f562a9977b57039dab9775ccec659d72bfce98ae5e269",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/LICENSES/THIRD_PARTY_NOTICES.md",
+      "beforeSha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/manifest.json",
+      "beforeSha256": "2576f0fed99cee5ac6b004123c8511f5c8dddaac2189c29bb359d3d826558f19",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/source-inputs.json",
+      "beforeSha256": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/index.html",
+      "beforeSha256": "8e3c39f73456ce40e86ba599895c1b29a67f50161261ebbbd77c0c5179fdf2ec",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/THIRD_PARTY_NOTICES.md",
+      "beforeSha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/manifest.json",
+      "beforeSha256": "926f3fa1b59acd8f349b758632366e251200db9adfb1ec987d65f6746e42d4b3",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/selection-channel.json",
+      "beforeSha256": "20e20f7882da6ab7e674ccc23edb03eeceb4e2d714389cd741a6b2fc39a6b54a",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/source-inputs.json",
+      "beforeSha256": "60bfd40db2819b04a0465c42346839b95f78ea12ab98401fa34a0a83cf9b2224",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/index.html",
+      "beforeSha256": "f4ac33c9c91a4e5596b4cc8b2c3c573e376bd9546c6be9b2006a4c6e05ff50a9",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/LICENSES/THIRD_PARTY_NOTICES.md",
+      "beforeSha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/manifest.json",
+      "beforeSha256": "e07f8cd1e192d40168352c940c5212beb1817109a06de999e773f7d2510ec3ac",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/source-inputs.json",
+      "beforeSha256": "17081ccde1c3ecf27f4eaff7eeecc80ebe439c398ef49b8ad0d958f796dff091",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/specimen-channel.json",
+      "beforeSha256": "20e20f7882da6ab7e674ccc23edb03eeceb4e2d714389cd741a6b2fc39a6b54a",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/index.html",
+      "beforeSha256": "e5e8f9e20cc399b7b72fcc50b2dd297f8723ea43e5b034f61c8570ca9d255604",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/THIRD_PARTY_NOTICES.md",
+      "beforeSha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/manifest.json",
+      "beforeSha256": "164855aef311b3385c0e10759bc588541ffd0ec0aa4f1fa772757d9e6be4bd28",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/source-inputs.json",
+      "beforeSha256": "da91643d35ec452de3cb44d903247949467ada4f80193852d729fe0d695a70d4",
+      "provenance": "exact-installed-runtime-producer"
+    },
+    {
+      "path": "scripts/check-anatomy-coverage.mjs",
+      "beforeSha256": "50def923f278a7efb1ef727bbf158b0216fdcb096afc2359ecccf144e1268e24",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "scripts/import-clinical-review.mjs",
+      "beforeSha256": "950b76b53389a7fb29be7fa665b51649b0a74506de7b3d6c52a25e8a9b6d5f05",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "scripts/stage-clinical-review-candidate-local.mjs",
+      "beforeSha256": "95a49ed55e773e157a2951422005e67171f9457709dc5f8bb283f25d4b79d5b5",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "beforeSha256": "3611dc20929cac9bb27c5ac4aac85c27498d4862b2feb5a5a716f3ed4f2b95a0",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "beforeSha256": "7b105f5146aab1653aedca9a7150a73733575f87e7e848063cb07e8faea9b843",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/atlas-region-picker.test.ts",
+      "beforeSha256": "5ba45ca88c427c30d33b548f905a0fb01cd23aa131b85da37ffdcf65b44734b3",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "tests/atlas-spinal-muscle-xray.test.mjs",
+      "beforeSha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-desktop-layout.test.mjs",
+      "beforeSha256": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-elbow-us-followup.test.ts",
+      "beforeSha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-entry-track.test.mjs",
+      "beforeSha256": "c82af1e3d4221b37b4876608950d9c312bf18b0ab5d6b26d2e94560e705b2f2c",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-foot-quiz.test.ts",
+      "beforeSha256": "154d68039e1e7a44a126d1de942fdf48644a3da2dc59cbcb5f4d9edf2641feea",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-forearm-vascular-xray.test.ts",
+      "beforeSha256": "59af4032c50b8352a1664d9296f522d2dd63bb0fbda5653ccd7c26168103bc62",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-genicular-ultrasound.test.ts",
+      "beforeSha256": "9f58d0e61113b327695d6cb6c98bd89062e00d5b64c2228ff7636dee9def3f10",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-girdle-ultrasound.test.ts",
+      "beforeSha256": "109393c2242920ea67e2e97fc5c0d65a87b07b84b1a98934251e07f00619fc5d",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-hepatic-venous-xray.test.ts",
+      "beforeSha256": "0e1caf978b937fc60ee32aa4410b2e5e99e706866c8be4d330181fcc3225c8b1",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-iliac-xray.test.ts",
+      "beforeSha256": "a7286bfc1a0b77f08d55df7059d41a9a4ab7cf7d52e21cba04a7d179218fb77e",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-internal-iliac-ultrasound.test.ts",
+      "beforeSha256": "61cf9e46f449ff2f842d6c8e47da95b7fc2bcab49dd4a1c60e7115678f792e5a",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-lacrimal-quiz.test.ts",
+      "beforeSha256": "3b51b64724f350e97be48685e093ad5c1db12b4feb0b7a66a6acace7fd92815e",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "beforeSha256": "b214fbac93ea5d89394ad35e2ad1eea2ee4a02cca74b9fdd2aaf643b33776d62",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "beforeSha256": "bb5bc9c86e1e18ccbaae4a66a6e5d3f68a2ece9db2f4018e4d688989bc07ec8f",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-neuro-organ-quiz.test.ts",
+      "beforeSha256": "81d41673fce49bca55901ccb9d374ae1fa8a62847563c2597b594be9729c10ef",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-ocular-support-quiz.test.ts",
+      "beforeSha256": "c0b8e103a75f6e1cc4dfbcb120aabeb272fc2b1d5ac63d69695c5b4059845701",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-orbital-support-quiz.test.ts",
+      "beforeSha256": "a32c560ec260c8e61d5323f3b2b6609fe835605c5787acc0165c5a218432d94a",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-pectoral-ultrasound.test.ts",
+      "beforeSha256": "815c986d956ea88382005a5a5170d888f4f61903ed30ffe0fb0abebcd3193317",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-root-cuff-xray.test.ts",
+      "beforeSha256": "2c93c2858c3182fca210eefd015354cb33649f33292b75fe8c41297293c5ebb5",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "beforeSha256": "7ae70f87540ce1cefa82437e9578b13ec3fddfc5ff2a2a9ccdd23e5ba4ae30d2",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-scapular-muscle-quiz.test.ts",
+      "beforeSha256": "2ef7cd0048c472defaee2062e510be0008dd9c88d3151fbd4f0738eb3b7c8f15",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-teaching-heading.test.ts",
+      "beforeSha256": "228eaa9986e7730815905d9ea11feb896a4effec5f1f64a1c0b1b1e25c8caef6",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/clinical-review-wayfinding.test.mjs",
+      "beforeSha256": "c04a8ca76716126748a8030885063451742ce6a7977a3b79db7dc5fa8c61cf25",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "beforeSha256": "e3eea7022e2154634b51f44d5d94a9dc9701ee9fb527f7c6f412f1aa7cdd169f",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/desktop-workspace-simplification.test.ts",
+      "beforeSha256": "9a1f3e90e1a895c37d06f4ab61510ea2bd0296422b1448b916d9cea6d47f0036",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "tests/disc-comparison.test.ts",
+      "beforeSha256": "fcd88b100d6de2ad8a615079a0f153631bb581900b2ee51706c7f30a06277504",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "beforeSha256": "4f51407c1c206789aa00705bc60d1e7c291f0dfac6f5d9a2226164fe07e3bf36",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/head-cerebellar-review.test.ts",
+      "beforeSha256": "07359e77a1cdb9126d00a7264293a4e763ad3eb1a128dd0d6d43bae80bfdf1bc",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/head-ct-facial-ui.test.mjs",
+      "beforeSha256": "6e8e413f7383f990e7d0b8d565ba815764d44a8cf3bb8c480605d21e0e322a64",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/head-deep-grey-review.test.ts",
+      "beforeSha256": "a49b6655c34c65a92ce4eb01573995595e3b8251c4d0fea0dea3f6b3ff198921",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/head-hippocampal-clinical.test.ts",
+      "beforeSha256": "3fe895d4de7edc027b1aab84acf7a5f25ccf9626c15bf874a3c4313127d67d5b",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/head-lobar-review.test.ts",
+      "beforeSha256": "cd083c79e1bae558de0131cef6c6f215ca8888ecbf5ceaecf22afd6f1efdd521",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/head-mri-independent-review-ui.test.ts",
+      "beforeSha256": "1a68c885c6d1c03503b707631941bb137433dbfd402c1a89478ca31e7e9ef23d",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/head-ventricular-review.test.ts",
+      "beforeSha256": "06b4d4f89c051860801dae5ffc2ad0abc2c63f52112dd28a602c9454bf86319d",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/header-session.test.ts",
+      "beforeSha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "tests/header-workspace-destination.test.mjs",
+      "beforeSha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "tests/plexus-dependency-rebind.test.mjs",
+      "beforeSha256": "955ed7714219f50d192f499973dcaf04465f2e562181af655631a75b6fc700a0",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/plexus-presentation-rebind.test.mjs",
+      "beforeSha256": "763bf21c4f15455688833baa684dc12bcb16c2a4d0af288156bcccf4f1d09164",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/siteframe-focus-lifecycle.test.mjs",
+      "beforeSha256": "a4ce563e5e725d7b1e71906d5f1968dcb962fa78c85e24869187f80adb1dc908",
+      "provenance": "exact-closed485-owned-preimage"
+    },
+    {
+      "path": "tests/ui-teaching-current-delivery.test.mjs",
+      "beforeSha256": "78919d9a82605a2c24bb4a490e0a5e5cc04549d15e2990107c3c7618dfec2189",
+      "provenance": "exact-owner-authorized-installed-b2bd-inventory"
+    },
+    {
+      "path": "tests/workspace-utilities-dismissal.test.mjs",
+      "beforeSha256": "e51e1c845ec7f64946cb860f154d9c5bda1d0063e3ac4d626e7150078b449202",
+      "provenance": "exact-closed485-owned-preimage"
+    }
+  ],
+  "installedCheckpoint": "F:/VisibleMedicine/recovery/checkpoints/20261020-local-review-cutover/checkpoint.json",
+  "installedCheckpointSha256": "9c9a1cf5676c7f1bab8f0d18c82cb3ecfd92604f6534f11c5fdebdb4712cfdef",
+  "installedSourceInventory": "F:/VisibleMedicine/staging/20261020-review-form-followup/SOURCE_INPUTS_AFTER.json",
+  "installedSourceInventorySha256": "c94cad5d71bea03aec67ceefdec636f4ac1deeb0c2f7c3511811f3e057aa6fcd",
+  "currentManifestSource": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+  "currentReview": "b2bd971b5bfefdd0760f8f3c8785e372276e15dac9cc293ac8fde4cdfb7dcb54",
+  "preservedAtPriorCutover": [
+    "docs/completion-checklist.json",
+    "docs/completion-checklist.md",
+    "docs/anatomy-coverage/README.md"
+  ],
+  "canonicalChanged": false,
+  "candidateChanged": false,
+  "limits": "Read-only provenance proof, not new overwrite/publication/clinical authority. Recheck exact current bytes and specialist ownership before cutover. Preserve or merge remaining unresolved paths. No private data copied."
+}

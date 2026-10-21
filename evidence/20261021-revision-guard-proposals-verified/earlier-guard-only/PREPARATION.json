@@ -1,0 +1,31 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-arterial-history-epoch-proposal",
+  "site": "F:/VisibleMedicine/staging/20261021-arterial-history-epoch-proposal",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "actualCandidate": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "copies": [
+    {
+      "source": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"
+    },
+    {
+      "source": "tests/fixtures/atlas-arterial-evidence-limits-before-current-admission.txt",
+      "path": "tests/fixtures/atlas-arterial-evidence-limits-before-current-admission.txt",
+      "bytes": 13686,
+      "sha256": "b15cda66fe97f25d6a6a61126f14e87e1f4c7a30d31a27f03ae42fd7238e9c15"
+    },
+    {
+      "source": "tests/arterial-history-preservation.test.mjs",
+      "path": "preimages/arterial-history-preservation.test.mjs",
+      "bytes": 2830,
+      "sha256": "5333cc9866b6d7bbf84d3c3790d8012cd9189f1639030f6812e62c9f56225225"
+    }
+  ],
+  "purpose": "One isolated lightweight Node/FS/string history-guard case only; no imported project resolver, geometry or build. The live full-suite candidate and its source remain untouched.",
+  "candidateEdited": false,
+  "privateDataCopied": false,
+  "canonicalInstalled": false
+}

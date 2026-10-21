@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T05:29:38.048Z",
+  "at": "2026-10-21T06:33:10.136Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "websiteInputCount": 5107
+    "websiteInputCount": 5107,
+    "proposalOnly": true
   },
-  "parent": "e870cee0b1fa01cf39bdd97ebde8a9441c42dcc3",
-  "gitParent": "e870cee0b1fa01cf39bdd97ebde8a9441c42dcc3",
+  "parent": "fd431cc1ea72be76d57fa74c9337252636047a0e",
+  "gitParent": "fd431cc1ea72be76d57fa74c9337252636047a0e",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3820,6 +3821,191 @@
       "sha256": "0b06f9be790ceb6f9e2bad8d984d78dd279c9502227197b1742c328c486f6cf4"
     },
     {
+      "path": "evidence/20261021-revision-guard-proposals-verified/arterial190/PREPARATION.json",
+      "bytes": 1676,
+      "sha256": "2ff4dadb7759c3cc1960defb3f80bf9d1cd88b2ebb87fdbc49560f5ae9d85e39"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/arterial190/SOURCE190_HISTORY_GUARD.json",
+      "bytes": 530,
+      "sha256": "de9ffcd452e67eabfd62ea2c12105d423e026ede4f2af15de8cca54e67d6821c"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/camera/PREPARATION.json",
+      "bytes": 887,
+      "sha256": "f2e4d57859bf764f84b8c8171440cc597c75d2e1a9c817c9f452a62a2d25ddbf"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/cutover/PREIMAGE_CLASSIFICATION_V2.json",
+      "bytes": 23476,
+      "sha256": "14b2415d7e206315e6cc8a94cc54a2a7c52d0fa7baeabf208cbfdcfd9ce3df5c"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/cutover/RESULT.json",
+      "bytes": 1570,
+      "sha256": "9faaad20a6e2f8d76a71bd5455c27583c97359638697dad5630c19f28b3bf0a0"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/earlier-guard-only/ISOLATED_HISTORY_GUARD.json",
+      "bytes": 533,
+      "sha256": "c340a45c9c17c9159ea8a6ee5daca9ccc00d2ab8fecaaa25f1b0b985a3910d93"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/earlier-guard-only/NEGATIVE_GUARD_PROOF.json",
+      "bytes": 959,
+      "sha256": "4054f8965aa50c84b72a677c560e0a9bc7719d05122de52b640a42bc9e6e7a32"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/earlier-guard-only/PREPARATION.json",
+      "bytes": 1477,
+      "sha256": "ddfefb0697ee331462af62bc21d8772e5e7fac4e7139822297d10a7d96c12024"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/evidence/ARTERIAL190_GRAPH_WITNESS.json",
+      "bytes": 583,
+      "sha256": "054f5995b4b728774272c57ddfc93f8838c34eca9973a3b0b709815b51a4cec9"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/evidence/ARTERIAL190_WHOLE_HISTORY.json",
+      "bytes": 545,
+      "sha256": "7acd27dd4f9537ff0eaabbf4cad0fcdb1c26792a54922d34aee3eb246e344a3f"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/evidence/CAMERA_LEGACY_CURRENT_ZOOM.json",
+      "bytes": 601,
+      "sha256": "9d7f74250cd6a22411c4e2a2c836361fa5473e44b4a37d0ebeac3ba963d9c7f2"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/evidence/COVERAGE_NATIVE_EPOCHS.json",
+      "bytes": 616,
+      "sha256": "db4d80f53707053b71130bd40c66503f1d50a6ce9293d660b9dfd8f268d809db"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/evidence/PREPARATION.json",
+      "bytes": 6181,
+      "sha256": "df4e2665e754236e61142ee97c485c06b2c2e55745d0ce13d05503de534367a0"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/evidence/PROOF.json",
+      "bytes": 1580,
+      "sha256": "b499b889e029ea6e495dfe8ffde44c25f69e57ffd53d1b6373158d5ad1ef85fa"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/preimages/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 17502,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/preimages/tests/arterial-history-preservation.test.mjs",
+      "bytes": 2830,
+      "sha256": "5333cc9866b6d7bbf84d3c3790d8012cd9189f1639030f6812e62c9f56225225"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/preimages/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/preimages/tests/atlas-guided-camera.test.ts",
+      "bytes": 8483,
+      "sha256": "a16d5b0ff30905c035a327752e9a4829449fab0eb6c470d308cfd74a8f501221"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/proposed-website/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 4090,
+      "sha256": "7484378b8c4e8dc91d2d4a3c7f5d58b772c90e8d9b2b2aeaf8f8ebe4ae9dc8da"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/proposed-website/tests/arterial-history-preservation.test.mjs",
+      "bytes": 3838,
+      "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/proposed-website/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/proposed-website/tests/atlas-guided-camera.test.ts",
+      "bytes": 9477,
+      "sha256": "31ca6f0b7bc7aa2fd079ac3ad50617de491e4fd2723cc20560d65395d156506c"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/proposed-website/tests/current-190-coverage.test.mjs",
+      "bytes": 4633,
+      "sha256": "5ec7577052250b5e6cc7a772b2e4b7fdedc04bf0091a85317dcbb96253718234"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/proposed-website/tests/fixtures/closed485-original/anatomy-coverage-revision-admission.test.mjs.raw",
+      "bytes": 17502,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/admit-revision-guard-batch-20261021.mjs",
+      "bytes": 3446,
+      "sha256": "c97fbc509fb842b5615b6a7c031bb8bfcea716cf5934aa0167a438c64c330d25"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/checkpoint-revision-guard-proposals-20261021.mjs",
+      "bytes": 9135,
+      "sha256": "c526b773e8b8a5736d5cec8ec7537651566316dfb32b2c044b5374ab4c575ea6"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/classify-source190-cutover-preimages-20261021.mjs",
+      "bytes": 2657,
+      "sha256": "46b2352a28ebaaf0524e54fcc7fb9354b739d1d65d280cf37122f43a9baa5e83"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/copy-camera-contract-native-check-20261021.mjs",
+      "bytes": 1117,
+      "sha256": "810026cc0cd05b4755f85af9e46d411c0ed172e393e9efd3a0a547c74a57478b"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/inspect-source190-local-cutover-20261021.mjs",
+      "bytes": 3711,
+      "sha256": "358d199f3c30b770e8c3f8213dd50edbe6cb7c20a8c9cdba82693885a2887793"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/prepare-arterial-epoch-proposal-check-20261021.mjs",
+      "bytes": 2387,
+      "sha256": "759e65f378483add1aedd243a43a97369405f192181077585d906670b1856d00"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/prepare-arterial190-epoch-proposal-20261021.mjs",
+      "bytes": 3854,
+      "sha256": "84af41de95c410a8c33d85050cdabcbfd8920119f735ced8136a77183a747994"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/prepare-arterial190-native-witness-20261021.mjs",
+      "bytes": 2226,
+      "sha256": "c56a4d0fcd91086dc1b213e35bc3dfaefb6f32578eef56f9cf42ee1f4f47a0e4"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/prepare-camera-zoom-contract-proposal-20261021.mjs",
+      "bytes": 3466,
+      "sha256": "4960035c710c0bbe90d8efa8ee6752b72f1fc72bc21d0d23e2fd681ac70eb85e"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/prepare-coverage-epoch-native-check-20261021.mjs",
+      "bytes": 3067,
+      "sha256": "0b4e9c2ad10f08247f741f08ce1505487738cb9acdca809fd7dff03a051d322e"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/prepare-revision-guard-batch-20261021.mjs",
+      "bytes": 4284,
+      "sha256": "e3c8e0a73ab95fa93e7f6a0fcea925729101e8f91fb894c2dd86fd3126c8ec1c"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/resolve-source190-installed-preimages-20261021.mjs",
+      "bytes": 2753,
+      "sha256": "1e54d8461db933682a826068168ec4f1413c50b325b62649f6191ccad480631e"
+    },
+    {
+      "path": "evidence/20261021-revision-guard-proposals-verified/scripts/verify-arterial-proposal-refusals-20261021.mjs",
+      "bytes": 2352,
+      "sha256": "361e49778b2faa89c6bd911fa92d1471d6b9e53c3ae2c0e179a8e99d5fa45e9c"
+    },
+    {
       "path": "evidence/20261021-source-credits-notices/audit/MAIN_FINDINGS.json",
       "bytes": 8301,
       "sha256": "0a17af73ae4896b1f5eefad40796be7fd3657a31aa28fe8f813a61088dee286e"
@@ -5641,55 +5827,40 @@
     }
   ],
   "removed": [],
-  "scope": "Selected owned local developer storage helper, native stager fix, private-state Git ignore boundary, regression tests, exact stager preimage and small non-patient proof/control sources. Prior filtered ancestry only. No private SQLite/rows/cookies/identities, scans/masks, full private inventory/modules/manifests, geometry/full runtimes/dist/dependencies/raw canonical history/browser pixels or DOM. Not a whole runnable or private-data backup, public deployment or clinical/spatial acceptance.",
+  "scope": "Six proposed owned test/immutable-original-fixture sources, four exact current test preimages and small explicit proof/control/read-only-cutover metadata on previously filtered ancestry. Proposals NOT installed; fresh types and whole-suite terminal still needed. No scans, masks, private identities/decisions/DB/env, private modules/full manifests, model geometry/full runtimes/dist/dependencies, raw canonical Git ancestry or browser media/DOM. Retained test harness junctions are NOT copied or packaged. Not a complete runnable or private-data backup, public release or clinical/spatial approval.",
   "proof": {
-    "at": "2026-10-21T05:27:32.923Z",
-    "viewport": {
-      "width": 1280,
-      "height": 720
-    },
-    "observed": [
-      "Whole-body skeleton renders with compact controls",
-      "Zoom in responds",
-      "Right lower limb: hip to heel opens as a loaded anatomical tour",
-      "Play full tour shows step 1 and its caption without a second Start click",
-      "Speed selector accepts 3x; playback advances automatically from step 1 to step 5",
-      "Pause changes the control to Play and retains step 5 and its caption"
-    ],
-    "unresolved": [
-      {
-        "message": "MutationObserver.observe: parameter 1 is not of type Node",
-        "count": 1,
-        "source": "Unclassified; console supplied no source URL or stack"
-      }
-    ],
-    "limits": [
-      "No frame-rate/smoothness benchmark",
-      "Not all tours or regions tested",
-      "Not clinical, spatial registration, hosted-release or full-suite acceptance"
-    ],
-    "modelsReadBackAcrossFreshEmulator": 137,
-    "modelBytes": 199072480,
+    "at": "2026-10-21T06:33:04.178Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "sourceInputs": 5107,
-    "tests": 17,
-    "passed": 17,
-    "skipped": 0,
-    "authenticationChanged": false,
-    "permissionsChanged": false,
+    "currentWebsiteInputs": 5107,
+    "proposedWebsiteInputs": 5109,
+    "changes": {
+      "existing": 4,
+      "added": 2
+    },
+    "boundedNativeRegistrationsPassed": 9,
+    "boundedNativeSkipped": 0,
+    "originalHistoricalChildTestsPassed": 4,
+    "countingNote": "Nine outer registrations across four bounded native runs; one wrapper strictly verifies four unchanged original child tests. Distinct units, not one full-suite count.",
+    "sourcePrefixAndWholeInverses": true,
+    "all1710ReviewInputsPreserved": true,
+    "candidateEdited": false,
     "canonicalInstalled": false,
-    "publicDeployment": false,
-    "localOnlyPrivateDatabaseCopy": true,
-    "sourceDatabaseOpenedReadOnly": true,
+    "freshTypesRequiredBeforeCutover": true,
+    "fullSuiteStillRequiresActualTerminalReceipt": true,
+    "originalFullFailureBaseline": 144,
+    "wholeSuitePassingClaim": false,
     "privateDataUploaded": false,
-    "ownerTabsTouched": false,
-    "ownerPort3000Untouched": true,
-    "temporaryPort3002Stopped": true,
-    "originalFullSuiteFailures": 144,
-    "fullSuiteAcceptance": false,
     "clinicalApproval": false,
-    "spatialRegistration": false
+    "spatialRegistration": false,
+    "publicDeployment": false,
+    "cutover": {
+      "existingPaths": 97,
+      "knownExactOwnedPreimages": 96,
+      "remaining": "Previously preserved coverage README; deliberately preserve/merge, no blind overwrite",
+      "unchangedModelObjects": 137
+    },
+    "limits": "Test-only proposals, not installed fixes or post-fix full-suite acceptance. Current models, teaching, actual access and user review forms unchanged. No new browser check from these native tests. Earlier source backups remain partial; no model, private-data, raw canonical ancestry or complete runnable-project backup."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
