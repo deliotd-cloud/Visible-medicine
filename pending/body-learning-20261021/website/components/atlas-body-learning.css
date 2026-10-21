@@ -1,0 +1,13 @@
+.atlas-body-learning{position:absolute;z-index:3;bottom:12px;left:12px;max-width:min(320px,calc(100% - 24px));padding:7px 10px;border:1px solid #aec8c2;border-radius:7px;background:#f8fbf6f5;color:#113c3e;font:12px/1.4 system-ui,sans-serif;box-shadow:0 2px 10px #12362d18}
+.atlas-body-learning>summary{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;font-weight:650}
+.atlas-body-learning[open]{max-height:240px;overflow:auto;overscroll-behavior:contain}
+.atlas-body-learning strong{display:block;margin:8px 0 5px;overflow-wrap:anywhere}
+.atlas-body-learning a{display:inline-flex;align-items:center;min-height:34px;padding:4px 9px;border:1px solid #7daea2;border-radius:5px;background:#fff;color:#075c58;font-weight:650;text-decoration:none}
+.atlas-body-learning a:hover{text-decoration:underline}
+.atlas-body-learning p{margin:8px 0 2px!important;font-size:11px!important;line-height:1.45}
+.atlas-body-learning :is(summary,a):focus-visible{outline:3px solid #16a695;outline-offset:3px}
+.atlas-runtime-frame:has(>.atlas-body-learning)>iframe{height:calc(100% - 36px);bottom:36px}
+.atlas-runtime-frame>.atlas-body-learning:not([open]){left:0;right:0;bottom:0;max-width:none;height:36px;border-width:1px 0 0;border-radius:0;box-shadow:none;padding:7px 12px}
+.atlas-runtime-frame:has(>.atlas-body-learning)>.atlas-runtime-help{bottom:44px}
+.atlas-body-learning-flow{position:static;max-width:none;margin:6px 0;box-shadow:none}
+@media(max-width:760px){.atlas-body-learning{bottom:8px;left:8px;max-width:min(270px,calc(100% - 16px))}.atlas-body-learning>summary{max-width:230px}}

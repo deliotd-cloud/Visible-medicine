@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T19:56:26.532Z",
+  "at": "2026-10-21T20:41:18.728Z",
   "sourceIdentity": {
-    "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
-    "bodyLectureLinksInstalled": true
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "canonicalAtlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "pendingAtlas": "0dfce15890cafc0a2b8e309193531daa29a672ed",
+    "sourceTree": "18f4fa612d0209123488a9104c2e26089b06cfe3"
   },
-  "parent": "512991c17eaa5eb8c631daf2c656097eec6e19e3",
-  "gitParent": "512991c17eaa5eb8c631daf2c656097eec6e19e3",
+  "parent": "7b8be4adec6d72c99ca4295a4abfb8d28572ce09",
+  "gitParent": "7b8be4adec6d72c99ca4295a4abfb8d28572ce09",
   "files": [
     {
       "path": "app/globals.css",
@@ -11875,6 +11876,126 @@
       "sha256": "087db70291173eca0d547f827e4c49520d767f57a16010ff7fe11e41ec2b93fb"
     },
     {
+      "path": "pending/body-learning-20261021/atlas/app/atlas-learning-selection-channel.tsx",
+      "bytes": 3181,
+      "sha256": "6fd3995d1f6a531365b0d15aa3715e2cd4b70fa8d42f6e21aa5f84b834a199ec"
+    },
+    {
+      "path": "pending/body-learning-20261021/atlas/app/body-explorer.tsx",
+      "bytes": 125813,
+      "sha256": "d9df86ff0701c7405a27c391bbb534e1fdb79d841652cf82ac69e62f19b29cc7"
+    },
+    {
+      "path": "pending/body-learning-20261021/atlas/integration/head-neck/main.tsx",
+      "bytes": 4167,
+      "sha256": "625ba92655fc0c0ec609566d611a918ae99d81f85af8e58f7c1eaee4b21dc685"
+    },
+    {
+      "path": "pending/body-learning-20261021/atlas/lib/atlas-learning-selection-channel.ts",
+      "bytes": 6461,
+      "sha256": "8ca29f6b31de329d5307d5b9267ddf01f8054de17d8492555d72349346322456"
+    },
+    {
+      "path": "pending/body-learning-20261021/atlas/scripts/fixtures/learning-channel-original-body.tsx.raw",
+      "bytes": 125142,
+      "sha256": "4ee0172e8dcc73020a523bbb705d478f308c9c23c524c62b7783049516f5bcf4"
+    },
+    {
+      "path": "pending/body-learning-20261021/atlas/scripts/fixtures/learning-channel-original-main.tsx.raw",
+      "bytes": 3959,
+      "sha256": "443b12fc8acc500013abd3de16917ef3de864f0a758a0bafa865c54fa9509284"
+    },
+    {
+      "path": "pending/body-learning-20261021/atlas/scripts/test-atlas-learning-selection-channel.mjs",
+      "bytes": 11573,
+      "sha256": "d078813d7209ce399127e836e920f979f5a5cd7c074a68ef47cf4bab0ac74a2b"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/components/atlas-body-learning.css",
+      "bytes": 1616,
+      "sha256": "2ae1fd51d1c6acf0c42faf166cd35dc364ed8d39cdc3a06fc7517f98008c9970"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/components/AtlasBodyLearning.tsx",
+      "bytes": 6329,
+      "sha256": "80c7eaf43329b32117bf7c6b4e838fe17a5d0436eea4ff9ec4d4f02d0a94f958"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/components/AtlasRuntimeFrame.tsx",
+      "bytes": 5344,
+      "sha256": "335b8b70b2ff60c3a951efb9eb18d98de8d230411c00896ff4a4123eff051261"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/components/HeadAtlasGuidedModel.tsx",
+      "bytes": 12483,
+      "sha256": "d476ced9b87984b150017ceed54c45dfe5236aa48d2f97bce053e0f59b07a0f0"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/components/HeadAtlasLinkedModel.tsx",
+      "bytes": 7004,
+      "sha256": "2651c0125b71b8bf9e026f05564bda0ff9303f5f6fd689ef9ad5025d3e5138c6"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "698967e2b59fec32f81d14aa9c393b91b7ca5744fc5439330afa8a29c0e744f7"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/lib/atlas-body-learning-selection.ts",
+      "bytes": 6128,
+      "sha256": "1f95164556ca07c13d47b678ccf03e6ede4566b52f679966e09c0746924ff14e"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "8a9725a2f427a425464dd0b9765436ee7e8f3fada37058ff5bd98e00c66a7b29"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/lib/lecture-body-catalog.json",
+      "bytes": 181273,
+      "sha256": "5e46d080c7d1b8513710d96db71349c89eee2568159f4249fa97608a82090d8f"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/scripts/bind-clinical-review.mjs",
+      "bytes": 8202,
+      "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "a0cf59b6551f3b330f0b02f5003d5dcbacf28f8e7414f9c34e2687bf747ceb96"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "c372bad521d19bd7ed03a40208e3d911c64339ddd23cf7188ddf668cc905e192"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas-body-learning-component.test.mjs",
+      "bytes": 13728,
+      "sha256": "7c54485091bb493623d11a4fe59602488cbe7fa8c2f77c589327cf7892f23600"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas-body-learning-selection.test.mjs",
+      "bytes": 7800,
+      "sha256": "5ddb65c7a5c2de12b01e081f14b055f242466615fa0a816b5537d96fa8cb7367"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-original-AtlasRuntimeFrame.tsx.raw",
+      "bytes": 5240,
+      "sha256": "673f6b25ab720fc250b7d55b04fd8571e5b2bc077a5bc1f69e984aabb624b234"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-original-HeadAtlasGuidedModel.tsx.raw",
+      "bytes": 12367,
+      "sha256": "cfaf695e1e6bd418fe6f2a1416cc18094aab7d7509ecc61396d4f55a37d37499"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-original-HeadAtlasLinkedModel.tsx.raw",
+      "bytes": 6869,
+      "sha256": "c90fd4b9a51a4fa67ef390fb6b79515825fd662160f83cabd127b7283b8d2fab"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -12581,79 +12702,50 @@
     }
   ],
   "removed": [],
-  "scope": "Retains the earlier filtered source and adds full-body lecture linking, deliberate source/side/revision bindings, access-checked related teaching, exact legacy test adapters and complete original public-code witnesses, explicit inherited licence/change notices and compact test/types/build/browser proof. Excludes scans, pixels, masks, private modules, identifiers, scan names/coordinates, private references/notes/decisions, env/database, models, generated viewer JavaScript, raw logs/DOM/media, dependencies and canonical Git ancestry. Partial source-only recovery, not whole/private/runnable recovery or clinical/spatial/public approval.",
+  "scope": "Existing verified selected website source plus24explicitly selected pending learning-channel source/test paths. Pending paths are an uninstalled partial candidate, not a finished release, current canonical checkout, whole/private/runnable backup, or public site deployment. No scans, pixels, models, masks, private modules, environment, databases, clinical records, raw logs, media or raw canonical Git ancestry included.",
   "proof": {
-    "at": "2026-10-21T19:56:20.819Z",
-    "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
-    "reviewBindings": 1712,
-    "importedSources": 1553,
-    "sourceInputs": 5534,
-    "controlledInputs": 5527,
-    "preservedInputs": 7,
-    "nativeCounts": {
-      "tests": 203,
-      "pass": 203,
+    "sourceCandidate": "0dfce15890cafc0a2b8e309193531daa29a672ed",
+    "sourceTree": "18f4fa612d0209123488a9104c2e26089b06cfe3",
+    "sourceOwnedPaths": 7,
+    "websiteOwnedPaths": 17,
+    "rootReferences": 1104,
+    "regions": 12,
+    "newReceiverAndLifecycleTests": {
+      "tests": 13,
+      "pass": 13,
       "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+      "skip": 0
     },
-    "firstNativeAttempt": {
-      "tests": 197,
-      "pass": 176,
-      "fail": 21,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+    "bodyLectureTests": {
+      "tests": 24,
+      "pass": 24,
+      "fail": 0
     },
-    "firstAttemptSourceRollbackVerified": true,
-    "allPriorAssertionsPreservedByWholeSourceInverse": true,
-    "fullProjectTypesPassed": true,
-    "fullLocalBuildPassed": true,
+    "legacySourceChannelsPassed": true,
+    "sourceTypesAndContainedBuildPassed": true,
+    "stagedWebsiteTypesAndFullBuildPassed": true,
     "stockReviewPassed": true,
-    "modelInventoryAndDeliveryPolicyPassed": true,
-    "publicBodyRootReferences": 1104,
-    "indexBytes": 181273,
-    "indexSha256": "14847c9d19f42d4128a0e38d6149b70b728d02e9302e83cfa3ba6679ac745b9c",
-    "fullBodyLectureLinkingInstalled": true,
-    "sharedHeadBodySlideLimit": 6,
-    "existingHeadManifestJsonAndHashesPreserved": true,
-    "stalePinsReadableButCannotNavigateOrPublish": true,
-    "automaticStructureOrImageMapping": false,
-    "positiveDiscoveryScope": "Real SQLite synthetic allocation/publication fixtures, real manifest integrity, injected final published authority; unchanged actual authority also exercised by legacy real-allocation suite.",
-    "realBrowserScope": {
-      "at": "2026-10-21T19:56:12.020Z",
-      "previewPid": 292788,
-      "parentPid": 274628,
-      "session": 60913,
-      "manualReload": true,
-      "actualSignedInSearchToBodyRelatedPagePassed": true,
-      "actualStaleSourcePageRefusesReplacement": true,
-      "actualNoAccessibleLecturesEmptyStatePassed": true,
-      "positiveLectureDisclosureTestedWithRealSqliteAndFinalGate": true,
-      "syntheticReactEditorAndPlayerPassed": true,
-      "syntheticSideQuery": "left Achilles",
-      "syntheticDeliberateLinkAndExactPreviewActionsPassed": true,
-      "syntheticSelectionRemovedAndDirtyStateCleared": true,
-      "syntheticSaveDisabledAfterCleanup": true,
-      "syntheticServerStopped": true,
-      "actualDesktopWidth": 1280,
-      "noHorizontalOverflow": true,
-      "realStudioSavedLectureRoundtripNotClaimed": true,
-      "ownerTabsReloaded": false,
-      "ownedTabsClosed": true,
-      "noSavedLecturesClinicalDecisionsOrLearnerResultsWritten": true
+    "reviewBindings": 1719,
+    "importedSources": 1556,
+    "canonicalInstalled": false,
+    "epochAdmissionTestsPending": true,
+    "normalOwnerPreviewUnchanged": true,
+    "initialStagingTypeFailureRetained": true,
+    "realBrowserFixture": {
+      "wholeBodyNativeLeftClavicle": true,
+      "handNativeRightScaphoid": true,
+      "quizLinkRevoked": true,
+      "exploreRecovery": true,
+      "collapsedDockDoesNotOverlapModel": true,
+      "allRegionBrowserCertification": false,
+      "lecturesNotCreatedOrOpened": true
     },
-    "licensing": "No new upstream dependency/font/texture/mesh/dataset/service. New index adapts existing cleared public metadata; separate family notices retained, BodyParts3D credit and change notice explicit. Not a whole-project re-audit.",
-    "clinicalApproval": false,
+    "geometryOrAcceptedMasksChanged": false,
+    "independentEntitlementsUnchanged": true,
+    "semanticReferenceOnly": true,
     "spatialRegistration": false,
-    "publicDeployment": false,
-    "newFees": false,
-    "wholeSuitePassClaim": false,
-    "wholeProjectBackup": false,
-    "privateDataBackup": false,
-    "fullGoalActive": true
+    "clinicalApproval": false,
+    "publicDeployment": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
