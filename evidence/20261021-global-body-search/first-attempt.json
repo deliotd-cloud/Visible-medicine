@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-21T19:03:08.671Z",
+  "error": "AssertionError [ERR_ASSERTION]: full-types\n\n2 !== 0\n",
+  "commands": [
+    {
+      "at": "2026-10-21T19:02:15.331Z",
+      "args": [
+        "--experimental-strip-types",
+        "--test",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/body-structure-search.test.ts",
+        "tests/atlas-structure-search.test.mjs",
+        "tests/structure-learning-search.test.ts",
+        "tests/unified-search-concepts.test.ts",
+        "tests/search-kind-page.test.ts",
+        "tests/atlas-search-study-handoff.test.ts",
+        "tests/head-learning-search-context.test.ts"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 4626,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/native.log",
+      "logSha256": "97d9d17679440545c598ebca48ebe92f6c37efab0ddaf0748d503e64771b5457",
+      "counts": {
+        "tests": 25,
+        "pass": 25,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "at": "2026-10-21T19:02:17.631Z",
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 2293,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/stock-review.log",
+      "logSha256": "51c61688b22897b2e563b4d0bbda9f75df742378bb5c381a1c2cddc45df732c7"
+    },
+    {
+      "at": "2026-10-21T19:03:08.657Z",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 2,
+      "signal": null,
+      "durationMs": 51024,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/full-types.log",
+      "logSha256": "5afb73dd35374af48158690dff5649c5b83c25ddefb2d136bceb3dc18882595f"
+    }
+  ],
+  "exactOriginalSourceRestored": true,
+  "newOwnedPathsRemovedWithStagedRecovery": true,
+  "previewRestartRequired": true
+}

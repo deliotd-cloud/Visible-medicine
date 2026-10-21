@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-21T19:03:57.462Z",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/body-structure-search.test.ts",
+    "tests/atlas-structure-search.test.mjs",
+    "tests/structure-learning-search.test.ts",
+    "tests/unified-search-concepts.test.ts",
+    "tests/search-kind-page.test.ts",
+    "tests/atlas-search-study-handoff.test.ts",
+    "tests/head-learning-search-context.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 4743,
+  "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/retry-types/native.log",
+  "logSha256": "6d3c0797269a03e3aa778805d99c67c3826b064431676bdabfbb0a6101ef6452",
+  "counts": {
+    "tests": 25,
+    "pass": 25,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  }
+}

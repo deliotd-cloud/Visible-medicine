@@ -1,0 +1,135 @@
+{
+  "at": "2026-10-21T19:05:39.822Z",
+  "site": "F:/VisibleMedicine/website",
+  "sourceRevision": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
+  "reviewBindings": 1712,
+  "sourceSnapshot": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/retry-types/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "9763f44d807f03894f4aeecfea3fc9bebdc903bd7b6bc8f23a15afc77b610825",
+  "controlledInputs": 5495,
+  "preservedInputs": 7,
+  "ops": [
+    {
+      "path": "lib/body-structure-search.ts",
+      "before": null,
+      "after": "8ca7f89d7306375e2d919b42f96e5ae4090cca3b7335829b5b77c14a70cf6425"
+    },
+    {
+      "path": "lib/atlas-structure-search.ts",
+      "before": null,
+      "after": "bbca359608981df0cb984e60edad57e86c70cf0efeeae707ff2db65e22517761"
+    },
+    {
+      "path": "lib/platform-governance.ts",
+      "before": "3c20a5435ace6f59ae9e62ab95d9151eaccb523b06deefc130da8b887f13d361",
+      "after": "142458d43a4d0fb095090a971c46450d3faffd271331ce536776fda977a574b0"
+    },
+    {
+      "path": "tests/body-structure-search.test.ts",
+      "before": null,
+      "after": "6f491e335c398181dfc220aedf9176ed1b5579e2cc657f7003f8aa06bf97fd7d"
+    },
+    {
+      "path": "tests/atlas-structure-search.test.mjs",
+      "before": null,
+      "after": "1cd3647253ce110436e465ab2e0482b8e0b0bde626c675923e7856589201e3c3"
+    },
+    {
+      "path": "tests/unified-search-concepts.test.ts",
+      "before": "84b1363004059cc33f88e948edf4f35d1d81af8012feb40de9481ff1fe7c957f",
+      "after": "3964a862f45cb002a92b46079c500fbd79a66f0fce217a8d173a02432737e0be"
+    },
+    {
+      "path": "tests/fixtures/global-body-search/platform-governance.before.txt",
+      "before": null,
+      "after": "3c20a5435ace6f59ae9e62ab95d9151eaccb523b06deefc130da8b887f13d361"
+    }
+  ],
+  "commands": [
+    {
+      "at": "2026-10-21T19:03:57.462Z",
+      "args": [
+        "--experimental-strip-types",
+        "--test",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/body-structure-search.test.ts",
+        "tests/atlas-structure-search.test.mjs",
+        "tests/structure-learning-search.test.ts",
+        "tests/unified-search-concepts.test.ts",
+        "tests/search-kind-page.test.ts",
+        "tests/atlas-search-study-handoff.test.ts",
+        "tests/head-learning-search-context.test.ts"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 4743,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/retry-types/native.log",
+      "logSha256": "6d3c0797269a03e3aa778805d99c67c3826b064431676bdabfbb0a6101ef6452",
+      "counts": {
+        "tests": 25,
+        "pass": 25,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "at": "2026-10-21T19:03:59.799Z",
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 2329,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/retry-types/stock-review.log",
+      "logSha256": "51c61688b22897b2e563b4d0bbda9f75df742378bb5c381a1c2cddc45df732c7"
+    },
+    {
+      "at": "2026-10-21T19:04:47.883Z",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 48082,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/retry-types/full-types.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at": "2026-10-21T19:05:35.601Z",
+      "args": [
+        "node_modules/vinext/dist/cli.js",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 47716,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-global-body-search/retry-types/full-build.log",
+      "logSha256": "65d7265f3eccf167395d7636dea03734170193df2be04b3294e3504271c1d78e"
+    }
+  ],
+  "nativeCounts": {
+    "tests": 25,
+    "pass": 25,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "reviewSourceAssetsAndBindingsUnchanged": true,
+  "allOtherControlledSourceUnchanged": true,
+  "typesPassed": true,
+  "buildPassed": true,
+  "stockReviewPassed": true,
+  "ownerTabsReloaded": false,
+  "noNotesOrDecisionsChanged": true,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "previewRestartPending": true
+}

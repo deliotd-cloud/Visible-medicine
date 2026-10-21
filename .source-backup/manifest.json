@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T18:42:23.119Z",
+  "at": "2026-10-21T19:07:49.594Z",
   "sourceIdentity": {
-    "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
-    "canonicalUiInstalled": true
+    "globalBodySearchInstalled": true
   },
-  "parent": "f2f86c8fc263bc03b59c59e2c1046706e53ac15b",
-  "gitParent": "f2f86c8fc263bc03b59c59e2c1046706e53ac15b",
+  "parent": "8802f547ca6036500bc540fde07353fc361527bd",
+  "gitParent": "8802f547ca6036500bc540fde07353fc361527bd",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4498,6 +4498,66 @@
       "path": "evidence/20261021-four-modules-verified/scripts/close-shoulder-and-export-modules-20261021.mjs",
       "bytes": 10230,
       "sha256": "1045cc614db2782b2435ee7000cfbc266ebc7a1d331698c2f5b7faea9d5c4c13"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/controls/checkpoint-global-body-search-20261021.mjs",
+      "bytes": 6409,
+      "sha256": "7db88aaf326bec4532d7092794c5ee3d6cc6d36e8797298e8fb8cfc9c23cf84f"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/controls/install-global-body-search-20261021.mjs",
+      "bytes": 6845,
+      "sha256": "4213c7ed6562a4af738b27ac445044e16bedc451ccef8b15a0bb60c2bb359a2a"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/controls/prepare-global-body-search-20261021.mjs",
+      "bytes": 2122,
+      "sha256": "46bfebe95ac6868f1302cc8cdf34ef75ad175703870a82aa8207d5f5263984c1"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/first-attempt.json",
+      "bytes": 2003,
+      "sha256": "37608e13cb0667383f1485e3c9779d63870bcea9e5ec68fecd6f961255be9244"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/full-build.json",
+      "bytes": 353,
+      "sha256": "648e6a5aa445f722f216534b65d49ecdbca9624116583115d4b6ad1e957c4f12"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/full-types.json",
+      "bytes": 390,
+      "sha256": "a6b4e86358f459ff34a65b052fea2886559c3b5feb4be827c466c10a1cdba1bd"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/install-first-attempt.mjs",
+      "bytes": 6372,
+      "sha256": "dc1faba264f91cca03eb31bb8d1752f16cba270aabdae62583a130aca79a7ab9"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/INSTALLATION.json",
+      "bytes": 4559,
+      "sha256": "6d711e7345ea49ed6e767602080228beede888ee427a92d658b0e4c3944ceed1"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/native.json",
+      "bytes": 834,
+      "sha256": "67fe1e50d2ca53fc5e158c1031b20a7bcdf20310a5a0311e4d976e12fe402c53"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/PROOF.json",
+      "bytes": 1374,
+      "sha256": "7148235d2ae26e0e76e495a34d1438caa2cbcd8cf942ab2319460c7daa8bc77f"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/RUNTIME_ACCEPTANCE.json",
+      "bytes": 1341,
+      "sha256": "eeaf6bd24ca884731401bb1f5d29e29f1a2e7a30500f55def4118c81ce8be4bb"
+    },
+    {
+      "path": "evidence/20261021-global-body-search/stock-review.json",
+      "bytes": 344,
+      "sha256": "75e3cd1f1393a4d3bf24b113e7fb4b8a2f2d591d2ad2d75ca4a0c420796e4c4d"
     },
     {
       "path": "evidence/20261021-guided-limb-reliability-checkpoint/controls/admission.mjs",
@@ -11550,6 +11610,16 @@
       "sha256": "5fe61d14688706a07349802cb30a5200461fd3385f5eaa680b5973f5b046836d"
     },
     {
+      "path": "lib/atlas-structure-search.ts",
+      "bytes": 1897,
+      "sha256": "bbca359608981df0cb984e60edad57e86c70cf0efeeae707ff2db65e22517761"
+    },
+    {
+      "path": "lib/body-structure-search.ts",
+      "bytes": 6294,
+      "sha256": "8ca7f89d7306375e2d919b42f96e5ae4090cca3b7335829b5b77c14a70cf6425"
+    },
+    {
       "path": "lib/clinical-review-fetch.ts",
       "bytes": 921,
       "sha256": "61f43dc7fdb4d8ac4b6ab2dc69d2901ee23f02e2e87801a2978719ccc8a8952c"
@@ -11563,6 +11633,11 @@
       "path": "lib/head-tour-playback.ts",
       "bytes": 4587,
       "sha256": "98a28b5d2d168e481b10d7c8461b721985eea32f9d1412546eab63afa8d6d294"
+    },
+    {
+      "path": "lib/platform-governance.ts",
+      "bytes": 45233,
+      "sha256": "142458d43a4d0fb095090a971c46450d3faffd271331ce536776fda977a574b0"
     },
     {
       "path": "lib/plexus-review-manifest.json",
@@ -11715,6 +11790,11 @@
       "sha256": "1fb3b7344104b6dbe43e47dfda7eaf3c32164984f44dd7177cbd61bc534fd0fd"
     },
     {
+      "path": "tests/atlas-structure-search.test.mjs",
+      "bytes": 7124,
+      "sha256": "1cd3647253ce110436e465ab2e0482b8e0b0bde626c675923e7856589201e3c3"
+    },
+    {
       "path": "tests/atlas-thoracoabdominal-quiz-checks.mjs",
       "bytes": 19832,
       "sha256": "0bb48b7d723c1d87262ccdf1eaa41e757c3d93f38c7fb1af8dce3bd6cc9ff6b7"
@@ -11723,6 +11803,11 @@
       "path": "tests/atlas-tour-library-pause.test.ts",
       "bytes": 6824,
       "sha256": "aa54cbe3c7d42ffb125b2b47d2db3b548ddb96fdcbced858fc38ee240cc9006f"
+    },
+    {
+      "path": "tests/body-structure-search.test.ts",
+      "bytes": 7901,
+      "sha256": "6f491e335c398181dfc220aedf9176ed1b5579e2cc657f7003f8aa06bf97fd7d"
     },
     {
       "path": "tests/cervical-current-history-context-contract.test.mjs",
@@ -11935,6 +12020,11 @@
       "sha256": "845dd13acf54b7e3b765b6ca1699273282c00ee376a1ce4a7f44a2569da8d95c"
     },
     {
+      "path": "tests/fixtures/global-body-search/platform-governance.before.txt",
+      "bytes": 45226,
+      "sha256": "3c20a5435ace6f59ae9e62ab95d9151eaccb523b06deefc130da8b887f13d361"
+    },
+    {
       "path": "tests/fixtures/inbox-material-reuse-before-97e75.ts.raw",
       "bytes": 8249,
       "sha256": "ecfac64ead278ec2e7798a523bc847ff15db9690d00b8d9fb7cc362b7923ef4c"
@@ -12100,107 +12190,56 @@
       "sha256": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285"
     },
     {
+      "path": "tests/unified-search-concepts.test.ts",
+      "bytes": 8203,
+      "sha256": "3964a862f45cb002a92b46079c500fbd79a66f0fce217a8d173a02432737e0be"
+    },
+    {
       "path": "tests/vite-cache-rollback.test.mjs",
       "bytes": 8213,
       "sha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056"
     }
   ],
   "removed": [],
-  "scope": "Prior filtered selected source retained, plus compact actual canonical installation/native/types/build/stock-binding/normal-browser acceptance and rollback/artifact-promotion receipts and controls. No private state/preimages/module, full input inventories, generated viewer JS, scans/pixels/masks/models, identifiers, native scan names/coordinates, private references/notes/decisions, env/database, dependencies, raw logs/DOM/media or canonical ancestry. F-local recovery retains exact overwritten source/viewer and private state separately; source-only Git backup remains partial, not whole/private/runnable recovery or clinical/spatial/public-release approval.",
+  "scope": "Previous filtered selected source preserved, plus seven exact full-body search source/test/fixture paths and compact local verification/rollback/browser receipts and controls. No scans, pixels, masks, private modules, identifiers, scan names, coordinates, private references, notes, decisions, env/database, models, generated viewer JavaScript, raw logs/DOM/media, dependencies or canonical Git ancestry. Partial source-only recovery; not whole/private/runnable recovery, clinical approval, spatial registration or public deployment.",
   "proof": {
-    "at": "2026-10-21T18:42:14.268Z",
-    "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "at": "2026-10-21T19:07:43.882Z",
+    "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
-    "reviewBefore": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "reviewBindings": 1712,
-    "atlasImportedSources": 1553,
-    "canonicalUiInstalled": true,
-    "operations": 97,
-    "sourceControlledInputs": 5490,
-    "preservedInputs": 7,
-    "totalNamedInputs": 5497,
-    "verifiedCurrentCandidateInputs": 5479,
-    "oldImmutableCompatibilityChunks": 18,
-    "actualNativeCounts": {
-      "tests": 208,
-      "pass": 208,
+    "importedSources": 1553,
+    "currentBodySelections": 1104,
+    "anatomyResultBudget": 12,
+    "globalResultBudget": 30,
+    "exactSourceAndRevisionBound3dLinks": true,
+    "usesExistingAuditedAliases": true,
+    "exactRootDedupNotNestedParentDedup": true,
+    "publicationQueriesAndAllOtherPlatformFunctionsPreservedByFullInverse": true,
+    "authEntitlementsClinicalDecisionsMasksAndGeometryUnchanged": true,
+    "dependenciesFontsTexturesDatasetsAndLicencesUnchanged": true,
+    "nativeCounts": {
+      "tests": 25,
+      "pass": 25,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "nativeRoots": [
-      "tests/clinical-review-navigation-guard.test.ts",
-      "tests/clinical-review-navigation-preservation.test.mjs",
-      "tests/review-draft-autosave.test.mjs",
-      "tests/head-teaching-review-notes.test.ts",
-      "tests/head-mri-review-notes.test.ts",
-      "tests/head-review-working-copy.test.ts",
-      "tests/current-atlas-delivery.test.mjs",
-      "tests/plexus-review-navigation-binding.test.mjs",
-      "tests/review-navigation-harness-preservation.test.mjs",
-      "tests/review-navigation-delivery-preservation.test.mjs",
-      "tests/head-ct-bone-decision-form.test.ts",
-      "tests/head-ct-bone-teaching-decision-form.test.ts",
-      "tests/head-ct-facial-decision-form.test.ts",
-      "tests/head-paired-decision-form.test.ts",
-      "tests/regional-guide-review-ui.test.ts",
-      "tests/regional-reference-draft-ui.test.ts",
-      "tests/review-navigation-six-harness-preservation.test.mjs",
-      "tests/head-ct-facial-ui.test.mjs",
-      "tests/plexus-review-ui.test.ts",
-      "tests/imaging-atlas-shell.test.ts",
-      "tests/imaging-pane-navigation.test.ts",
-      "tests/imaging-image-focus.test.mjs",
-      "tests/head-inline-comparison.test.ts",
-      "tests/head-atlas-navigation.test.ts",
-      "tests/clinical-review-history-guard.test.ts",
-      "tests/plexus-review-history-binding.test.mjs",
-      "tests/head-review-compact-navigation.test.ts",
-      "tests/head-review-compact-preservation.test.mjs",
-      "tests/head-teaching-review-navigation.test.ts",
-      "tests/head-ct-facial-navigation-status.test.mjs",
-      "tests/studio-workbook-table-semantics.test.mjs",
-      "tests/studio-workbook-empty-state.test.mjs",
-      "tests/studio-workbook-filter-accessibility.test.mjs",
-      "tests/studio-workspace.test.ts",
-      "tests/studio-queues.test.ts"
-    ],
     "fullProjectTypesPassed": true,
-    "fullLocalBuildPassed": true,
+    "fullBuildPassed": true,
     "stockReviewPassed": true,
-    "exactPlexusTwoStepPureRebind": true,
-    "anatomyStudyNonHtmlAssetsApprovalsEntitlementsAndAuthUnchanged": true,
-    "viewerStockVerifiedArtifactPromotedByteExact": true,
-    "canonicalViewerRebuildFingerprintMatched": false,
-    "firstAttemptExactGuardRefusedAndRolledBack": true,
-    "noObservedFingerprintRepinOrCodeNormalization": true,
-    "realSignedInHeadReviewLayoutNavigationAndDisclosurePassed": true,
-    "realMriExisting3dSemanticComparisonPassed": true,
-    "comparisonIsNotPatientSpaceRegistration": true,
-    "nativeAcceptedDirtyLeaveAndFullAppHistoryStillUnverified": true,
-    "fullScreenReaderCrossBrowserOrPixelValidation": false,
-    "ownerPreview": {
-      "pid": 254464,
-      "parent": 274524,
-      "session": 48914,
-      "url": "http://127.0.0.1:3000/",
-      "manualReload": true
-    },
+    "actualGlobalSearchAnd3dSelectionPassed": true,
     "ownerTabsReloaded": false,
-    "ownedTestTabsClosed": true,
-    "unusedLegacyPreviewStopped": true,
-    "noClinicalNotesOrDecisionsChanged": true,
-    "all71ChecklistItemsEightIdeasStatusesAndBaselinesPreserved": true,
-    "checklistRevision": 124,
+    "firstTypecheckRefusalAndExactRollbackRetained": true,
+    "mriQuizLocateOutsideMaskMarkedNotQuiteAndZeroOfOne": true,
+    "correctMaskPlacementAndFollowupBrowserAcceptanceNotProven": true,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
     "newFees": false,
-    "privateDataUploaded": false,
+    "wholeSuitePassClaim": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "wholeSuitePassingClaim": false,
     "fullGoalActive": true
   },
   "wholeProjectBackup": false,
