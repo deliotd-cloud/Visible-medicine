@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-21T14:41:47.597Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/corpus-xray-v2-current-delivery.test.mjs",
+    "tests/ui-teaching-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/ui-teaching-lifecycle-contract.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/tongue-palate-a247-inverse.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/corpus-ui-role-preservation.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/native.tap",
+  "logSha256": "f1214c159be849b85c547e81e249aca67270d1ab213b7ff6528df0a30f74ed46",
+  "counts": {
+    "tests": 65,
+    "pass": 65,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

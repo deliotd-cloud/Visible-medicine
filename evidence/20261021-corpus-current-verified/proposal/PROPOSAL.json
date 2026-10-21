@@ -1,0 +1,40 @@
+{
+  "schema": "vm-source-only-role-proposal/1",
+  "state": "corrected-candidate-needs-main-review-and-native-current-packet-replay",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "14d2e5dcae8d5525c5919803500ab5f9b9c3cdb2d486fb18285df6bb2b62af92",
+  "sourceSnapshotLimit": "This is the 5210+7 observation at corpus failure. Main later observed 5215+7 after an independent admission and must rebase to its latest complete snapshot.",
+  "failureReceipt": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/native.json",
+  "diagnosis": [
+    "Actual 11-root native receipt: 63 tests, 62 pass, one corpus X-ray failure at full packet fingerprints. The transition's bd-authored teaching fingerprint is c6458dd1, whereas current190 material reports d719f022; source18261 and checklist0c1a remain equal.",
+    "Read-only Git comparison of bd5465ee and 190a6323 pelvis JSON finds exactly one lesson changed for this corpus-spongiosum identity: CT moved from pending to an ordinary educational draft. The X-ray lesson, identity, and its other lessons remain equal. The Review teaching fingerprint covers all topics, so the authored X-ray transition hash is a historical packet obligation, not a current190 packet literal.",
+    "The candidate proves the complete authored-bd packet against transition.reviewAfter via exact Git application replay, proves the complete current packet against boundLiveAtlasHistory(delivery.source), which verifies the Website renderer adapter and full integration binding before Git replay, compares the old/current CT topic and unchanged other topics, and retains source/checklist continuity. Prior parent and authored-bd packets, forged citations, stale hashes, altered decision bodies, and synthetic no-storage refusals remain asserted.",
+    "The original historical appendix now reads and SHA-authenticates the exact a312 pre-epoch corpus test before its unchanged complete bd inverse; the new expanded current test is proved separately by the bounded preservation guard."
+  ],
+  "proposedPaths": [
+    {"path":"tests/corpus-xray-v2-current-delivery.test.mjs","preimageSha256":"a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905","candidateSha256":"f75554c4abf79498d87e199bc28fc225ca6d7251cc269b2b7b0c7972dcb00a28","candidateBytes":10709},
+    {"path":"tests/tour-discovery-current-delivery.test.mjs","preimageSha256":"689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b","candidateSha256":"4a9e256d477dc499259f634d507eaf1361e436b0da033d3a02f1e659651fdb83","candidateBytes":5937},
+    {"path":"tests/corpus-ui-role-preservation.test.mjs","preimageSha256":"b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667","candidateSha256":"e479df738feadeccfc53eeb116088ea64511dfdf6af2a5f5dcf81f5b7556b1a5","candidateBytes":12565},
+    {"path":"tests/fixtures/corpus-xray-v2-current-delivery-before-epoch-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905","candidateBytes":7883},
+    {"path":"tests/fixtures/tour-discovery-current-delivery-before-epoch-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b","candidateBytes":5772},
+    {"path":"tests/fixtures/corpus-ui-role-preservation-before-epoch-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667","candidateBytes":3905}
+  ],
+  "sourceOnlyChecks": {
+    "passed": [
+      "All three raw preimages are byte-identical to their canonical existing tests at observation.",
+      "Read-only bd-to-190 pelvis JSON comparison: exactly CT differs for the corpus identity; all other lesson tabs and identity equal.",
+      "node --check on three staged tests: pass.",
+      "node --test staged corpus-ui-role-preservation.test.mjs: 4/4 pass, including complete original bd corpus forward/inverse against authentic a312 pre-epoch source, complete current corpus four-seam forward/inverse, tour one-seam forward/inverse, retained refusals and unknown-append mutations, and unchanged UI whole-source two-count proof."
+    ],
+    "proofCommand": "node --test F:/VisibleMedicine/staging/20261021-corpus-current-epoch-proposal/tests/corpus-ui-role-preservation.test.mjs",
+    "deferredNativeCommands": [
+      "node --test --experimental-strip-types --test-concurrency=1 tests/corpus-xray-v2-current-delivery.test.mjs tests/tour-discovery-current-delivery.test.mjs tests/corpus-ui-role-preservation.test.mjs",
+      "Run the prior actual11-root native matrix after current source snapshot rebasing."
+    ]
+  },
+  "limits": "Staged source-only candidate. The new Git-backed packet replays and synthetic API refusals were not executed here because native/build work belongs to main; no actual native pass claimed. No canonical, product, data, validator, generated asset, clinical or private-data edit."
+}

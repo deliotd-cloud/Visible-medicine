@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T14:35:52.475Z",
+  "at": "2026-10-21T14:42:37.346Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5222,
+    "canonicalNamedInputs": 5225,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "d2a9a28782467bbf6541a73ed19b82f3412b7bbc",
-  "gitParent": "d2a9a28782467bbf6541a73ed19b82f3412b7bbc",
+  "parent": "fc76680a197f19062982d8dd991297cf69a2d301",
+  "gitParent": "fc76680a197f19062982d8dd991297cf69a2d301",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2675,6 +2675,96 @@
       "path": "evidence/20261021-connective-and-review-keyboard/installed-website/tests/fixtures/connective-xray-9f-original.test.ts.raw",
       "bytes": 16331,
       "sha256": "45edaee10adc1dd2bcd5da4461832a4878431ac0c3cfca18624c84bf95fcc074"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/controls/admission-config.json",
+      "bytes": 1346,
+      "sha256": "0cb7f1906a7b0a7b81b50eb0e8210d4f02a01609496be25b4662b0c8db4df994"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/controls/admission.mjs",
+      "bytes": 10037,
+      "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/controls/checkpoint-config.json",
+      "bytes": 2710,
+      "sha256": "6d22472aabee4c1187ce09abdeea68c7228c411ba3cd65e620aa9f0f52dc35ad"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7636,
+      "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7627,
+      "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/evidence/APPLICATION.json",
+      "bytes": 3995,
+      "sha256": "d223f56085da242984c08a4a5cc6b810075331cf745e0369a67fb3a5c98fb8e6"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/evidence/native.json",
+      "bytes": 1139,
+      "sha256": "c495e6114598af625df90c66795e86395668b1667448b99addd6d26767066575"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/evidence/PROOF.json",
+      "bytes": 3234,
+      "sha256": "273c764e9531b7cc3096a7b455fd776db21e68851bfa607a567a31977c162fef"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/installed-website/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 12565,
+      "sha256": "e479df738feadeccfc53eeb116088ea64511dfdf6af2a5f5dcf81f5b7556b1a5"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/installed-website/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "bytes": 10709,
+      "sha256": "f75554c4abf79498d87e199bc28fc225ca6d7251cc269b2b7b0c7972dcb00a28"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/corpus-ui-role-preservation-before-epoch-20261021.mjs.raw",
+      "bytes": 3905,
+      "sha256": "b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/corpus-xray-v2-current-delivery-before-epoch-20261021.mjs.raw",
+      "bytes": 7883,
+      "sha256": "a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/tour-discovery-current-delivery-before-epoch-20261021.mjs.raw",
+      "bytes": 5772,
+      "sha256": "689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/installed-website/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 5937,
+      "sha256": "4a9e256d477dc499259f634d507eaf1361e436b0da033d3a02f1e659651fdb83"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/preimages/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 3905,
+      "sha256": "b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/preimages/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "bytes": 7883,
+      "sha256": "a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/preimages/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 5772,
+      "sha256": "689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b"
+    },
+    {
+      "path": "evidence/20261021-corpus-current-verified/proposal/PROPOSAL.json",
+      "bytes": 5286,
+      "sha256": "81f62c687377150da0a850cbfdf9fd892d354290f52c4368716ff01fa5256af1"
     },
     {
       "path": "evidence/20261021-ct-delivery-history-repair/CT_DELIVERY_HISTORY.json",
@@ -9953,9 +10043,9 @@
     }
   ],
   "removed": [],
-  "scope": "Nine installed limb/suprahyoid test/raw paths plus explicit nineteen corpus/UI test/raw paths, original preimages, reviewed proposals, separate actual native receipts including one retained failure, and sanitized read-only public accessibility observation. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Six exact installed test/raw paths, three original preimages, main-reviewed proposal, actual65/65 native receipt and explicit admission controls; earlier partial failure and all historical source evidence retained through filtered parent ancestry. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T14:35:45.743Z",
+    "at": "2026-10-21T14:42:30.372Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -9963,8 +10053,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5222,
-    "controlledSourceInputs": 5215,
+    "currentNamedInputs": 5225,
+    "controlledSourceInputs": 5218,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -9974,18 +10064,18 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "8a2240e2575bd465c0674335e5aa2734d385ca03816a696767d87ddeabdda101",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "8077b8fa21d44deb759b4a39cb6d64bbd90ab63cbfc9f6a7ce24f282c5222365",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "5c20a07e40627f2576d2a891584c801d308ea76810f98daf6e31f586e25c46a2",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "74445226d33da0838e868640870f6c70400d5118f829acb143dddd31aa160bb0",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 9,
-    "existingEditedTestPaths": 4,
+    "installedTestOnlyPaths": 6,
+    "existingEditedTestPaths": 3,
     "actualNativeCode": 0,
     "actualNativeCounts": {
-      "tests": 40,
-      "pass": 40,
+      "tests": 65,
+      "pass": 65,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
@@ -10000,7 +10090,7 @@
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "milestone": "Nine limb/suprahyoid test/raw paths verify current190 ankle drafts,upper-limb completion,shoulder-girdle arteries and suprahyoid quizzes; actual7-root40/40pass, no skips or cancellations. Separate corpus/UI19path closure has actual11-root63/62pass/1failure: all UI, historical source inverses and mutation gates pass; corpus teaching fingerprint remains under investigation. Its failure receipt and original assertions are preserved, not repinned to observed values. Exact full6036 archived witnesses preserve all tongue/a247 inverses and forged negatives. Read-only actual temporary-tab accessibility check shows four named workspace radios; extra form inputs are hidden/clipped/non-tabbed, not a proven duplicate-control bug. No product or clinical edits and no whole-suite claim.",
+    "milestone": "Six exact corpus test/witness paths separate the authored bd historical teaching theorem from current190 Website-bound packet behavior. Git-backed source comparison identifies CT pending-to-draft as the only changed lesson for the exact identity; X-ray and all other lessons remain exact. Main also repaired the historical self-reader before admission and required the checked Website renderer adapter. Actual11-root65/65/0skip/0cancel now verifies current learner/Review packet, historical fingerprints, old/authored/forged no-storage refusals, UI delivery, complete source inverses and mutation gates. Original63/62/1 remains in prior checkpoint; no expected fingerprint was repinned to an observed hash. No product/content/private/owner-preview changes and no whole-suite claim.",
     "fullSuitePassingClaim": false,
     "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,

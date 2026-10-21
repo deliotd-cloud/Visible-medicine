@@ -1,0 +1,28 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application",
+  "manifestSha256": "81f62c687377150da0a850cbfdf9fd892d354290f52c4368716ff01fa5256af1",
+  "beforeInputs": 5215,
+  "afterInputs": 5218,
+  "expectedPaths": [
+    "tests/corpus-xray-v2-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/corpus-ui-role-preservation.test.mjs",
+    "tests/fixtures/corpus-xray-v2-current-delivery-before-epoch-20261021.mjs.raw",
+    "tests/fixtures/tour-discovery-current-delivery-before-epoch-20261021.mjs.raw",
+    "tests/fixtures/corpus-ui-role-preservation-before-epoch-20261021.mjs.raw"
+  ],
+  "roots": [
+    "tests/corpus-xray-v2-current-delivery.test.mjs",
+    "tests/ui-teaching-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/ui-teaching-lifecycle-contract.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/tongue-palate-a247-inverse.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/corpus-ui-role-preservation.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}

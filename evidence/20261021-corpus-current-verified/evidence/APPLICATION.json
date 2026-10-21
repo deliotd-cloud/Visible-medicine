@@ -1,0 +1,97 @@
+{
+  "at": "2026-10-21T14:41:50.919Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "preimageSha256": "a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905",
+      "candidateSha256": "f75554c4abf79498d87e199bc28fc225ca6d7251cc269b2b7b0c7972dcb00a28",
+      "candidateBytes": 10709
+    },
+    {
+      "path": "tests/tour-discovery-current-delivery.test.mjs",
+      "preimageSha256": "689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b",
+      "candidateSha256": "4a9e256d477dc499259f634d507eaf1361e436b0da033d3a02f1e659651fdb83",
+      "candidateBytes": 5937
+    },
+    {
+      "path": "tests/corpus-ui-role-preservation.test.mjs",
+      "preimageSha256": "b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667",
+      "candidateSha256": "e479df738feadeccfc53eeb116088ea64511dfdf6af2a5f5dcf81f5b7556b1a5",
+      "candidateBytes": 12565
+    },
+    {
+      "path": "tests/fixtures/corpus-xray-v2-current-delivery-before-epoch-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905",
+      "candidateBytes": 7883
+    },
+    {
+      "path": "tests/fixtures/tour-discovery-current-delivery-before-epoch-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b",
+      "candidateBytes": 5772
+    },
+    {
+      "path": "tests/fixtures/corpus-ui-role-preservation-before-epoch-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667",
+      "candidateBytes": 3905
+    }
+  ],
+  "controlledInputs": 5218,
+  "preservedInputs": 7,
+  "namedInputs": 5225,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "5c20a07e40627f2576d2a891584c801d308ea76810f98daf6e31f586e25c46a2",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:41:47.597Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "tests/ui-teaching-current-delivery.test.mjs",
+      "tests/tour-discovery-current-delivery.test.mjs",
+      "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "tests/current-delivery-admission-485.test.mjs",
+      "tests/tongue-palate-a247-inverse.test.mjs",
+      "tests/admission485-final-role-transition-20261021.test.mjs",
+      "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "tests/corpus-ui-role-preservation.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/posterior-fossa-coverage.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-corpus-current-epoch-application/native.tap",
+    "logSha256": "f1214c159be849b85c547e81e249aca67270d1ab213b7ff6528df0a30f74ed46",
+    "counts": {
+      "tests": 65,
+      "pass": 65,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
