@@ -1,14 +1,23 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T01:03:37.714Z",
+  "at": "2026-10-21T01:15:58.215Z",
   "sourceIdentity": {
     "atlas": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
     "proposalOnly": true,
-    "manifestSha256": "2558e591cc2afd389fc802d0646db6f39034156266649ce4986f7c08b55a21e7",
+    "sourcePaths": [
+      {
+        "path": "app/regional-guided-learning.tsx",
+        "beforeSha256": "bcc7a99b91d355c9a9ccbcd9ae7781742bd68f5222c2b4705bfffccff83c1899"
+      },
+      {
+        "path": "scripts/test-regional-tour-player.mjs",
+        "beforeSha256": "e1cebfdd8cd4fb01000af7dfbde2b16ba40c9fc6af092e7432243dc02ac904e9"
+      }
+    ],
     "canonicalInstalled": false
   },
-  "parent": "4918047dc57a6bf0060ac3f686a75b889403c7a2",
-  "gitParent": "4918047dc57a6bf0060ac3f686a75b889403c7a2",
+  "parent": "5864b23f75a3ac5722aff9101b6395eb360ed771",
+  "gitParent": "5864b23f75a3ac5722aff9101b6395eb360ed771",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -1446,6 +1455,66 @@
       "sha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a"
     },
     {
+      "path": "evidence/20261021-tour-start-hint/evidence/BROWSER_SUMMARY.json",
+      "bytes": 2302,
+      "sha256": "a92a9cfaf6af8a07d31cee1b7514b09abe4c9eb5e07e09832e676d60735e5266"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/evidence/MAIN_REVIEW.json",
+      "bytes": 2403,
+      "sha256": "714a0f7543d073a7c326cbe4eef01132792b7649d19fa28651f4b6037c6159ed"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/evidence/PREPARATION.json",
+      "bytes": 785,
+      "sha256": "8d5bca709714509b7005b7f7e1fec7be6a53055671b7aa1665d4e6dcb22ae728"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/evidence/TEXT_SCOPE.json",
+      "bytes": 664,
+      "sha256": "d9b8bb0cd95adcd56a608a6a0ce570f8241884a9d4ad58479431826eab28edec"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/evidence/verify-text-scope.mjs",
+      "bytes": 3071,
+      "sha256": "9358b2d1bc7dc6fd2d07af592ff0038a094614aef8b5bd82d7ef7a93caa29af0"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/full-suite/observation.json",
+      "bytes": 1798,
+      "sha256": "1f7bec488f9140bb60f3fcc7a9aa10ea50e42981eceabd280ca7a85e1034413c"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/originals/app/regional-guided-learning.tsx.raw",
+      "bytes": 15690,
+      "sha256": "bcc7a99b91d355c9a9ccbcd9ae7781742bd68f5222c2b4705bfffccff83c1899"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/originals/scripts/test-regional-tour-player.mjs.raw",
+      "bytes": 125980,
+      "sha256": "e1cebfdd8cd4fb01000af7dfbde2b16ba40c9fc6af092e7432243dc02ac904e9"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/proposal/app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/proposal/scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/scripts/checkpoint-tour-start-hint-20261021.mjs",
+      "bytes": 8342,
+      "sha256": "b277fb5943e3ac24877fc87e4db78ff03d4d380c947f82ee7ba4977901eed077"
+    },
+    {
+      "path": "evidence/20261021-tour-start-hint/scripts/prepare-tour-start-hint-20261021.mjs",
+      "bytes": 1516,
+      "sha256": "cd22334b9152895e73ba94138a92947d59eb4d5926a3d108939d8b8fd795169c"
+    },
+    {
       "path": "evidence/archived-delivery-verification.json",
       "bytes": 2669,
       "sha256": "4691ce21e58d3de2762bca5a0ec525a5b2c271e49ab1748d69cc36955f25fe7b"
@@ -2482,12 +2551,11 @@
     }
   ],
   "removed": [],
-  "scope": "Selected uninstalled28-path staged source/test/UI batch, native gate, notices, exact preimages and focused proof on prior filtered ancestry.112-file partial native metadata context remains F-local. No raw canonical ancestry, models/scans/masks, private modules/reviews/databases/secrets or browser media/DOM. Not whole/runnable/private-data backup, generated source admission or clinical acceptance.",
+  "scope": "Two uninstalled text/test source paths, exact preimages, scope checker and structured non-private evidence on prior filtered ancestry. Browser screenshot remains F-local. No scans/models/masks/private records/raw canonical history/browser pixels/DOM. Not full/runnable/private-data backup or new renderer/application/clinical acceptance.",
   "proof": {
-    "focusedNativeCases": 4,
-    "exactSourceDentalRecords": 28,
-    "aliasPass": true,
-    "fullResolverTransitionPass": false,
+    "sourceSyntaxAstInversePass": true,
+    "newPlayerCaseExecuted": false,
+    "newHintInstalledBrowserPass": false,
     "fullSuitePass": false,
     "clinicalApproval": false
   },

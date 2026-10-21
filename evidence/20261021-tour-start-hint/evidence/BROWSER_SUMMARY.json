@@ -1,0 +1,26 @@
+{
+  "schema": "visible-medicine.native-browser-check-summary/1",
+  "source": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+  "review": "b2bd971b5bfefdd0760f8f3c8785e372276e15dac9cc293ac8fde4cdfb7dcb54",
+  "browser": "Codex In-app Browser 2",
+  "ownedTab": "84, closed after inspection",
+  "routes": ["http://127.0.0.1:3000/atlas", "http://127.0.0.1:3000/atlas/3d"],
+  "kind": "Main-authored summary of actual CUA observations; not an exported raw DOM or automated full acceptance receipt",
+  "observed": [
+    "Installed Atlas modality tile navigates to Whole body with region picker, four learner modes and both side panels.",
+    "Physical ArrowRight on Explore selects Dissect and moves the one roving tabindex=0; ArrowRight on Dissect selects Guided learning and exposes the tour controls.",
+    "The chosen whole-body lower-limb tour actually renders its right hip-bone model and label at the initial preview pose in the screenshot. This is not anatomical correctness or later-step acceptance.",
+    "The default-open References, imaging & quick check drawer shows only a nested closed References & limits row before tour activation. Source inspection confirms active-gated teaching. This motivates the start hint, not removal of the teaching guard.",
+    "DOM snapshot lists duplicate native radio/checkbox inputs, but actual inspected inputs are aria-hidden=true and tabindex=-1. Do not misclassify this extraction artifact as duplicate accessible controls or change the Base UI primitives."
+  ],
+  "textZoomLimit": "One Control+Equal press had no observed effect: clientWidth/scrollWidth remained1265/1265 and computed root font16px. No200% zoom/text acceptance is claimed; do not substitute viewport shrinkage or DOM style mutation for it.",
+  "screenshot": "F:/VisibleMedicine/staging/20261021-whole-body-mode-browser-qa/guided-mode-native.png",
+  "screenshotSize": [1280,720],
+  "screenshotLocalOnly": true,
+  "unverified": ["New staged hint in installed browser", "Quiz and full keyboard cycle", "200% text", "Assistive-technology speech output", "GPU or Core Web Vitals performance", "Full tour playback and clinical correctness"],
+  "ownerReviewTabsTouched": false,
+  "reviewDecisionsWritten": false,
+  "sourceCutover": false,
+  "viewportOverrideUsed": false,
+  "publicDeployment": false
+}
