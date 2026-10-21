@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-21T17:02:55.362Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/studio-workbook-table-semantics.test.mjs",
+    "tests/studio-workbook-empty-state.test.mjs",
+    "tests/studio-workbook-filter-accessibility.test.mjs",
+    "tests/studio-workspace.test.ts",
+    "tests/studio-queues.test.ts",
+    "tests/head-neck-pilot-current.test.mjs",
+    "tests/head-neck-pilot.test.ts",
+    "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+    "tests/public-focus-adapter-preservation.test.mjs",
+    "tests/header-session.test.ts",
+    "tests/atlas-region-picker.test.ts",
+    "tests/disc-comparison.test.ts",
+    "tests/workspace-utilities-dismissal.test.mjs",
+    "tests/desktop-workspace-simplification.test.ts",
+    "tests/current-atlas-delivery.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "durationMs": 17566,
+  "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/native.log",
+  "logSha256": "b0bbae61d7d00b9170f550a018650ef35418d087f903b84475af2ffcf19a6da8",
+  "canonicalInstalled": false,
+  "counts": {
+    "tests": 116,
+    "pass": 116,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": []
+}

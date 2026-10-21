@@ -1,0 +1,17 @@
+{
+  "scope":"Synthetic actual Studio components with actual corrected production CSS; static SSR, not hydrated/signed-in application",
+  "browser":"Codex In-app Browser",
+  "ownedTab":"104",
+  "fixtureVariant":"corrected-header-v2",
+  "syntheticWorkbookLayoutPassed":true,
+  "desktop":{"frameWidth":1280,"frameHeight":720,"clientWidth":1280,"scrollWidth":1280,"horizontalOverflow":false,"tableName":"Find a workbook","headers":["Workbook","Course","Mode","State","Cases","Action"],"rowsIncludingHeader":3,"headerWidth":1018,"headerHeight":62,"headerDisplay":"grid"},
+  "narrow":{"frameWidth":640,"frameHeight":900,"clientWidth":625,"scrollWidth":625,"horizontalOverflow":false,"headers":["Workbook","Course","Mode","State","Cases","Action"],"rowsIncludingHeader":3,"headerWidth":1,"headerHeight":1,"headerMinWidth":"0px","headerMaxWidth":"1px","headerDisplay":"grid","headerClip":"inset(50%)"},
+  "empty":{"tables":0,"courseLinks":1},
+  "compiledStudioCssSha256":"440f38d00252d98f2f700b7363c21af59cbd0160466a0284b30b9f2f47dd22ea",
+  "ownerBrowserViewportChanged":false,
+  "ownerFormsRefreshed":false,
+  "privateDataUsed":false,
+  "browserNavigationGuardAcceptancePassed":false,
+  "fullBrowserOrScreenReaderAcceptance":false,
+  "limits":"Role queries and actual accessibility snapshots expose the named table, six headings, native links and empty state at both frame sizes. Real geometry proves corrected no-horizontal-overflow behavior. This does not prove screen-reader navigation, hydrated event/focus behavior,200percent text, signed-in Studio, or unsaved Review Cancel/leave/Back/Forward. Earlier overflow finding and all before-fix116pass/types/build receipts remain retained."
+}

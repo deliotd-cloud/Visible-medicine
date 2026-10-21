@@ -1,0 +1,169 @@
+{
+  "at": "2026-10-21T17:05:22.367Z",
+  "site": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/website",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+  "canonicalReview": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "reviewInputs": 1711,
+  "currentSourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/SOURCE_INPUTS_AFTER.json",
+  "currentSourceSnapshotSha256": "69d3b09da020e2b9f42a9ff95824698afc160ba83349d2c37915d042ed1d8877",
+  "candidateFiles": 5466,
+  "commands": [
+    {
+      "at": "2026-10-21T17:02:24.266Z",
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 2155,
+      "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/stock-review.log",
+      "logSha256": "24f7f4375ff6ad12d3ec9ad396dd9300a58f2b389a887ac2d618f0ce78935710",
+      "canonicalInstalled": false
+    },
+    {
+      "at": "2026-10-21T17:02:35.720Z",
+      "args": [
+        "scripts/atlas-model-inventory.mjs",
+        "--check"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 660,
+      "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/model-inventory.log",
+      "logSha256": "62d3fe8ac53184c12b22d4e83199e2ba55df863b0bb633f4d45440d4eb4cb753",
+      "canonicalInstalled": false
+    },
+    {
+      "at": "2026-10-21T17:02:45.963Z",
+      "args": [
+        "--experimental-strip-types",
+        "scripts/verify-atlas-delivery-policy.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 142,
+      "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/delivery-policy.log",
+      "logSha256": "ba39aa3f33daad707764993fd3b56d947f738c85cc60029c294612b4351df0a3",
+      "canonicalInstalled": false
+    },
+    {
+      "at": "2026-10-21T17:02:55.362Z",
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/studio-workbook-table-semantics.test.mjs",
+        "tests/studio-workbook-empty-state.test.mjs",
+        "tests/studio-workbook-filter-accessibility.test.mjs",
+        "tests/studio-workspace.test.ts",
+        "tests/studio-queues.test.ts",
+        "tests/head-neck-pilot-current.test.mjs",
+        "tests/head-neck-pilot.test.ts",
+        "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+        "tests/public-focus-adapter-preservation.test.mjs",
+        "tests/header-session.test.ts",
+        "tests/atlas-region-picker.test.ts",
+        "tests/disc-comparison.test.ts",
+        "tests/workspace-utilities-dismissal.test.mjs",
+        "tests/desktop-workspace-simplification.test.ts",
+        "tests/current-atlas-delivery.test.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 17566,
+      "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/native.log",
+      "logSha256": "b0bbae61d7d00b9170f550a018650ef35418d087f903b84475af2ffcf19a6da8",
+      "canonicalInstalled": false,
+      "counts": {
+        "tests": 116,
+        "pass": 116,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": []
+    },
+    {
+      "at": "2026-10-21T17:03:22.069Z",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 39851,
+      "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/full-types.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonicalInstalled": false
+    },
+    {
+      "at": "2026-10-21T17:04:11.260Z",
+      "args": [
+        "node_modules/vinext/dist/cli.js",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 52595,
+      "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/full-build.log",
+      "logSha256": "802834c9651e5bde306cc1dcdbe62b549f74443f3de1f1acb72e4ecfde2c7a83",
+      "canonicalInstalled": false
+    }
+  ],
+  "nativeRoots": [
+    "tests/studio-workbook-table-semantics.test.mjs",
+    "tests/studio-workbook-empty-state.test.mjs",
+    "tests/studio-workbook-filter-accessibility.test.mjs",
+    "tests/studio-workspace.test.ts",
+    "tests/studio-queues.test.ts",
+    "tests/head-neck-pilot-current.test.mjs",
+    "tests/head-neck-pilot.test.ts",
+    "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+    "tests/public-focus-adapter-preservation.test.mjs",
+    "tests/header-session.test.ts",
+    "tests/atlas-region-picker.test.ts",
+    "tests/disc-comparison.test.ts",
+    "tests/workspace-utilities-dismissal.test.mjs",
+    "tests/desktop-workspace-simplification.test.ts",
+    "tests/current-atlas-delivery.test.mjs"
+  ],
+  "nativeCounts": {
+    "tests": 116,
+    "pass": 116,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "fullProjectTypesPassed": true,
+  "fullLocalBuildPassed": true,
+  "stockReviewPassed": true,
+  "modelInventoryAndDeliveryPolicyPassed": true,
+  "original131ReviewChecksReusedAtExactSource": true,
+  "originalReviewVerification": "F:/VisibleMedicine/staging/20261021-review-navigation-ui-candidate/VERIFIED.json",
+  "originalReviewVerificationSha256": "261ed06e810eb2a97286491033e42ecb22697abea6dc0ce4a6f4331414f06523",
+  "allParentReviewSourceBytesUnchanged": true,
+  "newestCanonicalTestOnlyBatchesRetained": true,
+  "canonicalInstalled": false,
+  "ownerFormsRefreshed": false,
+  "ownerPreviewRestarted": false,
+  "priorCandidateUnchanged": true,
+  "privateDatabaseCopied": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "browserAcceptancePassed": false,
+  "wholeSuitePassingClaim": false,
+  "fullGoalActive": true
+}

@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-21T17:11:56.371Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/studio-workbook-table-semantics.test.mjs",
+    "tests/studio-workbook-empty-state.test.mjs",
+    "tests/studio-workbook-filter-accessibility.test.mjs",
+    "tests/studio-workspace.test.ts",
+    "tests/studio-queues.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 1761,
+  "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/layout-native.log",
+  "logSha256": "de4a6ed61929f84c5afe7e5e4698f73f495a06b90937476b6ec71ced6fdfb991",
+  "canonicalInstalled": false,
+  "counts": {
+    "tests": 20,
+    "pass": 20,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  }
+}

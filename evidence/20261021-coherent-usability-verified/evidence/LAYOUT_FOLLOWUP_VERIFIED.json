@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-21T17:12:50.814Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/FOLLOWUP_SOURCE_INPUTS.json",
+  "sourceSnapshotSha256": "71c75ff81550abf4b4dd3cb35551acf9acbac99575a1e56ba464cc7d5ec5b2c9",
+  "commands": [
+    {
+      "at": "2026-10-21T17:11:56.371Z",
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/studio-workbook-table-semantics.test.mjs",
+        "tests/studio-workbook-empty-state.test.mjs",
+        "tests/studio-workbook-filter-accessibility.test.mjs",
+        "tests/studio-workspace.test.ts",
+        "tests/studio-queues.test.ts"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 1761,
+      "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/layout-native.log",
+      "logSha256": "de4a6ed61929f84c5afe7e5e4698f73f495a06b90937476b6ec71ced6fdfb991",
+      "canonicalInstalled": false,
+      "counts": {
+        "tests": 20,
+        "pass": 20,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "at": "2026-10-21T17:11:58.139Z",
+      "args": [
+        "node_modules/vinext/dist/cli.js",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 43761,
+      "log": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/layout-build.log",
+      "logSha256": "ed4955adac73ebda5e36d93c98b93fce6cc2e08ee509eb873752f5a369ebc451",
+      "canonicalInstalled": false
+    }
+  ],
+  "actualFocusedNativeCounts": {
+    "tests": 20,
+    "pass": 20,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "fullLocalBuildPassed": true,
+  "fullTypesReusedAtUnchangedTypedSource": true,
+  "fullTypesReceipt": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/full-types.json",
+  "fullTypesReceiptSha256": "b81a9211d1e3ef0a4b218dfa37227b0d8e487edb0934c9054b8f053ddc0b155a",
+  "prior116PassReceipt": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/native.json",
+  "prior116PassReceiptSha256": "ba12bcdf6e935caaab94878f4f4011923559e653b21c658bd174eb3cea1345f7",
+  "prior116NotRecountedAsNewRun": true,
+  "allOtherCandidateInputsExact": true,
+  "all1711ReviewInputsUnchanged": true,
+  "allCanonicalInputsUnchanged": true,
+  "canonicalInstalled": false,
+  "ownerFormsRefreshed": false,
+  "browserAcceptancePending": true,
+  "clinicalApproval": false,
+  "publicDeployment": false,
+  "wholeSuitePassingClaim": false
+}

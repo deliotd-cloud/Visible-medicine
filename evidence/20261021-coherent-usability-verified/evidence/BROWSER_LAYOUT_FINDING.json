@@ -1,0 +1,11 @@
+{
+  "scope":"Synthetic actual-component SSR and actual production CSS in1280x720 and640x900 same-origin frames; owner viewport unchanged",
+  "browserTab":"104",
+  "desktop":{"clientWidth":1280,"scrollWidth":1280,"headers":6,"dataRows":2,"headerWidth":1018,"headerHeight":62},
+  "narrow":{"iframeWidth":640,"clientWidth":625,"scrollWidth":778,"headerClip":"inset(50%)","headerWidth":760,"headerHeight":1,"headersRemainAccessible":6},
+  "empty":{"tables":0,"courseLinks":1},
+  "cause":"The new visually-hidden header inherits shared global min-width760px, overriding its explicit width1px. Actual browser geometry contradicted source-only CSS proof.",
+  "requiredCorrection":"Add min-width0/max-width1px and assertions in this new candidate only, then rebuild/remeasure. Earlier proposal and116pass/types/build proof remain frozen.",
+  "ownerFormsRefreshed":false,"privateDataUsed":false,"fullBrowserOrScreenReaderAcceptance":false,
+  "fixtureShutdown":"Plain exec stdin was closed; identity-verified owned PID277824 was stopped before rebuilding. No owner/server process was stopped."
+}

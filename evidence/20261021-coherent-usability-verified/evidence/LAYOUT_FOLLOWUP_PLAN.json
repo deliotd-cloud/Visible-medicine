@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-21T17:10:48.853Z",
+  "preparationSha256": "2aa7c7d87a01d1ca5663d5491cddb65883154f74467d13c4e3dfa355b697c67d",
+  "originalVerificationSha256": "246e0b89a7aa0503ef31127678b9b6ff4967f08556a5cb2d5b27d60bd54d172a",
+  "paths": [
+    {
+      "path": "components/studio-workspace.css",
+      "preimageSha256": "69c66ca710a1ca9f08f42c617210e8396942d1facbc73530ef05f06868a9a93f",
+      "candidateSha256": "da50c0f8b9825c0d45a8d259c9cfbe45d37112f1cea8331897b2871928fe2b45",
+      "candidateBytes": 10486,
+      "old": "display: grid; width: 1px; height: 1px;",
+      "next": "display: grid; width: 1px; min-width: 0; max-width: 1px; height: 1px;"
+    },
+    {
+      "path": "tests/studio-workbook-table-semantics.test.mjs",
+      "preimageSha256": "8ae672c8308683a7abf99e8b8fc52107fe0a9ebae9292a92ba1bab6e0e75c00f",
+      "candidateSha256": "922997f11dbfd22dc59c487f5de5d4d4214035108cf9e528ab06cac482aa210e",
+      "candidateBytes": 9943,
+      "old": "'width: 1px', 'height: 1px'",
+      "next": "'width: 1px', 'min-width: 0', 'max-width: 1px', 'height: 1px'"
+    }
+  ],
+  "reason": "Actual narrow-browser inherited header min-width overflow; exact two-path correction.",
+  "canonicalInstalled": false
+}

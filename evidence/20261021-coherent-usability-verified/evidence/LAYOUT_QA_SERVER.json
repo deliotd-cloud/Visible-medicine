@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-21T17:06:57.851Z",
+  "pid": 277824,
+  "url": "http://127.0.0.1:55955/",
+  "port": 55955,
+  "loopbackOnly": true,
+  "actualSourceFiles": [
+    {
+      "path": "components/StudioWorkbookTable.tsx",
+      "sha256": "0590ce326ab95b76b74bd6f424256408950cf11d188e482dfc52e215b60cc992"
+    },
+    {
+      "path": "components/StudioShell.tsx",
+      "sha256": "e33f33b9be540811abada782464621a40ad5ffb2032943278297623ed1feebfb"
+    },
+    {
+      "path": "components/StudioNavigation.tsx",
+      "sha256": "78ed4dffdfc51c15cb050ab9ba6d9aa20983d39e47e31ec6153a4beb8d634d59"
+    },
+    {
+      "path": "lib/studio-queues.ts",
+      "sha256": "4e9ffaa969173560611ce3ef5d8c130694159a4dce3378eaaebc8513963ced4d"
+    }
+  ],
+  "compiledCss": [
+    {
+      "name": "index.BS1vMnzi.css",
+      "sha256": "5432da44135f81fd41fc333d81bcad0698938474c496d86accdf0ab082afee45"
+    },
+    {
+      "name": "StudioShell.DIGPufGV.css",
+      "sha256": "12c9d720c553c4f3e5028346df71083a85ee3a73e64af8c68fab5b5af4589400"
+    }
+  ],
+  "staticSyntheticFixture": true,
+  "privateDataUsed": false,
+  "authRouteBypassed": false,
+  "fullSignedInApplicationAcceptance": false
+}

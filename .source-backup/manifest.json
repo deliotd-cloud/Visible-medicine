@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T16:53:08.836Z",
+  "at": "2026-10-21T17:16:55.483Z",
   "sourceIdentity": {
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+    "canonicalReview": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": false,
-    "stagedMilestone": "workbook-table-semantics"
+    "coherentUsabilityCandidate": true
   },
-  "parent": "f1eaca607187f4a557ce11ed2df2c5fd74438ec2",
-  "gitParent": "f1eaca607187f4a557ce11ed2df2c5fd74438ec2",
+  "parent": "cbb3461c19f0826273023f389223521bf429f662",
+  "gitParent": "cbb3461c19f0826273023f389223521bf429f662",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2109,6 +2110,156 @@
       "path": "evidence/20261021-closed56-role-repair-verified/proposal/PROPOSAL.md",
       "bytes": 5200,
       "sha256": "e55ce7b1abe4639368a36955e0ce2a2fa68e5dddd36acaf94eaae3dae419d14c"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/candidate/components/studio-workspace.css",
+      "bytes": 10486,
+      "sha256": "da50c0f8b9825c0d45a8d259c9cfbe45d37112f1cea8331897b2871928fe2b45"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/candidate/components/StudioWorkbookTable.tsx",
+      "bytes": 4365,
+      "sha256": "0590ce326ab95b76b74bd6f424256408950cf11d188e482dfc52e215b60cc992"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/candidate/tests/studio-workbook-empty-state.test.mjs",
+      "bytes": 5057,
+      "sha256": "293d2d7e1352993d9d712020439d305edd2b58765c29c7de1036499baff3ced3"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/candidate/tests/studio-workbook-table-semantics.test.mjs",
+      "bytes": 9943,
+      "sha256": "922997f11dbfd22dc59c487f5de5d4d4214035108cf9e528ab06cac482aa210e"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/controls/admit-workbook-layout-followup-20261021.mjs",
+      "bytes": 3705,
+      "sha256": "f9611e45de8b81ad1d8f21266765f061dd0b1926f9ecf90f452c614c1989f84a"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/controls/checkpoint-coherent-usability-20261021.mjs",
+      "bytes": 9619,
+      "sha256": "ac041013680ffaa04c926e5a278d83e615b34ac4f38c2a45b7b3cc9b3303a712"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/controls/launch-workbook-layout-qa-20261021.mjs",
+      "bytes": 6409,
+      "sha256": "cc8ad8932b5db56515518c66c8a90d7d25efbf7affe525a474da7390175a8a9e"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/controls/prepare-coherent-usability-candidate-20261021.mjs",
+      "bytes": 8447,
+      "sha256": "aac22a1c6970fde88445a7221ebefc34207647a8078fd2e38c554cdfd52e1ccb"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/controls/verify-coherent-usability-candidate-20261021.mjs",
+      "bytes": 5907,
+      "sha256": "5491148ff9a82a72c68c1951fc25f9e8e361e6fdc226058c7bd9fdb720d59cd8"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/controls/verify-workbook-layout-followup-20261021.mjs",
+      "bytes": 4181,
+      "sha256": "4b96f6df5b85569aa937496482d4d7ad7fa3b20ed631bf42f31e707d6ce5a2c9"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/BROWSER_LAYOUT_ACCEPTANCE.json",
+      "bytes": 1685,
+      "sha256": "7903e6e1e89eaee766d46a39599af67570ad7947397035a779f51edaeeb05c87"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/BROWSER_LAYOUT_FINDING.json",
+      "bytes": 1086,
+      "sha256": "de2a4fe6290844866867c6a77f84404f625f1cd9024e518555ecec6be732b39c"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/copy-preflight-refusal.json",
+      "bytes": 550,
+      "sha256": "153abb31af137a2c4909c9eca98e7a63c0b1b8f21a4c60bf6ac17381869dd223"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/delivery-policy.json",
+      "bytes": 417,
+      "sha256": "199bc948204b1066c2d23fb9617846578dad8a1efe086a800a72379b563a5eab"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/full-build.json",
+      "bytes": 384,
+      "sha256": "6044ba67c62281829e5406a75de873deb948f7c3730763fd582415a10cfac871"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/full-types.json",
+      "bytes": 421,
+      "sha256": "b81a9211d1e3ef0a4b218dfa37227b0d8e487edb0934c9054b8f053ddc0b155a"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/LAYOUT_FOLLOWUP_ADMISSION.json",
+      "bytes": 453,
+      "sha256": "6d670972a8841dc94d3f8b3ebc69bbe04327f56dc9780d827c9ce92a8fd3fc11"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/LAYOUT_FOLLOWUP_PLAN.json",
+      "bytes": 1213,
+      "sha256": "6381a0ffe71511232f7cfc68238723cf6a92f0935492eea639a1afa0fcd9368f"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/LAYOUT_FOLLOWUP_VERIFIED.json",
+      "bytes": 2691,
+      "sha256": "946a62ff3242e0ed1e2444315d56e4e176fb00972ae817563e619fd9767dc62d"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/LAYOUT_QA_SERVER-v2.json",
+      "bytes": 1196,
+      "sha256": "9e203f050dcf864e0cc4f85cf84884d31f0dc13df7aac1d89d4f7b5ab05eb8f7"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/LAYOUT_QA_SERVER.json",
+      "bytes": 1160,
+      "sha256": "27cfe295e32fb0dbf1bdc2f3bffed35b819dba19e759f5c7c1d86b97ea3da6d9"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/layout-build.json",
+      "bytes": 369,
+      "sha256": "45d544d9344b2c68994773e4d5a0e2c4533d600bb15bb1e69aa45c37fa4fe4cc"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/layout-native.json",
+      "bytes": 775,
+      "sha256": "3d1b839357be9541271b1b9c45c62cadea45f9720ada3b1e33826ca2ce244366"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/model-inventory.json",
+      "bytes": 391,
+      "sha256": "d8c839ae9aec88c153b22da34806e0b142a3a5bca7168f55e583a57d80ee1722"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/native.json",
+      "bytes": 1279,
+      "sha256": "ba12bcdf6e935caaab94878f4f4011923559e653b21c658bd174eb3cea1345f7"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/PROOF.json",
+      "bytes": 2620,
+      "sha256": "cf763703fc31f134679a23c5613e2b84067a77c22f2949cc7e1cfd79865953b3"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/stock-review.json",
+      "bytes": 375,
+      "sha256": "9d08b2853cd2e1cd8b60c55da74f0c58e6e92ee54c91829f0bad511b9a56699f"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/evidence/VERIFIED.json",
+      "bytes": 6090,
+      "sha256": "246e0b89a7aa0503ef31127678b9b6ff4967f08556a5cb2d5b27d60bd54d172a"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/layout-preimages/components/studio-workspace.css",
+      "bytes": 10456,
+      "sha256": "69c66ca710a1ca9f08f42c617210e8396942d1facbc73530ef05f06868a9a93f"
+    },
+    {
+      "path": "evidence/20261021-coherent-usability-verified/layout-preimages/tests/studio-workbook-table-semantics.test.mjs",
+      "bytes": 9909,
+      "sha256": "8ae672c8308683a7abf99e8b8fc52107fe0a9ebae9292a92ba1bab6e0e75c00f"
     },
     {
       "path": "evidence/20261021-combined-integration-batch/batch/atlas/app/body-content.ts",
@@ -11407,18 +11558,26 @@
     }
   ],
   "removed": [],
-  "scope": "Four exact unpublished workbook semantic-table source/test paths, three authentic preimages, compact actual native/types receipts and reviewed controls. Prior filtered source ancestry retained. No scans, masks, geometry, private modules/references/identifiers/notes/decisions, env, database, dependencies, raw TAP/DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or release/clinical approval.",
+  "scope": "Four exact coherent workbook source/test paths with exact layout preimages, compact native/types/build/model/policy/browser-layout receipts, and reviewed preparation/admission/verification/fixture controls. Prior filtered source ancestry retains all proven navigation input sources. No full candidate/private input inventories, dependencies, patient data, scans, masks, geometry, private modules/references/identifiers/notes/decisions/env/database, raw TAP/browserDOM/media or raw canonical ancestry. Partial selected-source recovery, not full/private/runnable backup, clinical/spatial approval, whole-suite pass or public deployment.",
   "proof": {
-    "at": "2026-10-21T16:53:01.529Z",
+    "at": "2026-10-21T17:16:42.648Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+    "canonicalReview": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": false,
     "ownerDelivered": false,
-    "productPathsChanged": 2,
-    "stagedPaths": 4,
-    "exactPreimagesPreserved": true,
-    "nativeCounts": {
+    "coherentCandidateFiles": 5466,
+    "canonicalControlledInputsUnchanged": 5267,
+    "canonicalPreservedInputsUnchanged": 7,
+    "actualCoherentNativeCounts": {
+      "tests": 116,
+      "pass": 116,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "actualLayoutFollowupNativeCounts": {
       "tests": 20,
       "pass": 20,
       "fail": 0,
@@ -11426,25 +11585,43 @@
       "skipped": 0,
       "todo": 0
     },
-    "fullProjectTypesOverlayPassed": true,
-    "fullBuildPassed": false,
-    "browserAcceptancePassed": false,
-    "allCanonicalInputsUnchanged": true,
-    "controlledInputs": 5267,
-    "preservedInputs": 7,
-    "reviewBindingsUnchanged": 1710,
-    "singleStrongerHeaderRoleAssertionOnly": true,
-    "allOtherExistingEmptyStateAssertionsByteExact": true,
-    "ownerFormsRefreshed": false,
-    "ownerPreviewPid": 266712,
+    "countsAreSeparateOverlappingRuns": true,
+    "fullProjectTypesPassed": true,
+    "fullTypesReusedAfterOnlyCssAndUnimportedMjsChange": true,
+    "correctedFullLocalBuildPassed": true,
+    "stockReviewInputs": 1711,
+    "stockReviewPassed": true,
+    "original131ReviewChecksReusedAtExactSource": true,
+    "newestCanonicalTestOnlyBatchesRetained": true,
+    "browserSyntheticWorkbookLayoutPassed": true,
+    "browserNavigationGuardAcceptancePassed": false,
+    "fullBrowserOrScreenReaderAcceptance": false,
+    "browserObservedOverflowCorrected": true,
+    "desktopFrameWidth": 1280,
+    "narrowFrameWidth": 640,
+    "narrowClientAndScrollWidth": 625,
+    "sourceForwardInverseAndOtherInputsExact": true,
+    "priorCandidatesUnchanged": true,
+    "all71ItemsAndEightIdeasUnchanged": true,
+    "checklistRevision": 124,
     "fullGoalActive": true,
+    "ownerPreviewPid": 266712,
+    "ownerFormsRefreshed": false,
+    "ownerPreviewRestarted": false,
+    "ownerViewportChanged": false,
+    "ownedFixtureServersStopped": true,
+    "ownedQaTab104Closed": true,
+    "legacySyntheticReviewTab101RetainedForOwnerConfirmation": true,
+    "privateDataUsedForBrowserFixture": false,
+    "privateContextsLocalOnly": true,
+    "privateDataUploaded": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
-    "privateDataUploaded": false,
+    "wholeSuitePassingClaim": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "limits": "Source-ready unpublished candidate only. Actual five-root20/20zero-skip native checks used a read-only two-file product overlay and one exact unchanged queue context file; complete project types used a read-only compiler-host overlay. Not an installed Website build, browser/screen-reader/layout/200percent acceptance, whole-suite pass or completed UX-02. No owner refresh or Review rebind."
+    "limits": "Unpublished isolated candidate. Source-ready original Review guard still lacks actual Cancel/leave/clean-navigation acceptance, with Back/Forward and imperative navigation outside its present click-guard scope. Workbook browser proof is static synthetic actual-component SSR/production-CSS at measured iframe sizes, not hydrated/signed-in or screen-reader acceptance. All original before-fix proofs and actual overflow finding remain. No masks, clinical data, generated models or desktopPACS changed."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

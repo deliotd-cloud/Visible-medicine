@@ -1,0 +1,9 @@
+{
+  "toolChunk":"3873f2",
+  "phase":"before new candidate directory or files were created",
+  "reason":"Main initially mapped canonical viewer filenames into the already-proven navigation viewer. Stock generated filenames are content-addressed and differ. A missing file correctly refused; the fixed copy plan uses the authenticated46-file navigation viewer manifest and explicitly records retired planned names.",
+  "sourceOrPrivateDataDeleted":false,
+  "canonicalChanged":false,
+  "priorCandidateChanged":false,
+  "nativeVerificationClaim":false
+}
