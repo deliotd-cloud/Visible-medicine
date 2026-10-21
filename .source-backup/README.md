@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Existing verified selected website source plus24explicitly selected pending learning-channel source/test paths. Pending paths are an uninstalled partial candidate, not a finished release, current canonical checkout, whole/private/runnable backup, or public site deployment. No scans, pixels, models, masks, private modules, environment, databases, clinical records, raw logs, media or raw canonical Git ancestry included.
+Inherited verified filtered source selection plus explicitly selected live body-learning source and test-admission paths. Pending namespace now contains locally installed code, but remains only partial source recovery—not a full/private/runnable project backup. No scan, pixels, masks, models, patient identifiers, private runtime modules, clinical notes/decisions, environment, databases, raw logs, media or raw canonical Git ancestry.

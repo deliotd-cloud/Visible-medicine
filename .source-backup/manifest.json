@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T20:41:18.728Z",
+  "at": "2026-10-21T21:12:43.119Z",
   "sourceIdentity": {
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "canonicalAtlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "pendingAtlas": "0dfce15890cafc0a2b8e309193531daa29a672ed",
-    "sourceTree": "18f4fa612d0209123488a9104c2e26089b06cfe3"
+    "atlasHead": "0dfce15890cafc0a2b8e309193531daa29a672ed",
+    "atlasTree": "18f4fa612d0209123488a9104c2e26089b06cfe3",
+    "review": "d5dbb01222de26c1ffcb8adcc754f53b4e87a787d19e9ab5ba3498cfcc8963c9"
   },
-  "parent": "7b8be4adec6d72c99ca4295a4abfb8d28572ce09",
-  "gitParent": "7b8be4adec6d72c99ca4295a4abfb8d28572ce09",
+  "parent": "feb6732a02eb5e62bc222d48a2ee1677d34e063e",
+  "gitParent": "feb6732a02eb5e62bc222d48a2ee1677d34e063e",
   "files": [
     {
       "path": "app/globals.css",
@@ -11886,6 +11886,11 @@
       "sha256": "d9df86ff0701c7405a27c391bbb534e1fdb79d841652cf82ac69e62f19b29cc7"
     },
     {
+      "path": "pending/body-learning-20261021/atlas/content/body-renderer-revision.json",
+      "bytes": 215244,
+      "sha256": "dc50b925ebd35f75a62305ae6b03fd8f88ff08053491c81b5489956d4d173de5"
+    },
+    {
       "path": "pending/body-learning-20261021/atlas/integration/head-neck/main.tsx",
       "bytes": 4167,
       "sha256": "625ba92655fc0c0ec609566d611a918ae99d81f85af8e58f7c1eaee4b21dc685"
@@ -11981,6 +11986,201 @@
       "sha256": "5ddb65c7a5c2de12b01e081f14b055f242466615fa0a816b5537d96fa8cb7367"
     },
     {
+      "path": "pending/body-learning-20261021/website/tests/atlas-delivery-route.test.mjs",
+      "bytes": 7094,
+      "sha256": "68eb3e065d2c981f3c873e7173ac76007e0b83daa41d9a09e5722c968c10bd93"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas-learning-loader-preservation.test.mjs",
+      "bytes": 2763,
+      "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas-nonhead-comparison-ui.test.mjs",
+      "bytes": 6392,
+      "sha256": "bfefaa999afd7fffd55d4664ada902380bfbc4b539d7c89460df7afb8aa28fc2"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas-runtime-frame.test.mjs",
+      "bytes": 23666,
+      "sha256": "0d5edad796ce655f1f62da7ea06c08a3a541f110606d5b1cbb87d2b07d782e97"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas-shoulder-navigation-current.test.mjs",
+      "bytes": 7012,
+      "sha256": "546349e8c57caf01b9fac4bbb72ba1d1faf8a5f2a98c4fba7c29f3dc794e3b81"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas-study-transport-migration.test.mjs",
+      "bytes": 4882,
+      "sha256": "4758aa6bc8ced1e1a5388d2515b2ec7fcc42f092a390a8e88b876db63ad1558d"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas-study-transport.test.ts",
+      "bytes": 11108,
+      "sha256": "0d44faf7793eafd0dbf0eb0dd903f84a65bbab54639d3a003f626458f7f01e94"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 7079,
+      "sha256": "4e31d0bd60a4857419f0e18fbc0e1f6e0997fe50b0c67e2853b27c1f1199bb64"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/body-learning-current-admission.test.mjs",
+      "bytes": 6087,
+      "sha256": "0c0ed48aad198a7c462e8f335250513ca39d3fe146c648e6add82aa04b481a4d"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/body-learning-epoch-history-preservation.test.mjs",
+      "bytes": 7849,
+      "sha256": "2228e985ad8a748a5934cff7e665484c7ed4715fa746101405a2863895cc7b9a"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/body-learning-layout-history-preservation.test.mjs",
+      "bytes": 8156,
+      "sha256": "835632a7ff5ec67499c971ab1f6ca73828c02e2fdef925754ff8af5c9963fbcc"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 12027,
+      "sha256": "f85234c45be43ed018de4b1773a1c71e6b3f8dbe4af540e4bc918d6dc7db2e32"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 8554,
+      "sha256": "707db26812327fb29ed63642c65b5ca6f0e7fc55d12995421ff718223b18ef0c"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/current-190-coverage.test.mjs",
+      "bytes": 5482,
+      "sha256": "569173789acc7d974aff177b083da6f6f6651b3a6f9716a9942cd915e12af10a"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/current-atlas-delivery.mjs",
+      "bytes": 5092,
+      "sha256": "52551fd5ec16154a78b94f78e0cdfbfee6a1bea629f70714f3dd5f93ccb81bb5"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "93eab7abd191466bc7bf103a611b9ca936d74e5426cacf0421d96e748f0737e9"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-current-admission/atlas-delivery-route-190.test.mjs.raw",
+      "bytes": 6304,
+      "sha256": "2e6e776dc93fe3a69d5d95b640e59a02b36becd4f20cef58e9044ad7b34f2d20"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.json.raw",
+      "bytes": 1777,
+      "sha256": "a3cc2b4f72a2eae0d66cd25b1693c38e5c6cd49250f275dc18ef80d4283c9e21"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
+      "bytes": 4632,
+      "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.test.mjs.raw",
+      "bytes": 17978,
+      "sha256": "8695689615b454aea30feb3095645b00503b1ecf0e3bcc392a7c76da2747e751"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-epoch-history/atlas190-current-delivery-190.test.mjs.raw",
+      "bytes": 6697,
+      "sha256": "71b86ce39f4173198760b9fb6f1e8fbaf2afa422f89d51e791e6ce47b59250ef"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-epoch-history/coverage-index-190.json.raw",
+      "bytes": 154911,
+      "sha256": "7f9f872a80e7b45f33f73377d73671ca5d9ddcc08cf8a6fc072a6681b6424d68"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-epoch-history/current-190-coverage-190.test.mjs.raw",
+      "bytes": 4633,
+      "sha256": "5ec7577052250b5e6cc7a772b2e4b7fdedc04bf0091a85317dcbb96253718234"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-epoch-history/head-neck-pilot-190.test.ts.raw",
+      "bytes": 23508,
+      "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-epoch-history/head-neck-pilot-current-190.test.mjs.raw",
+      "bytes": 15848,
+      "sha256": "2f8ccf5be49d159d03624c57eee7d698a573df5fb76189a6b52842d1684dff16"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-layout-history/atlas-shoulder-navigation-current-original.test.mjs.raw",
+      "bytes": 6869,
+      "sha256": "1b0d2c84440379db35adcbbc73ee01cac7ea347322d6be4bbf4f59f8f03041cb"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-layout-history/clinical-review-desktop-layout-original.test.mjs.raw",
+      "bytes": 11478,
+      "sha256": "afc346bc245238ecc9469b64a39b9db472f9d7e1d4aa12389d25031e1ae29de3"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-layout-history/closed54-55-provider-preservation-original.test.mjs.raw",
+      "bytes": 7494,
+      "sha256": "3ad806905ee65d0a1e7fefa50cd58bf51c73419d899e62df6e89bc2dc531f5ae"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/body-learning-layout-history/head-manual-recovery-53-to-54-closed-original.test.mjs.raw",
+      "bytes": 5252,
+      "sha256": "44447da331496d3685c360eda3199cc18fa7a194cb556384167f33ccbf979dae"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "72f6809a3e5754b77c7c7a5ed53d2c3d9d1c58b52e1fa14165b20b767de78b8a"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/atlas-study-transport-migration.test.mjs.raw",
+      "bytes": 3959,
+      "sha256": "f50448b909131fe128a1e46362a1c731afee12cd4cfab823543c9f309dec8526"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/atlas-study-transport.test.ts.raw",
+      "bytes": 10846,
+      "sha256": "6d870cbeef5f4a23480af267c1f62fcdddeb0a47caaa1913fe7a20aabc6795ed"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/head-guided-model-commit.test.ts.raw",
+      "bytes": 14385,
+      "sha256": "2b2c3f1d49fc47ffdb9fbf3433848f1b3c3e51f2ef1fc7694ba014141b143c96"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/head-guided-model-playback.test.ts.raw",
+      "bytes": 14805,
+      "sha256": "d15addc34da6fba395551041f4e53476dac374ffe4f726454a5fef974fa39911"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/head-guided-model.test.ts.raw",
+      "bytes": 20094,
+      "sha256": "f9cc198aec25c6fcb85fb71619c0e293285d0764a8e77f5d0ef12e73d0f6f6ca"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/head-live-model.test.ts.raw",
+      "bytes": 13238,
+      "sha256": "f2e007ef253318afc61e50d5942acb0cfdc5fcb856ec5cb801ef81f9d6ae623a"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/head-manual-recovery-migration.test.mjs.raw",
+      "bytes": 4786,
+      "sha256": "d916732dd2c3bfc6629e830b078652a9af67e46fb7381ceaf4f75a055ab61beb"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/head-model-blank-recovery.test.mjs.raw",
+      "bytes": 15438,
+      "sha256": "f7b3919788a4d9177f7265b1813ca4e351e7b2e8872b4ba124911e612bc62a55"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-consumer-loader/structure-learning-ui.test.ts.raw",
+      "bytes": 10249,
+      "sha256": "cf8a27b13d56341a99eb54871497f97c064345f436fc5f8906d31b3b719f9c8f"
+    },
+    {
       "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-original-AtlasRuntimeFrame.tsx.raw",
       "bytes": 5240,
       "sha256": "673f6b25ab720fc250b7d55b04fd8571e5b2bc077a5bc1f69e984aabb624b234"
@@ -11994,6 +12194,96 @@
       "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-original-HeadAtlasLinkedModel.tsx.raw",
       "bytes": 6869,
       "sha256": "c90fd4b9a51a4fa67ef390fb6b79515825fd662160f83cabd127b7283b8d2fab"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-original-nonhead-migration.mjs.raw",
+      "bytes": 2396,
+      "sha256": "9f13900761b858801e9d82e02f7357c67883db3d1b364d50eb237f569864cc9f"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-original-nonhead-test.mjs.raw",
+      "bytes": 6210,
+      "sha256": "27501835522944d6f7f6c61b59e833e95f597efbb4bd4dd5f4538430783e41c2"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/fixtures/live-learning-original-runtime-frame-test.mjs.raw",
+      "bytes": 22012,
+      "sha256": "f4ebefd05a10639680e4c21c68c07a5ee31fbab380a3c4024c129d26872710b1"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/head-guided-model-commit.test.ts",
+      "bytes": 14530,
+      "sha256": "cb7acae4848c9d09bb6e815d4a7c0c11ab76f1ef223612abaae8a134d44f9b18"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/head-guided-model-playback.test.ts",
+      "bytes": 14950,
+      "sha256": "65c4fc8c3605bbdb92a091e3e998bf59c237d08676b38bd3ea5e629e077752cb"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/head-guided-model.test.ts",
+      "bytes": 20239,
+      "sha256": "b14a8b2a963e5843a68966b81f7e25c48f551f091b710b52c69c3ef7a19c1557"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/head-live-model.test.ts",
+      "bytes": 13378,
+      "sha256": "3e288203f8ba97cf211194e3e90a3de67c88f535b8ee6433d650128a395b7ed3"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/head-manual-recovery-53-to-54-closed.test.mjs",
+      "bytes": 5647,
+      "sha256": "c0bc2e446bc4ddba029688d28b90bb6cf294ce9fe870776b9307773c9cf27475"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/head-model-blank-recovery.test.mjs",
+      "bytes": 15583,
+      "sha256": "68343ab010898a2a09b9789f588a41003af07ffa53b63eeea12bbd46c04852da"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/head-neck-pilot-current.test.mjs",
+      "bytes": 15368,
+      "sha256": "416876fb43d5d87f86e4f29a447029ed66c22d907c6162affc1ad746da32d579"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/head-neck-pilot.test.ts",
+      "bytes": 23508,
+      "sha256": "9d496688c7b45d8d931466a8c87716382c70e99d9b695822910c3ce030d39e8a"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/learning-frame-loader-transition.mjs",
+      "bytes": 1669,
+      "sha256": "8960c131bdc559903a595c1ba7d15dccf4d031b0eb4bd9f9ecc784531ac04d31"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/live-learning-consumer-loader-preservation.test.mjs",
+      "bytes": 4606,
+      "sha256": "8abe3479f168cfffb148e5ec29f34ba436ae559fa60c015b0fa8166ba1b6306e"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/live-learning-consumer-loader-transition.mjs",
+      "bytes": 615,
+      "sha256": "0b263a2fe662b8dce6ac3bab5060dea36843286a5355c308aa546059983d7d50"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/live-learning-runtime-harness-preservation.test.mjs",
+      "bytes": 5341,
+      "sha256": "07453e8b3269f347560806b8b831a2a65026e85389888e294061ddd79e473845"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/live-learning-runtime-harness-transition.mjs",
+      "bytes": 2051,
+      "sha256": "65f5d68af30ea9994d2c77deb49c8b008c7752c06c180f4a3f41c3d334ce826c"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/nonhead-frame-migration.test.mjs",
+      "bytes": 2501,
+      "sha256": "be0971e01d2659b0756dbc8eb6a56c43eb4fd42f6ebc5ef1dcff995a885e74ee"
+    },
+    {
+      "path": "pending/body-learning-20261021/website/tests/structure-learning-ui.test.ts",
+      "bytes": 10409,
+      "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
     },
     {
       "path": "public/atlas-review-viewer/index.html",
@@ -12702,50 +12992,34 @@
     }
   ],
   "removed": [],
-  "scope": "Existing verified selected website source plus24explicitly selected pending learning-channel source/test paths. Pending paths are an uninstalled partial candidate, not a finished release, current canonical checkout, whole/private/runnable backup, or public site deployment. No scans, pixels, models, masks, private modules, environment, databases, clinical records, raw logs, media or raw canonical Git ancestry included.",
+  "scope": "Inherited verified filtered source selection plus explicitly selected live body-learning source and test-admission paths. Pending namespace now contains locally installed code, but remains only partial source recovery—not a full/private/runnable project backup. No scan, pixels, masks, models, patient identifiers, private runtime modules, clinical notes/decisions, environment, databases, raw logs, media or raw canonical Git ancestry.",
   "proof": {
-    "sourceCandidate": "0dfce15890cafc0a2b8e309193531daa29a672ed",
-    "sourceTree": "18f4fa612d0209123488a9104c2e26089b06cfe3",
-    "sourceOwnedPaths": 7,
-    "websiteOwnedPaths": 17,
-    "rootReferences": 1104,
-    "regions": 12,
-    "newReceiverAndLifecycleTests": {
-      "tests": 13,
-      "pass": 13,
+    "installedLocally": true,
+    "combinedConsumerChecks": {
+      "tests": 275,
+      "pass": 275,
       "fail": 0,
-      "skip": 0
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
-    "bodyLectureTests": {
-      "tests": 24,
-      "pass": 24,
-      "fail": 0
-    },
-    "legacySourceChannelsPassed": true,
-    "sourceTypesAndContainedBuildPassed": true,
-    "stagedWebsiteTypesAndFullBuildPassed": true,
-    "stockReviewPassed": true,
+    "fullProjectTypes": true,
+    "fullLocalBuild": true,
+    "stockReview": true,
     "reviewBindings": 1719,
     "importedSources": 1556,
-    "canonicalInstalled": false,
-    "epochAdmissionTestsPending": true,
-    "normalOwnerPreviewUnchanged": true,
-    "initialStagingTypeFailureRetained": true,
-    "realBrowserFixture": {
-      "wholeBodyNativeLeftClavicle": true,
-      "handNativeRightScaphoid": true,
-      "quizLinkRevoked": true,
-      "exploreRecovery": true,
-      "collapsedDockDoesNotOverlapModel": true,
-      "allRegionBrowserCertification": false,
-      "lecturesNotCreatedOrOpened": true
-    },
-    "geometryOrAcceptedMasksChanged": false,
-    "independentEntitlementsUnchanged": true,
-    "semanticReferenceOnly": true,
-    "spatialRegistration": false,
+    "rootStructures": 1104,
+    "regions": 12,
+    "readOnlySelection": true,
+    "exactVersionOriginSessionSequenceAndFrame": true,
+    "independentLectureAccessUnchanged": true,
+    "sourceAndModelGeometryUnchanged": true,
     "clinicalApproval": false,
-    "publicDeployment": false
+    "spatialRegistration": false,
+    "publicDeployment": false,
+    "wholeSuitePassing": false,
+    "wholeProjectBackup": false,
+    "privateDataBackup": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
