@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-21T11:01:43.201Z",
+  "site": "F:/VisibleMedicine/website",
+  "source": "scripts/refresh-completion-checklist.mjs",
+  "sourceBeforeSha256": "76774978df6798afac6c8f98a4d927b9565d3dedc7a6b51096ab1d4e4713f058",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-elbow-history-application/SOURCE_INPUTS_AFTER.json",
+  "checklistRevision": 104,
+  "firstFailure": {
+    "command": "node scripts/refresh-completion-checklist.mjs",
+    "code": 1,
+    "classification": "Schema conflates immutable recorded audit baseline with the newly installed local Atlas source",
+    "message": "Imported source must match website baseline",
+    "actual": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "expectedHistoricalBaseline": "98d7f17e2d120b031633e59e47fc50c82d44b2d0"
+  },
+  "preserve": "All71items/eightideas, statuses/owners/criteria, complete baseline and historical fixture behavior; do not lie that the installed source is pending."
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "vm-pelvic-portal-epoch-proposal/1",
+  "status": "proposal-only",
+  "websiteHeadAtInspection": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "atlasHeadAtInspection": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "historicalFeatureCommit": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+  "currentLearnerAndReviewRevision": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceRole": "Both original feature revisions and pin JSON assertions remain literal. The existing clinical-review-current-admission helper proves that each named historical Atlas feature blob is byte-identical in the checked current Atlas commit, imported Review files and learner source inputs. Current learner manifests and current Review manifest use the current revision.",
+  "applyPaths": [
+    "tests/clinical-review-pelvic-venous-tour.test.ts",
+    "tests/clinical-review-portal-hepatic-tour.test.ts"
+  ],
+  "proposalOnlyEvidencePaths": [
+    "preimages/tests/clinical-review-pelvic-venous-tour.test.ts.raw",
+    "preimages/tests/clinical-review-portal-hepatic-tour.test.ts.raw",
+    "verify-stage.mjs",
+    "STAGING_EVIDENCE.json"
+  ],
+  "files": {
+    "tests/clinical-review-pelvic-venous-tour.test.ts": {
+      "preSha256": "b9a5a72a447a4c5e687585df6318af1aeee3af7d7ce7c3b76361374f0079a7f9",
+      "postSha256": "2cd97eeb0a48ee535ec33618a9494cae774a172776990bb9fcbb56c9eb5d48c7",
+      "originalLines": 112,
+      "proposalLines": 119,
+      "originalCases": 1,
+      "proposalCases": 1
+    },
+    "tests/clinical-review-portal-hepatic-tour.test.ts": {
+      "preSha256": "cdfd5267c5841862a110d04646295f8d07db9e3947a45941a2bba805600d086c",
+      "postSha256": "f6276358748589754a53ef567e03c1b963973e3ec326f6e26ae3aa20c04b0e30",
+      "originalLines": 119,
+      "proposalLines": 126,
+      "originalCases": 2,
+      "proposalCases": 2
+    }
+  },
+  "sourceHashes": {
+    "lib/pelvic-venous-tour.ts": "3b83824e0f2d8d2d3fe3051e7290e8d69e952d3b6e66398d4172cf6d29d0d191",
+    "content/pelvic-venous-tour-pins.json": "9446981afc162aaf3a4df1ff3796070c831ef9411973c3185d13eb017a88bbb8",
+    "lib/portal-hepatic-tour.ts": "37fbe714b752a3332fcc38dc95b0c3830ae5cf416dca8ea49a17b7e1c90d4a16",
+    "content/portal-hepatic-tour-pins.json": "06ca37b29cb3ad27c395c9d4f5a9ed75ede4e0f0b46d43af75dbaf7c92981833",
+    "lib/regional-tours.ts": "88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97"
+  },
+  "pureCheck": {
+    "command": "node F:/VisibleMedicine/staging/20261021-pelvic-portal-epoch-proposal/verify-stage.mjs",
+    "result": "PASS: two whole-original inverses, exact current source roles, test-case counts and mutation refusal; native tests not run",
+    "guardSha256": "e586c7d7de24090025be2af6a425320c5f31528f21f14e6797f0ffbfe4531c18"
+  },
+  "preserved": "Every original tour, camera, source, packet and refusal assertion is restored by the exact inverse. Portal save assertions still use current bodyReviewContext for current malformed-422 checks and separate stale material/revision-409 checks. No body inbox URL assertion existed in these files; no URL/root semantics were changed.",
+  "notExecuted": ["native tests", "full suite", "build", "typecheck", "browser"],
+  "next": "Main reviews the two staged tests, confirms canonical preimages, applies only those files, then runs their two actual native modules serially. Keep genuine full-suite failures separate from selected-module results."
+}

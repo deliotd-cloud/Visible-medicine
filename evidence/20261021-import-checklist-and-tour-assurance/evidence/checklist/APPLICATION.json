@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-21T11:08:23.261Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalInstalled": true,
+  "paths": [
+    "scripts/refresh-completion-checklist.mjs",
+    "tests/completion-checklist-local-import.test.mjs"
+  ],
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-checklist-import-state/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "862157de49fec4898519241ae24160b1b52dbc11209bf381ab95c085be83373e",
+  "controlledInputs": 5151,
+  "preservedSourceInputs": 7,
+  "totalNamedInputs": 5158,
+  "actualCases": 50,
+  "failures": 0,
+  "skipped": 0,
+  "receipts": [
+    {
+      "label": "native-final",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/completion-checklist-local-import.test.mjs",
+        "tests/completion-checklist.test.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-checklist-import-state/native-final.log",
+      "logSha256": "4baa7ecab9415c0fa6a9c0ccf7ff7745169077a1981bb00483e277f3c946b6d8"
+    },
+    {
+      "label": "regenerate",
+      "args": [
+        "scripts/refresh-completion-checklist.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-checklist-import-state/regenerate.log",
+      "logSha256": "e55180ce07b1c5938add56b04704bb68ec81557173d300d3550f11b5e4afc112"
+    },
+    {
+      "label": "physical-check",
+      "args": [
+        "scripts/refresh-completion-checklist.mjs",
+        "--check",
+        "--verify-evidence"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-checklist-import-state/physical-check.log",
+      "logSha256": "350113a3ec11c228122cb4c97c340fb2be64799baba357fbdc936df11bbe32f9"
+    }
+  ],
+  "all71ItemsAndEightIdeasUnchanged": true,
+  "completeAuditBaselineUnchanged": true,
+  "allOtherControlledSourcesUnchanged": true,
+  "reviewBindingsUnchanged": 1710,
+  "previewPid": 266712,
+  "previewRestarted": false,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false,
+  "latestTwoPathsOffDeviceBackedUp": false
+}

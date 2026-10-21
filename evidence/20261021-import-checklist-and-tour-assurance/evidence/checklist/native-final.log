@@ -1,0 +1,310 @@
+TAP version 13
+# Subtest: local import retains the immutable audit baseline and all bounded roadmap requirements
+ok 1 - local import retains the immutable audit baseline and all bounded roadmap requirements
+  ---
+  duration_ms: 7.1501
+  type: 'test'
+  ...
+# Subtest: legacy imported and pending fixtures retain their original baseline obligations and wording
+ok 2 - legacy imported and pending fixtures retain their original baseline obligations and wording
+  ---
+  duration_ms: 7.6544
+  type: 'test'
+  ...
+# Subtest: local import rejects unbound source
+ok 3 - local import rejects unbound source
+  ---
+  duration_ms: 0.9697
+  type: 'test'
+  ...
+# Subtest: local import rejects unbound tree
+ok 4 - local import rejects unbound tree
+  ---
+  duration_ms: 0.4276
+  type: 'test'
+  ...
+# Subtest: local import rejects changed topic split
+ok 5 - local import rejects changed topic split
+  ---
+  duration_ms: 0.4096
+  type: 'test'
+  ...
+# Subtest: local import rejects invented approval
+ok 6 - local import rejects invented approval
+  ---
+  duration_ms: 0.3724
+  type: 'test'
+  ...
+# Subtest: local import rejects missing evidence digest
+ok 7 - local import rejects missing evidence digest
+  ---
+  duration_ms: 0.4747
+  type: 'test'
+  ...
+# Subtest: local import rejects unsafe evidence
+ok 8 - local import rejects unsafe evidence
+  ---
+  duration_ms: 0.3398
+  type: 'test'
+  ...
+# Subtest: physical import check requires immutable source objects and coherent delivery without reading private decisions
+ok 9 - physical import check requires immutable source objects and coherent delivery without reading private decisions
+  ---
+  duration_ms: 2.2186
+  type: 'test'
+  ...
+# Subtest: physical import check refuses unapplied proposal
+ok 10 - physical import check refuses unapplied proposal
+  ---
+  duration_ms: 1.5482
+  type: 'test'
+  ...
+# Subtest: physical import check refuses public-release substitution
+ok 11 - physical import check refuses public-release substitution
+  ---
+  duration_ms: 1.553
+  type: 'test'
+  ...
+# Subtest: physical import check refuses altered proof bytes
+ok 12 - physical import check refuses altered proof bytes
+  ---
+  duration_ms: 1.703
+  type: 'test'
+  ...
+# Subtest: physical import check refuses wrong source object
+ok 13 - physical import check refuses wrong source object
+  ---
+  duration_ms: 1.3065
+  type: 'test'
+  ...
+# Subtest: physical import check refuses wrong source tree
+ok 14 - physical import check refuses wrong source tree
+  ---
+  duration_ms: 1.4521
+  type: 'test'
+  ...
+# Subtest: physical import check refuses mismatched Review source
+ok 15 - physical import check refuses mismatched Review source
+  ---
+  duration_ms: 1.5368
+  type: 'test'
+  ...
+# Subtest: physical import check refuses changed input closure
+ok 16 - physical import check refuses changed input closure
+  ---
+  duration_ms: 1.5167
+  type: 'test'
+  ...
+# Subtest: physical import check refuses personal viewer records
+ok 17 - physical import check refuses personal viewer records
+  ---
+  duration_ms: 1.8479
+  type: 'test'
+  ...
+# Subtest: physical import check refuses one stale learner
+ok 18 - physical import check refuses one stale learner
+  ---
+  duration_ms: 1.2634
+  type: 'test'
+  ...
+# Subtest: physical import check refuses patient-data learner
+ok 19 - physical import check refuses patient-data learner
+  ---
+  duration_ms: 1.2928
+  type: 'test'
+  ...
+# Subtest: completion register preserves 71 stable bounded items and eight separate optional ideas
+ok 20 - completion register preserves 71 stable bounded items and eight separate optional ideas
+  ---
+  duration_ms: 6.7671
+  type: 'test'
+  ...
+# Subtest: completion register rejects duplicate IDs
+ok 21 - completion register rejects duplicate IDs
+  ---
+  duration_ms: 0.7015
+  type: 'test'
+  ...
+# Subtest: completion register rejects unknown status
+ok 22 - completion register rejects unknown status
+  ---
+  duration_ms: 0.2742
+  type: 'test'
+  ...
+# Subtest: completion register rejects proposal as mandatory requirement
+ok 23 - completion register rejects proposal as mandatory requirement
+  ---
+  duration_ms: 1.5599
+  type: 'test'
+  ...
+# Subtest: completion register rejects done without a completion record
+ok 24 - completion register rejects done without a completion record
+  ---
+  duration_ms: 0.2914
+  type: 'test'
+  ...
+# Subtest: completion register rejects missing evidence
+ok 25 - completion register rejects missing evidence
+  ---
+  duration_ms: 0.2268
+  type: 'test'
+  ...
+# Subtest: completion register rejects unsafe private locator
+ok 26 - completion register rejects unsafe private locator
+  ---
+  duration_ms: 0.2237
+  type: 'test'
+  ...
+# Subtest: completion register rejects missing current change log
+ok 27 - completion register rejects missing current change log
+  ---
+  duration_ms: 1.2373
+  type: 'test'
+  ...
+# Subtest: evidence references cannot escape source roots
+ok 28 - evidence references cannot escape source roots
+  ---
+  duration_ms: 0.2381
+  type: 'test'
+  ...
+# Subtest: pending source is displayed separately from the unchanged website baseline
+ok 29 - pending source is displayed separately from the unchanged website baseline
+  ---
+  duration_ms: 2.2355
+  type: 'test'
+  ...
+# Subtest: pending source cannot imply an import, expanded scope or approval
+ok 30 - pending source cannot imply an import, expanded scope or approval
+  ---
+  duration_ms: 1.146
+  type: 'test'
+  ...
+# Subtest: revision21 imported source agrees exactly with baseline and retains every roadmap item status
+ok 31 - revision21 imported source agrees exactly with baseline and retains every roadmap item status
+  ---
+  duration_ms: 2.7478
+  type: 'test'
+  ...
+# Subtest: revision22 four-draft source candidate stays distinct from unchanged integrated baseline
+ok 32 - revision22 four-draft source candidate stays distinct from unchanged integrated baseline
+  ---
+  duration_ms: 2.3676
+  type: 'test'
+  ...
+# Subtest: historical revision23 integrated four-draft source conserves scope and every roadmap item
+ok 33 - historical revision23 integrated four-draft source conserves scope and every roadmap item
+  ---
+  duration_ms: 2.4654
+  type: 'test'
+  ...
+# Subtest: historical revision24 lecture intake records partial progress without shrinking any roadmap acceptance
+ok 34 - historical revision24 lecture intake records partial progress without shrinking any roadmap acceptance
+  ---
+  duration_ms: 0.3685
+  type: 'test'
+  ...
+# Subtest: historical revision25 imports the exact cervical source and adds only retirement evidence
+ok 35 - historical revision25 imports the exact cervical source and adds only retirement evidence
+  ---
+  duration_ms: 1.9858
+  type: 'test'
+  ...
+# Subtest: current revision26 adds only exact Review identity and bounded guided lecture evidence
+ok 36 - current revision26 adds only exact Review identity and bounded guided lecture evidence
+  ---
+  duration_ms: 1.6008
+  type: 'test'
+  ...
+# Subtest: immutable revision27 imports only 56 exact-source spinal X-ray drafts and preserves the roadmap
+ok 37 - immutable revision27 imports only 56 exact-source spinal X-ray drafts and preserves the roadmap
+  ---
+  duration_ms: 7.156
+  type: 'test'
+  ...
+# Subtest: immutable revision28 records only bounded REL-01 delivery evidence and retains all release gates
+ok 38 - immutable revision28 records only bounded REL-01 delivery evidence and retains all release gates
+  ---
+  duration_ms: 1.7075
+  type: 'test'
+  ...
+# Subtest: immutable revision29 records correction preparation without claiming replacement or release
+ok 39 - immutable revision29 records correction preparation without claiming replacement or release
+  ---
+  duration_ms: 1.7559
+  type: 'test'
+  ...
+# Subtest: historical checklist without a pending source remains renderable
+ok 40 - historical checklist without a pending source remains renderable
+  ---
+  duration_ms: 1.9745
+  type: 'test'
+  ...
+# Subtest: immutable revision30 imports only36 hand X-ray drafts and preserves the complete roadmap
+ok 41 - immutable revision30 imports only36 hand X-ray drafts and preserves the complete roadmap
+  ---
+  duration_ms: 3.8065
+  type: 'test'
+  ...
+# Subtest: immutable revision31 adds only bounded release-epoch repair evidence
+ok 42 - immutable revision31 adds only bounded release-epoch repair evidence
+  ---
+  duration_ms: 2.3144
+  type: 'test'
+  ...
+# Subtest: immutable revision32 preserves complete scope and adds only correction recovery evidence
+ok 43 - immutable revision32 preserves complete scope and adds only correction recovery evidence
+  ---
+  duration_ms: 3.1366
+  type: 'test'
+  ...
+# Subtest: immutable revision33 keeps pending intracranial-US source separate from the running website
+ok 44 - immutable revision33 keeps pending intracranial-US source separate from the running website
+  ---
+  duration_ms: 3.4314
+  type: 'test'
+  ...
+# Subtest: immutable revision34 imports only eight intracranial Ultrasound drafts and preserves full scope
+ok 45 - immutable revision34 imports only eight intracranial Ultrasound drafts and preserves full scope
+  ---
+  duration_ms: 3.9529
+  type: 'test'
+  ...
+# Subtest: immutable revision35 adds only bounded UI evidence and normal renderer binding
+ok 46 - immutable revision35 adds only bounded UI evidence and normal renderer binding
+  ---
+  duration_ms: 3.1564
+  type: 'test'
+  ...
+# Subtest: immutable revision36 adds only draft-lineage evidence while preserving full roadmap and delivery
+ok 47 - immutable revision36 adds only draft-lineage evidence while preserving full roadmap and delivery
+  ---
+  duration_ms: 3.1638
+  type: 'test'
+  ...
+# Subtest: immutable revision37 adds twelve foot draft placements without changing roadmap statuses or scope
+ok 48 - immutable revision37 adds twelve foot draft placements without changing roadmap statuses or scope
+  ---
+  duration_ms: 3.8754
+  type: 'test'
+  ...
+# Subtest: immutable revision38 records installed safety evidence without advancing a broader requirement
+ok 49 - immutable revision38 records installed safety evidence without advancing a broader requirement
+  ---
+  duration_ms: 2.4411
+  type: 'test'
+  ...
+# Subtest: revision39 imports only exact arterial evidence limits and preserves the full roadmap
+ok 50 - revision39 imports only exact arterial evidence limits and preserves the full roadmap
+  ---
+  duration_ms: 4.3626
+  type: 'test'
+  ...
+1..50
+# tests 50
+# suites 0
+# pass 50
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 283.1423

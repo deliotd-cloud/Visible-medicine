@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T10:55:58.189Z",
+  "at": "2026-10-21T11:12:27.054Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5157,
+    "canonicalNamedInputs": 5158,
     "canonicalInstalled": true
   },
-  "parent": "b1b70e0cc4af26b3e5172bf35d7140529e965be1",
-  "gitParent": "b1b70e0cc4af26b3e5172bf35d7140529e965be1",
+  "parent": "dcea2196f67f1324e58257287cddbf9afb966545",
+  "gitParent": "dcea2196f67f1324e58257287cddbf9afb966545",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3829,6 +3829,116 @@
       "path": "evidence/20261021-historical-current-native-verified/scripts/run-current-source-matrix-20261021.mjs",
       "bytes": 3571,
       "sha256": "54b499b0e850adc6ad63f32e0c9a7a419389ff0e9c16d6adfbaff0f70f5b4056"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/controls/admit-pelvic-portal-epochs-20261021.mjs",
+      "bytes": 4165,
+      "sha256": "9e0807b2b974a337a5f7239c1fa814a678b6781e44e83b51ee09fc9f4e6ec162"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/controls/checkpoint-import-and-tour-assurance-20261021.mjs",
+      "bytes": 7479,
+      "sha256": "780cc860077e9a4053733f4cf8f267c9a24506c0c2542885ae73969915ddd18b"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/controls/finish-checklist-import-state-20261021.mjs",
+      "bytes": 3384,
+      "sha256": "2b399ce3bade092392c6c683310f3e308ec78b0213bab3ce5b8b218cf2a1e656"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/controls/prepare-checklist-import-state-20261021.mjs",
+      "bytes": 1573,
+      "sha256": "a256469558b5bb0983dc72e0339512fef31fb6332af892be2cc19d02202ab434"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/controls/set-checklist-import-record-20261021.mjs",
+      "bytes": 2429,
+      "sha256": "12a4b03410986cbf82b7a96b77edacb66d8915f4bf4dd25d6004273dea656434"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/checklist/APPLICATION.json",
+      "bytes": 2238,
+      "sha256": "063fae71c1b3d7600a80c134d3a033ce7877e35db1fa6de3e27b9221bf1b3cdf"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/checklist/native-final.log",
+      "bytes": 10439,
+      "sha256": "4baa7ecab9415c0fa6a9c0ccf7ff7745169077a1981bb00483e277f3c946b6d8"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/checklist/physical-check.log",
+      "bytes": 98,
+      "sha256": "350113a3ec11c228122cb4c97c340fb2be64799baba357fbdc936df11bbe32f9"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/checklist/PREPARATION.json",
+      "bytes": 952,
+      "sha256": "17c7ebf775f9e12a20307a312ddba2869243cb24c49f2ddbd8ad457436666414"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/connective/ROLE_REPORT.md",
+      "bytes": 4223,
+      "sha256": "a29476a9004ca1b1948fac7a10822f00bd9eabfe359d939726bcf0f0463267e2"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/PROOF.json",
+      "bytes": 2297,
+      "sha256": "104e5733bc239627b49c8b8f43856a8d5f4f6f68e30b98015cf794e6c110fad4"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/tours/APPLICATION.json",
+      "bytes": 1838,
+      "sha256": "2bb3a6ec0c301f02df82fa6b6ae775b50b6cda96b5a5c52a44877e3d5e089587"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/tours/native.json",
+      "bytes": 476,
+      "sha256": "35e9640b5751441ff435c0c8b83b64f0412352d9ddc7f8793eb5c9ea45478188"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/tours/PREPARATION.json",
+      "bytes": 1086,
+      "sha256": "6e844a84d30457bd03636dd959142a6456aa7c1e3074aac9748d7ad2754ebb42"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/tours/STAGING_EVIDENCE.json",
+      "bytes": 3398,
+      "sha256": "6e17c64d8a1c85543c0f5bddea10e431c018133a746eac4ccc474b215a999ce3"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/evidence/tours/types.json",
+      "bytes": 348,
+      "sha256": "1757987466fce907c2f5c754507fef5e51038ed6fb89c308e0ccb49791e0b646"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/installed-website/docs/completion-checklist.json",
+      "bytes": 162218,
+      "sha256": "6aca5ec4150f35f1d5318674781065a8c8c1023af622e117381d9ee0e8bee941"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/installed-website/docs/completion-checklist.md",
+      "bytes": 159322,
+      "sha256": "bb15c1aa5e78d5c80d2b02138a9db0b7193556ae8af2f80e3e560034802c18c9"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/installed-website/scripts/refresh-completion-checklist.mjs",
+      "bytes": 14943,
+      "sha256": "8a8d09097784389a15e514db3835345591cb29e7a1dbd6036fe491bf6a261a69"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/installed-website/tests/clinical-review-pelvic-venous-tour.test.ts",
+      "bytes": 7362,
+      "sha256": "2cd97eeb0a48ee535ec33618a9494cae774a172776990bb9fcbb56c9eb5d48c7"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/installed-website/tests/clinical-review-portal-hepatic-tour.test.ts",
+      "bytes": 10971,
+      "sha256": "f6276358748589754a53ef567e03c1b963973e3ec326f6e26ae3aa20c04b0e30"
+    },
+    {
+      "path": "evidence/20261021-import-checklist-and-tour-assurance/installed-website/tests/completion-checklist-local-import.test.mjs",
+      "bytes": 5845,
+      "sha256": "a90edb60ae231b20ab3940a011f34b3ca7fbe46b7418219659efa72845819491"
     },
     {
       "path": "evidence/20261021-keyboard-epoch-proposals-verified/coverage-prose/candidate-before.raw",
@@ -8247,13 +8357,18 @@
     }
   ],
   "removed": [],
-  "scope": "Explicit newly installed own Website code, three historical guard/fixture paths, small source-bound installation/browser/native proof and main controls only on previously filtered source-only ancestry. No raw canonical Git ancestry, full manifests/coverage datasets/runtime/geometry, private D1/DO/R2/env/identifiers/notes/decisions, scans/masks, dependencies, raw browser DOM/logs/media or private references. Not a complete runnable/private backup, public release, clinical approval or patient-space registration.",
+  "scope": "Explicit four own Website test/tool paths, source checklist metadata, small nonclinical verification receipts and controls on previously filtered source-only ancestry. No raw canonical ancestry, complete manifests/datasets/runtime/models, private DB/R2/env/notes/decisions, scans/masks, browser raw DOM/logs/media or uncleared private references. Partial selected-source backup only, not full/private/runnable recovery, clinical sign-off, spatial registration or public deployment.",
   "proof": {
-    "at": "2026-10-21T10:55:49.236Z",
+    "at": "2026-10-21T11:12:21.599Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "currentNamedInputs": 5157,
-    "controlledSourceInputs": 5150,
+    "canonicalInstalled": true,
+    "installation": {
+      "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
+      "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
+    },
+    "currentNamedInputs": 5158,
+    "controlledSourceInputs": 5151,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -8263,66 +8378,47 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-pelvic-portal-epoch-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "d36e468c6a85239eadc35b8a8ba4e1e2f35f760b8849bcbbcd6d31f424bb9844",
     "reviewInputs": 1710,
-    "canonicalInstalled": true,
-    "installation": {
-      "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
-      "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
-    },
     "canonicalDeveloperToolingInstalled": true,
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-elbow-history-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "ec6fedba552f9c9c51c8e8f7298220970e7aee9a30ed37710888c1f863b43a2b",
-    "atlasFastForwardOnly": true,
-    "websiteGitHeadUnchanged": true,
+    "checklistActualPasses": 50,
+    "tourActualPasses": 3,
+    "fullTypesPassed": true,
+    "all71ItemsAndEightIdeasUnchanged": true,
+    "wholeAuditBaselineUnchanged": true,
+    "allOtherControlledSourcesUnchanged": true,
     "ownerPreviewPid": 266712,
     "ownerPreviewSession": 32652,
+    "ownerPreviewRestarted": false,
     "ownerTabsReloaded": false,
     "ownerDecisionsChanged": false,
-    "independentSpecialistStatesChecked": true,
-    "fullTypesPassedOnIdenticalTypedInputs": true,
-    "identicalTypedInputs": 2555,
-    "productionBuildPassedBeforeMechanicalImport": true,
-    "installedReviewAndDeliveryVerifiersPassed": true,
-    "actualUiPasses": 40,
-    "affectedFeatureAndPreservationPasses": 17,
-    "separateActualElbowGuardPasses": 1,
-    "actualBrowserChecks": {
-      "atlasAndReviewHttp200": true,
-      "authorizedReviewQueueLoaded": true,
-      "reviewUrlRestoresPonsSearchAndHeadLearningArea": true,
-      "browserBackRestoresReviewFilters": true,
-      "mainWorkspaceDestinationsVisible": true,
-      "wholeBodyMeshVisuallyRendered": true,
-      "mriApprovedStudyAutoloaded": true,
-      "mriPonsSelected": true,
-      "existing3DAtlasInlineConfirmsPons": true,
-      "ctContinuationCarriesExactConceptAndHeadRevision": true,
-      "ctApprovedStudyAutoloaded": true,
-      "ctPonsSelected": true
+    "browserErrorFollowup": {
+      "temporaryTab": "92",
+      "closed": true,
+      "route": "/atlas/3d",
+      "error": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "observedAt": "2026-10-21T11:10:48.147Z",
+      "sourceUrl": null,
+      "stack": null,
+      "reproduced": true,
+      "attributed": false,
+      "suppressed": false,
+      "scanDataExported": false
     },
-    "semanticComparisonOnly": true,
-    "spatialRegistration": false,
-    "unresolvedBrowserErrors": [
-      {
-        "timestamp": "2026-10-21T10:42:59.034Z",
-        "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
-        "sourceUrl": null,
-        "attribution": "unresolved; not classified as external or suppressed",
-        "next": "Use existing development-only sanitized local Atlas diagnostic on a fresh reproduction; inspect warn/exception source and frame."
-      }
-    ],
+    "connectiveRoleClarified": true,
+    "connectiveProposalInstalled": false,
     "originalFullFailureBaseline": 144,
     "currentFullNativeFailureBaseline": 136,
     "fullSuitePassingClaim": false,
     "allNativeFailuresResolved": false,
     "clinicalApproval": false,
+    "spatialRegistration": false,
     "publicDeployment": false,
     "privateDataUploaded": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "fullGoalActive": true,
-    "previousGoalTurn": "progress: applied candidate UI/test repairs, fresh types/build/browser acceptance and source backup; not a wait/status-only turn",
-    "priorityReassessment": "Main UI simplification is now installed locally; continue release-essential regression repairs and real desktop/CT-MRI-existing3D journeys. Clinical review remains independent; do not stall."
+    "fullGoalActive": true
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

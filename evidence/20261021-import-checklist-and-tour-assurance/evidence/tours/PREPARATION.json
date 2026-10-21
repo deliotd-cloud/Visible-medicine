@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-21T11:09:26.992Z",
+  "site": "F:/VisibleMedicine/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-pelvic-portal-epoch-proposal",
+  "previous": "F:/VisibleMedicine/staging/20261021-checklist-import-state/SOURCE_INPUTS_AFTER.json",
+  "previousSha256": "862157de49fec4898519241ae24160b1b52dbc11209bf381ab95c085be83373e",
+  "changes": {
+    "tests/clinical-review-pelvic-venous-tour.test.ts": {
+      "preSha256": "b9a5a72a447a4c5e687585df6318af1aeee3af7d7ce7c3b76361374f0079a7f9",
+      "postSha256": "2cd97eeb0a48ee535ec33618a9494cae774a172776990bb9fcbb56c9eb5d48c7",
+      "originalLines": 112,
+      "proposalLines": 119,
+      "originalCases": 1,
+      "proposalCases": 1
+    },
+    "tests/clinical-review-portal-hepatic-tour.test.ts": {
+      "preSha256": "cdfd5267c5841862a110d04646295f8d07db9e3947a45941a2bba805600d086c",
+      "postSha256": "f6276358748589754a53ef567e03c1b963973e3ec326f6e26ae3aa20c04b0e30",
+      "originalLines": 119,
+      "proposalLines": 126,
+      "originalCases": 2,
+      "proposalCases": 2
+    }
+  },
+  "nativeRun": false
+}
