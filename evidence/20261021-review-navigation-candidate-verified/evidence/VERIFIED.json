@@ -1,0 +1,122 @@
+{
+  "at": "2026-10-21T16:15:29.475Z",
+  "commands": [
+    {
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "at": "2026-10-21T16:13:42.820Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 1478
+    },
+    {
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-concurrency=1",
+        "tests/clinical-review-navigation-guard.test.ts",
+        "tests/clinical-review-navigation-preservation.test.mjs",
+        "tests/review-draft-autosave.test.mjs",
+        "tests/head-teaching-review-notes.test.ts",
+        "tests/head-mri-review-notes.test.ts",
+        "tests/head-review-working-copy.test.ts",
+        "tests/current-atlas-delivery.test.mjs",
+        "tests/plexus-review-navigation-binding.test.mjs",
+        "tests/review-navigation-harness-preservation.test.mjs",
+        "tests/review-navigation-delivery-preservation.test.mjs",
+        "tests/head-ct-bone-decision-form.test.ts",
+        "tests/head-ct-bone-teaching-decision-form.test.ts",
+        "tests/head-ct-facial-decision-form.test.ts",
+        "tests/head-paired-decision-form.test.ts",
+        "tests/regional-guide-review-ui.test.ts",
+        "tests/regional-reference-draft-ui.test.ts",
+        "tests/review-navigation-six-harness-preservation.test.mjs",
+        "tests/head-ct-facial-ui.test.mjs",
+        "tests/plexus-review-ui.test.ts"
+      ],
+      "at": "2026-10-21T16:13:44.327Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 9875
+    },
+    {
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "at": "2026-10-21T16:13:54.202Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 38495
+    },
+    {
+      "args": [
+        "scripts/atlas-model-inventory.mjs",
+        "--check"
+      ],
+      "at": "2026-10-21T16:14:32.697Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 752
+    },
+    {
+      "args": [
+        "--experimental-strip-types",
+        "scripts/verify-atlas-delivery-policy.mjs"
+      ],
+      "at": "2026-10-21T16:14:33.449Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 101
+    },
+    {
+      "args": [
+        "node_modules/vinext/dist/cli.js",
+        "build"
+      ],
+      "at": "2026-10-21T16:14:33.550Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 52020
+    }
+  ],
+  "beforeReview": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+  "beforeInputs": 1710,
+  "inputs": 1711,
+  "addedInputs": [
+    {
+      "path": "lib/clinical-review-navigation-guard.ts",
+      "sha256": "8c779ba3552af0423a5c724587e6fcb8f371572c0feb48aa1cc281b671725cbb"
+    }
+  ],
+  "changedInputs": [
+    "components/HeadCtBoneDecisionForm.tsx",
+    "components/HeadCtBoneTeachingDecisionForm.tsx",
+    "components/HeadCtFacialDecisionForm.tsx",
+    "components/HeadMriReviewNotes.tsx",
+    "components/HeadPairedDecisionForm.tsx",
+    "components/HeadTeachingReviewNotes.tsx",
+    "components/PlexusReviewWorksheet.tsx",
+    "components/RegionalGuideReviewNotes.tsx",
+    "components/RegionalReferenceReviewNotes.tsx",
+    "scripts/bind-clinical-review.mjs"
+  ],
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "sourceFiles": 1553,
+  "viewerFiles": 46,
+  "viewerPackages": 22,
+  "allOriginalSourceUnchanged": true,
+  "allPackagesUnchanged": true,
+  "log": "F:/VisibleMedicine/staging/20261021-review-navigation-ui-candidate/VERIFY-v5.log",
+  "logSha256": "eecf0c5ebd43f21ad41a133054699e8d3a715b9917687a811e2af29a243c3929",
+  "canonicalInstalled": false,
+  "browserAcceptancePending": true,
+  "ownerPreviewUnchanged": true,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

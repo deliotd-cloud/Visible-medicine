@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-21T16:21:00Z",
+  "passed": false,
+  "automationBlocked": true,
+  "candidatePort": 3003,
+  "temporaryTab": "101",
+  "ownerTabsUntouched": true,
+  "ownerPreviewRestarted": false,
+  "savedReviewsOrApprovalsSubmitted": false,
+  "patientDataUsed": false,
+  "case": "Synthetic unsaved changes-required correction; no save, check attestation, approval, export or draft autosave invoked. Same-page Private notes anchor changed the URL hash and retained the exact synthetic text. Leaving through Clinical Review triggered an Input.dispatchMouseEvent deadline. getJsDialog returned undefined; subsequent evaluation, Escape and close could not dispatch because Emulation.setFocusEmulationEnabled exceeded its deadline. Do not infer successful confirmation/cancellation, navigation or lost notes from this automation failure.",
+  "observed": {"pageLoadedSignedInWithExistingPermissions":true,"emptyHistoryInitially":true,"autosaveIneligibleStatusSelectedBeforeTyping":true,"unsavedEditsVisible":true,"samePageHashNavigationRetainedText":true,"leaveNavigationCompleted":false,"cancelRetentionVerified":false,"cleanNavigationVerified":false},
+  "limits": ["No browser acceptance pass claimed. Owner may need to dismiss the temporary test confirmation if visible; a concise non-blocking question was sent.","Startup connection-refused tab100 and cold-load navigation timeout101 were separate from later automation blockage. Tab101 eventually loaded and actual controls were used.","Browser Back/Forward, imperative routes and non-anchor controls are outside this click guard.","No raw DOM, screenshots, scans, private notes, records or console data included.","Native test/type/build passes are separate technical evidence, not clinical/public-release approval."],
+  "canonicalInstalled": false,
+  "publicDeployment": false
+}

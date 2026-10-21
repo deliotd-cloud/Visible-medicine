@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import net from 'node:net';
+import {spawn} from 'node:child_process';
+import {json,sha,read} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261021-review-navigation-ui-candidate';
+const prep=json(stage+'/PREPARATION.json'),verified=json(stage+'/VERIFIED.json');
+assert(verified.allOriginalSourceUnchanged&&verified.canonicalInstalled===false);assert(json(stage+'/LOCAL_STATE.json').permissionsEdited===false);
+assert(!fs.existsSync(stage+'/PREVIEW_STARTED.json'));
+const busy=await new Promise(resolve=>{const s=net.createConnection({host:'127.0.0.1',port:3003});s.once('connect',()=>{s.destroy();resolve(true);});s.once('error',()=>resolve(false));});assert.equal(busy,false);
+const stream=fs.createWriteStream(stage+'/PREVIEW.log',{flags:'wx'});
+const child=spawn(process.execPath,['node_modules/vinext/dist/cli.js','dev','-H','127.0.0.1','-p','3003'],{cwd:prep.site,windowsHide:true,env:{...process.env,VM_LOCAL_PREVIEW_STABLE:'1',GOMAXPROCS:'2',RAYON_NUM_THREADS:'1',NODE_OPTIONS:'--max-old-space-size=4096'},stdio:['ignore','pipe','pipe']});
+child.stdout.pipe(stream,{end:false});child.stderr.pipe(stream,{end:false});
+const started={at:new Date().toISOString(),pid:child.pid,launcher:process.pid,site:prep.site,port:3003,host:'127.0.0.1',hmr:false,review:verified.review,ownerPort3000Untouched:true,permissionsEdited:false,canonicalInstalled:false};
+fs.writeFileSync(stage+'/PREVIEW_STARTED.json',JSON.stringify(started,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(started));
+const result=await new Promise(resolve=>child.once('close',(code,signal)=>resolve({code,signal})));
+await new Promise(resolve=>stream.end(resolve));fs.writeFileSync(stage+'/PREVIEW_STOPPED.json',JSON.stringify({...result,at:new Date().toISOString(),logSha256:sha(read(stage+'/PREVIEW.log'))},null,2)+'\n',{flag:'wx'});process.exitCode=result.code??1;

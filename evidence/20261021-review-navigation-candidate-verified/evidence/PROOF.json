@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-21T16:22:12.669Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+  "reviewInputs": 1711,
+  "previousCanonicalReview": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalInstalled": false,
+  "selectedSourcePaths": 48,
+  "actualNativeCounts": {
+    "tests": 131,
+    "pass": 131,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "fullTypesPassed": true,
+  "fullLocalBuildPassed": true,
+  "stockReviewVerifierPassed": true,
+  "allOriginalSourceUnchanged": true,
+  "ownerPreviewPid": 266712,
+  "ownerFormsRefreshed": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "wholeSuitePassingClaim": false,
+  "fullGoalActive": true,
+  "browserAcceptancePassed": false,
+  "browserAcceptance": {
+    "at": "2026-10-21T16:21:00Z",
+    "passed": false,
+    "automationBlocked": true,
+    "candidatePort": 3003,
+    "temporaryTab": "101",
+    "ownerTabsUntouched": true,
+    "ownerPreviewRestarted": false,
+    "savedReviewsOrApprovalsSubmitted": false,
+    "patientDataUsed": false,
+    "case": "Synthetic unsaved changes-required correction; no save, check attestation, approval, export or draft autosave invoked. Same-page Private notes anchor changed the URL hash and retained the exact synthetic text. Leaving through Clinical Review triggered an Input.dispatchMouseEvent deadline. getJsDialog returned undefined; subsequent evaluation, Escape and close could not dispatch because Emulation.setFocusEmulationEnabled exceeded its deadline. Do not infer successful confirmation/cancellation, navigation or lost notes from this automation failure.",
+    "observed": {
+      "pageLoadedSignedInWithExistingPermissions": true,
+      "emptyHistoryInitially": true,
+      "autosaveIneligibleStatusSelectedBeforeTyping": true,
+      "unsavedEditsVisible": true,
+      "samePageHashNavigationRetainedText": true,
+      "leaveNavigationCompleted": false,
+      "cancelRetentionVerified": false,
+      "cleanNavigationVerified": false
+    },
+    "limits": [
+      "No browser acceptance pass claimed. Owner may need to dismiss the temporary test confirmation if visible; a concise non-blocking question was sent.",
+      "Startup connection-refused tab100 and cold-load navigation timeout101 were separate from later automation blockage. Tab101 eventually loaded and actual controls were used.",
+      "Browser Back/Forward, imperative routes and non-anchor controls are outside this click guard.",
+      "No raw DOM, screenshots, scans, private notes, records or console data included.",
+      "Native test/type/build passes are separate technical evidence, not clinical/public-release approval."
+    ],
+    "canonicalInstalled": false,
+    "publicDeployment": false
+  }
+}

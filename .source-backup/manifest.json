@@ -1,15 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T15:56:50.055Z",
+  "at": "2026-10-21T16:22:18.787Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5267,
-    "canonicalInstalled": true,
-    "reviewCopyPreviewBuildPending": true
+    "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+    "canonicalInstalled": false
   },
-  "parent": "ca59d6ce623c1570315166886b2be79f1d404852",
-  "gitParent": "ca59d6ce623c1570315166886b2be79f1d404852",
+  "parent": "1d694fd7a5f1266276ebf73c73b2d4bc7f5ea795",
+  "gitParent": "1d694fd7a5f1266276ebf73c73b2d4bc7f5ea795",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -7007,6 +7005,351 @@
       "sha256": "5188a8f753997a07b7bd22883b3ee48b9f593c67b6c869b83889b228f08be40f"
     },
     {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/HeadCtBoneDecisionForm.tsx",
+      "bytes": 14867,
+      "sha256": "0c807b7cba1787aeba634b43cbff3e7049cebc47e4f9bd81f6da64cfbd68c019"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/HeadCtBoneTeachingDecisionForm.tsx",
+      "bytes": 15245,
+      "sha256": "21439b6bb12d5a7d69447ea1053c14f120fb556a2cd8bc22497cf9aaeedc2e6c"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/HeadCtFacialDecisionForm.tsx",
+      "bytes": 15454,
+      "sha256": "5722a60bc896913d14a7a4be4a96c5a8970aac538aa9a5c8c8359468a9bb7010"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/HeadMriReviewNotes.tsx",
+      "bytes": 14946,
+      "sha256": "bad60b15c011b88787589d5fa4836d10239993834f517683f079680030b93871"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/HeadPairedDecisionForm.tsx",
+      "bytes": 14883,
+      "sha256": "afe81218aea2c94c25f3c8d88ba28e25aa80e881d9d568336884fb386a008aef"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/HeadTeachingReviewNotes.tsx",
+      "bytes": 18314,
+      "sha256": "d5b80e3bb50d30ef479afd29f91a0dbc93f0d2b6682e2c7f9157e7907d6905a7"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/PlexusReviewWorksheet.tsx",
+      "bytes": 27096,
+      "sha256": "96eeb116e7244a6577d8708ea5dcd615dc25e57ed9fe18321b285eef5f03c120"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/RegionalGuideReviewNotes.tsx",
+      "bytes": 21286,
+      "sha256": "e091761ba091bc0fece6f0a4ffb1cc507852d945215f088a02407ba11bde6da1"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/components/RegionalReferenceReviewNotes.tsx",
+      "bytes": 20197,
+      "sha256": "de3843b7e98d4fbad71ee6909dc3dcbeda83f80073ea4a7eaf9c8a6934a82cb6"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/lib/clinical-review-navigation-guard.ts",
+      "bytes": 2332,
+      "sha256": "8c779ba3552af0423a5c724587e6fcb8f371572c0feb48aa1cc281b671725cbb"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/scripts/bind-clinical-review.mjs",
+      "bytes": 7929,
+      "sha256": "072053ecdc9b882c873ddadb92b36e156f77e190977b33e68a8ba544d6a3548f"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/scripts/import-plexus-review.mjs",
+      "bytes": 10166,
+      "sha256": "a5a164006d188ac2a5579b3749bbfbc15917b32223c2dea3a0fd440b0b2caacd"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/scripts/rebind-plexus-review-navigation.mjs",
+      "bytes": 7288,
+      "sha256": "5de36f33bd0888daa4ecf55caff7948a9191af5e7f77c41f10db08cb9f22078e"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/clinical-review-navigation-guard.test.ts",
+      "bytes": 3256,
+      "sha256": "3cbb789f662e765622e3ee6d0347711fd186e3d5f1d606a5a649b85e4a228d8b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/clinical-review-navigation-preservation.test.mjs",
+      "bytes": 4859,
+      "sha256": "e6c7c60f522877d6954e5bbb901ec24663f52d56a704768d47205d485183eaed"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 17978,
+      "sha256": "07e7fd5ede613f7c81d242580f54f75bf8dcaf6a7edccccd45b761fb63659357"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 1777,
+      "sha256": "dc1c32a175532aff8a66ff4b6571594786f65396dfa8aaf6eadfdad9ceb06763"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/HeadCtBoneDecisionForm.tsx.raw",
+      "bytes": 14682,
+      "sha256": "dbdee9dfea98c296385e78e76fa077903ec6b8766acbb10ccd40774a458f2b9b"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/HeadCtBoneTeachingDecisionForm.tsx.raw",
+      "bytes": 15060,
+      "sha256": "84b81b9782c1fce7f6dc864b52affc433fcbe40792c1045e93482efaa4e5be27"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/HeadCtFacialDecisionForm.tsx.raw",
+      "bytes": 15269,
+      "sha256": "9c19393c23c701ed0c8bd0d443dcafa2bafcf1d6ea2f1a9833bdecc6875da4f3"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/HeadMriReviewNotes.tsx.raw",
+      "bytes": 14751,
+      "sha256": "1a23659f536b7d8f2c8dd4a3ae4983cbda49575011b1ea7a3ba7d3a3c07e510c"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/HeadPairedDecisionForm.tsx.raw",
+      "bytes": 14698,
+      "sha256": "a05c1a33515474ff79bd5a0180cbd2c4013364f8b31a5da59074e5e83a8198c4"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/HeadTeachingReviewNotes.tsx.raw",
+      "bytes": 18124,
+      "sha256": "1e5aa993d10f322028de568d8094fe020707a2d22fa654efc0185ca5458ee1eb"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/PlexusReviewWorksheet.tsx.raw",
+      "bytes": 26896,
+      "sha256": "9eb612a0a5a117eca2817072c644d17b805381933f4a06bdaa3d17ebaec99478"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/RegionalGuideReviewNotes.tsx.raw",
+      "bytes": 21101,
+      "sha256": "b6a9afdf9534758e98f05754e79a982a0d0d7366c427e7a9ded4775b67181b48"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/RegionalReferenceReviewNotes.tsx.raw",
+      "bytes": 20012,
+      "sha256": "2f3fe5ed45b56c7c40ee2d21755967f05360bbf477ccccdf5114d76a8470f1a5"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-delivery/current-atlas-delivery.json.raw",
+      "bytes": 1777,
+      "sha256": "b6301e20b714a67df82575f9f9b75f642fbf44310560444cfb537692bf5cef1f"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-delivery/current-atlas-delivery.test.mjs.raw",
+      "bytes": 17978,
+      "sha256": "8b6215fe75454f5d30ee128b994538ecf87db6748ff2f5ce193b47f9f0a3b250"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-harness-originals/head-mri-review-notes.test.ts.raw",
+      "bytes": 18661,
+      "sha256": "97fcdccb1dd085bc6a86944b8e9ff8f7bf7c3ae5f7b919b2f53bde09c50d32e9"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-harness-originals/head-teaching-review-notes.test.ts.raw",
+      "bytes": 8089,
+      "sha256": "62d050a69320e941913523b367d4987769089db70d8c064dbd5b806d24b5a739"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-six-harness-originals/head-ct-bone-decision-form.test.ts.raw",
+      "bytes": 11846,
+      "sha256": "a8d635dc874acf3e7b328f0cbc4992a6943272c6add1770f406278af7ac9b080"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-six-harness-originals/head-ct-bone-teaching-decision-form.test.ts.raw",
+      "bytes": 12075,
+      "sha256": "4518acca04fbe4dcce5720442bb1a295e8d18df66de0996950b49fdcf73021e8"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-six-harness-originals/head-ct-facial-decision-form.test.ts.raw",
+      "bytes": 17730,
+      "sha256": "acd6042c21adeae7968a6e4a903c89031bb974b9e050f1346b5aae123d117f03"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-six-harness-originals/head-paired-decision-form.test.ts.raw",
+      "bytes": 16309,
+      "sha256": "a681f31d357ed4a9ab2ab8469c123ba95f2a3bfddbede5778ec98a84cba629c0"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-six-harness-originals/regional-guide-review-ui.test.ts.raw",
+      "bytes": 19904,
+      "sha256": "2706275af45beb11452f4a72a8adc7209af18f54c6964b38ad59b2406c3b40a3"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/fixtures/review-navigation-six-harness-originals/regional-reference-draft-ui.test.ts.raw",
+      "bytes": 19364,
+      "sha256": "60be257de429b63eb311458092417da29326f737c5b9a9779324b57c8bdcace1"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/head-ct-bone-decision-form.test.ts",
+      "bytes": 12995,
+      "sha256": "28606bdbeaf7d55a7a974c3d6d1d2c01192102c9a3fceebeb7791e851c99b08c"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/head-ct-bone-teaching-decision-form.test.ts",
+      "bytes": 13224,
+      "sha256": "824610ad0c17af829be8751c2dbfcb5d732d8ec09834829b25bd27760e7abdd7"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/head-ct-facial-decision-form.test.ts",
+      "bytes": 18879,
+      "sha256": "7e36ccf5df1ac4d8870460dfaa19d5b5e52245ae3af85e06d1d678cad5647321"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/head-mri-review-notes.test.ts",
+      "bytes": 19744,
+      "sha256": "5810ab77ec7dd5b976a692fae28611333cda975ed51c8d4d243b473e9dc5a1f3"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/head-paired-decision-form.test.ts",
+      "bytes": 17458,
+      "sha256": "017563651236c9b91e7251316290070c1782a8f5bf34d62420fb58c395db100c"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/head-teaching-review-notes.test.ts",
+      "bytes": 8231,
+      "sha256": "a1ec97c1ba80c54ee8f66d9062cff4de3f97c398cd335d525c86a18603d5e516"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/plexus-review-navigation-binding.test.mjs",
+      "bytes": 6738,
+      "sha256": "f348dd25e815fafc9f37b10fc54a37fe5b6cafe9e4e500fcedb8d2c304ef662e"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/regional-guide-review-ui.test.ts",
+      "bytes": 21025,
+      "sha256": "2df58c94c51a1944f1e5253d52d4c3bfcb5d77520fc975f9a4c14dec8ff7bcc2"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/regional-reference-draft-ui.test.ts",
+      "bytes": 20513,
+      "sha256": "87c59dc7bfab758df61a81646d95194037c44b76ad13381181232a11aa84ee18"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 1997,
+      "sha256": "a6635789e100ef4bfd70df0cd5e2c6dd4d08b72017518b7d5f5f58a615008295"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/review-navigation-harness-preservation.test.mjs",
+      "bytes": 2440,
+      "sha256": "b83a41b71f6086e6798bad15c0ade8385ab6d31b69ed9772d49b005997452238"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/candidate-website/tests/review-navigation-six-harness-preservation.test.mjs",
+      "bytes": 13442,
+      "sha256": "1af3889a15444f1f5f807ab4647d732b59b8f1fc0dc319eefe2459c3c872544f"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/controls/apply-candidate-plexus-navigation-20261021.mjs",
+      "bytes": 2308,
+      "sha256": "0acd10081bd847e48c708c0ceca824a065b927303005de2de3797744b87ddc45"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/controls/checkpoint-review-navigation-candidate-20261021.mjs",
+      "bytes": 7648,
+      "sha256": "600f2be21f0674cd05de254b1635403c0fff7bfacd97216a4e5d988f4c1b7a30"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/controls/launch-review-navigation-qa-20261021.mjs",
+      "bytes": 1945,
+      "sha256": "5bb319669dd1f5a8163284ac751f7f79c1d52e6f09031753f624c5625439beeb"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/controls/prepare-plexus-navigation-baseline-20261021.mjs",
+      "bytes": 1770,
+      "sha256": "4c0055ab5fa87635f730b9ac120f5406433e1274dfeed5a9a20d8af761f49eea"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/controls/prepare-review-navigation-candidate-20261021.mjs",
+      "bytes": 4568,
+      "sha256": "ea9df42ed110744447d78fa8f5775e9a817d537ee941e25f0e5f1c9774bc3ee3"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/controls/prepare-review-navigation-local-state-20261021.mjs",
+      "bytes": 2367,
+      "sha256": "cdb91a4262752c20d60b4c00c48be733421b2df3233092bba271aa716d945cf4"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/controls/verify-review-navigation-candidate-20261021.mjs",
+      "bytes": 9192,
+      "sha256": "a2ddeb7c04457ea5f451e24d96689d4e9f300e7b34405b1952cc3de08f889ac0"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/ATLAS_REFERENCE.json",
+      "bytes": 521,
+      "sha256": "7a3a583a00702a2f7fdb07078222968b8bc25ece1ef206b281114976a71a9a51"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/BROWSER_ACCEPTANCE.json",
+      "bytes": 1830,
+      "sha256": "332e9980ce0d8b69c4102c2d73803a946d9e09663b854d9bbee94fe5907f683d"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/EARLY_NATIVE_REFUSAL.json",
+      "bytes": 426,
+      "sha256": "04fb69e9d11ba766aaabedaf88a6f0a2b72cd07342603993370c4a8dda6a6277"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/PLEXUS_TRANSITION.json",
+      "bytes": 1248,
+      "sha256": "2adba19df2b4367847444125b2643acdf036324dbb4a99bd1eb2265ac5a24d56"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/PROOF.json",
+      "bytes": 2985,
+      "sha256": "c4b4166c2d9480166a6f3cfb3f840a0adb24bc86be217db18b0faf5cf78ab635"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/VERIFIED.json",
+      "bytes": 3850,
+      "sha256": "261ed06e810eb2a97286491033e42ecb22697abea6dc0ce4a6f4331414f06523"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/VERIFY_FAILURE-v2.json",
+      "bytes": 923,
+      "sha256": "f6b1bb65fae15b33a124c6f6f9f5f0f1663813891604d539388c3d76ac58d866"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/VERIFY_FAILURE-v3.json",
+      "bytes": 1682,
+      "sha256": "da97a551393a5440f9cec39819d8ab81160139faaf5b142f8167b426c1445126"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/VERIFY_FAILURE-v4.json",
+      "bytes": 1606,
+      "sha256": "ba53a5a6c7e8b71fe1d621d981bcd145143d076128c37a4c139cd9d89cf54c14"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/evidence/VERIFY_FAILURE.json",
+      "bytes": 447,
+      "sha256": "e9fd18de93ca17c12329a668b38d9954bfdb7605697e35e379dc8b6a1a0c73bb"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/proposals/20261021-plexus-navigation-binding-proposal.json",
+      "bytes": 6445,
+      "sha256": "08cef2e65f9944dcbf304fea3254185fa112a4f6c9f039274a4e3631b354a87a"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/proposals/20261021-review-navigation-guard-proposal.json",
+      "bytes": 6633,
+      "sha256": "77747840abdbb271588e990bb69edd47402d8bf6148b1f96cdfb2ea97155f1dd"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/proposals/20261021-review-navigation-harness-proposal.json",
+      "bytes": 3485,
+      "sha256": "755284e70e22ac3f08b3da1bd7f6958839720f22d654b377ec945c7d63a26363"
+    },
+    {
+      "path": "evidence/20261021-review-navigation-candidate-verified/proposals/20261021-review-navigation-six-harness-proposal.json",
+      "bytes": 7996,
+      "sha256": "8093633a68329d8150b927eb486c69f04093e3de721c6cd7d7f7be3083f99eaf"
+    },
+    {
       "path": "evidence/20261021-review-navigation-verified/evidence/desktop/OBSERVATION.json",
       "bytes": 1621,
       "sha256": "8b8bec5829e02db3506d2e19e93c1a9607feb473dff1a65e596e97320f74081a"
@@ -10833,71 +11176,69 @@
     }
   ],
   "removed": [],
-  "scope": "Sixteen exact test/raw paths, authentic original preimages and minimal historical witnesses, compact actual native receipts, clarification, bounded routing and reviewed admission controls only. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Verified isolated Review navigation candidate source, exact source-only test preimages, generator recipe, compact native/types/build/browser proof and prior filtered ancestry only. No private Plexus module or generated manifest, scans/masks, database, runtime/model assets, raw native/browser logs or canonical ancestry. Partial source recovery; private F-local baseline remains required for historical generator tests, not a complete or runnable backup.",
   "proof": {
-    "at": "2026-10-21T15:56:41.567Z",
+    "at": "2026-10-21T16:22:12.669Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalInstalled": true,
-    "installation": {
-      "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
-      "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
-    },
-    "currentNamedInputs": 5267,
-    "controlledSourceInputs": 5260,
-    "preservedSourcePaths": [
-      ".gitignore",
-      "docs/completion-checklist.json",
-      "docs/completion-checklist.md",
-      "public/atlas-runtime/female-pelvis/LICENSE",
-      "public/atlas-runtime/head-neck/LICENSE",
-      "public/atlas-runtime/lower-limb/LICENSE",
-      "public/atlas-runtime/shoulder/LICENSE"
-    ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "b5124ca90bfaa4c2c8ee277a86caa8cbb28a54b10cbdf54af5b55d92f17e2210",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "22ebbf09abaf0ca4aef6a5e2e172f6152289478a54e4b3c2c80538f0e6f4b2d6",
-    "reviewInputs": 1710,
-    "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 16,
-    "existingEditedTestPaths": 4,
-    "actualNativeCode": 0,
+    "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+    "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+    "reviewInputs": 1711,
+    "previousCanonicalReview": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "canonicalInstalled": false,
+    "selectedSourcePaths": 48,
     "actualNativeCounts": {
-      "tests": 56,
-      "pass": 56,
+      "tests": 131,
+      "pass": 131,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "actualNativeFailures": [],
-    "originalFullFailureBaseline": 136,
-    "originalFullSkips": 3,
-    "earlierDifferentSourceBaseline": 144,
-    "subset289_202_87Retained": true,
-    "allOtherSourceInputsAndBindingsUnchanged": true,
-    "all1553AtlasWorkingSourceBytesExact": true,
-    "all71ItemsAndEightIdeasUnchanged": true,
-    "wholeAuditBaselineUnchanged": true,
-    "milestone": "Actual nine-root56/56pass/0skip/0cancel after16exact test/witness paths. Closed53 supplies all unchanged authentic closed54/55 inputs; only proven differences use retained source-only historical witnesses or six exact Atlas46c4 Git blobs. All original validators, binding counts, source digests and refusal assertions remain. Earlier47current-drift paths were not47missing witnesses; clarification avoids unnecessary copies. Current190delivery runs independently. Original full136fail/3skip and different-source144baseline remain; bounded87-row routing now53exact-title scoped passes,9title-incomparable root passes,25unexercised, not25remaining failures or whole-suite green. No product/clinical/source-binding change. Separately, an owned temporary browser tab reproduced loss of synthetic unsaved changes-required notes on same-tab SPA workspace navigation, with autosave ineligible and no submission. A nine-form guard proposal is staged for separate UI verification; no claim of a delivered fix.",
-    "fullSuitePassingClaim": false,
-    "rawNativeLogExcludedFromBackup": true,
+    "fullTypesPassed": true,
+    "fullLocalBuildPassed": true,
+    "stockReviewVerifierPassed": true,
+    "allOriginalSourceUnchanged": true,
     "ownerPreviewPid": 266712,
-    "ownerPreviewSession": 32652,
     "ownerFormsRefreshed": false,
-    "ownerDecisionsChanged": false,
-    "previewBuildOrRestartRan": false,
-    "reviewCopyPreviewBuildPending": true,
-    "productSourceChangedByThisRepair": false,
-    "unresolvedBrowserErrorKinds": 1,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
-    "privateDataUploaded": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "fullGoalActive": true
+    "wholeSuitePassingClaim": false,
+    "fullGoalActive": true,
+    "browserAcceptancePassed": false,
+    "browserAcceptance": {
+      "at": "2026-10-21T16:21:00Z",
+      "passed": false,
+      "automationBlocked": true,
+      "candidatePort": 3003,
+      "temporaryTab": "101",
+      "ownerTabsUntouched": true,
+      "ownerPreviewRestarted": false,
+      "savedReviewsOrApprovalsSubmitted": false,
+      "patientDataUsed": false,
+      "case": "Synthetic unsaved changes-required correction; no save, check attestation, approval, export or draft autosave invoked. Same-page Private notes anchor changed the URL hash and retained the exact synthetic text. Leaving through Clinical Review triggered an Input.dispatchMouseEvent deadline. getJsDialog returned undefined; subsequent evaluation, Escape and close could not dispatch because Emulation.setFocusEmulationEnabled exceeded its deadline. Do not infer successful confirmation/cancellation, navigation or lost notes from this automation failure.",
+      "observed": {
+        "pageLoadedSignedInWithExistingPermissions": true,
+        "emptyHistoryInitially": true,
+        "autosaveIneligibleStatusSelectedBeforeTyping": true,
+        "unsavedEditsVisible": true,
+        "samePageHashNavigationRetainedText": true,
+        "leaveNavigationCompleted": false,
+        "cancelRetentionVerified": false,
+        "cleanNavigationVerified": false
+      },
+      "limits": [
+        "No browser acceptance pass claimed. Owner may need to dismiss the temporary test confirmation if visible; a concise non-blocking question was sent.",
+        "Startup connection-refused tab100 and cold-load navigation timeout101 were separate from later automation blockage. Tab101 eventually loaded and actual controls were used.",
+        "Browser Back/Forward, imperative routes and non-anchor controls are outside this click guard.",
+        "No raw DOM, screenshots, scans, private notes, records or console data included.",
+        "Native test/type/build passes are separate technical evidence, not clinical/public-release approval."
+      ],
+      "canonicalInstalled": false,
+      "publicDeployment": false
+    }
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

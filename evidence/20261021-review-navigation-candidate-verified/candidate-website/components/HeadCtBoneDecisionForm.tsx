@@ -1,0 +1,125 @@
+'use client';
+import {useEffect,useRef,useState} from 'react';
+import {clinicalReviewFetch,getClinicalReviewContext} from '../lib/clinical-review-fetch';
+import {blankCtBoneDecision,ctBoneDecisionStale,validateCtBoneDecision,type CtBoneDecision,type CtBoneDecisionContext,type SavedCtBoneDecision} from '../lib/head-ct-bone-decision-contract';
+import {confirmCtBoneSave,ctBoneSavePayload,parseCtBoneHistory,CtBoneSourceChangedError} from '../lib/head-ct-bone-decision-client';
+import {ctBoneWorkingCopy,downloadCtBoneWorkingCopy} from '../lib/head-ct-bone-working-copy';
+import './head-teaching-review-notes.css';
+import {GroupedReviewConfirmation,exactReviewChecks} from './GroupedReviewConfirmation';
+import {createReviewDraftAutosave,mayAutosaveDraft,reviewDraftStamp,reviewerFromAuthorizedHistory,rememberReviewerForContext,reviewerForContext} from '../lib/review-draft-autosave';
+import {registerClinicalReviewNavigationGuard} from '../lib/clinical-review-navigation-guard';
+
+const endpoint='/api/atlas-review/head-ct-bone';
+const stateLabel=(status:CtBoneDecision['status'])=>status==='accepted-semantic'?'Semantic comparison accepted':status==='changes-required'?'Corrections requested':'Draft';
+async function checkedResponse(response:Response){
+  const value:unknown=await response.json();
+  if(!response.ok)throw Error(value&&typeof value==='object'&&'error'in value&&typeof value.error==='string'?value.error:'Request failed. Keep your edits.');
+  return value;
+}
+export function HeadCtBoneDecisionForm({context}:{context:CtBoneDecisionContext}){
+  const [draft,setDraft]=useState(()=>blankCtBoneDecision(context)),[history,setHistory]=useState<SavedCtBoneDecision[]>([]),[nextBefore,setNextBefore]=useState<number|null>(null);
+  const [version,setVersion]=useState(0),[latest,setLatest]=useState(0),[loaded,setLoaded]=useState(false),[busy,setBusy]=useState(false),[dirty,setDirty]=useState(false);
+  const [uncertain,setUncertain]=useState(false),[reloadRequired,setReloadRequired]=useState(false),[historyReady,setHistoryReady]=useState(false),[discard,setDiscard]=useState(false);
+  const [message,setMessage]=useState('Loading your private comparison history…'),[error,setError]=useState(false),[downloadMessage,setDownloadMessage]=useState('');
+  const active=useRef(true),inFlight=useRef(false),hasLoaded=useRef(false),generation=useRef(0),confirmedHistory=useRef(false),dirtyRef=useRef(false),baseline=useRef(blankCtBoneDecision(context));
+  const autosave=useRef(createReviewDraftAutosave()),autosaveStamp=useRef(''),autosaveAllowed=useRef(false);
+  const sourceKey=reviewDraftStamp(context,0,null),sourceAtMount=useRef(sourceKey);
+  const titleId='ct-decision-title-'+context.conceptId;
+  const heading=useRef<HTMLHeadingElement>(null);
+  const alive=(ticket:number)=>active.current&&ticket===generation.current;
+  useEffect(()=>{active.current=true;return()=>{autosave.current.cancel();active.current=false;generation.current++;inFlight.current=false;};},[]);
+  useEffect(()=>{if(sourceKey!==sourceAtMount.current){autosave.current.cancel();setReloadRequired(true);}},[sourceKey]);
+  useEffect(()=>{heading.current?.focus();},[]);
+  useEffect(()=>{if(!dirty)return;const warn=(e:BeforeUnloadEvent)=>{e.preventDefault();e.returnValue='';};window.addEventListener('beforeunload',warn);const unregister=registerClinicalReviewNavigationGuard(document,()=>true);return()=>{window.removeEventListener('beforeunload',warn);unregister();};},[dirty]);
+  const status=(text:string,failed=false)=>{setMessage(text);setError(failed);};
+  const ready=(value:boolean)=>{confirmedHistory.current=value;setHistoryReady(value);};
+  async function load(before?:number){
+    autosave.current.cancel();
+    if(inFlight.current)return;const ticket=generation.current;inFlight.current=true;setBusy(true);if(before===undefined)ready(false);
+    try{
+      const params=new URLSearchParams({concept:context.conceptId});if(before!==undefined)params.set('before',String(before));
+      const response=await clinicalReviewFetch(endpoint+'?'+params,{cache:'no-store'});if(!alive(ticket))return;
+      if([401,403,409].includes(response.status))setReloadRequired(true);
+      const value=parseCtBoneHistory(await checkedResponse(response),context,before);if(!alive(ticket))return;
+      setHistory(previous=>before===undefined?value.history:[...previous,...value.history]);setNextBefore(value.nextBefore);
+      if(before===undefined){const newest=value.history[0]?.version??0;setLatest(newest);setLoaded(true);ready(true);
+        if(!hasLoaded.current){setVersion(newest);hasLoaded.current=true;setUncertain(false);
+          const current=value.history[0],token=getClinicalReviewContext();const profile=reviewerFromAuthorizedHistory(current?.decision??null,!!current&&!ctBoneDecisionStale(current,context),dirtyRef.current);if(profile)rememberReviewerForContext(token,profile);const remembered=profile??reviewerForContext(token);if(remembered&&!dirtyRef.current)setDraft(previous=>({...previous,reviewer:previous.reviewer||remembered.reviewer,qualification:previous.qualification||remembered.qualification}));}
+        status(dirtyRef.current?'History refreshed; unsaved edits are unchanged. Compare before discarding or starting again.':newest?'History loaded. Explicitly load a current entry or start a fresh draft.':'No saved decision yet. Your first save creates version 1.');}
+    }catch(caught){if(alive(ticket)){ready(false);setUncertain(true);if(caught instanceof CtBoneSourceChangedError)setReloadRequired(true);status(caught instanceof Error?caught.message:'History unavailable. Keep your edits.',true);}}
+    finally{if(alive(ticket)){inFlight.current=false;setBusy(false);}}
+  }
+  useEffect(()=>{void load();},[]); // GET only. POST is explicit, with no automatic retry.
+  function edit(change:Partial<CtBoneDecision>){
+    autosave.current.cancel();
+    // Any edit invalidates a previous acceptance attestation until explicitly rechecked.
+    setDraft(previous=>({...previous,...change,attested:change.attested===true}));dirtyRef.current=true;setDirty(true);setDiscard(false);
+  }
+  function replace(record?:SavedCtBoneDecision){
+    autosave.current.cancel();
+    if(dirtyRef.current||busy||!loaded||reloadRequired||!confirmedHistory.current||record&&ctBoneDecisionStale(record,context))return;
+    // Loading an old accepted entry never silently re-attests it.
+    const next=record?{...validateCtBoneDecision(record.decision,context),attested:false}:blankCtBoneDecision(context);
+    setDraft(next);baseline.current=next;setVersion(latest);setUncertain(false);
+    status(record?`Loaded version ${record.version} against latest version ${latest}. Acceptance must be attested again before saving.`:'Started a fresh draft. Saved history is preserved.');
+  }
+  async function save(automatic=false){
+    autosave.current.cancel();
+    if(sourceKey!==sourceAtMount.current)return;
+    if(automatic&&(!dirtyRef.current||draft.status!=='draft'||draft.attested))return;
+    if(inFlight.current||!loaded||uncertain||reloadRequired||!confirmedHistory.current||version!==latest)return;
+    let payload;try{payload=ctBoneSavePayload(context,version,draft);}catch(caught){status(caught instanceof Error?caught.message:'Check your review.',true);return;}
+    const ticket=generation.current;inFlight.current=true;setBusy(true);ready(false);
+    try{
+      const response=await clinicalReviewFetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});if(!alive(ticket))return;
+      if([401,403].includes(response.status))setReloadRequired(true);
+      const saved=confirmCtBoneSave(await checkedResponse(response),context,version,payload.decision);if(!alive(ticket))return;
+      rememberReviewerForContext(getClinicalReviewContext(),saved.decision);
+      setHistory(previous=>[saved,...previous]);setVersion(saved.version);setLatest(saved.version);setDraft(saved.decision);baseline.current=saved.decision;
+      dirtyRef.current=false;setDirty(false);setDiscard(false);setUncertain(false);ready(true);status(`Saved private comparison version ${saved.version}. ${stateLabel(saved.decision.status)}; no clinical or publication approval.`);
+    }catch(caught){if(alive(ticket)){setUncertain(true);status(caught instanceof Error?caught.message:'Save unconfirmed. Preserve edits and compare history.',true);}}
+    finally{if(alive(ticket)){inFlight.current=false;setBusy(false);}}
+  }
+  const autoStamp=reviewDraftStamp(context,version,draft);
+  autosaveStamp.current=autoStamp;
+  const autoReady=mayAutosaveDraft({status:draft.status,attested:draft.attested,dirty,loaded,currentHistory:historyReady&&version===latest&&sourceKey===sourceAtMount.current,busy,uncertain,reloadRequired});
+  autosaveAllowed.current=autoReady&&!discard;
+  useEffect(()=>{
+    if(!autoReady||discard)return()=>autosave.current.cancel();
+    autosave.current.schedule(autoStamp,expected=>active.current&&autosaveAllowed.current&&autosaveStamp.current===expected&&!inFlight.current,()=>{void save(true);});
+    return()=>autosave.current.cancel();
+  },[autoStamp,autoReady,discard]);
+  function downloadWorkingCopy(){
+    try{downloadCtBoneWorkingCopy(ctBoneWorkingCopy(context,draft,{baseVersion:loaded?version:null,unsavedChanges:dirty,saveUncertain:uncertain||busy,reloadRequired}));setDownloadMessage('Working-copy download requested. Confirm the file was saved and keep it private. Server-save status is unchanged.');}
+    catch{setDownloadMessage('Download could not be started. Keep this page open and copy your notes before leaving.');}
+  }
+  return <section className="head-review-notes" aria-labelledby={titleId}>
+    <h3 id={titleId} ref={heading} tabIndex={-1}>Private CT comparison review</h3>
+    <p>For <code>{context.conceptId}</code> only, saved to your account and institution. Semantic acceptance does not approve geometry, diagnosis, teaching, publication or patient-space registration. Credentials are self-reported. Do not enter patient data.</p>
+    <p className="head-review-message" role={error?'alert':'status'} aria-live="polite">{message}</p>
+    <form onSubmit={event=>{event.preventDefault();void save();}}>
+      <fieldset disabled={busy||!loaded}><legend>Review this comparison</legend>
+        <div className="head-review-fields">
+          <label>Reviewer name (self-reported)<input value={draft.reviewer} maxLength={160} onChange={e=>edit({reviewer:e.target.value})}/></label>
+          <label>Qualification (self-reported)<input value={draft.qualification} maxLength={160} onChange={e=>edit({qualification:e.target.value})}/></label>
+          <label>Status<select value={draft.status} onChange={e=>edit({status:e.target.value as CtBoneDecision['status']})}><option value="draft">Draft notes</option><option value="changes-required">Corrections requested</option><option value="accepted-semantic">Accept semantic comparison only</option></select></label>
+        </div>
+        <label className="head-review-notes-field">Notes / requested corrections<textarea value={draft.notes} rows={4} maxLength={8000} placeholder="Describe the exact correction; correction requests need at least 10 characters." onChange={e=>edit({notes:e.target.value})}/></label>
+        {draft.status==='accepted-semantic'&&<GroupedReviewConfirmation criteria={context.checklist} attestation={context.attestation} summary="Comparison criteria" checked={draft.attested&&context.checklist.every(check=>draft.checks[check.id]===true)} onChange={confirmed=>edit({checks:exactReviewChecks(context.checklist,confirmed),attested:confirmed})}/>}
+        <div className="head-review-actions"><button type="submit" disabled={uncertain||reloadRequired||!historyReady||version!==latest}>Save private {draft.status==='changes-required'?'correction request':draft.status==='accepted-semantic'?'semantic decision':'draft'}</button><span>{dirty?'Unsaved edits':`Editing from version ${version}`}</span></div>
+      </fieldset>
+    </form>
+    <details><summary>Exact review revisions</summary><dl><dt>Head source</dt><dd><code>{context.headRevision}</code></dd><dt>Comparison</dt><dd><code>{context.comparisonRevision}</code></dd><dt>Checklist</dt><dd>{context.checklistVersion}</dd></dl></details>
+    {downloadMessage&&<p role="status" aria-live="polite">{downloadMessage}</p>}
+    <div className="head-review-actions"><button type="button" onClick={downloadWorkingCopy}>Download working copy</button><button type="button" disabled={busy} onClick={()=>void load()}>Refresh saved history</button><button type="button" disabled={busy||!loaded||dirty||reloadRequired||!historyReady} onClick={()=>replace()}>Start fresh draft</button>{dirty&&<button type="button" disabled={busy} onClick={()=>{autosave.current.cancel();setDiscard(true);}}>Discard unsaved edits…</button>}</div>
+    {discard&&<div className="head-review-discard"><p>Discard only unsaved form edits? Saved history stays intact. Copy any text you want to keep first.</p><button type="button" disabled={busy} onClick={()=>{setDraft(baseline.current);dirtyRef.current=false;setDirty(false);setDiscard(false);status('Unsaved edits discarded. Refresh history, then explicitly load an entry or start fresh.');}}>Confirm discard</button> <button type="button" onClick={()=>setDiscard(false)}>Keep editing</button></div>}
+    {uncertain&&<p>Saving is locked. Refresh and compare history, preserve your text, then explicitly load a current entry or start fresh. Failed saves are never retried automatically.</p>}
+    {reloadRequired&&<p role="alert">The source or authorized session changed. Export unsaved notes, then reload. Refreshing history cannot unlock saving.</p>}
+    <details className="head-review-history"><summary>Saved history · {history.length} loaded</summary>
+      {history.length===0?<p>No history loaded.</p>:<ol>{history.map(record=>{const stale=ctBoneDecisionStale(record,context);return <li key={record.version}>
+        <div className="head-review-actions"><strong>Version {record.version} · {stateLabel(record.decision.status)}</strong><time dateTime={record.savedAt}>{record.savedAt}</time><span>{stale?'Historical source — cannot resume':record.version===latest?'Latest saved version':'Superseded version'}</span>{!stale&&<button type="button" disabled={busy||dirty||reloadRequired||!historyReady} onClick={()=>replace(record)}>Load version {record.version}</button>}</div>
+        <p>{record.decision.reviewer||'No self-reported name'} · {record.decision.qualification||'No qualification supplied'}</p><p className="head-review-preserve">{record.decision.notes||'No notes supplied.'}</p><details><summary>Exact saved evidence</summary><pre>{JSON.stringify(record,null,2)}</pre></details>
+      </li>;})}</ol>}{nextBefore!==null&&<button type="button" disabled={busy} onClick={()=>void load(nextBefore)}>Load older history</button>}
+    </details>
+  </section>;
+}

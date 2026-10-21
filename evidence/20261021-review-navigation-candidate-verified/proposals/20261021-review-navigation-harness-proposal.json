@@ -1,0 +1,76 @@
+{
+  "schema": "visible-medicine.stage-only-test-proposal/1",
+  "started": "2026-10-21T16:06:18.780Z",
+  "finished": "2026-10-21T16:06:20.126Z",
+  "canonicalInstalled": false,
+  "candidateEdited": false,
+  "stage": "F:/VisibleMedicine/staging/20261021-review-navigation-harness-proposal",
+  "proposalRoot": "F:\\VisibleMedicine\\staging\\20261021-review-navigation-harness-proposal\\proposal",
+  "canonicalHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "files": [
+    {
+      "path": "tests/fixtures/review-navigation-harness-originals/head-mri-review-notes.test.ts.raw",
+      "preimageSha256": null,
+      "proposedSha256": "97fcdccb1dd085bc6a86944b8e9ff8f7bf7c3ae5f7b919b2f53bde09c50d32e9"
+    },
+    {
+      "path": "tests/fixtures/review-navigation-harness-originals/head-teaching-review-notes.test.ts.raw",
+      "preimageSha256": null,
+      "proposedSha256": "62d050a69320e941913523b367d4987769089db70d8c064dbd5b806d24b5a739"
+    },
+    {
+      "path": "tests/head-mri-review-notes.test.ts",
+      "preimageSha256": "97fcdccb1dd085bc6a86944b8e9ff8f7bf7c3ae5f7b919b2f53bde09c50d32e9",
+      "proposedSha256": "5810ab77ec7dd5b976a692fae28611333cda975ed51c8d4d243b473e9dc5a1f3"
+    },
+    {
+      "path": "tests/head-teaching-review-notes.test.ts",
+      "preimageSha256": "62d050a69320e941913523b367d4987769089db70d8c064dbd5b806d24b5a739",
+      "proposedSha256": "a1ec97c1ba80c54ee8f66d9062cff4de3f97c398cd335d525c86a18603d5e516"
+    },
+    {
+      "path": "tests/review-navigation-harness-preservation.test.mjs",
+      "preimageSha256": null,
+      "proposedSha256": "b83a41b71f6086e6798bad15c0ade8385ab6d31b69ed9772d49b005997452238"
+    }
+  ],
+  "verification": {
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "--experimental-strip-types",
+      "--test",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/head-teaching-review-notes.test.ts",
+      "tests/head-mri-review-notes.test.ts",
+      "tests/clinical-review-navigation-guard.test.ts",
+      "tests/review-navigation-harness-preservation.test.mjs"
+    ],
+    "cwd": "F:\\VisibleMedicine\\staging\\20261021-review-navigation-harness-proposal\\source-only-harness",
+    "exitCode": 0,
+    "error": null,
+    "counts": {
+      "tests": 18,
+      "pass": 18,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "log": "F:\\VisibleMedicine\\staging\\20261021-review-navigation-harness-proposal\\native.log",
+    "logSha256": "47420c90c968b5f20262d652faf17055724f4d9fe76202ed28be0da7126edaba"
+  },
+  "preservation": {
+    "seams": "F:\\VisibleMedicine\\staging\\20261021-review-navigation-harness-proposal\\SEAMS.json",
+    "seamsSha256": "4de63ea5d4a1398bd3142c880a16558b4fe6eb4b50cbdee5abe37aed65852095",
+    "wholeOriginalBodiesRecovered": true,
+    "rawOriginalsByteExact": true
+  },
+  "limits": [
+    "Only the two affected native roots, real guard root, and new preservation root executed in a disposable source-only harness.",
+    "Real candidate helper imported through ESM and mapped into each transpiled CommonJS resolver.",
+    "MRI synthetic document enforces click/capture listener add/remove and cleanup; it does not dispatch synthetic navigation. Real helper navigation behavior is covered by the existing guard root.",
+    "No full native suite, types, build, browser, deployment, clinical or spatial approval claim.",
+    "Main original native result 26 tests / 17 pass / 9 fail remains separate regression evidence."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "commands": [
+    {
+      "args": [
+        "scripts/bind-clinical-review.mjs"
+      ],
+      "at": "2026-10-21T15:59:18.611Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 1463
+    },
+    {
+      "args": [
+        "scripts/build-clinical-review-viewer.mjs"
+      ],
+      "at": "2026-10-21T15:59:20.075Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 16692
+    },
+    {
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "at": "2026-10-21T15:59:36.767Z",
+      "code": 1,
+      "signal": null,
+      "durationMs": 2269
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: scripts/verify-clinical-review.mjs\n\n1 !== 0\n",
+  "log": "F:/VisibleMedicine/staging/20261021-review-navigation-ui-candidate/VERIFY-v2.log",
+  "logSha256": "397f6fa8140e811b8f29577577280d39ae2b54d0bb47655c19b534b3a8033801",
+  "canonicalInstalled": false,
+  "ownerPreviewUnchanged": true
+}

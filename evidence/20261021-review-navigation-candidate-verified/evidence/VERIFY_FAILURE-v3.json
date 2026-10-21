@@ -1,0 +1,38 @@
+{
+  "commands": [
+    {
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "at": "2026-10-21T16:07:22.759Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 1447
+    },
+    {
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-concurrency=1",
+        "tests/clinical-review-navigation-guard.test.ts",
+        "tests/clinical-review-navigation-preservation.test.mjs",
+        "tests/review-draft-autosave.test.mjs",
+        "tests/head-teaching-review-notes.test.ts",
+        "tests/head-mri-review-notes.test.ts",
+        "tests/head-review-working-copy.test.ts",
+        "tests/current-atlas-delivery.test.mjs",
+        "tests/plexus-review-navigation-binding.test.mjs",
+        "tests/review-navigation-harness-preservation.test.mjs"
+      ],
+      "at": "2026-10-21T16:07:24.234Z",
+      "code": 1,
+      "signal": null,
+      "durationMs": 5421
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: --test --experimental-strip-types --test-concurrency=1 tests/clinical-review-navigation-guard.test.ts tests/clinical-review-navigation-preservation.test.mjs tests/review-draft-autosave.test.mjs tests/head-teaching-review-notes.test.ts tests/head-mri-review-notes.test.ts tests/head-review-working-copy.test.ts tests/current-atlas-delivery.test.mjs tests/plexus-review-navigation-binding.test.mjs tests/review-navigation-harness-preservation.test.mjs\n\n1 !== 0\n",
+  "log": "F:/VisibleMedicine/staging/20261021-review-navigation-ui-candidate/VERIFY-v3.log",
+  "logSha256": "0aab3b8f62ee2298edff1d3348b75f809e8477dd00fc380dd5474ad193f86981",
+  "canonicalInstalled": false,
+  "ownerPreviewUnchanged": true
+}

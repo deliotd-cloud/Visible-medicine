@@ -1,0 +1,17 @@
+{
+  "commands": [
+    {
+      "args": [
+        "scripts/bind-clinical-review.mjs"
+      ],
+      "at": "2026-10-21T15:58:26.533Z",
+      "code": 1,
+      "signal": null,
+      "durationMs": 1535
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: scripts/bind-clinical-review.mjs\n\n1 !== 0\n",
+  "logSha256": "a262015b8150b0700e9f6a668faa1c9446c5b7e3cc35955cb7ba196efc6613fe",
+  "canonicalInstalled": false,
+  "ownerPreviewUnchanged": true
+}

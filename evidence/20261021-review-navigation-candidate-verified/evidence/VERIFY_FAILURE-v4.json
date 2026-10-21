@@ -1,0 +1,51 @@
+{
+  "commands": [
+    {
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "at": "2026-10-21T16:08:35.105Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 1662
+    },
+    {
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-concurrency=1",
+        "tests/clinical-review-navigation-guard.test.ts",
+        "tests/clinical-review-navigation-preservation.test.mjs",
+        "tests/review-draft-autosave.test.mjs",
+        "tests/head-teaching-review-notes.test.ts",
+        "tests/head-mri-review-notes.test.ts",
+        "tests/head-review-working-copy.test.ts",
+        "tests/current-atlas-delivery.test.mjs",
+        "tests/plexus-review-navigation-binding.test.mjs",
+        "tests/review-navigation-harness-preservation.test.mjs",
+        "tests/review-navigation-delivery-preservation.test.mjs"
+      ],
+      "at": "2026-10-21T16:08:36.793Z",
+      "code": 0,
+      "signal": null,
+      "durationMs": 5487
+    },
+    {
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "at": "2026-10-21T16:08:42.280Z",
+      "code": 2,
+      "signal": null,
+      "durationMs": 42446
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: node_modules/typescript/bin/tsc --noEmit --incremental false\n\n2 !== 0\n",
+  "log": "F:/VisibleMedicine/staging/20261021-review-navigation-ui-candidate/VERIFY-v4.log",
+  "logSha256": "39c4d7044a85bc5a8b52fd420741f3c13a35f857ffbc434f4ececefa080038f3",
+  "canonicalInstalled": false,
+  "ownerPreviewUnchanged": true
+}
