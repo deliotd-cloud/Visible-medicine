@@ -1,0 +1,26 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-keyboard-epoch-native-proof-v2",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "harness": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check",
+  "contracts": [
+    {
+      "path": "tests/atlas-keyboard-modules.test.ts",
+      "beforeSha256": "c51ddcb68911a77154846e14459e666b1c2199dc466feda3d4c497b4fbf3275c",
+      "sha256": "6988cd068f47729143dffa7ff33f16db9293d78c098a54ca9961821485e9fa70"
+    },
+    {
+      "path": "tests/atlas-label-keyboard.test.ts",
+      "beforeSha256": "17aaee37c397e5660a77842f881a773651c239aa0025be9740feee2d4618c2a5",
+      "sha256": "3c96b803580556775d34863291a0043f233c1e663be93dcc4d65a50230269f19"
+    }
+  ],
+  "namedInputs": 5107,
+  "reviewInputs": 1710,
+  "candidateChanged": false,
+  "scope": "Two lightweight native Node/FS/Git source/export test modules only; no build, database, model payload or broad validator. Not whole-suite acceptance.",
+  "priorFailure": "F:/VisibleMedicine/staging/20261021-keyboard-epoch-native-proof/KEYBOARD_CURRENT_HISTORY.json",
+  "priorFailureLogSha256": "c282d57e3c187a8acd877df001f98f203585448ef68dfc796a6ea95f7ec3054e",
+  "change": "Keep original historical combined guard and check the actual ordered current enabled/zoom/rotation guards separately. Only a native harness copy changed; candidate remains frozen."
+}

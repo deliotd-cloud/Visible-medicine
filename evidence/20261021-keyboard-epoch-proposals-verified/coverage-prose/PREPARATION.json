@@ -1,0 +1,38 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-coverage-prose-merge",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "target": "F:/VisibleMedicine/website/docs/anatomy-coverage/README.md",
+  "beforeSha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39",
+  "candidateBeforeSha256": "e1ed5267f1d8903173948fa67befea4b65fa36d0f48166bb75671a0a970388f8",
+  "proposedSha256": "4a9578c06d6a6733a3b07cc2d61562357548c45fb5008bc3ca4c711c9d2775ef",
+  "normalizedProposal": true,
+  "canonicalHistoricalProseExactlyPreserved": true,
+  "imported": 142,
+  "metadata": 26,
+  "dependencies": 168,
+  "sourceArtifacts": [
+    {
+      "scope": "root",
+      "path": "docs/anatomy-coverage/root.json",
+      "sha256": "00b01e9a701c01d8efbf544be05ccdc88d84ad4c20e8e2d7e6e8fd9ecd1ca5c1"
+    },
+    {
+      "scope": "nested",
+      "path": "docs/anatomy-coverage/nested.json",
+      "sha256": "ca6065b5efc7468a46e6194066229cf358948e48a5794554b100f769355d524d"
+    },
+    {
+      "scope": "independent",
+      "path": "docs/anatomy-coverage/independent.json",
+      "sha256": "801b972b74415a62eac521028fb2305ce0176a8324cc847a34621e6463adc66b"
+    },
+    {
+      "scope": "reference",
+      "path": "docs/anatomy-coverage/reference.json",
+      "sha256": "b32ea543f12479402186b669979f459507bcc1be75c141414ba2134410b66700"
+    }
+  ],
+  "proposalOnly": true,
+  "canonicalInstalled": false,
+  "requiredGate": "Do not admit until the coherent source190 local runtime/Review/coverage cutover; guard the exact canonical preimage again."
+}

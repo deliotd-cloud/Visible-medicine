@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {read,json,sha} from './source-only-backup-20261019.mjs';
+const previous='F:/VisibleMedicine/staging/20261021-keyboard-epoch-native-proof';
+const prep=json(previous+'/PREPARATION.json'),prior=json(previous+'/KEYBOARD_CURRENT_HISTORY.json');
+assert.equal(prior.code,1);assert.equal(sha(read(prior.log)),prior.logSha256);
+assert(prior.footer.includes('ℹ pass 2')&&prior.footer.includes('ℹ fail 4'));
+const stage='F:/VisibleMedicine/staging/20261021-keyboard-epoch-native-proof-v2';
+const from='F:/VisibleMedicine/staging/20261021-keyboard-epoch-proposal/v2/tests/atlas-keyboard-modules.test.ts';
+const next='6988cd068f47729143dffa7ff33f16db9293d78c098a54ca9961821485e9fa70';
+for(const row of json('F:/VisibleMedicine/staging/20261021-source190-complete-suite/SOURCE_INPUTS.json'))assert.equal(sha(read(prep.site+'/'+row.path)),row.sha256,row.path);
+const target=prep.harness+'/tests/atlas-keyboard-modules.test.ts';
+assert.equal(sha(read(target)),prep.contracts[0].sha256);assert.equal(sha(read(from)),next);
+assert.equal(sha(read(prep.harness+'/tests/atlas-label-keyboard.test.ts')),prep.contracts[1].sha256);
+assert(!fs.existsSync(stage));fs.mkdirSync(stage);fs.copyFileSync(target,stage+'/harness-v1.raw',fs.constants.COPYFILE_EXCL);
+fs.copyFileSync(from,target);assert.equal(sha(read(target)),next);
+const result={...prep,stage,contracts:prep.contracts.map((row,i)=>i===0?{...row,sha256:next}:row),priorFailure:previous+'/KEYBOARD_CURRENT_HISTORY.json',priorFailureLogSha256:prior.logSha256,change:'Keep original historical combined guard and check the actual ordered current enabled/zoom/rotation guards separately. Only a native harness copy changed; candidate remains frozen.'};
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));

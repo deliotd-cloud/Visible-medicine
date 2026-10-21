@@ -1,0 +1,23 @@
+{
+  "label": "KEYBOARD_CURRENT_HISTORY_V2",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-keyboard-modules.test.ts",
+    "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-label-keyboard.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-keyboard-epoch-native-proof-v2/KEYBOARD_CURRENT_HISTORY_V2.log",
+  "logSha256": "a5b4be55ce404061d7194a2280ed4c07fb2be98135949eef2b14e706b315bbf5",
+  "footer": [
+    "ℹ tests 6",
+    "ℹ pass 6",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

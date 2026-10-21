@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T06:33:10.136Z",
+  "at": "2026-10-21T06:53:33.279Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "websiteInputCount": 5107,
     "proposalOnly": true
   },
-  "parent": "fd431cc1ea72be76d57fa74c9337252636047a0e",
-  "gitParent": "fd431cc1ea72be76d57fa74c9337252636047a0e",
+  "parent": "dedae72693175b5fda9c01d87642392a736730be",
+  "gitParent": "dedae72693175b5fda9c01d87642392a736730be",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2809,6 +2809,116 @@
       "path": "evidence/20261021-hip-history-guard-proposal/WRAPPER_PROPOSAL.json",
       "bytes": 3014,
       "sha256": "de0c3c7c341310ea5d57b2e29d6052f47b76467623f8a9ec826e663c925a0766"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/coverage-prose/candidate-before.raw",
+      "bytes": 5901,
+      "sha256": "e1ed5267f1d8903173948fa67befea4b65fa36d0f48166bb75671a0a970388f8"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/coverage-prose/canonical-before.raw",
+      "bytes": 4852,
+      "sha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/coverage-prose/PREPARATION.json",
+      "bytes": 1541,
+      "sha256": "c9509fe33c335fecef9d03da0a90b731bcfebdd365b394611944dc318385618a"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/coverage-prose/README.md",
+      "bytes": 6088,
+      "sha256": "4a9578c06d6a6733a3b07cc2d61562357548c45fb5008bc3ca4c711c9d2775ef"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/evidence/20261021-keyboard-epoch-native-proof-v2/KEYBOARD_CURRENT_HISTORY_V2.json",
+      "bytes": 756,
+      "sha256": "7fb3814bc2d4c1dbe3122e911839147ec868c77b29669e38fd2cfcf178d5fceb"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/evidence/20261021-keyboard-epoch-native-proof-v2/PREPARATION.json",
+      "bytes": 1520,
+      "sha256": "923a6c2efe1374e659fed331a06181cafa5cfbee92c4b5650e36158ff908d543"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/evidence/20261021-keyboard-epoch-native-proof/KEYBOARD_CURRENT_HISTORY.json",
+      "bytes": 747,
+      "sha256": "9e8890f9ad97b590d2e63da74dff205c0952fb9c5562e966ec6014c6c23e87c8"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/evidence/20261021-keyboard-epoch-native-proof/PREPARATION.json",
+      "bytes": 1112,
+      "sha256": "21dcbb6a00733850d2bea92be4bde764e50375478ae49304529ecc2e1a50b0f1"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/evidence/BATCH_V3.json",
+      "bytes": 7697,
+      "sha256": "39a27bf0f4849062fa57bc3846186a746ff227a78ad2732ba44273195e97f682"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/evidence/KEYBOARD_HANDOFF_V2.md",
+      "bytes": 3130,
+      "sha256": "408c103d8745fff3ce24975b4d48233312c04a89362f1287ba48c1143f4f1a78"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/evidence/NATIVE_COST_AUDIT.md",
+      "bytes": 3325,
+      "sha256": "22d92f7a66496b4d23eb3ce1e97fcc315f2bd12a609503c3528f3d14f642f5b8"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/evidence/PROOF.json",
+      "bytes": 1935,
+      "sha256": "edf55cbbf6e9aef430d0208d0593c9cb1f389865a9f3b78161f2f853cb8e59fc"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/preimages/tests/atlas-keyboard-modules.test.ts",
+      "bytes": 4740,
+      "sha256": "c51ddcb68911a77154846e14459e666b1c2199dc466feda3d4c497b4fbf3275c"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/preimages/tests/atlas-label-keyboard.test.ts",
+      "bytes": 4979,
+      "sha256": "17aaee37c397e5660a77842f881a773651c239aa0025be9740feee2d4618c2a5"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/proposed-website/tests/atlas-keyboard-modules.test.ts",
+      "bytes": 7003,
+      "sha256": "6988cd068f47729143dffa7ff33f16db9293d78c098a54ca9961821485e9fa70"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/proposed-website/tests/atlas-label-keyboard.test.ts",
+      "bytes": 5368,
+      "sha256": "3c96b803580556775d34863291a0043f233c1e663be93dcc4d65a50230269f19"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/scripts/admit-revision-guard-batch-20261021.mjs",
+      "bytes": 3446,
+      "sha256": "3d2e60a53cd0c0ef49e36263646846aff0e42d6a45b515649d0a4187895af698"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/scripts/checkpoint-keyboard-epoch-proposals-20261021.mjs",
+      "bytes": 8702,
+      "sha256": "b3bab1ca8c4e83aee7fa1e71aa47c998318ca24cddac5693318ebe8ca3d94caa"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/scripts/prepare-coverage-prose-merge-20261021.mjs",
+      "bytes": 4019,
+      "sha256": "e69df46de91ac481a6d962b512ccbb09ae15c8d9d572580b91a364038fef29c4"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/scripts/prepare-keyboard-native-proof-20261021.mjs",
+      "bytes": 2459,
+      "sha256": "d378e2e677b33de9d087d60ecccf33a8a0b37921653fa58ae16e0ade2755aea0"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/scripts/prepare-keyboard-native-proof-v2-20261021.mjs",
+      "bytes": 1890,
+      "sha256": "37651bb27f0b65ca04e7ebeff4438981e746ca773707ee4e744f73cad68dde78"
+    },
+    {
+      "path": "evidence/20261021-keyboard-epoch-proposals-verified/scripts/prepare-revision-guard-batch-v3-20261021.mjs",
+      "bytes": 6267,
+      "sha256": "4c521239ab27d56f81d112c4d17cad20eb5e52bca1d86e4d274cc5621ee0730a"
     },
     {
       "path": "evidence/20261021-keyboard-zoom-proposal/checkpoint-keyboard-zoom-20261021.mjs",
@@ -5827,40 +5937,51 @@
     }
   ],
   "removed": [],
-  "scope": "Six proposed owned test/immutable-original-fixture sources, four exact current test preimages and small explicit proof/control/read-only-cutover metadata on previously filtered ancestry. Proposals NOT installed; fresh types and whole-suite terminal still needed. No scans, masks, private identities/decisions/DB/env, private modules/full manifests, model geometry/full runtimes/dist/dependencies, raw canonical Git ancestry or browser media/DOM. Retained test harness junctions are NOT copied or packaged. Not a complete runnable or private-data backup, public release or clinical/spatial approval.",
+  "scope": "Two additional owned test-source proposals and exact preimages, source190 prose merge preserving all canonical historical text, eight-path batch proof, native test receipts and small explicit controls/read-only cost audit on previously filtered ancestry. NOT installed. No private records/DB/env/scans/masks, model geometry/full runtimes/private modules/full manifests, raw canonical ancestry, dependencies, browser media or DOM. Harness junctions are never packaged. Not a complete runnable/private backup, public release or clinical/spatial approval.",
   "proof": {
-    "at": "2026-10-21T06:33:04.178Z",
+    "at": "2026-10-21T06:53:27.877Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "currentWebsiteInputs": 5107,
-    "proposedWebsiteInputs": 5109,
-    "changes": {
-      "existing": 4,
-      "added": 2
-    },
-    "boundedNativeRegistrationsPassed": 9,
-    "boundedNativeSkipped": 0,
+    "namedInputs": 5107,
+    "proposedNamedInputs": 5109,
+    "reviewInputs": 1710,
+    "testOnlyPaths": 8,
+    "existingTestChanges": 6,
+    "newCurrentTestOrOriginalFixturePaths": 2,
+    "boundedNativeRegistrationsPassed": 15,
     "originalHistoricalChildTestsPassed": 4,
-    "countingNote": "Nine outer registrations across four bounded native runs; one wrapper strictly verifies four unchanged original child tests. Distinct units, not one full-suite count.",
-    "sourcePrefixAndWholeInverses": true,
-    "all1710ReviewInputsPreserved": true,
-    "candidateEdited": false,
-    "canonicalInstalled": false,
-    "freshTypesRequiredBeforeCutover": true,
-    "fullSuiteStillRequiresActualTerminalReceipt": true,
+    "countingNote": "Fifteen outer native registrations across five separate successful runs; one wrapper additionally proves four unchanged historical children. Not a single post-fix whole-suite result. First six-case keyboard proposal failed4/passed2 and is retained.",
+    "completeOriginalKeyboardSourcesReconstructed": true,
+    "proseMerge": {
+      "proposalOnly": true,
+      "exactCanonicalHistoricalTextRetained": true,
+      "preimageSha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39",
+      "proposedSha256": "4a9578c06d6a6733a3b07cc2d61562357548c45fb5008bc3ca4c711c9d2775ef",
+      "required": "Apply only as part of source190 runtime/Review/coverage cutover, not before"
+    },
+    "nativeEfficiency": {
+      "readOnlyAuditOnly": true,
+      "benchmarkPerformed": false,
+      "speedupClaim": false,
+      "proposal": "Measure repeated per-file historical/current bundle transforms before adopting in-process byte reuse; preserve fresh module state and all assertions."
+    },
     "originalFullFailureBaseline": 144,
-    "wholeSuitePassingClaim": false,
-    "privateDataUploaded": false,
+    "fullSuiteRunningAtObservation": true,
+    "fullSuiteSession": 37113,
+    "runnerPid": 263984,
+    "testPid": 271752,
+    "ownerPreviewPid": 260328,
+    "candidateChanged": false,
+    "canonicalInstalled": false,
+    "ownerPagesTouched": false,
+    "freshTypesRequired": true,
+    "fullSuitePassingClaim": false,
+    "unchangedModelObjects": 137,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
-    "cutover": {
-      "existingPaths": 97,
-      "knownExactOwnedPreimages": 96,
-      "remaining": "Previously preserved coverage README; deliberately preserve/merge, no blind overwrite",
-      "unchangedModelObjects": 137
-    },
-    "limits": "Test-only proposals, not installed fixes or post-fix full-suite acceptance. Current models, teaching, actual access and user review forms unchanged. No new browser check from these native tests. Earlier source backups remain partial; no model, private-data, raw canonical ancestry or complete runnable-project backup."
+    "privateDataUploaded": false,
+    "fullGoalActive": true
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
