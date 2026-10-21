@@ -1,0 +1,115 @@
+{
+  "schema": "vm-runtime-license-byte-proposal/1",
+  "at": "2026-10-21T11:29:20.446Z",
+  "status": "proposal-only",
+  "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "atlasHead": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "matrix": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix",
+  "canonicalSiteChanged": false,
+  "atlasChanged": false,
+  "originalNativeFailureRetained": true,
+  "preparedCutover": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
+  "finding": "The prepared cutover preserved four older CRLF runtime LICENSE bytes while the current source190 manifests bind the LF bytes from the clean Atlas LICENSE and generated candidate.",
+  "rows": [
+    {
+      "module": "head-neck",
+      "path": "public/atlas-runtime/head-neck/LICENSE",
+      "actual": {
+        "bytes": 1494,
+        "sha256": "0f7e819ffbd6d06e35397175e1771535b8eeead5f9c66454ca31e1768e7d642e",
+        "crlf": 27
+      },
+      "manifest": {
+        "path": "LICENSE",
+        "bytes": 1467,
+        "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+      },
+      "candidate": {
+        "bytes": 1467,
+        "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+        "lf": 27
+      },
+      "atlasRootSha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "normalizedUtf8Equality": true,
+      "exactDifference": "27 CR bytes in CRLF versus LF",
+      "legalTextChanged": false
+    },
+    {
+      "module": "shoulder",
+      "path": "public/atlas-runtime/shoulder/LICENSE",
+      "actual": {
+        "bytes": 1494,
+        "sha256": "0f7e819ffbd6d06e35397175e1771535b8eeead5f9c66454ca31e1768e7d642e",
+        "crlf": 27
+      },
+      "manifest": {
+        "path": "LICENSE",
+        "bytes": 1467,
+        "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+      },
+      "candidate": {
+        "bytes": 1467,
+        "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+        "lf": 27
+      },
+      "atlasRootSha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "normalizedUtf8Equality": true,
+      "exactDifference": "27 CR bytes in CRLF versus LF",
+      "legalTextChanged": false
+    },
+    {
+      "module": "lower-limb",
+      "path": "public/atlas-runtime/lower-limb/LICENSE",
+      "actual": {
+        "bytes": 1494,
+        "sha256": "0f7e819ffbd6d06e35397175e1771535b8eeead5f9c66454ca31e1768e7d642e",
+        "crlf": 27
+      },
+      "manifest": {
+        "path": "LICENSE",
+        "bytes": 1467,
+        "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+      },
+      "candidate": {
+        "bytes": 1467,
+        "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+        "lf": 27
+      },
+      "atlasRootSha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "normalizedUtf8Equality": true,
+      "exactDifference": "27 CR bytes in CRLF versus LF",
+      "legalTextChanged": false
+    },
+    {
+      "module": "female-pelvis",
+      "path": "public/atlas-runtime/female-pelvis/LICENSE",
+      "actual": {
+        "bytes": 1494,
+        "sha256": "0f7e819ffbd6d06e35397175e1771535b8eeead5f9c66454ca31e1768e7d642e",
+        "crlf": 27
+      },
+      "manifest": {
+        "path": "LICENSE",
+        "bytes": 1467,
+        "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+      },
+      "candidate": {
+        "bytes": 1467,
+        "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+        "lf": 27
+      },
+      "atlasRootSha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea",
+      "normalizedUtf8Equality": true,
+      "exactDifference": "27 CR bytes in CRLF versus LF",
+      "legalTextChanged": false
+    }
+  ],
+  "proposedAction": "After the frozen native matrix is terminal, main may apply only the four staged LF LICENSE byte copies if canonical preimages and manifest rows still match this report; then run the affected native test without modifying it.",
+  "safeguards": [
+    "Exact canonical preimage SHA-256 and byte length",
+    "Exact candidate SHA-256 and byte length equal manifest row",
+    "Strict UTF-8 decode and CRLF-to-LF-only normalized equality",
+    "Candidate bytes equal clean committed Atlas LICENSE",
+    "No change to LICENSES, third-party notices, model licences, rights metadata, or tests"
+  ]
+}

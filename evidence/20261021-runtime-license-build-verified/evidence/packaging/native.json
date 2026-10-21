@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-21T11:42:24.994Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/atlas-guided-camera.test.ts",
+    "tests/atlas-tour-completion.test.mjs",
+    "tests/atlas-model-storage.test.ts",
+    "tests/anatomy-coverage-preflight.test.mjs",
+    "tests/atlas-runtime-build-preflight.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/native.log",
+  "logSha256": "4c04819fc9a7cf272fcf465a0ba4190507228896a32954c935c17e7cfa0a899f",
+  "counts": {
+    "tests": 24,
+    "pass": 24,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  }
+}

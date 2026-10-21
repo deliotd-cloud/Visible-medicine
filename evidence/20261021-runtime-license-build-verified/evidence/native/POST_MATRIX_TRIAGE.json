@@ -1,0 +1,1709 @@
+{
+  "schema": "vm-remaining-native-terminal-routing/1",
+  "at": "2026-10-21T11:45:04.921Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "terminal": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix/RESULT.json",
+  "terminalSha256": "643bd0898cad98aa18b764834df3afba68a04aadc07062b0b323b00ab54e6f9c",
+  "logSha256": "ec99b37d879e15ebfd8b2148226e8cbade08d0953dee014776698744050fe6b8",
+  "counts": {
+    "tests": 289,
+    "pass": 202,
+    "fail": 87,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "executedRoots": 80,
+  "failureInventoryComplete": true,
+  "failureFiles": 62,
+  "rootCauseDiagnosisComplete": false,
+  "failures": [
+    {
+      "number": 10,
+      "outcome": "failure-marker",
+      "title": "current camera source, import, and four runtimes retain the keyboard transition",
+      "durationMs": 410.1688,
+      "file": "tests/atlas-guided-camera.test.ts",
+      "line": 84,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "31ca6f0b7bc7aa2fd079ac3ad50617de491e4fd2723cc20560d65395d156506c",
+      "symptom": "current head-neck/LICENSE: byte length",
+      "route": "manifest-license-byte-mismatch",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 22,
+      "outcome": "failure-marker",
+      "title": "learner and protected Review deliver the exact completion-tested player and speed policy",
+      "durationMs": 430.1556,
+      "file": "tests/atlas-tour-completion.test.mjs",
+      "line": 45,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "29eabe4a82543be6cb4616f2092f80d005a07373e6eb51b94dbb2b2cf53116d1",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 57,
+      "outcome": "failure-marker",
+      "title": "exact source psoas X-ray drafts reach the learner and protected Review",
+      "durationMs": 2.5199,
+      "file": "tests/clinical-review-psoas-xray.test.ts",
+      "line": 52,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "7687a4b56ee61dcb46603cdcab5b7e273b2f7cfa7456a854f859b37cb2cf9af4",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "psoas-proposal-main-review-pending",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 58,
+      "outcome": "failure-marker",
+      "title": "9,936 placements and 1,104 Review packets change only for two psoas X-ray drafts",
+      "durationMs": 2583.0759,
+      "file": "tests/clinical-review-psoas-xray.test.ts",
+      "line": 176,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "7687a4b56ee61dcb46603cdcab5b7e273b2f7cfa7456a854f859b37cb2cf9af4",
+      "symptom": "Exact completed 47-tour catalogue is the live prefix",
+      "route": "psoas-proposal-main-review-pending",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 59,
+      "outcome": "failure-marker",
+      "title": "interactive reasoning reaches learner and protected review with source-bound answers",
+      "durationMs": 3.5449,
+      "file": "tests/clinical-review-reasoning.test.ts",
+      "line": 7,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "43b62ba1b12c400b7ac964aa94e9b317874fef009d0e98ac025f4e6e304491a8",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 60,
+      "outcome": "failure-marker",
+      "title": "twelve regional muscle selections share exact learner and protected Review draft questions",
+      "durationMs": 1.3443,
+      "file": "tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+      "line": 48,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "3c8c56aa397436b743f7b0b067bb59cafcb4b89f413a0f21f97e5b2d45047f9c",
+      "symptom": "shoulder",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 61,
+      "outcome": "failure-marker",
+      "title": "historical 77ac milestone: all thirty regional tours retain complete source-bound review evidence",
+      "durationMs": 3.9537,
+      "file": "tests/clinical-review-regional-tour.test.ts",
+      "line": 7,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 63,
+      "outcome": "failure-marker",
+      "title": "all structure-check hosts deliver the corrected success/retry component",
+      "durationMs": 3.0897,
+      "file": "tests/clinical-review-regional-tour.test.ts",
+      "line": 298,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "2c5b470fa1bd9b427241b98ce9990539d87b592f856a6e79d12e4b0c660e6eee",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 64,
+      "outcome": "failure-marker",
+      "title": "six exact salivary and stylohyoid quiz drafts reach both learners and protected Review",
+      "durationMs": 1443.491,
+      "file": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "line": 155,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "c4e18aeb9ce2056cb50fcef3a665de0356f91b88ff78992a928b7346f3ca2362",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "salivary-cache-proposal-main-review-pending",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 66,
+      "outcome": "failure-marker",
+      "title": "one exact short-ciliary source group delivers four draft quiz checks",
+      "durationMs": 55.9298,
+      "file": "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "line": 57,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "784380594d03080efbe80229329dadc93adcf2a09c7602fa35c12fca06f4078c",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 67,
+      "outcome": "failure-marker",
+      "title": "short-ciliary quiz preserves other epochs and refuses stale or forged Review submissions",
+      "durationMs": 760.846,
+      "file": "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "line": 147,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "784380594d03080efbe80229329dadc93adcf2a09c7602fa35c12fca06f4078c",
+      "symptom": "Atlas source revision changed",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 69,
+      "outcome": "failure-marker",
+      "title": "eight shoulder CT drafts reach learner and protected review without images or approval",
+      "durationMs": 3.7433,
+      "file": "tests/clinical-review-shoulder-ct.test.ts",
+      "line": 7,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "00be69c54d4d6fe7cf98a089d7b0e444efd508452a9e3a5f11fc95e86391b3a7",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 70,
+      "outcome": "failure-marker",
+      "title": "eight shoulder-girdle arterial selections share exact learner and protected Review questions",
+      "durationMs": 3.1305,
+      "file": "tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "line": 30,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "31323ff1f752edf060a9ecc335b7338ffb023773e1e76df3796249c5d978ef5c",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 71,
+      "outcome": "failure-marker",
+      "title": "exact muscle source pins, four learner exports, Review and emitted drafts",
+      "durationMs": 52.4941,
+      "file": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "line": 88,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "8267d8e7f5122069157815b17290d58b5f614937d182a5ca93529c881309d352",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 72,
+      "outcome": "failure-marker",
+      "title": "historical 16-topic transition, current 9,936 placements and 1,104 Review packets",
+      "durationMs": 1008.4854,
+      "file": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "line": 235,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "8267d8e7f5122069157815b17290d58b5f614937d182a5ca93529c881309d352",
+      "symptom": "Atlas source revision changed",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 73,
+      "outcome": "failure-marker",
+      "title": "19 spinal-disc Ultrasound drafts bind the committed learner and protected Review evidence",
+      "durationMs": 2.31,
+      "file": "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+      "line": 23,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "36cef6295314eaafe9413a01ff0568e63c4369032edfbb2af49661d4c13ac4ee",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 74,
+      "outcome": "failure-marker",
+      "title": "eight exact suprahyoid questions reach the learner and protected Review as draft",
+      "durationMs": 4.8158,
+      "file": "tests/clinical-review-suprahyoid-quiz.test.ts",
+      "line": 43,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "44f4f13cc6a1feafd40369977b8d4c89f08ab7472387275c36d4ca450c5268a3",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 77,
+      "outcome": "failure-marker",
+      "title": "azygos EUS remains exact without admitting independently drafted hemiazygos",
+      "durationMs": 2.5462,
+      "file": "tests/clinical-review-thoracic-eus.test.ts",
+      "line": 28,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "f2779287a51c847d087e6fd22097d65d644c9b76c62c8d6633cce163cbe2f36b",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 80,
+      "outcome": "failure-marker",
+      "title": "seven thoracic quick checks reach learner and review with exact identities and answer evidence",
+      "durationMs": 4.5204,
+      "file": "tests/clinical-review-thoracic-quiz.test.ts",
+      "line": 7,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "87acd111d474a2791105f841b6e9e431869d22b29b7b851df05701b0f829b630",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 82,
+      "outcome": "failure-marker",
+      "title": "learner bundles and protected Review bind the same exact thoracic teaching source",
+      "durationMs": 1.4404,
+      "file": "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+      "line": 53,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "46a83e58c6a04bdb2c6516beb94662b765f80cc32172dd51b4dd072a47bbc00b",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 85,
+      "outcome": "failure-marker",
+      "title": "six exact thoracic wall angiography drafts reach learner and protected Review",
+      "durationMs": 3.5689,
+      "file": "tests/clinical-review-thoracic-wall-xray.test.ts",
+      "line": 19,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "97cae6bdb01fcb68757c7cbba433cdc5b8caa4e84b2f84077fcb19b2ae18385b",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 86,
+      "outcome": "failure-marker",
+      "title": "six thoracoacromial ultrasound drafts bind exact learner and protected Review revisions",
+      "durationMs": 9.3763,
+      "file": "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "line": 30,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "7c395e4ceed1630061a62f3032b8cd660e0518ad8ea8f21a48a6aaa777fc3222",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 89,
+      "outcome": "failure-marker",
+      "title": "current 87ed imported notes and unsigned learner delivery retain exact source and renderer binding",
+      "durationMs": 150.8122,
+      "file": "tests/clinical-review-tour-imaging.test.ts",
+      "line": 152,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b",
+      "symptom": "Atlas source revision changed",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 93,
+      "outcome": "failure-marker",
+      "title": "seven ankle drafts reach both learner modules and exact specimen review",
+      "durationMs": 2.5089,
+      "file": "tests/clinical-review-um-ankle-imaging.test.ts",
+      "line": 7,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "e453387dfd045a0dcd744996165fd949d08446ef0afd5b6adaaf4e8c49e9176b",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 94,
+      "outcome": "failure-marker",
+      "title": "ten upper-limb selections share exact learner and protected Review draft questions",
+      "durationMs": 1.3985,
+      "file": "tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "line": 40,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "17a3cc58b361390d3e42570a86a9fb2c192c8cf80f985eae523af16e76d84c72",
+      "symptom": "shoulder",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 95,
+      "outcome": "failure-marker",
+      "title": "upper-limb venous learner and Review share six exact draft stops without flow or registration claims",
+      "durationMs": 3.9078,
+      "file": "tests/clinical-review-upper-venous-tour.test.ts",
+      "line": 8,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "c961ee464f01135f7238a81d1f14d3811b2d904e2e5602e9f6256f41d05d71f4",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 96,
+      "outcome": "failure-marker",
+      "title": "urinary tract learner and Review retain five exact draft stops and reject altered packets",
+      "durationMs": 1.7801,
+      "file": "tests/clinical-review-urinary-tract-tour.test.ts",
+      "line": 21,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "7d43a3927a06eb037ebbbe0be417873ff363f7c5b598cbfe8680e4be059ef3f8",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 100,
+      "outcome": "failure-marker",
+      "title": "live femoral admission follows the independently validated current delivery",
+      "durationMs": 9.1753,
+      "file": "tests/closed56-femoral-epoch.test.mjs",
+      "line": 94,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "bb6a8d631f190915f55d5ac4b5cdceb214691079b6502086f0d07c168026f037",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 102,
+      "outcome": "failure-marker",
+      "title": "exact live evolution projects only after both whole original transitions are proved",
+      "durationMs": 6.6782,
+      "file": "tests/closed56-live-preservation.test.mjs",
+      "line": 32,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "49bd6c57054d9e2788d41906b66415ddb5325c59c8a63f3321313a394ee935b7",
+      "symptom": "Live body, negatives and appended proofs match the hash-bound later epoch through only two declared seams",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 109,
+      "outcome": "failure-marker",
+      "title": "projection refuses changed current observed count",
+      "durationMs": 0.2843,
+      "file": "tests/closed56-live-preservation.test.mjs",
+      "line": 53,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "49bd6c57054d9e2788d41906b66415ddb5325c59c8a63f3321313a394ee935b7",
+      "symptom": "Assertion failed; full diagnostics retained locally",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 119,
+      "outcome": "failure-marker",
+      "title": "current-atlas-delivery.test.mjs live copy changes only its current Review expectation",
+      "durationMs": 3.9528,
+      "file": "tests/closed56-original-tests.test.mjs",
+      "line": 44,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "98b250943d8d0e671446601a94eee76cdb25a8cf9e0378b91e3d9b3b1f723552",
+      "symptom": "Live body, negatives and appended proofs match the hash-bound later epoch through only two declared seams",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 121,
+      "outcome": "failure-marker",
+      "title": "coronary original remains frozen and only eight explicit lifecycle seams change",
+      "durationMs": 3.0411,
+      "file": "tests/coronary-current-lifecycle-preservation.test.mjs",
+      "line": 31,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "2f66f67cb54657af1368f21fa37982c6b15ed370031f47f40119b464ad209204",
+      "symptom": "Exact reviewed candidate including all new proof",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 123,
+      "outcome": "failure-marker",
+      "title": "corpus Xray v2 reaches the exact learner and protected Review; old/forged teaching cannot be saved",
+      "durationMs": 214.4764,
+      "file": "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "line": 13,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 124,
+      "outcome": "failure-marker",
+      "title": "current admission advances only explicit source/tree/count seams; every previous assertion survives",
+      "durationMs": 3.7211,
+      "file": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "line": 20,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 126,
+      "outcome": "failure-marker",
+      "title": "new admission binds clean committed source, three added teaching inputs and existing protected models",
+      "durationMs": 8.3642,
+      "file": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "line": 38,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 129,
+      "outcome": "failure-marker",
+      "title": "both original CT summaries and draft limitations reach actual emitted learner imports",
+      "durationMs": 0.9507,
+      "file": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "line": 58,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 133,
+      "outcome": "failure-marker",
+      "title": "one current fixture binds exact source tree, four learners, protected Review and model registry",
+      "durationMs": 0.1815,
+      "file": "tests/current-atlas-delivery.test.mjs",
+      "line": 48,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "82d6c024dca59dab2dbaf944bed6f3066bf7905f99871e96033d9bf02a4c5821",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 134,
+      "outcome": "failure-marker",
+      "title": "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs",
+      "durationMs": 358.8927,
+      "file": "tests/current-atlas-delivery.test.mjs",
+      "line": 58,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "82d6c024dca59dab2dbaf944bed6f3066bf7905f99871e96033d9bf02a4c5821",
+      "symptom": "public/atlas-runtime/head-neck/LICENSE",
+      "route": "manifest-license-byte-mismatch",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 162,
+      "outcome": "failure-marker",
+      "title": "original complete clinical-review-desktop-layout.test.mjs reconstructs with only reviewed current-admission edits",
+      "durationMs": 1.1022,
+      "file": "tests/current-delivery-admission-485.test.mjs",
+      "line": 27,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec",
+      "symptom": "Exact admission seam: assert.equal(current.source,'485df97c2530e8e81a8d39a5ee61073ce76d93db');",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 163,
+      "outcome": "failure-marker",
+      "title": "admitted current scope agrees with exact source and bound imported bytes",
+      "durationMs": 230.0397,
+      "file": "tests/current-delivery-admission-485.test.mjs",
+      "line": 33,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 165,
+      "outcome": "failure-marker",
+      "title": "current50 source, register, exact input changes and unchanged model rights stay bounded",
+      "durationMs": 30.097,
+      "file": "tests/deep-plantar-current-transition.test.mjs",
+      "line": 45,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "458a217d855fe274c4e95d861405218b732a5a686aaf92c3348084ad9e532613",
+      "symptom": "app/atlas/head-neck-3d/head-learning.css",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 167,
+      "outcome": "failure-marker",
+      "title": "same-Atlas pre-disclosure delivery stays immutable and old complete contracts survive the one observed count seam",
+      "durationMs": 11.1417,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "line": 10,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 168,
+      "outcome": "failure-marker",
+      "title": "normal Review binds the actual disclosure helper and viewer, without changing any Atlas runtime or model policy",
+      "durationMs": 9.7232,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "line": 20,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 169,
+      "outcome": "failure-marker",
+      "title": "actual stock verifier refuses changed disclosure dependency: lib/head-disclosure-keyboard.ts",
+      "durationMs": 0.4704,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "line": 28,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 170,
+      "outcome": "failure-marker",
+      "title": "actual stock verifier refuses changed disclosure dependency: components/HeadAtlasViewer.tsx",
+      "durationMs": 0.1788,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "line": 28,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 171,
+      "outcome": "failure-marker",
+      "title": "portable real-helper regression keeps the whole worker test outside exact path/import seams",
+      "durationMs": 0.807,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "line": 37,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 172,
+      "outcome": "failure-marker",
+      "title": "whole original harness assertions survive the exact real-helper dependency seam: head-image-history.test.ts",
+      "durationMs": 5.3331,
+      "file": "tests/head-disclosure-harness-preservation.test.mjs",
+      "line": 14,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "94d12084491042a5b75b9fe0d36659f51d00060d0e61d5a701f99e05566ec6fc",
+      "symptom": "Every original assertion/regex/count/body stays exact",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 177,
+      "outcome": "failure-marker",
+      "title": "whole original harness assertions survive the exact real-helper dependency seam: head-view-history-client.test.mjs",
+      "durationMs": 1.1957,
+      "file": "tests/head-disclosure-harness-preservation.test.mjs",
+      "line": 14,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "94d12084491042a5b75b9fe0d36659f51d00060d0e61d5a701f99e05566ec6fc",
+      "symptom": "Every original assertion/regex/count/body stays exact",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 178,
+      "outcome": "failure-marker",
+      "title": "native-anchor history harness preserves all other original assertions",
+      "durationMs": 7.06,
+      "file": "tests/head-image-history-anchor-harness.test.mjs",
+      "line": 6,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "68993149a955247fa018931ccdd3c868d38a537c74c85a49d14c82adbdc85317",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 185,
+      "outcome": "failure-marker",
+      "title": "current delivery retains every prior assertion outside the one-input count and historical context seams",
+      "durationMs": 1.4115,
+      "file": "tests/head-index-tab-stop.test.mjs",
+      "line": 71,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "baef44aa7d0cbde7c9b2aa6f246670ef738c523444ec2ef2a9cbc85724f241b3",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 187,
+      "outcome": "failure-marker",
+      "title": "the previous Review binding is retired without changing anatomy, source meshes or access",
+      "durationMs": 10.1697,
+      "file": "tests/head-loading-review-binding.test.mjs",
+      "line": 36,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "7a918dab1d3963a742c550c3f1a432b8ef42b9f0df6a6c6da1b9a5ee858773d2",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 188,
+      "outcome": "failure-marker",
+      "title": "closed53 remains historical while current admission binds exactly two changed website inputs",
+      "durationMs": 39.2561,
+      "file": "tests/head-manual-recovery-53-to-54-closed.test.mjs",
+      "line": 14,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "44447da331496d3685c360eda3199cc18fa7a194cb556384167f33ccbf979dae",
+      "symptom": "app/atlas/head-neck-3d/head-learning.css closed54 unchanged input",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 192,
+      "outcome": "failure-marker",
+      "title": "current source and Review bind exactly six changed and three added website inputs",
+      "durationMs": 24.4189,
+      "file": "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "line": 27,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c",
+      "symptom": "app/atlas/head-neck-3d/head-learning.css unchanged closed55 input",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 193,
+      "outcome": "failure-marker",
+      "title": "Review import changed only the mapped superficial plantar content and revision records",
+      "durationMs": 7.1238,
+      "file": "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "line": 55,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c",
+      "symptom": "atlas-review/lib/body-review-material.ts unchanged closed55 input",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 196,
+      "outcome": "failure-marker",
+      "title": "closed52 retains every original byte and only declared historical read seams migrate",
+      "durationMs": 557.3557,
+      "file": "tests/head-native-history-current-transition.test.mjs",
+      "line": 4,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "c3edec82dd906b0204742f77e4946d3f5a312f5e007d4edde829a7d6dce84a0c",
+      "symptom": "All original52 assertions remain",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 201,
+      "outcome": "failure-marker",
+      "title": "the historical pilot retains every original assertion",
+      "durationMs": 2.4326,
+      "file": "tests/head-neck-pilot-current.test.mjs",
+      "line": 61,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 202,
+      "outcome": "failure-marker",
+      "title": "current head-neck delivery keeps exact source, regional/model scope and licence boundaries",
+      "durationMs": 3.4301,
+      "file": "tests/head-neck-pilot-current.test.mjs",
+      "line": 81,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 203,
+      "outcome": "failure-marker",
+      "title": "head and neck delivery preserves the complete audited regional and nested scope",
+      "durationMs": 388.9575,
+      "file": "tests/head-neck-pilot.test.ts",
+      "line": 9,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1",
+      "symptom": "Historical pilot file size changed: LICENSE",
+      "route": "manifest-license-byte-mismatch",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 207,
+      "outcome": "failure-marker",
+      "title": "practice binding retains the original binder and covers every new source and mutation",
+      "durationMs": 1.9761,
+      "file": "tests/head-practice-binding.test.mjs",
+      "line": 66,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "2419b38ce72e3c4a6ba292a2d94029b8b0707375d221d4abf5bdf2c6d72a16f9",
+      "symptom": "Complete original binder byte inverse",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 208,
+      "outcome": "failure-marker",
+      "title": "extended test preserves the complete executable ten-input test",
+      "durationMs": 482.8615,
+      "file": "tests/head-practice-binding.test.mjs",
+      "line": 96,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "2419b38ce72e3c4a6ba292a2d94029b8b0707375d221d4abf5bdf2c6d72a16f9",
+      "symptom": "All previously bound inputs",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 209,
+      "outcome": "failure-marker",
+      "title": "exact 87ed MRA source is imported with both source identities and no widened clearance",
+      "durationMs": 9.4833,
+      "file": "tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "line": 59,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "182500ce4fb9dd65fae0e4efd72fd4f0ad45f8ce7639e0352de117d86d50326a",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 210,
+      "outcome": "failure-marker",
+      "title": "only two pending MRI lessons change; 9934 source lessons, identity and geometry remain exact",
+      "durationMs": 8.6353,
+      "file": "tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "line": 94,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "182500ce4fb9dd65fae0e4efd72fd4f0ad45f8ce7639e0352de117d86d50326a",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 212,
+      "outcome": "failure-marker",
+      "title": "current51 retains 71 required and eight optional scopes with unchanged owners and acceptance",
+      "durationMs": 30.1635,
+      "file": "tests/lacrimal-current-transition.test.mjs",
+      "line": 46,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "5062b0a7d128d8331e5f1348b520330041293d3aebde9a3aed48fac4faa661f7",
+      "symptom": "app/atlas/head-neck-3d/head-learning.css",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 214,
+      "outcome": "failure-marker",
+      "title": "normal Review binding covers native image-focus dependencies and preserves source identity",
+      "durationMs": 12.4343,
+      "file": "tests/native-focus-review-binding.test.mjs",
+      "line": 7,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "4f69c6db89d21be5b3d9ab936695b239af18b1b1be88bde22d9081b2cb49ac21",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 216,
+      "outcome": "failure-marker",
+      "title": "orbital inbox retains exact original source except enumerated live-admission expressions",
+      "durationMs": 3.7188,
+      "file": "tests/orbital-inbox-admission-history.test.mjs",
+      "line": 33,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "c9910c150259019ebf095c970494b61f7990d5392eabbd6ddabd1738eaa64b36",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 218,
+      "outcome": "failure-marker",
+      "title": "new posterior-fossa draft is an exact source dependency without changed selection counts or approval",
+      "durationMs": 0.892,
+      "file": "tests/posterior-fossa-coverage.test.mjs",
+      "line": 14,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 220,
+      "outcome": "failure-marker",
+      "title": "the imported draft and package bind to this snapshot; changed content or import side is unavailable",
+      "durationMs": 6.3707,
+      "file": "tests/posterior-fossa-coverage.test.mjs",
+      "line": 37,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 221,
+      "outcome": "failure-marker",
+      "title": "header-session.test.ts: every original assertion survives exactly outside two dependency seams",
+      "durationMs": 538.2457,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "line": 62,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+      "symptom": "Expected values to be strictly deep-equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 222,
+      "outcome": "failure-marker",
+      "title": "atlas-region-picker.test.ts: every original assertion survives exactly outside two dependency seams",
+      "durationMs": 113.1597,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "line": 62,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+      "symptom": "Expected values to be strictly deep-equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 223,
+      "outcome": "failure-marker",
+      "title": "disc-comparison.test.ts: every original assertion survives exactly outside two dependency seams",
+      "durationMs": 16.2158,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "line": 62,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+      "symptom": "Expected values to be strictly deep-equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 224,
+      "outcome": "failure-marker",
+      "title": "workspace-utilities-dismissal.test.mjs: every original assertion survives exactly outside two dependency seams",
+      "durationMs": 5.4622,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "line": 62,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+      "symptom": "Expected values to be strictly deep-equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 225,
+      "outcome": "failure-marker",
+      "title": "desktop-workspace-simplification.test.ts: only the verified publishing disclosure assertion changes after two dependency seams",
+      "durationMs": 21.2833,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "line": 66,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+      "symptom": "Expected values to be strictly deep-equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 230,
+      "outcome": "failure-marker",
+      "title": "current attributes derive exactly from independent old52 bytes plus declared later rules",
+      "durationMs": 3.1344,
+      "file": "tests/radial-eus-current-transition.test.mjs",
+      "line": 27,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "d289abe076590281411eb8df6fd8c3d36d72d08ae594e6ce61054cc9cbb584b4",
+      "symptom": "current policy has no unreviewed bytes",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 233,
+      "outcome": "failure-marker",
+      "title": "current 87ed source retains radial teaching while later tongue quiz remains separate",
+      "durationMs": 226.4041,
+      "file": "tests/radial-eus-current-transition.test.mjs",
+      "line": 77,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "d289abe076590281411eb8df6fd8c3d36d72d08ae594e6ce61054cc9cbb584b4",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 235,
+      "outcome": "failure-marker",
+      "title": "the separate current imported catalogue admits the current Atlas graph",
+      "durationMs": 103.6652,
+      "file": "tests/regional-learning-catalogue.test.ts",
+      "line": 17,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "5e6d1ebabeb635cacffa1de78485cad254655a42bcf964285650e51595be698c",
+      "symptom": "Atlas source revision changed",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 243,
+      "outcome": "failure-marker",
+      "title": "current imported reference manifests are independently bound to current Atlas",
+      "durationMs": 11.9954,
+      "file": "tests/regional-mri-inline-inspection.test.ts",
+      "line": 30,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 252,
+      "outcome": "failure-marker",
+      "title": "canonical catalogue yields all 35 exact public draft links and honest topic totals",
+      "durationMs": 126.1133,
+      "file": "tests/regional-reference-review-index.test.ts",
+      "line": 45,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "508a9df7dda87e65ccf6cee49fc289d88ad2d3ca26e1388896b35563865320ad",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 259,
+      "outcome": "failure-marker",
+      "title": "current admission is the independently pinned 46c delivery, not the closed7b epoch",
+      "durationMs": 8.5245,
+      "file": "tests/shoulder-us-renderer-migration.test.mjs",
+      "line": 29,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "093711dabd8c55a071a906f1d19b20f0f0e2c2f3f481d6823d940b8945c891ef",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 265,
+      "outcome": "failure-marker",
+      "title": "historical 7b and pre-bind e440 witnesses stay distinct from validated current aaa8 delivery",
+      "durationMs": 241.6232,
+      "file": "tests/studio-lineage-integration.test.mjs",
+      "line": 75,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "c2d79752376e9be9dc64fc8362829500e7ec153234917a4c6f1779c6fe3443c0",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 267,
+      "outcome": "failure-marker",
+      "title": "the 6036 contract candidates rewind only declared seams to all four byte-exact a247 witnesses",
+      "durationMs": 2.4392,
+      "file": "tests/tongue-palate-a247-inverse.test.mjs",
+      "line": 101,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "afbc95685a8204a658074dad3a3a45a2e53ab21fd27de3c829ec8f0df6f2b18e",
+      "symptom": "current-atlas-delivery.test.mjs: entire prior contract reconstructed",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 269,
+      "outcome": "failure-marker",
+      "title": "6036 delivers four original quiz facts across eight exact source placements and unsigned Review",
+      "durationMs": 9.7758,
+      "file": "tests/tongue-palate-delivery.test.ts",
+      "line": 48,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "bf4528110979d7691f05701fb9113ee6e66214156214ef9478a40d763ce61145",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 270,
+      "outcome": "failure-marker",
+      "title": "complete pre-keyboard 30b delivery and all original contracts stay frozen outside exact source/tree seams",
+      "durationMs": 12.5033,
+      "file": "tests/tour-discovery-current-delivery.test.mjs",
+      "line": 8,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82",
+      "symptom": "Whole original behavioral and historical refusal bodies remain exact",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 271,
+      "outcome": "failure-marker",
+      "title": "59, 509b and f509 witnesses remain historical while current admission uses the actual validated producer",
+      "durationMs": 222.0422,
+      "file": "tests/ui-teaching-admission-contract.test.mjs",
+      "line": 75,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "5b78e5dd86c3a7372ad6931e2a966647065ae19e0576e5f6e332ebee7aed904f",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 273,
+      "outcome": "failure-marker",
+      "title": "current delivery binds five exact Atlas sources, four runtimes, protected Review and private dialog source",
+      "durationMs": 418.3686,
+      "file": "tests/ui-teaching-current-delivery.test.mjs",
+      "line": 40,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285",
+      "symptom": "Expected values to be strictly equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 276,
+      "outcome": "failure-marker",
+      "title": "the c237 fixture is byte-exact and current admission changes only declared seams",
+      "durationMs": 1.1988,
+      "file": "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "line": 71,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5",
+      "symptom": "Only the reviewed admission/UI test candidate is allowed",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 277,
+      "outcome": "failure-marker",
+      "title": "altered old refusal and admission proof are both rejected",
+      "durationMs": 0.3624,
+      "file": "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "line": 74,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5",
+      "symptom": "Missing declared seam:   assert.equal(delivery.reviewSourceFiles, 1548);",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    },
+    {
+      "number": 278,
+      "outcome": "failure-marker",
+      "title": "colic-arterial retains the complete original proof outside five explicit current-admission seams",
+      "durationMs": 42.8415,
+      "file": "tests/vascular-live-admission-preservation.test.mjs",
+      "line": 29,
+      "complete": true,
+      "scope": "terminal80module-subset",
+      "testSha256": "59699ecd8d8173668aa7bef97132d96905e5d53e80766c95769ee1ab25959132",
+      "symptom": "Expected values to be strictly deep-equal:",
+      "route": "needs-source-role-or-contract-review",
+      "diagnosisNotInferredFromTitle": true
+    }
+  ],
+  "groups": [
+    {
+      "file": "tests/atlas-guided-camera.test.ts",
+      "failures": 1,
+      "titles": [
+        "current camera source, import, and four runtimes retain the keyboard transition"
+      ]
+    },
+    {
+      "file": "tests/atlas-tour-completion.test.mjs",
+      "failures": 1,
+      "titles": [
+        "learner and protected Review deliver the exact completion-tested player and speed policy"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-psoas-xray.test.ts",
+      "failures": 2,
+      "titles": [
+        "exact source psoas X-ray drafts reach the learner and protected Review",
+        "9,936 placements and 1,104 Review packets change only for two psoas X-ray drafts"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-reasoning.test.ts",
+      "failures": 1,
+      "titles": [
+        "interactive reasoning reaches learner and protected review with source-bound answers"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+      "failures": 1,
+      "titles": [
+        "twelve regional muscle selections share exact learner and protected Review draft questions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-regional-tour.test.ts",
+      "failures": 2,
+      "titles": [
+        "historical 77ac milestone: all thirty regional tours retain complete source-bound review evidence",
+        "all structure-check hosts deliver the corrected success/retry component"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "failures": 1,
+      "titles": [
+        "six exact salivary and stylohyoid quiz drafts reach both learners and protected Review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "failures": 2,
+      "titles": [
+        "one exact short-ciliary source group delivers four draft quiz checks",
+        "short-ciliary quiz preserves other epochs and refuses stale or forged Review submissions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-shoulder-ct.test.ts",
+      "failures": 1,
+      "titles": [
+        "eight shoulder CT drafts reach learner and protected review without images or approval"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "failures": 1,
+      "titles": [
+        "eight shoulder-girdle arterial selections share exact learner and protected Review questions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "failures": 2,
+      "titles": [
+        "exact muscle source pins, four learner exports, Review and emitted drafts",
+        "historical 16-topic transition, current 9,936 placements and 1,104 Review packets"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+      "failures": 1,
+      "titles": [
+        "19 spinal-disc Ultrasound drafts bind the committed learner and protected Review evidence"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-suprahyoid-quiz.test.ts",
+      "failures": 1,
+      "titles": [
+        "eight exact suprahyoid questions reach the learner and protected Review as draft"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-eus.test.ts",
+      "failures": 1,
+      "titles": [
+        "azygos EUS remains exact without admitting independently drafted hemiazygos"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-quiz.test.ts",
+      "failures": 1,
+      "titles": [
+        "seven thoracic quick checks reach learner and review with exact identities and answer evidence"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+      "failures": 1,
+      "titles": [
+        "learner bundles and protected Review bind the same exact thoracic teaching source"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-wall-xray.test.ts",
+      "failures": 1,
+      "titles": [
+        "six exact thoracic wall angiography drafts reach learner and protected Review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "failures": 1,
+      "titles": [
+        "six thoracoacromial ultrasound drafts bind exact learner and protected Review revisions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-tour-imaging.test.ts",
+      "failures": 1,
+      "titles": [
+        "current 87ed imported notes and unsigned learner delivery retain exact source and renderer binding"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-um-ankle-imaging.test.ts",
+      "failures": 1,
+      "titles": [
+        "seven ankle drafts reach both learner modules and exact specimen review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "failures": 1,
+      "titles": [
+        "ten upper-limb selections share exact learner and protected Review draft questions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-upper-venous-tour.test.ts",
+      "failures": 1,
+      "titles": [
+        "upper-limb venous learner and Review share six exact draft stops without flow or registration claims"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-urinary-tract-tour.test.ts",
+      "failures": 1,
+      "titles": [
+        "urinary tract learner and Review retain five exact draft stops and reject altered packets"
+      ]
+    },
+    {
+      "file": "tests/closed56-femoral-epoch.test.mjs",
+      "failures": 1,
+      "titles": [
+        "live femoral admission follows the independently validated current delivery"
+      ]
+    },
+    {
+      "file": "tests/closed56-live-preservation.test.mjs",
+      "failures": 2,
+      "titles": [
+        "exact live evolution projects only after both whole original transitions are proved",
+        "projection refuses changed current observed count"
+      ]
+    },
+    {
+      "file": "tests/closed56-original-tests.test.mjs",
+      "failures": 1,
+      "titles": [
+        "current-atlas-delivery.test.mjs live copy changes only its current Review expectation"
+      ]
+    },
+    {
+      "file": "tests/coronary-current-lifecycle-preservation.test.mjs",
+      "failures": 1,
+      "titles": [
+        "coronary original remains frozen and only eight explicit lifecycle seams change"
+      ]
+    },
+    {
+      "file": "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "failures": 1,
+      "titles": [
+        "corpus Xray v2 reaches the exact learner and protected Review; old/forged teaching cannot be saved"
+      ]
+    },
+    {
+      "file": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "failures": 3,
+      "titles": [
+        "current admission advances only explicit source/tree/count seams; every previous assertion survives",
+        "new admission binds clean committed source, three added teaching inputs and existing protected models",
+        "both original CT summaries and draft limitations reach actual emitted learner imports"
+      ]
+    },
+    {
+      "file": "tests/current-atlas-delivery.test.mjs",
+      "failures": 2,
+      "titles": [
+        "one current fixture binds exact source tree, four learners, protected Review and model registry",
+        "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs"
+      ]
+    },
+    {
+      "file": "tests/current-delivery-admission-485.test.mjs",
+      "failures": 2,
+      "titles": [
+        "original complete clinical-review-desktop-layout.test.mjs reconstructs with only reviewed current-admission edits",
+        "admitted current scope agrees with exact source and bound imported bytes"
+      ]
+    },
+    {
+      "file": "tests/deep-plantar-current-transition.test.mjs",
+      "failures": 1,
+      "titles": [
+        "current50 source, register, exact input changes and unchanged model rights stay bounded"
+      ]
+    },
+    {
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "failures": 5,
+      "titles": [
+        "same-Atlas pre-disclosure delivery stays immutable and old complete contracts survive the one observed count seam",
+        "normal Review binds the actual disclosure helper and viewer, without changing any Atlas runtime or model policy",
+        "actual stock verifier refuses changed disclosure dependency: lib/head-disclosure-keyboard.ts",
+        "actual stock verifier refuses changed disclosure dependency: components/HeadAtlasViewer.tsx",
+        "portable real-helper regression keeps the whole worker test outside exact path/import seams"
+      ]
+    },
+    {
+      "file": "tests/head-disclosure-harness-preservation.test.mjs",
+      "failures": 2,
+      "titles": [
+        "whole original harness assertions survive the exact real-helper dependency seam: head-image-history.test.ts",
+        "whole original harness assertions survive the exact real-helper dependency seam: head-view-history-client.test.mjs"
+      ]
+    },
+    {
+      "file": "tests/head-image-history-anchor-harness.test.mjs",
+      "failures": 1,
+      "titles": [
+        "native-anchor history harness preserves all other original assertions"
+      ]
+    },
+    {
+      "file": "tests/head-index-tab-stop.test.mjs",
+      "failures": 1,
+      "titles": [
+        "current delivery retains every prior assertion outside the one-input count and historical context seams"
+      ]
+    },
+    {
+      "file": "tests/head-loading-review-binding.test.mjs",
+      "failures": 1,
+      "titles": [
+        "the previous Review binding is retired without changing anatomy, source meshes or access"
+      ]
+    },
+    {
+      "file": "tests/head-manual-recovery-53-to-54-closed.test.mjs",
+      "failures": 1,
+      "titles": [
+        "closed53 remains historical while current admission binds exactly two changed website inputs"
+      ]
+    },
+    {
+      "file": "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "failures": 2,
+      "titles": [
+        "current source and Review bind exactly six changed and three added website inputs",
+        "Review import changed only the mapped superficial plantar content and revision records"
+      ]
+    },
+    {
+      "file": "tests/head-native-history-current-transition.test.mjs",
+      "failures": 1,
+      "titles": [
+        "closed52 retains every original byte and only declared historical read seams migrate"
+      ]
+    },
+    {
+      "file": "tests/head-neck-pilot-current.test.mjs",
+      "failures": 2,
+      "titles": [
+        "the historical pilot retains every original assertion",
+        "current head-neck delivery keeps exact source, regional/model scope and licence boundaries"
+      ]
+    },
+    {
+      "file": "tests/head-neck-pilot.test.ts",
+      "failures": 1,
+      "titles": [
+        "head and neck delivery preserves the complete audited regional and nested scope"
+      ]
+    },
+    {
+      "file": "tests/head-practice-binding.test.mjs",
+      "failures": 2,
+      "titles": [
+        "practice binding retains the original binder and covers every new source and mutation",
+        "extended test preserves the complete executable ten-input test"
+      ]
+    },
+    {
+      "file": "tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "failures": 2,
+      "titles": [
+        "exact 87ed MRA source is imported with both source identities and no widened clearance",
+        "only two pending MRI lessons change; 9934 source lessons, identity and geometry remain exact"
+      ]
+    },
+    {
+      "file": "tests/lacrimal-current-transition.test.mjs",
+      "failures": 1,
+      "titles": [
+        "current51 retains 71 required and eight optional scopes with unchanged owners and acceptance"
+      ]
+    },
+    {
+      "file": "tests/native-focus-review-binding.test.mjs",
+      "failures": 1,
+      "titles": [
+        "normal Review binding covers native image-focus dependencies and preserves source identity"
+      ]
+    },
+    {
+      "file": "tests/orbital-inbox-admission-history.test.mjs",
+      "failures": 1,
+      "titles": [
+        "orbital inbox retains exact original source except enumerated live-admission expressions"
+      ]
+    },
+    {
+      "file": "tests/posterior-fossa-coverage.test.mjs",
+      "failures": 2,
+      "titles": [
+        "new posterior-fossa draft is an exact source dependency without changed selection counts or approval",
+        "the imported draft and package bind to this snapshot; changed content or import side is unavailable"
+      ]
+    },
+    {
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "failures": 5,
+      "titles": [
+        "header-session.test.ts: every original assertion survives exactly outside two dependency seams",
+        "atlas-region-picker.test.ts: every original assertion survives exactly outside two dependency seams",
+        "disc-comparison.test.ts: every original assertion survives exactly outside two dependency seams",
+        "workspace-utilities-dismissal.test.mjs: every original assertion survives exactly outside two dependency seams",
+        "desktop-workspace-simplification.test.ts: only the verified publishing disclosure assertion changes after two dependency seams"
+      ]
+    },
+    {
+      "file": "tests/radial-eus-current-transition.test.mjs",
+      "failures": 2,
+      "titles": [
+        "current attributes derive exactly from independent old52 bytes plus declared later rules",
+        "current 87ed source retains radial teaching while later tongue quiz remains separate"
+      ]
+    },
+    {
+      "file": "tests/regional-learning-catalogue.test.ts",
+      "failures": 1,
+      "titles": [
+        "the separate current imported catalogue admits the current Atlas graph"
+      ]
+    },
+    {
+      "file": "tests/regional-mri-inline-inspection.test.ts",
+      "failures": 1,
+      "titles": [
+        "current imported reference manifests are independently bound to current Atlas"
+      ]
+    },
+    {
+      "file": "tests/regional-reference-review-index.test.ts",
+      "failures": 1,
+      "titles": [
+        "canonical catalogue yields all 35 exact public draft links and honest topic totals"
+      ]
+    },
+    {
+      "file": "tests/shoulder-us-renderer-migration.test.mjs",
+      "failures": 1,
+      "titles": [
+        "current admission is the independently pinned 46c delivery, not the closed7b epoch"
+      ]
+    },
+    {
+      "file": "tests/studio-lineage-integration.test.mjs",
+      "failures": 1,
+      "titles": [
+        "historical 7b and pre-bind e440 witnesses stay distinct from validated current aaa8 delivery"
+      ]
+    },
+    {
+      "file": "tests/tongue-palate-a247-inverse.test.mjs",
+      "failures": 1,
+      "titles": [
+        "the 6036 contract candidates rewind only declared seams to all four byte-exact a247 witnesses"
+      ]
+    },
+    {
+      "file": "tests/tongue-palate-delivery.test.ts",
+      "failures": 1,
+      "titles": [
+        "6036 delivers four original quiz facts across eight exact source placements and unsigned Review"
+      ]
+    },
+    {
+      "file": "tests/tour-discovery-current-delivery.test.mjs",
+      "failures": 1,
+      "titles": [
+        "complete pre-keyboard 30b delivery and all original contracts stay frozen outside exact source/tree seams"
+      ]
+    },
+    {
+      "file": "tests/ui-teaching-admission-contract.test.mjs",
+      "failures": 1,
+      "titles": [
+        "59, 509b and f509 witnesses remain historical while current admission uses the actual validated producer"
+      ]
+    },
+    {
+      "file": "tests/ui-teaching-current-delivery.test.mjs",
+      "failures": 1,
+      "titles": [
+        "current delivery binds five exact Atlas sources, four runtimes, protected Review and private dialog source"
+      ]
+    },
+    {
+      "file": "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "failures": 2,
+      "titles": [
+        "the c237 fixture is byte-exact and current admission changes only declared seams",
+        "altered old refusal and admission proof are both rejected"
+      ]
+    },
+    {
+      "file": "tests/vascular-live-admission-preservation.test.mjs",
+      "failures": 1,
+      "titles": [
+        "colic-arterial retains the complete original proof outside five explicit current-admission seams"
+      ]
+    }
+  ],
+  "packagingFollowup": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/APPLICATION.json",
+  "packagingFollowupScope": "Separate24/24actual focused cases and3read-only gates on later source; do not subtract these from the old subset or infer whole-suite green.",
+  "originalFullFailureBaseline": 136,
+  "earlierDifferentSourceBaseline": 144,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "privateDataExported": false
+}

@@ -1,0 +1,1957 @@
+{
+  "schema": "vm-remaining-native-receipt-audit/1",
+  "at": "2026-10-21T11:23:27.716Z",
+  "baseline": {
+    "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "originalFailures": 136,
+    "originalFiles": 101,
+    "terminal": "F:/VisibleMedicine/staging/20261021-source190-complete-suite/TERMINAL.json",
+    "nativeReceipt": "F:/VisibleMedicine/staging/20261021-source190-website/website/.local/website-test-runs/2026-10-21T05-37-11-497Z-a5ab569e-0361-46d1-91d6-64fd8586c1c0/receipt.json"
+  },
+  "current": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-connective-epoch-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "56920b68f2c92bd614492aa93d266aa2119737a1678c0242cfaad7a8eddf6615",
+    "controlledInputs": 5153
+  },
+  "summary": {
+    "reusableExactCases": 24,
+    "unresolvedOriginalCases": 112,
+    "unresolvedNativeFiles": 80
+  },
+  "laterChangedInputsFromV11": [
+    "components/ClinicalReviewInbox.tsx",
+    "docs/anatomy-coverage/README.md",
+    "scripts/refresh-completion-checklist.mjs",
+    "tests/atlas-tour-library-pause.test.ts",
+    "tests/atlas-tour-reading-focus.test.ts",
+    "tests/clinical-epoch-batch-e-preservation.test.mjs",
+    "tests/clinical-review-elbow-arterial-tour.test.ts",
+    "tests/clinical-review-inbox-return-context.test.mjs",
+    "tests/clinical-review-lower-limb-connective-xray.test.ts",
+    "tests/clinical-review-nested-duct-xray.test.ts",
+    "tests/clinical-review-pelvic-venous-tour.test.ts",
+    "tests/clinical-review-portal-hepatic-tour.test.ts",
+    "tests/completion-checklist-local-import.test.mjs",
+    "tests/elbow-current-lifecycle-preservation.test.mjs",
+    "tests/fixtures/elbow-current-before-tour-type.ts.raw",
+    "tests/fixtures/elbow-current-tour-type.delta.raw",
+    "tests/fixtures/nested-duct-xray.delta.raw",
+    "tests/connective-xray-original-preservation.test.mjs",
+    "tests/fixtures/connective-xray-9f-original.test.ts.raw"
+  ],
+  "failedCases": [
+    {
+      "originalNumber": 51,
+      "file": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "title": "current coverage pins admit the regenerated source and reject the prior snapshot",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 52,
+      "file": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "title": "regeneration changes evidence identity without changing factual inventory or relaxing holds",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 53,
+      "file": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "title": "checker and view retain their entire prior bodies with only declared pins changed",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 58,
+      "file": "tests/arterial-history-preservation.test.mjs",
+      "title": "arterial admission uses the exact reviewed source transformation",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 70,
+      "file": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "title": "original arterial Website contract survives the exact pre-MRA feature retention adapter",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 220,
+      "file": "tests/atlas-guided-camera.test.ts",
+      "title": "current camera source, import, and four runtimes retain the keyboard transition",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 270,
+      "file": "tests/atlas-keyboard-modules.test.ts",
+      "title": "shoulder preserves the source-verified keyboard camera and focus-only hint across saved and current exports",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 271,
+      "file": "tests/atlas-keyboard-modules.test.ts",
+      "title": "female-pelvis preserves the source-verified keyboard camera and focus-only hint across saved and current exports",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 272,
+      "file": "tests/atlas-keyboard-modules.test.ts",
+      "title": "lower-limb preserves the source-verified keyboard camera and focus-only hint across saved and current exports",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 273,
+      "file": "tests/atlas-keyboard-modules.test.ts",
+      "title": "head-neck preserves the source-verified keyboard camera and focus-only hint across saved and current exports",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 278,
+      "file": "tests/atlas-label-keyboard.test.ts",
+      "title": "protected Review uses the same keyboard source and revised shoulder display bindings",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 465,
+      "file": "tests/atlas-shared-viewer-accessibility.test.ts",
+      "title": "shared viewer binds reset wording and keyboard-only orientation status to exact Atlas source",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 503,
+      "file": "tests/atlas-spinal-muscle-xray.test.mjs",
+      "title": "spinal X-ray source, Review, four runtime manifests and emitted teaching remain exact",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 1,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 544,
+      "file": "tests/atlas-tour-completion.test.mjs",
+      "title": "learner and protected Review deliver the exact completion-tested player and speed policy",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 557,
+      "file": "tests/atlas-tour-library-pause.test.ts",
+      "title": "learner and protected Review deliver the same source-bound library playback pause",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "buffer",
+        "receipt": "F:/VisibleMedicine/staging/20261021-buffer-type-application/AFFECTED_NATIVE.log",
+        "receiptSha256": "c12b5c91169e7fe2bc2e42fa6f9bdbb2d192f27a03d148cb4a435844aff13ec0",
+        "receiptHashValid": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": []
+      }
+    },
+    {
+      "originalNumber": 559,
+      "file": "tests/atlas-tour-reading-focus.test.ts",
+      "title": "Both learner modules and protected Review bind the verified reading-focus pause source",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "buffer",
+        "receipt": "F:/VisibleMedicine/staging/20261021-buffer-type-application/AFFECTED_NATIVE.log",
+        "receiptSha256": "c12b5c91169e7fe2bc2e42fa6f9bdbb2d192f27a03d148cb4a435844aff13ec0",
+        "receiptHashValid": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": []
+      }
+    },
+    {
+      "originalNumber": 775,
+      "file": "tests/clinical-review-desktop-layout.test.mjs",
+      "title": "current delivery remains separately bound to the clean Atlas source",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 786,
+      "file": "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "title": "right elbow guide binds eleven exact records, four bundles, learner captions and draft Review packets",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "buffer",
+        "receipt": "F:/VisibleMedicine/staging/20261021-buffer-type-application/AFFECTED_NATIVE.log",
+        "receiptSha256": "c12b5c91169e7fe2bc2e42fa6f9bdbb2d192f27a03d148cb4a435844aff13ec0",
+        "receiptHashValid": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": []
+      }
+    },
+    {
+      "originalNumber": 789,
+      "file": "tests/clinical-review-elbow-us-followup.test.ts",
+      "title": "six exact elbow arterial ultrasound drafts reach protected Review and two learner modules",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 4,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": true,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 826,
+      "file": "tests/clinical-review-forearm-vascular-xray.test.ts",
+      "title": "eight exact forearm vascular X-ray drafts reach protected Review and two learner modules",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 6,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": true,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 834,
+      "file": "tests/clinical-review-girdle-muscle-xray.test.ts",
+      "title": "exact girdle muscle pins, four learner exports, Review and emitted drafts",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 8,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 835,
+      "file": "tests/clinical-review-girdle-muscle-xray.test.ts",
+      "title": "immutable 16-topic transition, current 9,936 placements and 1,104 Review packets",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 9,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 838,
+      "file": "tests/clinical-review-git-root-preservation.test.mjs",
+      "title": "clinical-review-salivary-stylohyoid-quiz retains every original assertion and historical/current theorem",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 840,
+      "file": "tests/clinical-review-git-root-preservation.test.mjs",
+      "title": "a changed historical epoch, removed assertion or unchecked root cannot pass as a root-only repair",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 861,
+      "file": "tests/clinical-review-iliac-venous-xray.test.ts",
+      "title": "six exact iliac venous X-ray drafts reach learner and protected Review",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 10,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 935,
+      "file": "tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "title": "twelve source-bound intracranial arterial X-ray drafts reach learner and protected Review",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 11,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 947,
+      "file": "tests/clinical-review-limb-nerve-quiz.test.ts",
+      "title": "18 original Quiz questions survive with exact additional learner and Review checks",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/MATRIX_RESULT.json",
+        "receiptSha256": "427a4078134bb3accce776b48d1964f70f821a7777c980ebc317d76d10921e23",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/child.tap",
+        "nativeCaseNumber": 1,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": true,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 948,
+      "file": "tests/clinical-review-limb-nerve-quiz.test.ts",
+      "title": "private inbox binds all 18 current teaching revisions and rejects stale scans before database reads",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/MATRIX_RESULT.json",
+        "receiptSha256": "427a4078134bb3accce776b48d1964f70f821a7777c980ebc317d76d10921e23",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/child.tap",
+        "nativeCaseNumber": 2,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": true,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 949,
+      "file": "tests/clinical-review-longus-colli-quiz.test.ts",
+      "title": "three supplied left longus colli attachment quizzes bind learner runtimes and protected Review",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 14,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 953,
+      "file": "tests/clinical-review-lower-limb-connective-xray.test.ts",
+      "title": "four source-bound connective X-ray drafts reach current learner and Review imports",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "connective",
+        "receipt": "F:/VisibleMedicine/staging/20261021-connective-epoch-application/native.log",
+        "receiptSha256": "c4c4478e27854c2fd3351029236fcff212c99d2e9f8975c148d642874da0e90b",
+        "receiptHashValid": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": []
+      }
+    },
+    {
+      "originalNumber": 956,
+      "file": "tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "title": "right lower limb venous v2 is an exact source-bound draft in learners and protected Review",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/MATRIX_RESULT.json",
+        "receiptSha256": "427a4078134bb3accce776b48d1964f70f821a7777c980ebc317d76d10921e23",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/child.tap",
+        "nativeCaseNumber": 3,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 959,
+      "file": "tests/clinical-review-medial-thigh-tour.test.ts",
+      "title": "medial-thigh source reaches exact learner and protected Review imports",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 17,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 960,
+      "file": "tests/clinical-review-median-cubital-xray.test.ts",
+      "title": "two exact median cubital X-ray drafts reach protected Review and two learner modules",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 19,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": true,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 961,
+      "file": "tests/clinical-review-median-cubital-xray.test.ts",
+      "title": "private inbox binds two new teaching revisions and refuses stale continuation before database reads",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 20,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": true,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 964,
+      "file": "tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "title": "head-neck and shoulder learners contain the exact imported mesenteric teaching source",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 22,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 968,
+      "file": "tests/clinical-review-model-inspection.test.mjs",
+      "title": "imported nested Review retains exact child link and unavailable fallback",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 977,
+      "file": "tests/clinical-review-neonatal-cranial-us.test.ts",
+      "title": "ten exact infant cranial Ultrasound drafts bind to Review and the scoped learners",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v3/MATRIX_RESULT.json",
+        "receiptSha256": "b6d82cfd61f34077e0c45440dea4f2484201735b96f64b016ffc16e68d5d9ace",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v3/child.tap",
+        "nativeCaseNumber": 1,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": true,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 978,
+      "file": "tests/clinical-review-neonatal-cranial-us.test.ts",
+      "title": "private inbox shows ten new teaching revisions and rejects stale continuation before reads",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v3/MATRIX_RESULT.json",
+        "receiptSha256": "b6d82cfd61f34077e0c45440dea4f2484201735b96f64b016ffc16e68d5d9ace",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v3/child.tap",
+        "nativeCaseNumber": 2,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": true,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 979,
+      "file": "tests/clinical-review-nested-duct-xray.test.ts",
+      "title": "current four nested duct X-ray drafts and exact completed-era corpus replay",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "buffer",
+        "receipt": "F:/VisibleMedicine/staging/20261021-buffer-type-application/AFFECTED_NATIVE.log",
+        "receiptSha256": "c12b5c91169e7fe2bc2e42fa6f9bdbb2d192f27a03d148cb4a435844aff13ec0",
+        "receiptHashValid": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": []
+      }
+    },
+    {
+      "originalNumber": 983,
+      "file": "tests/clinical-review-orbital-apex-ct.test.ts",
+      "title": "twelve exact orbital-apex CT drafts reach the learner and protected Review exports",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/MATRIX_RESULT.json",
+        "receiptSha256": "427a4078134bb3accce776b48d1964f70f821a7777c980ebc317d76d10921e23",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/child.tap",
+        "nativeCaseNumber": 7,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 985,
+      "file": "tests/clinical-review-orbital-apex-ct.test.ts",
+      "title": "current imported Review retains exact orbital CT material under the live tour registry",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/MATRIX_RESULT.json",
+        "receiptSha256": "427a4078134bb3accce776b48d1964f70f821a7777c980ebc317d76d10921e23",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup-v2/child.tap",
+        "nativeCaseNumber": 9,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 990,
+      "file": "tests/clinical-review-orbital-ring-ct.test.ts",
+      "title": "two exact orbital-ring CT drafts reach learner and private Review bindings",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup/MATRIX_RESULT.json",
+        "receiptSha256": "1cff2c28ac42d569ed4061a956f66b237176e61e018c2b880a1f58a75a5612c9",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix-followup/child.tap",
+        "nativeCaseNumber": 10,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 991,
+      "file": "tests/clinical-review-orbital-sensory-mri.test.ts",
+      "title": "16 orbital sensory MRI drafts bind exact learner and protected Review evidence",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 30,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 992,
+      "file": "tests/clinical-review-orbital-support-mri.test.ts",
+      "title": "twelve orbital support MRI drafts retain exact learner and Review bindings",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 31,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 998,
+      "file": "tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+      "title": "head-neck and shoulder learner bundles carry the exact imported pancreatic teaching",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-current-source-matrix/MATRIX_RESULT.json",
+        "receiptSha256": "2ec07723d5c4362670523b85e3c4a9d8b48dcfeeeda7093f1067587cfe3a4c09",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-current-source-matrix/child.tap",
+        "nativeCaseNumber": 33,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 1005,
+      "file": "tests/clinical-review-pelvic-venous-tour.test.ts",
+      "title": "pelvic venous learner and Review retain ten exact draft stops and reject altered packets",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "pelvic-portal",
+        "receipt": "F:/VisibleMedicine/staging/20261021-pelvic-portal-epoch-application/native.log",
+        "receiptSha256": "17540db96a1e5440608e55679686571a30e417c79726fa52a5af4d1e0ae73121",
+        "receiptHashValid": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": []
+      }
+    },
+    {
+      "originalNumber": 1010,
+      "file": "tests/clinical-review-portal-hepatic-tour.test.ts",
+      "title": "portal/hepatic guide binds the exact imported sources, frames and draft Review evidence",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "pelvic-portal",
+        "receipt": "F:/VisibleMedicine/staging/20261021-pelvic-portal-epoch-application/native.log",
+        "receiptSha256": "17540db96a1e5440608e55679686571a30e417c79726fa52a5af4d1e0ae73121",
+        "receiptHashValid": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": []
+      }
+    },
+    {
+      "originalNumber": 1017,
+      "file": "tests/clinical-review-psoas-xray.test.ts",
+      "title": "exact source psoas X-ray drafts reach the learner and protected Review",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1018,
+      "file": "tests/clinical-review-psoas-xray.test.ts",
+      "title": "9,936 placements and 1,104 Review packets change only for two psoas X-ray drafts",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1026,
+      "file": "tests/clinical-review-reasoning.test.ts",
+      "title": "interactive reasoning reaches learner and protected review with source-bound answers",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1027,
+      "file": "tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+      "title": "twelve regional muscle selections share exact learner and protected Review draft questions",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1028,
+      "file": "tests/clinical-review-regional-tour.test.ts",
+      "title": "historical 77ac milestone: all thirty regional tours retain complete source-bound review evidence",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1030,
+      "file": "tests/clinical-review-regional-tour.test.ts",
+      "title": "all structure-check hosts deliver the corrected success/retry component",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1039,
+      "file": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "title": "six exact salivary and stylohyoid quiz drafts reach both learners and protected Review",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1045,
+      "file": "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "title": "one exact short-ciliary source group delivers four draft quiz checks",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1046,
+      "file": "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "title": "short-ciliary quiz preserves other epochs and refuses stale or forged Review submissions",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1050,
+      "file": "tests/clinical-review-shoulder-ct.test.ts",
+      "title": "eight shoulder CT drafts reach learner and protected review without images or approval",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1051,
+      "file": "tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "title": "eight shoulder-girdle arterial selections share exact learner and protected Review questions",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1052,
+      "file": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "title": "exact muscle source pins, four learner exports, Review and emitted drafts",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1053,
+      "file": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "title": "historical 16-topic transition, current 9,936 placements and 1,104 Review packets",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1058,
+      "file": "tests/clinical-review-specimen-continuous-playback.test.ts",
+      "title": "nine independent guides and all four emitted learners bind to the committed shared policy",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/MATRIX_RESULT.json",
+        "receiptSha256": "aae418a02c8038253b6e63c57f1c72b10f8e745f67477e03eb6800709023bb79",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/child.tap",
+        "nativeCaseNumber": 1,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 1059,
+      "file": "tests/clinical-review-specimen-continuous-playback.test.ts",
+      "title": "all 356 specimen Review rows retain source identity and reject stale or forged teaching before storage",
+      "disposition": "reusable-exact-case-with-current-closure-check",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/MATRIX_RESULT.json",
+        "receiptSha256": "aae418a02c8038253b6e63c57f1c72b10f8e745f67477e03eb6800709023bb79",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/child.tap",
+        "nativeCaseNumber": 2,
+        "proofHashValid": true,
+        "nativeCasePass": true,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 1063,
+      "file": "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+      "title": "19 spinal-disc Ultrasound drafts bind the committed learner and protected Review evidence",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1069,
+      "file": "tests/clinical-review-suprahyoid-quiz.test.ts",
+      "title": "eight exact suprahyoid questions reach the learner and protected Review as draft",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1079,
+      "file": "tests/clinical-review-thoracic-detail-ultrasound.test.ts",
+      "title": "ten exact thoracic Ultrasound drafts reach learner and protected Review",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1081,
+      "file": "tests/clinical-review-thoracic-eus.test.ts",
+      "title": "azygos EUS remains exact without admitting independently drafted hemiazygos",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1082,
+      "file": "tests/clinical-review-thoracic-mediastinal-arterial-xray.test.ts",
+      "title": "five exact source-bound thoracic mediastinal X-ray drafts reach learner and Review",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1085,
+      "file": "tests/clinical-review-thoracic-quiz.test.ts",
+      "title": "seven thoracic quick checks reach learner and review with exact identities and answer evidence",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1089,
+      "file": "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+      "title": "learner bundles and protected Review bind the same exact thoracic teaching source",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1090,
+      "file": "tests/clinical-review-thoracic-venous-xray.test.ts",
+      "title": "five exact source-bound thoracic venous X-ray drafts reach learner and Review",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1093,
+      "file": "tests/clinical-review-thoracic-wall-xray.test.ts",
+      "title": "six exact thoracic wall angiography drafts reach learner and protected Review",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1095,
+      "file": "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "title": "six thoracoacromial ultrasound drafts bind exact learner and protected Review revisions",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1098,
+      "file": "tests/clinical-review-tour-imaging.test.ts",
+      "title": "current 87ed imported notes and unsigned learner delivery retain exact source and renderer binding",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1111,
+      "file": "tests/clinical-review-um-ankle-imaging.test.ts",
+      "title": "seven ankle drafts reach both learner modules and exact specimen review",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1114,
+      "file": "tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "title": "ten upper-limb selections share exact learner and protected Review draft questions",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1115,
+      "file": "tests/clinical-review-upper-venous-tour.test.ts",
+      "title": "upper-limb venous learner and Review share six exact draft stops without flow or registration claims",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1116,
+      "file": "tests/clinical-review-urinary-tract-tour.test.ts",
+      "title": "urinary tract learner and Review retain five exact draft stops and reject altered packets",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1148,
+      "file": "tests/closed56-femoral-epoch.test.mjs",
+      "title": "live femoral admission follows the independently validated current delivery",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1152,
+      "file": "tests/closed56-live-preservation.test.mjs",
+      "title": "exact live evolution projects only after both whole original transitions are proved",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1159,
+      "file": "tests/closed56-live-preservation.test.mjs",
+      "title": "projection refuses changed current observed count",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1169,
+      "file": "tests/closed56-original-tests.test.mjs",
+      "title": "current-atlas-delivery.test.mjs live copy changes only its current Review expectation",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1215,
+      "file": "tests/coronary-current-lifecycle-preservation.test.mjs",
+      "title": "coronary original remains frozen and only eight explicit lifecycle seams change",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1220,
+      "file": "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "title": "corpus Xray v2 reaches the exact learner and protected Review; old/forged teaching cannot be saved",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1403,
+      "file": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "title": "current admission advances only explicit source/tree/count seams; every previous assertion survives",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1405,
+      "file": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "title": "new admission binds clean committed source, three added teaching inputs and existing protected models",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1408,
+      "file": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "title": "both original CT summaries and draft limitations reach actual emitted learner imports",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1467,
+      "file": "tests/current-atlas-delivery.test.mjs",
+      "title": "one current fixture binds exact source tree, four learners, protected Review and model registry",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1468,
+      "file": "tests/current-atlas-delivery.test.mjs",
+      "title": "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1497,
+      "file": "tests/current-delivery-admission-485.test.mjs",
+      "title": "admitted current scope agrees with exact source and bound imported bytes",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 1538,
+      "file": "tests/deep-plantar-current-transition.test.mjs",
+      "title": "current50 source, register, exact input changes and unchanged model rights stay bounded",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2185,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "title": "same-Atlas pre-disclosure delivery stays immutable and old complete contracts survive the one observed count seam",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2186,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "title": "normal Review binds the actual disclosure helper and viewer, without changing any Atlas runtime or model policy",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2187,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "title": "actual stock verifier refuses changed disclosure dependency: lib/head-disclosure-keyboard.ts",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2188,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "title": "actual stock verifier refuses changed disclosure dependency: components/HeadAtlasViewer.tsx",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2189,
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "title": "portable real-helper regression keeps the whole worker test outside exact path/import seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2190,
+      "file": "tests/head-disclosure-harness-preservation.test.mjs",
+      "title": "whole original harness assertions survive the exact real-helper dependency seam: head-image-history.test.ts",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2195,
+      "file": "tests/head-disclosure-harness-preservation.test.mjs",
+      "title": "whole original harness assertions survive the exact real-helper dependency seam: head-view-history-client.test.mjs",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2323,
+      "file": "tests/head-image-history-anchor-harness.test.mjs",
+      "title": "native-anchor history harness preserves all other original assertions",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2536,
+      "file": "tests/head-index-tab-stop.test.mjs",
+      "title": "current delivery retains every prior assertion outside the one-input count and historical context seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2697,
+      "file": "tests/head-loading-review-binding.test.mjs",
+      "title": "the previous Review binding is retired without changing anatomy, source meshes or access",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2730,
+      "file": "tests/head-manual-recovery-53-to-54-closed.test.mjs",
+      "title": "closed53 remains historical while current admission binds exactly two changed website inputs",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2734,
+      "file": "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "title": "current source and Review bind exactly six changed and three added website inputs",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2735,
+      "file": "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "title": "Review import changed only the mapped superficial plantar content and revision records",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2868,
+      "file": "tests/head-native-history-current-transition.test.mjs",
+      "title": "closed52 retains every original byte and only declared historical read seams migrate",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2874,
+      "file": "tests/head-neck-pilot-current.test.mjs",
+      "title": "current head-neck delivery keeps exact source, regional/model scope and licence boundaries",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2875,
+      "file": "tests/head-neck-pilot.test.ts",
+      "title": "head and neck delivery preserves the complete audited regional and nested scope",
+      "disposition": "unresolved-earlier-case-current-input-mismatch",
+      "evidence": {
+        "source": "v11-current-modules",
+        "receipt": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/MATRIX_RESULT.json",
+        "receiptSha256": "aae418a02c8038253b6e63c57f1c72b10f8e745f67477e03eb6800709023bb79",
+        "nativeTap": "F:/VisibleMedicine/staging/20261021-head-specimen-actual-native/child.tap",
+        "proofHashValid": true,
+        "nativeCasePass": false,
+        "currentTestHashValid": true,
+        "changedRelevantInputs": [],
+        "changedProducerRequiresRerun": false,
+        "baseClosure": "All frozen producer/Review/package inputs identical. Executed test source exact. Direct/transitive local import closure and referenced changed fixture names checked; remaining differences are other test-only source/archive/guard overlays, not producer or dependencies."
+      }
+    },
+    {
+      "originalNumber": 2919,
+      "file": "tests/head-practice-binding.test.mjs",
+      "title": "practice binding retains the original binder and covers every new source and mutation",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 2920,
+      "file": "tests/head-practice-binding.test.mjs",
+      "title": "extended test preserves the complete executable ten-input test",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3393,
+      "file": "tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "title": "exact 87ed MRA source is imported with both source identities and no widened clearance",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3394,
+      "file": "tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "title": "only two pending MRI lessons change; 9934 source lessons, identity and geometry remain exact",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3398,
+      "file": "tests/lacrimal-current-transition.test.mjs",
+      "title": "current51 retains 71 required and eight optional scopes with unchanged owners and acceptance",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3789,
+      "file": "tests/native-focus-review-binding.test.mjs",
+      "title": "normal Review binding covers native image-focus dependencies and preserves source identity",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3833,
+      "file": "tests/orbital-inbox-admission-history.test.mjs",
+      "title": "orbital inbox retains exact original source except enumerated live-admission expressions",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3945,
+      "file": "tests/posterior-fossa-coverage.test.mjs",
+      "title": "new posterior-fossa draft is an exact source dependency without changed selection counts or approval",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3947,
+      "file": "tests/posterior-fossa-coverage.test.mjs",
+      "title": "the imported draft and package bind to this snapshot; changed content or import side is unavailable",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3987,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "title": "header-session.test.ts: every original assertion survives exactly outside two dependency seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3988,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "title": "atlas-region-picker.test.ts: every original assertion survives exactly outside two dependency seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3989,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "title": "disc-comparison.test.ts: every original assertion survives exactly outside two dependency seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3990,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "title": "workspace-utilities-dismissal.test.mjs: every original assertion survives exactly outside two dependency seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 3991,
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "title": "desktop-workspace-simplification.test.ts: only the verified publishing disclosure assertion changes after two dependency seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 4008,
+      "file": "tests/radial-eus-current-transition.test.mjs",
+      "title": "current attributes derive exactly from independent old52 bytes plus declared later rules",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 4011,
+      "file": "tests/radial-eus-current-transition.test.mjs",
+      "title": "current 87ed source retains radial teaching while later tongue quiz remains separate",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 4050,
+      "file": "tests/regional-learning-catalogue.test.ts",
+      "title": "the separate current imported catalogue admits the current Atlas graph",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 4194,
+      "file": "tests/regional-mri-inline-inspection.test.ts",
+      "title": "current imported reference manifests are independently bound to current Atlas",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 4511,
+      "file": "tests/regional-reference-review-index.test.ts",
+      "title": "canonical catalogue yields all 35 exact public draft links and honest topic totals",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 4682,
+      "file": "tests/shoulder-us-renderer-migration.test.mjs",
+      "title": "current admission is the independently pinned 46c delivery, not the closed7b epoch",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 4717,
+      "file": "tests/spinal-later-six-preservation.test.mjs",
+      "title": "whole 3df theorem is frozen; only ten reviewed lifecycle seams change",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 4993,
+      "file": "tests/studio-lineage-integration.test.mjs",
+      "title": "historical 7b and pre-bind e440 witnesses stay distinct from validated current aaa8 delivery",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 5256,
+      "file": "tests/tongue-palate-a247-inverse.test.mjs",
+      "title": "the 6036 contract candidates rewind only declared seams to all four byte-exact a247 witnesses",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 5258,
+      "file": "tests/tongue-palate-delivery.test.ts",
+      "title": "6036 delivers four original quiz facts across eight exact source placements and unsigned Review",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 5259,
+      "file": "tests/tour-discovery-current-delivery.test.mjs",
+      "title": "complete pre-keyboard 30b delivery and all original contracts stay frozen outside exact source/tree seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 5262,
+      "file": "tests/ui-teaching-admission-contract.test.mjs",
+      "title": "59, 509b and f509 witnesses remain historical while current admission uses the actual validated producer",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 5264,
+      "file": "tests/ui-teaching-current-delivery.test.mjs",
+      "title": "current delivery binds five exact Atlas sources, four runtimes, protected Review and private dialog source",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 5267,
+      "file": "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "title": "the c237 fixture is byte-exact and current admission changes only declared seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 5268,
+      "file": "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "title": "altered old refusal and admission proof are both rejected",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    },
+    {
+      "originalNumber": 5273,
+      "file": "tests/vascular-live-admission-preservation.test.mjs",
+      "title": "colic-arterial retains the complete original proof outside five explicit current-admission seams",
+      "disposition": "unresolved-no-exact-later-native-case",
+      "evidence": null
+    }
+  ],
+  "proposedSerialNextNativeFiles": [
+    {
+      "file": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "originalFailedCases": 3,
+      "titles": [
+        "current coverage pins admit the regenerated source and reject the prior snapshot",
+        "regeneration changes evidence identity without changing factual inventory or relaxing holds",
+        "checker and view retain their entire prior bodies with only declared pins changed"
+      ]
+    },
+    {
+      "file": "tests/arterial-history-preservation.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "arterial admission uses the exact reviewed source transformation"
+      ]
+    },
+    {
+      "file": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "original arterial Website contract survives the exact pre-MRA feature retention adapter"
+      ]
+    },
+    {
+      "file": "tests/atlas-guided-camera.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "current camera source, import, and four runtimes retain the keyboard transition"
+      ]
+    },
+    {
+      "file": "tests/atlas-keyboard-modules.test.ts",
+      "originalFailedCases": 4,
+      "titles": [
+        "shoulder preserves the source-verified keyboard camera and focus-only hint across saved and current exports",
+        "female-pelvis preserves the source-verified keyboard camera and focus-only hint across saved and current exports",
+        "lower-limb preserves the source-verified keyboard camera and focus-only hint across saved and current exports",
+        "head-neck preserves the source-verified keyboard camera and focus-only hint across saved and current exports"
+      ]
+    },
+    {
+      "file": "tests/atlas-label-keyboard.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "protected Review uses the same keyboard source and revised shoulder display bindings"
+      ]
+    },
+    {
+      "file": "tests/atlas-shared-viewer-accessibility.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "shared viewer binds reset wording and keyboard-only orientation status to exact Atlas source"
+      ]
+    },
+    {
+      "file": "tests/atlas-tour-completion.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "learner and protected Review deliver the exact completion-tested player and speed policy"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-desktop-layout.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "current delivery remains separately bound to the clean Atlas source"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-elbow-us-followup.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "six exact elbow arterial ultrasound drafts reach protected Review and two learner modules"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-forearm-vascular-xray.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "eight exact forearm vascular X-ray drafts reach protected Review and two learner modules"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-git-root-preservation.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "clinical-review-salivary-stylohyoid-quiz retains every original assertion and historical/current theorem",
+        "a changed historical epoch, removed assertion or unchecked root cannot pass as a root-only repair"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-limb-nerve-quiz.test.ts",
+      "originalFailedCases": 2,
+      "titles": [
+        "18 original Quiz questions survive with exact additional learner and Review checks",
+        "private inbox binds all 18 current teaching revisions and rejects stale scans before database reads"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-median-cubital-xray.test.ts",
+      "originalFailedCases": 2,
+      "titles": [
+        "two exact median cubital X-ray drafts reach protected Review and two learner modules",
+        "private inbox binds two new teaching revisions and refuses stale continuation before database reads"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-model-inspection.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "imported nested Review retains exact child link and unavailable fallback"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-neonatal-cranial-us.test.ts",
+      "originalFailedCases": 2,
+      "titles": [
+        "ten exact infant cranial Ultrasound drafts bind to Review and the scoped learners",
+        "private inbox shows ten new teaching revisions and rejects stale continuation before reads"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-psoas-xray.test.ts",
+      "originalFailedCases": 2,
+      "titles": [
+        "exact source psoas X-ray drafts reach the learner and protected Review",
+        "9,936 placements and 1,104 Review packets change only for two psoas X-ray drafts"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-reasoning.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "interactive reasoning reaches learner and protected review with source-bound answers"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "twelve regional muscle selections share exact learner and protected Review draft questions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-regional-tour.test.ts",
+      "originalFailedCases": 2,
+      "titles": [
+        "historical 77ac milestone: all thirty regional tours retain complete source-bound review evidence",
+        "all structure-check hosts deliver the corrected success/retry component"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "six exact salivary and stylohyoid quiz drafts reach both learners and protected Review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "originalFailedCases": 2,
+      "titles": [
+        "one exact short-ciliary source group delivers four draft quiz checks",
+        "short-ciliary quiz preserves other epochs and refuses stale or forged Review submissions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-shoulder-ct.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "eight shoulder CT drafts reach learner and protected review without images or approval"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "eight shoulder-girdle arterial selections share exact learner and protected Review questions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-shoulder-muscle-xray.test.ts",
+      "originalFailedCases": 2,
+      "titles": [
+        "exact muscle source pins, four learner exports, Review and emitted drafts",
+        "historical 16-topic transition, current 9,936 placements and 1,104 Review packets"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "19 spinal-disc Ultrasound drafts bind the committed learner and protected Review evidence"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-suprahyoid-quiz.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "eight exact suprahyoid questions reach the learner and protected Review as draft"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-detail-ultrasound.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "ten exact thoracic Ultrasound drafts reach learner and protected Review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-eus.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "azygos EUS remains exact without admitting independently drafted hemiazygos"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-mediastinal-arterial-xray.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "five exact source-bound thoracic mediastinal X-ray drafts reach learner and Review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-quiz.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "seven thoracic quick checks reach learner and review with exact identities and answer evidence"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-systemic-teaching.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "learner bundles and protected Review bind the same exact thoracic teaching source"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-venous-xray.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "five exact source-bound thoracic venous X-ray drafts reach learner and Review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracic-wall-xray.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "six exact thoracic wall angiography drafts reach learner and protected Review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "six thoracoacromial ultrasound drafts bind exact learner and protected Review revisions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-tour-imaging.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "current 87ed imported notes and unsigned learner delivery retain exact source and renderer binding"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-um-ankle-imaging.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "seven ankle drafts reach both learner modules and exact specimen review"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "ten upper-limb selections share exact learner and protected Review draft questions"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-upper-venous-tour.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "upper-limb venous learner and Review share six exact draft stops without flow or registration claims"
+      ]
+    },
+    {
+      "file": "tests/clinical-review-urinary-tract-tour.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "urinary tract learner and Review retain five exact draft stops and reject altered packets"
+      ]
+    },
+    {
+      "file": "tests/closed56-femoral-epoch.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "live femoral admission follows the independently validated current delivery"
+      ]
+    },
+    {
+      "file": "tests/closed56-live-preservation.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "exact live evolution projects only after both whole original transitions are proved",
+        "projection refuses changed current observed count"
+      ]
+    },
+    {
+      "file": "tests/closed56-original-tests.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "current-atlas-delivery.test.mjs live copy changes only its current Review expectation"
+      ]
+    },
+    {
+      "file": "tests/coronary-current-lifecycle-preservation.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "coronary original remains frozen and only eight explicit lifecycle seams change"
+      ]
+    },
+    {
+      "file": "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "corpus Xray v2 reaches the exact learner and protected Review; old/forged teaching cannot be saved"
+      ]
+    },
+    {
+      "file": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "originalFailedCases": 3,
+      "titles": [
+        "current admission advances only explicit source/tree/count seams; every previous assertion survives",
+        "new admission binds clean committed source, three added teaching inputs and existing protected models",
+        "both original CT summaries and draft limitations reach actual emitted learner imports"
+      ]
+    },
+    {
+      "file": "tests/current-atlas-delivery.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "one current fixture binds exact source tree, four learners, protected Review and model registry",
+        "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs"
+      ]
+    },
+    {
+      "file": "tests/current-delivery-admission-485.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "admitted current scope agrees with exact source and bound imported bytes"
+      ]
+    },
+    {
+      "file": "tests/deep-plantar-current-transition.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "current50 source, register, exact input changes and unchanged model rights stay bounded"
+      ]
+    },
+    {
+      "file": "tests/head-disclosure-current-delivery.test.mjs",
+      "originalFailedCases": 5,
+      "titles": [
+        "same-Atlas pre-disclosure delivery stays immutable and old complete contracts survive the one observed count seam",
+        "normal Review binds the actual disclosure helper and viewer, without changing any Atlas runtime or model policy",
+        "actual stock verifier refuses changed disclosure dependency: lib/head-disclosure-keyboard.ts",
+        "actual stock verifier refuses changed disclosure dependency: components/HeadAtlasViewer.tsx",
+        "portable real-helper regression keeps the whole worker test outside exact path/import seams"
+      ]
+    },
+    {
+      "file": "tests/head-disclosure-harness-preservation.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "whole original harness assertions survive the exact real-helper dependency seam: head-image-history.test.ts",
+        "whole original harness assertions survive the exact real-helper dependency seam: head-view-history-client.test.mjs"
+      ]
+    },
+    {
+      "file": "tests/head-image-history-anchor-harness.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "native-anchor history harness preserves all other original assertions"
+      ]
+    },
+    {
+      "file": "tests/head-index-tab-stop.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "current delivery retains every prior assertion outside the one-input count and historical context seams"
+      ]
+    },
+    {
+      "file": "tests/head-loading-review-binding.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "the previous Review binding is retired without changing anatomy, source meshes or access"
+      ]
+    },
+    {
+      "file": "tests/head-manual-recovery-53-to-54-closed.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "closed53 remains historical while current admission binds exactly two changed website inputs"
+      ]
+    },
+    {
+      "file": "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "current source and Review bind exactly six changed and three added website inputs",
+        "Review import changed only the mapped superficial plantar content and revision records"
+      ]
+    },
+    {
+      "file": "tests/head-native-history-current-transition.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "closed52 retains every original byte and only declared historical read seams migrate"
+      ]
+    },
+    {
+      "file": "tests/head-neck-pilot-current.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "current head-neck delivery keeps exact source, regional/model scope and licence boundaries"
+      ]
+    },
+    {
+      "file": "tests/head-neck-pilot.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "head and neck delivery preserves the complete audited regional and nested scope"
+      ]
+    },
+    {
+      "file": "tests/head-practice-binding.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "practice binding retains the original binder and covers every new source and mutation",
+        "extended test preserves the complete executable ten-input test"
+      ]
+    },
+    {
+      "file": "tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "exact 87ed MRA source is imported with both source identities and no widened clearance",
+        "only two pending MRI lessons change; 9934 source lessons, identity and geometry remain exact"
+      ]
+    },
+    {
+      "file": "tests/lacrimal-current-transition.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "current51 retains 71 required and eight optional scopes with unchanged owners and acceptance"
+      ]
+    },
+    {
+      "file": "tests/native-focus-review-binding.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "normal Review binding covers native image-focus dependencies and preserves source identity"
+      ]
+    },
+    {
+      "file": "tests/orbital-inbox-admission-history.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "orbital inbox retains exact original source except enumerated live-admission expressions"
+      ]
+    },
+    {
+      "file": "tests/posterior-fossa-coverage.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "new posterior-fossa draft is an exact source dependency without changed selection counts or approval",
+        "the imported draft and package bind to this snapshot; changed content or import side is unavailable"
+      ]
+    },
+    {
+      "file": "tests/public-focus-adapter-preservation.test.mjs",
+      "originalFailedCases": 5,
+      "titles": [
+        "header-session.test.ts: every original assertion survives exactly outside two dependency seams",
+        "atlas-region-picker.test.ts: every original assertion survives exactly outside two dependency seams",
+        "disc-comparison.test.ts: every original assertion survives exactly outside two dependency seams",
+        "workspace-utilities-dismissal.test.mjs: every original assertion survives exactly outside two dependency seams",
+        "desktop-workspace-simplification.test.ts: only the verified publishing disclosure assertion changes after two dependency seams"
+      ]
+    },
+    {
+      "file": "tests/radial-eus-current-transition.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "current attributes derive exactly from independent old52 bytes plus declared later rules",
+        "current 87ed source retains radial teaching while later tongue quiz remains separate"
+      ]
+    },
+    {
+      "file": "tests/regional-learning-catalogue.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "the separate current imported catalogue admits the current Atlas graph"
+      ]
+    },
+    {
+      "file": "tests/regional-mri-inline-inspection.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "current imported reference manifests are independently bound to current Atlas"
+      ]
+    },
+    {
+      "file": "tests/regional-reference-review-index.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "canonical catalogue yields all 35 exact public draft links and honest topic totals"
+      ]
+    },
+    {
+      "file": "tests/shoulder-us-renderer-migration.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "current admission is the independently pinned 46c delivery, not the closed7b epoch"
+      ]
+    },
+    {
+      "file": "tests/spinal-later-six-preservation.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "whole 3df theorem is frozen; only ten reviewed lifecycle seams change"
+      ]
+    },
+    {
+      "file": "tests/studio-lineage-integration.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "historical 7b and pre-bind e440 witnesses stay distinct from validated current aaa8 delivery"
+      ]
+    },
+    {
+      "file": "tests/tongue-palate-a247-inverse.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "the 6036 contract candidates rewind only declared seams to all four byte-exact a247 witnesses"
+      ]
+    },
+    {
+      "file": "tests/tongue-palate-delivery.test.ts",
+      "originalFailedCases": 1,
+      "titles": [
+        "6036 delivers four original quiz facts across eight exact source placements and unsigned Review"
+      ]
+    },
+    {
+      "file": "tests/tour-discovery-current-delivery.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "complete pre-keyboard 30b delivery and all original contracts stay frozen outside exact source/tree seams"
+      ]
+    },
+    {
+      "file": "tests/ui-teaching-admission-contract.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "59, 509b and f509 witnesses remain historical while current admission uses the actual validated producer"
+      ]
+    },
+    {
+      "file": "tests/ui-teaching-current-delivery.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "current delivery binds five exact Atlas sources, four runtimes, protected Review and private dialog source"
+      ]
+    },
+    {
+      "file": "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "originalFailedCases": 2,
+      "titles": [
+        "the c237 fixture is byte-exact and current admission changes only declared seams",
+        "altered old refusal and admission proof are both rejected"
+      ]
+    },
+    {
+      "file": "tests/vascular-live-admission-preservation.test.mjs",
+      "originalFailedCases": 1,
+      "titles": [
+        "colic-arterial retains the complete original proof outside five explicit current-admission seams"
+      ]
+    }
+  ],
+  "limits": [
+    "Case-level reconciliation of 136 historical failures; not a complete suite pass.",
+    "Current closure screen checks named changed paths and changed producer references against test source; it does not replace a fresh native run for modules with changed closures.",
+    "This read-only audit does not claim clinical sign-off, patient-space registration, or public release."
+  ]
+}

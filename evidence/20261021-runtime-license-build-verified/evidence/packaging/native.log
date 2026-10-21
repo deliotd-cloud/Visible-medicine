@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: production Review verification checks the actual current coverage projection
+ok 1 - production Review verification checks the actual current coverage projection
+  ---
+  duration_ms: 28.9639
+  type: 'test'
+  ...
+# Subtest: the formerly silent old coverage and mixed or forged current inputs are refused
+ok 2 - the formerly silent old coverage and mixed or forged current inputs are refused
+  ---
+  duration_ms: 23.5953
+  type: 'test'
+  ...
+# Subtest: saved a10496da keyboard fix belongs to the whole immutable c285a387 website epoch
+ok 3 - saved a10496da keyboard fix belongs to the whole immutable c285a387 website epoch
+  ---
+  duration_ms: 15343.6371
+  type: 'test'
+  ...
+# Subtest: current camera source, import, and four runtimes retain the keyboard transition
+ok 4 - current camera source, import, and four runtimes retain the keyboard transition
+  ---
+  duration_ms: 566.5847
+  type: 'test'
+  ...
+# Subtest: current committed keyboard helper rotates only a focused enabled camera and keeps damping
+ok 5 - current committed keyboard helper rotates only a focused enabled camera and keeps damping
+  ---
+  duration_ms: 240.1268
+  type: 'test'
+  ...
+# Subtest: current camera contract rejects a missing zoom-camera argument without relaxing historical source
+ok 6 - current camera contract rejects a missing zoom-camera argument without relaxing historical source
+  ---
+  duration_ms: 50.0812
+  type: 'test'
+  ...
+# Subtest: registered inventory matches every module file and preserves existing delivery
+ok 7 - registered inventory matches every module file and preserves existing delivery
+  ---
+  duration_ms: 463.1895
+  type: 'test'
+  ...
+# Subtest: single byte ranges reject ambiguity and never escape the registered size
+ok 8 - single byte ranges reject ambiguity and never escape the registered size
+  ---
+  duration_ms: 0.7248
+  type: 'test'
+  ...
+# Subtest: actual Workers R2 streams, checksums, immutable writes and protected ranges
+ok 9 - actual Workers R2 streams, checksums, immutable writes and protected ranges
+  ---
+  duration_ms: 1556.2256
+  type: 'test'
+  ...
+# Subtest: ordinary builds check runtime assets and notices without regenerating the inventory
+ok 10 - ordinary builds check runtime assets and notices without regenerating the inventory
+  ---
+  duration_ms: 1.0345
+  type: 'test'
+  ...
+# Subtest: each generated runtime retains the complete declared LICENSE bytes
+ok 11 - each generated runtime retains the complete declared LICENSE bytes
+  ---
+  duration_ms: 6.0151
+  type: 'test'
+  ...
+# Subtest: learner and protected Review deliver the exact completion-tested player and speed policy
+ok 12 - learner and protected Review deliver the exact completion-tested player and speed policy
+  ---
+  duration_ms: 592.1135
+  type: 'test'
+  ...
+# Subtest: natural final stop holds motion and still refuses unready or quiz-open imaging
+ok 13 - natural final stop holds motion and still refuses unready or quiz-open imaging
+  ---
+  duration_ms: 0.2433
+  type: 'test'
+  ...
+# Subtest: intermediate stop keeps playback and cannot become a paused imaging stop
+ok 14 - intermediate stop keeps playback and cannot become a paused imaging stop
+  ---
+  duration_ms: 0.113
+  type: 'test'
+  ...
+# Subtest: retired epoch cannot finish or enable the stop
+ok 15 - retired epoch cannot finish or enable the stop
+  ---
+  duration_ms: 0.0721
+  type: 'test'
+  ...
+# Subtest: hidden page cannot finish or enable the stop
+ok 16 - hidden page cannot finish or enable the stop
+  ---
+  duration_ms: 0.064
+  type: 'test'
+  ...
+# Subtest: cleaned-up effect cannot finish or enable the stop
+ok 17 - cleaned-up effect cannot finish or enable the stop
+  ---
+  duration_ms: 0.0637
+  type: 'test'
+  ...
+# Subtest: inactive renderer scope cannot finish or enable the stop
+ok 18 - inactive renderer scope cannot finish or enable the stop
+  ---
+  duration_ms: 0.0511
+  type: 'test'
+  ...
+# Subtest: replaced renderer scope cannot finish or enable the stop
+ok 19 - replaced renderer scope cannot finish or enable the stop
+  ---
+  duration_ms: 0.0731
+  type: 'test'
+  ...
+# Subtest: actual step-duration expression uses each admitted speed for continuous and authored playback
+ok 20 - actual step-duration expression uses each admitted speed for continuous and authored playback
+  ---
+  duration_ms: 0.2359
+  type: 'test'
+  ...
+# Subtest: actual timer effect never schedules while unready, paused, hidden or without a selected step
+ok 21 - actual timer effect never schedules while unready, paused, hidden or without a selected step
+  ---
+  duration_ms: 0.2914
+  type: 'test'
+  ...
+# Subtest: actual effect cleanup clears the timer and revokes a retained callback
+ok 22 - actual effect cleanup clears the timer and revokes a retained callback
+  ---
+  duration_ms: 0.1018
+  type: 'test'
+  ...
+# Subtest: changing speed retires queued old-speed callbacks before effect cleanup
+ok 23 - changing speed retires queued old-speed callbacks before effect cleanup
+  ---
+  duration_ms: 0.2004
+  type: 'test'
+  ...
+# Subtest: unchanged and invalid rates do not invalidate playback or enable imaging
+ok 24 - unchanged and invalid rates do not invalidate playback or enable imaging
+  ---
+  duration_ms: 0.1134
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 21583.3042

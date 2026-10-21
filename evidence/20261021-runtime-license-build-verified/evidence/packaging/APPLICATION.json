@@ -1,0 +1,96 @@
+{
+  "at": "2026-10-21T11:42:35.539Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalInstalled": true,
+  "controlledInputs": 5154,
+  "preservedSourceInputs": 7,
+  "namedInputs": 5161,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "1b6149e6acea7e37df75085566d934b38ac818b91fa85b5585cd51a901a4ea4b",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/PRESERVED_SOURCE_AFTER.json",
+  "preservedSnapshotSha256": "3408adbc6325b7f62e5f274e57a507f4478cc1fb76c10f0d5838ddd57293881b",
+  "paths": [
+    "package.json",
+    "tests/atlas-runtime-build-preflight.test.mjs",
+    "public/atlas-runtime/head-neck/LICENSE",
+    "public/atlas-runtime/shoulder/LICENSE",
+    "public/atlas-runtime/lower-limb/LICENSE",
+    "public/atlas-runtime/female-pelvis/LICENSE"
+  ],
+  "licenseChangesStrictlyEolOnly": true,
+  "legalTextChanged": false,
+  "generatedAnatomyCodeChanged": false,
+  "prebuildReadOnlyInventoryGateAdded": true,
+  "dependenciesChanged": false,
+  "typedInputsUnchanged": true,
+  "receipts": [
+    {
+      "at": "2026-10-21T11:42:24.994Z",
+      "args": [
+        "--test",
+        "--experimental-strip-types",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/atlas-guided-camera.test.ts",
+        "tests/atlas-tour-completion.test.mjs",
+        "tests/atlas-model-storage.test.ts",
+        "tests/anatomy-coverage-preflight.test.mjs",
+        "tests/atlas-runtime-build-preflight.test.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/native.log",
+      "logSha256": "4c04819fc9a7cf272fcf465a0ba4190507228896a32954c935c17e7cfa0a899f",
+      "counts": {
+        "tests": 24,
+        "pass": 24,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "at": "2026-10-21T11:42:28.052Z",
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/review.log",
+      "logSha256": "80476937ca63598db3ed11c85846b316423e22877d3d3a3ad7311d267d581b73",
+      "counts": {}
+    },
+    {
+      "at": "2026-10-21T11:42:30.804Z",
+      "args": [
+        "scripts/atlas-model-inventory.mjs",
+        "--check"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/inventory.log",
+      "logSha256": "62d3fe8ac53184c12b22d4e83199e2ba55df863b0bb633f4d45440d4eb4cb753",
+      "counts": {}
+    },
+    {
+      "at": "2026-10-21T11:42:33.247Z",
+      "args": [
+        "--experimental-strip-types",
+        "scripts/verify-atlas-delivery-policy.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/policy.log",
+      "logSha256": "ba39aa3f33daad707764993fd3b56d947f738c85cc60029c294612b4351df0a3",
+      "counts": {}
+    }
+  ],
+  "allOtherInputsUnchanged": true,
+  "reviewBindingsUnchanged": 1710,
+  "ownerPreviewRestarted": false,
+  "ownerDecisionsChanged": false,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false
+}

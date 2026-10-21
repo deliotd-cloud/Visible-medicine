@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-21T11:36:49.762Z",
+  "matrix": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "prior": "F:/VisibleMedicine/staging/20261021-connective-epoch-application/SOURCE_INPUTS_AFTER.json",
+  "priorSha256": "56920b68f2c92bd614492aa93d266aa2119737a1678c0242cfaad7a8eddf6615",
+  "licenseProposal": "F:/VisibleMedicine/staging/20261021-runtime-license-byte-proposal/PROPOSAL.json",
+  "licenseProposalSha256": "8269ee85ae179d512adab72f7b41bf06330142392624024e716af8bca0ddb29b",
+  "buildChange": {
+    "status": "proposal-only; do not apply until native matrix terminal",
+    "packagePath": "package.json",
+    "packagePreSha256": "a565ae86769901977a232427dc1669936959bbe04ccf283e0b233f1865886cd0",
+    "prebuildBefore": "node scripts/verify-clinical-review.mjs && npm run verify:atlas-delivery-policy",
+    "prebuildAfter": "node scripts/verify-clinical-review.mjs && node scripts/atlas-model-inventory.mjs --check && npm run verify:atlas-delivery-policy",
+    "newTest": "tests/atlas-runtime-build-preflight.test.mjs",
+    "newTestSha256": "542b4fe9e5bc3d91b2b2f2f5351ecf44067f0505e75fc55bc3be51812e137a73",
+    "dependenciesChanged": false,
+    "rightsOrAttributionChanged": false,
+    "requires": "Main admits the four strictly EOL-only LICENSE corrections first; invoke the existing read-only complete inventory checker and actual affected native tests. Preserve all prior assertion bodies; no manifest rebind, no generated runtime-code editing, no restart or approval change."
+  },
+  "canonicalChanged": false,
+  "nativeRun": false,
+  "requiresTerminalMatrixBeforeAnyApply": true
+}

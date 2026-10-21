@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T11:18:42.356Z",
+  "at": "2026-10-21T11:47:09.932Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5160,
+    "canonicalNamedInputs": 5161,
     "canonicalInstalled": true
   },
-  "parent": "2a87734590df9594320159c824adff65f8de7d0a",
-  "gitParent": "2a87734590df9594320159c824adff65f8de7d0a",
+  "parent": "f7d604f1340d6ab37d8c3ee1cd0b179ba5b4ed89",
+  "gitParent": "f7d604f1340d6ab37d8c3ee1cd0b179ba5b4ed89",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -6226,6 +6226,191 @@
       "sha256": "361e49778b2faa89c6bd911fa92d1471d6b9e53c3ae2c0e179a8e99d5fa45e9c"
     },
     {
+      "path": "evidence/20261021-runtime-license-build-verified/controls/admit-runtime-license-preflight-20261021.mjs",
+      "bytes": 8158,
+      "sha256": "1660e94ed11d9dacb48977ae7315a440dddcd954a6f567d9c067fa8be2a5a1ad"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/controls/checkpoint-runtime-license-build-20261021.mjs",
+      "bytes": 8819,
+      "sha256": "08f0dc442afba76c27a8a5be7faf923e49f513935b26de7c06549a1ed6ade92e"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/controls/record-remaining-native-triage-20261021.mjs",
+      "bytes": 3181,
+      "sha256": "aff9658c683f19badc215ac66e780c279e9a42c66dde7e3048f842367318061f"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/controls/run-remaining-native-matrix-20261021.mjs",
+      "bytes": 4954,
+      "sha256": "0a321bfbff801420f03bc469768e314d3b8a3d62bd1eec7c80363bb7627ce984"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/native/POST_MATRIX_TRIAGE.json",
+      "bytes": 69748,
+      "sha256": "47964a18ec2c36f203a5863f29eff35a874b1494a71d80e73f6e1aad032780f6"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/native/RECEIPT_AUDIT.json",
+      "bytes": 89659,
+      "sha256": "5c7044fafcd487d8d298c8dddadf3a379b0cf55bd8050cacba409fce93e95cae"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/native/RESULT.json",
+      "bytes": 5324,
+      "sha256": "643bd0898cad98aa18b764834df3afba68a04aadc07062b0b323b00ab54e6f9c"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/APPLICATION.json",
+      "bytes": 3437,
+      "sha256": "415e878adb8dbbb2e2460df55aa684b78b2c5d08f9729de91d03bd7fd9f41ad1"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/inventory.json",
+      "bytes": 341,
+      "sha256": "6ba933b1016ce0017b4c48e8974af95d26cd165a3343da41c7ca0d322edfd003"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/inventory.log",
+      "bytes": 63,
+      "sha256": "62d3fe8ac53184c12b22d4e83199e2ba55df863b0bb633f4d45440d4eb4cb753"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/LICENSE_PROPOSAL.json",
+      "bytes": 4530,
+      "sha256": "8269ee85ae179d512adab72f7b41bf06330142392624024e716af8bca0ddb29b"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/native.json",
+      "bytes": 715,
+      "sha256": "a41a37d69bc83f2fb126c9b7bf1b12f6a574b3de9cad913058fd7068d3b97257"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/native.log",
+      "bytes": 5335,
+      "sha256": "4c04819fc9a7cf272fcf465a0ba4190507228896a32954c935c17e7cfa0a899f"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/policy.json",
+      "bytes": 364,
+      "sha256": "b7b88d056c0f21bea3348e6041b80d1bc3948dd0f628f442c41227a26f1dc6a6"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/PREPARATION.json",
+      "bytes": 1746,
+      "sha256": "52e1a88649e97f8a72eac3a0543d5d91d30fe4770f574cdde1a2fd0df78bdf4b"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/packaging/review.json",
+      "bytes": 324,
+      "sha256": "b4d4fac779111abcbed55ad6339184dd5511d2665320635f785564989576e019"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/evidence/PROOF.json",
+      "bytes": 3191,
+      "sha256": "c2268884f675572309f317ddafa2cabd894c4f42c26c1044cf9cd5a0714a42e3"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/installed-website/package.json",
+      "bytes": 2474,
+      "sha256": "709f273fb3fca47974c0da8cb095a219d72b2c7c60b3a8bbd3e59b4fc135dec6"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/installed-website/public/atlas-runtime/female-pelvis/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/installed-website/public/atlas-runtime/head-neck/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/installed-website/public/atlas-runtime/lower-limb/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/installed-website/public/atlas-runtime/shoulder/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/installed-website/tests/atlas-runtime-build-preflight.test.mjs",
+      "bytes": 2065,
+      "sha256": "542b4fe9e5bc3d91b2b2f2f5351ecf44067f0505e75fc55bc3be51812e137a73"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/psoas/REPORT.md",
+      "bytes": 3646,
+      "sha256": "1ee9d2e459aeb53511118976f28964f16267a3388ceabbd32f7fb520fbd07e25"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/psoas/tests/clinical-review-psoas-current-preservation.test.mjs",
+      "bytes": 2345,
+      "sha256": "ce84fc5cc359907e07bffd364cb00de7c9c2b3a232254956d04d35fd60aece51"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/psoas/tests/clinical-review-psoas-xray.test.ts",
+      "bytes": 19824,
+      "sha256": "48bd7232dc16e830cd5f8a7be95ab6ead9de41d9365ff55815457360f49dff16"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/psoas/tests/fixtures/clinical-review-psoas-xray.original.raw",
+      "bytes": 18282,
+      "sha256": "7687a4b56ee61dcb46603cdcab5b7e273b2f7cfa7456a854f859b37cb2cf9af4"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/PROPOSAL.md",
+      "bytes": 5585,
+      "sha256": "d1496e60aeee7cb58686be5db41c778b445f1d223256858336c7ae26fa7e68e0"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 5172,
+      "sha256": "8b6e741d1565be147f25258163ffdc00830aafcca2f4a04b39a0f4edbd5e62cf"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 5850,
+      "sha256": "59bf61933c8a8944bb7da9bd10cdb517c93ddd65af74ef34b0934c66389397a2"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "bytes": 33077,
+      "sha256": "a6fea25a4dd1bde5c87d02cf993459a44c255a735e73ef9e0e7b20331309696a"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/fixtures/salivary-cache-epoch-20261021/atlas190-current-delivery.original.mjs.raw",
+      "bytes": 5077,
+      "sha256": "1788fce7a307bc36145b20a570e3783a4c496cb1f06e26f8faf1b38195db93ef"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/fixtures/salivary-cache-epoch-20261021/git-root-preservation.original.mjs.raw",
+      "bytes": 5683,
+      "sha256": "d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/fixtures/salivary-cache-epoch-20261021/original.ts.raw",
+      "bytes": 29064,
+      "sha256": "c4e18aeb9ce2056cb50fcef3a665de0356f91b88ff78992a928b7346f3ca2362"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/salivary-cache-epoch-adapter.mjs",
+      "bytes": 2001,
+      "sha256": "8a84ac8dfe143a07113ca237e31ab1443ffe8a80a79c6a9559adef4362aedab0"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/salivary-cache-epoch-preservation.test.mjs",
+      "bytes": 2589,
+      "sha256": "f17f2181b380bae251927bda8feeca6e214a251444e8c0e8fb50bf29121cd1e4"
+    },
+    {
+      "path": "evidence/20261021-runtime-license-build-verified/proposals-unrun/salivary/tests/salivary-cache-guard-adaptation.test.mjs",
+      "bytes": 3586,
+      "sha256": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468"
+    },
+    {
       "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/cutover/SUMMARY.json",
       "bytes": 1768,
       "sha256": "b839b3883c66753657b29390ebb5ff30e29a1cbce4657c6c0cddc1d7c105ec43"
@@ -8422,9 +8607,9 @@
     }
   ],
   "removed": [],
-  "scope": "Only explicitly selected own Website test/fixture paths, small nonclinical receipts and controls on already filtered source-only ancestry. No raw canonical ancestry/full source/data/runtime/geometry/private records, scan/mask/media/browser DOM or private reference uploads. Partial source recovery only, not complete/private/runnable backup, clinical approval, registration or public deployment.",
+  "scope": "Explicit installed package/test/four MIT-and-third-party-carveout text files, small metadata-only native/packaging proofs and controls, plus clearly proposal-only authored tests/original-test fixtures. Previously filtered source-only ancestry only. No raw canonical ancestry/full project, scans/masks/models/media/datasets/private records or references/env/dependencies/native full TAP/browser DOM. Partial source recovery, not full/private/runnable backup, clinical sign-off, spatial registration or public deployment.",
   "proof": {
-    "at": "2026-10-21T11:18:36.951Z",
+    "at": "2026-10-21T11:47:04.752Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -8432,8 +8617,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5160,
-    "controlledSourceInputs": 5153,
+    "currentNamedInputs": 5161,
+    "controlledSourceInputs": 5154,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -8443,41 +8628,57 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-connective-epoch-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "56920b68f2c92bd614492aa93d266aa2119737a1678c0242cfaad7a8eddf6615",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "1b6149e6acea7e37df75085566d934b38ac818b91fa85b5585cd51a901a4ea4b",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-runtime-license-and-build-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "3408adbc6325b7f62e5f274e57a507f4478cc1fb76c10f0d5838ddd57293881b",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "connectiveActualCases": 2,
-    "fullTypesPassed": true,
-    "wholeOriginalPreserved": true,
-    "historicalContextExplicitlySynthetic": true,
-    "selectedCurrentTeachingAndRefusalsVerified": true,
+    "actualPackagingPasses": 24,
+    "allThreeReadOnlyPrebuildGatesPassed": true,
+    "licenseChangesStrictlyEolOnly": true,
+    "legalTextChanged": false,
+    "allCompanionRuntimeAndModelBytesVerified": true,
+    "modelIdentities": 137,
+    "modelPaths": 144,
+    "dependenciesChanged": false,
+    "typedInputsUnchanged": true,
+    "previousFullTypesOnIdenticalTypedInputs": true,
+    "productionBuildRerun": false,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
+    "subsetNative": {
+      "terminal": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix/RESULT.json",
+      "terminalSha256": "643bd0898cad98aa18b764834df3afba68a04aadc07062b0b323b00ab54e6f9c",
+      "counts": {
+        "tests": 289,
+        "pass": 202,
+        "fail": 87,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "entries": 80,
+      "sourceInputsUnchanged": true,
+      "failureInventory": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix/POST_MATRIX_TRIAGE.json",
+      "failureInventorySha256": "47964a18ec2c36f203a5863f29eff35a874b1494a71d80e73f6e1aad032780f6",
+      "all87FailuresMapped": true,
+      "failedFiles": 62,
+      "rootCauseDiagnosisComplete": false,
+      "packagingPassesNotSubtractedFromOldSubset": true
+    },
+    "proposalsUnrun": [
+      "psoas-current-epoch",
+      "salivary-cache-plus-two-coupled-guards"
+    ],
     "ownerPreviewPid": 266712,
     "ownerPreviewSession": 32652,
     "ownerPreviewRestarted": false,
     "ownerTabsReloaded": false,
     "ownerDecisionsChanged": false,
-    "reviewKeyboardBrowser": {
-      "temporaryTab": "93",
-      "closed": true,
-      "route": "/workspace/clinical-review-inbox?area=head-learning&q=pons",
-      "authorizedAutomaticScan": true,
-      "pausedFromKeyboard": true,
-      "focusAfterPause": "Resume from page 23",
-      "resumedFromKeyboard": true,
-      "focusAfterResume": "Pause",
-      "clientWidth": 1265,
-      "horizontalOverflow": false,
-      "decisionsSubmitted": false,
-      "rawDomOrPrivateRecordsExported": false,
-      "allDesktopOrAssistiveTechnologyAcceptance": false
-    },
     "unresolvedBrowserErrorKinds": 1,
-    "browserErrorAttributed": false,
-    "originalFullFailureBaseline": 144,
-    "currentFullNativeFailureBaseline": 136,
+    "originalFullFailureBaseline": 136,
+    "earlierDifferentSourceBaseline": 144,
     "fullSuitePassingClaim": false,
     "allNativeFailuresResolved": false,
     "clinicalApproval": false,
