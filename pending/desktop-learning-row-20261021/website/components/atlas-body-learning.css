@@ -1,0 +1,24 @@
+.atlas-body-learning{box-sizing:border-box;min-width:0;max-width:100%;padding:7px 12px;border:1px solid #aec8c2;background:#f8fbf6;color:#113c3e;font:12px/1.4 system-ui,sans-serif;overflow-wrap:anywhere}
+.atlas-body-learning>summary{cursor:pointer;font-weight:650;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.atlas-body-learning[open]>summary{overflow:visible;white-space:normal}
+.atlas-body-learning strong{font-size:13px}
+.atlas-body-learning a{display:inline-flex;align-items:center;min-height:32px;padding:3px 9px;border:1px solid #7daea2;border-radius:5px;background:#fff;color:#075c58;font-weight:650;text-decoration:none}
+.atlas-body-learning a:hover{text-decoration:underline}
+.atlas-body-learning p{margin:6px 0 2px!important;font-size:11px!important;line-height:1.45}
+.atlas-body-learning :is(summary,a):focus-visible{outline:3px solid #16a695;outline-offset:3px}
+.atlas-body-learning-action{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:8px 0 5px}
+.atlas-body-learning-source{max-width:100%;margin-top:7px}
+.atlas-body-learning-source>summary{cursor:pointer;color:#075c58;font-weight:600}
+.atlas-body-learning-source p{max-width:80ch}
+.atlas-runtime-frame:has(>.atlas-body-learning){--atlas-learning-row:36px;min-height:calc(280px + var(--atlas-learning-row))}
+.atlas-runtime-frame:has(>.atlas-body-learning[open]){--atlas-learning-row:96px}
+.atlas-runtime-frame:has(>.atlas-body-learning[open]>.atlas-body-learning-source[open]){--atlas-learning-row:168px}
+.atlas-runtime-frame:has(>.atlas-body-learning)>iframe{height:calc(100% - var(--atlas-learning-row));bottom:auto}
+.atlas-runtime-frame>.atlas-body-learning{position:absolute;z-index:3;bottom:0;left:0;right:0;width:100%;height:var(--atlas-learning-row);overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;border-width:1px 0 0}
+.atlas-runtime-frame:has(>.atlas-body-learning)>.atlas-runtime-help{bottom:calc(var(--atlas-learning-row) + 8px)}
+.atlas-body-learning-flow{position:static;max-width:100%;margin:6px 0;border-radius:6px}
+@media(max-width:760px){
+  .atlas-runtime-frame:has(>.atlas-body-learning[open]){--atlas-learning-row:128px}
+  .atlas-runtime-frame:has(>.atlas-body-learning[open]>.atlas-body-learning-source[open]){--atlas-learning-row:224px}
+  .atlas-body-learning-action{align-items:flex-start}
+}

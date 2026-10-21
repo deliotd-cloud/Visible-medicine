@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T21:12:43.119Z",
+  "at": "2026-10-21T21:40:29.797Z",
   "sourceIdentity": {
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlasHead": "0dfce15890cafc0a2b8e309193531daa29a672ed",
-    "atlasTree": "18f4fa612d0209123488a9104c2e26089b06cfe3",
-    "review": "d5dbb01222de26c1ffcb8adcc754f53b4e87a787d19e9ab5ba3498cfcc8963c9"
+    "review": "c4a5647ec3e0047013747d1810b87939a1b8472cb5e334659f5f64ae961d5db3"
   },
-  "parent": "feb6732a02eb5e62bc222d48a2ee1677d34e063e",
-  "gitParent": "feb6732a02eb5e62bc222d48a2ee1677d34e063e",
+  "parent": "3d72131a3efc7f86c00534e5cc3620c3472a38a9",
+  "gitParent": "3d72131a3efc7f86c00534e5cc3620c3472a38a9",
   "files": [
     {
       "path": "app/globals.css",
@@ -12286,6 +12285,61 @@
       "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
     },
     {
+      "path": "pending/desktop-learning-row-20261021/website/components/atlas-body-learning.css",
+      "bytes": 2339,
+      "sha256": "e67cb7c1ef4952eb6d94027a24b040d748de8feb4e4795f2757e71c5a3c42ea9"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/components/AtlasBodyLearning.tsx",
+      "bytes": 6490,
+      "sha256": "8512c42af12098b2833a901245ac08406f081c3edacbfabe2d6bc5d73b544d42"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/atlas-body-learning-space.test.mjs",
+      "bytes": 4755,
+      "sha256": "eebac7324514d16b9b2902c389b58d787a5bb937224a5cf444db21a2afec7a0e"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/body-learning-layout-history-preservation.test.mjs",
+      "bytes": 8156,
+      "sha256": "a667894f46b8d6a71d0fd964d07f9115aca0e8e65c6feda1b8c11b3a76a038b6"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 12027,
+      "sha256": "4986b31328ae291df5d98435ad1a88f702a8d915cda44a5b2664bf7e68257484"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 3222,
+      "sha256": "440ad2646f5d06769994957f73e771544c2caefdd1a42dfa49d8c772dfa1108f"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "48e78c04e4ac5c6da18e4d57ffb66616487f835b9e8574304c4798cd8c983627"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/fixtures/desktop-learning-row/body-learning-layout-history-preservation.test.mjs.raw",
+      "bytes": 8156,
+      "sha256": "835632a7ff5ec67499c971ab1f6ca73828c02e2fdef925754ff8af5c9963fbcc"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/fixtures/desktop-learning-row/clinical-review-desktop-layout.test.mjs.raw",
+      "bytes": 12027,
+      "sha256": "f85234c45be43ed018de4b1773a1c71e6b3f8dbe4af540e4bc918d6dc7db2e32"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/fixtures/desktop-learning-row/current-atlas-delivery.json.raw",
+      "bytes": 2051,
+      "sha256": "72f6809a3e5754b77c7c7a5ed53d2c3d9d1c58b52e1fa14165b20b767de78b8a"
+    },
+    {
+      "path": "pending/desktop-learning-row-20261021/website/tests/fixtures/desktop-learning-row/integration-inputs.json.raw",
+      "bytes": 270345,
+      "sha256": "1ff0122debc54ff429998ac9bfc669a0d2ced1563a9c3101024c655db6e9b930"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -12992,30 +13046,18 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source selection plus explicitly selected live body-learning source and test-admission paths. Pending namespace now contains locally installed code, but remains only partial source recovery—not a full/private/runnable project backup. No scan, pixels, masks, models, patient identifiers, private runtime modules, clinical notes/decisions, environment, databases, raw logs, media or raw canonical Git ancestry.",
+  "scope": "Inherited independently restored filtered source selection plus 11 explicitly selected desktop teaching-row component/test paths. Binding witness is relative source paths and SHA-256 digests only. Partial source recovery, not whole/private/runnable project recovery. No scans, masks, pixels, model meshes, identifiers, private runtime modules, notes, decisions, credentials, environment, databases, raw logs, media or raw canonical Git ancestry.",
   "proof": {
     "installedLocally": true,
-    "combinedConsumerChecks": {
-      "tests": 275,
-      "pass": 275,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "fullProjectTypes": true,
-    "fullLocalBuild": true,
-    "stockReview": true,
+    "combinedConsumerChecks": 281,
+    "focusedCanonicalChecks": 19,
+    "fullTypes": true,
+    "fullBuild": true,
     "reviewBindings": 1719,
     "importedSources": 1556,
-    "rootStructures": 1104,
-    "regions": 12,
-    "readOnlySelection": true,
-    "exactVersionOriginSessionSequenceAndFrame": true,
-    "independentLectureAccessUnchanged": true,
-    "sourceAndModelGeometryUnchanged": true,
+    "atlasAndModelsUnchanged": true,
+    "accessAndQuizGatesUnchanged": true,
     "clinicalApproval": false,
-    "spatialRegistration": false,
     "publicDeployment": false,
     "wholeSuitePassing": false,
     "wholeProjectBackup": false,
