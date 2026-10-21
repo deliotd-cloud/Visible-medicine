@@ -1,18 +1,33 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T19:20:49.362Z",
+  "at": "2026-10-21T19:56:26.532Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
-    "desktopSearchInstalled": true
+    "bodyLectureLinksInstalled": true
   },
-  "parent": "a0bc6efabda0bbc3759982ef60b1dc1d43d1f7e1",
-  "gitParent": "a0bc6efabda0bbc3759982ef60b1dc1d43d1f7e1",
+  "parent": "512991c17eaa5eb8c631daf2c656097eec6e19e3",
+  "gitParent": "512991c17eaa5eb8c631daf2c656097eec6e19e3",
   "files": [
     {
       "path": "app/globals.css",
       "bytes": 171538,
       "sha256": "67dbecc0822dd7c5b08633192ec9dbae32e16d097e8cf87bb7aaaceb4bc45c32"
+    },
+    {
+      "path": "app/learn/related-structure/page.tsx",
+      "bytes": 5210,
+      "sha256": "58fac35d3ba45742a3e0220931b5b533c4aa859649d865d78670fb055f6ed940"
+    },
+    {
+      "path": "app/search/page.tsx",
+      "bytes": 3836,
+      "sha256": "f785fb35fb7266267bc753df2974c70e28f98d3b241d0b98174d65885df271a4"
+    },
+    {
+      "path": "app/search/search.css",
+      "bytes": 4534,
+      "sha256": "582e1a0525a5c24d1c9b8dba31595ee4f010d812d6414e6018b8264e4ee7301f"
     },
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -248,6 +263,16 @@
       "path": "components/HeadTourPlayback.tsx",
       "bytes": 4470,
       "sha256": "20777219656e9d51aaaca559bb9fa946bff7012602cd92daf57f119958412588"
+    },
+    {
+      "path": "components/LectureEditor.tsx",
+      "bytes": 40403,
+      "sha256": "f58f16bf99b926ec334c038f3e19970204ce3abbf94ad122b36d45f95971ec92"
+    },
+    {
+      "path": "components/LecturePlayer.tsx",
+      "bytes": 13328,
+      "sha256": "7ec9ff6bba26565cbf8857d33c8e03da505010303d118550fc9d77abc9f1e912"
     },
     {
       "path": "components/PlexusReviewWorksheet.tsx",
@@ -783,6 +808,91 @@
       "path": "evidence/20261021-atlas-source-assembly/source/scripts/test-regional-tour-player.mjs",
       "bytes": 126985,
       "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/BROWSER_DRAFT_GATE.json",
+      "bytes": 244,
+      "sha256": "20f70c7df16f7b93d971bdfaaa6c18da455d7b2a7bf9be6406e32444fe7c2ee6"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/catalog-check.json",
+      "bytes": 348,
+      "sha256": "db54bf939d3b4fc6b9dff05cae2de622ebe5c498ac97424bd36552b2dea3ab45"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/controls/checkpoint-body-lecture-links-20261021.mjs",
+      "bytes": 10313,
+      "sha256": "77917139bb3159f1c6158143e5a96e42a25e0d2367c45e1e4f18b09c7acc9f04"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/controls/install-body-lecture-links-20261021.mjs",
+      "bytes": 8054,
+      "sha256": "3a25dd9fc9ddefae6d56e684be195e36ffb9a78368cef292c10ffdab50846f9e"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/controls/prepare-body-editor-transition-20261021.mjs",
+      "bytes": 1814,
+      "sha256": "13e268f7213f483ec2e5dcf1ded2841295b8467ae0d3273bc0c37d9182999c04"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/controls/prepare-body-lecture-layout-20261021.mjs",
+      "bytes": 4727,
+      "sha256": "90af8b88bababccb19b1ffb30f94a6589b1eedac7c215c0b5e8f45cc01f0bfbf"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/delivery-policy.json",
+      "bytes": 377,
+      "sha256": "ad0865c7150dc20e1fb3d17010e3ce422923d73ee9c16757580888ab73ec9b27"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/DOCUMENTATION_SUPPLEMENT.json",
+      "bytes": 696,
+      "sha256": "8e890dcbcab59f4b02b9eb78d4c8995c0e09b613b1bdcb83d901e909f2e16d84"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/full-build.json",
+      "bytes": 344,
+      "sha256": "49eb30952e2899c1538f74b9f7e74872b48943dc58e9006fe0dc9267ac9beb40"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/full-types.json",
+      "bytes": 381,
+      "sha256": "1d6773380e4b6fe54b660b9136cee7cae54ce5caf7cc5fecc2f107c62310fab6"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/INSTALLATION.json",
+      "bytes": 14156,
+      "sha256": "62db82582ff28b3d50c68f33931f5f5c9b05f20312ba4ed31a0346e973d80ad8"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/model-inventory.json",
+      "bytes": 351,
+      "sha256": "8ab5df1895261f61b12ac647686a1f38b2ce6eabe82f0f956adfe32325d91a31"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/native.json",
+      "bytes": 1855,
+      "sha256": "ad341d3db08db943a1827b6047cd9a815489a541e8dc3d1ea3f321a2a5f9dc42"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/PROOF.json",
+      "bytes": 2833,
+      "sha256": "02dd9db616880009c5fb8c785b8c9903fe32428cadbd1f5d2608073777a05bf6"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/RUNTIME_ACCEPTANCE.json",
+      "bytes": 885,
+      "sha256": "80115657b111c545c8cb2bcce4fc7d8c24b1ca8b4d5e84c88be6a8372055fecc"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/stock-review-after-notices.json",
+      "bytes": 239,
+      "sha256": "e7ba79dfad2a5667e0f193218a4c0068ab89e9faf64028d52cb20e21555cc9e8"
+    },
+    {
+      "path": "evidence/20261021-body-lecture-links/stock-review.json",
+      "bytes": 335,
+      "sha256": "e63f20e5cd79202c98e565811015ebf455858c8fa431663f8474ec3f49e8a402"
     },
     {
       "path": "evidence/20261021-canonical-local-r2-admitted/canonical-developer/preimage/stage-clinical-review-candidate-local.mjs",
@@ -11681,8 +11791,8 @@
     },
     {
       "path": "lib/body-structure-search.ts",
-      "bytes": 6294,
-      "sha256": "8ca7f89d7306375e2d919b42f96e5ae4090cca3b7335829b5b77c14a70cf6425"
+      "bytes": 6564,
+      "sha256": "717cf6d14356434d83a6e20e601ce8384793efe0db41081962909361d4cb46f4"
     },
     {
       "path": "lib/clinical-review-fetch.ts",
@@ -11700,6 +11810,36 @@
       "sha256": "98a28b5d2d168e481b10d7c8461b721985eea32f9d1412546eab63afa8d6d294"
     },
     {
+      "path": "lib/lecture-body-catalog.json",
+      "bytes": 181273,
+      "sha256": "14847c9d19f42d4128a0e38d6149b70b728d02e9302e83cfa3ba6679ac745b9c"
+    },
+    {
+      "path": "lib/lecture-body-reference.ts",
+      "bytes": 9768,
+      "sha256": "37e3ff087ac74360736f44636ac995c89ceb1f1324217abc25e5bcbb6ecf89f4"
+    },
+    {
+      "path": "lib/lecture-body-related-links.ts",
+      "bytes": 1516,
+      "sha256": "39c1650c2511c597c51e641b17db4612bb08277d0ce16e5dc99feabe59a79f9d"
+    },
+    {
+      "path": "lib/lecture-body-related-repository.ts",
+      "bytes": 4800,
+      "sha256": "bbe2f33286db3b0c3d042122cba2019342a0561fd8914c6f2b44e916ff32ef3e"
+    },
+    {
+      "path": "lib/lecture-content.ts",
+      "bytes": 6101,
+      "sha256": "5a609218b07604ad26eb7af1e83d4db8552cf53f7b2d662584e8a874f2413d7e"
+    },
+    {
+      "path": "lib/lecture-repository.ts",
+      "bytes": 15550,
+      "sha256": "3903af27466fbf6a99b6a48b6fdb50126ef967262b6b0c2c807a5258d9d0e79d"
+    },
+    {
       "path": "lib/platform-governance.ts",
       "bytes": 45233,
       "sha256": "142458d43a4d0fb095090a971c46450d3faffd271331ce536776fda977a574b0"
@@ -11713,6 +11853,26 @@
       "path": "lib/review-draft-autosave.ts",
       "bytes": 2402,
       "sha256": "9192c9af4dc0ad1c6bbe31eb762846dcf1d2af81753e9f6244fd4ea81c8249db"
+    },
+    {
+      "path": "lib/structure-learning-search.ts",
+      "bytes": 2774,
+      "sha256": "eefa0780f18d829ef53515f8981ddc88a9a1ac8be664d7bd29bed800af887825"
+    },
+    {
+      "path": "LICENSES/LECTURE_BODY_CATALOG.md",
+      "bytes": 2022,
+      "sha256": "ca5d6ec24949a072f430a86b793d184bc27e5260f0deb675948ce1a701fe1a64"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 11197,
+      "sha256": "2ce224dcf5634635b98d88b65d2549c19bc0cdd8fb3236b430f114268a0ba503"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2598,
+      "sha256": "087db70291173eca0d547f827e4c49520d767f57a16010ff7fe11e41ec2b93fb"
     },
     {
       "path": "public/atlas-review-viewer/index.html",
@@ -11783,6 +11943,11 @@
       "path": "scripts/import-plexus-review.mjs",
       "bytes": 10124,
       "sha256": "3c04c80a6be6ae27af8f9e34c2dca7e2c4215973366f135dae2ceb223700f98b"
+    },
+    {
+      "path": "scripts/lecture-body-catalog.mjs",
+      "bytes": 5385,
+      "sha256": "f1fdb64c51c6bf09f3cff49f776445966799d747b5d6e04308de1a89fc45c384"
     },
     {
       "path": "tests/anatomy-coverage-revision-admission.test.mjs",
@@ -12055,6 +12220,86 @@
       "sha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105"
     },
     {
+      "path": "tests/fixtures/body-lecture-links/app__search__page.tsx.raw",
+      "bytes": 3532,
+      "sha256": "c780dbe68d377685f826f87cedb460b49a35eb5e9b55e99a217d5ff0aecdc75a"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/app__search__search.css.raw",
+      "bytes": 3872,
+      "sha256": "3bfe16558036b8c38c1050297ce12654fd1a0008bdf1bdfcc0c1521950da1085"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/components__LectureEditor.tsx.raw",
+      "bytes": 35476,
+      "sha256": "b78b2bd2590a7a7f30f7ea9393d52ff4fa6d0993783d866ae0431ddb49f0173a"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/components__LecturePlayer.tsx.raw",
+      "bytes": 11742,
+      "sha256": "fedd755deb1160d493c0ca148ad74cf0593c99021b884ac0d0788d163c941558"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/editor-transition.json",
+      "bytes": 31417,
+      "sha256": "7bd2e6019ff71c08541439bd96f772ece4ee48485cb4af250020416b0747af61"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lecture-anatomy-integration.test.ts.raw",
+      "bytes": 8037,
+      "sha256": "186b6b79f718a9f8310230b08e0b4c336ce43ad75589e9c5d10fe2ab77657b01"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lecture-multi-anatomy-repository.test.ts.raw",
+      "bytes": 16946,
+      "sha256": "ce16f6b5a647e8d8578ca9e738b0cf096d64b449ab7ed19b2d4d413b086d2052"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lecture-repository.test.ts.raw",
+      "bytes": 24122,
+      "sha256": "d57df851e97afb4c292f2b80e400b5df9c4f72fc5ecb6aa715b8b2c86aa55c0e"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lecture-save-preservation.test.mjs.raw",
+      "bytes": 4681,
+      "sha256": "b604d397372a35ee8fc2d8a7b5f98010ea220a240b246d822bb1ebfb4d94fbde"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__body-structure-search.ts.raw",
+      "bytes": 6294,
+      "sha256": "8ca7f89d7306375e2d919b42f96e5ae4090cca3b7335829b5b77c14a70cf6425"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__lecture-content.ts.raw",
+      "bytes": 5099,
+      "sha256": "a0683b59e42f718e862311bb48ee75a5e2cb1da03b8386dcf38e145bb35e91b4"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__lecture-related-repository.ts.raw",
+      "bytes": 4896,
+      "sha256": "a5d3f73e285efc47ba055190424a61cf2776b64e801f8b88d7ed7042787d64c8"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__lecture-repository.ts.raw",
+      "bytes": 15461,
+      "sha256": "21b4b3ae6dffffc367205a973e6cbc8a27222e30a9c2311f5a874e7fec2e27b8"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__structure-learning-search.ts.raw",
+      "bytes": 2750,
+      "sha256": "c0f72a8d432260ab7ec96e3e900487b5a9cfeca666fe1d91e1360a8e46868e5a"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/package.json.raw",
+      "bytes": 2474,
+      "sha256": "709f273fb3fca47974c0da8cb095a219d72b2c7c60b3a8bbd3e59b4fc135dec6"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/related-lectures.test.ts.raw",
+      "bytes": 28760,
+      "sha256": "eae79ef9264b91359dfeb1819f369d21f06c3515b5fff8f365b4f2c7f2b45c75"
+    },
+    {
       "path": "tests/fixtures/corpus-ct-delivery-original-97e75.mjs.raw",
       "bytes": 6359,
       "sha256": "288450978d8c168a5e78ab85ebf05957eeafd5d0935c8b6160cf70c7506b4b00"
@@ -12180,6 +12425,66 @@
       "sha256": "702750035b329415c4a425bece2a40aa40ed5ba18d77ea90bb7b7575b1cc18bb"
     },
     {
+      "path": "tests/lecture-anatomy-integration.test.ts",
+      "bytes": 8149,
+      "sha256": "1bcac4a08540db6c6b45781d6e6b63ee5c292f63a9693a66fbca5ffbbd22299e"
+    },
+    {
+      "path": "tests/lecture-body-content.test.mjs",
+      "bytes": 7098,
+      "sha256": "8b67edc507ed90d46590379f840890f07c213b0004b4243e856c12748e0f3eca"
+    },
+    {
+      "path": "tests/lecture-body-integration.test.mjs",
+      "bytes": 7846,
+      "sha256": "f5702cebecfb60f05b2cae2e987102ce17de7dc6e6c4d15449c3c5bc434943df"
+    },
+    {
+      "path": "tests/lecture-body-loader-preservation.test.mjs",
+      "bytes": 1864,
+      "sha256": "1038de0794edeeb5d7f6d7a4d64f710157951ddf7d815e7f252da712380e3326"
+    },
+    {
+      "path": "tests/lecture-body-preservation.mjs",
+      "bytes": 1316,
+      "sha256": "9aaad76fd4f77a02fdaec3bab94cde9508278f3f667b8b920ceafa47324fe32c"
+    },
+    {
+      "path": "tests/lecture-body-preservation.test.mjs",
+      "bytes": 1473,
+      "sha256": "7daecb5cee311057ae3305548e9679cfcb5e1af49516d20679495a24d8174e56"
+    },
+    {
+      "path": "tests/lecture-body-reference.test.mjs",
+      "bytes": 9162,
+      "sha256": "41972d2dbaf32ed26a6ee347d4ae12c49a4fa9f7f0811b29a8cc6012eaa68331"
+    },
+    {
+      "path": "tests/lecture-body-related.test.mjs",
+      "bytes": 14323,
+      "sha256": "5df656729194b9cc156d6877dc19b88e8a7d99265874cc27a3b36be5a2f8666b"
+    },
+    {
+      "path": "tests/lecture-body-ui.test.mjs",
+      "bytes": 13220,
+      "sha256": "b88730f27891cec0aaf8b135f99d73fdd582e9edc955f8357b487ee595899205"
+    },
+    {
+      "path": "tests/lecture-multi-anatomy-repository.test.ts",
+      "bytes": 17058,
+      "sha256": "3f662168343e1f6b7420e01c05808b4dc93ddefd56291146f4fcd6fbcc3a6928"
+    },
+    {
+      "path": "tests/lecture-repository.test.ts",
+      "bytes": 24234,
+      "sha256": "90da065af83ae1b61ea46a7e1174bdd563f7b50469311c0c268982893d9416ed"
+    },
+    {
+      "path": "tests/lecture-save-preservation.test.mjs",
+      "bytes": 4787,
+      "sha256": "182b5574272d9999519f1e628895b3a617791761078f13fe0fbba1fe2d6d7eef"
+    },
+    {
       "path": "tests/native-head-52-source.mjs",
       "bytes": 2831,
       "sha256": "e6cf37c783ca11b76f70b513c140443032deee8de0fa8aebb32442523b605dcc"
@@ -12230,6 +12535,11 @@
       "sha256": "60be257de429b63eb311458092417da29326f737c5b9a9779324b57c8bdcace1"
     },
     {
+      "path": "tests/related-lectures.test.ts",
+      "bytes": 28919,
+      "sha256": "04e802b57c022446599b0635999bf7b5ebbfd2d13afa3f84abc031f1da09b305"
+    },
+    {
       "path": "tests/review-change-import-history.mjs",
       "bytes": 2481,
       "sha256": "b7ad45d970973a535880a4fb03e4df7c554fca4bfe767c952cc6bf49f75a9877"
@@ -12271,42 +12581,71 @@
     }
   ],
   "removed": [],
-  "scope": "Previous filtered source retained, plus three desktop Search source/test paths and compact real-layout/native-MRI/browser/types/build/stock integrity receipts and local controls. No scans, pixels, masks, private module, identifiers, scan names/coordinates, private references/notes/decisions, env/database, model files, generated viewer JavaScript, raw logs/DOM/media, dependencies or canonical Git ancestry. Partial source-only recovery, not whole/private/runnable recovery, clinical approval, spatial registration or public deployment.",
+  "scope": "Retains the earlier filtered source and adds full-body lecture linking, deliberate source/side/revision bindings, access-checked related teaching, exact legacy test adapters and complete original public-code witnesses, explicit inherited licence/change notices and compact test/types/build/browser proof. Excludes scans, pixels, masks, private modules, identifiers, scan names/coordinates, private references/notes/decisions, env/database, models, generated viewer JavaScript, raw logs/DOM/media, dependencies and canonical Git ancestry. Partial source-only recovery, not whole/private/runnable recovery or clinical/spatial/public approval.",
   "proof": {
-    "at": "2026-10-21T19:20:43.705Z",
+    "at": "2026-10-21T19:56:20.819Z",
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
     "reviewBindings": 1712,
     "importedSources": 1553,
-    "sourceInputs": 5503,
-    "controlledInputs": 5496,
+    "sourceInputs": 5534,
+    "controlledInputs": 5527,
     "preservedInputs": 7,
     "nativeCounts": {
-      "tests": 38,
-      "pass": 38,
+      "tests": 203,
+      "pass": 203,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
+    "firstNativeAttempt": {
+      "tests": 197,
+      "pass": 176,
+      "fail": 21,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "firstAttemptSourceRollbackVerified": true,
+    "allPriorAssertionsPreservedByWholeSourceInverse": true,
     "fullProjectTypesPassed": true,
     "fullLocalBuildPassed": true,
     "stockReviewPassed": true,
-    "desktopGlobalSearchDiscoverabilityImproved": true,
-    "compactSearchTestedAtWidths": [
-      1000,
-      1057,
-      1280
-    ],
-    "realSignedInKeyboardSearchAndWorkspaceEscapePassed": true,
-    "exactOtherHeaderAndCssSourceInversePassed": true,
-    "mobileDrawerAndAuthAccessPreserved": true,
-    "noNewDependenciesFontsModelsTexturesOrDatasets": true,
-    "inlineDecorativeGeometricIconOnly": true,
-    "nativeMriTypedPonsCorrectAndSeparateFollowupScoreVerified": true,
-    "mriLocateInsideMaskNotClaimed": true,
-    "ownerTabsReloaded": false,
-    "noClinicalRecordsOrSavedLearnerResultsWritten": true,
+    "modelInventoryAndDeliveryPolicyPassed": true,
+    "publicBodyRootReferences": 1104,
+    "indexBytes": 181273,
+    "indexSha256": "14847c9d19f42d4128a0e38d6149b70b728d02e9302e83cfa3ba6679ac745b9c",
+    "fullBodyLectureLinkingInstalled": true,
+    "sharedHeadBodySlideLimit": 6,
+    "existingHeadManifestJsonAndHashesPreserved": true,
+    "stalePinsReadableButCannotNavigateOrPublish": true,
+    "automaticStructureOrImageMapping": false,
+    "positiveDiscoveryScope": "Real SQLite synthetic allocation/publication fixtures, real manifest integrity, injected final published authority; unchanged actual authority also exercised by legacy real-allocation suite.",
+    "realBrowserScope": {
+      "at": "2026-10-21T19:56:12.020Z",
+      "previewPid": 292788,
+      "parentPid": 274628,
+      "session": 60913,
+      "manualReload": true,
+      "actualSignedInSearchToBodyRelatedPagePassed": true,
+      "actualStaleSourcePageRefusesReplacement": true,
+      "actualNoAccessibleLecturesEmptyStatePassed": true,
+      "positiveLectureDisclosureTestedWithRealSqliteAndFinalGate": true,
+      "syntheticReactEditorAndPlayerPassed": true,
+      "syntheticSideQuery": "left Achilles",
+      "syntheticDeliberateLinkAndExactPreviewActionsPassed": true,
+      "syntheticSelectionRemovedAndDirtyStateCleared": true,
+      "syntheticSaveDisabledAfterCleanup": true,
+      "syntheticServerStopped": true,
+      "actualDesktopWidth": 1280,
+      "noHorizontalOverflow": true,
+      "realStudioSavedLectureRoundtripNotClaimed": true,
+      "ownerTabsReloaded": false,
+      "ownedTabsClosed": true,
+      "noSavedLecturesClinicalDecisionsOrLearnerResultsWritten": true
+    },
+    "licensing": "No new upstream dependency/font/texture/mesh/dataset/service. New index adapts existing cleared public metadata; separate family notices retained, BodyParts3D credit and change notice explicit. Not a whole-project re-audit.",
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,

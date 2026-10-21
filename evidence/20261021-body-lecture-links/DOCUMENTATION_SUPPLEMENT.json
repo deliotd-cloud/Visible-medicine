@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-21T19:56:12.036Z",
+  "onlyLicenceProseChangedAfterBuild": true,
+  "ops": [
+    {
+      "path": "LICENSES/LECTURE_BODY_CATALOG.md",
+      "before": null,
+      "after": "ca5d6ec24949a072f430a86b793d184bc27e5260f0deb675948ce1a701fe1a64"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "before": "fe0a143ef9b37ea072888c6f12ef696cf9fdcfe260cd0e2f1bca09ab5e9003f5",
+      "after": "2ce224dcf5634635b98d88b65d2549c19bc0cdd8fb3236b430f114268a0ba503"
+    }
+  ],
+  "basis": "Reuses existing imported source-family grants and exact source-bound public display metadata; no new upstream assets or dependencies. Official BodyParts3D grant rechecked 21 October 2026."
+}

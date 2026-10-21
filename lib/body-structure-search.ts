@@ -8,6 +8,8 @@ import {makeStudyLink,type StudySide} from '@/atlas-review/lib/study-links';
 import type {BodyCatalog,BodyStructure} from '@/atlas-review/app/body-types';
 import {atlasBodyRegions} from '@/lib/atlas-navigation';
 import type {StructureLearningSearchRow} from '@/lib/structure-learning-search';
+import {createLectureBodyReference} from './lecture-body-reference.ts';
+import {bodyRelatedLectureHref} from './lecture-body-related-links.ts';
 
 export const BODY_STRUCTURE_SEARCH_LIMIT=12;
 const hex40=/^[a-f0-9]{40}$/;
@@ -89,13 +91,15 @@ export function searchBodyStructuresWithIdentity(value:unknown):BodyStructureSea
     if(!source||!hex64.test(source))continue;
     const href='/atlas/3d?'+new URLSearchParams({region:s.region,atlasRevision:index.revision,
       study:'1',structure:s.id,side,source}).toString();
+    const learningHref=bodyRelatedLectureHref(createLectureBodyReference(s.id));
     rows.push({
       identity:{structureId:s.id,fmaId:s.fmaId,sourceRevision:index.revision},
       row:{kind:'Anatomy concept',title:item.label,
         summary:s.representation?.coverage==='partial'
           ?`Partial source representation. ${s.representation.description}`
           :'Source-based 3D anatomy reference; anatomical review pending.',
-        href,meta:`3D Atlas · ${s.fmaId} · ${s.region}`},
+        href,meta:`3D Atlas · ${s.fmaId} · ${s.region}`,
+        ...(learningHref?{learningHref}:{})},
     });
   }
   return rows;

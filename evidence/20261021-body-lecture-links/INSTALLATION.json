@@ -1,0 +1,376 @@
+{
+  "at": "2026-10-21T19:51:13.636Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
+  "reviewBindings": 1712,
+  "ops": [
+    {
+      "path": "app/learn/related-structure/page.tsx",
+      "before": null,
+      "after": "58fac35d3ba45742a3e0220931b5b533c4aa859649d865d78670fb055f6ed940"
+    },
+    {
+      "path": "app/search/page.tsx",
+      "before": "c780dbe68d377685f826f87cedb460b49a35eb5e9b55e99a217d5ff0aecdc75a",
+      "after": "f785fb35fb7266267bc753df2974c70e28f98d3b241d0b98174d65885df271a4"
+    },
+    {
+      "path": "app/search/search.css",
+      "before": "3bfe16558036b8c38c1050297ce12654fd1a0008bdf1bdfcc0c1521950da1085",
+      "after": "582e1a0525a5c24d1c9b8dba31595ee4f010d812d6414e6018b8264e4ee7301f"
+    },
+    {
+      "path": "components/LectureEditor.tsx",
+      "before": "b78b2bd2590a7a7f30f7ea9393d52ff4fa6d0993783d866ae0431ddb49f0173a",
+      "after": "f58f16bf99b926ec334c038f3e19970204ce3abbf94ad122b36d45f95971ec92"
+    },
+    {
+      "path": "components/LecturePlayer.tsx",
+      "before": "fedd755deb1160d493c0ca148ad74cf0593c99021b884ac0d0788d163c941558",
+      "after": "7ec9ff6bba26565cbf8857d33c8e03da505010303d118550fc9d77abc9f1e912"
+    },
+    {
+      "path": "lib/body-structure-search.ts",
+      "before": "8ca7f89d7306375e2d919b42f96e5ae4090cca3b7335829b5b77c14a70cf6425",
+      "after": "717cf6d14356434d83a6e20e601ce8384793efe0db41081962909361d4cb46f4"
+    },
+    {
+      "path": "lib/lecture-body-catalog.json",
+      "before": null,
+      "after": "14847c9d19f42d4128a0e38d6149b70b728d02e9302e83cfa3ba6679ac745b9c"
+    },
+    {
+      "path": "lib/lecture-body-reference.ts",
+      "before": null,
+      "after": "37e3ff087ac74360736f44636ac995c89ceb1f1324217abc25e5bcbb6ecf89f4"
+    },
+    {
+      "path": "lib/lecture-body-related-links.ts",
+      "before": null,
+      "after": "39c1650c2511c597c51e641b17db4612bb08277d0ce16e5dc99feabe59a79f9d"
+    },
+    {
+      "path": "lib/lecture-body-related-repository.ts",
+      "before": null,
+      "after": "bbe2f33286db3b0c3d042122cba2019342a0561fd8914c6f2b44e916ff32ef3e"
+    },
+    {
+      "path": "lib/lecture-content.ts",
+      "before": "a0683b59e42f718e862311bb48ee75a5e2cb1da03b8386dcf38e145bb35e91b4",
+      "after": "5a609218b07604ad26eb7af1e83d4db8552cf53f7b2d662584e8a874f2413d7e"
+    },
+    {
+      "path": "lib/lecture-repository.ts",
+      "before": "21b4b3ae6dffffc367205a973e6cbc8a27222e30a9c2311f5a874e7fec2e27b8",
+      "after": "3903af27466fbf6a99b6a48b6fdb50126ef967262b6b0c2c807a5258d9d0e79d"
+    },
+    {
+      "path": "lib/structure-learning-search.ts",
+      "before": "c0f72a8d432260ab7ec96e3e900487b5a9cfeca666fe1d91e1360a8e46868e5a",
+      "after": "eefa0780f18d829ef53515f8981ddc88a9a1ac8be664d7bd29bed800af887825"
+    },
+    {
+      "path": "package.json",
+      "before": "709f273fb3fca47974c0da8cb095a219d72b2c7c60b3a8bbd3e59b4fc135dec6",
+      "after": "087db70291173eca0d547f827e4c49520d767f57a16010ff7fe11e41ec2b93fb"
+    },
+    {
+      "path": "scripts/lecture-body-catalog.mjs",
+      "before": null,
+      "after": "f1fdb64c51c6bf09f3cff49f776445966799d747b5d6e04308de1a89fc45c384"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/app__search__page.tsx.raw",
+      "before": null,
+      "after": "c780dbe68d377685f826f87cedb460b49a35eb5e9b55e99a217d5ff0aecdc75a"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/app__search__search.css.raw",
+      "before": null,
+      "after": "3bfe16558036b8c38c1050297ce12654fd1a0008bdf1bdfcc0c1521950da1085"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/components__LectureEditor.tsx.raw",
+      "before": null,
+      "after": "b78b2bd2590a7a7f30f7ea9393d52ff4fa6d0993783d866ae0431ddb49f0173a"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/components__LecturePlayer.tsx.raw",
+      "before": null,
+      "after": "fedd755deb1160d493c0ca148ad74cf0593c99021b884ac0d0788d163c941558"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/editor-transition.json",
+      "before": null,
+      "after": "7bd2e6019ff71c08541439bd96f772ece4ee48485cb4af250020416b0747af61"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lecture-anatomy-integration.test.ts.raw",
+      "before": null,
+      "after": "186b6b79f718a9f8310230b08e0b4c336ce43ad75589e9c5d10fe2ab77657b01"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lecture-multi-anatomy-repository.test.ts.raw",
+      "before": null,
+      "after": "ce16f6b5a647e8d8578ca9e738b0cf096d64b449ab7ed19b2d4d413b086d2052"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lecture-repository.test.ts.raw",
+      "before": null,
+      "after": "d57df851e97afb4c292f2b80e400b5df9c4f72fc5ecb6aa715b8b2c86aa55c0e"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lecture-save-preservation.test.mjs.raw",
+      "before": null,
+      "after": "b604d397372a35ee8fc2d8a7b5f98010ea220a240b246d822bb1ebfb4d94fbde"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__body-structure-search.ts.raw",
+      "before": null,
+      "after": "8ca7f89d7306375e2d919b42f96e5ae4090cca3b7335829b5b77c14a70cf6425"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__lecture-content.ts.raw",
+      "before": null,
+      "after": "a0683b59e42f718e862311bb48ee75a5e2cb1da03b8386dcf38e145bb35e91b4"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__lecture-related-repository.ts.raw",
+      "before": null,
+      "after": "a5d3f73e285efc47ba055190424a61cf2776b64e801f8b88d7ed7042787d64c8"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__lecture-repository.ts.raw",
+      "before": null,
+      "after": "21b4b3ae6dffffc367205a973e6cbc8a27222e30a9c2311f5a874e7fec2e27b8"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/lib__structure-learning-search.ts.raw",
+      "before": null,
+      "after": "c0f72a8d432260ab7ec96e3e900487b5a9cfeca666fe1d91e1360a8e46868e5a"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/package.json.raw",
+      "before": null,
+      "after": "709f273fb3fca47974c0da8cb095a219d72b2c7c60b3a8bbd3e59b4fc135dec6"
+    },
+    {
+      "path": "tests/fixtures/body-lecture-links/related-lectures.test.ts.raw",
+      "before": null,
+      "after": "eae79ef9264b91359dfeb1819f369d21f06c3515b5fff8f365b4f2c7f2b45c75"
+    },
+    {
+      "path": "tests/lecture-anatomy-integration.test.ts",
+      "before": "186b6b79f718a9f8310230b08e0b4c336ce43ad75589e9c5d10fe2ab77657b01",
+      "after": "1bcac4a08540db6c6b45781d6e6b63ee5c292f63a9693a66fbca5ffbbd22299e"
+    },
+    {
+      "path": "tests/lecture-body-content.test.mjs",
+      "before": null,
+      "after": "8b67edc507ed90d46590379f840890f07c213b0004b4243e856c12748e0f3eca"
+    },
+    {
+      "path": "tests/lecture-body-integration.test.mjs",
+      "before": null,
+      "after": "f5702cebecfb60f05b2cae2e987102ce17de7dc6e6c4d15449c3c5bc434943df"
+    },
+    {
+      "path": "tests/lecture-body-loader-preservation.test.mjs",
+      "before": null,
+      "after": "1038de0794edeeb5d7f6d7a4d64f710157951ddf7d815e7f252da712380e3326"
+    },
+    {
+      "path": "tests/lecture-body-preservation.mjs",
+      "before": null,
+      "after": "9aaad76fd4f77a02fdaec3bab94cde9508278f3f667b8b920ceafa47324fe32c"
+    },
+    {
+      "path": "tests/lecture-body-preservation.test.mjs",
+      "before": null,
+      "after": "7daecb5cee311057ae3305548e9679cfcb5e1af49516d20679495a24d8174e56"
+    },
+    {
+      "path": "tests/lecture-body-reference.test.mjs",
+      "before": null,
+      "after": "41972d2dbaf32ed26a6ee347d4ae12c49a4fa9f7f0811b29a8cc6012eaa68331"
+    },
+    {
+      "path": "tests/lecture-body-related.test.mjs",
+      "before": null,
+      "after": "5df656729194b9cc156d6877dc19b88e8a7d99265874cc27a3b36be5a2f8666b"
+    },
+    {
+      "path": "tests/lecture-body-ui.test.mjs",
+      "before": null,
+      "after": "b88730f27891cec0aaf8b135f99d73fdd582e9edc955f8357b487ee595899205"
+    },
+    {
+      "path": "tests/lecture-multi-anatomy-repository.test.ts",
+      "before": "ce16f6b5a647e8d8578ca9e738b0cf096d64b449ab7ed19b2d4d413b086d2052",
+      "after": "3f662168343e1f6b7420e01c05808b4dc93ddefd56291146f4fcd6fbcc3a6928"
+    },
+    {
+      "path": "tests/lecture-repository.test.ts",
+      "before": "d57df851e97afb4c292f2b80e400b5df9c4f72fc5ecb6aa715b8b2c86aa55c0e",
+      "after": "90da065af83ae1b61ea46a7e1174bdd563f7b50469311c0c268982893d9416ed"
+    },
+    {
+      "path": "tests/lecture-save-preservation.test.mjs",
+      "before": "b604d397372a35ee8fc2d8a7b5f98010ea220a240b246d822bb1ebfb4d94fbde",
+      "after": "182b5574272d9999519f1e628895b3a617791761078f13fe0fbba1fe2d6d7eef"
+    },
+    {
+      "path": "tests/related-lectures.test.ts",
+      "before": "eae79ef9264b91359dfeb1819f369d21f06c3515b5fff8f365b4f2c7f2b45c75",
+      "after": "04e802b57c022446599b0635999bf7b5ebbfd2d13afa3f84abc031f1da09b305"
+    }
+  ],
+  "commands": [
+    {
+      "at": "2026-10-21T19:49:30.901Z",
+      "args": [
+        "--experimental-strip-types",
+        "--test",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/lecture-body-reference.test.mjs",
+        "tests/lecture-body-content.test.mjs",
+        "tests/lecture-body-related.test.mjs",
+        "tests/lecture-body-ui.test.mjs",
+        "tests/lecture-body-integration.test.mjs",
+        "tests/lecture-body-loader-preservation.test.mjs",
+        "tests/lecture-body-preservation.test.mjs",
+        "tests/lecture-anatomy-reference.test.ts",
+        "tests/lecture-anatomy-collection.test.ts",
+        "tests/lecture-anatomy-integration.test.ts",
+        "tests/lecture-multi-anatomy-repository.test.ts",
+        "tests/lecture-multi-anatomy-ui.test.ts",
+        "tests/lecture-anatomy-text-matches.test.ts",
+        "tests/lecture-anatomy-matches-ui.test.ts",
+        "tests/related-lectures.test.ts",
+        "tests/related-lecture-entrypoints.test.ts",
+        "tests/lecture-manifest.test.ts",
+        "tests/lecture-repository.test.ts",
+        "tests/lecture-editor.test.ts",
+        "tests/lecture-slide-player.test.ts",
+        "tests/lecture-slide-preview.test.ts",
+        "tests/lecture-context-editor.test.mjs",
+        "tests/lecture-request-lifecycle.test.ts",
+        "tests/lecture-save-preservation.test.mjs",
+        "tests/lecture-save-adapter-preservation.test.mjs",
+        "tests/lecture-tour-player.test.ts",
+        "tests/lecture-api.test.ts",
+        "tests/body-structure-search.test.ts",
+        "tests/atlas-structure-search.test.mjs",
+        "tests/search-kind-page.test.ts"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 12493,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-body-lecture-links-v2/native.log",
+      "logSha256": "3fa7c5eef516ee66666ed10a4d86b471b836cbe65376759e9aa9ad31a6b22e6a",
+      "counts": {
+        "tests": 203,
+        "pass": 203,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "at": "2026-10-21T19:49:33.167Z",
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 2260,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-body-lecture-links-v2/stock-review.log",
+      "logSha256": "51c61688b22897b2e563b4d0bbda9f75df742378bb5c381a1c2cddc45df732c7"
+    },
+    {
+      "at": "2026-10-21T19:49:33.449Z",
+      "args": [
+        "scripts/lecture-body-catalog.mjs",
+        "--check"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 280,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-body-lecture-links-v2/catalog-check.log",
+      "logSha256": "076bd9d504f2bd995ac33f29696da8e1ebf84f1369eda7d2650a6f0ef712dcdc"
+    },
+    {
+      "at": "2026-10-21T19:50:20.309Z",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 46858,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-body-lecture-links-v2/full-types.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at": "2026-10-21T19:50:20.937Z",
+      "args": [
+        "scripts/atlas-model-inventory.mjs",
+        "--check"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 626,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-body-lecture-links-v2/model-inventory.log",
+      "logSha256": "62d3fe8ac53184c12b22d4e83199e2ba55df863b0bb633f4d45440d4eb4cb753"
+    },
+    {
+      "at": "2026-10-21T19:50:21.047Z",
+      "args": [
+        "--experimental-strip-types",
+        "scripts/verify-atlas-delivery-policy.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 108,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-body-lecture-links-v2/delivery-policy.log",
+      "logSha256": "ba39aa3f33daad707764993fd3b56d947f738c85cc60029c294612b4351df0a3"
+    },
+    {
+      "at": "2026-10-21T19:51:09.475Z",
+      "args": [
+        "node_modules/vinext/dist/cli.js",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 48426,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-body-lecture-links-v2/full-build.log",
+      "logSha256": "18bd9387ca78eca3c60a6a66c63ebd64392c2fea85423a8f295440c4bfbee6d0"
+    }
+  ],
+  "nativeCounts": {
+    "tests": 203,
+    "pass": 203,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceSnapshot": "F:/VisibleMedicine/recovery/local-cutover/20261021-body-lecture-links-v2/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "589f1ed46e028b938177e9f2ab05ae7780a2af1fbdd4a790fd86a078bf40e9e4",
+  "controlledInputs": 5526,
+  "preservedInputs": 7,
+  "typesPassed": true,
+  "buildPassed": true,
+  "stockReviewPassed": true,
+  "modelInventoryAndDeliveryPolicyPassed": true,
+  "ownerTabsReloaded": false,
+  "previewRestartPending": true,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false
+}

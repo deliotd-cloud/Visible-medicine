@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import http from 'node:http';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {sha,read} from './source-only-backup-20261019.mjs';
+const site='F:/VisibleMedicine/website',stage='F:/VisibleMedicine/staging/20261021-body-lecture-links-proposal',candidate=stage+'/candidate';
+const require=createRequire(site+'/package.json'),esbuild=require('esbuild');
+const apiPath=p=>JSON.stringify((candidate+'/'+p).replaceAll('\\','/'));
+const initial={id:'synthetic-body-lecture',courseId:'synthetic-course',courseTitle:'Anatomy teaching',title:'Structure learning',version:1,status:'draft',slides:[{id:'one',title:'Link a 3D structure',body:'Use the optional body structure search to deliberately choose an exact structure and side. This local fixture does not save records.',referenceUrl:''}],reviews:[],published:null,canEdit:true,canReview:false,canPublish:false};
+const script=`import React from 'react';import{createRoot}from'react-dom/client';import{LectureEditor}from ${apiPath('components/LectureEditor.tsx')};
+import{LecturePlayer}from ${apiPath('components/LecturePlayer.tsx')};import{lectureBodyOptions}from ${apiPath('lib/lecture-body-reference.ts')};
+const initial=${JSON.stringify(initial)};
+const testPin=lectureBodyOptions('left Achilles')[0].reference;
+const mode=location.pathname==='/player'?'player':'editor';
+createRoot(document.getElementById('root')).render(mode==='player'?<LecturePlayer title="Structure learning" slides={[{...initial.slides[0],bodyAnatomyReferences:[testPin]}]} version={1}/>:<LectureEditor initial={initial} courseOutline={[{id:initial.id,title:initial.title}]} expectedStudioContext={{actorId:'edu:synthetic',organizationId:'synthetic'}}/>);`;
+const result=await esbuild.build({stdin:{contents:script,resolveDir:site,sourcefile:'synthetic-body-layout.tsx',loader:'tsx'},absWorkingDir:site,nodePaths:[site+'/node_modules'],define:{'process.env.NODE_ENV':'"production"'},alias:{'@':site},bundle:true,platform:'browser',format:'esm',write:false,jsx:'automatic',minify:true,loader:{'.css':'empty'},plugins:[{name:'synthetic-boundaries',setup(b){
+ b.onResolve({filter:/^\.\/Workbook(?:CorrectionLineage|Correction|Retirement)$/},args=>({path:args.path,namespace:'synthetic'}));
+ b.onLoad({filter:/.*/,namespace:'synthetic'},()=>({contents:'export const WorkbookCorrection=()=>null,WorkbookRetirement=()=>null,WorkbookCorrectionLineage=()=>null;export const createWorkbookCorrectionLineageContext=()=>({begin:()=>Symbol(),finish(){},invalidate(){}});',loader:'js'}));
+ b.onResolve({filter:/^\.\.?\//},args=>{const target=path.resolve(args.resolveDir,args.path);if(target.startsWith(path.resolve(candidate))&&!fs.existsSync(target)){const fallback=path.resolve(site,path.relative(candidate,target));for(const trial of [fallback,fallback+'.tsx',fallback+'.ts'])if(fs.existsSync(trial))return{path:trial};}return null;});
+ }}]});
+const js=Buffer.from(result.outputFiles[0].contents);const css=read(site+'/components/lecture-editor.css');
+const html=Buffer.from(`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Local body-link UI test</title><style>:root{--ink:#092f35;--muted:#536c6e;--line:#d5e2df;--paper:#fff;--soft:#f0f5f1;--teal:#086568;--cream:#fafaf5}*{box-sizing:border-box}body{font:16px system-ui;color:var(--ink);background:#f7f9f5;margin:0;padding:24px}body>p{margin:0 0 18px}button,input,select,textarea{font:inherit}a{color:#086568}button{cursor:pointer}#root{max-width:1440px;margin:auto}</style><link rel="stylesheet" href="/style.css"><p><strong>Local interface test</strong> · Synthetic content only. No records are saved.</p><div id="root"></div><script type="module" src="/app.js"></script></html>`);
+const server=http.createServer((req,res)=>{if(req.method!=='GET'){res.writeHead(405);res.end();return;}const route=req.url?.split('?')[0];if(route==='/app.js'){res.setHeader('content-type','text/javascript');res.end(js);}else if(route==='/style.css'){res.setHeader('content-type','text/css');res.end(css);}else if(route==='/editor'||route==='/player'){res.setHeader('content-type','text/html');res.end(html);}else{res.writeHead(404);res.end();}});
+server.listen(3004,'127.0.0.1',()=>{const record={at:new Date().toISOString(),pid:process.pid,port:3004,loopback:true,syntheticOnly:true,mutationsSupported:false,editorSha256:sha(read(candidate+'/components/LectureEditor.tsx')),playerSha256:sha(read(candidate+'/components/LecturePlayer.tsx')),clientBytes:js.length,clientSha256:sha(js)};fs.writeFileSync(stage+'/LAYOUT_SERVER.json',JSON.stringify(record,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(record));});
