@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-21T14:09:30.500Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/regional-learning-catalogue.test.ts",
+    "tests/regional-reference-review-index.test.ts",
+    "tests/regional-mri-inline-inspection.test.ts",
+    "tests/regional-link-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-regional-link-role-application/native.tap",
+  "logSha256": "ef25ab60a9b862ed0045268e5fc8adc4660a7cb8a2555814e2229c4ce5d6e0d4",
+  "counts": {
+    "tests": 58,
+    "pass": 58,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

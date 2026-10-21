@@ -1,0 +1,43 @@
+{
+  "schema": "visible-medicine.staged-regional-link-role-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "atlasSource": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "atlasSourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "reviewDigest": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "controlledSnapshot": {
+    "path": "F:/VisibleMedicine/staging/20261021-head-role-union-application/SOURCE_INPUTS_AFTER.json",
+    "sha256": "f37794894656799e7b12589ff4b40de5e878a0f3f27b12252f928259fcd13c54"
+  },
+  "diagnosis": [
+    "The current catalogue test and its sole current-source reader still demand Atlas 87ed although the imported Review manifest and clean Atlas HEAD are 190. The archived 408 catalogue, legacy, and portal proofs are separate historical roles.",
+    "The current MRI manifest binding demands 87ed; its archived 408 manifests and synthetic MRI/public-transport refusal tests remain historical and unchanged.",
+    "The 35-row index test treats old 408 link and teaching digests as the current binding. The proposal independently hashes exact current 190 links, replays the 408 link revision against the authentic current entry body and demands its saved e99 digest, and retains 9f/ac714 plus all four old 408 teaching digests as exact historical checks."
+  ],
+  "directHelperConsumers": [
+    {
+      "helper": "tests/regional-learning-catalogue-history.ts",
+      "consumer": "tests/regional-learning-catalogue.test.ts",
+      "invocation": "the separate current imported catalogue admits the current Atlas graph invokes assertCurrentRegionalSource",
+      "otherDirectConsumersFound": 0
+    }
+  ],
+  "proposedPaths": [
+    {"path":"tests/regional-learning-catalogue.test.ts","preimageSha256":"5e6d1ebabeb635cacffa1de78485cad254655a42bcf964285650e51595be698c","candidateSha256":"0453ffc954e02ecc9185ad35520d153727d52801aea3ae7cbacd6acff7b4c53e","candidateBytes":10048},
+    {"path":"tests/regional-learning-catalogue-history.ts","preimageSha256":"59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9","candidateSha256":"4693e9e80e7523078e5155fe48624bc01ad57caf458d30bddb3cdc48ebbd75d9","candidateBytes":7595},
+    {"path":"tests/regional-reference-review-index.test.ts","preimageSha256":"508a9df7dda87e65ccf6cee49fc289d88ad2d3ca26e1388896b35563865320ad","candidateSha256":"9aa23fa7e8f91752145f5b3c1e4f9e99b77b8982032cc4df136dcc189cdc8811","candidateBytes":16186},
+    {"path":"tests/regional-mri-inline-inspection.test.ts","preimageSha256":"732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f","candidateSha256":"05435a2b21ff1036064bc5d8e83f6c11ff3990afa8360599050e0da49b4fcfd8","candidateBytes":20088},
+    {"path":"tests/regional-link-role-preservation-20261021.test.mjs","preimageSha256":null,"candidateSha256":"252cd3796bcba91edd547a49a99bf25a26751f30881ef0deb8295615e853ed3b","candidateBytes":4995},
+    {"path":"tests/fixtures/regional-link-before-role-batch-20261021/regional-learning-catalogue.test.ts.raw","preimageSha256":null,"candidateSha256":"5e6d1ebabeb635cacffa1de78485cad254655a42bcf964285650e51595be698c","candidateBytes":10048},
+    {"path":"tests/fixtures/regional-link-before-role-batch-20261021/regional-learning-catalogue-history.ts.raw","preimageSha256":null,"candidateSha256":"59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9","candidateBytes":7595},
+    {"path":"tests/fixtures/regional-link-before-role-batch-20261021/regional-reference-review-index.test.ts.raw","preimageSha256":null,"candidateSha256":"508a9df7dda87e65ccf6cee49fc289d88ad2d3ca26e1388896b35563865320ad","candidateBytes":15006},
+    {"path":"tests/fixtures/regional-link-before-role-batch-20261021/regional-mri-inline-inspection.test.ts.raw","preimageSha256":null,"candidateSha256":"732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f","candidateBytes":20089}
+  ],
+  "focusedSourceOnlyProof": {
+    "rawPreimagesMatchCanonical": true,
+    "fullFilePreservationGuard": "node --test tests/regional-link-role-preservation-20261021.test.mjs: 1/1 pass",
+    "currentAtlasHeadAndReviewManifestRevision": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "currentAtlasTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+    "limits": "No three native test roots, typecheck, build, browser, or whole suite ran here. The old-408 replay of the live catalogue's exact entries and four teaching digests must be verified by main after guarded admission; a passing source-only preservation guard is not a passing behavior test."
+  },
+  "scope": "F-local staged files only; no canonical, product, runtime, validator, importer, generated, clinical, or deployment edits."
+}

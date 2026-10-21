@@ -1,0 +1,26 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-regional-link-roles-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-regional-link-role-application",
+  "manifestSha256": "3c81316ab3e52739d969799c6c7e17876fc99e07fa4d07264b211cf953ec51de",
+  "beforeInputs": 5186,
+  "afterInputs": 5191,
+  "expectedPaths": [
+    "tests/regional-learning-catalogue.test.ts",
+    "tests/regional-learning-catalogue-history.ts",
+    "tests/regional-reference-review-index.test.ts",
+    "tests/regional-mri-inline-inspection.test.ts",
+    "tests/regional-link-role-preservation-20261021.test.mjs",
+    "tests/fixtures/regional-link-before-role-batch-20261021/regional-learning-catalogue.test.ts.raw",
+    "tests/fixtures/regional-link-before-role-batch-20261021/regional-learning-catalogue-history.ts.raw",
+    "tests/fixtures/regional-link-before-role-batch-20261021/regional-reference-review-index.test.ts.raw",
+    "tests/fixtures/regional-link-before-role-batch-20261021/regional-mri-inline-inspection.test.ts.raw"
+  ],
+  "roots": [
+    "tests/regional-learning-catalogue.test.ts",
+    "tests/regional-reference-review-index.test.ts",
+    "tests/regional-mri-inline-inspection.test.ts",
+    "tests/regional-link-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}

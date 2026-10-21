@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T14:06:15.349Z",
+  "at": "2026-10-21T14:11:08.007Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5193,
+    "canonicalNamedInputs": 5198,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "a78c665e4107d70fb177693c619b2ada88beed92",
-  "gitParent": "a78c665e4107d70fb177693c619b2ada88beed92",
+  "parent": "26ae885f2b8bb6cdf72c573aca4fe64adf0f029d",
+  "gitParent": "26ae885f2b8bb6cdf72c573aca4fe64adf0f029d",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -5772,6 +5772,116 @@
       "sha256": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468"
     },
     {
+      "path": "evidence/20261021-regional-link-current-verified/controls/admission-config.json",
+      "bytes": 1343,
+      "sha256": "624ced65b506b12c62e6e7959b76587f9132b2772f5c86fb506d52a6367a3880"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/controls/admission.mjs",
+      "bytes": 10037,
+      "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/controls/checkpoint-config.json",
+      "bytes": 2291,
+      "sha256": "92d32c235ac82d90e66c685cb5b6783bc3fbb56e99e8363434d60101b050f961"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7636,
+      "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7627,
+      "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/evidence/APPLICATION.json",
+      "bytes": 4570,
+      "sha256": "1eee78c5bb69ce794e6277a055a5e61087eb50e2c2befe3f30a9320b651a1030"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/evidence/native.json",
+      "bytes": 852,
+      "sha256": "62b6a9d74687424464292f7fd29f0695434294464acbffe7fa5f8f7fe7ec36fa"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/evidence/PROOF.json",
+      "bytes": 3010,
+      "sha256": "e5b224967ae3e19cd2abeb2e82086245c2afd30696bbc8c3e0da9449cd7dbc26"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/fixtures/regional-link-before-role-batch-20261021/regional-learning-catalogue-history.ts.raw",
+      "bytes": 7595,
+      "sha256": "59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/fixtures/regional-link-before-role-batch-20261021/regional-learning-catalogue.test.ts.raw",
+      "bytes": 10048,
+      "sha256": "5e6d1ebabeb635cacffa1de78485cad254655a42bcf964285650e51595be698c"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/fixtures/regional-link-before-role-batch-20261021/regional-mri-inline-inspection.test.ts.raw",
+      "bytes": 20089,
+      "sha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/fixtures/regional-link-before-role-batch-20261021/regional-reference-review-index.test.ts.raw",
+      "bytes": 15006,
+      "sha256": "508a9df7dda87e65ccf6cee49fc289d88ad2d3ca26e1388896b35563865320ad"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/regional-learning-catalogue-history.ts",
+      "bytes": 7595,
+      "sha256": "4693e9e80e7523078e5155fe48624bc01ad57caf458d30bddb3cdc48ebbd75d9"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/regional-learning-catalogue.test.ts",
+      "bytes": 10048,
+      "sha256": "0453ffc954e02ecc9185ad35520d153727d52801aea3ae7cbacd6acff7b4c53e"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/regional-link-role-preservation-20261021.test.mjs",
+      "bytes": 4995,
+      "sha256": "252cd3796bcba91edd547a49a99bf25a26751f30881ef0deb8295615e853ed3b"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/regional-mri-inline-inspection.test.ts",
+      "bytes": 20088,
+      "sha256": "05435a2b21ff1036064bc5d8e83f6c11ff3990afa8360599050e0da49b4fcfd8"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/installed-website/tests/regional-reference-review-index.test.ts",
+      "bytes": 16186,
+      "sha256": "9aa23fa7e8f91752145f5b3c1e4f9e99b77b8982032cc4df136dcc189cdc8811"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/preimages/tests/regional-learning-catalogue-history.ts",
+      "bytes": 7595,
+      "sha256": "59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/preimages/tests/regional-learning-catalogue.test.ts",
+      "bytes": 10048,
+      "sha256": "5e6d1ebabeb635cacffa1de78485cad254655a42bcf964285650e51595be698c"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/preimages/tests/regional-mri-inline-inspection.test.ts",
+      "bytes": 20089,
+      "sha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/preimages/tests/regional-reference-review-index.test.ts",
+      "bytes": 15006,
+      "sha256": "508a9df7dda87e65ccf6cee49fc289d88ad2d3ca26e1388896b35563865320ad"
+    },
+    {
+      "path": "evidence/20261021-regional-link-current-verified/proposal/PROPOSAL.json",
+      "bytes": 4690,
+      "sha256": "3c81316ab3e52739d969799c6c7e17876fc99e07fa4d07264b211cf953ec51de"
+    },
+    {
       "path": "evidence/20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.json",
       "bytes": 769,
       "sha256": "2358d74b7d8558de66a2bd4a0740294b0bee0c1b507aaf795294d1701f954f9d"
@@ -9383,9 +9493,9 @@
     }
   ],
   "removed": [],
-  "scope": "Two exact installed test/raw-witness paths, original preimage, actual43/43 native receipt, corrected read-only coverage diagnosis, main reviewed proposal and guarded recovery controls. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Nine exact installed test-side/raw-witness paths, four original preimages, reviewed proposal, actual58/58 native receipts, and explicit guarded TS/MJS admission controls. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T14:06:06.274Z",
+    "at": "2026-10-21T14:11:01.582Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -9393,8 +9503,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5193,
-    "controlledSourceInputs": 5186,
+    "currentNamedInputs": 5198,
+    "controlledSourceInputs": 5191,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -9404,18 +9514,18 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "9c2b975a4c92eb7c2201390a3cb7bcd76d3b9c8ec5987a9c87b201132da96032",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-posterior-fossa-current-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "15f3c54a8b923e253981fbe70acc1aefb0b1be2a726eacd64c7c66ef50c5b5fb",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-regional-link-role-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "c18f6270f59264f9420fbbff648718a96a5a0a604894cfbd92c3fbb7d7250ae0",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-regional-link-role-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "7080859ddc6ef9dcde22bdd266a1acbae17bbc347302f7c9b54b06514d710179",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 2,
-    "existingEditedTestPaths": 1,
+    "installedTestOnlyPaths": 9,
+    "existingEditedTestPaths": 4,
     "actualNativeCode": 0,
     "actualNativeCounts": {
-      "tests": 43,
-      "pass": 43,
+      "tests": 58,
+      "pass": 58,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
@@ -9430,7 +9540,7 @@
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "milestone": "Posterior-fossa current coverage uses Atlas190 and its exact f06f package rather than the old7b/5594 epoch. Every original count/privacy/import/refusal assertion survives a complete four-seam forward/inverse. Actual source gate now verifies all committed/working Atlas inputs. Website package709f is separate; coverage data is already correct and is not regenerated. Five native roots pass43/43; separate prior52/17/88 receipts and full failure baselines remain.",
+    "milestone": "Nine exact TS/test/raw-witness paths separate current190 catalogue,35-row reference index and MRI inspection links from immutable408/9f/ac714/87ed history. Actual6-root native58/58 verifies current revision-bound mappings, old408 public-link and teaching-digest replays, catalogue/tour graph and synthetic MRI transport/refusal behavior. Original source/count/approval/privacy assertions survive the bounded full-file preservation guard. No acquired images, content, geometry, private state, Review or owner preview changes; all full failure baselines retained.",
     "fullSuitePassingClaim": false,
     "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,
