@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T22:28:40.148Z",
+  "at": "2026-10-21T22:50:49.684Z",
   "sourceIdentity": {
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "atlasHead": "fa1bf9a233c6989fef42b533bbbac9d6ab034311",
-    "atlasTree": "5418fc0ba22673c086edea7afe13617e34e69f98",
-    "review": "0931a6f0042f2973a0d766c1c55f177f76bb3000867dad197e2bcc2ce6461823"
+    "installedAtlas": "fa1bf9a233c6989fef42b533bbbac9d6ab034311",
+    "installedReview": "0931a6f0042f2973a0d766c1c55f177f76bb3000867dad197e2bcc2ce6461823",
+    "candidateAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+    "candidateTree": "e9165d7122361f809a267af1414b337b69097fe2"
   },
-  "parent": "0ffd3d00fcb4f7ff9216b7a4bd5f2412c31ce193",
-  "gitParent": "0ffd3d00fcb4f7ff9216b7a4bd5f2412c31ce193",
+  "parent": "edb88517cfb828f15eadca56a0c68c2e17ddbe8c",
+  "gitParent": "edb88517cfb828f15eadca56a0c68c2e17ddbe8c",
   "files": [
     {
       "path": "app/globals.css",
@@ -12286,6 +12287,41 @@
       "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
     },
     {
+      "path": "pending/colic-ultrasound-20261021/atlas/app/body-content.ts",
+      "bytes": 82791,
+      "sha256": "26320b064b5648f4f5b6ca8c123806a02dedefb761b894935707559d530882fc"
+    },
+    {
+      "path": "pending/colic-ultrasound-20261021/atlas/content/body-renderer-revision.json",
+      "bytes": 215536,
+      "sha256": "6b6aead44906329d4642bf55ad169e5d9a69646584d657aea68d0517389557cc"
+    },
+    {
+      "path": "pending/colic-ultrasound-20261021/atlas/content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "64663645ea5ae88758c25496b82466c12499abecd2d8abd8bc22747204190a84"
+    },
+    {
+      "path": "pending/colic-ultrasound-20261021/atlas/content/colic-artery-ultrasound.ts",
+      "bytes": 1783,
+      "sha256": "2376bfade0c563377ca0096a6d4fbae790d9fa616796e4dec51c5f67dba8acf0"
+    },
+    {
+      "path": "pending/colic-ultrasound-20261021/atlas/docs/COLIC_ARTERY_ULTRASOUND.md",
+      "bytes": 2922,
+      "sha256": "27786828674806d99012fe9b9d5a18ac27dabf8d88f74b8929ec0c6f4e73cd31"
+    },
+    {
+      "path": "pending/colic-ultrasound-20261021/atlas/lib/colic-artery-ultrasound.ts",
+      "bytes": 2745,
+      "sha256": "dbbf0314a0411a7fd65b8f8c42e3a1d10baae7f79579ed74a02c67321b237213"
+    },
+    {
+      "path": "pending/colic-ultrasound-20261021/atlas/scripts/test-colic-artery-ultrasound.mjs",
+      "bytes": 16169,
+      "sha256": "c5fcd1e52e7c32afd246a72ad2813893cb37536cd5625bc485a0cb4b0758ed75"
+    },
+    {
       "path": "pending/desktop-drawable-space-20261021/atlas/app/body-explorer.css",
       "bytes": 65201,
       "sha256": "9722246697fafcd54f55e586797eaec33930c5f3f87d653117b064787ebe2904"
@@ -13157,36 +13193,41 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently restored filtered source selection (including four new Atlas source/proof paths) plus eighteen explicit website source/test/current-pin paths. No new frozen runtime-document witnesses or generated/private derivatives are uploaded. Partial selected-source recovery only, not whole/private/runnable recovery. No scans, masks, pixels, model meshes, identifiers, private runtime modules, private references, notes, decisions, credentials, environment, databases, raw logs, media or raw canonical Git ancestry.",
+  "scope": "Inherited independently restored filtered source selection plus seven explicit staged Atlas authored-code, source-only test/doc and hash-only binding-metadata paths. The regenerated full abdominal teaching snapshot, source catalogue/pins with coordinates, models, scans, masks, figures, private references/state, databases, credentials, logs, media and raw canonical Git ancestry are not added. Partial selected-source recovery only, not whole/private/runnable recovery. Candidate is not website-imported or owner-installed.",
   "proof": {
-    "installedLocally": true,
-    "combinedCanonicalTests": {
-      "tests": 139,
-      "pass": 139,
+    "sourceOnlyPartialRecovery": true,
+    "installedLocally": false,
+    "stagedSourceVerified": true,
+    "nativeSourceTests": {
+      "tests": 7,
+      "pass": 7,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "sourceDensityTests": {
-      "tests": 3,
-      "pass": 3,
+    "regionalLoaderTests": {
+      "tests": 21,
+      "pass": 21,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
     "fullTypes": true,
-    "fullBuild": true,
-    "stockReview": true,
-    "reviewBindings": 1719,
-    "importedSources": 1556,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "exactSourceRows": 5667,
-    "preservedSourcePaths": 7,
-    "geometryModelsAndAccessScopeUnchanged": true,
-    "sourceOnlyPartialRecovery": true,
+    "sourceHoldAndStockMetadataChecks": true,
+    "containedBuild": true,
+    "officialExport": true,
+    "changedTeachingPlacements": 2,
+    "unchangedTeachingPlacements": 9934,
+    "changedReviewPackets": 2,
+    "unchangedReviewPackets": 1102,
+    "sourcePaths": 8,
+    "selectedNewSourcePaths": 7,
+    "modelFilesUnchanged": 136,
+    "leftColicPending": true,
+    "routineTransabdominalVisibilityEstablished": false,
+    "imagesImported": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
