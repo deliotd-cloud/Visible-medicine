@@ -1,0 +1,14 @@
+{
+  "label": "DENTAL_TRANSITION_SYNTAX",
+  "command": "node",
+  "args": [
+    "--check",
+    "scripts/verify-dental-mri-transition.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/DENTAL_TRANSITION_SYNTAX.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "footer": [],
+  "canonicalInstalled": false
+}

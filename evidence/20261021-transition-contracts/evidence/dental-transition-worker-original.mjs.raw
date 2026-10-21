@@ -1,0 +1,288 @@
+// Exact 485 transition and current wiring. No review decision is stored here.
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+
+assert.equal(process.argv.length, 2, 'No alternate test modes are accepted');
+const atlas = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const baseline = '485df97c2530e8e81a8d39a5ee61073ce76d93db';
+const baselineTree = 'f5af5162af89bae05b9ece240f6f158401c5bd15';
+const pinsPath = 'content/dental-mri-pins.json';
+const catalogPath = 'public/models/bodyparts3d/full-body/catalog.json';
+const pinsSha = 'd1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af';
+const catalogSha = '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7';
+const sha = bytes => createHash('sha256').update(bytes).digest('hex');
+const git = (args, encoding = 'utf8') => execFileSync('git', args, {
+  cwd: atlas, encoding, windowsHide: true, maxBuffer: 64e6,
+  env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
+});
+const historical = (commit, path) => git(['show', `${commit}:${path}`], null);
+const liveBytes = path => readFileSync(resolve(atlas, path));
+assert.equal(git(['rev-parse', `${baseline}^{commit}`]).trim(), baseline);
+assert.equal(git(['rev-parse', `${baseline}^{tree}`]).trim(), baselineTree);
+assert.deepEqual(git(['check-attr', '-z', 'text', '--', pinsPath]).split('\0'),
+  [pinsPath, 'text', 'unset', ''], 'Pin file requires -text checkout protection');
+const head = git(['rev-parse', 'HEAD']).trim();
+let introduction = null;
+if (head !== baseline) {
+  const additions = git(['log', '--diff-filter=A', '--format=%H', '--', pinsPath])
+    .trim().split(/\r?\n/).filter(Boolean);
+  assert.equal(additions.length, 1, 'Exactly one real pin introduction is required');
+  introduction = additions[0];
+  assert.match(introduction, /^[a-f0-9]{40}$/);
+  assert.equal(git(['rev-parse', `${introduction}^`]).trim(), baseline,
+    'Pin introduction must have the exact 485 parent');
+  assert.equal(git(['merge-base', introduction, head]).trim(), introduction,
+    'Pin introduction must be a HEAD ancestor');
+  assert.deepEqual(liveBytes(pinsPath), historical(introduction, pinsPath),
+    'Introduced pin bytes must remain immutable');
+}
+const readEpoch = path => introduction ? historical(introduction, path) : liveBytes(path);
+const pinBytes = readEpoch(pinsPath);
+assert.equal(sha(pinBytes), pinsSha, 'Whole pin bytes changed');
+const pins = JSON.parse(pinBytes);
+assert.equal(pins.schemaVersion, 1);
+assert.equal(pins.baseline, baseline);
+assert.equal(pins.sourceTree, baselineTree);
+assert.equal(pins.catalogFileSha256, catalogSha);
+assert.equal(pins.sourceVersion, '4.0');
+assert.equal(pins.license, 'CC-BY-4.0');
+assert.equal(pins.entries.length, 28);
+assert.equal(pins.bundles.length, 1);
+const ids = new Set(pins.entries.map(row => row.identity.id));
+assert.equal(ids.size, 28);
+const groups = new Map([['incisors', 8], ['canines', 4], ['premolars', 8], ['molars', 8]]);
+for (const [group, count] of groups)
+  assert.equal(pins.entries.filter(row => row.group === group).length, count);
+
+const originalCatalogBytes = historical(baseline, catalogPath);
+assert.equal(sha(originalCatalogBytes), catalogSha);
+assert.deepEqual(readEpoch(catalogPath), originalCatalogBytes,
+  'Full original catalogue bytes changed');
+const raw = JSON.parse(originalCatalogBytes);
+assert.equal(raw.sourceVersion, pins.sourceVersion);
+assert.equal(raw.license, pins.license);
+assert.deepEqual(raw.coordinateSystem, pins.coordinateSystem);
+assert.deepEqual(raw.bundles.filter(bundle => bundle.id === pins.bundles[0].id), pins.bundles);
+for (const row of pins.entries) {
+  assert.equal(row.previousReadiness, 'pending');
+  assert.equal(row.identity.validation.status, 'unvalidated');
+  assert.equal(row.identity.validation.anatomicalReview, false);
+  assert.equal(row.identity.provenance.license, pins.license);
+  assert.equal(row.identity.bundle, pins.bundles[0].id);
+  assert.equal(row.identity.nodeName, row.identity.fmaId);
+  assert.deepEqual(raw.structures.filter(item => item.id === row.identity.id), [row.identity]);
+}
+
+const { exactSourceHistoryApi } = await import(pathToFileURL(resolve(atlas,
+  'scripts/exact-source-history-api.mjs')).href);
+const { build } = await import(pathToFileURL(resolve(atlas,
+  'scripts/workspace-test-build.mjs')).href);
+const before = await exactSourceHistoryApi(baseline, 'review-security');
+// Current application modules are bundled through the existing confined builder.
+const compiled = await build({ stdin: { contents: [
+  "export {dentalMriLesson} from './lib/dental-mri';",
+  "export {dentalMriGroups,dentalMriTopics,dentalMriNote} from './content/dental-mri';",
+  "export {bodyLesson,bodyContent} from './app/body-content';",
+  "export {bodyDisplayCatalog} from './lib/body-display-catalog';",
+  "export {contentTabs} from './lib/content-types';",
+  "export {structures} from './app/anatomy-data';",
+  "export {dissectionProfiles} from './app/dissection-data';",
+  "export {regionalTours} from './lib/regional-tours';",
+  "export * from './lib/body-review-material';",
+  "export * from './lib/body-review-context';",
+  "export * from './lib/body-review-response';",
+  "export * from './lib/body-review-api';",
+  "export * from './lib/body-review-decisions';",
+].join(''), resolveDir: atlas, loader: 'ts' }, bundle: true, write: false,
+platform: 'node', format: 'esm' });
+const live = await import('data:text/javascript;base64,' +
+  Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// The introduction epoch is always replayed from actual Git source. It uses the
+// pre-existing review-security profile, without overrides or historical stubs.
+const now = introduction
+  ? await exactSourceHistoryApi(introduction, 'review-security') : live;
+const catalog = now.bodyDisplayCatalog(raw);
+assert.deepEqual(catalog, before.bodyDisplayCatalog(JSON.parse(originalCatalogBytes)));
+assert.deepEqual(catalog.coordinateSystem, pins.coordinateSystem);
+assert.deepEqual(now.structures, before.structures);
+assert.deepEqual(now.dissectionProfiles, before.dissectionProfiles);
+assert.deepEqual(now.regionalTours, before.regionalTours);
+assert.deepEqual(now.contentTabs, before.contentTabs);
+assert.equal(catalog.structures.length, 1104);
+assert.equal(now.contentTabs.length, 9);
+assert.equal(catalog.structures.length * now.contentTabs.length, 9936);
+for (const path of ['app/anatomy-data.ts', 'app/dissection-data.ts', 'lib/regional-tours.ts'])
+  assert.deepEqual(readEpoch(path), historical(baseline, path), `${path}: source/frame changed`);
+for (const bundle of catalog.bundles) {
+  const path = `public${bundle.url.split('?')[0]}`;
+  const bytes = readEpoch(path);
+  assert.deepEqual(bytes, historical(baseline, path), `${path}: original bundle changed`);
+  assert.equal(bytes.length, bundle.bytes, path);
+  assert.equal(sha(bytes), bundle.sha256, path);
+}
+
+const citations = [
+  'https://pubmed.ncbi.nlm.nih.gov/22707436/',
+  'https://pubmed.ncbi.nlm.nih.gov/23420857/',
+  'https://pubmed.ncbi.nlm.nih.gov/40301177/',
+];
+assert.deepEqual(Object.keys(live.dentalMriGroups), [...groups.keys()]);
+assert.deepEqual(Object.keys(live.dentalMriTopics), [...groups.keys()]);
+assert.deepEqual([...groups].map(([key]) => live.dentalMriGroups[key].length), [...groups.values()]);
+assert.equal(new Set(Object.values(live.dentalMriGroups).flat()).size, 28);
+assert.equal(new Set(Object.values(live.dentalMriTopics).map(topic => topic.body)).size, 4);
+for (const topic of Object.values(live.dentalMriTopics)) {
+  assert.deepEqual(topic.citations, citations);
+  assert.match(topic.body, /Conventional 3 T turbo spin-echo MRI/);
+  assert.match(topic.body, /absent signal alone does not prove/);
+}
+assert.match(live.dentalMriNote, /revision-bound radiologist review is pending/);
+assert.match(live.dentalMriNote, /No scan or registration was imported or matched/);
+assert.match(live.dentalMriNote, /not separately segmented/);
+assert.match(live.dentalMriNote, /Atlas, imaging-case and paid-lecture access remain independent/);
+const lessons = new Map();
+for (const { group, identity } of pins.entries) {
+  const shown = catalog.structures.filter(s => s.id === identity.id);
+  assert.deepEqual(shown, [identity]);
+  assert(live.dentalMriGroups[group].includes(identity.fmaId));
+  const lesson = live.dentalMriLesson(identity, 'mri');
+  assert.equal(lesson.readiness, 'draft');
+  assert.equal(lesson.title, `${identity.name} · MRI methods orientation · draft`);
+  assert.equal(lesson.body, live.dentalMriTopics[group].body);
+  assert.deepEqual(lesson.bullets, [...live.dentalMriTopics[group].bullets]);
+  assert.deepEqual(lesson.citations, citations);
+  assert.equal(lesson.note, live.dentalMriNote);
+  assert.deepEqual(live.bodyLesson(shown[0], 'mri'), lesson, 'Current dispatcher disconnected');
+  const { readiness, ...content } = lesson;
+  assert.deepEqual(live.bodyContent(shown[0], 'mri'), content);
+  assert.deepEqual(now.bodyLesson(shown[0], 'mri'), lesson,
+    'Introduction epoch dispatcher does not serve the four pinned method bodies');
+  assert.deepEqual(now.bodyContent(shown[0], 'mri'), content);
+  lessons.set(identity.id, lesson);
+}
+for (const s of catalog.structures.filter(s => !ids.has(s.id)))
+  assert.equal(live.dentalMriLesson(s, 'mri'), undefined);
+
+let changedTopics = 0, preservedTopics = 0, changedPackets = 0, preservedPackets = 0;
+let malformedPackets = 0, staleTeaching = 0, staleImaging = 0;
+let forgedSaves = 0, refusedApprovals = 0, storageCalls = 0;
+const save = async (input) => now.postBodyDecision(
+  new Request('https://atlas.test/api/body-decisions', { method: 'POST',
+    headers: { origin: 'https://atlas.test', 'content-type': 'application/json',
+      'oai-authenticated-user-id': 'SYNTHETIC_DENTAL_MRI_TRANSITION' },
+    body: JSON.stringify(input) }),
+  { prepare() { storageCalls++; throw Error('Invalid decision reached storage'); } });
+for (const s of catalog.structures) {
+  for (const tab of now.contentTabs) {
+    const prior = before.bodyLesson(s, tab), current = now.bodyLesson(s, tab);
+    if (ids.has(s.id) && tab === 'mri') {
+      assert.equal(prior.readiness, 'pending');
+      assert.deepEqual(current, lessons.get(s.id));
+      changedTopics++;
+    } else {
+      assert.deepEqual(current, prior, `${s.id}/${tab}: unrelated topic changed`);
+      preservedTopics++;
+    }
+  }
+  const prior = await before.bodyReviewMaterial(s.id);
+  const packet = await now.bodyReviewMaterial(s.id);
+  assert.equal(packet.approval, false);
+  if (!ids.has(s.id)) {
+    assert.deepEqual(packet, prior, `${s.id}: unrelated Review packet changed`);
+    preservedPackets++;
+    continue;
+  }
+  for (const key of ['source', 'reasoning', 'guidedTours', 'checklist', 'atlasLink', 'limits'])
+    assert.deepEqual(packet[key], prior[key], `${s.id}:${key}`);
+  for (const key of ['source', 'checklist'])
+    assert.equal(packet.fingerprints[key], prior.fingerprints[key]);
+  assert.deepEqual(packet.topics.filter(topic => topic.tab !== 'mri'),
+    prior.topics.filter(topic => topic.tab !== 'mri'));
+  assert.deepEqual(packet.topics.find(topic => topic.tab === 'mri'),
+    { tab: 'mri', ...lessons.get(s.id) });
+  assert.notEqual(packet.fingerprints.teaching, prior.fingerprints.teaching);
+  assert.notEqual(packet.materialHash, prior.materialHash);
+  assert.deepEqual({ ...packet, topics: prior.topics,
+    fingerprints: { ...packet.fingerprints, teaching: prior.fingerprints.teaching },
+    materialHash: prior.materialHash }, prior,
+  `${s.id}: Review packet changed outside the MRI topic and teaching hashes`);
+  const currentPacket = await live.bodyReviewMaterial(s.id);
+  assert.equal(currentPacket.approval, false);
+  assert.deepEqual(currentPacket.topics.find(topic => topic.tab === 'mri'),
+    { tab: 'mri', ...lessons.get(s.id) }, 'Current Review wiring disconnected');
+  assert.deepEqual(await now.parseBodyReviewResponse(packet, s.id), packet);
+  assert.equal(await now.parseBodyReviewResponse(prior, s.id), null);
+  for (const edit of [
+    value => { value.topics.find(topic => topic.tab === 'mri').body += ' foreign'; },
+    value => { value.topics.find(topic => topic.tab === 'mri').citations = ['https://foreign.example']; },
+    value => { value.source.structure.sources[0].sha256 = '0'.repeat(64); },
+    value => { value.topics.find(topic => topic.tab === 'mri').readiness = 'approved'; },
+    value => { value.topics.splice(value.topics.findIndex(topic => topic.tab === 'mri'), 1); },
+  ]) {
+    const altered = structuredClone(packet); edit(altered);
+    assert.equal(await now.parseBodyReviewResponse(altered, s.id), null);
+    malformedPackets++;
+  }
+  const previousContext = await before.bodyReviewContext(s.id);
+  const context = await now.bodyReviewContext(s.id);
+  assert.equal(context.sourceHash, previousContext.sourceHash);
+  assert.notEqual(context.teachingHash, previousContext.teachingHash);
+  assert.notEqual(context.revisions.teaching, previousContext.revisions.teaching);
+  assert.equal(context.revisions.imaging, null);
+  assert(context.blockers.imaging.length);
+  // Renderer code also changes in this batch. Its geometry revision/approval
+  // is separate and is deliberately not equated to the source fingerprint.
+  const decision = { catalogScope: context.catalogScope, structureId: s.id,
+    track: 'teaching', expectedVersion: 0, materialHash: context.materialHash,
+    revisionHash: context.revisions.teaching, checklistVersion: context.checklistVersion,
+    draft: now.blankBodyReview(context, 'teaching') };
+  for (const hashes of [
+    { materialHash: previousContext.materialHash, revisionHash: previousContext.revisions.teaching },
+    { materialHash: previousContext.materialHash },
+    { revisionHash: previousContext.revisions.teaching },
+  ]) {
+    assert.equal((await save({ ...decision, ...hashes })).status, 409);
+    staleTeaching++;
+  }
+  const imaging = { ...decision, track: 'imaging', revisionHash: 'stale-imaging-revision',
+    draft: now.blankBodyReview(context, 'imaging') };
+  assert.equal((await save(imaging)).status, 409);
+  staleImaging++;
+  const forged = structuredClone(decision);
+  forged.draft.checks.foreign = true;
+  assert.throws(() => now.validateBodyReviewDraft(forged.draft, context.checklists.teaching),
+    /Checklist does not match/);
+  assert.equal((await save(forged)).status, 422);
+  forgedSaves++;
+  const unattested = structuredClone(decision);
+  unattested.draft.status = 'approved';
+  Object.keys(unattested.draft.checks).forEach(key => { unattested.draft.checks[key] = true; });
+  Object.assign(unattested.draft, { reviewer: 'Synthetic Reviewer', qualification: 'Synthetic role',
+    scope: 'Synthetic scope for refusal testing only',
+    evidence: [{ title: 'Synthetic evidence', url: 'https://example.test/evidence', note: '' }] });
+  const parsed = now.validateBodyReviewDraft(unattested.draft, context.checklists.teaching);
+  assert.deepEqual(now.bodyApprovalProblems(parsed, context, 'teaching'),
+    ['Attest that you personally performed this review.']);
+  const refused = await save(unattested);
+  assert.equal(refused.status, 422);
+  assert.equal((await refused.json()).error, 'Attest that you personally performed this review.');
+  refusedApprovals++;
+  const fakeApproval = structuredClone(decision);
+  fakeApproval.draft.status = 'approved'; fakeApproval.draft.attested = true;
+  fakeApproval.draft.checks.foreign = true;
+  assert.equal((await save(fakeApproval)).status, 422);
+  refusedApprovals++;
+  changedPackets++;
+}
+assert.deepEqual([changedTopics, preservedTopics, changedPackets, preservedPackets],
+  [28, 9908, 28, 1076]);
+assert.deepEqual([malformedPackets, staleTeaching, staleImaging, forgedSaves, refusedApprovals,
+  storageCalls], [140, 84, 28, 28, 56, 0]);
+console.log(JSON.stringify({ baseline, introduction, pinsSha, catalogSha,
+  changedTopics, preservedTopics, changedPackets, preservedPackets,
+  malformedPackets, staleTeaching, staleImaging, forgedSaves, refusedApprovals,
+  storageCalls, bundlesPreserved: catalog.bundles.length, clinicalApproval: false }));

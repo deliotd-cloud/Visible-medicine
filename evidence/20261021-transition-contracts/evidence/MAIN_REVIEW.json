@@ -1,0 +1,299 @@
+{
+  "at": "2026-10-21T01:59:08.260Z",
+  "phase": "exact transition gates and renderer binding prepared; runtime integration pending",
+  "previousGoalTurnClassification": "progress: actual source assembly/native checks, two portability corrections and555blob filtered backup",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "target": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourcePaths": [
+    {
+      "path": ".gitattributes",
+      "bytes": 4314,
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 354693,
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "af5cd7cda4fde0f48e04db9844513c9b8a3f75b5b7ca4e72251bad80a13b94e4"
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 4542,
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11426,
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "scripts/test-dental-mri-native.mjs",
+      "bytes": 8870,
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6786,
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "scripts/verify-dental-mri-transition.mjs",
+      "bytes": 17132,
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    }
+  ],
+  "dental": {
+    "workerModel": "gpt-6-sol",
+    "workerEffort": "medium",
+    "nestedDelegation": false,
+    "originalGateSha256": "d55469badf6d98b539f8fd82e391d7ddf2df36e08da0036ca918faef8f153661",
+    "finalGateSha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158",
+    "wholeWorkerInverseVerified": true,
+    "syntaxPass": true,
+    "actualFullGatePass": false,
+    "scope": "28exact MRI placements/four shared method bodies; baseline/current/genuine-introduction full resolver and Review theorem. Strengthened current display/Review source joins and real generated-display parsing; separate stale material/null imaging and forged imaging revision refusals,0storage calls expected. Imaging revision remains unavailable/null, not changed or approved.",
+    "generationOrder": "Existing trusted display-pin generator must run before full gate; renderer already generated with stock script. Commit real complete source only after source gates, then replay actual introduction via unmodified review-security history profile."
+  },
+  "renderer": {
+    "files": 1479,
+    "sha256": "41bdb3f383d694c24285dfd435e4c82b7a71d333945e59382a85e42d2ba67a87",
+    "stockGenerateAndCheckPass": true,
+    "exactChangedDependencies": [
+      {
+        "path": "app/body-content.ts",
+        "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+      },
+      {
+        "path": "app/fitted-camera.tsx",
+        "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+      },
+      {
+        "path": "app/regional-guided-learning.tsx",
+        "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+      },
+      {
+        "path": "content/dental-mri-pins.json",
+        "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+      },
+      {
+        "path": "content/dental-mri.ts",
+        "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+      },
+      {
+        "path": "lib/camera-keyboard.ts",
+        "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+      },
+      {
+        "path": "lib/dental-mri.ts",
+        "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+      },
+      {
+        "path": "package.json",
+        "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+      }
+    ],
+    "geometryChanged": false,
+    "geometryApproval": false
+  },
+  "spinal": {
+    "proposal": "F:/VisibleMedicine/staging/20261021-spinal-ct-contract-proposal",
+    "workerModel": "gpt-6-sol",
+    "workerEffort": "medium",
+    "nestedDelegation": false,
+    "paths": [
+      {
+        "path": "tests/atlas-spinal-muscle-xray.test.mjs",
+        "sha256": "c0fee664ecbf5bbbc1665138891eb2253bf71d6d7aff083757fe39b6095c9faa"
+      },
+      {
+        "path": "tests/fixtures/atlas-spinal-muscle-xray-original.raw",
+        "sha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13"
+      }
+    ],
+    "originalFrozenFileUnchanged": true,
+    "syntaxPass": true,
+    "controlledInverseHunks": 20,
+    "actualWebsiteModulePass": false,
+    "applied": false,
+    "scope": "Add exact genuine9296CT versus87edparent source/Review/current/emitted teaching branch for one corpus cell. Preserve whole original theorem/fixtures/security and9910/9818total sums; preserved counters each decrease exactly1. No blanket exception, future API substitution or new test skip."
+  },
+  "correction": "Main static reviewer initially sliced Unicode prose with Buffer-byte length instead of JS character length; corrected reviewer only, preimage retained. Initial failure is in tool output, not an invented raw log. Source and assertions unchanged by this correction.",
+  "receipts": [
+    {
+      "label": "ASSEMBLED_RENDERER_GENERATE",
+      "command": "node",
+      "args": [
+        "scripts/body-renderer-revisions.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/ASSEMBLED_RENDERER_GENERATE.log",
+      "logSha256": "74d38f7df63f4001f9f931c65e848e4d40610b920e6b7c7efd28de312e59ed33",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "ASSEMBLED_RENDERER_CHECK",
+      "command": "node",
+      "args": [
+        "scripts/body-renderer-revisions.mjs",
+        "--check"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/ASSEMBLED_RENDERER_CHECK.log",
+      "logSha256": "03d78ae9652258d17cc2d53f35b70b61c2d18a581ab88b058306f8ee27b222a9",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "DENTAL_TRANSITION_SOURCE_REVIEW",
+      "command": "node",
+      "args": [
+        "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/verify-dental-transition-source-20261021.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/DENTAL_TRANSITION_SOURCE_REVIEW.log",
+      "logSha256": "282013ababba8f47fa215cf3886c2979e55d952853ba2ddc5d5be1baf96809c1",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "DENTAL_TRANSITION_SYNTAX",
+      "command": "node",
+      "args": [
+        "--check",
+        "scripts/verify-dental-mri-transition.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/DENTAL_TRANSITION_SYNTAX.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "SPINAL_CT_PROPOSAL_INVERSE",
+      "command": "node",
+      "args": [
+        "F:/VisibleMedicine/staging/20261021-spinal-ct-contract-proposal/INVERSE_CHECK.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/SPINAL_CT_PROPOSAL_INVERSE.log",
+      "logSha256": "8fcdb2e6b1036be1ecb88a3c05ded027940e36d47713d631f1993c729414642e",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "SPINAL_CT_PROPOSAL_SYNTAX",
+      "command": "node",
+      "args": [
+        "--check",
+        "F:/VisibleMedicine/staging/20261021-spinal-ct-contract-proposal/tests/atlas-spinal-muscle-xray.test.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/SPINAL_CT_PROPOSAL_SYNTAX.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "footer": [],
+      "canonicalInstalled": false
+    }
+  ],
+  "wholeSuite": {
+    "observation": "F:/VisibleMedicine/staging/20261021-complete-website-assurance/observations/2026-10-21T01-57-38.440Z/observation.json",
+    "sha256": "c8a0a218ec7321aded6dd7d4ae5435866abcff20f297cf5495ab58d6a82208bd",
+    "live": true,
+    "terminal": false,
+    "frozenInputs": 5053,
+    "entryCount": 1050,
+    "partialFailureMarkers": [
+      "not ok 50 - desktop source restores its exact pre-repair body, then its raw original through the two coverage declarations",
+      "not ok 51 - current coverage pins admit the regenerated source and reject the prior snapshot",
+      "not ok 52 - regeneration changes evidence identity without changing factual inventory or relaxing holds",
+      "not ok 53 - checker and view retain their entire prior bodies with only declared pins changed",
+      "not ok 70 - original arterial Website contract survives the exact pre-MRA feature retention adapter",
+      "not ok 503 - spinal X-ray source, Review, four runtime manifests and emitted teaching remain exact"
+    ]
+  },
+  "tokens": "Per-run token measurements unavailable; no claimed measured saving.",
+  "websiteUiPathsSeparate": 11,
+  "previousWebsiteAssurancePathsSeparate": 2,
+  "newWebsiteAssurancePathsSeparate": 2,
+  "currentGeneratedDisplayPinsRefreshed": false,
+  "sourceCommitted": false,
+  "stockExportsGenerated": false,
+  "websiteImported": false,
+  "canonicalInstalled": false,
+  "fullSuitePass": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true,
+  "limits": "Static and stock renderer-source checks only, not full resolver/current-history/Review security/actual Website module/player/types/build/stock exports/import/browser acceptance. Prior native4/23/20checks remain exact unchanged runtime evidence, not full acceptance. Frozen full suite continues unchanged; owner98d7/Reviewb2bd/3000and open forms untouched. No masks/scans/private records/assets/dependencies/fees/permissions or clinical PACS changes."
+}

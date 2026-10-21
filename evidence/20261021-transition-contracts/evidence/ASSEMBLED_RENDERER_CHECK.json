@@ -1,0 +1,14 @@
+{
+  "label": "ASSEMBLED_RENDERER_CHECK",
+  "command": "node",
+  "args": [
+    "scripts/body-renderer-revisions.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/ASSEMBLED_RENDERER_CHECK.log",
+  "logSha256": "03d78ae9652258d17cc2d53f35b70b61c2d18a581ab88b058306f8ee27b222a9",
+  "footer": [],
+  "canonicalInstalled": false
+}

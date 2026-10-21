@@ -1,0 +1,9 @@
+# Bounded handoff — 21 October 2026
+
+The frozen spinal test rejects the genuine corpus spongiosum CT draft in its unrelated-cell equality branch. This proposal admits exactly `vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis/ct` through a pinned branch. The expected preserved counters each decrease by one; both original total-cell sums remain 9910 and 9818. All earlier transition branches, fixtures, source/tree/delivery pins, equality checks, negative mutations and source coverage remain present.
+
+The added contract checks the immediate parent `87ed7e343260c7df48a40d53503f25bbfd34cfa5`, genuine CT introduction `9296d0f940e25581162f8d8fe738a1aad40c72b8`, exact epoch tree, unchanged current pin/transition and feature bytes, one complete FMA19617 identity and CT cell, parent pending and introduced draft lesson, parent/introduced/current Review topic, and packet fingerprints/material hashes. Replacing only the CT topic and bound hashes in the introduced packet restores the complete parent packet. The current packet is unsigned; stale and mutated CT packets are refused. The current CT lesson is checked in each existing emitted teaching surface.
+
+Static evidence: `node --check` passed; `INVERSE_CHECK.mjs` passed, restoring SHA-256 `af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13` from 20 controlled hunks. Proposal SHA-256 is `c0fee664ecbf5bbbc1665138891eb2253bf71d6d7aff083757fe39b6095c9faa`. Git metadata confirmed immediate parent and tree; pin, predecessor and current JSON hashes match the native CT transition; frozen Atlas tracked status is clean and frozen Website test hash unchanged.
+
+Actual Website test, full suite, resolver, build and import gates remain unrun while the original suite owns the heavy slot. No Atlas or Website source was edited, and there is no clinical, release or deployment claim. Main should review the diff and run the actual test only after the full-run terminal inventory.

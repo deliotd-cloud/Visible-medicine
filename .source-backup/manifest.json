@@ -1,134 +1,115 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T01:40:43.453Z",
+  "at": "2026-10-21T01:59:10.902Z",
   "sourceIdentity": {
     "atlasBase": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "uncommittedPaths": [
+    "sourcePaths": [
       {
-        "path": "scripts/test-hip-quick-check-history.mjs",
-        "beforeSha256": "9a4bb88915f40c80ca77b6b40a665813c7aa56adfe5b419d2f5f88c1a048dcd5",
-        "finalSha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e",
-        "proposedSha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e",
-        "bytes": 4609
-      },
-      {
-        "path": "scripts/hip-quick-check-history-context.mjs",
-        "beforeSha256": null,
-        "finalSha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe",
-        "proposedSha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe",
-        "bytes": 9024
-      },
-      {
-        "path": "scripts/test-hip-history-entry-refusals.mjs",
-        "beforeSha256": null,
-        "finalSha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e",
-        "proposedSha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950",
-        "bytes": 6786
-      },
-      {
-        "path": "app/body-content.ts",
-        "beforeSha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6",
-        "finalSha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2",
-        "proposedSha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2",
-        "bytes": 82603
-      },
-      {
-        "path": "content/dental-mri.ts",
-        "beforeSha256": null,
-        "finalSha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d",
-        "proposedSha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d",
-        "bytes": 3508
-      },
-      {
-        "path": "content/dental-mri-pins.json",
-        "beforeSha256": null,
-        "finalSha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af",
-        "proposedSha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af",
-        "bytes": 57639
-      },
-      {
-        "path": "lib/dental-mri.ts",
-        "beforeSha256": null,
-        "finalSha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e",
-        "proposedSha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e",
-        "bytes": 1866
-      },
-      {
-        "path": "docs/DENTAL_MRI_EVIDENCE.md",
-        "beforeSha256": null,
-        "finalSha256": "7a9f7ab8aed07dd51267b4b8e92efaa99ed65241efadc2a94d41be7a9962e48c",
-        "proposedSha256": "7a9f7ab8aed07dd51267b4b8e92efaa99ed65241efadc2a94d41be7a9962e48c",
-        "bytes": 3849
-      },
-      {
-        "path": "app/fitted-camera.tsx",
-        "beforeSha256": "9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0",
-        "finalSha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6",
-        "proposedSha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6",
-        "bytes": 12876
-      },
-      {
-        "path": "lib/camera-keyboard.ts",
-        "beforeSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220",
-        "finalSha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e",
-        "proposedSha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e",
-        "bytes": 9666
-      },
-      {
-        "path": "package.json",
-        "beforeSha256": "9786b30019f418881824a20026ee66c2d3e16d4a3231f6cea85975687cbe6d1a",
-        "finalSha256": "5fbc8085737a4028af87ccaad75c8973f8424927bffe956637e68d0a5eb75408",
-        "proposedSha256": "5fbc8085737a4028af87ccaad75c8973f8424927bffe956637e68d0a5eb75408",
-        "bytes": 86656
-      },
-      {
-        "path": "scripts/test-camera-keyboard-zoom.mjs",
-        "beforeSha256": null,
-        "finalSha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369",
-        "proposedSha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd",
-        "bytes": 11426
-      },
-      {
-        "path": "docs/KEYBOARD_ZOOM.md",
-        "beforeSha256": null,
-        "finalSha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f",
-        "proposedSha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f",
-        "bytes": 1456
-      },
-      {
-        "path": "scripts/test-dental-mri-native.mjs",
-        "beforeSha256": null,
-        "finalSha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad",
-        "proposedSha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad",
-        "bytes": 8870
+        "path": ".gitattributes",
+        "bytes": 4314,
+        "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
       },
       {
         "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-        "beforeSha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
-        "finalSha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd",
-        "proposedSha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd",
-        "bytes": 354693
+        "bytes": 354693,
+        "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+      },
+      {
+        "path": "app/body-content.ts",
+        "bytes": 82603,
+        "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+      },
+      {
+        "path": "app/fitted-camera.tsx",
+        "bytes": 12876,
+        "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
       },
       {
         "path": "app/regional-guided-learning.tsx",
-        "beforeSha256": "bcc7a99b91d355c9a9ccbcd9ae7781742bd68f5222c2b4705bfffccff83c1899",
-        "finalSha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c",
-        "proposedSha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c",
-        "bytes": 15876
+        "bytes": 15876,
+        "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+      },
+      {
+        "path": "content/body-renderer-revision.json",
+        "bytes": 214791,
+        "sha256": "af5cd7cda4fde0f48e04db9844513c9b8a3f75b5b7ca4e72251bad80a13b94e4"
+      },
+      {
+        "path": "content/dental-mri-pins.json",
+        "bytes": 57639,
+        "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+      },
+      {
+        "path": "content/dental-mri.ts",
+        "bytes": 3508,
+        "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+      },
+      {
+        "path": "docs/DENTAL_MRI_EVIDENCE.md",
+        "bytes": 4542,
+        "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+      },
+      {
+        "path": "docs/KEYBOARD_ZOOM.md",
+        "bytes": 1456,
+        "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+      },
+      {
+        "path": "lib/camera-keyboard.ts",
+        "bytes": 9666,
+        "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+      },
+      {
+        "path": "lib/dental-mri.ts",
+        "bytes": 1866,
+        "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+      },
+      {
+        "path": "package.json",
+        "bytes": 86739,
+        "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+      },
+      {
+        "path": "scripts/hip-quick-check-history-context.mjs",
+        "bytes": 9024,
+        "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+      },
+      {
+        "path": "scripts/test-camera-keyboard-zoom.mjs",
+        "bytes": 11426,
+        "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+      },
+      {
+        "path": "scripts/test-dental-mri-native.mjs",
+        "bytes": 8870,
+        "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+      },
+      {
+        "path": "scripts/test-hip-history-entry-refusals.mjs",
+        "bytes": 6786,
+        "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+      },
+      {
+        "path": "scripts/test-hip-quick-check-history.mjs",
+        "bytes": 4609,
+        "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
       },
       {
         "path": "scripts/test-regional-tour-player.mjs",
-        "beforeSha256": "e1cebfdd8cd4fb01000af7dfbde2b16ba40c9fc6af092e7432243dc02ac904e9",
-        "finalSha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5",
-        "proposedSha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5",
-        "bytes": 126985
+        "bytes": 126985,
+        "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+      },
+      {
+        "path": "scripts/verify-dental-mri-transition.mjs",
+        "bytes": 17132,
+        "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
       }
     ],
     "sourceCommitted": false,
     "canonicalInstalled": false
   },
-  "parent": "a10f96e2d0a5650de114a36e0cf81303247772f6",
-  "gitParent": "a10f96e2d0a5650de114a36e0cf81303247772f6",
+  "parent": "e00ef31426da298da2f67391c53b18d0a02ae68c",
+  "gitParent": "e00ef31426da298da2f67391c53b18d0a02ae68c",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -1856,6 +1837,241 @@
       "sha256": "cd22334b9152895e73ba94138a92947d59eb4d5926a3d108939d8b8fd795169c"
     },
     {
+      "path": "evidence/20261021-transition-contracts/evidence/ASSEMBLED_RENDERER_CHECK.json",
+      "bytes": 400,
+      "sha256": "9d64e3277882891bbe94ed086805ad30fd888089ed2eebc994a1b0d0162287e1"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/ASSEMBLED_RENDERER_CHECK.log",
+      "bytes": 116,
+      "sha256": "03d78ae9652258d17cc2d53f35b70b61c2d18a581ab88b058306f8ee27b222a9"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/ASSEMBLED_RENDERER_GENERATE.json",
+      "bytes": 391,
+      "sha256": "2dfa3303ced0659118c3f4c3719d80e0012b33b5418dc824c51432fb2679665c"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/ASSEMBLED_RENDERER_GENERATE.log",
+      "bytes": 118,
+      "sha256": "74d38f7df63f4001f9f931c65e848e4d40610b920e6b7c7efd28de312e59ed33"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/DENTAL_TRANSITION_SOURCE_REVIEW.json",
+      "bytes": 495,
+      "sha256": "835bcb5321d122cb701369df877b794f782f1bb2a0db477d2fb8f5e05c382223"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/DENTAL_TRANSITION_SOURCE_REVIEW.log",
+      "bytes": 165,
+      "sha256": "282013ababba8f47fa215cf3886c2979e55d952853ba2ddc5d5be1baf96809c1"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/DENTAL_TRANSITION_STATIC.json",
+      "bytes": 5523,
+      "sha256": "9da1ce58a6d722cbf734256088ed9fbc561fc43c3cecdef924b73ca76ac853e4"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/DENTAL_TRANSITION_SYNTAX.json",
+      "bytes": 405,
+      "sha256": "5cf3fe82b6fc11ec3c95cf0609632fc60baa4f532356ea7a331c350e89d59178"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/DENTAL_TRANSITION_SYNTAX.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/dental-evidence-before-transition-doc.md.raw",
+      "bytes": 3849,
+      "sha256": "7a9f7ab8aed07dd51267b4b8e92efaa99ed65241efadc2a94d41be7a9962e48c"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/dental-transition-worker-original.mjs.raw",
+      "bytes": 16212,
+      "sha256": "d55469badf6d98b539f8fd82e391d7ddf2df36e08da0036ca918faef8f153661"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/gitattributes-before-dental-transition.raw",
+      "bytes": 4279,
+      "sha256": "863361695ed4abecebe980ed5ccc41db014703561b6eb25e27fc1bd7fda6f7fa"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/MAIN_REVIEW.json",
+      "bytes": 12440,
+      "sha256": "cd3365cc0834c7f722cf65371d18aff31b5e6363dd479cbd32b48e887dc96542"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/package-before-dental-transition.json.raw",
+      "bytes": 86656,
+      "sha256": "5fbc8085737a4028af87ccaad75c8973f8424927bffe956637e68d0a5eb75408"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/renderer-before-dental-transition.json.raw",
+      "bytes": 214383,
+      "sha256": "34997a221ae705766d3010a7db6e9bca6f4880bf0939041b44d1276e8456a02f"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/SPINAL_CT_PROPOSAL_INVERSE.json",
+      "bytes": 435,
+      "sha256": "97622ef09048719cc654092f5ddb90e0c8f784ff8df125c029732a6e752c3150"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/SPINAL_CT_PROPOSAL_INVERSE.log",
+      "bytes": 219,
+      "sha256": "8fcdb2e6b1036be1ecb88a3c05ded027940e36d47713d631f1993c729414642e"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/SPINAL_CT_PROPOSAL_SYNTAX.json",
+      "bytes": 470,
+      "sha256": "c7dc086c777066f8a82405449403e18c6cf5ad8dde86037ac4a2d75faa0a7a5e"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/SPINAL_CT_PROPOSAL_SYNTAX.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/evidence/static-review-before-unicode-length.mjs.raw",
+      "bytes": 8196,
+      "sha256": "82b4eb0b83946813658f82a540d988450cab5f78100e376d194886b58bee924f"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/scripts/checkpoint-transition-contracts-20261021.mjs",
+      "bytes": 11997,
+      "sha256": "ed1b835ab9096b1d88d220d5093110a254989a09d33ae47be57668670f65c019"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/scripts/verify-dental-transition-source-20261021.mjs",
+      "bytes": 8207,
+      "sha256": "88bdffca870a99e16afbb8ef76e2d163995a027a0652812c50b392707eedfa84"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/.gitattributes",
+      "bytes": 4314,
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "af5cd7cda4fde0f48e04db9844513c9b8a3f75b5b7ca4e72251bad80a13b94e4"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 4542,
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 354693,
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11426,
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/scripts/test-dental-mri-native.mjs",
+      "bytes": 8870,
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6786,
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/source/scripts/verify-dental-mri-transition.mjs",
+      "bytes": 17132,
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/website-proposal/FILES.md",
+      "bytes": 693,
+      "sha256": "6f09024ccd8cf85c94aaf17c1eb5a019b983a531ef3f4b03fabe4afb7a7f6447"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/website-proposal/HANDOFF.md",
+      "bytes": 1959,
+      "sha256": "14ea8069b40d59a1292d1f85822503506cd47d4873803dda2cf489bd8218050e"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/website-proposal/INVERSE_CHECK.mjs",
+      "bytes": 2576,
+      "sha256": "bab570c8a56842bec0e0d47d8629d9b5fe6dcbc8bdc604b3f560b226ecb98866"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/website-proposal/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 77488,
+      "sha256": "c0fee664ecbf5bbbc1665138891eb2253bf71d6d7aff083757fe39b6095c9faa"
+    },
+    {
+      "path": "evidence/20261021-transition-contracts/website-proposal/tests/fixtures/atlas-spinal-muscle-xray-original.raw",
+      "bytes": 70097,
+      "sha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13"
+    },
+    {
       "path": "evidence/archived-delivery-verification.json",
       "bytes": 2669,
       "sha256": "4691ce21e58d3de2762bca5a0ec525a5b2c271e49ab1748d69cc36955f25fe7b"
@@ -2892,14 +3108,14 @@
     }
   ],
   "removed": [],
-  "scope": "Selected17actual uncommitted source paths, exact test preimages, setup/check scripts and focused receipts on prior filtered ancestry. Full source clone/raw ancestry/historical worktrees, source geometry,47605installed dependencies/full manifest remain F-local; no scans/private modules/reviews/databases/secrets/browser pixels/DOM. Not whole/runnable/private-data backup or new generated/clinical admission.",
+  "scope": "Selected20actual uncommitted source paths,2Website assurance proposal paths, source preimages and bounded main-review/renderer/syntax/inverse proof on filtered ancestry. No full clone/raw canonical Git history, geometry, dependencies, scans/masks/private modules/reviews/databases/secrets/browser pixels/DOM. Observation/coordination local only. Not whole/runnable/private-data backup or generated/clinical admission.",
   "proof": {
-    "actualDentalCases": 4,
-    "actualCameraCases": 23,
-    "completeCameraAliasPass": true,
-    "historyGuardRefusals": 20,
-    "actualDefaultGitResolverPass": true,
-    "wholeHipWrapperPass": false,
+    "staticGateInversePass": true,
+    "rendererGenerateAndCheckPass": true,
+    "rendererFiles": 1479,
+    "spinalWholeInverseHunks": 20,
+    "actualFullTransitionPass": false,
+    "actualWebsiteModulePass": false,
     "fullSuitePass": false,
     "clinicalApproval": false
   },
