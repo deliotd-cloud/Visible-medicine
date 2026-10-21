@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Two uninstalled text/test source paths, exact preimages, scope checker and structured non-private evidence on prior filtered ancestry. Browser screenshot remains F-local. No scans/models/masks/private records/raw canonical history/browser pixels/DOM. Not full/runnable/private-data backup or new renderer/application/clinical acceptance.
+Selected17actual uncommitted source paths, exact test preimages, setup/check scripts and focused receipts on prior filtered ancestry. Full source clone/raw ancestry/historical worktrees, source geometry,47605installed dependencies/full manifest remain F-local; no scans/private modules/reviews/databases/secrets/browser pixels/DOM. Not whole/runnable/private-data backup or new generated/clinical admission.

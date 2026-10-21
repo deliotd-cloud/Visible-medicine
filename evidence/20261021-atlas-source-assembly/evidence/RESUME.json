@@ -1,0 +1,6 @@
+{
+  "at": "2026-10-21T01:22:48.048Z",
+  "cause": "First command cloned/checked out exact485cleanly, then stopped before source application when a path join appended an already-absolute Git common directory. Exact error remains in tool transcript, not a claimed raw log.",
+  "correction": "Use path.resolve for absolute/relative Git common directories. Explicit resume revalidates exact clean clone HEAD/tree/local origin and all preimages; no delete, second clone or frozen-source mutation.",
+  "cloneLogScope": "CLONE.log captures initial Git stdout only, which is empty; stderr was not persisted as a raw log."
+}

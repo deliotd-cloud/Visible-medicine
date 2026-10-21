@@ -1,0 +1,22 @@
+{
+  "label": "ASSEMBLED_CAMERA_KEYBOARD",
+  "command": "node",
+  "args": [
+    "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+    "run",
+    "camera-keyboard:test"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/ASSEMBLED_CAMERA_KEYBOARD.log",
+  "logSha256": "08bc583d59e5fc24d5bddfe9710076bb4082d8177d011296de07671b818d0614",
+  "footer": [
+    "ℹ tests 23",
+    "ℹ pass 22",
+    "ℹ fail 1",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

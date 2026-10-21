@@ -1,0 +1,51 @@
+
+> visible-medicine-anatomy@0.1.0 camera-keyboard:test
+> node --experimental-strip-types --test scripts/test-camera-keyboard.mjs scripts/test-camera-keyboard-zoom.mjs && node scripts/test-guided-camera-interruption.mjs
+
+✔ perspective model zoom preserves target and viewing direction (5.2463ms)
+✔ orthographic model zoom preserves target and viewing direction (0.5458ms)
+✔ orthographic tray zoom preserves target and viewing direction (0.4608ms)
+✔ browser modifiers, composition, focus, other targets and guide/zoom locks retain native behavior (0.2506ms)
+✔ existing distance and orthographic zoom bounds clamp without reversing an out-of-range gesture (1.007ms)
+✔ invalid camera scale, targets, bounds or unsupported camera do not consume zoom keys (0.8353ms)
+✔ zoom remains opt-in for old helper callers and restores only owned attributes (0.1726ms)
+✔ actual FittedCamera captures keyboard zoom, retains it across refits and disables it for guided locks (85.2794ms)
+✖ existing renderer-bound files and original native keyboard suite remain exact, with geometry untouched (0.6336ms)
+✔ keyboard behavior and focus treatment are bound to shoulder review revisions (0.514ms)
+✔ PerspectiveCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom (2.5952ms)
+✔ PerspectiveCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom (0.6761ms)
+✔ OrthographicCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom (0.6001ms)
+✔ OrthographicCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom (0.8752ms)
+✔ focus, modifier, composition, editable-target and rotation-lock guards do not consume keys (0.3059ms)
+✔ angle limits, invalid inputs, damping and lifecycle restoration (0.4063ms)
+✔ actual FittedCamera transitions spatial to tray to locked, captures pan and retains it across refits (89.3131ms)
+✔ tray pan follows camera right/up for projection 0,0,1, up 0,1,0 (0.8351ms)
+✔ tray pan follows camera right/up for projection 1,0,0, up 0,0,1 (0.3851ms)
+✔ tray pan follows camera right/up for projection 0,0,-1, up 0,1,0 (0.2362ms)
+✔ tray pan follows camera right/up for projection 0,1,0, up 0,0,1 (0.1878ms)
+✔ tray keyboard guards, invalid scale and attribute ownership (0.2218ms)
+✔ BodyScene keeps visual rotation silent and writes a keyboard-only polite orientation status (2271.2707ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 22
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5434.2723
+
+✖ failing tests:
+
+test at scripts\test-camera-keyboard-zoom.mjs:138:1
+✖ existing renderer-bound files and original native keyboard suite remain exact, with geometry untouched (0.6336ms)
+  Error: ENOENT: no such file or directory, open 'F:\VisibleMedicine\staging\20261021-atlas-combined-source\originals\scripts\test-camera-keyboard.mjs.raw'
+      at async open (node:internal/fs/promises:640:25)
+      at async readFile (node:internal/fs/promises:1290:14)
+      at async TestContext.<anonymous> (file:///F:/VisibleMedicine/staging/20261021-atlas-combined-source/scripts/test-camera-keyboard-zoom.mjs:140:15)
+      at async Test.run (node:internal/test_runner/test:1332:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'F:\\VisibleMedicine\\staging\\20261021-atlas-combined-source\\originals\\scripts\\test-camera-keyboard.mjs.raw'
+  }

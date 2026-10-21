@@ -1,0 +1,29 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /foreign commit/. Input:
+
+'Error: No trusted hip author checkout passed verification: Hip author checkout cannot be the current wrapper root. Provide an existing clean detached same-repository checkout at the exact hip author commit via VM_HIP_HISTORY_ROOT, or register one as a Git worktree. No checkout is created automatically.'
+
+    at file:///F:/VisibleMedicine/staging/20261021-atlas-combined-source/scripts/test-hip-history-entry-refusals.mjs:35:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: Error: No trusted hip author checkout passed verification: Hip author checkout cannot be the current wrapper root. Provide an existing clean detached same-repository checkout at the exact hip author commit via VM_HIP_HISTORY_ROOT, or register one as a Git worktree. No checkout is created automatically.
+      at resolveHipHistoryRoot (file:///F:/VisibleMedicine/staging/20261021-atlas-combined-source/scripts/hip-quick-check-history-context.mjs:113:8)
+      at file:///F:/VisibleMedicine/staging/20261021-atlas-combined-source/scripts/test-hip-history-entry-refusals.mjs:35:19
+      at getActual (node:assert:611:5)
+      at strict.throws (node:assert:759:24)
+      at file:///F:/VisibleMedicine/staging/20261021-atlas-combined-source/scripts/test-hip-history-entry-refusals.mjs:35:8
+      at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+      at async node:internal/modules/esm/loader:643:26
+      at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5),
+  expected: /foreign commit/,
+  operator: 'throws',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

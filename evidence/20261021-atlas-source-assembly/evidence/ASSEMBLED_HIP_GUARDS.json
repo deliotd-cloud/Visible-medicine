@@ -1,0 +1,13 @@
+{
+  "label": "ASSEMBLED_HIP_GUARDS",
+  "command": "node",
+  "args": [
+    "scripts/test-hip-history-entry-refusals.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/ASSEMBLED_HIP_GUARDS.log",
+  "logSha256": "c534f561d3ab2c709a8a036c1de4660308dd97cd2fe787b7af70309105cbaa51",
+  "footer": [],
+  "canonicalInstalled": false
+}

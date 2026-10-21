@@ -1,0 +1,22 @@
+{
+  "label": "ASSEMBLED_DENTAL_NATIVE",
+  "command": "node",
+  "args": [
+    "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+    "run",
+    "dental-mri:test"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/ASSEMBLED_DENTAL_NATIVE.log",
+  "logSha256": "3041bc5a1e845af7ae7907bd02d5231f796706b31721eee528e40d32a0bfda64",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

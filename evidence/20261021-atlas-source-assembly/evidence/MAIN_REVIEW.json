@@ -1,0 +1,192 @@
+{
+  "at": "2026-10-21T01:40:41.049Z",
+  "phase": "isolated actual source assembly with focused combined-source checks",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "target": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "previousGoalTurnClassification": "progress: browser-observed tour start hint, original test preservation, verified filtered509blob backup; not status-only",
+  "baseTree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+  "appliedPaths": [
+    {
+      "path": "scripts/test-hip-quick-check-history.mjs",
+      "beforeSha256": "9a4bb88915f40c80ca77b6b40a665813c7aa56adfe5b419d2f5f88c1a048dcd5",
+      "finalSha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e",
+      "proposedSha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e",
+      "bytes": 4609
+    },
+    {
+      "path": "scripts/hip-quick-check-history-context.mjs",
+      "beforeSha256": null,
+      "finalSha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe",
+      "proposedSha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe",
+      "bytes": 9024
+    },
+    {
+      "path": "scripts/test-hip-history-entry-refusals.mjs",
+      "beforeSha256": null,
+      "finalSha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e",
+      "proposedSha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950",
+      "bytes": 6786
+    },
+    {
+      "path": "app/body-content.ts",
+      "beforeSha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6",
+      "finalSha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2",
+      "proposedSha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2",
+      "bytes": 82603
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "beforeSha256": null,
+      "finalSha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d",
+      "proposedSha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d",
+      "bytes": 3508
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "beforeSha256": null,
+      "finalSha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af",
+      "proposedSha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af",
+      "bytes": 57639
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "beforeSha256": null,
+      "finalSha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e",
+      "proposedSha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e",
+      "bytes": 1866
+    },
+    {
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "beforeSha256": null,
+      "finalSha256": "7a9f7ab8aed07dd51267b4b8e92efaa99ed65241efadc2a94d41be7a9962e48c",
+      "proposedSha256": "7a9f7ab8aed07dd51267b4b8e92efaa99ed65241efadc2a94d41be7a9962e48c",
+      "bytes": 3849
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "beforeSha256": "9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0",
+      "finalSha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6",
+      "proposedSha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6",
+      "bytes": 12876
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "beforeSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220",
+      "finalSha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e",
+      "proposedSha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e",
+      "bytes": 9666
+    },
+    {
+      "path": "package.json",
+      "beforeSha256": "9786b30019f418881824a20026ee66c2d3e16d4a3231f6cea85975687cbe6d1a",
+      "finalSha256": "5fbc8085737a4028af87ccaad75c8973f8424927bffe956637e68d0a5eb75408",
+      "proposedSha256": "5fbc8085737a4028af87ccaad75c8973f8424927bffe956637e68d0a5eb75408",
+      "bytes": 86656
+    },
+    {
+      "path": "scripts/test-camera-keyboard-zoom.mjs",
+      "beforeSha256": null,
+      "finalSha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369",
+      "proposedSha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd",
+      "bytes": 11426
+    },
+    {
+      "path": "docs/KEYBOARD_ZOOM.md",
+      "beforeSha256": null,
+      "finalSha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f",
+      "proposedSha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f",
+      "bytes": 1456
+    },
+    {
+      "path": "scripts/test-dental-mri-native.mjs",
+      "beforeSha256": null,
+      "finalSha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad",
+      "proposedSha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad",
+      "bytes": 8870
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "beforeSha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
+      "finalSha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd",
+      "proposedSha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd",
+      "bytes": 354693
+    },
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "beforeSha256": "bcc7a99b91d355c9a9ccbcd9ae7781742bd68f5222c2b4705bfffccff83c1899",
+      "finalSha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c",
+      "proposedSha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c",
+      "bytes": 15876
+    },
+    {
+      "path": "scripts/test-regional-tour-player.mjs",
+      "beforeSha256": "e1cebfdd8cd4fb01000af7dfbde2b16ba40c9fc6af092e7432243dc02ac904e9",
+      "finalSha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5",
+      "proposedSha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5",
+      "bytes": 126985
+    }
+  ],
+  "sourceCommonSeparate": true,
+  "frozenOriginalRefsAndTopologyUnaffectedByApplication": true,
+  "dependencies": {
+    "files": 47605,
+    "links": 0,
+    "bytes": 726814102,
+    "manifestSha256": "cad2c45082ff0eb28a08a27aab76af26dd90390e814ca3379a63afa456745ee0",
+    "originalUnchanged": true,
+    "trackedSourceUnchanged": true,
+    "separatePhysicalCopies": true,
+    "packageFieldsAndLockPreserved": true,
+    "installedFromNetwork": false,
+    "lockfileByteAttested": false,
+    "cachesExcluded": [
+      ".cache",
+      ".vite",
+      ".tmp"
+    ],
+    "correction": "Initial64MB per-file preflight refused the existing official workerd.exe98366464bytes before any copy. Preserved initial helper and tool error; corrected to128KB streaming hashes/kernel file copies,256MB per-file and3GB aggregate bounds, not a full-file heap allocation or runtime check bypass."
+  },
+  "actualDentalNativeCases": 4,
+  "actualKeyboardCases": 23,
+  "originalKeyboardCases": 14,
+  "newKeyboardCases": 9,
+  "completeKeyboardAliasPass": true,
+  "originalGuidedInterruptionPass": {
+    "passed": true,
+    "normalAndShiftInterruptions": true,
+    "pausedResume": true,
+    "lockedAndNonArrowRejection": true,
+    "subsequentPresetEndpoint": true,
+    "capturePersistence": true,
+    "actualKeyListener": true
+  },
+  "historyGuardRefusals": 20,
+  "actualDefaultGitHistoryResolverPass": true,
+  "wholeHipWrapperExecuted": false,
+  "fullBodyTransitionPass": false,
+  "integrationCorrections": [
+    "Camera new test depended on untracked proposal originals/. Replaced only that dependency with a portable URL read and immutable whole-original485SHA. All original14cases and new9cases retained; whole inverse of new test proves no other assertions changed.",
+    "History guard test raw path comparison accidentally selected its current root on Windows. Canonical slash/case-aware comparison now excludes current root, with POSIX case retained and a positive Windows alias assertion. Real registered no-checkout wrong-commit fixture exercises the unchanged foreign-commit rejection. All prior guard assertions retained; runtime context/launcher unchanged."
+  ],
+  "setupCorrections": "Initial clone succeeded but absolute Git common-dir join failed before source application; explicit clean-clone resume revalidated root/tree/origin/preimages. Dependency64MB preflight rejected existing98MB official workerd before copying; preserved helper and corrected to128KB streaming hashes/kernel copies with256MB/3GB bounds. Early author setup refused before dependency receipt; retried only after actual completion. No original source/dependency mutation or invented raw error log.",
+  "websiteUiPathsStillSeparate": 11,
+  "website485AssurancePathsStillSeparate": 2,
+  "wholeSuite": {
+    "observation": "F:/VisibleMedicine/staging/20261021-complete-website-assurance/observations/2026-10-21T01-38-45.750Z/observation.json",
+    "sha256": "b1d4fdc2b23b81a04b7dc52c758b5e61244d0f431ac63610c63b799080c8a29b",
+    "live": true,
+    "terminal": false,
+    "frozenInputs": 5053
+  },
+  "limits": "Actual complete source checkout and focused native checks, not committed/generated/imported/installed or full current/history/topic/packet/renderer/types/build/Review/learner/Website/browser acceptance. New tour-player case still unrun. Historical fixtures/dependency copies are local, not lockfile-byte, clinical or off-device proof. No new assets/dependencies/fees/permissions or desktop PACS changes.",
+  "sourceCommitted": false,
+  "stockExportsGenerated": false,
+  "websiteImported": false,
+  "canonicalInstalled": false,
+  "fullSuitePass": false,
+  "newBrowserAcceptance": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true
+}

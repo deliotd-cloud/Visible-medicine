@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-21T01:38:45.750Z",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
+  "sessionId": 60576,
+  "runnerPid": 262080,
+  "testPid": 255564,
+  "processesConfirmedLive": true,
+  "processes": [
+    {
+      "ProcessId": 260328,
+      "ParentProcessId": 256512,
+      "CreationDate": "/Date(1792531838747)/",
+      "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" scripts/start-stable-preview.mjs"
+    },
+    {
+      "ProcessId": 262080,
+      "ParentProcessId": 117344,
+      "CreationDate": "/Date(1792538408682)/",
+      "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" scripts/run-website-tests.mjs --run"
+    },
+    {
+      "ProcessId": 255564,
+      "ParentProcessId": 262080,
+      "CreationDate": "/Date(1792538411786)/",
+      "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" --test --test-reporter=spec --test-reporter-destination=stdout --test-reporter=tap --test-reporter-destination=F:\\VisibleMedicine\\staging\\20261020-combined-website-ui\\website\\.local\\website-test-runs\\2026-10-20T23-20-11-575Z-314c80d2-a04f-4372-af8e-e9f086c9cc86\\child.tap --experimental-strip-types --test-concurrency=1 tests/*.test.ts tests/!(atlas-glottic-muscle-imaging).test.mjs"
+    }
+  ],
+  "output": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T23-20-11-575Z-314c80d2-a04f-4372-af8e-e9f086c9cc86",
+  "entryCount": 1050,
+  "namedInputsVerified": 5053,
+  "sourceFreezeSha256": "99173a3c9533d08d3190730410c0f448b4ae8257a16a8661e1425ac9683d7580",
+  "terminalReceiptObserved": false,
+  "counts": null,
+  "fullSuitePass": false,
+  "ownerPreviewRunning": true,
+  "noRemainingFailureArithmetic": true,
+  "canonicalInstalled": false
+}

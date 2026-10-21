@@ -1,0 +1,36 @@
+
+> visible-medicine-anatomy@0.1.0 camera-keyboard:test
+> node --experimental-strip-types --test scripts/test-camera-keyboard.mjs scripts/test-camera-keyboard-zoom.mjs && node scripts/test-guided-camera-interruption.mjs
+
+✔ perspective model zoom preserves target and viewing direction (3.843ms)
+✔ orthographic model zoom preserves target and viewing direction (0.3883ms)
+✔ orthographic tray zoom preserves target and viewing direction (0.4218ms)
+✔ browser modifiers, composition, focus, other targets and guide/zoom locks retain native behavior (0.2206ms)
+✔ existing distance and orthographic zoom bounds clamp without reversing an out-of-range gesture (0.8277ms)
+✔ invalid camera scale, targets, bounds or unsupported camera do not consume zoom keys (0.7532ms)
+✔ zoom remains opt-in for old helper callers and restores only owned attributes (0.1583ms)
+✔ actual FittedCamera captures keyboard zoom, retains it across refits and disables it for guided locks (38.2983ms)
+✔ existing renderer-bound files and original native keyboard suite remain exact, with geometry untouched (3.1589ms)
+✔ keyboard behavior and focus treatment are bound to shoulder review revisions (0.6014ms)
+✔ PerspectiveCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom (3.6891ms)
+✔ PerspectiveCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom (0.6804ms)
+✔ OrthographicCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom (0.5864ms)
+✔ OrthographicCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom (0.6028ms)
+✔ focus, modifier, composition, editable-target and rotation-lock guards do not consume keys (0.3324ms)
+✔ angle limits, invalid inputs, damping and lifecycle restoration (0.3348ms)
+✔ actual FittedCamera transitions spatial to tray to locked, captures pan and retains it across refits (38.0652ms)
+✔ tray pan follows camera right/up for projection 0,0,1, up 0,1,0 (0.6819ms)
+✔ tray pan follows camera right/up for projection 1,0,0, up 0,0,1 (0.3482ms)
+✔ tray pan follows camera right/up for projection 0,0,-1, up 0,1,0 (0.1862ms)
+✔ tray pan follows camera right/up for projection 0,1,0, up 0,0,1 (0.1596ms)
+✔ tray keyboard guards, invalid scale and attribute ownership (0.2077ms)
+✔ BodyScene keeps visual rotation silent and writes a keyboard-only polite orientation status (163.7373ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 505.4974
+{"passed":true,"normalAndShiftInterruptions":true,"pausedResume":true,"lockedAndNonArrowRejection":true,"subsequentPresetEndpoint":true,"capturePersistence":true,"actualKeyListener":true}

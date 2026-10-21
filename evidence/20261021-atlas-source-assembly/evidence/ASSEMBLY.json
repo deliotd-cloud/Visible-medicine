@@ -1,0 +1,135 @@
+{
+  "at": "2026-10-21T01:22:48.780Z",
+  "phase": "actual isolated uncommitted Atlas source assembly",
+  "sourceRoot": "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+  "target": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+  "sourceCommon": "F:\\VisibleMedicine\\staging\\20261020-inferior-thyroid-mra-source\\.git",
+  "targetCommon": "F:\\VisibleMedicine\\staging\\20261021-atlas-combined-source\\.git",
+  "resumedCleanClone": true,
+  "sourceWorktreeTopologyUnchangedDuringApplication": true,
+  "sourceReferencesUnchangedDuringApplication": true,
+  "appliedPaths": [
+    {
+      "path": "scripts/test-hip-quick-check-history.mjs",
+      "beforeSha256": "9a4bb88915f40c80ca77b6b40a665813c7aa56adfe5b419d2f5f88c1a048dcd5",
+      "finalSha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "scripts/hip-quick-check-history-context.mjs",
+      "beforeSha256": null,
+      "finalSha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "scripts/test-hip-history-entry-refusals.mjs",
+      "beforeSha256": null,
+      "finalSha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950"
+    },
+    {
+      "path": "app/body-content.ts",
+      "beforeSha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6",
+      "finalSha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "beforeSha256": null,
+      "finalSha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "beforeSha256": null,
+      "finalSha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "beforeSha256": null,
+      "finalSha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "beforeSha256": null,
+      "finalSha256": "7a9f7ab8aed07dd51267b4b8e92efaa99ed65241efadc2a94d41be7a9962e48c"
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "beforeSha256": "9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0",
+      "finalSha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "beforeSha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220",
+      "finalSha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "package.json",
+      "beforeSha256": "9786b30019f418881824a20026ee66c2d3e16d4a3231f6cea85975687cbe6d1a",
+      "finalSha256": "5fbc8085737a4028af87ccaad75c8973f8424927bffe956637e68d0a5eb75408"
+    },
+    {
+      "path": "scripts/test-camera-keyboard-zoom.mjs",
+      "beforeSha256": null,
+      "finalSha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd"
+    },
+    {
+      "path": "docs/KEYBOARD_ZOOM.md",
+      "beforeSha256": null,
+      "finalSha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "scripts/test-dental-mri-native.mjs",
+      "beforeSha256": null,
+      "finalSha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "beforeSha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8",
+      "finalSha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "beforeSha256": "bcc7a99b91d355c9a9ccbcd9ae7781742bd68f5222c2b4705bfffccff83c1899",
+      "finalSha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "scripts/test-regional-tour-player.mjs",
+      "beforeSha256": "e1cebfdd8cd4fb01000af7dfbde2b16ba40c9fc6af092e7432243dc02ac904e9",
+      "finalSha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    }
+  ],
+  "changedPaths": [
+    "LICENSES/THIRD_PARTY_NOTICES.md",
+    "app/body-content.ts",
+    "app/fitted-camera.tsx",
+    "app/regional-guided-learning.tsx",
+    "content/dental-mri-pins.json",
+    "content/dental-mri.ts",
+    "docs/DENTAL_MRI_EVIDENCE.md",
+    "docs/KEYBOARD_ZOOM.md",
+    "lib/camera-keyboard.ts",
+    "lib/dental-mri.ts",
+    "package.json",
+    "scripts/hip-quick-check-history-context.mjs",
+    "scripts/test-camera-keyboard-zoom.mjs",
+    "scripts/test-dental-mri-native.mjs",
+    "scripts/test-hip-history-entry-refusals.mjs",
+    "scripts/test-hip-quick-check-history.mjs",
+    "scripts/test-regional-tour-player.mjs"
+  ],
+  "trackedChangesOnlyReviewed": true,
+  "dependencyState": "Not prepared. Before actual gates, provide installed dependencies inside this clone scope without altering frozen source or weakening the hip author/dependency confinement. No install/network/model fetch was performed.",
+  "historicalState": "Original485 hip stage and trusted6d7author witness remain untouched. First run the new whole wrapper in original485 stage after Website terminal. A later equivalent trusted author checkout for this independent clone must be registered in this clone, not reused across repositories.",
+  "websiteUiPathsNotAppliedHere": 11,
+  "current485AssurancePathsNotAppliedHere": 2,
+  "sourceCommitted": false,
+  "fullResolverTransitionPass": false,
+  "newHipWrapperEndToEndPass": false,
+  "generatedOutputsChanged": false,
+  "websiteImported": false,
+  "canonicalInstalled": false,
+  "fullSuitePass": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "limits": "Actual full source checkout and exact17path application, not a running/buildable/accepted delivery. Unchanged models/source history are local-only; no scans, Website data or generated modules copied from the Website. Local object hardlinks are not off-device backup. No source or approval identity was predicted."
+}

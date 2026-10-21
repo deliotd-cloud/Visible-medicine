@@ -1,0 +1,22 @@
+{
+  "label": "HIP_FOREIGN_FIXTURE",
+  "command": "git",
+  "args": [
+    "-C",
+    "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+    "-c",
+    "core.autocrlf=false",
+    "worktree",
+    "add",
+    "--detach",
+    "--no-checkout",
+    "F:/VisibleMedicine/staging/20261021-atlas-combined-hip-foreign-guard",
+    "485df97c2530e8e81a8d39a5ee61073ce76d93db"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/HIP_FOREIGN_FIXTURE.log",
+  "logSha256": "79ef86e6ccbf463acf1dd6d0a3077198dcb73fbf7068a1b6097431b90cd4461f",
+  "footer": [],
+  "canonicalInstalled": false
+}
