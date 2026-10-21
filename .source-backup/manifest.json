@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T13:34:12.409Z",
+  "at": "2026-10-21T13:45:44.837Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5185,
+    "canonicalNamedInputs": 5192,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "a9e7c368d5ed5b59f5f592da2a9b2329dfcd8327",
-  "gitParent": "a9e7c368d5ed5b59f5f592da2a9b2329dfcd8327",
+  "parent": "74e106e0d1a74f5fa0208826c23b5f917cc61fc6",
+  "gitParent": "74e106e0d1a74f5fa0208826c23b5f917cc61fc6",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3765,6 +3765,146 @@
       "path": "evidence/20261021-four-modules-verified/scripts/close-shoulder-and-export-modules-20261021.mjs",
       "bytes": 10230,
       "sha256": "1045cc614db2782b2435ee7000cfbc266ebc7a1d331698c2f5b7faea9d5c4c13"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/controls/admit-closed56-role-repair-20261021.mjs",
+      "bytes": 9768,
+      "sha256": "31e8d86755d16d4402ca239b5d6dc6ebaee401f9fdd75879178a3eaf0f0f3017"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/controls/checkpoint-head-role-union-20261021.mjs",
+      "bytes": 9007,
+      "sha256": "ecd1a53418bd9de951d7dbba5d7ce015ed54acf573e0c6a61b6e97466234768e"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/controls/emit-inflight-patch.mjs",
+      "bytes": 2453,
+      "sha256": "3989cdfc285c66930aec8320a4b5d7b80d8b464dff489b8c263b23b8fe2d7d5f"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/controls/head-role-union-admission-20261021.json",
+      "bytes": 1409,
+      "sha256": "5d5a860513cf2cae43b9600a862707858618833c5602f3f7992d1d249e26dfab"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/controls/prepare-head-role-union-20261021.mjs",
+      "bytes": 3786,
+      "sha256": "78c8e76eab3edfdffdab4c44024cd5ca64f71107be76f10aa4bf5768a8b2a0bd"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/controls/verify-tour-camera-current-20261021.mjs",
+      "bytes": 3791,
+      "sha256": "626888547015380f60bac30f6aad5e685debccdb56191ad3674e49b61f8bf2d9"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/evidence/APPLICATION.json",
+      "bytes": 6195,
+      "sha256": "69e1747cce80f811c302077b602394033d6ebe637b6329b354e4815c32cacecf"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/evidence/narrow-reflow-search-QA.json",
+      "bytes": 1895,
+      "sha256": "a0d8d7af5b3da4b37187e07e16aa875c942d392e93fbb654b3b5f0e4b3e740ad"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/evidence/native.json",
+      "bytes": 983,
+      "sha256": "aaf3f704598c9ff1666a46d7679f365b8eb259c00bcdfb7854145e24cec94f57"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/evidence/PROOF.json",
+      "bytes": 3043,
+      "sha256": "a1abe3b38e2bf5b8a66b89a2e025a208d56322720a4a6e39865ab4dc48f5d467"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/evidence/tour-camera-RESULT.json",
+      "bytes": 1068,
+      "sha256": "7e794323e323e3b1031ee53e5f31db5a1757538fd262b6ee64a14fe0b489a857"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/evidence/tour-camera-STARTED.json",
+      "bytes": 1046,
+      "sha256": "145a3c39237b88ace7aba7ec1cceeb04e5924ea9c47415c8f73916e7bb2fbc90"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/craniofacial-ct-current-delivery.test.mjs",
+      "bytes": 8246,
+      "sha256": "b08d39c2e6a54cf1ea04f5cdf0b5c5a92a5b6adb2e68182796f9672a686ce76a"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/fixtures/craniofacial-ct-current-atlas-3dc.mjs.raw",
+      "bytes": 10944,
+      "sha256": "70397d1a602d1de4a1cb76da2687cf138f81ace50b9322a60c3ce327cd193e5d"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/fixtures/craniofacial-ct-current-delivery-before-190.mjs.raw",
+      "bytes": 6867,
+      "sha256": "0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/fixtures/craniofacial-ct-portal-3dc.mjs.raw",
+      "bytes": 3011,
+      "sha256": "2c32d0068ce42d8a0bcc33b259e608af81fa9fbdd37ec27d03638a04e379b383"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/fixtures/head-disclosure-before-role-batch-20261021.mjs.raw",
+      "bytes": 6057,
+      "sha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/fixtures/tour-discovery-before-role-batch-20261021.mjs.raw",
+      "bytes": 2210,
+      "sha256": "de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/fixtures/tour-discovery-corpus-bd5465ee.mjs.raw",
+      "bytes": 6670,
+      "sha256": "90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 7608,
+      "sha256": "fbd955d5125da0cece3e98ad094e87cd8549bc2478cfe5e0d2bcbecce1248a49"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "bytes": 4451,
+      "sha256": "682155eee19af01a2fe3882db9534c2a59a3d77795626c18e8d398f387f3bdb8"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/installed-website/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 5206,
+      "sha256": "6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/preimages/tests/craniofacial-ct-current-delivery.test.mjs",
+      "bytes": 6867,
+      "sha256": "0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/preimages/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 6057,
+      "sha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/preimages/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 2210,
+      "sha256": "de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/proposal/PROPOSAL.json",
+      "bytes": 6193,
+      "sha256": "f56ac97a1e6c59ac0bf918c1a059188b332e7cb26dfdfdadf9e605e999eababd"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/proposal/worker-0-PROPOSAL.json",
+      "bytes": 5761,
+      "sha256": "e4c5dd447aad2a17e97bf573a9ae56c30f669fff61b4829852cfd8926067a666"
+    },
+    {
+      "path": "evidence/20261021-head-role-union-verified/proposal/worker-1-PROPOSAL.json",
+      "bytes": 5503,
+      "sha256": "ca202054f20b5e353a9729d0576a927833b2ed7d57ee75fb4a0226c7e95b04ae"
     },
     {
       "path": "evidence/20261021-header-joint-evidence/checkpoint-header-inventory-20261021.mjs",
@@ -9173,9 +9313,9 @@
     }
   ],
   "removed": [],
-  "scope": "Six exact test/raw-witness paths, two original preimages, worker/main proposal provenance, compact actual88/88 native receipts,87-row regression routing and guarded controls. Prior filtered source ancestry only. No scans, masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Ten exact coupled test/raw-witness paths, three original preimages, both worker/main proposal provenance, actual52/52 native receipts, separate17/17 camera/tour receipt, sanitized narrow-reflow keyboard observations and guarded controls. Prior filtered source ancestry only. No scans, masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T13:34:05.176Z",
+    "at": "2026-10-21T13:45:37.606Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -9183,8 +9323,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5185,
-    "controlledSourceInputs": 5178,
+    "currentNamedInputs": 5192,
+    "controlledSourceInputs": 5185,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -9194,34 +9334,38 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "4347d68eb5895f949bd061e1bcc007aa1a8e983efc28e97a7b1ac7af921a4a99",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "f1d82b4ca339d963994fc60044c50110abf0fb955c7da515280169d29a0867ac",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-role-union-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "f37794894656799e7b12589ff4b40de5e878a0f3f27b12252f928259fcd13c54",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-role-union-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "37b5354acced41fb59455ce89f220564d68fed3ee3125c397c786825ab3493f6",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 6,
-    "existingEditedTestPaths": 2,
-    "mainPortableRootCorrection": true,
+    "installedTestOnlyPaths": 10,
+    "existingEditedTestPaths": 3,
+    "coupledDirectReaderAdmission": true,
+    "authenticWholeHistoricalDeliveryPortalCorpusAndUiWitnesses": true,
     "wholeOriginalAndRoleInverseMutationProofsPassed": true,
-    "actualTwelveRootNativeCounts": {
-      "tests": 88,
-      "pass": 88,
+    "actualEightRootNativeCounts": {
+      "tests": 52,
+      "pass": 52,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "actualTwelveRootNativeCode": 0,
+    "actualEightRootNativeCode": 0,
     "currentNativeFailures": [],
-    "routing": {
-      "file": "evidence/ROUTING.json",
-      "sha256": "3e4eb8c80d95406f3756355c2f61773d82a0d168fe771436b4a8588e4023f3f1",
-      "originalRows": 87,
-      "notExercised": 79,
-      "rootPassedTitleNotComparable": 2,
-      "laterScopedExactTitlePass": 6
+    "separateTourCameraNativeCounts": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
+    "separateTourCameraDifferentTestInputSnapshot": true,
+    "narrow640ReflowKeyboardSearchAndEscapeVerified": true,
+    "true200PercentTextZoomOrFullATClaim": false,
     "rawNativeLogExcludedFromBackup": true,
     "currentValidatorAndFixtureUnchanged": true,
     "currentTestNowChecksExact190": true,

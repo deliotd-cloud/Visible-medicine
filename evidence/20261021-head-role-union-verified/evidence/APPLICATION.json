@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-21T13:44:03.929Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/head-disclosure-current-delivery.test.mjs",
+      "preimageSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "candidateSha256": "fbd955d5125da0cece3e98ad094e87cd8549bc2478cfe5e0d2bcbecce1248a49",
+      "candidateBytes": 7608,
+      "reason": "Separates retained bd5465 historical contracts and explicit known UI/tour inverse seams from exact current190 delivery; repairs the current stock-verifier mutation probe.",
+      "workerStage": "F:/VisibleMedicine/staging/20261021-head-disclosure-role-proposal"
+    },
+    {
+      "path": "tests/fixtures/head-disclosure-before-role-batch-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "candidateBytes": 6057,
+      "reason": "Authentic byte-exact pre-role whole head-disclosure test witness; required for forward/inverse preservation of all original assertions and negatives.",
+      "workerStage": "F:/VisibleMedicine/staging/20261021-head-disclosure-role-proposal"
+    },
+    {
+      "path": "tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "682155eee19af01a2fe3882db9534c2a59a3d77795626c18e8d398f387f3bdb8",
+      "candidateBytes": 4451,
+      "reason": "Executing source-only full-file guard pins four declared role/async/path seams, reconstructs the exact original test, and refuses unknown assertion changes.",
+      "workerStage": "F:/VisibleMedicine/staging/20261021-head-disclosure-role-proposal"
+    },
+    {
+      "path": "tests/craniofacial-ct-current-delivery.test.mjs",
+      "preimageSha256": "0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee",
+      "candidateSha256": "b08d39c2e6a54cf1ea04f5cdf0b5c5a92a5b6adb2e68182796f9672a686ce76a",
+      "candidateBytes": 8246,
+      "workerStage": "F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal"
+    },
+    {
+      "path": "tests/tour-discovery-current-delivery.test.mjs",
+      "preimageSha256": "de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82",
+      "candidateSha256": "6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129",
+      "candidateBytes": 5206,
+      "workerStage": "F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal"
+    },
+    {
+      "path": "tests/fixtures/craniofacial-ct-current-atlas-3dc.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "70397d1a602d1de4a1cb76da2687cf138f81ace50b9322a60c3ce327cd193e5d",
+      "candidateBytes": 10944,
+      "workerStage": "F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal"
+    },
+    {
+      "path": "tests/fixtures/craniofacial-ct-current-delivery-before-190.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee",
+      "candidateBytes": 6867,
+      "workerStage": "F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal"
+    },
+    {
+      "path": "tests/fixtures/craniofacial-ct-portal-3dc.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "2c32d0068ce42d8a0bcc33b259e608af81fa9fbdd37ec27d03638a04e379b383",
+      "candidateBytes": 3011,
+      "workerStage": "F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal"
+    },
+    {
+      "path": "tests/fixtures/tour-discovery-before-role-batch-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82",
+      "candidateBytes": 2210,
+      "workerStage": "F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal"
+    },
+    {
+      "path": "tests/fixtures/tour-discovery-corpus-bd5465ee.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef",
+      "candidateBytes": 6670,
+      "workerStage": "F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal"
+    }
+  ],
+  "controlledInputs": 5185,
+  "preservedInputs": 7,
+  "namedInputs": 5192,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-role-union-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "f37794894656799e7b12589ff4b40de5e878a0f3f27b12252f928259fcd13c54",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-role-union-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T13:44:00.699Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/craniofacial-ct-current-delivery.test.mjs",
+      "tests/tour-discovery-current-delivery.test.mjs",
+      "tests/head-disclosure-current-delivery.test.mjs",
+      "tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "tests/head-viewer-disclosure-keyboard.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/clinical-review-portal-venous-current-admission.test.mjs",
+      "tests/exact-test-fixture-eol.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-head-role-union-application/native.tap",
+    "logSha256": "af4f61c23ad2fe00a6a95de32214e5438c28ec9062f6b4a19e172db16a5f0eb9",
+    "counts": {
+      "tests": 52,
+      "pass": 52,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

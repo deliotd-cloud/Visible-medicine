@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-21",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "url": "http://127.0.0.1:3000/atlas/3d",
+  "browser": "Codex In-app Browser",
+  "ownedTab": "97",
+  "closed": true,
+  "viewportDuringCheck": [640, 720],
+  "viewportResetAfterCheck": [1280, 720],
+  "observations": [
+    "Whole-body atlas and compact host navigation render at 640 CSS pixels; the outer document is exactly 640 pixels wide and 720 pixels high.",
+    "Region picker, modality links, Explore/Dissect/Guided learning/Quiz, search and collapsible systems/info remain available. Viewer content uses its own vertical scrolling; no outer horizontal overflow was observed.",
+    "Enter on Search atlas opens the named dialog and focuses the searchbox.",
+    "Searching clavicle yields two direct source-mapped results: Left clavicle FMA13323 and Right clavicle FMA13322, plus seven related study views.",
+    "Escape closes the dialog; after its exit transition the dialog count is zero, the Search atlas button has aria-expanded=false and owns focus.",
+    "The temporary viewport override was reset. The original 1280-pixel outer width and scrollY=0 were observed before the owned tab was closed."
+  ],
+  "publicModelScreenshotDisplayedInline": true,
+  "screenshotFileExported": false,
+  "nativeScanPixelsOrMasksCaptured": false,
+  "ownerTabsOrFormsChanged": false,
+  "reviewDecisionsWritten": false,
+  "productPatchJustified": false,
+  "limits": "Bounded reflow and physical browser-keyboard observations, not a true 200% text-zoom, reduced-motion, full assistive-technology, GPU/performance, clinical or whole-site acceptance. No source, sign-in, permissions, attempts or model assets changed.",
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false
+}

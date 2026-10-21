@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-21T13:40:12.676Z",
+  "code": 0,
+  "signal": null,
+  "counts": {
+    "tests": 17,
+    "pass": 17,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "roots": [
+    "tests/atlas-guided-camera.test.ts",
+    "tests/atlas-tour-completion.test.mjs"
+  ],
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "4347d68eb5895f949bd061e1bcc007aa1a8e983efc28e97a7b1ac7af921a4a99",
+  "log": "F:/VisibleMedicine/staging/20261021-tour-camera-current-verification/native.tap",
+  "logSha256": "b5b15e997c1dc6e7822681b1a270279a7d5b10d79e8042fb3790798510031b6f",
+  "rawLogLocalOnly": true,
+  "sourceInputsUnchanged": true,
+  "inputError": null,
+  "ownerPreviewUnchanged": true,
+  "ownerFormsRefreshed": false,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

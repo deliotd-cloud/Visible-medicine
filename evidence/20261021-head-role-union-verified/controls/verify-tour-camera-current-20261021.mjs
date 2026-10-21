@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawn} from 'node:child_process';
+import {read,json,sha,runGit} from './source-only-backup-20261019.mjs';
+const site='F:/VisibleMedicine/website',atlas='F:/VisibleMedicine/atlas';
+const stage='F:/VisibleMedicine/staging/20261021-tour-camera-current-verification';
+const roots=['tests/atlas-guided-camera.test.ts','tests/atlas-tour-completion.test.mjs'];
+const active=json('CURRENT_CHECKPOINT.json').activeWork;
+const snapshot=active.inflight.latestSourceSnapshot,digest=active.inflight.latestSourceSnapshotSha256;
+assert.equal(sha(read(snapshot)),digest);const rows=json(snapshot);assert.equal(rows.length,5178);
+const preserved=active.preservedSourcePaths.map(path=>({path,sha256:sha(read(site+'/'+path))}));
+const guard=()=>{
+ assert.equal(runGit(['-C',site,'rev-parse','HEAD']).toString().trim(),'b953ff3f5f1891599cb6e91cb91311d9d6006270');
+ assert.equal(runGit(['-C',atlas,'rev-parse','HEAD']).toString().trim(),active.source);
+ assert.equal(runGit(['-C',atlas,'status','--porcelain=v1']).toString().trim(),'');
+ for(const r of [...rows,...preserved])assert.equal(sha(read(site+'/'+r.path)),r.sha256,r.path);
+ const binding=json(site+'/atlas-review/integration-inputs.json');assert.equal(binding.sha256,active.review);assert.equal(binding.inputs.length,1710);
+ for(const r of binding.inputs)assert.equal(sha(read(site+'/'+r.path)),r.sha256,r.path);
+ for(const r of json('F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/PRIVATE_GUARDS_AT_CUTOVER.json'))assert.equal(sha(read(site+'/'+r.path)),r.sha256,r.path);
+ process.kill(266712,0);
+};
+guard();assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+const save=(name,value)=>fs.writeFileSync(stage+'/'+name,JSON.stringify(value,null,2)+'\n',{flag:'wx'});
+const args=['--test','--experimental-strip-types','--test-reporter=tap','--test-concurrency=1',...roots];
+const stream=fs.createWriteStream(stage+'/native.tap',{flags:'wx'});
+const child=spawn(process.execPath,args,{cwd:site,windowsHide:true,env:{...process.env,VM_ATLAS_SOURCE_REPO:atlas,GOMAXPROCS:'2',RAYON_NUM_THREADS:'1'},stdio:['ignore','pipe','pipe']});
+child.stdout.pipe(stream,{end:false});child.stderr.pipe(stream,{end:false});
+save('STARTED.json',{at:new Date().toISOString(),driver:process.pid,pid:child.pid,roots,args,source:active.source,review:active.review,sourceSnapshot:snapshot,sourceSnapshotSha256:digest,rootHashes:roots.map(path=>({path,sha256:sha(read(site+'/'+path))}))});
+console.log(JSON.stringify({stage,driver:process.pid,pid:child.pid,roots:roots.length}));
+const result=await new Promise(resolve=>{child.once('error',error=>resolve({code:null,error:String(error)}));child.once('close',(code,signal)=>resolve({code,signal}));});
+await new Promise(resolve=>stream.end(resolve));
+const tap=read(stage+'/native.tap').toString(),counts=Object.fromEntries([...tap.matchAll(/^# (tests|pass|fail|cancelled|skipped|todo) (\d+)\r?$/gm)].map(m=>[m[1],Number(m[2])]));
+const failures=[...tap.matchAll(/^not ok (\d+) - (.+)\r?$/gm)].map(m=>({number:Number(m[1]),title:m[2].trim()}));
+let inputError=null;try{guard();}catch(error){inputError=String(error);}
+save('RESULT.json',{at:new Date().toISOString(),...result,counts,failures,roots,source:active.source,review:active.review,sourceSnapshot:snapshot,sourceSnapshotSha256:digest,log:stage+'/native.tap',logSha256:sha(read(stage+'/native.tap')),rawLogLocalOnly:true,sourceInputsUnchanged:inputError===null,inputError,ownerPreviewUnchanged:true,ownerFormsRefreshed:false,fullSuitePassingClaim:false,clinicalApproval:false,publicDeployment:false});
+console.log(JSON.stringify({result:stage+'/RESULT.json',...result,counts,failures,sourceInputsUnchanged:inputError===null}));process.exitCode=inputError?2:(result.code??1);

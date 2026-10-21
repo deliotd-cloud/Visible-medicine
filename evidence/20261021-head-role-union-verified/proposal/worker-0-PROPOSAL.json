@@ -1,0 +1,64 @@
+{
+  "schema": "visible-medicine-staged-test-role-proposal-v1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceInputsSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/SOURCE_INPUTS_AFTER.json",
+  "sourceInputsSnapshotSha256": "4347d68eb5895f949bd061e1bcc007aa1a8e983efc28e97a7b1ac7af921a4a99",
+  "proposedPaths": [
+    {
+      "path": "tests/head-disclosure-current-delivery.test.mjs",
+      "preimageSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "candidateSha256": "fbd955d5125da0cece3e98ad094e87cd8549bc2478cfe5e0d2bcbecce1248a49",
+      "candidateBytes": 7608,
+      "reason": "Separates retained bd5465 historical contracts and explicit known UI/tour inverse seams from exact current190 delivery; repairs the current stock-verifier mutation probe."
+    },
+    {
+      "path": "tests/fixtures/head-disclosure-before-role-batch-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "18779c2339edf00e4e03f5f1ea35c4d92293b2c5401c64d01558e4aae279ebde",
+      "candidateBytes": 6057,
+      "reason": "Authentic byte-exact pre-role whole head-disclosure test witness; required for forward/inverse preservation of all original assertions and negatives."
+    },
+    {
+      "path": "tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "682155eee19af01a2fe3882db9534c2a59a3d77795626c18e8d398f387f3bdb8",
+      "candidateBytes": 4451,
+      "reason": "Executing source-only full-file guard pins four declared role/async/path seams, reconstructs the exact original test, and refuses unknown assertion changes."
+    }
+  ],
+  "coupledAdmissionDependency": {
+    "path": "tests/fixtures/tour-discovery-before-role-batch-20261021.mjs.raw",
+    "sha256": "de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82",
+    "stagedBy": "craniofacial_tour_roles_1021",
+    "stagedAt": "F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal/tests/fixtures/tour-discovery-before-role-batch-20261021.mjs.raw",
+    "ownership": "Other worker owns this path; admit with the coupled batch before executing the candidate test."
+  },
+  "diagnosis": [
+    "Cases 167-168 were old bd5465/same-source and 1680-input assumptions applied to a later Atlas190/Review34c1 delivery with 1710 inputs, 1553 Review source files, and changed emitted-document hashes. The historical bd5465 pin, three full raw test bodies, and the entire original head test remain exact byte witnesses; the authentic UI one-count transition and tour whole-body inverse are executed as historical proofs. The retained current-atlas source has no 1679-input assertion to invert. Current190 bindings are checked independently.",
+    "Cases 169-170 targeted a synchronous four-import verifier body. The actual stock verifier has a fifth coverage import and top-level await. The candidate runs that exact hashed async source and requires refusal of each synthetic dependency mutation before downstream coverage/log calls.",
+    "Case 171 compared the portable real-helper test to the original worker package through only three path seams. A later roving-role change moved its component fixture path. The candidate proves the full original body with the fourth exact path seam."
+  ],
+  "changedSeams": [
+    "The complete pre-role tour source is inverted through its two exact later count/UI-reader seams into the unchanged bd5465 raw witness; the shared tour witness has one exact SHA and is supplied by the other worker. The authentic bd5465 UI raw body is inverted through its unique 1679-to-1680 count seam; the authentic current-atlas raw body is explicitly checked to contain no such seam.",
+    "Current190 source/tree, 1710 Review input hash, three exact disclosure-related bound files, eight emitted runtime documents and model inventory are checked as current delivery.",
+    "The stock-verifier probe strips exactly five imports and runs the unchanged current async body with a checkedRead mutation, requiring its own assertion message and zero later calls.",
+    "The portable helper whole-file inverse accounts for the one later roving fixture path in addition to its original import/path seams.",
+    "A separate executable guard hashes the exact original head test, pins four explicit candidate sections, reconstructs the complete original file through the declared role/async/path seams, and proves mutations inside and outside the seams are refused."
+  ],
+  "sourceOnlyProof": {
+    "script": "F:/VisibleMedicine/staging/20261021-head-disclosure-role-proposal/PROOF.mjs",
+    "syntaxCheck": "node --check staged candidate: exit 0",
+    "result": "exit 0; three historical raw witnesses exact; pre-role tour whole inverse exact; portable helper whole inverse exact; current1710 binding/hash and three disclosure file hashes exact; two actual stock-source dependency mutations refused before later calls; staged preservation guard 2/2 passes and refuses four unknown candidate mutations plus archived-original mutation",
+    "limits": "Proof is source-only and reads the other worker's staged immutable tour witness. Neither the staged candidate nor the coupled tour proposal has been installed or run as a native Website root. Main owns guarded union admission and affected actual native roots once."
+  },
+  "scope": {
+    "canonicalFilesEdited": 0,
+    "productFilesEdited": 0,
+    "validatorsOrFixturesEdited": 0,
+    "ownerPreviewOrFormsTouched": false,
+    "clinicalOrReleaseApprovalClaim": false
+  }
+}

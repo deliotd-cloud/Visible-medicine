@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-21T13:44:00.699Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/craniofacial-ct-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/head-disclosure-current-delivery.test.mjs",
+    "tests/head-disclosure-role-preservation-20261021.test.mjs",
+    "tests/head-viewer-disclosure-keyboard.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/clinical-review-portal-venous-current-admission.test.mjs",
+    "tests/exact-test-fixture-eol.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-head-role-union-application/native.tap",
+  "logSha256": "af4f61c23ad2fe00a6a95de32214e5438c28ec9062f6b4a19e172db16a5f0eb9",
+  "counts": {
+    "tests": 52,
+    "pass": 52,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

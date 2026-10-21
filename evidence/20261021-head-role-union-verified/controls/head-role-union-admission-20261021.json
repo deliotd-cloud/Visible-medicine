@@ -1,0 +1,29 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-head-role-union-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-head-role-union-application",
+  "manifestSha256": "f56ac97a1e6c59ac0bf918c1a059188b332e7cb26dfdfdadf9e605e999eababd",
+  "beforeInputs": 5178,
+  "afterInputs": 5185,
+  "expectedPaths": [
+    "tests/head-disclosure-current-delivery.test.mjs",
+    "tests/fixtures/head-disclosure-before-role-batch-20261021.mjs.raw",
+    "tests/head-disclosure-role-preservation-20261021.test.mjs",
+    "tests/craniofacial-ct-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/fixtures/craniofacial-ct-current-atlas-3dc.mjs.raw",
+    "tests/fixtures/craniofacial-ct-current-delivery-before-190.mjs.raw",
+    "tests/fixtures/craniofacial-ct-portal-3dc.mjs.raw",
+    "tests/fixtures/tour-discovery-before-role-batch-20261021.mjs.raw",
+    "tests/fixtures/tour-discovery-corpus-bd5465ee.mjs.raw"
+  ],
+  "roots": [
+    "tests/craniofacial-ct-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/head-disclosure-current-delivery.test.mjs",
+    "tests/head-disclosure-role-preservation-20261021.test.mjs",
+    "tests/head-viewer-disclosure-keyboard.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/clinical-review-portal-venous-current-admission.test.mjs",
+    "tests/exact-test-fixture-eol.test.mjs"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-21T13:39:50.651Z",
+  "driver": 278796,
+  "pid": 281724,
+  "roots": [
+    "tests/atlas-guided-camera.test.ts",
+    "tests/atlas-tour-completion.test.mjs"
+  ],
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/atlas-guided-camera.test.ts",
+    "tests/atlas-tour-completion.test.mjs"
+  ],
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "4347d68eb5895f949bd061e1bcc007aa1a8e983efc28e97a7b1ac7af921a4a99",
+  "rootHashes": [
+    {
+      "path": "tests/atlas-guided-camera.test.ts",
+      "sha256": "31ca6f0b7bc7aa2fd079ac3ad50617de491e4fd2723cc20560d65395d156506c"
+    },
+    {
+      "path": "tests/atlas-tour-completion.test.mjs",
+      "sha256": "29eabe4a82543be6cb4616f2092f80d005a07373e6eb51b94dbb2b2cf53116d1"
+    }
+  ]
+}

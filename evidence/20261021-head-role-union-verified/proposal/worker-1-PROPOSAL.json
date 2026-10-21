@@ -1,0 +1,35 @@
+{
+  "schema": "vm-source-only-role-proposal/1",
+  "state": "candidate-needs-main-review-and-coupled-head-disclosure-admission",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-admission485-final-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "4347d68eb5895f949bd061e1bcc007aa1a8e983efc28e97a7b1ac7af921a4a99",
+  "diagnosis": [
+    "The craniofacial test's first case treated its historical 46c-to-3dc exact transition as the moving 190 current file, while later cases required the 3dc source, 1534 Review files and 1664 bindings from the 59 milestone. The current accepted pin is 190/c314 with 1553 imported files and 1710 bindings.",
+    "The tour test treated the complete 30b historical current-delivery source as an inverse of the moving current 190 file. Authentic retained bd5465 whole current-delivery and corpus sources invert exactly to the respective complete 30b sources; the authentic pre-disclosure UI source equals the complete 30b UI source. Current 190 Review/learner and seven imported corpus/UI teaching inputs are checked independently.",
+    "The passing head-disclosure reader hashes the complete pre-edit tour test. It must be admitted as a coupled reader adaptation by its separate owner using the shared raw witness in this proposal."
+  ],
+  "reviewRisks": [
+    "The historical post-3dc current-delivery and portal test sources were located in the retained 20261019 craniofacial website import checkpoint. Their complete source text exactly matches the entire original 46c-to-3dc seam transformations. Main should still inspect the checkpoint provenance and staged raw bytes before admission.",
+    "The current corpus native test itself still pins bd5465 and needs its separate source-role repair. This candidate proves its whole source and refusal preservation and current imported bytes; do not count that separate native root as passing.",
+    "The head-disclosure reader is a previously passing direct dependency and needs the separate worker's coupled adaptation."
+  ],
+  "proposedPaths": [
+    {"path":"tests/craniofacial-ct-current-delivery.test.mjs","preimageSha256":"0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee","candidateSha256":"b08d39c2e6a54cf1ea04f5cdf0b5c5a92a5b6adb2e68182796f9672a686ce76a","candidateBytes":8246},
+    {"path":"tests/tour-discovery-current-delivery.test.mjs","preimageSha256":"de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82","candidateSha256":"6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129","candidateBytes":5206},
+    {"path":"tests/fixtures/craniofacial-ct-current-atlas-3dc.mjs.raw","preimageSha256":null,"candidateSha256":"70397d1a602d1de4a1cb76da2687cf138f81ace50b9322a60c3ce327cd193e5d","candidateBytes":10944},
+    {"path":"tests/fixtures/craniofacial-ct-current-delivery-before-190.mjs.raw","preimageSha256":null,"candidateSha256":"0fb6edffde6f993919dd5727e3d1fc99cb5cb89c0de8b1c679f909db9db376ee","candidateBytes":6867},
+    {"path":"tests/fixtures/craniofacial-ct-portal-3dc.mjs.raw","preimageSha256":null,"candidateSha256":"2c32d0068ce42d8a0bcc33b259e608af81fa9fbdd37ec27d03638a04e379b383","candidateBytes":3011},
+    {"path":"tests/fixtures/tour-discovery-before-role-batch-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82","candidateBytes":2210},
+    {"path":"tests/fixtures/tour-discovery-corpus-bd5465ee.mjs.raw","preimageSha256":null,"candidateSha256":"90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef","candidateBytes":6670}
+  ],
+  "sourceOnlyChecks": {
+    "passed": ["node --check staged craniofacial candidate", "node --check staged tour candidate", "node PROOF.mjs: both whole-file forward and inverse reconstructions exact; both unknown-append and assertion mutations refused", "raw CT witness equals full canonical preimage SHA-256", "raw tour witness equals full canonical preimage SHA-256", "authentic archived post-3dc current/portal sources match complete original forward transformations", "authentic archived pre-disclosure current/corpus sources invert exactly to the complete original 30b sources; authentic UI source equals complete original UI source", "complete old refusal bodies remain verbatim in executing current roots", "seven current190 corpus/UI imported Review source bytes and head-neck manifest bind to exact current source"],
+    "wholeFileForwardInverseMutationProof": "cd F:/VisibleMedicine/staging/20261021-craniofacial-tour-role-proposal; node PROOF.mjs; exit 0; CT 77 operations/23 changed lines and tour 37 operations/27 changed lines, both exact forward/inverse and two mutations refused per file",
+    "deferredNativeCommands": ["node --test tests/craniofacial-ct-current-delivery.test.mjs tests/tour-discovery-current-delivery.test.mjs tests/head-disclosure-current-delivery.test.mjs", "node --test tests/current-atlas-delivery.test.mjs tests/clinical-review-portal-venous-current-admission.test.mjs tests/corpus-xray-v2-current-delivery.test.mjs tests/ui-teaching-current-delivery.test.mjs"]
+  },
+  "scope": "Source-only staging. No canonical or generated files changed; no native corpus, build, browser, private or clinical check claimed."
+}
