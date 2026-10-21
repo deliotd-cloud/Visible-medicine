@@ -1,0 +1,32 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-head-binding-role-proposal-v2",
+  "stage": "F:/VisibleMedicine/staging/20261021-head-binding-role-application",
+  "manifestSha256": "a4182f9e1d7bf9a1efc02a27083f856611cbb99bda03529be0db53dc209f34fa",
+  "beforeInputs": 5237,
+  "afterInputs": 5248,
+  "expectedPaths": [
+    "tests/head-practice-binding.test.mjs",
+    "tests/head-loading-review-binding.test.mjs",
+    "tests/native-focus-review-binding.test.mjs",
+    "tests/head-binding-role-preservation-20261021.test.mjs",
+    "tests/fixtures/head-binding-before-role-batch-20261021/head-practice-binding.test.mjs.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/head-loading-review-binding.test.mjs.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/native-focus-review-binding.test.mjs.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/practice-binder-after-keyboard.mjs.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/practice-inputs-before-keyboard.json.deflate-base64.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/practice-inputs-after-keyboard.json.deflate-base64.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/practice-manifest-before-keyboard.json.deflate-base64.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/practice-body-before-keyboard.json.deflate-base64.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/practice-revisions-before-keyboard.json.deflate-base64.raw",
+    "tests/fixtures/head-binding-before-role-batch-20261021/head-loading-after-pin.json.raw"
+  ],
+  "roots": [
+    "tests/head-practice-binding.test.mjs",
+    "tests/head-loading-review-binding.test.mjs",
+    "tests/native-focus-review-binding.test.mjs",
+    "tests/head-binding-role-preservation-20261021.test.mjs",
+    "tests/head-atlas-practice.test.ts",
+    "tests/head-index-tab-stop.test.mjs",
+    "tests/current-atlas-delivery.test.mjs"
+  ]
+}

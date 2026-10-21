@@ -1,0 +1,59 @@
+{
+  "schema": "visible-medicine.staged-head-binding-role-proposal/2",
+  "supersedesFrozenProposal": {
+    "path": "F:/VisibleMedicine/staging/20261021-head-binding-role-proposal/PROPOSAL.json",
+    "sha256": "bc57215fe2bb7155be84d2e861c914c6a21b42e9ceb097b6179b3de135543b1b"
+  },
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "controlledSnapshot": {
+    "path": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application/SOURCE_INPUTS_AFTER.json",
+    "sha256": "51809d2f667f26e0801e5fd8a64c48e1027d4364e0a32a9f5a4d75d174336ea1",
+    "reportedControlledPaths": 5237,
+    "reportedPreservedPaths": 7
+  },
+  "diagnosis": [
+    "V2 corrects two V1 literal transcription defects before admission: the archived binder SHA-256 is exactly ab50acaf277aec8b7385b342c4c1a36fc607a351e1612e482ec6d95d6da7f5b7, and the current190 Review manifest contains 1553 source files. The 1710 count belongs to integration binding inputs, now asserted separately. No historical count or original assertion was reduced.",
+    "Original matrix cases187,207,208,214 are historical/current source-role collisions, not evidence of a learner behavior defect. The current1710 binding and dependent native Review/UI input hashes remain independently exercised against current190.",
+    "Practice case207 compared the complete old practice/keyboard binder inverse with a later current binder containing additional valid adapters. An authentic Oct20 binder ab50acaf... exactly inverts to the retained pre-practice binder, and removing its keyboard line yields binder b99a1e... recorded in the genuine 1695-input inventory. The authentic subsequent inventory has 1696 inputs; it also records contemporaneous HeadAtlasViewer.tsx and head-atlas.css changes, which are explicitly acknowledged rather than falsely called keyboard-only digest retention.",
+    "The original same-run practice test still executes complete 1685→1695→1696 binder enumeration using the archived manifest/revisions and archived path set, with current source bytes for shared source reads and the authenticated archived candidate binder as a fixed source-file read. It retains all original omission, duplication, changed-path, four-write, no-saved-decision and source-hash mutation checks; current binder coverage/mutation is separately executed against its recorded binding.",
+    "Loading case187 now compares the original before and authentic retained Oct17 after pin at their historical bc925 source/tree, then independently rejects both with the current delivery validator. Focus case214 keeps its original later 589 transition and treats the retained aaa8 pin as historical, independently checking the current190/1710 dependency binding."
+  ],
+  "historicalWitnesses": {
+    "practiceBinder": "Oct20 head-keyboard-desktop preimages/scripts/bind-clinical-review.mjs; raw SHA-256 ab50acaf277aec8b7385b342c4c1a36fc607a351e1612e482ec6d95d6da7f5b7",
+    "practiceBeforeInputs": "Oct20 head-keyboard-desktop preimages/atlas-review/integration-inputs.json; original 266682 bytes SHA-256 0f82510f9243fa4615cf43a210bcdd4e284e6a4d771ab1e5ec17667eb867a746",
+    "practiceAfterInputs": "Oct20 head-speed-integrated before/atlas-review/integration-inputs.json; original 266822 bytes SHA-256 acbad30ecf452317221384c708022b3f5f2d4c3e8042ca82e572f91507bb43d7",
+    "practiceManifest": "Oct20 head-keyboard-desktop preimages/atlas-review/manifest.json; original 376467 bytes SHA-256 1e3de01b08f3d1e9fefc3510f4996eb6e23615a5a23587f2d9d2e555dd0a1350",
+    "practiceBody": "Oct20 head-keyboard-desktop preimages/atlas-review/content/body-renderer-revision.json; original 214575 bytes SHA-256 191995f1f55843c4fc8f0996939da2313d76dd5dd2bf7526ff93f0d6753323fc",
+    "practiceRevisions": "Oct20 head-keyboard-desktop preimages/atlas-review/content/review-revisions.json; original 12713 bytes SHA-256 25b9e20fe175ab4b75d8482929bb93e62725c4537c19a1f195968cf94f3bc99e",
+    "loadingAfterPin": "Oct17 head-loading-integration candidate/tests/fixtures/current-atlas-delivery.json; raw SHA-256 903fc8b1eb81ac3b2eefd2b1756222a2003a90dbb074e7227a2ac0fad76f618c"
+  },
+  "proposedPaths": [
+    {"path":"tests/head-practice-binding.test.mjs","preimageSha256":"2419b38ce72e3c4a6ba292a2d94029b8b0707375d221d4abf5bdf2c6d72a16f9","candidateSha256":"fa70612f6b1f5e3e7bba43b3eb1fc0b55a28fef0b97d690476384bd36702d490","candidateBytes":13389},
+    {"path":"tests/head-loading-review-binding.test.mjs","preimageSha256":"7a918dab1d3963a742c550c3f1a432b8ef42b9f0df6a6c6da1b9a5ee858773d2","candidateSha256":"b9f69ef4672368899f8dec6d4633be4659edfa12896b097e2f14496d9b927b31","candidateBytes":2930},
+    {"path":"tests/native-focus-review-binding.test.mjs","preimageSha256":"4f69c6db89d21be5b3d9ab936695b239af18b1b1be88bde22d9081b2cb49ac21","candidateSha256":"9c70cc8acb8034b2244d256509754ff32835937936169770c1a480de1654f259","candidateBytes":3923},
+    {"path":"tests/head-binding-role-preservation-20261021.test.mjs","preimageSha256":null,"candidateSha256":"b9f39466cc4e8268550898a78b8dd4f8ec2f0153f15d8aa1c6b214e79acfe716","candidateBytes":14856},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/head-practice-binding.test.mjs.raw","preimageSha256":null,"candidateSha256":"2419b38ce72e3c4a6ba292a2d94029b8b0707375d221d4abf5bdf2c6d72a16f9","candidateBytes":8076},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/head-loading-review-binding.test.mjs.raw","preimageSha256":null,"candidateSha256":"7a918dab1d3963a742c550c3f1a432b8ef42b9f0df6a6c6da1b9a5ee858773d2","candidateBytes":2412},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/native-focus-review-binding.test.mjs.raw","preimageSha256":null,"candidateSha256":"4f69c6db89d21be5b3d9ab936695b239af18b1b1be88bde22d9081b2cb49ac21","candidateBytes":3356},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/practice-binder-after-keyboard.mjs.raw","preimageSha256":null,"candidateSha256":"ab50acaf277aec8b7385b342c4c1a36fc607a351e1612e482ec6d95d6da7f5b7","candidateBytes":7357},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/practice-inputs-before-keyboard.json.deflate-base64.raw","preimageSha256":null,"candidateSha256":"d8f8c561b41b6d0232fe9a5b6948c46e9c7706fbc4488f2ba00abbe036e44057","candidateBytes":102337},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/practice-inputs-after-keyboard.json.deflate-base64.raw","preimageSha256":null,"candidateSha256":"81e84e26b830ef632364a70c44695a8cac287ce25037d46a36a67ddd507c128e","candidateBytes":102389},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/practice-manifest-before-keyboard.json.deflate-base64.raw","preimageSha256":null,"candidateSha256":"9c6275478992c72a01bd8dac3fce983abc915d369850c881a26a005adcaba5d9","candidateBytes":108269},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/practice-body-before-keyboard.json.deflate-base64.raw","preimageSha256":null,"candidateSha256":"d49cd9e153813e610b3ec2a3940e19dc161c42a4b317f642285008a59067810f","candidateBytes":88729},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/practice-revisions-before-keyboard.json.deflate-base64.raw","preimageSha256":null,"candidateSha256":"d8b392eaf817cc83e97981850c05ccbcbf83c0d35946da099fe629e6f5f5aba6","candidateBytes":6289},
+    {"path":"tests/fixtures/head-binding-before-role-batch-20261021/head-loading-after-pin.json.raw","preimageSha256":null,"candidateSha256":"903fc8b1eb81ac3b2eefd2b1756222a2003a90dbb074e7227a2ac0fad76f618c","candidateBytes":1777}
+  ],
+  "focusedSourceOnlyProof": {
+    "rawPreimagesMatchCanonical": "3/3 by SHA-256 at observation",
+    "wholeFileGuard": "node --test tests/head-binding-role-preservation-20261021.test.mjs: 3/3 pass; exact enumerated hunk replay of all three complete original files, with explicit unknown-append and removed-original-refusal negatives",
+    "literalAudit": "Archived practice binder file SHA-256 matches the corrected 64-character literal; current fixture and Review manifest each report 1553 source files, while current integration-inputs.json has 1710 input rows. Other quoted long hex literals are 40- or 64-character values; historical counts 1544, 1511, 1695 and 1696 retain their original roles.",
+    "syntax": "node --check on three candidate roots: 3/3 pass",
+    "archivedBinderReplay": "Source-only in-memory execution with archived manifest/revisions and archived path enumeration: 1685 baseline, 1695 pre-keyboard, 1696 keyboard, four derived Review writes, unchanged shared same-run input hashes; no saved decisions written",
+    "compressedWitnesses": "Five lossless deflate/base64 source-only witnesses verified byte-for-byte against originals; decoder checks canonical encoding, compressed-text bound, exact inflated size and SHA-256, with malformed/oversize/digest refusal assertions in candidate test",
+    "limits": "No canonical native roots, typecheck, build, browser or whole suite ran in this stage. Main must admit with preimage guards and execute the three actual roots plus preservation guard. Historical replay uses current available source bytes for shared paths under authentic old enumeration; it does not claim to reproduce every October source digest or clinical approval."
+  },
+  "scope": "F-local staged tests, byte-exact raw preimages, source-only historical witnesses and one enumerated guard only; no canonical, product, binder, generated, decision, private-data, validator, clinical or deployment writes."
+}

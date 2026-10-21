@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T15:20:21.606Z",
+  "at": "2026-10-21T15:32:28.782Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5244,
+    "canonicalNamedInputs": 5255,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "aa835a2805cd3a24f1b9f0bc9aea438aca77bbd6",
-  "gitParent": "aa835a2805cd3a24f1b9f0bc9aea438aca77bbd6",
+  "parent": "fe46ea173b3d2cd88824c38fd726f118538fad19",
+  "gitParent": "fe46ea173b3d2cd88824c38fd726f118538fad19",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4315,6 +4315,171 @@
       "path": "evidence/20261021-guided-limb-reliability-checkpoint/proposal/PROPOSAL.json",
       "bytes": 4596,
       "sha256": "738c7241f41dba8f8c372570d1db58fca72cf31da605125520d4c940ce61d1ab"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/admission.json",
+      "bytes": 1973,
+      "sha256": "a5f863effb052d88a07fbcf9d3ad83aee95ed54d1f2dac7187b451a0074457bc"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/admission.mjs",
+      "bytes": 10037,
+      "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/admit-text-witnesses.mjs",
+      "bytes": 4174,
+      "sha256": "ddffd0c126bf4e53c0d048621b3da7224935aa3cf332c820da3293b5d366764f"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/advance-scoped-routing.mjs",
+      "bytes": 3835,
+      "sha256": "2cfb2457f247ec619e08ec64b63b6d63c4a7f28abba991d7aec49a14e41b9c22"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/checkpoint-config.json",
+      "bytes": 3660,
+      "sha256": "6a1b4bce6ae1d99ee47bdb40aba5bc0e9cb253d83e7790a1ce39fe47c76766bb"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7636,
+      "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7627,
+      "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/emit-inflight-patch.mjs",
+      "bytes": 2751,
+      "sha256": "ee10d9d3385455254ab99a6396d8b6ee22c309accfa1e7265d600bf381f1435d"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/controls/routing.json",
+      "bytes": 581,
+      "sha256": "720b6f4cfafeaa6644d73ddb25f6897e032109656293db2644ff3cc2e39da194"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/evidence/APPLICATION.json",
+      "bytes": 6015,
+      "sha256": "992e743795f9010adb148ea408fdbbe39d33f5050315665266d7503e82ae2c2b"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/evidence/MECHANICAL_WITNESS_COPY.json",
+      "bytes": 1791,
+      "sha256": "894b9f1087bcf1cb8c54a2ec2f3794c21a0ce8312b4148f880a4694aa93c6c7e"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/evidence/native.json",
+      "bytes": 876,
+      "sha256": "ecc176c30b0f1bcc400fae4ceb2f6afe4d490e2693c3b7ff9d03506f96b86c46"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/evidence/PROOF.json",
+      "bytes": 3573,
+      "sha256": "194d0fdf1242f1f272ac5de896b43c9e9592cbcd6ee55306692d801135798398"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/head-loading-after-pin.json.raw",
+      "bytes": 1777,
+      "sha256": "903fc8b1eb81ac3b2eefd2b1756222a2003a90dbb074e7227a2ac0fad76f618c"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/head-loading-review-binding.test.mjs.raw",
+      "bytes": 2412,
+      "sha256": "7a918dab1d3963a742c550c3f1a432b8ef42b9f0df6a6c6da1b9a5ee858773d2"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/head-practice-binding.test.mjs.raw",
+      "bytes": 8076,
+      "sha256": "2419b38ce72e3c4a6ba292a2d94029b8b0707375d221d4abf5bdf2c6d72a16f9"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/native-focus-review-binding.test.mjs.raw",
+      "bytes": 3356,
+      "sha256": "4f69c6db89d21be5b3d9ab936695b239af18b1b1be88bde22d9081b2cb49ac21"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/practice-binder-after-keyboard.mjs.raw",
+      "bytes": 7357,
+      "sha256": "ab50acaf277aec8b7385b342c4c1a36fc607a351e1612e482ec6d95d6da7f5b7"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/practice-body-before-keyboard.json.deflate-base64.raw",
+      "bytes": 88729,
+      "sha256": "d49cd9e153813e610b3ec2a3940e19dc161c42a4b317f642285008a59067810f"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/practice-inputs-after-keyboard.json.deflate-base64.raw",
+      "bytes": 102389,
+      "sha256": "81e84e26b830ef632364a70c44695a8cac287ce25037d46a36a67ddd507c128e"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/practice-inputs-before-keyboard.json.deflate-base64.raw",
+      "bytes": 102337,
+      "sha256": "d8f8c561b41b6d0232fe9a5b6948c46e9c7706fbc4488f2ba00abbe036e44057"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/practice-manifest-before-keyboard.json.deflate-base64.raw",
+      "bytes": 108269,
+      "sha256": "9c6275478992c72a01bd8dac3fce983abc915d369850c881a26a005adcaba5d9"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/fixtures/head-binding-before-role-batch-20261021/practice-revisions-before-keyboard.json.deflate-base64.raw",
+      "bytes": 6289,
+      "sha256": "d8b392eaf817cc83e97981850c05ccbcbf83c0d35946da099fe629e6f5f5aba6"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/head-binding-role-preservation-20261021.test.mjs",
+      "bytes": 14856,
+      "sha256": "b9f39466cc4e8268550898a78b8dd4f8ec2f0153f15d8aa1c6b214e79acfe716"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/head-loading-review-binding.test.mjs",
+      "bytes": 2930,
+      "sha256": "b9f69ef4672368899f8dec6d4633be4659edfa12896b097e2f14496d9b927b31"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/head-practice-binding.test.mjs",
+      "bytes": 13389,
+      "sha256": "fa70612f6b1f5e3e7bba43b3eb1fc0b55a28fef0b97d690476384bd36702d490"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/installed-website/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3923,
+      "sha256": "9c70cc8acb8034b2244d256509754ff32835937936169770c1a480de1654f259"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/preimages/tests/head-loading-review-binding.test.mjs",
+      "bytes": 2412,
+      "sha256": "7a918dab1d3963a742c550c3f1a432b8ef42b9f0df6a6c6da1b9a5ee858773d2"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/preimages/tests/head-practice-binding.test.mjs",
+      "bytes": 8076,
+      "sha256": "2419b38ce72e3c4a6ba292a2d94029b8b0707375d221d4abf5bdf2c6d72a16f9"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/preimages/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3356,
+      "sha256": "4f69c6db89d21be5b3d9ab936695b239af18b1b1be88bde22d9081b2cb49ac21"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/proposal/PROPOSAL.json",
+      "bytes": 9715,
+      "sha256": "a4182f9e1d7bf9a1efc02a27083f856611cbb99bda03529be0db53dc209f34fa"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/proposals/initial-PROPOSAL.json",
+      "bytes": 8693,
+      "sha256": "bc57215fe2bb7155be84d2e861c914c6a21b42e9ceb097b6179b3de135543b1b"
+    },
+    {
+      "path": "evidence/20261021-head-binding-verified/routing/after-head-binding.json",
+      "bytes": 72770,
+      "sha256": "63a6fcafa7cb9971fc0e7d3324ad3c78275f68e0fbb717308c0d63ceba5d1274"
     },
     {
       "path": "evidence/20261021-head-history-tour-verified/controls/admission.json",
@@ -10488,9 +10653,9 @@
     }
   ],
   "removed": [],
-  "scope": "Fifteen test/raw paths, full originals and source-only proposals, actual compact native receipts, bounded routing and sanitized deferred historical diagnosis only. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Fourteen exact test/raw files, original preimages, V1/V2 proposal metadata, hash-guarded admission controls, compact actual native and mechanical-copy receipts and bounded routing only. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T15:20:14.142Z",
+    "at": "2026-10-21T15:32:21.018Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -10498,8 +10663,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5244,
-    "controlledSourceInputs": 5237,
+    "currentNamedInputs": 5255,
+    "controlledSourceInputs": 5248,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -10509,18 +10674,18 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "51809d2f667f26e0801e5fd8a64c48e1027d4364e0a32a9f5a4d75d174336ea1",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "5054c06998b70e9930f7cfddbc11c0e36b61e366feeec6d64465c42229a070ff",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-binding-role-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "31c70f89dfeae9c18be3c980aefb09a0b398776add0d6d941d82d91b8d786c59",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-binding-role-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "c9070f018e32c008f0ce79ab6602579342772e86626652cf1c34aa78784316b4",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 15,
-    "existingEditedTestPaths": 6,
+    "installedTestOnlyPaths": 14,
+    "existingEditedTestPaths": 3,
     "actualNativeCode": 0,
     "actualNativeCounts": {
-      "tests": 243,
-      "pass": 243,
+      "tests": 63,
+      "pass": 63,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
@@ -10535,7 +10700,7 @@
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "milestone": "Actual11-root243/243/0skip/0cancel passes after15 exact test/witness paths. Full disclosure/index-keyboard and anchor inverses, authentic closed52 radial and closed53 native histories remain; actual current190 delivery, real head navigation/history harnesses and complete renderer-bound upper-venous/urinary tour packets pass independently. Main corrected an initial staged Git API seam and removed unnecessary dynamic hash substitution before admission; all original source hashes, stops, frames and rejection cases survive. Two retained camera/tour roots are routed from their existing17/17 receipt without rerun. Original87 failure rows remain:47 later exact-title scoped passes,8 title-incomparable root passes,32 not covered by listed complete-pass runs, not32 remaining failures. Three closed54/55 historical fallback obligations are explicitly deferred with source-bound diagnosis; no product or clinical changes.",
+    "milestone": "Actual7-root63/63/0skip/0cancel passes after14 exact test/witness paths. Authentic full practice binder and lossless source-only inventories preserve1685-to1695-to1696 enumeration and all original whole-file, changed/omitted/duplicated-input and four-derived-write/no-decision obligations. Real current1710 bindings, native scoring, index keyboard, loading and focus dependencies run independently. Archived input pair's additional viewer/CSS changes remain explicit; same-run proof is not misrepresented as complete reproduction of historical source digests. Main caught and corrected a malformed staged digest and1553source/1710binding count confusion before canonical admission; V1 remains frozen, no native failure is concealed. Code used apply_patch; five authenticated compressed text witnesses were copied byte-exactly with no overwrite. Routing retains87original rows:50 later exact-title passes,9 title-incomparable root passes,28 unexercised by listed complete-pass runs, not28remaining failures. Separate243pass batch and all original full failure baselines remain; no whole-suite claim or product/clinical change.",
     "fullSuitePassingClaim": false,
     "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,

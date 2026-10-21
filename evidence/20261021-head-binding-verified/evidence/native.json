@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-21T15:30:03.786Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/head-practice-binding.test.mjs",
+    "tests/head-loading-review-binding.test.mjs",
+    "tests/native-focus-review-binding.test.mjs",
+    "tests/head-binding-role-preservation-20261021.test.mjs",
+    "tests/head-atlas-practice.test.ts",
+    "tests/head-index-tab-stop.test.mjs",
+    "tests/current-atlas-delivery.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-head-binding-role-application/native.tap",
+  "logSha256": "c33e869c83f3e94b893daac485959763373614b56af993ee2e76da0737173adc",
+  "counts": {
+    "tests": 63,
+    "pass": 63,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}
