@@ -1,0 +1,18 @@
+{
+  "schema": "vm-deferred-provider-clarification-1",
+  "status": "read-only-no-repair-no-native-pass",
+  "sourceSnapshotAtObservation": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "51809d2f667f26e0801e5fd8a64c48e1027d4364e0a32a9f5a4d75d174336ea1",
+  "scope": "All bound integration input paths were read and SHA-256-checked, not a selected subset. The original historical validators and tests were not replaced, executed, or edited.",
+  "audits": [
+    {"reader":"readRevision53","binding":"closed54 integration inputs","total":1658,"matched":1656,"digestMismatch":2,"readErrors":0,"mismatches":["components/HeadAtlasComparisonNavigation.tsx","components/HeadAtlasLinkedModel.tsx"]},
+    {"reader":"readRevision54(path,{readLive:readRevision53})","binding":"closed54 integration inputs","total":1658,"matched":1656,"digestMismatch":0,"readErrors":2,"firstCauses":"The helper's explicit selected-input delegation to readRevision55 bypasses readLive and yields the wrong-era bytes for the two declared 53-to-54 component changes."},
+    {"reader":"readRevision53","binding":"closed55 integration inputs","total":1661,"matched":1653,"digestMismatch":8,"readErrors":0,"mismatches":["atlas-review/app/body-content.ts","atlas-review/content/body-review-display-pins.json","atlas-review/content/regional-teaching/foot.json","components/HeadAtlasComparisonNavigation.tsx","components/HeadAtlasLinkedModel.tsx","docs/anatomy-coverage/index.json","lib/anatomy-coverage-view.ts","scripts/import-clinical-review.mjs"]},
+    {"reader":"readRevision55(path,{readLive:readRevision53})","binding":"closed55 integration inputs","total":1661,"matched":1653,"digestMismatch":0,"readErrors":8,"firstCauses":"The six declared changed55 inputs and the two inherited changed54 components require their exact post-transition values; the generic 53 fallback cannot supply them."},
+    {"reader":"readRevision55(path,{readLive:path=>readRevision54(path,{readLive:readRevision53})})","binding":"closed55 integration inputs","total":1661,"matched":1650,"digestMismatch":0,"readErrors":11,"firstCauses":"In addition to the eight differing paths, the three added55 superficial-medial-plantar files are outside readRevision54's closed input scope."},
+    {"reader":"readRevision53","binding":"closed55 imported Review rows","total":1531,"matched":1526,"digestMismatch":5,"readErrors":0},
+    {"reader":"readRevision55(path,{readLive:readRevision53})","binding":"closed55 imported Review rows","total":1531,"matched":1528,"digestMismatch":0,"readErrors":3,"firstCauses":"Three changed55 imported Review rows fall through to closed53 bytes: app/body-content.ts, content/body-review-display-pins.json and content/regional-teaching/foot.json."}
+  ],
+  "interpretation": "The 47-path count in DIAGNOSIS.json measured raw current Website drift against each old input manifest. It did not imply 47 missing archival witnesses: readRevision53 authenticates 1656 of 1658 closed54 bindings. Its two misses are the declared 53-to-54 component changes. For closed55, six declared changed inputs plus those two inherited component changes differ; the three declared added inputs currently happen to hash-match through readRevision53 fallback, but this does not by itself establish a durable closed55 source role for them. The original historical validators still fail as stated in DIAGNOSIS.json; these read-only audits are not a passing replacement.",
+  "workBoundary": "No candidate, helper, witness, test, generated file, copied data, native run, build, browser action or canonical edit was made. The original three failures remain explicit and every original assertion remains intact."
+}

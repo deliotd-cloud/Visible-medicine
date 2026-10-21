@@ -1,0 +1,155 @@
+{
+  "at": "2026-10-21T15:50:34.835Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/historical-current-atlas-delivery-54.mjs",
+      "preimageSha256": "983baa628d7f4ffa3d94b524365009f63622dce6dbe8bb2cfefd656f2f81300f",
+      "candidateSha256": "32460b199dca1bc6b4a97ba9dbfc29ca1d536c69a98c501860e99c0269a85825",
+      "candidateBytes": 4309
+    },
+    {
+      "path": "tests/historical-current-atlas-delivery-55.mjs",
+      "preimageSha256": "ac8ce7399f77d360d8cc90e1cc3eccb6af5267f10e42babaf56c0017aeaecf7a",
+      "candidateSha256": "15bdffdf1c56ed658b0b0d524566b2a8af6f45bd5cdd4e5f38e38f48323c8012",
+      "candidateBytes": 5603
+    },
+    {
+      "path": "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "preimageSha256": "980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c",
+      "candidateSha256": "a61fbe8b30ca01e50035c843399ae4cfbb0c0be214b3ec117b7424664cd5163d",
+      "candidateBytes": 8477
+    },
+    {
+      "path": "tests/historical-head-toolbar-css-preservation-57-closed.test.mjs",
+      "preimageSha256": "baefc07556aeff7188fa891c52001497b92c6a0db19d60c26132233053351119",
+      "candidateSha256": "5705e1fd6b020ad16b3e855628da2c2c531d7e17bc5ac0c4c7b1a7c4e23f64ea",
+      "candidateBytes": 4377
+    },
+    {
+      "path": "tests/closed54-55-bound-source.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "eee465fd8634f8c451d2179dc053820313e8f5b592628a91572e04e0dbce28ff",
+      "candidateBytes": 3295
+    },
+    {
+      "path": "tests/closed54-55-provider-preservation.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "3ad806905ee65d0a1e7fefa50cd58bf51c73419d899e62df6e89bc2dc531f5ae",
+      "candidateBytes": 7494
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/historical-current-atlas-delivery-54.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "983baa628d7f4ffa3d94b524365009f63622dce6dbe8bb2cfefd656f2f81300f",
+      "candidateBytes": 4326
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/historical-current-atlas-delivery-55.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "ac8ce7399f77d360d8cc90e1cc3eccb6af5267f10e42babaf56c0017aeaecf7a",
+      "candidateBytes": 5523
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/head-manual-recovery-53-to-54-closed.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "44447da331496d3685c360eda3199cc18fa7a194cb556384167f33ccbf979dae",
+      "candidateBytes": 5252
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/head-manual-recovery-54-to-55-closed.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c",
+      "candidateBytes": 7758
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/historical-head-toolbar-css-preservation-57-closed.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "baefc07556aeff7188fa891c52001497b92c6a0db19d60c26132233053351119",
+      "candidateBytes": 3326
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/HeadAtlasComparisonNavigation-54.tsx.raw",
+      "preimageSha256": null,
+      "candidateSha256": "05d32d7e3fc96e56af9bab7c76ed622d2e6063cd8378ecc4d1f50d0a6f9432d4",
+      "candidateBytes": 8683
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/HeadAtlasLinkedModel-54.tsx.raw",
+      "preimageSha256": null,
+      "candidateSha256": "c90fd4b9a51a4fa67ef390fb6b79515825fd662160f83cabd127b7283b8d2fab",
+      "candidateBytes": 6869
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/anatomy-coverage-index-55.json.raw",
+      "preimageSha256": null,
+      "candidateSha256": "5a7d458d8010c66c76a2be7817bd72cdcfbfa932ff5b1dcc2d0b835be6102f8a",
+      "candidateBytes": 154911
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/anatomy-coverage-view-55.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "4918e25d38bff5e11480b3a0ec857bd6c615aebdc2c5c0fc37500f92ba61b8f5",
+      "candidateBytes": 5290
+    },
+    {
+      "path": "tests/fixtures/closed54-55-provider/import-clinical-review-55.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "9ab934dcc6f349000ff20f10311416f32c21bf07a29b98daad53abdc10602a7a",
+      "candidateBytes": 6684
+    }
+  ],
+  "controlledInputs": 5260,
+  "preservedInputs": 7,
+  "namedInputs": 5267,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "b5124ca90bfaa4c2c8ee277a86caa8cbb28a54b10cbdf54af5b55d92f17e2210",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T15:50:31.654Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/head-manual-recovery-53-to-54-closed.test.mjs",
+      "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "tests/historical-current-atlas-delivery-54.test.mjs",
+      "tests/historical-current-atlas-delivery-55.test.mjs",
+      "tests/historical-head-toolbar-css-preservation-57-closed.test.mjs",
+      "tests/closed57-renderer-read.test.mjs",
+      "tests/head-manual-recovery-current-transition-56-closed.test.mjs",
+      "tests/closed54-55-provider-preservation.test.mjs",
+      "tests/current-atlas-delivery.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/native.tap",
+    "logSha256": "d38f1ae21ac0208c78494e3900c3a55f981d6df09e574ce638c6f215b110ea22",
+    "counts": {
+      "tests": 56,
+      "pass": 56,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

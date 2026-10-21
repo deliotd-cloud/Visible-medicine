@@ -1,0 +1,36 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application",
+  "manifestSha256": "40e518da6d337221b02bd193535e8d8158a7c8c7e55d57a1e37965c2185ede2d",
+  "beforeInputs": 5248,
+  "afterInputs": 5260,
+  "expectedPaths": [
+    "tests/historical-current-atlas-delivery-54.mjs",
+    "tests/historical-current-atlas-delivery-55.mjs",
+    "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+    "tests/historical-head-toolbar-css-preservation-57-closed.test.mjs",
+    "tests/closed54-55-bound-source.mjs",
+    "tests/closed54-55-provider-preservation.test.mjs",
+    "tests/fixtures/closed54-55-provider/historical-current-atlas-delivery-54.mjs.raw",
+    "tests/fixtures/closed54-55-provider/historical-current-atlas-delivery-55.mjs.raw",
+    "tests/fixtures/closed54-55-provider/head-manual-recovery-53-to-54-closed.test.mjs.raw",
+    "tests/fixtures/closed54-55-provider/head-manual-recovery-54-to-55-closed.test.mjs.raw",
+    "tests/fixtures/closed54-55-provider/historical-head-toolbar-css-preservation-57-closed.test.mjs.raw",
+    "tests/fixtures/closed54-55-provider/HeadAtlasComparisonNavigation-54.tsx.raw",
+    "tests/fixtures/closed54-55-provider/HeadAtlasLinkedModel-54.tsx.raw",
+    "tests/fixtures/closed54-55-provider/anatomy-coverage-index-55.json.raw",
+    "tests/fixtures/closed54-55-provider/anatomy-coverage-view-55.ts.raw",
+    "tests/fixtures/closed54-55-provider/import-clinical-review-55.mjs.raw"
+  ],
+  "roots": [
+    "tests/head-manual-recovery-53-to-54-closed.test.mjs",
+    "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+    "tests/historical-current-atlas-delivery-54.test.mjs",
+    "tests/historical-current-atlas-delivery-55.test.mjs",
+    "tests/historical-head-toolbar-css-preservation-57-closed.test.mjs",
+    "tests/closed57-renderer-read.test.mjs",
+    "tests/head-manual-recovery-current-transition-56-closed.test.mjs",
+    "tests/closed54-55-provider-preservation.test.mjs",
+    "tests/current-atlas-delivery.test.mjs"
+  ]
+}

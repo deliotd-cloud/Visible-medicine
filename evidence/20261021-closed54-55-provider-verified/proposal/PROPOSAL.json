@@ -1,0 +1,48 @@
+{
+  "schema": "vm-bounded-staged-proposal-1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshotAtObservation": "F:/VisibleMedicine/staging/20261021-head-binding-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "31c70f89dfeae9c18be3c980aefb09a0b398776add0d6d941d82d91b8d786c59",
+  "proposedPaths": [
+    {"path":"tests/historical-current-atlas-delivery-54.mjs","preimageSha256":"983baa628d7f4ffa3d94b524365009f63622dce6dbe8bb2cfefd656f2f81300f","candidateSha256":"32460b199dca1bc6b4a97ba9dbfc29ca1d536c69a98c501860e99c0269a85825","candidateBytes":4309},
+    {"path":"tests/historical-current-atlas-delivery-55.mjs","preimageSha256":"ac8ce7399f77d360d8cc90e1cc3eccb6af5267f10e42babaf56c0017aeaecf7a","candidateSha256":"15bdffdf1c56ed658b0b0d524566b2a8af6f45bd5cdd4e5f38e38f48323c8012","candidateBytes":5603},
+    {"path":"tests/head-manual-recovery-54-to-55-closed.test.mjs","preimageSha256":"980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c","candidateSha256":"a61fbe8b30ca01e50035c843399ae4cfbb0c0be214b3ec117b7424664cd5163d","candidateBytes":8477},
+    {"path":"tests/historical-head-toolbar-css-preservation-57-closed.test.mjs","preimageSha256":"baefc07556aeff7188fa891c52001497b92c6a0db19d60c26132233053351119","candidateSha256":"5705e1fd6b020ad16b3e855628da2c2c531d7e17bc5ac0c4c7b1a7c4e23f64ea","candidateBytes":4377},
+    {"path":"tests/closed54-55-bound-source.mjs","preimageSha256":null,"candidateSha256":"eee465fd8634f8c451d2179dc053820313e8f5b592628a91572e04e0dbce28ff","candidateBytes":3295},
+    {"path":"tests/closed54-55-provider-preservation.test.mjs","preimageSha256":null,"candidateSha256":"3ad806905ee65d0a1e7fefa50cd58bf51c73419d899e62df6e89bc2dc531f5ae","candidateBytes":7494},
+    {"path":"tests/fixtures/closed54-55-provider/historical-current-atlas-delivery-54.mjs.raw","preimageSha256":null,"candidateSha256":"983baa628d7f4ffa3d94b524365009f63622dce6dbe8bb2cfefd656f2f81300f","candidateBytes":4326},
+    {"path":"tests/fixtures/closed54-55-provider/historical-current-atlas-delivery-55.mjs.raw","preimageSha256":null,"candidateSha256":"ac8ce7399f77d360d8cc90e1cc3eccb6af5267f10e42babaf56c0017aeaecf7a","candidateBytes":5523},
+    {"path":"tests/fixtures/closed54-55-provider/head-manual-recovery-53-to-54-closed.test.mjs.raw","preimageSha256":null,"candidateSha256":"44447da331496d3685c360eda3199cc18fa7a194cb556384167f33ccbf979dae","candidateBytes":5252},
+    {"path":"tests/fixtures/closed54-55-provider/head-manual-recovery-54-to-55-closed.test.mjs.raw","preimageSha256":null,"candidateSha256":"980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c","candidateBytes":7758},
+    {"path":"tests/fixtures/closed54-55-provider/historical-head-toolbar-css-preservation-57-closed.test.mjs.raw","preimageSha256":null,"candidateSha256":"baefc07556aeff7188fa891c52001497b92c6a0db19d60c26132233053351119","candidateBytes":3326},
+    {"path":"tests/fixtures/closed54-55-provider/HeadAtlasComparisonNavigation-54.tsx.raw","preimageSha256":null,"candidateSha256":"05d32d7e3fc96e56af9bab7c76ed622d2e6063cd8378ecc4d1f50d0a6f9432d4","candidateBytes":8683},
+    {"path":"tests/fixtures/closed54-55-provider/HeadAtlasLinkedModel-54.tsx.raw","preimageSha256":null,"candidateSha256":"c90fd4b9a51a4fa67ef390fb6b79515825fd662160f83cabd127b7283b8d2fab","candidateBytes":6869},
+    {"path":"tests/fixtures/closed54-55-provider/anatomy-coverage-index-55.json.raw","preimageSha256":null,"candidateSha256":"5a7d458d8010c66c76a2be7817bd72cdcfbfa932ff5b1dcc2d0b835be6102f8a","candidateBytes":154911},
+    {"path":"tests/fixtures/closed54-55-provider/anatomy-coverage-view-55.ts.raw","preimageSha256":null,"candidateSha256":"4918e25d38bff5e11480b3a0ec857bd6c615aebdc2c5c0fc37500f92ba61b8f5","candidateBytes":5290},
+    {"path":"tests/fixtures/closed54-55-provider/import-clinical-review-55.mjs.raw","preimageSha256":null,"candidateSha256":"9ab934dcc6f349000ff20f10311416f32c21bf07a29b98daad53abdc10602a7a","candidateBytes":6684}
+  ],
+  "unchangedOriginalTest": "tests/head-manual-recovery-53-to-54-closed.test.mjs remains byte-identical to its raw SHA44447da331496d3685c360eda3199cc18fa7a194cb556384167f33ccbf979dae.",
+  "diagnosis": "Historical54/55 helpers still fall through to moving current Website source. The complete closed53 provider reproduces 1656/1658 old54 inputs; two declared component changes require small exact witnesses. Closed55 requires those two plus six declared changed/new Atlas inputs from verified Git commit46c43ed8 and three Website-authored inputs from retained exact recovery source. The old 47-path count was raw current drift, not missing historical witnesses. Original exported validators and explicit forged-reader refusal remain in place; actual current190 is checked separately.",
+  "witnessProvenance": [
+    {"path":"tests/fixtures/closed54-55-provider/HeadAtlasComparisonNavigation-54.tsx.raw","source":"F:/VisibleMedicine/recovery/checkpoints/20261018-course-launch-authority-source-backup/remote-source-restored/components/HeadAtlasComparisonNavigation.tsx"},
+    {"path":"tests/fixtures/closed54-55-provider/HeadAtlasLinkedModel-54.tsx.raw","source":"F:/VisibleMedicine/recovery/checkpoints/20261018-course-launch-authority-source-backup/remote-source-restored/components/HeadAtlasLinkedModel.tsx"},
+    {"path":"tests/fixtures/closed54-55-provider/anatomy-coverage-index-55.json.raw","source":"F:/VisibleMedicine/recovery/checkpoints/20261018-head-structure-retry-source-backup/remote-source-restored/docs/anatomy-coverage/index.json"},
+    {"path":"tests/fixtures/closed54-55-provider/anatomy-coverage-view-55.ts.raw","source":"F:/VisibleMedicine/recovery/checkpoints/20261018-head-structure-retry-source-backup/remote-source-restored/lib/anatomy-coverage-view.ts"},
+    {"path":"tests/fixtures/closed54-55-provider/import-clinical-review-55.mjs.raw","source":"F:/VisibleMedicine/recovery/checkpoints/20261018-head-structure-retry-source-backup/remote-source-restored/scripts/import-clinical-review.mjs"}
+  ],
+  "gitSourceProvenance": "The six enumerated atlas-review inputs in closed54-55-bound-source.mjs were individually checked against complete Git blobs at Atlas 46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd through checkedAtlasHistoryRepo. Each equals its closed55 input digest; the 1,080,401-byte foot source is not copied as a witness.",
+  "sourceOnlyProof": "Provider audited all closed54 inputs 1658/1658 exact and closed55 inputs 1661/1661 exact; Review55 1529/1531 through provider, with the two remaining renderer/revision files already frozen in the existing helper. Whole-file preservation guard 4/4 incl. mutation and missing/forged/oversize refusal; closed57-to-preedit source-only reader probe passed for both helpers. All seven staged source/test files passed node --check. None of these is an actual native root pass.",
+  "directReadersForMainNative": [
+    "tests/head-manual-recovery-53-to-54-closed.test.mjs",
+    "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+    "tests/historical-current-atlas-delivery-54.test.mjs",
+    "tests/historical-current-atlas-delivery-55.test.mjs",
+    "tests/historical-head-toolbar-css-preservation-57-closed.test.mjs",
+    "tests/closed57-renderer-read.test.mjs",
+    "tests/head-manual-recovery-current-transition-56-closed.test.mjs"
+  ],
+  "limits": "Main must admit only proposedPaths against its latest frozen source snapshot and run affected actual native roots. Stage-only shims and SOURCE_ONLY_READER_PROBE.mjs are not proposed. No canonical/product/generated/fixtureJSON/private/clinical edits, build, browser, backup, push or native run was made."
+}

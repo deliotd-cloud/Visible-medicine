@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T15:32:28.782Z",
+  "at": "2026-10-21T15:56:50.055Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5255,
+    "canonicalNamedInputs": 5267,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "fe46ea173b3d2cd88824c38fd726f118538fad19",
-  "gitParent": "fe46ea173b3d2cd88824c38fd726f118538fad19",
+  "parent": "ca59d6ce623c1570315166886b2be79f1d404852",
+  "gitParent": "ca59d6ce623c1570315166886b2be79f1d404852",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -1830,6 +1830,186 @@
       "path": "evidence/20261021-clinical-teaching-current-verified/question-proposal/PROPOSAL.json",
       "bytes": 4269,
       "sha256": "ef1b4ba30c6524f539311b1cd4e9d49de838de8825208aa01bb8733cbe72a50f"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/admission.json",
+      "bytes": 2069,
+      "sha256": "b44aacbbe7bf848be205635a221eb3215d9f25e863baade72f555d4be4e09fb6"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/admission.mjs",
+      "bytes": 10037,
+      "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/admit-text-witnesses.mjs",
+      "bytes": 4586,
+      "sha256": "999b6c867d624f0025dc20deb8462f66bca9bc623751166a279e6fe4bdf04966"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/advance-scoped-routing.mjs",
+      "bytes": 3835,
+      "sha256": "2cfb2457f247ec619e08ec64b63b6d63c4a7f28abba991d7aec49a14e41b9c22"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/checkpoint-config.json",
+      "bytes": 3577,
+      "sha256": "dade03b907438071a6ee7f964a028395ac32cafc9353d85039036eece77a9846"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7636,
+      "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7627,
+      "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/emit-inflight-patch.mjs",
+      "bytes": 2751,
+      "sha256": "ee10d9d3385455254ab99a6396d8b6ee22c309accfa1e7265d600bf381f1435d"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/controls/routing.json",
+      "bytes": 549,
+      "sha256": "867bf0d5a28924b1c4caf8d176220f7e887fb225f82c92043f1fb0166c34f1b9"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/evidence/APPLICATION.json",
+      "bytes": 6526,
+      "sha256": "f62eb8b5a01e64d323be257358b1fbdd0050b2e3d7ac2bcd94db7fbd999ea877"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/evidence/CLARIFICATION.json",
+      "bytes": 3730,
+      "sha256": "8cf2842d8f0584fba4eb83715a325c230cdaa07ec47e6cadc8dc1ac128f240ad"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/evidence/MECHANICAL_WITNESS_COPY.json",
+      "bytes": 572,
+      "sha256": "e42b48f196040defdcfdf9f8e2a3ca398b2214d1e036952a15805de82d25eadf"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/evidence/native.json",
+      "bytes": 1072,
+      "sha256": "81e1e4264a6915632da901e20fd753799e5acb816c51c7237a68a2bf7db88930"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/evidence/PROOF.json",
+      "bytes": 3454,
+      "sha256": "6ec2d40dbb4aa55124961b8b05b0581e7a4d894523b96e02ff25f369ea9829de"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/closed54-55-bound-source.mjs",
+      "bytes": 3295,
+      "sha256": "eee465fd8634f8c451d2179dc053820313e8f5b592628a91572e04e0dbce28ff"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 7494,
+      "sha256": "3ad806905ee65d0a1e7fefa50cd58bf51c73419d899e62df6e89bc2dc531f5ae"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/anatomy-coverage-index-55.json.raw",
+      "bytes": 154911,
+      "sha256": "5a7d458d8010c66c76a2be7817bd72cdcfbfa932ff5b1dcc2d0b835be6102f8a"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/anatomy-coverage-view-55.ts.raw",
+      "bytes": 5290,
+      "sha256": "4918e25d38bff5e11480b3a0ec857bd6c615aebdc2c5c0fc37500f92ba61b8f5"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/head-manual-recovery-53-to-54-closed.test.mjs.raw",
+      "bytes": 5252,
+      "sha256": "44447da331496d3685c360eda3199cc18fa7a194cb556384167f33ccbf979dae"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/head-manual-recovery-54-to-55-closed.test.mjs.raw",
+      "bytes": 7758,
+      "sha256": "980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/HeadAtlasComparisonNavigation-54.tsx.raw",
+      "bytes": 8683,
+      "sha256": "05d32d7e3fc96e56af9bab7c76ed622d2e6063cd8378ecc4d1f50d0a6f9432d4"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/HeadAtlasLinkedModel-54.tsx.raw",
+      "bytes": 6869,
+      "sha256": "c90fd4b9a51a4fa67ef390fb6b79515825fd662160f83cabd127b7283b8d2fab"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/historical-current-atlas-delivery-54.mjs.raw",
+      "bytes": 4326,
+      "sha256": "983baa628d7f4ffa3d94b524365009f63622dce6dbe8bb2cfefd656f2f81300f"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/historical-current-atlas-delivery-55.mjs.raw",
+      "bytes": 5523,
+      "sha256": "ac8ce7399f77d360d8cc90e1cc3eccb6af5267f10e42babaf56c0017aeaecf7a"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/historical-head-toolbar-css-preservation-57-closed.test.mjs.raw",
+      "bytes": 3326,
+      "sha256": "baefc07556aeff7188fa891c52001497b92c6a0db19d60c26132233053351119"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/fixtures/closed54-55-provider/import-clinical-review-55.mjs.raw",
+      "bytes": 6684,
+      "sha256": "9ab934dcc6f349000ff20f10311416f32c21bf07a29b98daad53abdc10602a7a"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8477,
+      "sha256": "a61fbe8b30ca01e50035c843399ae4cfbb0c0be214b3ec117b7424664cd5163d"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/historical-current-atlas-delivery-54.mjs",
+      "bytes": 4309,
+      "sha256": "32460b199dca1bc6b4a97ba9dbfc29ca1d536c69a98c501860e99c0269a85825"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/historical-current-atlas-delivery-55.mjs",
+      "bytes": 5603,
+      "sha256": "15bdffdf1c56ed658b0b0d524566b2a8af6f45bd5cdd4e5f38e38f48323c8012"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/installed-website/tests/historical-head-toolbar-css-preservation-57-closed.test.mjs",
+      "bytes": 4377,
+      "sha256": "5705e1fd6b020ad16b3e855628da2c2c531d7e17bc5ac0c4c7b1a7c4e23f64ea"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/preimages/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 7758,
+      "sha256": "980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/preimages/tests/historical-current-atlas-delivery-54.mjs",
+      "bytes": 4326,
+      "sha256": "983baa628d7f4ffa3d94b524365009f63622dce6dbe8bb2cfefd656f2f81300f"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/preimages/tests/historical-current-atlas-delivery-55.mjs",
+      "bytes": 5523,
+      "sha256": "ac8ce7399f77d360d8cc90e1cc3eccb6af5267f10e42babaf56c0017aeaecf7a"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/preimages/tests/historical-head-toolbar-css-preservation-57-closed.test.mjs",
+      "bytes": 3326,
+      "sha256": "baefc07556aeff7188fa891c52001497b92c6a0db19d60c26132233053351119"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/proposal/PROPOSAL.json",
+      "bytes": 7847,
+      "sha256": "40e518da6d337221b02bd193535e8d8158a7c8c7e55d57a1e37965c2185ede2d"
+    },
+    {
+      "path": "evidence/20261021-closed54-55-provider-verified/routing/after-closed54-55.json",
+      "bytes": 74342,
+      "sha256": "ce8a867d164ed926ea838751f1cfcf33536eadaf91a7781570e7f1f6f835cfa5"
     },
     {
       "path": "evidence/20261021-closed56-role-repair-verified/controls/admit-closed56-role-repair-20261021.mjs",
@@ -10653,9 +10833,9 @@
     }
   ],
   "removed": [],
-  "scope": "Fourteen exact test/raw files, original preimages, V1/V2 proposal metadata, hash-guarded admission controls, compact actual native and mechanical-copy receipts and bounded routing only. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Sixteen exact test/raw paths, authentic original preimages and minimal historical witnesses, compact actual native receipts, clarification, bounded routing and reviewed admission controls only. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T15:32:21.018Z",
+    "at": "2026-10-21T15:56:41.567Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -10663,8 +10843,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5255,
-    "controlledSourceInputs": 5248,
+    "currentNamedInputs": 5267,
+    "controlledSourceInputs": 5260,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -10674,18 +10854,18 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-binding-role-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "31c70f89dfeae9c18be3c980aefb09a0b398776add0d6d941d82d91b8d786c59",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-binding-role-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "c9070f018e32c008f0ce79ab6602579342772e86626652cf1c34aa78784316b4",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "b5124ca90bfaa4c2c8ee277a86caa8cbb28a54b10cbdf54af5b55d92f17e2210",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "22ebbf09abaf0ca4aef6a5e2e172f6152289478a54e4b3c2c80538f0e6f4b2d6",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 14,
-    "existingEditedTestPaths": 3,
+    "installedTestOnlyPaths": 16,
+    "existingEditedTestPaths": 4,
     "actualNativeCode": 0,
     "actualNativeCounts": {
-      "tests": 63,
-      "pass": 63,
+      "tests": 56,
+      "pass": 56,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
@@ -10700,7 +10880,7 @@
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "milestone": "Actual7-root63/63/0skip/0cancel passes after14 exact test/witness paths. Authentic full practice binder and lossless source-only inventories preserve1685-to1695-to1696 enumeration and all original whole-file, changed/omitted/duplicated-input and four-derived-write/no-decision obligations. Real current1710 bindings, native scoring, index keyboard, loading and focus dependencies run independently. Archived input pair's additional viewer/CSS changes remain explicit; same-run proof is not misrepresented as complete reproduction of historical source digests. Main caught and corrected a malformed staged digest and1553source/1710binding count confusion before canonical admission; V1 remains frozen, no native failure is concealed. Code used apply_patch; five authenticated compressed text witnesses were copied byte-exactly with no overwrite. Routing retains87original rows:50 later exact-title passes,9 title-incomparable root passes,28 unexercised by listed complete-pass runs, not28remaining failures. Separate243pass batch and all original full failure baselines remain; no whole-suite claim or product/clinical change.",
+    "milestone": "Actual nine-root56/56pass/0skip/0cancel after16exact test/witness paths. Closed53 supplies all unchanged authentic closed54/55 inputs; only proven differences use retained source-only historical witnesses or six exact Atlas46c4 Git blobs. All original validators, binding counts, source digests and refusal assertions remain. Earlier47current-drift paths were not47missing witnesses; clarification avoids unnecessary copies. Current190delivery runs independently. Original full136fail/3skip and different-source144baseline remain; bounded87-row routing now53exact-title scoped passes,9title-incomparable root passes,25unexercised, not25remaining failures or whole-suite green. No product/clinical/source-binding change. Separately, an owned temporary browser tab reproduced loss of synthetic unsaved changes-required notes on same-tab SPA workspace navigation, with autosave ineligible and no submission. A nine-form guard proposal is staged for separate UI verification; no claim of a delivered fix.",
     "fullSuitePassingClaim": false,
     "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,
