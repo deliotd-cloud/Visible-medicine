@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-21T19:17:45.424Z",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/desktop-search-entry.test.mjs",
+    "tests/header-session.test.ts",
+    "tests/header-workspace-destination.test.mjs",
+    "tests/desktop-workspace-simplification.test.ts",
+    "tests/workspace-utilities-dismissal.test.mjs",
+    "tests/footer-workspace-label.test.mjs",
+    "tests/atlas-structure-search.test.mjs",
+    "tests/search-kind-page.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 2934,
+  "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-desktop-search-entry/native.log",
+  "logSha256": "af17563d902fa2c23d37615404d0b5e9deb49f9f7b830cc7ae25eb202ab26515",
+  "counts": {
+    "tests": 38,
+    "pass": 38,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  }
+}

@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {createServer} from 'node:http';
+const site='F:/VisibleMedicine/website',stage='F:/VisibleMedicine/staging/20261021-desktop-search-entry-proposal';
+const req=createRequire(site+'/package.json'),ts=req('typescript'),React=req('react'),{renderToStaticMarkup}=req('react-dom/server');
+const compile=(file,mocks)=>{const out={exports:{}};new Function('require','module','exports',ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true,target:ts.ScriptTarget.ES2022}}).outputText)(name=>name in mocks?mocks[name]:req(name),out,out.exports);return out.exports;};
+const Link=({children,...props})=>React.createElement('a',props,children);
+const BrandLockup=()=>React.createElement('span',{className:'brand-lockup brand-lockup-light'},React.createElement('img',{className:'brand-lockup-image',src:'/brand/approved/visible-medicine-lockup-light.png',alt:'Visible Medicine',width:1024,height:217}));
+const destination=compile(site+'/lib/review-destination.ts',{});
+const {SiteHeader}=compile(stage+'/candidate/components/SiteHeader.tsx',{'next/link':Link,'next/navigation':{usePathname:()=>'/atlas/3d'},'./BrandLockup':{BrandLockup},'../lib/atlas-navigation':{atlasModalities:[]},'../lib/review-destination':destination});
+const css=fs.readFileSync(stage+'/candidate/app/globals.css','utf8');
+const pages=new Map([['/signed-in',true],['/anonymous',false]].map(([url,signedIn])=>[url,'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="http://127.0.0.1:3000/"><title>Isolated desktop header layout</title><style>'+css+'</style></head><body>'+renderToStaticMarkup(React.createElement(SiteHeader,{signedIn,reviewAvailable:signedIn}))+'<main><h1>Isolated public header layout</h1><p>Synthetic signed-in presentation only. No account, course, clinical record or access authority is provided by this fixture.</p></main></body></html>']));
+assert(!fs.existsSync(stage+'/LAYOUT_SERVER.json'));
+const server=createServer((request,response)=>{const body=pages.get(request.url);if(!body){response.writeHead(404);response.end('Not found');return;}response.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store'});response.end(body);});
+server.listen(3004,'127.0.0.1',()=>{fs.writeFileSync(stage+'/LAYOUT_SERVER.json',JSON.stringify({at:new Date().toISOString(),pid:process.pid,port:3004,loopbackOnly:true,syntheticPresentationOnly:true,canonicalSourceUnchanged:true},null,2)+'\n',{flag:'wx'});console.log('Local isolated header layout: http://127.0.0.1:3004/signed-in');});

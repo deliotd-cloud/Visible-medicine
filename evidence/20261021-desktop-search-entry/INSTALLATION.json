@@ -1,0 +1,114 @@
+{
+  "at": "2026-10-21T19:19:21.725Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
+  "reviewBindings": 1712,
+  "ops": [
+    {
+      "path": "components/SiteHeader.tsx",
+      "before": "f989c863450e3338c5b9d757016afe927013489e662edc587b86e0a0f3d5011a",
+      "after": "15b623deabbd2e24004aaa5ca14f320990df0991cb09c578586cb1d062fe2512"
+    },
+    {
+      "path": "app/globals.css",
+      "before": "ad24e5cd1b961faf18a324ab69018a4f9cfcff53ffc6ccca48505925b1d3cc3c",
+      "after": "67dbecc0822dd7c5b08633192ec9dbae32e16d097e8cf87bb7aaaceb4bc45c32"
+    },
+    {
+      "path": "tests/desktop-search-entry.test.mjs",
+      "before": null,
+      "after": "91adb11e7ef5d03e4b76ac9c75a0d8d18fad3c9ccea3e61075ad889ecb627096"
+    }
+  ],
+  "commands": [
+    {
+      "at": "2026-10-21T19:17:45.424Z",
+      "args": [
+        "--experimental-strip-types",
+        "--test",
+        "--test-reporter=tap",
+        "--test-concurrency=1",
+        "tests/desktop-search-entry.test.mjs",
+        "tests/header-session.test.ts",
+        "tests/header-workspace-destination.test.mjs",
+        "tests/desktop-workspace-simplification.test.ts",
+        "tests/workspace-utilities-dismissal.test.mjs",
+        "tests/footer-workspace-label.test.mjs",
+        "tests/atlas-structure-search.test.mjs",
+        "tests/search-kind-page.test.ts"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 2934,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-desktop-search-entry/native.log",
+      "logSha256": "af17563d902fa2c23d37615404d0b5e9deb49f9f7b830cc7ae25eb202ab26515",
+      "counts": {
+        "tests": 38,
+        "pass": 38,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "at": "2026-10-21T19:17:47.522Z",
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 2092,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-desktop-search-entry/stock-review.log",
+      "logSha256": "51c61688b22897b2e563b4d0bbda9f75df742378bb5c381a1c2cddc45df732c7"
+    },
+    {
+      "at": "2026-10-21T19:18:32.916Z",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 45392,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-desktop-search-entry/full-types.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at": "2026-10-21T19:19:17.752Z",
+      "args": [
+        "node_modules/vinext/dist/cli.js",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 44835,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-desktop-search-entry/full-build.log",
+      "logSha256": "fa611601c9e9a9dce6c3585b1c0a996e4ea5cacc01377d12d984f6c7d69abb53"
+    }
+  ],
+  "nativeCounts": {
+    "tests": 38,
+    "pass": 38,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceSnapshot": "F:/VisibleMedicine/recovery/local-cutover/20261021-desktop-search-entry/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "f3871b2b7f00d7a62c03f78927525c8cd187c9dfb25db7edbaacb071af984211",
+  "controlledInputs": 5496,
+  "preservedInputs": 7,
+  "typesPassed": true,
+  "buildPassed": true,
+  "stockReviewPassed": true,
+  "authEntitlementsReviewSourceAssetsMasksGeometryAndPrivateDecisionsUnchanged": true,
+  "onlyThreeDeclaredControlledPathsChanged": true,
+  "ownerTabsReloaded": false,
+  "previewRestartPending": true,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false
+}

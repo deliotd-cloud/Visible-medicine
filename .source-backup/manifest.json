@@ -1,14 +1,19 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T19:07:49.594Z",
+  "at": "2026-10-21T19:20:49.362Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
-    "globalBodySearchInstalled": true
+    "desktopSearchInstalled": true
   },
-  "parent": "8802f547ca6036500bc540fde07353fc361527bd",
-  "gitParent": "8802f547ca6036500bc540fde07353fc361527bd",
+  "parent": "a0bc6efabda0bbc3759982ef60b1dc1d43d1f7e1",
+  "gitParent": "a0bc6efabda0bbc3759982ef60b1dc1d43d1f7e1",
   "files": [
+    {
+      "path": "app/globals.css",
+      "bytes": 171538,
+      "sha256": "67dbecc0822dd7c5b08633192ec9dbae32e16d097e8cf87bb7aaaceb4bc45c32"
+    },
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
       "bytes": 28079,
@@ -258,6 +263,11 @@
       "path": "components/RegionalReferenceReviewNotes.tsx",
       "bytes": 20012,
       "sha256": "2f3fe5ed45b56c7c40ee2d21755967f05360bbf477ccccdf5114d76a8470f1a5"
+    },
+    {
+      "path": "components/SiteHeader.tsx",
+      "bytes": 15287,
+      "sha256": "15b623deabbd2e24004aaa5ca14f320990df0991cb09c578586cb1d062fe2512"
     },
     {
       "path": "docs/anatomy-coverage/independent.json",
@@ -4238,6 +4248,61 @@
       "path": "evidence/20261021-desktop-review-copy-and-tour-qa/preimages/tests/clinical-review-inbox-ui.test.mjs",
       "bytes": 17088,
       "sha256": "04e2a4b8d847f29cf41519e408c2597238b1f7287d4a1a74b604a9fe4aaca0c3"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/ACCEPTANCE_BEFORE_IMPORT.json",
+      "bytes": 821,
+      "sha256": "3dcaf55dbf9784fc3eda20c521f26a06b27f4cf6ebd8b09743d8b020fcadc9a7"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/controls/checkpoint-desktop-search-entry-20261021.mjs",
+      "bytes": 7141,
+      "sha256": "a493f8cb9d70ef50face70cef0e8b125a25a865e053d7dd1e01c7fc6418228a2"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/controls/install-desktop-search-entry-20261021.mjs",
+      "bytes": 6970,
+      "sha256": "b9e7ee5c81b94804ffb5f0942c6c85deb94335a9198f3f63542e3f59e877d194"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/controls/prepare-desktop-search-layout-20261021.mjs",
+      "bytes": 2801,
+      "sha256": "f1bc8b52a72376c5b81e2ad46761c9d874c5d5d821a878b02e7341a51b210c19"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/full-build.json",
+      "bytes": 343,
+      "sha256": "c5366d379a68d9d66ac6fe0bf4509f2dbc051e95730949cc21878e994bff4e5a"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/full-types.json",
+      "bytes": 380,
+      "sha256": "1d95a4a22f5467f4d6a2e7449909ad4ea5c8e6d725811696ca80c6dc8c29c805"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/INSTALLATION.json",
+      "bytes": 3798,
+      "sha256": "c36d188e2912463a8ec1ba88c6cbbcf89cf846b36f2e3f6025abb612e95a4bc9"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/native.json",
+      "bytes": 872,
+      "sha256": "e4482a649fae81735a234eb365450f12cea15632e3d0d0052eaa069df5ebb41f"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/PROOF.json",
+      "bytes": 1336,
+      "sha256": "73f2d023cf06b22a36289058ef0f5eee3e7ad3a4e6dde4c08a586f3b7dcf6c57"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/RUNTIME_ACCEPTANCE.json",
+      "bytes": 425,
+      "sha256": "eccc6b5a279049d0052be08d4aabeff326bb50cfe8f141d1214e6deaec3c8318"
+    },
+    {
+      "path": "evidence/20261021-desktop-search-entry/stock-review.json",
+      "bytes": 334,
+      "sha256": "149a251687e53de726a766f9a0929950bde58ecb7158a305d642f45c8e48587a"
     },
     {
       "path": "evidence/20261021-four-modules-verified/atlas/.gitattributes",
@@ -11980,6 +12045,11 @@
       "sha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec"
     },
     {
+      "path": "tests/desktop-search-entry.test.mjs",
+      "bytes": 3650,
+      "sha256": "91adb11e7ef5d03e4b76ac9c75a0d8d18fad3c9ccea3e61075ad889ecb627096"
+    },
+    {
       "path": "tests/elbow-current-lifecycle-preservation.test.mjs",
       "bytes": 5923,
       "sha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105"
@@ -12201,38 +12271,42 @@
     }
   ],
   "removed": [],
-  "scope": "Previous filtered selected source preserved, plus seven exact full-body search source/test/fixture paths and compact local verification/rollback/browser receipts and controls. No scans, pixels, masks, private modules, identifiers, scan names, coordinates, private references, notes, decisions, env/database, models, generated viewer JavaScript, raw logs/DOM/media, dependencies or canonical Git ancestry. Partial source-only recovery; not whole/private/runnable recovery, clinical approval, spatial registration or public deployment.",
+  "scope": "Previous filtered source retained, plus three desktop Search source/test paths and compact real-layout/native-MRI/browser/types/build/stock integrity receipts and local controls. No scans, pixels, masks, private module, identifiers, scan names/coordinates, private references/notes/decisions, env/database, model files, generated viewer JavaScript, raw logs/DOM/media, dependencies or canonical Git ancestry. Partial source-only recovery, not whole/private/runnable recovery, clinical approval, spatial registration or public deployment.",
   "proof": {
-    "at": "2026-10-21T19:07:43.882Z",
+    "at": "2026-10-21T19:20:43.705Z",
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
     "reviewBindings": 1712,
     "importedSources": 1553,
-    "currentBodySelections": 1104,
-    "anatomyResultBudget": 12,
-    "globalResultBudget": 30,
-    "exactSourceAndRevisionBound3dLinks": true,
-    "usesExistingAuditedAliases": true,
-    "exactRootDedupNotNestedParentDedup": true,
-    "publicationQueriesAndAllOtherPlatformFunctionsPreservedByFullInverse": true,
-    "authEntitlementsClinicalDecisionsMasksAndGeometryUnchanged": true,
-    "dependenciesFontsTexturesDatasetsAndLicencesUnchanged": true,
+    "sourceInputs": 5503,
+    "controlledInputs": 5496,
+    "preservedInputs": 7,
     "nativeCounts": {
-      "tests": 25,
-      "pass": 25,
+      "tests": 38,
+      "pass": 38,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
     "fullProjectTypesPassed": true,
-    "fullBuildPassed": true,
+    "fullLocalBuildPassed": true,
     "stockReviewPassed": true,
-    "actualGlobalSearchAnd3dSelectionPassed": true,
+    "desktopGlobalSearchDiscoverabilityImproved": true,
+    "compactSearchTestedAtWidths": [
+      1000,
+      1057,
+      1280
+    ],
+    "realSignedInKeyboardSearchAndWorkspaceEscapePassed": true,
+    "exactOtherHeaderAndCssSourceInversePassed": true,
+    "mobileDrawerAndAuthAccessPreserved": true,
+    "noNewDependenciesFontsModelsTexturesOrDatasets": true,
+    "inlineDecorativeGeometricIconOnly": true,
+    "nativeMriTypedPonsCorrectAndSeparateFollowupScoreVerified": true,
+    "mriLocateInsideMaskNotClaimed": true,
     "ownerTabsReloaded": false,
-    "firstTypecheckRefusalAndExactRollbackRetained": true,
-    "mriQuizLocateOutsideMaskMarkedNotQuiteAndZeroOfOne": true,
-    "correctMaskPlacementAndFollowupBrowserAcceptanceNotProven": true,
+    "noClinicalRecordsOrSavedLearnerResultsWritten": true,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
