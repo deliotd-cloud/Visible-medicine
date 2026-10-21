@@ -1,0 +1,25 @@
+{
+  "label": "TOUR_CURRENT_HISTORY",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "F:/VisibleMedicine/staging/20261021-tour-epoch-native-proof/native-check/tests/atlas-tour-completion.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-tour-epoch-native-proof/native-check/tests/atlas-tour-library-pause.test.ts",
+    "F:/VisibleMedicine/staging/20261021-tour-epoch-native-proof/native-check/tests/atlas-tour-reading-focus.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-tour-epoch-native-proof/TOUR_CURRENT_HISTORY.log",
+  "logSha256": "f596f7ac1fe24cdc17aef1b0465b118fae3f10a53f66a6b9953e3ac4420cc73f",
+  "footer": [
+    "ℹ tests 17",
+    "ℹ pass 17",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

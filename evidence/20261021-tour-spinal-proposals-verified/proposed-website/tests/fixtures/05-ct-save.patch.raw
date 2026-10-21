@@ -1,0 +1,55 @@
+diff --git a/F:/VisibleMedicine/staging/20261021-spinal-save-application/originals/tests/atlas-spinal-muscle-xray.test.mjs b/F:/VisibleMedicine/staging/20261021-source190-website/website/tests/atlas-spinal-muscle-xray.test.mjs
+index 7fecfa1..f8c8137 100644
+--- a/F:/VisibleMedicine/staging/20261021-spinal-save-application/originals/tests/atlas-spinal-muscle-xray.test.mjs
++++ b/F:/VisibleMedicine/staging/20261021-source190-website/website/tests/atlas-spinal-muscle-xray.test.mjs
+@@ -217,6 +217,8 @@ const apiEntry = [
+   "export {bodyReviewMaterial} from './lib/body-review-material';",
+   "export {bodyReviewContext} from './lib/body-review-context';",
+   "export {parseBodyReviewResponse} from './lib/body-review-response';",
++  "export {postBodyDecision} from './lib/body-review-api';",
++  "export {blankBodyReview} from './lib/body-review-decisions';",
+ ].join('');
+ async function importedApi() {
+   const built = await build({ stdin: { contents: apiEntry.replaceAll("'./", "'./atlas-review/"), resolveDir: root, loader: 'ts' },
+@@ -1082,12 +1084,40 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
+     packet=>{packet.topics.find(topic=>topic.tab==='ct').citations[0]='https://invalid.example/';},
+     packet=>{packet.topics.find(topic=>topic.tab==='ct').readiness='approved';},
+     packet=>{packet.topics.find(topic=>topic.tab==='ct').extra='foreign';},
+-    packet=>{packet.fingerprints.teaching=corpusCtTransition.reviewBefore.teaching;},
+   ]){
+     const altered=structuredClone(corpusCtPacket);mutate(altered);
+     assert.equal(await api.parseBodyReviewResponse(altered,corpusId),null,
+       'altered corpus CT Review material refused');
+   }
++  // A transport fingerprint is not display evidence. Save-time revision hashes
++  // are checked against the trusted current context before storage is touched.
++  const beforeCtContext=await corpusCtBefore.bodyReviewContext(corpusId);
++  const currentCtContext=await api.bodyReviewContext(corpusId);
++  assert(beforeCtContext&&currentCtContext,'both CT review contexts exist');
++  assert.equal(beforeCtContext.sourceHash,currentCtContext.sourceHash);
++  assert.notEqual(beforeCtContext.revisions.teaching,currentCtContext.revisions.teaching);
++  assert.notEqual(beforeCtContext.materialHash,currentCtContext.materialHash);
++  assert.equal(currentCtContext.materialHash,corpusCtPacket.materialHash);
++  assert.equal(currentCtContext.teachingHash,corpusCtTransition.reviewAfter.teaching);
++  assert.equal(beforeCtContext.teachingHash,corpusCtTransition.reviewBefore.teaching);
++  const ctSaveRequest=revisionHash=>new Request('https://review.test/api/body-review/decisions',{
++    method:'POST',headers:{origin:'https://review.test','content-type':'application/json',
++      'oai-authenticated-user-id':'SYNTHETIC_CORPUS_CT_REVIEW'},
++    body:JSON.stringify({catalogScope:currentCtContext.catalogScope,structureId:corpusId,
++      track:'teaching',expectedVersion:0,materialHash:currentCtContext.materialHash,
++      revisionHash,checklistVersion:currentCtContext.checklistVersion,
++      draft:api.blankBodyReview(currentCtContext,'teaching')}),
++  });
++  let storageCalls=0;
++  const forbiddenStorage={prepare(){storageCalls++;throw Error('Stale CT save reached storage');}};
++  const staleCtSave=await api.postBodyDecision(
++    ctSaveRequest(beforeCtContext.revisions.teaching),forbiddenStorage);
++  assert.equal(staleCtSave.status,409,'pre-CT teaching revision refused at save boundary');
++  assert.equal(storageCalls,0,'stale CT save refused before storage');
++  const currentCtSave=await api.postBodyDecision(
++    ctSaveRequest(currentCtContext.revisions.teaching),undefined);
++  assert.equal(currentCtSave.status,503,'valid current revision proceeds to storage availability');
++  assert.match((await currentCtSave.json()).error,/Body review storage is unavailable/);
+ 
+   const { emittedTeaching } = await import(pathToFileURL(resolve(root, 'tests/atlas-emitted-teaching.ts')).href);
+   const base = 'public/atlas-runtime/head-neck/';

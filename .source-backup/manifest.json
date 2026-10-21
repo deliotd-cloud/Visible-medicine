@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T07:26:57.679Z",
+  "at": "2026-10-21T07:54:11.025Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "websiteInputCount": 5107,
     "proposalOnly": true
   },
-  "parent": "bf7043b117bf6ec7dd3197ee1ddaa65d615886c0",
-  "gitParent": "bf7043b117bf6ec7dd3197ee1ddaa65d615886c0",
+  "parent": "09d7a6a7230bcacfa60444c4c0a070cb01b9c10e",
+  "gitParent": "09d7a6a7230bcacfa60444c4c0a070cb01b9c10e",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4866,6 +4866,196 @@
       "sha256": "fe9bbfe9e64286d36f1f373fd18475e91cdaf7a2ba6c504a0a71c7e483666dd5"
     },
     {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/evidence/BATCH.json",
+      "bytes": 15488,
+      "sha256": "52b0196f28c045f5c764c21ce9de6a86f534ad4cf17e67c811c41c1462248388"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/evidence/PREFIX_PARSER.json",
+      "bytes": 981,
+      "sha256": "0e245bc10775f9b7c6aace0f0cbf4d4aa927e8a0178a0196a321fa7fe6520858"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/evidence/PROOF.json",
+      "bytes": 2236,
+      "sha256": "b43516c310ef95d5352268e62a20326f9b9a00cb3bbe4ea611ef63b7dc118400"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/evidence/SPINAL_HISTORY_INVERSES.json",
+      "bytes": 740,
+      "sha256": "7b9da50b73ece4ae7c145d38e25cc08a427d370309c257e200c59d8025efd21c"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/evidence/SPINAL_PREPARATION.json",
+      "bytes": 4519,
+      "sha256": "7f9f666955d162551a8bea1e10517e457cd2839b0961f60a42eb4ef672e1774e"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/evidence/SPINAL_SOURCE_PROVENANCE.md",
+      "bytes": 7758,
+      "sha256": "4a5649e24d486d549b465c09de36d70973afedae5cf9d2096eaf5ba176a6c6a2"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/evidence/TOUR_CURRENT_HISTORY.json",
+      "bytes": 888,
+      "sha256": "5e2e489160950610a06f4ba6ffbd881237ca5a4deeb3f59db0d3e93f86eacdd0"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/evidence/TOUR_PREPARATION.json",
+      "bytes": 1823,
+      "sha256": "0197e8dc96b26ea7453f6087ebe9d17e0778fd637bcaeaca5dc9584f14770e69"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/preimages/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 79677,
+      "sha256": "075354d9e1da283b5209c39478eb89e6f5fc9243441d0cd25701f84f43ea564a"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/preimages/tests/atlas-tour-completion.test.mjs",
+      "bytes": 10448,
+      "sha256": "a60f9e9fe2ca5ec1c42de32c33a2a1bae90dadc55a54fb8bebd7b8de1f5b851c"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/preimages/tests/atlas-tour-library-pause.test.ts",
+      "bytes": 6824,
+      "sha256": "aa54cbe3c7d42ffb125b2b47d2db3b548ddb96fdcbced858fc38ee240cc9006f"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/preimages/tests/atlas-tour-reading-focus.test.ts",
+      "bytes": 4478,
+      "sha256": "9e8e77ad1f74ca2a59067caaffcbd0d13270267dd192bb2d6e245bd349dc95cd"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/preimages/tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "bytes": 3561,
+      "sha256": "0192f1a2056b1b176dafa1148a806ea3f63d341faa74bf2f3ba3a720c3ba9cab"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/preimages/tests/spinal-later-six-preservation.test.mjs",
+      "bytes": 4346,
+      "sha256": "bb201058554ff44fd61d6ff3e946767ed25a234b3344653b6e87e0bfc28128d8"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 85652,
+      "sha256": "6c202daf177a84a4cfd210673dd8a3975bc47cd77bcd47754139a9bffd6bdddc"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/atlas-tour-completion.test.mjs",
+      "bytes": 11268,
+      "sha256": "29eabe4a82543be6cb4616f2092f80d005a07373e6eb51b94dbb2b2cf53116d1"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/atlas-tour-library-pause.test.ts",
+      "bytes": 8208,
+      "sha256": "afe577ade8afc43e0bdc3f07192913e6f9d3c481e249a64274cd3152812366c7"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/atlas-tour-reading-focus.test.ts",
+      "bytes": 5643,
+      "sha256": "bea48a12d979c106fa5332d8d278d3493c7280b1ced2d35bb448050b147d9855"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/fixtures/01-tongue-palate.patch.raw",
+      "bytes": 13425,
+      "sha256": "c0b2f371ca8f918a5c5ebebbea0a40039ac9e4c3aa2dc025693c3951d0d0c144"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/fixtures/02-ileocolic.patch.raw",
+      "bytes": 16609,
+      "sha256": "ad6e3d2a0d6b331d7e273cc95e81edf1bfed54d85c3c2d222e0bf15194429a78"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/fixtures/03-corpus-current.patch.raw",
+      "bytes": 19142,
+      "sha256": "ff3a9d6a93c7a4053b611e21abad10603bbad42471a8406a9d738f6de97c6519"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/fixtures/04-corpus-ct.patch.raw",
+      "bytes": 17942,
+      "sha256": "d9cc55c0486228e18a8b768596a17c578e42caf7d7e4b5e0a98293d0e1210cc2"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/fixtures/05-ct-save.patch.raw",
+      "bytes": 4042,
+      "sha256": "fe2b28f5b14c26bbffd869965542c9bab13f955cc97ad3f094acc8165bd960ba"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/fixtures/06-dental.patch.raw",
+      "bytes": 14433,
+      "sha256": "dcf154ab70f4b1a0df353d816ab227814471d189179d254f58ffafbeb2e42dcd"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/fixtures/spinal-later-six-current-3824.mjs.raw",
+      "bytes": 53311,
+      "sha256": "3824e78ca19ff6f1a2745232142b9df53278393afdcf8a2e50cea82e0cd5b865"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "bytes": 3725,
+      "sha256": "ecfabedbe25abf58a093caefa5d4df3ad89049ce402d7dfacf6b2ba430ea8833"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/spinal-current-source-inverse.mjs",
+      "bytes": 5068,
+      "sha256": "c0c6f035f2564743d80bd827fe98703b192bb38086df1b639f28b786802651c8"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/proposed-website/tests/spinal-later-six-preservation.test.mjs",
+      "bytes": 4555,
+      "sha256": "33c5f117fcc5169b1b2c85c924244e064da3146d5daec62cd3820e3ee38c9385"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/admit-revision-guard-batch-20261021.mjs",
+      "bytes": 3809,
+      "sha256": "e443106181ca852fb3f7cb633f8d8236b832b2dc83fa8f6f7036369163b36361"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/checkpoint-owned-proposal-batch.mjs",
+      "bytes": 7150,
+      "sha256": "d0847a2b2b54db2d36fa93340c25ec055aa891e698e07b32182f7904ef46834e"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/native-tap-prefix-summary.mjs",
+      "bytes": 2278,
+      "sha256": "458fb79024f809f1d9fe4216f8b0759601417cdd884c2ac94029fc362cffcd43"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/observe-source190-suite-20261021.mjs",
+      "bytes": 3514,
+      "sha256": "dd8c0825e46559792622c64c08e1cf24e0cd3f0af78af7f74b697eae3533d44a"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/prepare-revision-guard-batch-v5-20261021.mjs",
+      "bytes": 4313,
+      "sha256": "81368020468cb13a25af0953bffd2d2281dd86180400c313a353a2e359bc018f"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/prepare-spinal-dental-native-proof-20261021.mjs",
+      "bytes": 3901,
+      "sha256": "1540dd8fe7428b21cc95ad07deaab7bcd550601daa6e9ee01faea72c8c4d3886"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/prepare-tour-epoch-native-proof-20261021.mjs",
+      "bytes": 2786,
+      "sha256": "68f3cf2d548a6fe55c6e35a3c5a05a912a71937799c05853cb8efa747d1b28d6"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/test-native-tap-prefix-summary.mjs",
+      "bytes": 2181,
+      "sha256": "be9520da6dac46f5206ec7b7506839908c0104cd983830b41862fe533cbae1d1"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/tour-spinal-proposals-checkpoint-20261021.json",
+      "bytes": 8630,
+      "sha256": "c01c122f2a938fac1e49c455b39d4cc93b63522555e63c1903bb5bc22f578806"
+    },
+    {
+      "path": "evidence/20261021-tour-spinal-proposals-verified/scripts/verify-native-tap-prefix-summary-20261021.mjs",
+      "bytes": 1689,
+      "sha256": "d8d71ad0830eecede023690060ad3ba91aeabba23c55c40001c079cbc5d2ca74"
+    },
+    {
       "path": "evidence/20261021-tour-start-hint/evidence/BROWSER_SUMMARY.json",
       "bytes": 2302,
       "sha256": "a92a9cfaf6af8a07d31cee1b7514b09abe4c9eb5e07e09832e676d60735e5266"
@@ -6199,14 +6389,13 @@
   "removed": [],
   "scope": "Explicit owned test-source proposals/exact preimages, small receipts, read-only cutover summary and controls on previously filtered ancestry. NOT installed or a full-suite pass. No raw canonical history, full private modules/manifests, model geometry/full runtimes, private DB/records/identities/decisions/env, scans/masks, dependencies or browser media/DOM. No test harness junctions packaged. Not a complete runnable/private backup, release or clinical/spatial approval.",
   "proof": {
-    "summary": "Four canonical JavaScript developer-tool/test paths admitted independently of the frozen whole-suite candidate: one source edit and three additions. Native4/4/0skip proves synthetic old-option loss versus corrected dispose/reopen persistence, absolute loopback options and actual ignore boundaries. No live model staging, runtime build/install, database copy/migration, auth change or preview restart was performed.",
+    "summary": "Three tour test proposals now pass17 native checks with full historical regional source reconstructed by removing exactly the new186-byte hint. Two spinal history guards pass3 native registrations with their complete original verifier bodies unchanged; six exact inverse stages restore075354 and3824 historical source bytes. The current28-dental-MRI/9936-topic spinal teaching theorem is staged but unexecuted, explicitly blocking V5 admission. No attributes change needed; frozen raw policy verified. Native prefix observer passes3 metadata tests and cannot turn a buffered footer into full-suite acceptance.",
     "canonicalDeveloperToolingInstalled": true,
+    "canonicalDeveloperToolingUnchangedFromParent": true,
     "canonicalAtlasUiInstalled": false,
-    "canonicalDeveloperNativeTests": 4,
-    "canonicalDeveloperNativeTestsPassed": 4,
-    "canonicalDeveloperNativeTestLogSha256": "90104003bdea937abb047fe1c12716b749c8f6b0f202cf52a7ecfe4f18f95849",
-    "countingNote": "Eighteen queued proposal registrations across six separate runs remain distinct from four actual-canonical developer tests. Not22 whole-suite/GPU/clinical tests. The unchanged nine-path proposal package is inherited from verified filtered parent, not redundantly copied again.",
-    "cutoverReadiness": "LOCAL_TOOLING_ADMISSION_OVERLAY.json explicitly accepts only four verified canonical postimages. Remaining virtual cutover206 changed/4896 identical/7 preserved of5109; previous generated six-directory/144GLB-path checks remain unchanged. Revalidate all other preimages and current coordinator snapshots before any later switch.",
+    "currentSpinalDentalTheoremPassed": false,
+    "v5AdmissionReady": false,
+    "countingNote": "38 outer registrations across8 separate proposal native runs; coverage wrapper separately4 historical children. Prefix parser3 and previously installed developer4 remain separate. No flat full-suite total or baseline reduction.",
     "fullSuiteSession": 37113,
     "runnerPid": 263984,
     "testPid": 271752,
@@ -6214,18 +6403,19 @@
     "sourceCandidateAndReviewBindingsUnchanged": true,
     "unchangedModelObjects": 137,
     "all71ItemsAndEightIdeasPreserved": true,
-    "privateSourceGuardFileExcludedFromRemoteBackup": true,
-    "at": "2026-10-21T07:26:52.748Z",
+    "excludedExploratoryAttributeCopy": true,
+    "fullSuitePrefixFailureMarkersAtObservation": 16,
+    "at": "2026-10-21T07:54:04.758Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "currentNamedInputs": 5107,
-    "proposedNamedInputs": 5109,
+    "proposedNamedInputs": 5117,
     "reviewInputs": 1710,
-    "testOnlyPaths": 9,
-    "existingTestChanges": 7,
-    "newCurrentTestOrOriginalFixturePaths": 2,
-    "boundedNativeRegistrationsPassed": 18,
-    "boundedNativeRuns": 6,
+    "testOnlyPaths": 23,
+    "existingTestChanges": 13,
+    "newCurrentTestOrOriginalFixturePaths": 10,
+    "boundedNativeRegistrationsPassed": 38,
+    "boundedNativeRuns": 8,
     "originalHistoricalChildTestsPassed": 4,
     "canonicalInstalled": false,
     "candidateChanged": false,

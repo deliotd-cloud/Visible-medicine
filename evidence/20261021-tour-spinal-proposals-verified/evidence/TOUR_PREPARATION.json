@@ -1,0 +1,38 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-tour-epoch-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "harness": "F:/VisibleMedicine/staging/20261021-tour-epoch-native-proof/native-check",
+  "contracts": [
+    {
+      "path": "tests/atlas-tour-completion.test.mjs",
+      "beforeSha256": "a60f9e9fe2ca5ec1c42de32c33a2a1bae90dadc55a54fb8bebd7b8de1f5b851c",
+      "sha256": "29eabe4a82543be6cb4616f2092f80d005a07373e6eb51b94dbb2b2cf53116d1",
+      "from": "F:/VisibleMedicine/staging/20261021-tour-epoch-proposal/tests/atlas-tour-completion.test.mjs"
+    },
+    {
+      "path": "tests/atlas-tour-library-pause.test.ts",
+      "beforeSha256": "aa54cbe3c7d42ffb125b2b47d2db3b548ddb96fdcbced858fc38ee240cc9006f",
+      "sha256": "afe577ade8afc43e0bdc3f07192913e6f9d3c481e249a64274cd3152812366c7",
+      "from": "F:/VisibleMedicine/staging/20261021-tour-epoch-proposal/tests/atlas-tour-library-pause.test.ts"
+    },
+    {
+      "path": "tests/atlas-tour-reading-focus.test.ts",
+      "beforeSha256": "9e8e77ad1f74ca2a59067caaffcbd0d13270267dd192bb2d6e245bd349dc95cd",
+      "sha256": "bea48a12d979c106fa5332d8d278d3493c7280b1ced2d35bb448050b147d9855",
+      "from": "F:/VisibleMedicine/staging/20261021-tour-epoch-proposal/tests/atlas-tour-reading-focus.test.ts"
+    }
+  ],
+  "links": [
+    "atlas-review",
+    "public",
+    "lib",
+    "docs",
+    "scripts",
+    "node_modules"
+  ],
+  "readOnlySourceJunctions": true,
+  "candidateChanged": false,
+  "ownerPagesTouched": false,
+  "scope": "Explicit native Node/FS/Git/TypeScript syntax-tree tests only; no build, whole TypeScript check, broad validator or full-suite rerun. Do not recursively delete/package this harness through its read-only junctions."
+}

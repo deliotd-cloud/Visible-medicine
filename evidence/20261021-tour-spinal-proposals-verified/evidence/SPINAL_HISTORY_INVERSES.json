@@ -1,0 +1,22 @@
+{
+  "label": "SPINAL_HISTORY_INVERSES",
+  "command": "node",
+  "args": [
+    "--test",
+    "F:/VisibleMedicine/staging/20261021-spinal-dental-native-proof/native-check/tests/spinal-ct-save-refusal-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-spinal-dental-native-proof/native-check/tests/spinal-later-six-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-spinal-dental-native-proof/SPINAL_HISTORY_INVERSES.log",
+  "logSha256": "1f94f4d84ee5a5f0f292b74f1b7d51d5f5c3f5c6a5eaca94a3ce1d115d979b06",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 3",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

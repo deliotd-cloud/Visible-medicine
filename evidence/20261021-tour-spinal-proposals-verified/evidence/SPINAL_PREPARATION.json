@@ -1,0 +1,91 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-spinal-dental-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "harness": "F:/VisibleMedicine/staging/20261021-spinal-dental-native-proof/native-check",
+  "changes": [
+    {
+      "path": "tests/atlas-spinal-muscle-xray.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/atlas-spinal-muscle-xray.test.mjs",
+      "sha256": "6c202daf177a84a4cfd210673dd8a3975bc47cd77bcd47754139a9bffd6bdddc",
+      "bytes": 85652,
+      "beforeSha256": "075354d9e1da283b5209c39478eb89e6f5fc9243441d0cd25701f84f43ea564a"
+    },
+    {
+      "path": "tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "sha256": "ecfabedbe25abf58a093caefa5d4df3ad89049ce402d7dfacf6b2ba430ea8833",
+      "bytes": 3725,
+      "beforeSha256": "0192f1a2056b1b176dafa1148a806ea3f63d341faa74bf2f3ba3a720c3ba9cab"
+    },
+    {
+      "path": "tests/spinal-later-six-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/spinal-later-six-preservation.test.mjs",
+      "sha256": "33c5f117fcc5169b1b2c85c924244e064da3146d5daec62cd3820e3ee38c9385",
+      "bytes": 4555,
+      "beforeSha256": "bb201058554ff44fd61d6ff3e946767ed25a234b3344653b6e87e0bfc28128d8"
+    },
+    {
+      "path": "tests/spinal-current-source-inverse.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/spinal-current-source-inverse.mjs",
+      "sha256": "c0c6f035f2564743d80bd827fe98703b192bb38086df1b639f28b786802651c8",
+      "bytes": 5068,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/01-tongue-palate.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/01-tongue-palate.patch.raw",
+      "sha256": "c0b2f371ca8f918a5c5ebebbea0a40039ac9e4c3aa2dc025693c3951d0d0c144",
+      "bytes": 13425,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/02-ileocolic.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/02-ileocolic.patch.raw",
+      "sha256": "ad6e3d2a0d6b331d7e273cc95e81edf1bfed54d85c3c2d222e0bf15194429a78",
+      "bytes": 16609,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/03-corpus-current.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/03-corpus-current.patch.raw",
+      "sha256": "ff3a9d6a93c7a4053b611e21abad10603bbad42471a8406a9d738f6de97c6519",
+      "bytes": 19142,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/04-corpus-ct.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/04-corpus-ct.patch.raw",
+      "sha256": "d9cc55c0486228e18a8b768596a17c578e42caf7d7e4b5e0a98293d0e1210cc2",
+      "bytes": 17942,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/05-ct-save.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/05-ct-save.patch.raw",
+      "sha256": "fe2b28f5b14c26bbffd869965542c9bab13f955cc97ad3f094acc8165bd960ba",
+      "bytes": 4042,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/06-dental.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/06-dental.patch.raw",
+      "sha256": "dcf154ab70f4b1a0df353d816ab227814471d189179d254f58ffafbeb2e42dcd",
+      "bytes": 14433,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/spinal-later-six-current-3824.mjs.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/spinal-later-six-current-3824.mjs.raw",
+      "sha256": "3824e78ca19ff6f1a2745232142b9df53278393afdcf8a2e50cea82e0cd5b865",
+      "bytes": 53311,
+      "beforeSha256": null
+    }
+  ],
+  "originalGuardBodiesUnchanged": true,
+  "existingFrozenFixtureAttributesSufficient": true,
+  "attributeChangeRequired": false,
+  "candidateChanged": false,
+  "ownerPagesTouched": false,
+  "scope": "Pure native SHA/FS/exact inverse guards only. Do not execute the costly spinal teaching theorem until the existing whole suite is genuinely terminal. No broad validator, types or build."
+}

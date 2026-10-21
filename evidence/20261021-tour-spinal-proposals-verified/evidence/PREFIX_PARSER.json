@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-21T07:45:14.477Z",
+  "inputs": [
+    {
+      "path": "native-tap-prefix-summary.mjs",
+      "sha256": "458fb79024f809f1d9fe4216f8b0759601417cdd884c2ac94029fc362cffcd43"
+    },
+    {
+      "path": "test-native-tap-prefix-summary.mjs",
+      "sha256": "be9520da6dac46f5206ec7b7506839908c0104cd983830b41862fe533cbae1d1"
+    },
+    {
+      "path": "observe-source190-suite-20261021.mjs",
+      "sha256": "dd8c0825e46559792622c64c08e1cf24e0cd3f0af78af7f74b697eae3533d44a"
+    }
+  ],
+  "command": [
+    "node",
+    "--test",
+    "test-native-tap-prefix-summary.mjs"
+  ],
+  "code": 0,
+  "tests": 3,
+  "pass": 3,
+  "fail": 0,
+  "skipped": 0,
+  "log": "F:/VisibleMedicine/staging/20261021-native-prefix-observer-proof/native.log",
+  "logSha256": "47ef4ffe0bce70ea79ad06e239772b2e4c57886a89cc4aa0e01d4a3e10fe013d",
+  "scope": "Metadata parser only; not Website, full-suite, clinical or release acceptance. No frozen candidate edits or private assertion payload copied."
+}
