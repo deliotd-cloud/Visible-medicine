@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T08:40:39.560Z",
+  "at": "2026-10-21T09:18:14.052Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "websiteInputCount": 5107,
     "proposalOnly": true
   },
-  "parent": "2ff71885ec8b8aab14c66408a6a155e9b138171a",
-  "gitParent": "2ff71885ec8b8aab14c66408a6a155e9b138171a",
+  "parent": "e907bb45af7308746183ed9a53c95bdca24f64d7",
+  "gitParent": "e907bb45af7308746183ed9a53c95bdca24f64d7",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2449,6 +2449,376 @@
       "path": "evidence/20261021-current-epoch-proofs-verified/scripts/prepare-revision-guard-batch-v7-20261021.mjs",
       "bytes": 2839,
       "sha256": "ce7f2e53b8dedd51753dba4bbf3cbb8f5776f04786fabfb07cbe653668f139bb"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/20261021-clinical-epoch-batch-c-v4-native-proof/PREPARATION.json",
+      "bytes": 8366,
+      "sha256": "5a672522474c4d87a430c3f65990d852c1f4d88f817c95ab7250e934e0a1551b"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/20261021-clinical-epoch-batch-c-v4-native-proof/receipt.json",
+      "bytes": 545,
+      "sha256": "96a8d58ddf750643b7d548279a2491ece3394212bc57656d5cbcd431c6afaabe"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/20261021-clinical-epoch-batch-e-v5-native-proof/PREPARATION.json",
+      "bytes": 7436,
+      "sha256": "6ffe45177657e4ca2684b92fd9946d9824693fe4ac1f7fca986e64beed4d9cbd"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/20261021-clinical-epoch-batch-e-v5-native-proof/receipt.json",
+      "bytes": 550,
+      "sha256": "0823cc2e1df531c58aa338e985cace8caa6c2d55bd198808a8f6f14d770e3d07"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/BATCH.json",
+      "bytes": 39248,
+      "sha256": "13d9d839eac2378ab4a5b81ac9862319e5da4450febbb91644e4593015bab11b"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/C4_HANDOFF.md",
+      "bytes": 1745,
+      "sha256": "9a87b772c562f886ee8003eb73e8d18655afc72ba5695f8cc21cff955602aa11"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/COMPLETE_NATIVE_FAILURE_CLASSIFICATION.json",
+      "bytes": 71092,
+      "sha256": "37ac61d8b40a42c2ef127105249c9e3654842f5cfff8b8ada4d11339405c359f"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/COMPLETE_NATIVE_TERMINAL.json",
+      "bytes": 186,
+      "sha256": "f6fdd8dda31bbf39a30d5ef2786952cd6c974a1a3c1ab87ca4461dfca7610063"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/CURRENT_MATRIX_PREPARATION.json",
+      "bytes": 3225,
+      "sha256": "2c3b93f5b2dd1a3cccec622489a8cbcb26e5b4feaa8b4ddb62c388fdfeadf5e1"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/CURRENT_MATRIX_STARTED.json",
+      "bytes": 1729,
+      "sha256": "e0fcd622474d80f4eef6e856c581d87ee5ef88456b1b8bccd8128753df29d1e0"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/E4_FIRST_FAILURE.json",
+      "bytes": 549,
+      "sha256": "27c79eb382c0739aa88c0195f588e242996f704e6aed4b5a0f206d640102c6b0"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/E5_HANDOFF.md",
+      "bytes": 4564,
+      "sha256": "f487deed100ecd247503f1b61d49de5abe6d23aae1b17ecef62604d99fab98c3"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/PROOF.json",
+      "bytes": 2818,
+      "sha256": "b6530223256704ea1b5ce535d6e8683eacf818f09c9d0db35b366c052877ea0a"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/REMAINING_FIRST_FAILURE_HANDOFF.md",
+      "bytes": 2343,
+      "sha256": "f0b74ecb0588c46963fafd40f04c1955659b8cbadde454dd73c12634bb4ab7d2"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/REMAINING_FIRST_FAILURE_TRIAGE.json",
+      "bytes": 40470,
+      "sha256": "918aee251c86ab9ae54276374de8a3f97fd37731b5662f602d6d2648f3a38f15"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/evidence/RENDERER_RECONSTRUCTION.json",
+      "bytes": 953,
+      "sha256": "dc09062c078bb64bb686e454333b16118f621bcfc9f104e8b3d48d14c6f566be"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-iliac-venous-xray.test.ts",
+      "bytes": 8867,
+      "sha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "bytes": 9941,
+      "sha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 16253,
+      "sha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-longus-colli-quiz.test.ts",
+      "bytes": 8090,
+      "sha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "bytes": 15632,
+      "sha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-medial-thigh-tour.test.ts",
+      "bytes": 14837,
+      "sha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 21757,
+      "sha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "bytes": 8522,
+      "sha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 24520,
+      "sha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-nested-duct-xray.test.ts",
+      "bytes": 27718,
+      "sha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-orbital-apex-ct.test.ts",
+      "bytes": 19663,
+      "sha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-orbital-ring-ct.test.ts",
+      "bytes": 15391,
+      "sha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-orbital-support-mri.test.ts",
+      "bytes": 11223,
+      "sha256": "c4829b9a32b117712aa85723e27517207f20dc13e769e1de360d965c581b5236"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/atlas9f-review-history.mjs",
+      "bytes": 3162,
+      "sha256": "176900387d90166dab84f8afc264d8c115c240a583aaead03d4d2ee7dd1ce910"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-epoch-batch-c-originals.test.mjs",
+      "bytes": 4384,
+      "sha256": "8f27c7eb5715e197fb952427cfbb12fa2aa387a378d71ff848f3ebc36ff47e24"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "bytes": 4838,
+      "sha256": "820d72f572654187bcc7ae324cef452c945222ecd9a82d024e7725f9f6fc73ac"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-iliac-venous-xray.test.ts",
+      "bytes": 9480,
+      "sha256": "a55f6c33ee41cccc7720482124104b529bcdfa9336ee5760ff35ec49ce34be68"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "bytes": 10554,
+      "sha256": "582b55d1960288b58f00cac0c2bf4b5be88df0dbe851a2e270e7522b3f9a91c8"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 16715,
+      "sha256": "7024f0caca815c59cc5cc3e54f4b9e82e188752e875c0abc681ed4243cf1fad6"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-longus-colli-quiz.test.ts",
+      "bytes": 8907,
+      "sha256": "68589eca6ad26c87d2e46f57f55769b75f3e3ce0919fe5cc49ac50ae7fa32dd8"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "bytes": 18470,
+      "sha256": "d3c42dabe7c63a51458dd498e88f3f5a2f021218c922690a13d641321024914b"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-medial-thigh-tour.test.ts",
+      "bytes": 17695,
+      "sha256": "03b265445b7937621a9d01ce849294ea170232c245f6f8c7a3f34b19325b4916"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 23327,
+      "sha256": "886db4ebcf56a04764fb9e416aaffd61c72f9487d5d18ddc63f66b0ed6e848a4"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "bytes": 8950,
+      "sha256": "b677b62a8c142b7e0a07ed8d225e1ba040f1e675bc3402a77d71b0883ed140b4"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 27003,
+      "sha256": "a00faa1bbe00bb7486e46808ed19b26495cd1ba2a09af823a8ac94451f1b9ef5"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-nested-duct-xray.test.ts",
+      "bytes": 29309,
+      "sha256": "9bbc43adfd820b25f2cb9ff7111b55649f0e809f86dbb62d0079b70e73f4ddc9"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-orbital-apex-ct.test.ts",
+      "bytes": 21280,
+      "sha256": "3dd1bb4f3eea243bdb9589b8baeebf030227553168c08527aa4cdae638c65e6e"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-orbital-ring-ct.test.ts",
+      "bytes": 17606,
+      "sha256": "7b747b37baa8061d9ddcaecc08cb7c4aa12dde17e0f7664237e48e79ee580e0c"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/clinical-review-orbital-support-mri.test.ts",
+      "bytes": 14085,
+      "sha256": "03467a60f9e863584cdecc34d6f217aa9222b938012c156c1ece2aeccf629495"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/atlas9f-body-renderer-binding.json",
+      "bytes": 729,
+      "sha256": "61f25d832616a390d4fad778b4f3e7c867dde1526c117a39674072961d9636a8"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "bytes": 8867,
+      "sha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "bytes": 9941,
+      "sha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "bytes": 16253,
+      "sha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "bytes": 8090,
+      "sha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "bytes": 15632,
+      "sha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "bytes": 14837,
+      "sha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "bytes": 21757,
+      "sha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "bytes": 8522,
+      "sha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "bytes": 61654,
+      "sha256": "6992d895e4ff2ca783a238163f666f99c3ac9b3f5ca5beb69d8ec6873fb8ff42"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-neonatal-cranial-us-original.ts.raw",
+      "bytes": 24520,
+      "sha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-nested-duct-xray-original.ts.raw",
+      "bytes": 27718,
+      "sha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-apex-ct-original.ts.raw",
+      "bytes": 19663,
+      "sha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-ring-ct-original.ts.raw",
+      "bytes": 15391,
+      "sha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-support-mri-original.ts.raw",
+      "bytes": 11223,
+      "sha256": "c4829b9a32b117712aa85723e27517207f20dc13e769e1de360d965c581b5236"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/neonatal-cranial-us.delta.raw",
+      "bytes": 4737,
+      "sha256": "8d20741dcbf242d3bd6697304cf3229323ade99962ba236911c6f4bcd0489b04"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/nested-duct-xray.delta.raw",
+      "bytes": 2242,
+      "sha256": "bb0a1ae9467b561d713d46936ce4e958f82ae9859201b278b3fd644b4bf5e2ac"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/orbital-apex-ct.delta.raw",
+      "bytes": 2712,
+      "sha256": "d98a8ad09e9434aa33c7feeb2076786b00c939f6325a192008f95a7b93896ed1"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/orbital-ring-ct.delta.raw",
+      "bytes": 3630,
+      "sha256": "60d1602cd1f9006b93b39adf3d6311b488c352567a27594d2127c6e9a3db5919"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/orbital-support-mri.delta.raw",
+      "bytes": 5196,
+      "sha256": "438b2245b666cfb456cff0d6289b5cfc11def1e58772cc12d1458b373135d0f5"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/admit-revision-guard-batch-20261021.mjs",
+      "bytes": 3996,
+      "sha256": "8cf618d7f9a762d230fc1a002a0e9c27405232b2d7a338a4ef3c4e911ea54a1b"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/checkpoint-owned-proposal-batch.mjs",
+      "bytes": 9106,
+      "sha256": "a2a60f09ec06eafda239595b9502296e171263564d204f38bd14c5f5353e0614"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/prepare-current-matrix-checkpoint-20261021.mjs",
+      "bytes": 6418,
+      "sha256": "358c0a33aaeef330c5852d7514cefc1de2c1283c942294d2ffc68b1e1488846b"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/prepare-current-source-matrix-20261021.mjs",
+      "bytes": 4638,
+      "sha256": "a8d7c40da63111653f86a2c179557302da741acf168210ac4400f1b3b9ae5aea"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/prepare-owned-source-guard-harness.mjs",
+      "bytes": 3318,
+      "sha256": "11450e4a6ab76267ae92766f8fec0c2a22083b56315c0c72ab8ec519b06b81b6"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/prepare-revision-guard-batch-v8-20261021.mjs",
+      "bytes": 4048,
+      "sha256": "bf7c14b1433e4a582137dbe5d3fcba61200a36cf747b8a3ecf21e53340380a2a"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/record-source190-terminal-triage-20261021.mjs",
+      "bytes": 3908,
+      "sha256": "662af0489d8cd9789e0d4768446d2b225213b3c5c06b761688af1234c1cd1d61"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/run-current-source-matrix-20261021.mjs",
+      "bytes": 3323,
+      "sha256": "eb490c85e04d2150fbd653e1d0b5a6bb46d2ce786d7be6f61d8481fcc9a2b636"
+    },
+    {
+      "path": "evidence/20261021-current-matrix-source-verified/scripts/verify-9f-renderer-reconstruction-20261021.mjs",
+      "bytes": 3019,
+      "sha256": "e3fe8c006b73c4a02207a106b5ed9a2f5f4b5e3464ffa136ac538fb831fb5315"
     },
     {
       "path": "evidence/20261021-dental-mri-proposal/proposal/app/body-content.ts",
@@ -6694,38 +7064,55 @@
   "removed": [],
   "scope": "Explicit owned test-source proposals/exact preimages, small receipts, read-only cutover summary and controls on previously filtered ancestry. NOT installed or a full-suite pass. No raw canonical history, full private modules/manifests, model geometry/full runtimes, private DB/records/identities/decisions/env, scans/masks, dependencies or browser media/DOM. No test harness junctions packaged. Not a complete runnable/private backup, release or clinical/spatial approval.",
   "proof": {
-    "summary": "Seventeen new bounded native checks pass in three distinct runs:7 desktop metadata/layout,5 girdle/Git-root whole-source inverses,3 batch-D exact historical inverses and2 actual-source controlled model-inspection cases. V7 has38test-only proposed paths,22existing/16new,projected5123inputs. Source candidate5107/1710 stays frozen. Fifty-five outer native registrations across11 distinct runs plus4 coverage historical children are not a whole-suite result; UI40 is a separate already-verified scope. Expensive current dental/spinal,girdle,elbow/forearm,orbital sensory and pancreatic actual teaching modules remain unrun and explicitly gate admission. New C/E worker proposals remain separate, incomplete and unadmitted. No learner/UI/runtime/model/auth/clinical edits or owner refresh.",
+    "summary": "Genuine full native source190 run TERMINAL5547tests/5408pass/136fail/3skip/0cancelled, no frozen-source or preview-asset drift. Every136failure individually accounted for:45covered by staged V8 paths,91first-failure diagnoses in67other modules, NOT resolved or permission to repin. V8 has74test-only proposed paths/35existing/39new/projected5146inputs; actual source5107/Review1710 unchanged. C4 source inverse1 and E5guards10pass; V8total66bounded outer registrations across13distinct runs,4coverage historical children separate. E4first9pass/1fail retained: RegExp.test was mistaken for a Node registration; only new guard corrected. Renderer729B metadata reconstructs206963B exact independent old artifact locally; full renderer/dependency manifest excluded. Main-owned isolated20-module current matrix is executing source/Review/emitted-teaching/corpus/refusal proofs. It is not whole-suite green, application install or clinical/spatial approval.",
     "canonicalDeveloperToolingInstalled": true,
     "canonicalDeveloperToolingUnchangedFromParent": true,
     "canonicalAtlasUiInstalled": false,
     "reviewQueueUiInstalled": false,
     "reviewQueueNativePasses": 40,
     "correctedComponentBrowserAcceptance": false,
+    "fullNativeCounts": {
+      "tests": 5547,
+      "pass": 5408,
+      "fail": 136,
+      "cancelled": 0,
+      "skipped": 3,
+      "todo": 0
+    },
+    "allNativeFailuresAccountedFor": true,
+    "allNativeFailuresResolved": false,
+    "originalFailureBaselineRetained": 144,
+    "baselineComparable": false,
     "sourceCandidateAndReviewBindingsUnchanged": true,
     "unchangedModelObjects": 137,
     "all71ItemsAndEightIdeasPreserved": true,
-    "fullSuiteSession": 37113,
-    "runnerPid": 263984,
-    "testPid": 271752,
+    "focusedMatrixSession": 55850,
+    "focusedMatrixDriver": 278608,
+    "focusedMatrixTestPid": 259616,
     "ownerPreviewPid": 260328,
-    "fullSuitePrefixFailureMarkersAtObservation": 60,
-    "countingNote": "60 is a buffered prefix observation, not final counts and not a reduction of the original144-failure baseline. V7 is a proposal batch only. New screening metadata rejects Commons-footer false positives; no image or other asset acquired, accepted or installed.",
-    "at": "2026-10-21T08:40:34.347Z",
+    "at": "2026-10-21T09:18:08.798Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "currentNamedInputs": 5107,
-    "proposedNamedInputs": 5123,
+    "proposedNamedInputs": 5146,
     "reviewInputs": 1710,
-    "testOnlyPaths": 38,
-    "existingTestChanges": 22,
-    "newCurrentTestOrOriginalFixturePaths": 16,
-    "boundedNativeRegistrationsPassed": 55,
-    "boundedNativeRuns": 11,
+    "testOnlyPaths": 74,
+    "existingTestChanges": 35,
+    "newCurrentTestOrOriginalFixturePaths": 39,
+    "boundedNativeRegistrationsPassed": 66,
+    "boundedNativeRuns": 13,
     "originalHistoricalChildTestsPassed": 4,
     "canonicalInstalled": false,
     "candidateChanged": false,
     "ownerPagesTouched": false,
-    "fullSuiteRunningAtObservation": true,
+    "fullSuiteRunningAtObservation": false,
+    "nativeWorkAtObservation": {
+      "at": "2026-10-21T09:18:08.755Z",
+      "state": "running",
+      "started": "F:/VisibleMedicine/staging/20261021-current-source-matrix/STARTED.json",
+      "driver": 278608,
+      "pid": 259616
+    },
     "fullSuitePassingClaim": false,
     "originalFullFailureBaseline": 144,
     "clinicalApproval": false,

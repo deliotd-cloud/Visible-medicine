@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {read,sha,json} from './source-only-backup-20261019.mjs';
+import {summarizeTapPrefix} from './native-tap-prefix-summary.mjs';
+const full='F:/VisibleMedicine/staging/20261021-source190-complete-suite';
+const batch='F:/VisibleMedicine/staging/20261021-revision-guard-batch-v8',prep=json(batch+'/PREPARATION.json');
+const native=prep.site+'/.local/website-test-runs/2026-10-21T05-37-11-497Z-a5ab569e-0361-46d1-91d6-64fd8586c1c0';
+const receipt=json(native+'/receipt.json'),terminal=json(full+'/TERMINAL.json');
+assert.equal(terminal.code,1);assert.equal(terminal.signal,null);assert.deepEqual(terminal.originalNamedInputDrift,[]);
+assert.equal(sha(read(full+'/RUNNER.log')),terminal.logSha256);assert.equal(receipt.child.exitCode,1);assert.equal(receipt.child.signal,null);
+assert.deepEqual(receipt.counts,{tests:5547,pass:5408,fail:136,cancelled:0,skipped:3,todo:0});
+assert.equal(receipt.testInputDrift,false);assert.equal(receipt.publicPreviewAssetDrift,false);
+const summary=summarizeTapPrefix(read(native+'/child.tap').toString());
+assert.equal(summary.failureMarkers,136,'Every native failed case must have a root diagnostic');assert.equal(summary.incompleteRootDiagnostics,0);
+const tailFile='F:/VisibleMedicine/staging/20261021-complete-suite-tail-triage/TRIAGE.json',tail=json(tailFile);
+const byNumber=new Map(tail.failures.map(row=>[row.tapNumber,row]));assert.equal(byNumber.size,91);
+const proposedPaths=new Set(prep.changes.map(row=>row.path));
+let staged=0,remaining=0;
+const failures=summary.failures.map(row=>{
+ assert(row.file&&row.complete&&row.line);
+ const extra=byNumber.get(row.number);
+ if(extra){assert.equal('tests/'+extra.module,row.file);assert.equal(extra.declarationLine,row.line);remaining++;return{...row,classification:extra.classification,evidence:extra.evidence,assertionLine:extra.assertionLine,status:'diagnosed-not-repaired-or-validated'};}
+ assert(proposedPaths.has(row.file),'Unclassified native failure: '+row.file);staged++;
+ return{...row,classification:'covered-by-source-bound-staged-test-repair',status:'actual-current-module-proof-pending-not-resolved'};
+});
+assert.equal(staged,45);assert.equal(remaining,91);assert.equal(staged+remaining,receipt.counts.fail);
+for(const row of json(full+'/SOURCE_INPUTS.json'))assert.equal(sha(read(prep.site+'/'+row.path)),row.sha256,row.path);
+const out={schema:'vm-complete-native-failure-triage/1',at:new Date().toISOString(),status:'classified-not-resolved',classificationComplete:true,source:prep.source,review:prep.review,nativeReceipt:native+'/receipt.json',nativeReceiptSha256:sha(read(native+'/receipt.json')),terminal:full+'/TERMINAL.json',terminalSha256:sha(read(full+'/TERMINAL.json')),tapSha256:sha(read(native+'/child.tap')),tailTriage:tailFile,tailTriageSha256:sha(read(tailFile)),counts:receipt.counts,stagedRepairFailureMarkers:staged,remainingDiagnosedFailureMarkers:remaining,remainingDiagnosedModules:tail.remaining.modules,failures,originalFailureBaseline:144,baselineComparable:false,scope:'All136 native failures individually accounted for, not closed. Source190 has a different source/input/case set from the old144-failure baseline: do not subtract8 or claim a repaired suite. No speculative first-error classification proves absence of a deeper product regression. Actual focused source matrix, types/build/browser/local cutover remain independent gates.',fullSuitePassingClaim:false,canonicalInstalled:false,clinicalApproval:false,spatialRegistration:false,publicDeployment:false};
+const target=full+'/TERMINAL_FAILURE_CLASSIFICATION.json';assert(!fs.existsSync(target));fs.writeFileSync(target,JSON.stringify(out,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({file:target,sha256:sha(read(target)),counts:out.counts,individuallyAccountedFor:failures.length,staged:45,diagnosedRemaining:91,allFailuresResolved:false}));

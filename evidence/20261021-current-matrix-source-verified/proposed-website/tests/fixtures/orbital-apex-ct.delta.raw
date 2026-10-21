@@ -1,0 +1,33 @@
+@@ -1,0 +2,2 @@ import {boundLiveAtlasHistory} from './atlas-bound-live-history.mjs';
++import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+@@ -11,2 +13,6 @@ import {build} from 'esbuild';
+-const atlas='F:/VisibleMedicine/atlas';
+-const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const atlas=currentAtlasDeliveryRoot();
++const historicalRevision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const portalTourRevision='47a851db0fb3369ad056fb8a8fcc3f3ba73656ea';
++const portalTourBlob='c832b8cafa2a53a79d244dfa223288b7fd255be6';
++const currentTourBlob='fb65a9c68d8753fc1789c7e6281e36c2889e0136';
++const revision=CURRENT_ATLAS_REVISION;
+@@ -80,0 +87,6 @@ test('twelve exact orbital-apex CT drafts reach the learner and protected Review
++  assert.equal(checkedAtlasHistoryRepo(historicalRevision),atlas);
++  assert.equal(git(['merge-base',historicalRevision,revision]).toString().trim(),historicalRevision);
++  assert.equal(git(['merge-base',portalTourRevision,historicalRevision]).toString().trim(),portalTourRevision);
++  assert.equal(git(['rev-parse',portalTourRevision+':lib/regional-tours.ts']).toString().trim(),portalTourBlob);
++  assert.equal(git(['rev-parse',historicalRevision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
++  assert.equal(git(['rev-parse',revision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
+@@ -98,0 +111 @@ test('twelve exact orbital-apex CT drafts reach the learner and protected Review
++    assert.deepEqual(source,committed(historicalRevision,path),`${path}: retained from first delivery`);
+@@ -228,0 +242,2 @@ test('current imported Review retains exact orbital CT material under the live t
++  const portalTourEpoch=await history(portalTourRevision);
++  const firstDelivery=await history(historicalRevision);
+@@ -237,2 +252,6 @@ test('current imported Review retains exact orbital CT material under the live t
+-  assert.equal(live.regionalTours.filter((tour:{id:string})=>tour.id!=='portal-hepatic-venous-relationships').length,47);
+-  assert.equal(live.regionalTours.length,48);
++  assert.equal(portalTourEpoch.regionalTours.filter((tour:{id:string})=>tour.id!=='portal-hepatic-venous-relationships').length,47);
++  assert.equal(portalTourEpoch.regionalTours.length,48);
++  assert.equal(firstDelivery.regionalTours.filter((tour:{id:string})=>tour.id!=='portal-hepatic-venous-relationships').length,50);
++  assert.equal(firstDelivery.regionalTours.length,51);
++  assert.equal(live.regionalTours.filter((tour:{id:string})=>tour.id!=='portal-hepatic-venous-relationships').length,50);
++  assert.equal(live.regionalTours.length,51);

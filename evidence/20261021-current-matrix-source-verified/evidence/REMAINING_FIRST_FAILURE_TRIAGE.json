@@ -1,0 +1,992 @@
+{
+  "schema": "vm-complete-suite-tail-triage-1",
+  "receipt": "2026-10-21T05-37-11-497Z-a5ab569e-0361-46d1-91d6-64fd8586c1c0",
+  "basis": "native child.tap, terminal receipt present; not a post-fix rerun",
+  "excluded": {
+    "v7": 28,
+    "clinicalC": 10,
+    "clinicalE": 7
+  },
+  "remaining": {
+    "failureMarkers": 91,
+    "modules": 67
+  },
+  "failures": [
+    {
+      "tapNumber": 953,
+      "module": "clinical-review-lower-limb-connective-xray.test.ts",
+      "declarationLine": 54,
+      "assertionLine": 56,
+      "classification": "unresolved",
+      "evidence": "connective theorem requires separate exact historical/current source roles",
+      "observed": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1005,
+      "module": "clinical-review-pelvic-venous-tour.test.ts",
+      "declarationLine": 11,
+      "assertionLine": 15,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1010,
+      "module": "clinical-review-portal-hepatic-tour.test.ts",
+      "declarationLine": 18,
+      "assertionLine": 20,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1017,
+      "module": "clinical-review-psoas-xray.test.ts",
+      "declarationLine": 52,
+      "assertionLine": 54,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1018,
+      "module": "clinical-review-psoas-xray.test.ts",
+      "declarationLine": 176,
+      "assertionLine": null,
+      "classification": "stale source/revision",
+      "evidence": "test applies historical tour/source epoch to current190",
+      "errorCode": null
+    },
+    {
+      "tapNumber": 1026,
+      "module": "clinical-review-reasoning.test.ts",
+      "declarationLine": 7,
+      "assertionLine": 10,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1027,
+      "module": "clinical-review-regional-muscle-completion-quiz.test.ts",
+      "declarationLine": 48,
+      "assertionLine": 51,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1028,
+      "module": "clinical-review-regional-tour.test.ts",
+      "declarationLine": 7,
+      "assertionLine": 11,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1030,
+      "module": "clinical-review-regional-tour.test.ts",
+      "declarationLine": 298,
+      "assertionLine": 307,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1039,
+      "module": "clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "declarationLine": 155,
+      "assertionLine": 68,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "e6a486cc4ab9745eae110615b340fa1797bb0e6e0b72195f083bec766543da25",
+      "expected": "8b85f64cfa63fe7e15ccf317c9d4efb544430c0175b8d329608a23d02665f3d3",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1045,
+      "module": "clinical-review-short-ciliary-quiz.test.ts",
+      "declarationLine": 57,
+      "assertionLine": 59,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1046,
+      "module": "clinical-review-short-ciliary-quiz.test.ts",
+      "declarationLine": 147,
+      "assertionLine": null,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1050,
+      "module": "clinical-review-shoulder-ct.test.ts",
+      "declarationLine": 7,
+      "assertionLine": 11,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1051,
+      "module": "clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "declarationLine": 30,
+      "assertionLine": 33,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1052,
+      "module": "clinical-review-shoulder-muscle-xray.test.ts",
+      "declarationLine": 88,
+      "assertionLine": 90,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1053,
+      "module": "clinical-review-shoulder-muscle-xray.test.ts",
+      "declarationLine": 235,
+      "assertionLine": null,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1058,
+      "module": "clinical-review-specimen-continuous-playback.test.ts",
+      "declarationLine": 96,
+      "assertionLine": 25,
+      "classification": "mock/interface",
+      "evidence": "Git ancestry/object lookup uses a root unable to resolve the current Atlas commit",
+      "errorCode": "ERR_TEST_FAILURE"
+    },
+    {
+      "tapNumber": 1059,
+      "module": "clinical-review-specimen-continuous-playback.test.ts",
+      "declarationLine": 181,
+      "assertionLine": 58,
+      "classification": "mock/interface",
+      "evidence": "Git ancestry/object lookup uses a root unable to resolve the current Atlas commit",
+      "errorCode": "ERR_TEST_FAILURE"
+    },
+    {
+      "tapNumber": 1063,
+      "module": "clinical-review-spinal-disc-ultrasound.test.ts",
+      "declarationLine": 23,
+      "assertionLine": 26,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1069,
+      "module": "clinical-review-suprahyoid-quiz.test.ts",
+      "declarationLine": 43,
+      "assertionLine": 47,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1079,
+      "module": "clinical-review-thoracic-detail-ultrasound.test.ts",
+      "declarationLine": 79,
+      "assertionLine": 82,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+      "expected": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1081,
+      "module": "clinical-review-thoracic-eus.test.ts",
+      "declarationLine": 28,
+      "assertionLine": 30,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1082,
+      "module": "clinical-review-thoracic-mediastinal-arterial-xray.test.ts",
+      "declarationLine": 52,
+      "assertionLine": 57,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+      "expected": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1085,
+      "module": "clinical-review-thoracic-quiz.test.ts",
+      "declarationLine": 7,
+      "assertionLine": 10,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1089,
+      "module": "clinical-review-thoracic-systemic-teaching.test.ts",
+      "declarationLine": 53,
+      "assertionLine": 55,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1090,
+      "module": "clinical-review-thoracic-venous-xray.test.ts",
+      "declarationLine": 58,
+      "assertionLine": 63,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+      "expected": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1093,
+      "module": "clinical-review-thoracic-wall-xray.test.ts",
+      "declarationLine": 19,
+      "assertionLine": 23,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1095,
+      "module": "clinical-review-thoracoacromial-ultrasound.test.ts",
+      "declarationLine": 30,
+      "assertionLine": 35,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1098,
+      "module": "clinical-review-tour-imaging.test.ts",
+      "declarationLine": 152,
+      "assertionLine": null,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1111,
+      "module": "clinical-review-um-ankle-imaging.test.ts",
+      "declarationLine": 7,
+      "assertionLine": 9,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1114,
+      "module": "clinical-review-upper-limb-completion-quiz.test.ts",
+      "declarationLine": 40,
+      "assertionLine": 43,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1115,
+      "module": "clinical-review-upper-venous-tour.test.ts",
+      "declarationLine": 8,
+      "assertionLine": 10,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1116,
+      "module": "clinical-review-urinary-tract-tour.test.ts",
+      "declarationLine": 21,
+      "assertionLine": 23,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1148,
+      "module": "closed56-femoral-epoch.test.mjs",
+      "declarationLine": 94,
+      "assertionLine": 97,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1152,
+      "module": "closed56-live-preservation.test.mjs",
+      "declarationLine": 32,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1159,
+      "module": "closed56-live-preservation.test.mjs",
+      "declarationLine": 53,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "historical witness or whole-source guard needs exact transition review",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1169,
+      "module": "closed56-original-tests.test.mjs",
+      "declarationLine": 44,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1215,
+      "module": "coronary-current-lifecycle-preservation.test.mjs",
+      "declarationLine": 31,
+      "assertionLine": 22,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "observed": "4be201ff8982d64de4e62c007da0dc797e5e819077b9fcb78be0b399988396f1",
+      "expected": "d57fb041284d07658aa0276c82c403c19805130eed09bae2c2d85307a7dcc5c1",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1220,
+      "module": "corpus-xray-v2-current-delivery.test.mjs",
+      "declarationLine": 13,
+      "assertionLine": 14,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1403,
+      "module": "craniofacial-ct-current-delivery.test.mjs",
+      "declarationLine": 20,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source historical witness differs beyond declared current-admission seams",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1405,
+      "module": "craniofacial-ct-current-delivery.test.mjs",
+      "declarationLine": 38,
+      "assertionLine": 39,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1408,
+      "module": "craniofacial-ct-current-delivery.test.mjs",
+      "declarationLine": 58,
+      "assertionLine": 59,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1467,
+      "module": "current-atlas-delivery.test.mjs",
+      "declarationLine": 48,
+      "assertionLine": 49,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1468,
+      "module": "current-atlas-delivery.test.mjs",
+      "declarationLine": 58,
+      "assertionLine": 71,
+      "classification": "stale source/revision",
+      "evidence": "pinned source or delivery count differs at current190",
+      "observed": "1553",
+      "expected": "1550",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1497,
+      "module": "current-delivery-admission-485.test.mjs",
+      "declarationLine": 33,
+      "assertionLine": 35,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 1538,
+      "module": "deep-plantar-current-transition.test.mjs",
+      "declarationLine": 45,
+      "assertionLine": 63,
+      "classification": "stale representation/minifier",
+      "evidence": "byte-pinned historical head-learning CSS differs from current runtime source",
+      "observed": "70eb06e2246820bf4b752aa857a4ddeb67f105bfe31361469bd9cb81afd5db83",
+      "expected": "3a3117cdcb03a50c1bb42992d036139e22366fefd76d00283c5c57c7e46f9767",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2185,
+      "module": "head-disclosure-current-delivery.test.mjs",
+      "declarationLine": 10,
+      "assertionLine": 12,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+      "expected": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2186,
+      "module": "head-disclosure-current-delivery.test.mjs",
+      "declarationLine": 20,
+      "assertionLine": 22,
+      "classification": "stale source/revision",
+      "evidence": "pinned source or delivery count differs at current190",
+      "observed": "1710",
+      "expected": "1680",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2187,
+      "module": "head-disclosure-current-delivery.test.mjs",
+      "declarationLine": 28,
+      "assertionLine": 29,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "90ee9c953f297521a1f6b8347e40f6e49648496301ce5181929418a2c95404f0",
+      "expected": "a97e725ae997c554d00a4d2f18fe6ca4fad02c67a6961df48e919ee20d127179",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2188,
+      "module": "head-disclosure-current-delivery.test.mjs",
+      "declarationLine": 28,
+      "assertionLine": 29,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "90ee9c953f297521a1f6b8347e40f6e49648496301ce5181929418a2c95404f0",
+      "expected": "a97e725ae997c554d00a4d2f18fe6ca4fad02c67a6961df48e919ee20d127179",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2189,
+      "module": "head-disclosure-current-delivery.test.mjs",
+      "declarationLine": 37,
+      "assertionLine": 43,
+      "classification": "stale source/revision",
+      "evidence": "pinned source or delivery count differs at current190",
+      "observed": "0",
+      "expected": "1",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2190,
+      "module": "head-disclosure-harness-preservation.test.mjs",
+      "declarationLine": 14,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2195,
+      "module": "head-disclosure-harness-preservation.test.mjs",
+      "declarationLine": 14,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2323,
+      "module": "head-image-history-anchor-harness.test.mjs",
+      "declarationLine": 6,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "historical witness or whole-source guard needs exact transition review",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2536,
+      "module": "head-index-tab-stop.test.mjs",
+      "declarationLine": 71,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source historical witness differs beyond declared current-admission seams",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2697,
+      "module": "head-loading-review-binding.test.mjs",
+      "declarationLine": 36,
+      "assertionLine": 39,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "bc925194ce3b388d4b6d9f73b4b3362ed4f2ad5f",
+      "expected": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2730,
+      "module": "head-manual-recovery-53-to-54-closed.test.mjs",
+      "declarationLine": 14,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "byte-pinned historical head-learning CSS differs from current runtime source",
+      "observed": "70eb06e2246820bf4b752aa857a4ddeb67f105bfe31361469bd9cb81afd5db83",
+      "expected": "3a3117cdcb03a50c1bb42992d036139e22366fefd76d00283c5c57c7e46f9767",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2734,
+      "module": "head-manual-recovery-54-to-55-closed.test.mjs",
+      "declarationLine": 27,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "byte-pinned historical head-learning CSS differs from current runtime source",
+      "observed": "70eb06e2246820bf4b752aa857a4ddeb67f105bfe31361469bd9cb81afd5db83",
+      "expected": "3a3117cdcb03a50c1bb42992d036139e22366fefd76d00283c5c57c7e46f9767",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2735,
+      "module": "head-manual-recovery-54-to-55-closed.test.mjs",
+      "declarationLine": 55,
+      "assertionLine": null,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "b40b89e5eb4ffb30feee1ec7064be6e1d52f3add0ce6bc0b6e0bc319610968b5",
+      "expected": "75e927f73854fd44554a34e9d8e9a923a3b7a0108b39489132c85c0243ce303e",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2868,
+      "module": "head-native-history-current-transition.test.mjs",
+      "declarationLine": 4,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "errorCode": null
+    },
+    {
+      "tapNumber": 2874,
+      "module": "head-neck-pilot-current.test.mjs",
+      "declarationLine": 81,
+      "assertionLine": 83,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "74ba7688c8dfd8939a160f56a04e7825b11183f947f1074c6825c0f39904d4ec",
+      "expected": "d8d5b5aaf4a40252217da56cd5d42c80ade5b43abb090454fd4c616a8e1ee9d8",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2875,
+      "module": "head-neck-pilot.test.ts",
+      "declarationLine": 8,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "historical 9f manifest names a hashed JS asset absent from current190 runtime; overlay lacks that old asset",
+      "errorCode": "ENOENT"
+    },
+    {
+      "tapNumber": 2919,
+      "module": "head-practice-binding.test.mjs",
+      "declarationLine": 66,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 2920,
+      "module": "head-practice-binding.test.mjs",
+      "declarationLine": 96,
+      "assertionLine": 116,
+      "classification": "stale source/revision",
+      "evidence": "pinned source or delivery count differs at current190",
+      "observed": "1709",
+      "expected": "1695",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 3393,
+      "module": "inferior-thyroid-mra-current-delivery.test.mjs",
+      "declarationLine": 59,
+      "assertionLine": 26,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 3394,
+      "module": "inferior-thyroid-mra-current-delivery.test.mjs",
+      "declarationLine": 94,
+      "assertionLine": 26,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 3398,
+      "module": "lacrimal-current-transition.test.mjs",
+      "declarationLine": 46,
+      "assertionLine": 67,
+      "classification": "stale representation/minifier",
+      "evidence": "byte-pinned historical head-learning CSS differs from current runtime source",
+      "observed": "70eb06e2246820bf4b752aa857a4ddeb67f105bfe31361469bd9cb81afd5db83",
+      "expected": "3a3117cdcb03a50c1bb42992d036139e22366fefd76d00283c5c57c7e46f9767",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 3789,
+      "module": "native-focus-review-binding.test.mjs",
+      "declarationLine": 7,
+      "assertionLine": 9,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 3833,
+      "module": "orbital-inbox-admission-history.test.mjs",
+      "declarationLine": 33,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source historical witness differs beyond declared current-admission seams",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 3945,
+      "module": "posterior-fossa-coverage.test.mjs",
+      "declarationLine": 14,
+      "assertionLine": 15,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "7b3e678ae4b8059aadb84459048ebd05f7abe7b9",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 3947,
+      "module": "posterior-fossa-coverage.test.mjs",
+      "declarationLine": 37,
+      "assertionLine": 43,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6",
+      "expected": "5594ae675dae99abe6fa1ac6f1a74af740d802adccd5afa0fc5da1908b6cb5ba",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 3987,
+      "module": "public-focus-adapter-preservation.test.mjs",
+      "declarationLine": 62,
+      "assertionLine": null,
+      "classification": "mock/interface",
+      "evidence": "declared two-seam original-source adapter differs from current test source; no UI behavioral test failure shown",
+      "errorCode": null
+    },
+    {
+      "tapNumber": 3988,
+      "module": "public-focus-adapter-preservation.test.mjs",
+      "declarationLine": 62,
+      "assertionLine": null,
+      "classification": "mock/interface",
+      "evidence": "declared two-seam original-source adapter differs from current test source; no UI behavioral test failure shown",
+      "errorCode": null
+    },
+    {
+      "tapNumber": 3989,
+      "module": "public-focus-adapter-preservation.test.mjs",
+      "declarationLine": 62,
+      "assertionLine": null,
+      "classification": "mock/interface",
+      "evidence": "declared two-seam original-source adapter differs from current test source; no UI behavioral test failure shown",
+      "errorCode": null
+    },
+    {
+      "tapNumber": 3990,
+      "module": "public-focus-adapter-preservation.test.mjs",
+      "declarationLine": 62,
+      "assertionLine": null,
+      "classification": "mock/interface",
+      "evidence": "declared two-seam original-source adapter differs from current test source; no UI behavioral test failure shown",
+      "errorCode": null
+    },
+    {
+      "tapNumber": 3991,
+      "module": "public-focus-adapter-preservation.test.mjs",
+      "declarationLine": 66,
+      "assertionLine": null,
+      "classification": "mock/interface",
+      "evidence": "declared two-seam original-source adapter differs from current test source; no UI behavioral test failure shown",
+      "errorCode": null
+    },
+    {
+      "tapNumber": 4008,
+      "module": "radial-eus-current-transition.test.mjs",
+      "declarationLine": 27,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "declared current-policy byte transition is incomplete",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 4011,
+      "module": "radial-eus-current-transition.test.mjs",
+      "declarationLine": 77,
+      "assertionLine": 79,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 4050,
+      "module": "regional-learning-catalogue.test.ts",
+      "declarationLine": 17,
+      "assertionLine": null,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 4194,
+      "module": "regional-mri-inline-inspection.test.ts",
+      "declarationLine": 30,
+      "assertionLine": 33,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 4511,
+      "module": "regional-reference-review-index.test.ts",
+      "declarationLine": 45,
+      "assertionLine": 48,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "408759d57644b05402e98a937e7cf6338b5509cf",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 4682,
+      "module": "shoulder-us-renderer-migration.test.mjs",
+      "declarationLine": 29,
+      "assertionLine": 31,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 4993,
+      "module": "studio-lineage-integration.test.mjs",
+      "declarationLine": 75,
+      "assertionLine": 97,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 5256,
+      "module": "tongue-palate-a247-inverse.test.mjs",
+      "declarationLine": 101,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source historical witness differs beyond declared current-admission seams",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 5258,
+      "module": "tongue-palate-delivery.test.ts",
+      "declarationLine": 48,
+      "assertionLine": 51,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 5259,
+      "module": "tour-discovery-current-delivery.test.mjs",
+      "declarationLine": 8,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 5262,
+      "module": "ui-teaching-admission-contract.test.mjs",
+      "declarationLine": 75,
+      "assertionLine": 103,
+      "classification": "stale source/revision",
+      "evidence": "pinned source, integration, or imported representation identity differs",
+      "observed": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+      "expected": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 5264,
+      "module": "ui-teaching-current-delivery.test.mjs",
+      "declarationLine": 40,
+      "assertionLine": 63,
+      "classification": "stale source/revision",
+      "evidence": "pinned source or delivery count differs at current190",
+      "observed": "1553",
+      "expected": "1550",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 5267,
+      "module": "ui-teaching-lifecycle-contract.test.mjs",
+      "declarationLine": 71,
+      "assertionLine": 65,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "observed": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285",
+      "expected": "78919d9a82605a2c24bb4a490e0a5e5cc04549d15e2990107c3c7618dfec2189",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 5268,
+      "module": "ui-teaching-lifecycle-contract.test.mjs",
+      "declarationLine": 74,
+      "assertionLine": 16,
+      "classification": "stale representation/minifier",
+      "evidence": "whole-source or declared-seam preservation guard differs from current test/fixture",
+      "errorCode": "ERR_ASSERTION"
+    },
+    {
+      "tapNumber": 5273,
+      "module": "vascular-live-admission-preservation.test.mjs",
+      "declarationLine": 29,
+      "assertionLine": null,
+      "classification": "stale representation/minifier",
+      "evidence": "declared five-seam original-source inverse differs from current vascular test bytes",
+      "errorCode": null
+    }
+  ],
+  "classificationScope": "first failure per TAP case; no post-proposal tests; source/revision labels are diagnostic, not authorization to repin",
+  "confirmedProductRegressions": [],
+  "priorityCandidates": [
+    {
+      "module": "head-neck-pilot.test.ts",
+      "tapNumber": 2875,
+      "kind": "historical-overlay missing hashed asset",
+      "reason": "9f manifest's body-scene-CcFnIl_v.js is absent from current190 runtime; current has body-scene-Bzofy8VU.js. Verify old bytes are recoverable before treating as a runtime regression."
+    },
+    {
+      "module": "clinical-review-specimen-continuous-playback.test.ts",
+      "tapNumbers": [
+        1058,
+        1059
+      ],
+      "kind": "wrong Git root/interface",
+      "reason": "Git calls cannot resolve current190 commit; check helper cwd/commit visibility before testing behavior."
+    },
+    {
+      "module": "clinical-review-lower-limb-connective-xray.test.ts",
+      "tapNumber": 953,
+      "kind": "unresolved historical/current theorem",
+      "reason": "Protected Review owner is 98d7, source test expects 9f; complete old proof plus strict current role remains to be established."
+    }
+  ]
+}

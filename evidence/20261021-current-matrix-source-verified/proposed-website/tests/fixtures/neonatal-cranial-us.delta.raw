@@ -1,0 +1,53 @@
+@@ -10,0 +11,2 @@ import {bodyChannelBaseline,bodyChannelEntrypoint} from './body-channel-source-e
++import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+@@ -12,2 +14,6 @@ import {bodyChannelBaseline,bodyChannelEntrypoint} from './body-channel-source-e
+-const atlas='F:/VisibleMedicine/atlas';
+-const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const atlas=currentAtlasDeliveryRoot();
++const historicalRevision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const portalTourRevision='47a851db0fb3369ad056fb8a8fcc3f3ba73656ea';
++const portalTourBlob='c832b8cafa2a53a79d244dfa223288b7fd255be6';
++const currentTourBlob='fb65a9c68d8753fc1789c7e6281e36c2889e0136';
++const revision=CURRENT_ATLAS_REVISION;
+@@ -15 +21,3 @@ const parent='c57449c1107a912442c6b0af23e270df41032522';
+-const tree='a84ecc18997c80b7f68917425164ea24993020dd';
++const priorTreeOwner='6b6d9bba99985dfc5ca8deb52ca9e2632b837d25';
++const priorTree='a84ecc18997c80b7f68917425164ea24993020dd';
++const historicalTree='1bd327fb20a52b35bec584675c457173c548e24b';
+@@ -83,0 +92,9 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++  assert.equal(checkedAtlasHistoryRepo(historicalRevision),atlas);
++  assert.equal(git(['rev-parse',priorTreeOwner+'^{tree}']).toString().trim(),priorTree,
++    'Earlier a84 tree remains bound to its actual 6b6d source epoch');
++  assert.equal(git(['merge-base',priorTreeOwner,historicalRevision]).toString().trim(),priorTreeOwner);
++  assert.equal(git(['merge-base',portalTourRevision,historicalRevision]).toString().trim(),portalTourRevision);
++  assert.equal(git(['merge-base',historicalRevision,revision]).toString().trim(),historicalRevision);
++  assert.equal(git(['rev-parse',portalTourRevision+':lib/regional-tours.ts']).toString().trim(),portalTourBlob);
++  assert.equal(git(['rev-parse',historicalRevision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
++  assert.equal(git(['rev-parse',revision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
+@@ -85 +102 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-  assert.equal(git(['rev-parse','HEAD^{tree}']).toString().trim(),tree);
++  assert.equal(git(['rev-parse',historicalRevision+'^{tree}']).toString().trim(),historicalTree);
+@@ -113,0 +131 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++    assert.deepEqual(source,committed(historicalRevision,path),`${name}: immutable channel entrypoint`);
+@@ -144 +162 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-  assert.equal(liveApi.regionalTours.length,48);assert.equal(liveApi.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),290);
++  assert.equal(liveApi.regionalTours.length,51);assert.equal(liveApi.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),309);
+@@ -145,0 +164,6 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++  const portalTourEpoch=await prior.exactSourceHistoryApi(portalTourRevision,'review-security');
++  assert.equal(portalTourEpoch.regionalTours.length,48);
++  assert.equal(portalTourEpoch.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),290);
++  const firstDelivery=await prior.exactSourceHistoryApi(historicalRevision,'review-security');
++  assert.equal(firstDelivery.regionalTours.length,51);
++  assert.equal(firstDelivery.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),309);
+@@ -149 +173,3 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-    assert.equal(sha(committed(revision,path)),sha(committed(completedSource,path)),`${path}: neonatal source preserved since completed epoch`);
++    assert.equal(sha(committed(historicalRevision,path)),sha(committed(completedSource,path)),`${path}: neonatal source preserved at first delivery`);
++  for(const path of sourcePaths)
++    assert.deepEqual(committed(revision,path),committed(historicalRevision,path),`${path}: neonatal source retained at current delivery`);
+@@ -317 +343,4 @@ test('private inbox shows ten new teaching revisions and rejects stale continuat
+-    assert.equal(row.href,'/workspace/atlas-review/body?structure='+encodeURIComponent(entry.id));
++    assert.equal(saved.href,'/workspace/atlas-review/body?structure='+encodeURIComponent(entry.id),
++      `${entry.id}: immutable historical inbox URL`);
++    assert.equal(row.href,'/workspace/atlas-review/body?structure='+encodeURIComponent(entry.id)+'&t=teaching',
++      `${entry.id}: current teaching-track selection`);

@@ -1,0 +1,21 @@
+{
+  "label": "BATCH_E_V4_WHOLE_SOURCE",
+  "command": "node",
+  "args": [
+    "--test",
+    "tests/clinical-epoch-batch-e-preservation.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-clinical-epoch-batch-e-v4-native-proof/BATCH_E_V4_WHOLE_SOURCE.log",
+  "logSha256": "6a02f6cdbd1cb01e5b9e560b4572dc1e902c9c4a369f04ac41fee826cabe9ced",
+  "footer": [
+    "ℹ tests 10",
+    "ℹ pass 9",
+    "ℹ fail 1",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

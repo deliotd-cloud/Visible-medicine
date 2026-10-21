@@ -1,0 +1,140 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4-native-proof",
+  "site": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4-native-proof/native-check",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "sourceSite": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4",
+  "guard": "tests/clinical-epoch-batch-c-originals.test.mjs",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-source190-complete-suite/SOURCE_INPUTS.json",
+  "sourceSnapshotSha256": "2d3d4544ca39cb357edcf82dcbe414ea0ec77b619df69135fca983a5ece7b5f4",
+  "proposed": [
+    {
+      "path": "tests/clinical-epoch-batch-c-originals.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-epoch-batch-c-originals.test.mjs",
+      "sha256": "8f27c7eb5715e197fb952427cfbb12fa2aa387a378d71ff848f3ebc36ff47e24",
+      "beforeSha256": null,
+      "bytes": 4384
+    },
+    {
+      "path": "tests/clinical-review-iliac-venous-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-iliac-venous-xray.test.ts",
+      "sha256": "a55f6c33ee41cccc7720482124104b529bcdfa9336ee5760ff35ec49ce34be68",
+      "beforeSha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba",
+      "bytes": 9480
+    },
+    {
+      "path": "tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "sha256": "582b55d1960288b58f00cac0c2bf4b5be88df0dbe851a2e270e7522b3f9a91c8",
+      "beforeSha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740",
+      "bytes": 10554
+    },
+    {
+      "path": "tests/clinical-review-limb-nerve-quiz.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "sha256": "7024f0caca815c59cc5cc3e54f4b9e82e188752e875c0abc681ed4243cf1fad6",
+      "beforeSha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432",
+      "bytes": 16715
+    },
+    {
+      "path": "tests/clinical-review-longus-colli-quiz.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-longus-colli-quiz.test.ts",
+      "sha256": "68589eca6ad26c87d2e46f57f55769b75f3e3ce0919fe5cc49ac50ae7fa32dd8",
+      "beforeSha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d",
+      "bytes": 8907
+    },
+    {
+      "path": "tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "sha256": "d3c42dabe7c63a51458dd498e88f3f5a2f021218c922690a13d641321024914b",
+      "beforeSha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84",
+      "bytes": 18470
+    },
+    {
+      "path": "tests/clinical-review-medial-thigh-tour.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-medial-thigh-tour.test.ts",
+      "sha256": "03b265445b7937621a9d01ce849294ea170232c245f6f8c7a3f34b19325b4916",
+      "beforeSha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0",
+      "bytes": 17695
+    },
+    {
+      "path": "tests/clinical-review-median-cubital-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-median-cubital-xray.test.ts",
+      "sha256": "886db4ebcf56a04764fb9e416aaffd61c72f9487d5d18ddc63f66b0ed6e848a4",
+      "beforeSha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4",
+      "bytes": 23327
+    },
+    {
+      "path": "tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "sha256": "b677b62a8c142b7e0a07ed8d225e1ba040f1e675bc3402a77d71b0883ed140b4",
+      "beforeSha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c",
+      "bytes": 8950
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "sha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba",
+      "beforeSha256": null,
+      "bytes": 8867
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "sha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740",
+      "beforeSha256": null,
+      "bytes": 9941
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "sha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432",
+      "beforeSha256": null,
+      "bytes": 16253
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "sha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d",
+      "beforeSha256": null,
+      "bytes": 8090
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "sha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84",
+      "beforeSha256": null,
+      "bytes": 15632
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "sha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0",
+      "beforeSha256": null,
+      "bytes": 14837
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "sha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4",
+      "beforeSha256": null,
+      "bytes": 21757
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "sha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c",
+      "beforeSha256": null,
+      "bytes": 8522
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "sha256": "6992d895e4ff2ca783a238163f666f99c3ac9b3f5ca5beb69d8ec6873fb8ff42",
+      "beforeSha256": null,
+      "bytes": 61654
+    }
+  ],
+  "unchangedExistingTests": [],
+  "scope": "Only the named, main-reviewed native FS/hash guard is to be executed. Copied TS subjects are not executed; no dependencies/junctions/build/types/corpus/clinical/browser acceptance or source installation."
+}

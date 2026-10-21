@@ -1,0 +1,776 @@
+{
+  "at": "2026-10-21T09:04:59.598Z",
+  "stage": "F:/VisibleMedicine/staging/20261021-revision-guard-batch-v8",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "previousSourceInputs": 5107,
+  "proposedSourceInputs": 5146,
+  "changes": [
+    {
+      "path": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/anatomy-coverage-revision-admission.test.mjs",
+      "beforeSha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1",
+      "sha256": "7484378b8c4e8dc91d2d4a3c7f5d58b772c90e8d9b2b2aeaf8f8ebe4ae9dc8da",
+      "bytes": 4090
+    },
+    {
+      "path": "tests/current-190-coverage.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/current-190-coverage.test.mjs",
+      "beforeSha256": null,
+      "sha256": "5ec7577052250b5e6cc7a772b2e4b7fdedc04bf0091a85317dcbb96253718234",
+      "bytes": 4633
+    },
+    {
+      "path": "tests/fixtures/closed485-original/anatomy-coverage-revision-admission.test.mjs.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/fixtures/closed485-original/anatomy-coverage-revision-admission.test.mjs.raw",
+      "beforeSha256": null,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1",
+      "bytes": 17502
+    },
+    {
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-arterial-evidence-limits.test.mjs",
+      "beforeSha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a",
+      "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6",
+      "bytes": 17250
+    },
+    {
+      "path": "tests/arterial-history-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/arterial-history-preservation.test.mjs",
+      "beforeSha256": "5333cc9866b6d7bbf84d3c3790d8012cd9189f1639030f6812e62c9f56225225",
+      "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596",
+      "bytes": 3838
+    },
+    {
+      "path": "tests/atlas-guided-camera.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-guided-camera.test.ts",
+      "beforeSha256": "a16d5b0ff30905c035a327752e9a4829449fab0eb6c470d308cfd74a8f501221",
+      "sha256": "31ca6f0b7bc7aa2fd079ac3ad50617de491e4fd2723cc20560d65395d156506c",
+      "bytes": 9477
+    },
+    {
+      "path": "tests/atlas-keyboard-modules.test.ts",
+      "beforeSha256": "c51ddcb68911a77154846e14459e666b1c2199dc466feda3d4c497b4fbf3275c",
+      "sha256": "6988cd068f47729143dffa7ff33f16db9293d78c098a54ca9961821485e9fa70",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-keyboard-modules.test.ts",
+      "bytes": 7003
+    },
+    {
+      "path": "tests/atlas-label-keyboard.test.ts",
+      "beforeSha256": "17aaee37c397e5660a77842f881a773651c239aa0025be9740feee2d4618c2a5",
+      "sha256": "3c96b803580556775d34863291a0043f233c1e663be93dcc4d65a50230269f19",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-label-keyboard.test.ts",
+      "bytes": 5368
+    },
+    {
+      "path": "tests/atlas-shared-viewer-accessibility.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/v2/tests/atlas-shared-viewer-accessibility.test.ts",
+      "beforeSha256": "4819f71d184b9651507ffbab10cb3bff42076333eb1375807e669c2524ce3141",
+      "sha256": "bf37a2e16233e47cde10ce15cc03c52ecf8a6033047dfdba09f73703f86ca5e6",
+      "bytes": 7307
+    },
+    {
+      "path": "tests/atlas-tour-completion.test.mjs",
+      "beforeSha256": "a60f9e9fe2ca5ec1c42de32c33a2a1bae90dadc55a54fb8bebd7b8de1f5b851c",
+      "sha256": "29eabe4a82543be6cb4616f2092f80d005a07373e6eb51b94dbb2b2cf53116d1",
+      "from": "F:/VisibleMedicine/staging/20261021-tour-epoch-proposal/tests/atlas-tour-completion.test.mjs",
+      "bytes": 11268
+    },
+    {
+      "path": "tests/atlas-tour-library-pause.test.ts",
+      "beforeSha256": "aa54cbe3c7d42ffb125b2b47d2db3b548ddb96fdcbced858fc38ee240cc9006f",
+      "sha256": "afe577ade8afc43e0bdc3f07192913e6f9d3c481e249a64274cd3152812366c7",
+      "from": "F:/VisibleMedicine/staging/20261021-tour-epoch-proposal/tests/atlas-tour-library-pause.test.ts",
+      "bytes": 8208
+    },
+    {
+      "path": "tests/atlas-tour-reading-focus.test.ts",
+      "beforeSha256": "9e8e77ad1f74ca2a59067caaffcbd0d13270267dd192bb2d6e245bd349dc95cd",
+      "sha256": "bea48a12d979c106fa5332d8d278d3493c7280b1ced2d35bb448050b147d9855",
+      "from": "F:/VisibleMedicine/staging/20261021-tour-epoch-proposal/tests/atlas-tour-reading-focus.test.ts",
+      "bytes": 5643
+    },
+    {
+      "path": "tests/atlas-spinal-muscle-xray.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/atlas-spinal-muscle-xray.test.mjs",
+      "sha256": "6c202daf177a84a4cfd210673dd8a3975bc47cd77bcd47754139a9bffd6bdddc",
+      "bytes": 85652,
+      "beforeSha256": "075354d9e1da283b5209c39478eb89e6f5fc9243441d0cd25701f84f43ea564a"
+    },
+    {
+      "path": "tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/spinal-ct-save-refusal-preservation.test.mjs",
+      "sha256": "ecfabedbe25abf58a093caefa5d4df3ad89049ce402d7dfacf6b2ba430ea8833",
+      "bytes": 3725,
+      "beforeSha256": "0192f1a2056b1b176dafa1148a806ea3f63d341faa74bf2f3ba3a720c3ba9cab"
+    },
+    {
+      "path": "tests/spinal-later-six-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/spinal-later-six-preservation.test.mjs",
+      "sha256": "33c5f117fcc5169b1b2c85c924244e064da3146d5daec62cd3820e3ee38c9385",
+      "bytes": 4555,
+      "beforeSha256": "bb201058554ff44fd61d6ff3e946767ed25a234b3344653b6e87e0bfc28128d8"
+    },
+    {
+      "path": "tests/spinal-current-source-inverse.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/spinal-current-source-inverse.mjs",
+      "sha256": "c0c6f035f2564743d80bd827fe98703b192bb38086df1b639f28b786802651c8",
+      "bytes": 5068,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/01-tongue-palate.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/01-tongue-palate.patch.raw",
+      "sha256": "c0b2f371ca8f918a5c5ebebbea0a40039ac9e4c3aa2dc025693c3951d0d0c144",
+      "bytes": 13425,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/02-ileocolic.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/02-ileocolic.patch.raw",
+      "sha256": "ad6e3d2a0d6b331d7e273cc95e81edf1bfed54d85c3c2d222e0bf15194429a78",
+      "bytes": 16609,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/03-corpus-current.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/03-corpus-current.patch.raw",
+      "sha256": "ff3a9d6a93c7a4053b611e21abad10603bbad42471a8406a9d738f6de97c6519",
+      "bytes": 19142,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/04-corpus-ct.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/04-corpus-ct.patch.raw",
+      "sha256": "d9cc55c0486228e18a8b768596a17c578e42caf7d7e4b5e0a98293d0e1210cc2",
+      "bytes": 17942,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/05-ct-save.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/05-ct-save.patch.raw",
+      "sha256": "fe2b28f5b14c26bbffd869965542c9bab13f955cc97ad3f094acc8165bd960ba",
+      "bytes": 4042,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/06-dental.patch.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/06-dental.patch.raw",
+      "sha256": "dcf154ab70f4b1a0df353d816ab227814471d189179d254f58ffafbeb2e42dcd",
+      "bytes": 14433,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/fixtures/spinal-later-six-current-3824.mjs.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-spinal-dental-epoch-proposal/tests/fixtures/spinal-later-six-current-3824.mjs.raw",
+      "sha256": "3824e78ca19ff6f1a2745232142b9df53278393afdcf8a2e50cea82e0cd5b865",
+      "bytes": 53311,
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/clinical-review-desktop-layout.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-viewer-epoch-proposal/tests/clinical-review-desktop-layout.test.mjs",
+      "beforeSha256": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf",
+      "sha256": "afc346bc245238ecc9469b64a39b9db472f9d7e1d4aa12389d25031e1ae29de3",
+      "bytes": 11478
+    },
+    {
+      "path": "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-viewer-epoch-proposal/tests/clinical-review-elbow-arterial-tour.test.ts",
+      "beforeSha256": "ecdaa555bffb332aab67d481c6873e0dc7ea28bc25cb3459ae1b4b8dd6e9df72",
+      "sha256": "deff0b510f8603a71c9d13910557dee9557a513ee1a19cf0bc0e6bd2e9fb7d1d",
+      "bytes": 25432
+    },
+    {
+      "path": "tests/clinical-review-elbow-us-followup.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-viewer-epoch-proposal/tests/clinical-review-elbow-us-followup.test.ts",
+      "beforeSha256": "52ebcddab39cc165bf4c3c94dee0659abfea6814c92e55f85bf86f25eb6c57d8",
+      "sha256": "dfe5b2522ed20791134dadd37a35e6fff235b4b7d8b139953a00252595159b7a",
+      "bytes": 36205
+    },
+    {
+      "path": "tests/clinical-review-forearm-vascular-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-viewer-epoch-proposal/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "beforeSha256": "108d94b7a5b0ead7e302ab576b2f295d44eb7cd7c2229de686115402379b6778",
+      "sha256": "fca614cc591eb44623f87e36dd35cea42aa3ea0e755ede1118b368e871f06861",
+      "bytes": 28665
+    },
+    {
+      "path": "tests/clinical-review-girdle-muscle-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-girdle-history-epoch-proposal/tests/clinical-review-girdle-muscle-xray.test.ts",
+      "beforeSha256": "0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77",
+      "sha256": "aad3d4eb21f3fe6f2c8a5bffce816f140276d8582142667f2aab25e3f88be339",
+      "bytes": 22602
+    },
+    {
+      "path": "tests/clinical-review-git-root-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-girdle-history-epoch-proposal/tests/clinical-review-git-root-preservation.test.mjs",
+      "beforeSha256": "0e244cfc0601dd9fd085e27e1ed6e75d04c30b1fac2fb6d2a0af18dff58b9c7d",
+      "sha256": "d7bd7c4e5abb369c00a69cf049d02848f77064b14f757573297393eac6bab4a1",
+      "bytes": 5683
+    },
+    {
+      "path": "tests/clinical-review-girdle-history-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-girdle-history-epoch-proposal/tests/clinical-review-girdle-history-preservation.test.mjs",
+      "beforeSha256": null,
+      "sha256": "d9f795ed98c2c58be3cfa3ec6cc0d3b39d5926607cde4b7251ee530095a2a011",
+      "bytes": 5175
+    },
+    {
+      "path": "tests/fixtures/clinical-review-girdle-muscle-xray-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-girdle-history-epoch-proposal/tests/fixtures/clinical-review-girdle-muscle-xray-original.ts.raw",
+      "beforeSha256": null,
+      "sha256": "0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77",
+      "bytes": 21356
+    },
+    {
+      "path": "tests/clinical-review-model-inspection.test.mjs",
+      "sha256": "f1fc322c26f68ad264148f36436f0a13a4d034324dbb193a1d0fe24b09f4c627",
+      "beforeSha256": "c1f906808fdf36a4dc76209df0a47f53e575235f02cfc531adbdafb931e3579a",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/clinical-review-model-inspection.test.mjs",
+      "bytes": 6032
+    },
+    {
+      "path": "tests/clinical-review-orbital-sensory-mri.test.ts",
+      "sha256": "0fa989b29a130f39264b192358545f9b9d56d602a84c215e82bc76bb875ea28b",
+      "beforeSha256": "1127b1186b5339a0a4be8d21ca1361cb61a338c93083c571f0e2705b61e86e64",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/clinical-review-orbital-sensory-mri.test.ts",
+      "bytes": 12079
+    },
+    {
+      "path": "tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+      "sha256": "6b22c076adf1371ff6f7c4b5cd550b0ca9c66edd033bda9156284c7a727fc1a4",
+      "beforeSha256": "6c0240e376991077706fb4ffddd2fab6fc53631259fade28bdc0b36f8be5e81e",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+      "bytes": 9497
+    },
+    {
+      "path": "tests/fixtures/clinical-review-model-inspection.test.mjs.raw",
+      "sha256": "c1f906808fdf36a4dc76209df0a47f53e575235f02cfc531adbdafb931e3579a",
+      "beforeSha256": null,
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/fixtures/clinical-review-model-inspection.test.mjs.raw",
+      "bytes": 5809
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-sensory-mri.test.ts.raw",
+      "sha256": "1127b1186b5339a0a4be8d21ca1361cb61a338c93083c571f0e2705b61e86e64",
+      "beforeSha256": null,
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/fixtures/clinical-review-orbital-sensory-mri.test.ts.raw",
+      "bytes": 11258
+    },
+    {
+      "path": "tests/fixtures/clinical-review-pancreatic-vessel-teaching.test.ts.raw",
+      "sha256": "6c0240e376991077706fb4ffddd2fab6fc53631259fade28bdc0b36f8be5e81e",
+      "beforeSha256": null,
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/fixtures/clinical-review-pancreatic-vessel-teaching.test.ts.raw",
+      "bytes": 8966
+    },
+    {
+      "path": "tests/clinical-epoch-batch-d-preservation.test.mjs",
+      "sha256": "c934a01dff830c1277b5648d7de81a86d60dfd1f977673779fa371d1f35d3746",
+      "beforeSha256": null,
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d/tests/clinical-epoch-batch-d-preservation.test.mjs",
+      "bytes": 4357
+    },
+    {
+      "path": "tests/clinical-epoch-batch-c-originals.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-epoch-batch-c-originals.test.mjs",
+      "sha256": "8f27c7eb5715e197fb952427cfbb12fa2aa387a378d71ff848f3ebc36ff47e24",
+      "beforeSha256": null,
+      "bytes": 4384
+    },
+    {
+      "path": "tests/clinical-review-iliac-venous-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-iliac-venous-xray.test.ts",
+      "sha256": "a55f6c33ee41cccc7720482124104b529bcdfa9336ee5760ff35ec49ce34be68",
+      "beforeSha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba",
+      "bytes": 9480
+    },
+    {
+      "path": "tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "sha256": "582b55d1960288b58f00cac0c2bf4b5be88df0dbe851a2e270e7522b3f9a91c8",
+      "beforeSha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740",
+      "bytes": 10554
+    },
+    {
+      "path": "tests/clinical-review-limb-nerve-quiz.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "sha256": "7024f0caca815c59cc5cc3e54f4b9e82e188752e875c0abc681ed4243cf1fad6",
+      "beforeSha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432",
+      "bytes": 16715
+    },
+    {
+      "path": "tests/clinical-review-longus-colli-quiz.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-longus-colli-quiz.test.ts",
+      "sha256": "68589eca6ad26c87d2e46f57f55769b75f3e3ce0919fe5cc49ac50ae7fa32dd8",
+      "beforeSha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d",
+      "bytes": 8907
+    },
+    {
+      "path": "tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "sha256": "d3c42dabe7c63a51458dd498e88f3f5a2f021218c922690a13d641321024914b",
+      "beforeSha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84",
+      "bytes": 18470
+    },
+    {
+      "path": "tests/clinical-review-medial-thigh-tour.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-medial-thigh-tour.test.ts",
+      "sha256": "03b265445b7937621a9d01ce849294ea170232c245f6f8c7a3f34b19325b4916",
+      "beforeSha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0",
+      "bytes": 17695
+    },
+    {
+      "path": "tests/clinical-review-median-cubital-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-median-cubital-xray.test.ts",
+      "sha256": "886db4ebcf56a04764fb9e416aaffd61c72f9487d5d18ddc63f66b0ed6e848a4",
+      "beforeSha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4",
+      "bytes": 23327
+    },
+    {
+      "path": "tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "sha256": "b677b62a8c142b7e0a07ed8d225e1ba040f1e675bc3402a77d71b0883ed140b4",
+      "beforeSha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c",
+      "bytes": 8950
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "sha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba",
+      "beforeSha256": null,
+      "bytes": 8867
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "sha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740",
+      "beforeSha256": null,
+      "bytes": 9941
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "sha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432",
+      "beforeSha256": null,
+      "bytes": 16253
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "sha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d",
+      "beforeSha256": null,
+      "bytes": 8090
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "sha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84",
+      "beforeSha256": null,
+      "bytes": 15632
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "sha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0",
+      "beforeSha256": null,
+      "bytes": 14837
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "sha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4",
+      "beforeSha256": null,
+      "bytes": 21757
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "sha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c",
+      "beforeSha256": null,
+      "bytes": 8522
+    },
+    {
+      "path": "tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4/tests/fixtures/clinical-epoch-batch-c-original/inverse-hunks.json",
+      "sha256": "6992d895e4ff2ca783a238163f666f99c3ac9b3f5ca5beb69d8ec6873fb8ff42",
+      "beforeSha256": null,
+      "bytes": 61654
+    },
+    {
+      "path": "tests/atlas9f-review-history.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/atlas9f-review-history.mjs",
+      "sha256": "176900387d90166dab84f8afc264d8c115c240a583aaead03d4d2ee7dd1ce910",
+      "beforeSha256": null,
+      "bytes": 3162
+    },
+    {
+      "path": "tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "sha256": "820d72f572654187bcc7ae324cef452c945222ecd9a82d024e7725f9f6fc73ac",
+      "beforeSha256": null,
+      "bytes": 4838
+    },
+    {
+      "path": "tests/clinical-review-neonatal-cranial-us.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "sha256": "a00faa1bbe00bb7486e46808ed19b26495cd1ba2a09af823a8ac94451f1b9ef5",
+      "beforeSha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9",
+      "bytes": 27003
+    },
+    {
+      "path": "tests/clinical-review-nested-duct-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/clinical-review-nested-duct-xray.test.ts",
+      "sha256": "9bbc43adfd820b25f2cb9ff7111b55649f0e809f86dbb62d0079b70e73f4ddc9",
+      "beforeSha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf",
+      "bytes": 29309
+    },
+    {
+      "path": "tests/clinical-review-orbital-apex-ct.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/clinical-review-orbital-apex-ct.test.ts",
+      "sha256": "3dd1bb4f3eea243bdb9589b8baeebf030227553168c08527aa4cdae638c65e6e",
+      "beforeSha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b",
+      "bytes": 21280
+    },
+    {
+      "path": "tests/clinical-review-orbital-ring-ct.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/clinical-review-orbital-ring-ct.test.ts",
+      "sha256": "7b747b37baa8061d9ddcaecc08cb7c4aa12dde17e0f7664237e48e79ee580e0c",
+      "beforeSha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d",
+      "bytes": 17606
+    },
+    {
+      "path": "tests/clinical-review-orbital-support-mri.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/clinical-review-orbital-support-mri.test.ts",
+      "sha256": "03467a60f9e863584cdecc34d6f217aa9222b938012c156c1ece2aeccf629495",
+      "beforeSha256": "c4829b9a32b117712aa85723e27517207f20dc13e769e1de360d965c581b5236",
+      "bytes": 14085
+    },
+    {
+      "path": "tests/fixtures/atlas9f-body-renderer-binding.json",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/atlas9f-body-renderer-binding.json",
+      "sha256": "61f25d832616a390d4fad778b4f3e7c867dde1526c117a39674072961d9636a8",
+      "beforeSha256": null,
+      "bytes": 729
+    },
+    {
+      "path": "tests/fixtures/clinical-review-neonatal-cranial-us-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/clinical-review-neonatal-cranial-us-original.ts.raw",
+      "sha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9",
+      "beforeSha256": null,
+      "bytes": 24520
+    },
+    {
+      "path": "tests/fixtures/clinical-review-nested-duct-xray-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/clinical-review-nested-duct-xray-original.ts.raw",
+      "sha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf",
+      "beforeSha256": null,
+      "bytes": 27718
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-apex-ct-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/clinical-review-orbital-apex-ct-original.ts.raw",
+      "sha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b",
+      "beforeSha256": null,
+      "bytes": 19663
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-ring-ct-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/clinical-review-orbital-ring-ct-original.ts.raw",
+      "sha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d",
+      "beforeSha256": null,
+      "bytes": 15391
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-support-mri-original.ts.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/clinical-review-orbital-support-mri-original.ts.raw",
+      "sha256": "c4829b9a32b117712aa85723e27517207f20dc13e769e1de360d965c581b5236",
+      "beforeSha256": null,
+      "bytes": 11223
+    },
+    {
+      "path": "tests/fixtures/neonatal-cranial-us.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/neonatal-cranial-us.delta.raw",
+      "sha256": "8d20741dcbf242d3bd6697304cf3229323ade99962ba236911c6f4bcd0489b04",
+      "beforeSha256": null,
+      "bytes": 4737
+    },
+    {
+      "path": "tests/fixtures/nested-duct-xray.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/nested-duct-xray.delta.raw",
+      "sha256": "bb0a1ae9467b561d713d46936ce4e958f82ae9859201b278b3fd644b4bf5e2ac",
+      "beforeSha256": null,
+      "bytes": 2242
+    },
+    {
+      "path": "tests/fixtures/orbital-apex-ct.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/orbital-apex-ct.delta.raw",
+      "sha256": "d98a8ad09e9434aa33c7feeb2076786b00c939f6325a192008f95a7b93896ed1",
+      "beforeSha256": null,
+      "bytes": 2712
+    },
+    {
+      "path": "tests/fixtures/orbital-ring-ct.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/orbital-ring-ct.delta.raw",
+      "sha256": "60d1602cd1f9006b93b39adf3d6311b488c352567a27594d2127c6e9a3db5919",
+      "beforeSha256": null,
+      "bytes": 3630
+    },
+    {
+      "path": "tests/fixtures/orbital-support-mri.delta.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5/tests/fixtures/orbital-support-mri.delta.raw",
+      "sha256": "438b2245b666cfb456cff0d6289b5cfc11def1e58772cc12d1458b373135d0f5",
+      "beforeSha256": null,
+      "bytes": 5196
+    }
+  ],
+  "receipts": [
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/COVERAGE_NATIVE_EPOCHS.json",
+      "sha256": "db4d80f53707053b71130bd40c66503f1d50a6ce9293d660b9dfd8f268d809db",
+      "label": "COVERAGE_NATIVE_EPOCHS",
+      "footer": [
+        "ℹ tests 3",
+        "ℹ pass 3",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "b160faa266a44cdbfba22bac0a8e88d9454a34050c401d3bc50d3a662050d2c2"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/ARTERIAL190_GRAPH_WITNESS.json",
+      "sha256": "054f5995b4b728774272c57ddfc93f8838c34eca9973a3b0b709815b51a4cec9",
+      "label": "ARTERIAL190_GRAPH_WITNESS",
+      "footer": [
+        "ℹ tests 1",
+        "ℹ pass 1",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "be6cd12fdb9f860e4ed8ad08b1cff251ca666dc8d6a222c820c3684db6afea2a"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/ARTERIAL190_WHOLE_HISTORY.json",
+      "sha256": "7acd27dd4f9537ff0eaabbf4cad0fcdb1c26792a54922d34aee3eb246e344a3f",
+      "label": "ARTERIAL190_WHOLE_HISTORY",
+      "footer": [
+        "ℹ tests 1",
+        "ℹ pass 1",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "c55c6838f8c3f9f0223c1008ee09f95759d5c377607d17cbde24ac709f8503c5"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-camera-zoom-contract-proposal/CAMERA_LEGACY_CURRENT_ZOOM.json",
+      "sha256": "9d7f74250cd6a22411c4e2a2c836361fa5473e44b4a37d0ebeac3ba963d9c7f2",
+      "label": "CAMERA_LEGACY_CURRENT_ZOOM",
+      "footer": [
+        "ℹ tests 4",
+        "ℹ pass 4",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "40c709ca7a2bed7d94eac3bdd77535400787ee785cf5ba18a1e9b6147d188a01"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-keyboard-epoch-native-proof-v2/KEYBOARD_CURRENT_HISTORY_V2.json",
+      "sha256": "7fb3814bc2d4c1dbe3122e911839147ec868c77b29669e38fd2cfcf178d5fceb",
+      "label": "KEYBOARD_CURRENT_HISTORY_V2",
+      "footer": [
+        "ℹ tests 6",
+        "ℹ pass 6",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "a5b4be55ce404061d7194a2280ed4c07fb2be98135949eef2b14e706b315bbf5"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/v2/SHARED_VIEWER_KEYBOARD_EPOCH_V2.json",
+      "sha256": "de94975eef713e429c10d3ab656f56f70c5cb2d09530eb1abc3ee78e9cae141f",
+      "label": "SHARED_VIEWER_KEYBOARD_EPOCH_V2",
+      "footer": [
+        "ℹ tests 3",
+        "ℹ pass 3",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "1912aef5c02c923155c170e0c57fede569f20678d7f9d0cb6b498564b04ae0f4"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-tour-epoch-native-proof/TOUR_CURRENT_HISTORY.json",
+      "sha256": "5e2e489160950610a06f4ba6ffbd881237ca5a4deeb3f59db0d3e93f86eacdd0",
+      "label": "TOUR_CURRENT_HISTORY",
+      "footer": [
+        "ℹ tests 17",
+        "ℹ pass 17",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "f596f7ac1fe24cdc17aef1b0465b118fae3f10a53f66a6b9953e3ac4420cc73f"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-spinal-dental-native-proof/SPINAL_HISTORY_INVERSES.json",
+      "sha256": "7b9da50b73ece4ae7c145d38e25cc08a427d370309c257e200c59d8025efd21c",
+      "label": "SPINAL_HISTORY_INVERSES",
+      "footer": [
+        "ℹ tests 3",
+        "ℹ pass 3",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "1f94f4d84ee5a5f0f292b74f1b7d51d5f5c3f5c6a5eaca94a3ce1d115d979b06"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-clinical-girdle-history-native-proof/GIRDLE_GIT_WHOLE_SOURCE.json",
+      "sha256": "08067a12a589e9bc7f0e2afe379f47cf38449ad48a37df6f6b615c2093fc9d87",
+      "label": "GIRDLE_GIT_WHOLE_SOURCE",
+      "footer": [
+        "ℹ tests 5",
+        "ℹ pass 5",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "e8b5fef27081029a5b79d901d06d93e4341fb5f87e0460414bce5e92230ae9c9"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-clinical-desktop-epoch-native-proof/DESKTOP_EPOCH_NATIVE.json",
+      "sha256": "e29e231a303cd5afedb0ed05cbe4435693ca27ea0f9e9dfba4f2b0597a5caaf6",
+      "label": "DESKTOP_EPOCH_NATIVE",
+      "footer": [
+        "ℹ tests 7",
+        "ℹ pass 7",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "4408e5e66c70c31aa2cbaa5046cbc4d809e7f272bca23f0c5c789422225319d7"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-d-native-proof/BATCH_D_NATIVE_SOURCE_MODEL.json",
+      "sha256": "83a825b5d3fd751111d972f0734f1707e15743441993b74fa6a84716f2a1e7cb",
+      "label": "BATCH_D_NATIVE_SOURCE_MODEL",
+      "footer": [
+        "ℹ tests 5",
+        "ℹ pass 5",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "aeaf7f653de68324a523f584bcec7ee220f26fce6ef8a991c722d7c709bd7165"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-c-v4-native-proof/BATCH_C_V4_WHOLE_SOURCE.json",
+      "sha256": "96a8d58ddf750643b7d548279a2491ece3394212bc57656d5cbcd431c6afaabe",
+      "label": "BATCH_C_V4_WHOLE_SOURCE",
+      "footer": [
+        "ℹ tests 1",
+        "ℹ pass 1",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "f88616dfc064e2d8ee7111baa6935f8ad55760802841768f2fd16e27834fc328"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-clinical-epoch-batch-e-v5-native-proof/BATCH_E_V5_WHOLE_SOURCE.json",
+      "sha256": "0823cc2e1df531c58aa338e985cace8caa6c2d55bd198808a8f6f14d770e3d07",
+      "label": "BATCH_E_V5_WHOLE_SOURCE",
+      "footer": [
+        "ℹ tests 10",
+        "ℹ pass 10",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "5907aa46555d8b9133cd979584485ce40526dc34986054d5c4c1d89d47f547b8"
+    }
+  ],
+  "scope": "74test-only proposal paths,35existing/39new,5146projected named inputs. 66outer native registrations across13 distinct successful runs plus4historical coverage children; C loop is one registration preserving8whole originals, not8executed teaching modules. E5 has10native guards/negatives after retained E4 9pass/1fail regex-witness error. Whole current teaching/Review modules have NOT run. Compact729B renderer binding reconstructs206963B exact history locally; no full renderer fixture included. Separate40-case review-return UI remains outside this test batch. No source installation/clinical/spatial/full-suite green claim.",
+  "limits": "No new learner/Review/runtime/geometry/access dependency. The whole standalone seven-case arterial module has not been rerun after this test-only proposal; its five expensive unchanged bodies already ran in the frozen complete suite. Full suite still pending; NOT post-fix whole-suite acceptance or source installation. Changed TypeScript camera test requires fresh types after heavy slot is released. Earlier v1 batch is superseded; do not apply it.",
+  "freshTypesRequiredBeforeCutover": true,
+  "candidateEdited": false,
+  "canonicalInstalled": false,
+  "privateDataCopied": false,
+  "publicDeployment": false,
+  "supersedes": "F:/VisibleMedicine/staging/20261021-revision-guard-batch-v7",
+  "wholeOriginalKeyboardSourcesReconstructed": true,
+  "keyboardOriginalHashes": [
+    {
+      "path": "tests/atlas-keyboard-modules.test.ts",
+      "sha256": "c51ddcb68911a77154846e14459e666b1c2199dc466feda3d4c497b4fbf3275c"
+    },
+    {
+      "path": "tests/atlas-label-keyboard.test.ts",
+      "sha256": "17aaee37c397e5660a77842f881a773651c239aa0025be9740feee2d4618c2a5"
+    }
+  ],
+  "admissionReady": false,
+  "requiredVerification": [
+    {
+      "label": "SPINAL_CURRENT_DENTAL",
+      "status": "pending",
+      "receipt": null,
+      "reason": "The exact current spinal teaching theorem across9936topics/1104worksheets, source and emitted delivery must execute once after the genuine full-suite terminal. Three pure preservation guards are not that proof."
+    },
+    {
+      "label": "COMPLETE_NATIVE_FAILURE_TRIAGE",
+      "status": "pending",
+      "receipt": null,
+      "reason": "Classify every failure from the genuine terminal receipt, not the current16-failure prefix."
+    },
+    {
+      "label": "CLINICAL_CURRENT_EPOCH_BATCH",
+      "status": "pending",
+      "receipt": null,
+      "reason": "Execute all20 explicit actualCurrentModules in the main-owned native matrix after the genuine full-suite terminal. Guards/metadata/source hashes are not these current teaching, emitted delivery, historical corpus, refusal and storage proofs."
+    }
+  ],
+  "actualCurrentModules": [
+    "tests/atlas-spinal-muscle-xray.test.mjs",
+    "tests/clinical-review-elbow-arterial-tour.test.ts",
+    "tests/clinical-review-elbow-us-followup.test.ts",
+    "tests/clinical-review-forearm-vascular-xray.test.ts",
+    "tests/clinical-review-girdle-muscle-xray.test.ts",
+    "tests/clinical-review-orbital-sensory-mri.test.ts",
+    "tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+    "tests/clinical-review-iliac-venous-xray.test.ts",
+    "tests/clinical-review-intracranial-arterial-xray.test.ts",
+    "tests/clinical-review-limb-nerve-quiz.test.ts",
+    "tests/clinical-review-longus-colli-quiz.test.ts",
+    "tests/clinical-review-lower-venous-tour-v2.test.ts",
+    "tests/clinical-review-medial-thigh-tour.test.ts",
+    "tests/clinical-review-median-cubital-xray.test.ts",
+    "tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+    "tests/clinical-review-neonatal-cranial-us.test.ts",
+    "tests/clinical-review-nested-duct-xray.test.ts",
+    "tests/clinical-review-orbital-apex-ct.test.ts",
+    "tests/clinical-review-orbital-ring-ct.test.ts",
+    "tests/clinical-review-orbital-support-mri.test.ts"
+  ]
+}

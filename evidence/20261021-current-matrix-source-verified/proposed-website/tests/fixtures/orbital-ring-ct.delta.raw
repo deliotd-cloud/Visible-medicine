@@ -1,0 +1,48 @@
+@@ -8,0 +9,3 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
++import {atlas9fReviewHistory,FIRST_DELIVERY} from './atlas9f-review-history.mjs';
++import {boundLiveAtlasHistory} from './atlas-bound-live-history.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+@@ -10,2 +13,3 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
+-const atlas='F:/VisibleMedicine/atlas';
+-const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
++const atlas=currentAtlasDeliveryRoot();
++const historicalRevision=FIRST_DELIVERY;
++const revision=CURRENT_ATLAS_REVISION;
+@@ -49,0 +54 @@ test('two exact orbital-ring CT drafts reach learner and private Review bindings
++ assert.equal(execFileSync('git',['merge-base',historicalRevision,revision],{cwd:atlas,windowsHide:true}).toString().trim(),historicalRevision);
+@@ -64,0 +70 @@ test('two exact orbital-ring CT drafts reach learner and private Review bindings
++  assert.deepEqual(git(revision,path),git(historicalRevision,path),`${path}: first-delivery source retained`);
+@@ -98 +104,13 @@ test('two exact orbital-ring CT drafts reach learner and private Review bindings
+- const live=await imported();
++ const current=await imported(),firstDelivery=await atlas9fReviewHistory();
++ // Historical generic Review/corpus APIs come only from immutable 9f replay.
++ // The five ring-specific exports are byte-identical at 9f and current190.
++ const live={...firstDelivery,
++  orbitalRingCtLesson:current.orbitalRingCtLesson,
++  orbitalRingCtNote:current.orbitalRingCtNote,
++  orbitalRingCtReferences:current.orbitalRingCtReferences,
++  orbitalRingCtScope:current.orbitalRingCtScope,
++  orbitalRingCtTopic:current.orbitalRingCtTopic};
++ for(const name of ['bodyContent','bodyDisplayCatalog','bodyLesson','bodyReviewContext',
++  'bodyReviewMaterial','parseBodyReviewResponse','postBodyDecision','blankBodyReview',
++  'regionalTours','structures','dissectionProfiles','contentTabs'])
++  assert(Object.hasOwn(firstDelivery,name),`Historical Review replay supplies ${name}`);
+@@ -227 +245,2 @@ test('two exact orbital-ring CT drafts reach learner and private Review bindings
+- const newPins=json('atlas-review/content/body-review-display-pins.json');
++ const newPins=JSON.parse(git(historicalRevision,'content/body-review-display-pins.json').toString());
++ const currentPins=json('atlas-review/content/body-review-display-pins.json');
+@@ -229 +248 @@ test('two exact orbital-ring CT drafts reach learner and private Review bindings
+-  sha(git(revision,'content/body-review-display-pins.json')),'Imported display pins match committed source');
++  sha(git(revision,'content/body-review-display-pins.json')),'Current imported display pins match committed source');
+@@ -235,0 +255,11 @@ test('two exact orbital-ring CT drafts reach learner and private Review bindings
++ const currentById=new Map(currentPins.pins.map((pin:any)=>[pin.structureId,pin.sha256]));
++ for(const id of selected.keys())assert.equal(currentById.get(id),newById.get(id),
++  `${id}: current ring display pin retains first delivery`);
++ const currentSource=await boundLiveAtlasHistory(revision);
++ for(const id of selected.keys()){
++  const identity=selected.get(id)!;
++  assert.deepEqual(current.bodyLesson(identity,'ct'),currentSource.bodyLesson(identity,'ct'),`${id}: current lesson`);
++  assert.deepEqual(current.bodyLesson(identity,'ct'),live.bodyLesson(identity,'ct'),`${id}: historic ring CT retained`);
++  assert.deepEqual(wire(await current.bodyReviewMaterial(id)),wire(await currentSource.bodyReviewMaterial(id)),
++   `${id}: current Review packet`);
++ }
