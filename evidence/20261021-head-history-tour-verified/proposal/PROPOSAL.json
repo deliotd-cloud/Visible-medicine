@@ -1,0 +1,109 @@
+{
+  "schema": "vm-reviewed-head-history-tour-union/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "proposedPaths": [
+    {
+      "path": "tests/head-disclosure-harness-preservation.test.mjs",
+      "preimageSha256": "94d12084491042a5b75b9fe0d36659f51d00060d0e61d5a701f99e05566ec6fc",
+      "candidateSha256": "b3e4fcef813339ee685f821c5d40de52965f81d7a7a2f75f0d678b8b82f84b29",
+      "candidateBytes": 2845
+    },
+    {
+      "path": "tests/head-image-history-anchor-harness.test.mjs",
+      "preimageSha256": "68993149a955247fa018931ccdd3c868d38a537c74c85a49d14c82adbdc85317",
+      "candidateSha256": "66645a662c9a0075e2728cd6d5b6c8aa1f714ed415ad8f6179fd92c1c4ef9527",
+      "candidateBytes": 2715
+    },
+    {
+      "path": "tests/head-native-history-current-transition.test.mjs",
+      "preimageSha256": "c3edec82dd906b0204742f77e4946d3f5a312f5e007d4edde829a7d6dce84a0c",
+      "candidateSha256": "53862d4b4c78959ab4bc2ab8b27412b00ae820df9575333766d4dbab5c961afa",
+      "candidateBytes": 8508
+    },
+    {
+      "path": "tests/head-manual-recovery-migration.test.mjs",
+      "preimageSha256": "b3ac57101707f35eacb1a7b405641440e909bfacdf05fce71185190125b0e6b3",
+      "candidateSha256": "d916732dd2c3bfc6629e830b078652a9af67e46fb7381ceaf4f75a055ab61beb",
+      "candidateBytes": 4786
+    },
+    {
+      "path": "tests/fixtures/head-disclosure-harness-preservation-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "94d12084491042a5b75b9fe0d36659f51d00060d0e61d5a701f99e05566ec6fc",
+      "candidateBytes": 2244
+    },
+    {
+      "path": "tests/fixtures/head-image-history-anchor-harness-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "68993149a955247fa018931ccdd3c868d38a537c74c85a49d14c82adbdc85317",
+      "candidateBytes": 2304
+    },
+    {
+      "path": "tests/fixtures/head-native-history-current-transition-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "c3edec82dd906b0204742f77e4946d3f5a312f5e007d4edde829a7d6dce84a0c",
+      "candidateBytes": 7381
+    },
+    {
+      "path": "tests/fixtures/head-manual-recovery-migration-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "b3ac57101707f35eacb1a7b405641440e909bfacdf05fce71185190125b0e6b3",
+      "candidateBytes": 4620
+    },
+    {
+      "path": "tests/fixtures/head-native-radial-eus-post52.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "04362adbf0d1ef51063e3943fc60b8d9693d7613a29349af2183ab1440670847",
+      "candidateBytes": 12920
+    },
+    {
+      "path": "tests/head-history-role-preservation.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "171f54cff8129b491890205f9d3b2a0ff21df0ac170943498d4018132f353d2c",
+      "candidateBytes": 4644
+    },
+    {
+      "path": "tests/clinical-review-upper-venous-tour.test.ts",
+      "preimageSha256": "c961ee464f01135f7238a81d1f14d3811b2d904e2e5602e9f6256f41d05d71f4",
+      "candidateSha256": "58876d6c84dc39aab6330e7a8a24f2656efa3c9223ae72470dc6bfa47d0c395d",
+      "candidateBytes": 5654
+    },
+    {
+      "path": "tests/fixtures/clinical-review-upper-venous-tour-before-role-20261021.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "c961ee464f01135f7238a81d1f14d3811b2d904e2e5602e9f6256f41d05d71f4",
+      "candidateBytes": 4309
+    },
+    {
+      "path": "tests/clinical-review-urinary-tract-tour.test.ts",
+      "preimageSha256": "7d43a3927a06eb037ebbbe0be417873ff363f7c5b598cbfe8680e4be059ef3f8",
+      "candidateSha256": "4c6f812f8aa70219073f79c7972b9b8881e567638e9e721e7ba7fe651eca31d2",
+      "candidateBytes": 8644
+    },
+    {
+      "path": "tests/fixtures/clinical-review-urinary-tract-tour-before-role-20261021.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "7d43a3927a06eb037ebbbe0be417873ff363f7c5b598cbfe8680e4be059ef3f8",
+      "candidateBytes": 7110
+    },
+    {
+      "path": "tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "425a72be30edf51159b4c2cc19bc12c15866372b4b8e2793b465deda7eef63e2",
+      "candidateBytes": 5534
+    }
+  ],
+  "sources": [
+    [
+      "F:/VisibleMedicine/staging/20261021-head-history-role-proposal",
+      "54bd54e04ec7fba57c2b643cb9529019f2fe1f04c5689d0b79c26c2ab7c4648b"
+    ],
+    [
+      "F:/VisibleMedicine/staging/20261021-venous-urinary-role-proposal-v3",
+      "e52fa606ecc3e0f4f6bdc601a02c957cd9218bd13db7d9d45785341f097f6c16"
+    ]
+  ],
+  "scope": "Four head historical readers and two current tour tests, complete authenticated full-file witnesses/guards only. Main reviewed every existing reader, full inverses and direct consumer closure. Retains closed52/53 and original tour refusal assertions; current190 delivery/packets independently checked. No product or private state edit."
+}

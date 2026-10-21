@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T15:01:44.881Z",
+  "at": "2026-10-21T15:20:21.606Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5235,
+    "canonicalNamedInputs": 5244,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "ebc25b451a183bb4950c710a50459596cfff992d",
-  "gitParent": "ebc25b451a183bb4950c710a50459596cfff992d",
+  "parent": "aa835a2805cd3a24f1b9f0bc9aea438aca77bbd6",
+  "gitParent": "aa835a2805cd3a24f1b9f0bc9aea438aca77bbd6",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4315,6 +4315,206 @@
       "path": "evidence/20261021-guided-limb-reliability-checkpoint/proposal/PROPOSAL.json",
       "bytes": 4596,
       "sha256": "738c7241f41dba8f8c372570d1db58fca72cf31da605125520d4c940ce61d1ab"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/admission.json",
+      "bytes": 1982,
+      "sha256": "da2cd83d59e1eec4b60fdf99fdd4c8f9962b73f40c04c2b70c8ae666c9b61f1e"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/admission.mjs",
+      "bytes": 10037,
+      "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/advance-scoped-routing.mjs",
+      "bytes": 3835,
+      "sha256": "2cfb2457f247ec619e08ec64b63b6d63c4a7f28abba991d7aec49a14e41b9c22"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/checkpoint-config.json",
+      "bytes": 3845,
+      "sha256": "e9205eb8375bfc9597a993808004d8fc712751f68e6d62417031bc92a06c1988"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7636,
+      "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7627,
+      "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/route-camera-receipt.mjs",
+      "bytes": 3967,
+      "sha256": "28ef5b98dfa14ddd6413487af9cd07f086e8ae08ca3ab45ab296e7845b7f67a4"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/routing.json",
+      "bytes": 593,
+      "sha256": "3b6b731535cdc07b41b5755e6b345041b8e4d70ce0fd3c66e2a46162faf17716"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/union-proposal.mjs",
+      "bytes": 2119,
+      "sha256": "1a4f5b0e3b5f55685ff3569760bd8bd543e5e88458379196ce4bc73611355ba5"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/controls/venous-urinary-proposal.mjs",
+      "bytes": 7039,
+      "sha256": "9b83a17bae90366fa3c4dcd71bb12da0c6ac706a8251283073b1e8b96d485df3"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/deferred/closed54-55-diagnosis.json",
+      "bytes": 3808,
+      "sha256": "dd28db2a6de958e8ffde6579a704cd188d430627998ffb37c5eb1930b27f26c2"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/evidence/APPLICATION.json",
+      "bytes": 6396,
+      "sha256": "521739ca5eb3aa26ae75a718564562340b1c23ae9c9d90020dd75af73cc0c930"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/evidence/native.json",
+      "bytes": 1139,
+      "sha256": "edfca15e464bf5c63c53334d488418a451eea69654a48ab268160270dfd62438"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/evidence/PROOF.json",
+      "bytes": 3382,
+      "sha256": "2805334a87cd89939526743f4a5a4140106f409c38bbfa07f0d6c337bb00b45b"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/clinical-review-upper-venous-tour.test.ts",
+      "bytes": 5654,
+      "sha256": "58876d6c84dc39aab6330e7a8a24f2656efa3c9223ae72470dc6bfa47d0c395d"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/clinical-review-urinary-tract-tour.test.ts",
+      "bytes": 8644,
+      "sha256": "4c6f812f8aa70219073f79c7972b9b8881e567638e9e721e7ba7fe651eca31d2"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/fixtures/clinical-review-upper-venous-tour-before-role-20261021.test.ts.raw",
+      "bytes": 4309,
+      "sha256": "c961ee464f01135f7238a81d1f14d3811b2d904e2e5602e9f6256f41d05d71f4"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/fixtures/clinical-review-urinary-tract-tour-before-role-20261021.test.ts.raw",
+      "bytes": 7110,
+      "sha256": "7d43a3927a06eb037ebbbe0be417873ff363f7c5b598cbfe8680e4be059ef3f8"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/fixtures/head-disclosure-harness-preservation-before-role-20261021.mjs.raw",
+      "bytes": 2244,
+      "sha256": "94d12084491042a5b75b9fe0d36659f51d00060d0e61d5a701f99e05566ec6fc"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/fixtures/head-image-history-anchor-harness-before-role-20261021.mjs.raw",
+      "bytes": 2304,
+      "sha256": "68993149a955247fa018931ccdd3c868d38a537c74c85a49d14c82adbdc85317"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/fixtures/head-manual-recovery-migration-before-role-20261021.mjs.raw",
+      "bytes": 4620,
+      "sha256": "b3ac57101707f35eacb1a7b405641440e909bfacdf05fce71185190125b0e6b3"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/fixtures/head-native-history-current-transition-before-role-20261021.mjs.raw",
+      "bytes": 7381,
+      "sha256": "c3edec82dd906b0204742f77e4946d3f5a312f5e007d4edde829a7d6dce84a0c"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/fixtures/head-native-radial-eus-post52.mjs.raw",
+      "bytes": 12920,
+      "sha256": "04362adbf0d1ef51063e3943fc60b8d9693d7613a29349af2183ab1440670847"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/head-disclosure-harness-preservation.test.mjs",
+      "bytes": 2845,
+      "sha256": "b3e4fcef813339ee685f821c5d40de52965f81d7a7a2f75f0d678b8b82f84b29"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/head-history-role-preservation.test.mjs",
+      "bytes": 4644,
+      "sha256": "171f54cff8129b491890205f9d3b2a0ff21df0ac170943498d4018132f353d2c"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/head-image-history-anchor-harness.test.mjs",
+      "bytes": 2715,
+      "sha256": "66645a662c9a0075e2728cd6d5b6c8aa1f714ed415ad8f6179fd92c1c4ef9527"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/head-manual-recovery-migration.test.mjs",
+      "bytes": 4786,
+      "sha256": "d916732dd2c3bfc6629e830b078652a9af67e46fb7381ceaf4f75a055ab61beb"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 8508,
+      "sha256": "53862d4b4c78959ab4bc2ab8b27412b00ae820df9575333766d4dbab5c961afa"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/installed-website/tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "bytes": 5534,
+      "sha256": "425a72be30edf51159b4c2cc19bc12c15866372b4b8e2793b465deda7eef63e2"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/preimages/tests/clinical-review-upper-venous-tour.test.ts",
+      "bytes": 4309,
+      "sha256": "c961ee464f01135f7238a81d1f14d3811b2d904e2e5602e9f6256f41d05d71f4"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/preimages/tests/clinical-review-urinary-tract-tour.test.ts",
+      "bytes": 7110,
+      "sha256": "7d43a3927a06eb037ebbbe0be417873ff363f7c5b598cbfe8680e4be059ef3f8"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/preimages/tests/head-disclosure-harness-preservation.test.mjs",
+      "bytes": 2244,
+      "sha256": "94d12084491042a5b75b9fe0d36659f51d00060d0e61d5a701f99e05566ec6fc"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/preimages/tests/head-image-history-anchor-harness.test.mjs",
+      "bytes": 2304,
+      "sha256": "68993149a955247fa018931ccdd3c868d38a537c74c85a49d14c82adbdc85317"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/preimages/tests/head-manual-recovery-migration.test.mjs",
+      "bytes": 4620,
+      "sha256": "b3ac57101707f35eacb1a7b405641440e909bfacdf05fce71185190125b0e6b3"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/preimages/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 7381,
+      "sha256": "c3edec82dd906b0204742f77e4946d3f5a312f5e007d4edde829a7d6dce84a0c"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/proposal/PROPOSAL.json",
+      "bytes": 5020,
+      "sha256": "7201c6b906e8d51857ed310edbfe596209f504949fd9d63b3cce3e8429b2cd5b"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/proposals/head-history.json",
+      "bytes": 4759,
+      "sha256": "54bd54e04ec7fba57c2b643cb9529019f2fe1f04c5689d0b79c26c2ab7c4648b"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/proposals/venous-urinary.json",
+      "bytes": 2513,
+      "sha256": "e52fa606ecc3e0f4f6bdc601a02c957cd9218bd13db7d9d45785341f097f6c16"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/routing/after-head-history.json",
+      "bytes": 71317,
+      "sha256": "cf9117976099c34f66b038550f1fb8eeca74c5b78465237e2da5b92c67b4f357"
+    },
+    {
+      "path": "evidence/20261021-head-history-tour-verified/routing/with-existing-camera-pass.json",
+      "bytes": 69634,
+      "sha256": "2caed9e1d12f19f3ac8414e6d84e350a7eaf5cca3ce64ab8b732fcde78f8a510"
     },
     {
       "path": "evidence/20261021-head-role-union-verified/controls/admit-closed56-role-repair-20261021.mjs",
@@ -10288,9 +10488,9 @@
     }
   ],
   "removed": [],
-  "scope": "Nine current thoracic test/raw paths plus explicit five tour and three final shoulder paths, originals, reviewed proposals, separate actual native receipts including main correction, and bounded routing evidence. No raw TAP or private data. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Fifteen test/raw paths, full originals and source-only proposals, actual compact native receipts, bounded routing and sanitized deferred historical diagnosis only. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T15:01:38.439Z",
+    "at": "2026-10-21T15:20:14.142Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -10298,8 +10498,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5235,
-    "controlledSourceInputs": 5228,
+    "currentNamedInputs": 5244,
+    "controlledSourceInputs": 5237,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -10309,18 +10509,18 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "1984f521830b24fb9a3823b57b7f720371a96d4924ced4aa0b745023180e7ebd",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "98f93666687d8b47aff045bf8929fd209c3c0a6e36ca72eb0f21252a0c5ad186",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "51809d2f667f26e0801e5fd8a64c48e1027d4364e0a32a9f5a4d75d174336ea1",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "5054c06998b70e9930f7cfddbc11c0e36b61e366feeec6d64465c42229a070ff",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 9,
-    "existingEditedTestPaths": 4,
+    "installedTestOnlyPaths": 15,
+    "existingEditedTestPaths": 6,
     "actualNativeCode": 0,
     "actualNativeCounts": {
-      "tests": 44,
-      "pass": 44,
+      "tests": 243,
+      "pass": 243,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
@@ -10335,7 +10535,7 @@
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "milestone": "Seventeen final test/raw paths across three source-role batches. Separate actual shoulder38/38 verifies original146mesh,9936placement,1104packet and refusal obligations; tour45/45 verifies authentic77ac/saved9f history,current190 imaging notes and corrected quick-check hosts; thoracic44/44 verifies four authored/current teaching modules, complete Website-bound packets and all original refusals. Main initial38/37/1 is retained: an added chronological-staleness assertion was false for identical material and was removed; complete original shoulder assertions now differ only at three current-source/root seams. Bounded routing retains87original failures:39later exact-title passes,8root passes with incomparable titles,40not covered by listed complete-pass runs, not40remaining failures. No product/clinical/private/owner-preview changes or whole-suite claim.",
+    "milestone": "Actual11-root243/243/0skip/0cancel passes after15 exact test/witness paths. Full disclosure/index-keyboard and anchor inverses, authentic closed52 radial and closed53 native histories remain; actual current190 delivery, real head navigation/history harnesses and complete renderer-bound upper-venous/urinary tour packets pass independently. Main corrected an initial staged Git API seam and removed unnecessary dynamic hash substitution before admission; all original source hashes, stops, frames and rejection cases survive. Two retained camera/tour roots are routed from their existing17/17 receipt without rerun. Original87 failure rows remain:47 later exact-title scoped passes,8 title-incomparable root passes,32 not covered by listed complete-pass runs, not32 remaining failures. Three closed54/55 historical fallback obligations are explicitly deferred with source-bound diagnosis; no product or clinical changes.",
     "fullSuitePassingClaim": false,
     "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,

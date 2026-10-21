@@ -1,0 +1,29 @@
+{
+  "schema": "vm-deferred-read-only-diagnosis-1",
+  "status": "deferred-no-proposal-no-native-pass",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshotAtObservation": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "51809d2f667f26e0801e5fd8a64c48e1027d4364e0a32a9f5a4d75d174336ea1",
+  "unchangedTests": [
+    {"path":"tests/head-manual-recovery-53-to-54-closed.test.mjs","sha256":"44447da331496d3685c360eda3199cc18fa7a194cb556384167f33ccbf979dae"},
+    {"path":"tests/head-manual-recovery-54-to-55-closed.test.mjs","sha256":"980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c"}
+  ],
+  "failedObligations": [
+    {"originalInventoryCase":188,"test":"closed53 remains historical while current admission binds exactly two changed website inputs","firstFailedPath":"app/atlas/head-neck-3d/head-learning.css","helper":"tests/historical-current-atlas-delivery-54.mjs:readRevision54 -> tests/historical-current-atlas-delivery-55.mjs:readRevision55 for selected input, then closed54 hash assertion"},
+    {"originalInventoryCase":192,"test":"current source and Review bind exactly six changed and three added website inputs","firstFailedPath":"app/atlas/head-neck-3d/head-learning.css","helper":"tests/historical-current-atlas-delivery-55.mjs:readRevision55 live fallback with closed55 hash assertion"},
+    {"originalInventoryCase":193,"test":"Review import changed only the mapped superficial plantar content and revision records","firstFailedPath":"atlas-review/lib/body-review-material.ts","helper":"tests/historical-current-atlas-delivery-55.mjs:readRevision55 live fallback with closed55 imported binding assertion"}
+  ],
+  "sourceRoleEvidence": {
+    "closed54Inputs": 1658,
+    "closed55Inputs": 1661,
+    "currentWebsiteHashMismatchesAgainstEachEpoch": 47,
+    "closed53FullReaderVsClosed54InputBindings": "Only the two declared closed53-to-54 changes differ: components/HeadAtlasComparisonNavigation.tsx and components/HeadAtlasLinkedModel.tsx. This is a read-only comparison, not a replacement for the complete closed54/55 validators.",
+    "headLearningCss": {"closed54And55Sha256":"3a3117cdcb03a50c1bb42992d036139e22366fefd76d00283c5c57c7e46f9767","currentWebsiteSha256":"70eb06e2246820bf4b752aa857a4ddeb67f105bfe31361469bd9cb81afd5db83","authenticatedMatchingRecoveryExample":"F:/VisibleMedicine/recovery/checkpoints/20261018-head-native-history-source-backup/remote-source-restored/app/atlas/head-neck-3d/head-learning.css"},
+    "bodyReviewMaterial": {"closed54And55Sha256":"75e927f73854fd44554a34e9d8e9a923a3b7a0108b39489132c85c0243ce303e","currentWebsiteSha256":"b40b89e5eb4ffb30feee1ec7064be6e1d52f3add0ce6bc0b6e0bc319610968b5","authenticatedMatchingRecoveryExample":"F:/VisibleMedicine/recovery/checkpoints/20261011-cerebellar-clinical/website-before/source/atlas-review/lib/body-review-material.ts"}
+  },
+  "verificationLimit": "Only read-only source/hash comparisons were made. No candidate files, fixture copies, source edits, guard, native rerun, build or browser work were produced. The two historical tests and all original complete-source/count/digest/refusal obligations remain unchanged and unresolved; the retained original87 cases are not counted as passes.",
+  "nextScopeDecision": "Parent deferred broad 47-path historical-source restoration. A later authorized repair must preserve the existing exported historical validators and authenticate the full closed54/55 source roles; it must not simply repin hashes or substitute moving current190 bytes."
+}

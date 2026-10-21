@@ -1,0 +1,26 @@
+{
+  "schema": "vm-bounded-staged-proposal-1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshotAtObservation": "F:/VisibleMedicine/staging/20261021-thoracic-teaching-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "1984f521830b24fb9a3823b57b7f720371a96d4924ced4aa0b745023180e7ebd",
+  "proposedPaths": [
+    {"path":"tests/head-disclosure-harness-preservation.test.mjs","preimageSha256":"94d12084491042a5b75b9fe0d36659f51d00060d0e61d5a701f99e05566ec6fc","candidateSha256":"b3e4fcef813339ee685f821c5d40de52965f81d7a7a2f75f0d678b8b82f84b29","candidateBytes":2845},
+    {"path":"tests/head-image-history-anchor-harness.test.mjs","preimageSha256":"68993149a955247fa018931ccdd3c868d38a537c74c85a49d14c82adbdc85317","candidateSha256":"66645a662c9a0075e2728cd6d5b6c8aa1f714ed415ad8f6179fd92c1c4ef9527","candidateBytes":2715},
+    {"path":"tests/head-native-history-current-transition.test.mjs","preimageSha256":"c3edec82dd906b0204742f77e4946d3f5a312f5e007d4edde829a7d6dce84a0c","candidateSha256":"53862d4b4c78959ab4bc2ab8b27412b00ae820df9575333766d4dbab5c961afa","candidateBytes":8508},
+    {"path":"tests/head-manual-recovery-migration.test.mjs","preimageSha256":"b3ac57101707f35eacb1a7b405641440e909bfacdf05fce71185190125b0e6b3","candidateSha256":"d916732dd2c3bfc6629e830b078652a9af67e46fb7381ceaf4f75a055ab61beb","candidateBytes":4786},
+    {"path":"tests/fixtures/head-disclosure-harness-preservation-before-role-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"94d12084491042a5b75b9fe0d36659f51d00060d0e61d5a701f99e05566ec6fc","candidateBytes":2244},
+    {"path":"tests/fixtures/head-image-history-anchor-harness-before-role-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"68993149a955247fa018931ccdd3c868d38a537c74c85a49d14c82adbdc85317","candidateBytes":2304},
+    {"path":"tests/fixtures/head-native-history-current-transition-before-role-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"c3edec82dd906b0204742f77e4946d3f5a312f5e007d4edde829a7d6dce84a0c","candidateBytes":7381},
+    {"path":"tests/fixtures/head-manual-recovery-migration-before-role-20261021.mjs.raw","preimageSha256":null,"candidateSha256":"b3ac57101707f35eacb1a7b405641440e909bfacdf05fce71185190125b0e6b3","candidateBytes":4620},
+    {"path":"tests/fixtures/head-native-radial-eus-post52.mjs.raw","preimageSha256":null,"candidateSha256":"04362adbf0d1ef51063e3943fc60b8d9693d7613a29349af2183ab1440670847","candidateBytes":12920},
+    {"path":"tests/head-history-role-preservation.test.mjs","preimageSha256":null,"candidateSha256":"171f54cff8129b491890205f9d3b2a0ff21df0ac170943498d4018132f353d2c","candidateBytes":4644}
+  ],
+  "diagnosis": "Two disclosure harnesses and the image-history anchor needed their later index-keyboard import/branch seams enumerated before complete original-body equality. The closed52 native radial proof was reading moving current radial bytes; the exact authored post52 full body is frozen independently. The previously passing manual-recovery reader now compares its complete closed53 reconstruction against the byte-authentic pre-edit native reader. Native reader also validates real current190 delivery independently of the closed53 theorem.",
+  "historicalRadialProvenance": {"path":"F:/VisibleMedicine/recovery/checkpoints/20261018-head-native-history-source-backup/source-delta/tests/radial-eus-current-transition.test.mjs","sha256":"04362adbf0d1ef51063e3943fc60b8d9693d7613a29349af2183ab1440670847","bytes":12920,"authentication":"Exact result of the original closed52 radial full-source transformation; 84 retained checkpoint copies match this SHA."},
+  "sourceOnlyProof": {"command":"node --test F:/VisibleMedicine/staging/20261021-head-history-role-proposal/tests/head-history-role-preservation.test.mjs","result":"2/2 pass: four whole-file inverses and undeclared-mutation refusal; four candidate node --check commands passed. With non-proposed byte-exact fixture/current-source copies into staging, disclosure and anchor source-only tests passed 7/7."},
+  "deferredNative": "Main integration must admit only proposedPaths, rebase against its latest full source snapshot, then run the four repaired roots plus direct head-image-history/head-view-history-client tests in the canonical Website. No native root, build, corpus, browser, or clinical verification was run by this worker.",
+  "limits": "Stage contains non-proposed mechanical copies solely to execute the two source-only harnesses; do not admit them. No current clinical or deployment conclusion."
+}

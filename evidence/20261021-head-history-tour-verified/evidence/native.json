@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-21T15:16:16.827Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/head-disclosure-harness-preservation.test.mjs",
+    "tests/head-image-history-anchor-harness.test.mjs",
+    "tests/head-native-history-current-transition.test.mjs",
+    "tests/head-manual-recovery-migration.test.mjs",
+    "tests/head-history-role-preservation.test.mjs",
+    "tests/clinical-review-upper-venous-tour.test.ts",
+    "tests/clinical-review-urinary-tract-tour.test.ts",
+    "tests/venous-urinary-role-preservation-20261021.test.mjs",
+    "tests/head-image-history.test.ts",
+    "tests/head-view-history-client.test.mjs",
+    "tests/current-atlas-delivery.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application/native.tap",
+  "logSha256": "a78c0b76cfe59b23ad414aedb8addbf62d9d3f8c78ba0eadd3c16f873cbe6955",
+  "counts": {
+    "tests": 243,
+    "pass": 243,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

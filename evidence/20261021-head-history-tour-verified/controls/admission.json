@@ -1,0 +1,37 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-head-history-tour-union-application",
+  "manifestSha256": "7201c6b906e8d51857ed310edbfe596209f504949fd9d63b3cce3e8429b2cd5b",
+  "beforeInputs": 5228,
+  "afterInputs": 5237,
+  "expectedPaths": [
+    "tests/head-disclosure-harness-preservation.test.mjs",
+    "tests/head-image-history-anchor-harness.test.mjs",
+    "tests/head-native-history-current-transition.test.mjs",
+    "tests/head-manual-recovery-migration.test.mjs",
+    "tests/fixtures/head-disclosure-harness-preservation-before-role-20261021.mjs.raw",
+    "tests/fixtures/head-image-history-anchor-harness-before-role-20261021.mjs.raw",
+    "tests/fixtures/head-native-history-current-transition-before-role-20261021.mjs.raw",
+    "tests/fixtures/head-manual-recovery-migration-before-role-20261021.mjs.raw",
+    "tests/fixtures/head-native-radial-eus-post52.mjs.raw",
+    "tests/head-history-role-preservation.test.mjs",
+    "tests/clinical-review-upper-venous-tour.test.ts",
+    "tests/fixtures/clinical-review-upper-venous-tour-before-role-20261021.test.ts.raw",
+    "tests/clinical-review-urinary-tract-tour.test.ts",
+    "tests/fixtures/clinical-review-urinary-tract-tour-before-role-20261021.test.ts.raw",
+    "tests/venous-urinary-role-preservation-20261021.test.mjs"
+  ],
+  "roots": [
+    "tests/head-disclosure-harness-preservation.test.mjs",
+    "tests/head-image-history-anchor-harness.test.mjs",
+    "tests/head-native-history-current-transition.test.mjs",
+    "tests/head-manual-recovery-migration.test.mjs",
+    "tests/head-history-role-preservation.test.mjs",
+    "tests/clinical-review-upper-venous-tour.test.ts",
+    "tests/clinical-review-urinary-tract-tour.test.ts",
+    "tests/venous-urinary-role-preservation-20261021.test.mjs",
+    "tests/head-image-history.test.ts",
+    "tests/head-view-history-client.test.mjs",
+    "tests/current-atlas-delivery.test.mjs"
+  ]
+}

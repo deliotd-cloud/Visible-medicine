@@ -1,0 +1,40 @@
+{
+  "schema": "visible-medicine.main-venous-urinary-role-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "proposedPaths": [
+    {
+      "path": "tests/clinical-review-upper-venous-tour.test.ts",
+      "preimageSha256": "c961ee464f01135f7238a81d1f14d3811b2d904e2e5602e9f6256f41d05d71f4",
+      "candidateSha256": "58876d6c84dc39aab6330e7a8a24f2656efa3c9223ae72470dc6bfa47d0c395d",
+      "candidateBytes": 5654
+    },
+    {
+      "path": "tests/fixtures/clinical-review-upper-venous-tour-before-role-20261021.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "c961ee464f01135f7238a81d1f14d3811b2d904e2e5602e9f6256f41d05d71f4",
+      "candidateBytes": 4309
+    },
+    {
+      "path": "tests/clinical-review-urinary-tract-tour.test.ts",
+      "preimageSha256": "7d43a3927a06eb037ebbbe0be417873ff363f7c5b598cbfe8680e4be059ef3f8",
+      "candidateSha256": "4c6f812f8aa70219073f79c7972b9b8881e567638e9e721e7ba7fe651eca31d2",
+      "candidateBytes": 8644
+    },
+    {
+      "path": "tests/fixtures/clinical-review-urinary-tract-tour-before-role-20261021.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "7d43a3927a06eb037ebbbe0be417873ff363f7c5b598cbfe8680e4be059ef3f8",
+      "candidateBytes": 7110
+    },
+    {
+      "path": "tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "425a72be30edf51159b4c2cc19bc12c15866372b4b8e2793b465deda7eef63e2",
+      "candidateBytes": 5534
+    }
+  ],
+  "diagnosis": "Original upper-venous/urinary tests compare moving current manifests to immutable9f. Keep every original stop, frame, source hash, licence-scope and altered-packet assertion; authenticate complete authored tour source/API independently, and current complete packets against verified Website-renderer-bound190 replay. Exact old9f-to190 Git diff across both tours, pins and regional-tour aggregator is empty, so all original urinary source hashes remain unchanged rather than being dynamically replaced. Main corrected the initial staged historical API reader to the actual Atlas Git replay and discarded an unnecessary dynamic hash map before canonical admission.",
+  "limits": "Staged test-only proposal. Native affected roots not run yet. No product, source teaching, model, private, review decision, permissions or deployment change."
+}
