@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-21T14:23:30.194Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "preimageSha256": "2f722851cafdca21cab4e7e6594f65b434896f420e372b8e02c5d7e904aac3ae",
+      "candidateSha256": "d42841bf35bb2dd54320be3d6bbe658bd17e522b49f07763728e1485c85b1f9f",
+      "candidateBytes": 18725
+    },
+    {
+      "path": "tests/clinical-question-role-preservation-20261021.test.mjs",
+      "preimageSha256": "49f1905bda0ed55705eb648693bd686865f9295fc910158eaea273a643d6a0b9",
+      "candidateSha256": "d0bb91733cf0703739bf48db1c77bed53f592a6365e9231b984cc1d82c7c2d6a",
+      "candidateBytes": 15179
+    }
+  ],
+  "controlledInputs": 5195,
+  "preservedInputs": 7,
+  "namedInputs": 5202,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "013790d44eed861b5af80036a2ca02d960ab252855793ce24066d9e2c0d5b8cd",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:23:26.794Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/clinical-review-reasoning.test.ts",
+      "tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+      "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "tests/clinical-question-role-preservation-20261021.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/posterior-fossa-coverage.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-application/native.tap",
+    "logSha256": "a1a270e95e153d330f87ff61a782b3ea80289639525ce7d24ea76dcd3e48861c",
+    "counts": {
+      "tests": 41,
+      "pass": 41,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

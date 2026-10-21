@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-21T14:24:31.542Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/clinical-review-shoulder-ct.test.ts",
+    "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+    "tests/clinical-review-thoracic-quiz.test.ts",
+    "tests/clinical-imaging-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-application/native.tap",
+  "logSha256": "b887bb9effb6e5ac7374d7f0a58f96054afc7b9cf3dd3fc33f4041841417f1a6",
+  "counts": {
+    "tests": 39,
+    "pass": 39,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

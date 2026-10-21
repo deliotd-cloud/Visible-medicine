@@ -1,0 +1,31 @@
+{
+  "schema": "visible-medicine.staged-clinical-question-role-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "controlledSnapshot": {
+    "path": "F:/VisibleMedicine/staging/20261021-regional-link-role-application/SOURCE_INPUTS_AFTER.json",
+    "sha256": "c18f6270f59264f9420fbbff648718a96a5a0a604894cfbd92c3fbb7d7250ae0"
+  },
+  "diagnosis": [
+    "Reasoning and regional-muscle tests fail at hardcoded 9f manifest checks although exact relevant Atlas Git blobs are unchanged between 9f and current190. Current learner/Review bindings advance to190; the tests additionally read and compare authentic 9f and190 committed source bytes through checked currentAtlasDeliveryRoot() before executing original answer, laterality, emitted-content, draft, no-approval and refusal assertions.",
+    "Short-ciliary's original liveCommit variable conflated its authentic 9f one-of-9936 historical milestone with current delivery. Its quiz content/lib, full-body catalog, and regional-tours Git blobs are unchanged, but app/body-content.ts has later branches. The 9f whole-epoch one-of-9936 and packet-difference proof now replays exact 9f Git source independently against baseline; current190 imports are separately checked against the current bound live history, current manifests, emitted teaching, response parsing, stale/forged submissions and zero storage calls."
+  ],
+  "proposedPaths": [
+    {"path":"tests/clinical-review-reasoning.test.ts","preimageSha256":"43b62ba1b12c400b7ac964aa94e9b317874fef009d0e98ac025f4e6e304491a8","candidateSha256":"d8a09984ef5392e6df069e37f775e2543d09fb36b868a8af4467c32d554796fa","candidateBytes":3818},
+    {"path":"tests/clinical-review-regional-muscle-completion-quiz.test.ts","preimageSha256":"3c8c56aa397436b743f7b0b067bb59cafcb4b89f413a0f21f97e5b2d45047f9c","candidateSha256":"2a5735e0b62b7845ba73afa18c87a9e6c673dc2959f30abc7111995fe7a9a63e","candidateBytes":12345},
+    {"path":"tests/clinical-review-short-ciliary-quiz.test.ts","preimageSha256":"784380594d03080efbe80229329dadc93adcf2a09c7602fa35c12fca06f4078c","candidateSha256":"2f722851cafdca21cab4e7e6594f65b434896f420e372b8e02c5d7e904aac3ae","candidateBytes":18585},
+    {"path":"tests/clinical-question-role-preservation-20261021.test.mjs","preimageSha256":null,"candidateSha256":"49f1905bda0ed55705eb648693bd686865f9295fc910158eaea273a643d6a0b9","candidateBytes":15038},
+    {"path":"tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-reasoning.test.ts.raw","preimageSha256":null,"candidateSha256":"43b62ba1b12c400b7ac964aa94e9b317874fef009d0e98ac025f4e6e304491a8","candidateBytes":3098},
+    {"path":"tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-regional-muscle-completion-quiz.test.ts.raw","preimageSha256":null,"candidateSha256":"3c8c56aa397436b743f7b0b067bb59cafcb4b89f413a0f21f97e5b2d45047f9c","candidateBytes":11806},
+    {"path":"tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-short-ciliary-quiz.test.ts.raw","preimageSha256":null,"candidateSha256":"784380594d03080efbe80229329dadc93adcf2a09c7602fa35c12fca06f4078c","candidateBytes":17298}
+  ],
+  "focusedSourceOnlyProof": {
+    "exactRawPreimagesMatchCanonical": true,
+    "fullFilePreservation": "node --test tests/clinical-question-role-preservation-20261021.test.mjs: 1/1 pass",
+    "gitAncestry": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2 is merge-base with current190",
+    "relevantBlobIdentity": "The reasoning three, regional-muscle three, short-ciliary quiz content/lib, full-body catalog and regional-tours paths have equal Git blob IDs at 9f and190; app/body-content.ts differs.",
+    "limits": "No native clinical-question roots, typecheck, build, browser, or whole suite ran in this stage. Historical 9f whole-epoch replay, current190 behavior, emitted content and store refusal require main's actual guarded native execution; source-only guard pass is not behavior pass."
+  },
+  "scope": "F-local staged tests, raw witnesses and guard only; no canonical, product, runtime, generated, validator, fixture JSON, clinical or deployment changes."
+}

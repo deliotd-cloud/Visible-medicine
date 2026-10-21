@@ -1,0 +1,19 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-application",
+  "manifestSha256": "587c1927743802b6b0ff79b8aa38f30057a006130c1a7ce00d5835b6af567b33",
+  "beforeInputs": 5195,
+  "afterInputs": 5195,
+  "expectedPaths": [
+    "tests/clinical-review-short-ciliary-quiz.test.ts",
+    "tests/clinical-question-role-preservation-20261021.test.mjs"
+  ],
+  "roots": [
+    "tests/clinical-review-reasoning.test.ts",
+    "tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+    "tests/clinical-review-short-ciliary-quiz.test.ts",
+    "tests/clinical-question-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}

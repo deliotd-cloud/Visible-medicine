@@ -1,0 +1,98 @@
+{
+  "at": "2026-10-21T14:24:34.309Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/clinical-review-shoulder-ct.test.ts",
+      "preimageSha256": "00be69c54d4d6fe7cf98a089d7b0e444efd508452a9e3a5f11fc95e86391b3a7",
+      "candidateSha256": "1f07449dc566d996bd436cbe0b96abd5fc5aa48e5ddc1774b2ba2c30fec69d51",
+      "candidateBytes": 4894
+    },
+    {
+      "path": "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+      "preimageSha256": "36cef6295314eaafe9413a01ff0568e63c4369032edfbb2af49661d4c13ac4ee",
+      "candidateSha256": "0c28be9eefcd1378b3e498e3aa1de9f2be2f9c3be1e3652d487b3a4f587522bf",
+      "candidateBytes": 9631
+    },
+    {
+      "path": "tests/clinical-review-thoracic-quiz.test.ts",
+      "preimageSha256": "87acd111d474a2791105f841b6e9e431869d22b29b7b851df05701b0f829b630",
+      "candidateSha256": "3cfd396b7380760b75443b4ba76e1e0aa9bd85433c700bcd7f22da230543936a",
+      "candidateBytes": 4780
+    },
+    {
+      "path": "tests/clinical-imaging-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "6a5663260ede388a42fc262940c0c6f5300765ca536ae420c6d588fe8c4be5ff",
+      "candidateBytes": 11002
+    },
+    {
+      "path": "tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-shoulder-ct.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "00be69c54d4d6fe7cf98a089d7b0e444efd508452a9e3a5f11fc95e86391b3a7",
+      "candidateBytes": 3899
+    },
+    {
+      "path": "tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-spinal-disc-ultrasound.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "36cef6295314eaafe9413a01ff0568e63c4369032edfbb2af49661d4c13ac4ee",
+      "candidateBytes": 9028
+    },
+    {
+      "path": "tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-thoracic-quiz.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "87acd111d474a2791105f841b6e9e431869d22b29b7b851df05701b0f829b630",
+      "candidateBytes": 4173
+    }
+  ],
+  "controlledInputs": 5199,
+  "preservedInputs": 7,
+  "namedInputs": 5206,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "2d56a6f1428a1e6ef3c78fcf22790a6711c0ab01888b277660e014c3663f2601",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:24:31.542Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/clinical-review-shoulder-ct.test.ts",
+      "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+      "tests/clinical-review-thoracic-quiz.test.ts",
+      "tests/clinical-imaging-role-preservation-20261021.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/posterior-fossa-coverage.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-application/native.tap",
+    "logSha256": "b887bb9effb6e5ac7374d7f0a58f96054afc7b9cf3dd3fc33f4041841417f1a6",
+    "counts": {
+      "tests": 39,
+      "pass": 39,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

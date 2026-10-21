@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-21T14:20:24.842Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/clinical-review-reasoning.test.ts",
+    "tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+    "tests/clinical-review-short-ciliary-quiz.test.ts",
+    "tests/clinical-question-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-clinical-question-role-application/native.tap",
+  "logSha256": "a3e96f95530aec8fd7bdcfac8c9a2a1f00dd21248c77e99df052efad8a42e58c",
+  "counts": {
+    "tests": 41,
+    "pass": 40,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [
+    {
+      "number": 5,
+      "title": "short-ciliary quiz preserves other epochs and refuses stale or forged Review submissions"
+    }
+  ],
+  "rawLogLocalOnly": true
+}

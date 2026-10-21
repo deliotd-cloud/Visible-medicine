@@ -1,0 +1,114 @@
+{
+  "root": "F:/VisibleMedicine/recovery/checkpoints/20261021-clinical-teaching-current-verified",
+  "stage": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-application",
+  "previous": "F:/VisibleMedicine/recovery/checkpoints/20261021-regional-link-current-verified",
+  "proposal": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-proposal",
+  "changedPaths": 7,
+  "controlledInputs": 5199,
+  "checklistRevision": 116,
+  "nativeCode": 0,
+  "nativeCounts": {
+    "tests": 39,
+    "pass": 39,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "parentHead": "f9fe4a61a050578659aef21c72736de2f9e62f5b",
+  "repo": "F:/VisibleMedicine/history/website-work/github-clinical-teaching-current-20261021.git",
+  "branch": "backup/clinical-teaching-current-20261021",
+  "milestone": "Fourteen exact test/raw-witness paths repair current190 reasoning,regional-muscle,short-ciliary,shoulderCT,spinal-disc Ultrasound and thoracic quiz checks without product/content edits. Actual question6-root41/41 and separate imaging6-root39/39 verify answers, learner/Review bindings, emitted content and stale/forged refusals. The initial41/40/1 receipt is retained: main traced short-ciliary historical exclusivity to authentic280c, immediate child of0a, instead of later9f with intervening X-ray drafts. Both original full-file guards and every original count/refusal obligation remain. All full failure baselines retained; owner forms/private source/Review untouched.",
+  "scope": "Seven installed imaging test/raw paths plus explicitly selected seven final question paths, original preimages, both reviewed proposals, exact authored-epoch correction and separate actual native receipts. Test-side reliability repair only.",
+  "extraFiles": [
+    {
+      "from": "admit-closed56-role-repair-20261021.mjs",
+      "to": "controls/admission.mjs"
+    },
+    {
+      "from": "clinical-imaging-role-admission-20261021.json",
+      "to": "controls/imaging-admission.json"
+    },
+    {
+      "from": "clinical-question-role-admission-20261021.json",
+      "to": "controls/question-admission.json"
+    },
+    {
+      "from": "short-ciliary-authored-epoch-admission-20261021.json",
+      "to": "controls/authored-epoch-admission.json"
+    },
+    {
+      "from": "prepare-short-ciliary-authored-epoch-20261021.mjs",
+      "to": "controls/authored-epoch-proposal-emitter.mjs"
+    },
+    {
+      "from": "emit-coordination-checkpoint.mjs",
+      "to": "controls/emit-coordination-checkpoint.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-question-role-proposal/PROPOSAL.json",
+      "to": "question-proposal/PROPOSAL.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-proposal/PROPOSAL.json",
+      "to": "authored-epoch-proposal/PROPOSAL.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-question-role-application/APPLICATION.json",
+      "to": "question-evidence/original-APPLICATION.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-question-role-application/native.json",
+      "to": "question-evidence/original-native.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-application/APPLICATION.json",
+      "to": "question-evidence/corrected-APPLICATION.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-application/native.json",
+      "to": "question-evidence/corrected-native.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/clinical-review-reasoning.test.ts",
+      "to": "installed-website/tests/clinical-review-reasoning.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-question-role-application/preimages/tests/clinical-review-reasoning.test.ts",
+      "to": "question-preimages/tests/clinical-review-reasoning.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+      "to": "installed-website/tests/clinical-review-regional-muscle-completion-quiz.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-question-role-application/preimages/tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+      "to": "question-preimages/tests/clinical-review-regional-muscle-completion-quiz.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/clinical-review-short-ciliary-quiz.test.ts",
+      "to": "installed-website/tests/clinical-review-short-ciliary-quiz.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-clinical-question-role-application/preimages/tests/clinical-review-short-ciliary-quiz.test.ts",
+      "to": "question-preimages/tests/clinical-review-short-ciliary-quiz.test.ts"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/clinical-question-role-preservation-20261021.test.mjs",
+      "to": "installed-website/tests/clinical-question-role-preservation-20261021.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-reasoning.test.ts.raw",
+      "to": "installed-website/tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-reasoning.test.ts.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-regional-muscle-completion-quiz.test.ts.raw",
+      "to": "installed-website/tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-regional-muscle-completion-quiz.test.ts.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-short-ciliary-quiz.test.ts.raw",
+      "to": "installed-website/tests/fixtures/clinical-question-before-role-batch-20261021/clinical-review-short-ciliary-quiz.test.ts.raw"
+    }
+  ],
+  "next": "Main-review the corpus/UI eight-test closure when authentic6036 whole-source readers and mutation obligations are complete; execute actual affected behavior once after coherent guarded admission. Continue useful independent desktop/CT/MRI/existing3D and website acceptance without clinical-review stall. Keep original full-suite failures, separate receipts and all review/privacy gates; no owner refresh,public deployment,fees or desktopPACS edits."
+}

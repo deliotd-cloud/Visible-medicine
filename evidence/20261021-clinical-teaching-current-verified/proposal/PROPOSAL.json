@@ -1,0 +1,27 @@
+{
+  "schema": "visible-medicine.staged-clinical-imaging-role-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "diagnosis": [
+    "The requested regional-quick-check and spinal-disc-us filenames do not exist. Main confirmed exact prior-triage substitute roots: clinical-review-thoracic-quiz.test.ts (case80) and clinical-review-spinal-disc-ultrasound.test.ts (case73), plus existing clinical-review-shoulder-ct.test.ts (case69).",
+    "The three roots fail fast at historical 9f revision assertions while current learner and Review are bound to190. Each proposed root retains its original quiz, source-identity, laterality, emitted-text, draft/no-approval and refusal behavior and additionally verifies authentic 9f Git source against current190 for its feature-specific files through checked currentAtlasDeliveryRoot().",
+    "Shoulder CT's fixed 92add dispatcher digest is authentic historical9f evidence; current190 app/body-content.ts is different because of later drafts. The historical digest is checked against committed9f bytes, while current Review and learner dispatcher hashes are independently checked against committed190 bytes and exact 3deda6 digest. The original current-behavior assertions remain."
+  ],
+  "proposedPaths": [
+    {"path":"tests/clinical-review-shoulder-ct.test.ts","preimageSha256":"00be69c54d4d6fe7cf98a089d7b0e444efd508452a9e3a5f11fc95e86391b3a7","candidateSha256":"1f07449dc566d996bd436cbe0b96abd5fc5aa48e5ddc1774b2ba2c30fec69d51","candidateBytes":4894},
+    {"path":"tests/clinical-review-spinal-disc-ultrasound.test.ts","preimageSha256":"36cef6295314eaafe9413a01ff0568e63c4369032edfbb2af49661d4c13ac4ee","candidateSha256":"0c28be9eefcd1378b3e498e3aa1de9f2be2f9c3be1e3652d487b3a4f587522bf","candidateBytes":9631},
+    {"path":"tests/clinical-review-thoracic-quiz.test.ts","preimageSha256":"87acd111d474a2791105f841b6e9e431869d22b29b7b851df05701b0f829b630","candidateSha256":"3cfd396b7380760b75443b4ba76e1e0aa9bd85433c700bcd7f22da230543936a","candidateBytes":4780},
+    {"path":"tests/clinical-imaging-role-preservation-20261021.test.mjs","preimageSha256":null,"candidateSha256":"6a5663260ede388a42fc262940c0c6f5300765ca536ae420c6d588fe8c4be5ff","candidateBytes":11002},
+    {"path":"tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-shoulder-ct.test.ts.raw","preimageSha256":null,"candidateSha256":"00be69c54d4d6fe7cf98a089d7b0e444efd508452a9e3a5f11fc95e86391b3a7","candidateBytes":3899},
+    {"path":"tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-spinal-disc-ultrasound.test.ts.raw","preimageSha256":null,"candidateSha256":"36cef6295314eaafe9413a01ff0568e63c4369032edfbb2af49661d4c13ac4ee","candidateBytes":9028},
+    {"path":"tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-thoracic-quiz.test.ts.raw","preimageSha256":null,"candidateSha256":"87acd111d474a2791105f841b6e9e431869d22b29b7b851df05701b0f829b630","candidateBytes":4173}
+  ],
+  "focusedSourceOnlyProof": {
+    "exactRawPreimagesMatchCanonical": true,
+    "wholeFileGuard": "node --check and node --test tests/clinical-imaging-role-preservation-20261021.test.mjs: 1/1 pass",
+    "gitBlobReview": "Feature-specific shoulder CT, spinal-disc ultrasound and thoracic quiz files have equal 9f and190 Git blob IDs; app/body-content.ts differs. Historical9f dispatcher SHA256=92add5e49675680abd55f687c08e7d4bbcfcb0ab34e1e0f611cc3da74c3fef9f and current190 SHA256=3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2 were verified from Git bytes.",
+    "limits": "No native behavior roots, build, typecheck, browser or whole suite ran in this stage. Main must execute all three roots after guarded admission; source-only guard success is not a behavior pass."
+  },
+  "scope": "F-local staged tests, raw witnesses and guard only; no canonical, product, generated, validator, fixture JSON, clinical or deployment writes."
+}

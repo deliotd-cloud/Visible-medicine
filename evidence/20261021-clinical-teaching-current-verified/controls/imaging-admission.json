@@ -1,0 +1,24 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-application",
+  "manifestSha256": "30fe596af7dfea6257771d56d37938bf82882eb0cfb26a2e6358fdd2922ee9b8",
+  "beforeInputs": 5195,
+  "afterInputs": 5199,
+  "expectedPaths": [
+    "tests/clinical-review-shoulder-ct.test.ts",
+    "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+    "tests/clinical-review-thoracic-quiz.test.ts",
+    "tests/clinical-imaging-role-preservation-20261021.test.mjs",
+    "tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-shoulder-ct.test.ts.raw",
+    "tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-spinal-disc-ultrasound.test.ts.raw",
+    "tests/fixtures/clinical-imaging-before-role-batch-20261021/clinical-review-thoracic-quiz.test.ts.raw"
+  ],
+  "roots": [
+    "tests/clinical-review-shoulder-ct.test.ts",
+    "tests/clinical-review-spinal-disc-ultrasound.test.ts",
+    "tests/clinical-review-thoracic-quiz.test.ts",
+    "tests/clinical-imaging-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}

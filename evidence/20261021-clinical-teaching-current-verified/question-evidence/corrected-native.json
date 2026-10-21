@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-21T14:23:26.794Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/clinical-review-reasoning.test.ts",
+    "tests/clinical-review-regional-muscle-completion-quiz.test.ts",
+    "tests/clinical-review-short-ciliary-quiz.test.ts",
+    "tests/clinical-question-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-short-ciliary-authored-epoch-application/native.tap",
+  "logSha256": "a1a270e95e153d330f87ff61a782b3ea80289639525ce7d24ea76dcd3e48861c",
+  "counts": {
+    "tests": 41,
+    "pass": 41,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}
