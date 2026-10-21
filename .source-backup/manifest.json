@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T04:17:26.765Z",
+  "at": "2026-10-21T04:36:22.869Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "website": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "inputCount": 5087
+    "tree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "websiteInputCount": 5095
   },
-  "parent": "ede7c5d56d0885d24fbd596f68da492a83249352",
-  "gitParent": "ede7c5d56d0885d24fbd596f68da492a83249352",
+  "parent": "6b867cb1d3878742db325ef18504bd5beb3eb51e",
+  "gitParent": "6b867cb1d3878742db325ef18504bd5beb3eb51e",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3630,6 +3631,301 @@
       "sha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a"
     },
     {
+      "path": "evidence/20261021-source190-website-verified/evidence/BIND_BUILD.json",
+      "bytes": 1414,
+      "sha256": "1fe48c5f4f6797dd952e5af89f92fc2bc8d4ab85d1b55288f4940c6684def2fe"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/coverage/coverage/candidate-manifest.json",
+      "bytes": 11130,
+      "sha256": "ac61f5acf2701e108ca9822cb9be8ab2c64429df1491eb8ceb4c5da7a2b3fed2"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/coverage/GENERATE_SOURCE190_COVERAGE.json",
+      "bytes": 650,
+      "sha256": "0c036361909296d4f815946cc69a33cd54cb8dfa1e22625f0f21870d05825a54"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/delivery/atlas-review/integration-inputs.json",
+      "bytes": 268954,
+      "sha256": "69092b905e27e50b748a73344214a050e35cd4eb345bcebe19887b6867b8b82d"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/delivery/atlas-review/manifest.json",
+      "bytes": 377660,
+      "sha256": "b4ba7a95f08fe473d838a9be700dc76de8c3484879cadf2464b416d532e8881f"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/delivery/public/atlas-review-viewer/manifest.json",
+      "bytes": 9033,
+      "sha256": "84e9c2a9c578ba8f4e54e171ad4aa573d549fb5951e07e24fc30a2a910d36152"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/EXACT_NATIVE_ADMISSION.json",
+      "bytes": 1653,
+      "sha256": "559354d6fd108a43a736c6c7ed7e90efb4ec204a51cb59d17a44f8b8f9ee9171"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/EXPLICIT_ENTRY_SCOPE.json",
+      "bytes": 460,
+      "sha256": "6b9f33ba12ac91ff1fc10cef3812e73a40779ad3e810a47d8381bf7d5987c4cd"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/FINAL_SOURCE.json",
+      "bytes": 6048,
+      "sha256": "85f050d48ddfe2b899315b893ba18555ded7902386b19c20af2f83d519396319"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/MAIN_REVIEW.json",
+      "bytes": 2874,
+      "sha256": "984f7c0393fe29d1932751ce36780d25b3e0db96f41b3928f2c8cb6a7a5b44a4"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/NATIVE_PIN_PLAN.json",
+      "bytes": 499,
+      "sha256": "79765582f9e79da602d71bb6cfb87ace48a8c33547645ac14ee1a749b1164b17"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/RECOVERY_FILTER_REFUSAL.json",
+      "bytes": 441,
+      "sha256": "3b8c79f1472e0df8be4480d18fbb6e3fe93a51fdbb8d74f3270c28d1774cd20d"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/RETAINED_INITIAL_COPY_REFUSAL.json",
+      "bytes": 592,
+      "sha256": "d6c9080eb966def232e5676b0eb31b58c7322b55e8ce8202ca18137530450b96"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/SOURCE190_FINAL_FOCUSED.json",
+      "bytes": 830,
+      "sha256": "1598c0a27405e229ae305e81a6583920fddaada9cac79abbcd1fbfa3d6fdc99c"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/SOURCE190_TYPES_RETRY.json",
+      "bytes": 421,
+      "sha256": "a50cca72edc81549e1ef39465dd1a6d4d102b0cf3ef1f55212e0f6833d09ea2d"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/SOURCE190_TYPES.json",
+      "bytes": 409,
+      "sha256": "34509b6628078bc867acae1f0862a7593a7a20fb02c28d41d94842eb6d96eb11"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/SOURCE190_WEBSITE_BUILD.json",
+      "bytes": 423,
+      "sha256": "846a4744d51cbd4a9ab9b818840f6a2b420ce9ad605404ddc828376e4dd29d8d"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/evidence/STOCK_IMPORT.json",
+      "bytes": 2115,
+      "sha256": "7d2a096ab0c7d955ce26a7789ff91d421f4dc9c31bc3886011ca804754ed98dc"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/.gitattributes",
+      "bytes": 20781,
+      "sha256": "ff18dd6bd760d83a82fd15baac65aaa0b9ac28aa5bed63ed5f02df1909ee7de1"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/docs/anatomy-coverage/independent.json",
+      "bytes": 772439,
+      "sha256": "fa41d4c8cf5a91b2512ae5e585e6ee134220e8c944703ceeac8e1a1a66dd1ae6"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/docs/anatomy-coverage/index.json",
+      "bytes": 154911,
+      "sha256": "9020eac8ed2fee77ef04b63357eabd23471f99e3e966d5b2c427010ee3478579"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/docs/anatomy-coverage/nested.json",
+      "bytes": 789529,
+      "sha256": "6bee2b34ca9be16548680e24b85d0fa0dcb9a9529b24a503bd79564706c327a9"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/docs/anatomy-coverage/reference.json",
+      "bytes": 154089,
+      "sha256": "eeaa4def25b332a3f7817625008f0476ffd825905d5a6a1515dbbd3735970d71"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/docs/anatomy-coverage/root.json",
+      "bytes": 1067871,
+      "sha256": "025f45fcb4cd83c5feddeb89e0583f348f3ac021f96f9b08fe0a4571458e527b"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "700e5b8ebd6f7aeafd98e858879da10d35b94aab977c564f80616d4c585e01e5"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "9b6f3f9f679ae60de34e8d24fefb7b500b6fa0f2ae985b4846549ea950c5fbec"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/lib/atlas-model-inventory.json",
+      "bytes": 33492,
+      "sha256": "5fe61d14688706a07349802cb30a5200461fd3385f5eaa680b5973f5b046836d"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "7111c89c35ea528818092e6118433c050f679f986910d4d9a6fe61f314c1bc8b"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "611df4c6735e84855cbb307c7c318438a9d791fb6e958717797bc93cdf409f38"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "bytes": 29052,
+      "sha256": "fe9bbfe9e64286d36f1f373fd18475e91cdaf7a2ba6c504a0a71c7e483666dd5"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/preimages/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 1777,
+      "sha256": "7f08673542eedf10d211b4668aad93efc65ab7854d6141ec409512edd3785eba"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/scripts/bind-and-build-source190-website-20261021.mjs",
+      "bytes": 6370,
+      "sha256": "6fcbb3cae1846e3716bd25edd636d2c6cb14391f1265acf612e2886c9272925d"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/scripts/checkpoint-source190-website-20261021.mjs",
+      "bytes": 8918,
+      "sha256": "c61995d13c354e3bf250631b4c7ba166352f987af63095f1a90fe6f5fde5a070"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/scripts/clone-source190-website-candidate-20261021.mjs",
+      "bytes": 7270,
+      "sha256": "fcf81b1f1b796ca1856153cf0bc67a8906c9a8202c4baf506104aa004743d5cd"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/scripts/finalize-source190-website-20261021.mjs",
+      "bytes": 7948,
+      "sha256": "cd5ccdfa9c3ace1ea589c92d6aeb6a5862adf411ab065244bf27b8b9e1a10810"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/scripts/import-source190-website-review-20261021.mjs",
+      "bytes": 4348,
+      "sha256": "f1def6138bf261fb3b673bbe51a4243a5f9c38cf74c1932c5e5b393a2a015501"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/scripts/prepare-atlas190-website-admission-20261021.mjs",
+      "bytes": 1651,
+      "sha256": "b932f0ba7627750d61d89ceb79390af0e5f96cb833c2ba71c84dd55441472ead"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/scripts/run-visible-medicine-check.mjs",
+      "bytes": 1966,
+      "sha256": "11ca39491557ddbf4fd790a12b3a65bf646da2a7963c76122a78b94eae234ea5"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/.gitattributes",
+      "bytes": 21014,
+      "sha256": "74d938c872f950c0434293863b166026cbe6a353b1ba39debf08cb1b96fd70e7"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/atlas-review/content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/atlas-review/content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/atlas-review/lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/docs/anatomy-coverage/independent.json",
+      "bytes": 772439,
+      "sha256": "801b972b74415a62eac521028fb2305ce0176a8324cc847a34621e6463adc66b"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/docs/anatomy-coverage/index.json",
+      "bytes": 154911,
+      "sha256": "7f9f872a80e7b45f33f73377d73671ca5d9ddcc08cf8a6fc072a6681b6424d68"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/docs/anatomy-coverage/nested.json",
+      "bytes": 789529,
+      "sha256": "ca6065b5efc7468a46e6194066229cf358948e48a5794554b100f769355d524d"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/docs/anatomy-coverage/reference.json",
+      "bytes": 154089,
+      "sha256": "b32ea543f12479402186b669979f459507bcc1be75c141414ba2134410b66700"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/docs/anatomy-coverage/root.json",
+      "bytes": 1067871,
+      "sha256": "00b01e9a701c01d8efbf544be05ccdc88d84ad4c20e8e2d7e6e8fd9ecd1ca5c1"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "84589865957f5773fdfaac0680d3c07db754ffca2c5b7ab5e83fbef21e382453"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "4262d07034e74afee3f537b6ea940666b5ccc0fee732a78ca1b057f51860c803"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/lib/atlas-model-inventory.json",
+      "bytes": 33492,
+      "sha256": "b61341f4a0476ceaef85ae39a56706db29c1ff7c9fbba574ea096777c8eb9022"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "f49c102d001acc988b6ae1dda38ff0f1d392b36bf83a4d32e3b0c81ff6938180"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "d56891a83dae7b839e109f36e597900fbeb2443a59c6df1d4badb6c2983f8fbe"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 5077,
+      "sha256": "1788fce7a307bc36145b20a570e3783a4c496cb1f06e26f8faf1b38195db93ef"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/tests/clinical-review-salivary-stylohyoid-quiz.test.ts",
+      "bytes": 29064,
+      "sha256": "c4e18aeb9ce2056cb50fcef3a665de0356f91b88ff78992a928b7346f3ca2362"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 1777,
+      "sha256": "b6301e20b714a67df82575f9f9b75f642fbf44310560444cfb537692bf5cef1f"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/tests/fixtures/source190-admission/admission.json",
+      "bytes": 636,
+      "sha256": "2ffb9ac34f46a221767257e733e7dd09e3dd277c937b7b7e7a7289adade782f0"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/tests/fixtures/source190-admission/importer-before.mjs.raw",
+      "bytes": 6751,
+      "sha256": "611df4c6735e84855cbb307c7c318438a9d791fb6e958717797bc93cdf409f38"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/tests/fixtures/source190-admission/previous-current.json",
+      "bytes": 1777,
+      "sha256": "7f08673542eedf10d211b4668aad93efc65ab7854d6141ec409512edd3785eba"
+    },
+    {
+      "path": "evidence/20261021-source190-website-verified/website/tests/fixtures/source190-admission/salivary-before-type-annotation.ts.raw",
+      "bytes": 29052,
+      "sha256": "fe9bbfe9e64286d36f1f373fd18475e91cdaf7a2ba6c504a0a71c7e483666dd5"
+    },
+    {
       "path": "evidence/20261021-tour-start-hint/evidence/BROWSER_SUMMARY.json",
       "bytes": 2302,
       "sha256": "a92a9cfaf6af8a07d31cee1b7514b09abe4c9eb5e07e09832e676d60735e5266"
@@ -4961,16 +5257,17 @@
     }
   ],
   "removed": [],
-  "scope": "Selected test/helper/original-test fixtures,scoped attributes,small result/proof/control scripts on prior filtered source-only ancestry. No private historical manifest/module,scans,masks,review decisions,inbox,geometry,dependencies,raw canonical ancestry,browser pixels/DOM or long failed logs. Not a complete runnable/private-data backup,public deployment or clinical/rights acceptance.",
+  "scope": "Selected13native Website pin/coverage/test/attribute postimages and exact preimages,5new test/evidence fixtures,3exact new imported dental text/metadata paths,source-only delivery manifests,small results/check receipts/control scripts on prior filtered ancestry. No model geometry/full runtime/dist binaries,private modules/manifests/review records/scans/masks/identifiers,deps,raw canonical Git ancestry or browser media/DOM. Local existing source190and closed485 remain independently staged;not a complete runnable/private-data backup or hosted/clinical/spatial release.",
   "proof": {
-    "actualTests": 7,
-    "passed": 7,
+    "fourRuntimesAndReviewImported": true,
+    "all137ModelsUnchanged": true,
+    "all22ViewerPackagesUnchanged": true,
+    "freshTypesPass": true,
+    "fullProductionBuildPass": true,
+    "actualFocusedPass": 29,
     "skipped": 0,
-    "inputDrift": false,
-    "pinnedHistoricalSource": true,
-    "originalAssertionsPreserved": true,
-    "noRuntimeEdits": true,
-    "noPrivateArtifactCopied": true
+    "original485Preserved": true,
+    "canonicalInstalled": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

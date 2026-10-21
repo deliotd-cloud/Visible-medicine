@@ -1,0 +1,8 @@
+{
+  "reason": "Old preparation module pin was historical16-input plexus state;current18-input module refused before copying. Native current verifier plus exact current manifest/module hashes now required. No original source or owner editor changed.",
+  "oldModuleSha256": "c9c6fbcb71502709b87fefee105bde32cce51cdf88065ec550caa6d8a665bec6",
+  "currentManifestSha256": "b09b4b8ad4adbe33efecbfe5c01b2778a05cc5abbe600e385d9da9be3d621fc2",
+  "currentModuleSha256": "c0e960bd831e9cb82659e0ecb903b3c5f47eb44ba03e8ca8f6752b7f4dfa4a75",
+  "nativeVerifierPassed": true,
+  "partialFilesChecked": true
+}

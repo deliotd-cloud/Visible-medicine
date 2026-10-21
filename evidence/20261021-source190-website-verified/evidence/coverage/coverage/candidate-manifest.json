@@ -1,0 +1,278 @@
+{
+  "schema": "vm-coverage-candidate-1",
+  "sourceRevision": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "nodeVersion": "v24.18.0",
+  "sourceArtifacts": [
+    {
+      "scope": "root",
+      "path": "docs/anatomy-coverage/root.json",
+      "sha256": "00b01e9a701c01d8efbf544be05ccdc88d84ad4c20e8e2d7e6e8fd9ecd1ca5c1"
+    },
+    {
+      "scope": "nested",
+      "path": "docs/anatomy-coverage/nested.json",
+      "sha256": "ca6065b5efc7468a46e6194066229cf358948e48a5794554b100f769355d524d"
+    },
+    {
+      "scope": "independent",
+      "path": "docs/anatomy-coverage/independent.json",
+      "sha256": "801b972b74415a62eac521028fb2305ce0176a8324cc847a34621e6463adc66b"
+    },
+    {
+      "scope": "reference",
+      "path": "docs/anatomy-coverage/reference.json",
+      "sha256": "b32ea543f12479402186b669979f459507bcc1be75c141414ba2134410b66700"
+    }
+  ],
+  "indexSha256": "7f9f872a80e7b45f33f73377d73671ca5d9ddcc08cf8a6fc072a6681b6424d68",
+  "sourceInputs": 168,
+  "receipts": [
+    {
+      "scope": "root",
+      "producerSha256": "0bfa81b430fd3070c5f6e4f54e60710c2162c24835fcf91f55115a8e861cabf8",
+      "producerInputs": [
+        {
+          "path": "scripts/generate-anatomy-coverage.mjs",
+          "sha256": "5dee2a4cb7bc4e551244070b557559c2519c133f3b14e4ffe29652f0919dd764"
+        },
+        {
+          "path": "scripts/build-anatomy-coverage-index.mjs",
+          "sha256": "d9166d2b6924cbfb6dfe2f688e1d53fc47ba3aa790be80604a18d4ff550d259a"
+        },
+        {
+          "path": "scripts/anatomy-coverage/source-context.mjs",
+          "sha256": "e0d87af042e7adcf67991b6dd4dde47606ee0fc399d1778486c15ad53377918e"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-root.mjs",
+          "sha256": "abeb58e4c676c87fbf7cd28e9ff8cfa3cd706c6a2bc4c743104ec58d6f175973"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-nested.mjs",
+          "sha256": "79f490d5b51f987f478bf0a91f6c5f57ce613ed40e999dd770c2329d2904cc29"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-independent.mjs",
+          "sha256": "3aca680dc4d84fa47c2f864fd6dd74451dc7ee7a7200e44e2015be89c449f9fd"
+        },
+        {
+          "path": "scripts/anatomy-coverage/root-producer.mjs",
+          "sha256": "0bfa81b430fd3070c5f6e4f54e60710c2162c24835fcf91f55115a8e861cabf8"
+        },
+        {
+          "path": "scripts/anatomy-coverage/nested-producer.mjs",
+          "sha256": "07c09a61897c616cc3839a4e7973f3016c34fcf66148bd268fe8f59c47acd0d8"
+        },
+        {
+          "path": "scripts/anatomy-coverage/independent-producer.mjs",
+          "sha256": "cfd3301cda0d9733964e9a0cf4befab27e257d86d053e412f8178616be44de7c"
+        },
+        {
+          "path": "scripts/anatomy-coverage/reference-producer.mjs",
+          "sha256": "b8289607394349646556ff9f82a6cbbe51893b91cc0a1d2dc41e45dfe4975be6"
+        }
+      ],
+      "status": 0,
+      "startedAt": "2026-10-21T04:19:44.573Z",
+      "finishedAt": "2026-10-21T04:19:55.439Z",
+      "logSha256": "ce7fcd30f9ec6d53591dfd3512c5e03cb8d81b92f9c9a9aeca9ab4ffa0da783e"
+    },
+    {
+      "scope": "nested",
+      "producerSha256": "07c09a61897c616cc3839a4e7973f3016c34fcf66148bd268fe8f59c47acd0d8",
+      "producerInputs": [
+        {
+          "path": "scripts/generate-anatomy-coverage.mjs",
+          "sha256": "5dee2a4cb7bc4e551244070b557559c2519c133f3b14e4ffe29652f0919dd764"
+        },
+        {
+          "path": "scripts/build-anatomy-coverage-index.mjs",
+          "sha256": "d9166d2b6924cbfb6dfe2f688e1d53fc47ba3aa790be80604a18d4ff550d259a"
+        },
+        {
+          "path": "scripts/anatomy-coverage/source-context.mjs",
+          "sha256": "e0d87af042e7adcf67991b6dd4dde47606ee0fc399d1778486c15ad53377918e"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-root.mjs",
+          "sha256": "abeb58e4c676c87fbf7cd28e9ff8cfa3cd706c6a2bc4c743104ec58d6f175973"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-nested.mjs",
+          "sha256": "79f490d5b51f987f478bf0a91f6c5f57ce613ed40e999dd770c2329d2904cc29"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-independent.mjs",
+          "sha256": "3aca680dc4d84fa47c2f864fd6dd74451dc7ee7a7200e44e2015be89c449f9fd"
+        },
+        {
+          "path": "scripts/anatomy-coverage/root-producer.mjs",
+          "sha256": "0bfa81b430fd3070c5f6e4f54e60710c2162c24835fcf91f55115a8e861cabf8"
+        },
+        {
+          "path": "scripts/anatomy-coverage/nested-producer.mjs",
+          "sha256": "07c09a61897c616cc3839a4e7973f3016c34fcf66148bd268fe8f59c47acd0d8"
+        },
+        {
+          "path": "scripts/anatomy-coverage/independent-producer.mjs",
+          "sha256": "cfd3301cda0d9733964e9a0cf4befab27e257d86d053e412f8178616be44de7c"
+        },
+        {
+          "path": "scripts/anatomy-coverage/reference-producer.mjs",
+          "sha256": "b8289607394349646556ff9f82a6cbbe51893b91cc0a1d2dc41e45dfe4975be6"
+        }
+      ],
+      "status": 0,
+      "startedAt": "2026-10-21T04:19:55.445Z",
+      "finishedAt": "2026-10-21T04:20:16.652Z",
+      "logSha256": "01fd00023d2aeb787b1b7afa8a8bd6088b63dd788f8da683ae523341b10ccb73"
+    },
+    {
+      "scope": "independent",
+      "producerSha256": "cfd3301cda0d9733964e9a0cf4befab27e257d86d053e412f8178616be44de7c",
+      "producerInputs": [
+        {
+          "path": "scripts/generate-anatomy-coverage.mjs",
+          "sha256": "5dee2a4cb7bc4e551244070b557559c2519c133f3b14e4ffe29652f0919dd764"
+        },
+        {
+          "path": "scripts/build-anatomy-coverage-index.mjs",
+          "sha256": "d9166d2b6924cbfb6dfe2f688e1d53fc47ba3aa790be80604a18d4ff550d259a"
+        },
+        {
+          "path": "scripts/anatomy-coverage/source-context.mjs",
+          "sha256": "e0d87af042e7adcf67991b6dd4dde47606ee0fc399d1778486c15ad53377918e"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-root.mjs",
+          "sha256": "abeb58e4c676c87fbf7cd28e9ff8cfa3cd706c6a2bc4c743104ec58d6f175973"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-nested.mjs",
+          "sha256": "79f490d5b51f987f478bf0a91f6c5f57ce613ed40e999dd770c2329d2904cc29"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-independent.mjs",
+          "sha256": "3aca680dc4d84fa47c2f864fd6dd74451dc7ee7a7200e44e2015be89c449f9fd"
+        },
+        {
+          "path": "scripts/anatomy-coverage/root-producer.mjs",
+          "sha256": "0bfa81b430fd3070c5f6e4f54e60710c2162c24835fcf91f55115a8e861cabf8"
+        },
+        {
+          "path": "scripts/anatomy-coverage/nested-producer.mjs",
+          "sha256": "07c09a61897c616cc3839a4e7973f3016c34fcf66148bd268fe8f59c47acd0d8"
+        },
+        {
+          "path": "scripts/anatomy-coverage/independent-producer.mjs",
+          "sha256": "cfd3301cda0d9733964e9a0cf4befab27e257d86d053e412f8178616be44de7c"
+        },
+        {
+          "path": "scripts/anatomy-coverage/reference-producer.mjs",
+          "sha256": "b8289607394349646556ff9f82a6cbbe51893b91cc0a1d2dc41e45dfe4975be6"
+        }
+      ],
+      "status": 0,
+      "startedAt": "2026-10-21T04:20:16.656Z",
+      "finishedAt": "2026-10-21T04:20:21.773Z",
+      "logSha256": "c1ebb65d6cc6a7afa8bf28774c28d89a0f80f53ff1740541cde9b262a32cad77"
+    },
+    {
+      "scope": "reference",
+      "producerSha256": "b8289607394349646556ff9f82a6cbbe51893b91cc0a1d2dc41e45dfe4975be6",
+      "producerInputs": [
+        {
+          "path": "scripts/generate-anatomy-coverage.mjs",
+          "sha256": "5dee2a4cb7bc4e551244070b557559c2519c133f3b14e4ffe29652f0919dd764"
+        },
+        {
+          "path": "scripts/build-anatomy-coverage-index.mjs",
+          "sha256": "d9166d2b6924cbfb6dfe2f688e1d53fc47ba3aa790be80604a18d4ff550d259a"
+        },
+        {
+          "path": "scripts/anatomy-coverage/source-context.mjs",
+          "sha256": "e0d87af042e7adcf67991b6dd4dde47606ee0fc399d1778486c15ad53377918e"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-root.mjs",
+          "sha256": "abeb58e4c676c87fbf7cd28e9ff8cfa3cd706c6a2bc4c743104ec58d6f175973"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-nested.mjs",
+          "sha256": "79f490d5b51f987f478bf0a91f6c5f57ce613ed40e999dd770c2329d2904cc29"
+        },
+        {
+          "path": "scripts/anatomy-coverage/build-independent.mjs",
+          "sha256": "3aca680dc4d84fa47c2f864fd6dd74451dc7ee7a7200e44e2015be89c449f9fd"
+        },
+        {
+          "path": "scripts/anatomy-coverage/root-producer.mjs",
+          "sha256": "0bfa81b430fd3070c5f6e4f54e60710c2162c24835fcf91f55115a8e861cabf8"
+        },
+        {
+          "path": "scripts/anatomy-coverage/nested-producer.mjs",
+          "sha256": "07c09a61897c616cc3839a4e7973f3016c34fcf66148bd268fe8f59c47acd0d8"
+        },
+        {
+          "path": "scripts/anatomy-coverage/independent-producer.mjs",
+          "sha256": "cfd3301cda0d9733964e9a0cf4befab27e257d86d053e412f8178616be44de7c"
+        },
+        {
+          "path": "scripts/anatomy-coverage/reference-producer.mjs",
+          "sha256": "b8289607394349646556ff9f82a6cbbe51893b91cc0a1d2dc41e45dfe4975be6"
+        }
+      ],
+      "status": 0,
+      "startedAt": "2026-10-21T04:20:21.779Z",
+      "finishedAt": "2026-10-21T04:20:42.704Z",
+      "logSha256": "fe36c6a3dc0699b3e1b24e74fabe9b0fa453d294ccf82e5afe6a03eb6e4ef086"
+    }
+  ],
+  "producerInputs": [
+    {
+      "path": "scripts/generate-anatomy-coverage.mjs",
+      "sha256": "5dee2a4cb7bc4e551244070b557559c2519c133f3b14e4ffe29652f0919dd764"
+    },
+    {
+      "path": "scripts/build-anatomy-coverage-index.mjs",
+      "sha256": "d9166d2b6924cbfb6dfe2f688e1d53fc47ba3aa790be80604a18d4ff550d259a"
+    },
+    {
+      "path": "scripts/anatomy-coverage/source-context.mjs",
+      "sha256": "e0d87af042e7adcf67991b6dd4dde47606ee0fc399d1778486c15ad53377918e"
+    },
+    {
+      "path": "scripts/anatomy-coverage/build-root.mjs",
+      "sha256": "abeb58e4c676c87fbf7cd28e9ff8cfa3cd706c6a2bc4c743104ec58d6f175973"
+    },
+    {
+      "path": "scripts/anatomy-coverage/build-nested.mjs",
+      "sha256": "79f490d5b51f987f478bf0a91f6c5f57ce613ed40e999dd770c2329d2904cc29"
+    },
+    {
+      "path": "scripts/anatomy-coverage/build-independent.mjs",
+      "sha256": "3aca680dc4d84fa47c2f864fd6dd74451dc7ee7a7200e44e2015be89c449f9fd"
+    },
+    {
+      "path": "scripts/anatomy-coverage/root-producer.mjs",
+      "sha256": "0bfa81b430fd3070c5f6e4f54e60710c2162c24835fcf91f55115a8e861cabf8"
+    },
+    {
+      "path": "scripts/anatomy-coverage/nested-producer.mjs",
+      "sha256": "07c09a61897c616cc3839a4e7973f3016c34fcf66148bd268fe8f59c47acd0d8"
+    },
+    {
+      "path": "scripts/anatomy-coverage/independent-producer.mjs",
+      "sha256": "cfd3301cda0d9733964e9a0cf4befab27e257d86d053e412f8178616be44de7c"
+    },
+    {
+      "path": "scripts/anatomy-coverage/reference-producer.mjs",
+      "sha256": "b8289607394349646556ff9f82a6cbbe51893b91cc0a1d2dc41e45dfe4975be6"
+    }
+  ],
+  "canonicalSnapshotsInstalled": false,
+  "clinicalApproval": false,
+  "patientRegistration": false,
+  "remoteReferenceFetched": false,
+  "originalModelsOrObjRead": false
+}

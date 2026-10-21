@@ -1,0 +1,29 @@
+{
+  "label": "SOURCE190_FINAL_FOCUSED",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=spec",
+    "tests/atlas190-current-delivery.test.mjs",
+    "tests/anatomy-coverage-view.test.ts",
+    "tests/atlas-delivery-policy-preflight.test.mjs",
+    "tests/atlas-delivery-route.test.mjs",
+    "tests/atlas-delivery.test.ts",
+    "tests/education-media-access.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-source190-website/SOURCE190_FINAL_FOCUSED.log",
+  "logSha256": "0bd1ac9cb9c6b7b3d8447390ecc4a5081eaface170443b7cb1fe8658bd71644d",
+  "footer": [
+    "ℹ tests 29",
+    "ℹ pass 29",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

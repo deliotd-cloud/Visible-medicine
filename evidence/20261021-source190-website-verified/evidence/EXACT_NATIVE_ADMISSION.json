@@ -1,0 +1,39 @@
+{
+  "changes": [
+    {
+      "path": "scripts/import-clinical-review.mjs",
+      "beforeSha256": "611df4c6735e84855cbb307c7c318438a9d791fb6e958717797bc93cdf409f38",
+      "sha256": "d56891a83dae7b839e109f36e597900fbeb2443a59c6df1d4badb6c2983f8fbe",
+      "exactWholeInverse": true
+    },
+    {
+      "path": "lib/anatomy-coverage-view.ts",
+      "beforeSha256": "700e5b8ebd6f7aeafd98e858879da10d35b94aab977c564f80616d4c585e01e5",
+      "sha256": "84589865957f5773fdfaac0680d3c07db754ffca2c5b7ab5e83fbef21e382453",
+      "exactWholeInverse": true
+    },
+    {
+      "path": "lib/atlas-delivery-policy.ts",
+      "beforeSha256": "9b6f3f9f679ae60de34e8d24fefb7b500b6fa0f2ae985b4846549ea950c5fbec",
+      "sha256": "4262d07034e74afee3f537b6ea940666b5ccc0fee732a78ca1b057f51860c803",
+      "exactWholeInverse": true
+    },
+    {
+      "path": "scripts/check-anatomy-coverage.mjs",
+      "beforeSha256": "7111c89c35ea528818092e6118433c050f679f986910d4d9a6fe61f314c1bc8b",
+      "sha256": "f49c102d001acc988b6ae1dda38ff0f1d392b36bf83a4d32e3b0c81ff6938180",
+      "exactWholeInverse": true
+    }
+  ],
+  "plan": {
+    "coverageSource": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "coverageSnapshot": "0f38b3486c30aad02a942427188279fe263b710c968ce1ad0b6187fe15a40659",
+    "coverageImported": "236d059ce1e3c0442b4006abacf2ccd3f4de52bf2be92a3c644f62b8f49f30bf",
+    "coveragePackage": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6",
+    "privateModelInventory": "b61341f4a0476ceaef85ae39a56706db29c1ff7c9fbba574ea096777c8eb9022",
+    "importedRows": 142,
+    "metadataRows": 26,
+    "sourceFiles": 1553
+  },
+  "canonicalInstalled": false
+}

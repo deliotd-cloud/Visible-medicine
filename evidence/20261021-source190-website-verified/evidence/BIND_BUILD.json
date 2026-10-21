@@ -1,0 +1,54 @@
+{
+  "commands": [
+    {
+      "args": [
+        "scripts/verify-atlas-delivery-policy.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 179
+    },
+    {
+      "args": [
+        "scripts/bind-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 1295
+    },
+    {
+      "args": [
+        "scripts/build-clinical-review-viewer.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 16907
+    },
+    {
+      "args": [
+        "scripts/verify-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 2267
+    }
+  ],
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "tree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceFiles": 1553,
+  "boundInputs": 1710,
+  "viewerFiles": 46,
+  "viewerPackages": 22,
+  "all137ModelsUnchanged": true,
+  "all22PackagesUnchanged": true,
+  "original485Unchanged": true,
+  "log": "F:/VisibleMedicine/staging/20261021-source190-website/BIND_BUILD.log",
+  "logSha256": "ec6bc25a8996d80679838e18c9a57066481cff0b02df6623cf90c307110737c3",
+  "currentFixtureSha256": "b6301e20b714a67df82575f9f9b75f642fbf44310560444cfb537692bf5cef1f",
+  "canonicalInstalled": false,
+  "ownerPreviewUnchanged": true,
+  "clinicalApproval": false,
+  "fullWebsiteSuitePass": false,
+  "publicDeployment": false
+}

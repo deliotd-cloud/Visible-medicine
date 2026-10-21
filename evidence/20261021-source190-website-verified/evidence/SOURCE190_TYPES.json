@@ -1,0 +1,16 @@
+{
+  "label": "SOURCE190_TYPES",
+  "command": "node",
+  "args": [
+    "node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "--incremental",
+    "false"
+  ],
+  "code": 2,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-source190-website/SOURCE190_TYPES.log",
+  "logSha256": "7be3132ac2dda4c3e59a6a19033c22726cb72c39d213a72d23c60d47bc8bde60",
+  "footer": [],
+  "canonicalInstalled": false
+}

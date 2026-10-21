@@ -1,0 +1,19 @@
+{
+  "label": "GENERATE_SOURCE190_COVERAGE",
+  "command": "node",
+  "args": [
+    "scripts/generate-anatomy-coverage.mjs",
+    "--source-root",
+    "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+    "--revision",
+    "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "--output-root",
+    "F:/VisibleMedicine/staging/20261021-atlas190-website-admission/coverage"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas190-website-admission/GENERATE_SOURCE190_COVERAGE.log",
+  "logSha256": "724680af6efd73f7b429fcdc13ff8af775894f87fa18942226e4c251cb434ff3",
+  "footer": [],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {read,json,sha,runGit} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261021-atlas190-website-admission',site='F:/VisibleMedicine/staging/20261020-combined-website-ui/website',atlas='F:/VisibleMedicine/staging/20261021-atlas-combined-source';
+assert(!fs.existsSync(stage));
+const inputs=json('F:/VisibleMedicine/staging/20261021-plexus-historical-eol-retry/source-inputs-after.json');assert.equal(inputs.length,5087);
+for(const row of inputs)assert.equal(sha(read(site+'/'+row.path)),row.sha256,row.path);
+assert.equal(runGit(['-C',atlas,'rev-parse','HEAD']).toString().trim(),'190a63238eadcf906abe89dcbb6a67c88afe70b9');
+assert.equal(runGit(['-C',atlas,'status','--porcelain=v1','--untracked-files=all']).toString().trim(),'');
+const modules=json('F:/VisibleMedicine/staging/20261021-four-module-admission-v2/RESULT.json');assert(modules.passed&&modules.exports.length===4);
+for(const m of modules.exports)assert.equal(sha(read(m.target+'/manifest.json')),m.manifestSha256);
+fs.mkdirSync(stage);
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify({stage,site,atlas,sourceCommit:modules.commit,sourceTree:modules.tree,websiteInputCount:inputs.length,scope:'Read-only generation of exact source190coverage followed by isolated unpublished Website admission. Owner preview/forms unchanged;closed485original retained.'},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(stage+'/source-inputs-before.json',JSON.stringify(inputs,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({stage,source:modules.commit,websiteInputs:inputs.length}));
