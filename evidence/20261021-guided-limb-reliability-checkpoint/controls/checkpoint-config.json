@@ -1,0 +1,166 @@
+{
+  "root": "F:/VisibleMedicine/recovery/checkpoints/20261021-guided-limb-reliability-checkpoint",
+  "stage": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application",
+  "previous": "F:/VisibleMedicine/recovery/checkpoints/20261021-clinical-teaching-current-verified",
+  "proposal": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-proposal",
+  "changedPaths": 9,
+  "controlledInputs": 5215,
+  "checklistRevision": 117,
+  "nativeCode": 0,
+  "nativeCounts": {
+    "tests": 40,
+    "pass": 40,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "parentHead": "d2a9a28782467bbf6541a73ed19b82f3412b7bbc",
+  "repo": "F:/VisibleMedicine/history/website-work/github-guided-limb-reliability-20261021.git",
+  "branch": "backup/guided-limb-reliability-20261021",
+  "milestone": "Nine limb/suprahyoid test/raw paths verify current190 ankle drafts,upper-limb completion,shoulder-girdle arteries and suprahyoid quizzes; actual7-root40/40pass, no skips or cancellations. Separate corpus/UI19path closure has actual11-root63/62pass/1failure: all UI, historical source inverses and mutation gates pass; corpus teaching fingerprint remains under investigation. Its failure receipt and original assertions are preserved, not repinned to observed values. Exact full6036 archived witnesses preserve all tongue/a247 inverses and forged negatives. Read-only actual temporary-tab accessibility check shows four named workspace radios; extra form inputs are hidden/clipped/non-tabbed, not a proven duplicate-control bug. No product or clinical edits and no whole-suite claim.",
+  "scope": "Nine installed limb/suprahyoid test/raw paths plus explicit nineteen corpus/UI test/raw paths, original preimages, reviewed proposals, separate actual native receipts including one retained failure, and sanitized read-only public accessibility observation.",
+  "extraFiles": [
+    {
+      "from": "admit-closed56-role-repair-20261021.mjs",
+      "to": "controls/admission.mjs"
+    },
+    {
+      "from": "limb-suprahyoid-role-admission-20261021.json",
+      "to": "controls/limb-admission.json"
+    },
+    {
+      "from": "corpus-ui-role-admission-20261021.json",
+      "to": "controls/corpus-ui-admission.json"
+    },
+    {
+      "from": "emit-coordination-checkpoint.mjs",
+      "to": "controls/emit-coordination-checkpoint.mjs"
+    },
+    {
+      "from": "atlas-mode-accessibility-qa-20261021.json",
+      "to": "observations/public-mode-accessibility.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-followup/PROPOSAL.json",
+      "to": "corpus-ui-proposal/PROPOSAL.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/APPLICATION.json",
+      "to": "corpus-ui-evidence/APPLICATION.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/native.json",
+      "to": "corpus-ui-evidence/native.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "to": "installed-website/tests/corpus-xray-v2-current-delivery.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/preimages/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "to": "corpus-ui-preimages/tests/corpus-xray-v2-current-delivery.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/ui-teaching-current-delivery.test.mjs",
+      "to": "installed-website/tests/ui-teaching-current-delivery.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/preimages/tests/ui-teaching-current-delivery.test.mjs",
+      "to": "corpus-ui-preimages/tests/ui-teaching-current-delivery.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/tour-discovery-current-delivery.test.mjs",
+      "to": "installed-website/tests/tour-discovery-current-delivery.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/preimages/tests/tour-discovery-current-delivery.test.mjs",
+      "to": "corpus-ui-preimages/tests/tour-discovery-current-delivery.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/ui-teaching-lifecycle-contract.test.mjs",
+      "to": "installed-website/tests/ui-teaching-lifecycle-contract.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/preimages/tests/ui-teaching-lifecycle-contract.test.mjs",
+      "to": "corpus-ui-preimages/tests/ui-teaching-lifecycle-contract.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/current-delivery-admission-485.test.mjs",
+      "to": "installed-website/tests/current-delivery-admission-485.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/preimages/tests/current-delivery-admission-485.test.mjs",
+      "to": "corpus-ui-preimages/tests/current-delivery-admission-485.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/tongue-palate-a247-inverse.test.mjs",
+      "to": "installed-website/tests/tongue-palate-a247-inverse.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/preimages/tests/tongue-palate-a247-inverse.test.mjs",
+      "to": "corpus-ui-preimages/tests/tongue-palate-a247-inverse.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/admission485-final-role-transition-20261021.test.mjs",
+      "to": "installed-website/tests/admission485-final-role-transition-20261021.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/preimages/tests/admission485-final-role-transition-20261021.test.mjs",
+      "to": "corpus-ui-preimages/tests/admission485-final-role-transition-20261021.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "to": "installed-website/tests/current-head-index-whole-role-transition-20261021.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/preimages/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "to": "corpus-ui-preimages/tests/current-head-index-whole-role-transition-20261021.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/corpus-ui-role-preservation.test.mjs",
+      "to": "installed-website/tests/corpus-ui-role-preservation.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/corpus-xray-v2-current-delivery.test.mjs.raw",
+      "to": "installed-website/tests/fixtures/corpus-xray-v2-current-delivery.test.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/ui-teaching-current-delivery.test.mjs.raw",
+      "to": "installed-website/tests/fixtures/ui-teaching-current-delivery.test.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/tour-discovery-current-delivery.test.mjs.raw",
+      "to": "installed-website/tests/fixtures/tour-discovery-current-delivery.test.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/ui-teaching-lifecycle-contract.test.mjs.raw",
+      "to": "installed-website/tests/fixtures/ui-teaching-lifecycle-contract.test.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/current-delivery-admission-485.test.mjs.raw",
+      "to": "installed-website/tests/fixtures/current-delivery-admission-485.test.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/tongue-palate-a247-inverse.test.mjs.raw",
+      "to": "installed-website/tests/fixtures/tongue-palate-a247-inverse.test.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/admission485-final-role-transition-20261021.test.mjs.raw",
+      "to": "installed-website/tests/fixtures/admission485-final-role-transition-20261021.test.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/current-head-index-whole-role-transition-20261021.test.mjs.raw",
+      "to": "installed-website/tests/fixtures/current-head-index-whole-role-transition-20261021.test.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/tongue-palate-current-atlas-delivery-6036.mjs.raw",
+      "to": "installed-website/tests/fixtures/tongue-palate-current-atlas-delivery-6036.mjs.raw"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/tongue-palate-ui-teaching-admission-6036.mjs.raw",
+      "to": "installed-website/tests/fixtures/tongue-palate-ui-teaching-admission-6036.mjs.raw"
+    }
+  ],
+  "next": "Main-review the bounded corpus current/historical packet followup once authored, preserving exact bd historical fingerprints and independently bound190 behavior/refusal checks. Continue remaining release regressions and desktop/CT/MRI/existing3D acceptance without clinical-review stall. Original failure baselines and all71items remain; no owner form refresh,public deployment,fees,private upload or desktopPACS edits."
+}

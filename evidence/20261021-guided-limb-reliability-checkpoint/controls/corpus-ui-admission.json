@@ -1,0 +1,41 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-followup",
+  "stage": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application",
+  "manifestSha256": "1326d5914ee79c7dbe410250742b8d49ad5ac505e58e8d8c81f1e53518e16f60",
+  "beforeInputs": 5199,
+  "afterInputs": 5210,
+  "expectedPaths": [
+    "tests/corpus-xray-v2-current-delivery.test.mjs",
+    "tests/ui-teaching-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/ui-teaching-lifecycle-contract.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/tongue-palate-a247-inverse.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/corpus-ui-role-preservation.test.mjs",
+    "tests/fixtures/corpus-xray-v2-current-delivery.test.mjs.raw",
+    "tests/fixtures/ui-teaching-current-delivery.test.mjs.raw",
+    "tests/fixtures/tour-discovery-current-delivery.test.mjs.raw",
+    "tests/fixtures/ui-teaching-lifecycle-contract.test.mjs.raw",
+    "tests/fixtures/current-delivery-admission-485.test.mjs.raw",
+    "tests/fixtures/tongue-palate-a247-inverse.test.mjs.raw",
+    "tests/fixtures/admission485-final-role-transition-20261021.test.mjs.raw",
+    "tests/fixtures/current-head-index-whole-role-transition-20261021.test.mjs.raw",
+    "tests/fixtures/tongue-palate-current-atlas-delivery-6036.mjs.raw",
+    "tests/fixtures/tongue-palate-ui-teaching-admission-6036.mjs.raw"
+  ],
+  "roots": [
+    "tests/corpus-xray-v2-current-delivery.test.mjs",
+    "tests/ui-teaching-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/ui-teaching-lifecycle-contract.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/tongue-palate-a247-inverse.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/corpus-ui-role-preservation.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}

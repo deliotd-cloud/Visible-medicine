@@ -1,0 +1,111 @@
+{
+  "at": "2026-10-21T14:34:53.763Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/clinical-review-um-ankle-imaging.test.ts",
+      "preimageSha256": "e453387dfd045a0dcd744996165fd949d08446ef0afd5b6adaaf4e8c49e9176b",
+      "candidateSha256": "57c7250be0b65ea1756f992b822803cad98560389eb9aa3f551c33414d5bd2c5",
+      "candidateBytes": 4055
+    },
+    {
+      "path": "tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "preimageSha256": "17a3cc58b361390d3e42570a86a9fb2c192c8cf80f985eae523af16e76d84c72",
+      "candidateSha256": "3f8b770eed2ed466fa233a6a93b659ed17fed1e1158cd486df74d0ef66fc71d3",
+      "candidateBytes": 11969
+    },
+    {
+      "path": "tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "preimageSha256": "31323ff1f752edf060a9ecc335b7338ffb023773e1e76df3796249c5d978ef5c",
+      "candidateSha256": "efa18987a9fa80a339bf9e8ce2d4c38dae2e8ea99cc5f03f978b4ca544b5768a",
+      "candidateBytes": 8148
+    },
+    {
+      "path": "tests/clinical-review-suprahyoid-quiz.test.ts",
+      "preimageSha256": "44f4f13cc6a1feafd40369977b8d4c89f08ab7472387275c36d4ca450c5268a3",
+      "candidateSha256": "302c5bf4d5bdb567932497cd2cdf7d71d8e286a4ff5274908fc04905f6f31b43",
+      "candidateBytes": 10039
+    },
+    {
+      "path": "tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "b9359849ff93c19f51d555d33e0ca772625632a08855d6d1f6822dac84203aa7",
+      "candidateBytes": 15245
+    },
+    {
+      "path": "tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-um-ankle-imaging.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "e453387dfd045a0dcd744996165fd949d08446ef0afd5b6adaaf4e8c49e9176b",
+      "candidateBytes": 3400
+    },
+    {
+      "path": "tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-upper-limb-completion-quiz.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "17a3cc58b361390d3e42570a86a9fb2c192c8cf80f985eae523af16e76d84c72",
+      "candidateBytes": 10657
+    },
+    {
+      "path": "tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-shoulder-girdle-artery-quiz.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "31323ff1f752edf060a9ecc335b7338ffb023773e1e76df3796249c5d978ef5c",
+      "candidateBytes": 6836
+    },
+    {
+      "path": "tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-suprahyoid-quiz.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "44f4f13cc6a1feafd40369977b8d4c89f08ab7472387275c36d4ca450c5268a3",
+      "candidateBytes": 9138
+    }
+  ],
+  "controlledInputs": 5215,
+  "preservedInputs": 7,
+  "namedInputs": 5222,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "8a2240e2575bd465c0674335e5aa2734d385ca03816a696767d87ddeabdda101",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:34:50.799Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/clinical-review-um-ankle-imaging.test.ts",
+      "tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "tests/clinical-review-suprahyoid-quiz.test.ts",
+      "tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/posterior-fossa-coverage.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application/native.tap",
+    "logSha256": "c3731f610c5c7f7879d17b96e173b3d80bcb186045533cd43a19ec859d2dae7c",
+    "counts": {
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

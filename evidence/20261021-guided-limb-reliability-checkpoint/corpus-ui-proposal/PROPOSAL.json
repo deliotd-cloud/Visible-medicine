@@ -1,0 +1,65 @@
+{
+  "schema": "vm-source-only-role-proposal/1",
+  "state": "candidate-needs-main-review-and-native-admission-after-6036-source-correction",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-role-union-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "f37794894656799e7b12589ff4b40de5e878a0f3f27b12252f928259fcd13c54",
+  "sourceSnapshotLimit": "Initial 5185+7 controlled snapshot, not the later 5199+7 main observation; main must rebase latest source snapshot before admission.",
+  "authentic6036ScopeReceipt": "F:/VisibleMedicine/staging/20261020-full-regression-6036/CHECKOUT_REPAIR_SOURCE_SCOPE.json",
+  "authentic6036ScopeReceiptSha256": "a0dfe5c10b2d4664c3ee860e172bd69ef091fd30dcc7a3b62efe751f2589ea8c",
+  "diagnosis": [
+    "The executing corpus root retained the complete bd5465 source and refusal body but asserted bd as the moving current source. Its exact whole predecessor survives with only the bd-to-190 source seam and an archived-source/stale-refusal proof; the actual pelvis import changed between bd and 190, while the corpus pins and transition source files did not.",
+    "The executing UI root retained the complete learner, Review, refusal, and private-dialog body but asserted the 1550/1707 pre-head counts. Actual 190 Review and binding counts are 1553/1710; only those two assertions advance.",
+    "The tour reader previously equated the current corpus test to an archived bd source; it now inverts only the one declared current-source seam and the bounded appended historical test before whole-source equality. The lifecycle root advances its current UI hash and count inverse. The previously passing admission485 historical theorem retains its 78919 older raw fixture and exact 1550-to-1548, 1707-to-1685 inverse against byte-authentic afcfd94 pre-edit UI source; current190 is proved separately. Tongue uses authenticated whole 6036 delivery/admission sources for all four historical a247 inverses and both original forged-count/refusal negatives; final485 and current-head historical readers use exact immutable predecessors."
+  ],
+  "directReaderClosure": [
+    "tests/corpus-xray-v2-current-delivery.test.mjs",
+    "tests/ui-teaching-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/ui-teaching-lifecycle-contract.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/tongue-palate-a247-inverse.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs"
+  ],
+  "proposedPaths": [
+    {"path":"tests/corpus-xray-v2-current-delivery.test.mjs","preimageSha256":"90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef","candidateSha256":"a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905","candidateBytes":7883},
+    {"path":"tests/ui-teaching-current-delivery.test.mjs","preimageSha256":"afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285","candidateSha256":"8dac3b76e058953603aac3b7124fb19f3b754870cac0d88166ba2531efde13a8","candidateBytes":16195},
+    {"path":"tests/tour-discovery-current-delivery.test.mjs","preimageSha256":"6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129","candidateSha256":"689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b","candidateBytes":5772},
+    {"path":"tests/ui-teaching-lifecycle-contract.test.mjs","preimageSha256":"dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5","candidateSha256":"afa322520b0f14e081b3777fa82582012cc25c6b183f049c02174a1e51e036a4","candidateBytes":5994},
+    {"path":"tests/current-delivery-admission-485.test.mjs","preimageSha256":"3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611","candidateSha256":"3cbc677e5f9d144aa1388e0e97eef72cbda13528e7c57b5ee010ccc881c79fd0","candidateBytes":6427},
+    {"path":"tests/tongue-palate-a247-inverse.test.mjs","preimageSha256":"afbc95685a8204a658074dad3a3a45a2e53ab21fd27de3c829ec8f0df6f2b18e","candidateSha256":"c3b90e6f7714396aee95c8d68e56e02f6ebf1b9b577a63407d302ea9b8d97c0b","candidateBytes":8949},
+    {"path":"tests/admission485-final-role-transition-20261021.test.mjs","preimageSha256":"45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af","candidateSha256":"5d018d7855474aee8470a22556c42d1955679f68d84bb0f6f8988d6429dafe40","candidateBytes":9624},
+    {"path":"tests/current-head-index-whole-role-transition-20261021.test.mjs","preimageSha256":"e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11","candidateSha256":"f1d535bf3208894030b528203d7cb75f1c6a8091e07349fccc40dc9737ab24bb","candidateBytes":12029},
+    {"path":"tests/corpus-ui-role-preservation.test.mjs","preimageSha256":null,"candidateSha256":"b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667","candidateBytes":3905},
+    {"path":"tests/fixtures/corpus-xray-v2-current-delivery.test.mjs.raw","preimageSha256":null,"candidateSha256":"90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef","candidateBytes":6670},
+    {"path":"tests/fixtures/ui-teaching-current-delivery.test.mjs.raw","preimageSha256":null,"candidateSha256":"afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285","candidateBytes":16195},
+    {"path":"tests/fixtures/tour-discovery-current-delivery.test.mjs.raw","preimageSha256":null,"candidateSha256":"6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129","candidateBytes":5206},
+    {"path":"tests/fixtures/ui-teaching-lifecycle-contract.test.mjs.raw","preimageSha256":null,"candidateSha256":"dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5","candidateBytes":5210},
+    {"path":"tests/fixtures/current-delivery-admission-485.test.mjs.raw","preimageSha256":null,"candidateSha256":"3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611","candidateBytes":5305},
+    {"path":"tests/fixtures/tongue-palate-a247-inverse.test.mjs.raw","preimageSha256":null,"candidateSha256":"afbc95685a8204a658074dad3a3a45a2e53ab21fd27de3c829ec8f0df6f2b18e","candidateBytes":7526},
+    {"path":"tests/fixtures/admission485-final-role-transition-20261021.test.mjs.raw","preimageSha256":null,"candidateSha256":"45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af","candidateBytes":8867},
+    {"path":"tests/fixtures/current-head-index-whole-role-transition-20261021.test.mjs.raw","preimageSha256":null,"candidateSha256":"e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11","candidateBytes":11708},
+    {"path":"tests/fixtures/tongue-palate-current-atlas-delivery-6036.mjs.raw","preimageSha256":null,"candidateSha256":"6233c1028f9478b2bb4d7733a5b48c5427e69990fec8e5bfed106d77b3f615a6","candidateBytes":16123},
+    {"path":"tests/fixtures/tongue-palate-ui-teaching-admission-6036.mjs.raw","preimageSha256":null,"candidateSha256":"5b78e5dd86c3a7372ad6931e2a966647065ae19e0576e5f6e332ebee7aed904f","candidateBytes":12232}
+  ],
+  "sourceOnlyChecks": {
+    "passed": [
+      "All eight staged raw preimage hashes remain byte-identical to current canonical tests at correction; no existing target drift.",
+      "node --check on all nine staged test files: pass.",
+      "node --test staged tests/corpus-ui-role-preservation.test.mjs: 2/2 pass; exact whole-file forward, byte-exact inverse, and unknown-append mutation refusal for corpus and UI.",
+      "Source-only staged tongue root with VM_WEBSITE_ROOT=F:/VisibleMedicine/website and VM_CONTRACT_CANDIDATE_ROOT=F:/VisibleMedicine/staging/20261021-corpus-ui-role-followup/tests: 2/2 pass; all four complete a247 inverses and forged count/refusal negatives against authenticated 6036 raw sources.",
+      "All eight candidate diffs inspected; six dependent readers change only to immutable historical preimages and bounded exact current-role seams, retaining original full historical and refusal bodies."
+    ],
+    "proofCommand": "node --test F:/VisibleMedicine/staging/20261021-corpus-ui-role-followup/tests/corpus-ui-role-preservation.test.mjs",
+    "tongueProofCommand": "PowerShell: & { $env:VM_WEBSITE_ROOT='F:/VisibleMedicine/website'; $env:VM_CONTRACT_CANDIDATE_ROOT='F:/VisibleMedicine/staging/20261021-corpus-ui-role-followup/tests'; node --test F:/VisibleMedicine/staging/20261021-corpus-ui-role-followup/tests/tongue-palate-a247-inverse.test.mjs }",
+    "deferredNativeCommands": [
+      "node --test tests/corpus-xray-v2-current-delivery.test.mjs tests/ui-teaching-current-delivery.test.mjs tests/tour-discovery-current-delivery.test.mjs tests/ui-teaching-lifecycle-contract.test.mjs",
+      "node --test tests/current-delivery-admission-485.test.mjs tests/tongue-palate-a247-inverse.test.mjs tests/admission485-final-role-transition-20261021.test.mjs tests/current-head-index-whole-role-transition-20261021.test.mjs tests/corpus-ui-role-preservation.test.mjs"
+    ]
+  },
+  "limits": "Staged source-only candidate; no canonical or generated file edited. Native corpus/UI, build, browser, clinical and private-data checks not run or claimed. Main must review exact byte preimages, couple all eight direct readers, then execute native roots."
+}

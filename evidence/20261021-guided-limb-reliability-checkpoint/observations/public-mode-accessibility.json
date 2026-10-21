@@ -1,0 +1,20 @@
+{
+  "schema": "visible-medicine.bounded-public-dom-observation/1",
+  "date": "2026-10-21",
+  "route": "http://127.0.0.1:3000/atlas/3d",
+  "ownedTemporaryTab": "98",
+  "ownedTabClosed": true,
+  "sourceRevision": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "observation": "Primary browser accessibility output presents exactly four workspace radios: Explore, Dissect, Guided learning and Quiz. Read-only embedded DOM inspection confirms four additional native form inputs are aria-hidden=true, clipped to inset(50%), 1px square and tabIndex=-1. These are not extra learner-facing controls. The selected visible Explore radio has tabIndex=0; other visible radios have tabIndex=-1.",
+  "outcome": "The earlier doubled DOM snapshot is not evidence of a duplicated accessible-control defect; no product patch justified by this bounded observation.",
+  "method": "Actual accessibility tree plus read-only frame-scoped DOM/style inspection. No injected scripts, preference changes, form edits, submissions or model selection.",
+  "limits": [
+    "Not a full screen-reader or assistive-technology acceptance test.",
+    "No 200% text, reduced-motion, performance or GPU measurement.",
+    "No full model-load or clinical acceptance claim.",
+    "No raw DOM, scan images, private data or review decisions included."
+  ],
+  "ownerTabsRefreshed": false,
+  "ownerReviewDecisionsChanged": false,
+  "sourceChanged": false
+}

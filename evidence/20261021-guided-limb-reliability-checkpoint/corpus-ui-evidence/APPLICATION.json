@@ -1,0 +1,180 @@
+{
+  "at": "2026-10-21T14:32:32.551Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "preimageSha256": "90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef",
+      "candidateSha256": "a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905",
+      "candidateBytes": 7883
+    },
+    {
+      "path": "tests/ui-teaching-current-delivery.test.mjs",
+      "preimageSha256": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285",
+      "candidateSha256": "8dac3b76e058953603aac3b7124fb19f3b754870cac0d88166ba2531efde13a8",
+      "candidateBytes": 16195
+    },
+    {
+      "path": "tests/tour-discovery-current-delivery.test.mjs",
+      "preimageSha256": "6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129",
+      "candidateSha256": "689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b",
+      "candidateBytes": 5772
+    },
+    {
+      "path": "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "preimageSha256": "dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5",
+      "candidateSha256": "afa322520b0f14e081b3777fa82582012cc25c6b183f049c02174a1e51e036a4",
+      "candidateBytes": 5994
+    },
+    {
+      "path": "tests/current-delivery-admission-485.test.mjs",
+      "preimageSha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611",
+      "candidateSha256": "3cbc677e5f9d144aa1388e0e97eef72cbda13528e7c57b5ee010ccc881c79fd0",
+      "candidateBytes": 6427
+    },
+    {
+      "path": "tests/tongue-palate-a247-inverse.test.mjs",
+      "preimageSha256": "afbc95685a8204a658074dad3a3a45a2e53ab21fd27de3c829ec8f0df6f2b18e",
+      "candidateSha256": "c3b90e6f7714396aee95c8d68e56e02f6ebf1b9b577a63407d302ea9b8d97c0b",
+      "candidateBytes": 8949
+    },
+    {
+      "path": "tests/admission485-final-role-transition-20261021.test.mjs",
+      "preimageSha256": "45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af",
+      "candidateSha256": "5d018d7855474aee8470a22556c42d1955679f68d84bb0f6f8988d6429dafe40",
+      "candidateBytes": 9624
+    },
+    {
+      "path": "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "preimageSha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11",
+      "candidateSha256": "f1d535bf3208894030b528203d7cb75f1c6a8091e07349fccc40dc9737ab24bb",
+      "candidateBytes": 12029
+    },
+    {
+      "path": "tests/corpus-ui-role-preservation.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667",
+      "candidateBytes": 3905
+    },
+    {
+      "path": "tests/fixtures/corpus-xray-v2-current-delivery.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef",
+      "candidateBytes": 6670
+    },
+    {
+      "path": "tests/fixtures/ui-teaching-current-delivery.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285",
+      "candidateBytes": 16195
+    },
+    {
+      "path": "tests/fixtures/tour-discovery-current-delivery.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129",
+      "candidateBytes": 5206
+    },
+    {
+      "path": "tests/fixtures/ui-teaching-lifecycle-contract.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5",
+      "candidateBytes": 5210
+    },
+    {
+      "path": "tests/fixtures/current-delivery-admission-485.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611",
+      "candidateBytes": 5305
+    },
+    {
+      "path": "tests/fixtures/tongue-palate-a247-inverse.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "afbc95685a8204a658074dad3a3a45a2e53ab21fd27de3c829ec8f0df6f2b18e",
+      "candidateBytes": 7526
+    },
+    {
+      "path": "tests/fixtures/admission485-final-role-transition-20261021.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af",
+      "candidateBytes": 8867
+    },
+    {
+      "path": "tests/fixtures/current-head-index-whole-role-transition-20261021.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11",
+      "candidateBytes": 11708
+    },
+    {
+      "path": "tests/fixtures/tongue-palate-current-atlas-delivery-6036.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "6233c1028f9478b2bb4d7733a5b48c5427e69990fec8e5bfed106d77b3f615a6",
+      "candidateBytes": 16123
+    },
+    {
+      "path": "tests/fixtures/tongue-palate-ui-teaching-admission-6036.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "5b78e5dd86c3a7372ad6931e2a966647065ae19e0576e5f6e332ebee7aed904f",
+      "candidateBytes": 12232
+    }
+  ],
+  "controlledInputs": 5210,
+  "preservedInputs": 7,
+  "namedInputs": 5217,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "14d2e5dcae8d5525c5919803500ab5f9b9c3cdb2d486fb18285df6bb2b62af92",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T14:32:29.193Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "tests/ui-teaching-current-delivery.test.mjs",
+      "tests/tour-discovery-current-delivery.test.mjs",
+      "tests/ui-teaching-lifecycle-contract.test.mjs",
+      "tests/current-delivery-admission-485.test.mjs",
+      "tests/tongue-palate-a247-inverse.test.mjs",
+      "tests/admission485-final-role-transition-20261021.test.mjs",
+      "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "tests/corpus-ui-role-preservation.test.mjs",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/posterior-fossa-coverage.test.mjs"
+    ],
+    "code": 1,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/native.tap",
+    "logSha256": "74daeb8a33991d6557386a13c1da0d73c3deab932605c62453ed148fb289516b",
+    "counts": {
+      "tests": 63,
+      "pass": 62,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [
+      {
+        "number": 6,
+        "title": "corpus Xray v2 reaches the exact learner and protected Review; old/forged teaching cannot be saved"
+      }
+    ],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

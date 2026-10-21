@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-21T14:32:29.193Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/corpus-xray-v2-current-delivery.test.mjs",
+    "tests/ui-teaching-current-delivery.test.mjs",
+    "tests/tour-discovery-current-delivery.test.mjs",
+    "tests/ui-teaching-lifecycle-contract.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/tongue-palate-a247-inverse.test.mjs",
+    "tests/admission485-final-role-transition-20261021.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/corpus-ui-role-preservation.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-corpus-ui-role-application/native.tap",
+  "logSha256": "74daeb8a33991d6557386a13c1da0d73c3deab932605c62453ed148fb289516b",
+  "counts": {
+    "tests": 63,
+    "pass": 62,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [
+    {
+      "number": 6,
+      "title": "corpus Xray v2 reaches the exact learner and protected Review; old/forged teaching cannot be saved"
+    }
+  ],
+  "rawLogLocalOnly": true
+}

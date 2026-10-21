@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T14:25:33.103Z",
+  "at": "2026-10-21T14:35:52.475Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5206,
+    "canonicalNamedInputs": 5222,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "f9fe4a61a050578659aef21c72736de2f9e62f5b",
-  "gitParent": "f9fe4a61a050578659aef21c72736de2f9e62f5b",
+  "parent": "d2a9a28782467bbf6541a73ed19b82f3412b7bbc",
+  "gitParent": "d2a9a28782467bbf6541a73ed19b82f3412b7bbc",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3955,6 +3955,276 @@
       "path": "evidence/20261021-four-modules-verified/scripts/close-shoulder-and-export-modules-20261021.mjs",
       "bytes": 10230,
       "sha256": "1045cc614db2782b2435ee7000cfbc266ebc7a1d331698c2f5b7faea9d5c4c13"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/controls/admission.mjs",
+      "bytes": 10037,
+      "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/controls/checkpoint-config.json",
+      "bytes": 9094,
+      "sha256": "de1a775cf999e59f228eeff1a6d7a019a051560ece9b2644440de996c999ef53"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7636,
+      "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/controls/corpus-ui-admission.json",
+      "bytes": 2129,
+      "sha256": "1864b5dc913911ce3e4e6b1d802b73e3f954e7bba6e5e54571a4a8c4cabae84a"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7627,
+      "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/controls/limb-admission.json",
+      "bytes": 1500,
+      "sha256": "cba89c15bf044fce60694aeb4a9a76e6fc02d98bb40b8af0a134c32d1d762483"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-evidence/APPLICATION.json",
+      "bytes": 7521,
+      "sha256": "eb6be035b41d5803e163fc70b4bcbb7e2a208d4651a0e3edc482bb0fbd35f979"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-evidence/native.json",
+      "bytes": 1283,
+      "sha256": "c0b18e0015b442ed960628bfbbfd7c58de6acb181a1a18e47b452aa3fb58b215"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/admission485-final-role-transition-20261021.test.mjs",
+      "bytes": 8867,
+      "sha256": "45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "bytes": 6670,
+      "sha256": "90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 5305,
+      "sha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 11708,
+      "sha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/tongue-palate-a247-inverse.test.mjs",
+      "bytes": 7526,
+      "sha256": "afbc95685a8204a658074dad3a3a45a2e53ab21fd27de3c829ec8f0df6f2b18e"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 5206,
+      "sha256": "6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16195,
+      "sha256": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/ui-teaching-lifecycle-contract.test.mjs",
+      "bytes": 5210,
+      "sha256": "dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-proposal/PROPOSAL.json",
+      "bytes": 9371,
+      "sha256": "1326d5914ee79c7dbe410250742b8d49ad5ac505e58e8d8c81f1e53518e16f60"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/evidence/APPLICATION.json",
+      "bytes": 4730,
+      "sha256": "462de2b1055a4c6b2f676fde83412f22efa03f8dc088a405e940cdb7d7c5aa45"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/evidence/native.json",
+      "bytes": 938,
+      "sha256": "8839a97edf11a446f519bfefe56ed36d7bb2e8b639fa13ddb560f291fbddf337"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/evidence/PROOF.json",
+      "bytes": 3235,
+      "sha256": "19a81a150936198c85ec9cc7068cefd105823c84767c7b2affaba23cbf0437cc"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/admission485-final-role-transition-20261021.test.mjs",
+      "bytes": 9624,
+      "sha256": "5d018d7855474aee8470a22556c42d1955679f68d84bb0f6f8988d6429dafe40"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "bytes": 8148,
+      "sha256": "efa18987a9fa80a339bf9e8ce2d4c38dae2e8ea99cc5f03f978b4ca544b5768a"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/clinical-review-suprahyoid-quiz.test.ts",
+      "bytes": 10039,
+      "sha256": "302c5bf4d5bdb567932497cd2cdf7d71d8e286a4ff5274908fc04905f6f31b43"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/clinical-review-um-ankle-imaging.test.ts",
+      "bytes": 4055,
+      "sha256": "57c7250be0b65ea1756f992b822803cad98560389eb9aa3f551c33414d5bd2c5"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "bytes": 11969,
+      "sha256": "3f8b770eed2ed466fa233a6a93b659ed17fed1e1158cd486df74d0ef66fc71d3"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 3905,
+      "sha256": "b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "bytes": 7883,
+      "sha256": "a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 6427,
+      "sha256": "3cbc677e5f9d144aa1388e0e97eef72cbda13528e7c57b5ee010ccc881c79fd0"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 12029,
+      "sha256": "f1d535bf3208894030b528203d7cb75f1c6a8091e07349fccc40dc9737ab24bb"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/admission485-final-role-transition-20261021.test.mjs.raw",
+      "bytes": 8867,
+      "sha256": "45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/corpus-xray-v2-current-delivery.test.mjs.raw",
+      "bytes": 6670,
+      "sha256": "90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/current-delivery-admission-485.test.mjs.raw",
+      "bytes": 5305,
+      "sha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/current-head-index-whole-role-transition-20261021.test.mjs.raw",
+      "bytes": 11708,
+      "sha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-shoulder-girdle-artery-quiz.test.ts.raw",
+      "bytes": 6836,
+      "sha256": "31323ff1f752edf060a9ecc335b7338ffb023773e1e76df3796249c5d978ef5c"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-suprahyoid-quiz.test.ts.raw",
+      "bytes": 9138,
+      "sha256": "44f4f13cc6a1feafd40369977b8d4c89f08ab7472387275c36d4ca450c5268a3"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-um-ankle-imaging.test.ts.raw",
+      "bytes": 3400,
+      "sha256": "e453387dfd045a0dcd744996165fd949d08446ef0afd5b6adaaf4e8c49e9176b"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-upper-limb-completion-quiz.test.ts.raw",
+      "bytes": 10657,
+      "sha256": "17a3cc58b361390d3e42570a86a9fb2c192c8cf80f985eae523af16e76d84c72"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/tongue-palate-a247-inverse.test.mjs.raw",
+      "bytes": 7526,
+      "sha256": "afbc95685a8204a658074dad3a3a45a2e53ab21fd27de3c829ec8f0df6f2b18e"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/tongue-palate-current-atlas-delivery-6036.mjs.raw",
+      "bytes": 16123,
+      "sha256": "6233c1028f9478b2bb4d7733a5b48c5427e69990fec8e5bfed106d77b3f615a6"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/tongue-palate-ui-teaching-admission-6036.mjs.raw",
+      "bytes": 12232,
+      "sha256": "5b78e5dd86c3a7372ad6931e2a966647065ae19e0576e5f6e332ebee7aed904f"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/tour-discovery-current-delivery.test.mjs.raw",
+      "bytes": 5206,
+      "sha256": "6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/ui-teaching-current-delivery.test.mjs.raw",
+      "bytes": 16195,
+      "sha256": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/ui-teaching-lifecycle-contract.test.mjs.raw",
+      "bytes": 5210,
+      "sha256": "dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "bytes": 15245,
+      "sha256": "b9359849ff93c19f51d555d33e0ca772625632a08855d6d1f6822dac84203aa7"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/tongue-palate-a247-inverse.test.mjs",
+      "bytes": 8949,
+      "sha256": "c3b90e6f7714396aee95c8d68e56e02f6ebf1b9b577a63407d302ea9b8d97c0b"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 5772,
+      "sha256": "689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16195,
+      "sha256": "8dac3b76e058953603aac3b7124fb19f3b754870cac0d88166ba2531efde13a8"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/ui-teaching-lifecycle-contract.test.mjs",
+      "bytes": 5994,
+      "sha256": "afa322520b0f14e081b3777fa82582012cc25c6b183f049c02174a1e51e036a4"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/observations/public-mode-accessibility.json",
+      "bytes": 1411,
+      "sha256": "ab9aeaf6e649054fd0de7f2e76788e9fd23e65e7705aa86788977a4afa54a857"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "bytes": 6836,
+      "sha256": "31323ff1f752edf060a9ecc335b7338ffb023773e1e76df3796249c5d978ef5c"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-suprahyoid-quiz.test.ts",
+      "bytes": 9138,
+      "sha256": "44f4f13cc6a1feafd40369977b8d4c89f08ab7472387275c36d4ca450c5268a3"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-um-ankle-imaging.test.ts",
+      "bytes": 3400,
+      "sha256": "e453387dfd045a0dcd744996165fd949d08446ef0afd5b6adaaf4e8c49e9176b"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "bytes": 10657,
+      "sha256": "17a3cc58b361390d3e42570a86a9fb2c192c8cf80f985eae523af16e76d84c72"
+    },
+    {
+      "path": "evidence/20261021-guided-limb-reliability-checkpoint/proposal/PROPOSAL.json",
+      "bytes": 4596,
+      "sha256": "738c7241f41dba8f8c372570d1db58fca72cf31da605125520d4c940ce61d1ab"
     },
     {
       "path": "evidence/20261021-head-role-union-verified/controls/admit-closed56-role-repair-20261021.mjs",
@@ -9683,9 +9953,9 @@
     }
   ],
   "removed": [],
-  "scope": "Seven installed imaging test/raw paths plus explicitly selected seven final question paths, original preimages, both reviewed proposals, exact authored-epoch correction and separate actual native receipts. Test-side reliability repair only. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Nine installed limb/suprahyoid test/raw paths plus explicit nineteen corpus/UI test/raw paths, original preimages, reviewed proposals, separate actual native receipts including one retained failure, and sanitized read-only public accessibility observation. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T14:25:26.984Z",
+    "at": "2026-10-21T14:35:45.743Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -9693,8 +9963,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5206,
-    "controlledSourceInputs": 5199,
+    "currentNamedInputs": 5222,
+    "controlledSourceInputs": 5215,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -9704,18 +9974,18 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "2d56a6f1428a1e6ef3c78fcf22790a6711c0ab01888b277660e014c3663f2601",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-clinical-imaging-role-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "6b87bdee4084879f268dad8cb6580a98d8a05bd01b94d13b7a70bfc634ba91b1",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "8a2240e2575bd465c0674335e5aa2734d385ca03816a696767d87ddeabdda101",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "8077b8fa21d44deb759b4a39cb6d64bbd90ab63cbfc9f6a7ce24f282c5222365",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 7,
-    "existingEditedTestPaths": 3,
+    "installedTestOnlyPaths": 9,
+    "existingEditedTestPaths": 4,
     "actualNativeCode": 0,
     "actualNativeCounts": {
-      "tests": 39,
-      "pass": 39,
+      "tests": 40,
+      "pass": 40,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
@@ -9730,7 +10000,7 @@
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,
     "wholeAuditBaselineUnchanged": true,
-    "milestone": "Fourteen exact test/raw-witness paths repair current190 reasoning,regional-muscle,short-ciliary,shoulderCT,spinal-disc Ultrasound and thoracic quiz checks without product/content edits. Actual question6-root41/41 and separate imaging6-root39/39 verify answers, learner/Review bindings, emitted content and stale/forged refusals. The initial41/40/1 receipt is retained: main traced short-ciliary historical exclusivity to authentic280c, immediate child of0a, instead of later9f with intervening X-ray drafts. Both original full-file guards and every original count/refusal obligation remain. All full failure baselines retained; owner forms/private source/Review untouched.",
+    "milestone": "Nine limb/suprahyoid test/raw paths verify current190 ankle drafts,upper-limb completion,shoulder-girdle arteries and suprahyoid quizzes; actual7-root40/40pass, no skips or cancellations. Separate corpus/UI19path closure has actual11-root63/62pass/1failure: all UI, historical source inverses and mutation gates pass; corpus teaching fingerprint remains under investigation. Its failure receipt and original assertions are preserved, not repinned to observed values. Exact full6036 archived witnesses preserve all tongue/a247 inverses and forged negatives. Read-only actual temporary-tab accessibility check shows four named workspace radios; extra form inputs are hidden/clipped/non-tabbed, not a proven duplicate-control bug. No product or clinical edits and no whole-suite claim.",
     "fullSuitePassingClaim": false,
     "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,

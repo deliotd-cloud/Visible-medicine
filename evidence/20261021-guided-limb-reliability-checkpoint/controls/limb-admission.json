@@ -1,0 +1,27 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-limb-suprahyoid-role-application",
+  "manifestSha256": "738c7241f41dba8f8c372570d1db58fca72cf31da605125520d4c940ce61d1ab",
+  "beforeInputs": 5210,
+  "afterInputs": 5215,
+  "expectedPaths": [
+    "tests/clinical-review-um-ankle-imaging.test.ts",
+    "tests/clinical-review-upper-limb-completion-quiz.test.ts",
+    "tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+    "tests/clinical-review-suprahyoid-quiz.test.ts",
+    "tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+    "tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-um-ankle-imaging.test.ts.raw",
+    "tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-upper-limb-completion-quiz.test.ts.raw",
+    "tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-shoulder-girdle-artery-quiz.test.ts.raw",
+    "tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-suprahyoid-quiz.test.ts.raw"
+  ],
+  "roots": [
+    "tests/clinical-review-um-ankle-imaging.test.ts",
+    "tests/clinical-review-upper-limb-completion-quiz.test.ts",
+    "tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+    "tests/clinical-review-suprahyoid-quiz.test.ts",
+    "tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/posterior-fossa-coverage.test.mjs"
+  ]
+}
