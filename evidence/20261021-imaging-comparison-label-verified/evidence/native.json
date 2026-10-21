@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-21T17:31:22.878Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/imaging-atlas-shell.test.ts",
+    "tests/imaging-pane-navigation.test.ts",
+    "tests/imaging-image-focus.test.mjs",
+    "tests/head-inline-comparison.test.ts",
+    "tests/head-atlas-navigation.test.ts",
+    "tests/review-navigation-delivery-preservation.test.mjs",
+    "tests/current-atlas-delivery.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "durationMs": 5470,
+  "log": "F:/VisibleMedicine/staging/20261021-imaging-comparison-label-candidate/native.log",
+  "logSha256": "fa6d6799337961a1e5c63e07a319d0bdb0b81ed9e8e7bc6df45f2b2f7359ceed",
+  "canonicalInstalled": false,
+  "counts": {
+    "tests": 65,
+    "pass": 65,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": []
+}

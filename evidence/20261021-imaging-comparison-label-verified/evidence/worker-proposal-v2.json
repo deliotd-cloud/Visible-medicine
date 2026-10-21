@@ -1,0 +1,43 @@
+{
+  "schema": "visible-medicine-comparison-accessible-label-proposal-v2",
+  "status": "staged proposal; not integrated",
+  "previousProposal": {
+    "path": "F:/VisibleMedicine/staging/20261021-comparison-accessible-label-proposal/PROPOSAL_V1.json",
+    "sha256": "6e83c0d841428fc6d87efe2f1e04b52259748f529544483d9c3d05f733abef80"
+  },
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "atlasSourceAtObservation": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "baseline": {
+    "directory": "F:/VisibleMedicine/staging/20261021-coherent-usability-candidate/website",
+    "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+    "reviewInputs": 1711
+  },
+  "candidateDirectory": "F:/VisibleMedicine/staging/20261021-comparison-accessible-label-proposal/candidate",
+  "proposedPaths": [
+    {
+      "path": "components/ImagingAtlasShell.tsx",
+      "preimageSha256": "b020d260358b7ae0eaacc8b15a46c41289024e77f46179bd0cf9e85ecedcdd87",
+      "candidateSha256": "17af2c98f3919cabf6a87340a06003d1cdf24d1e7ad8f58ce9d6886fa0b1a8d3",
+      "candidateBytes": 6498
+    },
+    {
+      "path": "tests/imaging-atlas-shell.test.ts",
+      "preimageSha256": "c11f2cd83e5c3b3ca9e5dbb4987eb210206eaca50c412df938995974d2fd5e81",
+      "candidateSha256": "1a4efc97f1e50fdc7a96db432649ca3d5995c8641a3f53c87119f0ec71a6c97c",
+      "candidateBytes": 16099
+    }
+  ],
+  "change": "One presentation-only label names the open 3D comparison in both the learning shortcut and its target landmark. Without comparison, caller-supplied or default labels remain unchanged.",
+  "proof": {
+    "diffReviewed": true,
+    "ssr": "12/12 CT and MRI open/closed cases pass using the exact staged component, real ImagingPaneNavigation from the coherent baseline, canonical React/TypeScript dependencies and no generated files.",
+    "testSource": "The candidate test adds the same 12 SSR cases while preserving every original assertion. Its harness now transpiles real ImagingPaneNavigation and supplies actual imaging-pane-focus; the original case-preserving shortcut mock was removed. The candidate test was not run as a native root because this two-file proposal has no local dependency tree.",
+    "unchangedBehavior": "Component diff changes only the derived presentation label and two label props; pane targets, focus/reveal, visibility, modality context, entitlement and registration logic are untouched."
+  },
+  "limits": [
+    "No canonical files, Review bindings, CSS, generated outputs, scans, masks, native/private assets or clinical claims changed.",
+    "Main must perform exact Review source-binding transition, integrate and run native focused roots, types/build and recovery checks against the final combined candidate.",
+    "No browser, assistive-technology or owner-form acceptance is claimed."
+  ]
+}

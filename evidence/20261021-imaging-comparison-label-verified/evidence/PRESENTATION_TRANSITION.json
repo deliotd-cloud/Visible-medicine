@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-21T17:31:07.566Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "reviewBefore": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
+  "reviewAfter": "ac872c4ac15e606794f963256c8617f7cef9001c4048e572bc2dbc1836a4c86b",
+  "reviewInputs": 1711,
+  "sourceInputChanges": [
+    "components/ImagingAtlasShell.tsx"
+  ],
+  "generatedRevisionPaths": [
+    "atlas-review/integration-inputs.json",
+    "atlas-review/manifest.json",
+    "atlas-review/content/body-renderer-revision.json",
+    "atlas-review/content/review-revisions.json"
+  ],
+  "changedDeliveryDocuments": [
+    "atlas-review/manifest.json",
+    "atlas-review/integration-inputs.json",
+    "public/atlas-review-viewer/manifest.json"
+  ],
+  "stockBinderAndViewer": true,
+  "wholeReviewAndSourceRevisionInverseExact": true,
+  "packagesUnchanged": true,
+  "privatePlexusPacketAndModuleUnchanged": true,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-imaging-comparison-label-candidate/FINAL_SOURCE_INPUTS.json",
+  "sourceSnapshotSha256": "34186bc2e340127b1fd13475e4e28ed7e78702fc231fb637be641b7c0fbcee1c",
+  "canonicalInstalled": false,
+  "ownerFormsRefreshed": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false
+}

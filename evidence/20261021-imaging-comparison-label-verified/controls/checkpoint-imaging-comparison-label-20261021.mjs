@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {backup,read,json,sha,runGit} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261021-imaging-comparison-label-candidate',root='F:/VisibleMedicine/recovery/checkpoints/20261021-imaging-comparison-label-verified';
+const p=json(stage+'/PREPARATION.json'),v=json(stage+'/VERIFIED.json'),transition=json(stage+'/PRESENTATION_TRANSITION.json'),rows=json(v.sourceSnapshot);
+assert.equal(v.actualNativeCounts.pass,65);assert.equal(v.actualNativeCounts.tests,65);assert.equal(v.actualNativeCounts.fail,0);assert.equal(v.actualNativeCounts.skipped,0);assert.equal(v.actualNativeCounts.cancelled,0);
+assert(v.fullProjectTypesPassed&&v.fullLocalBuildPassed&&v.stockReviewPassed&&v.wholePresentationTransitionExact);assert.equal(v.canonicalInstalled,false);
+assert.equal(v.review,'ac872c4ac15e606794f963256c8617f7cef9001c4048e572bc2dbc1836a4c86b');
+assert.equal(sha(read(v.sourceSnapshot)),v.sourceSnapshotSha256);assert.equal(rows.length,5466);
+for(const c of v.commands){assert.equal(c.code,0);assert.equal(sha(read(c.log)),c.logSha256);}
+const guard=()=>{
+ for(const r of rows)assert.equal(sha(read(p.site+'/'+r.path)),r.sha256,r.path);
+ for(const r of json(p.baselineSnapshot))assert.equal(sha(read(p.baseline+'/website/'+r.path)),r.sha256,'Preserved baseline:'+r.path);
+ for(const r of [...json(p.canonicalSnapshot),...p.preserved])assert.equal(sha(read(p.canonical+'/'+r.path)),r.sha256,'Owner source:'+r.path);
+ assert.equal(runGit(['-C',p.canonical,'rev-parse','HEAD']).toString().trim(),p.websiteHead);
+ assert.equal(runGit(['-C','F:/VisibleMedicine/atlas','rev-parse','HEAD']).toString().trim(),p.source);assert.equal(runGit(['-C','F:/VisibleMedicine/atlas','status','--porcelain']).toString().trim(),'');
+ const checklist=json(p.canonical+'/docs/completion-checklist.json'),previous=json('F:/VisibleMedicine/recovery/checkpoints/20261021-coherent-usability-verified/coordination-saved/completion-checklist.json');
+ assert.equal(checklist.revision,124);assert.equal(checklist.items.length,71);assert.deepEqual(checklist.items,previous.items);assert.deepEqual(checklist.baseline,previous.baseline);
+ process.kill(266712,0);process.kill(240632,0);
+};
+guard();assert(!fs.existsSync(root));fs.mkdirSync(root,{recursive:true});const selected=[];
+const copy=(from,name)=>{
+ assert(!path.isAbsolute(name)&&!name.includes('..')&&!/[\\\x00-\x1f]/.test(name));assert(!/\.(?:log|tap|glb|dcm|nii|nrrd|sqlite|db|png|jpg|mp4)$/i.test(name));
+ const b=read(from);assert(b.length<250000&&!b.includes(0));new TextDecoder('utf-8',{fatal:true}).decode(b);
+ const to=root+'/'+name;fs.mkdirSync(path.dirname(to),{recursive:true});fs.writeFileSync(to,b,{flag:'wx'});selected.push({path:name,bytes:b.length,sha256:sha(b)});
+};
+for(const r of p.proposedPaths){copy(p.site+'/'+r.path,'candidate/'+r.path);copy(stage+'/preimages/'+r.path,'preimages/'+r.path);}
+copy(p.site+'/tests/fixtures/current-atlas-delivery.json','candidate/tests/fixtures/current-atlas-delivery.json');
+copy(p.baseline+'/website/tests/fixtures/current-atlas-delivery.json','preimages/tests/fixtures/current-atlas-delivery.json');
+for(const name of ['VERIFIED','PRESENTATION_TRANSITION','bind-review','build-review-viewer','stock-review','native','full-types','full-build','COPY_PREFLIGHT_FAILURE'])copy(stage+'/'+name+'.json','evidence/'+name+'.json');
+copy(p.proposal,'evidence/worker-proposal-v2.json');copy(path.dirname(p.proposal)+'/PROPOSAL_V1.json','evidence/worker-proposal-v1.json');
+for(const name of ['prepare-imaging-comparison-label-20261021.mjs','verify-imaging-comparison-label-20261021.mjs','checkpoint-imaging-comparison-label-20261021.mjs'])copy(name,'controls/'+name);
+const proof={at:new Date().toISOString(),source:p.source,review:v.review,reviewBefore:v.reviewBefore,reviewInputs:1711,candidateFiles:5466,actualFocusedNativeCounts:v.actualNativeCounts,nativeRoots:v.nativeRoots,newLabelScenarios:12,realPaneNavigationUsed:true,fullProjectTypesPassed:true,fullLocalBuildPassed:true,stockReviewPassed:true,wholePresentationTransitionExact:true,sourceInputChanges:transition.sourceInputChanges,packagesAndLicensingInventoryUnchanged:true,privatePlexusPacketAndModuleUnchanged:true,canonicalInstalled:false,ownerFormsRefreshed:false,ownerPreviewRestarted:false,priorCandidateUnchanged:true,all71ItemsAndEightIdeasUnchanged:true,checklistRevision:124,fullGoalActive:true,privateDataUploaded:false,clinicalApproval:false,spatialRegistration:false,publicDeployment:false,wholeSuitePassingClaim:false,browserAcceptancePassed:false,wholeProjectBackup:false,privateDataBackup:false,limits:'The CT/MRI-to-existing3D shortcut and learning landmark now name an open comparison. These are focused real-component SSR/behavior tests and a full build, not browser or screen-reader acceptance. Candidate is isolated, not installed in owner preview. Earlier Review Cancel/leave/clean-navigation acceptance remains unresolved; Back/Forward and imperative routing remain outside the click guard. No changes to clinical content, decisions, scans, masks, model assets, native imaging or desktopPACS.'};
+fs.writeFileSync(root+'/PROOF.json',JSON.stringify(proof,null,2)+'\n',{flag:'wx'});copy(root+'/PROOF.json','evidence/PROOF.json');
+const parentRoot='F:/VisibleMedicine/recovery/checkpoints/20261021-coherent-usability-verified-backup',parent=json(parentRoot+'/github-backup.json');assert(parent.sourceBackupVerified);assert.equal(parent.head,'e79e56b3b3d46ee7e8ea36a14d68c196a6a5a9cb');
+const values=new Map(json(parentRoot+'/remote-source-restored/.source-backup/manifest.json').files.map(r=>{const b=read(parentRoot+'/remote-source-restored/'+r.path);assert.equal(sha(b),r.sha256);return[r.path,b];}));
+for(const r of selected)values.set('evidence/'+path.basename(root)+'/'+r.path,read(root+'/'+r.path));
+const remote=backup({root:root+'-backup',repo:'F:/VisibleMedicine/history/website-work/github-imaging-comparison-label-20261021.git',branch:'backup/imaging-comparison-label-20261021',files:[...values].map(([path,b])=>({path,bytes:b.length,sha256:sha(b)})).sort((a,b)=>a.path.localeCompare(b.path)),bytesFor:p=>values.get(p),verifySource:guard,parent:parent.head,parentTree:parent.tree,parentRepo:parentRoot+'/independent-readback.git',sourceIdentity:{source:p.source,review:v.review,canonicalInstalled:false},proof,scope:'Two reviewed comparison-label source/test files, exact preimages and old/new generated-delivery fingerprints; compact focused native/types/build/stock-binding transition receipts and mechanical controls. Existing filtered parent sources are retained. No scans, masks, geometry, identifiers, private modules/references/notes/decisions/env/database, full candidate/private input inventories, dependencies, raw logs/DOM/media or raw canonical ancestry. Partial selected-source recovery only; not whole/private/runnable backup, clinical/spatial approval, whole-suite pass or public deployment.'});
+const cp={...proof,stage,site:p.site,sourceSnapshot:v.sourceSnapshot,sourceSnapshotSha256:v.sourceSnapshotSha256,sourceSnapshotLocalOnly:true,selectedFiles:selected,verification:stage+'/VERIFIED.json',verificationSha256:sha(read(stage+'/VERIFIED.json')),backup:{receipt:root+'-backup/github-backup.json',receiptSha256:sha(read(root+'-backup/github-backup.json')),head:remote.head,tree:remote.tree,restoredPaths:remote.restoredPaths},next:'Continue full71-item/eight-idea roadmap without clinical-signoff stall. Preserve this coherent staged candidate and owner forms. Resolve actual Review navigation acceptance and broader unsaved-work navigation independently; do not repeatedly provoke the unchanged blocked native confirmation. Use risk-matched focused checks, real browser evidence where needed and exact source/revision transitions. No public deployment, fee, private upload, authentication bypass, desktopPACS or specialist-mask edit.'};
+fs.writeFileSync(root+'/checkpoint.json',JSON.stringify(cp,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({checkpoint:root+'/checkpoint.json',sha256:sha(read(root+'/checkpoint.json')),head:remote.head,tree:remote.tree,restoredPaths:remote.restoredPaths,canonicalInstalled:false}));
