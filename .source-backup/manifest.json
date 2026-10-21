@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T23:16:32.578Z",
+  "at": "2026-10-21T23:47:18.734Z",
   "sourceIdentity": {
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "atlasHead": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
-    "atlasTree": "e9165d7122361f809a267af1414b337b69097fe2",
-    "review": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59"
+    "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+    "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
+    "stagedUiSourcePaths": 6,
+    "stagedAortaAssurancePaths": 3
   },
-  "parent": "6358dd4c4344f106096006a2c05c01c6d611c0c2",
-  "gitParent": "6358dd4c4344f106096006a2c05c01c6d611c0c2",
+  "parent": "ef46fe0b8293168e20324280934788c753a04c41",
+  "gitParent": "ef46fe0b8293168e20324280934788c753a04c41",
   "files": [
     {
       "path": "app/globals.css",
@@ -12571,6 +12572,51 @@
       "sha256": "1ff0122debc54ff429998ac9bfc669a0d2ced1563a9c3101024c655db6e9b930"
     },
     {
+      "path": "pending/inline-viewer-20261022/aorta-assurance/tests/aorta-runtime-family-admission.test.mjs",
+      "bytes": 2845,
+      "sha256": "eb4dd6dbb509f270c5a0a1312553e0284e746704ee49f3c36bfc5674107a7f9a"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/aorta-assurance/tests/atlas-abdominal-aorta-us.test.ts",
+      "bytes": 6535,
+      "sha256": "f745e25f2f1856e3ec0cb6dc3c2ec4ea58d42ea6e7384119b3c22e7808d5329c"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/aorta-assurance/tests/fixtures/aorta-runtime-family-before-20261022.raw",
+      "bytes": 6431,
+      "sha256": "0e2c98a68cd46e2845a0cd97f2c356b592684c96331315285a2004fedcce3d81"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/ui/components/atlas-runtime-expansion.ts",
+      "bytes": 4160,
+      "sha256": "bc93f073905072c8628624712a1758517471ac121483a291573e9f65fd28611b"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/ui/components/atlas-runtime-frame.css",
+      "bytes": 5371,
+      "sha256": "ec6e4c9562253b899353edb40f069e324acf9b0d88541675b616af35a04e58ea"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/ui/components/AtlasRuntimeFrame.tsx",
+      "bytes": 7352,
+      "sha256": "7d4d9d36f5f8b7a88477355ba76b3adb4e93d080cff9356dfe5725f3fc6c76d8"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/ui/tests/atlas-runtime-expansion.test.mjs",
+      "bytes": 11291,
+      "sha256": "c053028d8cdc970a49a7afcf2b06911c478b59f5e275ef2f16abe60322845fde"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/atlas-runtime-frame.css.raw",
+      "bytes": 1893,
+      "sha256": "f4ba294204a84b573b41baf9d64219a3b7814e8833b9ba4572003637ae62d1c8"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/AtlasRuntimeFrame.tsx.raw",
+      "bytes": 5344,
+      "sha256": "335b8b70b2ff60c3a951efb9eb18d98de8d230411c00896ff4a4123eff051261"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -13277,47 +13323,41 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently restored filtered source selection (including seven new Atlas source/proof/hash-only metadata paths) plus seventeen explicit installed website source/test/current-pin paths. No new frozen runtime-document witnesses, regenerated full abdominal snapshot, generated/private derivatives or models are uploaded. Partial selected-source recovery only, not whole/private/runnable recovery. No scans, masks, pixels, meshes, identifiers, private runtime modules, private references, notes, decisions, credentials, environment, databases, raw logs, media or raw canonical Git ancestry.",
+  "scope": "Inherited independently restored filtered source selection plus nine explicit staged authored UI/controller/test and exact original source-test/CSS/TSX text preimage paths. Preimages are code only, not frozen runtime/scan data. Isolated prototype and aorta test repair are not installed. No screenshots, media, scans, masks, pixels, models, source catalogues/coordinates, private runtime modules, identifiers, references, notes, decisions, credentials, environment, databases, raw logs or raw canonical Git ancestry are added. Partial selected-source recovery only, not whole/private/runnable recovery.",
   "proof": {
-    "installedLocally": true,
-    "combinedCanonicalTests": {
-      "tests": 146,
-      "pass": 146,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "sourceColicTests": {
-      "tests": 7,
-      "pass": 7,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "fullTypes": true,
-    "fullBuild": true,
-    "stockReview": true,
-    "reviewBindings": 1721,
-    "importedSources": 1558,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "exactSourceRows": 5730,
-    "preservedSourcePaths": 7,
-    "changedTeachingPlacements": 2,
-    "unchangedTeachingPlacements": 9934,
-    "changedReviewPackets": 2,
-    "unchangedReviewPackets": 1102,
-    "geometryModelsAndAccessScopeUnchanged": true,
-    "leftColicUltrasoundPending": true,
-    "routineTransabdominalVisibilityEstablished": false,
-    "imagesImported": false,
     "sourceOnlyPartialRecovery": true,
-    "clinicalApproval": false,
-    "spatialRegistration": false,
-    "publicDeployment": false,
+    "installedLocally": false,
+    "stagedUiTests": {
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "stagedAortaInverseTests": {
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "actualIsolatedDesktopFullscreen": true,
+    "actualParentAndIframeEscape": true,
+    "nativeMenuEscapeRespected": true,
+    "oneMountedIframeAndSelectionPreserved": true,
+    "closedActionsReuseExisting36pxTeachingHeader": true,
+    "legacyNoDockReserves36px": true,
+    "fullTypes": false,
+    "fullBuild": false,
+    "reviewRebind": false,
+    "nativeAortaRerun": false,
+    "completeStockSuitePending": true,
     "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "publicDeployment": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false
   },
