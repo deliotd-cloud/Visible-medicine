@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-21T18:28:31Z",
+  "method": "Fresh read-only documented CUA tab inventory and visible DOM state; no navigation, editing, saving or note values read.",
+  "observedTabs": ["2","50","58","66","69","72","74","75","80"],
+  "scope": "All currently listed in-app local tabs; shoulder80 is the only active worksheet. Body66/body75 and Studio69 have no active note editors. Remaining tabs are exploration, imaging, pilot or inbox, not authoring forms. No claim about unobserved external applications.",
+  "shoulder": {"unsavedTrackDrafts": 0, "dirtyMarkers": 0, "busySaveButtons": 0, "alerts": 0},
+  "body66ActiveNoteFields": 0,
+  "body75ActiveNoteFields": 0,
+  "studio69ActiveEditors": 0,
+  "noActiveReviewEdits": true,
+  "ownerLocalSwitchPreviouslyAuthorized": true,
+  "authorizationEvidence": "Owner reply: Drafts saved — switch the local website; subsequent request to continue efficiently while clinical reviews wait until tomorrow. No public deployment authority inferred.",
+  "noNotesOrDecisionsChanged": true,
+  "openTabsWillNotBeReloaded": true,
+  "manualReloadPreview": true,
+  "privateNoteValuesCopied": false,
+  "rawDomOrMediaExported": false
+}

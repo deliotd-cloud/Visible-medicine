@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-21T18:29:36.096Z",
+  "error": "AssertionError [ERR_ASSERTION]: Installed:public/atlas-review-viewer/manifest.json\n+ actual - expected\n\n+ 'c375414587b363e37d783c0aa3b51e91f88631955c7e14e182df29e03c5f5c51'\n- 'ed46905fe5265da7bf98bd4acea1546fb066e901487d9090c1f0bdd7eb548873'\n",
+  "commands": [
+    {
+      "at": "2026-10-21T18:29:14.130Z",
+      "args": [
+        "scripts/bind-clinical-review.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 1519,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-coherent-ui/bind-review.log",
+      "logSha256": "061f1f2defbeb4a0281c271a1a84ceee1b645dc82517452672a9d96c0c6219fd"
+    },
+    {
+      "at": "2026-10-21T18:29:31.524Z",
+      "args": [
+        "scripts/build-clinical-review-viewer.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 17386,
+      "log": "F:/VisibleMedicine/recovery/local-cutover/20261021-coherent-ui/build-review-viewer.log",
+      "logSha256": "cfccea81d38277d71b918f2403c94a366948234279953c294fb4b39c2349591b"
+    }
+  ],
+  "priorWebsiteBytesRestored": true,
+  "previewRestartRequired": true,
+  "privateStateNotRestoredOrModified": true,
+  "noPublicDeployment": true
+}

@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T18:18:27.502Z",
+  "at": "2026-10-21T18:42:23.119Z",
   "sourceIdentity": {
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
-    "canonicalInstalled": false
+    "canonicalUiInstalled": true
   },
-  "parent": "6ea230474052cf299bbb6f4ab0c6eb8154169656",
-  "gitParent": "6ea230474052cf299bbb6f4ab0c6eb8154169656",
+  "parent": "f2f86c8fc263bc03b59c59e2c1046706e53ac15b",
+  "gitParent": "f2f86c8fc263bc03b59c59e2c1046706e53ac15b",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2108,6 +2108,131 @@
       "path": "evidence/20261021-closed56-role-repair-verified/proposal/PROPOSAL.md",
       "bytes": 5200,
       "sha256": "e55ce7b1abe4639368a36955e0ce2a2fa68e5dddd36acaf94eaae3dae419d14c"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/controls/checkpoint-coherent-ui-installed-20261021.mjs",
+      "bytes": 9407,
+      "sha256": "89d62f987abe87deda7526444b03b175b7c1c88bf242d0204f74947f6424d97b"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/controls/install-coherent-ui-20261021.mjs",
+      "bytes": 13853,
+      "sha256": "06137027260d52c9fd58100612d8253fbd63f2e705708805ba0f07c3ae85a21d"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/controls/install-coherent-ui-v1.mjs",
+      "bytes": 11765,
+      "sha256": "6e2157a06ba2c30a7ac8bd720d956b399d1966a03dd9365968cf7939aea355c4"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/controls/prepare-coherent-ui-installation-20261021.mjs",
+      "bytes": 8189,
+      "sha256": "a5f888ede9608c8eaed590ed799d70b65172068cd943b1de9919fee35c1762c7"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/controls/record-coherent-ui-runtime-20261021.mjs",
+      "bytes": 3767,
+      "sha256": "4a0bc886cf54e629eac4209cfefb81ec3015900fcdbd3b575d317b32e37663d3"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/controls/retain-local-review-chunks-20261021.mjs",
+      "bytes": 2449,
+      "sha256": "74edf827d1ac36aa7588168fe4bc8108fbbec6b0c821a5cdf6c6dc4ac5357f6e"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/bind-review.json",
+      "bytes": 346,
+      "sha256": "3bc63811632259aef1c8b4b3c5e6f53ba8a2d715e5e41fef4cccc81d7c67ef88"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/BROWSER_ACCEPTANCE.json",
+      "bytes": 1953,
+      "sha256": "e856afc10bab3a1c12a568087c7cb7a3aa66dc9b1c7204c8959520b5d62c058d"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/full-build.json",
+      "bytes": 358,
+      "sha256": "36698cbbe5e2862338c11a28c044321d1ff524cf5679a65d72cfac43d46ba631"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/full-types.json",
+      "bytes": 395,
+      "sha256": "14f8c5866ce500121ff2c2e5e384554876a959f563110b14da02689c21863d72"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/INSTALLATION.json",
+      "bytes": 7363,
+      "sha256": "9c38879c4fbef255f179095195ed0b075bb9bafbf7d903c22d4e8b8bb3bccad2"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/LEGACY_CHUNK_CACHE.json",
+      "bytes": 4240,
+      "sha256": "b8475bb6d2dd63cf06d57be6d0eeb190b81eeca1e54b6942f746f9d2dae9b1b2"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/LOCAL_PREVIEW.json",
+      "bytes": 5178,
+      "sha256": "5b54175ddda6ced7d0e0863ec3ea25d5f056d7a97b10c0d3a716cbed4c7226e5"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/native.json",
+      "bytes": 2255,
+      "sha256": "3a9b6ade2bbdb9e9e379d6f4b1abf60b1f8d1152e76f558fa7c617a9a07ed340"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/PROOF.json",
+      "bytes": 3809,
+      "sha256": "c502a7b1479a634b2c2907d72c0555ce2bb11d73af4f9deba391510167480abf"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/stock-review.json",
+      "bytes": 349,
+      "sha256": "141afe8422d1c521ebffcd24e479a9caab16c6ecb6d9790d660367f815c04397"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/TEMP_PREVIEW_CLEANUP.json",
+      "bytes": 584,
+      "sha256": "c384b1961883a1f63bf2651b4039c9b3b8c45c046c97660aad3289c5c41060cd"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/evidence/VIEWER_ARTIFACT_PROMOTION.json",
+      "bytes": 9814,
+      "sha256": "96f0cfe64e26e197b952eb8729bb07a8589c54715241efc8920ea2886f5c9a77"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/prior-attempt/bind-review.json",
+      "bytes": 322,
+      "sha256": "c2d4ad46ad82ceb6389d749f7beccea32a517fecc897ea6770b6fd33b8aeba53"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/prior-attempt/build-review-viewer.json",
+      "bytes": 339,
+      "sha256": "09a2f5d4ffb985df04efa586c34fb1ded5c6462077a6f8499612f71d7cf2fd8a"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/prior-attempt/COMBINED_NATIVE.json",
+      "bytes": 1962,
+      "sha256": "ef1a96951b73a7fcbc077593e95498428ad852a22ca729ca4ab3c808f5df8435"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/prior-attempt/INSTALLATION_FAILED.json",
+      "bytes": 1218,
+      "sha256": "b819bf7a09d1b19c385da193fb92267312361c50157f9ae4c54210c493d971d8"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/prior-attempt/OPEN_DRAFT_GATE_RETRY.json",
+      "bytes": 588,
+      "sha256": "a4c992be79c7b62847a75ae3295795b09d7719281696f307e849c6cf0cc75bb6"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/prior-attempt/OPEN_DRAFT_GATE.json",
+      "bytes": 1168,
+      "sha256": "7ccc8850428c350c6aefd5864668b525c402149e3c4079cc6f7655cee4f519b5"
+    },
+    {
+      "path": "evidence/20261021-coherent-ui-installed-verified/prior-attempt/PREPARED.json",
+      "bytes": 527,
+      "sha256": "2161235a1fdf1d44b25ec4da1bb7cebd5b7951352c1efff6009f87586febca0e"
     },
     {
       "path": "evidence/20261021-coherent-usability-verified/candidate/components/studio-workspace.css",
@@ -11981,62 +12106,102 @@
     }
   ],
   "removed": [],
-  "scope": "Exact three head Review components, normal stock binder source, original and adapted tests, full original raw witnesses, generated-delivery hash fingerprints, concise native/types/build/stock-binding and synthetic-browser receipts and source controls. Prior filtered sources retained. Excludes full input inventories, private scan names/coordinates/notes/decisions/references, masks/pixels/geometry/Plexus private module, dependencies, env/database, raw logs/DOM/media and canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup, clinical/spatial/public-release or full-app acceptance.",
+  "scope": "Prior filtered selected source retained, plus compact actual canonical installation/native/types/build/stock-binding/normal-browser acceptance and rollback/artifact-promotion receipts and controls. No private state/preimages/module, full input inventories, generated viewer JS, scans/pixels/masks/models, identifiers, native scan names/coordinates, private references/notes/decisions, env/database, dependencies, raw logs/DOM/media or canonical ancestry. F-local recovery retains exact overwritten source/viewer and private state separately; source-only Git backup remains partial, not whole/private/runnable recovery or clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T18:18:10.963Z",
+    "at": "2026-10-21T18:42:14.268Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "82cb899401b6bbdfeba4db81d70e8898a4aa19891030b1c4be31b7c94b59f838",
-    "reviewBefore": "9cf639e08a25a4e649f06f6ff1a7fa580b5ba9d86528ab9d2c2d998ddc85ff1d",
-    "reviewInputs": 1712,
-    "candidateFiles": 5479,
-    "actualFocusedNativeCounts": {
-      "tests": 65,
-      "pass": 65,
+    "reviewBefore": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "reviewBindings": 1712,
+    "atlasImportedSources": 1553,
+    "canonicalUiInstalled": true,
+    "operations": 97,
+    "sourceControlledInputs": 5490,
+    "preservedInputs": 7,
+    "totalNamedInputs": 5497,
+    "verifiedCurrentCandidateInputs": 5479,
+    "oldImmutableCompatibilityChunks": 18,
+    "actualNativeCounts": {
+      "tests": 208,
+      "pass": 208,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
     "nativeRoots": [
+      "tests/clinical-review-navigation-guard.test.ts",
+      "tests/clinical-review-navigation-preservation.test.mjs",
+      "tests/review-draft-autosave.test.mjs",
+      "tests/head-teaching-review-notes.test.ts",
+      "tests/head-mri-review-notes.test.ts",
+      "tests/head-review-working-copy.test.ts",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/plexus-review-navigation-binding.test.mjs",
+      "tests/review-navigation-harness-preservation.test.mjs",
+      "tests/review-navigation-delivery-preservation.test.mjs",
+      "tests/head-ct-bone-decision-form.test.ts",
+      "tests/head-ct-bone-teaching-decision-form.test.ts",
+      "tests/head-ct-facial-decision-form.test.ts",
+      "tests/head-paired-decision-form.test.ts",
+      "tests/regional-guide-review-ui.test.ts",
+      "tests/regional-reference-draft-ui.test.ts",
+      "tests/review-navigation-six-harness-preservation.test.mjs",
+      "tests/head-ct-facial-ui.test.mjs",
+      "tests/plexus-review-ui.test.ts",
+      "tests/imaging-atlas-shell.test.ts",
+      "tests/imaging-pane-navigation.test.ts",
+      "tests/imaging-image-focus.test.mjs",
+      "tests/head-inline-comparison.test.ts",
+      "tests/head-atlas-navigation.test.ts",
+      "tests/clinical-review-history-guard.test.ts",
+      "tests/plexus-review-history-binding.test.mjs",
       "tests/head-review-compact-navigation.test.ts",
       "tests/head-review-compact-preservation.test.mjs",
       "tests/head-teaching-review-navigation.test.ts",
-      "tests/head-teaching-review-notes.test.ts",
-      "tests/head-ct-facial-ui.test.mjs",
       "tests/head-ct-facial-navigation-status.test.mjs",
-      "tests/current-atlas-delivery.test.mjs",
-      "tests/review-navigation-delivery-preservation.test.mjs",
-      "tests/clinical-review-navigation-preservation.test.mjs",
-      "tests/clinical-review-history-guard.test.ts",
-      "tests/plexus-review-history-binding.test.mjs"
+      "tests/studio-workbook-table-semantics.test.mjs",
+      "tests/studio-workbook-empty-state.test.mjs",
+      "tests/studio-workbook-filter-accessibility.test.mjs",
+      "tests/studio-workspace.test.ts",
+      "tests/studio-queues.test.ts"
     ],
     "fullProjectTypesPassed": true,
     "fullLocalBuildPassed": true,
     "stockReviewPassed": true,
-    "allMedicalContentIdsScopesAndIndependentDecisionsPreserved": true,
-    "allOriginalAssertionsPreservedExceptIntentionallySupportedListedSection": true,
-    "stockBinderEnumeratesOneNewNavigatorSource": true,
-    "allOther1711InputsExactExceptThreeDeclaredSourceEdits": true,
-    "plexusPacketAssetsAndNavigationGuardUnchanged": true,
-    "dependenciesAndLicensingUnchanged": true,
-    "browserActualNavigatorAndRendererWithSyntheticDataPassed": true,
-    "fullAppOrScreenReaderAcceptance": false,
-    "all71ItemsAndEightIdeasUnchanged": true,
+    "exactPlexusTwoStepPureRebind": true,
+    "anatomyStudyNonHtmlAssetsApprovalsEntitlementsAndAuthUnchanged": true,
+    "viewerStockVerifiedArtifactPromotedByteExact": true,
+    "canonicalViewerRebuildFingerprintMatched": false,
+    "firstAttemptExactGuardRefusedAndRolledBack": true,
+    "noObservedFingerprintRepinOrCodeNormalization": true,
+    "realSignedInHeadReviewLayoutNavigationAndDisclosurePassed": true,
+    "realMriExisting3dSemanticComparisonPassed": true,
+    "comparisonIsNotPatientSpaceRegistration": true,
+    "nativeAcceptedDirtyLeaveAndFullAppHistoryStillUnverified": true,
+    "fullScreenReaderCrossBrowserOrPixelValidation": false,
+    "ownerPreview": {
+      "pid": 254464,
+      "parent": 274524,
+      "session": 48914,
+      "url": "http://127.0.0.1:3000/",
+      "manualReload": true
+    },
+    "ownerTabsReloaded": false,
+    "ownedTestTabsClosed": true,
+    "unusedLegacyPreviewStopped": true,
+    "noClinicalNotesOrDecisionsChanged": true,
+    "all71ChecklistItemsEightIdeasStatusesAndBaselinesPreserved": true,
     "checklistRevision": 124,
-    "canonicalInstalled": false,
-    "ownerPreviewRestarted": false,
-    "ownerFormsRefreshed": false,
-    "ownedTab106Closed": true,
-    "ownedSyntheticFixtureStopped": true,
-    "privateDataUploaded": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
-    "wholeSuitePassingClaim": false,
-    "fullGoalActive": true,
+    "newFees": false,
+    "privateDataUploaded": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "limits": "Affected65 tests pass, not the whole historical suite. Actual browser DOM verifies navigation and preservation only in a synthetic fixture, not a signed-in whole-app session or screen reader. Canonical UI stays unchanged pending coherent safe switch; prior accepted-dirty-leave/native-history gaps remain scoped acceptance work, not a whole-goal block."
+    "wholeSuitePassingClaim": false,
+    "fullGoalActive": true
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

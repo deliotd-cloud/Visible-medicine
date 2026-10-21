@@ -1,0 +1,12 @@
+// Preserve already-served immutable JS chunks for unrefreshed owner tabs.
+// These are old-source compatibility cache, NOT new manifest/admitted source.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {read,json,sha} from './source-only-backup-20261019.mjs';
+const original='F:/VisibleMedicine/recovery/local-cutover/20261021-coherent-ui',root=original+'/retry-verified-artifact',plan=json(original+'/PLAN.json'),installed=json(root+'/INSTALLATION.json'),site=installed.site;
+assert(installed.typesPassed&&installed.buildPassed&&installed.stockReviewPassed);assert.equal(installed.nativeCounts.pass,208);assert.equal(plan.dropped.length,18);
+const current=json(site+'/public/atlas-review-viewer/manifest.json');assert.equal(current.websiteIntegrationSha256,installed.review);assert.equal(current.files.length,46);
+const kept=[];for(const r of plan.dropped){assert(/^public\/atlas-review-viewer\/assets\/[A-Za-z0-9_-]+\.js$/.test(r.path));assert(!current.files.some(v=>'public/atlas-review-viewer/'+v.path===r.path));const from=path.resolve(root,'retained-canonical',r.path),to=path.resolve(site,r.path);assert(from.startsWith(path.resolve(root,'retained-canonical')+path.sep));assert(to.startsWith(path.resolve(site,'public/atlas-review-viewer/assets')+path.sep));assert(fs.lstatSync(from).isFile()&&!fs.lstatSync(from).isSymbolicLink());assert(!fs.existsSync(to));const b=read(from);assert.equal(sha(b),r.sha256);fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);assert.equal(sha(read(to)),r.sha256);kept.push({path:r.path,bytes:b.length,sha256:r.sha256});}
+for(const r of current.files)assert.equal(sha(read(site+'/public/atlas-review-viewer/'+r.path)),r.sha256);
+fs.writeFileSync(root+'/LEGACY_CHUNK_CACHE.json',JSON.stringify({at:new Date().toISOString(),sourceOfPriorAssets:root+'/retained-canonical/public/atlas-review-viewer',files:kept,currentReview:installed.review,currentManifestUnchanged:true,currentManifestFiles:46,oldChunksNotAdmittedAsCurrent:true,purpose:'Keep existing owner iframe dynamic imports available without refreshing tabs during local UI transition. These are exact prior public JS chunks only; old decisions remain source-bound and are never migrated.',newPublicDeployment:false,privateAssetsIncluded:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({retainedHistoricalCacheFiles:kept.length,currentManifestFiles:46,currentManifestUnchanged:true}));

@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-21T18:26:03.767Z",
+  "plan": "F:/VisibleMedicine/recovery/local-cutover/20261021-coherent-ui/PLAN.json",
+  "planSha256": "14d34b09056d0bf11cab79fe0cfb10e477579682c636616f0c769514839647b8",
+  "changes": 97,
+  "preimages": 38,
+  "nativeCounts": {
+    "tests": 188,
+    "pass": 188,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "combinedNativeRoots": 30,
+  "exactPlexusTwoStepPureRebind": true,
+  "canonicalUnchanged": true,
+  "previewStopped": false,
+  "publicDeployment": false
+}
