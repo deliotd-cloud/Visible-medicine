@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: keyboard behavior and focus treatment are bound to shoulder review revisions
+ok 1 - keyboard behavior and focus treatment are bound to shoulder review revisions
+  ---
+  duration_ms: 2.026
+  type: 'test'
+  ...
+# Subtest: PerspectiveCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom
+ok 2 - PerspectiveCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom
+  ---
+  duration_ms: 2.3175
+  type: 'test'
+  ...
+# Subtest: PerspectiveCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom
+ok 3 - PerspectiveCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom
+  ---
+  duration_ms: 0.6725
+  type: 'test'
+  ...
+# Subtest: OrthographicCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom
+ok 4 - OrthographicCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom
+  ---
+  duration_ms: 0.5627
+  type: 'test'
+  ...
+# Subtest: OrthographicCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom
+ok 5 - OrthographicCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom
+  ---
+  duration_ms: 0.6076
+  type: 'test'
+  ...
+# Subtest: focus, modifier, composition, editable-target and rotation-lock guards do not consume keys
+ok 6 - focus, modifier, composition, editable-target and rotation-lock guards do not consume keys
+  ---
+  duration_ms: 0.3432
+  type: 'test'
+  ...
+# Subtest: angle limits, invalid inputs, damping and lifecycle restoration
+ok 7 - angle limits, invalid inputs, damping and lifecycle restoration
+  ---
+  duration_ms: 0.3288
+  type: 'test'
+  ...
+# Subtest: actual FittedCamera transitions spatial to tray to locked, captures pan and retains it across refits
+ok 8 - actual FittedCamera transitions spatial to tray to locked, captures pan and retains it across refits
+  ---
+  duration_ms: 40.7428
+  type: 'test'
+  ...
+# Subtest: tray pan follows camera right/up for projection 0,0,1, up 0,1,0
+ok 9 - tray pan follows camera right/up for projection 0,0,1, up 0,1,0
+  ---
+  duration_ms: 0.6802
+  type: 'test'
+  ...
+# Subtest: tray pan follows camera right/up for projection 1,0,0, up 0,0,1
+ok 10 - tray pan follows camera right/up for projection 1,0,0, up 0,0,1
+  ---
+  duration_ms: 0.3139
+  type: 'test'
+  ...
+# Subtest: tray pan follows camera right/up for projection 0,0,-1, up 0,1,0
+ok 11 - tray pan follows camera right/up for projection 0,0,-1, up 0,1,0
+  ---
+  duration_ms: 0.19
+  type: 'test'
+  ...
+# Subtest: tray pan follows camera right/up for projection 0,1,0, up 0,0,1
+ok 12 - tray pan follows camera right/up for projection 0,1,0, up 0,0,1
+  ---
+  duration_ms: 0.165
+  type: 'test'
+  ...
+# Subtest: tray keyboard guards, invalid scale and attribute ownership
+ok 13 - tray keyboard guards, invalid scale and attribute ownership
+  ---
+  duration_ms: 0.1995
+  type: 'test'
+  ...
+# Subtest: BodyScene keeps visual rotation silent and writes a keyboard-only polite orientation status
+ok 14 - BodyScene keeps visual rotation silent and writes a keyboard-only polite orientation status
+  ---
+  duration_ms: 178.7836
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 545.9095

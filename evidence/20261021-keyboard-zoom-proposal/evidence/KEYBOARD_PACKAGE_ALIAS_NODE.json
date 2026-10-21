@@ -1,0 +1,22 @@
+{
+  "label": "KEYBOARD_PACKAGE_ALIAS_NODE",
+  "command": "node",
+  "args": [
+    "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+    "run",
+    "camera-keyboard:test"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-keyboard-zoom-proposal/KEYBOARD_PACKAGE_ALIAS_NODE.log",
+  "logSha256": "ae7d63e36e1b595a18925f526d18dc1922b431b863c822b9891d0ac493ea609e",
+  "footer": [
+    "ℹ tests 23",
+    "ℹ pass 23",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

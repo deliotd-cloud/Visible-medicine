@@ -1,40 +1,35 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T00:28:39.136Z",
+  "at": "2026-10-21T00:45:54.535Z",
   "sourceIdentity": {
     "atlas": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "website": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "uninstalled": true,
+    "proposalOnly": true,
     "sourceFiles": [
       {
-        "path": "app/credits/page.tsx",
-        "sha256": "12d197e2c9e7ebd2b311b9e8d141f8e0377c314aaf489a96d84c5bf0e2d7b409"
+        "path": "app/fitted-camera.tsx",
+        "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
       },
       {
-        "path": "app/credits/source-credits.css",
-        "sha256": "5c5788fa35fd32ad9093ab5b2655380fe1a4ec06a24fded2354fd5f23e1fd47c"
+        "path": "lib/camera-keyboard.ts",
+        "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
       },
       {
-        "path": "lib/source-credits.ts",
-        "sha256": "e422fa2081112f8886df2ab6d514691a0e77c07fe69fab636c05619de68ac64b"
+        "path": "package.json",
+        "sha256": "2c37e96fb78409ae265166a4245dfe0157d487772535bce1b67e7ff20262164a"
       },
       {
-        "path": "components/SiteFooter.tsx",
-        "sha256": "df34a62c94bba10970aea6c5d1e51650a3bc4bdc4af5acf4c9d1001a71f8314a"
+        "path": "scripts/test-camera-keyboard-zoom.mjs",
+        "sha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd"
       },
       {
-        "path": "tests/source-credits.test.mjs",
-        "sha256": "a625542a9700cf871686f2c732f1160923f0a84b2770aef748b04aee8668b98a"
-      },
-      {
-        "path": "tests/fixtures/source-credits/SiteFooter.tsx.raw",
-        "sha256": "e24b578934daeb60c1f13ee22f3c31a5e0f555cf6b10dd070a19e67ab2148e8a"
+        "path": "docs/KEYBOARD_ZOOM.md",
+        "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
       }
     ],
     "canonicalInstalled": false
   },
-  "parent": "428fe80f0a4a0281c60ccc3dd73d787ecefe3822",
-  "gitParent": "428fe80f0a4a0281c60ccc3dd73d787ecefe3822",
+  "parent": "176b3540e8db6e1a7b36208e21127d0ac6f1a5e4",
+  "gitParent": "176b3540e8db6e1a7b36208e21127d0ac6f1a5e4",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -835,6 +830,151 @@
       "path": "evidence/20261021-hip-history-guard-proposal/WRAPPER_PROPOSAL.json",
       "bytes": 3014,
       "sha256": "de0c3c7c341310ea5d57b2e29d6052f47b76467623f8a9ec826e663c925a0766"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/checkpoint-keyboard-zoom-20261021.mjs",
+      "bytes": 10982,
+      "sha256": "dc93adc6aa458b1f625afad73fd440efab140ff4cb7a31523f33e5544b518209"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/HANDOFF.md",
+      "bytes": 3017,
+      "sha256": "6ac86a2d188f14ef375ccc41ae1940f12bb3194f394619319f4a5b50aefa283a"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_EXISTING_WITH_CATALOG.json",
+      "bytes": 579,
+      "sha256": "282f91d30a4ebad83e206875f97d8bac6e16235072dc07f1be660366d7783cb4"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_EXISTING_WITH_CATALOG.log",
+      "bytes": 3238,
+      "sha256": "141957c7b92d69e4934a506ce7abf1ad995b55efdd8b009295083d204e1f7773"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_EXISTING.json",
+      "bytes": 553,
+      "sha256": "29d3be7f02522e72fcf3b2c7b3bbbf73cfc290227bd57f4b79dc040cef9207ff"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_EXISTING.log",
+      "bytes": 3980,
+      "sha256": "d9af05c58d8f383c729f4d5f2fd7246d3ade7298201ba45eb7ebe79f5577a196"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_PACKAGE_ALIAS_NODE.json",
+      "bytes": 572,
+      "sha256": "997838c0b68f221f91b63ea698ad3d13ab875ae0f75dc78f9e30b212c2abbfff"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_PACKAGE_ALIAS_NODE.log",
+      "bytes": 2706,
+      "sha256": "ae7d63e36e1b595a18925f526d18dc1922b431b863c822b9891d0ac493ea609e"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_ZOOM_FINAL.json",
+      "bytes": 602,
+      "sha256": "f34256df63aaeffd87c576109c544fe62093b998536dc6583a67768bf94ff2e1"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_ZOOM_FINAL.log",
+      "bytes": 5348,
+      "sha256": "69be3bf65467d304fac11c85cee6a7dfac1cfeb8d898b537b37de0629310cfbe"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_ZOOM_NATIVE.json",
+      "bytes": 604,
+      "sha256": "2bb1c8972c428e70d35e428f0e50fe6c163f1a091fcd65b1b7afb24614cf0a59"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_ZOOM_NATIVE.log",
+      "bytes": 6131,
+      "sha256": "e36caf8585124a644f41dc4c9c8119ea7c9df48932efa90295de1cf31c0d627e"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_ZOOM_WORLD_EXTENT.json",
+      "bytes": 616,
+      "sha256": "eadf79f7a3e4eb56e9b6ce2116af83f0d65a86c177df041633e56f23f0f4eeea"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/KEYBOARD_ZOOM_WORLD_EXTENT.log",
+      "bytes": 5348,
+      "sha256": "8e859a67ee745185405f819e918f59d46965ce0aa26f59ab893010ef9efd34d2"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/MAIN_REVIEW.json",
+      "bytes": 3489,
+      "sha256": "d79bc290168422672973a9c26886c3bdee80ecd870b826f7313e030c08bc9de5"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/PREPARATION.json",
+      "bytes": 17224,
+      "sha256": "4290b263a656787de45629bc9f0b9f8707b8ade53aa23a9dfe4ee2b4469c6812"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/evidence/WINDOWS_NPM_SPAWN_FAILURE.json",
+      "bytes": 621,
+      "sha256": "98ccdf18eb580423a96d4ead4a0ac4e4fe77a4d5ced050395ca75fc84950c9a7"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/full-suite/observation.json",
+      "bytes": 1798,
+      "sha256": "3bc7d05fbf2de072d11a8a2b0ce41a3e3631fe2c8b818312f2a592a9b8faef77"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/originals/app/fitted-camera.tsx.raw",
+      "bytes": 12862,
+      "sha256": "9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/originals/lib/camera-keyboard.ts.raw",
+      "bytes": 6169,
+      "sha256": "9a0a095306c6687ca7fd568570c7a66363566ac3a70f2916bc1e8f74aa405220"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/originals/package.json.raw",
+      "bytes": 86545,
+      "sha256": "9786b30019f418881824a20026ee66c2d3e16d4a3231f6cea85975687cbe6d1a"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/originals/scripts/test-camera-keyboard.mjs.raw",
+      "bytes": 18190,
+      "sha256": "d4a5d5a386f7997e2cd4716f4ca966513199239810a4c418113d44e3805241b3"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/originals/scripts/test-guided-camera-interruption.mjs",
+      "bytes": 9248,
+      "sha256": "b4a2567cb3cae63bf0df820376fb8626e7c25f2bef5a4f3b27c148b9dc3b4910"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/originals/test-camera-keyboard-zoom-before-world-extent.mjs.raw",
+      "bytes": 10609,
+      "sha256": "33c1dcceb80cc33eeb107c05de51432aa9a4a0fa60db39770ff14f9004f94476"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/proposal/app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/proposal/docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/proposal/lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/proposal/package.json",
+      "bytes": 86583,
+      "sha256": "2c37e96fb78409ae265166a4245dfe0157d487772535bce1b67e7ff20262164a"
+    },
+    {
+      "path": "evidence/20261021-keyboard-zoom-proposal/proposal/scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11197,
+      "sha256": "4293c0891813953604fbb32a84a9a60342911bc087c16117c8f3181897e394cd"
     },
     {
       "path": "evidence/20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.json",
@@ -2098,13 +2238,13 @@
     }
   ],
   "removed": [],
-  "scope": "Selected uninstalled source-credits/footer/test code, notice-checker source/originals/hash-only current findings and focused evidence on previously filtered source ancestry. Browser screenshot stays F-local; no browser DOM, raw canonical ancestry, scans, masks, meshes, private modules/reviews/databases/secrets. Not a whole/runnable/private-data backup or legal/release acceptance.",
+  "scope": "Selected uninstalled anatomical-camera/test/docs/package-script source, original preimages and actual focused proof on prior filtered ancestry only. Full native context remains F-local. No raw canonical ancestry, scans/masks/models, browser pixels/DOM, private modules/reviews/databases/secrets. Not whole/runnable/private-data backup or new renderer/application/clinical acceptance.",
   "proof": {
-    "pageTests": 5,
-    "noticeTests": 9,
-    "inspectedNoticeFiles": 34,
-    "consistentDeclaredScopes": 5,
-    "exhaustiveRightsClearance": false,
+    "focusedTests": 23,
+    "originalCasesRetained": 14,
+    "newCases": 9,
+    "completeCameraKeyboardAliasPass": true,
+    "fullSuitePass": false,
     "clinicalApproval": false
   },
   "wholeProjectBackup": false,

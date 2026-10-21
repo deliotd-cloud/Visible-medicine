@@ -1,0 +1,11 @@
+{
+  "phase": "focused package alias launcher pre-execution",
+  "command": "npm.cmd",
+  "args": ["run", "camera-keyboard:test"],
+  "observedError": "Error: spawn EINVAL",
+  "errno": -4071,
+  "syscall": "spawn",
+  "code": "EINVAL",
+  "evidence": "Original exec tool output; the helper threw synchronously before its pending log stream opened, so no raw log or normal receipt was written for this attempt.",
+  "correction": "Run the same package alias through the existing installed npm CLI using Node. KEYBOARD_PACKAGE_ALIAS_NODE.json and its raw log record terminal0,23cases and the original guided-interruption check."
+}

@@ -1,0 +1,24 @@
+{
+  "label": "KEYBOARD_ZOOM_FINAL",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-reporter=tap",
+    "scripts/test-camera-keyboard.mjs",
+    "scripts/test-camera-keyboard-zoom.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-keyboard-zoom-proposal/KEYBOARD_ZOOM_FINAL.log",
+  "logSha256": "69be3bf65467d304fac11c85cee6a7dfac1cfeb8d898b537b37de0629310cfbe",
+  "footer": [
+    "# tests 23",
+    "# pass 23",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0"
+  ],
+  "canonicalInstalled": false
+}

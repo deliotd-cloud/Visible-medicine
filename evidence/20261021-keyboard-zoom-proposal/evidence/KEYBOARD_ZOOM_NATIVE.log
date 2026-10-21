@@ -1,0 +1,162 @@
+TAP version 13
+# Subtest: perspective model zoom preserves target and viewing direction
+ok 1 - perspective model zoom preserves target and viewing direction
+  ---
+  duration_ms: 3.5409
+  type: 'test'
+  ...
+# Subtest: orthographic model zoom preserves target and viewing direction
+ok 2 - orthographic model zoom preserves target and viewing direction
+  ---
+  duration_ms: 0.3843
+  type: 'test'
+  ...
+# Subtest: orthographic tray zoom preserves target and viewing direction
+ok 3 - orthographic tray zoom preserves target and viewing direction
+  ---
+  duration_ms: 0.4827
+  type: 'test'
+  ...
+# Subtest: browser modifiers, composition, focus, other targets and guide/zoom locks retain native behavior
+ok 4 - browser modifiers, composition, focus, other targets and guide/zoom locks retain native behavior
+  ---
+  duration_ms: 0.2261
+  type: 'test'
+  ...
+# Subtest: existing distance and orthographic zoom bounds clamp without reversing an out-of-range gesture
+ok 5 - existing distance and orthographic zoom bounds clamp without reversing an out-of-range gesture
+  ---
+  duration_ms: 0.8374
+  type: 'test'
+  ...
+# Subtest: invalid camera scale, targets, bounds or unsupported camera do not consume zoom keys
+ok 6 - invalid camera scale, targets, bounds or unsupported camera do not consume zoom keys
+  ---
+  duration_ms: 0.7424
+  type: 'test'
+  ...
+# Subtest: zoom remains opt-in for old helper callers and restores only owned attributes
+ok 7 - zoom remains opt-in for old helper callers and restores only owned attributes
+  ---
+  duration_ms: 0.6218
+  type: 'test'
+  ...
+# Subtest: actual FittedCamera captures keyboard zoom, retains it across refits and disables it for guided locks
+not ok 8 - actual FittedCamera captures keyboard zoom, retains it across refits and disables it for guided locks
+  ---
+  duration_ms: 43.2528
+  type: 'test'
+  location: 'F:\\VisibleMedicine\\staging\\20261021-keyboard-zoom-proposal\\scripts\\test-camera-keyboard-zoom.mjs:102:1'
+  failureType: 'testCodeFailure'
+  error: '1 != 1.1764705882352942'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    near (file:///F:/VisibleMedicine/staging/20261021-keyboard-zoom-proposal/scripts/test-camera-keyboard-zoom.mjs:28:24)
+    TestContext.<anonymous> (file:///F:/VisibleMedicine/staging/20261021-keyboard-zoom-proposal/scripts/test-camera-keyboard-zoom.mjs:125:94)
+    process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    async Test.run (node:internal/test_runner/test:1332:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:911:7)
+  ...
+# Subtest: existing renderer-bound files and original native keyboard suite remain exact, with geometry untouched
+ok 9 - existing renderer-bound files and original native keyboard suite remain exact, with geometry untouched
+  ---
+  duration_ms: 5.628
+  type: 'test'
+  ...
+# Subtest: keyboard behavior and focus treatment are bound to shoulder review revisions
+ok 10 - keyboard behavior and focus treatment are bound to shoulder review revisions
+  ---
+  duration_ms: 1.7946
+  type: 'test'
+  ...
+# Subtest: PerspectiveCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom
+ok 11 - PerspectiveCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom
+  ---
+  duration_ms: 2.2429
+  type: 'test'
+  ...
+# Subtest: PerspectiveCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom
+ok 12 - PerspectiveCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom
+  ---
+  duration_ms: 0.662
+  type: 'test'
+  ...
+# Subtest: OrthographicCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom
+ok 13 - OrthographicCamera, up 0,1,0: coarse/fine rotation preserves target, distance and zoom
+  ---
+  duration_ms: 0.6079
+  type: 'test'
+  ...
+# Subtest: OrthographicCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom
+ok 14 - OrthographicCamera, up 0,0,1: coarse/fine rotation preserves target, distance and zoom
+  ---
+  duration_ms: 0.5688
+  type: 'test'
+  ...
+# Subtest: focus, modifier, composition, editable-target and rotation-lock guards do not consume keys
+ok 15 - focus, modifier, composition, editable-target and rotation-lock guards do not consume keys
+  ---
+  duration_ms: 0.3627
+  type: 'test'
+  ...
+# Subtest: angle limits, invalid inputs, damping and lifecycle restoration
+ok 16 - angle limits, invalid inputs, damping and lifecycle restoration
+  ---
+  duration_ms: 0.3337
+  type: 'test'
+  ...
+# Subtest: actual FittedCamera transitions spatial to tray to locked, captures pan and retains it across refits
+ok 17 - actual FittedCamera transitions spatial to tray to locked, captures pan and retains it across refits
+  ---
+  duration_ms: 44.8439
+  type: 'test'
+  ...
+# Subtest: tray pan follows camera right/up for projection 0,0,1, up 0,1,0
+ok 18 - tray pan follows camera right/up for projection 0,0,1, up 0,1,0
+  ---
+  duration_ms: 0.6572
+  type: 'test'
+  ...
+# Subtest: tray pan follows camera right/up for projection 1,0,0, up 0,0,1
+ok 19 - tray pan follows camera right/up for projection 1,0,0, up 0,0,1
+  ---
+  duration_ms: 0.2895
+  type: 'test'
+  ...
+# Subtest: tray pan follows camera right/up for projection 0,0,-1, up 0,1,0
+ok 20 - tray pan follows camera right/up for projection 0,0,-1, up 0,1,0
+  ---
+  duration_ms: 0.1755
+  type: 'test'
+  ...
+# Subtest: tray pan follows camera right/up for projection 0,1,0, up 0,0,1
+ok 21 - tray pan follows camera right/up for projection 0,1,0, up 0,0,1
+  ---
+  duration_ms: 0.148
+  type: 'test'
+  ...
+# Subtest: tray keyboard guards, invalid scale and attribute ownership
+ok 22 - tray keyboard guards, invalid scale and attribute ownership
+  ---
+  duration_ms: 0.1978
+  type: 'test'
+  ...
+# Subtest: BodyScene keeps visual rotation silent and writes a keyboard-only polite orientation status
+ok 23 - BodyScene keeps visual rotation silent and writes a keyboard-only polite orientation status
+  ---
+  duration_ms: 178.3323
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 22
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 590.4803

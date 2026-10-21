@@ -1,0 +1,23 @@
+{
+  "label": "KEYBOARD_EXISTING",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-reporter=tap",
+    "scripts/test-camera-keyboard.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-keyboard-zoom-proposal/KEYBOARD_EXISTING.log",
+  "logSha256": "d9af05c58d8f383c729f4d5f2fd7246d3ade7298201ba45eb7ebe79f5577a196",
+  "footer": [
+    "# tests 14",
+    "# pass 13",
+    "# fail 1",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0"
+  ],
+  "canonicalInstalled": false
+}
