@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-21T10:49:21.888Z",
+  "args": [
+    "--test",
+    "--test-reporter=spec",
+    "tests/elbow-current-lifecycle-preservation.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:/VisibleMedicine/staging/20261021-elbow-history-application/FIRST_NATIVE_FAILED.log",
+  "logSha256": "e1227f67384834480392245b5d832cafa791159d247959e351ac5910be4e32b8",
+  "footer": [
+    "ℹ tests 1",
+    "ℹ pass 0",
+    "ℹ fail 1",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "guardSha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105",
+  "actualElbowTestSha256": "1b2f22d6bee38da836cc3e491b1b16fec3c0bc4fca0b577cf9e127cf0d081490",
+  "canonicalInstalled": true,
+  "fullSuitePassingClaim": false
+}

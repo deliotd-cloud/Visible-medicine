@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-21T10:38:33Z",
+  "scope": "read-only changed-section review; installer not run",
+  "installer": "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/install-prepared-source190-20261021.mjs",
+  "installerSha256": "88f0f675b76c636effe9e6dc859107d67a791f8c0627e7cfd2aef9cdb483e400",
+  "previousFindings": {
+    "canonicalGeneratedPathSet": "closed: unchanged() now compares complete live tree path sets directly with PLAN_V4 generated.canonical before stop and after private copy",
+    "postStopFailureOutsideCatch": "closed: stop, listener assertion and local private-state copy now run inside try/catch; catch records failure and scoped restart command. Main must handle failed preview recovery; script does not automatically restart.",
+    "exactPreviewChildren": "closed for observed PIDs: stop-time check requires precisely workerd 9356 and conhost 261032 under preview parent 260328, with workerd executable prefix. Conhost executable path is not checked, but exact PID, parent and name are checked."
+  },
+  "remainingActionableBlocker": {
+    "code": "staged-tree-set-compared-to-mutable-copies-list",
+    "location": "installer checkStagedTrees(), lines 18-20",
+    "finding": "The staged tree path-set guard compares the live staged tree to COPIES.json, not directly to PLAN_V4 generated.source. COPIES.json is not hash-pinned by PREPARED.json. A path added to both the staged tree and COPIES.json would pass this guard and be installed by a whole-tree rename, even though it is absent from PLAN_V4. Current read-only comparison shows no extra or missing paths in any of six staged scopes, so there is no present mismatch.",
+    "requiredFix": "For each generated scope, assert that staged paths equal the path set in PLAN_V4 generated.source, with only the four declared preserved LICENSE postimage substitutions; retain the per-file COPIES hash check. Recheck after private copy and immediately before rename."
+  },
+  "currentEvidence": {
+    "sixStagedPathSetsMatchPlan": true,
+    "stagedExtraOrMissingPaths": 0,
+    "installationReceiptExists": false,
+    "installerExecutedByReviewer": false
+  }
+}

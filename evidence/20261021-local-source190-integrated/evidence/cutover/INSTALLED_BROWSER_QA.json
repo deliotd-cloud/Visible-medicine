@@ -1,0 +1,58 @@
+{
+  "at": "2026-10-21T10:51:07.741Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalInstalled": true,
+  "localPreview": {
+    "pid": 266712,
+    "launcher": 274080,
+    "sessionId": 32652,
+    "url": "http://127.0.0.1:3000",
+    "loopbackOnly": true,
+    "hmr": false
+  },
+  "checks": {
+    "atlasAndReviewHttp200": true,
+    "authorizedReviewQueueLoaded": true,
+    "reviewUrlRestoresPonsSearchAndHeadLearningArea": true,
+    "browserBackRestoresReviewFilters": true,
+    "mainWorkspaceDestinationsVisible": true,
+    "wholeBodyMeshVisuallyRendered": true,
+    "mriApprovedStudyAutoloaded": true,
+    "mriPonsSelected": true,
+    "existing3DAtlasInlineConfirmsPons": true,
+    "ctContinuationCarriesExactConceptAndHeadRevision": true,
+    "ctApprovedStudyAutoloaded": true,
+    "ctPonsSelected": true
+  },
+  "method": "Actual IAB temporary tab91 through documented CUA DOM and whole-body screenshot observation; owner tabs never reloaded. Temporary tab closed after checks. No scan pixels, raw DOM or logs exported.",
+  "initialObservations": {
+    "earlyHttpRefusedBeforeReady": true,
+    "processConfirmedLiveAndNotRestarted": true,
+    "localReadySubsequentlyPrinted": true,
+    "myLearningWaitExpiredButActualUrlAndDestinationConfirmed": true,
+    "noDuplicateNavigationClick": true,
+    "hiddenSecondaryCtLinkNotMatched": true,
+    "visibleHeaderCtContinuationSucceeded": true
+  },
+  "capturedBrowserErrors": [
+    {
+      "timestamp": "2026-10-21T10:42:59.034Z",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "sourceUrl": null,
+      "attribution": "unresolved; not classified as external or suppressed",
+      "next": "Use existing development-only sanitized local Atlas diagnostic on a fresh reproduction; inspect warn/exception source and frame."
+    }
+  ],
+  "ownerFormsReloaded": false,
+  "ownerNotesOrDecisionsChanged": false,
+  "authOrPermissionsChanged": false,
+  "desktopPacsChanged": false,
+  "patientDataUploaded": false,
+  "publicDeployment": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "semanticComparisonOnly": true,
+  "fullSuitePassingClaim": false,
+  "scope": "Installed return navigation and representative whole-body/MRI→existing3D→CT pons journey only. Not all concepts, browser/GPU performance, accessibility, clinical or release acceptance."
+}

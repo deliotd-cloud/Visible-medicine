@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-21T10:39:51.546Z",
+  "recordedAt": "2026-10-21T10:40:03.965Z",
+  "method": "Read-only current in-app-browser DOM through documented CUA; no navigation, edits, saves, approvals or history changes.",
+  "scope": "Existing IAB local tabs: shoulder80/body66/body75/Studio69; remaining local tabs are atlas/exploration/inbox, not authoring forms. No claim about unobserved applications.",
+  "shoulder": {
+    "zeroUnsavedTrackDrafts": true,
+    "dirtyMarkers": 0
+  },
+  "body66": {
+    "activeNoteFields": 0,
+    "saveControls": 0
+  },
+  "body75": {
+    "activeNoteFields": 0,
+    "saveControls": 0
+  },
+  "studio69": {
+    "activeNoteFields": 0
+  },
+  "noActiveReviewEdits": true,
+  "ownerLocalSwitchPreviouslyAuthorized": true,
+  "noNotesOrDecisionsChanged": true,
+  "openTabsWillNotBeReloaded": true,
+  "stablePreviewHmr": false,
+  "rawDomOrMediaExported": false
+}

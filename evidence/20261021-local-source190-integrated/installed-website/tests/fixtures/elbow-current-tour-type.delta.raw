@@ -1,0 +1,21 @@
+@@ -32,0 +33,7 @@ const sourcePaths=[pinPath,'lib/elbow-arterial-tour.ts','lib/regional-tours.ts']
++const startHint='      {!active&&<p className="regional-tour-start-hint">Choose Play full tour or Start guided tour to open each stop\'s notes. Imaging links and quick checks appear where available.</p>}\n';
++const withoutStartHint=(source:Buffer)=>{
++  const text=Buffer.from(source).toString('utf8');
++  assert.equal(Buffer.byteLength(startHint),186,'exact source190 hint bytes');
++  assert.equal(text.split(startHint).length,2,'one exact regional start hint');
++  return Buffer.from(text.replace(startHint,''));
++};
+@@ -218,3 +225,6 @@ test('right elbow guide binds eleven exact records, four bundles, learner captio
+-  const rateSource=committed(revision,playerPath),currentPlayer=readFileSync('atlas-review/'+playerPath);
+-  assert.deepEqual(committed(currentRevision,playerPath),rateSource,'rate-aware player survives from genuine speed introduction');
+-  assert.equal(currentPlayer.toString(),rateSource.toString().replaceAll('@/','@/atlas-review/'),
++  const rateSource=committed(revision,playerPath),source190=committed(currentRevision,playerPath);
++  const currentPlayer=readFileSync('atlas-review/'+playerPath);
++  assert.deepEqual(withoutStartHint(source190),rateSource,'complete rate-aware player survives by the one exact hint inverse');
++  const mutated=Buffer.from(source190.toString().replace('Choose Play full tour','Choose Pause full tour'));
++  assert.throws(()=>withoutStartHint(mutated),/one exact regional start hint/);
++  assert.equal(currentPlayer.toString(),source190.toString().replaceAll('@/','@/atlas-review/'),
+@@ -223 +233 @@ test('right elbow guide binds eleven exact records, four bundles, learner captio
+-  assert.equal(playerRecord.sourceSha256,sha(rateSource));assert.equal(playerRecord.importedSha256,sha(currentPlayer));
++  assert.equal(playerRecord.sourceSha256,sha(source190));assert.equal(playerRecord.importedSha256,sha(currentPlayer));

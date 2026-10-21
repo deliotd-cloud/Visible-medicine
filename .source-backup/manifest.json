@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T10:23:40.750Z",
+  "at": "2026-10-21T10:55:58.189Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "websiteInputCount": 5155,
-    "canonicalInstalled": false
+    "canonicalNamedInputs": 5157,
+    "canonicalInstalled": true
   },
-  "parent": "0220c554b83249e8c4fdf39f1304bcfebbe8b92a",
-  "gitParent": "0220c554b83249e8c4fdf39f1304bcfebbe8b92a",
+  "parent": "b1b70e0cc4af26b3e5172bf35d7140529e965be1",
+  "gitParent": "b1b70e0cc4af26b3e5172bf35d7140529e965be1",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4466,6 +4466,201 @@
       "sha256": "0192f1a2056b1b176dafa1148a806ea3f63d341faa74bf2f3ba3a720c3ba9cab"
     },
     {
+      "path": "evidence/20261021-local-source190-integrated/controls/admit-elbow-history-guard-20261021.mjs",
+      "bytes": 6729,
+      "sha256": "6a392223488dc09be018d97bdeb0f6dde5cc1d59132a70d4eefa28e8f8bebf6e"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/controls/checkpoint-installed-source190-20261021.mjs",
+      "bytes": 9638,
+      "sha256": "1d0c6060389bfe5035ab891e75c4dda92575a88af87038cfa2b32c5d0c2001d0"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/controls/emit-coordination-checkpoint.mjs",
+      "bytes": 7159,
+      "sha256": "2e4da014321eb91c767f2fe1b4dd12567561eea20e2447416b5b3e580890e8e7"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/controls/install-prepared-source190-20261021.mjs",
+      "bytes": 10323,
+      "sha256": "28ade47ea42fa2c93c1beceb5b79726f12fe35eec06c6c317ba51a9db5d7382a"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/controls/launch-installed-source190-20261021.mjs",
+      "bytes": 2669,
+      "sha256": "b195c150b53430425850ccc990690712152e625f42e097fd8ec434dcf2f57372"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/controls/prepare-recoverable-cutover-20261021.mjs",
+      "bytes": 6429,
+      "sha256": "2f2cea8fe332f77c6fb8cdd9615f5caba1622ca44fcf9e749f98f39228a05b23"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/controls/record-installed-source190-qa-20261021.mjs",
+      "bytes": 2991,
+      "sha256": "742329a2d82e53220db1c16afb92e844f5a0def612911ff9a0220e2480023570"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/controls/record-source190-open-draft-gate-20261021.mjs",
+      "bytes": 1251,
+      "sha256": "702389d9236666c7c41bf121c4b2f4bfc7f960c6fb317437316957d28b402729"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/controls/snapshot-coordination.mjs",
+      "bytes": 1744,
+      "sha256": "c0a8e96ab9fd03fc2cf394ed6712f517f032c65045f1b35f9b82bd888d092457"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/browser/ATTRIBUTION.md",
+      "bytes": 2885,
+      "sha256": "e8a8a6a3bcbf743ca4c28b7db8d88e56bb1f6f83b252600e1c6cfbf6cb96dbbb"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/cutover/INSTALLATION.json",
+      "bytes": 1022,
+      "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/cutover/INSTALLED_BROWSER_QA.json",
+      "bytes": 2490,
+      "sha256": "e6e61f58edce56e874aecb3da58ee5b217fa723349c0eb7de22861a65de8c719"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/cutover/INSTALLER_REVIEW_V2.json",
+      "bytes": 2164,
+      "sha256": "1c5f9324f3f4bedc788bd610fd64ac2626442cd72b28e9266645d1faf6425a88"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/cutover/INSTALLER_REVIEW.json",
+      "bytes": 4025,
+      "sha256": "e03fd93bcec11feca6344caeab4c9534f12eeff8c650ead135238be0a2265a0f"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/cutover/OPEN_DRAFT_GATE.json",
+      "bytes": 881,
+      "sha256": "a9352df0b1d5ee612bf4f57f4d917c3a4db9717839a04d4830e420c65f3dbaf1"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/cutover/PREVIEW_STARTED.json",
+      "bytes": 975,
+      "sha256": "1c9d734f86a6667c6d0b40720ec9948195c15d1249326c6add53192ad6df7ef4"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/elbow/ACTUAL_NATIVE_PASSED.json",
+      "bytes": 748,
+      "sha256": "d6cc1d97457a72cdc6d797a766ea0499335992ee0a85ca24d13dcffbe3ab5ae7"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/elbow/APPLICATION.json",
+      "bytes": 1765,
+      "sha256": "bec89166b3dce7f1373677688e584844b8aa0046ec87c2fdf47de278bc560269"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/elbow/FIRST_NATIVE_FAILED.json",
+      "bytes": 747,
+      "sha256": "23283e3ccd4bb0687737adbebc92bedc58b9da6f4b5a7e7c226ee33ba21f4cb4"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/elbow/PREPARATION.json",
+      "bytes": 2215,
+      "sha256": "c3d019bfc529fd83f6ebb5cb2b80c1e198d0c335fb2894a0792ee91c13d0c709"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/elbow/STAGING_EVIDENCE.json",
+      "bytes": 1721,
+      "sha256": "c01fcc3638de5bf7ac7a4330f180a91e9958371a68402c06cd6aedefc679de77"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/evidence/PROOF.json",
+      "bytes": 3385,
+      "sha256": "0efe5f6a65b1e13fde476d0a52c8d8dd121032caded4149a532a075b5e1b5ae7"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/.gitattributes",
+      "bytes": 21014,
+      "sha256": "74d938c872f950c0434293863b166026cbe6a353b1ba39debf08cb1b96fd70e7"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/app/layout.tsx",
+      "bytes": 3215,
+      "sha256": "e99b6206d0554964d022640760a5abefa573b76d910a71c3586a21536315a1be"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/components/ClinicalReviewInbox.tsx",
+      "bytes": 29392,
+      "sha256": "f7324e4be67bb1027c403c89a85cb84579fa9f5fcf99a8944b27b11b8537642d"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/components/SiteFrame.tsx",
+      "bytes": 12406,
+      "sha256": "e5190dfb36a052656ce2e57ea2317f6f59fef210bf04572854aa25c66f15b6a8"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/components/SiteHeader.tsx",
+      "bytes": 15031,
+      "sha256": "f989c863450e3338c5b9d757016afe927013489e662edc587b86e0a0f3d5011a"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/docs/anatomy-coverage/README.md",
+      "bytes": 6088,
+      "sha256": "4a9578c06d6a6733a3b07cc2d61562357548c45fb5008bc3ca4c711c9d2775ef"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "84589865957f5773fdfaac0680d3c07db754ffca2c5b7ab5e83fbef21e382453"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "4262d07034e74afee3f537b6ea940666b5ccc0fee732a78ca1b057f51860c803"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/lib/atlas-model-inventory.json",
+      "bytes": 33492,
+      "sha256": "b61341f4a0476ceaef85ae39a56706db29c1ff7c9fbba574ea096777c8eb9022"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/lib/clinical-review-inbox.ts",
+      "bytes": 9588,
+      "sha256": "060b4451447121dc91e616d40af6b68f0707ca83453936ecea4703cc26e7b365"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/lib/review-destination.ts",
+      "bytes": 1267,
+      "sha256": "3b1330cfe70b22b5b299db780e4558a8ca82fc4bcc0477040379888893b2b27b"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "f49c102d001acc988b6ae1dda38ff0f1d392b36bf83a4d32e3b0c81ff6938180"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "d56891a83dae7b839e109f36e597900fbeb2443a59c6df1d4badb6c2983f8fbe"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/tests/elbow-current-lifecycle-preservation.test.mjs",
+      "bytes": 9109,
+      "sha256": "7d0c39c16ad534409dc29bc0b6ad4c994f3c24b167a001ce80483db385da8e9a"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/tests/fixtures/elbow-current-before-tour-type.ts.raw",
+      "bytes": 24691,
+      "sha256": "ecdaa555bffb332aab67d481c6873e0dc7ea28bc25cb3459ae1b4b8dd6e9df72"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/installed-website/tests/fixtures/elbow-current-tour-type.delta.raw",
+      "bytes": 1979,
+      "sha256": "78dcfb8155c9c6928f5787ea6249aa8a7fda71baa08ecfaba1dfa1f1cb55b261"
+    },
+    {
+      "path": "evidence/20261021-local-source190-integrated/preimages/elbow-current-lifecycle-preservation.test.mjs",
+      "bytes": 5923,
+      "sha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105"
+    },
+    {
       "path": "evidence/20261021-local-storage-loaded-verified/evidence/ADMISSION.json",
       "bytes": 681,
       "sha256": "61772a4da4c55081777f9fff33e6cb055f79ef367888f484a605929bee4b69d0"
@@ -8052,45 +8247,82 @@
     }
   ],
   "removed": [],
-  "scope": "Explicit applied candidate test/UI source, six prior test preimages, small source-bound proof and main controls only, on already filtered source-only ancestry. No complete source-input manifests, raw canonical history, scans/masks, private DB/identifiers/decisions/env, full runtimes/models, dependencies or browser media/DOM. Not a complete runnable/private backup, public release, clinical approval or spatial registration.",
+  "scope": "Explicit newly installed own Website code, three historical guard/fixture paths, small source-bound installation/browser/native proof and main controls only on previously filtered source-only ancestry. No raw canonical Git ancestry, full manifests/coverage datasets/runtime/geometry, private D1/DO/R2/env/identifiers/notes/decisions, scans/masks, dependencies, raw browser DOM/logs/media or private references. Not a complete runnable/private backup, public release, clinical approval or patient-space registration.",
   "proof": {
-    "at": "2026-10-21T10:23:34.854Z",
+    "at": "2026-10-21T10:55:49.236Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "currentNamedInputs": 5155,
-    "reviewInputs": 1710,
-    "candidateTestPathsApplied": 85,
-    "reviewUiPathsApplied": 2,
-    "bufferRepairPathsApplied": 6,
-    "actualReviewUiPasses": 40,
-    "affectedNativeFooter": [
-      "ℹ tests 17",
-      "ℹ pass 17",
-      "ℹ fail 0",
-      "ℹ cancelled 0",
-      "ℹ skipped 0",
-      "ℹ todo 0"
+    "currentNamedInputs": 5157,
+    "controlledSourceInputs": 5150,
+    "preservedSourcePaths": [
+      ".gitignore",
+      "docs/completion-checklist.json",
+      "docs/completion-checklist.md",
+      "public/atlas-runtime/female-pelvis/LICENSE",
+      "public/atlas-runtime/head-neck/LICENSE",
+      "public/atlas-runtime/lower-limb/LICENSE",
+      "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "freshFullTypes": true,
-    "productionBuild": true,
-    "reviewAndDeliveryChecks": true,
-    "browserReturnContext": true,
-    "browserApplicationSourceUnchangedAfterTestOnlyFix": true,
+    "reviewInputs": 1710,
+    "canonicalInstalled": true,
+    "installation": {
+      "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
+      "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
+    },
+    "canonicalDeveloperToolingInstalled": true,
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-elbow-history-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "ec6fedba552f9c9c51c8e8f7298220970e7aee9a30ed37710888c1f863b43a2b",
+    "atlasFastForwardOnly": true,
+    "websiteGitHeadUnchanged": true,
+    "ownerPreviewPid": 266712,
+    "ownerPreviewSession": 32652,
+    "ownerTabsReloaded": false,
+    "ownerDecisionsChanged": false,
+    "independentSpecialistStatesChecked": true,
+    "fullTypesPassedOnIdenticalTypedInputs": true,
+    "identicalTypedInputs": 2555,
+    "productionBuildPassedBeforeMechanicalImport": true,
+    "installedReviewAndDeliveryVerifiersPassed": true,
+    "actualUiPasses": 40,
+    "affectedFeatureAndPreservationPasses": 17,
+    "separateActualElbowGuardPasses": 1,
+    "actualBrowserChecks": {
+      "atlasAndReviewHttp200": true,
+      "authorizedReviewQueueLoaded": true,
+      "reviewUrlRestoresPonsSearchAndHeadLearningArea": true,
+      "browserBackRestoresReviewFilters": true,
+      "mainWorkspaceDestinationsVisible": true,
+      "wholeBodyMeshVisuallyRendered": true,
+      "mriApprovedStudyAutoloaded": true,
+      "mriPonsSelected": true,
+      "existing3DAtlasInlineConfirmsPons": true,
+      "ctContinuationCarriesExactConceptAndHeadRevision": true,
+      "ctApprovedStudyAutoloaded": true,
+      "ctPonsSelected": true
+    },
+    "semanticComparisonOnly": true,
+    "spatialRegistration": false,
+    "unresolvedBrowserErrors": [
+      {
+        "timestamp": "2026-10-21T10:42:59.034Z",
+        "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+        "sourceUrl": null,
+        "attribution": "unresolved; not classified as external or suppressed",
+        "next": "Use existing development-only sanitized local Atlas diagnostic on a fresh reproduction; inspect warn/exception source and frame."
+      }
+    ],
     "originalFullFailureBaseline": 144,
-    "currentFullRunFailuresRetained": 136,
+    "currentFullNativeFailureBaseline": 136,
     "fullSuitePassingClaim": false,
     "allNativeFailuresResolved": false,
-    "canonicalInstalled": false,
-    "canonicalDeveloperToolingInstalled": true,
-    "ownerPreviewChanged": false,
-    "ownerFormsTouched": false,
     "clinicalApproval": false,
-    "spatialRegistration": false,
     "publicDeployment": false,
     "privateDataUploaded": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "fullGoalActive": true
+    "fullGoalActive": true,
+    "previousGoalTurn": "progress: applied candidate UI/test repairs, fresh types/build/browser acceptance and source backup; not a wait/status-only turn",
+    "priorityReassessment": "Main UI simplification is now installed locally; continue release-essential regression repairs and real desktop/CT-MRI-existing3D journeys. Clinical review remains independent; do not stall."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

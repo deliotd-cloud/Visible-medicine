@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-21T10:49:31.786Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "paths": 3,
+  "controlledInputs": 5150,
+  "preservedCoordinationAndLicensePaths": 7,
+  "totalNamedInputs": 5157,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-elbow-history-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "ec6fedba552f9c9c51c8e8f7298220970e7aee9a30ed37710888c1f863b43a2b",
+  "actualNative": {
+    "at": "2026-10-21T10:49:27.559Z",
+    "args": [
+      "--test",
+      "--test-reporter=spec",
+      "tests/elbow-current-lifecycle-preservation.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "log": "F:/VisibleMedicine/staging/20261021-elbow-history-application/ACTUAL_NATIVE_PASSED.log",
+    "logSha256": "96018575b272e56061ea69e208ad750c28732c07122e19b6ba92054c994cf151",
+    "footer": [
+      "ℹ tests 1",
+      "ℹ pass 1",
+      "ℹ fail 0",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ],
+    "guardSha256": "7d0c39c16ad534409dc29bc0b6ad4c994f3c24b167a001ce80483db385da8e9a",
+    "actualElbowTestSha256": "1b2f22d6bee38da836cc3e491b1b16fec3c0bc4fca0b577cf9e127cf0d081490",
+    "canonicalInstalled": true,
+    "fullSuitePassingClaim": false
+  },
+  "firstFailureRetained": true,
+  "wholeHistoricalBeforeCurrentSha256": "15bb108f73a9eb2719edca3708e7b4ea9844c8f555db4495c8045c83ede40f99",
+  "wholeOriginalSha256": "5d14824a266020120ba92957008670d04b167beae5aa591ba3b0555aa853450e",
+  "allOtherControlledSourcesUnchanged": true,
+  "reviewBindingsUnchanged": 1710,
+  "canonicalInstalled": true,
+  "ownerPreviewRestartedForTestOnlyChange": false,
+  "clinicalApproval": false,
+  "fullSuitePassingClaim": false
+}

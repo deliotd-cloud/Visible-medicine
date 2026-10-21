@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-21T10:36:00Z",
+  "scope": "read-only review; installer not run",
+  "installer": "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/install-prepared-source190-20261021.mjs",
+  "installerSha256": "8ef6445118b0d25a94d9c8f3c802d4437057e09485d529c1ff1e6cd505f41e9c",
+  "plan": "F:/VisibleMedicine/staging/20261021-cutover-plan-5155/PLAN_V4.json",
+  "planSha256": "6c621cafde36f277e98034064a9699131db2ec78b1aa63bff8c4cc074acf483c",
+  "prepared": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/PREPARED.json",
+  "preparedSha256": "0bc509a6bea8431416b9526a6ec51f947dc066762763ee1a2c05fd36214ba3cf",
+  "actionableBlockers": [
+    {
+      "priority": "high",
+      "code": "generated-path-set-not-revalidated",
+      "location": "installer lines 18-22 and 42",
+      "finding": "The preflight hashes only listed generated files and COPIES rows. A newly added file in either live canonical or staged generated tree is not rejected before six whole-directory renames. That file would silently disappear from the live tree or be installed without a named-path guard. Current read-only enumeration finds zero extra or missing paths in all six trees, but the installer must repeat exact path-set equality immediately before renaming.",
+      "requiredFix": "Enumerate regular files in each canonical and staged scope, reject symlinks/junctions and compare complete path sets and hashes with PLAN_V4 generated.canonical/source plus the four preserved LICENSE staged postimages before stopping or renaming. Abort on any extra, missing or changed path."
+    },
+    {
+      "priority": "high",
+      "code": "post-stop-failure-outside-recovery",
+      "location": "installer lines 35-40",
+      "finding": "Preview stop, listener assertion and local D1/DO state copies run before the try/catch that records failure and restores Website source. An exception there leaves the preview stopped without INSTALLATION_FAILED.json or a defined restart/handoff path. The two write-once pre-stop receipts also make an uncorrected retry fail.",
+      "requiredFix": "Move post-stop assertions and private-state capture inside a transaction-level error handler. Write a failure receipt and define the exact scoped preview restart/recovery action for an abort before source changes; make pre-stop receipts retry-safe only after explicit exact-state review."
+    },
+    {
+      "priority": "medium",
+      "code": "workerd-child-not-exactly-bound",
+      "location": "installer line 35",
+      "finding": "The stop command permits any workerd.exe child under the website node_modules prefix; it does not pin the observed workerd PID 9356. The current child is PID 9356 with the expected executable, but a replacement or additional matching child could be stopped without a fresh exact-child decision.",
+      "requiredFix": "Require the exact current child set or an explicitly refreshed preview child inventory, including PID 9356 and executable/command line, immediately before Stop-Process."
+    }
+  ],
+  "verifiedBoundaries": {
+    "preparedPlanHashMatches": true,
+    "preparedReceiptHashMatchesHardcodedGuard": true,
+    "currentSixGeneratedTreePathSetsExact": true,
+    "fourStagedRuntimeLicenseHashesMatchCanonicalPreservedBytes": true,
+    "stagedCoverageReadmeSha256": "4a9578c06d6a6733a3b07cc2d61562357548c45fb5008bc3ca4c711c9d2775ef",
+    "allSevenPreservedNamedPathsListed": true,
+    "generatedRenameRootsBothOnFVolume": true,
+    "rollbackHasCanonicalPreimageCopiesAndRetainedTreeInverses": true,
+    "atlasUsesCleanHeadAndFastForwardGuards": true,
+    "privateAndAuthPathsCapturedAndComparedAfterInstall": true,
+    "currentPreviewPid": 260328,
+    "currentWorkerdPid": 9356,
+    "openDraftGatePresentAtReview": false,
+    "nativeVerificationResultNotRecheckedHere": true
+  },
+  "noChanges": {
+    "installerExecuted": false,
+    "canonicalOrCandidateEdited": false,
+    "recoveryTreeEdited": false,
+    "previewStopped": false,
+    "processKilled": false
+  }
+}

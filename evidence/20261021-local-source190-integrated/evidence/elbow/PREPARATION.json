@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-21T10:49:21.895Z",
+  "site": "F:/VisibleMedicine/website",
+  "proposal": "F:/VisibleMedicine/staging/20261021-elbow-history-guard-proposal",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "changes": [
+    {
+      "path": "tests/elbow-current-lifecycle-preservation.test.mjs",
+      "beforeSha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105",
+      "sha256": "7d0c39c16ad534409dc29bc0b6ad4c994f3c24b167a001ce80483db385da8e9a"
+    },
+    {
+      "path": "tests/fixtures/elbow-current-before-tour-type.ts.raw",
+      "beforeSha256": null,
+      "sha256": "ecdaa555bffb332aab67d481c6873e0dc7ea28bc25cb3459ae1b4b8dd6e9df72"
+    },
+    {
+      "path": "tests/fixtures/elbow-current-tour-type.delta.raw",
+      "beforeSha256": null,
+      "sha256": "78dcfb8155c9c6928f5787ea6249aa8a7fda71baa08ecfaba1dfa1f1cb55b261"
+    }
+  ],
+  "preservedPaths": [
+    ".gitignore",
+    "docs/completion-checklist.json",
+    "docs/completion-checklist.md",
+    "public/atlas-runtime/female-pelvis/LICENSE",
+    "public/atlas-runtime/head-neck/LICENSE",
+    "public/atlas-runtime/lower-limb/LICENSE",
+    "public/atlas-runtime/shoulder/LICENSE"
+  ],
+  "beforeControlledInputs": 5148,
+  "afterControlledInputs": 5150,
+  "afterNamedInputsIncludingPreserved": 5157,
+  "firstFailure": {
+    "at": "2026-10-21T10:49:21.888Z",
+    "args": [
+      "--test",
+      "--test-reporter=spec",
+      "tests/elbow-current-lifecycle-preservation.test.mjs"
+    ],
+    "code": 1,
+    "signal": null,
+    "log": "F:/VisibleMedicine/staging/20261021-elbow-history-application/FIRST_NATIVE_FAILED.log",
+    "logSha256": "e1227f67384834480392245b5d832cafa791159d247959e351ac5910be4e32b8",
+    "footer": [
+      "ℹ tests 1",
+      "ℹ pass 0",
+      "ℹ fail 1",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ],
+    "guardSha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105",
+    "actualElbowTestSha256": "1b2f22d6bee38da836cc3e491b1b16fec3c0bc4fca0b577cf9e127cf0d081490",
+    "canonicalInstalled": true,
+    "fullSuitePassingClaim": false
+  },
+  "ownerPreviewPid": 266712
+}
