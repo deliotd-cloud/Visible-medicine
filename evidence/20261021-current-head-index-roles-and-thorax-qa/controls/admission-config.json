@@ -1,0 +1,35 @@
+{
+  "proposal": "F:/VisibleMedicine/staging/20261021-current-head-index-role-proposal",
+  "stage": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application",
+  "manifestSha256": "02fcd14f1f7196a2f6be6f3d8ebd7b147ebad0f10702029b2fbcf8df79bbb1cf",
+  "beforeInputs": 5167,
+  "afterInputs": 5174,
+  "expectedPaths": [
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/head-index-tab-stop.test.mjs",
+    "tests/head-filtered-layout.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/atlas190-current-delivery.test.mjs",
+    "tests/salivary-cache-guard-adaptation.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/fixtures/current-atlas-delivery-before-role-20261021.mjs.raw",
+    "tests/fixtures/head-index-tab-stop-before-role-20261021.mjs.raw",
+    "tests/fixtures/head-filtered-layout-before-role-20261021.mjs.raw",
+    "tests/fixtures/current-delivery-admission-485-before-role-20261021.mjs.raw",
+    "tests/fixtures/atlas190-current-delivery-before-role-20261021.mjs.raw",
+    "tests/fixtures/salivary-cache-guard-adaptation-before-role-20261021.mjs.raw"
+  ],
+  "roots": [
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/head-index-tab-stop.test.mjs",
+    "tests/head-filtered-layout.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/atlas190-current-delivery.test.mjs",
+    "tests/salivary-cache-guard-adaptation.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/closed56-live-preservation.test.mjs",
+    "tests/closed56-original-tests.test.mjs",
+    "tests/closed56-whole-role-transition-20261021.test.mjs",
+    "tests/exact-test-fixture-eol.test.mjs"
+  ]
+}

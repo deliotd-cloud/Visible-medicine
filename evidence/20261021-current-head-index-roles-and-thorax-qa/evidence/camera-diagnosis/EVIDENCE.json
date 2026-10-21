@@ -1,0 +1,42 @@
+{
+  "kind": "regional-focus-framing-diagnosis",
+  "date": "2026-10-21",
+  "disposition": "report-only-no-product-candidate",
+  "atlas": {
+    "path": "F:/VisibleMedicine/atlas",
+    "head": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "tree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
+    "fittedCameraSha256Before": "F9D7AA3B4EF534EEEBB02F8BB3736898D0255062ECB7597A7D56493472FB54C6",
+    "fittedCameraSha256After": "F9D7AA3B4EF534EEEBB02F8BB3736898D0255062ECB7597A7D56493472FB54C6",
+    "gitStatusPorcelainV1": "",
+    "gitStatusVerifiedReadOnly": true
+  },
+  "focusedCommands": [
+    {
+      "command": "node scripts/validate-thorax-framing.mjs",
+      "cwd": "F:/VisibleMedicine/atlas",
+      "exitCode": 0,
+      "toolResultChunkId": "8baa59",
+      "reportedProjectedFits": 72,
+      "reportedSelectionChecks": 367,
+      "stdoutRetainedAsFile": false,
+      "stdoutSha256": null,
+      "receiptStatus": "terminal-output-not-retained"
+    },
+    {
+      "command": "node scripts/validate-camera-zoom.mjs",
+      "cwd": "F:/VisibleMedicine/atlas",
+      "exitCode": 0,
+      "toolResultChunkId": "12a585",
+      "reportedChecks": 414,
+      "stdoutRetainedAsFile": false,
+      "stdoutSha256": null,
+      "receiptStatus": "terminal-output-not-retained"
+    }
+  ],
+  "productSourcePathsChanged": [],
+  "browserUsedForThisHandoff": false,
+  "validationRerunForHandoff": false,
+  "clinicalAcceptance": false,
+  "fullDeviceAcceptance": false
+}

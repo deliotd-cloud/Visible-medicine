@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-21T13:07:57.865Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/head-index-tab-stop.test.mjs",
+    "tests/head-filtered-layout.test.mjs",
+    "tests/current-delivery-admission-485.test.mjs",
+    "tests/atlas190-current-delivery.test.mjs",
+    "tests/salivary-cache-guard-adaptation.test.mjs",
+    "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+    "tests/closed56-live-preservation.test.mjs",
+    "tests/closed56-original-tests.test.mjs",
+    "tests/closed56-whole-role-transition-20261021.test.mjs",
+    "tests/exact-test-fixture-eol.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/native.tap",
+  "logSha256": "1dd100d170c0c9604a8a22c09bd8e00381fb7eea2ddb03ed4f8e234dee7889a5",
+  "counts": {
+    "tests": 84,
+    "pass": 82,
+    "fail": 2,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [
+    {
+      "number": 61,
+      "title": "original complete clinical-review-desktop-layout.test.mjs reconstructs with only reviewed current-admission edits"
+    },
+    {
+      "number": 62,
+      "title": "admitted current scope agrees with exact source and bound imported bytes"
+    }
+  ],
+  "rawLogLocalOnly": true
+}

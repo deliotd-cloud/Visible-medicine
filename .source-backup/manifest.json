@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T12:53:29.374Z",
+  "at": "2026-10-21T13:15:07.922Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5174,
+    "canonicalNamedInputs": 5181,
     "canonicalInstalled": true,
     "reviewCopyPreviewBuildPending": true
   },
-  "parent": "efef8af7e643068e15efcb4483687167081c837e",
-  "gitParent": "efef8af7e643068e15efcb4483687167081c837e",
+  "parent": "5ee0a5f0adc3ec427f17d4d71e245bffeac16731",
+  "gitParent": "5ee0a5f0adc3ec427f17d4d71e245bffeac16731",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -2615,6 +2615,156 @@
       "path": "evidence/20261021-current-epoch-proofs-verified/scripts/prepare-revision-guard-batch-v7-20261021.mjs",
       "bytes": 2839,
       "sha256": "ce7f2e53b8dedd51753dba4bbf3cbb8f5776f04786fabfb07cbe653668f139bb"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/controls/admission-config.json",
+      "bytes": 1727,
+      "sha256": "a93626406d3ecca8258f69fc75bbbcc955a6609d40d0bb3d0cf85efe432fd1f3"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/controls/admit-closed56-role-repair-20261021.mjs",
+      "bytes": 9768,
+      "sha256": "31e8d86755d16d4402ca239b5d6dc6ebaee401f9fdd75879178a3eaf0f0f3017"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/controls/checkpoint-current-head-index-roles-20261021.mjs",
+      "bytes": 8992,
+      "sha256": "66a6522414c162f226514a35c19cf92b49ce2369be19dea396b4568c96f06418"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/evidence/APPLICATION.json",
+      "bytes": 6098,
+      "sha256": "882505a7560f197c113179e39be392f2879ce23bfb347a64aecbc1fad10f3188"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/evidence/camera-diagnosis/EVIDENCE.json",
+      "bytes": 1450,
+      "sha256": "4242fb14d8387dda09377425d7c3aea9dc26fb6dcdcc8dc90bfd877e9077a731"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/evidence/camera-diagnosis/REPORT.md",
+      "bytes": 1815,
+      "sha256": "a2688f3b5ff7979d0dbd3fb7272a81d4d1159bfedd37ecf1a32c88c6369c11fd"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/evidence/native.json",
+      "bytes": 1396,
+      "sha256": "3dbc244c0d18e46fd1ddb00bd5886935e68494bd3de45c50208938a8672b5a57"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/evidence/PROOF.json",
+      "bytes": 3434,
+      "sha256": "ea67e77f923a02b1c7467ec2b6e3cb093483ff7ce1cd5b5a23deb20f9b9f0cb8"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/evidence/thorax-browser-observations.json",
+      "bytes": 2823,
+      "sha256": "5d75a8067797e3c900797eb0955eac49d0775ac06530f0da6b09b96780326b10"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 6697,
+      "sha256": "71b86ce39f4173198760b9fb6f1e8fbaf2afa422f89d51e791e6ce47b59250ef"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 17978,
+      "sha256": "8b6215fe75454f5d30ee128b994538ecf87db6748ff2f5ce193b47f9f0a3b250"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 3873,
+      "sha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 8362,
+      "sha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/atlas190-current-delivery-before-role-20261021.mjs.raw",
+      "bytes": 5172,
+      "sha256": "8b6e741d1565be147f25258163ffdc00830aafcca2f4a04b39a0f4edbd5e62cf"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/current-atlas-delivery-before-role-20261021.mjs.raw",
+      "bytes": 17978,
+      "sha256": "82d6c024dca59dab2dbaf944bed6f3066bf7905f99871e96033d9bf02a4c5821"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/current-delivery-admission-485-before-role-20261021.mjs.raw",
+      "bytes": 3554,
+      "sha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/head-filtered-layout-before-role-20261021.mjs.raw",
+      "bytes": 4094,
+      "sha256": "79a174b171076f301c8a33cf82bf8de4a3d1e5438ba2b51047ca78fb3bcbc80e"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/head-index-tab-stop-before-role-20261021.mjs.raw",
+      "bytes": 6172,
+      "sha256": "baef44aa7d0cbde7c9b2aa6f246670ef738c523444ec2ef2a9cbc85724f241b3"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/salivary-cache-guard-adaptation-before-role-20261021.mjs.raw",
+      "bytes": 3586,
+      "sha256": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/head-filtered-layout.test.mjs",
+      "bytes": 4402,
+      "sha256": "151e0511ce7ce925ff7a58469100759586f7aae3b40b85458db4da1ae7c05e3e"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/head-index-tab-stop.test.mjs",
+      "bytes": 6371,
+      "sha256": "883c8e03499f53eb62877079105e72e663263990ce41ad96e3e3d189f9c65ae2"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/salivary-cache-guard-adaptation.test.mjs",
+      "bytes": 3840,
+      "sha256": "15daeb7333adf104dfa6d7ab211d51d716872ce0a3b7da4a9797be62550e954e"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 5172,
+      "sha256": "8b6e741d1565be147f25258163ffdc00830aafcca2f4a04b39a0f4edbd5e62cf"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/current-atlas-delivery.test.mjs",
+      "bytes": 17978,
+      "sha256": "82d6c024dca59dab2dbaf944bed6f3066bf7905f99871e96033d9bf02a4c5821"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 3554,
+      "sha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/head-filtered-layout.test.mjs",
+      "bytes": 4094,
+      "sha256": "79a174b171076f301c8a33cf82bf8de4a3d1e5438ba2b51047ca78fb3bcbc80e"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/head-index-tab-stop.test.mjs",
+      "bytes": 6172,
+      "sha256": "baef44aa7d0cbde7c9b2aa6f246670ef738c523444ec2ef2a9cbc85724f241b3"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/salivary-cache-guard-adaptation.test.mjs",
+      "bytes": 3586,
+      "sha256": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/proposal/DIRECT_READERS.md",
+      "bytes": 6920,
+      "sha256": "5f31abda00e12e108b1a3b632e160cf7a8296d32454fcb5c576365f32f1f732f"
+    },
+    {
+      "path": "evidence/20261021-current-head-index-roles-and-thorax-qa/proposal/PROPOSAL.json",
+      "bytes": 4042,
+      "sha256": "02fcd14f1f7196a2f6be6f3d8ebd7b147ebad0f10702029b2fbcf8df79bbb1cf"
     },
     {
       "path": "evidence/20261021-current-matrix-source-verified/evidence/20261021-clinical-epoch-batch-c-v4-native-proof/PREPARATION.json",
@@ -8928,9 +9078,9 @@
     }
   ],
   "removed": [],
-  "scope": "Nine exact installed test/helper/raw-source-proof paths, four original preimages, reviewed manifest/proposal, compact actual terminal receipts and guarded controls on prior filtered source ancestry. Full native log stays local. No native image/mask data, private audit or coordinates, scans, models, identifiers, decisions, notes, private references/env/dependencies, raw canonical Git ancestry, browser DOM/media or complete project/private recovery. All67actual cases include3retained failures; no whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Thirteen exact installed test/raw-proof paths, six originals, reviewed dependency audit, compact84/82/2 native receipts, sanitized public-model keyboard QA and report-only framing diagnosis with unretained terminal-output limits. Guarded controls and prior filtered source ancestry only. No native masks, scan pixels, private reports/coordinates/identifiers/notes/decisions/env/dependencies, model assets, full native TAP, raw browser DOM/media or raw canonical ancestry. Partial source recovery only, not whole/private/runnable backup or full-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T12:53:22.863Z",
+    "at": "2026-10-21T13:15:01.353Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "canonicalInstalled": true,
@@ -8938,8 +9088,8 @@
       "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
       "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
     },
-    "currentNamedInputs": 5174,
-    "controlledSourceInputs": 5167,
+    "currentNamedInputs": 5181,
+    "controlledSourceInputs": 5174,
     "preservedSourcePaths": [
       ".gitignore",
       "docs/completion-checklist.json",
@@ -8949,43 +9099,41 @@
       "public/atlas-runtime/lower-limb/LICENSE",
       "public/atlas-runtime/shoulder/LICENSE"
     ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-closed56-role-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "592f2631ca857608175102874b5625f99d4c39beee4305de4937715e3486c2f0",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-closed56-role-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "1d189e98289cfb9e1aa0a7c60d65101741816954a1716d69bded29ba7e9b0c81",
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "09a180538a8da65b7e06aed708062ab4b610938bc4709cfd1f32024bf07bcb86",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "7c2657294d3973d33059d9fa8ba40a5c9fba0c077f6727d22d81e538607e6698",
     "reviewInputs": 1710,
     "canonicalDeveloperToolingInstalled": true,
-    "closed56ExactInstalledPaths": 9,
-    "closed56ExistingEditedPaths": 4,
+    "installedTestOnlyPaths": 13,
+    "existingEditedTestPaths": 6,
     "wholeOriginalAndRoleInverseMutationProofsPassed": true,
-    "affectedClosed56ActualNativeCases": 30,
-    "affectedClosed56ActualNativePasses": 30,
-    "allSevenRootActualNativeCounts": {
-      "tests": 67,
-      "pass": 64,
-      "fail": 3,
+    "actualElevenRootNativeCounts": {
+      "tests": 84,
+      "pass": 82,
+      "fail": 2,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "allSevenRootActualNativeCode": 1,
+    "actualElevenRootNativeCode": 1,
     "remainingCases": [
       {
-        "number": 34,
-        "title": "one current fixture binds exact source tree, four learners, protected Review and model registry"
+        "number": 61,
+        "title": "original complete clinical-review-desktop-layout.test.mjs reconstructs with only reviewed current-admission edits"
       },
       {
-        "number": 35,
-        "title": "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs"
-      },
-      {
-        "number": 67,
-        "title": "current delivery retains every prior assertion outside the one-input count and historical context seams"
+        "number": 62,
+        "title": "admitted current scope agrees with exact source and bound imported bytes"
       }
     ],
-    "remainingDiagnosis": "Two unchanged current-atlas-delivery assertions still expect485/1550 rather than exact190/1553; unchanged head-index whole-current assertion still equates the moving current test to its87ed archive. These are the three actual failures, not silently repinned or counted as passes.",
+    "remainingDiagnosis": "The two genuine remaining cases both belong to the unchanged485source-role assertions in current-delivery-admission-485: its clinical-desktop inverse reads later current source, and its actual-current scope still expects485. All original failure inventories remain; a further bounded proposal is not installed.",
+    "thoraxKeyboardAndLayoutObservation": "thorax-desktop-keyboard-qa-20261021.json",
+    "cameraPatchNotJustified": true,
+    "cameraAuditTerminalOutputsNotRetained": true,
     "rawNativeLogExcludedFromBackup": true,
     "currentValidatorAndFixtureUnchanged": true,
+    "currentTestNowChecksExact190": true,
     "allOtherSourceInputsAndBindingsUnchanged": true,
     "all1553AtlasWorkingSourceBytesExact": true,
     "all71ItemsAndEightIdeasUnchanged": true,

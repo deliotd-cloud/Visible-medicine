@@ -1,0 +1,148 @@
+{
+  "at": "2026-10-21T13:08:01.786Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "preimageSha256": "82d6c024dca59dab2dbaf944bed6f3066bf7905f99871e96033d9bf02a4c5821",
+      "candidateSha256": "8b6215fe75454f5d30ee128b994538ecf87db6748ff2f5ce193b47f9f0a3b250",
+      "candidateBytes": 17978
+    },
+    {
+      "path": "tests/head-index-tab-stop.test.mjs",
+      "preimageSha256": "baef44aa7d0cbde7c9b2aa6f246670ef738c523444ec2ef2a9cbc85724f241b3",
+      "candidateSha256": "883c8e03499f53eb62877079105e72e663263990ce41ad96e3e3d189f9c65ae2",
+      "candidateBytes": 6371
+    },
+    {
+      "path": "tests/head-filtered-layout.test.mjs",
+      "preimageSha256": "79a174b171076f301c8a33cf82bf8de4a3d1e5438ba2b51047ca78fb3bcbc80e",
+      "candidateSha256": "151e0511ce7ce925ff7a58469100759586f7aae3b40b85458db4da1ae7c05e3e",
+      "candidateBytes": 4402
+    },
+    {
+      "path": "tests/current-delivery-admission-485.test.mjs",
+      "preimageSha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec",
+      "candidateSha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0",
+      "candidateBytes": 3873
+    },
+    {
+      "path": "tests/atlas190-current-delivery.test.mjs",
+      "preimageSha256": "8b6e741d1565be147f25258163ffdc00830aafcca2f4a04b39a0f4edbd5e62cf",
+      "candidateSha256": "71b86ce39f4173198760b9fb6f1e8fbaf2afa422f89d51e791e6ce47b59250ef",
+      "candidateBytes": 6697
+    },
+    {
+      "path": "tests/salivary-cache-guard-adaptation.test.mjs",
+      "preimageSha256": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468",
+      "candidateSha256": "15daeb7333adf104dfa6d7ab211d51d716872ce0a3b7da4a9797be62550e954e",
+      "candidateBytes": 3840
+    },
+    {
+      "path": "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33",
+      "candidateBytes": 8362
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "82d6c024dca59dab2dbaf944bed6f3066bf7905f99871e96033d9bf02a4c5821",
+      "candidateBytes": 17978
+    },
+    {
+      "path": "tests/fixtures/head-index-tab-stop-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "baef44aa7d0cbde7c9b2aa6f246670ef738c523444ec2ef2a9cbc85724f241b3",
+      "candidateBytes": 6172
+    },
+    {
+      "path": "tests/fixtures/head-filtered-layout-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "79a174b171076f301c8a33cf82bf8de4a3d1e5438ba2b51047ca78fb3bcbc80e",
+      "candidateBytes": 4094
+    },
+    {
+      "path": "tests/fixtures/current-delivery-admission-485-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec",
+      "candidateBytes": 3554
+    },
+    {
+      "path": "tests/fixtures/atlas190-current-delivery-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "8b6e741d1565be147f25258163ffdc00830aafcca2f4a04b39a0f4edbd5e62cf",
+      "candidateBytes": 5172
+    },
+    {
+      "path": "tests/fixtures/salivary-cache-guard-adaptation-before-role-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468",
+      "candidateBytes": 3586
+    }
+  ],
+  "controlledInputs": 5174,
+  "preservedInputs": 7,
+  "namedInputs": 5181,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "09a180538a8da65b7e06aed708062ab4b610938bc4709cfd1f32024bf07bcb86",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T13:07:57.865Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/head-index-tab-stop.test.mjs",
+      "tests/head-filtered-layout.test.mjs",
+      "tests/current-delivery-admission-485.test.mjs",
+      "tests/atlas190-current-delivery.test.mjs",
+      "tests/salivary-cache-guard-adaptation.test.mjs",
+      "tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "tests/closed56-live-preservation.test.mjs",
+      "tests/closed56-original-tests.test.mjs",
+      "tests/closed56-whole-role-transition-20261021.test.mjs",
+      "tests/exact-test-fixture-eol.test.mjs"
+    ],
+    "code": 1,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/native.tap",
+    "logSha256": "1dd100d170c0c9604a8a22c09bd8e00381fb7eea2ddb03ed4f8e234dee7889a5",
+    "counts": {
+      "tests": 84,
+      "pass": 82,
+      "fail": 2,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [
+      {
+        "number": 61,
+        "title": "original complete clinical-review-desktop-layout.test.mjs reconstructs with only reviewed current-admission edits"
+      },
+      {
+        "number": 62,
+        "title": "admitted current scope agrees with exact source and bound imported bytes"
+      }
+    ],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": false,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

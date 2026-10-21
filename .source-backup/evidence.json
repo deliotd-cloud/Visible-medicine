@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-21T12:53:22.863Z",
+  "at": "2026-10-21T13:15:01.353Z",
   "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
   "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
   "canonicalInstalled": true,
@@ -7,8 +7,8 @@
     "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
     "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
   },
-  "currentNamedInputs": 5174,
-  "controlledSourceInputs": 5167,
+  "currentNamedInputs": 5181,
+  "controlledSourceInputs": 5174,
   "preservedSourcePaths": [
     ".gitignore",
     "docs/completion-checklist.json",
@@ -18,43 +18,41 @@
     "public/atlas-runtime/lower-limb/LICENSE",
     "public/atlas-runtime/shoulder/LICENSE"
   ],
-  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-closed56-role-application/SOURCE_INPUTS_AFTER.json",
-  "sourceSnapshotSha256": "592f2631ca857608175102874b5625f99d4c39beee4305de4937715e3486c2f0",
-  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-closed56-role-application/PRESERVED_SOURCE_AFTER.json",
-  "preservedSnapshotSha256": "1d189e98289cfb9e1aa0a7c60d65101741816954a1716d69bded29ba7e9b0c81",
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "09a180538a8da65b7e06aed708062ab4b610938bc4709cfd1f32024bf07bcb86",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-current-head-index-role-application/PRESERVED_SOURCE_AFTER.json",
+  "preservedSnapshotSha256": "7c2657294d3973d33059d9fa8ba40a5c9fba0c077f6727d22d81e538607e6698",
   "reviewInputs": 1710,
   "canonicalDeveloperToolingInstalled": true,
-  "closed56ExactInstalledPaths": 9,
-  "closed56ExistingEditedPaths": 4,
+  "installedTestOnlyPaths": 13,
+  "existingEditedTestPaths": 6,
   "wholeOriginalAndRoleInverseMutationProofsPassed": true,
-  "affectedClosed56ActualNativeCases": 30,
-  "affectedClosed56ActualNativePasses": 30,
-  "allSevenRootActualNativeCounts": {
-    "tests": 67,
-    "pass": 64,
-    "fail": 3,
+  "actualElevenRootNativeCounts": {
+    "tests": 84,
+    "pass": 82,
+    "fail": 2,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "allSevenRootActualNativeCode": 1,
+  "actualElevenRootNativeCode": 1,
   "remainingCases": [
     {
-      "number": 34,
-      "title": "one current fixture binds exact source tree, four learners, protected Review and model registry"
+      "number": 61,
+      "title": "original complete clinical-review-desktop-layout.test.mjs reconstructs with only reviewed current-admission edits"
     },
     {
-      "number": 35,
-      "title": "current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs"
-    },
-    {
-      "number": 67,
-      "title": "current delivery retains every prior assertion outside the one-input count and historical context seams"
+      "number": 62,
+      "title": "admitted current scope agrees with exact source and bound imported bytes"
     }
   ],
-  "remainingDiagnosis": "Two unchanged current-atlas-delivery assertions still expect485/1550 rather than exact190/1553; unchanged head-index whole-current assertion still equates the moving current test to its87ed archive. These are the three actual failures, not silently repinned or counted as passes.",
+  "remainingDiagnosis": "The two genuine remaining cases both belong to the unchanged485source-role assertions in current-delivery-admission-485: its clinical-desktop inverse reads later current source, and its actual-current scope still expects485. All original failure inventories remain; a further bounded proposal is not installed.",
+  "thoraxKeyboardAndLayoutObservation": "thorax-desktop-keyboard-qa-20261021.json",
+  "cameraPatchNotJustified": true,
+  "cameraAuditTerminalOutputsNotRetained": true,
   "rawNativeLogExcludedFromBackup": true,
   "currentValidatorAndFixtureUnchanged": true,
+  "currentTestNowChecksExact190": true,
   "allOtherSourceInputsAndBindingsUnchanged": true,
   "all1553AtlasWorkingSourceBytesExact": true,
   "all71ItemsAndEightIdeasUnchanged": true,

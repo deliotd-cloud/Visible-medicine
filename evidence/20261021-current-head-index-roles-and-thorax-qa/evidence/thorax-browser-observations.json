@@ -1,0 +1,31 @@
+{
+  "schema": "vm-local-regional-desktop-observation-1",
+  "date": "2026-10-21",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "routes": ["/atlas/3d", "/atlas/thorax-3d"],
+  "temporaryOwnedTab": "96",
+  "temporaryOwnedTabClosed": true,
+  "ownerTabsReloadedOrClosed": false,
+  "viewport": {"width":1280,"height":720,"outerDocumentWidth":1280,"outerPageScroll":0},
+  "observations": [
+    "Selecting Thorax in the native region picker did not navigate until Go was activated by Enter. The page then opened the integrated thorax route, not a new pop-out.",
+    "An immediate wait for the exact heading Thorax timed out during navigation; fresh inspection confirmed the page heading is Thorax anatomy and the embedded viewer heading is Thorax. This is retained as a locator mismatch, not classified as a navigation failure.",
+    "Space selected the Dissect radio, revealing the inline four-stage layer sequence, enabled-structure status and Undo/Redo controls.",
+    "Space on Next dissection stage moved from Assembled anatomy to Remove pectoralis major, 2 of 4. Undo returned to stage1; focus transferred to the enabled Redo control. Redo restored stage2 and focus transferred to Undo.",
+    "Space on Focus view hid the side panels and focused Show panels. A public-model screenshot showed the thorax and its leader labels. Show panels restored Systems and dissection tools and Anatomy study panel while retaining stage2.",
+    "Outer page scroll stayed zero and document width stayed1280. The observed model silhouette looked smaller than the whole fitted region; a separate source-bound camera audit found that the full thorax context explains the fit, not a proven shrink-on-resize defect. No camera patch was made.",
+    "The last-navigation error capture contains one MutationObserver error without source URL, consistent with the previously unresolved issue. It is not suppressed, attributed externally or claimed fixed.",
+    "Only owned test tab96 was closed. No review, lecture, saved study, quiz attempt, clinical decision, authentication or permission change was submitted."
+  ],
+  "limits": [
+    "This is bounded keyboard and layout evidence, not 200-percent text, reduced-motion, full screen-reader, camera frame-time, every-region or human hardware acceptance.",
+    "The screenshot is a public reference model, not a native CT/MRI image; no scan pixels, masks or private reports were captured or exported.",
+    "The separate camera audit records focused terminal outputs as not retained; its counts are not a fresh main full-suite or device benchmark."
+  ],
+  "productSourceChanged": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "privateDataUploaded": false
+}
