@@ -1,0 +1,21 @@
+// Local QA only. Never copy the interaction plan/coordinates or source assets
+// into GitHub, hosted artifacts, screenshots or shared browser evidence.
+import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {pathToFileURL} from 'node:url';import {read,sha} from './source-only-backup-20261019.mjs';
+const site='F:/VisibleMedicine/website',stage='F:/VisibleMedicine/staging/20261021-head-positive-mask-browser';
+const {loadEnv}=await import(pathToFileURL(site+'/node_modules/vite/dist/node/index.js'));
+const {createNativeVolumeGeometry,maskCropIndexForIJK}=await import(pathToFileURL(site+'/lib/head-atlas-geometry.mjs'));
+const configured=loadEnv('development',site,'VM_LOCAL_HEAD_').VM_LOCAL_HEAD_ROOT;assert(configured&&path.isAbsolute(configured));const root=path.resolve(configured);assert.equal(fs.realpathSync(root),root);assert(!fs.lstatSync(root).isSymbolicLink());
+const expected='0f91f6097e378465827c89a4a10c6ca32ae1bdc276dfbb9c6714527e4f3530c5';const manifestBytes=read(root+'/manifest.json');assert.equal(sha(manifestBytes),expected);const manifest=JSON.parse(manifestBytes);assert.equal(manifest.version,'1.0.2');assert.equal(manifest.source_studies_are_distinct,true);
+assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+const plans=[];for(const modality of ['MRI','CT']){
+ const study=manifest.studies[modality],matches=study.entries.filter(e=>e.label.replace(/\s*(?:[—–-]\s*)?regional mask\s*$/i,'').trim()==='Pons');assert.equal(matches.length,1);const entry=matches[0],crop=entry.mask;assert(crop&&crop.dtype==='uint8');assert(!entry.source?.geometry_alias_of);
+ assert(typeof crop.file==='string'&&!/[\\:\x00-\x1f]/.test(crop.file)&&crop.file.split('/').every(v=>v&&v!=='.'&&v!=='..'));const file=path.resolve(root,crop.file);assert(file.startsWith(root+path.sep));assert(!fs.lstatSync(file).isSymbolicLink());assert.equal(fs.realpathSync(file),file);const mask=read(file);assert.equal(sha(mask),crop.sha256);const[K,J,I]=crop.shape_kji;assert.equal(mask.length,K*J*I);assert.deepEqual(crop.native_shape_kji,study.image.shape_kji);assert.deepEqual(crop.ijk_to_ras,study.image.ijk_to_ras);
+ // Independently inspect the original binary values; never infer a boundary
+ // from a mesh, point locator, geometric centre, label or zero mask cell.
+ let selected=-1,distance=Infinity;for(let n=0;n<mask.length;n++){assert(mask[n]===0||mask[n]===1);if(mask[n]!==1)continue;const i=n%I,j=Math.floor(n/I)%J,k=Math.floor(n/(I*J)),d=(i-I/2)**2+(j-J/2)**2+(k-K/2)**2;if(d<distance){distance=d;selected=n;}}
+ assert(selected>=0);const point=[selected%I+crop.offset_kji[2],Math.floor(selected/I)%J+crop.offset_kji[1],Math.floor(selected/(I*J))+crop.offset_kji[0]];assert.equal(mask[maskCropIndexForIJK(point,crop)],1);
+ const geometry=createNativeVolumeGeometry(study.image),view=geometry.views.axial,centre=[study.image.shape_kji[2],study.image.shape_kji[1],study.image.shape_kji[0]].map(n=>Math.floor(n/2));centre[view.fixedAxisIJK]=point[view.fixedAxisIJK];const start=view.pixelFromIJK(centre),target=view.pixelFromIJK(point);const horizontal=target.x-start.x,vertical=target.y-start.y;assert(Number.isSafeInteger(horizontal)&&Number.isSafeInteger(vertical)&&Math.abs(horizontal)+Math.abs(vertical)<=256);assert.deepEqual(view.pixelToIJK(start.x+horizontal,start.y+vertical,point[view.fixedAxisIJK]),point);
+ plans.push({modality,entryId:entry.id,manifestSha256:expected,maskSha256:crop.sha256,maskByteLength:mask.length,binaryPositiveVoxelVerified:true,sourceFilesChanged:false,plane:'axial',expectedSliceNumber:point[view.fixedAxisIJK]+1,presses:[{key:horizontal<0?'ArrowLeft':'ArrowRight',count:Math.abs(horizontal)},{key:vertical<0?'ArrowUp':'ArrowDown',count:Math.abs(vertical)}],privateInteractionMetadata:true,neverUpload:true});
+}
+fs.writeFileSync(stage+'/PRIVATE_INTERACTION_PLAN.json',JSON.stringify({at:new Date().toISOString(),plans,neverUpload:true},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({localOnly:true,sourceFilesChanged:false,plans:plans.map(({modality,expectedSliceNumber,presses,binaryPositiveVoxelVerified})=>({modality,expectedSliceNumber,presses,binaryPositiveVoxelVerified})),noPixelsOrMasksReturned:true}));

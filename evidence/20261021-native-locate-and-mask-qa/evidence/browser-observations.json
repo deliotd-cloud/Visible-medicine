@@ -1,0 +1,34 @@
+{
+  "schema": "vm-local-native-practice-observation-1",
+  "date": "2026-10-21",
+  "atlasSource": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "routes": ["/atlas/mri-head", "/atlas/ct-head"],
+  "browser": "Codex in-app browser",
+  "temporaryOwnedTab": "95",
+  "temporaryOwnedTabClosed": true,
+  "ownerTabsReloadedOrClosed": false,
+  "viewport": {"width": 1280, "height": 720, "outerDocumentWidth": 1280},
+  "observations": [
+    "Keyboard search and result selection selected Pons in the MRI atlas. Practise this structure opened a one-question locate session.",
+    "A separately verified occupied voxel in the accepted native MRI mask was selected through the image's real keyboard controls. Check answer displayed Correct, moved focus to the feedback and did not scroll the page. See results showed 1 of 1 correct first attempts.",
+    "The Structure tab returned to the selected anatomy. Find Pons on CT carried only the semantic concept and exact head-package revision, not scan coordinates or quiz results.",
+    "The separate CT study selected Pons without displaying the preceding MRI result. Its own one-question locate session accepted a separately verified occupied CT-mask voxel and displayed Correct with focused feedback, followed by 1 of 1 correct first attempts.",
+    "A fractional accessibility-tree image scroll did not change the slice. It is retained as an input-delivery limitation, not classified as a viewer defect.",
+    "Pointer-centred browser scrolling changed CT slices down and back up while outer page scroll remained zero. PageDown then PageUp also changed and restored the slice without moving the page.",
+    "The last-navigation browser error capture returned zero errors and was below its limit. This does not establish that the separately unattributed 3D observer error is fixed.",
+    "Only the owned test tab was closed. Practice is session-only; no review decision, saved attempt, study set, lecture draft or clinical record was submitted."
+  ],
+  "limits": [
+    "Two actual positive locate journeys are not exhaustive browser coverage of every mask or boundary.",
+    "Pointer-centred automated browser scrolling is not a human hardware, mobile or all-boundary scrolling test.",
+    "All source-derived voxel locations, slice values, key movement plans, private filenames and per-mask reports remain local and are excluded from this observation and remote backup.",
+    "The separate all-eligible-mask read-only audit checks actual data and production scoring functions, not full Website regression, clinical accuracy, registration, cleared Education transport or complete assistive-technology acceptance.",
+    "No new Website source was changed by these observations. The earlier review wording correction still awaits the next preview build."
+  ],
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "privateDataUploaded": false,
+  "wholeDesktopAcceptanceClaim": false
+}
