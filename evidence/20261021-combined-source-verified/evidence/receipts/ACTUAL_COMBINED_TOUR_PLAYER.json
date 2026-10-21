@@ -1,0 +1,20 @@
+{
+  "label": "ACTUAL_COMBINED_TOUR_PLAYER",
+  "command": "node",
+  "args": [
+    "scripts/test-regional-tour-player.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-atlas-source-assembly/ACTUAL_COMBINED_TOUR_PLAYER.log",
+  "logSha256": "ac983e750b20759e60c119850229a638aaa2e54e238066c3d9674b73f33e097a",
+  "footer": [
+    "ℹ tests 75",
+    "ℹ pass 75",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

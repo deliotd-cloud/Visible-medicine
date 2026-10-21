@@ -1,0 +1,80 @@
+{
+  "at": "2026-10-21T03:40:08.560Z",
+  "driverPid": 275528,
+  "wrapperPid": 273764,
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/head-cerebellar-review.test.ts",
+    "tests/head-ct-facial-ui.test.mjs",
+    "tests/head-deep-grey-review.test.ts",
+    "tests/head-hippocampal-clinical.test.ts",
+    "tests/head-lobar-review.test.ts",
+    "tests/head-mri-independent-review-ui.test.ts",
+    "tests/head-ventricular-review.test.ts",
+    "tests/clinical-review-elbow-us-followup.test.ts",
+    "tests/elbow-us-followup-preservation.test.mjs"
+  ],
+  "files": [
+    {
+      "path": "tests/head-cerebellar-review.test.ts",
+      "beforeSha256": "07359e77a1cdb9126d00a7264293a4e763ad3eb1a128dd0d6d43bae80bfdf1bc",
+      "sha256": "e296846aea3e46e42c373d01ae3934c06adae223e7789f413b0b494ca8ffbdc8"
+    },
+    {
+      "path": "tests/head-ct-facial-ui.test.mjs",
+      "beforeSha256": "6e8e413f7383f990e7d0b8d565ba815764d44a8cf3bb8c480605d21e0e322a64",
+      "sha256": "b5ea302b03648b4af1f9e750c10ecf43fff0182c8dabe2ef241f6fda1fd47e57"
+    },
+    {
+      "path": "tests/head-deep-grey-review.test.ts",
+      "beforeSha256": "a49b6655c34c65a92ce4eb01573995595e3b8251c4d0fea0dea3f6b3ff198921",
+      "sha256": "bcf97aa6433919540e40960b65f4f7e069fb2cbb5a0573195c092e55d78e8915"
+    },
+    {
+      "path": "tests/head-hippocampal-clinical.test.ts",
+      "beforeSha256": "3fe895d4de7edc027b1aab84acf7a5f25ccf9626c15bf874a3c4313127d67d5b",
+      "sha256": "3866730ce1998d887379736e2ff5a922b89bbcbf59b770300e6dac7958d39f15"
+    },
+    {
+      "path": "tests/head-lobar-review.test.ts",
+      "beforeSha256": "cd083c79e1bae558de0131cef6c6f215ca8888ecbf5ceaecf22afd6f1efdd521",
+      "sha256": "478aa7bd74b9dabafc358b160002fe6fecf134954cd83243520977553f4fceb3"
+    },
+    {
+      "path": "tests/head-mri-independent-review-ui.test.ts",
+      "beforeSha256": "1a68c885c6d1c03503b707631941bb137433dbfd402c1a89478ca31e7e9ef23d",
+      "sha256": "ba1cb6a494877390ebea5420827ef6b2f01f97ed4ab1a7492a2c29c198df640c"
+    },
+    {
+      "path": "tests/head-ventricular-review.test.ts",
+      "beforeSha256": "06b4d4f89c051860801dae5ffc2ad0abc2c63f52112dd28a602c9454bf86319d",
+      "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
+    },
+    {
+      "path": "tests/grouped-review-confirmation-harness.mjs",
+      "beforeSha256": null,
+      "sha256": "93abee8a727e996385ca67fad498520aac94a2c58f650f4a9240dc83413b595c"
+    },
+    {
+      "path": "tests/clinical-review-elbow-us-followup.test.ts",
+      "beforeSha256": "9b0b950ead7cc57f0dfe069d1a359a65b96e15a51aa004dca536f52e0ed3b443",
+      "sha256": "cdd84bd2693941783da9f058cc4860ac7a32361913e687dab1699f66fa9a0f1f",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-later-xray-repair"
+    },
+    {
+      "path": "tests/elbow-us-followup-preservation.test.mjs",
+      "beforeSha256": "00c2bbcf29ab8ad3dfa3f1032643e302a17bb4bf70e9fe59a12b7ed3dcd1b166",
+      "sha256": "7ca1c0796278bd08cc9c7d60493c2ff79202772f5dd38608666c8a0cf537c009",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-later-xray-repair"
+    },
+    {
+      "path": ".gitattributes",
+      "beforeSha256": "59c8051bb5060e03f664c7af670f440cb59eb5abba34295611c1c9a45721d9ef",
+      "sha256": "44944abe2297cbe238a66708d15d0b241e5dcfc7311e009040777af0d7634869"
+    }
+  ],
+  "sourceInputs": 5084,
+  "canonicalInstalled": false
+}

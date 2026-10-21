@@ -1,0 +1,14 @@
+{
+  "label": "CHECK_REGIONAL_SNAPSHOTS",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/regional-teaching-snapshots.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-generated-source-closure/CHECK_REGIONAL_SNAPSHOTS.log",
+  "logSha256": "7ad9c6d59d2a609667b9c2ab4adf5b23dabcefde615dcd236c9128ae04e81e7d",
+  "footer": [],
+  "canonicalInstalled": false
+}

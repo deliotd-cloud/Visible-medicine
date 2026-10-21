@@ -1,0 +1,24 @@
+{
+  "label": "ACTUAL_SPINAL_SAVE",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/atlas-spinal-muscle-xray.test.mjs",
+    "tests/spinal-ct-save-refusal-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-spinal-save-application/ACTUAL_SPINAL_SAVE.log",
+  "logSha256": "0a7f280563690ddbe36ed8ec364b1f7127378ca47b8f3bd8c57c91facc8a254d",
+  "footer": [
+    "ℹ tests 2",
+    "ℹ pass 2",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

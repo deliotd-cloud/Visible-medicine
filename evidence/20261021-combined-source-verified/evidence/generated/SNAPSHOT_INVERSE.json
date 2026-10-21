@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-21T03:51:05.739Z",
+  "introduction": "30135cdd1849115a75c036dd6897d76e3d91e231",
+  "changedMriCells": 28,
+  "preservedCells": 2330,
+  "ids": [
+    "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+    "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+    "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth"
+  ],
+  "wholeSnapshotInverse": true,
+  "files": [
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "ff43508e300d8f6e12c138c300e1e4adabba0104f180aaf09ec6dcf2e6fab0c7"
+    },
+    {
+      "path": "content/regional-teaching/head-neck.json",
+      "bytes": 2457934,
+      "sha256": "e6a486cc4ab9745eae110615b340fa1797bb0e6e0b72195f083bec766543da25"
+    }
+  ],
+  "clinicalApproval": false
+}

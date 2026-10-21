@@ -1,0 +1,14 @@
+{
+  "label": "CHECK_RENDERER_BINDING",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/body-renderer-revisions.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-generated-source-closure/CHECK_RENDERER_BINDING.log",
+  "logSha256": "30415fabee2b212c059665cc313b6413c400c9a829118213a34159f74a67785c",
+  "footer": [],
+  "canonicalInstalled": false
+}

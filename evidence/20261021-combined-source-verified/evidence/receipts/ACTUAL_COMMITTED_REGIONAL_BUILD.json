@@ -1,0 +1,16 @@
+{
+  "label": "ACTUAL_COMMITTED_REGIONAL_BUILD",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "node_modules/vite/bin/vite.js",
+    "build",
+    "--config",
+    "integration/head-neck/vite.config.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-committed-source-admission/ACTUAL_COMMITTED_REGIONAL_BUILD.log",
+  "logSha256": "5dd520cf05348617fb1c69d9507a6f5d89205ef967f895ac869aed43faea4ec3",
+  "footer": [],
+  "canonicalInstalled": false
+}

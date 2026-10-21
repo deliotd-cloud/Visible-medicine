@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-21T03:47:23.153Z",
+  "commit": "30135cdd1849115a75c036dd6897d76e3d91e231",
+  "tree": "e20a6fbe8e29adf50fc1ae3e2005438479ddc04c",
+  "steps": [
+    {
+      "label": "ACTUAL_COMMITTED_DENTAL",
+      "code": 0,
+      "signal": null,
+      "receiptSha256": "278ad4d9bb62027849e8e84f9c35e533c883b34e2286bb1bc7fcf8404b6e5327"
+    },
+    {
+      "label": "ACTUAL_COMMITTED_REGIONAL_BUILD",
+      "code": 1,
+      "signal": null,
+      "receiptSha256": "59bdbe221d0f3118b2fe846c6377947c392e42cfa59417999a57b4a46b646165"
+    }
+  ],
+  "passed": false,
+  "canonicalInstalled": false
+}

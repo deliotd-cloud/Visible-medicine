@@ -1,0 +1,353 @@
+{
+  "at": "2026-10-21T03:53:55.843Z",
+  "source": {
+    "commit": "5c7ed0612f94b9a3ad99d9e49566c655495b98a6",
+    "tree": "ab34d6ce706b690edd6abe8bec585d348b0a5fe0",
+    "parent": "30135cdd1849115a75c036dd6897d76e3d91e231",
+    "introduction": "30135cdd1849115a75c036dd6897d76e3d91e231",
+    "baseline": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "changedSourcePaths": 22,
+    "clean": true
+  },
+  "progress": "Actual complete original hip wrapper,75tour-player cases,fresh TypeScript pass. Four dental MRI methods notes bind28existing tooth representations,not28unique lessons or acquired MRI. Genuine introduction30135cdd and generated closure successor are separate actual commits. Stock generation changes28MRI cells/preserves2330head-neck cells;stock checker verifies all12generated files with its declared text-EOL policy,and only two Git paths change. Renderer/display gates, actual committed full transition and regional build pass. Original stale-snapshot build failure retained; no bypass.",
+  "clinicalTestProgress": "Coverage4/4,arterial6/6,spinal2/2 actual checks pass. Forearm/hepatic/salivary corpus/private-storage modules pass. Elbow exact current/historical six US packets now prove later six X-ray cells and genuine tour playback metadata without dropping whole packets; original inverses retained. Seven real head-review modules initially33/30pass/3fail after manual test resolver repair; the7affected elbow/MRI/guard retries now allpass with no5084input drift. MRI failure was an omitted getClinicalReviewContext in the synthetic test adapter,not a new production permission or checkbox requirement. Earlier30case passes retain unchanged runtime/test dependencies,not a newly rerun33case or full-suite pass.",
+  "sourceFiles": [
+    {
+      "path": ".gitattributes",
+      "bytes": 4314,
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 354693,
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "ff43508e300d8f6e12c138c300e1e4adabba0104f180aaf09ec6dcf2e6fab0c7"
+    },
+    {
+      "path": "content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "37c64990ca92b3c5c2eaef7676812661deb5cc2f7be4353d3e7d665928685905"
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "content/regional-teaching/head-neck.json",
+      "bytes": 2457934,
+      "sha256": "e6a486cc4ab9745eae110615b340fa1797bb0e6e0b72195f083bec766543da25"
+    },
+    {
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 4542,
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11426,
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "scripts/test-dental-mri-native.mjs",
+      "bytes": 8870,
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6786,
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "scripts/verify-dental-mri-transition.mjs",
+      "bytes": 17132,
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    }
+  ],
+  "websiteFiles": [
+    {
+      "path": "tests/head-cerebellar-review.test.ts",
+      "beforeSha256": "07359e77a1cdb9126d00a7264293a4e763ad3eb1a128dd0d6d43bae80bfdf1bc",
+      "sha256": "e296846aea3e46e42c373d01ae3934c06adae223e7789f413b0b494ca8ffbdc8"
+    },
+    {
+      "path": "tests/head-ct-facial-ui.test.mjs",
+      "beforeSha256": "6e8e413f7383f990e7d0b8d565ba815764d44a8cf3bb8c480605d21e0e322a64",
+      "sha256": "b5ea302b03648b4af1f9e750c10ecf43fff0182c8dabe2ef241f6fda1fd47e57"
+    },
+    {
+      "path": "tests/head-deep-grey-review.test.ts",
+      "beforeSha256": "a49b6655c34c65a92ce4eb01573995595e3b8251c4d0fea0dea3f6b3ff198921",
+      "sha256": "bcf97aa6433919540e40960b65f4f7e069fb2cbb5a0573195c092e55d78e8915"
+    },
+    {
+      "path": "tests/head-hippocampal-clinical.test.ts",
+      "beforeSha256": "3fe895d4de7edc027b1aab84acf7a5f25ccf9626c15bf874a3c4313127d67d5b",
+      "sha256": "3866730ce1998d887379736e2ff5a922b89bbcbf59b770300e6dac7958d39f15"
+    },
+    {
+      "path": "tests/head-lobar-review.test.ts",
+      "beforeSha256": "cd083c79e1bae558de0131cef6c6f215ca8888ecbf5ceaecf22afd6f1efdd521",
+      "sha256": "478aa7bd74b9dabafc358b160002fe6fecf134954cd83243520977553f4fceb3"
+    },
+    {
+      "path": "tests/head-mri-independent-review-ui.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-mri-review-context-test/tests/head-mri-independent-review-ui.test.ts",
+      "beforeSha256": "ba1cb6a494877390ebea5420827ef6b2f01f97ed4ab1a7492a2c29c198df640c",
+      "sha256": "fe94de89865a008b971a74611be60b73db2021e4252a149aec6fe066b56ccc31"
+    },
+    {
+      "path": "tests/head-ventricular-review.test.ts",
+      "beforeSha256": "06b4d4f89c051860801dae5ffc2ad0abc2c63f52112dd28a602c9454bf86319d",
+      "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
+    },
+    {
+      "path": "tests/grouped-review-confirmation-harness.mjs",
+      "beforeSha256": null,
+      "sha256": "93abee8a727e996385ca67fad498520aac94a2c58f650f4a9240dc83413b595c"
+    },
+    {
+      "path": "tests/clinical-review-elbow-us-followup.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-playback-packet-repair/tests/clinical-review-elbow-us-followup.test.ts",
+      "beforeSha256": "cdd84bd2693941783da9f058cc4860ac7a32361913e687dab1699f66fa9a0f1f",
+      "sha256": "52ebcddab39cc165bf4c3c94dee0659abfea6814c92e55f85bf86f25eb6c57d8"
+    },
+    {
+      "path": "tests/elbow-us-followup-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-playback-packet-repair/tests/elbow-us-followup-preservation.test.mjs",
+      "beforeSha256": "7ca1c0796278bd08cc9c7d60493c2ff79202772f5dd38608666c8a0cf537c009",
+      "sha256": "63f4f423ece0998e8bd169d76aee2c46fe653e47593ee7f89cdc49fce2d29f4a"
+    },
+    {
+      "path": ".gitattributes",
+      "beforeSha256": "59c8051bb5060e03f664c7af670f440cb59eb5abba34295611c1c9a45721d9ef",
+      "sha256": "44944abe2297cbe238a66708d15d0b241e5dcfc7311e009040777af0d7634869"
+    }
+  ],
+  "receipts": [
+    {
+      "folder": "atlas-source-assembly",
+      "label": "ACTUAL_COMBINED_HIP",
+      "code": 0,
+      "logSha256": "c72afbd5f31a318370f292cd035a4eb9d802e418e643d2b3f364e8db3c7294b5",
+      "receiptSha256": "17e75e08bc5c90b81e47b4e24f02950023f9de94927292e9fd935589e85f05e4",
+      "footer": []
+    },
+    {
+      "folder": "atlas-source-assembly",
+      "label": "ACTUAL_COMBINED_TOUR_PLAYER",
+      "code": 0,
+      "logSha256": "ac983e750b20759e60c119850229a638aaa2e54e238066c3d9674b73f33e097a",
+      "receiptSha256": "1315b8b8ce26c2246059852f003104fc1626076091e5e32ea652afe3d5ebb52b",
+      "footer": [
+        "ℹ tests 75",
+        "ℹ pass 75",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ]
+    },
+    {
+      "folder": "atlas-source-assembly",
+      "label": "ACTUAL_COMBINED_TYPES",
+      "code": 0,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receiptSha256": "b2516c6efcb0bf2855216d7e2a836c0f117302fdf2bacae3cbdf8e49bff951f7",
+      "footer": []
+    },
+    {
+      "folder": "spinal-save-application",
+      "label": "ACTUAL_SPINAL_SAVE",
+      "code": 0,
+      "logSha256": "0a7f280563690ddbe36ed8ec364b1f7127378ca47b8f3bd8c57c91facc8a254d",
+      "receiptSha256": "34e0306025c65ef334cec5bd09fe632c7ab0ec594143f0ff4e9cea0199063094",
+      "footer": [
+        "ℹ tests 2",
+        "ℹ pass 2",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ]
+    },
+    {
+      "folder": "review-harness-and-elbow-application",
+      "label": "ACTUAL_REVIEW_REPAIRS",
+      "code": 1,
+      "logSha256": "97f7c55d8a0b861179c2896e375dc352fd2aad57dbc5bd43d059a6e07d998b14",
+      "receiptSha256": "a76ae94e569284f99dcf7c52b4ed209cb7896e8fa6aefee7951c99a94b400e79",
+      "footer": [
+        "ℹ tests 33",
+        "ℹ pass 30",
+        "ℹ fail 3",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ]
+    },
+    {
+      "folder": "review-final-retry",
+      "label": "ACTUAL_FINAL_REVIEW_RETRY",
+      "code": 0,
+      "logSha256": "2d86b215c4e4e5906d93ceb0f86b2fca95cee7fa39490208c9c2e5a5a726b246",
+      "receiptSha256": "c5344c6d2471232235f970d448981c300f6a9ba0f8b694732739b8ecb461f538",
+      "footer": [
+        "ℹ tests 7",
+        "ℹ pass 7",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ]
+    },
+    {
+      "folder": "committed-source-admission",
+      "label": "ACTUAL_COMMITTED_DENTAL",
+      "code": 0,
+      "logSha256": "d5c4fcc37b7b6d3dbce662ce02035146c786ea1c6e7657563b724c6c125c46fe",
+      "receiptSha256": "278ad4d9bb62027849e8e84f9c35e533c883b34e2286bb1bc7fcf8404b6e5327",
+      "footer": []
+    },
+    {
+      "folder": "committed-source-admission",
+      "label": "ACTUAL_COMMITTED_REGIONAL_BUILD",
+      "code": 1,
+      "logSha256": "5dd520cf05348617fb1c69d9507a6f5d89205ef967f895ac869aed43faea4ec3",
+      "receiptSha256": "59bdbe221d0f3118b2fe846c6377947c392e42cfa59417999a57b4a46b646165",
+      "footer": []
+    },
+    {
+      "folder": "generated-source-closure",
+      "label": "GENERATE_REGIONAL_SNAPSHOTS",
+      "code": 0,
+      "logSha256": "b8c2111c072fa2421556d1adde96a0738766741d1bff79882178cd0b2349f334",
+      "receiptSha256": "2b4966b9a8ba675495ff7ecebe7dcd52a3c74b4f505d83a621484b82518098b3",
+      "footer": []
+    },
+    {
+      "folder": "generated-source-closure",
+      "label": "CHECK_REGIONAL_SNAPSHOTS",
+      "code": 0,
+      "logSha256": "7ad9c6d59d2a609667b9c2ab4adf5b23dabcefde615dcd236c9128ae04e81e7d",
+      "receiptSha256": "b8a005809fcd19851ac9098a4093b27e567830d44276a4f48f318246de511a88",
+      "footer": []
+    },
+    {
+      "folder": "generated-source-closure",
+      "label": "GENERATE_RENDERER_BINDING",
+      "code": 0,
+      "logSha256": "9a7c2b6d8e588199985b185db389838f69983a56ee0d1f66061d24d1527f03ff",
+      "receiptSha256": "3dd826b275a69679f64b8224718b5e8b294c401a4ff470ac593625a5ce0b833b",
+      "footer": []
+    },
+    {
+      "folder": "generated-source-closure",
+      "label": "CHECK_RENDERER_BINDING",
+      "code": 0,
+      "logSha256": "30415fabee2b212c059665cc313b6413c400c9a829118213a34159f74a67785c",
+      "receiptSha256": "a2f71bc105f8d966d6fafa400c0efdaf0506378b0fce7e2e0e7025e0cc0823dd",
+      "footer": []
+    },
+    {
+      "folder": "generated-source-closure",
+      "label": "CHECK_DISPLAY_PINS",
+      "code": 0,
+      "logSha256": "711494e99be52fa1deae48b864796958be3efa7481dd22754ac9ef37abc07a20",
+      "receiptSha256": "0514d04408badb3af0dbebe4ad1a85136d36b9820cd05d9da40bbd2b1a789293",
+      "footer": []
+    },
+    {
+      "folder": "generated-source-closure",
+      "label": "ACTUAL_GENERATED_COMMITTED_DENTAL",
+      "code": 0,
+      "logSha256": "d5c4fcc37b7b6d3dbce662ce02035146c786ea1c6e7657563b724c6c125c46fe",
+      "receiptSha256": "35cd16cced3e134944cb4fd14ff7d6b06af61c767f554318955b115b39861401",
+      "footer": []
+    },
+    {
+      "folder": "generated-source-closure",
+      "label": "ACTUAL_GENERATED_REGIONAL_BUILD",
+      "code": 0,
+      "logSha256": "74a92c9e557322e1518feda0d7df2af7f922389fdac186db4e59f6cd0d45879e",
+      "receiptSha256": "b02939b4f7475471ef4ec41a22adf24c858f7944b77fd57b38ddab9cca64d9c4",
+      "footer": []
+    }
+  ],
+  "originalFullSuite": {
+    "tests": 5502,
+    "pass": 5355,
+    "fail": 144,
+    "skip": 3,
+    "inputDrift": false,
+    "passingClaim": false
+  },
+  "remaining": "Original full-suite remaining historical/provenance/input-contract failures remain. Read-only plexus triage found a genuine later two-file presentation pin extension,not evidence of licensing weakening; historical target provenance still needs exact reconstruction. Export/import all four source-derived runtimes/Review from the actual new revision into a separate unpublished Website candidate; preserve137model objects and independent access. Then affected integration/full-suite/build/browser acceptance. Do not refresh owner review tabs or invent clinical/spatial/public approval.",
+  "actualTwoClinicalModulesAndGuardPass": true,
+  "regionalModuleBuildPass": true,
+  "canonicalInstalled": false,
+  "fullWebsiteSuitePass": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true
+}

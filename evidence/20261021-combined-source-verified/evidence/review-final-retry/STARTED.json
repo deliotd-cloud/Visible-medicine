@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-21T03:47:59.786Z",
+  "driverPid": 259144,
+  "wrapperPid": 273916,
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/clinical-review-elbow-us-followup.test.ts",
+    "tests/elbow-us-followup-preservation.test.mjs",
+    "tests/head-mri-independent-review-ui.test.ts"
+  ],
+  "files": [
+    {
+      "path": "tests/clinical-review-elbow-us-followup.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-playback-packet-repair/tests/clinical-review-elbow-us-followup.test.ts",
+      "beforeSha256": "cdd84bd2693941783da9f058cc4860ac7a32361913e687dab1699f66fa9a0f1f",
+      "sha256": "52ebcddab39cc165bf4c3c94dee0659abfea6814c92e55f85bf86f25eb6c57d8"
+    },
+    {
+      "path": "tests/elbow-us-followup-preservation.test.mjs",
+      "origin": "F:/VisibleMedicine/staging/20261021-elbow-playback-packet-repair/tests/elbow-us-followup-preservation.test.mjs",
+      "beforeSha256": "7ca1c0796278bd08cc9c7d60493c2ff79202772f5dd38608666c8a0cf537c009",
+      "sha256": "63f4f423ece0998e8bd169d76aee2c46fe653e47593ee7f89cdc49fce2d29f4a"
+    },
+    {
+      "path": "tests/head-mri-independent-review-ui.test.ts",
+      "origin": "F:/VisibleMedicine/staging/20261021-mri-review-context-test/tests/head-mri-independent-review-ui.test.ts",
+      "beforeSha256": "ba1cb6a494877390ebea5420827ef6b2f01f97ed4ab1a7492a2c29c198df640c",
+      "sha256": "fe94de89865a008b971a74611be60b73db2021e4252a149aec6fe066b56ccc31"
+    }
+  ],
+  "sourceInputs": 5084,
+  "canonicalInstalled": false
+}

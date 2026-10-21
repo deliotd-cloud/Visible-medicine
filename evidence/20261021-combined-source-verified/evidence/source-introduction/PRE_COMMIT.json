@@ -1,0 +1,94 @@
+{
+  "at": "2026-10-21T03:45:45.925Z",
+  "parent": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "paths": [
+    {
+      "path": ".gitattributes",
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "app/body-content.ts",
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "app/fitted-camera.tsx",
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "sha256": "af5cd7cda4fde0f48e04db9844513c9b8a3f75b5b7ca4e72251bad80a13b94e4"
+    },
+    {
+      "path": "content/body-review-display-pins.json",
+      "sha256": "37c64990ca92b3c5c2eaef7676812661deb5cc2f7be4353d3e7d665928685905"
+    },
+    {
+      "path": "content/dental-mri-pins.json",
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "content/dental-mri.ts",
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "docs/DENTAL_MRI_EVIDENCE.md",
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "docs/KEYBOARD_ZOOM.md",
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "lib/camera-keyboard.ts",
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "lib/dental-mri.ts",
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "package.json",
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "scripts/hip-quick-check-history-context.mjs",
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "scripts/test-camera-keyboard-zoom.mjs",
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "scripts/test-dental-mri-native.mjs",
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "scripts/test-hip-history-entry-refusals.mjs",
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "scripts/test-hip-quick-check-history.mjs",
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "scripts/test-regional-tour-player.mjs",
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "scripts/verify-dental-mri-transition.mjs",
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    }
+  ],
+  "existingOutput": false,
+  "headTypecheckPass": true,
+  "tourCases": 75,
+  "canonicalInstalled": false
+}

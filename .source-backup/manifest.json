@@ -1,13 +1,17 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T03:33:07.313Z",
+  "at": "2026-10-21T03:54:00.272Z",
   "sourceIdentity": {
-    "atlasBase": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "namedWebsiteInputs": 5083,
-    "canonicalInstalled": false
+    "commit": "5c7ed0612f94b9a3ad99d9e49566c655495b98a6",
+    "tree": "ab34d6ce706b690edd6abe8bec585d348b0a5fe0",
+    "parent": "30135cdd1849115a75c036dd6897d76e3d91e231",
+    "introduction": "30135cdd1849115a75c036dd6897d76e3d91e231",
+    "baseline": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "changedSourcePaths": 22,
+    "clean": true
   },
-  "parent": "810c3488cf8aed7871ce0af328944b3689763a16",
-  "gitParent": "810c3488cf8aed7871ce0af328944b3689763a16",
+  "parent": "73043aeb010c75e4ba19efaf6a3d1732194dff44",
+  "gitParent": "73043aeb010c75e4ba19efaf6a3d1732194dff44",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -1733,6 +1737,421 @@
       "path": "evidence/20261021-combined-integration-batch/scripts/prepare-dental-native-context-20261021.mjs",
       "bytes": 3570,
       "sha256": "903c444ab371b5c4db7adae66af0585936d88a5d4018adcea40d304c55a207b0"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/.gitattributes",
+      "bytes": 4314,
+      "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/app/body-content.ts",
+      "bytes": 82603,
+      "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/app/fitted-camera.tsx",
+      "bytes": 12876,
+      "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "ff43508e300d8f6e12c138c300e1e4adabba0104f180aaf09ec6dcf2e6fab0c7"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "37c64990ca92b3c5c2eaef7676812661deb5cc2f7be4353d3e7d665928685905"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/content/dental-mri-pins.json",
+      "bytes": 57639,
+      "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/content/dental-mri.ts",
+      "bytes": 3508,
+      "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/content/regional-teaching/head-neck.json",
+      "bytes": 2457934,
+      "sha256": "e6a486cc4ab9745eae110615b340fa1797bb0e6e0b72195f083bec766543da25"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/docs/DENTAL_MRI_EVIDENCE.md",
+      "bytes": 4542,
+      "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/docs/KEYBOARD_ZOOM.md",
+      "bytes": 1456,
+      "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/lib/camera-keyboard.ts",
+      "bytes": 9666,
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/lib/dental-mri.ts",
+      "bytes": 1866,
+      "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 354693,
+      "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11426,
+      "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/scripts/test-dental-mri-native.mjs",
+      "bytes": 8870,
+      "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6786,
+      "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/atlas/scripts/verify-dental-mri-transition.mjs",
+      "bytes": 17132,
+      "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/elbow-later-xray-repair/HANDOFF.md",
+      "bytes": 2292,
+      "sha256": "e3f89ed0ff0b10b7525460ca8b97113725801b683919ed9d2435a847dec0c4d3"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/elbow-playback-packet-repair/HANDOFF.md",
+      "bytes": 2451,
+      "sha256": "9fccd9e747bf5234e05c0a8360399c65f04c2eac4f6fc82f014669d9010adf25"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/generated/COMMITTED.json",
+      "bytes": 665,
+      "sha256": "0cc422c9dff8d5d643bd24da7897de709e5c6ed9a9e154b75afdaa050e7a2e28"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/generated/RESULT.json",
+      "bytes": 2075,
+      "sha256": "12bad6a8b3ec64c06d35f317d268d332115ccd2a0cedaa0bbb779adba3c4efd2"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/generated/SNAPSHOT_INVERSE.json",
+      "bytes": 2991,
+      "sha256": "7b79a83f0a03dd375288e2b76f2e360128ab9d6c9bd09a0575915586960c272c"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/head-harness-inverse.json",
+      "bytes": 364,
+      "sha256": "96519a0b169430be632961c9d2a07bc81374cee075773fdbb51faa401aa52cdd"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/head-review-grouped-harness/HANDOFF.md",
+      "bytes": 3750,
+      "sha256": "4d71fc444dd5dcbb22b889fa89975a65c255f8ff1e3881ded7edd4176c50763e"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/MAIN_REVIEW.json",
+      "bytes": 14739,
+      "sha256": "7aa9c6537ac48ddcb5ea67e53fe5908d06a9d9bd777aab40a5ffb0b8138ff626"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_COMBINED_HIP.json",
+      "bytes": 380,
+      "sha256": "17e75e08bc5c90b81e47b4e24f02950023f9de94927292e9fd935589e85f05e4"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_COMBINED_TOUR_PLAYER.json",
+      "bytes": 514,
+      "sha256": "1315b8b8ce26c2246059852f003104fc1626076091e5e32ea652afe3d5ebb52b"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_COMBINED_TYPES.json",
+      "bytes": 425,
+      "sha256": "b2516c6efcb0bf2855216d7e2a836c0f117302fdf2bacae3cbdf8e49bff951f7"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_COMMITTED_DENTAL.json",
+      "bytes": 424,
+      "sha256": "278ad4d9bb62027849e8e84f9c35e533c883b34e2286bb1bc7fcf8404b6e5327"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_COMMITTED_REGIONAL_BUILD.json",
+      "bytes": 503,
+      "sha256": "59bdbe221d0f3118b2fe846c6377947c392e42cfa59417999a57b4a46b646165"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_FINAL_REVIEW_RETRY.json",
+      "bytes": 727,
+      "sha256": "c5344c6d2471232235f970d448981c300f6a9ba0f8b694732739b8ecb461f538"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_GENERATED_COMMITTED_DENTAL.json",
+      "bytes": 442,
+      "sha256": "35cd16cced3e134944cb4fd14ff7d6b06af61c767f554318955b115b39861401"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_GENERATED_REGIONAL_BUILD.json",
+      "bytes": 501,
+      "sha256": "b02939b4f7475471ef4ec41a22adf24c858f7944b77fd57b38ddab9cca64d9c4"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_REVIEW_REPAIRS.json",
+      "bytes": 997,
+      "sha256": "a76ae94e569284f99dcf7c52b4ed209cb7896e8fa6aefee7951c99a94b400e79"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/ACTUAL_SPINAL_SAVE.json",
+      "bytes": 663,
+      "sha256": "34e0306025c65ef334cec5bd09fe632c7ab0ec594143f0ff4e9cea0199063094"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/CHECK_DISPLAY_PINS.json",
+      "bytes": 432,
+      "sha256": "0514d04408badb3af0dbebe4ad1a85136d36b9820cd05d9da40bbd2b1a789293"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/CHECK_REGIONAL_SNAPSHOTS.json",
+      "bytes": 438,
+      "sha256": "b8a005809fcd19851ac9098a4093b27e567830d44276a4f48f318246de511a88"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/CHECK_RENDERER_BINDING.json",
+      "bytes": 430,
+      "sha256": "a2f71bc105f8d966d6fafa400c0efdaf0506378b0fce7e2e0e7025e0cc0823dd"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/GENERATE_REGIONAL_SNAPSHOTS.json",
+      "bytes": 429,
+      "sha256": "2b4966b9a8ba675495ff7ecebe7dcd52a3c74b4f505d83a621484b82518098b3"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/receipts/GENERATE_RENDERER_BINDING.json",
+      "bytes": 421,
+      "sha256": "3dd826b275a69679f64b8224718b5e8b294c401a4ff470ac593625a5ce0b833b"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/review-final-retry/RESULT.json",
+      "bytes": 474,
+      "sha256": "d95468bde22006393cf9df3fb9c5316371c7e9cb3f64fc7c16d06eecdf58b5b1"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/review-final-retry/STARTED.json",
+      "bytes": 1544,
+      "sha256": "79f83c64e7f18bcf61586f5da0938e1fb4d6341986b61c01115be30377bee83b"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/review-harness-and-elbow-application/RESULT.json",
+      "bytes": 468,
+      "sha256": "730472654d5952c1bd24bf93dd2c95d649b2d6c59deb8b2ff9b80c33e8626bff"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/review-harness-and-elbow-application/STARTED.json",
+      "bytes": 3413,
+      "sha256": "b027d250d91a473aea4ce2a8ed4ac2a24ba7811734ba41277c60975245100da9"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/source-introduction/COMMITTED.json",
+      "bytes": 3287,
+      "sha256": "1c6c863142dd44fbb97a3b8a38bb52255ec2de8c3c506684ec15c30bdddcb45a"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/source-introduction/PRE_COMMIT.json",
+      "bytes": 3223,
+      "sha256": "581fb43404d6d3a6f8553eabfd6b2ebadf6ce6d7e171e3ed05ea4091602669a2"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/evidence/source-introduction/RESULT.json",
+      "bytes": 592,
+      "sha256": "391fdf6400043167ab9f3b7a1d0414de4581e8f571cfc0d4d67c97d7373094fe"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/generated/content/body-renderer-revision.json",
+      "bytes": 214791,
+      "sha256": "af5cd7cda4fde0f48e04db9844513c9b8a3f75b5b7ca4e72251bad80a13b94e4"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/generated/content/regional-teaching/head-neck.json",
+      "bytes": 2432752,
+      "sha256": "8b85f64cfa63fe7e15ccf317c9d4efb544430c0175b8d329608a23d02665f3d3"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-final-retry/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 32268,
+      "sha256": "cdd84bd2693941783da9f058cc4860ac7a32361913e687dab1699f66fa9a0f1f"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-final-retry/tests/elbow-us-followup-preservation.test.mjs",
+      "bytes": 9774,
+      "sha256": "7ca1c0796278bd08cc9c7d60493c2ff79202772f5dd38608666c8a0cf537c009"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-final-retry/tests/head-mri-independent-review-ui.test.ts",
+      "bytes": 9744,
+      "sha256": "ba1cb6a494877390ebea5420827ef6b2f01f97ed4ab1a7492a2c29c198df640c"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/.gitattributes",
+      "bytes": 20105,
+      "sha256": "59c8051bb5060e03f664c7af670f440cb59eb5abba34295611c1c9a45721d9ef"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 27096,
+      "sha256": "9b0b950ead7cc57f0dfe069d1a359a65b96e15a51aa004dca536f52e0ed3b443"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/elbow-us-followup-preservation.test.mjs",
+      "bytes": 6278,
+      "sha256": "00c2bbcf29ab8ad3dfa3f1032643e302a17bb4bf70e9fe59a12b7ed3dcd1b166"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/head-cerebellar-review.test.ts",
+      "bytes": 18741,
+      "sha256": "07359e77a1cdb9126d00a7264293a4e763ad3eb1a128dd0d6d43bae80bfdf1bc"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/head-ct-facial-ui.test.mjs",
+      "bytes": 7174,
+      "sha256": "6e8e413f7383f990e7d0b8d565ba815764d44a8cf3bb8c480605d21e0e322a64"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/head-deep-grey-review.test.ts",
+      "bytes": 17841,
+      "sha256": "a49b6655c34c65a92ce4eb01573995595e3b8251c4d0fea0dea3f6b3ff198921"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/head-hippocampal-clinical.test.ts",
+      "bytes": 23750,
+      "sha256": "3fe895d4de7edc027b1aab84acf7a5f25ccf9626c15bf874a3c4313127d67d5b"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/head-lobar-review.test.ts",
+      "bytes": 20724,
+      "sha256": "cd083c79e1bae558de0131cef6c6f215ca8888ecbf5ceaecf22afd6f1efdd521"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/head-mri-independent-review-ui.test.ts",
+      "bytes": 9598,
+      "sha256": "1a68c885c6d1c03503b707631941bb137433dbfd402c1a89478ca31e7e9ef23d"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/preimages/review-harness-and-elbow-application/tests/head-ventricular-review.test.ts",
+      "bytes": 11569,
+      "sha256": "06b4d4f89c051860801dae5ffc2ad0abc2c63f52112dd28a602c9454bf86319d"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/scripts/admit-and-test-final-review-repairs-20261021.mjs",
+      "bytes": 5532,
+      "sha256": "46a5440e6ec0aa624bb5d31570cd56fe037f76d33b208bfe8d9d4cc526bedc72"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/scripts/admit-and-test-head-review-harness-20261021.mjs",
+      "bytes": 9082,
+      "sha256": "38cda45218cc28dfab655eca51ce7231380833a4bcc0aba6d7b907b3128e1bbd"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/scripts/checkpoint-combined-source-verified-20261021.mjs",
+      "bytes": 10566,
+      "sha256": "3fc75960c9825d4d4e43ffc83fcb0c81f4f1efbf31382fa1ee8b0a2b77739406"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/scripts/close-generated-source-and-build-20261021.mjs",
+      "bytes": 6572,
+      "sha256": "9de286458c2405c63d7cbdca9a758e07017c332d91e0fbeca815c3eb55076241"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/scripts/commit-and-test-combined-atlas-20261021.mjs",
+      "bytes": 5674,
+      "sha256": "51b1b6682550382a3f3a43aa9e868f12f8fe7c038141f09a15ccb64b1198c76d"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/.gitattributes",
+      "bytes": 20508,
+      "sha256": "44944abe2297cbe238a66708d15d0b241e5dcfc7311e009040777af0d7634869"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 35278,
+      "sha256": "52ebcddab39cc165bf4c3c94dee0659abfea6814c92e55f85bf86f25eb6c57d8"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/elbow-us-followup-preservation.test.mjs",
+      "bytes": 11293,
+      "sha256": "63f4f423ece0998e8bd169d76aee2c46fe653e47593ee7f89cdc49fce2d29f4a"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/grouped-review-confirmation-harness.mjs",
+      "bytes": 2018,
+      "sha256": "93abee8a727e996385ca67fad498520aac94a2c58f650f4a9240dc83413b595c"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/head-cerebellar-review.test.ts",
+      "bytes": 18966,
+      "sha256": "e296846aea3e46e42c373d01ae3934c06adae223e7789f413b0b494ca8ffbdc8"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/head-ct-facial-ui.test.mjs",
+      "bytes": 7335,
+      "sha256": "b5ea302b03648b4af1f9e750c10ecf43fff0182c8dabe2ef241f6fda1fd47e57"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/head-deep-grey-review.test.ts",
+      "bytes": 18066,
+      "sha256": "bcf97aa6433919540e40960b65f4f7e069fb2cbb5a0573195c092e55d78e8915"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/head-hippocampal-clinical.test.ts",
+      "bytes": 23975,
+      "sha256": "3866730ce1998d887379736e2ff5a922b89bbcbf59b770300e6dac7958d39f15"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/head-lobar-review.test.ts",
+      "bytes": 20949,
+      "sha256": "478aa7bd74b9dabafc358b160002fe6fecf134954cd83243520977553f4fceb3"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/head-mri-independent-review-ui.test.ts",
+      "bytes": 9912,
+      "sha256": "fe94de89865a008b971a74611be60b73db2021e4252a149aec6fe066b56ccc31"
+    },
+    {
+      "path": "evidence/20261021-combined-source-verified/website/tests/head-ventricular-review.test.ts",
+      "bytes": 11794,
+      "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
     },
     {
       "path": "evidence/20261021-ct-delivery-history-repair/CT_DELIVERY_HISTORY.json",
@@ -4216,63 +4635,14 @@
     }
   ],
   "removed": [],
-  "scope": "Selected admitted Website test postimages/exact preimages,21assembled Atlas code/evidence/pin paths, concise actual receipts and main-controlled scripts on previous filtered source-only ancestry. No whole private imports/inbox/patient scans/masks/models/dependencies/raw canonical Git ancestry/browser pixels or DOM/long failed source-dump logs. Source-input/process/coordination snapshots stay local. Not a complete runnable/private-data backup or clinical release.",
+  "scope": "Selected22committed Atlas source/code/generated-teaching paths,review test postimages/exact preimages,small structured receipts/main scripts on prior filtered ancestry. No raw canonical Git ancestry,models,fonts/textures,publisher figures,scans/masks/patient data/private decisions/inbox or private plexus metadata,browser pixels/DOM,long failed source-dump logs,dependencies. Full current-input/plexus/coordination details stay local. Not whole runnable/private-data backup or clinical/public release.",
   "proof": {
-    "actualRuns": [
-      {
-        "name": "current-contract-application",
-        "result": {
-          "at": "2026-10-21T03:18:21.872Z",
-          "code": 1,
-          "signal": null,
-          "inputDrift": false,
-          "error": null,
-          "footer": [
-            "ℹ tests 11",
-            "ℹ pass 10",
-            "ℹ fail 1",
-            "ℹ cancelled 0",
-            "ℹ skipped 0",
-            "ℹ todo 0"
-          ],
-          "receiptSha256": "20c449a192f876ad14d933900e47dd255581742ea42c0fae0210f70bc3ddf1bc",
-          "actualCurrentContractsPass": false,
-          "wholeWebsiteSuitePass": false,
-          "canonicalInstalled": false
-        },
-        "terminal": true
-      },
-      {
-        "name": "clinical-retry",
-        "result": {
-          "at": "2026-10-21T03:29:47.429Z",
-          "code": 1,
-          "signal": null,
-          "inputDrift": false,
-          "error": null,
-          "footer": [
-            "ℹ tests 15",
-            "ℹ pass 14",
-            "ℹ fail 1",
-            "ℹ cancelled 0",
-            "ℹ skipped 0",
-            "ℹ todo 0"
-          ],
-          "receiptSha256": "5c87f9436daf9a81610df70ecefe219a74e5ffa43354906f91a0cc29f6462806",
-          "actualFourClinicalRepairsPass": false,
-          "wholeWebsiteSuitePass": false,
-          "canonicalInstalled": false,
-          "clinicalApproval": false
-        },
-        "terminal": true
-      },
-      {
-        "name": "spinal-save-application",
-        "result": null,
-        "terminal": false
-      }
-    ],
-    "actualFullDentalGatePass": true,
+    "actualFinalRetryPass": true,
+    "tourPlayerCases": 75,
+    "wholeHipPass": true,
+    "freshTypesPass": true,
+    "genuineSourceIntroduction": true,
+    "committedTransitionAndRegionalBuildPass": true,
     "canonicalInstalled": false,
     "clinicalApproval": false
   },

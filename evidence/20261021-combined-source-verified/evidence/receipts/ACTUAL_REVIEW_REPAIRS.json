@@ -1,0 +1,31 @@
+{
+  "label": "ACTUAL_REVIEW_REPAIRS",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/head-cerebellar-review.test.ts",
+    "tests/head-ct-facial-ui.test.mjs",
+    "tests/head-deep-grey-review.test.ts",
+    "tests/head-hippocampal-clinical.test.ts",
+    "tests/head-lobar-review.test.ts",
+    "tests/head-mri-independent-review-ui.test.ts",
+    "tests/head-ventricular-review.test.ts",
+    "tests/clinical-review-elbow-us-followup.test.ts",
+    "tests/elbow-us-followup-preservation.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-review-harness-and-elbow-application/ACTUAL_REVIEW_REPAIRS.log",
+  "logSha256": "97f7c55d8a0b861179c2896e375dc352fd2aad57dbc5bd43d059a6e07d998b14",
+  "footer": [
+    "ℹ tests 33",
+    "ℹ pass 30",
+    "ℹ fail 3",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}
