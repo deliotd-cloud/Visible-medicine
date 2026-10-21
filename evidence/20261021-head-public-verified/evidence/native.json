@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-21T16:40:24.394Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/head-neck-pilot-current.test.mjs",
+    "tests/head-neck-pilot.test.ts",
+    "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+    "tests/current-atlas-delivery.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/native.tap",
+  "logSha256": "c60ef086f4bd8d5f02cb6d14abdbddb6c7eff3f9a5a99e90f8369f015a050782",
+  "counts": {
+    "tests": 41,
+    "pass": 41,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

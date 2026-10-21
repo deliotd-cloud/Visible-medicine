@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-21T16:35:32.344Z",
+  "args": [
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "tests/public-focus-adapter-preservation.test.mjs",
+    "tests/header-session.test.ts",
+    "tests/atlas-region-picker.test.ts",
+    "tests/disc-comparison.test.ts",
+    "tests/workspace-utilities-dismissal.test.mjs",
+    "tests/desktop-workspace-simplification.test.ts",
+    "tests/current-atlas-delivery.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-public-focus-preservation-application/native.tap",
+  "logSha256": "98845dbeefbb00cefe6c5e71ea298a645747626395ab3cb6ee15c2b06eb96a60",
+  "counts": {
+    "tests": 85,
+    "pass": 85,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [],
+  "rawLogLocalOnly": true
+}

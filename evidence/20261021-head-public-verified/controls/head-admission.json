@@ -1,0 +1,9 @@
+{
+  "proposal":"F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal",
+  "stage":"F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application",
+  "manifestSha256":"66d733b96d1a3ec0fea91cf1bba48e30b3f3631ffea7209f294de42296265db1",
+  "beforeInputs":5263,
+  "afterInputs":5267,
+  "expectedPaths":["tests/head-neck-pilot-current.test.mjs","tests/historical-head-pilot-87-read.mjs","tests/head-pilot-delivery-role-preservation-20261021.test.mjs","tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot-current.test.mjs.raw","tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot.test.ts.raw"],
+  "roots":["tests/head-neck-pilot-current.test.mjs","tests/head-neck-pilot.test.ts","tests/head-pilot-delivery-role-preservation-20261021.test.mjs","tests/current-atlas-delivery.test.mjs"]
+}

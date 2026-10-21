@@ -1,0 +1,22 @@
+{
+  "schema":"visible-medicine-browser-acceptance-supplement/1",
+  "candidatePort":3003,
+  "canonicalOwnerPort":3000,
+  "browser":"Codex In-app Browser",
+  "ownedBlockedTab":101,
+  "confirmationDispatchStillBlocked":true,
+  "actualDialogTypeVerified":false,
+  "cancelVerified":false,
+  "leaveVerified":false,
+  "hashOnlySyntheticNotesPreservedPreviously":true,
+  "freshLocalhostTabEnforcedSignIn":true,
+  "freshSignedInTabLoaded":true,
+  "freshCleanNavigationVerified":false,
+  "freshTestTabsClosed":[102,103],
+  "newNotesSavedOrDecisionsSubmitted":false,
+  "ownerFormsRefreshed":false,
+  "browserAcceptancePassed":false,
+  "previousCheckpointEvidenceOverwritten":false,
+  "limitation":"The clean-link attempt returned without reaching the destination. Browser dispatch remains unverified; this is not a product diagnosis or navigation pass. The normal owner website is unchanged. Retain only the synthetic owned test tab for confirmation recovery; continue independent work without another repeated question.",
+  "containsPrivateRecordsOrRawDom":false
+}

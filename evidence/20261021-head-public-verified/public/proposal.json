@@ -1,0 +1,204 @@
+{
+  "schema": "visible-medicine.public-focus-preservation-proposal/1",
+  "at": "2026-10-21T16:32:48.971Z",
+  "scope": "Staged only. Four source paths: one affected preservation guard, one minimal exact-source preservation helper, one lossless seam witness, one immutable complete original guard witness. No UI behavior test changes.",
+  "canonicalInstalled": false,
+  "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "atlasSource": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "canonicalReview": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "reviewBindings": 1710,
+  "sourceSnapshot": {
+    "path": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/SOURCE_INPUTS_AFTER.json",
+    "sha256": "b5124ca90bfaa4c2c8ee277a86caa8cbb28a54b10cbdf54af5b55d92f17e2210",
+    "entries": 5260
+  },
+  "changes": [
+    {
+      "path": "tests/public-focus-adapter-preservation.test.mjs",
+      "bytes": 5153,
+      "sha256": "ace71f3b460402c4dff07dd1fa6b9308b7b6aa32d33f4e4d4550d42edd7e09af",
+      "preimage": {
+        "path": "tests/public-focus-adapter-preservation.test.mjs",
+        "bytes": 6435,
+        "sha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "snapshotMatches": true
+      }
+    },
+    {
+      "path": "tests/public-focus-epoch-preservation.mjs",
+      "bytes": 3160,
+      "sha256": "036a247e192d86f41af20b2113ef5044d630eb6a70aeac36485fb2802b64b062",
+      "preimage": null
+    },
+    {
+      "path": "tests/fixtures/public-focus-epochs-20261021.json",
+      "bytes": 22713,
+      "sha256": "4460693c1edc749c8afbdce2cdcc8f164ef2d60d111fea7483abd355d07b0f51",
+      "preimage": null
+    },
+    {
+      "path": "tests/fixtures/public-focus-original-guard-20261021.mjs.raw",
+      "bytes": 6435,
+      "sha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+      "preimage": null
+    }
+  ],
+  "diagnosis": "All five original raw witnesses are authentic and unmodified. Applying each original two public-focus dependency seams plus the single desktop publishing assertion transition yields byte-identical saved preimages of the separately admitted Review destination authoring epoch. The five canonical current tests match both that authoring receipt and the latest 5260-input snapshot. Four tests retain behavior with dependency/explicit-availability adapters only; header also has an independently authorized Review availability epoch, so its old complete body is replayed separately from the complete current source closure.",
+  "authentication": {
+    "originalGuardSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+    "historicalReceipt": "F:/VisibleMedicine/staging/20261021-review-destination-application/FINAL_NAVIGATION.json",
+    "historicalReceiptSha256": "3bf7d73d8fb4f50c7cbcd11ae63f838f39d37a59a4a09df8ac9668dfefe0022b",
+    "inputAndPreimageEvidence": "SOURCE_AUDIT.json",
+    "recipes": "candidate/tests/fixtures/public-focus-epochs-20261021.json",
+    "completeOriginalWitness": "candidate/tests/fixtures/public-focus-original-guard-20261021.mjs.raw",
+    "everyHistoricalExpectedEqualsAuthenticSavedPreimage": true,
+    "allTwelveExistingInputsMatchSourceSnapshot": true
+  },
+  "proofDesign": [
+    "The unchanged eight-test original guard is whole-file hash-bound and replayed through exactly four ESM import seams and one module-URL seam. Only its five test-source reads use complete reconstructed historical preimages. Original raw fixture reads remain real filesystem reads. Every original assertion, registration, mutation and publishing refusal body executes unchanged.",
+    "Current proof reconstructs every current byte by explicitly enumerated literal offset/before/after seams from each authenticated historical preimage, and independently inverses the complete current file. No regex masking or normalization; CRLF, UTF-8 and historical source bytes remain exact.",
+    "Current JSON recipes are hash-bound. Each full-original and full-current assertion-bearing line is mutation-deleted; unknown appendices, each old dependency/publishing reversal and every current Review seam deletion/reversal/duplication/offset mutation are rejected.",
+    "Original/current authoring epochs stay distinct. The actual UI behavior consumers are unchanged and have not been executed by this worker."
+  ],
+  "seamAndMutationInventory": {
+    "header-session.test.ts": {
+      "originalAssertionLines": 59,
+      "currentAssertionLines": 81,
+      "currentReviewSeams": 23
+    },
+    "desktop-workspace-simplification.test.ts": {
+      "originalAssertionLines": 59,
+      "currentAssertionLines": 59,
+      "currentReviewSeams": 5
+    },
+    "atlas-region-picker.test.ts": {
+      "originalAssertionLines": 74,
+      "currentAssertionLines": 74,
+      "currentReviewSeams": 2
+    },
+    "disc-comparison.test.ts": {
+      "originalAssertionLines": 37,
+      "currentAssertionLines": 37,
+      "currentReviewSeams": 2
+    },
+    "workspace-utilities-dismissal.test.mjs": {
+      "originalAssertionLines": 13,
+      "currentAssertionLines": 13,
+      "currentReviewSeams": 2
+    }
+  },
+  "verification": {
+    "command": "$env:VM_PUBLIC_FOCUS_ROOT='file:///F:/VisibleMedicine/website/'; node --test F:/VisibleMedicine/staging/20261021-public-focus-preservation-proposal/candidate/tests/public-focus-adapter-preservation.test.mjs",
+    "cwd": "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2",
+    "result": {
+      "exitCode": 0,
+      "tests": 23,
+      "pass": 23,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "log": "PURE_VERIFICATION.log",
+    "toolChunk": "76e64a",
+    "beforeFinalRecipeDescriptions": {
+      "toolChunk": "7a4596",
+      "tests": 23,
+      "pass": 23,
+      "fail": 0
+    },
+    "initialDevelopmentFailure": {
+      "toolChunk": "5ffd17",
+      "tests": 23,
+      "pass": 22,
+      "fail": 1,
+      "title": "header-session.test.ts: every current assertion and each exact Review seam rejects deletion reversal and duplication",
+      "error": "Missing expected exception: A shifted or unlisted seam fails the full-source closure",
+      "cause": "JavaScript slice clamps an insertion offset beyond EOF. Bounds validation was added to the exact-seam helper; no source/theorem assertions removed.",
+      "retained": true
+    }
+  },
+  "retainedFailures": {
+    "routing": "F:/VisibleMedicine/staging/20261021-regression-routing-after-closed54-55/ROUTING.json",
+    "routingSha256": "ce8a867d164ed926ea838751f1cfcf33536eadaf91a7781570e7f1f6f835cfa5",
+    "originalMatrixCounts": {
+      "tests": 289,
+      "pass": 202,
+      "fail": 87,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "originalRows": [
+      {
+        "originalNumber": 221,
+        "file": "tests/public-focus-adapter-preservation.test.mjs",
+        "title": "header-session.test.ts: every original assertion survives exactly outside two dependency seams",
+        "originalTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "currentTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "status": "not-exercised-by-listed-complete-pass-runs",
+        "receipt": null,
+        "receiptSha256": null,
+        "fullSuiteResolved": false
+      },
+      {
+        "originalNumber": 222,
+        "file": "tests/public-focus-adapter-preservation.test.mjs",
+        "title": "atlas-region-picker.test.ts: every original assertion survives exactly outside two dependency seams",
+        "originalTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "currentTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "status": "not-exercised-by-listed-complete-pass-runs",
+        "receipt": null,
+        "receiptSha256": null,
+        "fullSuiteResolved": false
+      },
+      {
+        "originalNumber": 223,
+        "file": "tests/public-focus-adapter-preservation.test.mjs",
+        "title": "disc-comparison.test.ts: every original assertion survives exactly outside two dependency seams",
+        "originalTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "currentTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "status": "not-exercised-by-listed-complete-pass-runs",
+        "receipt": null,
+        "receiptSha256": null,
+        "fullSuiteResolved": false
+      },
+      {
+        "originalNumber": 224,
+        "file": "tests/public-focus-adapter-preservation.test.mjs",
+        "title": "workspace-utilities-dismissal.test.mjs: every original assertion survives exactly outside two dependency seams",
+        "originalTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "currentTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "status": "not-exercised-by-listed-complete-pass-runs",
+        "receipt": null,
+        "receiptSha256": null,
+        "fullSuiteResolved": false
+      },
+      {
+        "originalNumber": 225,
+        "file": "tests/public-focus-adapter-preservation.test.mjs",
+        "title": "desktop-workspace-simplification.test.ts: only the verified publishing disclosure assertion changes after two dependency seams",
+        "originalTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "currentTestSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+        "status": "not-exercised-by-listed-complete-pass-runs",
+        "receipt": null,
+        "receiptSha256": null,
+        "fullSuiteResolved": false
+      }
+    ],
+    "originalInventory": "F:/VisibleMedicine/staging/20261021-remaining-native-matrix/POST_MATRIX_TRIAGE.json",
+    "wholeSuiteResolved": false,
+    "note": "Original failure rows remain historical failure evidence. New original-title passes belong to explicitly reconstructed historical sources, not actual-current execution of the five behavior consumers. Independent current-source closures pass separately."
+  },
+  "exclusions": [
+    "No canonical/Atlas/generated/shared-delivery-helper changes",
+    "No edits to five UI behavior tests",
+    "No browser, database, build, types or heavy native work",
+    "No external messaging, nested delegation, private upload, fees, deployment, approvals or clinical completion claims",
+    "Isolated 1711 Review UI candidate not read or touched"
+  ],
+  "handoff": {
+    "integration": "Main reviews and admits only the four exact source paths after rechecking preimages and source snapshot.",
+    "focusedVerification": "Main owns actual five behavior consumers plus preservation guard and appropriate current integration tests.",
+    "stoppingCondition": "Staged proof/manifest complete; worker idle."
+  }
+}

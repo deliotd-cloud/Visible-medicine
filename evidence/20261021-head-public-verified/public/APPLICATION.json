@@ -1,0 +1,81 @@
+{
+  "at": "2026-10-21T16:35:44.746Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/public-focus-adapter-preservation.test.mjs",
+      "preimageSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+      "candidateSha256": "ace71f3b460402c4dff07dd1fa6b9308b7b6aa32d33f4e4d4550d42edd7e09af",
+      "candidateBytes": 5153
+    },
+    {
+      "path": "tests/public-focus-epoch-preservation.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "036a247e192d86f41af20b2113ef5044d630eb6a70aeac36485fb2802b64b062",
+      "candidateBytes": 3160
+    },
+    {
+      "path": "tests/fixtures/public-focus-epochs-20261021.json",
+      "preimageSha256": null,
+      "candidateSha256": "4460693c1edc749c8afbdce2cdcc8f164ef2d60d111fea7483abd355d07b0f51",
+      "candidateBytes": 22713
+    },
+    {
+      "path": "tests/fixtures/public-focus-original-guard-20261021.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3",
+      "candidateBytes": 6435
+    }
+  ],
+  "controlledInputs": 5263,
+  "preservedInputs": 7,
+  "namedInputs": 5270,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-public-focus-preservation-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "8280dc47327b136e8cb49d2cda8ee57a5a0bf497e1d407a071c58d481d5d3ee7",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-public-focus-preservation-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T16:35:32.344Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/public-focus-adapter-preservation.test.mjs",
+      "tests/header-session.test.ts",
+      "tests/atlas-region-picker.test.ts",
+      "tests/disc-comparison.test.ts",
+      "tests/workspace-utilities-dismissal.test.mjs",
+      "tests/desktop-workspace-simplification.test.ts",
+      "tests/current-atlas-delivery.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-public-focus-preservation-application/native.tap",
+    "logSha256": "98845dbeefbb00cefe6c5e71ea298a645747626395ab3cb6ee15c2b06eb96a60",
+    "counts": {
+      "tests": 85,
+      "pass": 85,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

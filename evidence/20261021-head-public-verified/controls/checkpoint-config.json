@@ -1,0 +1,92 @@
+{
+  "root": "F:/VisibleMedicine/recovery/checkpoints/20261021-head-public-verified",
+  "stage": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application",
+  "previous": "F:/VisibleMedicine/recovery/checkpoints/20261021-closed54-55-provider-verified",
+  "proposal": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal",
+  "changedPaths": 5,
+  "controlledInputs": 5267,
+  "checklistRevision": 123,
+  "nativeCode": 0,
+  "nativeCounts": {
+    "tests": 41,
+    "pass": 41,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "parentHead": "bcdb588b011c273476357318ecb8a2bda1bf2f44",
+  "parentBackupRoot": "F:/VisibleMedicine/recovery/checkpoints/20261021-review-navigation-candidate-verified-backup",
+  "parentBackupReceiptSha256": "5aea7a67bf3eecc61a86d01d3104eaad34530003367cfd0f5c6ecdd12340d572",
+  "repo": "F:/VisibleMedicine/history/website-work/github-head-public-20261021.git",
+  "branch": "backup/head-public-20261021",
+  "milestone": "Two separately verified test-only batches installed9exact paths. Head-pilot four-root41/41 and public desktop seven-root85/85 pass, both zero-skip/cancel; counts are separate runs with overlapping delivery coverage, not126unique tests. The complete historical87 runtime/source/model/licence proof is preserved independently of complete current190 proof; its217file local historical archive remains an explicit F-only dependency, not off-device recovered. Public historical whole-source obligations and actual current UI behavior remain separate, all five consumer files unchanged. Routing retains all87original rows:61exact-title scoped passes,9title-incomparable root passes,17unexercised, not17remaining failures or whole-suite green. No product, anatomy asset, Review binding or owner-form changes. The separate nine-form navigation UI candidate retains131focused/fulltypes/fullbuild proof and source recovery, but browser acceptance remains partial; no canonical UI cutover.",
+  "scope": "Five head-pilot test/helper/raw paths plus four public-focus test/witness paths, complete preimages, compact actual native receipts, bounded routing and reviewed controls. New filtered backup inherits the latest independently verified candidate source-only ancestry, keeping canonical and isolated candidate evidence separate. No217file emitted historical archive is included.",
+  "extraFiles": [
+    {
+      "from": "admit-closed56-role-repair-20261021.mjs",
+      "to": "controls/admission.mjs"
+    },
+    {
+      "from": "head-pilot-delivery-admission-20261021.json",
+      "to": "controls/head-admission.json"
+    },
+    {
+      "from": "public-focus-preservation-admission-20261021.json",
+      "to": "controls/public-admission.json"
+    },
+    {
+      "from": "emit-inflight-patch.mjs",
+      "to": "controls/emit-inflight-patch.mjs"
+    },
+    {
+      "from": "advance-scoped-native-routing-20261021.mjs",
+      "to": "controls/advance-scoped-routing.mjs"
+    },
+    {
+      "from": "head-public-routing-20261021.json",
+      "to": "controls/routing.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-regression-routing-after-head-public/ROUTING.json",
+      "to": "routing/after-head-public.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-public-focus-preservation-proposal/PROPOSAL.json",
+      "to": "public/proposal.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-public-focus-preservation-application/APPLICATION.json",
+      "to": "public/APPLICATION.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-public-focus-preservation-application/native.json",
+      "to": "public/native.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-review-navigation-ui-candidate/BROWSER_SUPPLEMENT-20261021.json",
+      "to": "evidence/browser-supplement.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/public-focus-adapter-preservation.test.mjs",
+      "to": "installed-website/tests/public-focus-adapter-preservation.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/staging/20261021-public-focus-preservation-application/preimages/tests/public-focus-adapter-preservation.test.mjs",
+      "to": "preimages/tests/public-focus-adapter-preservation.test.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/public-focus-epoch-preservation.mjs",
+      "to": "installed-website/tests/public-focus-epoch-preservation.mjs"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/public-focus-epochs-20261021.json",
+      "to": "installed-website/tests/fixtures/public-focus-epochs-20261021.json"
+    },
+    {
+      "from": "F:/VisibleMedicine/website/tests/fixtures/public-focus-original-guard-20261021.mjs.raw",
+      "to": "installed-website/tests/fixtures/public-focus-original-guard-20261021.mjs.raw"
+    }
+  ],
+  "next": "Keep the nine-form UI candidate staged until actual Cancel/leave/clean-navigation acceptance; owner review tomorrow is not a blocker for independent useful work. Continue the full71-item/eight-idea roadmap, prioritizing existing3D/CT/MRI learning usability and clean desktop authoring. Preserve authentic historical/current source proofs, original failure inventories and independent entitlements. No owner-form refresh, private upload, public deployment,fees or desktopPACS edits."
+}

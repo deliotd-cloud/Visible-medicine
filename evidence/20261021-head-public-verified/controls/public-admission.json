@@ -1,0 +1,9 @@
+{
+  "proposal":"F:/VisibleMedicine/staging/20261021-public-focus-preservation-proposal",
+  "stage":"F:/VisibleMedicine/staging/20261021-public-focus-preservation-application",
+  "manifestSha256":"672101a503c6b706b2842bf86df4da650ff75e02e149bc0ab8074659939f4e6b",
+  "beforeInputs":5260,
+  "afterInputs":5263,
+  "expectedPaths":["tests/public-focus-adapter-preservation.test.mjs","tests/public-focus-epoch-preservation.mjs","tests/fixtures/public-focus-epochs-20261021.json","tests/fixtures/public-focus-original-guard-20261021.mjs.raw"],
+  "roots":["tests/public-focus-adapter-preservation.test.mjs","tests/header-session.test.ts","tests/atlas-region-picker.test.ts","tests/disc-comparison.test.ts","tests/workspace-utilities-dismissal.test.mjs","tests/desktop-workspace-simplification.test.ts","tests/current-atlas-delivery.test.mjs"]
+}

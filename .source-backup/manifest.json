@@ -1,13 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T16:22:18.787Z",
+  "at": "2026-10-21T16:42:20.686Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
-    "canonicalInstalled": false
+    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "canonicalNamedInputs": 5274,
+    "canonicalInstalled": true,
+    "reviewCopyPreviewBuildPending": true
   },
-  "parent": "1d694fd7a5f1266276ebf73c73b2d4bc7f5ea795",
-  "gitParent": "1d694fd7a5f1266276ebf73c73b2d4bc7f5ea795",
+  "parent": "bcdb588b011c273476357318ecb8a2bda1bf2f44",
+  "gitParent": "bcdb588b011c273476357318ecb8a2bda1bf2f44",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4858,6 +4860,146 @@
       "path": "evidence/20261021-head-history-tour-verified/routing/with-existing-camera-pass.json",
       "bytes": 69634,
       "sha256": "2caed9e1d12f19f3ac8414e6d84e350a7eaf5cca3ce64ab8b732fcde78f8a510"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/controls/admission.mjs",
+      "bytes": 11874,
+      "sha256": "1f8961003a4622d308cb9be2d0f36f176ebec4c81de696d78929521c09673b24"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/controls/advance-scoped-routing.mjs",
+      "bytes": 3835,
+      "sha256": "2cfb2457f247ec619e08ec64b63b6d63c4a7f28abba991d7aec49a14e41b9c22"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/controls/checkpoint-config.json",
+      "bytes": 5338,
+      "sha256": "746f285050066fbf21b70b2d27d548154fbac04d4a3108c439c9abf720e038c6"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "bytes": 7907,
+      "sha256": "a5ddf7dbb5988e847017fd116bd854048f173ea9be92b4de059017666b0c7b9c"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/controls/emit-inflight-patch.mjs",
+      "bytes": 2751,
+      "sha256": "ee10d9d3385455254ab99a6396d8b6ee22c309accfa1e7265d600bf381f1435d"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/controls/head-admission.json",
+      "bytes": 836,
+      "sha256": "78a898a17741512c70a40dd17b0b145657dc9b4db3d0bc8a26a22cd2af690fc2"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/controls/public-admission.json",
+      "bytes": 837,
+      "sha256": "08c7c696d9f80db3efc288445a70256fb4f92dd41e0634e68cd2c0dd56d1a397"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/controls/routing.json",
+      "bytes": 743,
+      "sha256": "601ccfd497533d7fad409f0ced5b2ca8d60259c049f0c4205d383832353e3b1a"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/evidence/APPLICATION.json",
+      "bytes": 3229,
+      "sha256": "9add3442f844e7e649ac3354b0d3bf9a1acdc364b2fcb62e52ca01971bb43b3e"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/evidence/browser-supplement.json",
+      "bytes": 1055,
+      "sha256": "37b3247e4f128587d4f8a516e672960ebb4401cbb06ea303ffd4442979e481ff"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/evidence/native.json",
+      "bytes": 741,
+      "sha256": "74aa45de8ce4ca551120e882498df81bc16ad3ab1efacb1c2023a7fd670562e5"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/evidence/PROOF.json",
+      "bytes": 3429,
+      "sha256": "c192d987eba0601ec072426c84c9e404ebfe42db727b19abdc8c7c96ed5ed126"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot-current.test.mjs.raw",
+      "bytes": 9786,
+      "sha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot.test.ts.raw",
+      "bytes": 23508,
+      "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/fixtures/public-focus-epochs-20261021.json",
+      "bytes": 22713,
+      "sha256": "4460693c1edc749c8afbdce2cdcc8f164ef2d60d111fea7483abd355d07b0f51"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/fixtures/public-focus-original-guard-20261021.mjs.raw",
+      "bytes": 6435,
+      "sha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/head-neck-pilot-current.test.mjs",
+      "bytes": 15848,
+      "sha256": "2f8ccf5be49d159d03624c57eee7d698a573df5fb76189a6b52842d1684dff16"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "bytes": 9751,
+      "sha256": "4bd96b1659df318631348d2c12e08ba917ced43aa44841f79f4c9da997ad737e"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/historical-head-pilot-87-read.mjs",
+      "bytes": 5105,
+      "sha256": "0b00a34f394fd38b350100cf332dfa50629caf67dd69816bb34296f2fed109ae"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/public-focus-adapter-preservation.test.mjs",
+      "bytes": 5153,
+      "sha256": "ace71f3b460402c4dff07dd1fa6b9308b7b6aa32d33f4e4d4550d42edd7e09af"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/installed-website/tests/public-focus-epoch-preservation.mjs",
+      "bytes": 3160,
+      "sha256": "036a247e192d86f41af20b2113ef5044d630eb6a70aeac36485fb2802b64b062"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/preimages/tests/head-neck-pilot-current.test.mjs",
+      "bytes": 9786,
+      "sha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/preimages/tests/public-focus-adapter-preservation.test.mjs",
+      "bytes": 6435,
+      "sha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/proposal/PROPOSAL.json",
+      "bytes": 9659,
+      "sha256": "66d733b96d1a3ec0fea91cf1bba48e30b3f3631ffea7209f294de42296265db1"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/public/APPLICATION.json",
+      "bytes": 3076,
+      "sha256": "834ff76b6b2e557d4cd6f6ff6207b5f44224eda0b7022a9744e4efc9d692e2ca"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/public/native.json",
+      "bytes": 871,
+      "sha256": "d151ee3ef26707adf163d68b8cfaaa27287e39b58ffd771794378e3dffac6c27"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/public/proposal.json",
+      "bytes": 10881,
+      "sha256": "672101a503c6b706b2842bf86df4da650ff75e02e149bc0ab8074659939f4e6b"
+    },
+    {
+      "path": "evidence/20261021-head-public-verified/routing/after-head-public.json",
+      "bytes": 77224,
+      "sha256": "6aff888ec2582a4e8e4e73ebb7304731539e98ac0c24dfed0bccb9c029b1551f"
     },
     {
       "path": "evidence/20261021-head-role-union-verified/controls/admit-closed56-role-repair-20261021.mjs",
@@ -11176,69 +11318,71 @@
     }
   ],
   "removed": [],
-  "scope": "Verified isolated Review navigation candidate source, exact source-only test preimages, generator recipe, compact native/types/build/browser proof and prior filtered ancestry only. No private Plexus module or generated manifest, scans/masks, database, runtime/model assets, raw native/browser logs or canonical ancestry. Partial source recovery; private F-local baseline remains required for historical generator tests, not a complete or runnable backup.",
+  "scope": "Five head-pilot test/helper/raw paths plus four public-focus test/witness paths, complete preimages, compact actual native receipts, bounded routing and reviewed controls. New filtered backup inherits the latest independently verified candidate source-only ancestry, keeping canonical and isolated candidate evidence separate. No217file emitted historical archive is included. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
   "proof": {
-    "at": "2026-10-21T16:22:12.669Z",
+    "at": "2026-10-21T16:42:09.317Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "sourceTree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
-    "review": "15a0c1e0c4d30535fd212b06bd0b815d97ea7cd26933a6354bdcc24a35c6802e",
-    "reviewInputs": 1711,
-    "previousCanonicalReview": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalInstalled": false,
-    "selectedSourcePaths": 48,
+    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "canonicalInstalled": true,
+    "installation": {
+      "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
+      "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
+    },
+    "currentNamedInputs": 5274,
+    "controlledSourceInputs": 5267,
+    "preservedSourcePaths": [
+      ".gitignore",
+      "docs/completion-checklist.json",
+      "docs/completion-checklist.md",
+      "public/atlas-runtime/female-pelvis/LICENSE",
+      "public/atlas-runtime/head-neck/LICENSE",
+      "public/atlas-runtime/lower-limb/LICENSE",
+      "public/atlas-runtime/shoulder/LICENSE"
+    ],
+    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/SOURCE_INPUTS_AFTER.json",
+    "sourceSnapshotSha256": "69d3b09da020e2b9f42a9ff95824698afc160ba83349d2c37915d042ed1d8877",
+    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/PRESERVED_SOURCE_AFTER.json",
+    "preservedSnapshotSha256": "39404921112ea882c5e9a8526bb9267b512d494eb85a1a19b3d4bf635e306c1d",
+    "reviewInputs": 1710,
+    "canonicalDeveloperToolingInstalled": true,
+    "installedTestOnlyPaths": 5,
+    "existingEditedTestPaths": 1,
+    "actualNativeCode": 0,
     "actualNativeCounts": {
-      "tests": 131,
-      "pass": 131,
+      "tests": 41,
+      "pass": 41,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "fullTypesPassed": true,
-    "fullLocalBuildPassed": true,
-    "stockReviewVerifierPassed": true,
-    "allOriginalSourceUnchanged": true,
+    "actualNativeFailures": [],
+    "originalFullFailureBaseline": 136,
+    "originalFullSkips": 3,
+    "earlierDifferentSourceBaseline": 144,
+    "subset289_202_87Retained": true,
+    "allOtherSourceInputsAndBindingsUnchanged": true,
+    "all1553AtlasWorkingSourceBytesExact": true,
+    "all71ItemsAndEightIdeasUnchanged": true,
+    "wholeAuditBaselineUnchanged": true,
+    "milestone": "Two separately verified test-only batches installed9exact paths. Head-pilot four-root41/41 and public desktop seven-root85/85 pass, both zero-skip/cancel; counts are separate runs with overlapping delivery coverage, not126unique tests. The complete historical87 runtime/source/model/licence proof is preserved independently of complete current190 proof; its217file local historical archive remains an explicit F-only dependency, not off-device recovered. Public historical whole-source obligations and actual current UI behavior remain separate, all five consumer files unchanged. Routing retains all87original rows:61exact-title scoped passes,9title-incomparable root passes,17unexercised, not17remaining failures or whole-suite green. No product, anatomy asset, Review binding or owner-form changes. The separate nine-form navigation UI candidate retains131focused/fulltypes/fullbuild proof and source recovery, but browser acceptance remains partial; no canonical UI cutover.",
+    "fullSuitePassingClaim": false,
+    "rawNativeLogExcludedFromBackup": true,
     "ownerPreviewPid": 266712,
+    "ownerPreviewSession": 32652,
     "ownerFormsRefreshed": false,
+    "ownerDecisionsChanged": false,
+    "previewBuildOrRestartRan": false,
+    "reviewCopyPreviewBuildPending": true,
+    "productSourceChangedByThisRepair": false,
+    "unresolvedBrowserErrorKinds": 1,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
+    "privateDataUploaded": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "wholeSuitePassingClaim": false,
-    "fullGoalActive": true,
-    "browserAcceptancePassed": false,
-    "browserAcceptance": {
-      "at": "2026-10-21T16:21:00Z",
-      "passed": false,
-      "automationBlocked": true,
-      "candidatePort": 3003,
-      "temporaryTab": "101",
-      "ownerTabsUntouched": true,
-      "ownerPreviewRestarted": false,
-      "savedReviewsOrApprovalsSubmitted": false,
-      "patientDataUsed": false,
-      "case": "Synthetic unsaved changes-required correction; no save, check attestation, approval, export or draft autosave invoked. Same-page Private notes anchor changed the URL hash and retained the exact synthetic text. Leaving through Clinical Review triggered an Input.dispatchMouseEvent deadline. getJsDialog returned undefined; subsequent evaluation, Escape and close could not dispatch because Emulation.setFocusEmulationEnabled exceeded its deadline. Do not infer successful confirmation/cancellation, navigation or lost notes from this automation failure.",
-      "observed": {
-        "pageLoadedSignedInWithExistingPermissions": true,
-        "emptyHistoryInitially": true,
-        "autosaveIneligibleStatusSelectedBeforeTyping": true,
-        "unsavedEditsVisible": true,
-        "samePageHashNavigationRetainedText": true,
-        "leaveNavigationCompleted": false,
-        "cancelRetentionVerified": false,
-        "cleanNavigationVerified": false
-      },
-      "limits": [
-        "No browser acceptance pass claimed. Owner may need to dismiss the temporary test confirmation if visible; a concise non-blocking question was sent.",
-        "Startup connection-refused tab100 and cold-load navigation timeout101 were separate from later automation blockage. Tab101 eventually loaded and actual controls were used.",
-        "Browser Back/Forward, imperative routes and non-anchor controls are outside this click guard.",
-        "No raw DOM, screenshots, scans, private notes, records or console data included.",
-        "Native test/type/build passes are separate technical evidence, not clinical/public-release approval."
-      ],
-      "canonicalInstalled": false,
-      "publicDeployment": false
-    }
+    "fullGoalActive": true
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

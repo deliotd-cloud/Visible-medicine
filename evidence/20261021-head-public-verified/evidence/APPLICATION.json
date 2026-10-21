@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-21T16:40:29.814Z",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "canonicalSourceInstalled": true,
+  "ownerPreviewRestarted": false,
+  "ownerFormsRefreshed": false,
+  "changedPaths": [
+    {
+      "path": "tests/head-neck-pilot-current.test.mjs",
+      "preimageSha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58",
+      "candidateSha256": "2f8ccf5be49d159d03624c57eee7d698a573df5fb76189a6b52842d1684dff16",
+      "candidateBytes": 15848
+    },
+    {
+      "path": "tests/historical-head-pilot-87-read.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "0b00a34f394fd38b350100cf332dfa50629caf67dd69816bb34296f2fed109ae",
+      "candidateBytes": 5105
+    },
+    {
+      "path": "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "preimageSha256": null,
+      "candidateSha256": "4bd96b1659df318631348d2c12e08ba917ced43aa44841f79f4c9da997ad737e",
+      "candidateBytes": 9751
+    },
+    {
+      "path": "tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot-current.test.mjs.raw",
+      "preimageSha256": null,
+      "candidateSha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58",
+      "candidateBytes": 9786
+    },
+    {
+      "path": "tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot.test.ts.raw",
+      "preimageSha256": null,
+      "candidateSha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1",
+      "candidateBytes": 23508
+    }
+  ],
+  "controlledInputs": 5267,
+  "preservedInputs": 7,
+  "namedInputs": 5274,
+  "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/SOURCE_INPUTS_AFTER.json",
+  "sourceSnapshotSha256": "69d3b09da020e2b9f42a9ff95824698afc160ba83349d2c37915d042ed1d8877",
+  "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/PRESERVED_SOURCE_AFTER.json",
+  "native": {
+    "at": "2026-10-21T16:40:24.394Z",
+    "args": [
+      "--test",
+      "--experimental-strip-types",
+      "--test-reporter=tap",
+      "--test-concurrency=1",
+      "tests/head-neck-pilot-current.test.mjs",
+      "tests/head-neck-pilot.test.ts",
+      "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "tests/current-atlas-delivery.test.mjs"
+    ],
+    "code": 0,
+    "signal": null,
+    "error": null,
+    "log": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/native.tap",
+    "logSha256": "c60ef086f4bd8d5f02cb6d14abdbddb6c7eff3f9a5a99e90f8369f015a050782",
+    "counts": {
+      "tests": 41,
+      "pass": 41,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "rawLogLocalOnly": true
+  },
+  "sourceInputsUnchangedDuringRun": true,
+  "allOtherSourceInputsUnchanged": true,
+  "all1710ReviewBindingsUnchanged": true,
+  "currentAtlasValidatorAndFixtureUnchanged": true,
+  "currentAtlasValidatorTestAndFixtureUnchanged": true,
+  "allProposedPathHashesExact": true,
+  "allOriginalAssertionsAndMutationGuardsRetained": true,
+  "fullSuitePassingClaim": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

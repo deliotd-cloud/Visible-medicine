@@ -1,0 +1,215 @@
+{
+  "schema": "visible-medicine-head-pilot-delivery-proposal-v1",
+  "at": "2026-10-21T16:35:08.900Z",
+  "status": "stage-only-ready-for-main-native-admission",
+  "canonicalInstalled": false,
+  "baseline": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "sourceSnapshot": {
+      "path": "F:/VisibleMedicine/staging/20261021-closed54-55-provider-application/SOURCE_INPUTS_AFTER.json",
+      "bytes": 908859,
+      "sha256": "b5124ca90bfaa4c2c8ee277a86caa8cbb28a54b10cbdf54af5b55d92f17e2210"
+    },
+    "controlledSourceInputs": 5260,
+    "preservedInputs": 7
+  },
+  "paths": [
+    {
+      "path": "tests/head-neck-pilot-current.test.mjs",
+      "preimage": {
+        "path": "F:/VisibleMedicine/website/tests/head-neck-pilot-current.test.mjs",
+        "bytes": 9786,
+        "sha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58"
+      },
+      "candidate": {
+        "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/head-neck-pilot-current.test.mjs",
+        "bytes": 15848,
+        "sha256": "2f8ccf5be49d159d03624c57eee7d698a573df5fb76189a6b52842d1684dff16"
+      }
+    },
+    {
+      "path": "tests/historical-head-pilot-87-read.mjs",
+      "preimage": null,
+      "candidate": {
+        "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/historical-head-pilot-87-read.mjs",
+        "bytes": 5105,
+        "sha256": "0b00a34f394fd38b350100cf332dfa50629caf67dd69816bb34296f2fed109ae"
+      }
+    },
+    {
+      "path": "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "preimage": null,
+      "candidate": {
+        "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+        "bytes": 9751,
+        "sha256": "4bd96b1659df318631348d2c12e08ba917ced43aa44841f79f4c9da997ad737e"
+      }
+    },
+    {
+      "path": "tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot-current.test.mjs.raw",
+      "preimage": null,
+      "candidate": {
+        "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot-current.test.mjs.raw",
+        "bytes": 9786,
+        "sha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58"
+      }
+    },
+    {
+      "path": "tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot.test.ts.raw",
+      "preimage": null,
+      "candidate": {
+        "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot.test.ts.raw",
+        "bytes": 23508,
+        "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1"
+      }
+    }
+  ],
+  "unchangedCandidatePaths": [
+    {
+      "path": "tests/head-neck-pilot.test.ts",
+      "preimage": {
+        "path": "F:/VisibleMedicine/website/tests/head-neck-pilot.test.ts",
+        "bytes": 23508,
+        "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1"
+      },
+      "candidate": {
+        "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/head-neck-pilot.test.ts",
+        "bytes": 23508,
+        "sha256": "97d2ab7dfdeab8ac28656bbc779c0a8bec3c08bf98cf05ff545658930372d1e1"
+      },
+      "operation": "do-not-install-no-change"
+    }
+  ],
+  "diagnosis": {
+    "rows": [
+      201,
+      202,
+      203
+    ],
+    "row201": "Whole TS inverse overlooked the exact existing current190 import and complete appended scene proof. Both exact seams are now reversed before comparing with authentic original9f source; TS remains byte-exact.",
+    "row202": "Whole historical87 source/runtime/model/licence theorem still read current190 output. It now replays exact old87 manifest and all216 runtime rows through a fail-closed reader, retaining every original assertion. Separate new190 theorem repeats the complete proof with independently current-pin-authenticated source seams.",
+    "row203": "No new assertion repair: current9f provider successfully authenticates all217 runtime files including exact scene Git blob. Native TS root remains for main verification.",
+    "countClarification": "Head runtime current190 source-inputs has1511 rows;1553 is the independent Review source count. The1511 expectation is bound to the unchanged current-delivery pin document digest, not observed counts alone."
+  },
+  "verification": {
+    "syntax": [
+      {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--check",
+          "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/head-neck-pilot-current.test.mjs"
+        ],
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--check",
+          "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/historical-head-pilot-87-read.mjs"
+        ],
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--check",
+          "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/head-pilot-delivery-role-preservation-20261021.test.mjs"
+        ],
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "pure": {
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--loader",
+        "file:///F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/pure-loader.mjs",
+        "--test",
+        "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/candidate/tests/head-pilot-delivery-role-preservation-20261021.test.mjs"
+      ],
+      "log": {
+        "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/pure-1792600417027.log",
+        "bytes": 902,
+        "sha256": "d2c8def8d19cc981297165bd1b208e8dee849e9bf868839c23279e5de4a4e44d"
+      },
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "scope": "source/inverse and authentic all217 historical87 bytes/refusals only; loader maps the sole unchanged9f provider import to canonical and transforms no code"
+    },
+    "prepare": {
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/prepare.mjs"
+      ],
+      "exitCode": 0,
+      "fullTypeScriptInversePassed": true
+    },
+    "failuresRetained": [
+      {
+        "log": {
+          "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/pure.log",
+          "bytes": 1589,
+          "sha256": "b194107225591c97e4e6ce30966060f2469bda613c05328c7277e383bdd65946"
+        },
+        "kind": "stage-only harness loader path URL failure",
+        "resolvedBy": "file URL for the loader; no candidate assertion change"
+      },
+      {
+        "kind": "original canonical MJS root observation",
+        "toolChunk": "3be0cc",
+        "observed": "historical source inverse fails on existing190 import/scene append; current87 manifest expectation sees190 bytes",
+        "retainedRouting": "F:/VisibleMedicine/staging/20261021-regression-routing-after-closed54-55/ROUTING.json"
+      },
+      {
+        "kind": "prepare initial scope diagnostic",
+        "toolChunk": "8211ab",
+        "observed": "asserted1511!==1553 before candidate write",
+        "resolvedBy": "runtime source count versus Review source count distinction, independently authenticated by current-delivery pin"
+      }
+    ],
+    "notRun": [
+      "actual native candidate roots",
+      "TypeScript/build",
+      "browser",
+      "full suite",
+      "public release"
+    ]
+  },
+  "dependencyScope": {
+    "path": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-proposal/DEPENDENCIES.json",
+    "bytes": 88250,
+    "sha256": "9b36a0734cebf4ecf2c26efa50da93654593f2e041e2d5d8cb17edb5fe12fdfd"
+  },
+  "limitations": [
+    "Filtered source backup is partial; complete authentic old87 emitted-asset context remains at the fixed F-local archive. No full off-device runtime replay claim.",
+    "The unchanged9f helper retains its documented compressed fixtures, two old support assets and exact scene Git object dependency.",
+    "No clinical, spatial, model/license clearance, public deployment, owner-form refresh or private-data approval is provided."
+  ],
+  "nextForMain": {
+    "nativeRoots": [
+      "tests/head-neck-pilot-current.test.mjs",
+      "tests/head-neck-pilot.test.ts",
+      "tests/head-pilot-delivery-role-preservation-20261021.test.mjs"
+    ],
+    "admitChangedPathsOnly": [
+      "tests/head-neck-pilot-current.test.mjs",
+      "tests/historical-head-pilot-87-read.mjs",
+      "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot-current.test.mjs.raw",
+      "tests/fixtures/head-pilot-delivery-before-role-20261021/head-neck-pilot.test.ts.raw"
+    ],
+    "retainUnchangedTS": true,
+    "requireExactPreimages": true
+  },
+  "stoppingCondition": "Proposal, all path preimages/candidate hashes/bytes, full commands, source-only evidence and F-local dependency limits handed to main. No canonical edits, nested delegation, commits, backup, deployment or further work."
+}
