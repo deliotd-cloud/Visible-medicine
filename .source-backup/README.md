@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Selected uninstalled original teaching/code/source-identity pins, worker preimages and proof on previously filtered source ancestry only. No raw canonical ancestry, scans/masks/meshes/figures/textures/private modules/review records/databases/secrets. Not complete/runnable/private-data backup or admitted application release.
+Selected uninstalled public header/test source, exact-revision named metadata, original fixtures and actual focused proof, retaining previously filtered source ancestry only. No raw canonical ancestry, scans, masks, geometry, browser pixels/DOM, private modules/reviews/databases or secrets. Not a complete/runnable/private-data backup, source admission or release.

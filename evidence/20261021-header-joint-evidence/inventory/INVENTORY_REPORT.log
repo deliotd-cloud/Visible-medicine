@@ -1,0 +1,446 @@
+{
+  "schema": "vm-joint-named-metadata-evidence/1",
+  "sourceHead": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "inputs": [
+    {
+      "path": "public/models/bodyparts3d/full-body/catalog.json",
+      "sha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7"
+    },
+    {
+      "path": "public/models/um-knee/catalog.json",
+      "sha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e"
+    },
+    {
+      "path": "public/models/um-limb/catalog.json",
+      "sha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb"
+    },
+    {
+      "path": "app/anatomy-data.ts",
+      "sha256": "75a91a07a3bf268088f7b6e011e71ffd27bbc0366d2d01a3dbbd7f28da64a4cb"
+    }
+  ],
+  "countsBySource": [
+    10,
+    10,
+    2
+  ],
+  "countMeaning": "Selected source records only, not unique anatomy, lessons or completion percentages",
+  "regions": [
+    {
+      "region": "shoulder",
+      "namedEvidence": [],
+      "analystFinding": "no separate named evidence in inspected metadata for capsule, labrum, bursa, joint ligaments or articular cartilage",
+      "findingScope": "Provisional named-metadata screen only; not biological absence or exhaustive anatomy coverage"
+    },
+    {
+      "region": "elbow",
+      "namedEvidence": [
+        {
+          "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+          "name": "Interosseous membrane of right forearm",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1476",
+            "sha256": "e70c96c4534da21f082cc494a7804f42db96195bed75641334348845cb1ddb97"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+          "name": "Interosseous membrane of left forearm",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1476M",
+            "sha256": "2855876f02fbf5186e8cb19d640828808063a859d297042494477cc40c212d22"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        }
+      ],
+      "analystFinding": "forearm interosseous membranes are regional context, not separately named elbow capsule or collateral ligaments",
+      "findingScope": "Provisional named-metadata screen only; not biological absence or exhaustive anatomy coverage"
+    },
+    {
+      "region": "wrist",
+      "namedEvidence": [
+        {
+          "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+          "name": "Flexor retinaculum of right wrist",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1471",
+            "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+          "name": "Flexor retinaculum of left wrist",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1471M",
+            "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        }
+      ],
+      "analystFinding": "paired flexor retinacula; no separately named TFCC, wrist capsule or articular cartilage in inspected catalogues",
+      "findingScope": "Provisional named-metadata screen only; not biological absence or exhaustive anatomy coverage"
+    },
+    {
+      "region": "hip",
+      "namedEvidence": [
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:femoral-head-cartilage",
+          "name": "Femoral head cartilage",
+          "catalogue": "public/models/um-limb/catalog.json",
+          "catalogueSha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb",
+          "frameScope": "um-5t6tz7-v1-2:lower-limb",
+          "sourceMember": {
+            "file": "Segmentation_Cartilage_Femur Head .stl",
+            "sha256": "3703e65c9b90533635956747715aa7a50b5a9c6e180b0971f33e2337d22afcae"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        }
+      ],
+      "analystFinding": "UM femoral head cartilage only; no separately named acetabular cartilage, labrum or capsule in inspected metadata",
+      "findingScope": "Provisional named-metadata screen only; not biological absence or exhaustive anatomy coverage"
+    },
+    {
+      "region": "knee",
+      "namedEvidence": [
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:femoral-cartilage",
+          "name": "Distal femoral cartilage",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Cartilage_Femur Distal .stl",
+            "sha256": "ba670fd8fe935b60bb3648bed50d3352bdc3db2b2623d3c2a24ee55e0cec3b9e"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:tibial-cartilage",
+          "name": "Tibial cartilage (source group)",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Cartilage_Tibia .stl",
+            "sha256": "7dbfbe8b6e78d4306f9d35a75e37a3b9e7a436bb64659b50e1ba7680bc5c5f7d"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:patellar-cartilage",
+          "name": "Patellar cartilage",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Cartilage_Patella.stl",
+            "sha256": "b05387d7f434b4015a1d581ad7bba08dedea70b488d266c94260732a4a925390"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:acl",
+          "name": "Anterior cruciate ligament",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Ligament_ACL.stl",
+            "sha256": "62ae8ab641bb3073449819de127194be621acd000aa26057688bc8f8d9076d54"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:pcl",
+          "name": "Posterior cruciate ligament",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Ligament_PCL.stl",
+            "sha256": "786a8ae4a45c42a11f80d7c378e9c41be30593bc03e970d7bf8fc489240cb3e4"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:mcl",
+          "name": "Medial collateral ligament",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Ligament_MCL.stl",
+            "sha256": "f5f1ca536754456140470590d95f79b1143bfd9b8ba5153ad78721c861c0793d"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:lcl",
+          "name": "Lateral collateral ligament",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Ligament_LCL.stl",
+            "sha256": "b4a222fec9b6a6d03656c2448264ac5daac5b756b8a7a18d3be27de1bf7e593a"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:patellar-ligament",
+          "name": "Patellar ligament",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Ligament_Patella .stl",
+            "sha256": "92885e29d132834daabb4476731648a804eca3743eec11fb2376ee80495e395b"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:meniscus-group",
+          "name": "Knee meniscus (source group)",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Meniscus_Knee.stl",
+            "sha256": "ef781315590c6d84028f615c8e0bc63173865fddb86a4e5064a815ace3fd1359"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:knee:quadriceps-tendon",
+          "name": "Quadriceps tendon",
+          "catalogue": "public/models/um-knee/catalog.json",
+          "catalogueSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+          "frameScope": "um-5t6tz7-v1-2:knee",
+          "sourceMember": {
+            "file": "Segmentation_Tendon_Quadriceps .stl",
+            "sha256": "f08968890b5f9899abadb0746288b09e6483644e23f5666a8d525600ea622d73"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        }
+      ],
+      "analystFinding": "UM menisci and tibial cartilage are grouped, not separately medial/lateral; capsule and bursa have no separate named evidence",
+      "findingScope": "Provisional named-metadata screen only; not biological absence or exhaustive anatomy coverage"
+    },
+    {
+      "region": "ankle",
+      "namedEvidence": [
+        {
+          "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+          "name": "Right long plantar ligament",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1424",
+            "sha256": "661b56c07f5a39362806f1c62d10497f42dbe1da37a680da0d4359c0c5079c9c"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+          "name": "Left long plantar ligament",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1424M",
+            "sha256": "85a4d2965253a1638342e3295fb342ff0d8e8931c9d9b6373de6e6af7de3e79e"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
+          "name": "Interosseous membrane of right leg",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1392",
+            "sha256": "5e096412b0b74f19d32080170b9cd6598d62bf9ba5add6bd2adf41b487f17d8f"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
+          "name": "Interosseous membrane of left leg",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1392M",
+            "sha256": "60f79a84a6c31041436e09928e1d07070d4b2350ec44ac5badec46bd0e61b786"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+          "name": "Right calcaneal tendon",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1405",
+            "sha256": "64696f68cd961e4dfb7809ab9899a6777e994ea3bf696213da7a0ac1a507bed9"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+          "name": "Left calcaneal tendon",
+          "catalogue": "public/models/bodyparts3d/full-body/catalog.json",
+          "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+          "frameScope": "bodyparts3d:4.0:common-source",
+          "sourceMember": {
+            "file": "FJ1405M",
+            "sha256": "192692c7351198ed60745072f921cf10b0a3a73fa25bc2fe2df4fb1c45a449f0"
+          },
+          "sourceCredit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+          "sourceLicense": "CC-BY-4.0",
+          "evidenceRole": "regional context, not a complete joint surface set",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        },
+        {
+          "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:achilles-tendon",
+          "name": "Calcaneal (Achilles) tendon",
+          "catalogue": "public/models/um-limb/catalog.json",
+          "catalogueSha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb",
+          "frameScope": "um-5t6tz7-v1-2:lower-limb",
+          "sourceMember": {
+            "file": "Segmentation_Tendon_Archilles .stl",
+            "sha256": "30c8770721c391641d6f0d9a0ce5576991651837bda24d36bb448617f0a78b52"
+          },
+          "sourceCredit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2.",
+          "sourceLicense": "CC0-1.0",
+          "evidenceRole": "independent specimen record",
+          "anatomicalReview": false,
+          "patientSpaceRegistration": false
+        }
+      ],
+      "analystFinding": "foot/leg or calcaneal-tendon regional context; no separately named ankle joint capsule, collateral complex, bursa or articular cartilage in inspected metadata",
+      "findingScope": "Provisional named-metadata screen only; not biological absence or exhaustive anatomy coverage"
+    }
+  ],
+  "dedicatedShoulderIds": [
+    "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+    "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+    "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+    "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid",
+    "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus",
+    "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus",
+    "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis",
+    "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head",
+    "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor"
+  ],
+  "status": "source-bound provisional inventory; no geometry inspection or admission",
+  "clinicalApproval": false,
+  "geometryDecoded": false,
+  "sourceAdmission": false,
+  "spatialRegistration": false,
+  "limits": [
+    "Counts are by source catalogue, not unique anatomy or completeness.",
+    "No biological absence or unusable-geometry conclusion follows from an unindexed name.",
+    "No geometry decoded, registration performed, source admitted, teaching curriculum accepted, or clinical clearance inferred.",
+    "Root FMA text, synonyms in prose, and innervation are not mesh evidence.",
+    "Other repositories, archives, and candidate sources were not inventoried."
+  ]
+}

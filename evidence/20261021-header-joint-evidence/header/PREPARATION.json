@@ -1,0 +1,35 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-header-native-proposal",
+  "site": "F:/VisibleMedicine/staging/20261021-header-native-proposal",
+  "atlas": "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+  "source": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "copiedInputs": [
+    {
+      "path": "components/SiteHeader.tsx",
+      "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+    },
+    {
+      "path": "components/SiteFrame.tsx",
+      "sha256": "8a507e7acbbd860ac69e64ff54a7253b92e357c0d4a3ab58e878570ff3007c10"
+    },
+    {
+      "path": "lib/public-route-focus.ts",
+      "sha256": "613421b7982da287b87e1b670fb9dd2c1e1bc5f7d5bf0a55e2fb113957aa956b"
+    },
+    {
+      "path": "tests/header-session.test.ts",
+      "sha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2"
+    },
+    {
+      "path": "tests/header-workspace-destination.test.mjs",
+      "sha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0"
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "ea5fa4acdb32e28b27b453e71817ae3b3decf9f63a53154cfa3d561956d7d513"
+    }
+  ],
+  "proposedHeaderSha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b",
+  "onlyRuntimeChange": "One primary group focus guard; no live/frozen Website edits or learner/source import.",
+  "scope": "Closed lightweight native header tests, not a full Website checkout/build/release/browser acceptance."
+}

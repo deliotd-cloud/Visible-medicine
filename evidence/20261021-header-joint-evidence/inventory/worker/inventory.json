@@ -1,0 +1,45 @@
+{
+  "kind": "read-only named-metadata evidence inventory; provisional targets only",
+  "sourceRoot": "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+  "sourceHead": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "sourceStatus": "clean at inspection",
+  "catalogues": [
+    {"path":"public/models/bodyparts3d/full-body/catalog.json","sha256":"109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7","frame":"BodyParts3D v4.0 common source frame: mm, X left / Y posterior / Z superior; scene transform declared in catalog.coordinateSystem","entryCount":1022,"namedRegionalContextCount":10},
+    {"path":"public/models/um-knee/catalog.json","sha256":"946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e","frame":"um-5t6tz7-v1-2:knee; independent right-limb source, LPS STL headers; registeredToBodyParts3D=false; imagingRegistration=null","entryCount":15,"namedTargetCount":10},
+    {"path":"public/models/um-limb/catalog.json","sha256":"fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb","frame":"um-5t6tz7-v1-2:lower-limb; same UM archive, distinct catalogue/specimen scope; registeredToBodyParts3D=false; imagingRegistration=null","entryCount":52,"namedTargetCount":2}
+  ],
+  "dedicatedShoulder": {"path":"app/anatomy-data.ts","sha256":"75a91a07a3bf268088f7b6e011e71ffd27bbc0366d2d01a3dbbd7f28da64a4cb","entries":9,"categories":["bone","muscle"],"namedJointSoftTissueEntries":0,"note":"Biceps long head is one muscle-category teaching entry and explicitly not a separately segmented tendon (line 519). Prose mentions labrum, capsule and bursa but does not index them as structures. No separate frame ID is declared in this file; model path is /models/bodyparts3d/shoulder-right.glb in app/anatomy-scene.tsx:260."},
+  "regionalEvidence": {
+    "shoulder": {"namedEntries":[],"finding":"no separate named evidence in inspected metadata for capsule, labrum, bursa, joint ligaments or articular cartilage"},
+    "elbow": {"namedEntries":["vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm","vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm"],"finding":"forearm interosseous membranes are regional context, not separately named elbow capsule or collateral ligaments"},
+    "wrist": {"namedEntries":["vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist","vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"],"finding":"paired flexor retinacula; no separately named TFCC, wrist capsule or articular cartilage in inspected catalogues"},
+    "hip": {"namedEntries":["vm:reference:um-5t6tz7-v1-2:lower-limb:femoral-head-cartilage"],"finding":"UM femoral head cartilage only; no separately named acetabular cartilage, labrum or capsule in inspected metadata"},
+    "knee": {"namedEntries":["vm:reference:um-5t6tz7-v1-2:knee:femoral-cartilage","vm:reference:um-5t6tz7-v1-2:knee:tibial-cartilage","vm:reference:um-5t6tz7-v1-2:knee:patellar-cartilage","vm:reference:um-5t6tz7-v1-2:knee:acl","vm:reference:um-5t6tz7-v1-2:knee:pcl","vm:reference:um-5t6tz7-v1-2:knee:mcl","vm:reference:um-5t6tz7-v1-2:knee:lcl","vm:reference:um-5t6tz7-v1-2:knee:patellar-ligament","vm:reference:um-5t6tz7-v1-2:knee:meniscus-group","vm:reference:um-5t6tz7-v1-2:knee:quadriceps-tendon"],"finding":"UM menisci and tibial cartilage are grouped, not separately medial/lateral; capsule and bursa have no separate named evidence"},
+    "ankle": {"namedEntries":["vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament","vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament","vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg","vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg","vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon","vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon","vm:reference:um-5t6tz7-v1-2:lower-limb:achilles-tendon"],"finding":"foot/leg or calcaneal-tendon regional context; no separately named ankle joint capsule, collateral complex, bursa or articular cartilage in inspected metadata"}
+  },
+  "members": [
+    {"id":"vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm","name":"Interosseous membrane of right forearm","sourceFile":"FJ1476","fmaId":"FMA23707"},
+    {"id":"vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm","name":"Interosseous membrane of left forearm","sourceFile":"FJ1476M","fmaId":"FMA23708"},
+    {"id":"vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist","name":"Flexor retinaculum of right wrist","sourceFile":"FJ1471","fmaId":"FMA40120"},
+    {"id":"vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist","name":"Flexor retinaculum of left wrist","sourceFile":"FJ1471M","fmaId":"FMA40121"},
+    {"id":"vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament","name":"Right long plantar ligament","sourceFile":"FJ1424","fmaId":"FMA44249"},
+    {"id":"vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament","name":"Left long plantar ligament","sourceFile":"FJ1424M","fmaId":"FMA44250"},
+    {"id":"vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg","name":"Interosseous membrane of right leg","sourceFile":"FJ1392","fmaId":"FMA35192"},
+    {"id":"vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg","name":"Interosseous membrane of left leg","sourceFile":"FJ1392M","fmaId":"FMA35193"},
+    {"id":"vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon","name":"Right calcaneal tendon","sourceFile":"FJ1405","fmaId":"FMA258847"},
+    {"id":"vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon","name":"Left calcaneal tendon","sourceFile":"FJ1405M","fmaId":"FMA264844"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:femoral-cartilage","name":"Distal femoral cartilage","sourceName":"Cartilage_Femur Distal ","sourceFile":"Segmentation_Cartilage_Femur Distal .stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:tibial-cartilage","name":"Tibial cartilage (source group)","sourceName":"Cartilage_Tibia ","sourceFile":"Segmentation_Cartilage_Tibia .stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:patellar-cartilage","name":"Patellar cartilage","sourceName":"Cartilage_Patella","sourceFile":"Segmentation_Cartilage_Patella.stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:acl","name":"Anterior cruciate ligament","sourceName":"Ligament_ACL","sourceFile":"Segmentation_Ligament_ACL.stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:pcl","name":"Posterior cruciate ligament","sourceName":"Ligament_PCL","sourceFile":"Segmentation_Ligament_PCL.stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:mcl","name":"Medial collateral ligament","sourceName":"Ligament_MCL","sourceFile":"Segmentation_Ligament_MCL.stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:lcl","name":"Lateral collateral ligament","sourceName":"Ligament_LCL","sourceFile":"Segmentation_Ligament_LCL.stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:patellar-ligament","name":"Patellar ligament","sourceName":"Ligament_Patella ","sourceFile":"Segmentation_Ligament_Patella .stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:meniscus-group","name":"Knee meniscus (source group)","sourceName":"Meniscus_Knee","sourceFile":"Segmentation_Meniscus_Knee.stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:knee:quadriceps-tendon","name":"Quadriceps tendon","sourceName":"Tendon_Quadriceps ","sourceFile":"Segmentation_Tendon_Quadriceps .stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:lower-limb:femoral-head-cartilage","name":"Femoral head cartilage","sourceName":"Cartilage_Femur Head ","sourceFile":"Segmentation_Cartilage_Femur Head .stl"},
+    {"id":"vm:reference:um-5t6tz7-v1-2:lower-limb:achilles-tendon","name":"Calcaneal (Achilles) tendon","sourceName":"Tendon_Archilles ","sourceFile":"Segmentation_Tendon_Archilles .stl"}
+  ],
+  "limits": ["Counts are by source catalogue, not unique anatomy or completeness.","No biological absence or unusable-geometry conclusion follows from an unindexed name.","No geometry decoded, registration performed, source admitted, teaching curriculum accepted, or clinical clearance inferred.","Root FMA text, synonyms in prose, and innervation are not mesh evidence.","Other repositories, archives, and candidate sources were not inventoried."]
+}

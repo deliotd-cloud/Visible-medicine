@@ -1,0 +1,22 @@
+{
+  "label": "INVENTORY_NATIVE",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-reporter=tap",
+    "verify-inventory.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-joint-soft-tissue-inventory/INVENTORY_NATIVE.log",
+  "logSha256": "caca4b267e02676dcc215a4a04e758e41549b2c0da681753ed2277db8d94a729",
+  "footer": [
+    "# tests 13",
+    "# pass 13",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0"
+  ],
+  "canonicalInstalled": false
+}

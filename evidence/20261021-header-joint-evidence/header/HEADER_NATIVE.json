@@ -1,0 +1,25 @@
+{
+  "label": "HEADER_NATIVE",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-reporter=tap",
+    "tests/header-session.test.ts",
+    "tests/header-workspace-destination.test.mjs",
+    "tests/header-tab-focus.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-header-native-proposal/HEADER_NATIVE.log",
+  "logSha256": "72eb5612dca63c085f4ebfad4d736becae6394f8c52ec27442f02b5bf2116715",
+  "footer": [
+    "# tests 13",
+    "# pass 12",
+    "# fail 1",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0"
+  ],
+  "canonicalInstalled": false
+}

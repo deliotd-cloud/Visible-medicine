@@ -1,0 +1,55 @@
+{
+  "at": "2026-10-21T00:13:23.148Z",
+  "phase": "native header proposal and exact-revision joint metadata verification",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "headerStage": "F:/VisibleMedicine/staging/20261021-header-native-proposal",
+  "inventoryStage": "F:/VisibleMedicine/staging/20261021-joint-soft-tissue-inventory",
+  "headerProof": {
+    "logSha256": "d4766b6f2fb6ceb306b2d6d7a784f651a7be13b4193245f6982d5318b9540e4a",
+    "tests": 13,
+    "code": 0
+  },
+  "inventoryProof": {
+    "logSha256": "caca4b267e02676dcc215a4a04e758e41549b2c0da681753ed2277db8d94a729",
+    "tests": 13,
+    "code": 0
+  },
+  "headerAdmissionPaths": [
+    "components/SiteHeader.tsx",
+    "tests/header-workspace-destination.test.mjs",
+    "tests/header-tab-focus.test.mjs",
+    "tests/fixtures/header-before-keyboard-focus/SiteHeader.tsx.raw",
+    "tests/fixtures/header-before-keyboard-focus/header-workspace-destination.test.mjs.raw"
+  ],
+  "actualFocusedTests": 26,
+  "inventorySelectedRecordsBySource": [
+    10,
+    10,
+    2
+  ],
+  "headerWholeOriginalInverse": true,
+  "workspaceWholeOriginalTestInverse": true,
+  "originalSessionTestUnchanged": true,
+  "initialHeaderFailure": "Isolated sandbox omitted unchanged app/layout.tsx; exact frozen layout added, all original assertions retained, 13/13 subsequent pass. Original 12/13 receipt preserved.",
+  "jointScope": "Six-region bounded named-metadata evidence: 22 exact records from 3 separately identified catalogues; no unique-anatomy or completeness claim. Twelve negative mutation cases plus one actual source check. Independent UM scopes stay unregistered; grouped surfaces and literal filenames retained. Source credit/licences retained.",
+  "observation": {
+    "path": "F:/VisibleMedicine/staging/20261021-complete-website-assurance/observations/2026-10-21T00-09-38.100Z/observation.json",
+    "sha256": "e9066a5cd0de24a72787552238c022a399b18db37ac95a5f8dd3499cd01b04d6",
+    "liveAtObservation": true,
+    "terminalAtObservation": false,
+    "frozenInputs": 5053
+  },
+  "canonicalInstalled": false,
+  "candidateChanged": false,
+  "sourceCommitted": false,
+  "reviewPacketGenerated": false,
+  "newHeaderBrowserAccepted": false,
+  "fullSuitePass": false,
+  "clinicalApproval": false,
+  "geometryDecoded": false,
+  "spatialRegistration": false,
+  "publicDeployment": false,
+  "fullGoalActive": true,
+  "limits": "Focused native tests and source-bound metadata only. No new full Website type/build/browser, source/mesh admission, complete anatomy curriculum or clinical acceptance. Frozen 5053 candidate/source485 and owner98d7/Reviewb2bd/manual-reload3000 remain untouched."
+}

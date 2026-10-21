@@ -1,52 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T00:00:41.196Z",
+  "at": "2026-10-21T00:13:24.894Z",
   "sourceIdentity": {
-    "baseline": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
-    "stagedSourceFiles": [
-      {
-        "path": "app/body-content.ts",
-        "bytes": 82603,
-        "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
-      },
-      {
-        "path": "content/dental-mri.ts",
-        "bytes": 3508,
-        "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
-      },
-      {
-        "path": "content/dental-mri-pins.json",
-        "bytes": 57639,
-        "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
-      },
-      {
-        "path": "lib/dental-mri.ts",
-        "bytes": 1866,
-        "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
-      },
-      {
-        "path": "docs/DENTAL_MRI_EVIDENCE.md",
-        "bytes": 3197,
-        "sha256": "ae0c9cef8b7daa9810b9fa74dc96d97b5b63fb1ee8bba9e880e7a92d225d8261"
-      },
-      {
-        "path": "tests/test-dental-mri-content.mjs",
-        "bytes": 3386,
-        "sha256": "569ca0c81f955e5a7a02382a996aa8791f38b628a3d694ac38e521c09b14e47f"
-      },
-      {
-        "path": "tests/test-dental-mri-binding.mjs",
-        "bytes": 6191,
-        "sha256": "1a3f4a495be9acf0a5ee3cfae8bda9410fe51f4b3af77d8edb490b2322b2bfb4"
-      }
-    ],
+    "atlas": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "uninstalledHeaderSha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b",
     "proposalOnly": true,
-    "canonicalInstalled": false,
-    "sourceCommitted": false
+    "canonicalInstalled": false
   },
-  "parent": "eb001e20746f58f5b871f7816cae8e08e9ed2ede",
-  "gitParent": "eb001e20746f58f5b871f7816cae8e08e9ed2ede",
+  "parent": "412ffbc336bf99a40d8d5ee0a8d2aad449ca781f",
+  "gitParent": "412ffbc336bf99a40d8d5ee0a8d2aad449ca781f",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -672,6 +634,151 @@
       "path": "evidence/20261021-desktop-qa/proposals/header-keyboard/tests/header-keyboard.test.mjs",
       "bytes": 8808,
       "sha256": "522a2f8e40437bbb9a08bcb98e9c721fade9e92c621e9d5cc0a740d6c586ff91"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/checkpoint-header-inventory-20261021.mjs",
+      "bytes": 10052,
+      "sha256": "be574b9d51006791c76c4b2e3fde18e10d872b49530aa50152bcfa8b6f244046"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/full-suite/observation.json",
+      "bytes": 1798,
+      "sha256": "e9066a5cd0de24a72787552238c022a399b18db37ac95a5f8dd3499cd01b04d6"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/app/layout.tsx",
+      "bytes": 2768,
+      "sha256": "ea5fa4acdb32e28b27b453e71817ae3b3decf9f63a53154cfa3d561956d7d513"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/components/SiteFrame.tsx",
+      "bytes": 12061,
+      "sha256": "8a507e7acbbd860ac69e64ff54a7253b92e357c0d4a3ab58e878570ff3007c10"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/components/SiteHeader.tsx",
+      "bytes": 14418,
+      "sha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/HANDOFF.md",
+      "bytes": 2419,
+      "sha256": "72491b5972fa6aebca56731c222b6831ca226dae7a372c88b23de540d44b22a8"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/HEADER_NATIVE_WITH_LAYOUT.json",
+      "bytes": 655,
+      "sha256": "53a647a6dd00e8c4ae527fa807149d1d4d8a1e033f602cff87da6b954f057c22"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/HEADER_NATIVE_WITH_LAYOUT.log",
+      "bytes": 3174,
+      "sha256": "d4766b6f2fb6ceb306b2d6d7a784f651a7be13b4193245f6982d5318b9540e4a"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/HEADER_NATIVE.json",
+      "bytes": 631,
+      "sha256": "6da1a553f540bc06308abf371f71db9cd3d6f40808a6cac34774b69e0e67167c"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/HEADER_NATIVE.log",
+      "bytes": 4134,
+      "sha256": "72eb5612dca63c085f4ebfad4d736becae6394f8c52ec27442f02b5bf2116715"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/lib/public-route-focus.ts",
+      "bytes": 1754,
+      "sha256": "613421b7982da287b87e1b670fb9dd2c1e1bc5f7d5bf0a55e2fb113957aa956b"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/package.json",
+      "bytes": 95,
+      "sha256": "e0d70d0ed1aa610065fe1da2987afd982ae12206f137da05256d7680832d8a69"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/PREPARATION.json",
+      "bytes": 1488,
+      "sha256": "0e791b1845d0251086eb5b26ef312f322f075d6e4283267980d0950a0273004b"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/tests/fixtures/header-before-keyboard-focus/header-workspace-destination.test.mjs.raw",
+      "bytes": 3146,
+      "sha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/tests/fixtures/header-before-keyboard-focus/SiteHeader.tsx.raw",
+      "bytes": 14391,
+      "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/tests/header-session.test.ts",
+      "bytes": 17803,
+      "sha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/tests/header-tab-focus.test.mjs",
+      "bytes": 8523,
+      "sha256": "895bbdbd4cee6b8abf46e79da84b3a1fceb691b8f2a7c093f74fb008ad2567dd"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/header/tests/header-workspace-destination.test.mjs",
+      "bytes": 4735,
+      "sha256": "684829e24ac04ea18539d669e29f3f4491670f49537144c45077226e83cb774c"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/INVENTORY_NATIVE.json",
+      "bytes": 515,
+      "sha256": "f69a867be7277dac8e6dff157d59943d5ffe08d8157fc77f91f036fda508a955"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/INVENTORY_NATIVE.log",
+      "bytes": 1932,
+      "sha256": "caca4b267e02676dcc215a4a04e758e41549b2c0da681753ed2277db8d94a729"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/INVENTORY_REPORT.json",
+      "bytes": 518,
+      "sha256": "365170f03b4b20d69025ab182ba32eb272ba83068e9d6d83e3418b69ff23d722"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/INVENTORY_REPORT.log",
+      "bytes": 23110,
+      "sha256": "eb5e6e2a5c1a47afbd80608e696d7044429401f8028d8b39eeb4ff7476a0af05"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/main/HANDOFF.md",
+      "bytes": 2538,
+      "sha256": "27ee5e2985f33180232771165c077ad59134f45f27700e6e02545cd6d9370c44"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/main/verify-inventory.mjs",
+      "bytes": 7462,
+      "sha256": "213483b803bb7a85e87bc9064e8b31b41ef0ed1e031b2166e00141198b43b31c"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/main/verify-inventory.test.mjs",
+      "bytes": 2320,
+      "sha256": "7e47fea6b9a59ce1f2212b8dfc8e1c61e9c3a595d339d5ccf5837544de724bba"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/PREPARATION.json",
+      "bytes": 377,
+      "sha256": "a36588def0852e0e91639cebee32811d95bea5aa2cc660834714860348c21d59"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/worker/inventory.json",
+      "bytes": 8292,
+      "sha256": "70c1ddf48ecd45572299e50a6fab23d1a120e2237eb9a0065a985a5cb2878877"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/inventory/worker/README.md",
+      "bytes": 5334,
+      "sha256": "f207d6381d716e07300f5abd8b44858c298e60d79d4474fefd2cad0b91f96e76"
+    },
+    {
+      "path": "evidence/20261021-header-joint-evidence/MAIN_REVIEW.json",
+      "bytes": 2726,
+      "sha256": "59da7ef94b0d1a850c15171879913f98a1365d7e05c24498f9b0e2d9cc330e21"
     },
     {
       "path": "evidence/20261021-hip-history-guard-proposal/HIP_WRAPPER_DEFAULT_GIT.json",
@@ -1770,15 +1877,15 @@
     }
   ],
   "removed": [],
-  "scope": "Selected uninstalled original teaching/code/source-identity pins, worker preimages and proof on previously filtered source ancestry only. No raw canonical ancestry, scans/masks/meshes/figures/textures/private modules/review records/databases/secrets. Not complete/runnable/private-data backup or admitted application release.",
+  "scope": "Selected uninstalled public header/test source, exact-revision named metadata, original fixtures and actual focused proof, retaining previously filtered source ancestry only. No raw canonical ancestry, scans, masks, geometry, browser pixels/DOM, private modules/reviews/databases or secrets. Not a complete/runnable/private-data backup, source admission or release.",
   "proof": {
-    "focusedTests": 6,
-    "exactRecords": 28,
-    "sharedGroups": 4,
-    "refusals": 868,
-    "wholeDispatcherInverse": true,
-    "fullTransitionPass": false,
-    "clinicalApproval": false
+    "actualHeaderTests": 13,
+    "actualInventoryTests": 13,
+    "namedRecords": 22,
+    "wholeOriginalInverses": true,
+    "fullSuitePass": false,
+    "clinicalApproval": false,
+    "sourceAdmission": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

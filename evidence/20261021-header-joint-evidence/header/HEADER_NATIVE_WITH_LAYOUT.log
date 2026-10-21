@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: public routes retain the full site header and request-scoped account link
+ok 1 - public routes retain the full site header and request-scoped account link
+  ---
+  duration_ms: 32.4636
+  type: 'test'
+  ...
+# Subtest: header menus respond to Escape, outside pointer, links, scroll and each other
+ok 2 - header menus respond to Escape, outside pointer, links, scroll and each other
+  ---
+  duration_ms: 35.9871
+  type: 'test'
+  ...
+# Subtest: workspace routes render one compact header without duplicate site navigation
+ok 3 - workspace routes render one compact header without duplicate site navigation
+  ---
+  duration_ms: 7.594
+  type: 'test'
+  ...
+# Subtest: account workspace is not presented as the Learn workspace
+ok 4 - account workspace is not presented as the Learn workspace
+  ---
+  duration_ms: 0.6895
+  type: 'test'
+  ...
+# Subtest: actual root layout supplies only request-scoped boolean with no identity leakage
+ok 5 - actual root layout supplies only request-scoped boolean with no identity leakage
+  ---
+  duration_ms: 15.7854
+  type: 'test'
+  ...
+# Subtest: Clinical Review navigation opens the inbox and retains exact worksheet and comparison context
+ok 6 - Clinical Review navigation opens the inbox and retains exact worksheet and comparison context
+  ---
+  duration_ms: 19.3063
+  type: 'test'
+  ...
+# Subtest: source is still the expected exact input and proposal changes only the focus guard
+ok 7 - source is still the expected exact input and proposal changes only the focus guard
+  ---
+  duration_ms: 1.1013
+  type: 'test'
+  ...
+# Subtest: closed link/button focus stays closed; disclosure, hover and dismissals retain behavior
+ok 8 - closed link/button focus stays closed; disclosure, hover and dismissals retain behavior
+  ---
+  duration_ms: 62.213
+  type: 'test'
+  ...
+# Subtest: signed-in switcher names the shared role-filtered hub Workspace without changing its four destinations
+ok 9 - signed-in switcher names the shared role-filtered hub Workspace without changing its four destinations
+  ---
+  duration_ms: 8.0334
+  type: 'test'
+  ...
+# Subtest: signed-out visitors receive no switcher and keep the existing sign-in destination
+ok 10 - signed-out visitors receive no switcher and keep the existing sign-in destination
+  ---
+  duration_ms: 2.5426
+  type: 'test'
+  ...
+# Subtest: public institution navigation is still separate from private workspace selection
+ok 11 - public institution navigation is still separate from private workspace selection
+  ---
+  duration_ms: 3.3114
+  type: 'test'
+  ...
+# Subtest: the exact reversible change touches only the two misleading workspace labels and description
+ok 12 - the exact reversible change touches only the two misleading workspace labels and description
+  ---
+  duration_ms: 1.7546
+  type: 'test'
+  ...
+# Subtest: complete original Workspace contract remains byte-exact apart from its explicit history context
+ok 13 - complete original Workspace contract remains byte-exact apart from its explicit history context
+  ---
+  duration_ms: 1.0986
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 467.9886

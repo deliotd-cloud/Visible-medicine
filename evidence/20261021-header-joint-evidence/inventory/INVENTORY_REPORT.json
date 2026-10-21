@@ -1,0 +1,15 @@
+{
+  "label": "INVENTORY_REPORT",
+  "command": "node",
+  "args": [
+    "verify-inventory.mjs",
+    "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+    "F:/VisibleMedicine/staging/20261021-joint-soft-tissue-inventory/worker/inventory.json"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-joint-soft-tissue-inventory/INVENTORY_REPORT.log",
+  "logSha256": "eb5e6e2a5c1a47afbd80608e696d7044429401f8028d8b39eeb4ff7476a0af05",
+  "footer": [],
+  "canonicalInstalled": false
+}
