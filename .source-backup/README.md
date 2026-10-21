@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Selected23Atlas source/generated-teaching/revision paths,exact2metadata preimages,4module MANIFESTS ONLY,small actual receipts/main scripts on prior filtered source-only ancestry. Full runtime files/model geometry and all private artifacts,patient scans/masks/decisions/inbox,raw canonical ancestry,dependencies and browser media remain local/excluded. Not a complete runnable/private-data backup,hosted release or clinical/spatial approval.
+Selected test/helper/original-test fixtures,scoped attributes,small result/proof/control scripts on prior filtered source-only ancestry. No private historical manifest/module,scans,masks,review decisions,inbox,geometry,dependencies,raw canonical ancestry,browser pixels/DOM or long failed logs. Not a complete runnable/private-data backup,public deployment or clinical/rights acceptance.

@@ -1,0 +1,23 @@
+{
+  "label": "ACTUAL_PLEXUS_EOL",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/plexus-dependency-rebind.test.mjs",
+    "tests/plexus-presentation-rebind.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-plexus-historical-eol-retry/ACTUAL_PLEXUS_EOL.log",
+  "logSha256": "fe1819eb934d043036f63e3ee2357fdb33618a180735a80ed71dbcd2514020a3",
+  "footer": [
+    "ℹ tests 7",
+    "ℹ pass 7",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

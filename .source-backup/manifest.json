@@ -1,17 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T04:07:06.431Z",
+  "at": "2026-10-21T04:17:26.765Z",
   "sourceIdentity": {
-    "commit": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "tree": "c314f1cbfa394caed4c6874864fda7dea0a3286c",
-    "parent": "5c7ed0612f94b9a3ad99d9e49566c655495b98a6",
-    "introduction": "30135cdd1849115a75c036dd6897d76e3d91e231",
-    "base": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "clean": true,
-    "paths": 23
+    "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "website": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "inputCount": 5087
   },
-  "parent": "69d6458384ad5dc5250adffb441f4c98ca605505",
-  "gitParent": "69d6458384ad5dc5250adffb441f4c98ca605505",
+  "parent": "ede7c5d56d0885d24fbd596f68da492a83249352",
+  "gitParent": "ede7c5d56d0885d24fbd596f68da492a83249352",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -3339,6 +3335,76 @@
       "sha256": "0192f1a2056b1b176dafa1148a806ea3f63d341faa74bf2f3ba3a720c3ba9cab"
     },
     {
+      "path": "evidence/20261021-plexus-history-verified/evidence/ACTUAL_PLEXUS_EOL.json",
+      "bytes": 622,
+      "sha256": "32f562ab1d58961e2037080a8d39719da4bff65f075d8b84c989fa892cea0d2e"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/evidence/CHANGE.json",
+      "bytes": 331,
+      "sha256": "54db2a1cb36931873c57a53bdf10fb7df04c970199190e91d0023e1533b6ee0b"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/evidence/MAIN_REVIEW.json",
+      "bytes": 1517,
+      "sha256": "2731ff76084dced1bc06eb3d97174b1d8b68635d45b30a145ad66c460ac47f51"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/evidence/RESULT.json",
+      "bytes": 487,
+      "sha256": "3dbdd41f8d5a0df3567b5a172b17f904ee4e50c38114078edaf0cdc7a1887a9a"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/preimages/tests/plexus-historical-source.mjs",
+      "bytes": 2857,
+      "sha256": "39ac1003c637bfcde874755e32736a8c35b09f722eb8aefba2cb61a27a218c49"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/scripts/admit-and-test-plexus-history-20261021.mjs",
+      "bytes": 6908,
+      "sha256": "d0ec885ad67260180d4b3fe9c468337deda0c90e868a8ee4a79e2d70de1544fd"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/scripts/checkpoint-plexus-history-verified-20261021.mjs",
+      "bytes": 6716,
+      "sha256": "abd3a01b2d58f875caee3ee448d2dcb0111d407faf8c6b41895f10d1265e3032"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/scripts/retry-plexus-historical-eol-20261021.mjs",
+      "bytes": 4549,
+      "sha256": "9c475b84f137720f3f7737dd2d6c4fad41f61235f689480b3631cb2a7dab139c"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/website/.gitattributes",
+      "bytes": 20781,
+      "sha256": "ff18dd6bd760d83a82fd15baac65aaa0b9ac28aa5bed63ed5f02df1909ee7de1"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/website/tests/fixtures/plexus-dependency-rebind.test.mjs.raw",
+      "bytes": 4168,
+      "sha256": "955ed7714219f50d192f499973dcaf04465f2e562181af655631a75b6fc700a0"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/website/tests/fixtures/plexus-presentation-rebind.test.mjs.raw",
+      "bytes": 3358,
+      "sha256": "763bf21c4f15455688833baa684dc12bcb16c2a4d0af288156bcccf4f1d09164"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/website/tests/plexus-dependency-rebind.test.mjs",
+      "bytes": 7184,
+      "sha256": "f0b6e9dc3dd155d67338253f94ba68fd73f16f3ca40b7fe711525e70444953e7"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/website/tests/plexus-historical-source.mjs",
+      "bytes": 3362,
+      "sha256": "9875e06880ed2d9a78d45eef70a95b45276b1de6d39fa0209288f68ff9422a11"
+    },
+    {
+      "path": "evidence/20261021-plexus-history-verified/website/tests/plexus-presentation-rebind.test.mjs",
+      "bytes": 3437,
+      "sha256": "e10677129e441c7d962b997f89bb957c75eb6e6e74d449142d1752dbfdf342cc"
+    },
+    {
       "path": "evidence/20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.json",
       "bytes": 769,
       "sha256": "2358d74b7d8558de66a2bd4a0740294b0bee0c1b507aaf795294d1701f954f9d"
@@ -4895,15 +4961,16 @@
     }
   ],
   "removed": [],
-  "scope": "Selected23Atlas source/generated-teaching/revision paths,exact2metadata preimages,4module MANIFESTS ONLY,small actual receipts/main scripts on prior filtered source-only ancestry. Full runtime files/model geometry and all private artifacts,patient scans/masks/decisions/inbox,raw canonical ancestry,dependencies and browser media remain local/excluded. Not a complete runnable/private-data backup,hosted release or clinical/spatial approval.",
+  "scope": "Selected test/helper/original-test fixtures,scoped attributes,small result/proof/control scripts on prior filtered source-only ancestry. No private historical manifest/module,scans,masks,review decisions,inbox,geometry,dependencies,raw canonical ancestry,browser pixels/DOM or long failed logs. Not a complete runnable/private-data backup,public deployment or clinical/rights acceptance.",
   "proof": {
-    "fourBuildsPass": true,
-    "fourStockExportsPass": true,
-    "allLocalExportedFilesByteVerified": true,
-    "geometryUnchanged": true,
-    "noApprovalMigration": true,
-    "websiteImported": false,
-    "canonicalInstalled": false
+    "actualTests": 7,
+    "passed": 7,
+    "skipped": 0,
+    "inputDrift": false,
+    "pinnedHistoricalSource": true,
+    "originalAssertionsPreserved": true,
+    "noRuntimeEdits": true,
+    "noPrivateArtifactCopied": true
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
