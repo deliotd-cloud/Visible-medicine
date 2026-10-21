@@ -1,0 +1,50 @@
+{
+  "batch":"F:/VisibleMedicine/staging/20261021-revision-guard-batch-v4",
+  "checkpointRoot":"F:/VisibleMedicine/recovery/checkpoints/20261021-canonical-local-r2-admitted",
+  "parentRoot":"F:/VisibleMedicine/recovery/checkpoints/20261021-shared-viewer-epoch-proposals-verified-backup",
+  "parentHead":"bf7043b117bf6ec7dd3197ee1ddaa65d615886c0",
+  "prefix":"evidence/20261021-canonical-local-r2-admitted",
+  "backupRepo":"F:/VisibleMedicine/history/website-work/github-canonical-r2-fix-20261021.git",
+  "branch":"backup/canonical-r2-fix-20261021",
+  "expectedBoundedPasses":18,
+  "includeProposalSources":false,
+  "canonicalAdmission":{
+    "file":"F:/VisibleMedicine/staging/20261021-canonical-local-r2-fix/ADMISSION.json",
+    "sha256":"3c30b97cde33005eb3b3e89e1cfc288f51d9cae486cb3b0bc1145709fa881e19",
+    "localOnlyGuardFile":"F:/VisibleMedicine/staging/20261021-canonical-local-r2-fix/PRIVATE_SOURCE_GUARDS.json"
+  },
+  "files":[
+    {"from":"F:/VisibleMedicine/website/scripts/stage-clinical-review-candidate-local.mjs","path":"canonical-developer/scripts/stage-clinical-review-candidate-local.mjs"},
+    {"from":"F:/VisibleMedicine/website/scripts/local-r2-persistence.mjs","path":"canonical-developer/scripts/local-r2-persistence.mjs"},
+    {"from":"F:/VisibleMedicine/website/tests/local-r2-persistence.test.mjs","path":"canonical-developer/tests/local-r2-persistence.test.mjs"},
+    {"from":"F:/VisibleMedicine/website/tests/local-preview-data-boundaries.test.mjs","path":"canonical-developer/tests/local-preview-data-boundaries.test.mjs"},
+    {"from":"F:/VisibleMedicine/staging/20261021-canonical-local-r2-fix/preimage/stage-clinical-review-candidate-local.mjs","path":"canonical-developer/preimage/stage-clinical-review-candidate-local.mjs"},
+    {"from":"F:/VisibleMedicine/staging/20261021-canonical-local-r2-fix/PREPARATION.json","path":"evidence/NATIVE_PREPARATION.json"},
+    {"from":"F:/VisibleMedicine/staging/20261021-canonical-local-r2-fix/ADMISSION.json","path":"evidence/NATIVE_ADMISSION.json"},
+    {"from":"F:/VisibleMedicine/staging/20261021-canonical-local-r2-fix/CANONICAL_LOCAL_R2.json","path":"evidence/CANONICAL_LOCAL_R2.json"},
+    {"from":"F:/VisibleMedicine/staging/20261021-source190-virtual-cutover-plan/LOCAL_TOOLING_ADMISSION_OVERLAY.json","path":"cutover/LOCAL_TOOLING_ADMISSION_OVERLAY.json"},
+    {"from":"prepare-canonical-local-r2-fix-20261021.mjs","path":"scripts/prepare-canonical-local-r2-fix-20261021.mjs"},
+    {"from":"verify-canonical-local-r2-fix-20261021.mjs","path":"scripts/verify-canonical-local-r2-fix-20261021.mjs"},
+    {"from":"checkpoint-owned-proposal-batch.mjs","path":"scripts/checkpoint-owned-proposal-batch.mjs"},
+    {"from":"canonical-r2-fix-checkpoint-20261021.json","path":"scripts/canonical-r2-fix-checkpoint-20261021.json"}
+  ],
+  "proof":{
+    "summary":"Four canonical JavaScript developer-tool/test paths admitted independently of the frozen whole-suite candidate: one source edit and three additions. Native4/4/0skip proves synthetic old-option loss versus corrected dispose/reopen persistence, absolute loopback options and actual ignore boundaries. No live model staging, runtime build/install, database copy/migration, auth change or preview restart was performed.",
+    "canonicalDeveloperToolingInstalled":true,
+    "canonicalAtlasUiInstalled":false,
+    "canonicalDeveloperNativeTests":4,
+    "canonicalDeveloperNativeTestsPassed":4,
+    "canonicalDeveloperNativeTestLogSha256":"90104003bdea937abb047fe1c12716b749c8f6b0f202cf52a7ecfe4f18f95849",
+    "countingNote":"Eighteen queued proposal registrations across six separate runs remain distinct from four actual-canonical developer tests. Not22 whole-suite/GPU/clinical tests. The unchanged nine-path proposal package is inherited from verified filtered parent, not redundantly copied again.",
+    "cutoverReadiness":"LOCAL_TOOLING_ADMISSION_OVERLAY.json explicitly accepts only four verified canonical postimages. Remaining virtual cutover206 changed/4896 identical/7 preserved of5109; previous generated six-directory/144GLB-path checks remain unchanged. Revalidate all other preimages and current coordinator snapshots before any later switch.",
+    "fullSuiteSession":37113,
+    "runnerPid":263984,
+    "testPid":271752,
+    "ownerPreviewPid":260328,
+    "sourceCandidateAndReviewBindingsUnchanged":true,
+    "unchangedModelObjects":137,
+    "all71ItemsAndEightIdeasPreserved":true,
+    "privateSourceGuardFileExcludedFromRemoteBackup":true
+  },
+  "next":"Keep full suite37113 running at frozen5107inputs/1710bindings. Nine-path V4 still proposal-only, and full runtime/Review/coverage UI cutover remains uninstalled. When genuinely terminal classify every failure, perform guarded V4 admission/focused actual-site checks/fresh TypeScript, then use the local-tooling postimage overlay on the recoverable cutover plan. Revalidate all other canonical/coordinator preimages and protect open drafts. No second heavy run, public/clinical/spatial release, private-data upload or whole-project-backup claim."
+}

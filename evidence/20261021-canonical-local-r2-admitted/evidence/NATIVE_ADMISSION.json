@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-21T07:24:50.734Z",
+  "stage": "F:/VisibleMedicine/staging/20261021-canonical-local-r2-fix",
+  "site": "F:/VisibleMedicine/website",
+  "source": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "changes": [
+    {
+      "path": "scripts/stage-clinical-review-candidate-local.mjs",
+      "beforeSha256": "95a49ed55e773e157a2951422005e67171f9457709dc5f8bb283f25d4b79d5b5",
+      "sha256": "daf8450193dda4b64d798e5989d1988f46530c325c3f4d71e1f5a2e3ecf1c868",
+      "bytes": 3861
+    },
+    {
+      "path": "scripts/local-r2-persistence.mjs",
+      "beforeSha256": null,
+      "sha256": "6e36899805273d4d8f916ace6605474c11e60c1c38c03b914a8886f07fc75c67",
+      "bytes": 688
+    },
+    {
+      "path": "tests/local-r2-persistence.test.mjs",
+      "beforeSha256": null,
+      "sha256": "e3c6aaa33544f2409b3df417bc2fab31f9de40fa7a7e4c6d20ba19f38ff62e37",
+      "bytes": 3370
+    },
+    {
+      "path": "tests/local-preview-data-boundaries.test.mjs",
+      "beforeSha256": null,
+      "sha256": "548542d2633abd2aec95e12709eb6611903417d9001a6f8c7195707264dbb435",
+      "bytes": 1127
+    }
+  ],
+  "canonicalDeveloperToolingInstalled": true,
+  "canonicalAtlasUiInstalled": false,
+  "canonicalHeadUnchanged": true,
+  "atlasHeadUnchanged": true,
+  "ownerPreviewPidUnchanged": 260328,
+  "reviewRevisionUnchanged": "b2bd971b5bfefdd0760f8f3c8785e372276e15dac9cc293ac8fde4cdfb7dcb54",
+  "frontendAndAuthSourceGuardsUnchanged": true,
+  "nativeTests": {
+    "receipt": "F:/VisibleMedicine/staging/20261021-canonical-local-r2-fix/CANONICAL_LOCAL_R2.json",
+    "receiptSha256": "7e056dfd54f0fc7143dafc0828112c87d13550ca958a412c98c013ea6cb1c375",
+    "logSha256": "90104003bdea937abb047fe1c12716b749c8f6b0f202cf52a7ecfe4f18f95849",
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "skipped": 0,
+    "scope": "Synthetic isolated old-vs-fixed R2 dispose/reopen readback, absolute loopback option checks and exact Git-ignore boundaries. The test runner itself does not install source; use this admission receipt for installation state."
+  },
+  "sourceCandidateNamedInputsPreserved": 5107,
+  "sourceCandidateReviewInputsPreserved": 1710,
+  "sourceCandidateSnapshotSha256": "2d3d4544ca39cb357edcf82dcbe414ea0ec77b619df69135fca983a5ece7b5f4",
+  "fullSuiteSession": 37113,
+  "fullSuiteRunningAtObservation": true,
+  "nativeActualModelStagingExecuted": false,
+  "liveR2OrDatabaseMigrated": false,
+  "privateDataCopied": false,
+  "permissionsChanged": false,
+  "clinicalDecisionsTouched": false,
+  "ownerPagesRefreshed": false,
+  "publicDeployment": false,
+  "clinicalApproval": false,
+  "spatialRegistration": false,
+  "references": [
+    "https://github.com/cloudflare/workers-sdk/blob/main/packages/miniflare/README.md#persistence",
+    "https://developers.cloudflare.com/workers/best-practices/workers-best-practices/"
+  ],
+  "scope": "Four JavaScript developer-tool/test files only. Active runtime/UI/Review, model inventory, environments, dependency versions, package/lock and private state unchanged. Canonical .gitignore was preserved byte-for-byte; its recorded EOL-only difference required explicit normalized-content verification. Initial preflight refusals occurred before any source edit. No assertion or actual private staging command was skipped/executed to obtain this pass."
+}

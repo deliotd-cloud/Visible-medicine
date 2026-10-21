@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T07:14:24.975Z",
+  "at": "2026-10-21T07:26:57.679Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "websiteInputCount": 5107,
     "proposalOnly": true
   },
-  "parent": "391000d530ec38aa17cea3e5502048215952934b",
-  "gitParent": "391000d530ec38aa17cea3e5502048215952934b",
+  "parent": "bf7043b117bf6ec7dd3197ee1ddaa65d615886c0",
+  "gitParent": "bf7043b117bf6ec7dd3197ee1ddaa65d615886c0",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -679,6 +679,81 @@
       "path": "evidence/20261021-atlas-source-assembly/source/scripts/test-regional-tour-player.mjs",
       "bytes": 126985,
       "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/canonical-developer/preimage/stage-clinical-review-candidate-local.mjs",
+      "bytes": 4096,
+      "sha256": "95a49ed55e773e157a2951422005e67171f9457709dc5f8bb283f25d4b79d5b5"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/canonical-developer/scripts/local-r2-persistence.mjs",
+      "bytes": 688,
+      "sha256": "6e36899805273d4d8f916ace6605474c11e60c1c38c03b914a8886f07fc75c67"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/canonical-developer/scripts/stage-clinical-review-candidate-local.mjs",
+      "bytes": 3861,
+      "sha256": "daf8450193dda4b64d798e5989d1988f46530c325c3f4d71e1f5a2e3ecf1c868"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/canonical-developer/tests/local-preview-data-boundaries.test.mjs",
+      "bytes": 1127,
+      "sha256": "548542d2633abd2aec95e12709eb6611903417d9001a6f8c7195707264dbb435"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/canonical-developer/tests/local-r2-persistence.test.mjs",
+      "bytes": 3370,
+      "sha256": "e3c6aaa33544f2409b3df417bc2fab31f9de40fa7a7e4c6d20ba19f38ff62e37"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/cutover/LOCAL_TOOLING_ADMISSION_OVERLAY.json",
+      "bytes": 1888,
+      "sha256": "9ff4d28340a84f3af873e7b562ec9eba3d6495c76cf944ab115484ef26a6c431"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/evidence/BATCH.json",
+      "bytes": 8876,
+      "sha256": "ed335291e5cf7ac4f2e7bec30c4cf49a37ba212d59118cc19ed5450adde7521d"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/evidence/CANONICAL_LOCAL_R2.json",
+      "bytes": 559,
+      "sha256": "7e056dfd54f0fc7143dafc0828112c87d13550ca958a412c98c013ea6cb1c375"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/evidence/NATIVE_ADMISSION.json",
+      "bytes": 3299,
+      "sha256": "3c30b97cde33005eb3b3e89e1cfc288f51d9cae486cb3b0bc1145709fa881e19"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/evidence/NATIVE_PREPARATION.json",
+      "bytes": 1696,
+      "sha256": "b3d35966801aa05bb172437819648384b64e6f10050ee64f9052fa95294364a8"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/evidence/PROOF.json",
+      "bytes": 2467,
+      "sha256": "cd6e8a09371af88bcc6f12387d757d49274c367d53d76931492b7b473350a3e2"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/scripts/canonical-r2-fix-checkpoint-20261021.json",
+      "bytes": 5043,
+      "sha256": "345a7e47fce539114e477cf8d41cd0e47cbfd4642fec0bebae12fb95597057ac"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/scripts/checkpoint-owned-proposal-batch.mjs",
+      "bytes": 7129,
+      "sha256": "ab4fefd2e9ddc550f719f2471af7507de8a27f22b41caf9fd6a0eb49640539c9"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/scripts/prepare-canonical-local-r2-fix-20261021.mjs",
+      "bytes": 4795,
+      "sha256": "170f3a1736aef2dee523f61d471f9acaf1343c3eceee9044ccafd90f240a8a7c"
+    },
+    {
+      "path": "evidence/20261021-canonical-local-r2-admitted/scripts/verify-canonical-local-r2-fix-20261021.mjs",
+      "bytes": 5472,
+      "sha256": "330b18a79cee77e255cb779be20103deb5ce9e7fc2b1f7bef23befe0cfaf2356"
     },
     {
       "path": "evidence/20261021-clinical-assurance-ready/evidence/ASSEMBLY_CHECKOUT_SYNTAX.json",
@@ -6124,17 +6199,23 @@
   "removed": [],
   "scope": "Explicit owned test-source proposals/exact preimages, small receipts, read-only cutover summary and controls on previously filtered ancestry. NOT installed or a full-suite pass. No raw canonical history, full private modules/manifests, model geometry/full runtimes, private DB/records/identities/decisions/env, scans/masks, dependencies or browser media/DOM. No test harness junctions packaged. Not a complete runnable/private backup, release or clinical/spatial approval.",
   "proof": {
-    "summary": "V4 nine-path proposal batch retains every original historical/current theorem and all complete source inverses. Three shared-viewer native cases pass, including exact original emitted assertions and two missing-emission refusals, added to prior15 separate bounded passes. Original ENOBUFS retained; explicit bounded historical Git read fixes capacity, not assertions.",
-    "countingNote": "Eighteen outer native registrations across six separate runs; coverage wrapper separately verifies four original historical children. Not one full-suite or production/GPU acceptance result.",
-    "cutoverReadiness": "Read-only virtual plan:210 changed,4892 identical,7 preserved named paths out of projected5109. Six generated directory scopes, no unexpected files; all144 generated GLB paths hash-match current canonical and137 known model objects. Canonical Atlas clean fast-forward possible; private plexus code unchanged. No install or preview stop; all actual gates still required.",
-    "sourceAndModelsUnchanged": true,
-    "freshTypesStillRequired": true,
+    "summary": "Four canonical JavaScript developer-tool/test paths admitted independently of the frozen whole-suite candidate: one source edit and three additions. Native4/4/0skip proves synthetic old-option loss versus corrected dispose/reopen persistence, absolute loopback options and actual ignore boundaries. No live model staging, runtime build/install, database copy/migration, auth change or preview restart was performed.",
+    "canonicalDeveloperToolingInstalled": true,
+    "canonicalAtlasUiInstalled": false,
+    "canonicalDeveloperNativeTests": 4,
+    "canonicalDeveloperNativeTestsPassed": 4,
+    "canonicalDeveloperNativeTestLogSha256": "90104003bdea937abb047fe1c12716b749c8f6b0f202cf52a7ecfe4f18f95849",
+    "countingNote": "Eighteen queued proposal registrations across six separate runs remain distinct from four actual-canonical developer tests. Not22 whole-suite/GPU/clinical tests. The unchanged nine-path proposal package is inherited from verified filtered parent, not redundantly copied again.",
+    "cutoverReadiness": "LOCAL_TOOLING_ADMISSION_OVERLAY.json explicitly accepts only four verified canonical postimages. Remaining virtual cutover206 changed/4896 identical/7 preserved of5109; previous generated six-directory/144GLB-path checks remain unchanged. Revalidate all other preimages and current coordinator snapshots before any later switch.",
     "fullSuiteSession": 37113,
     "runnerPid": 263984,
     "testPid": 271752,
     "ownerPreviewPid": 260328,
+    "sourceCandidateAndReviewBindingsUnchanged": true,
+    "unchangedModelObjects": 137,
     "all71ItemsAndEightIdeasPreserved": true,
-    "at": "2026-10-21T07:14:20.005Z",
+    "privateSourceGuardFileExcludedFromRemoteBackup": true,
+    "at": "2026-10-21T07:26:52.748Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "currentNamedInputs": 5107,

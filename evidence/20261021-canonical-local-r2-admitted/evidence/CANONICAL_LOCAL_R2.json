@@ -1,0 +1,22 @@
+{
+  "label": "CANONICAL_LOCAL_R2",
+  "command": "node",
+  "args": [
+    "--test",
+    "tests/local-r2-persistence.test.mjs",
+    "tests/local-preview-data-boundaries.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-canonical-local-r2-fix/CANONICAL_LOCAL_R2.log",
+  "logSha256": "90104003bdea937abb047fe1c12716b749c8f6b0f202cf52a7ecfe4f18f95849",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

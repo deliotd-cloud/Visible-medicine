@@ -1,0 +1,180 @@
+{
+  "at": "2026-10-21T07:12:22.907Z",
+  "stage": "F:/VisibleMedicine/staging/20261021-revision-guard-batch-v4",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "previousSourceInputs": 5107,
+  "proposedSourceInputs": 5109,
+  "changes": [
+    {
+      "path": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/anatomy-coverage-revision-admission.test.mjs",
+      "beforeSha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1",
+      "sha256": "7484378b8c4e8dc91d2d4a3c7f5d58b772c90e8d9b2b2aeaf8f8ebe4ae9dc8da",
+      "bytes": 4090
+    },
+    {
+      "path": "tests/current-190-coverage.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/current-190-coverage.test.mjs",
+      "beforeSha256": null,
+      "sha256": "5ec7577052250b5e6cc7a772b2e4b7fdedc04bf0091a85317dcbb96253718234",
+      "bytes": 4633
+    },
+    {
+      "path": "tests/fixtures/closed485-original/anatomy-coverage-revision-admission.test.mjs.raw",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/fixtures/closed485-original/anatomy-coverage-revision-admission.test.mjs.raw",
+      "beforeSha256": null,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1",
+      "bytes": 17502
+    },
+    {
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-arterial-evidence-limits.test.mjs",
+      "beforeSha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a",
+      "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6",
+      "bytes": 17250
+    },
+    {
+      "path": "tests/arterial-history-preservation.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/arterial-history-preservation.test.mjs",
+      "beforeSha256": "5333cc9866b6d7bbf84d3c3790d8012cd9189f1639030f6812e62c9f56225225",
+      "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596",
+      "bytes": 3838
+    },
+    {
+      "path": "tests/atlas-guided-camera.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-guided-camera.test.ts",
+      "beforeSha256": "a16d5b0ff30905c035a327752e9a4829449fab0eb6c470d308cfd74a8f501221",
+      "sha256": "31ca6f0b7bc7aa2fd079ac3ad50617de491e4fd2723cc20560d65395d156506c",
+      "bytes": 9477
+    },
+    {
+      "path": "tests/atlas-keyboard-modules.test.ts",
+      "beforeSha256": "c51ddcb68911a77154846e14459e666b1c2199dc466feda3d4c497b4fbf3275c",
+      "sha256": "6988cd068f47729143dffa7ff33f16db9293d78c098a54ca9961821485e9fa70",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-keyboard-modules.test.ts",
+      "bytes": 7003
+    },
+    {
+      "path": "tests/atlas-label-keyboard.test.ts",
+      "beforeSha256": "17aaee37c397e5660a77842f881a773651c239aa0025be9740feee2d4618c2a5",
+      "sha256": "3c96b803580556775d34863291a0043f233c1e663be93dcc4d65a50230269f19",
+      "from": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-label-keyboard.test.ts",
+      "bytes": 5368
+    },
+    {
+      "path": "tests/atlas-shared-viewer-accessibility.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/v2/tests/atlas-shared-viewer-accessibility.test.ts",
+      "beforeSha256": "4819f71d184b9651507ffbab10cb3bff42076333eb1375807e669c2524ce3141",
+      "sha256": "bf37a2e16233e47cde10ce15cc03c52ecf8a6033047dfdba09f73703f86ca5e6",
+      "bytes": 7307
+    }
+  ],
+  "receipts": [
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/COVERAGE_NATIVE_EPOCHS.json",
+      "sha256": "db4d80f53707053b71130bd40c66503f1d50a6ce9293d660b9dfd8f268d809db",
+      "label": "COVERAGE_NATIVE_EPOCHS",
+      "footer": [
+        "ℹ tests 3",
+        "ℹ pass 3",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "b160faa266a44cdbfba22bac0a8e88d9454a34050c401d3bc50d3a662050d2c2"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/ARTERIAL190_GRAPH_WITNESS.json",
+      "sha256": "054f5995b4b728774272c57ddfc93f8838c34eca9973a3b0b709815b51a4cec9",
+      "label": "ARTERIAL190_GRAPH_WITNESS",
+      "footer": [
+        "ℹ tests 1",
+        "ℹ pass 1",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "be6cd12fdb9f860e4ed8ad08b1cff251ca666dc8d6a222c820c3684db6afea2a"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/ARTERIAL190_WHOLE_HISTORY.json",
+      "sha256": "7acd27dd4f9537ff0eaabbf4cad0fcdb1c26792a54922d34aee3eb246e344a3f",
+      "label": "ARTERIAL190_WHOLE_HISTORY",
+      "footer": [
+        "ℹ tests 1",
+        "ℹ pass 1",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "c55c6838f8c3f9f0223c1008ee09f95759d5c377607d17cbde24ac709f8503c5"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-camera-zoom-contract-proposal/CAMERA_LEGACY_CURRENT_ZOOM.json",
+      "sha256": "9d7f74250cd6a22411c4e2a2c836361fa5473e44b4a37d0ebeac3ba963d9c7f2",
+      "label": "CAMERA_LEGACY_CURRENT_ZOOM",
+      "footer": [
+        "ℹ tests 4",
+        "ℹ pass 4",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "40c709ca7a2bed7d94eac3bdd77535400787ee785cf5ba18a1e9b6147d188a01"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-keyboard-epoch-native-proof-v2/KEYBOARD_CURRENT_HISTORY_V2.json",
+      "sha256": "7fb3814bc2d4c1dbe3122e911839147ec868c77b29669e38fd2cfcf178d5fceb",
+      "label": "KEYBOARD_CURRENT_HISTORY_V2",
+      "footer": [
+        "ℹ tests 6",
+        "ℹ pass 6",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "a5b4be55ce404061d7194a2280ed4c07fb2be98135949eef2b14e706b315bbf5"
+    },
+    {
+      "file": "F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/v2/SHARED_VIEWER_KEYBOARD_EPOCH_V2.json",
+      "sha256": "de94975eef713e429c10d3ab656f56f70c5cb2d09530eb1abc3ee78e9cae141f",
+      "label": "SHARED_VIEWER_KEYBOARD_EPOCH_V2",
+      "footer": [
+        "ℹ tests 3",
+        "ℹ pass 3",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "logSha256": "1912aef5c02c923155c170e0c57fede569f20678d7f9d0cb6b498564b04ae0f4"
+    }
+  ],
+  "scope": "Nine test-only paths: seven existing plus two new. Eighteen outer registrations across six separate successful native runs, not one whole-suite pass. Historical coverage wrapper additionally verifies four unchanged child tests. New shared-viewer test retains original emitted assertions at exact f2f7/88cea bytes, uses source-bound current checks independent of minifier local names, and refuses missing emitted step/listener paths. Its first ENOBUFS attempt remains retained; exact historic bundle read now has32MB bounded capacity. Complete original test-source inverse is verified. No application, model, access or clinical data changes.",
+  "limits": "No new learner/Review/runtime/geometry/access dependency. The whole standalone seven-case arterial module has not been rerun after this test-only proposal; its five expensive unchanged bodies already ran in the frozen complete suite. Full suite still pending; NOT post-fix whole-suite acceptance or source installation. Changed TypeScript camera test requires fresh types after heavy slot is released. Earlier v1 batch is superseded; do not apply it.",
+  "freshTypesRequiredBeforeCutover": true,
+  "candidateEdited": false,
+  "canonicalInstalled": false,
+  "privateDataCopied": false,
+  "publicDeployment": false,
+  "supersedes": "F:/VisibleMedicine/staging/20261021-revision-guard-batch-v3",
+  "wholeOriginalKeyboardSourcesReconstructed": true,
+  "keyboardOriginalHashes": [
+    {
+      "path": "tests/atlas-keyboard-modules.test.ts",
+      "sha256": "c51ddcb68911a77154846e14459e666b1c2199dc466feda3d4c497b4fbf3275c"
+    },
+    {
+      "path": "tests/atlas-label-keyboard.test.ts",
+      "sha256": "17aaee37c397e5660a77842f881a773651c239aa0025be9740feee2d4618c2a5"
+    }
+  ]
+}
