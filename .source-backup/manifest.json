@@ -1,13 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T21:40:29.797Z",
+  "at": "2026-10-21T22:04:16.746Z",
   "sourceIdentity": {
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "atlasHead": "0dfce15890cafc0a2b8e309193531daa29a672ed",
-    "review": "c4a5647ec3e0047013747d1810b87939a1b8472cb5e334659f5f64ae961d5db3"
+    "installedAtlas": "0dfce15890cafc0a2b8e309193531daa29a672ed",
+    "candidateAtlas": "fa1bf9a233c6989fef42b533bbbac9d6ab034311",
+    "candidateTree": "5418fc0ba22673c086edea7afe13617e34e69f98",
+    "installedReview": "c4a5647ec3e0047013747d1810b87939a1b8472cb5e334659f5f64ae961d5db3"
   },
-  "parent": "3d72131a3efc7f86c00534e5cc3620c3472a38a9",
-  "gitParent": "3d72131a3efc7f86c00534e5cc3620c3472a38a9",
+  "parent": "5882184f3ec7d20ab9a5529aefbe2b8717bb05f3",
+  "gitParent": "5882184f3ec7d20ab9a5529aefbe2b8717bb05f3",
   "files": [
     {
       "path": "app/globals.css",
@@ -12285,6 +12287,26 @@
       "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
     },
     {
+      "path": "pending/desktop-drawable-space-20261021/atlas/app/body-explorer.css",
+      "bytes": 65201,
+      "sha256": "9722246697fafcd54f55e586797eaec33930c5f3f87d653117b064787ebe2904"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/atlas/content/body-renderer-revision.json",
+      "bytes": 215244,
+      "sha256": "d27e2f126342552a6ee9fd5ec85ea58fb0f7184f56a2e2f5980b2f374f063adb"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/atlas/scripts/fixtures/body-drawable-space-original.css.raw",
+      "bytes": 64441,
+      "sha256": "9834c72543476b41ba5acb5a47427dced3596d56320c59502d91f9e9e2524dca"
+    },
+    {
+      "path": "pending/desktop-drawable-space-20261021/atlas/scripts/test-body-drawable-space.mjs",
+      "bytes": 3173,
+      "sha256": "16f289693d8434b0697fcb8f2efb186ac9c2b452c383a8c4399fa500d2428cba"
+    },
+    {
       "path": "pending/desktop-learning-row-20261021/website/components/atlas-body-learning.css",
       "bytes": 2339,
       "sha256": "e67cb7c1ef4952eb6d94027a24b040d748de8feb4e4795f2757e71c5a3c42ea9"
@@ -13046,18 +13068,22 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently restored filtered source selection plus 11 explicitly selected desktop teaching-row component/test paths. Binding witness is relative source paths and SHA-256 digests only. Partial source recovery, not whole/private/runnable project recovery. No scans, masks, pixels, model meshes, identifiers, private runtime modules, notes, decisions, credentials, environment, databases, raw logs, media or raw canonical Git ancestry.",
+  "scope": "Inherited independently restored filtered selection plus four explicit staged Atlas CSS, renderer-relative hash metadata and regression-test/raw CSS paths. Partial source recovery only, not whole/private/runnable recovery. Candidate not installed. No scans, masks, pixels, model meshes, identifiers, private runtime modules, notes, decisions, credentials, environment, databases, raw logs, media or raw canonical Git ancestry.",
   "proof": {
-    "installedLocally": true,
-    "combinedConsumerChecks": 281,
-    "focusedCanonicalChecks": 19,
+    "installedLocally": false,
+    "stagedSourceVerified": true,
+    "densityAndChannelTests": 9,
+    "cameraResizeInternalChecks": 27,
+    "cameraZoomInternalChecks": 414,
     "fullTypes": true,
-    "fullBuild": true,
-    "reviewBindings": 1719,
-    "importedSources": 1556,
-    "atlasAndModelsUnchanged": true,
-    "accessAndQuizGatesUnchanged": true,
+    "containedBuild": true,
+    "officialContainedExport": true,
+    "sourcePaths": 4,
+    "exactCommittedInputs": 6245,
+    "modelFilesUnchanged": 136,
+    "modelMembershipAndBundlesUnchanged": true,
     "clinicalApproval": false,
+    "spatialRegistration": false,
     "publicDeployment": false,
     "wholeSuitePassing": false,
     "wholeProjectBackup": false,
