@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-linked-tour-dismiss-successor',sourcePath=root+'/TEST_READY_SOURCE.json',source=json(sourcePath),original=json(root+'/SOURCE.json');
+assert.equal(source.nonTestProductBytesChanged,0);assert.equal(source.sourcePaths,6113);
+const result={...source,changedProductPaths:original.changedProductPaths,reviewBindingUnchanged:true,historicalMigrationAppliedInIsolation:true,originalHistoricalFailureRetained:true};
+const finalPath=root+'/READY_SOURCE.json';fs.writeFileSync(finalPath,JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+const tests=['head-learning-picker.test.ts','head-learning-navigation.test.ts','head-linked-navigation-regressions-20261009.test.ts','head-atlas-comparison.test.ts','head-comparison-compact-ui.test.mjs','head-comparison-revision.test.ts','head-ct-facial-navigation-status.test.mjs','head-link-availability.test.ts','head-model-blank-recovery.test.mjs','structure-learning-ui.test.ts','related-lecture-entrypoints.test.ts','guided-lecture-ui.test.ts','head-learning-picker-dismiss.test.mjs','head-manual-recovery-migration.test.mjs','live-learning-consumer-loader-preservation.test.mjs','atlas-runtime-expansion-adoption-proof.test.mjs'].map(name=>'tests/'+name);
+fs.writeFileSync(root+'/NATIVE_PLAN.json',JSON.stringify({sourceReceipt:finalPath,sourceReceiptSha256:sha(read(finalPath)),tests,evidence:root+'/native-integration',scope:'Existing linked-tour selection/navigation/availability/history consumers, new dismissal behaviors and original historical migration/loader/expansion proofs. No whole-suite, live-practice or clinical approval.'},null,2)+'\n',{flag:'wx'});
+const pointer=json('CURRENT_CHECKPOINT.json');Object.assign(pointer.activeWork.current,{currentCandidate:source.website,sourceReceipt:finalPath,sourceReceiptSha256:sha(read(finalPath)),sourcePaths:source.sourcePaths});fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(pointer,null,2)+'\n');
+console.log(JSON.stringify({sourceReceipt:finalPath,sha256:sha(read(finalPath)),sourcePaths:source.sourcePaths,nativeRoots:tests.length,ownerPreviewChanged:false}));

@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T11:25:28.919Z",
+  "at": "2026-10-22T11:42:23.907Z",
   "sourceIdentity": {
     "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "isolatedReview": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a"
   },
-  "parent": "36beb9fd6ac6dc18c220a5cb443d27dcc928ae17",
-  "gitParent": "36beb9fd6ac6dc18c220a5cb443d27dcc928ae17",
+  "parent": "4fa641bee1da51a2ef6ed59e6390ef327401dc1f",
+  "gitParent": "4fa641bee1da51a2ef6ed59e6390ef327401dc1f",
   "files": [
     {
       "path": "app/globals.css",
@@ -15865,6 +15865,96 @@
       "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
     },
     {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/components/HeadAtlasLearningPicker.tsx",
+      "bytes": 4790,
+      "sha256": "38f0385f393dc2e1a65c2af33c843cca0e25f4d4903bb3dcffc3866cdfbcd4a0"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/tests/head-learning-picker-dismiss.test.mjs",
+      "bytes": 7865,
+      "sha256": "113f62c9f89916af407d885d81aa44e3adffdbaa514b29ab50752553c446de89"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/RAW/build-unbound-ui-successor.before-picker.mjs",
+      "bytes": 4470,
+      "sha256": "c01afb80a081acc69a05676e89351917ba66387ae7a4ba3f73e21192840e97d1"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/RAW/head-learning-picker-dismiss.test.mjs.preimage",
+      "bytes": 7886,
+      "sha256": "9f80461b5716a6b4e2d6165bdaf47b849ee58d98be5674a6bf56de334145a1a8"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/RAW/HeadAtlasLearningPicker.tsx.preimage",
+      "bytes": 4123,
+      "sha256": "ae3f13d3c420c8deeeb787667304c7ec95415a010334d92fa8f30892ae82d09e"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/CODE/tests/atlas-runtime-expansion-adoption-proof.test.mjs",
+      "bytes": 4439,
+      "sha256": "21292691505e9db1aae22bb1b2ea3efb7e92c5d6e2d6a533ca747908bf63a502"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/CODE/tests/live-learning-migration-consumer-inverse.mjs",
+      "bytes": 2244,
+      "sha256": "5fa9c9c30d30f9324c5b58af158b1eb54a434ee8eba9293e88bcca9b47783775"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/inspect-source.mjs",
+      "bytes": 2685,
+      "sha256": "624a7d6bef1af83c835edb6b3929e203861294649ff2293687dcf1d6f5322045"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/atlas-runtime-expansion-adoption-proof.test.mjs.raw",
+      "bytes": 4071,
+      "sha256": "8e260374718c266b434234478ed32d14b91402bfdfb878e7126b62ad06777784"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/live-learning-consumer-loader-preservation.test.mjs.raw",
+      "bytes": 6061,
+      "sha256": "0061b458a0b0a4b079264d5d945d871a387fafa997e1b779278de0f016ed54f2"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/coordination/build-unbound-ui-successor.mjs",
+      "bytes": 4566,
+      "sha256": "047d7da1bfc1109ad30c826144d06e8db761f0b3e937df9429fb3066dc969ac0"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/coordination/checkpoint-linked-tour-dismiss-20261022.mjs",
+      "bytes": 10077,
+      "sha256": "315e7cf1a7929c043278ff0c0d6f0e6a2598c30c38fa733369000be64f419ba7"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/coordination/prepare-linked-tour-dismiss-checks-20261022.mjs",
+      "bytes": 2356,
+      "sha256": "447a3dafbb8857db3f29cbd8f06c980e5393df7709fdba4e51a10b9dcba46b4d"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/coordination/prepare-linked-tour-dismiss-native-20261022.mjs",
+      "bytes": 2243,
+      "sha256": "0922af1a0eaaac0d5e8e07079ad0605c625bcafa426e50f2d01720348c68dd3d"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/coordination/qa-linked-tour-dismiss-20261022/entry.jsx",
+      "bytes": 2053,
+      "sha256": "e8c2f843a81a965180dad69215c244678859021f3585bd61f48e948a8818db78"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/coordination/qa-linked-tour-dismiss-20261022/mappings.jsx",
+      "bytes": 1650,
+      "sha256": "72b999537941272fe93e0a5100d1eb6c4eb9b5f9bcddf4e054b6431bcb0263c5"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/coordination/record-linked-tour-dismiss-browser-20261022.mjs",
+      "bytes": 2666,
+      "sha256": "7b5aa58ec30e5a3e463c658bfe840deb805717a54098b51355b6691e6f3b2b3e"
+    },
+    {
+      "path": "pending/linked-tour-dismiss-20261022/coordination/serve-linked-tour-dismiss-specimen-20261022.mjs",
+      "bytes": 4729,
+      "sha256": "5c4f2e4ee15dad827915a93d695f22a05ae893dca8cb3c79f8cf4c6785efea1d"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/craniofacial-ct-current-delivery.test.mjs",
       "bytes": 9929,
       "sha256": "5d3b6ce69f3db7e91eacca50c78e76d91dc6f2648f5f8232ca097358dd1c5e92"
@@ -20446,46 +20536,27 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus isolated Studio explicit focus/draft-preserving controls, exact preimages and test-harness/current-historical role sources, staged head-tool regression proposals, local QA and recovery helpers. Generated binding/pin JSON, private records/DB/env/decisions/references, held assets, scans/models/masks, raw logs/media and canonical Git ancestry are excluded. Not full/private/runnable recovery or installation.",
+  "scope": "Inherited filtered source plus unbound linked-tour dismissal, exact preimages, remaining historical migration consumer composition and local verification/QA/recovery helpers. Generated binding/pin JSON, private records/DB/env/decisions/references, held assets, scans/models/masks, raw logs/media and canonical Git ancestry are excluded. Not full/private/runnable recovery, deployment or installation.",
   "proof": {
-    "sourceReceiptSha256": "f04f3dbcbb43ab16fdc3926c799f6a1d8b743e0a9b7f4ff1d6e557fd1aefccfd",
-    "sourcePaths": 6110,
-    "studioNative": {
-      "tests": 84,
-      "pass": 84,
+    "sourceReceiptSha256": "d72ddc1094db40b0a44cd1192f2362ca89b43a80c460a4423b401a7f61272013",
+    "sourcePaths": 6113,
+    "reviewUnchanged": true,
+    "changedProductPaths": [
+      "components/HeadAtlasLearningPicker.tsx"
+    ],
+    "native": {
+      "tests": 77,
+      "pass": 77,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "originalStudioCounts": {
-      "tests": 84,
-      "pass": 80,
-      "fail": 4
-    },
-    "widerHeadCounts": {
-      "tests": 669,
-      "pass": 661,
-      "fail": 8,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "headFocusedCounts": {
-      "tests": 73,
-      "pass": 72,
-      "fail": 1,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "eightOriginalHeadFailuresResolvedInFocusedRun": true,
-    "additionalHistoricalFailurePredatesUi": true,
-    "unappliedMigrationProposal": true,
-    "finalTypesPassed": true,
+    "historicalMigrationAndDirectConsumersPassed": true,
     "qualityPassed": true,
-    "desktopSyntheticGroups": 10,
-    "realScanOrSignedInWorkflow": false,
+    "desktopSyntheticGroups": 8,
+    "livePracticeSessionTested": false,
+    "nativeNewTabWorkflowTested": false,
     "ownerPreviewUnchanged": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,

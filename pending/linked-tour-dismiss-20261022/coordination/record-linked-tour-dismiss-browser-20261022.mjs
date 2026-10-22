@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import net from 'node:net';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-linked-tour-dismiss-successor',stage=root+'/browser-specimen',sourcePath=root+'/READY_SOURCE.json';
+const source=json(sourcePath),inputs=json(stage+'/INPUTS.json'),observed=json(stage+'/OBSERVED.json');
+assert.equal(sha(read(sourcePath)),'d72ddc1094db40b0a44cd1192f2362ca89b43a80c460a4423b401a7f61272013');assert.equal(inputs.sourceReceiptSha256,sha(read(sourcePath)));
+for(const row of source.sourceRows)assert.equal(sha(read(source.website+'/'+row.path)),row.sha256,row.path);
+for(const row of inputs.inputs)assert.equal(sha(read(row.path)),row.sha256,row.path);for(const row of inputs.generated)assert.equal(sha(read(stage+row.path)),row.sha256,row.path);
+assert.equal(Object.keys(observed.checks).length,8);for(const [group,checks] of Object.entries(observed.checks))for(const [name,value] of Object.entries(checks))assert.equal(value,true,group+'/'+name);
+assert.deepEqual(observed.viewport,{width:1280,height:720});assert.equal(observed.consoleWarningsOrErrors,0);assert.equal(observed.ownedTabClosed,true);assert.equal(observed.ownedServerStopped,true);
+await new Promise((resolve,reject)=>{const socket=net.connect({host:'127.0.0.1',port:3015});socket.setTimeout(1500);socket.once('connect',()=>{socket.destroy();reject(Error('Owned specimen listener still active'));});socket.once('error',error=>error.code==='ECONNREFUSED'?resolve():reject(error));socket.once('timeout',()=>{socket.destroy();reject(Error('Unverified specimen teardown'));});});
+const result={at:new Date().toISOString(),sourceReceipt:sourcePath,sourceReceiptSha256:sha(read(sourcePath)),inputs:{path:stage+'/INPUTS.json',sha256:sha(read(stage+'/INPUTS.json'))},observations:{path:stage+'/OBSERVED.json',sha256:sha(read(stage+'/OBSERVED.json'))},accessibilityTree:{path:stage+'/final-a11y-tree.txt',sha256:sha(read(stage+'/final-a11y-tree.txt')),method:'Saved exact inline browser-tool text; no screenshot or assistive-technology certification.'},...observed,livePracticeSessionTested:false,signedInEndToEndTested:false,nativeNewTabWorkflowTested:false,screenReaderCertification:false,wholeWebsiteAcceptance:false,clinicalApproval:false,ownerPreviewChanged:false,canonicalInstalled:false,publicDeployment:false};
+fs.writeFileSync(stage+'/BROWSER_RESULT.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({receipt:stage+'/BROWSER_RESULT.json',sha256:sha(read(stage+'/BROWSER_RESULT.json')),groups:8,ownedServerStopped:true,ownerPreviewChanged:false}));

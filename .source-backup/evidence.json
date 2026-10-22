@@ -1,42 +1,23 @@
 {
-  "sourceReceiptSha256": "f04f3dbcbb43ab16fdc3926c799f6a1d8b743e0a9b7f4ff1d6e557fd1aefccfd",
-  "sourcePaths": 6110,
-  "studioNative": {
-    "tests": 84,
-    "pass": 84,
+  "sourceReceiptSha256": "d72ddc1094db40b0a44cd1192f2362ca89b43a80c460a4423b401a7f61272013",
+  "sourcePaths": 6113,
+  "reviewUnchanged": true,
+  "changedProductPaths": [
+    "components/HeadAtlasLearningPicker.tsx"
+  ],
+  "native": {
+    "tests": 77,
+    "pass": 77,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "originalStudioCounts": {
-    "tests": 84,
-    "pass": 80,
-    "fail": 4
-  },
-  "widerHeadCounts": {
-    "tests": 669,
-    "pass": 661,
-    "fail": 8,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "headFocusedCounts": {
-    "tests": 73,
-    "pass": 72,
-    "fail": 1,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "eightOriginalHeadFailuresResolvedInFocusedRun": true,
-  "additionalHistoricalFailurePredatesUi": true,
-  "unappliedMigrationProposal": true,
-  "finalTypesPassed": true,
+  "historicalMigrationAndDirectConsumersPassed": true,
   "qualityPassed": true,
-  "desktopSyntheticGroups": 10,
-  "realScanOrSignedInWorkflow": false,
+  "desktopSyntheticGroups": 8,
+  "livePracticeSessionTested": false,
+  "nativeNewTabWorkflowTested": false,
   "ownerPreviewUnchanged": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
