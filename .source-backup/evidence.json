@@ -1,38 +1,21 @@
 {
   "focusedCounts": {
-    "neck-native": {
-      "tests": 8,
-      "pass": 8,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0
-    },
-    "gap-tools": {
-      "tests": 5,
-      "pass": 5,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0
-    },
-    "regional-freshness": {
-      "tests": 21,
-      "pass": 21,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0
-    }
+    "tests": 80,
+    "pass": 80,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
   },
   "fullTypesPassed": true,
   "productionBuildPassed": true,
+  "reviewBindingUnchanged": true,
   "sourceDrift": [],
-  "changedLessons": 3,
-  "unrelatedPlacementsPreserved": 9933,
-  "sourceIdentityRefusals": 121,
-  "staleApprovalRefused": true,
-  "liveBrowserAcceptance": false,
+  "syntheticBrowserCases": 11,
+  "signedInAcceptance": false,
+  "humanAssistiveTechnologyCertification": false,
   "wholeSuitePassing": false,
   "ownerPreviewChanged": false,
   "clinicalApproval": false,
-  "spatialRegistration": false,
   "publicDeployment": false
 }

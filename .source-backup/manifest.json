@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T12:14:15.933Z",
+  "at": "2026-10-22T12:42:27.262Z",
   "sourceIdentity": {
-    "selectedWebsiteReceiptSha256": "d72ddc1094db40b0a44cd1192f2362ca89b43a80c460a4423b401a7f61272013",
-    "atlasCandidate": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
-    "atlasCandidateTree": "25acdee40ee57e0253cdcca924aa64b4b38586c8",
+    "websiteReceiptSha256": "7ecb9d226386b8f31dcb8949fca8084d55a2d1d64fee9cfa43a7579426959b52",
+    "review": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a",
+    "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1"
   },
-  "parent": "d17b60dfa5619bcc40239c8dfc29247994ce8492",
-  "gitParent": "d17b60dfa5619bcc40239c8dfc29247994ce8492",
+  "parent": "5846868f4413a844b9c0e818a2e72cd8fe75ff28",
+  "gitParent": "5846868f4413a844b9c0e818a2e72cd8fe75ff28",
   "files": [
     {
       "path": "app/globals.css",
@@ -19341,6 +19341,46 @@
       "sha256": "90e3ed54b165183ba91285542c82435a04af2851e6ea6ddadee62d539c6dc461"
     },
     {
+      "path": "pending/review-return-refresh-20261022/coordination/checkpoint-review-return-refresh-20261022.mjs",
+      "bytes": 8893,
+      "sha256": "919734a5917daf82a9a86c5af0c79b1395fbf6b5a38a292de5fdab1a8ff48178"
+    },
+    {
+      "path": "pending/review-return-refresh-20261022/coordination/prepare-review-return-refresh-20261022.mjs",
+      "bytes": 2634,
+      "sha256": "65d57d54615abe8a170b24cefa94b8231786fc80bb3e6fed838ec74cad1b7d80"
+    },
+    {
+      "path": "pending/review-return-refresh-20261022/coordination/qa-review-return-refresh-20261022/check-browser.js",
+      "bytes": 6242,
+      "sha256": "eba0d475a8a627e79c16a613706f2ca4750d62bb554fae458388c4e52c8d9817"
+    },
+    {
+      "path": "pending/review-return-refresh-20261022/coordination/qa-review-return-refresh-20261022/entry.jsx",
+      "bytes": 3763,
+      "sha256": "96f583014df7a2da189dd5e14186d126afc3a8b7927162864ff117fd34276cf7"
+    },
+    {
+      "path": "pending/review-return-refresh-20261022/coordination/serve-review-return-refresh-20261022.mjs",
+      "bytes": 4552,
+      "sha256": "725e1d1a17082e7ba65fd3e81e6d61b439d51d2418c8fb7af53ec4a79276e95e"
+    },
+    {
+      "path": "pending/review-return-refresh-20261022/RAW/ClinicalReviewInbox.tsx",
+      "bytes": 30144,
+      "sha256": "603abf828d584b3cc28e20192dfe37d7fc43799fa2f47599bab3cd73dae8456a"
+    },
+    {
+      "path": "pending/review-return-refresh-20261022/website/components/ClinicalReviewInbox.tsx",
+      "bytes": 33804,
+      "sha256": "f6ae6018afa5e5f98087a4213742d07c10a3c914d4700d92eb3af721313b5631"
+    },
+    {
+      "path": "pending/review-return-refresh-20261022/website/tests/clinical-review-inbox-auto-return.test.mjs",
+      "bytes": 12084,
+      "sha256": "f38d862f1590fdc4c8df18ff86313b5f964b6df0f1257777df05aa4d5a3679fa"
+    },
+    {
       "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/CODE/tests/head-manual-migration-later-inverse.mjs",
       "bytes": 4249,
       "sha256": "80c814db779190f0354ddc5cc9bcee8cf8ee80d1ee63e23bff4c009554a9a19c"
@@ -20587,43 +20627,26 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus staged source-bound hyoid/epiglottis/cricoid X-ray draft code, additive test, exact original wording preimages and coordination helpers. Generated snapshots/pins/revision JSON, article assets, raw evidence/logs, models/scans/masks, private records/DB/env/decisions/references and canonical ancestry are excluded. Not full/private/runnable recovery or installation.",
+  "scope": "Inherited filtered source plus isolated Review inbox return-refresh component, original preimage, additive real-component tests and synthetic QA/coordination source. Generated snapshots/pins/revision JSON, private records/accounts/DB/env/decisions/references, raw logs/media, scans/models/masks/held assets and canonical ancestry stay local. Not full/private/runnable recovery or installation.",
   "proof": {
     "focusedCounts": {
-      "neck-native": {
-        "tests": 8,
-        "pass": 8,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0
-      },
-      "gap-tools": {
-        "tests": 5,
-        "pass": 5,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0
-      },
-      "regional-freshness": {
-        "tests": 21,
-        "pass": 21,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0
-      }
+      "tests": 80,
+      "pass": 80,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
     "fullTypesPassed": true,
     "productionBuildPassed": true,
+    "reviewBindingUnchanged": true,
     "sourceDrift": [],
-    "changedLessons": 3,
-    "unrelatedPlacementsPreserved": 9933,
-    "sourceIdentityRefusals": 121,
-    "staleApprovalRefused": true,
-    "liveBrowserAcceptance": false,
+    "syntheticBrowserCases": 11,
+    "signedInAcceptance": false,
+    "humanAssistiveTechnologyCertification": false,
     "wholeSuitePassing": false,
     "ownerPreviewChanged": false,
     "clinicalApproval": false,
-    "spatialRegistration": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,
