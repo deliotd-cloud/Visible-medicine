@@ -1,24 +1,22 @@
 {
-  "focusedNativeAcceptance": true,
-  "nativeRoots": 13,
-  "native": {
-    "tests": 76,
-    "pass": 76,
+  "focusedNative": {
+    "tests": 64,
+    "pass": 64,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "fullTypesPassed": true,
-  "all6426SourceStable": true,
-  "fiveWholeOriginalTestInverses": true,
-  "handActualInverseMutationRefusals": 3,
-  "originalResourceFailureTestsUnchanged": true,
+  "focusedRoots": 8,
+  "originalTestBodiesUnchanged": 3,
+  "allVisibleMarkupUnchanged": true,
+  "initialProposalReplayPassed": true,
+  "mainThreeAdditionalFailuresPreserved": true,
+  "reviewBindingPending": true,
+  "fullTypesBuildBrowserPending": true,
   "wholeSuitePassing": false,
-  "productChanged": false,
   "ownerPreviewChanged": false,
   "canonicalInstalled": false,
   "clinicalApproval": false,
-  "spatialRegistration": false,
   "publicDeployment": false
 }

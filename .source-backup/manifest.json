@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T20:32:05.230Z",
+  "at": "2026-10-22T20:49:01.667Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
+    "parentAcceptedSourceSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
+    "pendingUiSourceSha256": "83ca32a88ab937bcf121908f5b39579ed2b7aaf40c7112e0d7abc08f7dabee14",
     "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "tree": "db21ed3dee259c390878450b3495468996a3af85",
-    "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc"
+    "reviewBindingPending": true
   },
-  "parent": "21e83370214e7bd7018516c47a77bc932344dc3f",
-  "gitParent": "21e83370214e7bd7018516c47a77bc932344dc3f",
+  "parent": "7beda7a636a225836499615849d79f2a28efd605",
+  "gitParent": "7beda7a636a225836499615849d79f2a28efd605",
   "files": [
     {
       "path": "app/globals.css",
@@ -16496,6 +16496,86 @@
       "sha256": "c2f804c9154e3bbab18e8328f26b138084d306afbde99fce3bb2577bbbebfea5"
     },
     {
+      "path": "pending/head-review-commit-controls-20261022/coordination/checkpoint-head-review-commit-controls-20261022.mjs",
+      "bytes": 11721,
+      "sha256": "3b9f11888d52cc07c3ee6f091e60a0eff4ac905c599fe5a38622a8a2bad31b2b"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/coordination/prepare-head-review-commit-candidate-20261022.mjs",
+      "bytes": 7077,
+      "sha256": "168abb37999517614b6c0553475caa99b10d08cb07d19f431c696872e3b77788"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/coordination/probe-head-review-commit-candidate-20261022.mjs",
+      "bytes": 2569,
+      "sha256": "90957529f736b14201d4c69d7ed89d0ad3ab5e85d208ab2042ebfb7cd1b72965"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/coordination/run-complete-release-diagnostic-successor-20261022.mjs",
+      "bytes": 7080,
+      "sha256": "6d1784b240eab592ce4c9321b0ab7108c529dab22a9e741d14a589a870b7b71d"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/initial-proposal/head-practice-review-commit-controls.portability-before.mjs.raw",
+      "bytes": 9215,
+      "sha256": "dafa77760f0475167cf9dad115270de33531f8c9297651d9b852cc50c4d3be3e"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/initial-proposal/head-practice-review-commit-controls.test.mjs.raw",
+      "bytes": 5774,
+      "sha256": "983a60471c377bc342c5e1c9bde71faab61c4d5a4d80007f959aba000ed9f487"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/initial-proposal/HeadAtlasPracticeReview.tsx.raw",
+      "bytes": 12547,
+      "sha256": "e8e12bf71208890e9b29b17eb7f6fe43dc2cd241caa4c5cba7eb5b7c7e632d68"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/components/HeadAtlasPracticeReview.tsx",
+      "bytes": 12578,
+      "sha256": "b1eb8c2d736d84794ecc91a08aac6203063833f2405f191615bdbf741e271813"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/tests/fixtures/head-review-commit-before/head-practice-focused-review-ui.test.ts.raw",
+      "bytes": 7940,
+      "sha256": "55f490502dbf03e86eb00ce40dd58743c32e6f857bee59e42a192562bb5e72bb"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/tests/fixtures/head-review-commit-before/head-practice-review.test.ts.raw",
+      "bytes": 29407,
+      "sha256": "003bc98ea89393022dad45c0e23c088cb37f4cda4cea82acd28383c283bd9edb"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/tests/fixtures/head-review-commit-before/head-review-study-set-ui.test.ts.raw",
+      "bytes": 8648,
+      "sha256": "aa306448cafea97b1c404132e633492e90145d223e0e577326f071e9a09451f4"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/tests/fixtures/head-review-commit-before/HeadAtlasPracticeReview.tsx.raw",
+      "bytes": 11770,
+      "sha256": "cf08b63296f22bacf1d5114466e0f88728aab66964e3cf086919eea0d7295524"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/tests/head-practice-focused-review-ui.test.ts",
+      "bytes": 8118,
+      "sha256": "84df79b86c817e6b7a2b969889cc1c1535fc5a495d43c46f7d45586797ad84b2"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/tests/head-practice-review-commit-controls.test.mjs",
+      "bytes": 9249,
+      "sha256": "28656ff2e6b701b70c93c79f3478e1a34554808812c3bc3f5f7eac3f16daf028"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/tests/head-practice-review.test.ts",
+      "bytes": 29506,
+      "sha256": "a01f0ef629084df3ff5c17cd242ef57cb2f772f9751fffbd433e4a719faa3dd8"
+    },
+    {
+      "path": "pending/head-review-commit-controls-20261022/website/tests/head-review-study-set-ui.test.ts",
+      "bytes": 8826,
+      "sha256": "a73b5459612ce11a95229c7466b83f9e55320a0a2ef500bc241fb26912387eac"
+    },
+    {
       "path": "pending/head-surface-cancellation-20261022/coordination/admit-head-surface-cancellation-20261022.mjs",
       "bytes": 10181,
       "sha256": "502bd5664309de8358189bcd58936b5e68ba66bc0474c2f53917213b9c25eec4"
@@ -23202,29 +23282,27 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus five reviewed test-compatibility repairs, exact complete original code inverses and authenticated hand renderer-epoch code. No product/runtime/binding/licence/asset changes. Source-only recovery, not whole/private/runnable backup. Generated JSON/Review/pin/tracking records, binary runtimes/models/masks/scans/fonts, private references/decisions/DB/env/held assets, raw native logs, full coordination archive and canonical Git ancestry remain local. Interrupted complete1176-entry attempt remains unresolved; focused native status is separately explicit.",
+  "scope": "Inherited filtered source plus staged CT/MRI practice review commit-lifecycle control repair and tests, complete original code preimages and source-only coordinators. Actual new9-case lifecycle and eight-root64-case focused checks pass, but the UI draft is not rebound, built, browser-accepted, installed or publicly deployed. The separate stock complete suite stays on the unchanged accepted6426-source candidate. No clinical, score, mask, image, access or rights change. Generated JSON/Review/pins/tracking, full private records/references/archive, held assets, binary models/scans/fonts/runtime, raw native logs and canonical Git ancestry remain local. Source-only, not full/private/runnable recovery.",
   "proof": {
-    "focusedNativeAcceptance": true,
-    "nativeRoots": 13,
-    "native": {
-      "tests": 76,
-      "pass": 76,
+    "focusedNative": {
+      "tests": 64,
+      "pass": 64,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "fullTypesPassed": true,
-    "all6426SourceStable": true,
-    "fiveWholeOriginalTestInverses": true,
-    "handActualInverseMutationRefusals": 3,
-    "originalResourceFailureTestsUnchanged": true,
+    "focusedRoots": 8,
+    "originalTestBodiesUnchanged": 3,
+    "allVisibleMarkupUnchanged": true,
+    "initialProposalReplayPassed": true,
+    "mainThreeAdditionalFailuresPreserved": true,
+    "reviewBindingPending": true,
+    "fullTypesBuildBrowserPending": true,
     "wholeSuitePassing": false,
-    "productChanged": false,
     "ownerPreviewChanged": false,
     "canonicalInstalled": false,
     "clinicalApproval": false,
-    "spatialRegistration": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,

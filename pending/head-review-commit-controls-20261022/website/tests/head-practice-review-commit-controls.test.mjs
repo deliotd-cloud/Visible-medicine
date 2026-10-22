@@ -1,0 +1,144 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+
+const baseRequire=createRequire(import.meta.url);
+const componentRequire=createRequire(new URL('../components/HeadAtlasPracticeReview.tsx',import.meta.url));
+const React=baseRequire('react');
+const ts=baseRequire('typescript');
+const source=readFileSync(new URL('../components/HeadAtlasPracticeReview.tsx',import.meta.url),'utf8');
+const compiled=ts.transpileModule(source,{reportDiagnostics:true,compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}});
+assert.equal(compiled.diagnostics?.filter(d=>d.category===ts.DiagnosticCategory.Error).length,0);
+
+function harness(){
+  const slots=[];
+  let cursor=0,pending=[],cleanups=[];
+  const hooks={
+    useState(initial){const i=cursor++;if(!(i in slots))slots[i]=typeof initial==='function'?initial():initial;
+      return [slots[i],next=>{slots[i]=typeof next==='function'?next(slots[i]):next;}];},
+    useRef(initial){const i=cursor++;return slots[i]??(slots[i]={current:initial});},
+    useLayoutEffect(effect){pending.push(effect);},
+  };
+  const module={exports:{}};
+  new Function('require','module','exports',compiled.outputText)(name=>name==='react'?hooks:
+    name==='./HeadAtlasTeaching'?{HeadAtlasTeaching:()=>null}:
+    componentRequire(name.startsWith('.')?`${name}.ts`:name),module,module.exports);
+  function render(props,commit=true){cursor=0;pending=[];const tree=module.exports.HeadAtlasPracticeReview(props);
+    if(commit){for(const cleanup of cleanups)cleanup();cleanups=pending.map(effect=>effect()).filter(cleanup=>typeof cleanup==='function');}return tree;}
+  function unmount(){for(const cleanup of cleanups)cleanup();cleanups=[];}
+  return {render,unmount};
+}
+const entry=(id,label)=>({id,label,laterality:'midline_or_unpaired',family:'synthetic',representation:'mask',color:[1,0,0],opacity:{fill:.2,outline:.8}});
+const a=entry('a','Missed pons'),b=entry('b','Correct structure');
+const items=[{entry:a,outcome:'incorrect'},{entry:b,outcome:'correct'}];
+const nodes=tree=>React.isValidElement(tree)?[tree,...React.Children.toArray(tree.props.children).flatMap(nodes)]:[];
+const action=(tree,prefix)=>{
+  const match=nodes(tree).find(node=>node.type==='button'&&React.Children.toArray(node.props.children).join('').startsWith(prefix));
+  assert(match,`visible ${prefix} control`);return match;
+};
+const click=node=>node.props.onClick();
+
+for(const modality of ['CT','MRI'])test(`${modality}: abandoned render preserves committed practice and add callbacks`,()=>{
+  const h=harness(),practised=[],added=[];
+  const studySet={entries:[],onAdd:entries=>{added.push([...entries]);return entries.length;}};
+  const props={items,modality,revision:'synthetic',active:false,finished:true,
+    onPracticeEntries:(entries,mode)=>{practised.push({entries:[...entries],mode});return true;},studySet};
+  const committed=h.render(props);
+  h.render({...props,active:true},false);
+  click(action(committed,'Practise visible missed'));
+  click(action(committed,'Add visible missed'));
+  assert.deepEqual(practised,[{entries:[a],mode:'locate'}]);
+  assert.deepEqual(added,[[a]]);
+});
+
+test('committed replacement retires old callbacks; new controls use the new items and handlers',()=>{
+  const h=harness(),oldCalls=[],newCalls=[];
+  const first={items,modality:'CT',revision:'synthetic',active:false,finished:true,
+    onPracticeEntries:entries=>{oldCalls.push(entries);return true;},studySet:{entries:[],onAdd:entries=>{oldCalls.push(entries);return entries.length;}}};
+  const old=h.render(first),next={...first,items:[{entry:entry('c','Replacement miss'),outcome:'revealed'}],
+    onPracticeEntries:entries=>{newCalls.push(entries);return true;},studySet:{entries:[],onAdd:entries=>{newCalls.push(entries);return entries.length;}}};
+  const current=h.render(next);
+  click(action(old,'Practise visible missed'));click(action(old,'Add visible missed'));
+  assert.deepEqual(oldCalls,[]);
+  click(action(current,'Practise visible missed'));click(action(current,'Add visible missed'));
+  assert.equal(newCalls.length,2);assert.equal(newCalls[0][0].id,'c');assert.equal(newCalls[1][0].id,'c');
+});
+
+test('in-place item change invalidates old controls until a commit; repeated synchronous clicks claim once',()=>{
+  const h=harness(),practised=[],added=[];
+  const mutable=[...items];
+  const props={items:mutable,modality:'MRI',revision:'synthetic',active:false,finished:true,
+    onPracticeEntries:entries=>{practised.push(entries);return true;},
+    studySet:{entries:[],onAdd:entries=>{added.push(entries);return entries.length;}}};
+  const old=h.render(props);
+  mutable[0]={entry:entry('changed','Changed miss'),outcome:'incorrect'};
+  click(action(old,'Practise visible missed'));click(action(old,'Add visible missed'));
+  assert.deepEqual(practised,[]);assert.deepEqual(added,[]);
+  const current=h.render(props);
+  click(action(current,'Practise visible missed'));click(action(current,'Practise visible missed'));
+  click(action(current,'Add visible missed'));click(action(current,'Add visible missed'));
+  assert.equal(practised.length,1);assert.equal(added.length,1);
+  assert.equal(practised[0][0].id,'changed');assert.equal(added[0][0].id,'changed');
+});
+
+test('unmount invalidates both visible actions',()=>{
+  const h=harness(),calls=[];
+  const props={items,modality:'CT',revision:'synthetic',active:false,finished:true,
+    onPracticeEntries:()=>{calls.push('practice');return true;},studySet:{entries:[],onAdd:()=>{calls.push('add');return 1;}}};
+  const tree=h.render(props);h.unmount();
+  click(action(tree,'Practise visible missed'));click(action(tree,'Add visible missed'));
+  assert.deepEqual(calls,[]);
+});
+
+test('even an equivalent speculative render cannot publish working callbacks',()=>{
+  const h=harness(),calls=[];
+  const props={items,modality:'CT',revision:'synthetic',active:false,finished:true,
+    onPracticeEntries:()=>{calls.push('practice');return true;},studySet:{entries:[],onAdd:()=>{calls.push('add');return 1;}}};
+  const current=h.render(props),speculative=h.render({...props},false);
+  click(action(speculative,'Practise visible missed'));click(action(speculative,'Add visible missed'));
+  assert.deepEqual(calls,[],'uncommitted callbacks must stay inert even when all props are equivalent');
+  click(action(current,'Practise visible missed'));click(action(current,'Add visible missed'));
+  assert.deepEqual(calls,['practice','add']);
+});
+
+test('a new commit retires older callbacks even when the result fields and array are unchanged',()=>{
+  const h=harness(),calls=[];
+  const props={items,modality:'MRI',revision:'synthetic',active:false,finished:true,
+    onPracticeEntries:()=>{calls.push('practice');return true;},studySet:{entries:[],onAdd:()=>{calls.push('add');return 1;}}};
+  const old=h.render(props),current=h.render({...props});
+  click(action(old,'Practise visible missed'));click(action(old,'Add visible missed'));
+  assert.deepEqual(calls,[],'only controls from the committed visit may act');
+  click(action(current,'Practise visible missed'));click(action(current,'Add visible missed'));
+  assert.deepEqual(calls,['practice','add']);
+});
+
+test('replacing an entry object in place invalidates its old controls without relying on display-label differences',()=>{
+  const h=harness(),calls=[],mutable=[...items];
+  const props={items:mutable,modality:'MRI',revision:'synthetic',active:false,finished:true,
+    onPracticeEntries:entries=>{calls.push(entries);return true;},studySet:{entries:[],onAdd:entries=>{calls.push(entries);return entries.length;}}};
+  const old=h.render(props),replacement={...a};
+  mutable[0]={entry:replacement,outcome:'incorrect'};
+  click(action(old,'Practise visible missed'));click(action(old,'Add visible missed'));
+  assert.deepEqual(calls,[],'same text and IDs are not an exact entry-object match');
+  const current=h.render(props);
+  click(action(current,'Practise visible missed'));click(action(current,'Add visible missed'));
+  assert.equal(calls.length,2);assert.equal(calls[0][0],replacement);assert.equal(calls[1][0],replacement);
+});
+
+test('failed or zero-result synchronous actions remain retryable without duplicate reentrant calls',()=>{
+  for(const first of [false,0]){
+    const h=harness();let practiceCalls=0,addCalls=0,accepted=false,tree;
+    const props={items,modality:'CT',revision:'synthetic',active:false,finished:true,
+      onPracticeEntries:()=>{practiceCalls++;click(action(tree,'Practise visible missed'));return accepted;},
+      studySet:{entries:[],onAdd:()=>{addCalls++;click(action(tree,'Add visible missed'));return accepted?1:first;}}};
+    tree=h.render(props);
+    click(action(tree,'Practise visible missed'));click(action(tree,'Add visible missed'));
+    assert.equal(practiceCalls,1);assert.equal(addCalls,1);
+    accepted=true;
+    click(action(tree,'Practise visible missed'));click(action(tree,'Add visible missed'));
+    assert.equal(practiceCalls,2);assert.equal(addCalls,2);
+    click(action(tree,'Practise visible missed'));click(action(tree,'Add visible missed'));
+    assert.equal(practiceCalls,2);assert.equal(addCalls,2);
+  }
+});
