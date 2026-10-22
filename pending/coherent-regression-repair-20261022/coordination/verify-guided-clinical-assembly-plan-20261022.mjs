@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {existsSync,mkdirSync,writeFileSync} from 'node:fs';
+import {planReviewedRegressionCandidate,requireClosedPredecessor} from './prepare-reviewed-regression-candidate-20261022.mjs';
+import {read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-guided-clinical-assembly-plan-proof';assert(!existsSync(root));
+const targetRoot='F:/VisibleMedicine/staging/20261022-reviewed-regression-planned-78';
+const plan=planReviewedRegressionCandidate({queuePath:'F:/VisibleMedicine/staging/20261022-guided-clinical-shared-consolidated/QUEUE.json',queueSha256:'31565e5a62ea302bf4c6b05afdf7391658d511b126f1fed7cae99b47b6e889df',expectedProposals:78,targetRoot});
+assert.equal(plan.sourceRows.length,5900);assert.equal(plan.changes.length,78);assert.equal(plan.addedPaths.length,89);
+assert.throws(()=>requireClosedPredecessor(),/Actual predecessor terminal receipt is required/);assert(!existsSync(targetRoot));
+const result={at:new Date().toISOString(),status:'PASS_SOURCE_PLAN_ONLY',queue:plan.queuePath,queueSha256:plan.queueSha256,basePaths:5811,plannedPaths:5900,proposals:78,completeCodePreimages:78,additionalCodePaths:11,changedNonTestPaths:0,predecessorStillRefused:true,assemblyPerformed:false,nativeTestOrBuildRun:false,ownerPreviewChanged:false,plannerSha256:sha(read('prepare-reviewed-regression-candidate-20261022.mjs')),terminalSchemaProof:'F:/VisibleMedicine/staging/20261022-reviewed-regression-terminal-gate-proof/RESULT.json'};
+mkdirSync(root);writeFileSync(root+'/RESULT.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({...result,receipt:root+'/RESULT.json',sha256:sha(read(root+'/RESULT.json'))}));

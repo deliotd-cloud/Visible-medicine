@@ -36,8 +36,14 @@ export function checkpointReviewedRegressionQueue({stem,queuePath,queueSha256,ex
  const failures=[...tap.toString().matchAll(/^not ok ([^\r\n]+)\r?\n([\s\S]*?)^  \.\.\.\r?$/gm)].map(match=>{
   const location=match[2].match(/location: '([^'\r\n]+)'/);assert(location);
   const name=location[1].replaceAll('\\\\','/').split('/website/')[1]?.replace(/:\d+:\d+$/,'');assert(name?.startsWith('tests/'));
-  const proposals=direct.has(name)?[name]:(helpers[name]??[]).filter(p=>direct.has(p));
-  return {label:match[1],path:name,proposalPaths:proposals,status:proposals.length?'Reviewed source-only proposal exists; actual native rerun required':'Further triage required',passingClaim:false};
+  let proposals=direct.has(name)?[name]:(helpers[name]??[]).filter(p=>direct.has(p));
+  let route=direct.has(name)?'direct test proposal':proposals.length?'previously inspected helper consumer':null;
+  const shared='tests/clinical-review-current-admission.mjs',details=match[2].replaceAll('\\\\','/');
+  if(!proposals.length&&direct.has(shared)&&details.includes('/'+shared+':')
+    &&details.includes('190a63238eadcf906abe89dcbb6a67c88afe70b9')&&details.includes('6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1')){
+   proposals=[shared];route='actual observed family-revision mismatch in shared admission stack';
+  }
+  return {label:match[1],path:name,proposalPaths:proposals,route,status:proposals.length?'Reviewed source-only proposal exists; actual native rerun required':'Further triage required',passingClaim:false};
  });
  const remaining=[...new Set(failures.filter(row=>!row.proposalPaths.length).map(row=>row.path))];
  mkdirSync(root,{recursive:true});copyFileSync('CURRENT_CHECKPOINT.json',root+'/pointer.before.json');copyFileSync('WORKSPACE_MAP.md',root+'/WORKSPACE_MAP.before.md');
