@@ -1,0 +1,437 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const rows=[
+  {
+    "name": "head-disclosure-current-delivery.test.mjs",
+    "before": "999704133a16bff87fb69948a0ef67ba3b5973218235ee3b99ef2d455cbfe58d",
+    "after": "d9ff129afdaf8ba43d232eb9fbd201bf5a3d4c3327b8970e3c54bd435c44ec22",
+    "workerAfter": "d9ff129afdaf8ba43d232eb9fbd201bf5a3d4c3327b8970e3c54bd435c44ec22",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 31,
+        "j": 31,
+        "before": [
+          "test('current 190 Review binds the actual disclosure helper and viewer with emitted runtime and model evidence',()=>{"
+        ],
+        "after": [
+          "test('current Review binds the actual disclosure helper and viewer with emitted runtime and model evidence',()=>{"
+        ]
+      },
+      {
+        "i": 33,
+        "j": 33,
+        "before": [
+          " assert.equal(now.source,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');assert.equal(now.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');assert.notEqual(now.source,old.source);assert.notEqual(now.sourceTree,old.sourceTree);",
+          " assert.equal(now.reviewSourceFiles,1558);assert.equal(binding.inputs.length,1724);assert.equal(binding.sha256,'3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a');assert.equal(binding.sha256,now.reviewIntegration);assert.equal(sha(JSON.stringify(binding.inputs)),binding.sha256);"
+        ],
+        "after": [
+          " assert.equal(now.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');assert.equal(now.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');assert.notEqual(now.source,old.source);assert.notEqual(now.sourceTree,old.sourceTree);",
+          " assert.equal(now.reviewSourceFiles,1562);assert.equal(binding.inputs.length,1729);assert.equal(binding.sha256,'1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc');assert.equal(binding.sha256,now.reviewIntegration);assert.equal(sha(JSON.stringify(binding.inputs)),binding.sha256);"
+        ]
+      },
+      {
+        "i": 46,
+        "j": 46,
+        "before": [
+          " assert.equal(current.reviewIntegration,'3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a');"
+        ],
+        "after": [
+          " assert.equal(current.reviewIntegration,'1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc');"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "head-manual-recovery-54-to-55-closed.test.mjs",
+    "before": "07c63b0d0eb11832ba209715a2c20e42f791c9d171a6902fb950010cfd5443ad",
+    "after": "e60a4d22254e3af6da0394822cee26acc52fa8373c67c634400b36f74bf96f9a",
+    "workerAfter": "e60a4d22254e3af6da0394822cee26acc52fa8373c67c634400b36f74bf96f9a",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 14,
+        "j": 14,
+        "before": [
+          "test('actual current190 remains independently bound beyond the closed54/55 transitions',()=>{"
+        ],
+        "after": [
+          "test('actual current delivery remains independently bound beyond the closed54/55 transitions',()=>{"
+        ]
+      },
+      {
+        "i": 16,
+        "j": 16,
+        "before": [
+          " assert.equal(current.source,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');",
+          " assert.equal(current.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');",
+          " assert.equal(current.reviewIntegration,'3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a');",
+          " assert.equal(current.reviewSourceFiles,1558);"
+        ],
+        "after": [
+          " assert.equal(current.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');",
+          " assert.equal(current.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');",
+          " assert.equal(current.reviewIntegration,'1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc');",
+          " assert.equal(current.reviewSourceFiles,1562);"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "head-native-history-current-transition.test.mjs",
+    "before": "6a2cf5ee21203146e830b696436fa5abc5d41637e818b7e54acfa672d5e5cfb5",
+    "after": "6280d5d8c8bd42447827a29f256acb5e718acd07effb549e9226ddc4b8efd8b4",
+    "workerAfter": "6280d5d8c8bd42447827a29f256acb5e718acd07effb549e9226ddc4b8efd8b4",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 12,
+        "j": 12,
+        "before": [
+          "test('actual current6d7 delivery retains independent 190a runtimes without treating closed53 as current',()=>{",
+          " const live=validateLiveAtlasDelivery();assert.equal(live.source,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');assert.equal(live.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');assert.equal(live.reviewIntegration,'3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a');assert.equal(live.reviewSourceFiles,1558);"
+        ],
+        "after": [
+          "test('actual current delivery retains independent 190a runtimes without treating closed53 as current',()=>{",
+          " const live=validateLiveAtlasDelivery();assert.equal(live.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');assert.equal(live.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');assert.equal(live.reviewIntegration,'1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc');assert.equal(live.reviewSourceFiles,1562);"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "inferior-thyroid-mra-current-delivery.test.mjs",
+    "before": "0ff16b6d81a20d018a78eb49b416e431ef70dcfcbcd950e8e79dfdfa7de1b44d",
+    "after": "4a77dee71f3887f7f28982835cd8658a7f6b30ea325d3ef02cf961b4bcfe2331",
+    "workerAfter": "6f4daeee4d857b7cf0bf25c93d31c5a021590af29dd8f05d5d8e9c57af654a11",
+    "mainStrengthening": "Restore the full original regionalTours data equality: later renal resolver guard is not permission to skip array-content comparison.",
+    "edits": [
+      {
+        "i": 9,
+        "j": 9,
+        "before": [],
+        "after": [
+          "import {beforeNeckXrayBody,beforeNeckXraySnapshot} from './tongue-palate-neck-history.mjs';"
+        ]
+      },
+      {
+        "i": 13,
+        "j": 14,
+        "before": [
+          "const currentSource='6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1';"
+        ],
+        "after": [
+          "const currentSource='2381efe43b75f8a7fb768a069eecd7268c508dac';",
+          "const preNeck='6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1';"
+        ]
+      },
+      {
+        "i": 28,
+        "j": 30,
+        "before": [
+          " assert.equal(pin.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');"
+        ],
+        "after": [
+          " assert.equal(pin.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');"
+        ]
+      },
+      {
+        "i": 62,
+        "j": 64,
+        "before": [
+          "test('exact historical87 MRA source reaches current6d7 Review with separate runtime identities and no widened clearance',async()=>{"
+        ],
+        "after": [
+          "test('exact historical87 MRA source reaches current2381 Review with separate runtime identities and no widened clearance',async()=>{"
+        ]
+      },
+      {
+        "i": 93,
+        "j": 95,
+        "before": [
+          " let currentBody=git(atlas,'show',`${currentSource}:app/body-content.ts`).toString();"
+        ],
+        "after": [
+          " const neckBody=git(atlas,'show',`${currentSource}:app/body-content.ts`);",
+          " const preNeckBody=git(atlas,'show',`${preNeck}:app/body-content.ts`);",
+          " beforeNeckXrayBody(neckBody,preNeckBody);",
+          " let currentBody=preNeckBody.toString();"
+        ]
+      },
+      {
+        "i": 104,
+        "j": 109,
+        "before": [
+          "  'Entire current body lesson dispatcher reverses to historical87 outside dental and colic additions');"
+        ],
+        "after": [
+          "  'Entire current body lesson dispatcher reverses through neck, dental and colic epochs to historical87');",
+          " const currentNeck=git(atlas,'show',`${currentSource}:content/regional-teaching/head-neck.json`);",
+          " const preNeckSnapshot=git(atlas,'show',`${preNeck}:content/regional-teaching/head-neck.json`);",
+          " beforeNeckXraySnapshot(currentNeck,preNeckSnapshot);"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "closed56-femoral-epoch.test.mjs",
+    "before": "9b666215eb5f12c2ab7564cf6ffe6e560682efb46d033a4bd13d88ecaf389f4e",
+    "after": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7",
+    "workerAfter": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 110,
+        "j": 110,
+        "before": [
+          " assert.equal(pin.source,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');",
+          " assert.equal(pin.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');"
+        ],
+        "after": [
+          " assert.equal(pin.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');",
+          " assert.equal(pin.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');"
+        ]
+      },
+      {
+        "i": 119,
+        "j": 119,
+        "before": [
+          " assert.equal(review.files.length,1558);",
+          " assert.equal(inputs.inputs.length,1724);"
+        ],
+        "after": [
+          " assert.equal(review.files.length,1562);",
+          " assert.equal(inputs.inputs.length,1729);"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "radial-eus-current-transition.test.mjs",
+    "before": "5a1f625dd7539e66c502b7cff0d6e237c63b9d1e793f49a5e3af5c0ac3231cbe",
+    "after": "3f48e87d9cff237970ae8f29660106ee1b43cdcea1c7483055947718a9c470a4",
+    "workerAfter": "3f48e87d9cff237970ae8f29660106ee1b43cdcea1c7483055947718a9c470a4",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 160,
+        "j": 160,
+        "before": [
+          " const live=validateSiteCurrentAtlasDelivery();assert.equal(live.source,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');assert.equal(live.runtimeSources['head-neck'],live.source);for(const name of ['shoulder','lower-limb','female-pelvis'])assert.equal(live.runtimeSources[name],'190a63238eadcf906abe89dcbb6a67c88afe70b9');assert.throws(()=>validateSiteCurrentAtlasDelivery({pin}));"
+        ],
+        "after": [
+          " const live=validateSiteCurrentAtlasDelivery();assert.equal(live.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');assert.equal(live.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');assert.equal(live.runtimeSources['head-neck'],live.source);for(const name of ['shoulder','lower-limb','female-pelvis'])assert.equal(live.runtimeSources[name],'190a63238eadcf906abe89dcbb6a67c88afe70b9');assert.throws(()=>validateSiteCurrentAtlasDelivery({pin}));"
+        ]
+      },
+      {
+        "i": 179,
+        "j": 179,
+        "before": [
+          "test('current 6d7 source retains radial teaching while later tongue quiz remains separate',async()=>{"
+        ],
+        "after": [
+          "test('current 2381 source retains radial teaching while later tongue quiz remains separate',async()=>{"
+        ]
+      },
+      {
+        "i": 181,
+        "j": 181,
+        "before": [
+          " assert.equal(pin.source,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');",
+          " assert.equal(pin.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');"
+        ],
+        "after": [
+          " assert.equal(pin.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');",
+          " assert.equal(pin.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "shoulder-us-renderer-migration.test.mjs",
+    "before": "ab3dd097913f298b924db07a512c1aca6f2626e6bae426732dcc9c4c510bf8d2",
+    "after": "b78586de80aebffc3e95c2592fc4870c2f62c48e5f807b1db03ab228ddc5a257",
+    "workerAfter": "b78586de80aebffc3e95c2592fc4870c2f62c48e5f807b1db03ab228ddc5a257",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 28,
+        "j": 28,
+        "before": [
+          "test('current admission is the independently pinned 6d7 delivery, not the closed7b epoch',()=>{"
+        ],
+        "after": [
+          "test('current admission is the independently pinned 2381 delivery, not the closed7b epoch',()=>{"
+        ]
+      },
+      {
+        "i": 30,
+        "j": 30,
+        "before": [
+          "  assert.equal(delivery.CURRENT_ATLAS_REVISION,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');",
+          "  assert.equal(pin.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');"
+        ],
+        "after": [
+          "  assert.equal(delivery.CURRENT_ATLAS_REVISION,'2381efe43b75f8a7fb768a069eecd7268c508dac');",
+          "  assert.equal(pin.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');"
+        ]
+      },
+      {
+        "i": 33,
+        "j": 33,
+        "before": [
+          "  assert.equal(pin.reviewSourceFiles,1558);"
+        ],
+        "after": [
+          "  assert.equal(pin.reviewSourceFiles,1562);"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "review-navigation-delivery-preservation.test.mjs",
+    "before": "326b425f1d529b590eaa345f94a9dd440ed2bcfe5fbbb19dcb918048a002b995",
+    "after": "14e5824f2a60c96b4832d7a17416378500fe01d46ac8c7262985ecfa36301119",
+    "workerAfter": "14e5824f2a60c96b4832d7a17416378500fe01d46ac8c7262985ecfa36301119",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 6,
+        "j": 6,
+        "before": [],
+        "after": [
+          "import {restorePreNeckPin2381,restorePreNeckDelivery2381} from './zero-registration-current-roles-inverse.mjs';"
+        ]
+      },
+      {
+        "i": 12,
+        "j": 13,
+        "before": [
+          " const actual=beforeCompactDeliveryTest(read('tests/current-atlas-delivery.test.mjs').toString()),seam='assert.equal(inputs,1712)';"
+        ],
+        "after": [
+          " const actual=beforeCompactDeliveryTest(restorePreNeckDelivery2381(read('tests/current-atlas-delivery.test.mjs'),read('tests/fixtures/current-atlas-delivery-before-neck-xray-20261022.mjs.raw')).toString()),seam='assert.equal(inputs,1712)';"
+        ]
+      },
+      {
+        "i": 20,
+        "j": 21,
+        "before": [
+          " assert.equal(currentBinding.inputs.length,1724);assert.equal(currentBinding.sourceCommit,current.source);",
+          " const old=JSON.parse(beforeBytes),now=beforeCompactPin(read('tests/fixtures/current-atlas-delivery.json'));"
+        ],
+        "after": [
+          " assert.equal(currentBinding.inputs.length,1729);assert.equal(currentBinding.sourceCommit,current.source);",
+          " const old=JSON.parse(beforeBytes),now=beforeCompactPin(restorePreNeckPin2381(read('tests/fixtures/current-atlas-delivery.json'),read('tests/fixtures/current-atlas-delivery-before-neck-xray-20261022.json')));"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ui-teaching-current-delivery.test.mjs",
+    "before": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7",
+    "after": "2d654b875fb68520036e2288cad70e08a4a8da885391196f715168f339418a4f",
+    "workerAfter": "2d654b875fb68520036e2288cad70e08a4a8da885391196f715168f339418a4f",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 62,
+        "j": 62,
+        "before": [
+          "  assert.equal(delivery.reviewSourceFiles, 1558);"
+        ],
+        "after": [
+          "  assert.equal(delivery.reviewSourceFiles, 1562);"
+        ]
+      },
+      {
+        "i": 69,
+        "j": 69,
+        "before": [
+          "  assert.equal(inputs.inputs.length, 1724);"
+        ],
+        "after": [
+          "  assert.equal(inputs.inputs.length, 1729);"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ui-teaching-admission-contract.test.mjs",
+    "before": "0d35c3590b0453730d4a484fc2f1c794e44119f5b1eba9c75de075d20cd0ed7b",
+    "after": "b57e611a7ee77263da554141708e3d3acc5bd8da2aed2664b19a185f6e41f3ab",
+    "workerAfter": "b57e611a7ee77263da554141708e3d3acc5bd8da2aed2664b19a185f6e41f3ab",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 109,
+        "j": 109,
+        "before": [
+          " assert.equal(live.source,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');",
+          " assert.equal(live.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');",
+          " assert.equal(live.reviewIntegration,'3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a');",
+          " assert.equal(live.reviewSourceFiles,1558);"
+        ],
+        "after": [
+          " assert.equal(live.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');",
+          " assert.equal(live.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');",
+          " assert.equal(live.reviewIntegration,'1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc');",
+          " assert.equal(live.reviewSourceFiles,1562);"
+        ]
+      },
+      {
+        "i": 114,
+        "j": 114,
+        "before": [
+          " assert.equal(sha(bindingBytes),'3c159e7d1abecd4735ed5182cd9143a968a15718f6abc6a0faccd504c0c66513','Exact current Review binding document');"
+        ],
+        "after": [
+          " assert.equal(sha(bindingBytes),'157d8f90d7cc44a4a5c4a5394b7012dd91e488b95d4d72e9f1e6f2eb4acf59fa','Exact current Review binding document');"
+        ]
+      },
+      {
+        "i": 118,
+        "j": 118,
+        "before": [
+          " assert.equal(binding.inputs.length,1724);"
+        ],
+        "after": [
+          " assert.equal(binding.inputs.length,1729);"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tour-discovery-current-delivery.test.mjs",
+    "before": "6f48857ab2f7e4167348091bdd60fb60d9d3106f399548650aad593660c61956",
+    "after": "2c0bc87f3660711894dad3cfe7aa5a638bbe11296c994662c9870a759b9e2fb3",
+    "workerAfter": "2c0bc87f3660711894dad3cfe7aa5a638bbe11296c994662c9870a759b9e2fb3",
+    "mainStrengthening": null,
+    "edits": [
+      {
+        "i": 12,
+        "j": 12,
+        "before": [
+          " const current=validateCurrentAtlasDelivery();assert.equal(CURRENT_ATLAS_REVISION,'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');assert.equal(current.sourceTree,'e9165d7122361f809a267af1414b337b69097fe2');assert.equal(current.reviewSourceFiles,1558);"
+        ],
+        "after": [
+          " const current=validateCurrentAtlasDelivery();assert.equal(CURRENT_ATLAS_REVISION,'2381efe43b75f8a7fb768a069eecd7268c508dac');assert.equal(current.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');assert.equal(current.reviewSourceFiles,1562);"
+        ]
+      },
+      {
+        "i": 57,
+        "j": 57,
+        "before": [
+          " assert.equal(inputs.inputs.length,1724);assert.equal(current.reviewIntegration,inputs.sha256);assert.equal(review.revision,current.source);assert.equal(learner.sourceCommit,current.source);"
+        ],
+        "after": [
+          " assert.equal(inputs.inputs.length,1729);assert.equal(current.reviewIntegration,inputs.sha256);assert.equal(review.revision,current.source);assert.equal(learner.sourceCommit,current.source);"
+        ]
+      }
+    ]
+  }
+],sha=b=>createHash('sha256').update(b).digest('hex');
+function restore(row,bytes){assert.equal(sha(bytes),row.after);const lines=bytes.toString().split('\n');for(const e of [...row.edits].reverse()){assert.deepEqual(lines.slice(e.j,e.j+e.after.length),e.after);lines.splice(e.j,e.after.length,...e.before);}return Buffer.from(lines.join('\n'));}
+test('all eleven complete original head/regional/UI test bodies and refusal assertions survive exact current-source seams',()=>{for(const row of rows){const before=readFileSync(new URL('./fixtures/current-source-closure-before/'+row.name+'.raw',import.meta.url)),after=readFileSync(new URL('./'+row.name,import.meta.url));assert.equal(sha(before),row.before);assert.deepEqual(restore(row,after),before);}});
+test('added text, missing assertions and foreign source edits cannot pass the complete source inverse',()=>{for(const row of rows){const after=readFileSync(new URL('./'+row.name,import.meta.url));assert.throws(()=>restore(row,Buffer.concat([after,Buffer.from('/* foreign */')])));const changed=Buffer.from(after);changed[0]^=1;assert.throws(()=>restore(row,changed));}});

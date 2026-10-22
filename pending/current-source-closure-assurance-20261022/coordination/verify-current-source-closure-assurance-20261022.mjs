@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawn} from 'node:child_process';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+import {nativeAtlasEnvironment} from './native-atlas-environment-20261022.mjs';
+const root='F:/VisibleMedicine/staging/20261022-current-source-closure-assurance',v2=process.argv[2]==='v2',receipt=root+(v2?'/SOURCE_V2.json':'/SOURCE.json'),source=json(receipt),previous=json(source.previousSource),composition=json(root+(v2?'/COMPOSED_V2.json':'/COMPOSED.json'));
+assert.equal(sha(read(receipt)),composition.sourceReceiptSha256);assert.equal(fs.realpathSync(root+'/atlas'),fs.realpathSync(source.atlas));
+const evidence=root+(v2?'/verification-v2':'/verification');assert(!fs.existsSync(evidence));fs.mkdirSync(evidence);
+const env=nativeAtlasEnvironment({atlas:source.atlas,revision:source.atlasHead,tree:source.atlasTree}),tests=composition.tests;
+const commands=[['native',['--test','--experimental-strip-types','--test-concurrency=1','--test-reporter=tap',...tests]],['types',['node_modules/typescript/bin/tsc','--noEmit','--incremental','false']]],results=[];
+for(const[label,args]of commands){const out=fs.createWriteStream(evidence+'/'+label+'.stdout.log',{flags:'wx'}),err=fs.createWriteStream(evidence+'/'+label+'.stderr.log',{flags:'wx'});const child=spawn(process.execPath,args,{cwd:source.website,env,windowsHide:true,stdio:['ignore','pipe','pipe']});child.stdout.pipe(out);child.stderr.pipe(err);
+ fs.writeFileSync(evidence+'/'+label+'.STARTED.json',JSON.stringify({at:new Date().toISOString(),pid:child.pid,args,sourceReceipt:receipt,sourceReceiptSha256:sha(read(receipt))},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({label,pid:child.pid,roots:tests.length}));
+ const outcome=await new Promise(resolve=>{child.once('error',e=>resolve({code:null,error:String(e)}));child.once('close',(code,signal)=>resolve({code,signal}));});await Promise.all([out,err].map(s=>new Promise(resolve=>s.closed?resolve():s.once('close',resolve))));
+ const text=read(out.path).toString(),counts=Object.fromEntries([...text.matchAll(/^# (tests|pass|fail|cancelled|skipped|todo) (\d+)\r?$/gm)].map(m=>[m[1],+m[2]])),result={label,args,...outcome,counts,failed:[...text.matchAll(/^not ok \d+ - (.*)$/gm)].map(m=>m[1]),stdoutSha256:sha(read(out.path)),stderrSha256:sha(read(err.path))};results.push(result);fs.writeFileSync(evidence+'/'+label+'.TERMINAL.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({label,...outcome,counts,failed:result.failed}));if(outcome.code!==0)break;
+}
+const sourceDrift=source.sourceRows.filter(r=>sha(read(source.website+'/'+r.path))!==r.sha256).map(r=>r.path),previousSourceDrift=previous.sourceRows.filter(r=>sha(read(previous.website+'/'+r.path))!==r.sha256).map(r=>r.path);
+const terminal={at:new Date().toISOString(),terminal:true,code:results.length===commands.length&&results.every(r=>r.code===0)&&!sourceDrift.length&&!previousSourceDrift.length?0:1,sourceReceipt:receipt,sourceReceiptSha256:sha(read(receipt)),roots:tests,commands:results,sourceDrift,previousSourceDrift,productChanged:false,wholeSuitePassing:false,newBuildOrBrowserAcceptance:false,ownerPreviewChanged:false,canonicalInstalled:false,clinicalApproval:false,spatialRegistration:false,publicDeployment:false};fs.writeFileSync(evidence+'/TERMINAL.json',JSON.stringify(terminal,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({receipt:evidence+'/TERMINAL.json',code:terminal.code,sourceDrift}));process.exitCode=terminal.code;

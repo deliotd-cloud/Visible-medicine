@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T18:45:09.440Z",
+  "at": "2026-10-22T19:03:33.602Z",
   "sourceIdentity": {
     "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
     "tree": "db21ed3dee259c390878450b3495468996a3af85",
     "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc",
-    "sourceReceiptSha256": "d769eb7da674dd534f3e220a1b32b1a176c321ce39602d84ae9862a942c0989a"
+    "sourceReceiptSha256": "92403824dc9ebcce2f8efe6bb02ed10db642ab646fbdc9cff983d48cfe9a0a07"
   },
-  "parent": "04468344ed86f26ba98167b3dff10490a6aab9e2",
-  "gitParent": "04468344ed86f26ba98167b3dff10490a6aab9e2",
+  "parent": "271e64df6ef412aacb53d4748b3559454c9a44b4",
+  "gitParent": "271e64df6ef412aacb53d4748b3559454c9a44b4",
   "files": [
     {
       "path": "app/globals.css",
@@ -15176,6 +15176,191 @@
       "sha256": "db3be451ccae1b8969e19f5c2747ccfd42ab9e6c6da831e5b79b9b00166ab6d9"
     },
     {
+      "path": "pending/current-source-closure-assurance-20261022/coordination/checkpoint-current-source-closure-assurance-20261022.mjs",
+      "bytes": 11563,
+      "sha256": "68df891912b740eb4bfd1616153b53b076b71ae69a2dbe85305c37d4184c152d"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/coordination/freeze-current-source-closure-v2-20261022.mjs",
+      "bytes": 4298,
+      "sha256": "b09d472eff6c95731536c2e19b4361ef72a2c59edf708a10186e2ffd547c1238"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/coordination/prepare-current-source-closure-assurance-20261022.mjs",
+      "bytes": 8646,
+      "sha256": "b64550eac8d355635113ea8a9eb3e6c2ccf9be7545e2fc5676580b1c5fca60bc"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/coordination/prepare-ui-tour-current-closure-20261022.mjs",
+      "bytes": 8016,
+      "sha256": "e0f1dfdb37b52c40c24758edca80eb746d88939258f2615268de4a9de36247b2"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/coordination/record-current-source-closure-progress-20261022.mjs",
+      "bytes": 2174,
+      "sha256": "26507b9006eef8cb15806529db8db9b4fafb3f0dbdaf01f5437ebea5968e9554"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/coordination/verify-current-source-closure-assurance-20261022.mjs",
+      "bytes": 3537,
+      "sha256": "1d5af47fc6f7f28b36b848ed8f3f26735d4698132e02219ff64aeebf7a60eda5"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/diagnostic-source/inferior-thyroid-before-renal-revision-fix.mjs.raw",
+      "bytes": 12249,
+      "sha256": "4a77dee71f3887f7f28982835cd8658a7f6b30ea325d3ef02cf961b4bcfe2331"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/diagnostic-source/preservation-before-renal-revision-fix.mjs.raw",
+      "bytes": 19990,
+      "sha256": "4c50aae51f5873636faec5163fd3459622d1514752e3b3440628686d8244afba"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 10912,
+      "sha256": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/current-source-closure-preservation.test.mjs",
+      "bytes": 21593,
+      "sha256": "d8d5f4e9bfcb0ff199aeeb688411ae5e2f44ea1463644306b5bf0045fccc920b"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/closed56-femoral-epoch.test.mjs.raw",
+      "bytes": 10912,
+      "sha256": "9b666215eb5f12c2ab7564cf6ffe6e560682efb46d033a4bd13d88ecaf389f4e"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/head-disclosure-current-delivery.test.mjs.raw",
+      "bytes": 8355,
+      "sha256": "999704133a16bff87fb69948a0ef67ba3b5973218235ee3b99ef2d455cbfe58d"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/head-manual-recovery-54-to-55-closed.test.mjs.raw",
+      "bytes": 8716,
+      "sha256": "07c63b0d0eb11832ba209715a2c20e42f791c9d171a6902fb950010cfd5443ad"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/head-native-history-current-transition.test.mjs.raw",
+      "bytes": 8756,
+      "sha256": "6a2cf5ee21203146e830b696436fa5abc5d41637e818b7e54acfa672d5e5cfb5"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/inferior-thyroid-mra-current-delivery.test.mjs.raw",
+      "bytes": 11704,
+      "sha256": "0ff16b6d81a20d018a78eb49b416e431ef70dcfcbcd950e8e79dfdfa7de1b44d"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/radial-eus-current-transition.test.mjs.raw",
+      "bytes": 25366,
+      "sha256": "5a1f625dd7539e66c502b7cff0d6e237c63b9d1e793f49a5e3af5c0ac3231cbe"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/review-navigation-delivery-preservation.test.mjs.raw",
+      "bytes": 2412,
+      "sha256": "326b425f1d529b590eaa345f94a9dd440ed2bcfe5fbbb19dcb918048a002b995"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/shoulder-us-renderer-migration.test.mjs.raw",
+      "bytes": 6051,
+      "sha256": "ab3dd097913f298b924db07a512c1aca6f2626e6bae426732dcc9c4c510bf8d2"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/tour-discovery-current-delivery.test.mjs.raw",
+      "bytes": 8122,
+      "sha256": "6f48857ab2f7e4167348091bdd60fb60d9d3106f399548650aad593660c61956"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/ui-teaching-admission-contract.test.mjs.raw",
+      "bytes": 13882,
+      "sha256": "0d35c3590b0453730d4a484fc2f1c794e44119f5b1eba9c75de075d20cd0ed7b"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/current-source-closure-before/ui-teaching-current-delivery.test.mjs.raw",
+      "bytes": 16217,
+      "sha256": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/ui-tour-current-before/review-navigation-delivery-preservation.test.mjs.raw",
+      "bytes": 2412,
+      "sha256": "326b425f1d529b590eaa345f94a9dd440ed2bcfe5fbbb19dcb918048a002b995"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/ui-tour-current-before/tour-discovery-current-delivery.test.mjs.raw",
+      "bytes": 8122,
+      "sha256": "6f48857ab2f7e4167348091bdd60fb60d9d3106f399548650aad593660c61956"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/ui-tour-current-before/ui-teaching-admission-contract.test.mjs.raw",
+      "bytes": 13882,
+      "sha256": "0d35c3590b0453730d4a484fc2f1c794e44119f5b1eba9c75de075d20cd0ed7b"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/fixtures/ui-tour-current-before/ui-teaching-current-delivery.test.mjs.raw",
+      "bytes": 16217,
+      "sha256": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 8351,
+      "sha256": "d9ff129afdaf8ba43d232eb9fbd201bf5a3d4c3327b8970e3c54bd435c44ec22"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8722,
+      "sha256": "e60a4d22254e3af6da0394822cee26acc52fa8373c67c634400b36f74bf96f9a"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 8753,
+      "sha256": "6280d5d8c8bd42447827a29f256acb5e718acd07effb549e9226ddc4b8efd8b4"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "bytes": 13192,
+      "sha256": "7f28ac68d9e7ac522b20b9122c9760ba497c61775238fc952d8ff4541990e618"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/radial-eus-current-transition.test.mjs",
+      "bytes": 25440,
+      "sha256": "3f48e87d9cff237970ae8f29660106ee1b43cdcea1c7483055947718a9c470a4"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2732,
+      "sha256": "14e5824f2a60c96b4832d7a17416378500fe01d46ac8c7262985ecfa36301119"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/shoulder-us-renderer-migration.test.mjs",
+      "bytes": 6052,
+      "sha256": "b78586de80aebffc3e95c2592fc4870c2f62c48e5f807b1db03ab228ddc5a257"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 8122,
+      "sha256": "2c0bc87f3660711894dad3cfe7aa5a638bbe11296c994662c9870a759b9e2fb3"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/ui-teaching-admission-contract.test.mjs",
+      "bytes": 13882,
+      "sha256": "b57e611a7ee77263da554141708e3d3acc5bd8da2aed2664b19a185f6e41f3ab"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16217,
+      "sha256": "2d654b875fb68520036e2288cad70e08a4a8da885391196f715168f339418a4f"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/website/tests/ui-tour-current-role-preservation.test.mjs",
+      "bytes": 5521,
+      "sha256": "017effaff9be910c378216d9e838852e14b33acb9659e7b108ca715d9d7622db"
+    },
+    {
+      "path": "pending/current-source-closure-assurance-20261022/worker-regional/regional-current-history-inverse.mjs",
+      "bytes": 6465,
+      "sha256": "4f133d589d8f9e0c02c71abaf693e497c8221462b5f8e4d2927602cf69b81eb3"
+    },
+    {
       "path": "pending/desktop-drawable-space-20261021/atlas/app/body-explorer.css",
       "bytes": 65201,
       "sha256": "9722246697fafcd54f55e586797eaec33930c5f3f87d653117b064787ebe2904"
@@ -22857,22 +23042,23 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus seven current/historical regression roots, unchanged tongue/palate quizzes verified against later neck X-ray teaching, exact original source and mutation witnesses, and coordinator scripts. No product/anatomy/runtime/binding changes. Actual generated JSON, pin/tracking/Review evidence, compiled runtimes/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries/logs stay local. Historical code-only witnesses are raw text, not images, private data or new product. Source-only, not whole/private/runnable recovery, installation or public deployment.",
+  "scope": "Inherited filtered source plus eleven independently current/historical head, regional, teaching, UI and navigation test roots and full original-source inverses. Product/runtime/binding bytes unchanged. Generated JSON, pin/tracking/Review evidence, compiled runtimes/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries/logs remain local. Raw witnesses are code text only. This is scoped source-only recovery, not a full/private/runnable backup, installation or public deployment.",
   "proof": {
     "native": {
-      "tests": 86,
-      "pass": 86,
+      "tests": 131,
+      "pass": 131,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
+    "nativeRoots": 26,
     "fullTypesPassed": true,
-    "initial85of86WitnessFailureRetained": true,
-    "subsequentMissingLocalAtlasAliasTypesFailureRetained": true,
-    "all6400NamedInputsStable": true,
+    "initial130of131FailureRetained": true,
+    "fullRegionalTourDataEqualityPreservedWithOneAuthenticatedRenalRevisionInverse": true,
+    "all6417NamedInputsStable": true,
     "allProductAndBindingsUnchanged": true,
-    "initialSourceEpochsExactlyReplayed": true,
+    "firstSourceEpochExactlyReplayed": true,
     "newBuildOrBrowserAcceptance": false,
     "canonicalInstalled": false,
     "ownerPreviewChanged": false,

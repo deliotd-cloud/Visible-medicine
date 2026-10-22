@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-current-source-closure-assurance',first=json(root+'/SOURCE.json'),composition=json(root+'/COMPOSED.json'),terminal=json(root+'/verification/TERMINAL.json');
+assert.equal(terminal.code,1);assert.deepEqual(terminal.commands[0].counts,{tests:131,pass:130,fail:1,cancelled:0,skipped:0,todo:0});assert.deepEqual(terminal.sourceDrift,[]);
+const target='tests/inferior-thyroid-mra-current-delivery.test.mjs',witness='tests/current-source-closure-preservation.test.mjs';
+for(const row of first.sourceRows)if(row.path!==target)assert.equal(sha(read(first.website+'/'+row.path)),row.sha256,row.path);
+const proof=composition.proof.find(row=>'tests/'+row.name===target),before=read(first.website+'/tests/fixtures/current-source-closure-before/'+proof.name+'.raw'),old=read('F:/VisibleMedicine/staging/20261022-regional-current-history-closure/tests/'+proof.name).toString();
+const skipped="if(key!=='regionalTours')equal(currentGit[key],now[key],`Current ${key} unchanged since historical MRA introduction`);";
+assert.equal(old.split(skipped).length,2);const initial=Buffer.from(old.replace(skipped,'equal(currentGit[key],now[key],`Current ${key} unchanged since historical MRA introduction`);'));assert.equal(sha(initial),proof.after);
+fs.writeFileSync(root+'/inferior-thyroid-before-renal-revision-fix.mjs.raw',initial,{flag:'wx'});fs.copyFileSync(first.website+'/'+witness,root+'/preservation-before-renal-revision-fix.mjs.raw',fs.constants.COPYFILE_EXCL);
+function editsFor(a,b){const dp=Array.from({length:a.length+1},()=>new Uint32Array(b.length+1));for(let i=a.length-1;i>=0;i--)for(let j=b.length-1;j>=0;j--)dp[i][j]=a[i]===b[j]?1+dp[i+1][j+1]:Math.max(dp[i+1][j],dp[i][j+1]);let i=0,j=0,start=null;const out=[];const close=()=>{if(start){out.push({...start,before:a.slice(start.i,i),after:b.slice(start.j,j)});start=null;}};while(i<a.length||j<b.length){if(i<a.length&&j<b.length&&a[i]===b[j]){close();i++;j++;}else{start??={i,j};if(i<a.length&&(j===b.length||dp[i+1][j]>=dp[i][j+1]))i++;else j++;}}close();return out;}
+const oldProof=JSON.stringify(composition.proof,null,2),current=read(first.website+'/'+target),a=before.toString().split('\n'),b=current.toString().split('\n');
+proof.edits=editsFor(a,b);proof.after=sha(current);proof.mainStrengthening='Preserve the entire regionalTours comparison after restoring only the independently authenticated later renal revision scalar; all other data, current imports and historical two-MRI theorem remain checked.';
+const restored=[...b];for(const e of [...proof.edits].reverse()){assert.deepEqual(restored.slice(e.j,e.j+e.after.length),e.after);restored.splice(e.j,e.after.length,...e.before);}assert.deepEqual(restored,a);
+const text=read(first.website+'/'+witness).toString();assert.equal(text.split(oldProof).length,2);fs.writeFileSync(first.website+'/'+witness,text.replace(oldProof,JSON.stringify(composition.proof,null,2)));
+const source={...first,at:new Date().toISOString(),previousVerificationSource:root+'/SOURCE.json',previousVerificationSourceSha256:sha(read(root+'/SOURCE.json')),sourceRows:first.sourceRows.map(row=>{const bytes=read(first.website+'/'+row.path);return{path:row.path,bytes:bytes.length,sha256:sha(bytes)};})};
+const changed=source.sourceRows.filter((r,i)=>r.sha256!==first.sourceRows[i].sha256).map(r=>r.path);assert.deepEqual(changed.sort(),[target,witness].sort());
+for(const row of first.sourceRows){const bytes=read(row.path===target?root+'/inferior-thyroid-before-renal-revision-fix.mjs.raw':row.path===witness?root+'/preservation-before-renal-revision-fix.mjs.raw':first.website+'/'+row.path);assert.equal(sha(bytes),row.sha256,'Exact retained first-run source epoch');}
+fs.writeFileSync(root+'/SOURCE_V2.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});fs.writeFileSync(root+'/COMPOSED_V2.json',JSON.stringify({...composition,sourceReceipt:root+'/SOURCE_V2.json',sourceReceiptSha256:sha(read(root+'/SOURCE_V2.json')),firstFailureRetained:true},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({receipt:root+'/SOURCE_V2.json',sha256:sha(read(root+'/SOURCE_V2.json')),firstEpochReplayed:true,changed,productChanged:false}));
