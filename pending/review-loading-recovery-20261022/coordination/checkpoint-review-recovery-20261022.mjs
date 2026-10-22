@@ -1,0 +1,44 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,existsSync,mkdirSync,copyFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const read=path=>readFileSync(path),json=path=>JSON.parse(read(path)),sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const git=(cwd,...args)=>execFileSync('git',['-C',cwd,...args],{encoding:'utf8',windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).trim();
+const root='F:/VisibleMedicine/staging/20261022-review-recovery-website-candidate',built=json(root+'/BUILD_RESULT.json');
+const oldRoot='F:/VisibleMedicine/staging/20261022-viewer-assurance-candidate',base=json(oldRoot+'/VERIFIED_SOURCE.json');
+const canonical='F:/VisibleMedicine/website',destination='F:/VisibleMedicine/recovery/checkpoints/20261022-review-recovery-verified';
+assert(!existsSync(destination));assert(!existsSync(root+'/VERIFIED_SOURCE.json'));
+assert(built.allStepsPassed);assert.equal(built.sourcePaths,5811);assert.equal(built.sourceRows.length,5811);assert.deepEqual(built.drift,[]);assert.deepEqual(built.baseDrift,[]);
+assert.equal(git(canonical,'rev-parse','HEAD'),'b953ff3f5f1891599cb6e91cb91311d9d6006270');
+assert.equal(git('F:/VisibleMedicine/atlas','rev-parse','HEAD'),built.source);assert.equal(git('F:/VisibleMedicine/atlas','status','--porcelain'),'');
+for(const row of built.sourceRows){const bytes=read(built.website+'/'+row.path);assert.equal(bytes.length,row.bytes,row.path);assert.equal(sha(bytes),row.sha256,row.path);}
+for(const row of base.sourceRows)assert.equal(sha(read(base.website+'/'+row.path)),row.sha256,'Frozen base '+row.path);
+const oldMap=new Map(base.sourceRows.map(row=>[row.path,row]));
+const added=built.sourceRows.filter(row=>!oldMap.has(row.path));
+assert.deepEqual(added.map(row=>row.path),['app/workspace/atlas-review/loading.tsx','tests/clinical-review-route-loading.test.mjs']);
+for(const row of built.sourceRows.filter(row=>oldMap.has(row.path)))assert.deepEqual(row,oldMap.get(row.path));
+const installed=json('F:/VisibleMedicine/recovery/local-cutover/20261021-colic-ultrasound/SOURCE_INPUTS_AFTER.json');
+const preserved=json('F:/VisibleMedicine/recovery/local-cutover/20261021-colic-ultrasound/PLAN.json').preserved;
+assert.equal(installed.length,5730);assert.equal(preserved.length,7);
+const installedMap=new Map();for(const row of [...installed,...preserved]){if(installedMap.has(row.path))assert.deepEqual(installedMap.get(row.path),row);installedMap.set(row.path,row);}
+assert.equal(installedMap.size,5736);
+for(const row of installedMap.values()){const bytes=read(canonical+'/'+row.path);assert.equal(bytes.length,row.bytes,row.path);assert.equal(sha(bytes),row.sha256,'Canonical '+row.path);}
+const delta=built.sourceRows.filter(row=>!existsSync(canonical+'/'+row.path)||sha(read(canonical+'/'+row.path))!==row.sha256).map(row=>({...row,before:existsSync(canonical+'/'+row.path)?{bytes:read(canonical+'/'+row.path).length,sha256:sha(read(canonical+'/'+row.path))}:null}));
+assert.equal(delta.length,102);assert(delta.every(row=>!row.path.endsWith('.glb')&&!row.path.startsWith('.local/')));
+assert.equal(json(built.website+'/atlas-review/integration-inputs.json').sha256,built.review);
+assert.equal(json(canonical+'/atlas-review/integration-inputs.json').sha256,'ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59');
+const backupPath='F:/VisibleMedicine/recovery/checkpoints/20261022-review-recovery-backup/github-backup.json',backup=json(backupPath);
+assert(backup.sourceBackupVerified&&backup.strictIntegrity);assert.equal(backup.restoredPaths,2749);
+const diagnosis='F:/VisibleMedicine/staging/20261022-review-loading-diagnostic/BROWSER_RESULT.json',browser=json(diagnosis);
+assert(browser.fresh.authorizedScopeNotice&&browser.fresh.loadedHeading&&browser.newTab132Closed);assert.equal(browser.oldTabRefreshed,false);
+const source={at:new Date().toISOString(),website:built.website,source:built.source,review:built.review,sourceRows:built.sourceRows,previousSourceReceipt:oldRoot+'/VERIFIED_SOURCE.json',previousSourceReceiptSha256:sha(read(oldRoot+'/VERIFIED_SOURCE.json')),exactPreviousRowsPreserved:5809,added,delta,knownInstalledDistinctPathsVerified:5736,canonicalInstalled:false};
+writeFileSync(root+'/VERIFIED_SOURCE.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});
+const next='Keep the 5811-path coherent candidate isolated until a fresh saved-draft/restart answer. The original 5809-path candidate is frozen and all5736 known installed distinct paths remain exact. At authorized cutover preserve preimages and the exact verified Review artifact plus110 compatibility assets; verify canonical integration and browser behavior without forcing owner tabs to refresh. Meanwhile advance independent safe roadmap work. Fresh complete stock regression remains required; no previous partial run is passing.';
+const checkpoint={at:source.at,phase:'Expanded-viewer candidate extended with a static protected Review loading/recovery screen; full types/build/stockReview and four new tests pass; backed up selected source; not installed',website:built.website,source:built.source,candidateReview:built.review,installedReview:'ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59',sourcePaths:5811,plannedDeltaPaths:102,sourceReceipt:root+'/VERIFIED_SOURCE.json',sourceReceiptSha256:sha(read(root+'/VERIFIED_SOURCE.json')),previousVerifiedCandidate:{website:base.website,sourcePaths:5809,unchanged:true,checkpoint:'F:/VisibleMedicine/recovery/checkpoints/20261022-expanded-viewer-verified/checkpoint.json'},newFocusedChecks:built.results.find(row=>row.label==='loading-tests'),fullTypes:true,productionWebsiteBuild:true,stockReviewVerified:true,allPriorReviewViewerRuntimeAndSourceBytesUnchanged:true,reviewBindings:1723,viewerFiles:46,viewerPackages:22,retainedCompatibilityAssets:110,loadingRecovery:{genericServerFallback:true,realRouterDiscovery:true,noAuthOrStorageChanges:true,noAutomaticReload:true,manualNewTabOnly:true,browserAcceptanceOfNewFallback:false,oldTabCauseNotProved:true,diagnosis,diagnosisSha256:sha(read(diagnosis)),freshAuthorizedExistingReviewRendered:true,oldOwnerTabUnchanged:true},sourceBackup:{receipt:backupPath,receiptSha256:sha(read(backupPath)),head:backup.head,tree:backup.tree,restoredPaths:backup.restoredPaths,selectedSourceOnly:true,wholePrivateRunnableBackup:false},leftColicUltrasound:{evidence:'F:/VisibleMedicine/staging/20261022-left-colic-ultrasound-evidence/EVIDENCE.md',status:'pending; bounded primary audit did not justify promoting branch-specific ultrasound visibility'},canonicalInstalled:false,ownerPreview:{pid:297128,session:98175,changed:false,ownerTabsRefreshed:false},freshDraftRestartQuestionPending:true,heavyJobsRunning:false,fullStockRegressionPassing:false,freshFullRegressionRequired:true,clinicalApproval:false,patientSpaceRegistration:false,publicDeployment:false,full71AndEightIdeasAndOriginalBaselinesPreserved:true,next};
+mkdirSync(destination);copyFileSync('CURRENT_CHECKPOINT.json',destination+'/CURRENT_CHECKPOINT.before.json');
+const checkpointPath=destination+'/checkpoint.json';writeFileSync(checkpointPath,JSON.stringify(checkpoint,null,2)+'\n',{flag:'wx'});
+const pointer=json('CURRENT_CHECKPOINT.json'),pending=pointer.activeWork.pendingCoherentViewerCandidate;
+Object.assign(pending,{stage:root,candidate:built.website,receipt:root+'/PREPARED.json',receiptSha256:sha(read(root+'/PREPARED.json')),phase:checkpoint.phase,sourcePaths:5811,plannedDeltaPaths:102,previousClosedCandidate:checkpoint.previousVerifiedCandidate,latestSourceReceipt:checkpoint.sourceReceipt,latestSourceReceiptSha256:checkpoint.sourceReceiptSha256,checkpoint:checkpointPath,checkpointSha256:sha(read(checkpointPath)),sourceBackupReceipt:backupPath,sourceBackupHead:backup.head,sourceBackupTree:backup.tree,reviewLoadingRecovery:checkpoint.loadingRecovery,latestBuild:root+'/BUILD_RESULT.json',latestBuildSha256:sha(read(root+'/BUILD_RESULT.json')),newFocusedChecks:checkpoint.newFocusedChecks,canonicalInstalled:false,freshDraftRestartQuestionPending:true,next});
+pointer.activeWork.updated=source.at;pointer.activeWork.inflight.heavyJobRunning=false;pointer.activeWork.inflight.runningSession=null;pointer.activeWork.inflight.runningDriver=null;pointer.activeWork.inflight.runningStage=null;pointer.activeWork.inflight.next=next;
+writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(pointer,null,2)+'\n');
+console.log(JSON.stringify({checkpoint:checkpointPath,sha256:sha(read(checkpointPath)),sourcePaths:5811,plannedDelta:102,knownCanonicalPathsUnchanged:5736,backupHead:backup.head,backupRestoredPaths:2749,canonicalInstalled:false}));

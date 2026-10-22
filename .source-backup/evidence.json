@@ -1,37 +1,27 @@
 {
   "selectedSourceOnly": true,
-  "reviewViewerActuallyBuilt": true,
-  "exactPackagesAndNoticesUnchanged": true,
-  "strictCurrentDeliveryAdmitted": true,
-  "focusedNativeTests": {
-    "tests": 110,
-    "pass": 110,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "historicalNativeTests": {
-    "tests": 21,
-    "pass": 21,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
+  "newFiles": 2,
   "fullTypes": true,
   "productionWebsiteBuild": true,
-  "typesAnnotationsExecutableIdentity": true,
-  "earlierFullRunInterrupted": true,
-  "earlierFullRunPassing": false,
-  "freshFullRegressionStillRequired": true,
-  "additionalNativeEpochCohortRunning": true,
-  "wholeSuitePassing": false,
+  "stockReviewVerified": true,
+  "newFocusedTests": {
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "realFrameworkRouteDiscovery": true,
+  "base5809SourceUnchanged": true,
+  "sourcePaths": 5811,
+  "manualNewTabRecoveryOnly": true,
+  "noAutomaticReloadOrDraftClearing": true,
   "ownerPreviewChanged": false,
   "clinicalApproval": false,
   "patientSpaceRegistration": false,
-  "legalClearance": false,
   "publicDeployment": false,
   "wholeProjectBackup": false,
-  "privateDataBackup": false
+  "privateDataBackup": false,
+  "fullStockRegressionPassing": false
 }

@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T00:44:36.675Z",
+  "at": "2026-10-22T01:11:06.436Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
-    "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99",
-    "candidatePinSha256": "db46c1722ed839a4c8a57bd9bad4028dd90f5cb765641172ab4cdc9581e0d80f"
+    "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "a1862b3eb0bc11c7bf747341f17d7382a2041876",
-  "gitParent": "a1862b3eb0bc11c7bf747341f17d7382a2041876",
+  "parent": "568689610c1b811b40d6822f4d748b8e2189aaa4",
+  "gitParent": "568689610c1b811b40d6822f4d748b8e2189aaa4",
   "files": [
     {
       "path": "app/globals.css",
@@ -13001,6 +13000,41 @@
       "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
     },
     {
+      "path": "pending/review-loading-recovery-20261022/coordination/backup-review-recovery-20261022.mjs",
+      "bytes": 4006,
+      "sha256": "683dd2f7dc087ab1204078347c91f70734050b2b00eb891f45d2d3c01f606f37"
+    },
+    {
+      "path": "pending/review-loading-recovery-20261022/coordination/build-review-recovery-candidate-20261022.mjs",
+      "bytes": 5304,
+      "sha256": "2d95c655b3a5108269fb14062883a98f33dcfcfa34a4be19b99f759352e7358c"
+    },
+    {
+      "path": "pending/review-loading-recovery-20261022/coordination/checkpoint-review-recovery-20261022.mjs",
+      "bytes": 8698,
+      "sha256": "8883b7a65ff5c02ab5ac1cb9901ae4ec920959b688af03e6f462a353279e743f"
+    },
+    {
+      "path": "pending/review-loading-recovery-20261022/coordination/diagnose-review-stream-20261022.mjs",
+      "bytes": 1712,
+      "sha256": "ce3a6d322463f85f621fd8fe8d80a1dd15db796bc4c7d5ddbd236e4dc5e44007"
+    },
+    {
+      "path": "pending/review-loading-recovery-20261022/coordination/verify-review-loading-recovery-20261022.mjs",
+      "bytes": 1549,
+      "sha256": "386e067e477e796812a867a52b9d936ebc126021338344ae9d10f45ed334f533"
+    },
+    {
+      "path": "pending/review-loading-recovery-20261022/website/app/workspace/atlas-review/loading.tsx",
+      "bytes": 652,
+      "sha256": "ac2e48e14600448efcd5c259c39b386aab1fd672e6ea19c1d07a5c416b356415"
+    },
+    {
+      "path": "pending/review-loading-recovery-20261022/website/tests/clinical-review-route-loading.test.mjs",
+      "bytes": 4408,
+      "sha256": "c25c5298f4cbad04e82ae441985ae85ce0ba7f20934aa76c85bea5e00bef1c7d"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -13707,43 +13741,33 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered authored source plus explicit authored test/admission/helper source and complete raw CODE preimages only. Generated JSON pin/documents/Review revision records, runtime/viewer output, licences HTML, source scans, pixels/masks, models, private references/notes/decisions, identifiers, environment/credentials, databases, raw logs/media and raw canonical Git ancestry are NOT added. Candidate is locally built but not installed or deployed. This is selected authored-source recovery, not whole/private/runnable recovery.",
+  "scope": "Inherited filtered authored source plus two explicit generic loading UI/test files and five authored coordination scripts. No new generated JSON, Review records, runtime, scan pixels/masks, models, private references/notes/decisions, identifiers, credentials/environment, databases, raw logs/media or canonical Git ancestry. Selected authored-source recovery only: not a whole/private/runnable backup. Candidate is not installed or deployed.",
   "proof": {
     "selectedSourceOnly": true,
-    "reviewViewerActuallyBuilt": true,
-    "exactPackagesAndNoticesUnchanged": true,
-    "strictCurrentDeliveryAdmitted": true,
-    "focusedNativeTests": {
-      "tests": 110,
-      "pass": 110,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "historicalNativeTests": {
-      "tests": 21,
-      "pass": 21,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
+    "newFiles": 2,
     "fullTypes": true,
     "productionWebsiteBuild": true,
-    "typesAnnotationsExecutableIdentity": true,
-    "earlierFullRunInterrupted": true,
-    "earlierFullRunPassing": false,
-    "freshFullRegressionStillRequired": true,
-    "additionalNativeEpochCohortRunning": true,
-    "wholeSuitePassing": false,
+    "stockReviewVerified": true,
+    "newFocusedTests": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "realFrameworkRouteDiscovery": true,
+    "base5809SourceUnchanged": true,
+    "sourcePaths": 5811,
+    "manualNewTabRecoveryOnly": true,
+    "noAutomaticReloadOrDraftClearing": true,
     "ownerPreviewChanged": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
-    "legalClearance": false,
     "publicDeployment": false,
     "wholeProjectBackup": false,
-    "privateDataBackup": false
+    "privateDataBackup": false,
+    "fullStockRegressionPassing": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

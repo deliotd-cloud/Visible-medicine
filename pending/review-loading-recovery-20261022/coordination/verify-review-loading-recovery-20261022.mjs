@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {writeFileSync,readFileSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const stage='F:/VisibleMedicine/staging/20261022-review-loading-recovery';
+const suffix=process.argv[2]??'';assert(['','-router','-router-v2'].includes(suffix));
+const result=spawnSync(process.execPath,['--test','--test-reporter=tap',stage+'/tests/clinical-review-route-loading.test.mjs'],{encoding:'utf8',windowsHide:true,maxBuffer:4e6});
+const output=(result.stdout??'')+(result.stderr??'');writeFileSync(stage+'/TESTS'+suffix+'.log',output,{flag:'wx'});
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const counts={};for(const key of['tests','pass','fail','cancelled','skipped','todo'])counts[key]=Number(output.match(new RegExp('^# '+key+' (\\d+)$','m'))?.[1]??NaN);
+const paths=['app/workspace/atlas-review/loading.tsx','tests/clinical-review-route-loading.test.mjs'];
+const receipt={at:new Date().toISOString(),stage,status:result.status,counts,logSha256:sha(Buffer.from(output)),files:paths.map(path=>({path,bytes:readFileSync(stage+'/'+path).length,sha256:sha(readFileSync(stage+'/'+path))})),frozenExpandedViewerCandidateChanged:false,canonicalInstalled:false,ownerTabRefreshed:false,privateRecordsOrPermissionsChanged:false,fullProjectTypesBuildOrBrowserAcceptance:false};
+writeFileSync(stage+'/TEST_RESULT'+suffix+'.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(receipt));assert.equal(result.status,0);
