@@ -1,111 +1,51 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T22:50:14.429Z",
+  "at": "2026-10-22T23:07:38.681Z",
   "sourceIdentity": {
-    "localHead": "7978478992f54ea68e0f53c3d195c459c7b80068",
-    "localTree": "17cc5a564348832c268dac9b6d713f48b6b7f530",
-    "baseline": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "sourceRows": [
+    "atlas": "7978478992f54ea68e0f53c3d195c459c7b80068",
+    "atlasTree": "17cc5a564348832c268dac9b6d713f48b6b7f530",
+    "review": "9a622360e2578862559371462d2832e81d884131cdbbd6335442923c01b50540",
+    "namedSourceReceiptSha256": "2a87c6f0e169b79b4cf3d4dff62a9ccc506373e9fd12f8b1706596e538f98796",
+    "authoredHostChanges": [
       {
-        "path": "app/anatomy-data.ts",
-        "bytes": 26813,
-        "sha256": "7cff871e9791c438ceca79b3d6645b2e933d9ab45c2429525f9d707ee5b2f78e",
-        "generated": false
+        "path": "components/HeadLearningBookmark.tsx",
+        "bytes": 9067,
+        "sha256": "2b889e1dd98c185ea7f9b07469944dad449ab8a84586832cab3e07bcb3ebd3cf"
       },
       {
-        "path": "app/body-content.ts",
-        "bytes": 83121,
-        "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56",
-        "generated": false
+        "path": "lib/anatomy-coverage-view.ts",
+        "bytes": 5290,
+        "sha256": "7e5e3ba0528d10a0702219251412d6630ba95e6f14e14cf003ba1768ff788b60"
       },
       {
-        "path": "app/regional-guided-learning.tsx",
-        "bytes": 17559,
-        "sha256": "418319343ca3033bff575d35faa6da5e177fc6eab16238fa052c2de755f10f79",
-        "generated": false
+        "path": "scripts/check-anatomy-coverage.mjs",
+        "bytes": 4552,
+        "sha256": "81a8ff15afbbee869023162e4aae48a3793b001a5b3195fb11dafabe91d5db6c"
       },
       {
-        "path": "lib/hamstring-tours.ts",
-        "bytes": 5374,
-        "sha256": "14f56f53002c574fd2eb8a6a88f23f4e8fad9476495ad227434384ef59d51737",
-        "generated": false
+        "path": "scripts/import-clinical-review.mjs",
+        "bytes": 6751,
+        "sha256": "d1985571c8ab0f155cfe4143ad602a35506ea2ebbfb7dba9003a0faa8a790681"
       },
       {
-        "path": "lib/legacy-shoulder-bone-references.ts",
-        "bytes": 2164,
-        "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649",
-        "generated": false
+        "path": "tests/arterial-history-preservation.test.mjs",
+        "bytes": 7772,
+        "sha256": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
       },
       {
-        "path": "lib/legacy-shoulder-muscle-references.ts",
-        "bytes": 4585,
-        "sha256": "283ec0d7d4fabb4477539ea3a35c08dcea1500e0e59ba7bd078dc6770dbbfc5d",
-        "generated": false
+        "path": "tests/head-bookmark-ui-loader.ts",
+        "bytes": 1026,
+        "sha256": "375280e5074985912c0be6465695dca6441d1ee00eb4e81fc2067d27db7f2268"
       },
       {
-        "path": "lib/legacy-shoulder-references.ts",
-        "bytes": 858,
-        "sha256": "d7de7f5ffae34b845092277b75e4ec555bf493be36768bb15a5a73b4b7770f82",
-        "generated": false
-      },
-      {
-        "path": "lib/regional-tours.ts",
-        "bytes": 45118,
-        "sha256": "b1a1bc9d9d80b84d4d98aed1aaa08aa4e9d7313e58bdd40f3b8a10ea0bab215d",
-        "generated": false
-      },
-      {
-        "path": "package.json",
-        "bytes": 87104,
-        "sha256": "1b941e171ea58f1b33202019aff9b441cd64ad3640bd2563a43764dc6b57fdb4",
-        "generated": false
-      },
-      {
-        "path": "scripts/pin-hamstring-tours.mjs",
-        "bytes": 2469,
-        "sha256": "6bce1950dc435b17fd089627dfca575e1aeac1f91cbf3ff15a17394753113a87",
-        "generated": false
-      },
-      {
-        "path": "scripts/test-atlas-teaching-tour-composition.mjs",
-        "bytes": 9904,
-        "sha256": "6cd2b2b2fa3a577a3c13da9d77eaef89628fb3d960a76cedfedde38437d2fd61",
-        "generated": false
-      },
-      {
-        "path": "scripts/test-hamstring-library.mjs",
-        "bytes": 7755,
-        "sha256": "fafb03c535da4eb2489862479904e0c0316322f29b17b1b7e8cf83e6898b601a",
-        "generated": false
-      },
-      {
-        "path": "scripts/test-hamstring-tours.mjs",
-        "bytes": 11462,
-        "sha256": "51a11c2bd062a9ade7f47f62709c5179ddf739af405e1b029e564fb3a9850f61",
-        "generated": false
-      },
-      {
-        "path": "scripts/test-legacy-shoulder-references.mjs",
-        "bytes": 13764,
-        "sha256": "fb4a55e9f2429ce2d1eff00043cb1dfb3ebe95fa32daa99e7e53d018c975c0f4",
-        "generated": false
-      },
-      {
-        "path": "scripts/test-regional-tour-player.mjs",
-        "bytes": 135312,
-        "sha256": "919f0399b7c6028ff1181cefaad67a65cd7efe47739f906bf0ed44850ad3b131",
-        "generated": false
-      },
-      {
-        "path": "scripts/test-whole-body-guided-learning.mjs",
-        "bytes": 35039,
-        "sha256": "b720e85a3b67cfcb5d4e54c8f53b5c6aa00011b3686153f2f87b80acb0254b1e",
-        "generated": false
+        "path": "tests/head-learning-bookmark-ui.test.ts",
+        "bytes": 20767,
+        "sha256": "9c26ca9ed9b8839aad1ecbc01512a4b06cb65f5a6df4bcffeff7b261e6aae88c"
       }
     ]
   },
-  "parent": "bdfbf66eb1b6782eec8b6f36fe17b4f45bb8afc3",
-  "gitParent": "bdfbf66eb1b6782eec8b6f36fe17b4f45bb8afc3",
+  "parent": "166650c5e6faaaf7ba49306821329a48b8505fb3",
+  "gitParent": "166650c5e6faaaf7ba49306821329a48b8505fb3",
   "files": [
     {
       "path": "app/globals.css",
@@ -11991,6 +11931,106 @@
       "path": "pending/arterial-current-role-followup-20261022/website/tests/arterial-history-preservation.test.mjs",
       "bytes": 7772,
       "sha256": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/coordination/admit-atlas-teaching-coverage-20261022.mjs",
+      "bytes": 2881,
+      "sha256": "72b89cb7cf7ade5af0e58da32e664ffa242ff720723662f790ec0b28950ba015"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/coordination/checkpoint-atlas-teaching-website-composition-20261023.mjs",
+      "bytes": 11534,
+      "sha256": "953ede40f03380f62aedf479521879e5fe21931704e179d89240d25bf0e31fa7"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/coordination/prepare-atlas-teaching-website-composition-20261022.mjs",
+      "bytes": 4243,
+      "sha256": "3a4c012fd473dce8b35907d20ca26b175929b48aaf682ec7c58e9b74cc09681d"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/coordination/review-atlas-teaching-website-composition-20261022.mjs",
+      "bytes": 9850,
+      "sha256": "e2df5a3e997d6f3685f21935ccb037342a158a3608b5821f6c309d98fca37633"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/coordination/run-atlas-teaching-website-composition-20261022.mjs",
+      "bytes": 2917,
+      "sha256": "f12d3f1c40486e6ce389c5d7e2af0f1fbe477ae6668a5a3cc58d0128d806c052"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/coordination/test-atlas-teaching-website-composition-20261022.mjs",
+      "bytes": 9222,
+      "sha256": "90c3042923fc53dd62daa4cac161affbc5e7570dcac3c1d6f6e9b3685b6ec122"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/current/components/HeadLearningBookmark.tsx",
+      "bytes": 9067,
+      "sha256": "2b889e1dd98c185ea7f9b07469944dad449ab8a84586832cab3e07bcb3ebd3cf"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/current/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "7e5e3ba0528d10a0702219251412d6630ba95e6f14e14cf003ba1768ff788b60"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/current/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "81a8ff15afbbee869023162e4aae48a3793b001a5b3195fb11dafabe91d5db6c"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/current/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "d1985571c8ab0f155cfe4143ad602a35506ea2ebbfb7dba9003a0faa8a790681"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/current/tests/arterial-history-preservation.test.mjs",
+      "bytes": 7772,
+      "sha256": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/current/tests/head-bookmark-ui-loader.ts",
+      "bytes": 1026,
+      "sha256": "375280e5074985912c0be6465695dca6441d1ee00eb4e81fc2067d27db7f2268"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/current/tests/head-learning-bookmark-ui.test.ts",
+      "bytes": 20767,
+      "sha256": "9c26ca9ed9b8839aad1ecbc01512a4b06cb65f5a6df4bcffeff7b261e6aae88c"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/preimage/components/HeadLearningBookmark.tsx",
+      "bytes": 8679,
+      "sha256": "8396af75753bfaeef7ade8853893e34922277571d1717251d71550e79fcee2fa"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/preimage/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "d5263a59256009aa7a8670cf6eb3f4c1c9a3d67ddbbacabaceec4f6467624fe7"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/preimage/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "ad4581cdc7fcaa5a4f7a68c7322aafe097a75e786cf08c89677fd88b019717c2"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/preimage/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "df699b7f36f8afaa33964f98cedda561c8664c96c5a734916bd57dfcb2586137"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/preimage/tests/arterial-history-preservation.test.mjs",
+      "bytes": 6059,
+      "sha256": "60a15827ff4e534d7ce5c534ad14a67dad64dc6d152dea90ae136a7ca6ad92a6"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/preimage/tests/head-bookmark-ui-loader.ts",
+      "bytes": 927,
+      "sha256": "6d73a5557a59dc34d6fedea28216def61a8962fbd45263b657072a765dbbca8c"
+    },
+    {
+      "path": "pending/atlas-review-source-composition-20261023/preimage/tests/head-learning-bookmark-ui.test.ts",
+      "bytes": 15470,
+      "sha256": "df11f5e9f38bcdd8cc4d34145086ea37c84fed76d746c58c9690e11aafe82936"
     },
     {
       "path": "pending/atlas-teaching-tour-composition-20261022/coordination/checkpoint-atlas-teaching-tour-composition-20261022.mjs",
@@ -23984,11 +24024,12 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus authored isolated Atlas composition sources, bounded regressions and source-only preimages. Adds bilateral draft hamstring tours, shoulder/Brain reference wording and commit-bound tour playback controls. Generated pins/teaching/Review/runtime JSON, geometry/models/textures, scans/identifiers/masks, private references/decisions, raw logs/process records and canonical Git ancestry are excluded. No new package/asset or fees. Source-only recovery, not full/private/runnable backup or installed/clinical/spatial/public release acceptance.",
+  "scope": "Inherited filtered source plus authored source-only Website import/coverage pin updates, queued bookmark and test changes, verification sources and before-source copies. The isolated Review source import is new; the unchanged built viewer/runtime still use an earlier source and the current-delivery gate correctly rejects this incomplete composition. Not an admitted, installed, public or runnable delivery. Generated Atlas imports/Review/coverage/runtime JSON, raw logs, models/binaries, scans/identifiers/masks, private held references/decisions/process records and canonical Git ancestry are excluded. No new dependencies/assets or fees. This is selected source-only recovery, not a whole/private/runnable backup or clinical/spatial approval.",
   "proof": {
-    "focusedNative": [
+    "focusedPassingNative": [
       {
-        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\01.log",
+        "phase": "proof",
+        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\proof\\2.log",
         "tests": 5,
         "pass": 5,
         "fail": 0,
@@ -23997,87 +24038,55 @@
         "todo": 0
       },
       {
-        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\02.log",
-        "tests": 5,
-        "pass": 5,
+        "phase": "ui-only",
+        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\ui-only\\1.log",
+        "tests": 64,
+        "pass": 64,
         "fail": 0,
         "cancelled": 0,
         "skipped": 0,
         "todo": 0
       },
       {
-        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\03.log",
-        "tests": 81,
-        "pass": 81,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      {
-        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\04.log",
-        "tests": 3,
-        "pass": 3,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      {
-        "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-portable-evidence/hamstring-test.log",
-        "tests": 4,
-        "pass": 4,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      {
-        "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-library-evidence/historical-whole-body.log",
-        "tests": 1,
-        "pass": 1,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      {
-        "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-library-evidence/current-hamstring-library.log",
-        "tests": 3,
-        "pass": 3,
+        "phase": "bookmark-worker",
+        "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-website-composition/bookmark-portable-evidence/head-learning-bookmark-ui.native.log",
+        "tests": 20,
+        "pass": 20,
         "fail": 0,
         "cancelled": 0,
         "skipped": 0,
         "todo": 0
       }
     ],
-    "currentComposition": {
-      "rootSelections": 1104,
-      "topicPlacements": 9936,
-      "changedTeachingPlacements": 89,
-      "changedReviewSnapshots": 22,
-      "unchangedReviewSnapshots": 1082,
-      "newTourSourceIdentities": 10,
-      "previousToursPreserved": 51,
-      "currentTours": 53,
-      "newStops": 8,
-      "pendingTeachingPlacements": 525
+    "currentMaterials": {
+      "rootWorksheets": 1104,
+      "changedSnapshots": 22,
+      "unchangedSnapshots": 1082,
+      "changedTopicPlacements": 89,
+      "pendingTopicPlacements": 525,
+      "importEqualsDirectAtlas": true
     },
-    "generatedBindingScope": {
-      "bodyDisplayPins": 1104,
-      "changedPins": 22,
-      "shoulderTeachingRevisions": 9,
-      "shoulderGeometryAndImagingUnchanged": true,
-      "rootRendererFiles": 1492,
-      "rootRendererSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
-      "generatedByExistingProducers": true
+    "sourceFiles": 1567,
+    "reviewBindings": 1734,
+    "coverageSourceInputs": 171,
+    "pendingCurrentDelivery": {
+      "classification": "Expected fail-closed incomplete delivery, not a relaxed/passing release gate",
+      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\ui\\1.log",
+      "logSha256": "39dbef1dbcd49ed08cb8d869eab95243007b11c656bbe882e0404b2a3b2b30b6",
+      "nativeFailureEntries": 1,
+      "passingUiRecords": 64,
+      "reason": "Review imports now identify7978478 but existing viewer/runtime/current-delivery fixture remain at2381. Must produce/rebuild/rebind/verify the full delivery before admitting a new current fixture.",
+      "rendererRuntimeBuildPending": true,
+      "wholeProjectTypesPending": true,
+      "browserPending": true,
+      "plexusDependencyRebindPending": true
     },
-    "reviewRuntimeBindingPending": true,
     "fullTypesBuildBrowserPending": true,
-    "previewChanged": false,
+    "normalPreviewChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
-    "wholeSuitePassing": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,

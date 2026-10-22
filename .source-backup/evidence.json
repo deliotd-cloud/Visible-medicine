@@ -1,7 +1,8 @@
 {
-  "focusedNative": [
+  "focusedPassingNative": [
     {
-      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\01.log",
+      "phase": "proof",
+      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\proof\\2.log",
       "tests": 5,
       "pass": 5,
       "fail": 0,
@@ -10,86 +11,54 @@
       "todo": 0
     },
     {
-      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\02.log",
-      "tests": 5,
-      "pass": 5,
+      "phase": "ui-only",
+      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\ui-only\\1.log",
+      "tests": 64,
+      "pass": 64,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
     {
-      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\03.log",
-      "tests": 81,
-      "pass": 81,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    {
-      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\04.log",
-      "tests": 3,
-      "pass": 3,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    {
-      "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-portable-evidence/hamstring-test.log",
-      "tests": 4,
-      "pass": 4,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    {
-      "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-library-evidence/historical-whole-body.log",
-      "tests": 1,
-      "pass": 1,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    {
-      "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-library-evidence/current-hamstring-library.log",
-      "tests": 3,
-      "pass": 3,
+      "phase": "bookmark-worker",
+      "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-website-composition/bookmark-portable-evidence/head-learning-bookmark-ui.native.log",
+      "tests": 20,
+      "pass": 20,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     }
   ],
-  "currentComposition": {
-    "rootSelections": 1104,
-    "topicPlacements": 9936,
-    "changedTeachingPlacements": 89,
-    "changedReviewSnapshots": 22,
-    "unchangedReviewSnapshots": 1082,
-    "newTourSourceIdentities": 10,
-    "previousToursPreserved": 51,
-    "currentTours": 53,
-    "newStops": 8,
-    "pendingTeachingPlacements": 525
+  "currentMaterials": {
+    "rootWorksheets": 1104,
+    "changedSnapshots": 22,
+    "unchangedSnapshots": 1082,
+    "changedTopicPlacements": 89,
+    "pendingTopicPlacements": 525,
+    "importEqualsDirectAtlas": true
   },
-  "generatedBindingScope": {
-    "bodyDisplayPins": 1104,
-    "changedPins": 22,
-    "shoulderTeachingRevisions": 9,
-    "shoulderGeometryAndImagingUnchanged": true,
-    "rootRendererFiles": 1492,
-    "rootRendererSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
-    "generatedByExistingProducers": true
+  "sourceFiles": 1567,
+  "reviewBindings": 1734,
+  "coverageSourceInputs": 171,
+  "pendingCurrentDelivery": {
+    "classification": "Expected fail-closed incomplete delivery, not a relaxed/passing release gate",
+    "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\ui\\1.log",
+    "logSha256": "39dbef1dbcd49ed08cb8d869eab95243007b11c656bbe882e0404b2a3b2b30b6",
+    "nativeFailureEntries": 1,
+    "passingUiRecords": 64,
+    "reason": "Review imports now identify7978478 but existing viewer/runtime/current-delivery fixture remain at2381. Must produce/rebuild/rebind/verify the full delivery before admitting a new current fixture.",
+    "rendererRuntimeBuildPending": true,
+    "wholeProjectTypesPending": true,
+    "browserPending": true,
+    "plexusDependencyRebindPending": true
   },
-  "reviewRuntimeBindingPending": true,
   "fullTypesBuildBrowserPending": true,
-  "previewChanged": false,
+  "normalPreviewChanged": false,
+  "installed": false,
+  "wholeSuitePassing": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
-  "wholeSuitePassing": false,
   "publicDeployment": false
 }
