@@ -1,51 +1,34 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T23:07:38.681Z",
+  "at": "2026-10-22T23:25:08.571Z",
   "sourceIdentity": {
-    "atlas": "7978478992f54ea68e0f53c3d195c459c7b80068",
-    "atlasTree": "17cc5a564348832c268dac9b6d713f48b6b7f530",
-    "review": "9a622360e2578862559371462d2832e81d884131cdbbd6335442923c01b50540",
-    "namedSourceReceiptSha256": "2a87c6f0e169b79b4cf3d4dff62a9ccc506373e9fd12f8b1706596e538f98796",
-    "authoredHostChanges": [
+    "baseline": "7978478992f54ea68e0f53c3d195c459c7b80068",
+    "baselineTree": "17cc5a564348832c268dac9b6d713f48b6b7f530",
+    "sourceRows": [
       {
-        "path": "components/HeadLearningBookmark.tsx",
-        "bytes": 9067,
-        "sha256": "2b889e1dd98c185ea7f9b07469944dad449ab8a84586832cab3e07bcb3ebd3cf"
+        "path": "app/eye-layers.tsx",
+        "bytes": 31813,
+        "sha256": "505315716203dca72e075d573e47f86d9be91d376b7bfbefc8676ecb06e6341b"
       },
       {
-        "path": "lib/anatomy-coverage-view.ts",
-        "bytes": 5290,
-        "sha256": "7e5e3ba0528d10a0702219251412d6630ba95e6f14e14cf003ba1768ff788b60"
+        "path": "app/ventricles.tsx",
+        "bytes": 93854,
+        "sha256": "83ade7f6b2b75ddaf7f1378aaa8f8a25c762c3d651d4da6c0fc048a5bd781fbc"
       },
       {
-        "path": "scripts/check-anatomy-coverage.mjs",
-        "bytes": 4552,
-        "sha256": "81a8ff15afbbee869023162e4aae48a3793b001a5b3195fb11dafabe91d5db6c"
+        "path": "app/whole-body-guided-learning.tsx",
+        "bytes": 7214,
+        "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
       },
       {
-        "path": "scripts/import-clinical-review.mjs",
-        "bytes": 6751,
-        "sha256": "d1985571c8ab0f155cfe4143ad602a35506ea2ebbfb7dba9003a0faa8a790681"
-      },
-      {
-        "path": "tests/arterial-history-preservation.test.mjs",
-        "bytes": 7772,
-        "sha256": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
-      },
-      {
-        "path": "tests/head-bookmark-ui-loader.ts",
-        "bytes": 1026,
-        "sha256": "375280e5074985912c0be6465695dca6441d1ee00eb4e81fc2067d27db7f2268"
-      },
-      {
-        "path": "tests/head-learning-bookmark-ui.test.ts",
-        "bytes": 20767,
-        "sha256": "9c26ca9ed9b8839aad1ecbc01512a4b06cb65f5a6df4bcffeff7b261e6aae88c"
+        "path": "scripts/test-nested-tour-library-pause.mjs",
+        "bytes": 10612,
+        "sha256": "287d4529afe727452244af1ee7deceea49ae31502d8df3941f620bd978b2c70c"
       }
     ]
   },
-  "parent": "166650c5e6faaaf7ba49306821329a48b8505fb3",
-  "gitParent": "166650c5e6faaaf7ba49306821329a48b8505fb3",
+  "parent": "1aace1ac6fa0a02b30fbc0982df6c00fc2a542a2",
+  "gitParent": "1aace1ac6fa0a02b30fbc0982df6c00fc2a542a2",
   "files": [
     {
       "path": "app/globals.css",
@@ -18388,6 +18371,61 @@
       "sha256": "303a1ba566b8dbbac99e06206f92ad5df3634579fb29bb696a64f4c5a4529cea"
     },
     {
+      "path": "pending/nested-tour-library-pause-20261023/coordination/checkpoint-nested-tour-library-pause-20261023.mjs",
+      "bytes": 12695,
+      "sha256": "2d4c64d8c69c2c34e70641e99b0d5dc2e442c192c42767df63b6a639167e4a9a"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/coordination/prepare-nested-tour-library-pause-20261023.mjs",
+      "bytes": 2807,
+      "sha256": "f06cf7b0841be8284702db0000e2082ff95d2c93ea7f8417038b975e020c047f"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/coordination/review-nested-tour-library-pause-source-20261023.mjs",
+      "bytes": 4588,
+      "sha256": "789fb8744c6ef9500b9db7b32d69db3a369d24e85c2dcabb58c854fa849ca5ed"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/coordination/verify-nested-tour-library-pause-20261023.mjs",
+      "bytes": 3008,
+      "sha256": "0ab2fa6fa08f3b3bf7d22657478dbdfea5e6b6fe7f264ef9c4f301e4fc75b580"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/current/app/eye-layers.tsx",
+      "bytes": 31813,
+      "sha256": "505315716203dca72e075d573e47f86d9be91d376b7bfbefc8676ecb06e6341b"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/current/app/ventricles.tsx",
+      "bytes": 93854,
+      "sha256": "83ade7f6b2b75ddaf7f1378aaa8f8a25c762c3d651d4da6c0fc048a5bd781fbc"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/current/app/whole-body-guided-learning.tsx",
+      "bytes": 7214,
+      "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/current/scripts/test-nested-tour-library-pause.mjs",
+      "bytes": 10612,
+      "sha256": "287d4529afe727452244af1ee7deceea49ae31502d8df3941f620bd978b2c70c"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/preimage/app/eye-layers.tsx",
+      "bytes": 31329,
+      "sha256": "3350a55d8162226b400cc8ed2ad3a28e4fcf323ced4ae7a7ec38d43d2437930d"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/preimage/app/ventricles.tsx",
+      "bytes": 93370,
+      "sha256": "010f2c495e5c3fa290935d673531d2ca3049bee215abb22d2b88016e9a98d07e"
+    },
+    {
+      "path": "pending/nested-tour-library-pause-20261023/preimage/app/whole-body-guided-learning.tsx",
+      "bytes": 7158,
+      "sha256": "684fffbf6ed7010a8bfc8a266a2c4866519f3c7dc580594c1e0da2dfb6e5d75c"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/craniofacial-ct-current-delivery.test.mjs",
       "bytes": 9929,
       "sha256": "5d3b6ce69f3db7e91eacca50c78e76d91dc6f2648f5f8232ca097358dd1c5e92"
@@ -24024,70 +24062,24 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus authored source-only Website import/coverage pin updates, queued bookmark and test changes, verification sources and before-source copies. The isolated Review source import is new; the unchanged built viewer/runtime still use an earlier source and the current-delivery gate correctly rejects this incomplete composition. Not an admitted, installed, public or runnable delivery. Generated Atlas imports/Review/coverage/runtime JSON, raw logs, models/binaries, scans/identifiers/masks, private held references/decisions/process records and canonical Git ancestry are excluded. No new dependencies/assets or fees. This is selected source-only recovery, not a whole/private/runnable backup or clinical/spatial approval.",
+  "scope": "Inherited independently verified filtered source plus four source-only nested-tour-library pause/test files, exact three-component preimages and four task utility sources. No canonical Git ancestry, geometry, models, private/review/generated metadata, scans, masks, raw logs, decisions, process records or runtime binaries. Local sparse candidate has no model binaries and is not an admitted, installed, runnable or public delivery. Root renderer metadata, full types/build/browser/export/import/rebinding are pending. No approvals, registration, permissions, asset/dependency additions or fees. Selected source recovery is not full/private/runnable backup.",
   "proof": {
-    "focusedPassingNative": [
-      {
-        "phase": "proof",
-        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\proof\\2.log",
-        "tests": 5,
-        "pass": 5,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      {
-        "phase": "ui-only",
-        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\ui-only\\1.log",
-        "tests": 64,
-        "pass": 64,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      {
-        "phase": "bookmark-worker",
-        "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-website-composition/bookmark-portable-evidence/head-learning-bookmark-ui.native.log",
-        "tests": 20,
-        "pass": 20,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      }
-    ],
-    "currentMaterials": {
-      "rootWorksheets": 1104,
-      "changedSnapshots": 22,
-      "unchangedSnapshots": 1082,
-      "changedTopicPlacements": 89,
-      "pendingTopicPlacements": 525,
-      "importEqualsDirectAtlas": true
+    "sourceReviewSha256": "8fe21f7818dbdb0d258a20912bfbfb63061672d5e438faed59d57fd2bd1c665b",
+    "native": {
+      "newCurrent": 1,
+      "existingLibraryPause": 1,
+      "existingEyeAssertions": 506,
+      "existingVentricularAssertions": 201,
+      "existingSpeedCheck": true,
+      "expectedBaselineFailures": 4,
+      "countsAreNotFullSuiteTotals": true
     },
-    "sourceFiles": 1567,
-    "reviewBindings": 1734,
-    "coverageSourceInputs": 171,
-    "pendingCurrentDelivery": {
-      "classification": "Expected fail-closed incomplete delivery, not a relaxed/passing release gate",
-      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-website-composition\\evidence\\ui\\1.log",
-      "logSha256": "39dbef1dbcd49ed08cb8d869eab95243007b11c656bbe882e0404b2a3b2b30b6",
-      "nativeFailureEntries": 1,
-      "passingUiRecords": 64,
-      "reason": "Review imports now identify7978478 but existing viewer/runtime/current-delivery fixture remain at2381. Must produce/rebuild/rebind/verify the full delivery before admitting a new current fixture.",
-      "rendererRuntimeBuildPending": true,
-      "wholeProjectTypesPending": true,
-      "browserPending": true,
-      "plexusDependencyRebindPending": true
-    },
-    "fullTypesBuildBrowserPending": true,
-    "normalPreviewChanged": false,
+    "allPreExistingComponentBytesPreserved": true,
+    "previewChanged": false,
     "installed": false,
-    "wholeSuitePassing": false,
     "clinicalApproval": false,
-    "spatialRegistration": false,
-    "publicDeployment": false
+    "wholeSuitePassing": false,
+    "fullTypesBuildBrowserPending": true
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
