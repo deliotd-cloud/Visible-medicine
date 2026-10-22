@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T06:08:58.253Z",
+  "at": "2026-10-22T06:26:42.926Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "811a766f4800de3ff8933e4b8f1bb7408f361a5c",
-  "gitParent": "811a766f4800de3ff8933e4b8f1bb7408f361a5c",
+  "parent": "249df6ac9c1419c275fb0aba613162919bcccc73",
+  "gitParent": "249df6ac9c1419c275fb0aba613162919bcccc73",
   "files": [
     {
       "path": "app/globals.css",
@@ -12325,6 +12325,11 @@
       "sha256": "ac94f9e97d1fb3fc1b84abb9ee970108ccb13b6558c9126eefa5059a96b6d0ad"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-native-source-followups-20261022.mjs",
+      "bytes": 3022,
+      "sha256": "bdf7885eaa206d14341e8e9f1e203047190f2f88e93b89fd4cc17eb7a6020134"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-regional-imaging-history-admission-20261022.mjs",
       "bytes": 1107,
       "sha256": "bf765b90a1109f26759d6c5632b83beab7182cf4a413f66000ab480058351f0e"
@@ -12395,9 +12400,19 @@
       "sha256": "939e3cf590f2e2d874d37eb7a22db0113232016d678df819ea6b6bdcaec01e97"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-native-source-followups-20261022.mjs",
+      "bytes": 4898,
+      "sha256": "a5166a882bc0d44f65707a41b464743ee9f33451e1696735a8de8f6ac88c5923"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-regional-imaging-history-admission-20261022.mjs",
       "bytes": 1165,
       "sha256": "eb4cd453b33bf802a9c4b73d242aec1e933a7ae848015758c54a4059965fe83d"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-review-tour-admissions-20261022.mjs",
+      "bytes": 5804,
+      "sha256": "7fa4ed238ee9fcddd34d548ce08fd1a7b02a5adb1a632322120e3f1a596ed952"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-review-tour-followups-20261022.mjs",
@@ -12453,6 +12468,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-historic-schema-repairs-20261022.mjs",
       "bytes": 7196,
       "sha256": "f0c4637cedbb745d59af82682a26720a0277feca650558a9aa22b37925daed71"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-native-source-followups-20261022.mjs",
+      "bytes": 5395,
+      "sha256": "046e7ef25189a0902c1a27be76bfe5ee93176445025a7e12676c30115f79345e"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-regional-imaging-history-admission-20261022.mjs",
@@ -12530,9 +12550,19 @@
       "sha256": "7693a02df00ae51454b04157da4942bf8b22127b19679eac7430ae04f6cf5bc3"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/prepare-native-source-followups-20261022.mjs",
+      "bytes": 4553,
+      "sha256": "b090c683e984117c7ec615f95f51820164110afc85225bccb35080da7241b8a4"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/prepare-regional-runtime-product-candidate-20261022.mjs",
       "bytes": 3705,
       "sha256": "d42be665423e2e356ea47ac0caa045457e47537c9e5ee875b60db9b3513bf2eb"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/prepare-review-tour-followups-20261022.mjs",
+      "bytes": 4377,
+      "sha256": "823d1b5a7401fa29ebd8691cf939463e052302423c815c1ef308e826270a8231"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/prepare-reviewed-regression-candidate-20261022.mjs",
@@ -15665,6 +15695,76 @@
       "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
     },
     {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-intracranial-license-checkout-followup/CODE/tests/atlas-intracranial-arterial-ultrasound.test.mjs",
+      "bytes": 34911,
+      "sha256": "7e9a57a8b3169c12f3715e549a3a182c87896fb45376e6f1b3ccb3acba471eb5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-intracranial-license-checkout-followup/RAW/tests/atlas-intracranial-arterial-ultrasound.test.mjs",
+      "bytes": 35041,
+      "sha256": "34c72bc49fd71233b055340cecf3b81bd423bac6291aad0d66d56d6a64374c32"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-intracranial-license-checkout-followup/SOURCE_PROOF.mjs",
+      "bytes": 4136,
+      "sha256": "5fe6b62c076bf7ecc45ff0b29fb7992c7bfdb383149024de2a86077914c4904e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-intracranial-runtime-family-followup/CODE/tests/atlas-intracranial-arterial-ultrasound.test.mjs",
+      "bytes": 35843,
+      "sha256": "be62fa493b5e4c3bcb951233cb432a874a25119fa4e92b7bea25e91c9dd55c39"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-intracranial-runtime-family-followup/RAW/tests/atlas-intracranial-arterial-ultrasound.test.mjs",
+      "bytes": 35041,
+      "sha256": "34c72bc49fd71233b055340cecf3b81bd423bac6291aad0d66d56d6a64374c32"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-intracranial-runtime-family-followup/SOURCE_PROOF.mjs",
+      "bytes": 8793,
+      "sha256": "30f26ed9f9df120f4dc24ae38cff173254c83971a945a561da81837e5a59fc93"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-question-regional-composition-followup/CODE/tests/clinical-question-role-preservation-20261021.test.mjs",
+      "bytes": 18162,
+      "sha256": "969b1860dffde7f30ab07d7eabefbbdeb8287eefd6ec7064ac16d0c1a20200b9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-question-regional-composition-followup/RAW/tests/clinical-question-role-preservation-20261021.test.mjs",
+      "bytes": 15758,
+      "sha256": "311b3c9e87f5ffa069330dafe1c41fc07fed5ca144974655e97ed34814c61392"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-question-regional-composition-followup/SOURCE_PROOF.mjs",
+      "bytes": 3707,
+      "sha256": "a92e87f9f2cc89f7b356d22b0775f1830f998b5ecdd1bbd7f26cbaef568ca0ef"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-spinal-dispatch-source-followup/CODE/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 88551,
+      "sha256": "7a39e919130ce257d590f564b0a9839857df9b2a1c3c786cf2805527fe79e01b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-spinal-dispatch-source-followup/CODE/tests/spinal-current-source-inverse.mjs",
+      "bytes": 8915,
+      "sha256": "3008622e5256507d67006ca128488decf53d037ad5318f8d896c62ebc9524c89"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-spinal-dispatch-source-followup/RAW/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 87983,
+      "sha256": "46feb48a3d91439396e47fa739df407ea95a3eacca0900c742fd4fe1ed6adf44"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-spinal-dispatch-source-followup/RAW/tests/spinal-current-source-inverse.mjs",
+      "bytes": 5068,
+      "sha256": "c0c6f035f2564743d80bd827fe98703b192bb38086df1b639f28b786802651c8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-spinal-dispatch-source-followup/SOURCE_PROOF.mjs",
+      "bytes": 8226,
+      "sha256": "787e855221a34465b6020d993f42818f0beb5923533ca9ff5d044e0bb97c6872"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/next-head-harness/CODE/tests/head-cerebellar-review.test.ts",
       "bytes": 19108,
       "sha256": "7b9e809990724a602c2adceba0f4eea0a2c6d5601af2a3b69e8bb55fb8fc3d71"
@@ -17142,22 +17242,19 @@
     "proposedTestAndHelperPaths": 161,
     "completeOriginalSourceInverses": 161,
     "additionalCodeAndProofPaths": 65,
-    "explicitProductSourceAndPreimageFiles": 64,
+    "explicitProductSourceAndPreimageFiles": 14,
     "productProof": {
+      "planSha256": "e46623e9018cf718ca2dcfacb0f9d9f06cff867870b19ea8c8d094a5446047f1",
       "sourceReceiptSha256": "49a132ab76102e0fb2845df9ab111047630ecdafc0f0a2e61e81fef70a62a03f",
-      "sourcePaths": 6042,
-      "newSourceOnlyProposals": 20,
-      "nextFocusedNativeRoots": 29,
-      "allFullPreimagesAndRejectedCodePreserved": true,
-      "exactSnapshotInverseAndOriginalQuizPlacementsProved": true,
-      "generatedMetadataFixturesExcluded": [
-        "tests/fixtures/review-frame-history/current-atlas-delivery-1712.json.raw",
-        "tests/fixtures/review-frame-history/integration-inputs-1712.json.raw"
-      ],
-      "sourceCompositionReceiptSha256": "5ac13873764915178847c6ca25f7ee73b80f40b9047b3bba74e084898d60922f",
-      "originalRefusalReceiptSha256": "511e2467318cf46ff6893e5347e6def387d6dd28777edab6b2703084b6f2d168",
+      "selectedFollowupRepairs": 24,
+      "newSourceRepairs": 4,
+      "nextNativeRoots": 35,
+      "sourceOnlyInputRecordsVerified": 2876,
+      "exactGitBlobsVerified": 1617,
+      "wholeV5AndAllHistoricalInversesPreserved": true,
+      "firstLicenseOnlyProposalPreserved": true,
+      "licenseVerifierAndSharedPinUnchanged": true,
       "newNativeBatchExecuted": false,
-      "existing172RootRunTerminalReceiptPresent": false,
       "canonicalInstalled": false,
       "ownerPreviewChanged": false,
       "wholeSuitePassing": false,

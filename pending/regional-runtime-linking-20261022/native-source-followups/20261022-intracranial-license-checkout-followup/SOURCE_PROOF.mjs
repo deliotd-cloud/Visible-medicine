@@ -1,0 +1,52 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
+
+const stage='F:/VisibleMedicine/staging/20261022-intracranial-license-checkout-followup/';
+const website='F:/VisibleMedicine/staging/20261022-reviewed-regression-runtime-linking/website/';
+const atlas='F:/VisibleMedicine/atlas';
+const path='LICENSES/bodyparts3d-license-evidence.html';
+const name='tests/atlas-intracranial-arterial-ultrasound.test.mjs';
+const sha=x=>createHash('sha256').update(x).digest('hex');
+const read=x=>readFileSync(x);
+const old=read(stage+'RAW/'+name),now=read(stage+'CODE/'+name);
+assert.equal(sha(old),'34c72bc49fd71233b055340cecf3b81bd423bac6291aad0d66d56d6a64374c32');
+assert.equal(sha(now),'7e9a57a8b3169c12f3715e549a3a182c87896fb45376e6f1b3ccb3acba471eb5');
+assert(old.equals(read(website+name)),'Exact V5 source preimage');
+const importLine="import {verifyCurrentCommittedBinding} from './cerebral-checkout-current-adapter.mjs';\n";
+const oldLoop=`      assert.ok(working.equals(committed) ||
+        Buffer.from(working.toString('utf8').replaceAll('\\r\\n', '\\n')).equals(committed),
+        'Current Git/working source: ' + row.path);
+      assert.equal(row.sha256, sha(working), region + ' current source input ' + row.path);`;
+const newLoop='      verifyCurrentCommittedBinding(row, committed, working);';
+const once=(text,a,b)=>{assert.equal(text.split(a).length,2,'Unique explicit source seam');return text.replace(a,b);};
+let inverse=once(now.toString('utf8'),importLine,'');
+inverse=once(inverse,newLoop,oldLoop);
+assert.equal(inverse,old.toString('utf8'),'Whole V5 test recovered');
+let forward=once(old.toString('utf8'),"import {validateCurrentAtlasDelivery as validateHistoricalAtlasDelivery} from './fixtures/closed56-validator/tests/current-atlas-delivery.mjs';\n","import {validateCurrentAtlasDelivery as validateHistoricalAtlasDelivery} from './fixtures/closed56-validator/tests/current-atlas-delivery.mjs';\n"+importLine);
+forward=once(forward,oldLoop,newLoop);
+assert.equal(forward,now.toString('utf8'),'Exact two-seam forward');
+assert.notEqual(once(now.toString('utf8'),'assert.equal(review.revision, source);','assert.notEqual(review.revision, source);'),forward,'Old historical assertion mutation refused');
+
+assert.equal(execFileSync('git',['-C',atlas,'rev-parse','HEAD'],{encoding:'utf8'}).trim(),'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');
+const tree=execFileSync('git',['-C',atlas,'ls-tree','HEAD','--',path],{encoding:'utf8'}).trim();
+assert.equal(tree,`100644 blob e445e6a84c6f3db7cffccaad2e047a4d98075569\t${path}`);
+const committed=execFileSync('git',['-C',atlas,'cat-file','blob','e445e6a84c6f3db7cffccaad2e047a4d98075569']);
+const working=read(atlas+'/'+path);
+assert.equal(committed.length,14682);assert.equal(working.length,14694);
+assert.equal(sha(committed),'7a873d9c6ed62578a7ee5603d68d6a8fbf6e3ccc0b52db6a3ad8b952f8cf7271');
+assert.equal(sha(working),'90dea95329aea5015ce339e430d9f342090617c82ee48613e15dd2240f08b746');
+const rows=JSON.parse(read(website+'public/atlas-runtime/head-neck/source-inputs.json'));
+const row=rows.find(x=>x.path===path);assert(row);assert.equal(row.sha256,sha(committed));
+const helper=await import(pathToFileURL(website+'tests/cerebral-checkout-current-adapter.mjs').href);
+assert.equal(helper.verifyCurrentCommittedBinding(row,committed,working),true);
+const bad=(r,c,w)=>assert.throws(()=>helper.verifyCurrentCommittedBinding(r,c,w));
+bad({...row,path:'LICENSES/other.html'},committed,working);
+bad({...row,sha256:sha(working)},committed,working);
+bad(row,Buffer.from(committed.map((x,i)=>i===0?x^1:x)),working);
+bad(row,committed,Buffer.from(working.subarray(0,-1)));
+bad(row,committed,Buffer.from(working.toString('utf8').replace('\r\n','\n')));
+bad(row,committed,Buffer.from(working.toString('utf8').replace('\r\n','\r\r\n')));
+console.log(JSON.stringify({raw:sha(old),code:sha(now),helper:sha(read(website+'tests/cerebral-checkout-current-adapter.mjs')),git:sha(committed),checkout:sha(working),crlf:12,proof:'PASS'}));
