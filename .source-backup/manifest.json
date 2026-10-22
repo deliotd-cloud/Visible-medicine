@@ -1,14 +1,39 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T21:36:00.827Z",
+  "at": "2026-10-22T21:49:44.275Z",
   "sourceIdentity": {
-    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "atlasTree": "db21ed3dee259c390878450b3495468996a3af85",
+    "baselineAtlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+    "baselineTree": "db21ed3dee259c390878450b3495468996a3af85",
     "selectedWebsiteSourceSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
-    "hamstringModuleSha256": "14f56f53002c574fd2eb8a6a88f23f4e8fad9476495ad227434384ef59d51737"
+    "proposal": [
+      {
+        "path": "app/anatomy-data.ts",
+        "sha256": "85497e2ee6b2e11dc2ee855dac8bd6ac4116f492e732fc4ebe07b3a4bb819d0b"
+      },
+      {
+        "path": "app/body-content.ts",
+        "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
+      },
+      {
+        "path": "lib/legacy-shoulder-bone-references.ts",
+        "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649"
+      },
+      {
+        "path": "lib/legacy-shoulder-muscle-references.ts",
+        "sha256": "9fabee47ed5f1b926b69a1247ed972039d91230a995ddb2030723b166cdc7936"
+      },
+      {
+        "path": "lib/legacy-shoulder-references.ts",
+        "sha256": "dc20f96665158308eb8f28fb6f28f1133d4048293d386fb2b494e53b84f0116c"
+      },
+      {
+        "path": "scripts/test-legacy-shoulder-references.mjs",
+        "sha256": "a1a7a75a2ea3c2037c4d70e086a97443c38764280eb1f84846a81ad794519007"
+      }
+    ]
   },
-  "parent": "b0f0f3703353a9381d22074e32161f4ba9f98fe1",
-  "gitParent": "b0f0f3703353a9381d22074e32161f4ba9f98fe1",
+  "parent": "8f802efecb2a611aacc03fef035d97f1708a723d",
+  "gitParent": "8f802efecb2a611aacc03fef035d97f1708a723d",
   "files": [
     {
       "path": "app/globals.css",
@@ -17636,6 +17661,61 @@
       "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
     },
     {
+      "path": "pending/legacy-shoulder-references-20261022/atlas/app/anatomy-data.ts",
+      "bytes": 26547,
+      "sha256": "85497e2ee6b2e11dc2ee855dac8bd6ac4116f492e732fc4ebe07b3a4bb819d0b"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/atlas/app/body-content.ts",
+      "bytes": 83121,
+      "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/atlas/lib/legacy-shoulder-bone-references.ts",
+      "bytes": 2164,
+      "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/atlas/lib/legacy-shoulder-muscle-references.ts",
+      "bytes": 4454,
+      "sha256": "9fabee47ed5f1b926b69a1247ed972039d91230a995ddb2030723b166cdc7936"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/atlas/lib/legacy-shoulder-references.ts",
+      "bytes": 849,
+      "sha256": "dc20f96665158308eb8f28fb6f28f1133d4048293d386fb2b494e53b84f0116c"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/atlas/scripts/test-legacy-shoulder-references.mjs",
+      "bytes": 12467,
+      "sha256": "a1a7a75a2ea3c2037c4d70e086a97443c38764280eb1f84846a81ad794519007"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/coordination/checkpoint-legacy-shoulder-references-20261022.mjs",
+      "bytes": 10830,
+      "sha256": "a93d349a71fa32eb9add4fa2da5d035732762453a6bfa17579a5f8bdc938d797"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/coordination/verify-legacy-shoulder-references-20261022.mjs",
+      "bytes": 6410,
+      "sha256": "7e8384e3a16d5785f5ed563116dd5b5bdb2130a027a0aaf676dfe6f975ab1143"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/fixtures/anatomy-data.ts.raw",
+      "bytes": 25438,
+      "sha256": "75a91a07a3bf268088f7b6e011e71ffd27bbc0366d2d01a3dbbd7f28da64a4cb"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/fixtures/body-content.ts.raw",
+      "bytes": 82967,
+      "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
+    },
+    {
+      "path": "pending/legacy-shoulder-references-20261022/fixtures/worker-muscle-references.ts.raw",
+      "bytes": 4201,
+      "sha256": "5351a55d164f65b10c72e5ef5b3023e9340b77004fd355042c85eb6c278018dc"
+    },
+    {
       "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/components/HeadAtlasLearningPicker.tsx",
       "bytes": 4790,
       "sha256": "38f0385f393dc2e1a65c2af33c843cca0e25f4d4903bb3dcffc3866cdfbcd4a0"
@@ -23432,29 +23512,28 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus two unintegrated, main-reviewed bilateral hamstring tours and their source-only assertion/pin producers. Existing51tours preserved,8newstops,10exactsourceidentities,3bundles. Primary factual references summarized in original captions; no external images/article prose/assets imported. No generated pin JSON, teaching reports or clinical records, raw logs, anatomy metadata/data files, scans, masks, geometry, private references or canonical Git ancestry added. New authored audit code is included, its generated readiness/quality output is local-only. Source-only recovery, not whole/private/runnable backup. No selected full-gate/installed source or normal preview change.",
+  "scope": "Inherited filtered source plus unintegrated source/reference improvements:70legacy authored sections and Brain function gain links across85root placements;9sections receive scoped anatomy/imaging/provenance corrections. Existing X-ray lessons, quiz answers, source geometry, readiness, access and approvals remain unchanged. References link original primary/society/educational pages; no external article prose, images or assets copied. Four CT placements retain a topic-reference evidence gap, not fabricated citations. New authored code and source preimages only; no generated Review/pin/source-metadata/clinical/tracking JSON, raw logs, private references/scans/masks/model bytes or canonical Git ancestry. Source-only recovery, not full/private/runnable backup. Selected complete-run source and owner preview unchanged.",
   "proof": {
-    "originalToursPreserved": 51,
-    "newDraftTours": 2,
-    "newStops": 8,
-    "customAssertions": {
-      "tourAndSourceRefusals": 102,
-      "sourceLeafRefusals": 349,
-      "reviewEvidenceChecks": 8
+    "nativeFocused": {
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
-    "sharedPlaybackUnchanged": true,
-    "readinessDraftPlacements": 9380,
-    "readinessPendingPlacements": 525,
-    "rootSelections": 1104,
-    "readinessIsNotClinicalCompletion": true,
-    "generatedReportsUploaded": false,
-    "pinsUploaded": false,
-    "geometryAdmitted": false,
-    "integrated": false,
-    "ownerPreviewChanged": false,
-    "wholeSuitePassing": false,
+    "resolvedPlacements": 9936,
+    "newCitationPlacements": 85,
+    "remainingCitationPlacements": 4,
+    "editedAuthoredSections": 9,
+    "changedReviewTeachingHashes": 12,
+    "unaffectedWorksheetExact": true,
+    "sourceGeometryUnchanged": true,
     "clinicalApproval": false,
     "spatialRegistration": false,
+    "fullTypesBuildBrowserPassing": false,
+    "integrated": false,
+    "ownerPreviewChanged": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,

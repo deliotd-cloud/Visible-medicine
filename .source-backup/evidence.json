@@ -1,24 +1,23 @@
 {
-  "originalToursPreserved": 51,
-  "newDraftTours": 2,
-  "newStops": 8,
-  "customAssertions": {
-    "tourAndSourceRefusals": 102,
-    "sourceLeafRefusals": 349,
-    "reviewEvidenceChecks": 8
+  "nativeFocused": {
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
   },
-  "sharedPlaybackUnchanged": true,
-  "readinessDraftPlacements": 9380,
-  "readinessPendingPlacements": 525,
-  "rootSelections": 1104,
-  "readinessIsNotClinicalCompletion": true,
-  "generatedReportsUploaded": false,
-  "pinsUploaded": false,
-  "geometryAdmitted": false,
-  "integrated": false,
-  "ownerPreviewChanged": false,
-  "wholeSuitePassing": false,
+  "resolvedPlacements": 9936,
+  "newCitationPlacements": 85,
+  "remainingCitationPlacements": 4,
+  "editedAuthoredSections": 9,
+  "changedReviewTeachingHashes": 12,
+  "unaffectedWorksheetExact": true,
+  "sourceGeometryUnchanged": true,
   "clinicalApproval": false,
   "spatialRegistration": false,
+  "fullTypesBuildBrowserPassing": false,
+  "integrated": false,
+  "ownerPreviewChanged": false,
   "publicDeployment": false
 }
