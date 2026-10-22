@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T20:58:44.431Z",
+  "at": "2026-10-22T21:07:52.455Z",
   "sourceIdentity": {
-    "parentSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
-    "overlayBefore": "60a15827ff4e534d7ce5c534ad14a67dad64dc6d152dea90ae136a7ca6ad92a6",
-    "overlayAfter": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
+    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+    "tree": "db21ed3dee259c390878450b3495468996a3af85",
+    "mainReviewSha256": "4f6f1ae7729d9e54553ad187d6dd0d1d7e1ef52b7d6fcc6f8321a632425e9ff9",
+    "targetPlanSha256": "64318525c66efc50a038e443d259632e00f69e0f7b212d5088a3413f6ab71ffd"
   },
-  "parent": "c3e65a1c8d8e22db1ef60e9223167f1e3e1c1fc5",
-  "gitParent": "c3e65a1c8d8e22db1ef60e9223167f1e3e1c1fc5",
+  "parent": "433204209336eea21a4a59c4adf21fca28380ab4",
+  "gitParent": "433204209336eea21a4a59c4adf21fca28380ab4",
   "files": [
     {
       "path": "app/globals.css",
@@ -17625,6 +17626,36 @@
       "sha256": "5c4f2e4ee15dad827915a93d695f22a05ae893dca8cb3c79f8cf4c6785efea1d"
     },
     {
+      "path": "pending/lower-limb-nerve-coverage-20261022/coordination/checkpoint-lower-limb-nerve-coverage-20261022.mjs",
+      "bytes": 7726,
+      "sha256": "47221ed181562e5e8774304ce03c0014598b2fa189635fba6fbd727b473524f0"
+    },
+    {
+      "path": "pending/lower-limb-nerve-coverage-20261022/coordination/verify-lower-limb-nerve-inventory-20261022.mjs",
+      "bytes": 6117,
+      "sha256": "b5f191ba4f18762ef63d4ca0fd157a30d33717253a7b90192d47f9f1bde37f9d"
+    },
+    {
+      "path": "pending/lower-limb-nerve-coverage-20261022/inventory-v2.mjs",
+      "bytes": 9832,
+      "sha256": "82570a1ff4086d23661a49857c28423ebc052d6c382ab412d3a13734da8f554d"
+    },
+    {
+      "path": "pending/lower-limb-nerve-coverage-20261022/inventory.mjs",
+      "bytes": 6538,
+      "sha256": "613a2c83494bbd13d177d0a765cd7c8fee254d59079d20cb673f87eb2999e1cf"
+    },
+    {
+      "path": "pending/lower-limb-nerve-coverage-20261022/main-review-v0.mjs.raw",
+      "bytes": 7091,
+      "sha256": "513f69d76a61b8c55a056fe4e70f0dbe7ec0c6196728550698096fbe9b7c6304"
+    },
+    {
+      "path": "pending/lower-limb-nerve-coverage-20261022/target-plan.mjs",
+      "bytes": 6349,
+      "sha256": "64318525c66efc50a038e443d259632e00f69e0f7b212d5088a3413f6ab71ffd"
+    },
+    {
       "path": "pending/neck-landmark-xray-20261022/atlas/app/body-content.ts",
       "bytes": 82967,
       "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
@@ -23301,24 +23332,19 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus one pending arterial historical source-role test repair, its complete original code preimage and coordinators. Original closed6d7/190/485/87/pre-MRA theorem remains byte-exact after inverting only the current native-source scalar. Three native checks pass in an exact contained metadata/source-text fixture, not in the physical whole website. The current complete1178-entry gate remains frozen and separately running; its partial failure62 is retained. No app, source geometry, licence, source data, Review binding, score, access or approval change. Native metadata fixtures, generated JSON/Review/pins/tracking, binary models/scans/media/fonts/runtime, raw logs, private records/references/archive and canonical Git ancestry stay local. Source-only, not full/private/runnable backup.",
+  "scope": "Inherited selected source plus metadata-only lower-limb nerve inventory scripts and an original authored editorial acquisition queue. Source-composed candidate1104 roots/108nested targets have no thigh/leg/foot nervous geometry; raw1022 roots/82augmentation rows and two independent UM catalogues remain separate units. Queue13major nerves/10branch targets is proposed, nonexhaustive and not new geometry, asset permission or clinical approval. Primary references support names only; no external diagrams, tables, assets or scans copied. Generated inventory JSON, source catalogue JSON, logs, private/binary/runtime data and canonical Git ancestry remain local. Source-only recovery, not full/private/runnable backup.",
   "proof": {
-    "native": {
-      "tests": 3,
-      "pass": 3,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "fixtureOnly": true,
-    "wholeOriginalSourceInversePassed": true,
-    "originalClosedHashesUnchanged": true,
-    "foreignSourceScalarAndAssertionEditsRefused": true,
-    "physicalCandidateAcceptance": false,
-    "wholeSuitePassing": false,
+    "workerV2Reproduced": true,
+    "sourceComposedRoots": 1104,
+    "nestedTargets": 108,
+    "lowerLimbNervousRoots": 0,
+    "lowerLimbNervousNestedPlacements": 0,
+    "acquisitionTargets": 23,
+    "majorNerves": 13,
+    "branchTargets": 10,
+    "scopeExhaustive": false,
+    "productChanged": false,
     "ownerPreviewChanged": false,
-    "canonicalInstalled": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false

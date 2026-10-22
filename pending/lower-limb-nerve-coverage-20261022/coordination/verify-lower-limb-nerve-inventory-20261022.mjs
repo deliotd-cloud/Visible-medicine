@@ -1,0 +1,56 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+import {registerHooks} from 'node:module';
+import {execFileSync} from 'node:child_process';
+import {json,read,sha,runGit} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261022-lower-limb-nerve-inventory';
+const {plan}=await import(pathToFileURL(stage+'/target-plan.mjs').href);
+const atlas='F:/VisibleMedicine/staging/20261022-review-traversal-candidate/atlas';
+const result=json(stage+'/RESULT_V2.json');
+const git=(...args)=>runGit(['-C',atlas,...args]).toString().trim();
+const checkGit=()=>{assert.equal(git('rev-parse','HEAD'),plan.sourceHead);assert.equal(git('rev-parse','HEAD^{tree}'),result.sourceIdentity.tree);assert.equal(git('status','--porcelain'),'');};
+checkGit();
+const reproduced=JSON.parse(execFileSync(process.execPath,[stage+'/inventory-v2.mjs',atlas],{maxBuffer:2e6,windowsHide:true}));
+assert.deepEqual(reproduced,result,'Reproduced worker inventory');
+const inputs=[...result.sourceFiles,result.mainCatalog,...result.displayScope.augmentationCatalogues,...result.displayScope.correctionFiles,...result.nestedScope.catalogues,...result.independentSpecimens,...result.references];
+for(const r of inputs)assert.equal(sha(read(atlas+'/'+r.path)),r.sha256,r.path);
+const modules=new Map(),rootURL=pathToFileURL(atlas+'/').href;
+const relativeHooks=registerHooks({
+  resolve(specifier,context,next){
+    if(specifier===pathToFileURL(atlas+'/lib/body-display-catalog.ts').href||specifier===pathToFileURL(atlas+'/lib/nested-anatomy.ts').href)return next(specifier,context);
+    assert(context.parentURL?.startsWith(rootURL)&&specifier.startsWith('.'),'Only exact source relative dependencies');
+    let url=new URL(specifier,context.parentURL);if(!path.extname(url.pathname))url=new URL(url.href+'.ts');
+    assert(url.href.startsWith(rootURL));return next(url.href,context);
+  },
+  load(url,context,next){
+    assert(url.startsWith(rootURL));const file=fileURLToPath(url);assert(/\.(?:ts|json)$/.test(file));
+    const relative=path.relative(atlas,file).replaceAll('\\','/');modules.set(relative,{path:relative,sha256:sha(read(file))});return next(url,context);
+  },
+});
+const {bodyDisplayCatalog}=await import(pathToFileURL(atlas+'/lib/body-display-catalog.ts').href);
+const {nestedStudyTargets}=await import(pathToFileURL(atlas+'/lib/nested-anatomy.ts').href);
+const raw=json(atlas+'/public/models/bodyparts3d/full-body/catalog.json'),rawBefore=sha(Buffer.from(JSON.stringify(raw)));
+const display=bodyDisplayCatalog(raw),nested=nestedStudyTargets(display);
+relativeHooks.deregister();
+assert.equal(sha(Buffer.from(JSON.stringify(raw))),rawBefore,'Composition must not mutate source catalogue');
+assert.equal(display.structures.length,1104);assert.equal(display.structures.length-raw.structures.length,82);
+const regions=s=>[...new Set([s.region,...(s.regions??[])].filter(Boolean))];
+const nervous=s=>s.system==='nerves'||s.tissue==='nerves'||s.tissue==='nerve'||s.category==='nerve';
+const lower=s=>regions(s).some(r=>['thigh','leg','foot'].includes(r));
+const compact=s=>({id:s.id,name:s.name,regions:regions(s),sourceMeshKeys:(s.sources??[]).map(f=>[s.sourceTree??'bodyparts3d',f.file,f.sha256].join(':'))});
+const roots=display.structures.filter(s=>nervous(s)&&lower(s)).map(compact);
+const placements=nested.filter(t=>nervous(t.structure)&&lower(t.structure)).map(t=>({parentId:t.parentId,study:t.study,...compact(t.structure)}));
+assert.equal(roots.length,0);assert.equal(placements.length,0);
+assert.equal(plan.targets.length,23);assert.equal(plan.targets.filter(t=>t.batch===1).length,13);
+assert.equal(new Set(plan.targets.map(t=>t.key)).size,plan.targets.length);
+const refs=new Set(plan.references.map(r=>r.id));
+for(const t of plan.targets){assert(t.key.startsWith('lln-target:'));assert(t.references.length>0&&t.references.every(r=>refs.has(r)));assert.equal(t.anatomyId,null);assert.equal(t.admittedMeshId,null);assert.equal(t.geometrySource,null);assert.equal(t.rightsCleared,false);assert.equal(t.clinicallyApproved,false);}
+const aliases=plan.targets.flatMap(t=>t.aliases);assert.equal(aliases.length,3);assert.equal(new Set(aliases).size,3);
+for(const r of modules.values())assert.equal(sha(read(atlas+'/'+r.path)),r.sha256,r.path);
+checkGit();
+const evidence={at:new Date().toISOString(),schema:'visible-medicine.lower-limb-nerve-main-review/1',sourceIdentity:result.sourceIdentity,workerV2Sha256:sha(read(stage+'/RESULT_V2.json')),workerReproduced:true,sourceInputsVerified:new Set(inputs.map(r=>r.path)).size,moduleInputs:[...modules.values()].sort((a,b)=>a.path.localeCompare(b.path)),nodeVersion:process.version,method:'Exact source functions executed with Node type stripping and relative-only TS/JSON module hooks; no build, mesh reads, exporter or browser.',sourceComposition:{rawRoots:raw.structures.length,composedRoots:display.structures.length,addedRows:82,allRegionNervousRoots:display.structures.filter(nervous).length,totalNestedTargets:nested.length,lowerLimbNervousRoots:roots,lowerLimbNervousNestedPlacements:placements},targetPlan:{path:stage+'/target-plan.mjs',sha256:sha(read(stage+'/target-plan.mjs')),targets:23,majorNerves:13,branchTargets:10,exhaustive:false,clinicalApproval:false},limits:['Counts describe the source-composed candidate catalogue at2381, not a GPU/browser inspection or installed6d7 acceptance.','Named acquisition targets are proposed scope, not new structures, licensed geometry or a complete anatomical inventory.','No source, frame, course, rights or clinical admission inferred from zero-count metadata.'],productChanged:false,previewChanged:false,fullSuiteAccepted:false};
+fs.writeFileSync(stage+'/MAIN_REVIEW.json',JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(stage+'/TARGET_PLAN.json',JSON.stringify(plan,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({review:stage+'/MAIN_REVIEW.json',sha256:sha(read(stage+'/MAIN_REVIEW.json')),sourceComposition:evidence.sourceComposition,targetPlan:evidence.targetPlan}));
