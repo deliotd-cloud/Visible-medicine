@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 import {read,json,sha,runGit,backup} from './source-only-backup-20261019.mjs';
 
-export function backupReviewedRegressionQueue({queuePath,queueSha256,expectedProposals,parentReceipt,parentReceiptSha256,parentRepo,stem,coordinationScripts=[]}){
+export function backupReviewedRegressionQueue({queuePath,queueSha256,expectedProposals,parentReceipt,parentReceiptSha256,parentRepo,stem,coordinationScripts=[],additionalSourceFiles=[],productProof=null}){
  assert.match(stem,/^[a-z][a-z0-9-]{1,65}$/);
  assert.match(queueSha256,/^[a-f0-9]{64}$/);assert.match(parentReceiptSha256,/^[a-f0-9]{64}$/);
  assert.equal(sha(read(queuePath)),queueSha256);const queue=json(queuePath);
@@ -35,6 +35,12 @@ export function backupReviewedRegressionQueue({queuePath,queueSha256,expectedPro
   assert.match(name,/^[a-z0-9-]+\.mjs$/);const from=path.resolve(name);requireCode(from);
   destinations.set(prefix+'coordination/'+name,from);
  }
+ for(const row of additionalSourceFiles){
+  assert.match(row.path,/^pending\/regional-runtime-linking-20261022\/[a-zA-Z0-9_./-]+$/);
+  assert(row.path.split('/').every(part=>part&&part!=='.'&&part!=='..'));
+  assert(!destinations.has(row.path),'No hidden source-backup overwrite: '+row.path);
+  assert.equal(sha(requireCode(row.from)),row.sha256);destinations.set(row.path,row.from);
+ }
  const files=[...destinations].map(([relative,from])=>({path:relative,bytes:read(from).length,sha256:sha(read(from))})).sort((a,b)=>a.path.localeCompare(b.path));
  const bytesFor=name=>read(destinations.get(name));
  const verifySource=()=>{
@@ -46,6 +52,6 @@ export function backupReviewedRegressionQueue({queuePath,queueSha256,expectedPro
  return backup({root:'F:/VisibleMedicine/recovery/checkpoints/20261022-'+stem+'-source-backup',repo:'F:/VisibleMedicine/history/website-work/github-'+stem+'-20261022.git',branch:'backup/'+stem+'-20261022',parent:parent.head,parentTree:parent.tree,parentRepo,files,bytesFor,verifySource,
   sourceIdentity:{installedAtlas:queue.source,installedReview:'ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59',candidateReview:queue.review},
   scope:`Inherited filtered authored-source recovery plus ${expectedProposals} unintegrated reviewed test/helper proposals, complete raw CODE preimages, ${queue.additionalFiles.length} explicit CODE/proof additions and named proof/coordination scripts. Whole-original byte inverses, historical obligations, independent Review/runtime families and all strict current-source gates are retained. No generated Review/runtime JSON, geometry/models, scans/masks/pixels, patient identifiers, owner decisions, credentials/env, databases, raw logs/media, private reference notes, article assets or raw canonical Git ancestry. Selected authored-source only, not whole/private/runnable recovery or native/browser/clinical/release completion.`,
-  proof:{selectedSourceOnly:true,proposedTestAndHelperPaths:expectedProposals,completeOriginalSourceInverses:expectedProposals,additionalCodeAndProofPaths:queue.additionalFiles.length,strictCurrentValidatorAndPinChanged:false,frozenCandidateEdited:false,nativeRootsRerun:false,fullRegressionPending:true,installed:false,clinicalApproval:false,patientRegistration:false,publicDeployment:false,wholeProjectBackup:false,privateDataBackup:false,runnableProjectRecovery:false},
+  proof:{selectedSourceOnly:true,proposedTestAndHelperPaths:expectedProposals,completeOriginalSourceInverses:expectedProposals,additionalCodeAndProofPaths:queue.additionalFiles.length,explicitProductSourceAndPreimageFiles:additionalSourceFiles.length,productProof,strictCurrentValidatorAndPinChanged:false,frozenCandidateEdited:false,nativeRootsRerun:false,fullRegressionPending:true,installed:false,clinicalApproval:false,patientRegistration:false,publicDeployment:false,wholeProjectBackup:false,privateDataBackup:false,runnableProjectRecovery:false},
  });
 }

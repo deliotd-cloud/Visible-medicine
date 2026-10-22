@@ -1,8 +1,27 @@
 {
   "selectedSourceOnly": true,
-  "proposedTestAndHelperPaths": 124,
-  "completeOriginalSourceInverses": 124,
-  "additionalCodeAndProofPaths": 39,
+  "proposedTestAndHelperPaths": 161,
+  "completeOriginalSourceInverses": 161,
+  "additionalCodeAndProofPaths": 65,
+  "explicitProductSourceAndPreimageFiles": 82,
+  "productProof": {
+    "sourceReceiptSha256": "51f4b8be426c996381e105eb60ad78ded0827076185d865c3726b14c2904747c",
+    "sourceFiles": 36,
+    "focusedNative": {
+      "tests": 404,
+      "pass": 404,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "fullTypes": true,
+    "containedBuild": true,
+    "ownerPreviewChanged": false,
+    "patientRegistration": false,
+    "clinicalApproval": false,
+    "wholeSuitePassing": false
+  },
   "strictCurrentValidatorAndPinChanged": false,
   "frozenCandidateEdited": false,
   "nativeRootsRerun": false,

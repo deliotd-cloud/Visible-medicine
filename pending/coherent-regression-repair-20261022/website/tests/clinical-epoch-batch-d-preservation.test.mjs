@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {restoreFrozenCandidate} from './clinical-orbital-neonatal-composition.mjs';
+import {restorePancreaticPortalCandidate} from './clinical-pancreatic-portal-composition.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const cases=[
@@ -40,6 +41,8 @@ for(const entry of cases)test(entry.name+' restores every original byte after ex
  const delivered=readFileSync(new URL('./'+entry.name,import.meta.url));
  const proposed=entry.name==='clinical-review-orbital-sensory-mri.test.ts'
   ?restoreFrozenCandidate(entry.name,delivered,readFileSync(new URL('./fixtures/orbital-neonatal-frozen/'+entry.name+'.raw',import.meta.url)))
+  :entry.name==='clinical-review-pancreatic-vessel-teaching.test.ts'
+   ?restorePancreaticPortalCandidate(entry.name,delivered,readFileSync(new URL('./fixtures/pancreatic-portal-frozen/'+entry.name+'.raw',import.meta.url)))
   :delivered;
  assert.equal(sha(original),entry.before,'Original whole-source pin');
  assert.equal(sha(proposed),entry.after,'Proposed whole-source pin');

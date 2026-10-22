@@ -5,6 +5,7 @@ import {dirname,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import test from 'node:test';
 import {restoreFrozenCandidate} from './clinical-orbital-neonatal-composition.mjs';
+import {restoreTeachingQuestionCandidate} from './clinical-teaching-question-composition.mjs';
 
 const here=dirname(fileURLToPath(import.meta.url));
 const rawDir='fixtures/clinical-question-before-role-batch-20261021';
@@ -95,6 +96,8 @@ test('all original clinical-question test bodies survive outside enumerated hist
   const delivered=readFileSync(join(here,name));
   const proposed=name==='clinical-review-short-ciliary-quiz.test.ts'
    ?restoreFrozenCandidate(name,delivered,readFileSync(join(here,'fixtures/orbital-neonatal-frozen',name+'.raw')))
+   :name==='clinical-review-reasoning.test.ts'
+   ?restoreTeachingQuestionCandidate(name,delivered,readFileSync(join(here,'fixtures/teaching-question-frozen',name+'.raw')))
    :delivered;
   assert.deepEqual(proposed,Buffer.from(expected),name+' unknown assertion or behavior edit');
  }
