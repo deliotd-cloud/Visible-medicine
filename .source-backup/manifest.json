@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T21:49:44.275Z",
+  "at": "2026-10-22T22:12:30.276Z",
   "sourceIdentity": {
     "baselineAtlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
     "baselineTree": "db21ed3dee259c390878450b3495468996a3af85",
-    "selectedWebsiteSourceSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
-    "proposal": [
+    "ct": [
       {
         "path": "app/anatomy-data.ts",
-        "sha256": "85497e2ee6b2e11dc2ee855dac8bd6ac4116f492e732fc4ebe07b3a4bb819d0b"
+        "sha256": "db23dc93b851342766d76b66cbd2982ad9814520c33d606fbf24c374f2667f43"
       },
       {
         "path": "app/body-content.ts",
@@ -20,7 +19,7 @@
       },
       {
         "path": "lib/legacy-shoulder-muscle-references.ts",
-        "sha256": "9fabee47ed5f1b926b69a1247ed972039d91230a995ddb2030723b166cdc7936"
+        "sha256": "283ec0d7d4fabb4477539ea3a35c08dcea1500e0e59ba7bd078dc6770dbbfc5d"
       },
       {
         "path": "lib/legacy-shoulder-references.ts",
@@ -28,12 +27,25 @@
       },
       {
         "path": "scripts/test-legacy-shoulder-references.mjs",
-        "sha256": "a1a7a75a2ea3c2037c4d70e086a97443c38764280eb1f84846a81ad794519007"
+        "sha256": "306da2656c019fdf647675cc94e58eb829c9f3920790d9666c6aa55821ab63ad"
       }
-    ]
+    ],
+    "tour": [
+      {
+        "path": "app/regional-guided-learning.tsx",
+        "sha256": "418319343ca3033bff575d35faa6da5e177fc6eab16238fa052c2de755f10f79",
+        "preimageSha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+      },
+      {
+        "path": "scripts/test-regional-tour-player.mjs",
+        "sha256": "919f0399b7c6028ff1181cefaad67a65cd7efe47739f906bf0ed44850ad3b131",
+        "preimageSha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+      }
+    ],
+    "selectedWebsiteSourceSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522"
   },
-  "parent": "8f802efecb2a611aacc03fef035d97f1708a723d",
-  "gitParent": "8f802efecb2a611aacc03fef035d97f1708a723d",
+  "parent": "9873c0210a8e46f0652ff0396c8008ab6550ff00",
+  "gitParent": "9873c0210a8e46f0652ff0396c8008ab6550ff00",
   "files": [
     {
       "path": "app/globals.css",
@@ -22806,6 +22818,96 @@
       "sha256": "1d626f85ee1e8e9b132ad5f2545684d82504a2f863a64a0051da68cf4430bf8d"
     },
     {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/coordination/checkpoint-tour-lifecycle-ct-evidence-20261022.mjs",
+      "bytes": 12616,
+      "sha256": "8a86f58512f3699557cb29702193a4f8b2be6a0a422c3af06e96598d4e0a897c"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/coordination/prepare-legacy-shoulder-ct-evidence-20261022.mjs",
+      "bytes": 1550,
+      "sha256": "4ea512759382fdfbbaf3288454a4cd2562701f89462710de0b2291a11608a619"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/coordination/review-regional-tour-source-preservation-20261022.mjs",
+      "bytes": 3539,
+      "sha256": "f2f1f103fd1ebc509381819c24aff942dd00fd6b7e54a42217c3c7ad433f5f00"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/coordination/verify-legacy-shoulder-ct-evidence-20261022.mjs",
+      "bytes": 7403,
+      "sha256": "c3fd21c1b06f6765427c95eef4ede7b97e652205e630189d22dadb68a0829e0a"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/coordination/verify-regional-tour-commit-controls-20261022.mjs",
+      "bytes": 6971,
+      "sha256": "d8954495cdac4d353b031faaa7ed3cee5362872a83c4784ca4ff83c403d78ba2"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/ct/atlas/app/anatomy-data.ts",
+      "bytes": 26810,
+      "sha256": "db23dc93b851342766d76b66cbd2982ad9814520c33d606fbf24c374f2667f43"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/ct/atlas/app/body-content.ts",
+      "bytes": 83121,
+      "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/ct/atlas/lib/legacy-shoulder-bone-references.ts",
+      "bytes": 2164,
+      "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/ct/atlas/lib/legacy-shoulder-muscle-references.ts",
+      "bytes": 4585,
+      "sha256": "283ec0d7d4fabb4477539ea3a35c08dcea1500e0e59ba7bd078dc6770dbbfc5d"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/ct/atlas/lib/legacy-shoulder-references.ts",
+      "bytes": 849,
+      "sha256": "dc20f96665158308eb8f28fb6f28f1133d4048293d386fb2b494e53b84f0116c"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/ct/atlas/scripts/test-legacy-shoulder-references.mjs",
+      "bytes": 13020,
+      "sha256": "306da2656c019fdf647675cc94e58eb829c9f3920790d9666c6aa55821ab63ad"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/tour/atlas/app/regional-guided-learning.tsx",
+      "bytes": 17559,
+      "sha256": "418319343ca3033bff575d35faa6da5e177fc6eab16238fa052c2de755f10f79"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/tour/atlas/scripts/test-regional-tour-player.mjs",
+      "bytes": 135312,
+      "sha256": "919f0399b7c6028ff1181cefaad67a65cd7efe47739f906bf0ed44850ad3b131"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/tour/first-main-rejected/regional-guided-learning.tsx",
+      "bytes": 17452,
+      "sha256": "23dca515b061d80ddf57f4e24788120963f72fd2b85cd13d3b8488f5ae0c9f2a"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/tour/first-main-rejected/test-regional-tour-player.mjs",
+      "bytes": 134571,
+      "sha256": "cc08de705be1804d8044359a5f45345f4d022115741687b6d0e741d3ac89d6d9"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/tour/preimage/app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/tour/preimage/scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "pending/tour-lifecycle-ct-evidence-20261022/tour/worker-test-preimage.mjs",
+      "bytes": 134035,
+      "sha256": "4beb473e5f5c581fa9aa694735a4c1648031871da43b10d0d339f8c21c649308"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -23512,9 +23614,9 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus unintegrated source/reference improvements:70legacy authored sections and Brain function gain links across85root placements;9sections receive scoped anatomy/imaging/provenance corrections. Existing X-ray lessons, quiz answers, source geometry, readiness, access and approvals remain unchanged. References link original primary/society/educational pages; no external article prose, images or assets copied. Four CT placements retain a topic-reference evidence gap, not fabricated citations. New authored code and source preimages only; no generated Review/pin/source-metadata/clinical/tracking JSON, raw logs, private references/scans/masks/model bytes or canonical Git ancestry. Source-only recovery, not full/private/runnable backup. Selected complete-run source and owner preview unchanged.",
+  "scope": "Inherited filtered source plus two unintegrated proposals. Topic-specific primary CT references close four remaining legacy shoulder citation placements, with two scoped original CT paraphrases; no article prose/images/data/vendor software imported. Regional tour commit-lifecycle repair preserves visible playback after abandoned renders, refuses stale/speculative controls and prevents cross-source retry focus. Authored code and exact source preimages only. No scans, masks, identifiers, private references, generated Review/runtime/pin/clinical JSON, coordinates, geometry, raw logs or canonical Git ancestry. Source-only recovery, not full/private/runnable backup. No install, preview change, public deployment or clinical/spatial approval.",
   "proof": {
-    "nativeFocused": {
+    "ctNative": {
       "tests": 5,
       "pass": 5,
       "fail": 0,
@@ -23522,18 +23624,27 @@
       "skipped": 0,
       "todo": 0
     },
-    "resolvedPlacements": 9936,
-    "newCitationPlacements": 85,
-    "remainingCitationPlacements": 4,
-    "editedAuthoredSections": 9,
-    "changedReviewTeachingHashes": 12,
-    "unaffectedWorksheetExact": true,
-    "sourceGeometryUnchanged": true,
+    "tourNative": {
+      "tests": 81,
+      "pass": 81,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "originalTourTestCallSitesPreserved": 65,
+    "originalTourNativeCases": 75,
+    "newTourCases": 6,
+    "originalTourAddedRegressionFailures": 6,
+    "citationPlacements": 89,
+    "remainingExplicitCitationGaps": 0,
+    "reviewRuntimeBindingPending": true,
+    "fullTypesBuildBrowserPending": true,
+    "integrated": false,
+    "previewChanged": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
-    "fullTypesBuildBrowserPassing": false,
-    "integrated": false,
-    "ownerPreviewChanged": false,
+    "wholeSuitePassing": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,

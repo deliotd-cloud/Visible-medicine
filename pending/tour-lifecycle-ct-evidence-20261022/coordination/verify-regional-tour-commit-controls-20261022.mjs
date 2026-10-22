@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+import {spawnSync} from 'node:child_process';
+import {json,read,sha,runGit} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261022-regional-tour-commit-controls',atlas=stage+'/atlas';
+const git=(...args)=>runGit(['-C',atlas,...args]);
+assert.equal(git('rev-parse','HEAD').toString().trim(),'2381efe43b75f8a7fb768a069eecd7268c508dac');
+const paths=['app/regional-guided-learning.tsx','scripts/test-regional-tour-player.mjs'];
+assert.deepEqual(git('diff','--name-only').toString().trim().split('\n').sort(),[...paths].sort());
+const rows=paths.map(path=>({path,sha256:sha(read(atlas+'/'+path)),preimageSha256:sha(git('show','HEAD:'+path))}));
+const require=createRequire(atlas+'/package.json'),ts=require('typescript');
+const extract=source=>{
+ const file=ts.createSourceFile('test.mjs',source.replaceAll('\r\n','\n'),ts.ScriptTarget.Latest,true,ts.ScriptKind.JS),result=new Map();
+ const visit=node=>{if(ts.isCallExpression(node)&&node.expression.getText(file)==='test'){const key=node.arguments[0].getText(file);assert(!result.has(key));result.set(key,node.getText(file));}ts.forEachChild(node,visit);};visit(file);
+ return result;
+};
+const before=extract(git('show','HEAD:'+paths[1]).toString()),after=extract(read(atlas+'/'+paths[1]).toString());
+assert.equal(before.size,65);assert.equal(after.size,before.size+6);
+for(const[name,body]of before)assert.equal(after.get(name),body,'Original test body unchanged: '+name);
+const added=[...after.keys()].filter(name=>!before.has(name));assert.equal(added.length,6);
+const assurance=json(stage+'/SOURCE_ASSURANCE_V2.json');for(const row of assurance.paths)assert.equal(sha(read(atlas+'/'+row.path)),row.sha256);
+const output=stage+'/main-verification-v2';assert(!fs.existsSync(output));fs.mkdirSync(output);
+for(const row of rows){const to=output+'/preimage/'+row.path;fs.mkdirSync(to.slice(0,to.lastIndexOf('/')),{recursive:true});fs.writeFileSync(to,git('show','HEAD:'+row.path),{flag:'wx'});}
+const diff=git('diff','--',...paths);fs.writeFileSync(output+'/source.diff',diff,{flag:'wx'});
+const run=(name,args,env={})=>{
+ const started=Date.now(),result=spawnSync(process.execPath,['--max-old-space-size=256','--test','--test-concurrency=1','--test-reporter=tap',...args,'scripts/test-regional-tour-player.mjs'],{cwd:atlas,windowsHide:true,maxBuffer:8e6,env:{...process.env,GOMAXPROCS:'2',RAYON_NUM_THREADS:'1',...env}});
+ for(const[suffix,b]of [['stdout.log',result.stdout??''],['stderr.log',result.stderr??'']])fs.writeFileSync(output+'/'+name+'.'+suffix,b,{flag:'wx'});
+ const counts=Object.fromEntries([...String(result.stdout).matchAll(/^# (tests|pass|fail|cancelled|skipped|todo) (\d+)\r?$/gm)].map(m=>[m[1],Number(m[2])]));
+ const receipt={args:['--max-old-space-size=256','--test','--test-concurrency=1','--test-reporter=tap',...args,'scripts/test-regional-tour-player.mjs'],preimage:env.REGIONAL_TOUR_PREIMAGE==='1',exit:result.status,signal:result.signal,error:result.error?.message,elapsedMs:Date.now()-started,counts,stdout:output+'/'+name+'.stdout.log',stdoutSha256:sha(result.stdout??''),stderr:output+'/'+name+'.stderr.log',stderrSha256:sha(result.stderr??'')};
+ fs.writeFileSync(output+'/'+name+'.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({name,...receipt}));return receipt;
+};
+const red=run('original-red',['--test-name-pattern=Abandoned source render|Abandoned same-source render|Committed source replacement|Effect cleanup/setup|Retry focus intent|Committed same-stop callbacks'],{REGIONAL_TOUR_PREIMAGE:'1'});
+assert.equal(red.exit,1);assert.equal(red.counts.tests,6);assert(red.counts.fail>=5);assert.equal(red.counts.cancelled,0);assert.equal(red.counts.todo,0);
+const green=run('repaired-full',[],{REGIONAL_TOUR_PREIMAGE:'0'});
+assert.equal(green.exit,0);assert.deepEqual(green.counts,{tests:81,pass:81,fail:0,cancelled:0,skipped:0,todo:0});
+for(const row of rows)assert.equal(sha(read(atlas+'/'+row.path)),row.sha256);
+assert.equal(git('diff','--check').toString(),'');
+const first=json(stage+'/main-verification/repaired-full.json');assert.deepEqual(first.counts,{tests:80,pass:78,fail:2,cancelled:0,skipped:0,todo:0});
+const report={schema:'vm.regional-tour-commit-controls-main-review/1',at:new Date().toISOString(),status:'focused-verified-unintegrated',baseline:{path:atlas,head:git('rev-parse','HEAD').toString().trim(),tree:git('rev-parse','HEAD^{tree}').toString().trim()},proposal:rows,originalTestCallSitesPreserved:65,originalNativeCases:75,lineEndingNormalizationOnly:true,sourceAssurance:stage+'/SOURCE_ASSURANCE_V2.json',sourceAssuranceSha256:sha(read(stage+'/SOURCE_ASSURANCE_V2.json')),addedTestCases:added,originalRed:red,repairedFull:green,workerReport:stage+'/RESULT.md',workerReportSha256:sha(read(stage+'/RESULT.md')),workerTestPreimage:stage+'/worker-test-preimage.mjs',workerTestPreimageSha256:sha(read(stage+'/worker-test-preimage.mjs')),diff:output+'/source.diff',diffSha256:sha(diff),firstMainFailure:first,mainStrengthening:'Counts every setter attempt after layout-only retirement. Main full80case run caught two real existing quick-check regressions in per-render-ticket retirement; corrected product now retains committed same-source/same-stop callbacks across ordinary rerenders while refusing speculative callbacks and previous stops. Six new regressions fail against the exact original component. Every original65test() source body is exact after CRLF/LF normalization and expands to75native cases; no acceptance assertion weakened.',behavior:'Committed scope and stop-bound action tickets keep visible tours playable through abandoned renders. Speculative or retired controls/scene events are refused; child scene reports queue until source commit; source changes do not inherit retry-focus intent.83JSX surface entries preserve text/tags/non-event attributes exactly after line-ending normalization; event-handler JSX necessarily changes. Tour geometry, content and camera/timing policy unchanged.',limits:'Synthetic hook/component harness, not real React StrictMode, browser/GPU, full project types/build, Review/runtime rebind or whole-release acceptance. Earlier worker78case77pass/1new harness error remains in worker report; main first80case78pass/2real regressions and exact preimages/raw logs retained. Final81native checks are separate evidence.',reviewRuntimeBindingPending:true,fullTypesBuildBrowserPending:true,integrated:false,previewChanged:false,clinicalApproval:false,spatialRegistration:false,wholeSuitePassing:false,publicDeployment:false};
+fs.writeFileSync(stage+'/MAIN_REVIEW.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({mainReview:stage+'/MAIN_REVIEW.json',sha256:sha(read(stage+'/MAIN_REVIEW.json')),native:green.counts,originalTestCallSitesPreserved:65,originalNativeCases:75,integrated:false,previewChanged:false}));

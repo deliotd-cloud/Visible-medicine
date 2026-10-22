@@ -1,0 +1,1784 @@
+/* oxlint-disable react-hooks/rules-of-hooks -- controlled hooks exercise production tour component */
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { createRequire } from 'node:module';
+import { execFileSync } from 'node:child_process';
+import { runInNewContext } from 'node:vm';
+import { test } from 'node:test';
+import { build } from './workspace-component-test-build.mjs';
+
+const require = createRequire(import.meta.url), React = require('react');
+const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
+const catalogBefore = JSON.stringify(catalog);
+const built = await build({ stdin: {
+contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { regionalTours, elbowArterialTour, pancreaticArterialTour, pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, cervicalDiscTour, medialThighTour, posteriorCalfTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame, regionalTourEvidence } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+  loader: 'tsx', resolveDir: process.cwd(),
+}, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
+  if(process.env.REGIONAL_TOUR_PREIMAGE==='1')api.onLoad({filter:/[\\/]app[\\/]regional-guided-learning\.tsx$/},()=>({loader:'tsx',contents:execFileSync('git',['show','HEAD:app/regional-guided-learning.tsx'],{encoding:'utf8'})}));
+  api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
+  // Camera/player assertions inspect resolved, real source teaching. Async load,
+  // cancellation and retry have their own actual-boundary tests.
+  api.onLoad({ filter: /[\\/]app[\\/]lazy-body-teaching\.tsx$/ }, () => ({ loader: 'tsx', contents: "import * as teaching from './body-content'; export function LazyBodyTeaching({enabled=true,children}){return enabled?children(teaching):null;}" }));
+} }] });
+const nodes = tree => !tree || typeof tree !== 'object' ? [] : Array.isArray(tree) ? tree.flatMap(nodes) : tree.type?.name==='LazyBodyTeaching' ? [tree,...nodes(tree.type(tree.props))] : [tree, ...nodes(tree.props?.children)];
+const text = tree => tree == null ? '' : typeof tree === 'string' || typeof tree === 'number' ? String(tree) : Array.isArray(tree) ? tree.map(text).join('') : text(tree.props?.children);
+const plain = value => JSON.parse(JSON.stringify(value));
+
+function harness(source = catalog, tourName = 'thoraxTour', compact = false, missingDisplayId) {
+  const slots = [], setters = [], timers = new Map(), listeners = new Map();
+  let cursor = 0, pending = [], dirty = false, tree, serial = 0, exits = 0, mounted = true, lateUpdates = 0, stateWrites = 0, autoReady = false, committedSceneKey;
+  const retryControl={calls:[],importError:false,cacheError:false,clear(urls,base){this.calls.push({urls:plain(urls),base});if(this.cacheError)throw new Error('cache failed');}};
+  const changed = (old, next) => !old || !next || old.length !== next.length || old.some((item, i) => !Object.is(item, next[i]));
+  const queueEffect=(fn,deps,kind)=>{const i=cursor++;if(changed(slots[i]?.deps,deps))pending.push(()=>{slots[i]?.cleanup?.();slots[i]={deps,kind,setup:fn,cleanup:fn()};});};
+  const shim = { ...React,
+    useState(initial) { const i = cursor++; if (!(i in slots)) slots[i] = typeof initial === 'function' ? initial() : initial; setters[i] ??= value => { stateWrites++; if(!mounted){lateUpdates++;return;} const next = typeof value === 'function' ? value(slots[i]) : value; if (!Object.is(next, slots[i])) { slots[i] = next; dirty = true; } }; return [slots[i], setters[i]]; },
+    useRef(initial) { return slots[cursor++] ??= { current: initial }; },
+    useMemo(fn, deps) { const i = cursor++; if (changed(slots[i]?.deps, deps)) slots[i] = { deps, value: fn() }; return slots[i].value; },
+    useCallback(fn, deps) { return shim.useMemo(() => fn, deps); },
+    useEffect(fn, deps) {queueEffect(fn,deps,'passive');},
+    useLayoutEffect(fn,deps){queueEffect(fn,deps,'layout');},
+  };
+  const preference = { matches: false, addEventListener(_event, fn) { listeners.set('motion', fn); }, removeEventListener() { listeners.delete('motion'); } };
+  const doc = { hidden: false, addEventListener(event, fn) { listeners.set(event, fn); }, removeEventListener(event) { listeners.delete(event); } };
+  const win = { matchMedia: query => query.includes('max-width') ? {matches:compact} : preference, setTimeout(fn, delay) { const id = ++serial; timers.set(id, { fn, delay }); return id; }, clearTimeout(id) { timers.delete(id); },addEventListener(event,fn){listeners.set('window:'+event,fn);},removeEventListener(event){listeners.delete('window:'+event);} };
+  const mod = { exports: {} };
+  runInNewContext(built.outputFiles[0].text, { module: mod, exports: mod.exports, window: win, document: doc, structuredClone, crypto, retryControl,
+    require(id) { if (id === 'react') return shim; if (id === 'next/dynamic') return () => 'BodyScene'; return require(id); } });
+  const api = mod.exports, props = { catalog: api.bodyDisplayCatalog(source), tour: api[tourName]??api.regionalTours.find(t=>t.id===tourName), assetBase: '/atlas-runtime/head-neck', onExit() { exits++; } };
+  assert(props.tour, `Available tour: ${tourName}`);
+  if(missingDisplayId)props.catalog={...props.catalog,structures:props.catalog.structures.filter(s=>s.id!==missingDisplayId)};
+  const tourBefore = JSON.stringify(props.tour);
+  function render() { let count = 0; do { dirty = false; cursor = 0; pending = []; tree = api.RegionalGuidedLearning(props); assert(++count < 15); if(dirty)continue;
+    const mountedScene=nodes(tree).find(n=>n.type==='BodyScene');
+    if(autoReady&&mountedScene&&committedSceneKey!==mountedScene.key){committedSceneKey=mountedScene.key;for(const id of new Set(mountedScene.props.structures.map(s=>s.bundle)))mountedScene.props.onLoaded(id);mountedScene.props.onRendererHealth('ready');}
+    for (const effect of pending) effect();
+  } while (dirty); return tree; }
+  function abandon(changes) {
+    const committedProps={...props},committedSlots=slots.slice(),committedTree=tree;
+    Object.assign(props,changes);
+    let proposed;
+    try { let count=0;do { cursor=0;pending=[];dirty=false;proposed=api.RegionalGuidedLearning(props);assert(++count<15); } while(dirty); }
+    finally { for(const key of Object.keys(props))if(!(key in committedProps))delete props[key];Object.assign(props,committedProps);slots.length=0;slots.push(...committedSlots);tree=committedTree;pending=[];dirty=false; }
+    return proposed;
+  }
+  function find(predicate) { const matches = nodes(tree).filter(predicate); assert.equal(matches.length, 1); return matches[0].props; }
+  const scene = () => find(n => n.type === 'BodyScene');
+  const button = label => find(n => n.props?.onClick && text(n) === label);
+  const bundles = () => [...new Set(scene().structures.map(s => s.bundle))];
+  function ready() { for (const id of bundles()) scene().onLoaded(id); scene().onRendererHealth('ready'); render(); }
+  function click(label) { const control = button(label); assert(!control.disabled, `${label} enabled`); control.onClick(); render(); }
+  function tick(expectedDuration) { assert.equal(timers.size, 1); const [id, timer] = [...timers][0]; timers.delete(id); assert.equal(timer.delay, expectedDuration??props.tour.steps[scene().reset].durationMs); timer.fn(); render(); }
+  function unchanged() { assert.equal(JSON.stringify(catalog), catalogBefore, 'Source catalogue unchanged'); assert.equal(JSON.stringify(props.tour), tourBefore, 'Tour definition unchanged'); }
+  function unmount(){for(const slot of slots)slot?.cleanup?.();mounted=false;}
+  function layoutUnmount(){for(const slot of slots)if(slot?.kind==='layout'){slot.cleanup?.();slot.cleanup=undefined;}}
+  function replayEffects(){const effects=slots.filter(slot=>slot?.setup);for(const slot of effects)slot.cleanup?.();for(const slot of effects)slot.cleanup=slot.setup();render();}
+  async function settle(){await new Promise(resolve=>setImmediate(resolve));if(mounted)render();}
+  render();
+  return { render, abandon, replayEffects, layoutUnmount, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, unmount, settle, retryControl, speed:()=>find(n=>n.type?.name==='TourSpeedControl'), mountReady(){autoReady=true;render();}, stateWrites:()=>stateWrites, lateUpdates:()=>lateUpdates, tree: () => tree, exits: () => exits };
+}
+
+test('Abandoned source render leaves the committed tour playable and refuses speculative scene callbacks',()=>{
+ const h=harness();h.ready();h.click('Play full tour');
+ const oldTimer=[...h.timers.values()][0],start=h.scene().reset;
+ h.abandon({assetBase:'/atlas-runtime/speculative'});
+ oldTimer.fn();h.render();
+ assert.equal(h.scene().reset,start+1,'visible timer still advances after an abandoned render');
+ assert.equal(h.button('Pause')['aria-pressed'],true);
+ const proposed=h.abandon({assetBase:'/atlas-runtime/speculative'});
+ const proposedScene=nodes(proposed).find(n=>n.type==='BodyScene').props;
+ nodes(proposed).find(n=>n.props?.onClick&&text(n)==='Exit tour').props.onClick();
+ nodes(proposed).find(n=>n.type?.name==='TourSpeedControl').props.onRateChange(3);
+ proposedScene.onFailure(h.bundles()[0]);proposedScene.onRendererHealth('failed');
+ h.render();
+ assert.equal(h.button('Pause')['aria-pressed'],true,'speculative failure cannot pause the visible tour');
+ assert.equal(h.exits(),0,'speculative Exit cannot close the visible tour');
+ assert.equal(h.speed().rate,1,'speculative speed choice cannot change visible playback');
+ h.unmount();
+});
+
+test('Abandoned same-source render cannot invoke speculative active controls',()=>{
+ const h=harness();h.ready();h.click('Play full tour');const timer=[...h.timers.values()][0];
+ const proposed=h.abandon({pauseRequest:1});
+ nodes(proposed).find(n=>n.props?.onClick&&text(n)==='Next').props.onClick();
+ nodes(proposed).find(n=>n.props?.onClick&&text(n)==='Pause').props.onClick();
+ nodes(proposed).find(n=>n.props?.onClick&&text(n)==='Exit tour').props.onClick();
+ timer.fn();h.render();assert.equal(h.scene().reset,1);assert.equal(h.button('Pause')['aria-pressed'],true);assert.equal(h.exits(),0);h.unmount();
+});
+
+test('Committed source replacement accepts child mount reports and retires old scene actions',()=>{
+ const h=harness();h.ready();h.click('Play full tour');
+ const oldScene=h.scene(),oldExit=h.button('Exit tour').onClick,oldSpeed=h.speed().onRateChange,oldTimer=[...h.timers.values()][0];
+ h.props.assetBase='/atlas-runtime/replacement';h.mountReady();
+ assert.equal(h.button('Start guided tour').disabled,false,'new child load before parent layout remains ready');
+ oldScene.onFailure(h.bundles()[0]);oldScene.onRendererHealth('failed');oldExit();oldSpeed(3);oldTimer.fn();h.render();
+ assert.equal(h.exits(),0);assert.equal(h.button('Start guided tour').disabled,false);
+ assert.equal(h.scene().reset,0);assert.equal(h.speed().rate,1);
+ h.click('Start guided tour');h.click('Play');h.preference.matches=true;h.listeners.get('motion')();h.render();
+ assert.equal(h.timers.size,0,'new source retains reduced-motion revocation');h.unmount();
+});
+
+test('Effect cleanup/setup replay keeps the committed scene identity and rejects layout-unmounted callbacks',()=>{
+ const h=harness();h.ready();h.click('Play full tour');const oldScene=h.scene(),timer=[...h.timers.values()][0];
+ h.replayEffects();assert.equal(h.button('Pause')['aria-pressed'],true);
+ timer.fn();h.render();assert.equal(h.scene().reset,0,'cleaned-up timer stays retired');
+ const oldExit=h.button('Exit tour').onClick,oldSpeed=h.speed().onRateChange,oldMotion=h.listeners.get('motion'),oldPagehide=h.listeners.get('window:pagehide');
+ h.layoutUnmount();const writes=h.stateWrites();
+ oldScene.onFailure(h.bundles()[0]);oldScene.onRendererHealth('failed');oldScene.onLoaded(h.bundles()[0]);
+ oldExit();oldSpeed(3);h.preference.matches=true;oldMotion();oldPagehide();timer.fn();
+ assert.equal(h.stateWrites(),writes,'layout retirement rejects every setter before passive cleanup, even equal-value updates');
+ assert.equal(h.exits(),0);assert.equal(h.lateUpdates(),0);
+ h.unmount();
+});
+
+test('Retry focus intent belongs only to the source that requested it',async()=>{
+ const h=harness();h.ready();h.click('Start guided tour');
+ const failed=h.bundles()[0];h.scene().onFailure(failed);h.render();
+ let focused=0;nodes(h.tree()).find(n=>n.props?.className==='regional-tour-controls').props.ref.current={querySelector(){return {focus(){focused++;}};}};
+ const retryButton={};h.doc.body={};h.doc.activeElement=retryButton;
+ h.button('Retry missing anatomy').onClick({currentTarget:retryButton});await h.settle();
+ h.doc.activeElement=h.doc.body;h.props.assetBase='/atlas-runtime/fresh-source';h.mountReady();
+ assert.equal(h.button('Start guided tour').disabled,false);assert.equal(focused,0,'replacement source cannot inherit prior retry focus');h.unmount();
+});
+
+test('live tour speed rescales camera and current stop, retires old callbacks and preserves exact anatomy',()=>{
+ const h=harness();h.ready();assert.equal(h.speed().rate,1);
+ h.speed().onRateChange(2);h.render();assert.equal(h.timers.size,0,'speed selection does not start playback');
+ h.click('Play full tour');assert.equal(h.scene().transitionMs,4000);assert.equal(h.scene().reset,0);
+ const before=h.scene().structures,old=[...h.timers.values()][0];assert.equal(old.delay,12000);
+ h.speed().onRateChange(3);old.fn();h.render();
+ assert.equal(h.scene().reset,0,'queued old-speed stop cannot advance before cleanup');
+ assert.equal(h.scene().transitionMs,2667);assert.equal([...h.timers.values()][0].delay,8000);
+ assert.deepEqual(h.scene().structures,before);assert.equal(h.button('Pause')['aria-pressed'],true);
+ for(const invalid of [0,NaN,Infinity,4,'2']){h.speed().onRateChange(invalid);h.render();assert.equal(h.speed().rate,3);}
+ h.tick(8000);assert.equal(h.scene().reset,1);h.unchanged();h.unmount();
+});
+
+test('speed choices never resume paused, hidden or reduced-motion tours; manual navigation keeps its camera timing',()=>{
+ const h=harness();h.ready();h.click('Play full tour');h.click('Pause');
+ h.speed().onRateChange(.5);h.render();assert.equal(h.timers.size,0);assert.equal(h.scene().reset,0);assert.equal(h.scene().transitionPaused,true);
+ h.click('Play');assert.equal(h.scene().transitionMs,16000);assert.equal([...h.timers.values()][0].delay,48000);
+ h.doc.hidden=true;h.listeners.get('visibilitychange')();h.render();h.speed().onRateChange(2);h.render();assert.equal(h.timers.size,0);
+ h.doc.hidden=false;h.listeners.get('visibilitychange')();h.render();assert.equal(h.timers.size,0,'visibility does not resume');
+ h.preference.matches=true;h.listeners.get('motion')();h.render();h.speed().onRateChange(3);h.render();
+ assert.equal(h.timers.size,0);assert.equal(h.scene().transitionMs,0,'speed never overrides reduced motion');h.unmount();
+ const manual=harness();manual.ready();manual.click('Start guided tour');manual.click('Play');
+ const duration=manual.props.tour.steps[0].durationMs;manual.speed().onRateChange(2);manual.render();
+ assert.equal(manual.scene().transitionMs,1800);assert.equal([...manual.timers.values()][0].delay,Math.ceil(duration/2));manual.tick(Math.ceil(duration/2));manual.unchanged();manual.unmount();
+});
+
+test('Play full tour traverses every source-bound regional tour with readable timing and a final hold',()=>{
+ const inventory=harness(),tours=inventory.api.regionalTours.map(t=>({id:t.id,steps:t.steps.length}));
+ assert(tours.length>=50,'Exercise the complete current regional registry');inventory.unmount();
+ for(const {id,steps} of tours){
+  const h=harness(catalog,id),tour=h.props.tour;
+  assert.equal(tour.steps.length,steps,id);
+  const ids=[...new Set([...tour.contextIds,...tour.steps.map(step=>step.selectedId)])];
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids,`${id}: exact selected and context sources`);
+  const required=[...new Set(ids.map(sourceId=>h.props.catalog.structures.find(s=>s.id===sourceId)?.bundle))];
+  assert(!required.includes(undefined),`${id}: every source exists`);
+  assert.deepEqual(plain(h.bundles().sort()),plain(required.sort()),`${id}: all source bundles retained`);
+  assert(h.button('Play full tour').disabled,`${id}: waits for all bundles and renderer`);
+  assert.equal(h.timers.size,0);h.ready();h.click('Play full tour');
+  const evidence=h.api.regionalTourEvidence(h.props.catalog,tour.steps[0].selectedId).find(item=>item.tour.id===id)?.continuousPlayback;
+  assert(evidence,`${id}: continuous review evidence exists`);
+  assert.equal(evidence.transitionMs,8000);assert.equal(evidence.final,'hold');
+  assert.equal(evidence.stepDurationsMs.length,steps);
+  for(const [index,step] of tour.steps.entries()){
+   assert.equal(h.scene().reset,index,`${id}: stop ${index} index`);
+   assert.equal(h.scene().selectedId,step.selectedId,`${id}: stop ${index} selected source`);
+   assert.equal(h.scene().view,step.view,`${id}: stop ${index} view`);
+   assert.equal(h.scene().explode,0,`${id}: source separation remains zero`);
+   assert.equal(h.scene().transitionMs,8000,`${id}: slow camera sweep`);
+   assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids,`${id}: displayed source set stays assembled`);
+   assert(text(h.tree()).includes(step.caption),`${id}: full authored caption at stop ${index}`);
+   assert(evidence.stepDurationsMs[index]>=24000,`${id}: readable stop duration`);
+   h.tick(evidence.stepDurationsMs[index]);
+  }
+  assert.equal(h.scene().reset,steps-1,`${id}: final stop held`);
+  assert.equal(h.scene().selectedId,tour.steps.at(-1).selectedId);
+  assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);
+  assert.equal(h.scene().transitionPaused,true);assert.equal(h.exits(),0,`${id}: never auto-exits`);
+  h.unchanged();h.unmount();
+ }
+});
+
+test('Continuous regional playback revokes captured timers for user reading, interruption and source change',()=>{
+ const start=()=>{const h=harness(catalog,'thoraxTour');h.ready();h.click('Play full tour');return h;};
+ {
+  const h=start(),queued=[...h.timers.values()][0].fn;
+  h.button('Pause').onClick();queued();h.render();
+  assert.equal(h.scene().reset,0);assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  h.click('Play');assert.equal(h.timers.size,1);
+  const old=[...h.timers.values()][0].fn;
+  h.button('Next').onClick();old();h.render();
+  assert.equal(h.scene().reset,1,'Manual Next wins over captured continuous timer');
+  assert.equal(h.timers.size,1,'Next starts a fresh full-duration timer');
+  assert.equal([...h.timers.values()][0].delay,h.api.regionalTourEvidence(h.props.catalog,h.props.tour.steps[1].selectedId).find(item=>item.tour.id===h.props.tour.id).continuousPlayback.stepDurationsMs[1]);
+  h.click('Pause');h.unmount();
+ }
+ for(const cause of ['caption-focus','references','picker','hidden','pagehide','bundle-failed','renderer-failed','reduced-motion','source-change','exit','unmount']){
+  const h=start(),queued=[...h.timers.values()][0].fn;
+  if(cause==='caption-focus')nodes(h.tree()).find(n=>n.props?.['aria-label']==='Current step explanation').props.onFocus();
+  if(cause==='references')nodes(h.tree()).find(n=>n.props?.className==='regional-tour-resources').props.onFocusCapture();
+  if(cause==='picker')nodes(h.tree()).find(n=>n.type?.name==='TourStepPicker').props.onPause();
+  if(cause==='hidden'){h.doc.hidden=true;h.listeners.get('visibilitychange')();}
+  if(cause==='pagehide')h.listeners.get('window:pagehide')();
+  if(cause==='bundle-failed')h.scene().onFailure(h.bundles()[0]);
+  if(cause==='renderer-failed')h.scene().onRendererHealth('failed');
+  if(cause==='reduced-motion'){h.preference.matches=true;h.listeners.get('motion')();}
+  if(cause==='source-change'){h.props.catalog={...h.props.catalog};h.render();}
+  if(cause==='exit')h.button('Exit tour').onClick();
+  if(cause==='unmount')h.unmount();
+  queued();if(cause!=='unmount')h.render();
+  assert.equal(h.timers.size,0,`${cause}: no old timer remains`);
+  if(cause!=='source-change'&&cause!=='unmount')assert.equal(h.scene().reset,0,`${cause}: stale callback cannot advance`);
+  if(!['source-change','exit','unmount'].includes(cause)){
+   assert.equal(h.button('Play')['aria-pressed'],false,`${cause}: no automatic resume`);
+   assert.equal(h.scene().transitionPaused,true,`${cause}: camera frozen`);
+   h.doc.hidden=false;h.preference.matches=false;
+   h.scene().onRendererHealth('ready');h.render();
+   assert.equal(h.timers.size,0,`${cause}: recovery stays paused`);
+  }
+  if(cause!=='unmount')h.unmount();
+ }
+});
+
+test('Cranial vault tour keeps a stable assembled frame through six smooth stops',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'cranialVaultTour',compact),tour=h.props.tour;
+  const ids=plain(tour.steps.map(s=>s.selectedId));
+  assert.equal(tour.steps.length,6);assert.equal(tour.contextIds.length,0);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles(),['head-neck-skeleton']);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  const frame=plain(h.scene().presetBounds);
+  for(const [i,step]of tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),frame);
+   assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+   assert(text(h.tree()).includes(step.caption));if(i<5)h.click('Next');
+  }
+  h.click('Back');h.click('Play');const late=[...h.timers.values()][0].fn;
+  h.click('Pause');late();h.render();assert.equal(h.scene().reset,4);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of ids){const missing=harness(catalog,'cranialVaultTour',compact,id);assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);missing.unmount();}
+ }
+});
+
+test('Diaphragm tour retains six exact surfaces and safe five-stop transitions',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'diaphragmTour',compact);
+  const tour=h.props.tour,ids=[...tour.contextIds,...tour.steps.map(s=>s.selectedId)];
+  assert.equal(tour.steps.length,5);assert.equal(tour.contextIds.length,1);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles().sort(),['abdomen-organs','abdomen-vessels-recovery','thorax-muscles','thorax-organs','thorax-vessels-recovery']);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  for(const [i,step]of tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+   assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   assert(text(h.tree()).includes(step.caption));if(i<4)h.click('Next');
+  }
+  h.click('Back');h.click('Play');const late=[...h.timers.values()][0].fn;
+  h.click('Pause');late();h.render();assert.equal(h.scene().reset,3);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of ids){const missing=harness(catalog,'diaphragmTour',compact,id);assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);missing.unmount();}
+ }
+});
+
+test('Urinary tour spans five exact abdominal/pelvic targets with smooth frames and safe pause',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'urinaryTractTour',compact);
+  assert.equal(h.props.tour.steps.length,5);assert.equal(h.scene().structures.length,5);
+  assert.deepEqual(h.bundles().sort(),['abdomen-organs','abdomen-organs-recovery','pelvis-organs']);
+  assert(h.button('Start guided tour').disabled);assert.equal(h.timers.size,0);
+  h.ready();h.click('Start guided tour');
+  for(const [i,step]of h.props.tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+   assert(text(h.tree()).includes(step.caption));if(i<4)h.click('Next');
+  }
+  h.click('Back');h.click('Play');const late=[...h.timers.values()][0].fn;
+  h.click('Pause');late();h.render();assert.equal(h.scene().reset,3);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of h.props.tour.steps.map(s=>s.selectedId)){
+   const missing=harness(catalog,'urinaryTractTour',compact,id);
+   assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unmount();
+  }
+ }
+});
+
+test('Digestive tract tour keeps six exact surfaces across three regions with smooth framing and safe exit',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'digestiveTractTour',compact);
+  assert.equal(h.props.tour.steps.length,6);assert.equal(h.scene().structures.length,6);
+  assert.deepEqual(h.bundles().sort(),['abdomen-organs','abdomen-organs-inventory','pelvis-organs-recovery','thorax-organs']);
+  assert(h.button('Start guided tour').disabled);assert.equal(h.timers.size,0);
+  h.ready();h.click('Start guided tour');
+  for(const [i,step]of h.props.tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+   assert(text(h.tree()).includes(step.caption));if(i<5)h.click('Next');
+  }
+  h.click('Back');h.click('Play');const late=[...h.timers.values()][0].fn;
+  h.click('Pause');late();h.render();assert.equal(h.scene().reset,4);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of h.props.tour.steps.map(s=>s.selectedId)){
+   const missing=harness(catalog,'digestiveTractTour',compact,id);
+   assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unmount();
+  }
+ }
+});
+
+test('Pelvic venous tour keeps ten source-bound stops and seven context surfaces in both layouts',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'pelvicVenousTour',compact);
+  const tour=h.props.tour,ids=[...tour.contextIds,...tour.steps.map(s=>s.selectedId)];
+  assert.equal(tour.steps.length,10);assert.equal(tour.contextIds.length,7);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles().sort(),['pelvic-veins','pelvis-skeleton','pelvis-vessels-recovery','spine-skeleton']);
+  assert(h.button('Start guided tour').disabled);assert.equal(h.timers.size,0);
+  h.ready();h.click('Start guided tour');
+  for(const [i,step]of tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+   assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   assert(text(h.tree()).includes(step.caption));if(i<9)h.click('Next');
+  }
+  h.click('Back');h.click('Play');const late=[...h.timers.values()][0].fn;
+  h.click('Pause');late();h.render();assert.equal(h.scene().reset,8);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of ids){
+   const missing=harness(catalog,'pelvicVenousTour',compact,id);
+   assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unmount();
+  }
+ }
+});
+
+test('Orbital nerve tour keeps seven exact sources, smooth six-stop framing and safe pause',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'orbitalNerveTour',compact);
+  assert.equal(h.props.tour.steps.length,6);assert.equal(h.scene().structures.length,7);
+  assert.deepEqual(h.bundles().sort(),['eye-corrected-parent','head-neck-nerves','head-neck-nerves-inventory']);
+  assert(h.button('Start guided tour').disabled);assert.equal(h.timers.size,0);
+  h.ready();h.click('Start guided tour');
+  for(const [i,step]of h.props.tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+   assert(text(h.tree()).includes(step.caption));if(i<5)h.click('Next');
+  }
+  h.click('Back');h.click('Play');const late=[...h.timers.values()][0].fn;
+  h.click('Pause');late();h.render();assert.equal(h.scene().reset,4);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of [...h.props.tour.contextIds,...h.props.tour.steps.map(s=>s.selectedId)]){
+   const missing=harness(catalog,'orbitalNerveTour',compact,id);
+   assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unmount();
+  }
+ }
+});
+
+test('Forearm arterial tour retains six sources, exact frames, pause and reduced motion',()=>{
+ const h=harness(catalog,'forearmArterialTour');
+ assert.equal(h.props.tour.steps.length,4);assert.equal(h.scene().structures.length,6);
+ assert.deepEqual(h.bundles().sort(),['forearm-skeleton','forearm-vessels-forearm-vascular','forearm-vessels-recovery']);
+ assert.equal(h.timers.size,0);assert(h.button('Start guided tour').disabled);
+ h.ready();h.click('Start guided tour');
+ for(const [i,step] of h.props.tour.steps.entries()){
+  assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+  assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+  assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+  assert(text(h.tree()).includes(step.caption));if(i<3)h.click('Next');
+ }
+ h.click('Back');assert.equal(h.scene().selectedId,h.props.tour.steps[2].selectedId);
+ h.click('Play');const late=[...h.timers.values()][0].fn;
+ h.click('Pause');late();h.render();assert.equal(h.scene().reset,2);assert.equal(h.timers.size,0);
+ h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+ h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+ const missing=harness(catalog,'forearmArterialTour',false,h.props.tour.steps[0].selectedId);
+ assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unmount();
+});
+
+test('Pulmonary venous tour keeps exact bilateral frames, assembled stops and safe playback in both layouts',()=>{
+ const id=(side,kind,name)=>`vm:anatomy:body:thorax:${side}:${kind}:${name}`;
+ const targets=['right','left'].flatMap(side=>['superior','inferior'].map(level=>id(side,'vessel',`${side}-${level}-pulmonary-vein`)));
+ const context=['right','left'].flatMap(side=>[id(side,'organ',`${side}-main-bronchus`),id(side,'vessel',`${side}-pulmonary-artery`)]);
+ for(const compact of [false,true]){
+  const h=harness(catalog,'pulmonaryVenousTour',compact),tour=h.props.tour;
+  assert.equal(tour.id,'pulmonary-venous-hilar-relationships');
+  assert.equal(tour.revision,'pulmonary-venous-hilar-relationships-20261011-r1');
+  assert.equal(tour.region,'thorax');assert.deepEqual(plain(tour.contextIds),context);
+  assert.deepEqual(plain(tour.steps.map(step=>step.selectedId)),targets);
+  assert.deepEqual(plain(tour.steps.map(step=>step.view)),['anterior','right','anterior','left']);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),[...context,...targets]);
+  assert.equal(h.scene().explode,0);assert.equal(h.scene().layout,'spatial');
+  assert.equal(h.scene().transitionMs,0);assert.equal(h.timers.size,0);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  assert.equal(h.button('Back').disabled,true);assert.equal(h.button('Play')['aria-pressed'],false);
+  for(const [i,step]of tour.steps.entries()){
+   const side=Math.floor(i/2)*2,scene=h.scene();
+   assert.deepEqual(plain(step.frameIds),[...targets.slice(side,side+2),...context.slice(side,side+2)]);
+   assert.equal(step.durationMs,14000);assert.equal(step.fadeOthers,true);
+   assert.equal(scene.reset,i);assert.equal(scene.selectedId,targets[i]);assert.equal(scene.view,step.view);
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.layout,'spatial');
+   assert.equal(scene.isolated,true);assert.equal(scene.tourLocked,true);
+   assert.deepEqual(plain(scene.structures.map(s=>s.id)),[...context,...targets]);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   const framed=[...targets.slice(side,side+2),...context.slice(side,side+2)].map(id=>h.props.catalog.structures.find(s=>s.id===id).bounds);
+   assert.deepEqual(plain(scene.presetBounds),{
+    min:[0,1,2].map(axis=>Math.min(...framed.map(bounds=>bounds.min[axis]))),
+    max:[0,1,2].map(axis=>Math.max(...framed.map(bounds=>bounds.max[axis]))),
+   },'Camera bounds are the exact ipsilateral source union');
+   assert(text(h.tree()).includes(step.caption));if(i<3)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,2);h.click('Play');
+  const stale=[...h.timers.values()][0].fn;
+  h.button('Pause').onClick();stale();h.render();
+  assert.equal(h.scene().reset,2);assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  h.click('Play');const reducedStale=[...h.timers.values()][0].fn;
+  h.preference.matches=true;h.listeners.get('motion')();h.render();reducedStale();h.render();
+  assert.equal(h.scene().reset,2);assert.equal(h.scene().transitionMs,0);assert.equal(h.timers.size,0);
+  h.click('Next');assert.equal(h.scene().selectedId,targets[3]);assert.equal(h.scene().transitionMs,0);
+  h.click('Play');h.tick();assert.equal(h.scene().reset,3);assert.equal(h.timers.size,0);
+  assert.equal(h.exits(),0,'Final stop holds until explicit exit');
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  const exiting=harness(catalog,'pulmonaryVenousTour',compact);exiting.ready();exiting.click('Start guided tour');exiting.click('Play');
+  const exitStale=[...exiting.timers.values()][0].fn;
+  exiting.button('Exit tour').onClick();exitStale();exiting.render();
+  assert.equal(exiting.exits(),1);assert.equal(exiting.scene().reset,0);assert.equal(exiting.timers.size,0);
+  exiting.unchanged();exiting.unmount();
+  for(const missingId of [...targets,...context]){
+   const missing=harness(catalog,'pulmonaryVenousTour',compact,missingId);
+   assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unchanged();missing.unmount();
+  }
+ }
+});
+
+test('Pancreatic arterial guide plays nine exact stops with guarded context and stale timers',()=>{
+ const expected=['FMA14782','FMA70479','FMA14784','FMA70480','FMA14805','FMA14787','FMA14790','FMA14792','FMA14793'];
+ for(const compact of [false,true]){
+  const h=harness(catalog,'pancreaticArterialTour',compact),tour=h.props.tour;
+  assert.equal(tour.id,'pancreatic-arterial-relationships');assert.equal(tour.revision,'pancreatic-arterial-relationships-20261012-r1');
+  assert.equal(tour.region,'abdomen');assert.equal(tour.steps.length,9);assert.equal(tour.contextIds.length,5);
+  const ids=[...tour.contextIds,...tour.steps.map(step=>step.selectedId)];
+  assert.equal(new Set(ids).size,14);
+  assert.deepEqual(plain(tour.steps.map(step=>h.props.catalog.structures.find(s=>s.id===step.selectedId)?.fmaId)),expected);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.equal(h.scene().explode,0);assert.equal(h.scene().layout,'spatial');assert.equal(h.timers.size,0);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  for(const [i,step] of tour.steps.entries()){
+   const scene=h.scene();assert.equal(scene.reset,i);assert.equal(scene.selectedId,step.selectedId);assert.equal(scene.view,step.view);
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.isolated,true);assert.equal(scene.tourLocked,true);
+   assert.deepEqual(plain(scene.structures.map(s=>s.id)),ids);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   const framed=step.frameIds.map(id=>h.props.catalog.structures.find(s=>s.id===id).bounds);
+   assert.deepEqual(plain(scene.presetBounds),{min:[0,1,2].map(a=>Math.min(...framed.map(b=>b.min[a]))),max:[0,1,2].map(a=>Math.max(...framed.map(b=>b.max[a])))});
+   assert.equal(step.durationMs,14000);assert.equal(step.fadeOthers,true);assert(text(h.tree()).includes(step.caption));
+   if(i<8)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,7);h.click('Play');
+  const stale=[...h.timers.values()][0].fn;h.button('Pause').onClick();stale();h.render();
+  assert.equal(h.scene().reset,7);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const missingId of ids){const missing=harness(catalog,'pancreaticArterialTour',compact,missingId);assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);missing.click('Exit tour');missing.unchanged();missing.unmount();}
+ }
+});
+
+test('Elbow arterial guide compares four exact pairs with guarded eight-stop playback',()=>{
+ const expected=['FMA22712','FMA22801','FMA22707','FMA22804','FMA23126','FMA22764','FMA23124','FMA268667'];
+ const context=['FMA23130','FMA23464','FMA23467'];
+ for(const compact of [false,true]){
+  const h=harness(catalog,'elbowArterialTour',compact),tour=h.props.tour;
+  assert.equal(tour.id,'right-elbow-arterial-pairs');assert.equal(tour.revision,'right-elbow-arterial-pairs-20261012-r1');
+  assert.equal(tour.region,'forearm');assert.equal(tour.status,'draft');
+  assert.equal(tour.steps.length,8);assert.equal(tour.contextIds.length,3);
+  const targets=tour.steps.map(step=>step.selectedId),ids=[...tour.contextIds,...targets];
+  assert.equal(new Set(ids).size,11);
+  assert.deepEqual(plain(targets.map(id=>h.props.catalog.structures.find(s=>s.id===id)?.fmaId)),expected);
+  assert.deepEqual(plain(tour.contextIds.map(id=>h.props.catalog.structures.find(s=>s.id===id)?.fmaId)),context);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles().sort(),['elbow-arteries','forearm-skeleton','forearm-vessels-forearm-vascular','shoulder-arm-skeleton']);
+  assert.equal(h.scene().explode,0);assert.equal(h.scene().layout,'spatial');
+  assert.equal(h.scene().transitionMs,0);assert.equal(h.timers.size,0);
+  const evidence=h.api.regionalTourEvidence(h.props.catalog,targets[0]).find(item=>item.tour.id===tour.id);
+  assert(evidence);assert.equal(evidence.transitionMs,1800);assert.equal(evidence.transition,'quintic-orbit');
+  assert.equal(evidence.separation,0);assert.equal(evidence.stepFrames.length,8);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  assert.equal(h.button('Back').disabled,true);assert.equal(h.button('Play')['aria-pressed'],false);
+  for(const [i,step] of tour.steps.entries()){
+   const pair=targets.slice(Math.floor(i/2)*2,Math.floor(i/2)*2+2),scene=h.scene();
+   assert.deepEqual(plain(step.frameIds),plain(pair),'Each camera frame contains only one named pair');
+   assert.equal(step.durationMs,14000);assert.equal(step.fadeOthers,true);
+   assert.equal(scene.reset,i);assert.equal(scene.selectedId,targets[i]);assert.equal(scene.view,step.view);
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+   assert.equal(scene.tourLocked,true);assert.deepEqual(plain(scene.structures.map(s=>s.id)),ids);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   const framed=pair.map(id=>h.props.catalog.structures.find(s=>s.id===id).bounds);
+   assert.deepEqual(plain(scene.presetBounds),{
+    min:[0,1,2].map(a=>Math.min(...framed.map(b=>b.min[a]))),
+    max:[0,1,2].map(a=>Math.max(...framed.map(b=>b.max[a]))),
+   },'Pair bounds exclude whole-bone context');
+   assert(text(h.tree()).includes(step.caption));if(i<7)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,6);h.click('Play');
+  const stale=[...h.timers.values()][0].fn;
+  const picker=()=>nodes(h.tree()).find(node=>node.type?.name==='TourStepPicker').props;
+  picker().onPause();h.render();stale();h.render();
+  assert.equal(h.scene().reset,6);assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  picker().onStep(7);h.render();assert.equal(h.scene().reset,7);assert.equal(h.timers.size,0);
+  h.click('Play');const reducedStale=[...h.timers.values()][0].fn;
+  h.preference.matches=true;h.listeners.get('motion')();h.render();reducedStale();h.render();
+  assert.equal(h.scene().reset,7);assert.equal(h.scene().transitionMs,0);assert.equal(h.timers.size,0);
+  h.click('Play');h.tick();assert.equal(h.scene().reset,7);assert.equal(h.timers.size,0);
+  assert.equal(h.exits(),0,'Final pair holds until explicit exit');
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const missingId of ids){
+   const missing=harness(catalog,'elbowArterialTour',compact,missingId);
+   assert(missing.button('Start guided tour').disabled);
+   assert.equal(nodes(missing.tree()).filter(node=>node.type==='BodyScene').length,0);
+   missing.click('Exit tour');missing.unchanged();missing.unmount();
+  }
+  const altered=harness(catalog,'elbowArterialTour',compact);
+  const changed=structuredClone(altered.props.catalog);
+  changed.bundles.find(bundle=>bundle.id==='elbow-arteries').sha256='0'.repeat(64);
+  altered.props.catalog=changed;altered.render();
+  assert(altered.button('Start guided tour').disabled);
+  assert.equal(nodes(altered.tree()).filter(node=>node.type==='BodyScene').length,0);
+  altered.click('Exit tour');altered.unchanged();altered.unmount();
+ }
+});
+
+test('Cardiac venous tour retains heart context and four smooth source-bound stops',()=>{
+ const h=harness(catalog,'cardiacVenousTour');
+ assert.equal(h.props.tour.steps.length,4);assert.equal(h.scene().structures.length,4);
+ assert.deepEqual(h.bundles().sort(),['anterior-cardiac-vein','thorax-organs','thorax-vessels-recovery']);
+ assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+ for(const [index,step] of h.props.tour.steps.entries()){
+  assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+  assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+  assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+  assert(text(h.tree()).includes(step.caption));if(index<3)h.click('Next');
+ }
+ h.click('Back');assert.equal(h.scene().view,'posterior');
+ h.click('Play');assert.equal(h.timers.size,1);h.click('Pause');assert.equal(h.timers.size,0);
+ h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+ h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('Lower arterial tour loads exact skeletal context with nine local frames, pause and reduced motion',()=>{
+ const h=harness(catalog,'lowerArterialTour');
+ assert.equal(h.props.tour.steps.length,9);
+ assert(h.props.tour.contextIds.length>0,'Spatial landmarks are required');
+ assert.equal(h.scene().structures.length,9+h.props.tour.contextIds.length);
+ assert.equal(h.props.tour.contextIds.length,9);
+ assert.deepEqual(plain(h.scene().structures.filter(s=>s.system==='skeleton').map(s=>s.id)),plain(h.props.tour.contextIds));
+ assert.equal(h.bundles().length,8,'Skeletal bundles join the four artery bundles');assert(h.button('Start guided tour').disabled);
+ for(const id of h.bundles().slice(0,-1))h.scene().onLoaded(id);
+ h.scene().onRendererHealth('ready');h.render();
+ assert(h.button('Start guided tour').disabled,'Incomplete artery sequence cannot start');
+ h.ready();h.click('Start guided tour');
+ for(const [i,step] of h.props.tour.steps.entries()){
+  assert.equal(h.scene().reset,i);assert.equal(h.scene().selectedId,step.selectedId);
+  assert.equal(h.scene().view,step.view);assert.equal(h.scene().transitionMs,1800);
+  assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+  assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+  assert(text(h.tree()).includes(step.caption));if(i<8)h.click('Next');
+ }
+ h.click('Back');h.click('Play');const late=[...h.timers.values()][0].fn;
+ h.click('Pause');late();h.render();assert.equal(h.scene().reset,7);assert.equal(h.timers.size,0);
+ h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');
+ assert.equal(h.scene().reset,8);assert.equal(h.scene().transitionMs,0);
+ h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+ const drift=harness(catalog,'lowerArterialTour');
+ drift.props.catalog=structuredClone(drift.props.catalog);
+ drift.props.catalog.structures.find(s=>s.id===drift.props.tour.steps[4].selectedId).sources[0].sha256='0'.repeat(64);
+ drift.render();assert.equal(nodes(drift.tree()).filter(n=>n.type==='BodyScene').length,0);
+ assert(drift.button('Start guided tour').disabled);assert.equal(drift.timers.size,0);
+ const absent=harness(catalog,'lowerArterialTour');
+ absent.props.catalog={...absent.props.catalog,structures:absent.props.catalog.structures.filter(s=>s.id!==absent.props.tour.contextIds[0])};
+ absent.render();assert.equal(nodes(absent.tree()).filter(n=>n.type==='BodyScene').length,0);
+ assert(absent.button('Start guided tour').disabled,'Missing skeletal context refuses the revised source-bound tour');
+ absent.unchanged();
+});
+
+test('Thoracic spine player uses six exact local frames, both bundles, pause and reduced motion',()=>{
+ const h=harness(catalog,'thoracicSpineTour');
+ assert.equal(h.props.tour.id,'thoracic-spine-discs-orientation');
+ assert.equal(h.props.tour.steps.length,6);
+ assert.equal(h.scene().structures.length,11);
+ assert.deepEqual(h.bundles().sort(),['spine-connective-gaps','spine-skeleton']);
+ assert(h.button('Start guided tour').disabled);
+ h.scene().onLoaded('spine-skeleton');h.scene().onRendererHealth('ready');h.render();
+ assert(h.button('Start guided tour').disabled,'Bones alone cannot unlock disc stops');
+ h.scene().onLoaded('spine-connective-gaps');h.render();h.click('Start guided tour');
+ for(const [i,step] of h.props.tour.steps.entries()){
+  const scene=h.scene();assert.equal(scene.reset,i);assert.equal(scene.selectedId,step.selectedId);
+  assert.equal(scene.view,step.view);assert.equal(scene.transitionMs,1800);
+  assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+  assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+  assert(text(h.tree()).includes(step.caption));
+  if(i<5)h.click('Next');
+ }
+ h.click('Back');assert.equal(h.scene().reset,4);
+ h.click('Play');assert.equal(h.timers.size,1);h.click('Pause');assert.equal(h.timers.size,0);
+ assert.equal(h.scene().transitionPaused,true);
+ h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');
+ assert.equal(h.scene().reset,5);assert.equal(h.scene().transitionMs,0);
+ h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+ const unavailable=harness(catalog,'thoracicSpineTour');
+ const drift=structuredClone(unavailable.props.catalog);
+ drift.structures.find(s=>s.id===unavailable.props.tour.steps[2].selectedId).sources[0].sha256='0'.repeat(64);
+ unavailable.props.catalog=drift;unavailable.render();
+ assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
+ assert(unavailable.button('Start guided tour').disabled);assert.equal(unavailable.timers.size,0);
+ unavailable.click('Exit tour');assert.equal(unavailable.exits(),1);unavailable.unchanged();
+});
+
+test('Cervical whole-disc player requires both bundles and walks six exact adjacent-bone frames',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'cervicalDiscTour',compact),tour=h.props.tour;
+  const raw=JSON.parse(catalogBefore);
+  const fmaIds=['FMA25058','FMA13896','FMA13897','FMA13898','FMA13899','FMA13900'];
+  const boneFmas=['FMA12520','FMA12521','FMA12522','FMA12523','FMA12524','FMA12525','FMA9165'];
+  const byFma=fma=>{const matches=raw.structures.filter(s=>s.fmaId===fma);assert.equal(matches.length,1);return matches[0].id;};
+  const discs=fmaIds.map(byFma),bones=boneFmas.map(byFma),ids=[...bones,...discs];
+  assert.equal(tour.id,'cervical-whole-discs-orientation');
+  assert.deepEqual(plain(tour.steps.map(s=>s.selectedId)),discs);
+  assert.deepEqual(plain(tour.contextIds),bones);
+  assert.deepEqual(plain(tour.steps.map(s=>s.frameIds)),discs.map((id,i)=>[id,bones[i],bones[i+1]]));
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles().sort(),['spine-connective-gaps','spine-skeleton']);
+  assert(h.button('Start guided tour').disabled);assert.equal(h.timers.size,0);
+  h.scene().onLoaded('spine-skeleton');h.scene().onRendererHealth('ready');h.render();
+  assert(h.button('Start guided tour').disabled,'Skeletal context alone cannot start disc guidance');
+  h.scene().onLoaded('spine-connective-gaps');h.render();h.click('Start guided tour');
+  for(const [i,step] of tour.steps.entries()){
+   const scene=h.scene();assert.equal(scene.reset,i);assert.equal(scene.selectedId,discs[i]);
+   assert.equal(scene.view,'left');assert.equal(scene.transitionMs,1800);
+   assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   assert(text(h.tree()).includes(step.caption));if(i<5)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,4);
+  h.click('Play');assert.equal(h.timers.size,1);const stale=[...h.timers.values()][0].fn;
+  h.click('Pause');assert.equal(h.timers.size,0);stale();h.render();assert.equal(h.scene().reset,4);
+  h.click('Next');assert.equal(h.scene().reset,5);h.click('Finish');assert.equal(h.exits(),1);
+  h.unchanged();h.unmount();
+  const unavailable=harness(catalog,'cervicalDiscTour',compact);
+  const drift=structuredClone(unavailable.props.catalog);
+  drift.structures.find(s=>s.id===discs[2]).sources[0].sha256='0'.repeat(64);
+  unavailable.props.catalog=drift;unavailable.render();
+  assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert(unavailable.button('Start guided tour').disabled);assert.equal(unavailable.timers.size,0);
+  unavailable.click('Exit tour');assert.equal(unavailable.exits(),1);unavailable.unchanged();unavailable.unmount();
+ }
+});
+
+test('Medial thigh player requires both bundles and walks five selected-surface frames',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'medialThighTour',compact),tour=h.props.tour;
+  const raw=JSON.parse(catalogBefore);
+  const byFma=fma=>{const matches=raw.structures.filter(s=>s.fmaId===fma);assert.equal(matches.length,1);return matches[0].id;};
+  const muscles=['FMA22450','FMA22456','FMA22452','FMA22459','FMA43883'].map(byFma);
+  const femur=byFma('FMA24474'),ids=[femur,...muscles];
+  assert.equal(tour.id,'right-medial-thigh-orientation');
+  assert.deepEqual(plain(tour.steps.map(s=>s.selectedId)),muscles);
+  assert.deepEqual(plain(tour.contextIds),[femur]);
+  assert.deepEqual(plain(tour.steps.map(s=>s.frameIds)),muscles.map(id=>[id]));
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles().sort(),['thigh-muscles','thigh-skeleton']);
+  assert(h.button('Start guided tour').disabled);assert.equal(h.timers.size,0);
+  h.scene().onLoaded('thigh-skeleton');h.scene().onRendererHealth('ready');h.render();
+  assert(h.button('Start guided tour').disabled,'Femoral context alone cannot start medial thigh guidance');
+  h.scene().onLoaded('thigh-muscles');h.render();h.click('Start guided tour');
+  for(const [i,step] of tour.steps.entries()){
+   const scene=h.scene();assert.equal(scene.reset,i);assert.equal(scene.selectedId,muscles[i]);
+   assert.equal(scene.view,['anterior','anterior','left','posterior','left'][i]);
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+   assert.deepEqual(plain(scene.structures.map(s=>s.id)),ids);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   const surface=h.props.catalog.structures.find(s=>s.id===muscles[i]);
+   assert(surface.bounds.min.every((v,a)=>v>=scene.presetBounds.min[a]&&surface.bounds.max[a]<=scene.presetBounds.max[a]));
+   assert(text(h.tree()).includes(step.caption));if(i<4)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,3);
+  h.click('Play');assert.equal(h.timers.size,1);const stale=[...h.timers.values()][0].fn;
+  h.click('Pause');assert.equal(h.timers.size,0);stale();h.render();assert.equal(h.scene().reset,3);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');
+  assert.equal(h.scene().reset,4);assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of ids){
+   const missing=harness(catalog,'medialThighTour',compact,id);
+   assert(missing.button('Start guided tour').disabled);
+   assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');missing.unchanged();missing.unmount();
+  }
+  const failed=harness(catalog,'medialThighTour',compact);
+  failed.ready();failed.click('Start guided tour');failed.click('Play');
+  const late=[...failed.timers.values()][0].fn;
+  failed.scene().onRendererHealth('failed');late();failed.render();
+  assert.equal(failed.scene().reset,0);assert.equal(failed.timers.size,0);
+  assert.match(text(failed.tree()),/renderer could not start/i);
+  failed.click('Exit tour');assert.equal(failed.exits(),1);failed.unchanged();failed.unmount();
+ }
+});
+
+test('Posterior calf player preserves leg and foot sources through five local stops in both layouts',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'posteriorCalfTour',compact),tour=h.props.tour;
+  const raw=JSON.parse(catalogBefore);
+  const byFma=fma=>{const found=raw.structures.filter(s=>s.fmaId===fma);assert.equal(found.length,1);return found[0].id;};
+  const targets=['FMA45957','FMA45960','FMA22558','FMA258847','FMA24497'].map(byFma);
+  const context=['FMA24477','FMA24480'].map(byFma),ids=[...context,...targets];
+  const bundles=['foot-skeleton','leg-connective-gaps','leg-muscles','leg-muscles-dissection','leg-skeleton'];
+  assert.equal(tour.id,'right-posterior-calf-achilles-orientation');
+  assert.equal(tour.region,'whole-body');assert.deepEqual(plain(tour.scopeRegions),['leg','foot']);
+  assert.deepEqual(plain(tour.contextIds),context);
+  assert.deepEqual(plain(tour.steps.map(s=>s.selectedId)),targets);
+  assert.deepEqual(plain(tour.steps.map(s=>s.frameIds)),targets.map(id=>[id]));
+  assert.deepEqual(plain(tour.steps.map(s=>s.view)),['left','posterior','posterior','posterior','left']);
+  assert.equal(h.props.catalog.structures.find(s=>s.id===targets[4]).region,'foot');
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles().sort(),bundles);
+  const evidence=h.api.regionalTourEvidence(h.props.catalog,targets[0]).find(x=>x.tour.id===tour.id);
+  assert(evidence);assert.equal(evidence.transitionMs,1800);
+  assert.equal(evidence.transition,'quintic-orbit');assert.equal(evidence.separation,0);
+  assert.deepEqual(plain(evidence.structures.map(s=>s.id)),ids);
+  assert.equal(h.button('Start guided tour').disabled,true);assert.equal(h.timers.size,0);
+  h.scene().onRendererHealth('ready');h.render();
+  for(const bundle of bundles.slice(0,-1)){
+   h.scene().onLoaded(bundle);h.render();assert.equal(h.button('Start guided tour').disabled,true);
+  }
+  h.scene().onLoaded(bundles.at(-1));h.render();h.click('Start guided tour');
+  for(const [i,step] of tour.steps.entries()){
+   const scene=h.scene(),surface=h.props.catalog.structures.find(s=>s.id===targets[i]);
+   assert.equal(scene.reset,i);assert.equal(scene.selectedId,targets[i]);assert.equal(scene.view,step.view);
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);
+   assert.equal(scene.isolated,true);assert.equal(scene.tourLocked,true);
+   assert.deepEqual(plain(scene.structures.map(s=>s.id)),ids);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   assert(surface.bounds.min.every((v,a)=>v>=scene.presetBounds.min[a]&&surface.bounds.max[a]<=scene.presetBounds.max[a]));
+   assert(text(h.tree()).includes(step.caption));
+   assert.equal(step.durationMs,14000);assert.equal(step.fadeOthers,true);
+   if(i<tour.steps.length-1)h.click('Next');
+  }
+  assert.equal(h.timers.size,0,'The final stop does not autoplay or exit');
+  h.click('Back');assert.equal(h.scene().reset,3);
+  h.click('Play');assert.equal(h.timers.size,1);const stale=[...h.timers.values()][0].fn;
+  h.click('Pause');assert.equal(h.timers.size,0);stale();h.render();assert.equal(h.scene().reset,3);
+  h.click('Play');h.tick();assert.equal(h.scene().reset,4);
+  assert.equal(h.timers.size,1,'The final stop keeps its full teaching duration');
+  h.tick();assert.equal(h.scene().reset,4);
+  assert.equal(h.timers.size,0,'Autoplay holds after the final duration');
+  assert.equal(h.button('Play')['aria-pressed'],false);
+  assert.equal(h.scene().transitionPaused,true);assert.equal(h.exits(),0);
+  h.click('Back');assert.equal(h.scene().reset,3);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');
+  assert.equal(h.scene().reset,4);assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of ids){
+   const missing=harness(catalog,'posteriorCalfTour',compact,id);
+   assert.equal(missing.button('Start guided tour').disabled,true);
+   assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');missing.unchanged();missing.unmount();
+  }
+  for(const bundle of bundles){
+   const missing=harness(catalog,'posteriorCalfTour',compact);
+   missing.props.catalog={...missing.props.catalog,
+     bundles:missing.props.catalog.bundles.filter(x=>x.id!==bundle)};
+   missing.render();assert.equal(missing.button('Start guided tour').disabled,true);
+   assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');missing.unchanged();missing.unmount();
+  }
+ }
+});
+
+test('Reduced-motion activation interrupts regional autoplay without losing the selected stop',()=>{
+ const h=harness(catalog,'thoraxTour');let suspends=0;
+ h.props.pausedImaging={suspend(){suspends++;},setStop(){}};h.render();
+ h.ready();h.click('Start guided tour');h.click('Play');
+ assert.equal(h.timers.size,1);const stale=[...h.timers.values()][0].fn;
+ const selected=h.scene().selectedId,frame=plain(h.scene().presetBounds),index=h.scene().reset;
+ const before=suspends;
+ h.preference.matches=true;h.listeners.get('motion')();
+ assert(suspends>before,'Preference activation revokes paused-imaging consent immediately');
+ h.render();
+ assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);
+ assert.equal(h.scene().transitionPaused,true);assert.equal(h.scene().transitionMs,0);
+ assert.equal(h.scene().selectedId,selected);assert.equal(h.scene().reset,index);
+ assert.deepEqual(plain(h.scene().presetBounds),frame);
+ stale();h.render();assert.equal(h.scene().reset,index,'Cancelled callback cannot advance after preference activation');
+ h.click('Next');assert.equal(h.scene().reset,index+1);assert.equal(h.scene().transitionMs,0);
+ assert.equal(h.timers.size,0,'Manual navigation does not restart playback');
+ h.click('Play');assert.equal(h.timers.size,1,'Explicit Play remains available under reduced motion');
+ assert.equal(h.scene().transitionMs,0);h.click('Pause');assert.equal(h.timers.size,0);
+ h.preference.matches=false;h.listeners.get('motion')();h.render();
+ assert.equal(h.timers.size,0,'Clearing preference never auto-resumes');
+ h.click('Play');assert.equal(h.timers.size,1,'Explicit Play remains available');
+ h.click('Pause');assert.equal(h.timers.size,0);h.unchanged();
+});
+
+test('Required anatomy failure and renderer loss revoke queued autoplay before render',async()=>{
+ for(const failure of ['required-bundle','renderer-health']){
+  const h=harness(catalog,'forearmTour',true);
+  h.ready();h.click('Start guided tour');h.click('Play');
+  assert.equal(h.timers.size,1);
+  const queued=[...h.timers.values()][0].fn;
+  const before={index:h.scene().reset,selected:h.scene().selectedId,frame:plain(h.scene().presetBounds)};
+  const failed=h.bundles()[0];
+  if(failure==='required-bundle')h.scene().onFailure(failed);
+  else h.scene().onRendererHealth('lost');
+  queued(); // The timeout was captured while ready; React has not rendered the failure yet.
+  h.render();
+  assert.equal(h.scene().reset,before.index,`${failure} cannot advance the stop`);
+  assert.equal(h.scene().selectedId,before.selected);
+  assert.deepEqual(plain(h.scene().presetBounds),before.frame);
+  assert.equal(h.timers.size,0);
+  assert.equal(h.button('Play')['aria-pressed'],false);
+  assert.equal(h.scene().transitionPaused,true);
+  if(failure==='required-bundle'){
+   h.click('Retry missing anatomy');await h.settle();
+   h.scene().onLoaded(failed);
+  }else h.scene().onRendererHealth('ready');
+  h.render();
+  assert.equal(h.button('Play').disabled,false);
+  assert.equal(h.button('Play')['aria-pressed'],false,'Recovery never autoplays');
+  assert.equal(h.timers.size,0);
+  assert.equal(h.scene().reset,before.index);
+  h.click('Next');assert.equal(h.scene().reset,before.index+1);
+  assert.equal(h.timers.size,0);h.unchanged();
+ }
+});
+
+test('Paused stop outgoing consent is reset before movement, failure, hidden page, source change and exit; incoming cannot retarget',()=>{
+ const h=harness(catalog,'thoraxTour'),entries=h.api.bodyLinkEntries(h.props.catalog),sent=[];
+ const link=h.api.createPausedTourImaging({entries,allowedIds:h.props.catalog.structures.map(s=>s.id)});
+ h.props.pausedImaging=link;
+ const detach=h.api.imagingBridge.attachAtlas(h.api.createAtlasReceiver(()=>({enabled:true,disabled:true,entries,allowedIds:entries.map(e=>e.id),onSelect(){throw Error('Tour must never accept manual retarget');}}),()=>{}));
+ const adapter=h.api.imagingBridge.registerAdapter({id:'synthetic-tour',label:'Synthetic fixture only',modality:'CT',onAtlasSelection:p=>sent.push(p)});
+ const cancel=link.subscribeInvalidation(()=>{});
+ h.render();assert.equal(link.snapshot().eligible,false);h.ready();h.click('Start guided tour');
+ assert.equal(link.snapshot().eligible,false,'Not playing is insufficient while camera is sweeping');
+ const read=()=>{const notes=nodes(h.tree()).find(n=>n.type?.name==='TourImagingNotes');assert(notes);notes.props.onOpen();h.render();};
+ const arm=()=>{read();assert.equal(h.scene().transitionPaused,true);assert.equal(link.snapshot().eligible,true);assert.equal(link.snapshot().enabled,false);link.setEnabled(true);assert.equal(link.canNavigate(),true);};
+ arm();assert.equal(link.send(),true);assert.equal(sent.at(-1).structureId,h.props.tour.steps[0].selectedId);
+ const check=nodes(h.tree()).find(n=>n.type?.name==='TourQuickCheck');assert(check);check.props.onChange(true);assert.equal(link.canNavigate(),false);h.render();
+ read();assert.equal(link.snapshot().eligible,false,'Reading imaging notes cannot reopen a link while the quick check is open');
+ nodes(h.tree()).find(n=>n.type?.name==='TourQuickCheck').props.onChange(false);h.render();assert.equal(link.snapshot().eligible,true);assert.equal(link.snapshot().enabled,false);link.setEnabled(true);
+ const frozen=h.scene().selectedId;
+ assert.equal(adapter.selectStructure({version:1,origin:'imaging',messageId:'other-stop',structureId:h.props.tour.steps[1].selectedId}).status,'paused');
+ assert.equal(h.scene().selectedId,frozen);assert.equal(h.timers.size,0);
+ // A retained handler must revoke consent synchronously, before the next render.
+ h.button('Next').onClick();assert.equal(link.canNavigate(),false);h.render();assert.equal(link.snapshot().eligible,false);
+ arm();h.button('Play').onClick();assert.equal(link.canNavigate(),false);h.render();assert.equal(link.snapshot().eligible,false);
+ h.click('Pause');assert.equal(link.snapshot().eligible,true);assert.equal(link.snapshot().enabled,false);
+ link.setEnabled(true);h.scene().onFailure(h.bundles()[0]);assert.equal(link.canNavigate(),false);h.render();assert.equal(link.snapshot().eligible,false);
+ h.unmount();assert.equal(link.canNavigate(),false);cancel();adapter.dispose();detach();link.dispose();
+ for(const event of ['visibilitychange','window:pagehide']){
+  const p=harness(catalog,'thoraxTour'),pLink=p.api.createPausedTourImaging({entries:p.api.bodyLinkEntries(p.props.catalog),allowedIds:p.props.catalog.structures.map(s=>s.id)});
+  const a=p.api.imagingBridge.registerAdapter({id:'lifecycle',label:'Synthetic fixture',modality:'MRI',onAtlasSelection(){}});
+  const stop=pLink.subscribe(()=>{});p.props.pausedImaging=pLink;p.render();p.ready();p.click('Start guided tour');
+  nodes(p.tree()).find(n=>n.type?.name==='TourImagingNotes').props.onOpen();p.render();pLink.setEnabled(true);assert(pLink.canNavigate());
+  if(event==='visibilitychange')p.doc.hidden=true;
+  p.listeners.get(event)();assert.equal(pLink.canNavigate(),false);p.render();
+  assert.equal(pLink.snapshot().enabled,false);
+  p.props.catalog={...p.props.catalog};p.render();assert.equal(pLink.snapshot().eligible,false);assert(p.button('Start guided tour').disabled);
+  p.click('Exit tour');assert.equal(pLink.canNavigate(),false);p.unmount();stop();a.dispose();pLink.dispose();
+ }
+});
+
+test('Both original hand-vein tours retain compound selections and pause-safe smooth camera requests',()=>{
+ for(const name of ['rightHandVenousTour','leftHandVenousTour']){
+  const h=harness(catalog,name);assert.equal(h.scene().structures.length,7);assert.equal(h.props.tour.steps.length,7);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  for(let i=0;i<7;i++){
+   const scene=h.scene(),step=h.props.tour.steps[i];assert.equal(scene.selectedId,step.selectedId);assert.equal(scene.reset,i);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+   assert(text(h.tree()).includes(step.caption),'Exact reviewed caption reaches the player');
+   if(i<6)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().selectedId,h.props.tour.steps[5].selectedId);
+  h.click('Play');assert.equal(h.timers.size,1);h.click('Pause');assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);h.unchanged();
+  const missing=harness(catalog,name,false,h.props.tour.steps[3].selectedId);assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
+ }
+});
+
+test('Hand arterial tour frames seven exact targets with pause-safe smooth camera requests',()=>{
+ const h=harness(catalog,'handArterialTour');
+ assert.equal(h.scene().structures.length,7);assert.equal(h.props.tour.steps.length,7);
+ assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+ for(let index=0;index<7;index++){
+  const scene=h.scene(),step=h.props.tour.steps[index];assert.equal(scene.selectedId,step.selectedId);assert.equal(scene.reset,index);
+  assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+  assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+  if(index<6)h.click('Next');
+ }
+ h.click('Back');assert.equal(h.scene().selectedId,h.props.tour.steps[5].selectedId);
+ h.click('Play');assert.equal(h.timers.size,1);h.click('Pause');assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);h.unchanged();
+ const missing=harness(catalog,'handArterialTour',false,h.props.tour.steps[3].selectedId);
+ assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
+});
+
+test('Coronary arterial tour presents six exact source-bound stops and fails closed on source drift',()=>{
+ const prefix='vm:anatomy:body:thorax:';
+ const right=prefix+'right:vessel:trunk-of-right-coronary-artery';
+ const left=prefix+'left:vessel:trunk-of-left-coronary-artery';
+ const descending=prefix+'left:vessel:anterior-interventricular-branch-of-left-coronary-artery';
+ const circumflex=prefix+'left:vessel:circumflex-branch-of-left-coronary-artery';
+ const heart=prefix+'unpaired:organ:heart';
+ const expected=[
+  [right,'anterior','Begin on the anatomical right. The right coronary artery usually follows the groove between right atrium and ventricle. Compare the highlighted surface with the faded heart; this source does not establish its aortic opening.'],
+  [left,'left','Move to the short left coronary trunk. Its usual main branches are the anterior interventricular and circumflex arteries. These separately labelled selections help orientation; apparent contact is not proof of a continuous bifurcation.'],
+  [descending,'anterior','Follow the anterior interventricular surface towards the apex. LAD is a common clinical name for this branch. Eighteen source files share one selection here; do not interpret their boundaries as stenosis or separate clinical coronary segments.'],
+  [circumflex,'left','Sweep left to compare the circumflex branch with the trunk. In usual anatomy it courses in the left atrioventricular groove. The faded heart offers spatial context without assigning an individual myocardial supply territory.'],
+  [circumflex,'posterior','Keep the same circumflex selection while moving behind the heart. Compare its visible extent from another direction. No posterior interventricular selection is supplied by this tour, so this view cannot establish coronary dominance.'],
+  [right,'anterior','Return to the four arterial selections. Future coronary CTA can compare anatomy on contrast-enhanced, multiplanar CT images. This static source assembly is not a CT angiogram: no contrast, cardiac phase, plaque assessment or scan correspondence is present.'],
+ ];
+ const h=harness(catalog,'coronaryArterialTour');
+ assert.equal(h.props.tour.id,'coronary-arterial-orientation');
+ assert.deepEqual(plain(h.props.tour.steps.map(s=>[s.selectedId,s.view,s.caption])),expected);
+ assert.deepEqual(plain(h.props.tour.contextIds),[heart]);
+ assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),[heart,right,left,descending,circumflex]);
+ assert.deepEqual(h.bundles().sort(),['thorax-organs','thorax-vessels-recovery']);
+ assert(h.button('Start guided tour').disabled);
+ h.scene().onLoaded('thorax-vessels-recovery');h.scene().onRendererHealth('ready');h.render();
+ assert(h.button('Start guided tour').disabled,'Arteries alone cannot unlock the tour');
+ h.scene().onLoaded('thorax-organs');h.render();h.click('Start guided tour');
+ for(let i=0;i<expected.length;i++){
+  const scene=h.scene();assert.equal(scene.reset,i);assert.equal(scene.selectedId,expected[i][0]);
+  assert.equal(scene.view,expected[i][1]);assert.equal(scene.transitionMs,1800);
+  assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+  assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+  assert(text(h.tree()).includes(expected[i][2]),'Exact caption reaches the player');
+  if(i<expected.length-1)h.click('Next');
+ }
+ h.click('Back');assert.equal(h.scene().reset,4);assert.equal(h.scene().selectedId,circumflex);
+ assert.equal(h.scene().view,'posterior');
+ h.click('Back');assert.equal(h.scene().reset,3);assert.equal(h.scene().selectedId,circumflex);
+ assert.equal(h.scene().view,'left','Repeated circumflex target changes view');
+ h.click('Play');assert.equal(h.timers.size,1);h.click('Pause');assert.equal(h.timers.size,0);
+ assert.equal(h.scene().transitionPaused,true);
+ h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');
+ assert.equal(h.scene().reset,4);assert.equal(h.scene().transitionMs,0);
+ h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+ for(const id of [heart,right,left,descending,circumflex]){
+  const unavailable=harness(catalog,'coronaryArterialTour');
+  const drift=structuredClone(unavailable.props.catalog),source=drift.structures.find(s=>s.id===id);
+  assert(source?.sources?.length,`Pinned source exists: ${id}`);
+  source.sources[0].sha256='0'.repeat(64);
+  unavailable.props.catalog=drift;unavailable.render();
+  assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert(unavailable.button('Start guided tour').disabled);
+  assert.equal(unavailable.timers.size,0);unavailable.click('Exit tour');
+  assert.equal(unavailable.exits(),1);unavailable.unchanged();
+ }
+});
+
+test('Hepatobiliary tour frames each exact target and pauses smoothly without adding controls',()=>{
+ const h=harness(catalog,'hepatobiliaryTour');
+ assert.equal(h.scene().structures.length,4);assert.equal(h.props.tour.steps.length,4);
+ assert.equal(h.scene().transitionMs,0);assert(h.button('Start guided tour').disabled);
+ h.ready();h.click('Start guided tour');
+ for(let index=0;index<4;index++){
+  const scene=h.scene(),step=h.props.tour.steps[index];
+  assert.equal(scene.selectedId,step.selectedId);assert.equal(scene.reset,index);
+  assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+  assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+  if(index<3)h.click('Next');
+ }
+ h.click('Back');assert.equal(h.scene().selectedId,h.props.tour.steps[2].selectedId);
+ h.click('Play');assert.equal(h.timers.size,1);h.click('Pause');assert.equal(h.timers.size,0);
+ assert.equal(h.scene().transitionPaused,true);h.unchanged();
+ const missing=harness(catalog,'hepatobiliaryTour',false,h.props.tour.steps[2].selectedId);
+ assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
+});
+
+test('Direct step navigation pauses autoplay and uses exact frames without resuming',()=>{
+  const h=harness(catalog,'subscapularTour');h.ready();h.click('Start guided tour');h.click('Play');
+  const picker=()=>nodes(h.tree()).find(n=>n.type?.name==='TourStepPicker').props;
+  picker().onPause();h.render();assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  picker().onStep(3);h.render();assert.equal(h.scene().reset,3);assert.equal(h.scene().transitionPaused,false);
+  assert.equal(h.scene().selectedId,h.props.tour.steps[3].selectedId);assert.equal(h.button('Play')['aria-pressed'],false);
+  assert.equal(h.scene().transitionMs,1800);assert.equal(h.timers.size,0);
+  h.scene().onRendererHealth('lost');h.render();assert.equal(picker().ready,false);
+  picker().onStep(0);h.render();assert.equal(h.scene().reset,3,'Unavailable anatomy rejects direct navigation');
+  h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('User Pause revokes a queued autoplay callback before render',()=>{
+  const h=harness(catalog,'subscapularTour');h.ready();h.click('Start guided tour');h.click('Play');
+  const index=h.scene().reset,queued=[...h.timers.values()][0].fn;
+  h.button('Pause').onClick();queued();h.render();
+  assert.equal(h.scene().reset,index,'A captured timer cannot advance after explicit Pause');
+  assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.timers.size,0);
+  h.click('Play');assert.equal(h.timers.size,1,'Explicit Play still resumes');
+  h.click('Pause');h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('Manual step and reading disclosures hold position despite captured autoplay',()=>{
+  const start=()=>{const h=harness(catalog,'subscapularTour');h.ready();h.click('Start guided tour');h.click('Play');return h;};
+  {
+    const h=start(),queued=[...h.timers.values()][0].fn;
+    const picker=nodes(h.tree()).find(n=>n.type?.name==='TourStepPicker').props;
+    picker.onPause();picker.onStep(3);queued();h.render();
+    assert.equal(h.scene().reset,3,'Queued autoplay cannot overwrite a directly selected stop');
+    assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.timers.size,0);h.unchanged();
+  }
+  {
+    const h=start();h.click('Next');
+    assert.equal(h.button('Pause')['aria-pressed'],true,'Next retains intentional Play state');
+    const queued=[...h.timers.values()][0].fn;
+    h.button('Back').onClick();queued();h.render();
+    assert.equal(h.scene().reset,0,'Queued autoplay cannot override manual Back');
+    assert.equal(h.button('Pause')['aria-pressed'],true,'Back retains intentional Play state');
+    assert.equal(h.timers.size,1,'Playing re-arms for the manually selected stop');
+    h.click('Pause');h.unchanged();
+  }
+  {
+    const h=start(),queued=[...h.timers.values()][0].fn;
+    h.button('Next').onClick();queued();h.render();
+    assert.equal(h.scene().reset,1,'Manual Next keeps its intended stop before effect cleanup');
+    assert.equal(h.button('Pause')['aria-pressed'],true,'Next retains Play');
+    assert.equal(h.timers.size,1,'Next re-arms the new stop');h.click('Pause');h.unchanged();
+  }
+  for(const invalid of [-1,0,NaN]){
+    const h=start(),queued=[...h.timers.values()][0].fn;
+    const picker=nodes(h.tree()).find(n=>n.type?.name==='TourStepPicker').props;
+    picker.onStep(invalid);queued();h.render();
+    assert.equal(h.scene().reset,1,`Invalid/same manual ${invalid} cannot orphan the live timer`);
+    assert.equal(h.button('Pause')['aria-pressed'],true);h.click('Pause');h.unchanged();
+  }
+  {
+    const h=start(),index=h.scene().reset,queued=[...h.timers.values()][0].fn;
+    h.button('Exit tour').onClick();queued();h.render();
+    assert.equal(h.exits(),1);assert.equal(h.scene().reset,index,'Exit revokes a timer before unmount');
+    assert.equal(h.timers.size,0);h.unchanged();
+  }
+  for(const control of ['explanation','references','imaging','quiz']){
+    const h=start(),index=h.scene().reset,queued=[...h.timers.values()][0].fn;
+    if(control==='explanation'){
+      const details=nodes(h.tree()).find(n=>n.props?.className==='regional-tour-explanation');
+      details.props.onToggle({currentTarget:{open:true}});
+    }else if(control==='references'){
+      const details=nodes(h.tree()).find(n=>n.type==='details'&&n.props?.children?.[0]?.props?.children==='References & limits · Draft, review pending');
+      assert(details,'Nested references disclosure exists');
+      details.props.onToggle({currentTarget:{open:true}});
+    }else{
+      const child=nodes(h.tree()).find(n=>n.type?.name===(control==='imaging'?'TourImagingNotes':'TourQuickCheck'));
+      assert(child,`${control} reader exists`);child.props.onOpen();
+    }
+    queued();h.render();
+    assert.equal(h.scene().reset,index,`${control}: opening reader must hold stop`);
+    assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.timers.size,0);
+    if(control==='explanation'){
+      const details=nodes(h.tree()).find(n=>n.props?.className==='regional-tour-explanation');
+      details.props.onToggle({currentTarget:{open:false}});h.render();
+      assert.equal(h.scene().reset,index,'Closing reader never resumes playback');assert.equal(h.timers.size,0);
+    }
+    h.unchanged();
+  }
+});
+
+test('Subscapular and lumbar tours keep exact steps, smooth frames, pause and exit',()=>{
+ for(const name of ['subscapularTour','lumbarTour']){
+  const h=harness(catalog,name,true);
+  assert.equal(h.button('Start guided tour').disabled,true);h.ready();h.click('Start guided tour');
+  for(const [index,step]of h.props.tour.steps.entries()){
+    assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().transitionMs,1800);
+    assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+    assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+    if(index===0){h.click('Play');assert.equal(h.timers.size,1);h.click('Pause');assert.equal(h.timers.size,0);}
+    if(index<h.props.tour.steps.length-1)h.click('Next');
+  }
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ }
+});
+
+test('Renal tour requires both source bundles, keeps one assembled frame and respects reduced motion',()=>{
+ const h=harness(catalog,'renalTour');
+ assert.equal(h.scene().structures.length,5);
+ assert.deepEqual(h.bundles().sort(),['abdomen-organs','abdomen-vessels-recovery']);
+ h.scene().onLoaded('abdomen-organs');h.scene().onRendererHealth('ready');h.render();
+ assert.equal(h.button('Start guided tour').disabled,true,'Organ-only readiness cannot unlock artery teaching');
+ h.scene().onLoaded('abdomen-vessels-recovery');h.render();h.click('Start guided tour');
+ const frame=plain(h.scene().presetBounds);h.click('Play');
+ for(const [index,step]of h.props.tour.steps.entries()){
+  assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+  assert.equal(h.scene().structures.length,5);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+  assert.deepEqual(plain(h.scene().presetBounds),frame);
+  assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+  assert.equal(h.scene().transitionMs,1800);h.tick();
+ }
+ assert.equal(h.scene().reset,3);assert.equal(h.timers.size,0);
+ h.preference.matches=true;h.listeners.get('motion')();h.render();
+ h.click('Back');assert.equal(h.scene().transitionMs,0);assert.equal(h.scene().reset,2);
+ h.preference.matches=false;h.listeners.get('motion')();h.render();
+ h.click('Next');assert.equal(h.scene().transitionMs,1800);h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ for(const id of [...h.props.tour.contextIds,...h.props.tour.steps.map(s=>s.selectedId)]){
+  const unavailable=harness(catalog,'renalTour',true,id);
+  assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert.equal(unavailable.button('Start guided tour').disabled,true);assert.equal(unavailable.timers.size,0);
+ }
+});
+
+test('Carpal tour keeps eight assembled bones, exact stops, shared smooth motion and reduced-motion controls',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'carpalTour',compact);
+  assert.equal(h.scene().structures.length,8);assert.deepEqual(h.bundles(),['hand-skeleton']);
+  assert.equal(h.button('Start guided tour').disabled,true);assert.equal(h.timers.size,0);
+  h.scene().onLoaded('foot-skeleton');h.scene().onRendererHealth('ready');h.render();
+  assert.equal(h.button('Start guided tour').disabled,true,'Wrong loaded bundle cannot unlock carpal tour');
+  h.scene().onLoaded('hand-skeleton');h.render();h.click('Start guided tour');
+  const assembledFrame=plain(h.scene().presetBounds);h.click('Play');
+  for(const [index,step]of h.props.tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().structures.length,8);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),assembledFrame);
+   assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+   assert.equal(h.scene().transitionMs,1800);h.tick();
+  }
+  assert.equal(h.scene().reset,7);assert.equal(h.timers.size,0);assert.equal(h.exits(),0);
+  h.click('Back');assert.equal(h.scene().reset,6);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();assert.equal(h.scene().transitionMs,0);
+  h.click('Next');assert.equal(h.scene().reset,7);assert.equal(h.scene().transitionMs,0);
+  h.preference.matches=false;h.listeners.get('motion')();h.render();assert.equal(h.scene().transitionMs,1800);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ }
+ const initial=harness(catalog,'carpalTour');
+ for(const step of initial.props.tour.steps){
+  const h=harness(catalog,'carpalTour',true,step.selectedId);
+  assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);assert.equal(h.button('Start guided tour').disabled,true);
+  assert.equal(h.timers.size,0);h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+ }
+});
+
+test('Whole-limb and pelvic-ring tours wait for every source bundle and keep assembled geometry through contextual close-ups',()=>{
+ for(const [tourName,count,bundles] of [
+  ['lowerLimbBoneTour',7,['pelvis-skeleton','thigh-skeleton','leg-skeleton','foot-skeleton']],
+  ['upperLimbBoneTour',9,['shoulder-arm-skeleton','forearm-skeleton','hand-skeleton']],
+  ['pelvicRingTour',5,['pelvis-skeleton','spine-skeleton','thigh-skeleton']],
+ ]){
+ for(const compact of [false,true]){
+  const h=harness(catalog,tourName,compact);
+  assert.equal(h.scene().structures.length,count);
+  assert.deepEqual(h.bundles().sort(),[...bundles].sort());
+  h.scene().onRendererHealth('ready');h.render();
+  for(const bundle of bundles.slice(0,-1)){
+   h.scene().onLoaded(bundle);h.render();
+   assert.equal(h.button('Start guided tour').disabled,true,'Partial source readiness cannot unlock teaching');
+  }
+  h.scene().onLoaded(bundles.at(-1));h.render();h.click('Start guided tour');
+  const assembledIds=plain(h.scene().structures.map(s=>s.id));h.click('Play');
+  for(const [index,step]of h.props.tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),assembledIds,'Camera windows never drop source context');
+   assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+   assert.equal(h.scene().transitionMs,1800);h.tick();
+  }
+  assert.equal(h.scene().reset,h.props.tour.steps.length-1);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();
+  h.click('Back');assert.equal(h.scene().transitionMs,0);
+  h.preference.matches=false;h.listeners.get('motion')();h.render();
+  h.click('Next');assert.equal(h.scene().transitionMs,1800);h.click('Finish');
+  assert.equal(h.exits(),1);h.unchanged();
+ }
+ const initial=harness(catalog,tourName);
+ for(const id of [...initial.props.tour.contextIds,...initial.props.tour.steps.map(s=>s.selectedId)]){
+  const unavailable=harness(catalog,tourName,true,id);
+  assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert.equal(unavailable.button('Start guided tour').disabled,true);assert.equal(unavailable.timers.size,0);
+ }
+ }
+});
+
+test('Tarsal tour keeps seven bones assembled, smooth turns, reduced motion and source readiness',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'tarsalTour',compact);
+  assert.equal(h.scene().structures.length,7);assert.deepEqual(h.bundles(),['foot-skeleton']);
+  h.scene().onLoaded('hand-skeleton');h.scene().onRendererHealth('ready');h.render();
+  assert.equal(h.button('Start guided tour').disabled,true,'Wrong source cannot unlock tarsal teaching');
+  h.scene().onLoaded('foot-skeleton');h.render();h.click('Start guided tour');
+  const frame=plain(h.scene().presetBounds);h.click('Play');
+  for(const [index,step]of h.props.tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),frame);
+   assert.deepEqual(frame,plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,index)));
+   assert.equal(h.scene().transitionMs,1800);h.tick();
+  }
+  assert.equal(h.scene().reset,6);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();
+  h.click('Back');assert.equal(h.scene().transitionMs,0);assert.equal(h.scene().reset,5);
+  h.preference.matches=false;h.listeners.get('motion')();h.render();
+  h.click('Next');assert.equal(h.scene().transitionMs,1800);h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ }
+ const initial=harness(catalog,'tarsalTour');
+ for(const step of initial.props.tour.steps){
+  const h=harness(catalog,'tarsalTour',true,step.selectedId);
+  assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert.equal(h.button('Start guided tour').disabled,true);assert.equal(h.timers.size,0);
+  h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+ }
+});
+
+test('Retry clears only failed required anatomy and preserves the paused step and teaching',async()=>{
+  const h=harness(catalog,'forearmTour',true);h.ready();h.click('Start guided tour');h.click('Next');h.click('Play');
+  const explanation=()=>nodes(h.tree()).find(n=>n.props?.className==='regional-tour-explanation').props;
+  const before={caption:h.props.tour.steps[1].caption,selected:h.scene().selectedId,frame:plain(h.scene().presetBounds)};
+  const failed='forearm-muscles',other='head-neck-skeleton';
+  h.scene().onFailure(other);h.scene().onFailure('unknown-bundle');h.render();
+  assert.equal(h.timers.size,1,'Unrequested failures do not affect the tour');
+  h.scene().onFailure(failed);h.render();assert.equal(h.timers.size,0);
+  const retry=h.button('Retry missing anatomy');retry.onClick();retry.onClick();h.render();
+  assert.equal(h.button('Retrying…').disabled,true);assert.equal(h.button('Exit tour').disabled,undefined);
+  await h.settle();
+  assert.deepEqual(h.retryControl.calls,[{urls:[h.props.catalog.bundles.find(b=>b.id===failed).url],base:h.props.assetBase}]);
+  assert.deepEqual(plain(h.scene().retries),{[failed]:1});
+  assert.equal(h.button('Play').disabled,true,'Retry must wait for the actual new load');
+  h.scene().onLoaded(failed);h.render();
+  assert.equal(h.button('Play').disabled,false);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  assert.equal(h.scene().reset,1);assert.equal(h.scene().selectedId,before.selected);assert.deepEqual(plain(h.scene().presetBounds),before.frame);
+  assert.equal(explanation().open,false);assert.ok(text(h.tree()).includes(before.caption));h.unchanged();
+  h.scene().onFailure(failed);h.render();h.click('Retry missing anatomy');await h.settle();
+  assert.equal(h.scene().retries[failed],2);h.scene().onFailure(failed);h.render();
+  assert.equal(h.button('Play').disabled,true);assert.equal(h.button('Retry missing anatomy').disabled,false);
+  assert.match(text(h.tree()),/failed to load/);h.click('Exit tour');assert.equal(h.exits(),1);
+});
+
+test('Access failures retain the stop, explain sign-in or refusal, and recover only on explicit retry',async()=>{
+ for(const reason of ['sign-in','access-denied','unavailable']){
+  const h=harness();h.ready();h.click('Start guided tour');h.click('Next');h.click('Play');
+  const selected=h.scene().selectedId,failed=h.bundles()[0];
+  h.scene().onFailure('unknown-bundle','sign-in');h.render();assert.equal(h.timers.size,1);
+  h.scene().onFailure(failed,reason);h.render();
+  assert.equal(h.timers.size,0);assert.equal(h.button('Play').disabled,true);
+  assert.match(text(h.tree()),reason==='sign-in'?/require sign-in/:reason==='access-denied'?/refused access/:/failed to load/);
+  const output=nodes(h.tree()).find(n=>n.type==='output');assert.equal(output.props['aria-live'],'polite');
+  h.click(reason==='unavailable'?'Retry missing anatomy':'Check access again');await h.settle();
+  assert.equal(h.button('Play').disabled,true);assert.doesNotMatch(text(h.tree()),/require sign-in|refused access/);
+  h.scene().onLoaded(failed);h.render();
+  assert.equal(h.scene().selectedId,selected);assert.equal(h.button('Play').disabled,false);
+  assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.timers.size,0);
+  h.scene().onFailure(failed,'unavailable');h.render();
+  assert.doesNotMatch(text(h.tree()),/require sign-in|refused access/);h.button('Retry missing anatomy');
+  h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+ }
+});
+
+test('Changed sources discard access reasons and ignore late old-scene failures',()=>{
+ const h=harness();const stale=h.scene();stale.onFailure(h.bundles()[0],'sign-in');h.render();
+ assert.match(text(h.tree()),/require sign-in/);
+ h.props.assetBase='/atlas-runtime/new-source';h.render();
+ stale.onFailure(h.bundles()[0],'access-denied');h.render();
+ assert.doesNotMatch(text(h.tree()),/require sign-in|refused access/);
+ assert.match(text(h.tree()),/Preparing the model/);assert(h.button('Start guided tour').disabled);
+});
+
+test('Renderer failures and context recovery are not described as initial model loading',()=>{
+ for(const health of ['failed','lost','restoring']){
+  const h=harness();h.ready();h.click('Start guided tour');h.click('Play');
+  h.scene().onRendererHealth(health);h.render();
+  assert.match(text(h.tree()),health==='failed'?/renderer could not start/:/view is recovering/);
+  assert.doesNotMatch(text(h.tree()),/Preparing the model/);assert.equal(h.timers.size,0);
+  assert(h.button('Play').disabled);h.scene().onRendererHealth('ready');h.render();
+  assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.timers.size,0);
+  h.click('Exit tour');assert.equal(h.exits(),1);
+ }
+});
+
+test('Recovered retry restores keyboard focus without stealing another control',async()=>{
+  for(const moved of [false,true]){
+    const h=harness();h.ready();h.click('Start guided tour');
+    const failed=h.bundles()[0];h.scene().onFailure(failed);h.render();
+    let focused=0;
+    nodes(h.tree()).find(n=>n.props?.className==='regional-tour-controls').props.ref.current={querySelector(selector){assert.equal(selector,'[data-tour-resume]');return {focus(){focused++;}};}};
+    const button={};h.doc.body={};h.doc.activeElement=button;
+    h.button('Retry missing anatomy').onClick({currentTarget:button});await h.settle();
+    h.doc.activeElement=moved?{}:h.doc.body;
+    h.scene().onLoaded(failed);h.render();assert.equal(focused,moved?0:1);
+    assert.equal(h.button('Play')['aria-pressed'],false);
+  }
+});
+
+test('Import and cache-clear failures retain failure state and allow another retry',async()=>{
+  for(const cause of ['importError','cacheError']){
+    const h=harness(catalog,'forearmTour');h.mountReady();h.click('Start guided tour');
+    const failed=h.bundles()[0];h.scene().onFailure(failed);h.render();h.retryControl[cause]=true;
+    h.click('Retry missing anatomy');await h.settle();
+    assert.match(text(h.tree()),/retry could not start/);assert.deepEqual(plain(h.scene().retries),{});
+    assert.equal(h.button('Play').disabled,true);assert.equal(h.button('Retry missing anatomy').disabled,false);
+    h.retryControl[cause]=false;h.click('Retry missing anatomy');await h.settle();
+    if(cause==='importError'){
+      // Like a cached rejected browser module, esbuild's failed initializer cannot recover here.
+      assert.match(text(h.tree()),/retry could not start/);assert.deepEqual(plain(h.scene().retries),{});
+      assert.equal(h.button('Play').disabled,true);assert.equal(h.button('Retry missing anatomy').disabled,false);
+      h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();continue;
+    }
+    assert.equal(h.scene().retries[failed],1);h.scene().onLoaded(failed);h.render();
+    assert.equal(h.button('Play').disabled,false);assert.equal(h.timers.size,0);h.unchanged();
+  }
+});
+
+test('Late retry imports cannot clear caches or update an unmounted or changed tour',async()=>{
+  for(const change of ['unmount','tour','assetBase']){
+    const h=harness(catalog,'forearmTour');h.mountReady();h.click('Start guided tour');
+    const stale=h.scene();stale.onFailure(h.bundles()[0]);h.render();h.click('Retry missing anatomy');
+    if(change==='unmount')h.unmount();
+    else {if(change==='tour')h.props.tour=h.api.legTour;else h.props.assetBase='/atlas-runtime/another-source';h.render();}
+    await h.settle();assert.deepEqual(h.retryControl.calls,[]);assert.equal(h.lateUpdates(),0);
+    if(change!=='unmount'){
+      stale.onFailure('forearm-muscles');stale.onLoaded('forearm-muscles');h.render();
+      assert.deepEqual(plain(h.scene().retries),{});assert.equal(h.button('Start guided tour').disabled,false,'New scene mount callbacks survive source change');
+      assert.doesNotMatch(text(h.tree()),/failed to load/);h.click('Start guided tour');assert.equal(h.timers.size,0);
+    }
+  }
+});
+
+test('Compact tours retain complete teaching on demand and pause while reading', () => {
+  for (const compact of [true,false]) {
+    const h=harness(catalog,'celiacTour',compact);
+    const explanation=()=>nodes(h.tree()).find(n=>n.props?.className==='regional-tour-explanation').props;
+    assert.equal(explanation().open,!compact);
+    assert.match(text(h.tree()),/Branching patterns vary/,'Complete limitations are retained');
+    h.ready();h.click('Start guided tour');h.click('Play');
+    explanation().onToggle({currentTarget:{open:true}});h.render();
+    assert.equal(explanation().open,true);assert.equal(h.timers.size,0);
+    assert.equal(h.scene().transitionPaused,true);
+    explanation().onToggle({currentTarget:{open:false}});h.render();
+    assert.equal(explanation().open,false);assert.equal(h.timers.size,0,'Closing never resumes playback');
+    h.click('Next');assert.equal(h.scene().reset,1);h.click('Exit tour');assert.equal(h.exits(),1);
+  }
+});
+
+test('Source-bound quick checks pause playback, remount per step and disappear on renderer failure',()=>{
+  const h=harness(catalog,'thoraxTour',true);
+  const check=()=>nodes(h.tree()).find(n=>n.props?.lesson&&n.props?.onOpen);
+  assert.equal(check(),undefined);
+  h.ready();assert.equal(check(),undefined,'No attempt before Start');
+  h.click('Start guided tour');assert.equal(check(),undefined,'Compact teaching waits for the explanation disclosure');
+  nodes(h.tree()).find(n=>n.props?.className==='regional-tour-explanation').props.onToggle({currentTarget:{open:true}});h.render();
+  const initial=check();assert.ok(initial.props.lesson.correctAnswer);
+  const disclosureKeys=nodes(h.tree()).filter(n=>n.props?.onOpen).map(n=>n.key);
+  assert.equal(new Set(disclosureKeys).size,disclosureKeys.length,'Sibling disclosures require unique keys to prevent retained duplicate panels');
+  h.click('Play');assert.equal(h.timers.size,1);
+  initial.props.onOpen();h.render();assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  h.click('Next');assert.notEqual(check().key,initial.key,'Each step resets its check');
+  assert.notEqual(check().props.lesson.body,initial.props.lesson.body);
+  h.scene().onRendererHealth('lost');h.render();assert.equal(check(),undefined,'No answering without available anatomy');
+  h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('Forearm tour requires both bundles and runs five exact right-sided close-ups with bounded finish', () => {
+  const h=harness(catalog,'forearmTour');
+  const heading=()=>nodes(h.tree()).find(n=>n.props?.className==='regional-tour-heading');
+  const announcement=nodes(heading()).find(n=>n.type==='h2');
+  assert.equal(announcement.props['aria-live'],'polite');assert.equal(announcement.props['aria-atomic'],'true');
+  assert.equal(heading().props['aria-live'],undefined,'Interactive picker is outside the live announcement');
+  assert.equal(h.scene().structures.length,7);assert.deepEqual(h.bundles().sort(),['forearm-muscles','forearm-skeleton']);
+  assert(h.scene().structures.every(s=>s.laterality==='right'));
+  assert(h.scene().structures.every(s=>!s.id.includes(':nerve:')));
+  assert.match(text(h.tree()),/nerve/i);assert.match(text(h.tree()),/registration/i);assert.match(text(h.tree()),/Draft pending radiologist review/);
+  assert.equal(h.button('Start guided tour').disabled,true);
+  h.scene().onLoaded('forearm-muscles');h.scene().onLoaded('unknown-bundle');h.render();
+  assert.equal(h.button('Start guided tour').disabled,true);
+  h.scene().onRendererHealth('ready');h.render();assert.equal(h.button('Start guided tour').disabled,true);
+  h.scene().onLoaded('forearm-skeleton');h.render();assert.equal(h.button('Start guided tour').disabled,false);
+  assert.equal(h.timers.size,0);h.click('Start guided tour');
+  assert.equal(h.button('Back').disabled,true);h.button('Back').onClick();h.render();assert.equal(h.scene().reset,0);
+  const names=['right-brachioradialis','right-extensor-digitorum','right-flexor-carpi-radialis','right-flexor-digitorum-superficialis','right-pronator-quadratus'];
+  const views=['right','posterior','anterior','anterior','anterior'];
+  const frames=[];
+  for(let i=0;i<5;i++){
+    const id=`vm:anatomy:body:forearm:right:muscle:${names[i]}`;
+    assert.equal(h.scene().selectedId,id);assert.equal(h.scene().view,views[i]);
+    assert.deepEqual(plain(h.props.tour.steps[i].frameIds),[id]);
+    assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+    assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+    assert.equal(nodes(heading()).find(n=>n.type?.name==='TourStepPicker').props.index,i);assert.match(text(heading()),new RegExp(h.props.tour.steps[i].title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+    frames.push(plain(h.scene().presetBounds));if(i<4)h.click('Next');
+  }
+  assert.notDeepEqual(frames[0],frames[4],'Different muscle stops use distinct source bounds');
+  h.click('Back');assert.equal(h.scene().reset,3);h.click('Play');h.tick();h.tick();
+  assert.equal(h.scene().reset,4);assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.exits(),0);
+  h.click('Finish');assert.equal(h.exits(),1);assert.equal(h.scene().reset,4);h.unchanged();
+});
+
+const limbCases = [
+  {region:'thigh',names:['right-rectus-femoris','right-vastus-lateralis','right-adductor-longus','long-head-of-right-biceps-femoris','right-semitendinosus'],views:['anterior','right','left','posterior','posterior'],bones:['right-femur'],bundles:['thigh-muscles','thigh-muscles-dissection','thigh-skeleton']},
+  {region:'leg',names:['right-tibialis-anterior','right-extensor-digitorum-longus','right-fibularis-longus','right-soleus','right-tibialis-posterior'],views:['anterior','anterior','right','posterior','posterior'],bones:['right-tibia','right-fibula'],bundles:['leg-muscles','leg-skeleton']},
+  {region:'hand',names:['right-abductor-pollicis-brevis','right-opponens-pollicis','abductor-digiti-minimi-of-right-hand','flexor-digiti-minimi-brevis-of-right-hand','opponens-digiti-minimi-of-right-hand'],views:Array(5).fill('anterior'),bones:['right-first-metacarpal-bone','right-fifth-metacarpal-bone'],bundles:['hand-muscles','hand-skeleton']},
+  {region:'foot',names:['right-extensor-hallucis-brevis','right-abductor-hallucis','right-flexor-digitorum-brevis','abductor-digiti-minimi-of-right-foot','right-flexor-accessorius'],views:['superior','inferior','inferior','inferior','inferior'],bones:['right-calcaneus','right-first-metatarsal-bone','right-fifth-metatarsal-bone'],bundles:['foot-muscles','foot-skeleton']},
+  {region:'shoulder-arm',exportName:'upperArmTour',id:'right-upper-arm-muscle-orientation',bonePrefix:'vm:anatomy:upper-limb:shoulder:right:bone:',names:['long-head-of-right-biceps-brachii','short-head-of-right-biceps-brachii','right-brachialis','long-head-of-right-triceps-brachii','lateral-head-of-right-triceps-brachii','medial-head-of-right-triceps-brachii'],views:['anterior','anterior','anterior','posterior','posterior','posterior'],bones:['humerus','scapula'],bundles:['shoulder-arm-muscles','shoulder-arm-muscles-dissection','shoulder-arm-skeleton']},
+];
+for(const spec of limbCases){
+  test(`${spec.region} tour requires every source bundle and runs all exact stops without looping`,()=>{
+    const h=harness(catalog,spec.exportName??`${spec.region}Tour`),ids=spec.names.map(name=>`vm:anatomy:body:${spec.region}:right:muscle:${name}`);
+    const contexts=spec.bones.map(name=>(spec.bonePrefix??`vm:anatomy:body:${spec.region}:right:bone:`)+name);
+    assert.deepEqual(h.bundles().sort(),spec.bundles);
+    assert.deepEqual(plain(h.scene().structures.map(s=>s.id)).sort(),[...ids,...contexts].sort());
+    assert(h.scene().structures.every(s=>s.laterality==='right'));
+    assert.match(text(h.tree()),/Draft pending radiologist review/);
+    h.scene().onRendererHealth('ready');h.scene().onLoaded('unknown-bundle');h.render();
+    for(const bundle of spec.bundles){assert.equal(h.button('Start guided tour').disabled,true);h.scene().onLoaded(bundle);h.render();}
+    assert.equal(h.button('Start guided tour').disabled,false);assert.equal(h.timers.size,0);
+    h.click('Start guided tour');assert.equal(h.button('Back').disabled,true);
+    h.button('Back').onClick();h.render();assert.equal(h.scene().reset,0);
+    const frames=[],last=ids.length-1;
+    for(let i=0;i<ids.length;i++){
+      assert.equal(h.scene().selectedId,ids[i]);assert.equal(h.scene().view,spec.views[i]);
+      assert.deepEqual(plain(h.props.tour.steps[i].frameIds),[ids[i]]);
+      assert.equal(h.props.tour.steps[i].durationMs,14000);assert.equal(h.props.tour.steps[i].fadeOthers,true);
+      assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+      assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+      frames.push(plain(h.scene().presetBounds));if(i<last)h.click('Next');
+    }
+    assert.notDeepEqual(frames[0],frames[last]);
+    h.click('Back');h.click('Play');h.tick();h.tick();
+    assert.equal(h.scene().reset,last);assert.equal(h.scene().selectedId,ids[last]);
+    assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.exits(),0);
+    h.click('Finish');assert.equal(h.exits(),1);assert.equal(h.scene().reset,last);h.unchanged();
+  });
+  test(`${spec.region} missing muscle or bone fails closed and Exit stays usable`,()=>{
+    for(const [kind,names] of [['muscle',spec.names],['bone',spec.bones]])for(const name of names){
+      const id=kind==='bone'?(spec.bonePrefix??`vm:anatomy:body:${spec.region}:right:bone:`)+name:`vm:anatomy:body:${spec.region}:right:muscle:${name}`;
+      const h=harness(catalog,spec.exportName??`${spec.region}Tour`,false,id);
+      assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);
+      assert.equal(h.button('Start guided tour').disabled,true);assert.equal(h.timers.size,0);
+      assert.match(text(h.tree()),/unavailable for the current anatomy source/);
+      h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+    }
+  });
+}
+
+test('Cervical tour runs all five exact steps with fixed framing and its own limits', () => {
+  const h=harness(catalog,'cervicalSpineTour');
+  assert.equal(h.button('Start guided tour').disabled,true);
+  assert.match(text(h.tree()),/discs, ligaments, spinal cord and nerve roots are not shown/);
+  assert.doesNotMatch(text(h.tree()),/bronchial tree/);
+  h.ready();h.click('Start guided tour');
+  const frame=plain(h.scene().presetBounds);
+  assert.equal(h.scene().structures.length,8);assert.deepEqual(h.bundles(),['spine-skeleton']);
+  for(let i=0;i<5;i++){
+    assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+    assert.deepEqual(plain(h.scene().presetBounds),frame);
+    assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+    if(i<4)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().selectedId,h.props.tour.steps[3].selectedId);
+  h.click('Play');h.tick();h.tick();assert.equal(h.timers.size,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('Coeliac tour uses the corrected display and waits for both exact bundles', () => {
+  const h=harness(catalog,'celiacTour');
+  assert.equal(h.scene().structures.length,6);
+  assert.equal(h.scene().structures.find(s=>s.id===h.props.tour.steps[0].selectedId).bundle,'celiac-display-corrected');
+  assert.match(text(h.tree()),/Branching patterns vary/);
+  h.scene().onRendererHealth('ready');h.scene().onLoaded('abdomen-vessels-recovery');h.render();
+  assert.equal(h.button('Start guided tour').disabled,true,'Archived vascular bundle does not satisfy corrected display');
+  h.scene().onLoaded('celiac-display-corrected');h.render();h.click('Start guided tour');
+  const frame=plain(h.scene().presetBounds),overview=h.api.regionalTourFrame(h.props.catalog,h.props.tour);
+  assert(frame.max[0]-frame.min[0]<(overview.max[0]-overview.min[0])/2,'Small origin gets a materially closer frame');
+  for(let i=0;i<5;i++){
+    assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+    assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+    assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+    if(i<4)h.click('Next');
+  }
+  assert.notDeepEqual(plain(h.scene().presetBounds),frame,'Hepatic stops use their own close-up');
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('All actual tour bundles and ready renderer are required; entry remains manual and canonical', () => {
+  const h = harness();
+  assert.equal(h.button('Start guided tour').disabled, true); assert.equal(h.timers.size, 0);
+  h.scene().onRendererHealth('ready'); h.render(); assert.equal(h.button('Start guided tour').disabled, true);
+  const bundles = h.bundles(); assert(bundles.length > 1, 'Actual tour spans multiple source bundles');
+  for (const id of bundles.slice(0, -1)) { h.scene().onLoaded(id); h.render(); assert.equal(h.button('Start guided tour').disabled, true, 'Missing any bundle blocks start'); }
+  h.scene().onLoaded('unknown-bundle'); h.render(); assert.equal(h.button('Start guided tour').disabled, true);
+  h.scene().onLoaded(bundles.at(-1)); h.render(); assert.equal(h.button('Start guided tour').disabled, false);
+  h.scene().onLoaded(bundles.at(-1)); h.render(); assert.equal(h.timers.size, 0, 'Readiness never autostarts');
+  h.click('Start guided tour'); assert.equal(h.button('Play')['aria-pressed'], false); assert.equal(h.timers.size, 0);
+  const scene = h.scene(), expected = h.api.regionalTourStructures(catalog, h.props.tour);
+  assert.deepEqual(plain(scene.structures), plain(expected));
+  assert.equal(scene.structures.length, 8, 'Only six exact targets plus two lung contexts');
+  assert.deepEqual(plain(scene.presetBounds), plain(h.api.regionalTourFrame(catalog, h.props.tour)));
+  assert.deepEqual(plain(scene.systems), plain(h.api.allBodySystems));
+  assert.deepEqual(plain(scene.inspection), plain(h.api.initialInspection));
+  for (const key of ['explode', 'reset']) assert.equal(scene[key], 0);
+  for (const key of ['ghostRemoved', 'anchorSkeleton', 'showOrigins', 'focus', 'exam', 'plate']) assert.equal(scene[key], false);
+  assert.equal(scene.layout, 'spatial'); assert.equal(scene.zoom, 1); assert.equal(scene.labels, true); assert.equal(scene.tourLocked, true);
+  assert.deepEqual(plain(scene.hiddenIds), []); assert.deepEqual(plain(scene.landmarks), []);
+  const selected = scene.selectedId; scene.onSelect(h.props.tour.steps[5].selectedId); h.render(); assert.equal(h.scene().selectedId, selected, 'Scene clicks cannot introduce another selection');
+  h.unchanged();
+});
+
+test('Opening step-bound imaging notes pauses motion and autoplay; next step gets fresh notes',()=>{
+  const h=harness();h.ready();h.click('Start guided tour');h.click('Play');
+  const notes=()=>nodes(h.tree()).find(n=>n.type?.name==='TourImagingNotes');
+  assert.equal(notes().key,`imaging:${h.props.tour.steps[0].id}`);
+  assert.equal(notes().props.structureName,'Trachea');assert.equal(notes().props.lessons.length,4);
+  notes().props.onOpen();h.render();
+  assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);assert.equal(h.scene().transitionPaused,true);
+  h.click('Next');assert.equal(notes().key,`imaging:${h.props.tour.steps[1].id}`);assert.equal(h.timers.size,0);
+  assert.equal(notes().props.structureName,'Right main bronchus');h.unchanged();
+});
+
+const visceralCases=[
+  {name:'larynxTour',region:'head-neck',prefix:'vm:anatomy:body:head-neck:',targets:['midline:cartilage:thyroid-cartilage','midline:cartilage:cricoid-cartilage','right:cartilage:right-arytenoid-cartilage','left:cartilage:left-arytenoid-cartilage','unpaired:organ:epiglottis'],context:['vm:anatomy:body:head-neck:midline:bone:hyoid-bone'],bundles:['head-neck-connective-recovery','head-neck-organs-visceral-detail','head-neck-skeleton']},
+  {name:'malePelvisTour',region:'pelvis',prefix:'vm:anatomy:body:pelvis:',targets:['unpaired:organ:urinary-bladder','unpaired:organ:prostate','right:organ:right-seminal-vesicle','left:organ:left-seminal-vesicle','unpaired:organ:rectum'],context:['vm:anatomy:body:pelvis:right:bone:right-hip-bone','vm:anatomy:body:pelvis:left:bone:left-hip-bone','vm:anatomy:body:spine:midline:bone:sacrum'],bundles:['pelvis-organs','pelvis-organs-recovery','pelvis-skeleton','spine-skeleton']},
+];
+for(const spec of visceralCases){
+  test(`${spec.name}: exact five stops, all bundles, frames and final hold`,()=>{
+    const h=harness(catalog,spec.name),ids=spec.targets.map(id=>spec.prefix+id);
+    assert.deepEqual(plain(h.props.tour.contextIds),spec.context);
+    assert.deepEqual(h.bundles().sort(),spec.bundles);
+    assert.equal(h.props.tour.region,spec.region);
+    assert.equal(h.button('Start guided tour').disabled,true);
+    h.scene().onRendererHealth('ready');h.render();
+    for(const bundle of spec.bundles){assert.equal(h.button('Start guided tour').disabled,true);h.scene().onLoaded(bundle);h.render();}
+    h.click('Start guided tour');h.click('Play');
+    for(let i=0;i<5;i++){
+      assert.equal(h.scene().selectedId,ids[i]);
+      assert.equal(h.scene().view,['anterior','right','posterior','posterior','left'][i]);
+      assert.deepEqual(plain(h.props.tour.steps[i].frameIds),[ids[i]]);
+      assert.deepEqual(plain(h.scene().presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+      assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+      assert.equal(h.scene().isolated,true);h.tick();
+    }
+    assert.equal(h.scene().reset,4);assert.equal(h.timers.size,0);assert.equal(h.exits(),0);
+    h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+  });
+  test(`${spec.name}: missing selected or context source fails closed`,()=>{
+    for(const id of [...spec.targets.map(id=>spec.prefix+id),...spec.context]){
+      const h=harness(catalog,spec.name,false,id);
+      assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);
+      assert.equal(h.button('Start guided tour').disabled,true);
+      assert.match(text(h.tree()),/unavailable for the current anatomy source/);
+      h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();
+    }
+  });
+}
+
+test('Manual step bounds, autoplay pause/resume and final hold use actual callbacks', () => {
+  const h = harness(); h.ready(); h.click('Start guided tour');
+  assert.equal(h.button('Back').disabled, true);
+  h.button('Back').onClick(); h.render(); assert.equal(h.scene().reset, 0, 'Actual lower-bound guard rejects negative step');
+  h.click('Next'); assert.equal(h.scene().reset, 1); h.click('Back'); assert.equal(h.scene().reset, 0);
+  h.click('Play'); assert.equal(h.timers.size, 1); h.click('Pause'); assert.equal(h.timers.size, 0); assert.equal(h.scene().transitionPaused, true);
+  h.click('Play'); assert.equal(h.scene().transitionPaused, false);
+  while (h.scene().reset < h.props.tour.steps.length - 1) h.tick();
+  const final = h.scene().selectedId; h.tick();
+  assert.equal(h.button('Play')['aria-pressed'], false); assert.equal(h.timers.size, 0); assert.equal(h.scene().selectedId, final, 'Final source holds instead of looping');
+  assert.equal(h.scene().transitionPaused, true, 'Natural completion holds camera motion like an explicit Pause');
+  assert.equal(h.scene().reset, 5); assert.equal(h.exits(), 0, 'Autoplay never exits automatically');
+  h.click('Finish'); assert.equal(h.exits(), 1); assert.equal(h.scene().selectedId, final, 'Finish does not advance beyond sequence');
+  h.unchanged();
+});
+
+test('Natural completion offers only an opt-in, exact paused imaging stop and revokes retired timers',()=>{
+ for(const reduced of [false,true]){
+  const h=harness(),sent=[],entries=h.api.bodyLinkEntries(h.props.catalog);
+  const link=h.api.createPausedTourImaging({entries,allowedIds:entries.map(e=>e.id)});
+  const adapter=h.api.imagingBridge.registerAdapter({id:'completion-fixture',label:'Synthetic CT fixture',modality:'CT',onAtlasSelection:p=>sent.push(p)});
+  h.props.pausedImaging=link;h.render();h.ready();
+  if(reduced){h.preference.matches=true;h.listeners.get('motion')();h.render();}
+  h.click('Start guided tour');h.click('Play');
+  while(h.scene().reset<h.props.tour.steps.length-1){
+   assert.equal(link.snapshot().eligible,false);assert.equal(h.scene().transitionPaused,false);
+   h.tick();assert.equal(h.button('Pause')['aria-pressed'],true,'Intermediate stops keep playing');
+  }
+  const final=h.scene().selectedId,retired=[...h.timers.values()][0].fn;
+  h.tick();
+  assert.equal(h.scene().selectedId,final);assert.equal(h.scene().transitionPaused,true);
+  assert.equal(h.timers.size,0);assert.equal(h.exits(),0);assert.equal(link.snapshot().eligible,true);
+  assert.equal(link.snapshot().enabled,false);assert.equal(link.send(),false);assert.equal(sent.length,0,'Completion never launches imaging');
+  link.setEnabled(true);assert.equal(link.send(),true);assert.equal(sent.at(-1).structureId,final);
+  const exact=entries.find(e=>e.id===final);
+  assert(link.canAccessAnatomy({scope:'body',structureId:final,sources:exact.sources}));
+  assert.equal(link.canAccessAnatomy({scope:'body',structureId:final,sources:exact.sources.map(s=>({...s,sha256:'0'.repeat(64)}))}),false);
+  const check=nodes(h.tree()).find(n=>n.type?.name==='TourQuickCheck');assert(check);
+  check.props.onOpen();check.props.onChange(true);h.render();assert.equal(link.snapshot().eligible,false);
+  check.props.onChange(false);h.render();assert.equal(link.snapshot().eligible,true);assert.equal(link.snapshot().enabled,false);
+  h.click('Play');retired();h.render();
+  assert.equal(h.button('Pause')['aria-pressed'],true,'Retired completion cannot pause explicit replay');
+  assert.equal(h.timers.size,1);assert.equal(link.snapshot().eligible,false);assert.equal(sent.length,1);
+  const hiddenTimer=[...h.timers.values()][0].fn;
+  h.doc.hidden=true;h.listeners.get('visibilitychange')();hiddenTimer();h.render();
+  assert.equal(link.snapshot().eligible,false);assert.equal(link.snapshot().enabled,false);assert.equal(h.timers.size,0);
+  h.doc.hidden=false;h.listeners.get('visibilitychange')();h.render();
+  assert.equal(link.snapshot().enabled,false,'Visibility never restores consent');
+  h.scene().onRendererHealth('lost');h.render();assert.equal(link.snapshot().eligible,false);
+  h.unmount();assert.equal(link.canNavigate(),false);adapter.dispose();link.dispose();h.unchanged();
+ }
+});
+
+test('Chest-wall tour uses six exact sources, smooth per-step frames and final hold',()=>{
+  const h=harness(catalog,'chestWallTour',true);
+  assert.equal(h.props.tour.steps.length,6);assert(h.button('Start guided tour').disabled);
+  h.ready();h.click('Start guided tour');h.click('Play');
+  for(let i=0;i<6;i++){
+    const step=h.props.tour.steps[i],scene=h.scene();
+    assert.equal(scene.selectedId,step.selectedId);assert.equal(scene.explode,0);
+    assert.equal(scene.transitionMs,1800);assert.equal(scene.isolated,true);
+    assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,h.props.tour,i)));
+    h.tick();
+  }
+  assert.equal(h.timers.size,0);assert.equal(h.scene().reset,5);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+});
+
+test('Chest-wall tour rejects every missing target or context source',()=>{
+  const initial=harness(catalog,'chestWallTour');
+  for(const id of [...initial.props.tour.contextIds,...initial.props.tour.steps.map(s=>s.selectedId)]){
+    const h=harness(catalog,'chestWallTour',true,id);
+    assert.equal(nodes(h.tree()).filter(n=>n.type==='BodyScene').length,0);
+    assert(h.button('Start guided tour').disabled);h.click('Exit tour');assert.equal(h.exits(),1);
+  }
+});
+
+test('Orbital tour uses corrected globe context, six close-up targets and safe finish',()=>{
+ const h=harness(catalog,'orbitalTour',true);assert.equal(h.props.tour.steps.length,6);
+ assert.equal(h.scene().structures.length,7);h.ready();h.click('Start guided tour');
+ for(let i=0;i<6;i++){
+  assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+  assert.deepEqual(h.scene().presetBounds,h.api.regionalTourFrame(h.props.catalog,h.props.tour,i));
+  assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+  assert.equal(h.scene().structures.find(s=>s.id===h.props.tour.contextIds[0]).bundle,'eye-corrected-parent');
+  if(i<5)h.click('Next');
+ }
+ h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ const missing=harness(catalog,'orbitalTour',true,h.props.tour.contextIds[0]);
+ assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+ assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
+});
+
+test('Intrinsic larynx tours seven muscles with exact cartilage context and reversible exit',()=>{
+ const h=harness(catalog,'intrinsicLarynxTour',true);assert.equal(h.props.tour.steps.length,7);
+ assert.equal(h.scene().structures.length,10);h.ready();h.click('Start guided tour');
+ for(let i=0;i<7;i++){
+  assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+  assert.deepEqual(h.scene().presetBounds,h.api.regionalTourFrame(h.props.catalog,h.props.tour,i));
+  assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+  assert.equal(h.scene().structures.filter(s=>h.props.tour.contextIds.includes(s.id)).length,3);
+  if(i<6)h.click('Next');
+ }
+ h.click('Back');assert.equal(h.scene().reset,5);h.click('Next');h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ for(const id of [...h.props.tour.contextIds,...h.props.tour.steps.map(s=>s.selectedId)]){
+  const missing=harness(catalog,'intrinsicLarynxTour',true,id);
+  assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
+ }
+});
+
+test('Male duct landmarks retain eight exact surfaces, local frames and reversible exit',()=>{
+ const h=harness(catalog,'maleDuctTour',true);assert.equal(h.props.tour.steps.length,6);
+ assert.equal(h.scene().structures.length,8);h.ready();h.click('Start guided tour');
+ for(let i=0;i<6;i++){
+  assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+  assert.deepEqual(h.scene().presetBounds,h.api.regionalTourFrame(h.props.catalog,h.props.tour,i));
+  assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+  assert.equal(h.scene().structures.filter(s=>h.props.tour.contextIds.includes(s.id)).length,2);
+  if(i<5)h.click('Next');
+ }
+ h.click('Back');assert.equal(h.scene().reset,4);h.click('Next');h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+ for(const id of [...h.props.tour.contextIds,...h.props.tour.steps.map(s=>s.selectedId)]){
+  const missing=harness(catalog,'maleDuctTour',true,id);
+  assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
+ }
+});
+test('Whole-body venous orientation keeps nine right-sided source frames and four bone contexts assembled and exits reversibly',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'lowerVenousTour',compact);assert.equal(h.props.tour.steps.length,9);
+  assert.equal(h.scene().structures.length,13);assert.equal(h.props.tour.contextIds.length,4);assert.equal(h.props.tour.region,'whole-body');
+  h.ready();h.click('Start guided tour');
+  for(let i=0;i<9;i++){
+   assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
+   assert.deepEqual(h.scene().presetBounds,h.api.regionalTourFrame(h.props.catalog,h.props.tour,i));
+   assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
+   assert(h.scene().structures.every(s=>s.laterality==='right'&&['vessels','skeleton'].includes(s.system)));
+   assert.equal(h.scene().structures.filter(s=>s.system==='vessels').length,9);
+   assert.equal(h.scene().structures.filter(s=>s.system==='skeleton').length,4);
+   assert(text(h.tree()).includes(h.props.tour.steps[i].caption));
+   if(i<8)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,7);h.click('Next');h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+  for(const id of [...h.props.tour.contextIds,...h.props.tour.steps.map(s=>s.selectedId)]){
+   const missing=harness(catalog,'lowerVenousTour',compact,id);
+   assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
+  }
+ }
+});
+
+test('Hidden tabs and renderer/load failure pause, never auto-resume, and keep Exit enabled', () => {
+  for (const cause of ['hidden', 'lost', 'failed', 'bundle-failed']) {
+    const h = harness(); h.ready(); h.click('Start guided tour'); h.click('Play');
+    if (cause === 'hidden') { h.doc.hidden = true; h.listeners.get('visibilitychange')(); }
+    else if (cause === 'bundle-failed') h.scene().onFailure(h.bundles()[0]);
+    else h.scene().onRendererHealth(cause);
+    h.render(); assert.equal(h.timers.size, 0); assert.equal(h.button('Play')['aria-pressed'], false); assert.equal(h.scene().transitionPaused, true);
+    if (cause !== 'hidden') for (const label of ['Back', 'Play', 'Next']) assert.equal(h.button(label).disabled, true);
+    h.doc.hidden = false; h.scene().onRendererHealth('ready'); h.render();
+    assert.equal(h.timers.size, 0, `${cause}: no automatic recovery playback`);
+    assert.equal(h.button('Play')['aria-pressed'], false);
+    if (cause === 'bundle-failed') { assert.equal(h.button('Play').disabled, true); assert.match(text(h.tree()), /failed to load/); }
+    h.click('Exit tour'); assert.equal(h.exits(), 1); h.unchanged();
+  }
+});
+
+test('Reduced motion switches active camera duration between 1800 and zero; Exit works before readiness', () => {
+  const h = harness(); assert.equal(h.scene().transitionMs, 0); h.click('Exit tour'); assert.equal(h.exits(), 1);
+  h.ready(); h.click('Start guided tour'); assert.equal(h.scene().transitionMs, 1800);
+  h.preference.matches = true; h.listeners.get('motion')(); h.render(); assert.equal(h.scene().transitionMs, 0);
+  h.click('Next'); assert.equal(h.scene().transitionMs, 0);
+  h.preference.matches = false; h.listeners.get('motion')(); h.render(); assert.equal(h.scene().transitionMs, 1800);
+  h.unchanged();
+});
+
+test('Pre-start resources explain both entry controls without starting playback or leaking into active stops', () => {
+  const hint = tree => nodes(tree).filter(n => n.props?.className === 'regional-tour-start-hint');
+  for (const entry of ['Play full tour', 'Start guided tour']) {
+    const h = harness();
+    assert.equal(hint(h.tree()).length, 1);
+    assert.match(text(hint(h.tree())[0]), /Choose Play full tour or Start guided tour/);
+    assert.match(text(hint(h.tree())[0]), /where available/);
+    assert.equal(h.timers.size, 0, 'Showing a hint never starts playback');
+    h.ready(); assert.equal(hint(h.tree()).length, 1);
+    h.click(entry);
+    assert.equal(hint(h.tree()).length, 0, `${entry}: real stop content replaces hint`);
+    h.props.catalog = {...h.props.catalog}; h.render();
+    assert.equal(hint(h.tree()).length, 1, 'Changed source returns to the pre-start hint');
+    assert.equal(h.timers.size, 0, 'Changed source never auto-resumes');
+    h.unchanged(); h.unmount();
+  }
+});
+
+test('Missing exact source fails closed with no replacement scene and usable Exit', () => {
+  const source = structuredClone(catalog); source.structures = source.structures.filter(s => !s.id.endsWith(':trachea'));
+  const h = harness(source);
+  assert.equal(nodes(h.tree()).filter(n => n.type === 'BodyScene').length, 0);
+  assert.equal(h.button('Start guided tour').disabled, true); assert.match(text(h.tree()), /unavailable for the current anatomy source/);
+  assert.equal(h.timers.size, 0); h.click('Exit tour'); assert.equal(h.exits(), 1); h.unchanged();
+});

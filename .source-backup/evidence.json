@@ -1,5 +1,5 @@
 {
-  "nativeFocused": {
+  "ctNative": {
     "tests": 5,
     "pass": 5,
     "fail": 0,
@@ -7,17 +7,26 @@
     "skipped": 0,
     "todo": 0
   },
-  "resolvedPlacements": 9936,
-  "newCitationPlacements": 85,
-  "remainingCitationPlacements": 4,
-  "editedAuthoredSections": 9,
-  "changedReviewTeachingHashes": 12,
-  "unaffectedWorksheetExact": true,
-  "sourceGeometryUnchanged": true,
+  "tourNative": {
+    "tests": 81,
+    "pass": 81,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "originalTourTestCallSitesPreserved": 65,
+  "originalTourNativeCases": 75,
+  "newTourCases": 6,
+  "originalTourAddedRegressionFailures": 6,
+  "citationPlacements": 89,
+  "remainingExplicitCitationGaps": 0,
+  "reviewRuntimeBindingPending": true,
+  "fullTypesBuildBrowserPending": true,
+  "integrated": false,
+  "previewChanged": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
-  "fullTypesBuildBrowserPassing": false,
-  "integrated": false,
-  "ownerPreviewChanged": false,
+  "wholeSuitePassing": false,
   "publicDeployment": false
 }
