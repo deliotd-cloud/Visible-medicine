@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T19:03:33.602Z",
+  "at": "2026-10-22T19:24:47.359Z",
   "sourceIdentity": {
+    "acceptedSourceReceiptSha256": "92403824dc9ebcce2f8efe6bb02ed10db642ab646fbdc9cff983d48cfe9a0a07",
+    "pendingOverlayPlanSha256": "7f762506cdb17f8f21f907f257fde7d857884d8d88f60229b6772cd259893a89",
     "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
     "tree": "db21ed3dee259c390878450b3495468996a3af85",
-    "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc",
-    "sourceReceiptSha256": "92403824dc9ebcce2f8efe6bb02ed10db642ab646fbdc9cff983d48cfe9a0a07"
+    "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc"
   },
-  "parent": "271e64df6ef412aacb53d4748b3559454c9a44b4",
-  "gitParent": "271e64df6ef412aacb53d4748b3559454c9a44b4",
+  "parent": "d3e5d78dfa2fc4ac92ccf049f9b45d7f7455d636",
+  "gitParent": "d3e5d78dfa2fc4ac92ccf049f9b45d7f7455d636",
   "files": [
     {
       "path": "app/globals.css",
@@ -15121,6 +15122,76 @@
       "sha256": "5cb326883f1081550cb9940f4a603b2b9258e57ef41cee068ab3d33d786fc7d9"
     },
     {
+      "path": "pending/complete-release-followups-20261022/coordination/checkpoint-complete-release-followup-proposals-20261022.mjs",
+      "bytes": 10636,
+      "sha256": "657d413bd1ef20154b2e9dee99a4cb8b18a00ce963edd6874d64229e644cfcae"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/coordination/compose-complete-release-followups-20261022.mjs",
+      "bytes": 6708,
+      "sha256": "dd32c05d765a8bc3f847760113cfeb0e0373e3485243be15cb9e61db6f9ebbd8"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/coordination/prove-complete-wrapper-followup-20261022.mjs",
+      "bytes": 4950,
+      "sha256": "4c448129e5d743d784fcfaa0132130633ecbf4f0ffdd41010f819732c88bb92b"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/coordination/record-complete-release-followups-20261022.mjs",
+      "bytes": 3450,
+      "sha256": "2110ab7b3b5e71540ce133e12c7dc4c3d4ab444bdd0d22362bc571f28565ef3d"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/website/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 19003,
+      "sha256": "35aa317814977114af7caf761ca5b4504b319b92a76e3e18dd8b281fa50d608d"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/website/tests/atlas-body-learning-component.test.mjs",
+      "bytes": 14026,
+      "sha256": "3fcba11946ef40aeb8ad754962a9383851f61fc9950369a6f5c0f65920f159b6"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/website/tests/atlas-cervical-epoch-preservation.test.mjs",
+      "bytes": 7323,
+      "sha256": "bb3c2bb8b360b9d6bbba2e809525366afd5d827f27e9d61e54d01a78e2d28754"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/website/tests/complete-release-followup-preservation.test.mjs",
+      "bytes": 5530,
+      "sha256": "7f1975b2b0e55db9a41e7407baa514403b774a214a5e0355dd1f62cf34c94bdb"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/website/tests/fixtures/complete-release-before/atlas-arterial-evidence-limits.test.mjs.raw",
+      "bytes": 19003,
+      "sha256": "d04a1842fc6b68f0b7be42a2d0206e93598b29e9d34c40ec7b5d3b1914296dbb"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/website/tests/fixtures/complete-release-before/atlas-body-learning-component.test.mjs.raw",
+      "bytes": 13913,
+      "sha256": "fdb9016dee124c1a68278b281ec39a67fe6b27dc30b37161b434932823584c2d"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/website/tests/fixtures/complete-release-before/atlas-cervical-epoch-preservation.test.mjs.raw",
+      "bytes": 6396,
+      "sha256": "ff62e76523d50e2a9e476bf3d2bda53225a23a2ff7326bc58b2ce693ee994367"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/website/tests/head-access-wrapper-inverse.mjs",
+      "bytes": 3220,
+      "sha256": "791a0329dd4589749b72f087d042b314d2d314b41edc72fbb05879e860226fb1"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/worker-arterial/source-only-proof.mjs",
+      "bytes": 3701,
+      "sha256": "72ec7f6b0fefa77b217a600d22e9d1cf95bae4e39a751cef640c57e81aa4147e"
+    },
+    {
+      "path": "pending/complete-release-followups-20261022/worker-cervical-licence/source-only-proof.mjs",
+      "bytes": 5156,
+      "sha256": "18a7f3de75ad02c904a83c7da7fddc2678beaee255759dd274b363c0b540a0aa"
+    },
+    {
       "path": "pending/corpus-cranio-assurance-20261022/coordination/checkpoint-corpus-cranio-assurance-20261022.mjs",
       "bytes": 10038,
       "sha256": "b304f5bdcb5af8aec2afec2aaf7c8c31edaeadd856784e4d5f85de48da389afa"
@@ -23042,27 +23113,19 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus eleven independently current/historical head, regional, teaching, UI and navigation test roots and full original-source inverses. Product/runtime/binding bytes unchanged. Generated JSON, pin/tracking/Review evidence, compiled runtimes/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries/logs remain local. Raw witnesses are code text only. This is scoped source-only recovery, not a full/private/runnable backup, installation or public deployment.",
+  "scope": "Inherited filtered source plus three reviewed but native-unaccepted test overlays, their complete original code preimages, strict later access inverse, and pure source-only proofs/coordinator scripts. The stock1176-entry release suite is still separately running on unchanged source. No product/runtime/binding/licence/asset/approval change. Actual generated JSON/pin/tracking/evidence, private DB/env/records/decisions/references, held assets, compiled runtimes/viewer, scans/models/masks/fonts/binaries/raw logs and canonical Git ancestry remain local. Source-only, not full/private/runnable recovery or final/native/clinical/release approval.",
   "proof": {
-    "native": {
-      "tests": 131,
-      "pass": 131,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "nativeRoots": 26,
-    "fullTypesPassed": true,
-    "initial130of131FailureRetained": true,
-    "fullRegionalTourDataEqualityPreservedWithOneAuthenticatedRenalRevisionInverse": true,
-    "all6417NamedInputsStable": true,
-    "allProductAndBindingsUnchanged": true,
-    "firstSourceEpochExactlyReplayed": true,
-    "newBuildOrBrowserAcceptance": false,
-    "canonicalInstalled": false,
-    "ownerPreviewChanged": false,
+    "sourceOnly": true,
+    "nativeAcceptance": false,
     "wholeSuitePassing": false,
+    "mainThreeWrapperFullInverses": true,
+    "mainWrapperMutationRefusals": 12,
+    "fullOriginalTestInverses": true,
+    "unchangedStrictLicenceWitness": true,
+    "bothExactLicenceRepresentationsChecked": true,
+    "allNewlineConversionStillRefused": true,
+    "ownerPreviewChanged": false,
+    "canonicalInstalled": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false
