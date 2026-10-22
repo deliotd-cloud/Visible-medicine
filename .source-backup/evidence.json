@@ -1,21 +1,31 @@
 {
-  "focusedCounts": {
-    "tests": 80,
-    "pass": 80,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
+  "sourcePaths": 6154,
+  "review": "2c8e263eb4bbd04120eb79560314f372a10846f6fd5616477bde18a42e9f7ef3",
+  "boundInputs": 1726,
+  "importedSources": 1560,
+  "viewerFiles": 46,
+  "viewerPackages": 22,
+  "focused": {
+    "originalCurrentDeliveryPass": 41,
+    "firstCurrentRun": {
+      "tests": 178,
+      "pass": 177,
+      "fail": 1
+    },
+    "correctedIntegrationPass": 1,
+    "unchangedProductionAndOtherTests": true,
+    "newCombined178PassRun": false
   },
   "fullTypesPassed": true,
   "productionBuildPassed": true,
-  "reviewBindingUnchanged": true,
-  "sourceDrift": [],
-  "syntheticBrowserCases": 11,
-  "signedInAcceptance": false,
-  "humanAssistiveTechnologyCertification": false,
+  "stockSourceRuntimeReviewModelPolicyCoverageCatalogChecksPassed": true,
+  "models": 137,
+  "modelPaths": 144,
+  "modelBytes": 199072480,
+  "newBrowserAcceptance": false,
   "wholeSuitePassing": false,
   "ownerPreviewChanged": false,
   "clinicalApproval": false,
+  "spatialRegistration": false,
   "publicDeployment": false
 }

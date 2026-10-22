@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T12:42:27.262Z",
+  "at": "2026-10-22T13:03:10.208Z",
   "sourceIdentity": {
-    "websiteReceiptSha256": "7ecb9d226386b8f31dcb8949fca8084d55a2d1d64fee9cfa43a7579426959b52",
-    "review": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a",
-    "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "websiteReceiptSha256": "83df8fd5064b4598e21397864d7ab57c0824c652ec60d24fbf10860e54b7d0ae",
+    "atlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
+    "atlasTree": "25acdee40ee57e0253cdcca924aa64b4b38586c8",
+    "review": "2c8e263eb4bbd04120eb79560314f372a10846f6fd5616477bde18a42e9f7ef3",
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1"
   },
-  "parent": "5846868f4413a844b9c0e818a2e72cd8fe75ff28",
-  "gitParent": "5846868f4413a844b9c0e818a2e72cd8fe75ff28",
+  "parent": "dc52dc6f2818ead17c9c9931026dc04ce1857b47",
+  "gitParent": "dc52dc6f2818ead17c9c9931026dc04ce1857b47",
   "files": [
     {
       "path": "app/globals.css",
@@ -16006,6 +16007,86 @@
       "sha256": "5c71243ce7ebbfc021fdd71cf71e40d86d6be1f5fc9a81f9055d2c549c1f4e37"
     },
     {
+      "path": "pending/neck-xray-website-20261022/coordination/admit-neck-xray-delivery-20261022.mjs",
+      "bytes": 3193,
+      "sha256": "ebc8d1f302a3510e9dae6a276eabc5bdbebc512d37f5844f3e5d1aef8d1ded24"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/coordination/build-neck-xray-runtime-20261022.mjs",
+      "bytes": 3807,
+      "sha256": "f8ad1d802c97ca2efb33c683a1344719ba1b7d8579f0f079c58e03bdc26d7bdb"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/coordination/checkpoint-neck-xray-website-20261022.mjs",
+      "bytes": 10546,
+      "sha256": "11a7035ffcb6ae34942d29c1ec68b54e89aa1406dee3b9526d3836a83e175b16"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/coordination/finalize-neck-xray-website-20261022.mjs",
+      "bytes": 6549,
+      "sha256": "e9fc099f9a801963ed08a31c81abb4f7609faf6ff59000e8721e274ba61871f0"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/coordination/import-neck-xray-website-20261022.mjs",
+      "bytes": 10023,
+      "sha256": "8b49d7cfa512fb7e522c859c9e48c62f7075a4452238b6b7978cd19c9e5fcda1"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/coordination/prepare-neck-xray-website-20261022.mjs",
+      "bytes": 3037,
+      "sha256": "cad796597e8ce4e352b771a08fdb350a6d9eb8f3112fb7a9d1bc924c51896052"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/coordination/restore-neck-xray-review-compatibility-20261022.mjs",
+      "bytes": 1340,
+      "sha256": "bc9dac3d2d71284af1e350abd3f21fb17b2f6daa49598e5ad81db96f3994fa56"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/coordination/verify-neck-xray-website-20261022.mjs",
+      "bytes": 8636,
+      "sha256": "2b24317ea044255de92edad76775334de177c464e800f7db63072ad3b30b4577"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "3ef5a2a6db403c6fb068f6bd488e2596b96e1bbd77840024f4a7783d0d19aead"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "26773f6fe4a6f96e9c7337821cd728cb4be0eb66c0904a1bbec81133cc616ef6"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "a4a5fdd5a83084f1fbd2c37aae38d7ac7a3439bf817053fcc88dc043be8dcfbf"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "6ae94de8a7f621085e2f092f32e1f8f0e8c23495d216846589e28ef2778ccf74"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/website/tests/atlas-neck-landmark-xray.test.mjs",
+      "bytes": 10277,
+      "sha256": "7005d5e150cd06a1068e2d8124a4cb47ade962703eee7865b77f0edcccd2d500"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/website/tests/atlas-neck-xray-delivery-transition.test.mjs",
+      "bytes": 2858,
+      "sha256": "edfe931326e44419d70725c0f84b2b45fe84518c16f7f809135ce59188b17e5f"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "172e1153b7213b1e32ec1fff745ebb3594cef5fdce49168734670325e8ac827e"
+    },
+    {
+      "path": "pending/neck-xray-website-20261022/website/tests/fixtures/current-atlas-delivery-before-neck-xray-20261022.mjs.raw",
+      "bytes": 19208,
+      "sha256": "303a1ba566b8dbbac99e06206f92ad5df3634579fb29bb696a64f4c5a4529cea"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/craniofacial-ct-current-delivery.test.mjs",
       "bytes": 9929,
       "sha256": "5d3b6ce69f3db7e91eacca50c78e76d91dc6f2648f5f8232ca097358dd1c5e92"
@@ -20627,26 +20708,36 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus isolated Review inbox return-refresh component, original preimage, additive real-component tests and synthetic QA/coordination source. Generated snapshots/pins/revision JSON, private records/accounts/DB/env/decisions/references, raw logs/media, scans/models/masks/held assets and canonical ancestry stay local. Not full/private/runnable recovery or installation.",
+  "scope": "Inherited filtered source plus staged website producer/source-epoch declarations, exact original current-delivery test, additive source-bound neck X-ray integration tests and local coordination source. Generated binding/pin/coverage JSON, compiled runtime/viewer payloads, private records/DB/env/decisions/references, held sources/assets, scans/models/masks, article assets/media, raw logs and canonical ancestry remain local. Not full/private/runnable recovery or installation.",
   "proof": {
-    "focusedCounts": {
-      "tests": 80,
-      "pass": 80,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+    "sourcePaths": 6154,
+    "review": "2c8e263eb4bbd04120eb79560314f372a10846f6fd5616477bde18a42e9f7ef3",
+    "boundInputs": 1726,
+    "importedSources": 1560,
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "focused": {
+      "originalCurrentDeliveryPass": 41,
+      "firstCurrentRun": {
+        "tests": 178,
+        "pass": 177,
+        "fail": 1
+      },
+      "correctedIntegrationPass": 1,
+      "unchangedProductionAndOtherTests": true,
+      "newCombined178PassRun": false
     },
     "fullTypesPassed": true,
     "productionBuildPassed": true,
-    "reviewBindingUnchanged": true,
-    "sourceDrift": [],
-    "syntheticBrowserCases": 11,
-    "signedInAcceptance": false,
-    "humanAssistiveTechnologyCertification": false,
+    "stockSourceRuntimeReviewModelPolicyCoverageCatalogChecksPassed": true,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "newBrowserAcceptance": false,
     "wholeSuitePassing": false,
     "ownerPreviewChanged": false,
     "clinicalApproval": false,
+    "spatialRegistration": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,
