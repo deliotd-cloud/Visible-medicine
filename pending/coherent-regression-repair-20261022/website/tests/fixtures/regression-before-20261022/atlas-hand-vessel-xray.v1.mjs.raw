@@ -1,0 +1,506 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {readFileSync,realpathSync,statSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {gunzipSync} from 'node:zlib';
+import test from 'node:test';
+import {handHistoryApi,handImportedArchiveApi} from './atlas-hand-vessel-xray-history-api.mjs';
+import {deriveBoundRenderer} from './hand-renderer-binding.mjs';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
+
+const root=process.cwd(),pin=validateCurrentAtlasDelivery(),atlas=currentAtlasDeliveryRoot();
+const historicalPinBytes=readFileSync(new URL('./fixtures/current-atlas-delivery-58926355.json',import.meta.url));
+const historicalPin=JSON.parse(historicalPinBytes);
+const archive=JSON.parse(readFileSync(new URL('./fixtures/hand-vessel-xray-589-delivery-archive-v3.json',import.meta.url)));
+const historical='589263554141ba94548f9073327d4e51674bc33b';
+const baseline='8d32653eaac8b86521618c824214dd6af8e35e29';
+const priorSource='f1dc0ccc54ec82aa774720db3c822d3e0ea9c418';
+const regions=['head-neck','shoulder','lower-limb','female-pelvis'];
+const selected=['app/body-content.ts','lib/hand-vessel-xray.ts','content/hand-vessel-xray.ts',
+  'content/hand-vessel-xray-pins.json','content/regional-teaching/hand.json',
+  'content/intracranial-arterial-us-pins.json'];
+const required=selected.slice(0,5),sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const same=(a,b,label)=>assert.deepEqual(structuredClone(a),structuredClone(b),label);
+const git=(...args)=>execFileSync('git',['-C',atlas,...args],{windowsHide:true,maxBuffer:256e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+const json=path=>JSON.parse(readFileSync(resolve(root,path)));
+const records=new Map();
+assert.equal(sha(historicalPinBytes),'3a29ea22a99e88869409f164ad50598e69106484e9b4f0603e4434e92d7df1f4');
+assert.equal(archive.schema,'vm-hand-vessel-xray-589-delivery-archive-3');
+assert.equal(archive.provenance,'hash-bound recovered website snapshot plus manifest-hash-matched source-input reconstruction; no observed 589 checkout or website Git epoch claim');
+assert.equal(archive.source,historical);
+same(archive.documents,historicalPin.documents);
+for(const row of archive.records){
+  assert(!records.has(row.path),row.path);
+  const bytes=gunzipSync(Buffer.from(row.gzipBase64,'base64'));
+  assert.equal(sha(bytes),row.sha256,row.path);
+  records.set(row.path,bytes);
+}
+const historicalReview=JSON.parse(records.get('atlas-review/manifest.json'));
+const historicalInputProvenance=new Map(archive.sourceInputReconstruction.map(row=>[row.path,row]));
+assert.equal(historicalInputProvenance.size,1504);
+const historicalCodeAssets=regions.flatMap(region=>{
+  const base=`public/atlas-runtime/${region}/`;
+  const manifest=JSON.parse(records.get(base+'manifest.json'));
+  return manifest.files.filter(row=>/\.(?:js|css|html)$/.test(row.path)).map(row=>base+row.path);
+});
+same([...records.keys()].sort(),[...Object.keys(historicalPin.documents),
+  ...historicalReview.files.map(row=>`atlas-review/${row.path}`),...historicalCodeAssets,
+  ...archive.sourceInputReconstruction.flatMap(row=>row.recordPath?[row.recordPath]:[]),
+  'tests/atlas-hand-vessel-xray.original.mjs'].sort());
+const historicalRead=path=>{assert(records.has(path),`Missing historical record ${path}`);return records.get(path);};
+const historicalValidatorBytes=readFileSync(new URL('./fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw',import.meta.url));
+assert.equal(sha(historicalValidatorBytes),'dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62');
+const historicalValidatorSource=historicalValidatorBytes.toString('utf8');
+const validatorConstantsStart=historicalValidatorSource.indexOf('const modules=');
+const validatorFunctionStart=historicalValidatorSource.indexOf('export function validateCurrentAtlasDelivery(');
+const validatorFunctionEnd=historicalValidatorSource.indexOf('// Consumers cannot silently accept',validatorFunctionStart);
+assert(validatorConstantsStart>=0&&validatorFunctionStart>validatorConstantsStart&&validatorFunctionEnd>validatorFunctionStart);
+const validateHistoricalAtlasDelivery=new Function('assert','createHash','readFileSync','websiteRoot','defaultPin',
+  `${historicalValidatorSource.slice(validatorConstantsStart,validatorFunctionStart)}\n${historicalValidatorSource.slice(validatorFunctionStart,validatorFunctionEnd).replace(/^export function /,'function ')}\nreturn validateCurrentAtlasDelivery;`)(assert,createHash,readFileSync,'',null);
+const oldOriginal=historicalRead('tests/atlas-hand-vessel-xray.original.mjs');
+assert.equal(sha(oldOriginal),'1d575db1efe1e23fdfd891eabe122cc9950e8624caed480e69908b9e24bbc6b4');
+assert.equal(sha(readFileSync(new URL('./fixtures/atlas-hand-vessel-xray-f1dc0ccc.txt',import.meta.url))),
+  'c8efd4f95be60c8bf9ecb2c411318636d40bea0aa486f217ab54ad68ac9ab88a');
+assert.equal(pin.source,CURRENT_ATLAS_REVISION);
+assert.equal(git('rev-parse',`${pin.source}^{tree}`).toString().trim(),pin.sourceTree);
+assert.equal(realpathSync(atlas),realpathSync(git('rev-parse','--show-toplevel').toString().trim()));
+assert.equal(git('rev-parse',`${historical}^{commit}`).toString().trim(),historical);
+assert.equal(git('rev-parse',`${historical}^{tree}`).toString().trim(),historicalPin.sourceTree);
+assert.equal(git('rev-parse',`${baseline}^{commit}`).toString().trim(),baseline);
+assert.equal(git('rev-parse',`${priorSource}^{commit}`).toString().trim(),priorSource);
+checkedAtlasHistoryRepo(historical);
+
+const entry=[
+  "export {bodyLesson,bodyContent} from './app/body-content';",
+  "export {bodyDisplayCatalog} from './lib/body-display-catalog';",
+  "export {contentTabs} from './lib/content-types';",
+  "export {decodeRegionalTeachingSnapshot} from './lib/regional-teaching-snapshot';",
+  "export {handVesselXrayLesson} from './lib/hand-vessel-xray';",
+  "export * from './content/hand-vessel-xray';",
+  "export {intracranialArterialUsLesson} from './lib/intracranial-arterial-us';",
+  "export {bodyReviewMaterial} from './lib/body-review-material';",
+  "export {bodyReviewContext} from './lib/body-review-context';",
+  "export {parseBodyReviewResponse} from './lib/body-review-response';",
+].join('');
+const baseEntry=[
+  "export {bodyLesson} from './app/body-content';",
+  "export {bodyDisplayCatalog} from './lib/body-display-catalog';",
+  "export {contentTabs} from './lib/content-types';",
+  "export {bodyReviewMaterial} from './lib/body-review-material';",
+  "export {bodyReviewContext} from './lib/body-review-context';",
+].join('');
+const siteEntry=entry.replaceAll("'./","'./atlas-review/");
+let archivedApiPromise;
+const archivedApi=()=>archivedApiPromise??=handImportedArchiveApi(records,siteEntry);
+const requireSite=createRequire(resolve(root,'package.json'));
+async function importedApi(){
+  const {build}=requireSite('esbuild');
+  const decisionEntry=siteEntry+"export {postBodyDecision} from './atlas-review/lib/body-review-api';";
+  const built=await build({stdin:{contents:decisionEntry,resolveDir:root,loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+  return import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
+}
+function tree(commit){
+  const map=new Map();
+  for(const line of git('ls-tree','-r','-z','--full-tree',commit).toString().split('\0')){
+    const match=/^(100644|100755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(line);
+    if(match)map.set(match[3],match[2]);
+  }
+  return map;
+}
+const currentTree=tree(pin.source),historicalTree=tree(historical),priorTree=tree(baseline);
+const trees=new Map([[pin.source,currentTree],[historical,historicalTree],[baseline,priorTree]]);
+const objects=new Map();
+function batch(commit,paths){
+  const sourceTree=trees.get(commit);assert(sourceTree,commit);
+  const ids=[...new Set(paths.map(path=>{
+    const id=sourceTree.get(path);assert(id,`${commit} lacks ${path}`);return id;
+  }))].filter(id=>!objects.has(`${commit}:${id}`));
+  if(!ids.length)return;
+  const bytes=execFileSync('git',['-C',atlas,'cat-file','--batch'],{
+    input:ids.join('\n')+'\n',windowsHide:true,maxBuffer:256e6,
+    env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'},
+  });
+  let offset=0;
+  for(const id of ids){
+    const end=bytes.indexOf(10,offset);assert(end>offset);
+    const header=/^([a-f0-9]{40}) blob ([0-9]+)$/.exec(bytes.subarray(offset,end).toString());
+    assert(header&&header[1]===id);
+    const length=Number(header[2]);assert(Number.isSafeInteger(length)&&length>=0&&length<=32e6);
+    const finish=end+1+length;assert(finish<bytes.length&&bytes[finish]===10);
+    objects.set(`${commit}:${id}`,bytes.subarray(end+1,finish));offset=finish+1;
+  }
+  assert.equal(offset,bytes.length);
+}
+const gitBlob=(commit,path)=>{
+  if(!trees.has(commit))trees.set(commit,tree(commit));
+  assert(trees.get(commit).has(path),`${commit} lacks ${path}`);
+  batch(commit,[path]);
+  return objects.get(`${commit}:${trees.get(commit).get(path)}`);
+};
+function historicalInputBytes(row){
+  const provenance=historicalInputProvenance.get(row.path);assert(provenance,row.path);
+  assert.equal(provenance.declaredSha256,row.sha256,row.path);
+  const committed=gitBlob(historical,row.path);
+  assert.equal(provenance.git589Sha256,sha(committed),row.path);
+  switch(provenance.kind){
+    case 'recovered-589-imported-Review-snapshot':return historicalRead(`atlas-review/${row.path}`);
+    case 'exact-589-Git-blob':return committed;
+    case 'reconstructed-589-Git-uniform-CRLF':
+      assert(!committed.includes(0),row.path);
+      return Buffer.from(committed.toString('utf8').replaceAll('\n','\r\n'));
+    case 'current-clean-7b-checkout-manifest-hash-match; not observed 589 checkout':
+      assert.equal(provenance.recordPath,`source-input-reconstruction/${row.path}`);
+      return historicalRead(provenance.recordPath);
+    default:throw Error(`Unrecognized historical input provenance ${row.path}`);
+  }
+}
+
+test('the recovered 589 delivery closes exactly and its selected imported sources match Git',()=>{
+  assert.throws(()=>validateCurrentAtlasDelivery({pin:historicalPin,read:historicalRead}),error=>
+    error?.code==='ERR_ASSERTION'&&error.actual==='vm-current-atlas-test-delivery-1'
+      &&error.expected==='vm-current-atlas-test-delivery-2',
+  'Schema-1 history cannot be admitted by the current schema-2 validator');
+  assert.equal(validateHistoricalAtlasDelivery({pin:historicalPin,read:historicalRead}).source,historical);
+  assert.throws(()=>validateHistoricalAtlasDelivery({pin:{...historicalPin,source:'0'.repeat(40)},read:historicalRead}),
+    {code:'ERR_ASSERTION'},
+    'Historical source substitution cannot satisfy the authenticated delivery closure');
+  assert.throws(()=>validateHistoricalAtlasDelivery({pin:historicalPin,read:path=>path==='atlas-review/manifest.json'
+    ?Buffer.concat([historicalRead(path),Buffer.from(' ')]):historicalRead(path)}),
+    {code:'ERR_ASSERTION'},
+    'Historical document mutation must fail its pinned digest');
+  assert.equal(historicalPin.source,historical);
+  const review=JSON.parse(historicalRead('atlas-review/manifest.json'));
+  assert.equal(review.revision,historical);
+  assert.equal(review.files.length,historicalPin.reviewSourceFiles);
+  for(const path of required)assert(review.files.some(row=>row.path===path),path);
+  batch(historical,[...review.files.map(row=>row.path),...historicalInputProvenance.keys()]);
+  for(const row of review.files){
+    assert.equal(sha(historicalRead(`atlas-review/${row.path}`)),row.importedSha256,`Historical Review import ${row.path}`);
+    assert.equal(sha(gitBlob(historical,row.path)),row.sourceSha256,`Historical Review source ${row.path}`);
+  }
+  for(const path of selected){
+    const row=review.files.find(item=>item.path===path);assert(row,path);
+    assert.equal(sha(historicalRead(`atlas-review/${path}`)),row.importedSha256,path);
+    assert.equal(sha(gitBlob(historical,path)),row.sourceSha256,path);
+  }
+  let historicalInputRows=0;
+  for(const region of regions){
+    const base=`public/atlas-runtime/${region}/`;
+    const manifest=JSON.parse(historicalRead(base+'manifest.json'));
+    assert.equal(manifest.sourceCommit,historical,region);
+    assert.equal(new Set(manifest.files.map(row=>row.path)).size,manifest.files.length);
+    for(const row of manifest.files.filter(file=>/\.(?:js|css|html)$/.test(file.path))){
+      const bytes=historicalRead(base+row.path);
+      assert.equal(bytes.length,row.bytes,`${region}/${row.path} length`);
+      assert.equal(sha(bytes),row.sha256,`${region}/${row.path} digest`);
+    }
+    const inputs=JSON.parse(historicalRead(base+'source-inputs.json'));
+    for(const input of inputs){
+      historicalInputRows++;
+      const reconstructed=historicalInputBytes(input),committed=gitBlob(historical,input.path);
+      assert.equal(sha(reconstructed),input.sha256,`${region} reconstructed source input ${input.path}`);
+      if(!reconstructed.equals(committed)){
+        assert(!reconstructed.includes(0)&&!committed.includes(0),input.path);
+        assert(reconstructed.includes(Buffer.from('\r\n')),input.path);
+        assert(Buffer.from(reconstructed.toString('utf8').replaceAll('\r\n','\n')).equals(committed),
+          `${region} reconstructed input normalizes to exact 589 Git ${input.path}`);
+      }
+    }
+    if(region==='head-neck')for(const path of required)
+      same(inputs.filter(row=>row.path===path),
+        [{path,sha256:sha(historicalInputBytes({path,sha256:historicalInputProvenance.get(path).declaredSha256}))}],
+        `Historical head-neck source closure ${path}`);
+  }
+  assert.equal(historicalInputRows,2797,'Every historical runtime source-input row checked');
+});
+
+test('the original 589 hand X-ray and f1 ultrasound transitions execute against immutable Atlas graphs',async()=>{
+  const old=await handHistoryApi(atlas,baseline,baseEntry),prior=await handHistoryApi(atlas,priorSource,baseEntry);
+  const api=await archivedApi(),sourceApi=await handHistoryApi(atlas,historical,entry);
+  const review=JSON.parse(historicalRead('atlas-review/manifest.json'));
+  const pins=JSON.parse(historicalRead('atlas-review/content/hand-vessel-xray-pins.json'));
+  const usPins=JSON.parse(historicalRead('atlas-review/content/intracranial-arterial-us-pins.json'));
+  const catalogPath='public/models/bodyparts3d/full-body/catalog.json';
+  const catalog=api.bodyDisplayCatalog(JSON.parse(historicalRead('atlas-review/'+catalogPath)));
+  same(catalog,sourceApi.bodyDisplayCatalog(JSON.parse(gitBlob(historical,catalogPath))),
+    'Archived imported and exact Git display catalogs');
+  same(api.contentTabs,sourceApi.contentTabs,'Archived imported and exact Git content tabs');
+  same(catalog,old.bodyDisplayCatalog(JSON.parse(gitBlob(baseline,catalogPath))),'complete historical catalog unchanged');
+  assert.equal(catalog.structures.length,1104);assert.equal(api.contentTabs.length,9);
+  assert.equal(pins.baseline,baseline);assert.equal(pins.entries.length,36);
+  assert.equal(new Set(pins.entries.map(row=>row.identity.id)).size,36);
+  assert.equal(pins.entries.filter(row=>row.identity.bundle==='hand-vessels-hand-vascular').length,22);
+  assert.equal(pins.entries.filter(row=>row.identity.bundle==='hand-vessels-hand-venous').length,14);
+  assert.equal(Object.keys(api.handVesselXrayFacts).length,19);
+  assert.equal(usPins.baseline,priorSource);assert.equal(usPins.entries.length,8);
+  same(usPins.entries.map(row=>row.identity.fmaId).sort(),
+    ['FMA50029','FMA50030','FMA50082','FMA50085','FMA50086','FMA50169','FMA50584','FMA50585']);
+  const selectedRows=new Map(pins.entries.map(row=>[row.identity.id,row]));
+  const usSelected=new Map(usPins.entries.map(row=>[row.identity.id,row]));
+  assert.equal(usSelected.size,8);
+  const hand=api.decodeRegionalTeachingSnapshot(JSON.parse(historicalRead('atlas-review/content/regional-teaching/hand.json')),'hand');
+  let changed=0,preserved=0,changedWorksheets=0,usChanges=0,usWorksheets=0,currentPreserved=0;
+  for(const structure of catalog.structures){
+    const oldWorksheet=await old.bodyReviewMaterial(structure.id);
+    const priorWorksheet=await prior.bodyReviewMaterial(structure.id);
+    const worksheet=await api.bodyReviewMaterial(structure.id);
+    same(worksheet,await sourceApi.bodyReviewMaterial(structure.id),`${structure.id} historical imported/source worksheet`);
+    assert.equal(worksheet.approval,false,`${structure.id} has no carried approval`);
+    for(const tab of api.contentTabs){
+      const before=old.bodyLesson(structure,tab),after=api.bodyLesson(structure,tab);
+      same(after,sourceApi.bodyLesson(structure,tab),`${structure.id}/${tab} historical imported/source lesson`);
+      const priorTopic=oldWorksheet.topics.find(topic=>topic.tab===tab);
+      const topic=worksheet.topics.find(topic=>topic.tab===tab);
+      const f1Lesson=prior.bodyLesson(structure,tab);
+      const f1Topic=priorWorksheet.topics.find(item=>item.tab===tab);
+      if(usSelected.has(structure.id)&&tab==='ultrasound'){
+        const row=usSelected.get(structure.id);
+        same(structure,row.identity,`${structure.id} exact ultrasound identity`);
+        same(f1Lesson,row.previous,`${structure.id} f1 ultrasound predecessor`);
+        same(before,row.previous,`${structure.id} 8d ultrasound predecessor`);
+        assert.equal(after.readiness,'draft');
+        same(after,api.intracranialArterialUsLesson(structure,tab));
+        same(topic,{tab,...after});assert.notDeepEqual(topic,f1Topic);usChanges++;
+      }else{
+        same(after,f1Lesson,`${structure.id}/${tab} lesson unchanged since f1`);
+        same(topic,f1Topic,`${structure.id}/${tab} worksheet unchanged since f1`);currentPreserved++;
+      }
+      if(selectedRows.has(structure.id)&&tab==='xray'){
+        const row=selectedRows.get(structure.id);
+        same(structure,row.identity,`${structure.id} complete source identity`);
+        same(before,row.previous,`${structure.id} exact historical pending lesson`);
+        assert.equal(before.readiness,'pending');assert.equal(after.readiness,'draft');
+        same(after,api.handVesselXrayLesson(structure,tab));
+        const fact=api.handVesselXrayFacts[row.family];assert(fact,row.family);
+        same([after.body,...after.bullets],[fact.body,...fact.bullets,
+          `Retained source: ${structure.fmaId} · ${structure.laterality} · ${structure.sources.length} recorded component${structure.sources.length===1?'':'s'}.`,
+          `Source limit: ${structure.coverageNote}`,...api.handVesselXrayLimitations]);
+        same(after.citations,fact.references);
+        assert.match(after.note,/revision-bound radiologist review/i);
+        assert.match(after.note,/No acquired image, patient-space registration, clinical approval/i);
+        assert(hand.accepts(structure));same(hand.bodyLesson(structure,tab),after);
+        same(topic,{tab,...after});assert.notDeepEqual(topic,priorTopic);changed++;
+      }else if(!(usSelected.has(structure.id)&&tab==='ultrasound')){
+        same(after,before,`${structure.id}/${tab} lesson preserved`);
+        same(topic,priorTopic,`${structure.id}/${tab} worksheet preserved`);preserved++;
+      }
+    }
+    if(selectedRows.has(structure.id))changedWorksheets++;
+    if(usSelected.has(structure.id)){
+      assert.equal(worksheet.fingerprints.source,priorWorksheet.fingerprints.source);
+      assert.equal(worksheet.fingerprints.checklist,priorWorksheet.fingerprints.checklist);
+      assert.notEqual(worksheet.fingerprints.teaching,priorWorksheet.fingerprints.teaching);usWorksheets++;
+    }else same(worksheet,priorWorksheet,`${structure.id} complete worksheet unchanged since f1`);
+  }
+  same([changed,preserved,changedWorksheets,usChanges,usWorksheets,currentPreserved],[36,9892,36,8,8,9928]);
+  for(const [path,id] of historicalTree)if(/^public\/models\/bodyparts3d\/full-body\/[^/]+\.glb$/.test(path))
+    assert.equal(id,priorTree.get(path),`${path} unchanged Git blob`);
+  assert.equal([...historicalTree.keys()].filter(path=>/^public\/models\/bodyparts3d\/full-body\/[^/]+\.glb$/.test(path)).length,86);
+  for(const bundle of pins.bundles){
+    const path=`public/models/bodyparts3d/full-body/${bundle.id}.glb`,bytes=gitBlob(historical,path);
+    assert.equal(bytes.length,bundle.bytes);assert.equal(sha(bytes),bundle.sha256);
+  }
+  const historicalCervical=JSON.parse(historicalRead('atlas-review/content/cervical-projection-xray-pins.json'));
+  assert.equal(historicalCervical.entries.length,6);
+  for(const row of historicalCervical.entries){
+    const structure=catalog.structures.find(item=>item.id===row.identity.id);assert(structure);
+    same(api.bodyLesson(structure,'xray'),old.bodyLesson(structure,'xray'));
+  }
+  const historicalArterial=JSON.parse(historicalRead('atlas-review/content/hand-arterial-ultrasound-pins.json'));
+  const historicalHandArteries=historicalArterial.entries.filter(row=>['superficialArch','deepArch','princeps'].includes(row.group));
+  assert.equal(historicalHandArteries.length,6);
+  for(const row of historicalHandArteries){
+    const structure=catalog.structures.find(item=>item.id===row.identity.id);assert(structure);
+    same(api.bodyLesson(structure,'xray'),old.bodyLesson(structure,'xray'));
+  }
+  for(const row of pins.entries){
+    const worksheet=await api.bodyReviewMaterial(row.identity.id);
+    assert(await api.parseBodyReviewResponse(worksheet,row.identity.id));
+    const tampered=structuredClone(worksheet);tampered.topics.find(topic=>topic.tab==='xray').body+=' altered';
+    assert.equal(await api.parseBodyReviewResponse(tampered,row.identity.id),null);
+    const context=await api.bodyReviewContext(row.identity.id),before=await old.bodyReviewContext(row.identity.id);
+    assert.equal(context.sourceHash,before.sourceHash);
+    assert.notEqual(context.revisions.teaching,before.revisions.teaching);
+    assert.equal(context.revisions.imaging,null);
+  }
+  const {emittedTeaching}=await import(pathToFileURL(resolve(root,'tests/atlas-emitted-teaching.ts')).href);
+  const emittedBase='public/atlas-runtime/head-neck/';
+  const emitted=emittedTeaching(emittedBase,JSON.parse(historicalRead(emittedBase+'manifest.json')).files,
+    true,path=>historicalRead(path));
+  const contains=line=>emitted.includes(line)||emitted.includes(JSON.stringify(line).slice(1,-1));
+  for(const fact of Object.values(api.handVesselXrayFacts))
+    for(const line of [fact.body,...fact.bullets,...fact.references])
+      assert(contains(line),`historical emitted fact/reference: ${line.slice(0,50)}`);
+  for(const line of api.handVesselXrayLimitations)assert(contains(line),'historical emitted limitation');
+  for(const row of pins.entries)assert(emitted.includes(row.identity.id),`historical emitted ${row.identity.fmaId}`);
+  assert.match(emitted,/revision-bound radiologist review/);
+  assert.equal(review.revision,historical);
+});
+
+test('current 7b delivery binds the complete imported graph and retains protected hand teaching',async()=>{
+  const api=await importedApi();
+  const committed=await handHistoryApi(atlas,pin.source,entry);
+  const review=json('atlas-review/manifest.json');
+  assert.equal(review.revision,pin.source);
+  assert.equal(new Set(review.files.map(row=>row.path)).size,review.files.length);
+  batch(pin.source,[...review.files.map(row=>row.path),
+    ...regions.flatMap(region=>json(`public/atlas-runtime/${region}/source-inputs.json`).map(row=>row.path))]);
+  for(const row of review.files){
+    assert.equal(row.sourceSha256,sha(gitBlob(pin.source,row.path)),`Review source ${row.path}`);
+    assert.equal(row.importedSha256,sha(readFileSync(resolve(root,'atlas-review',row.path))),`Review import ${row.path}`);
+  }
+  for(const region of regions){
+    const base=`public/atlas-runtime/${region}/`,manifest=json(base+'manifest.json');
+    assert.equal(manifest.sourceCommit,pin.source);
+    assert.equal(new Set(manifest.files.map(row=>row.path)).size,manifest.files.length);
+    for(const row of manifest.files){
+      const bytes=readFileSync(resolve(root,base,row.path));
+      assert.equal(bytes.length,row.bytes);assert.equal(sha(bytes),row.sha256);
+    }
+    const inputs=json(base+'source-inputs.json');
+    for(const input of inputs){
+      const working=readFileSync(resolve(atlas,input.path)),committedBytes=gitBlob(pin.source,input.path);
+      if(!working.equals(committedBytes)){
+        assert(!working.includes(0)&&!committedBytes.includes(0));
+        assert(working.includes(Buffer.from('\r\n')));
+        assert(Buffer.from(working.toString('utf8').replaceAll('\r\n','\n')).equals(committedBytes));
+      }
+      assert.equal(input.sha256,sha(working));
+    }
+    if(region==='head-neck')for(const path of required)
+      same(inputs.filter(row=>row.path===path),[{path,sha256:sha(readFileSync(resolve(atlas,path)))}]);
+    for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])
+      assert(manifest[flag]===false||manifest[flag]===undefined,`${region} ${flag}`);
+  }
+  const catalogPath='public/models/bodyparts3d/full-body/catalog.json';
+  const catalog=api.bodyDisplayCatalog(json('atlas-review/'+catalogPath));
+  const sourceCatalog=committed.bodyDisplayCatalog(JSON.parse(gitBlob(pin.source,catalogPath)));
+  same(catalog,sourceCatalog);assert.equal(catalog.structures.length,1104);
+  assert.equal(api.contentTabs.length,9);
+  const historicalPins=JSON.parse(historicalRead('atlas-review/content/hand-vessel-xray-pins.json'));
+  const oldApi=await archivedApi();
+  const oldCatalog=oldApi.bodyDisplayCatalog(JSON.parse(historicalRead('atlas-review/'+catalogPath)));
+  const pins=json('atlas-review/content/hand-vessel-xray-pins.json');
+  same(pins,historicalPins,'Exact protected hand teaching pins');
+  assert.equal(pins.entries.length,36);assert.equal(Object.keys(api.handVesselXrayFacts).length,19);
+  same(api.handVesselXrayFacts,committed.handVesselXrayFacts);
+  same(api.handVesselXrayLimitations,committed.handVesselXrayLimitations);
+  const hand=api.decodeRegionalTeachingSnapshot(json('atlas-review/content/regional-teaching/hand.json'),'hand');
+  let compared=0;
+  for(const structure of catalog.structures){
+    const sourceStructure=sourceCatalog.structures.find(row=>row.id===structure.id);same(structure,sourceStructure);
+    const worksheet=await api.bodyReviewMaterial(structure.id),sourceWorksheet=await committed.bodyReviewMaterial(structure.id);
+    same(worksheet,sourceWorksheet,`${structure.id} current worksheet`);
+    assert.equal(worksheet.approval,false);
+    for(const tab of api.contentTabs){
+      const lesson=api.bodyLesson(structure,tab);
+      same(lesson,committed.bodyLesson(sourceStructure,tab),`${structure.id}/${tab} current Git lesson`);
+      if(tab==='xray'&&pins.entries.some(row=>row.identity.id===structure.id)){
+        const row=pins.entries.find(item=>item.identity.id===structure.id);
+        const oldStructure=oldCatalog.structures.find(item=>item.id===structure.id);assert(oldStructure);
+        same(lesson,oldApi.bodyLesson(oldStructure,'xray'),`${structure.id} 589-to-7b inherited X-ray teaching`);
+        const oldWorksheet=await oldApi.bodyReviewMaterial(oldStructure.id);
+        same(worksheet.topics.find(topic=>topic.tab==='xray'),
+          oldWorksheet.topics.find(topic=>topic.tab==='xray'),`${structure.id} 589-to-7b Review X-ray topic`);
+        same(structure,row.identity);same(lesson,api.handVesselXrayLesson(structure,tab));
+        assert.equal(lesson.readiness,'draft');assert.match(lesson.note,/revision-bound radiologist review/i);
+        assert.match(lesson.note,/No acquired image, patient-space registration, clinical approval/i);
+        assert(hand.accepts(structure));same(hand.bodyLesson(structure,tab),lesson);
+        same(worksheet.topics.find(topic=>topic.tab===tab),{tab,...lesson});
+      }
+      compared++;
+    }
+  }
+  assert.equal(compared,9936);
+  const {emittedTeaching}=await import(pathToFileURL(resolve(root,'tests/atlas-emitted-teaching.ts')).href);
+  const base='public/atlas-runtime/head-neck/';
+  const emitted=emittedTeaching(base,json(base+'manifest.json').files,true,path=>readFileSync(resolve(root,path)));
+  const contains=line=>emitted.includes(line)||emitted.includes(JSON.stringify(line).slice(1,-1));
+  for(const fact of Object.values(api.handVesselXrayFacts))for(const line of [fact.body,...fact.bullets,...fact.references])
+    assert(contains(line),`emitted fact/reference: ${line.slice(0,50)}`);
+  for(const line of api.handVesselXrayLimitations)assert(contains(line),'emitted limitation');
+  for(const row of pins.entries)assert(emitted.includes(row.identity.id),`emitted ${row.identity.fmaId}`);
+  assert.match(emitted,/revision-bound radiologist review/);
+  const modelPaths=[...currentTree.keys()].filter(path=>/^public\/models\/bodyparts3d\/full-body\/[^/]+\.glb$/.test(path));
+  assert.equal(modelPaths.length,86);
+  for(const path of modelPaths)assert.equal(currentTree.get(path),priorTree.get(path),`${path} unchanged Git blob`);
+  for(const bundle of pins.bundles){
+    const path=`public/models/bodyparts3d/full-body/${bundle.id}.glb`,bytes=gitBlob(pin.source,path);
+    assert.equal(bytes.length,bundle.bytes);assert.equal(sha(bytes),bundle.sha256);
+    const copies=regions.filter(region=>{
+      const file=`public/atlas-runtime/${region}/models/bodyparts3d/full-body/${bundle.id}.glb`;
+      return json(`public/atlas-runtime/${region}/manifest.json`).files.some(row=>row.path===`models/bodyparts3d/full-body/${bundle.id}.glb`)
+        &&statSync(resolve(root,file)).size===bundle.bytes;
+    });
+    assert(copies.length>=1,`${bundle.id} exact model delivered`);
+  }
+  const cervical=json('atlas-review/content/cervical-projection-xray-pins.json');
+  assert.equal(cervical.entries.length,6);
+  for(const row of cervical.entries){
+    const structure=catalog.structures.find(item=>item.id===row.identity.id);assert(structure);
+    same(api.bodyLesson(structure,'xray'),committed.bodyLesson(structure,'xray'));
+  }
+  const arterial=json('atlas-review/content/hand-arterial-ultrasound-pins.json');
+  const priorHandArteries=arterial.entries.filter(row=>['superficialArch','deepArch','princeps'].includes(row.group));
+  assert.equal(priorHandArteries.length,6);
+  for(const row of priorHandArteries){
+    const structure=catalog.structures.find(item=>item.id===row.identity.id);assert(structure);
+    same(api.bodyLesson(structure,'xray'),committed.bodyLesson(structure,'xray'));
+  }
+  const rendererPath='content/body-renderer-revision.json';
+  const rendererRecord=json('atlas-review/manifest.json').files.find(item=>item.path===rendererPath);
+  assert(rendererRecord,'Imported renderer manifest record');
+  const sourceRendererBytes=gitBlob(pin.source,rendererPath);
+  const importedRendererBytes=readFileSync(resolve(root,'atlas-review',rendererPath));
+  const expectedRendererBytes=deriveBoundRenderer(sourceRendererBytes,pin.reviewIntegration);
+  assert.equal(rendererRecord.sourceSha256,sha(sourceRendererBytes));
+  assert.equal(rendererRecord.importedSha256,sha(expectedRendererBytes));
+  assert.deepEqual(importedRendererBytes,expectedRendererBytes);
+  assert.equal(sha(sourceRendererBytes),rendererRecord.sourceSha256);
+  assert.equal(sha(importedRendererBytes),rendererRecord.importedSha256);
+  const sourceRenderer=JSON.parse(sourceRendererBytes),importedRenderer=JSON.parse(importedRendererBytes);
+  assert.equal(importedRenderer.sourceRendererSha256,sourceRenderer.sourceRendererSha256??sourceRenderer.sha256);
+  assert.equal(importedRenderer.websiteIntegrationSha256,pin.reviewIntegration);
+  assert.equal(importedRenderer.sha256,JSON.parse(expectedRendererBytes).sha256);
+  assert.notEqual(importedRenderer.sha256,sourceRenderer.sha256);
+  const geometryRevision=(context,rendererHash)=>sha(JSON.stringify({
+    catalogScope:context.catalogScope,structureId:context.structureId,checklistVersion:context.checklistVersion,
+    source:context.sourceHash,renderer:rendererHash,checks:context.checklists.geometry,
+  }));
+  for(const row of pins.entries){
+    const worksheet=await api.bodyReviewMaterial(row.identity.id);
+    assert(await api.parseBodyReviewResponse(worksheet,row.identity.id));
+    const tampered=structuredClone(worksheet);tampered.topics.find(topic=>topic.tab==='xray').body+=' altered';
+    assert.equal(await api.parseBodyReviewResponse(tampered,row.identity.id),null);
+    const context=await api.bodyReviewContext(row.identity.id),sourceContext=await committed.bodyReviewContext(row.identity.id);
+    assert(context&&sourceContext,row.identity.id);
+    const {rendererHash:importedHash,revisions:importedRevisions,...importedShared}=context;
+    const {rendererHash:sourceHash,revisions:sourceRevisions,...sourceShared}=sourceContext;
+    same(importedShared,sourceShared,`${row.identity.id} current context except renderer-bound fields`);
+    const {geometry:importedGeometry,...importedOtherRevisions}=importedRevisions;
+    const {geometry:sourceGeometry,...sourceOtherRevisions}=sourceRevisions;
+    same(importedOtherRevisions,sourceOtherRevisions,`${row.identity.id} other revisions`);
+    assert.equal(importedHash,importedRenderer.sha256);
+    assert.equal(sourceHash,sourceRenderer.sha256);
+    assert.equal(importedGeometry,geometryRevision(context,importedHash));
+    assert.equal(sourceGeometry,geometryRevision(sourceContext,sourceHash));
+    assert.notEqual(importedGeometry,sourceGeometry,`${row.identity.id} distinct renderer frames`);
+    assert.equal(context.revisions.imaging,null);
+  }
+  const staleId=pins.entries[0].identity.id;
+  const staleContext=await api.bodyReviewContext(staleId),staleSource=await committed.bodyReviewContext(staleId);
+  assert(staleContext&&staleSource);
+  const staleRequest=new Request('https://review.invalid/api/atlas-review/body-review/decisions',{
+    method:'POST',headers:{'oai-authenticated-user-id':'synthetic-hand-renderer-test',
+      origin:'https://review.invalid','content-type':'application/json'},
+    body:JSON.stringify({catalogScope:staleContext.catalogScope,structureId:staleId,track:'geometry',
+      expectedVersion:0,materialHash:staleContext.materialHash,
+      revisionHash:staleSource.revisions.geometry,checklistVersion:staleContext.checklistVersion,draft:{}}),
+  });
+  const staleResponse=await api.postBodyDecision(staleRequest,undefined);
+  assert.equal(staleResponse.status,409,'Old renderer geometry revision is refused before storage');
+});

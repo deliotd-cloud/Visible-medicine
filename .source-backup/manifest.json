@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T02:04:55.482Z",
+  "at": "2026-10-22T02:26:29.334Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "76e0cab16b82c0f73abe70b02c5fdd055ffd267c",
-  "gitParent": "76e0cab16b82c0f73abe70b02c5fdd055ffd267c",
+  "parent": "12f49b71fcf785570572a3c6511b9960c7b76e82",
+  "gitParent": "12f49b71fcf785570572a3c6511b9960c7b76e82",
   "files": [
     {
       "path": "app/globals.css",
@@ -12295,9 +12295,24 @@
       "sha256": "4e8883ebb84bc70917d80d685ea6d19379683a2e1aa155a07d56535fb8e83a66"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-historic-schema-repairs-20261022.mjs",
+      "bytes": 5611,
+      "sha256": "ac94f9e97d1fb3fc1b84abb9ee970108ccb13b6558c9126eefa5059a96b6d0ad"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-runtime-admission-20261022.mjs",
       "bytes": 5114,
       "sha256": "4381d2ad2b21340d4a34665891b3494601309d76c32a0ff5af0ad0d22ac21e00"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-runtime-admission-20261022.mjs",
+      "bytes": 4067,
+      "sha256": "d3fd6961ed2ac1ad33117c67a99dc78b819260d17ad882db277aff6fce816201"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-historic-schema-repairs-20261022.mjs",
+      "bytes": 7196,
+      "sha256": "f0c4637cedbb745d59af82682a26720a0277feca650558a9aa22b37925daed71"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-runtime-admission-20261022.mjs",
@@ -12368,6 +12383,21 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-runtime-simple-consumers-batch3/prove-inverse.mjs",
       "bytes": 7015,
       "sha256": "c3466699c80770feef5173e233029a1a60183a78792dc4e34e9b21a26adeb1f8"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/hand-vessel-v2/audit-text-inputs.ps1",
+      "bytes": 6533,
+      "sha256": "60eabde77ac6748659df259a431e991af58033c4a768fbb036d321f36adddf21"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/hand-vessel-v2/prove-source-inverse.mjs",
+      "bytes": 3777,
+      "sha256": "c8472ef25112d152d9229aa4c1abfdeba9078b716cef5c9cbaedb68ce27182b0"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/historical-schema-batch4/prove-readonly.ps1",
+      "bytes": 7865,
+      "sha256": "850803661e29b9db2d79b118d1a77caa8acf2df7cbc0cd6e0e6463e4466c3d7c"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/arterial-history-preservation.test.mjs",
@@ -12450,6 +12480,16 @@
       "sha256": "8e8c076dbdbf56e4c291b1d2d8b74246394e1a569aacb50d17bde0c67152fa72"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-hand-vessel-xray.test.mjs",
+      "bytes": 35727,
+      "sha256": "f0c3a3ab07860965154ad8557066da57b343a6d7e98bff1b8436363a223988db"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-intracranial-arterial-ultrasound.test.mjs",
+      "bytes": 35041,
+      "sha256": "34c72bc49fd71233b055340cecf3b81bd423bac6291aad0d66d56d6a64374c32"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-label-keyboard.test.ts",
       "bytes": 5458,
       "sha256": "34e80eada4c9163021072db22f2a3978c231e0ffbe61e408cc1540835143e4c9"
@@ -12485,6 +12525,11 @@
       "sha256": "69065c2863e82b5a71d1d23446d00662d295840358162e95ff794442801533ae"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-orbital-check-evidence.test.mjs",
+      "bytes": 15087,
+      "sha256": "61cac60df80a619c841bb4c8db2458b0ebe57a688ef1dceff72ea505c25ac6e1"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-regional-muscle-completion-quiz.test.ts",
       "bytes": 12718,
       "sha256": "0b8b911d3c4f24dbb69e6ce5e7ffb2cee6af5ab8470550c971a010b2c4ff0f2c"
@@ -12513,6 +12558,16 @@
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/arterial-history-preservation.before-6d7.test.mjs.raw",
       "bytes": 3838,
       "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
+      "bytes": 4632,
+      "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/closed56-validator/tests/current-atlas-delivery.mjs",
+      "bytes": 4632,
+      "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/drawable-space-css-append.css.raw",
@@ -12600,6 +12655,21 @@
       "sha256": "9423dc02b29eba96bc5bd8d99e05a44652ed75e753e12bdfd9b67e6bcdab9b83"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-hand-vessel-xray.test.mjs.raw",
+      "bytes": 32537,
+      "sha256": "a91e7a1ab980fed3cf96ebe6b1de090502ee1f22c0a5496b83a71fbd457726a8"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-hand-vessel-xray.v1.mjs.raw",
+      "bytes": 34617,
+      "sha256": "53f1cb32695f89e582ccfd0c2ef1e6c75733c4196c95fdbba8368d5055958038"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-intracranial-arterial-ultrasound.test.mjs.raw",
+      "bytes": 34668,
+      "sha256": "ea5d9ff5c989be5eb5b4ddb211487fb0e594754339c214acde5da6f99974279b"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-label-keyboard.test.ts.raw",
       "bytes": 5368,
       "sha256": "3c96b803580556775d34863291a0043f233c1e663be93dcc4d65a50230269f19"
@@ -12635,6 +12705,11 @@
       "sha256": "f75121a0dccc73ef0e906db2e0dd081ea9633ef38b04308288e38b5e094bb349"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-orbital-check-evidence.test.mjs.raw",
+      "bytes": 14713,
+      "sha256": "781cbf5f36bfe0eb902703f2f0195f2c0d11feb6b83b5f27a73b36faba2d25eb"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-regional-muscle-completion-quiz.test.ts.raw",
       "bytes": 12345,
       "sha256": "2a5735e0b62b7845ba73afa18c87a9e6c673dc2959f30abc7111995fe7a9a63e"
@@ -12658,6 +12733,86 @@
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-urinary-tract-tour.test.ts.raw",
       "bytes": 8644,
       "sha256": "4c6f812f8aa70219073f79c7972b9b8881e567638e9e721e7ba7fe651eca31d2"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/historical-deep-plantar-delivery-49.mjs.raw",
+      "bytes": 1828,
+      "sha256": "343b14a4d467135892e71ed83695f0fa1b1691c1a2c92e2fe8f4bdf0c8b0e7b9"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/historical-head-manual-recovery-delivery-53.mjs.raw",
+      "bytes": 3701,
+      "sha256": "92388db10cc70f47fa87223cd7763cdec10d16995013fc0719ce23e325c9f352"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/historical-head-mask-epoch.mjs.raw",
+      "bytes": 3110,
+      "sha256": "0dcb1ec84ffaef70f64c2d785e2898894a1b01bfab90300488cf5ecfe603ed2a"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/historical-lacrimal-delivery-50.mjs.raw",
+      "bytes": 2128,
+      "sha256": "7cc5f18105c2388b4dce7b2fdf0795c70dbac1e6d5f1f166dd1ff36d84ba9201"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/historical-native-head-history-delivery-52.mjs.raw",
+      "bytes": 2680,
+      "sha256": "4099a2fcd7fea4051cfed4285c16e6db0249d199f814b54d9e71b149d6d9a531"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/historical-radial-eus-delivery-51.mjs.raw",
+      "bytes": 1985,
+      "sha256": "514853f2472efa783c9fa3a0401f5aba632675a14367b20200eac745f1d5bc08"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/orbital-mri-delivery-transition.test.mjs.raw",
+      "bytes": 8543,
+      "sha256": "37ec90efd4ae774d7df4513b0cbdf59df795d5140c2543bba7d8c677ef21ae83"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/shoulder-us-history-contract.test.mjs.raw",
+      "bytes": 8741,
+      "sha256": "e47cb8ccdde8a51e3955c1c9eb520bafb2db95d504163d7e469d829cc46dd771"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/historical-deep-plantar-delivery-49.mjs",
+      "bytes": 2126,
+      "sha256": "1b251e7f7b6f10fdf2b5ac8c10d16fe789943eb37a01a9f8f75027b0efc39de7"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/historical-head-manual-recovery-delivery-53.mjs",
+      "bytes": 3999,
+      "sha256": "8c269f7c74564b61da647dd160a174d159dfce51f35723c0a1d7f50d41464fc5"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/historical-head-mask-epoch.mjs",
+      "bytes": 3412,
+      "sha256": "0cee4bd332e3fd63c0d641123c5b8bdd8cd1815c6b79da34934390903807ecfd"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/historical-lacrimal-delivery-50.mjs",
+      "bytes": 2426,
+      "sha256": "f35a2b9bf55be9ec8e3bbe605f61eac3c9e1ac25f80b21eca7991753304eb3dd"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/historical-native-head-history-delivery-52.mjs",
+      "bytes": 2978,
+      "sha256": "78b849664d237d1cd14367d306b34b8e6c5b73241252cb0f42a63fea17cc1b7c"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/historical-radial-eus-delivery-51.mjs",
+      "bytes": 2283,
+      "sha256": "eb6f46cc03c1075cd07a81d97797be389b294e7e91732029438deb9fbae53501"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/orbital-mri-delivery-transition.test.mjs",
+      "bytes": 8923,
+      "sha256": "5fc10db664c5d5040930a607d18d130747b62f56be314980af92c00793e2ef23"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/shoulder-us-history-contract.test.mjs",
+      "bytes": 9116,
+      "sha256": "d7588b2dad7da761751c5386c5a18da2bb3020edf6ce30ef2624fa8dc94957b2"
     },
     {
       "path": "pending/colic-ultrasound-20261021/atlas/app/body-content.ts",
@@ -14116,14 +14271,18 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited previously filtered authored-source recovery plus28 unintegrated test-only repair proposals,28 complete original raw CODE preimages, one authored CSS code fixture, and explicitly listed coordination/proof scripts. No new generated Review/runtime JSON, model binaries, scans/masks/pixels, patient/private data, identifiers, owner decisions, credentials/environment, databases, raw logs/media, private reference notes, article prose/figures/tables/data or canonical Git ancestry. Selected source-only recovery, not whole/private/runnable project recovery.",
+  "scope": "Inherited filtered authored-source recovery plus39 unintegrated test/helper proposals and complete raw CODE preimages, two unchanged schema1 validator CODE witnesses, intermediate hand-vessel V1 CODE, and explicitly listed proof/coordination scripts. No new generated Review/runtime JSON, models, scans/masks/pixels, patient identifiers/private data, owner decisions, credentials/environment, databases, raw logs/media, reference notes, article prose/figures/tables/datasets or canonical Git ancestry. Selected source-only recovery, not whole/private/runnable recovery or native/browser/clinical/release acceptance.",
   "proof": {
     "selectedSourceOnly": true,
-    "proposedTestFiles": 28,
-    "wholeOriginalSourceInverses": 28,
-    "independentFamilySourceBindings": 65,
-    "threeEpochAuthoredPaths": 9,
-    "historicalDispatchSourceRetained": true,
+    "proposedTestAndHelperFiles": 39,
+    "wholeOriginalSourceInverses": 39,
+    "independentlyAuditedTextSourceRows": 2874,
+    "unprovenTextRows": 0,
+    "excludedPngInputsNotCovered": 2,
+    "historicalAndCurrentValidatorRolesSeparate": true,
+    "oldChecksumRefusalRetained": true,
+    "exactTwelveCrLfLicenceRepresentation": true,
+    "currentStrictValidatorChanged": false,
     "newNativeRootsPassing": false,
     "fullRegressionStillPending": true,
     "frozenCandidateEdited": false,

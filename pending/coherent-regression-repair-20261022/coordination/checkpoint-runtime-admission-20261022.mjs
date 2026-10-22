@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {existsSync,mkdirSync,copyFileSync,writeFileSync} from 'node:fs';
+import {read,json,sha,runGit} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/recovery/checkpoints/20261022-runtime-admission-source-verified';assert(!existsSync(root));
+const queuePath='F:/VisibleMedicine/staging/20261022-runtime-admission-consolidated/QUEUE.json';
+assert.equal(sha(read(queuePath)),'e2b417a6b33191c66d7759c6a89adadf37aab33d6f14818e1980d24efde14562');
+const queue=json(queuePath),backupPath='F:/VisibleMedicine/recovery/checkpoints/20261022-runtime-admission-source-backup/github-backup.json';
+assert.equal(sha(read(backupPath)),'aca3e6a2cc10cbe89ded67f4d3face0fc1ad10d95d9c9480c13f3dd36e41d228');
+const backup=json(backupPath);assert(backup.sourceBackupVerified&&backup.strictIntegrity);assert.equal(backup.head,'12f49b71fcf785570572a3c6511b9960c7b76e82');assert.equal(backup.restoredPaths,2824);
+assert.equal(runGit(['-C','F:/VisibleMedicine/atlas','rev-parse','HEAD']).toString().trim(),queue.source);assert.equal(runGit(['-C','F:/VisibleMedicine/atlas','status','--porcelain']).toString().trim(),'');
+assert.equal(runGit(['-C','F:/VisibleMedicine/website','rev-parse','HEAD']).toString().trim(),'b953ff3f5f1891599cb6e91cb91311d9d6006270');
+for(const row of queue.repairs){assert.equal(sha(read(row.proposal)),row.proposalSha256);assert.equal(sha(read(queue.website+'/'+row.path)),row.beforeSha256);assert.equal(sha(read('F:/VisibleMedicine/recovery/checkpoints/20261022-runtime-admission-source-backup/remote-source-restored/pending/coherent-regression-repair-20261022/website/'+row.path)),row.proposalSha256);}
+const pointer=json('CURRENT_CHECKPOINT.json'),running=pointer.activeWork.runningFullAssurance;
+assert.equal(running.root,'F:/VisibleMedicine/staging/20261022-coherent-full-regression');const observation=json(running.latestObservation);assert(observation.live&&!observation.terminal);
+mkdirSync(root,{recursive:true});copyFileSync('CURRENT_CHECKPOINT.json',root+'/pointer.before.json');copyFileSync('WORKSPACE_MAP.md',root+'/WORKSPACE_MAP.md');
+const sourceBackup={receipt:backupPath,receiptSha256:sha(read(backupPath)),head:backup.head,tree:backup.tree,restoredSelectedPaths:backup.restoredPaths,sourcePaths:backup.sourcePaths,includesAll28RepairProposalsAndCodePreimages:true,independentFetchTreeBytesRestoreVerified:true,wholeProjectOrPrivateOrRunnableBackup:false};
+const result={at:new Date().toISOString(),purpose:'Unintegrated whole-source-preserving test repair checkpoint; not a product cutover or native passing claim',installedAtlas:queue.source,installedReview:'ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59',candidateReview:queue.review,queue:queuePath,queueSha256:sha(read(queuePath)),proposedFiles:28,wholeSourceInverses:28,independentFamilySourceBindings:65,authoredPathsAtThreeEpochs:9,sourceBackup,fullRegression:{root:running.root,session:92110,live:true,terminal:false,latestObservation:running.latestObservation,latestObservationSha256:sha(read(running.latestObservation)),entries:1143,namedInputs:5632,countsAreTerminal:false,passingClaim:false},ownerPreviewUnchanged:true,ownerFormsRefreshed:false,cancelledOldTestConfirmationIsNotNewDraftSafeCutoverPermission:true,clinicalApproval:false,publicDeployment:false,privateUpload:false,desktopPacsEdited:false,next:queue.next};
+writeFileSync(root+'/checkpoint.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+Object.assign(pointer.activeWork.pendingRegressionRepairQueue,{sourceBackupIncludesThisWholeBatch:true,sourceBackup,checkpoint:root+'/checkpoint.json',checkpointSha256:sha(read(root+'/checkpoint.json'))});pointer.activeWork.regressionRepairSourceBackup=sourceBackup;pointer.activeWork.updated=result.at;writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(pointer,null,2)+'\n');
+console.log(JSON.stringify({checkpoint:root+'/checkpoint.json',sha256:sha(read(root+'/checkpoint.json')),proposedFiles:28,sourceBackupHead:backup.head,fullRegressionLive:true,canonicalOrOwnerUiChanged:false}));
