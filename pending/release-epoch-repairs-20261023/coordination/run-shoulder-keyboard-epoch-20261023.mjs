@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+import {nativeAtlasEnvironment} from './native-atlas-environment-20261022.mjs';
+const root='F:/VisibleMedicine/staging/20261023-ae84-metadata-closure',p=json(root+'/PREPARATION.json'),baseline=process.argv.includes('--baseline');
+const env=nativeAtlasEnvironment({atlas:p.atlas,revision:p.atlasRevision,tree:p.atlasTree});Object.assign(env,{NODE_OPTIONS:'--max-old-space-size=256',GOMAXPROCS:'2',RAYON_NUM_THREADS:'1'});
+const args=['--test','--test-reporter=tap','--test-concurrency=1','tests/atlas-label-keyboard.test.ts'],r=spawnSync(process.execPath,args,{cwd:p.website,env,encoding:'utf8',windowsHide:true,maxBuffer:8*1024*1024});
+const log=(r.stdout??'')+(r.stderr??''),name=baseline?'shoulder-baseline-red-v2':'shoulder-candidate-green';fs.writeFileSync(root+'/'+name+'.tap',log,{flag:'wx'});
+assert.equal(r.error,undefined);assert.equal(r.status,baseline?1:0,log);const fail=Number(log.match(/^# fail (\d+)/m)?.[1]),pass=Number(log.match(/^# pass (\d+)/m)?.[1]);assert.equal(fail,baseline?1:0);assert.equal(pass,baseline?1:2);
+if(baseline)assert(log.includes('Current shoulder display geometry follows committed Atlas source'));
+const receipt={at:new Date().toISOString(),baseline,args,exitCode:r.status,pass,fail,log:root+'/'+name+'.tap',sha256:sha(read(root+'/'+name+'.tap')),source:p.atlasRevision,sourceOnlyAndRuntimeJsCheckNotBrowserAcceptance:true,previewChanged:false};
+fs.writeFileSync(root+'/'+name+'.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(receipt));

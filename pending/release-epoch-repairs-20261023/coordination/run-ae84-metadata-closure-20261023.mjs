@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+import {nativeAtlasEnvironment} from './native-atlas-environment-20261022.mjs';
+const root='F:/VisibleMedicine/staging/20261023-ae84-metadata-closure',p=json(root+'/PREPARATION.json'),baseline=process.argv.includes('--baseline'),combined=process.argv.includes('--combined');
+const args=['--test','--test-reporter=tap','--test-concurrency=1','tests/clinical-review-desktop-layout.test.mjs','tests/historical-review-ae84-preservation.test.mjs',...(baseline?[]:['tests/ae84-metadata-closure.test.mjs']),...(combined?['tests/atlas-label-keyboard.test.ts','tests/atlas-label-keyboard-epoch.test.mjs']:[])];
+const env=nativeAtlasEnvironment({atlas:p.atlas,revision:p.atlasRevision,tree:p.atlasTree});Object.assign(env,{NODE_OPTIONS:'--max-old-space-size=256',GOMAXPROCS:'2',RAYON_NUM_THREADS:'1'});
+const r=spawnSync(process.execPath,args,{cwd:p.website,env,encoding:'utf8',windowsHide:true,maxBuffer:16*1024*1024});
+const log=(r.stdout??'')+(r.stderr??''),name=baseline?'baseline-red-v2':combined?'combined-green-v3':'candidate-green';fs.writeFileSync(root+'/'+name+'.tap',log,{flag:'wx'});
+assert.equal(r.error,undefined);assert.equal(r.status,baseline?1:0,log);
+const fail=Number(log.match(/^# fail (\d+)/m)?.[1]),pass=Number(log.match(/^# pass (\d+)/m)?.[1]);assert.equal(fail,baseline?1:0);assert(pass>0);
+if(baseline)assert(log.includes('Current delivery changed: lib/atlas-model-inventory.json'),'Expected reproduced historical metadata fallback, not a loader failure');
+const report={at:new Date().toISOString(),baseline,args,exitCode:r.status,pass,fail,log:root+'/'+name+'.tap',logSha256:sha(read(root+'/'+name+'.tap')),sourceRoot:p.atlas,source:p.atlasRevision,containedHarnessNotWholeWebsite:true,previewChanged:false};
+fs.writeFileSync(root+'/'+name+'.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(report));

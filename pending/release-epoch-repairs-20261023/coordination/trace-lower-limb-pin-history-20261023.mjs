@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha,runGit} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261023-ae84-metadata-closure',p=json(root+'/PREPARATION.json'),atlas=p.atlas;
+const file='content/body-review-display-pins.json',prior='190a63238eadcf906abe89dcbb6a67c88afe70b9',before='389bd0ca846a42c7f21055f55904bcf5df81a09f',current=p.atlasRevision;
+const git=args=>runGit(['-C',atlas,...args]),pins=c=>JSON.parse(git(['show',c+':'+file])).pins;
+const diff=(a,b)=>{const old=new Map(pins(a).map(r=>[r.structureId,r.sha256]));return pins(b).filter(r=>r.sha256!==old.get(r.structureId));};
+const rows=diff(prior,before).map(row=>({...row,introductions:git(['log','--reverse','--format=%H %s','-S',row.sha256,prior+'..'+before,'--',file]).toString().trim().split('\n').filter(Boolean)}));
+const renal=diff(before,current),combined=diff(prior,current);
+assert.deepEqual(combined.map(r=>r.structureId).sort(),[...rows,...renal].map(r=>r.structureId).sort());
+const report={at:new Date().toISOString(),prior,before,current,earlier:rows,laterRenal:renal,combined,sourceOnly:true,productEdited:false,clinicalInference:false};
+fs.writeFileSync(root+'/LOWER_LIMB_PIN_DIAGNOSIS.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(report,null,2));

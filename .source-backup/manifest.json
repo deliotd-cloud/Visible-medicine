@@ -1,74 +1,34 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T23:36:40.376Z",
+  "at": "2026-10-22T23:53:53.527Z",
   "sourceIdentity": {
-    "atlas": "9e1407629bd6f85061537c9f013fd72e4543e0da",
-    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
-    "baseline": "7978478992f54ea68e0f53c3d195c459c7b80068",
-    "renderer": {
-      "sha256": "2e3ac138d06e52a56cca96287963459d02c13c6093a06812221b286c55f9aede",
-      "priorSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
-      "dependencies": 1492,
-      "changedInputs": [
-        {
-          "path": "app/eye-layers.tsx",
-          "sha256": "505315716203dca72e075d573e47f86d9be91d376b7bfbefc8676ecb06e6341b"
-        },
-        {
-          "path": "app/ventricles.tsx",
-          "sha256": "83ade7f6b2b75ddaf7f1378aaa8f8a25c762c3d651d4da6c0fc048a5bd781fbc"
-        },
-        {
-          "path": "app/whole-body-guided-learning.tsx",
-          "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
-        },
-        {
-          "path": "package.json",
-          "sha256": "55c8269c2a017d1454ecc2b86d6ef1bf6efffac65f3d5638a65b534686af65b8"
-        }
-      ],
-      "allDependencyBytesVerified": true
-    },
-    "sourceRows": [
+    "frozenSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
+    "nativeAtlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+    "authoredCode": [
       {
-        "path": "app/eye-layers.tsx",
-        "bytes": 31813,
-        "sha256": "505315716203dca72e075d573e47f86d9be91d376b7bfbefc8676ecb06e6341b"
+        "path": "tests/historical-review-ae84.mjs",
+        "bytes": 3405,
+        "sha256": "6296daa02ffc1a1eb8dd3aaf1588ad8caf6f851122809e78bd0b8dcdf954d824"
       },
       {
-        "path": "app/ventricles.tsx",
-        "bytes": 93854,
-        "sha256": "83ade7f6b2b75ddaf7f1378aaa8f8a25c762c3d651d4da6c0fc048a5bd781fbc"
+        "path": "tests/atlas-label-keyboard.test.ts",
+        "bytes": 5616,
+        "sha256": "928e48406373c864c961cd87b1146b749a6ef403ac8de509dedc883c5b320515"
       },
       {
-        "path": "app/whole-body-guided-learning.tsx",
-        "bytes": 7214,
-        "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
+        "path": "tests/ae84-metadata-closure.test.mjs",
+        "bytes": 3763,
+        "sha256": "02d0cc1f9669995e5e2f71302a571d24a848a8e8a0a1fe9e46c4640c9a203755"
       },
       {
-        "path": "content/body-renderer-revision.json",
-        "bytes": 216695,
-        "sha256": "d2e33ed510664f3be369cc3aa322c0ac7c18f2d2832f38bcea24a3d939ab32d3"
-      },
-      {
-        "path": "package.json",
-        "bytes": 87155,
-        "sha256": "55c8269c2a017d1454ecc2b86d6ef1bf6efffac65f3d5638a65b534686af65b8"
-      },
-      {
-        "path": "scripts/test-nested-tour-library-pause.mjs",
-        "bytes": 10612,
-        "sha256": "287d4529afe727452244af1ee7deceea49ae31502d8df3941f620bd978b2c70c"
-      },
-      {
-        "path": "scripts/test-whole-body-guided-learning.mjs",
-        "bytes": 35762,
-        "sha256": "cba724101dfeb9aaa82dfa7579a001b84dd4449bdc16f50aff6d1456e86cf4a2"
+        "path": "tests/atlas-label-keyboard-epoch.test.mjs",
+        "bytes": 5006,
+        "sha256": "b49e4ec3eceee4d88d577055d70b406474cbf2f2d76b725e2c3c81c05a60427a"
       }
     ]
   },
-  "parent": "0d93b185533573e230305202c02e7cb0fe3894fa",
-  "gitParent": "0d93b185533573e230305202c02e7cb0fe3894fa",
+  "parent": "541d2fcb787753320b958f54b08b03a55d898d36",
+  "gitParent": "541d2fcb787753320b958f54b08b03a55d898d36",
   "files": [
     {
       "path": "app/globals.css",
@@ -21676,6 +21636,71 @@
       "sha256": "3d1276c34dfb6729b647386e660f7f9f03d25cd6d9b197211fb8e04cfc04853a"
     },
     {
+      "path": "pending/release-epoch-repairs-20261023/coordination/checkpoint-release-epoch-repairs-20261023.mjs",
+      "bytes": 14643,
+      "sha256": "1128a04686233042517743dced430771dee340e64517dc6a7f64d4afe5dbdd59"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/coordination/prepare-ae84-metadata-closure-20261023.mjs",
+      "bytes": 4894,
+      "sha256": "c076886353e211cdf37057cea16b02f67b7393cc817144ef5f87026eb1cc544a"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/coordination/prepare-shoulder-keyboard-epoch-20261023.mjs",
+      "bytes": 2718,
+      "sha256": "dc2cafc40feac55c7d9a24d83863f9205646673c0ed9f360329be436e27b2719"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/coordination/review-renal-tour-epoch-20261023.mjs",
+      "bytes": 7717,
+      "sha256": "836a29f7a20b9996d5d5293909f42045c299a2d5d70cbe8cbcf35cb9e1a21ed5"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/coordination/run-ae84-metadata-closure-20261023.mjs",
+      "bytes": 2027,
+      "sha256": "3f5f71be7930b887cb66eca4753d0fc15e49f0e64b51862d3743f5101345e75f"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/coordination/run-shoulder-keyboard-epoch-20261023.mjs",
+      "bytes": 1689,
+      "sha256": "50080fd9bfe0d0c1c47b3dcf42a0c7f17c0a66d2c09430b3a43ce4458fa0c7a4"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/coordination/trace-lower-limb-pin-history-20261023.mjs",
+      "bytes": 1348,
+      "sha256": "5e040a1d3cc89cda86f244ac42d0a6bfd049b6e420ab84428bc2517dbbac5c8d"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/current/tests/ae84-metadata-closure.test.mjs",
+      "bytes": 3763,
+      "sha256": "02d0cc1f9669995e5e2f71302a571d24a848a8e8a0a1fe9e46c4640c9a203755"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/current/tests/atlas-label-keyboard-epoch.test.mjs",
+      "bytes": 5006,
+      "sha256": "b49e4ec3eceee4d88d577055d70b406474cbf2f2d76b725e2c3c81c05a60427a"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/current/tests/atlas-label-keyboard.test.ts",
+      "bytes": 5616,
+      "sha256": "928e48406373c864c961cd87b1146b749a6ef403ac8de509dedc883c5b320515"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/current/tests/historical-review-ae84.mjs",
+      "bytes": 3405,
+      "sha256": "6296daa02ffc1a1eb8dd3aaf1588ad8caf6f851122809e78bd0b8dcdf954d824"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/preimage/tests/atlas-label-keyboard.test.ts",
+      "bytes": 5458,
+      "sha256": "34e80eada4c9163021072db22f2a3978c231e0ffbe61e408cc1540835143e4c9"
+    },
+    {
+      "path": "pending/release-epoch-repairs-20261023/preimage/tests/historical-review-ae84.mjs",
+      "bytes": 2962,
+      "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
+    },
+    {
       "path": "pending/renal-import-admission-20261022/assurance-website-preimages/tests/colic-adapter-inverse.test.mjs",
       "bytes": 11173,
       "sha256": "cfcaa8e253a9699aba33383c13c43d718ad17aa62534583ed9ba31208fcdd567"
@@ -24142,59 +24167,18 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source with the two new source-only test-command/history-admission changes, their exact preimages and four task utility sources. The nested-player source/test blobs already remain in the filtered parent. No canonical Git ancestry, binary/model assets, private scans/masks/decisions, generated renderer/Review metadata, raw logs, runtime or process records. Locally committed sparse Atlas candidate remains uninstalled and has no model binaries. Not full/private/runnable backup, full-release acceptance, clinical approval or spatial registration.",
+  "scope": "Inherited independently verified filtered source plus four authored test/helper files, exact two source preimages and seven main task utility sources. Three authentic historical generated metadata fixtures, raw logs, private data, snapshots, geometry, runtime binaries, clinical records and canonical ancestry stay local and are excluded. This is a source-only test proposal, not a complete/runnable Website backup, installed delivery, release pass, clinical approval or registration. The frozen full stock source and owner preview are unchanged.",
   "proof": {
-    "verificationSha256": "e01f297327cdd3df9828519f4702439a8da5cd9f0a0a115e1199b144fa9d3b41",
-    "guardProofSha256": "94b124dac4ff7e627337564c1d734399f5d51493db802884d37168c9877c644a",
-    "renderer": {
-      "sha256": "2e3ac138d06e52a56cca96287963459d02c13c6093a06812221b286c55f9aede",
-      "priorSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
-      "dependencies": 1492,
-      "changedInputs": [
-        {
-          "path": "app/eye-layers.tsx",
-          "sha256": "505315716203dca72e075d573e47f86d9be91d376b7bfbefc8676ecb06e6341b"
-        },
-        {
-          "path": "app/ventricles.tsx",
-          "sha256": "83ade7f6b2b75ddaf7f1378aaa8f8a25c762c3d651d4da6c0fc048a5bd781fbc"
-        },
-        {
-          "path": "app/whole-body-guided-learning.tsx",
-          "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
-        },
-        {
-          "path": "package.json",
-          "sha256": "55c8269c2a017d1454ecc2b86d6ef1bf6efffac65f3d5638a65b534686af65b8"
-        }
-      ],
-      "allDependencyBytesVerified": true
-    },
-    "historicalProof": {
-      "originalWholeBodyTestInverse": true,
-      "onlyTwoSignalPropsPermitted": true,
-      "foreignCodeOrSubstitutionRefused": true,
-      "oldTheoremExecuted": true,
-      "currentRegressionSeparatelyExecuted": true
-    },
-    "actualScopedReview": {
-      "passed": true,
-      "root": 1104,
-      "nested": 108,
-      "specimen": 356,
-      "geometryDisplayRevisionsChange": true,
-      "teachingAndSourcePreserved": true,
-      "imagingStillBlocked": true,
-      "privateDecisionsReadOrMigrated": false
-    },
-    "nativePassing": 83,
-    "focusedCommandRuns": 8,
-    "matchingRuntimeReviewWebsitePending": true,
-    "fullTypesBuildBrowserPending": true,
+    "mainReviewSha256": "33f6c6338f11248bad09880019085c0ab30a7685d403e3452d6e7cfe8baa584e",
+    "focusedNative": 19,
+    "originalWholeSourceInversesPreserved": true,
+    "historicalAndCurrentDeliverySeparated": true,
+    "forgedCurrentGeometryRefused": true,
+    "renalAndPinDiagnosesNotImplemented": true,
     "previewChanged": false,
     "installed": false,
-    "clinicalApproval": false,
-    "wholeSuitePassing": false
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
