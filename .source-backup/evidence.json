@@ -1,24 +1,19 @@
 {
-  "focusedNative": {
-    "tests": 51,
-    "pass": 51,
+  "native": {
+    "tests": 86,
+    "pass": 86,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "priorRemainingRootRun": {
-    "tests": 65,
-    "pass": 40,
-    "fail": 25,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "priorRemainingRunStillFailed": true,
-  "productAndBindingsUnchanged": true,
-  "typesAndBuildNotRerun": true,
-  "realBrowserNotRerun": true,
+  "fullTypesPassed": true,
+  "initial85of86WitnessFailureRetained": true,
+  "subsequentMissingLocalAtlasAliasTypesFailureRetained": true,
+  "all6400NamedInputsStable": true,
+  "allProductAndBindingsUnchanged": true,
+  "initialSourceEpochsExactlyReplayed": true,
+  "newBuildOrBrowserAcceptance": false,
   "canonicalInstalled": false,
   "ownerPreviewChanged": false,
   "wholeSuitePassing": false,

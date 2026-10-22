@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T18:20:55.187Z",
+  "at": "2026-10-22T18:45:09.440Z",
   "sourceIdentity": {
     "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
     "tree": "db21ed3dee259c390878450b3495468996a3af85",
     "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc",
-    "sourceReceiptSha256": "4148e2f10b083c9fdeec9d28ead4d13effd67e8f3499f2fdee43b9e0d1311eb7"
+    "sourceReceiptSha256": "d769eb7da674dd534f3e220a1b32b1a176c321ce39602d84ae9862a942c0989a"
   },
-  "parent": "d40bbd34f16a39796b347eded7fd3faedaf2f627",
-  "gitParent": "d40bbd34f16a39796b347eded7fd3faedaf2f627",
+  "parent": "04468344ed86f26ba98167b3dff10490a6aab9e2",
+  "gitParent": "04468344ed86f26ba98167b3dff10490a6aab9e2",
   "files": [
     {
       "path": "app/globals.css",
@@ -16491,6 +16491,241 @@
       "sha256": "1da8567fdace98f737a63de69818b69202b8963c87851134dadd6b3c84cf8482"
     },
     {
+      "path": "pending/historical-admission-assurance-20261022/coordination/checkpoint-historical-admission-assurance-20261022.mjs",
+      "bytes": 12981,
+      "sha256": "cabe4fb0d9d80093ec4f7582c2bac14047f62ced1e06444112516c61e9cdbf0a"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/coordination/compose-historical-admission-assurance-20261022.mjs",
+      "bytes": 10401,
+      "sha256": "4c4d8dab6c4b13147e05703139a9789d7ba3b4bba9ad4b6674d484dd1b218977"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/coordination/finalize-corpus-cranio-assurance-20261022.mjs",
+      "bytes": 2920,
+      "sha256": "d112bd2a5a34d5152edd59ea1cf4ef4c1c3ff41d3ae202aa3182884ea8d09cb7"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/coordination/prepare-historical-admission-assurance-20261022.mjs",
+      "bytes": 3289,
+      "sha256": "bce61856821aea8390becbd5f6e9d39831e8c4f2198171c90ae6bb75b61827d9"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/coordination/prepare-tongue-neck-proposal-20261022.mjs",
+      "bytes": 6956,
+      "sha256": "06f2af338f4a976967b670b30ef1065474cef35290a43650a72145ee2b111ee3"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/coordination/record-historical-admission-progress-20261022.mjs",
+      "bytes": 2302,
+      "sha256": "e00c37dd501b25a798dc0f99c314ba6df7762112afc600e03e173abafbc0aa43"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/coordination/repair-historical-atlas-alias-20261022.mjs",
+      "bytes": 2118,
+      "sha256": "c4aa80d6d94df7de0ca98a7228885b8938b192c05e909f1867ed1c0dea9140b5"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/coordination/verify-historical-admission-assurance-20261022.mjs",
+      "bytes": 5080,
+      "sha256": "2e4230900b64da9f3613433a309c62d6a36e5a55fe7b44626bd71ea480390410"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/coordination/verify-historical-proof-fix-20261022.mjs",
+      "bytes": 2218,
+      "sha256": "c432938901025a6cce3cafd1a67edde80332eaf94cbc0377c57de0efe5b1992a"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/diagnostic-source/compose-before-order-fix.mjs",
+      "bytes": 10309,
+      "sha256": "60f1f456a31fa0ff95a8755b754b4f56f81c09ec939a04d7b54747d43971b13e"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/diagnostic-source/prepare-before-atlas-junction.mjs",
+      "bytes": 3232,
+      "sha256": "4f8c20bb93ac55af51c37be7f1ba12f0db04f929b7782fc11f5576ab545201bd"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/diagnostic-source/preservation-before-order-fix.mjs",
+      "bytes": 5236,
+      "sha256": "b8509929952366a99fc16059a2d83fe1185bf60d70e9740e99ba0ecc9511d8e8"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/diagnostic-source/verify-before-combined-v2.mjs",
+      "bytes": 4821,
+      "sha256": "3e9601ace5ed500b0edb4257a261cd777a6cf54316b6a83f8397b05a66ea3c8c"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/diagnostic-source/verify-before-combined-v3.mjs",
+      "bytes": 4880,
+      "sha256": "89bbb03b10b8422c543bbd959839b18dbccb4ad71b366e3b661880ec51118f4f"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 13653,
+      "sha256": "522d21d973f0e54edcf4936e2f544d6d032a7147267edb301d389edab33bf388"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 7586,
+      "sha256": "26020fdaef83411a5acfa972ea5811fa3bb794c873784ed456ddd89a9f8088ab"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/four-live-before/native-focus-review-binding.test.mjs.raw",
+      "bytes": 3923,
+      "sha256": "d16ab332cf960809365ed3378abd5ff9b84ba72472f2b24a691508f2cc9a9e23"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/four-live-before/posterior-fossa-coverage.test.mjs.raw",
+      "bytes": 6407,
+      "sha256": "ccc80bccd2b2f0f456ec71951e2c92017766fc8a19479bf5318bdda9441eab20"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/four-live-before/salpingopharyngeus-integration-register.test.mjs.raw",
+      "bytes": 1020,
+      "sha256": "70cc28e5445300730d5d98845024b4eb6f0970572bb0206809d79000c3a78d3e"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/four-live-before/studio-lineage-integration.test.mjs.raw",
+      "bytes": 8140,
+      "sha256": "bbee89861f319613982193bf101cff3838bba9d2a5ba2f5cf230064eaea6993e"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/tongue-palate-before-neck-history.ts.raw",
+      "bytes": 16975,
+      "sha256": "f6e9e4fb0db975efea146e31c873fd0ece922156e8ae49906833a03bbfd30b0a"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-before/drawable-epoch-current-admission.test.mjs.raw",
+      "bytes": 8803,
+      "sha256": "269e7af836b93760fcf460bf39ce1be296a96c1549452b04076a38a52d24c9ce"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-before/expanded-review-delivery-admission.test.mjs.raw",
+      "bytes": 3933,
+      "sha256": "e4ee6d1670ec14b6f5f7b722ae4b9958225ee1886aff82513e4e1a74301b8872"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/atlas-review/app/body-explorer.tsx.raw",
+      "bytes": 126723,
+      "sha256": "df0ed6c21b83568791362a255ffc8fc0fc8651292c1a5146f74a24a8d5ab78fb"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/atlas-review/app/eye-layers.tsx.raw",
+      "bytes": 31400,
+      "sha256": "f65c734161648f205e7e8c53df9756b90293a795a764a71a8728fc0d0abb7c62"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/atlas-review/app/review/review-dashboard.tsx.raw",
+      "bytes": 46067,
+      "sha256": "3e9b41bd1afee156617143718553627c9ff973443ebe4546af4d98830b53098e"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/atlas-review/app/ventricles.tsx.raw",
+      "bytes": 93645,
+      "sha256": "60d66fc98d0699d02e026a01fb415a02b85b2b0c22e6441587c0cfe7941de322"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/atlas-review/lib/head-selection-channel.ts.raw",
+      "bytes": 5433,
+      "sha256": "b401c5058d9bd09d5b1de1ee4b753dea232d908ad017350233f102a93b897e5d"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/atlas-review/lib/regional-tours.ts.raw",
+      "bytes": 44624,
+      "sha256": "88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/atlas-review/lib/renal-tour.ts.raw",
+      "bytes": 2845,
+      "sha256": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/components/HeadAtlasComparisonNavigation.tsx.raw",
+      "bytes": 8683,
+      "sha256": "05d32d7e3fc96e56af9bab7c76ed622d2e6063cd8378ecc4d1f50d0a6f9432d4"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/components/HeadAtlasGuidedModel.tsx.raw",
+      "bytes": 12483,
+      "sha256": "d476ced9b87984b150017ceed54c45dfe5236aa48d2f97bce053e0f59b07a0f0"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/components/HeadAtlasInlineComparison.tsx.raw",
+      "bytes": 14110,
+      "sha256": "c64692ad3594129be18cb739063536d6bfa2bcbac72a91fdb4970c5df1e1b105"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/fixtures/zero-registration-fa1-binding/components/HeadAtlasLinkedModel.tsx.raw",
+      "bytes": 7004,
+      "sha256": "2651c0125b71b8bf9e026f05564bda0ff9303f5f6fd689ef9ad5025d3e5138c6"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/historical-admission-role-preservation.test.mjs",
+      "bytes": 5328,
+      "sha256": "6400090f7a0cb852c8adb31556d8857cfe35864e8d64eab618d61b9d7ee2b056"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3923,
+      "sha256": "cafe5272f1f0ba724f14486e4221786569e7655ccd846a1d0b5a5d8be9ba3746"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/posterior-fossa-coverage.test.mjs",
+      "bytes": 6407,
+      "sha256": "c84ece35d9ae5a2761741368d44382b09c808fa9d26db25dc9a2b005040a7f35"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/salpingopharyngeus-integration-register.test.mjs",
+      "bytes": 1020,
+      "sha256": "de145f116bbf8feb0c125458fb3f78aee565504ac14ce4c13f01606df38df13a"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/studio-lineage-integration.test.mjs",
+      "bytes": 8140,
+      "sha256": "e502e68931ed135efbeea055e58176d00e9e9febf783741649108b6376dcd69f"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/tongue-palate-delivery.test.ts",
+      "bytes": 17600,
+      "sha256": "84bee4b383a741a678c66307479d33b738ce95a4f2bfbe30f728477a08e92984"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/tongue-palate-neck-history.mjs",
+      "bytes": 2441,
+      "sha256": "5bfa009888a2ef614b3a4de74553681639a6709a45bcc45c8debe2770970365d"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/tongue-palate-neck-history.test.mjs",
+      "bytes": 3512,
+      "sha256": "40e6bffda2ee50701a3a342f3e2d2e0fb4e04ee3c0ed5cf70b764e004e6dce33"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/website/tests/zero-registration-current-roles-inverse.mjs",
+      "bytes": 5501,
+      "sha256": "68b706c744c31be25695b095b2c92171188c6415c2a5df3ce3f13dc83ecb5c4f"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/worker-four/VERIFY.ps1",
+      "bytes": 4188,
+      "sha256": "26ef518732ef60f8e79996088ad6415d09eafb87d3e912fe694244ffb93ca14e"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/worker-zero/PROVE_SOURCE.mjs",
+      "bytes": 6346,
+      "sha256": "bd3862a0ee0f720dc1342b7a14b2022121548706ecce018e9e1501f7972766a7"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/worker-zero/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 13639,
+      "sha256": "a824fc3cdb9b2cbfabcffe2efb8af1c764e162703503b562526d1458868b885a"
+    },
+    {
+      "path": "pending/historical-admission-assurance-20261022/worker-zero/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 7586,
+      "sha256": "26020fdaef83411a5acfa972ea5811fa3bb794c873784ed456ddd89a9f8088ab"
+    },
+    {
       "path": "pending/imaging-presentation-20261022/coordination/bind-imaging-presentation-20261022.mjs",
       "bytes": 5162,
       "sha256": "5f0e4badbb1314cb0138d0a5a812b13e796328d3586e2b33ccc9c9b638acc078"
@@ -22622,28 +22857,23 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered practice/checklist source plus two bounded release-test current-source repairs, exact original test witnesses, whole-source preservation/mutation test and coordinator scripts. All product/runtime/binding bytes unchanged. Actual tracking/evidence/generated JSON, binary runtime, private records/DB/env/decisions/references, held assets, scans/models/masks, fonts and logs remain local. Source-only, not whole/private/runnable recovery, installation or deployment.",
+  "scope": "Inherited filtered source plus seven current/historical regression roots, unchanged tongue/palate quizzes verified against later neck X-ray teaching, exact original source and mutation witnesses, and coordinator scripts. No product/anatomy/runtime/binding changes. Actual generated JSON, pin/tracking/Review evidence, compiled runtimes/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries/logs stay local. Historical code-only witnesses are raw text, not images, private data or new product. Source-only, not whole/private/runnable recovery, installation or public deployment.",
   "proof": {
-    "focusedNative": {
-      "tests": 51,
-      "pass": 51,
+    "native": {
+      "tests": 86,
+      "pass": 86,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "priorRemainingRootRun": {
-      "tests": 65,
-      "pass": 40,
-      "fail": 25,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "priorRemainingRunStillFailed": true,
-    "productAndBindingsUnchanged": true,
-    "typesAndBuildNotRerun": true,
-    "realBrowserNotRerun": true,
+    "fullTypesPassed": true,
+    "initial85of86WitnessFailureRetained": true,
+    "subsequentMissingLocalAtlasAliasTypesFailureRetained": true,
+    "all6400NamedInputsStable": true,
+    "allProductAndBindingsUnchanged": true,
+    "initialSourceEpochsExactlyReplayed": true,
+    "newBuildOrBrowserAcceptance": false,
     "canonicalInstalled": false,
     "ownerPreviewChanged": false,
     "wholeSuitePassing": false,
