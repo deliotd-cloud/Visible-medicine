@@ -1,0 +1,30 @@
+// Bounded source/API audit only: never opens scan pixels or rewrites accepted masks.
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+import {execFileSync} from 'node:child_process';
+const atlas='F:/VisibleMedicine/atlas',website='F:/VisibleMedicine/staging/20261022-review-recovery-website-candidate/website';
+const root='F:/VisibleMedicine/staging/20261022-cerebellar-link-source-audit';assert(!existsSync(root));
+const read=path=>readFileSync(path),json=path=>JSON.parse(read(path)),sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const git=(...args)=>execFileSync('git',['-C',atlas,...args],{encoding:'utf8',windowsHide:true}).trim();
+assert.equal(git('rev-parse','HEAD'),'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');assert.equal(git('status','--porcelain'),'');
+const catalogPath=atlas+'/public/models/bodyparts3d/brainstem/catalog.json',catalog=json(catalogPath);
+const selected=catalog.structures.filter(row=>row.fmaId==='FMA67944');assert.equal(selected.length,1);
+const compound=selected[0];assert.equal(compound.id,'vm:anatomy:body:head-neck:midline:organ:cerebellum');
+assert.equal(compound.laterality,'midline');assert.equal(compound.nodeName,'FMA67944');
+assert.equal(compound.validation.status,'unvalidated');assert.equal(compound.validation.anatomicalReview,false);
+assert.deepEqual(compound.sources,[{file:'FJ1781',sha256:'6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed'},{file:'FJ1830',sha256:'d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9'}]);
+const ids=['cerebellum-left-hemisphere','cerebellum-right-hemisphere','cerebellum-vermis'];
+const api=await import(pathToFileURL(website+'/lib/head-image-only-links.ts').href);
+const packet=api.headImageOnlyComparisonPacket();assert.equal(packet.bindings.length,3);
+assert.equal(packet.clinicalApproval,false);assert.equal(packet.patientRegistration,false);
+const links=ids.map(id=>api.headImageConceptById(id));
+for(const link of links){assert(link);assert.equal(link.atlasHref,undefined);assert(link.ctHref&&link.mriHref);assert.equal(link.headRevision,packet.headRevision);}
+const exporterPath=atlas+'/scripts/export-brainstem.mjs',exporter=read(exporterPath).toString();
+assert(exporter.includes("['FMA67944', 'cerebellum', ['FJ1781', 'FJ1830']]"));
+assert(exporter.includes('Require complete official compound, not one hemisphere'));
+const paths=[catalogPath,exporterPath,atlas+'/lib/brainstem.ts',website+'/lib/head-image-only-links.ts',website+'/lib/head-atlas-links.ts',website+'/lib/head-cerebellar-learning.ts'];
+const receipt={at:new Date().toISOString(),source:git('rev-parse','HEAD'),website,headRevision:packet.headRevision,files:paths.map(path=>({path,bytes:read(path).length,sha256:sha(read(path))})),compound:{id:compound.id,fmaId:compound.fmaId,nodeName:compound.nodeName,laterality:compound.laterality,sources:compound.sources,license:compound.provenance.license,validation:compound.validation},imageConcepts:links.map(link=>({id:link.conceptId,ct:!!link.ctHref,mri:!!link.mriHref,exact3DTarget:false})),decision:'Keep these three existing CT/MRI concepts image-only. The currently exposed 3D selection is a two-source unvalidated compound, not separately contracted left/right hemispheres or vermis. Do not label a source file or coordinate-clipped piece as a validated hemisphere, or add a false exact anatomical/spatial link. This is a bounded current-contract finding, not a claim that every upstream dataset lacks suitable parts.',next:'An exact link needs independently supported part identity, source-bound selectable geometry, provenance/side checks and its own revision-bound clinical review. Existing whole-cerebellum 3D context is not an exact match or patient-space registration.',scansOrMasksOpened:false,sourceGeometryChanged:false,websiteOrAtlasEdited:false,clinicalApproval:false,patientRegistration:false,publicDeployment:false};
+mkdirSync(root);writeFileSync(root+'/RESULT.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({receipt:root+'/RESULT.json',sha256:sha(read(root+'/RESULT.json')),compoundId:compound.id,ctMriConcepts:3,exact3DLinksAdded:0,sourceUnchanged:git('status','--porcelain')===''}));

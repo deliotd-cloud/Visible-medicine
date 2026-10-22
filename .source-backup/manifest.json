@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T01:11:06.436Z",
+  "at": "2026-10-22T01:31:50.944Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "568689610c1b811b40d6822f4d748b8e2189aaa4",
-  "gitParent": "568689610c1b811b40d6822f4d748b8e2189aaa4",
+  "parent": "684b769ac981d7c95baabc3afbe717f55bde1c56",
+  "gitParent": "684b769ac981d7c95baabc3afbe717f55bde1c56",
   "files": [
     {
       "path": "app/globals.css",
@@ -12285,6 +12285,41 @@
       "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/audit-cerebellar-link-source-20261022.mjs",
+      "bytes": 4329,
+      "sha256": "59808f3dd347268c167a951c009e4a92a1442c4dec66c139184cc2ba52695490"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-coherent-regression-proposal-20261022.mjs",
+      "bytes": 3940,
+      "sha256": "4e8883ebb84bc70917d80d685ea6d19379683a2e1aa155a07d56535fb8e83a66"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/observe-coherent-full-regression-20261022.mjs",
+      "bytes": 4914,
+      "sha256": "195096239e32a0c05266f8b213e5119a7f8a1b915d07d805f506a64d51605f03"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/run-coherent-full-regression-20261022.mjs",
+      "bytes": 6617,
+      "sha256": "637bc06c7a4a8d772c89dd12dbfeacc0a63c89ba6d3f8b9e57ea12fa4660a513"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/verify-arterial-history-proposal-20261022.mjs",
+      "bytes": 5340,
+      "sha256": "fc3036bd46db11e75ba88806e876a36a09fc5e1f5cef3284baa2c62f3bf0c30f"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/arterial-history-preservation.test.mjs",
+      "bytes": 6059,
+      "sha256": "60a15827ff4e534d7ce5c534ad14a67dad64dc6d152dea90ae136a7ca6ad92a6"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/arterial-history-preservation.before-6d7.test.mjs.raw",
+      "bytes": 3838,
+      "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596"
+    },
+    {
       "path": "pending/colic-ultrasound-20261021/atlas/app/body-content.ts",
       "bytes": 82791,
       "sha256": "26320b064b5648f4f5b6ca8c123806a02dedefb761b894935707559d530882fc"
@@ -13741,33 +13776,22 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered authored source plus two explicit generic loading UI/test files and five authored coordination scripts. No new generated JSON, Review records, runtime, scan pixels/masks, models, private references/notes/decisions, identifiers, credentials/environment, databases, raw logs/media or canonical Git ancestry. Selected authored-source recovery only: not a whole/private/runnable backup. Candidate is not installed or deployed.",
+  "scope": "Inherited filtered authored source plus one unintegrated inverse-only test proposal, its complete original raw CODE preimage, and five authored coordination scripts. No new generated JSON/Review/runtime, masks/scans, models, article text/figures/tables/datasets/evidence notes, patient/private data, decisions, credentials/environment, databases, raw logs/media or canonical Git ancestry. Selected authored-source recovery only, not whole/private/runnable recovery or clinical/release completion.",
   "proof": {
     "selectedSourceOnly": true,
-    "newFiles": 2,
-    "fullTypes": true,
-    "productionWebsiteBuild": true,
-    "stockReviewVerified": true,
-    "newFocusedTests": {
-      "tests": 4,
-      "pass": 4,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "realFrameworkRouteDiscovery": true,
-    "base5809SourceUnchanged": true,
-    "sourcePaths": 5811,
-    "manualNewTabRecoveryOnly": true,
-    "noAutomaticReloadOrDraftClearing": true,
-    "ownerPreviewChanged": false,
+    "testProposalInstalled": false,
+    "exactWholeOriginalHarnessInverse": true,
+    "pureInverseCases": 4,
+    "expectedNegativeRefusals": 3,
+    "nativeArterialSemanticRootRerun": false,
+    "frozenFullRunSourceEdited": false,
+    "completeStockRegressionTerminal": false,
+    "completeStockRegressionPassing": false,
     "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "patientRegistration": false,
     "publicDeployment": false,
     "wholeProjectBackup": false,
-    "privateDataBackup": false,
-    "fullStockRegressionPassing": false
+    "privateDataBackup": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
