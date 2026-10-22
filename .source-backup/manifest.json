@@ -1,14 +1,16 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T14:42:52.149Z",
+  "at": "2026-10-22T15:26:33.754Z",
   "sourceIdentity": {
     "atlas": "4f20ae0b62b9e0dab5936b430575a983dcdd934e",
     "atlasTree": "64f085e1f8b63b5f17daf8b107efcbe40bb7596c",
-    "websiteSourceReceiptSha256": "be8b13e91cb8dfeb8b420b91710437248c18ebe9232e6859a6fe54778b6a8079",
-    "review": "811baffeb0cfa83626ea4f00383d0ed04fe6980716415d2f919151078cdad9b5"
+    "review": "9aead9088895249b19b6a28f75fe824388b951055d6a62263ca14e6ed4e0eb5c",
+    "websiteSourceReceiptSha256": "274b98b13bdbe1e092b33d0671d2462010045242ce40149fefb1405d677366b5",
+    "separateAssuranceAtlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
+    "assuranceSourceReceiptSha256": "fcccc077d15911a94d395832be0cfe28e8eb15e2b0d37e80f01463645e0c89f1"
   },
-  "parent": "1614f7a84aaee1ffc45c95300680ea63809b609c",
-  "gitParent": "1614f7a84aaee1ffc45c95300680ea63809b609c",
+  "parent": "ed7d5931765a812706e93a0360bae48d2942bc3a",
+  "gitParent": "ed7d5931765a812706e93a0360bae48d2942bc3a",
   "files": [
     {
       "path": "app/globals.css",
@@ -19356,6 +19358,356 @@
       "sha256": "b70d0b2e8409859d37c7d216ac91bf890a1a5dff645520f0ef4be120a4c274ef"
     },
     {
+      "path": "pending/renal-import-admission-20261022/assurance-website-preimages/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 11173,
+      "sha256": "cfcaa8e253a9699aba33383c13c43d718ad17aa62534583ed9ba31208fcdd567"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website-preimages/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 8803,
+      "sha256": "269e7af836b93760fcf460bf39ce1be296a96c1549452b04076a38a52d24c9ce"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website-preimages/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 3933,
+      "sha256": "e4ee6d1670ec14b6f5f7b722ae4b9958225ee1886aff82513e4e1a74301b8872"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website-preimages/tests/head-tools-wider-consumer-source-preservation.test.mjs",
+      "bytes": 1115,
+      "sha256": "018031d1af55b8b967a37bceddfe028d9e39e8fcc635f801a9c411b46b4c2d35"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website/tests/admission-source-roles.mjs",
+      "bytes": 7137,
+      "sha256": "a5d5dc5f23b1ac9be96977d8ac4d2cb4c34bc59e9fcd253473c1e1b8ccf47e5b"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 12078,
+      "sha256": "ab11c367369ef7dc50a1bbe8dc8b9d8a21cf4bdb0d0e50aba64dfcf228a10874"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website/tests/current-pin-epoch-inverse.mjs",
+      "bytes": 2753,
+      "sha256": "6a4a5a3c4063db4668355caf0a1399c880ce8ef9644e621953af8f72d9c0422a"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 13222,
+      "sha256": "e4fac800ddb19994e4641e6617978ffc4a2a7452ae7ec5343d56b35e8c46d1fa"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 8435,
+      "sha256": "f2ba18059ddf07fd044a281b1dcaced48ff22830adb0c51d9d17ca6687adf1da"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/assurance-website/tests/head-tools-wider-consumer-source-preservation.test.mjs",
+      "bytes": 1786,
+      "sha256": "683a959e1da17d2db1b0c14fd88e80a9a549d8e52ed6d6f13fd688b318fb3efe"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/admit-renal-gitbytes-delivery-20261022.mjs",
+      "bytes": 3783,
+      "sha256": "4188fde2f1165eb99d0a159d5e64daf2980248166b29e4c4b11eb3d28eb36b9a"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/checkpoint-renal-import-admission-20261022.mjs",
+      "bytes": 15221,
+      "sha256": "afffa7c22e41b927b43b1ee62f42b1c18a18eeb9241d053c369c8f8b4f403459"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/finalize-renal-gitbytes-website-20261022.mjs",
+      "bytes": 6580,
+      "sha256": "8cb1bbad10fb3ccef69119aeb72431c63b508d5ccdca5245c81f2575e2615672"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/import-renal-gitbytes-website-20261022.mjs",
+      "bytes": 9983,
+      "sha256": "fe7e9c972b59989345666b6cca6173366cd67b582d10976269f20a684e02796e"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/import-renal-tour-website-20261022.mjs",
+      "bytes": 9979,
+      "sha256": "d56d102f0ff1ca61751560d2dc833cc839a40f5e5cb1aab7ebdefb576fa079c5"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/prepare-admission-dependent-source-20261022.mjs",
+      "bytes": 3321,
+      "sha256": "31369421f668a117778421377af22b8e631b6236a072342e1f010a4bfba63885"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/prepare-admission-importer-source-20261022.mjs",
+      "bytes": 3479,
+      "sha256": "100b5e47c8a78f5dd0251b9be1d67cef611f4b96d381896f8bd2e8c3b1617c07"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/prepare-renal-canonical-checkout-20261022.mjs",
+      "bytes": 4399,
+      "sha256": "030db7eea3185dc61818df0b474592bdb5e0e62318e5faa2a7930d52ad965475"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/prepare-renal-gitbytes-website-20261022.mjs",
+      "bytes": 3870,
+      "sha256": "b1c3c4aa2349201a46a9f6a44198dc47101e8ec36f38ec1009bcfe61eaa47172"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/prepare-renal-tour-website-20261022.mjs",
+      "bytes": 3822,
+      "sha256": "e1a438ab06047e6f829f95b5b974d51161776dd57815c5c4d8f53f9f43347265"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/prepare-zero-registration-admission-20261022.mjs",
+      "bytes": 2941,
+      "sha256": "190cbbebc8c1dac219e868d43e41f8ad99ce79760c1f6bfa69545121efafeb5e"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/prove-renal-type-decoding-20261022.mjs",
+      "bytes": 3192,
+      "sha256": "8f825b33620438cbba06ac4ec836688429d79c916bafa77486cec5d7ebf5e065"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/renal-delivery-transition-20261022.test.mjs",
+      "bytes": 2644,
+      "sha256": "a58ec64c76b712b100b861e93a8a95ffd717fdfb798a31cec7fd8eed3dc392ba"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/renal-tour-website-integration-20261022.test.mjs",
+      "bytes": 8931,
+      "sha256": "e0975da4f3c8673f01bdc42ece2e127f9676fd791302ee5aee570d1e79a9db01"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/verify-build-renal-canonical-20261022.mjs",
+      "bytes": 5478,
+      "sha256": "0fca331a5e745356bb4e7a02187442324a377ccc40be220d97ec2809e0d18de7"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/verify-renal-gitbytes-website-20261022.mjs",
+      "bytes": 8641,
+      "sha256": "27ef884431776023d903463be4a6504c4767ffe8732769efe7c22662b40f2002"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/coordination/verify-renal-typefix-20261022.mjs",
+      "bytes": 5176,
+      "sha256": "86f75d409aaab3fbd903a2ec83f95bf9271e9004619d228d0580ec43b2855a9a"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/correction-preimages/verification-v2/median.before-typed-decoding.ts",
+      "bytes": 27344,
+      "sha256": "2849d62d65fe498c4378b9705abf8934138dfe5274283c715550182721ed74f4"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/correction-preimages/verification-v2/teaching-helper.before-typed-decoding.mjs",
+      "bytes": 11009,
+      "sha256": "c458586d1a840956920fe60d0f093c620a3a68b1cba7ec21f81cd1a69ed7d1c7"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/correction-preimages/verification/renal-transition-test.before-unique-target.mjs",
+      "bytes": 2528,
+      "sha256": "4fc9847b122a19e848babf70ee1a9ea7d34e34882fd781b7c79f4abf3e8f1248"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/atlas-review/lib/regional-tours.ts",
+      "bytes": 44624,
+      "sha256": "88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/atlas-review/lib/renal-tour.ts",
+      "bytes": 2845,
+      "sha256": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "3ef5a2a6db403c6fb068f6bd488e2596b96e1bbd77840024f4a7783d0d19aead"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "26773f6fe4a6f96e9c7337821cd728cb4be0eb66c0904a1bbec81133cc616ef6"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "a4a5fdd5a83084f1fbd2c37aae38d7ac7a3439bf817053fcc88dc043be8dcfbf"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "6ae94de8a7f621085e2f092f32e1f8f0e8c23495d216846589e28ef2778ccf74"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 27344,
+      "sha256": "2849d62d65fe498c4378b9705abf8934138dfe5274283c715550182721ed74f4"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "6a4d43e4a5ca4a6c88b77c63cbb7269eac95d1a4eb678c3622e4b40b1fb911eb"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website-preimages/tests/teaching-consumer-source-inverse.mjs",
+      "bytes": 11009,
+      "sha256": "c458586d1a840956920fe60d0f093c620a3a68b1cba7ec21f81cd1a69ed7d1c7"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/atlas-review/lib/regional-tours.ts",
+      "bytes": 44790,
+      "sha256": "9123a100dd7693f99a7675b3f369803e4c788de5d6ed48a850e4be9caa8534cd"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/atlas-review/lib/renal-tour.ts",
+      "bytes": 4810,
+      "sha256": "e52cfc1830ccade4f2d6279fdc42555e950f1a9efc35856205c3d313fb879859"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "5a9595a018e184e624738f566e2b8909d71278911aa6bdc5f2d47156748fdc04"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "16c74641fd8e364659b2a98f8d3690b7dbe73c73ba852bd3ab6b317cd974e01a"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "14f79b373ea5a87b254e491224b630b73a3233daf774802a639602ebe887f890"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "cdb107324b105cfbf2cfbce0667195bbf9325ba6004900e6a0bbeef7a13bcd1b"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/tests/atlas-renal-delivery-transition.test.mjs",
+      "bytes": 2644,
+      "sha256": "a58ec64c76b712b100b861e93a8a95ffd717fdfb798a31cec7fd8eed3dc392ba"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/tests/atlas-renal-source-tour.test.mjs",
+      "bytes": 8931,
+      "sha256": "e0975da4f3c8673f01bdc42ece2e127f9676fd791302ee5aee570d1e79a9db01"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 27357,
+      "sha256": "ff99b7dcb7437ea01ede3d2c2fcbb4ad8e12416835031f813be9d21604bd7863"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "2c22ebddc061915b2fd44c3a283d2eff9d363032efc516026c734291511aeefe"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/tests/fixtures/current-atlas-delivery-before-renal-source-20261022.mjs.raw",
+      "bytes": 19208,
+      "sha256": "6a4d43e4a5ca4a6c88b77c63cbb7269eac95d1a4eb678c3622e4b40b1fb911eb"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/renal-website/tests/teaching-consumer-source-inverse.mjs",
+      "bytes": 11540,
+      "sha256": "c996298145d3e02597a77af8cd0cd48c2df7e5c461030593409fd8f40007ed8a"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/CODE/admission-source-roles.mjs",
+      "bytes": 4605,
+      "sha256": "a5cf6db61cdf7cec6ba60f408e3c5833e0201edb5497ad3d5788c7118167ca11"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/CODE/colic-adapter-inverse.test.mjs",
+      "bytes": 12078,
+      "sha256": "ab11c367369ef7dc50a1bbe8dc8b9d8a21cf4bdb0d0e50aba64dfcf228a10874"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/CODE/drawable-epoch-current-admission.test.mjs",
+      "bytes": 11942,
+      "sha256": "a84dbee06466c21d4402a9886b4830162d77bffbd35fefcd5a9dc2bef44e8550"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/CODE/head-tools-wider-consumer-source-preservation.test.mjs",
+      "bytes": 1786,
+      "sha256": "683a959e1da17d2db1b0c14fd88e80a9a549d8e52ed6d6f13fd688b318fb3efe"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/evidence/prove-source-only-before-neck.stdout.txt.raw",
+      "bytes": 427,
+      "sha256": "633c0a88a9f0f613e9fa211109a45aeb1dcc329a692fbf2f3d07b18502c8a91c"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/evidence/prove-source-only.mjs",
+      "bytes": 7028,
+      "sha256": "eda05ca9427d64ed4754c34aa1d6edc5b4fcea023bef34817684a119ff026c2b"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/RAW/colic-adapter-inverse.test.mjs.raw",
+      "bytes": 11173,
+      "sha256": "cfcaa8e253a9699aba33383c13c43d718ad17aa62534583ed9ba31208fcdd567"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/RAW/drawable-epoch-current-admission.test.mjs.raw",
+      "bytes": 10847,
+      "sha256": "21051bc34bdc0ed517f14d4d466a9c05052efe9991b5fbe79af100647f4a8fd4"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-dependent-source-followup/RAW/head-tools-wider-consumer-source-preservation.test.mjs.raw",
+      "bytes": 1115,
+      "sha256": "018031d1af55b8b967a37bceddfe028d9e39e8fcc635f801a9c411b46b4c2d35"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-importer-source-followup/CODE/admission-source-roles.mjs",
+      "bytes": 7137,
+      "sha256": "a5d5dc5f23b1ac9be96977d8ac4d2cb4c34bc59e9fcd253473c1e1b8ccf47e5b"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-importer-source-followup/CODE/drawable-epoch-current-admission.test.mjs",
+      "bytes": 13222,
+      "sha256": "e4fac800ddb19994e4641e6617978ffc4a2a7452ae7ec5343d56b35e8c46d1fa"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-importer-source-followup/evidence/prove-source-only.mjs",
+      "bytes": 4054,
+      "sha256": "be7f4afa536a00226ac5331e63143ed0f2c0aa11841fe5d8820dcda338b6371d"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-importer-source-followup/RAW/admission-source-roles.mjs.raw",
+      "bytes": 4605,
+      "sha256": "a5cf6db61cdf7cec6ba60f408e3c5833e0201edb5497ad3d5788c7118167ca11"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-admission-importer-source-followup/RAW/drawable-epoch-current-admission.test.mjs.raw",
+      "bytes": 11942,
+      "sha256": "a84dbee06466c21d4402a9886b4830162d77bffbd35fefcd5a9dc2bef44e8550"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-zero-registration-source-followup/CODE/current-pin-epoch-inverse.mjs",
+      "bytes": 2753,
+      "sha256": "6a4a5a3c4063db4668355caf0a1399c880ce8ef9644e621953af8f72d9c0422a"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-zero-registration-source-followup/CODE/drawable-epoch-current-admission.test.mjs",
+      "bytes": 10847,
+      "sha256": "21051bc34bdc0ed517f14d4d466a9c05052efe9991b5fbe79af100647f4a8fd4"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-zero-registration-source-followup/CODE/expanded-review-delivery-admission.test.mjs",
+      "bytes": 8435,
+      "sha256": "f2ba18059ddf07fd044a281b1dcaced48ff22830adb0c51d9d17ca6687adf1da"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-zero-registration-source-followup/RAW/drawable-epoch-current-admission.test.mjs.raw",
+      "bytes": 8803,
+      "sha256": "269e7af836b93760fcf460bf39ce1be296a96c1549452b04076a38a52d24c9ce"
+    },
+    {
+      "path": "pending/renal-import-admission-20261022/worker-proposals/20261022-zero-registration-source-followup/RAW/expanded-review-delivery-admission.test.mjs.raw",
+      "bytes": 3933,
+      "sha256": "e4ee6d1670ec14b6f5f7b722ae4b9958225ee1886aff82513e4e1a74301b8872"
+    },
+    {
       "path": "pending/renal-tour-and-consumer-verified-20261022/atlas/lib/regional-tours.ts",
       "bytes": 45186,
       "sha256": "6925988200cc938d0db3c45f1dc8e0c75749dc56b84cbc50fe9f99392d4cca0b"
@@ -21167,28 +21519,32 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus verified renal-tour source guard, additive tests, exact historical consumer repairs and code preimages. Generated pin/Review metadata, compiled runtime/viewer, private records/DB/env/references/decisions, held assets, scans/models/masks, raw logs/media and canonical ancestry remain local. Not full, private or runnable recovery. No installation or deployment.",
+  "scope": "Inherited filtered source plus renal website import/source guards, exact historical admission repairs, authored proofs and code preimages. Separate old and new source roles remain explicit. Generated bindings/pins/coverage JSON, compiled runtimes/viewer, private records/DB/env/decisions/references, held assets, scans/models/masks, media/raw logs and raw canonical ancestry remain local. Not full, private or runnable recovery. Not installed or deployed.",
   "proof": {
-    "renalTypesAndProductionBuild": true,
-    "renalPlayerTests": 75,
-    "renalReviewPacketsChanged": 5,
-    "otherReviewPacketsUnchanged": 1099,
-    "teachingPlacementsUnchanged": 9936,
-    "websiteTestOnlyChanges": 13,
-    "focusedNative": {
-      "tests": 77,
-      "pass": 77,
+    "stockImportChecks": 10,
+    "canonicalByteAtlasChecks": 12,
+    "websiteTypesAndProductionBuild": true,
+    "renalNative": {
+      "originalTests": 192,
+      "pass": 191,
+      "fail": 1,
+      "correctedProofPass": 1,
+      "noNewCombined192PassRun": true
+    },
+    "assuranceNative": {
+      "tests": 74,
+      "pass": 74,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "allNonTestWebsiteBytesUnchanged": true,
-    "widerPredecessor": {
-      "tests": 751,
-      "pass": 713,
-      "fail": 38
-    },
+    "wholeOriginalAssertionInversesRetained": true,
+    "sourceOnlyTestTypeCorrection": true,
+    "renalPacketsChanged": 5,
+    "otherPacketsUnchanged": 1099,
+    "teachingPlacementsUnchanged": 9936,
+    "full71AndEightIdeasPreserved": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
