@@ -1,54 +1,95 @@
 {
-  "focusedNative": {
-    "tests": 32,
-    "pass": 32,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
+  "focusedNative": [
+    {
+      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\01.log",
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\02.log",
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\03.log",
+      "tests": 81,
+      "pass": 81,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\04.log",
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-portable-evidence/hamstring-test.log",
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-library-evidence/historical-whole-body.log",
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-library-evidence/current-hamstring-library.log",
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    }
+  ],
+  "currentComposition": {
+    "rootSelections": 1104,
+    "topicPlacements": 9936,
+    "changedTeachingPlacements": 89,
+    "changedReviewSnapshots": 22,
+    "unchangedReviewSnapshots": 1082,
+    "newTourSourceIdentities": 10,
+    "previousToursPreserved": 51,
+    "currentTours": 53,
+    "newStops": 8,
+    "pendingTeachingPlacements": 525
   },
-  "windows": "Actual default Windows process inspector, same short-lived synthetic test root and identical inherited environment. Two separate real coordinators pass and reuse exactly one native attempt. Not an actual Website batch or uninterrupted stock gate.",
-  "fullRootPartition": {
-    "deliveryNamedPaths": 6426,
-    "stockNamedFiles": 6244,
-    "deliveryOnlyPaths": 182,
-    "entries": 1178,
-    "executedRoots": 1177,
-    "importCovered": 1,
-    "finalArgsBudgetChecks": [
-      {
-        "chunkSize": 1,
-        "chunks": 1177,
-        "maximumCommandLength": 484,
-        "roots": 1177,
-        "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
-        "chunkRootsSha256": "8e9b6343597dccf30e788a854ac2f9bd39060b248c6e89db7b111001c4b4029b"
-      },
-      {
-        "chunkSize": 25,
-        "chunks": 48,
-        "maximumCommandLength": 1778,
-        "roots": 1177,
-        "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
-        "chunkRootsSha256": "41c06975ed0872c0621d9cabaef69a3e8c1672f6b0e7eb7e592511682ae8b623"
-      },
-      {
-        "chunkSize": 10000,
-        "chunks": 3,
-        "maximumCommandLength": 23985,
-        "roots": 1177,
-        "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
-        "chunkRootsSha256": "e7bd43be32a7fbb6bd0fdf86612de5a707cbfe524a449a9637008a07f442b0f4"
-      }
-    ],
-    "actualArgsForExecuted": true,
-    "scope": "Metadata/preflight and partition proof, not execution of Website roots. Stock named-input exclusions remain explicit."
+  "generatedBindingScope": {
+    "bodyDisplayPins": 1104,
+    "changedPins": 22,
+    "shoulderTeachingRevisions": 9,
+    "shoulderGeometryAndImagingUnchanged": true,
+    "rootRendererFiles": 1492,
+    "rootRendererSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
+    "generatedByExistingProducers": true
   },
-  "stockRunnerUnchanged": true,
-  "integrated": false,
-  "ownerPreviewChanged": false,
-  "stockUninterruptedPassingClaim": false,
+  "reviewRuntimeBindingPending": true,
+  "fullTypesBuildBrowserPending": true,
+  "previewChanged": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
+  "wholeSuitePassing": false,
   "publicDeployment": false
 }

@@ -1,69 +1,111 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T22:31:40.375Z",
+  "at": "2026-10-22T22:50:14.429Z",
   "sourceIdentity": {
-    "proposal": [
+    "localHead": "7978478992f54ea68e0f53c3d195c459c7b80068",
+    "localTree": "17cc5a564348832c268dac9b6d713f48b6b7f530",
+    "baseline": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+    "sourceRows": [
       {
-        "path": "scripts/public-preview-preflight.mjs",
-        "sha256": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89"
+        "path": "app/anatomy-data.ts",
+        "bytes": 26813,
+        "sha256": "7cff871e9791c438ceca79b3d6645b2e933d9ab45c2429525f9d707ee5b2f78e",
+        "generated": false
       },
       {
-        "path": "scripts/run-website-tests-chunked.md",
-        "sha256": "ee8b19515509518b0bef32d093b3723115f245e34675fded4d392901a5e11a32"
+        "path": "app/body-content.ts",
+        "bytes": 83121,
+        "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56",
+        "generated": false
       },
       {
-        "path": "scripts/run-website-tests-chunked.mjs",
-        "sha256": "c81cc02c3c3e2ed003143c96b8beaacd900a18ffab0dbfb534f19053cf3e7682"
+        "path": "app/regional-guided-learning.tsx",
+        "bytes": 17559,
+        "sha256": "418319343ca3033bff575d35faa6da5e177fc6eab16238fa052c2de755f10f79",
+        "generated": false
       },
       {
-        "path": "scripts/run-website-tests.mjs",
-        "sha256": "9dc062a40d1a92c45c4d0d45ab02957b4f54a32af9d96f9e84ce06601d828a7a"
+        "path": "lib/hamstring-tours.ts",
+        "bytes": 5374,
+        "sha256": "14f56f53002c574fd2eb8a6a88f23f4e8fad9476495ad227434384ef59d51737",
+        "generated": false
       },
       {
-        "path": "scripts/stock-website-test-inventory.mjs",
-        "sha256": "3ce73391bc8d1cead67a9d1565f91fc5432eb0acc5e71c9168023c0088b6e0dc"
+        "path": "lib/legacy-shoulder-bone-references.ts",
+        "bytes": 2164,
+        "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649",
+        "generated": false
       },
       {
-        "path": "scripts/website-test-child-ready.mjs",
-        "sha256": "8c061249d672c99cb7b30c1e2c8703908ff3b015a373f0a7194173f02c45e4ff"
+        "path": "lib/legacy-shoulder-muscle-references.ts",
+        "bytes": 4585,
+        "sha256": "283ec0d7d4fabb4477539ea3a35c08dcea1500e0e59ba7bd078dc6770dbbfc5d",
+        "generated": false
       },
       {
-        "path": "scripts/website-test-chunks.mjs",
-        "sha256": "df1c71e6635d6a05a3301a33ad6eb05e6737599c2cd42621334af2d6ed19ba08"
+        "path": "lib/legacy-shoulder-references.ts",
+        "bytes": 858,
+        "sha256": "d7de7f5ffae34b845092277b75e4ec555bf493be36768bb15a5a73b4b7770f82",
+        "generated": false
       },
       {
-        "path": "scripts/website-test-history-preflight.mjs",
-        "sha256": "7df9800439fe8d1864f3b8d2df505e84075c8968cd8bbbb596f6d930dd3d5351"
+        "path": "lib/regional-tours.ts",
+        "bytes": 45118,
+        "sha256": "b1a1bc9d9d80b84d4d98aed1aaa08aa4e9d7313e58bdd40f3b8a10ea0bab215d",
+        "generated": false
       },
       {
-        "path": "scripts/website-test-process.mjs",
-        "sha256": "0ad5945672d0634bab7d282ca62bf9826f2831d70c7fa068969451d03c5cae90"
+        "path": "package.json",
+        "bytes": 87104,
+        "sha256": "1b941e171ea58f1b33202019aff9b441cd64ad3640bd2563a43764dc6b57fdb4",
+        "generated": false
       },
       {
-        "path": "tests/run-website-tests.test.mjs",
-        "sha256": "57d48829552a9383594830bc5d9a8a27e3a64c09e8d2d408629dccf2e27977e2"
+        "path": "scripts/pin-hamstring-tours.mjs",
+        "bytes": 2469,
+        "sha256": "6bce1950dc435b17fd089627dfca575e1aeac1f91cbf3ff15a17394753113a87",
+        "generated": false
       },
       {
-        "path": "tests/website-test-chunks-child-ready.test.mjs",
-        "sha256": "2b9127c8dc0b84c24e0d73fd7fa63008222c3c1aea8abf798c87f9a388754fb1"
+        "path": "scripts/test-atlas-teaching-tour-composition.mjs",
+        "bytes": 9904,
+        "sha256": "6cd2b2b2fa3a577a3c13da9d77eaef89628fb3d960a76cedfedde38437d2fd61",
+        "generated": false
       },
       {
-        "path": "tests/website-test-chunks-main.test.mjs",
-        "sha256": "1b27d48c214e305ab6dabbc8cd29718b1789e059a454be085c340768d16004e9"
+        "path": "scripts/test-hamstring-library.mjs",
+        "bytes": 7755,
+        "sha256": "fafb03c535da4eb2489862479904e0c0316322f29b17b1b7e8cf83e6898b601a",
+        "generated": false
       },
       {
-        "path": "tests/website-test-chunks-review.test.mjs",
-        "sha256": "29d894a1a436653c7dc045b8bec3bd1656dce3e60d68d35178fee1d9bff5bd07"
+        "path": "scripts/test-hamstring-tours.mjs",
+        "bytes": 11462,
+        "sha256": "51a11c2bd062a9ade7f47f62709c5179ddf739af405e1b029e564fb3a9850f61",
+        "generated": false
       },
       {
-        "path": "tests/website-test-chunks.test.mjs",
-        "sha256": "91c60269ce21c16bfab5514f5248f9a38a39ad7cef5ac1b76f8e6308344047fe"
+        "path": "scripts/test-legacy-shoulder-references.mjs",
+        "bytes": 13764,
+        "sha256": "fb4a55e9f2429ce2d1eff00043cb1dfb3ebe95fa32daa99e7e53d018c975c0f4",
+        "generated": false
+      },
+      {
+        "path": "scripts/test-regional-tour-player.mjs",
+        "bytes": 135312,
+        "sha256": "919f0399b7c6028ff1181cefaad67a65cd7efe47739f906bf0ed44850ad3b131",
+        "generated": false
+      },
+      {
+        "path": "scripts/test-whole-body-guided-learning.mjs",
+        "bytes": 35039,
+        "sha256": "b720e85a3b67cfcb5d4e54c8f53b5c6aa00011b3686153f2f87b80acb0254b1e",
+        "generated": false
       }
-    ],
-    "selectedSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522"
+    ]
   },
-  "parent": "a7cdd0da95e343304fc4bcf8b88b15b17f68d6ab",
-  "gitParent": "a7cdd0da95e343304fc4bcf8b88b15b17f68d6ab",
+  "parent": "bdfbf66eb1b6782eec8b6f36fe17b4f45bb8afc3",
+  "gitParent": "bdfbf66eb1b6782eec8b6f36fe17b4f45bb8afc3",
   "files": [
     {
       "path": "app/globals.css",
@@ -11951,6 +11993,141 @@
       "sha256": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
     },
     {
+      "path": "pending/atlas-teaching-tour-composition-20261022/coordination/checkpoint-atlas-teaching-tour-composition-20261022.mjs",
+      "bytes": 10952,
+      "sha256": "a97106d4e90d49ff984a83ff04fc66e73a667ab1ca59d3bcc9b52118621ab656"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/coordination/prepare-atlas-teaching-tour-composition-20261022.mjs",
+      "bytes": 3527,
+      "sha256": "5fa5e989234ac7405361b6fac787187eb4b52a85e25ccb6c149b8f580043be20"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/coordination/review-atlas-teaching-tour-composition-20261022.mjs",
+      "bytes": 9889,
+      "sha256": "dc7081e44e836c9c1b4b67fc0bbb774a85e089b5e1cc2b9d257b6d434af8e8be"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/coordination/verify-atlas-teaching-tour-composition-20261022.mjs",
+      "bytes": 3677,
+      "sha256": "d6ed8e46f9cebcb88444268554cb9f0db9f07d95511f28fb4b829d081e965189"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/app/anatomy-data.ts",
+      "bytes": 26813,
+      "sha256": "7cff871e9791c438ceca79b3d6645b2e933d9ab45c2429525f9d707ee5b2f78e"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/app/body-content.ts",
+      "bytes": 83121,
+      "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/app/regional-guided-learning.tsx",
+      "bytes": 17559,
+      "sha256": "418319343ca3033bff575d35faa6da5e177fc6eab16238fa052c2de755f10f79"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/lib/hamstring-tours.ts",
+      "bytes": 5374,
+      "sha256": "14f56f53002c574fd2eb8a6a88f23f4e8fad9476495ad227434384ef59d51737"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/lib/legacy-shoulder-bone-references.ts",
+      "bytes": 2164,
+      "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/lib/legacy-shoulder-muscle-references.ts",
+      "bytes": 4585,
+      "sha256": "283ec0d7d4fabb4477539ea3a35c08dcea1500e0e59ba7bd078dc6770dbbfc5d"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/lib/legacy-shoulder-references.ts",
+      "bytes": 858,
+      "sha256": "d7de7f5ffae34b845092277b75e4ec555bf493be36768bb15a5a73b4b7770f82"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/lib/regional-tours.ts",
+      "bytes": 45118,
+      "sha256": "b1a1bc9d9d80b84d4d98aed1aaa08aa4e9d7313e58bdd40f3b8a10ea0bab215d"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/package.json",
+      "bytes": 87104,
+      "sha256": "1b941e171ea58f1b33202019aff9b441cd64ad3640bd2563a43764dc6b57fdb4"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/scripts/pin-hamstring-tours.mjs",
+      "bytes": 2469,
+      "sha256": "6bce1950dc435b17fd089627dfca575e1aeac1f91cbf3ff15a17394753113a87"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/scripts/test-atlas-teaching-tour-composition.mjs",
+      "bytes": 9904,
+      "sha256": "6cd2b2b2fa3a577a3c13da9d77eaef89628fb3d960a76cedfedde38437d2fd61"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/scripts/test-hamstring-library.mjs",
+      "bytes": 7755,
+      "sha256": "fafb03c535da4eb2489862479904e0c0316322f29b17b1b7e8cf83e6898b601a"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/scripts/test-hamstring-tours.mjs",
+      "bytes": 11462,
+      "sha256": "51a11c2bd062a9ade7f47f62709c5179ddf739af405e1b029e564fb3a9850f61"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/scripts/test-legacy-shoulder-references.mjs",
+      "bytes": 13764,
+      "sha256": "fb4a55e9f2429ce2d1eff00043cb1dfb3ebe95fa32daa99e7e53d018c975c0f4"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/scripts/test-regional-tour-player.mjs",
+      "bytes": 135312,
+      "sha256": "919f0399b7c6028ff1181cefaad67a65cd7efe47739f906bf0ed44850ad3b131"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/current/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 35039,
+      "sha256": "b720e85a3b67cfcb5d4e54c8f53b5c6aa00011b3686153f2f87b80acb0254b1e"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/preimage/app/anatomy-data.ts",
+      "bytes": 25438,
+      "sha256": "75a91a07a3bf268088f7b6e011e71ffd27bbc0366d2d01a3dbbd7f28da64a4cb"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/preimage/app/body-content.ts",
+      "bytes": 82967,
+      "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/preimage/app/regional-guided-learning.tsx",
+      "bytes": 15876,
+      "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/preimage/lib/regional-tours.ts",
+      "bytes": 44790,
+      "sha256": "9123a100dd7693f99a7675b3f369803e4c788de5d6ed48a850e4be9caa8534cd"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/preimage/package.json",
+      "bytes": 86739,
+      "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/preimage/scripts/test-regional-tour-player.mjs",
+      "bytes": 126985,
+      "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+    },
+    {
+      "path": "pending/atlas-teaching-tour-composition-20261022/preimage/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 32493,
+      "sha256": "e1d659c5bed06c263c61b1a0429043f7a71a6775544ce63715e0e5eda44dcda6"
+    },
+    {
       "path": "pending/body-learning-20261021/atlas/app/atlas-learning-selection-channel.tsx",
       "bytes": 3181,
       "sha256": "6fd3995d1f6a531365b0d15aa3715e2cd4b70fa8d42f6e21aa5f84b834a199ec"
@@ -23807,59 +23984,100 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus authored opt-in sequential Website test chunk/resume tooling and regression sources/preimages only. Default stock runner unchanged; this tool is not integrated or selected as the release gate. Native nested/suite result validation, permanent observed-drift invalidation and an owned-child identity-before-payload handshake are verified only within the recorded focused/synthetic fixtures. No scans, identifiers, masks, geometry, private references, generated Review/runtime/delivery JSON, raw logs, process records or canonical Git ancestry. No dependencies, assets or fees added. Source-only recovery, not whole/private/runnable backup; no preview/install/public deployment or clinical/privacy/spatial/release approval.",
+  "scope": "Inherited filtered source plus authored isolated Atlas composition sources, bounded regressions and source-only preimages. Adds bilateral draft hamstring tours, shoulder/Brain reference wording and commit-bound tour playback controls. Generated pins/teaching/Review/runtime JSON, geometry/models/textures, scans/identifiers/masks, private references/decisions, raw logs/process records and canonical Git ancestry are excluded. No new package/asset or fees. Source-only recovery, not full/private/runnable backup or installed/clinical/spatial/public release acceptance.",
   "proof": {
-    "focusedNative": {
-      "tests": 32,
-      "pass": 32,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+    "focusedNative": [
+      {
+        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\01.log",
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      {
+        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\02.log",
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      {
+        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\03.log",
+        "tests": 81,
+        "pass": 81,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      {
+        "log": "F:\\VisibleMedicine\\staging\\20261022-atlas-teaching-tour-composition\\composition-evidence\\final\\04.log",
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      {
+        "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-portable-evidence/hamstring-test.log",
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      {
+        "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-library-evidence/historical-whole-body.log",
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      {
+        "log": "F:/VisibleMedicine/staging/20261022-atlas-teaching-tour-composition/hamstring-library-evidence/current-hamstring-library.log",
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    ],
+    "currentComposition": {
+      "rootSelections": 1104,
+      "topicPlacements": 9936,
+      "changedTeachingPlacements": 89,
+      "changedReviewSnapshots": 22,
+      "unchangedReviewSnapshots": 1082,
+      "newTourSourceIdentities": 10,
+      "previousToursPreserved": 51,
+      "currentTours": 53,
+      "newStops": 8,
+      "pendingTeachingPlacements": 525
     },
-    "windows": "Actual default Windows process inspector, same short-lived synthetic test root and identical inherited environment. Two separate real coordinators pass and reuse exactly one native attempt. Not an actual Website batch or uninterrupted stock gate.",
-    "fullRootPartition": {
-      "deliveryNamedPaths": 6426,
-      "stockNamedFiles": 6244,
-      "deliveryOnlyPaths": 182,
-      "entries": 1178,
-      "executedRoots": 1177,
-      "importCovered": 1,
-      "finalArgsBudgetChecks": [
-        {
-          "chunkSize": 1,
-          "chunks": 1177,
-          "maximumCommandLength": 484,
-          "roots": 1177,
-          "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
-          "chunkRootsSha256": "8e9b6343597dccf30e788a854ac2f9bd39060b248c6e89db7b111001c4b4029b"
-        },
-        {
-          "chunkSize": 25,
-          "chunks": 48,
-          "maximumCommandLength": 1778,
-          "roots": 1177,
-          "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
-          "chunkRootsSha256": "41c06975ed0872c0621d9cabaef69a3e8c1672f6b0e7eb7e592511682ae8b623"
-        },
-        {
-          "chunkSize": 10000,
-          "chunks": 3,
-          "maximumCommandLength": 23985,
-          "roots": 1177,
-          "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
-          "chunkRootsSha256": "e7bd43be32a7fbb6bd0fdf86612de5a707cbfe524a449a9637008a07f442b0f4"
-        }
-      ],
-      "actualArgsForExecuted": true,
-      "scope": "Metadata/preflight and partition proof, not execution of Website roots. Stock named-input exclusions remain explicit."
+    "generatedBindingScope": {
+      "bodyDisplayPins": 1104,
+      "changedPins": 22,
+      "shoulderTeachingRevisions": 9,
+      "shoulderGeometryAndImagingUnchanged": true,
+      "rootRendererFiles": 1492,
+      "rootRendererSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
+      "generatedByExistingProducers": true
     },
-    "stockRunnerUnchanged": true,
-    "integrated": false,
-    "ownerPreviewChanged": false,
-    "stockUninterruptedPassingClaim": false,
+    "reviewRuntimeBindingPending": true,
+    "fullTypesBuildBrowserPending": true,
+    "previewChanged": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
+    "wholeSuitePassing": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,
