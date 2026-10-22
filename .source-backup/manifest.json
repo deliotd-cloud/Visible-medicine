@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T13:03:10.208Z",
+  "at": "2026-10-22T13:21:35.897Z",
   "sourceIdentity": {
-    "websiteReceiptSha256": "83df8fd5064b4598e21397864d7ab57c0824c652ec60d24fbf10860e54b7d0ae",
+    "websiteReceiptSha256": "b9c972cf68305f7f621ef12e3db1c421389439d78ee7716e7373b0789c8241a7",
     "atlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
     "atlasTree": "25acdee40ee57e0253cdcca924aa64b4b38586c8",
-    "review": "2c8e263eb4bbd04120eb79560314f372a10846f6fd5616477bde18a42e9f7ef3",
-    "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1"
+    "review": "2c8e263eb4bbd04120eb79560314f372a10846f6fd5616477bde18a42e9f7ef3"
   },
-  "parent": "dc52dc6f2818ead17c9c9931026dc04ce1857b47",
-  "gitParent": "dc52dc6f2818ead17c9c9931026dc04ce1857b47",
+  "parent": "3edae0b532041f7fadf940b82170c0a44293eec6",
+  "gitParent": "3edae0b532041f7fadf940b82170c0a44293eec6",
   "files": [
     {
       "path": "app/globals.css",
@@ -15432,6 +15431,111 @@
       "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
     },
     {
+      "path": "pending/head-modality-3d-20261022/coordination/build-unbound-ui-successor.mjs",
+      "bytes": 4572,
+      "sha256": "b64ddd7d0916bab4e96465b0af0cd4594745a5abac0ed2cf2cffcad246980eb4"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/checkpoint-head-modality-3d-20261022.mjs",
+      "bytes": 9403,
+      "sha256": "612747aadbd569bab3c60f2474c105bf6ebc1c0f94dd9eebf59531205cb10921"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/native-atlas-environment-20261022.mjs",
+      "bytes": 2240,
+      "sha256": "4204b4a40ccd599486fd0b24eafea711b81a1cb7a4da6696d5e87bc67133ebb7"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/prepare-head-modality-3d-20261022.mjs",
+      "bytes": 2942,
+      "sha256": "8e5f26fdf88cbb28bce0fa6d01dd5f3b7b3d24d60a30ad7238268f9c0f52112d"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/prepare-unbound-ui-successor.mjs",
+      "bytes": 6633,
+      "sha256": "738568ed58fcd4d80cb4b5a6d3fdc2bad846a505bace65ccf0b25fe26dd9d4a2"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/qa-head-modality-3d-20261022/check-browser.js",
+      "bytes": 4803,
+      "sha256": "ae39c2a42bcd2833b6adfe31c54e457cfb915ee4bf00110776a57403f8e6bf1d"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/qa-head-modality-3d-20261022/entry.jsx",
+      "bytes": 2571,
+      "sha256": "8e489ff5c44ce7abac8f3a88e33a98eec08517f423d387809e182bc80061bf17"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/qa-head-modality-3d-20261022/next-link.jsx",
+      "bytes": 246,
+      "sha256": "ead7b0c4099e57958871f9c880190367da20195f63f77d805c5ca24190fda80b"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/qa-head-modality-3d-20261022/next-navigation.js",
+      "bytes": 87,
+      "sha256": "fc0a4269093710e000674dbb79afd82fa5fa41521c27d73e3fff7b6e522867ff"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/RAW/build-unbound-ui-successor.mjs",
+      "bytes": 4566,
+      "sha256": "047d7da1bfc1109ad30c826144d06e8db761f0b3e937df9429fb3066dc969ac0"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/RAW/native-atlas-environment-20261022.mjs",
+      "bytes": 1320,
+      "sha256": "50c6f4915bd3163c43e3e9b3e20568ee7b5939da52b44f6e28367ef3d220d873"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/RAW/prepare-unbound-ui-successor.mjs",
+      "bytes": 6236,
+      "sha256": "0c97333d05f150dfb8293c8fa7c7b6ec4db8caafe35d02e8dd403bc8ca08eeb4"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/RAW/verify-isolated-source-native.mjs",
+      "bytes": 4385,
+      "sha256": "cf78603d19a00766bc9910759810488964b6704e6f39e0141029f3afcac35856"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/serve-head-modality-3d-20261022.mjs",
+      "bytes": 4258,
+      "sha256": "7f7d1880d977b7c26e6887ef5ad2ae8077418ccbed508b75a67c13c23dc61839"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/test-native-atlas-receipt-20261022.mjs",
+      "bytes": 2286,
+      "sha256": "5d7d3d28be3128e6872ddcc798814df0c7952e083ad9e943f8f73ac89d6efcf7"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/coordination/verify-isolated-source-native.mjs",
+      "bytes": 4380,
+      "sha256": "ec6cbe7e88dc0340f9101d63c888fc9578a180352cc5eef5a3a4522c7fd32a85"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/RAW/components/AtlasWorkspaceNavigation.tsx",
+      "bytes": 3156,
+      "sha256": "64269bf8b1f62388e535070dc164933488645b3080bbaa7abd56c8d59f49906e"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/RAW/tests/atlas-workspace-simplification.test.ts",
+      "bytes": 5763,
+      "sha256": "ee9578187cfaccd2eb717c11c9e0153b768efa934d725abc6013b652503557ae"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/website/components/AtlasWorkspaceNavigation.tsx",
+      "bytes": 5415,
+      "sha256": "b6b742dfcbdc5655a9b958bb6bd9e28f4f05d21e92297f004b573ff9f36d621d"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/website/tests/atlas-workspace-3d-context.test.mjs",
+      "bytes": 5717,
+      "sha256": "a475d86168f015be3264fbfd2a5de3059944511329d1e9504232fcd1f0986ff3"
+    },
+    {
+      "path": "pending/head-modality-3d-20261022/website/tests/atlas-workspace-simplification.test.ts",
+      "bytes": 5853,
+      "sha256": "bd7aed9867c51c839a10eb8fc981068244c24be92d7e4e12e3a3bd3a32ef5e3d"
+    },
+    {
       "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/components/HeadAtlasViewer.tsx",
       "bytes": 109363,
       "sha256": "723b2b7d5cf00c761d5541a7658dbb27489f66ae426d9c6ca73f7662607bb320"
@@ -20708,32 +20812,23 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus staged website producer/source-epoch declarations, exact original current-delivery test, additive source-bound neck X-ray integration tests and local coordination source. Generated binding/pin/coverage JSON, compiled runtime/viewer payloads, private records/DB/env/decisions/references, held sources/assets, scans/models/masks, article assets/media, raw logs and canonical ancestry remain local. Not full/private/runnable recovery or installation.",
+  "scope": "Inherited filtered source plus staged CT/MRI-to-existing3D modality navigation, additive tests and exact component/test/tool preimages with local synthetic QA/coordination code. Generated bindings/pins/coverage JSON, compiled runtime/viewer payloads, private records/accounts/DB/env/decisions/references, held source/assets, scans/models/masks, raw logs/media and canonical ancestry remain local. Not full/private/runnable recovery, model/scan browser acceptance, installation or deployment.",
   "proof": {
-    "sourcePaths": 6154,
-    "review": "2c8e263eb4bbd04120eb79560314f372a10846f6fd5616477bde18a42e9f7ef3",
-    "boundInputs": 1726,
-    "importedSources": 1560,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "focused": {
-      "originalCurrentDeliveryPass": 41,
-      "firstCurrentRun": {
-        "tests": 178,
-        "pass": 177,
-        "fail": 1
-      },
-      "correctedIntegrationPass": 1,
-      "unchangedProductionAndOtherTests": true,
-      "newCombined178PassRun": false
+    "focusedCounts": {
+      "tests": 91,
+      "pass": 91,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
+    "sourceToolingCases": 20,
     "fullTypesPassed": true,
     "productionBuildPassed": true,
-    "stockSourceRuntimeReviewModelPolicyCoverageCatalogChecksPassed": true,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "newBrowserAcceptance": false,
+    "reviewBindingUnchanged": true,
+    "browserCases": 11,
+    "signedInAcceptance": false,
+    "nativeScanModelRenderingTested": false,
     "wholeSuitePassing": false,
     "ownerPreviewChanged": false,
     "clinicalApproval": false,
