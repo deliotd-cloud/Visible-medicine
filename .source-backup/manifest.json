@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T13:21:35.897Z",
+  "at": "2026-10-22T13:39:52.523Z",
   "sourceIdentity": {
-    "websiteReceiptSha256": "b9c972cf68305f7f621ef12e3db1c421389439d78ee7716e7373b0789c8241a7",
+    "websiteReceiptSha256": "67b0f4f7716d062aaa2269c22b759436c3b62e2082248d4a447197d28a3643ed",
     "atlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
     "atlasTree": "25acdee40ee57e0253cdcca924aa64b4b38586c8",
-    "review": "2c8e263eb4bbd04120eb79560314f372a10846f6fd5616477bde18a42e9f7ef3"
+    "review": "811baffeb0cfa83626ea4f00383d0ed04fe6980716415d2f919151078cdad9b5"
   },
-  "parent": "3edae0b532041f7fadf940b82170c0a44293eec6",
-  "gitParent": "3edae0b532041f7fadf940b82170c0a44293eec6",
+  "parent": "38d5c8a3f997f90b7ae36ffe0180ece0e722d26e",
+  "gitParent": "38d5c8a3f997f90b7ae36ffe0180ece0e722d26e",
   "files": [
     {
       "path": "app/globals.css",
@@ -15536,6 +15536,91 @@
       "sha256": "bd7aed9867c51c839a10eb8fc981068244c24be92d7e4e12e3a3bd3a32ef5e3d"
     },
     {
+      "path": "pending/head-surface-cancellation-20261022/coordination/admit-head-surface-cancellation-20261022.mjs",
+      "bytes": 10181,
+      "sha256": "502bd5664309de8358189bcd58936b5e68ba66bc0474c2f53917213b9c25eec4"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/coordination/checkpoint-head-surface-cancellation-20261022.mjs",
+      "bytes": 10378,
+      "sha256": "d85d36506f72c220ae2e08b5e297351b60b37badaf1eb1cf49f9a0809a010912"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/coordination/finish-head-surface-native-plan-20261022.mjs",
+      "bytes": 2756,
+      "sha256": "4e94422de4e61ae6e752588fc3486f958b606862fd137cfbd9f9fdbb0beb7aaf"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/coordination/prepare-head-surface-cancellation-20261022.mjs",
+      "bytes": 2866,
+      "sha256": "f78bfe07c8f361ac2bbc58285752aedd73508b815812651418697b0450ca827e"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/coordination/qa-head-surface-cancellation-20261022.html",
+      "bytes": 4052,
+      "sha256": "15b34ce16e19ab6cecb4ffef4233722770d36a8641846fd6930c999558893056"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/coordination/serve-head-surface-cancellation-20261022.mjs",
+      "bytes": 1648,
+      "sha256": "12f8acea2739b83d5a1843bf84522e3bff60c8dbcaa4cd172b4c0e593fcbc2f2"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/RAW/lib/head-atlas-import.ts",
+      "bytes": 16166,
+      "sha256": "9fcb349f19c69fee2a6221870a0db3de090c7cd2265b98f6a04d87c9d6098b57"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/RAW/negative-control-entry-test.ts",
+      "bytes": 4003,
+      "sha256": "75afb9cd12040cb069223472a7f3819d9a69d15aac7e1814909f726fe0218050"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/RAW/scripts/bind-clinical-review.mjs",
+      "bytes": 8282,
+      "sha256": "0339eedafdc65e60fb35efd7f59c839a57afa274966c405e4b373f8722f95d06"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/RAW/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "172e1153b7213b1e32ec1fff745ebb3594cef5fdce49168734670325e8ac827e"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/website/lib/head-atlas-import.ts",
+      "bytes": 16099,
+      "sha256": "70fa65adc382a02cfa3a53d4bf6baf267c6272bed9086297866a80adc87413b7"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/website/lib/head-surface-validation.ts",
+      "bytes": 1333,
+      "sha256": "85597c4c6a59fb18c862eb404a3da21c3043306985f44f6d2985703b8c1022b6"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/website/scripts/bind-clinical-review.mjs",
+      "bytes": 8315,
+      "sha256": "56feeaebfcbea52a28077a7e4a15e645c2a9c3fbd0be30a7e411d692d1ff9c97"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "6a4d43e4a5ca4a6c88b77c63cbb7269eac95d1a4eb678c3622e4b40b1fb911eb"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/website/tests/head-entry-surface-cancellation.test.ts",
+      "bytes": 5968,
+      "sha256": "1ae5bcbaa194e0e0cec8c20560597356b8105fb1ff557426c908837cc4b031b3"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/website/tests/head-surface-review-binding.test.mjs",
+      "bytes": 4237,
+      "sha256": "6d11ebbade5b2794d49cb8f2fdb62ca5bd2c4e03bd00b8277a7319ce412662c0"
+    },
+    {
+      "path": "pending/head-surface-cancellation-20261022/website/tests/head-surface-validation.test.ts",
+      "bytes": 2356,
+      "sha256": "8b4f977027856faa15cae191b73ad33428212cedec327a85985ccfd9f14af0de"
+    },
+    {
       "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/components/HeadAtlasViewer.tsx",
       "bytes": 109363,
       "sha256": "723b2b7d5cf00c761d5541a7658dbb27489f66ae426d9c6ca73f7662607bb320"
@@ -20812,23 +20897,26 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus staged CT/MRI-to-existing3D modality navigation, additive tests and exact component/test/tool preimages with local synthetic QA/coordination code. Generated bindings/pins/coverage JSON, compiled runtime/viewer payloads, private records/accounts/DB/env/decisions/references, held source/assets, scans/models/masks, raw logs/media and canonical ancestry remain local. Not full/private/runnable recovery, model/scan browser acceptance, installation or deployment.",
+  "scope": "Inherited filtered source plus staged cooperative native head surface validation, additive tests, exact code/test preimages and synthetic QA/coordination source. Generated pins/bindings/coverage, compiled runtime/viewer assets, private records/accounts/DB/env/decisions/references, held source/assets, scans/models/masks and raw logs/media remain local. Not full/private/runnable recovery, installation or deployment.",
   "proof": {
     "focusedCounts": {
-      "tests": 91,
-      "pass": 91,
+      "tests": 125,
+      "pass": 125,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "sourceToolingCases": 20,
+    "negativeControl": {
+      "oldImporterTests": 3,
+      "pass": 2,
+      "expectedFail": 1
+    },
     "fullTypesPassed": true,
     "productionBuildPassed": true,
-    "reviewBindingUnchanged": true,
-    "browserCases": 11,
-    "signedInAcceptance": false,
-    "nativeScanModelRenderingTested": false,
+    "stockReviewModelsPolicyCatalogPassed": true,
+    "browserCases": 6,
+    "syntheticOnly": true,
     "wholeSuitePassing": false,
     "ownerPreviewChanged": false,
     "clinicalApproval": false,

@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Isolated surface validation QA</title>
+<style>body{font:18px system-ui;padding:32px;background:#f3f7f5;color:#002b34}button{padding:12px;margin:8px}pre{white-space:pre-wrap}</style>
+<h1>Isolated surface-validation check</h1><p>Synthetic buffers only. This is not the website or a clinical viewer.</p>
+<button id="run">Run checks</button><button id="cancel" disabled>Cancel current validation</button><pre id="status" role="status">Ready</pre>
+<script type="module">
+import {validateHeadSurface,HEAD_SURFACE_CHUNK_SCALARS} from '/helper.js';
+let current=null;const status=document.querySelector('#status'),cancel=document.querySelector('#cancel');
+const check=(ok,label)=>{if(!ok)throw Error(label);};
+cancel.addEventListener('click',()=>current?.abort());
+window.runChecks=async()=>{
+ const results=[];let currentFrame=0;
+ let raf=true;const frame=()=>{if(raf){currentFrame++;requestAnimationFrame(frame);}};requestAnimationFrame(frame);
+ try{
+  let ticked=false;const timer=setTimeout(()=>{ticked=true;},0);
+  const small=Float32Array.of(-100000,0,100000),smallIndices=Uint16Array.of(0,0,0);
+  await validateHeadSurface(small,smallIndices,1);check(!ticked,'small surface unexpectedly waited for timer');clearTimeout(timer);
+  results.push({case:'small-original-boundary-values-no-timer',passed:true});
+  for(const phase of ['positions','indices']){
+   const positions=new Float32Array(phase==='positions'?6000000:9),indices=new Uint32Array(phase==='indices'?12000000:3);
+   current=new AbortController();cancel.disabled=false;let cancelEvent=false,returned=false,errorName=null;
+   status.textContent='Validating '+phase;
+   // The ordinary Cancel listener receives a deliberately synthetic timed click.
+   const onCancel=()=>{cancelEvent=true;};cancel.addEventListener('click',onCancel,{once:true});
+   const cancelTimer=setTimeout(()=>cancel.click(),0);
+   try{await validateHeadSurface(positions,indices,positions.length/3,current.signal);returned=true;}catch(e){errorName=e.name;}
+   finally{clearTimeout(cancelTimer);cancel.disabled=true;cancel.removeEventListener('click',onCancel);current=null;}
+   check(cancelEvent&&!returned&&errorName==='AbortError','timer cancellation failed in '+phase);
+   results.push({case:'synthetic-cancel-during-'+phase,passed:true,errorName});
+  }
+  const positions=new Float32Array(6000000),indices=new Uint32Array(12000000),posBuffer=positions.buffer,indexBuffer=indices.buffer;
+  const initialFrames=currentFrame;let timerTicks=0;const ticking=setInterval(()=>timerTicks++,0),start=performance.now();
+  try{await validateHeadSurface(positions,indices,2000000);}finally{clearInterval(ticking);}
+  check(timerTicks>0&&currentFrame>initialFrames,'maximum validation starved timers/paint');
+  check(positions.buffer===posBuffer&&indices.buffer===indexBuffer,'buffer identity changed');
+  results.push({case:'maximum-supported-surface-completes-with-timers-and-paint',passed:true,timerTicks,animationFrames:currentFrame-initialFrames,observedMs:performance.now()-start,notABenchmark:true});
+  for(const phase of ['positions','indices']){
+   const p=new Float32Array(HEAD_SURFACE_CHUNK_SCALARS+1),i=new Uint32Array(HEAD_SURFACE_CHUNK_SCALARS+1);
+   if(phase==='positions')p[p.length-1]=NaN;else i[i.length-1]=1;
+   let message=null;try{await validateHeadSurface(p,i,1);}catch(e){message=e.message;}
+   check(message===(phase==='positions'?'Invalid world-space surface point.':'Surface index is out of bounds.'),'late invalid value accepted');
+   results.push({case:'late-invalid-'+phase+'-refused',passed:true});
+  }
+  window.surfaceResults={cases:results,allPassed:true,actualHelper:true,syntheticOnly:true,clinicalOrNativeScanAcceptance:false};
+  status.textContent=JSON.stringify(window.surfaceResults,null,2);return window.surfaceResults;
+ }finally{raf=false;cancel.disabled=true;current=null;}
+};
+document.querySelector('#run').addEventListener('click',()=>window.runChecks().catch(e=>{status.textContent=e.stack;console.error(e);}));
+</script></html>

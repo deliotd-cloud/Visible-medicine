@@ -1,19 +1,22 @@
 {
   "focusedCounts": {
-    "tests": 91,
-    "pass": 91,
+    "tests": 125,
+    "pass": 125,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "sourceToolingCases": 20,
+  "negativeControl": {
+    "oldImporterTests": 3,
+    "pass": 2,
+    "expectedFail": 1
+  },
   "fullTypesPassed": true,
   "productionBuildPassed": true,
-  "reviewBindingUnchanged": true,
-  "browserCases": 11,
-  "signedInAcceptance": false,
-  "nativeScanModelRenderingTested": false,
+  "stockReviewModelsPolicyCatalogPassed": true,
+  "browserCases": 6,
+  "syntheticOnly": true,
   "wholeSuitePassing": false,
   "ownerPreviewChanged": false,
   "clinicalApproval": false,
