@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const name='tests/current-head-index-whole-role-transition-20261021.test.mjs';
+const raw=readFileSync(new URL('./RAW/'+name,import.meta.url));
+const code=readFileSync(new URL('./CODE/'+name,import.meta.url));
+assert.equal(sha(raw),'866f45ea141b122ecb801edd29ffbd62cbd9e0af923f1a648f26d424914bd133');
+assert.equal(sha(code),'e560aacdc0eaf0595345140bccb0bc2893949791d69219b495d74dc59110e403');
+const before=raw.toString('utf8'),after=code.toString('utf8');
+assert(Buffer.from(before).equals(raw)&&Buffer.from(after).equals(code));
+const once=(text,from,to)=>{assert.equal(text.split(from).length,2);return text.replace(from,to);};
+const priorAt=before.indexOf('function prove('),currentAt=after.indexOf('function prove(');
+const priorTests=before.indexOf('\ntest(',priorAt),currentTests=after.indexOf('\ntest(',currentAt);
+assert(priorAt>0&&currentAt>0&&priorTests>priorAt&&currentTests>currentAt);
+assert.equal(after.slice(currentTests),before.slice(priorTests),'Every complete original case and refusal body remains byte exact');
+// A seventh textual header is inside an archived template, not a registration.
+const literalHeaders=(before.slice(priorTests).match(/^test\(/gm)||[]).length;
+assert.equal((after.slice(currentTests).match(/^test\(/gm)||[]).length,literalHeaders);
+const addedAt=after.indexOf('function lineHunks(before,after){');
+assert(addedAt>0&&addedAt<currentAt);
+let restored=once(after,after.slice(addedAt,currentAt),'');
+restored=once(restored,after.slice(currentAt,currentTests),before.slice(priorAt,priorTests));
+assert.deepEqual(Buffer.from(restored),raw,'Entire corrected test restores the V5 test, not just its case list');
+console.log(JSON.stringify({codeSha256:sha(code),rawSha256:sha(raw),wholeTestInverse:true,
+ literalHeaders,actualOriginalCasesVerifiedSeparatelyBySourceProof:6}));

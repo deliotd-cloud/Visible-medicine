@@ -41,7 +41,7 @@ assert(roots.length>0&&new Set(roots).size===roots.length);
 for(const path of roots){assert(path.startsWith('tests/')&&/\.test\.[cm]?[jt]sx?$/.test(path));assert(rows.has(path)||seen.has(path));}
 const terminalPath=base+'/native-selected-repairs-v5/TERMINAL.json';
 if(mode==='--preflight'){
- const output=base+'/REVIEWED_SOURCE_FOLLOWUP_PREFLIGHT.json';
+ const output=planPath.slice(0,-'/PLAN.json'.length)+'/PREFLIGHT.json';
  assert(!fs.existsSync(output));
  const result={at:new Date().toISOString(),planPath,planSha256:planHash,sourceReceipt:sourcePath,sourceReceiptSha256:sourceHash,
   replacements:plan.repairs.length,additions:plan.additionalFiles.length,nextNativeRoots:roots.length,

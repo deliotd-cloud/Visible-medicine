@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T07:07:16.945Z",
+  "at": "2026-10-22T07:44:24.123Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "27bebb4b0b5a800088b89f463478cb4cb7f9cf37",
-  "gitParent": "27bebb4b0b5a800088b89f463478cb4cb7f9cf37",
+  "parent": "3972c456968195ea4dc801c6a384eced14638b50",
+  "gitParent": "3972c456968195ea4dc801c6a384eced14638b50",
   "files": [
     {
       "path": "app/globals.css",
@@ -12375,6 +12375,11 @@
       "sha256": "c544a7179e7a07360b14412142f8a7776a00f0930d36a0e1c48dcaa8359b47df"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-terminal-source-continuation-20261022.mjs",
+      "bytes": 4076,
+      "sha256": "c690a0a01aa3041584595439c17cf917674342e9b949e966d9388a5af36cebfd"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-tour-reading-admission-20261022.mjs",
       "bytes": 860,
       "sha256": "7c4f1bb24b59184268ee698189103e5701b6cf5b3e0063c010a642dc91a5d42d"
@@ -12453,6 +12458,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-spinal-step-wrist-admission-20261022.mjs",
       "bytes": 7125,
       "sha256": "0c43d4aa31e815182e276d86290be0fdefbb33f8f77350fb4bdced0ba4fc4271"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-terminal-source-continuation-20261022.mjs",
+      "bytes": 5827,
+      "sha256": "5302e9167102daae65e768d9f797918404847a781c0cedbd57878be5f64d5b61"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-tour-reading-admission-20261022.mjs",
@@ -12591,8 +12601,13 @@
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/prepare-reviewed-source-followups-20261022.mjs",
-      "bytes": 5935,
-      "sha256": "f58f96f3198724925bcacc7d6316b0eae5b5d947659230e5774702bc67929b73"
+      "bytes": 5944,
+      "sha256": "f456d752e1bc488b869ce4034d00e6a714a9ffda78e3e004d20929bf14444a87"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/prepare-ui-dependent-source-followups-20261022.mjs",
+      "bytes": 7513,
+      "sha256": "7cfa69eee57763c18bf3dee8cd9fc205498c19e67ed0de7bc20a16779544d1bc"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/prove-extra-expansion-admission-20261022.mjs",
@@ -12605,6 +12620,11 @@
       "sha256": "69793fbfbc12c48dd05062dc6a76512bb43a24401d9b9f1f9d747aa64ffdd01f"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/prove-ui-dependent-source-followups-20261022.mjs",
+      "bytes": 4162,
+      "sha256": "b5e17616ba1ede095f48b5a3e3b7fab1bbe8614e0b1d6605b55f2cde4dada128"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/record-preview-hold-20261022.mjs",
       "bytes": 1123,
       "sha256": "8f3b1f5f3f6b1c65b4413c7bd903f47445bde6570aa67eb5ee635e40ab596811"
@@ -12615,9 +12635,19 @@
       "sha256": "2788a8d4103b50bb3969747773041bfa69cd1d5c02ffc189062b3a66ece8b636"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/record-selected-native-terminal-20261022.mjs",
+      "bytes": 4091,
+      "sha256": "35e385bdb6a0e2bc891b8859be5b0791b2a6a43b87c73810f97c3848efe7926b"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/record-six-clinical-composition-refusal-20261022.mjs",
       "bytes": 2380,
       "sha256": "206da86f831d68046670ef82a8d7f501632b1ad955168eac7f8bdc1f72871cfd"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/review-source-packet-20261022.mjs",
+      "bytes": 3557,
+      "sha256": "6cc9ccc20b1a2cde67516e1f6dd9f8171897f45cfffdfc77a6afd5eb4048c990"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/run-coherent-full-regression-20261022.mjs",
@@ -12638,6 +12668,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/save-regional-tour-leg-handoff-20261022.mjs",
       "bytes": 6822,
       "sha256": "6b816c8c6b216a76490487565a8d0018b0d965fea6c36e622a214bb374d530b2"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/select-terminal-source-followups-20261022.mjs",
+      "bytes": 10828,
+      "sha256": "8b8de2e2e91ffb7b8821d59d79b03b764f05b7d846b6edafaaeaa3ad9729ec24"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/stage-keyboard-module-admission-20261022.mjs",
@@ -12663,6 +12698,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/start-regional-runtime-qa-proxy-20261022.mjs",
       "bytes": 3295,
       "sha256": "799f2b3c29e95a29b764f4d24003560c104c1fb28548a2cebac50508db5e0cac"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/test-source-packet-inverse-20261022.mjs",
+      "bytes": 1124,
+      "sha256": "9e7d8b945a18fd8a23082e6c640e7e820724fcf0d3394a549117d312d1542f17"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-arterial-history-proposal-20261022.mjs",
@@ -12733,6 +12773,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-six-clinical-composition-20261022.mjs",
       "bytes": 7858,
       "sha256": "548bb7c1759f869ea47fcb711944455934b297b8553c74479fcafcebd9ae7035"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/verify-terminal-source-followups-20261022.mjs",
+      "bytes": 5735,
+      "sha256": "78c39850ee74df32bc3790ec93146022c640a0541ac6179ff25b9afe5620bb09"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-thoracic-authored-epochs-20261022.mjs",
@@ -16665,6 +16710,831 @@
       "sha256": "0c37c1868381d97f90e02ec8cd7a37e59a5d633c8fab0c3f4648473f3da8a4ff"
     },
     {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/CODE/tests/radial-eus-current-transition.test.mjs",
+      "bytes": 21258,
+      "sha256": "adf350fe7fc229a63bf7013a5bd7e159886beb27053586d6d7f6e6e3eb505811"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/CODE/tests/salpingopharyngeus-integration-register.test.mjs",
+      "bytes": 1020,
+      "sha256": "70cc28e5445300730d5d98845024b4eb6f0970572bb0206809d79000c3a78d3e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/CODE/tests/ui-teaching-admission-contract.test.mjs",
+      "bytes": 13429,
+      "sha256": "978b402df48fafdab49e36969e2a11cdd7e445cf2b9a2eb24fc8fa82e3c7fa57"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/PROVE_SOURCE.mjs",
+      "bytes": 7239,
+      "sha256": "deea17f11f93890869cec4beffffaa48cf6b85559931f5bbe4830584058c3567"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/RAW/tests/radial-eus-current-transition.test.mjs",
+      "bytes": 16828,
+      "sha256": "d289abe076590281411eb8df6fd8c3d36d72d08ae594e6ce61054cc9cbb584b4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/RAW/tests/salpingopharyngeus-integration-register.test.mjs",
+      "bytes": 568,
+      "sha256": "a52ee328b4f8cd2d041e25a1b92afe4cc60e21f53d36549a8a8a66a1e4bc78d0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/RAW/tests/ui-teaching-admission-contract.test.mjs",
+      "bytes": 12760,
+      "sha256": "574b110f29a31db2db3c451a0ee6f20c7daecc552f3e1ef928285dd8796a0be6"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-closed56-57-provider-admission/CODE/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8707,
+      "sha256": "1e2111111f5c9798a778710e65057680928c18ae79f954fc40796c4ca01fde4a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-closed56-57-provider-admission/CODE/tests/closed57-original-tests.test.mjs",
+      "bytes": 14066,
+      "sha256": "ac08121a7e58bf747880bd1a0c24c9479ee51ffdb8cfa0c7a2b2ef7f4ed10966"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-closed56-57-provider-admission/CODE/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8716,
+      "sha256": "e7d47048bc2b69bd13ad1ca03cc3bb7db377cd8b0e720847165189c53b2f07af"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-closed56-57-provider-admission/CODE/tests/historical-head-toolbar-css-extension.test.mjs",
+      "bytes": 6915,
+      "sha256": "b11a1e6d8216880a50e9dc8120b35d91eeeacf1e035e0762796054e2ca92af60"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-closed56-57-provider-admission/RAW/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8476,
+      "sha256": "61e2886316e369954d6902709d885357b1f6c62318eb4c5056260eb6d40ab718"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-closed56-57-provider-admission/RAW/tests/closed57-original-tests.test.mjs",
+      "bytes": 10239,
+      "sha256": "926a8367daa7311ab955b25a5fc47b0ae1edae7845a3d4229bc2b9e0fed631da"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-closed56-57-provider-admission/RAW/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8477,
+      "sha256": "a61fbe8b30ca01e50035c843399ae4cfbb0c0be214b3ec117b7424664cd5163d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-closed56-57-provider-admission/RAW/tests/historical-head-toolbar-css-extension.test.mjs",
+      "bytes": 5818,
+      "sha256": "ed5e97efb13abf3df17bea0d4175bd61b58101b35a086909672ac7091373ce19"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-colic-complete-source-followup/CODE/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 9444,
+      "sha256": "2add31dc03372e7c1960a2f91bdfe429e03c7eeed53d53274a638ca72fdddbb0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-colic-complete-source-followup/CODE/tests/colic-later-source-inverse.mjs",
+      "bytes": 3855,
+      "sha256": "53880d21096880b81b88cf241eefd7e4f8d8853eaae8157ec3af1be7f889fa44"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-colic-complete-source-followup/PROVE_SOURCE.mjs",
+      "bytes": 6487,
+      "sha256": "90e6293b717c360a2c2734ee5ba8152ebd833ccf1234d7a7f9ff48b78631317f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-colic-complete-source-followup/RAW/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 4561,
+      "sha256": "8780092a4889681421adb5f696f06f28cdb5a29c157ba31271b38c1cf3ded0ff"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-corpus-ui-current-followups/CODE/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 15458,
+      "sha256": "5f2e7ae49b2aeacb9d0f99adac6c736e022fe1671fb65127d5f6ee0ceb98b337"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-corpus-ui-current-followups/CODE/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "bytes": 11258,
+      "sha256": "28be69bc03dd3b78665ccf5947fb2fd33077654ed6a26bf03bad6bf9c3e6207e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-corpus-ui-current-followups/CODE/tests/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16217,
+      "sha256": "89125a0699029efb7186800ba761ecbe0748c052753424fc02fc36231f5f5913"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-corpus-ui-current-followups/RAW/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 12565,
+      "sha256": "e479df738feadeccfc53eeb116088ea64511dfdf6af2a5f5dcf81f5b7556b1a5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-corpus-ui-current-followups/RAW/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "bytes": 10709,
+      "sha256": "f75554c4abf79498d87e199bc28fc225ca6d7251cc269b2b7b0c7972dcb00a28"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-corpus-ui-current-followups/RAW/tests/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16195,
+      "sha256": "8dac3b76e058953603aac3b7124fb19f3b754870cac0d88166ba2531efde13a8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-corpus-ui-current-followups/SOURCE_PROOF.mjs",
+      "bytes": 6457,
+      "sha256": "ee6a44e87ce91e7fe9d2477635e92536e2ee476359b902e8fc3f19f1bfe3acf1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-entrypoint-followups/CODE/tests/batch-c-role-inverse.mjs",
+      "bytes": 10413,
+      "sha256": "595daaba750d0f6d6a13aa16986ec47cfb2e6dc188c5328bc808ef05417a101b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-entrypoint-followups/CODE/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 25177,
+      "sha256": "4e2a4a78f39f8aa4f9f1dc69304f963541c5a60e77d7d2b97d7bb45cfad894a0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-entrypoint-followups/CODE/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 31702,
+      "sha256": "94b81cb4b06e64a1781a5bbea45d349d1524dc3e346cdcce0fc54c31a8f3ab5c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-entrypoint-followups/PROVE_SOURCE.mjs",
+      "bytes": 9683,
+      "sha256": "4166382cb284e2975b0decd569b1693092e2bbfc3fc83693dcd55472e40a6c4c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-entrypoint-followups/RAW/tests/batch-c-role-inverse.mjs",
+      "bytes": 5670,
+      "sha256": "c0fcc58347889fb7b56fe4c43006a8cf6cbfb77e207c510d26a2ae31ad9767c4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-entrypoint-followups/RAW/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 23659,
+      "sha256": "211e92a61e4e9b7298163c20b90b04b333e9ea741654dfbada106c9537864b1f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-entrypoint-followups/RAW/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 30225,
+      "sha256": "dee00a61a1362803c529e72646f10e71684eb2bde71cb76908bc800634f85937"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-history-closure/CODE/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 15110,
+      "sha256": "e560aacdc0eaf0595345140bccb0bc2893949791d69219b495d74dc59110e403"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-history-closure/MAIN_TEST_SOURCE_INVERSE.before-literal-count.mjs",
+      "bytes": 1781,
+      "sha256": "ae21b4aab0c701f7bc7cd2e5e3471ec3a524cc2c3d9892e30023214d4649e2e5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-history-closure/MAIN_TEST_SOURCE_INVERSE.mjs",
+      "bytes": 1999,
+      "sha256": "e84b99d0a3ebd4b2679fed0cd83b3cffd92d2eff565fe8bc526dcb12115a2d74"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-history-closure/RAW/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 12202,
+      "sha256": "866f45ea141b122ecb801edd29ffbd62cbd9e0af923f1a648f26d424914bd133"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-current-head-history-closure/SOURCE_PROOF.mjs",
+      "bytes": 3181,
+      "sha256": "7848404ee67adfc5aefb6f40d62a8e40d7ed4f72190a96923e11d4872b308056"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-desktop-frame-history-followup/CODE/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 6148,
+      "sha256": "8c94803ea09e9389837e1b46ea41d52701e115ac1bed55f4e58444365141ca51"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-desktop-frame-history-followup/CODE/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 8430,
+      "sha256": "1dcf6afcade0e1439627ce583d13c3d5181bdca4eb04fd84e9b5bf685b0a2025"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-desktop-frame-history-followup/RAW/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 4177,
+      "sha256": "88aa79624b76b3cb69e52f15a378b47466dc6fd2549847339721afd4f56c1514"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-desktop-frame-history-followup/RAW/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 6383,
+      "sha256": "08836926edb3c2cd47a69ac2b0e1c6d31a58360cf4b85781b54670c8d25fa18d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-desktop-frame-history-followup/ROWS_PROOF.mjs",
+      "bytes": 2340,
+      "sha256": "4fa826c2c3fe729d74a464c49120565fbe423b5c851b9d9252b933b943a12532"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-desktop-frame-history-followup/SOURCE_PROOF.mjs",
+      "bytes": 10659,
+      "sha256": "d63aa8e6877545bd466575929f39c0d1e78793737ca1a5547b45d93d48068f58"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-head-pilot-history-followups/CODE/tests/head-neck-pilot-history-preservation.test.mjs",
+      "bytes": 5094,
+      "sha256": "9798269f4b3f982d4d16d80437a09a0abb0c0c11015d94dfb57a2c1b708ece69"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-head-pilot-history-followups/CODE/tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "bytes": 15021,
+      "sha256": "e6d3875ea07c68aac014c77124c01c985f37d651e54b8e6fac54b79cc2ce5d49"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-head-pilot-history-followups/PROOF.mjs",
+      "bytes": 2577,
+      "sha256": "1119c53468bc7bd8c4f34b2adef56c8468b76c8b1121f14973f5b9f21d8815c7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-head-pilot-history-followups/RAW/tests/head-neck-pilot-history-preservation.test.mjs",
+      "bytes": 3809,
+      "sha256": "cb402999742a1e04e5603e0e613d6a407e8e2a83f2e6f720053ca2c34447aab1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-head-pilot-history-followups/RAW/tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "bytes": 9751,
+      "sha256": "4bd96b1659df318631348d2c12e08ba917ced43aa44841f79f4c9da997ad737e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-heading-root-history-followup/CODE/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 6746,
+      "sha256": "c04ede4783b03fa7c7bdac213e04ad08826e93def837652e51a34541abbf265d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-heading-root-history-followup/CODE/tests/salivary-cache-guard-adaptation.test.mjs",
+      "bytes": 5414,
+      "sha256": "09bdafdb9ec5cad0b55bc613907bc6b3171cbbc2a06a078c5275f291307ad627"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-heading-root-history-followup/CODE/tests/salivary-current-family-inverse.mjs",
+      "bytes": 6680,
+      "sha256": "249a9ae1b34e811da3da475e790997bfbf0bbb27a1a92f5141d85ab90e7377b3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-heading-root-history-followup/RAW/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 5962,
+      "sha256": "5f17dd98df38536edc9456addccca15b5b418af35325d6a284c503dc829992d9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-heading-root-history-followup/RAW/tests/salivary-cache-guard-adaptation.test.mjs",
+      "bytes": 4234,
+      "sha256": "646bb8dc4a841aa97aedd5cf84cc3bdef1e99f14bfc53d98a9e0c9525155f69d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-heading-root-history-followup/RAW/tests/salivary-current-family-inverse.mjs",
+      "bytes": 5011,
+      "sha256": "d022a72465520efd87d4c84578a0db80cd04fb41cacdc9a8aec85a32076b6a37"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-heading-root-history-followup/SOURCE_PROOF.mjs",
+      "bytes": 9055,
+      "sha256": "40d304ea8ee2f46b68ef384eb3640440add0cced4df5d87e30b27e37d2c05ca9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-inferior-thyroid-history-followup/CODE/tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "bytes": 11704,
+      "sha256": "0ff16b6d81a20d018a78eb49b416e431ef70dcfcbcd950e8e79dfdfa7de1b44d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-inferior-thyroid-history-followup/PROOF.mjs",
+      "bytes": 6607,
+      "sha256": "8c3410a99f5f9c7d9ad2ac2def58ca651f8894ccce7277e01d1a2d254a2d2dc2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-inferior-thyroid-history-followup/RAW/tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "bytes": 8688,
+      "sha256": "182500ce4fb9dd65fae0e4efd72fd4f0ad45f8ce7639e0352de117d86d50326a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-intracranial-runtime-family-followup/CODE/tests/atlas-intracranial-arterial-ultrasound.test.mjs",
+      "bytes": 35843,
+      "sha256": "be62fa493b5e4c3bcb951233cb432a874a25119fa4e92b7bea25e91c9dd55c39"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-intracranial-runtime-family-followup/RAW/tests/atlas-intracranial-arterial-ultrasound.test.mjs",
+      "bytes": 35041,
+      "sha256": "34c72bc49fd71233b055340cecf3b81bd423bac6291aad0d66d56d6a64374c32"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-cranial-teaching-batch.test.ts",
+      "bytes": 14628,
+      "sha256": "0b914531d036027e95c36864779422da7b4979683acd2e73596977ff11b987fc"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-dorsal-hand-ultrasound.test.ts",
+      "bytes": 10744,
+      "sha256": "03226b8b33047c96788898e14ff2bdb620463f7f703fac9b69e8dbdb32fd3ccb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-elbow-arterial-ultrasound.test.ts",
+      "bytes": 10776,
+      "sha256": "b99219fd4331cf78215d02b1daa81fc54a7ee0c7a761681d0ed774a25cd3a5d1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-foot-variant-quiz.test.ts",
+      "bytes": 11257,
+      "sha256": "cc424ea799294f03ae5d8464ba19ecb0eaf28d576aeef7e453d0d5e35d2028ec"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-foot-venous-arch-imaging.test.ts",
+      "bytes": 9248,
+      "sha256": "f801fdd4ceeda0b08675ea04e117cd8014cfe70ea32b7082a1357e6309eb02b5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/next-five-admission-contract.test.mjs",
+      "bytes": 7042,
+      "sha256": "a4a92d981f860193765a0fb93b3a8347e1312f7de1ccb221300a77999e8bcf9d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/next-six-admission-contract.test.mjs",
+      "bytes": 6920,
+      "sha256": "7dcd00b36a4bc20c5050f5161c935d7708135290654c2506cd38c5c173af5a39"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/ORIGINAL_THEOREM_PROOF.mjs",
+      "bytes": 2473,
+      "sha256": "64767788ea483b8f407ecc4ff1d29509603b939c66c02712dcfd34914a285a75"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-cranial-teaching-batch.test.ts",
+      "bytes": 14432,
+      "sha256": "33d3ac3fd9c057ea49644e58cfbbbff13a3e3cf0f4e7069ed1699e27360f4225"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-dorsal-hand-ultrasound.test.ts",
+      "bytes": 10548,
+      "sha256": "87d29750351caaf50c1a2781ab5c248a92f711483fcece79b7f15de69853c3c1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-elbow-arterial-ultrasound.test.ts",
+      "bytes": 10580,
+      "sha256": "8c7d6cfa63436615f4ace28125163796b5d55a80702ca7075b8c24ce63dc2182"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-foot-variant-quiz.test.ts",
+      "bytes": 11061,
+      "sha256": "7edc338eae04a62d73767c52ed7e5e1586a3dd2f907021cb5c4c61e150e8c938"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-foot-venous-arch-imaging.test.ts",
+      "bytes": 9052,
+      "sha256": "fd7b184fac2e89e4dc8b76c03c47e365686e55db23479f8d885d350c0e32b957"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/next-five-admission-contract.test.mjs",
+      "bytes": 5829,
+      "sha256": "370f887910a9a92bd25e1487ebd7533ee729d4d098c248122fa8f00f65ee90b9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/next-six-admission-contract.test.mjs",
+      "bytes": 5542,
+      "sha256": "9620e31d9882dfa21338e3eba223e5f2309efd9130dcb59c00a64c35910c2e9d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/SOURCE_CLOSURE.mjs",
+      "bytes": 3244,
+      "sha256": "39cf822b7423248535556f63d90b96c49efa385c9d973380beae27b9ba0b8c56"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/SOURCE_PROOF.mjs",
+      "bytes": 5871,
+      "sha256": "7022d4c6c8ac26888e2d4f9c9218b3bcca73d9f4736d6f61f3da6e6dc988ac1c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-limb-nerve-entrypoint-followup/CODE/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 20197,
+      "sha256": "cffd85f99710eab36bf0df7d71f8dd86ded3cf8634a960028e94cf1c517ce8f6"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-limb-nerve-entrypoint-followup/PROVE_SOURCE.mjs",
+      "bytes": 9430,
+      "sha256": "8a7ac41df52d7b612a658b4fe26b57623453209b9c8db976774d384b98589f20"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-limb-nerve-entrypoint-followup/RAW/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 18408,
+      "sha256": "fa3ff34ae74397b4f84835e0a5f5364493136114f004c26ce9d7a41acdd9d9a7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-orbital-check-runtime-followup/CODE/tests/clinical-review-orbital-check-evidence.test.mjs",
+      "bytes": 15516,
+      "sha256": "c36348ef1a34ad4a7cb82eea80fb4c2c3bc06725927bd203f8c97354930d52e2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-orbital-check-runtime-followup/PROOF.mjs",
+      "bytes": 5216,
+      "sha256": "0225d31a61c8b85a55c63106168559d8245c3b6105cff91b5837860e5846eaf2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-orbital-check-runtime-followup/RAW/tests/clinical-review-orbital-check-evidence.test.mjs",
+      "bytes": 15087,
+      "sha256": "61cac60df80a619c841bb4c8db2458b0ebe57a688ef1dceff72ea505c25ac6e1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-orbital-check-runtime-followup/SOURCE_PROOF.mjs",
+      "bytes": 2959,
+      "sha256": "b2c5e55e355dd56ca98a94d2575bd427c42e89b0913f002a766556e8f11e87d3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-question-regional-composition-followup/CODE/tests/clinical-question-role-preservation-20261021.test.mjs",
+      "bytes": 18162,
+      "sha256": "969b1860dffde7f30ab07d7eabefbbdeb8287eefd6ec7064ac16d0c1a20200b9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-question-regional-composition-followup/RAW/tests/clinical-question-role-preservation-20261021.test.mjs",
+      "bytes": 15758,
+      "sha256": "311b3c9e87f5ffa069330dafe1c41fc07fed5ca144974655e97ed34814c61392"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/CODE/tests/fixtures/review-frame-history/atlas-runtime-frame-body-learning.raw",
+      "bytes": 23666,
+      "sha256": "0d5edad796ce655f1f62da7ea06c08a3a541f110606d5b1cbb87d2b07d782e97"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/CODE/tests/fixtures/review-frame-history/review-navigation-delivery-v5.raw",
+      "bytes": 2010,
+      "sha256": "aa78cc90a446a70f436ff161e7f2e506d257f7463442e63c9a470a0348d6aa9a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/CODE/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 6048,
+      "sha256": "d7c49de5731cdf64dcc57e6e861cf9b2614d763a784a256ade5ba7755a7fc4d4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/CODE/tests/live-learning-runtime-harness-preservation.test.mjs",
+      "bytes": 5436,
+      "sha256": "c07a432944abfd9d410b3b9cedc6387ab3a8b333b4d12e41c1d86591cb4774c0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/CODE/tests/review-frame-history-inverse.mjs",
+      "bytes": 7390,
+      "sha256": "107fac77b4f68f2ca4b91a035a53920210a69a63a14b023e7b0f09e85810041a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/CODE/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2412,
+      "sha256": "e89390f4aa8ebf4c8c709f6d6b78e9400e79e0dca7a16e58eea4de371dd8b144"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/RAW/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 5301,
+      "sha256": "7257e974b953d81a4858642fddba053d56f0aa6168a765b9be620a5ce009cdf1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/RAW/tests/live-learning-runtime-harness-preservation.test.mjs",
+      "bytes": 5341,
+      "sha256": "07453e8b3269f347560806b8b831a2a65026e85389888e294061ddd79e473845"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-review-frame-history-admission/RAW/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2010,
+      "sha256": "aa78cc90a446a70f436ff161e7f2e506d257f7463442e63c9a470a0348d6aa9a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-salpingopharyngeus-runtime-followup/CODE/tests/salpingopharyngeus-mri-delivery.test.mjs",
+      "bytes": 9302,
+      "sha256": "3a15256c509ed4c0de24413f49bfd46272b440c92f2106ebf62d44c168ce3b80"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-salpingopharyngeus-runtime-followup/RAW/tests/salpingopharyngeus-mri-delivery.test.mjs",
+      "bytes": 8915,
+      "sha256": "3d0840fcefe027bf4bb541cdbae45eb80b5b86012aa6f29847fcdd74d560f1bc"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-tour-imaging.test.ts",
+      "bytes": 32992,
+      "sha256": "21186d4ade0a595cba0f7121b0c439dfe81acc597d7d93e581b0467a9c2158de"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-um-ankle-imaging.test.ts",
+      "bytes": 4081,
+      "sha256": "62449d6ba0d2719e16d7cd4acd7b48a5215d261cd44822a23d0d796da718b3ac"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-upper-venous-tour.test.ts",
+      "bytes": 5678,
+      "sha256": "d9718a82a25fd9533a7f3dcc7483acb131404738e012e7bab8ec2109dee5668f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-visceral-arterial-xray.test.ts",
+      "bytes": 24319,
+      "sha256": "be2e213ba210247d94a964bb4521c2630edab81f4496c3e2363d2cf725921c7b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 8460,
+      "sha256": "36d9b0a2d2b33c1426207c95103279966e53bbba5c61b325ecff757482a59c91"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "bytes": 16923,
+      "sha256": "d51678cc4a2f42badbc9fb3fd0afffabb6094c7af2fa2f225f4acb907c6e0fcb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/regional-tour-role-preservation-20261021.test.mjs",
+      "bytes": 16382,
+      "sha256": "99cfb5b368c4ad51545d431916fbd5ee204d3ce1e27b5ad57b74273c391b0fc5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/tongue-palate-delivery.test.ts",
+      "bytes": 16972,
+      "sha256": "5dd1101cc8ce1a84618878d905b890d82484229bef3efc1c71c8015c4546b665"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/CODE/tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "bytes": 6386,
+      "sha256": "4130539addc372692276dcad2da6bb8b1913e93b41df98394045ae42f7d58b4e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-tour-imaging.test.ts",
+      "bytes": 32924,
+      "sha256": "5b6973bb2241ab63ffccb4a911a48e5c2ee9adef3f7ce8c6cfb1345d3deb4be4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-um-ankle-imaging.test.ts",
+      "bytes": 4055,
+      "sha256": "57c7250be0b65ea1756f992b822803cad98560389eb9aa3f551c33414d5bd2c5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-upper-venous-tour.test.ts",
+      "bytes": 5654,
+      "sha256": "58876d6c84dc39aab6330e7a8a24f2656efa3c9223ae72470dc6bfa47d0c395d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-visceral-arterial-xray.test.ts",
+      "bytes": 24230,
+      "sha256": "4c20690db0b8894ffd1eb583e545c61bccc6cb5894b715964f8ff2ff38fe82ca"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 8333,
+      "sha256": "957869680b17019ea178d75b9effacdc2f4333e9737abfad5bbd5906058b5c71"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "bytes": 15666,
+      "sha256": "81a6a02d6a25426c64e9cd7a313e19a3be1b4ab44183b0a89c0c90000076a038"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/regional-tour-role-preservation-20261021.test.mjs",
+      "bytes": 15177,
+      "sha256": "11900802b88e160a98b7810f18dc0afae9b4df66918f2cbaf148dc49aecba912"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/tongue-palate-delivery.test.ts",
+      "bytes": 12464,
+      "sha256": "bf4528110979d7691f05701fb9113ee6e66214156214ef9478a40d763ce61145"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-clinical-runtime-admission/RAW/tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "bytes": 5534,
+      "sha256": "425a72be30edf51159b4c2cc19bc12c15866372b4b8e2793b465deda7eef63e2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-current-imaging-preservation.test.mjs",
+      "bytes": 5629,
+      "sha256": "5d25ab54eb280d0b15c862d9c0c73b1796c877a025dcd4f93b4971e52cd2d00a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-current-quiz-preservation.test.mjs",
+      "bytes": 7527,
+      "sha256": "95e8980f44a1c686c58e6410ace272bf49b7880f6a52e27e590e815a165b4be5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-lacrimal-quiz.test.ts",
+      "bytes": 10761,
+      "sha256": "4a59cee188d717617cc5308470f629628763d1bd1c0d2785a2cb0bf4339edfac"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "bytes": 12231,
+      "sha256": "9c585b33e1f3bceb25731cb4cc68decb511aa929a792a9e5f497cbee9b545790"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "bytes": 12030,
+      "sha256": "b544e0c1d9af85d1af32c8142785bb98e53e917c0b09f57f221ee57d5c6477e0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-ocular-support-quiz.test.ts",
+      "bytes": 12551,
+      "sha256": "42c041f166b31ecd33e1049bb2676fef2328e636dc185ee03122b0e3af9ec20b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-orbital-support-quiz.test.ts",
+      "bytes": 9271,
+      "sha256": "cb661d3d5528eda4fcfb3684bdae97cc0b4d831a7075eadd63793588b524d892"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-pectoral-ultrasound.test.ts",
+      "bytes": 12183,
+      "sha256": "8929acb72bb0f87cc459ecbd9e10faac91958039209172fb64e0710ba0054d29"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-current-imaging-preservation.test.mjs",
+      "bytes": 4489,
+      "sha256": "4a975560f129067bc08d572efe500209363d8107a234df861214edd32824b56c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-current-quiz-preservation.test.mjs",
+      "bytes": 6293,
+      "sha256": "b7ef46cdeb1c22340ce0f007b18cf02743fa5c81c21d58067743b2f0548587af"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-lacrimal-quiz.test.ts",
+      "bytes": 10565,
+      "sha256": "2134305fe2af059f405b463dfa6158a5c2e05396628fde97ddd24210df695abe"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "bytes": 12035,
+      "sha256": "63cc3f0c56b554f6a7ca0030eaeef44ff919dc7ec3f0d3c66ac8354f57e91deb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "bytes": 11834,
+      "sha256": "806646d125fa5772174a46f3976c162a095755e257d15b961536536eff8f0aec"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-ocular-support-quiz.test.ts",
+      "bytes": 12355,
+      "sha256": "a29ccee61b27faf00d925fafc8b00e0d5b64eda4ebd6481b8b1ff4d16b7e5101"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-orbital-support-quiz.test.ts",
+      "bytes": 9075,
+      "sha256": "fe12516289eb6a2c6d971d3d0e44b186d6cfba00beda3deda7bc95150a436954"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-pectoral-ultrasound.test.ts",
+      "bytes": 11985,
+      "sha256": "3d243b0041685bcaac16eb271be4f7d6891a2485f7fbfeff406e53b83ba0d1fc"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/SOURCE_CLOSURE.mjs",
+      "bytes": 3466,
+      "sha256": "0345ad338955289042245511aed38d5eee096e5174dd6ab36f028e068b3f03f0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-six-remaining-clinical-runtime-followup/SOURCE_PROOF.mjs",
+      "bytes": 5629,
+      "sha256": "0c37c1868381d97f90e02ec8cd7a37e59a5d633c8fab0c3f4648473f3da8a4ff"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-spinal-dispatch-source-followup/CODE/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 88551,
+      "sha256": "7a39e919130ce257d590f564b0a9839857df9b2a1c3c786cf2805527fe79e01b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-spinal-dispatch-source-followup/CODE/tests/spinal-current-source-inverse.mjs",
+      "bytes": 8915,
+      "sha256": "3008622e5256507d67006ca128488decf53d037ad5318f8d896c62ebc9524c89"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-spinal-dispatch-source-followup/RAW/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 87983,
+      "sha256": "46feb48a3d91439396e47fa739df407ea95a3eacca0900c742fd4fe1ed6adf44"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-spinal-dispatch-source-followup/RAW/tests/spinal-current-source-inverse.mjs",
+      "bytes": 5068,
+      "sha256": "c0c6f035f2564743d80bd827fe98703b192bb38086df1b639f28b786802651c8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-terminal-source-continuation/PREPARER.before-versioned-preflight.mjs",
+      "bytes": 5935,
+      "sha256": "f58f96f3198724925bcacc7d6316b0eae5b5d947659230e5774702bc67929b73"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-tour-quiz-runtime-family-admission/CODE/tests/clinical-review-quiz-disclosure.test.ts",
+      "bytes": 6443,
+      "sha256": "4629e27ef0a622a14cf3fd1eaef3bd1f939c17b725d39bba89992c17dfd7b683"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-tour-quiz-runtime-family-admission/CODE/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "bytes": 19897,
+      "sha256": "d1ef90c77d79b7ddb2b7013576f7a1c68a636b825dfd5179204d476b5a02a072"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-tour-quiz-runtime-family-admission/CODE/tests/clinical-review-tour-speed.test.ts",
+      "bytes": 5916,
+      "sha256": "455136653f2735cd0be1ca2ab2e52baf96b7efbd996fb79971154d6b781ed09e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-tour-quiz-runtime-family-admission/CODE/tests/specimen-playback-whole-source-inverse.test.mjs",
+      "bytes": 3979,
+      "sha256": "1fcd5d8fdd44974d9cc9dbe407325eff7ff75cb41cfda0d10e32ebf8967fcd47"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-tour-quiz-runtime-family-admission/RAW/tests/clinical-review-quiz-disclosure.test.ts",
+      "bytes": 6367,
+      "sha256": "5b74d78eb8080e18231b17bef7a0fd3cee7db237dcb6afef58aa862c7d044a0b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-tour-quiz-runtime-family-admission/RAW/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "bytes": 19788,
+      "sha256": "3076ac33f3096b47f09dbf9364f92687d74d8ffb5899b4c612e8134f3db1ba1c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-tour-quiz-runtime-family-admission/RAW/tests/clinical-review-tour-speed.test.ts",
+      "bytes": 5896,
+      "sha256": "e497da23a851402c9dd0988e5b2aeda899d868242a8be6586e03828ae0fdd974"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-tour-quiz-runtime-family-admission/RAW/tests/specimen-playback-whole-source-inverse.test.mjs",
+      "bytes": 2295,
+      "sha256": "8962aac6ed256b5e41ebfe2136dee07c28f02311cdf5d4ca90abcd823a2238d0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/CODE/tests/deep-plantar-current-transition.test.mjs",
+      "bytes": 11864,
+      "sha256": "7829cee2a88f7df10b326bcc9efa0dd786bbaed4f64757fe3754bd94b0ff5845"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/CODE/tests/head-history-role-preservation.test.mjs",
+      "bytes": 5820,
+      "sha256": "8ca48968147e801cec9c9bf0e8db15f733d8b07eda7bcd1dde4b079e13f8a506"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/CODE/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 8756,
+      "sha256": "d2d85cd79f9b61745d961c3f16340300a734c43e27ab2f705650cba670bdc6a3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/CODE/tests/lacrimal-current-transition.test.mjs",
+      "bytes": 12600,
+      "sha256": "31c6b7e117eb98032ea3374cac36ee3ce0d0a33db39034884b4697297c059917"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/RAW/tests/deep-plantar-current-transition.test.mjs",
+      "bytes": 10862,
+      "sha256": "458a217d855fe274c4e95d861405218b732a5a686aaf92c3348084ad9e532613"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/RAW/tests/head-history-role-preservation.test.mjs",
+      "bytes": 4644,
+      "sha256": "171f54cff8129b491890205f9d3b2a0ff21df0ac170943498d4018132f353d2c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/RAW/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 8508,
+      "sha256": "53862d4b4c78959ab4bc2ab8b27412b00ae820df9575333766d4dbab5c961afa"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/RAW/tests/lacrimal-current-transition.test.mjs",
+      "bytes": 11598,
+      "sha256": "5062b0a7d128d8331e5f1348b520330041293d3aebde9a3aed48fac4faa661f7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-transition-terminal-closure/SOURCE_PROOF.mjs",
+      "bytes": 6313,
+      "sha256": "91f08ff5c1eea5b105a6d8e3b115decbdf897b490f7fa3368b1846bf2d380aa0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/CODE/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 6520,
+      "sha256": "814e5d9c32dc8a97c2150e394c281421bd91d7bcb6a0398fcdf2d11c5643d181"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/CODE/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 7608,
+      "sha256": "60ef7d4039e6c89451c0392b2411d2d6314d922e4d564ef85e382bde37aa5c80"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/CODE/tests/ui-current-v5-source-inverse.mjs",
+      "bytes": 1141,
+      "sha256": "0458fb3406ec90f6b4877e7ba83a1b29f95461d9d194bfcb01904280c4fb3bb1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/CODE/tests/ui-teaching-lifecycle-contract.test.mjs",
+      "bytes": 6641,
+      "sha256": "99eeebea4fd0fe9e0038f31a22752e7ee6c30fcb7cb42f4c194309c08a13d87b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/MAIN_PROOF.before-case-count.mjs",
+      "bytes": 4179,
+      "sha256": "3b4ca4eef3ee8b36e940cb8a1b2c60814a90def0f5c39395f957e94abbdbafe9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/MAIN_PROOF.before-module-loader.mjs",
+      "bytes": 3675,
+      "sha256": "a97eae530dc7a49fc47bb04cb4479cfcd59b6c9b5067484de40d3c5e60aacec4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/RAW/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 6427,
+      "sha256": "3cbc677e5f9d144aa1388e0e97eef72cbda13528e7c57b5ee010ccc881c79fd0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/RAW/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 7608,
+      "sha256": "fbd955d5125da0cece3e98ad094e87cd8549bc2478cfe5e0d2bcbecce1248a49"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-ui-dependent-source-followups/RAW/tests/ui-teaching-lifecycle-contract.test.mjs",
+      "bytes": 5994,
+      "sha256": "afa322520b0f14e081b3777fa82582012cc25c6b183f049c02174a1e51e036a4"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/website/lib/regional-atlas-runtime-binding.ts",
       "bytes": 1823,
       "sha256": "ad50af82562dac65d17691ebd7587509784e697e4dd0e737b8f09291c957b022"
@@ -17592,28 +18462,39 @@
     "proposedTestAndHelperPaths": 161,
     "completeOriginalSourceInverses": 161,
     "additionalCodeAndProofPaths": 65,
-    "explicitProductSourceAndPreimageFiles": 64,
+    "explicitProductSourceAndPreimageFiles": 165,
     "productProof": {
-      "planSha256": "3ea1ec6220680ce72cc6796925b8066107258cc1fbdd3f5328d2df332901aa71",
-      "sourceReceiptSha256": "49a132ab76102e0fb2845df9ab111047630ecdafc0f0a2e61e81fef70a62a03f",
-      "selectedFollowupRepairs": 47,
-      "additions": 6,
-      "nextNativeRoots": 89,
-      "originalFailurePaths": 224,
-      "formerlyUnselectedPaths": 33,
-      "fullV5AndHistoricalTheoremsPreserved": true,
-      "colicAll13SourcePatchesProved": true,
-      "headEntrypointCurrentAndHistoricalRolesSeparate": true,
-      "pausedProposalNotSelected": true,
-      "rawDiagnosticLogsAndGeneratedMetadataFixturesExcluded": true,
-      "independentSourceProofsNotNativeAcceptance": true,
-      "current172RootRunStillUnaccepted": true,
-      "canonicalInstalled": false,
-      "ownerPreviewChanged": false,
-      "ownerExplicitlyHoldsNormalPreview": true,
+      "selectedPlanSha256": "c434483f2f05fba330d3412655716a7fb76c3b8c50294509571fe024260fa46f",
+      "sourceReceiptSha256": "44b20981b029abc59f4a5efcaa2c8e6a9fbddb7e2e00886c0db914646681169c",
+      "selectedRepairs": 68,
+      "selectedAdditions": 7,
+      "selectedNativeRoots": 101,
+      "sourcePaths": 6049,
+      "originalTerminalCounts": {
+        "tests": 386,
+        "pass": 355,
+        "fail": 31,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "actualFailureMarkersDiagnosed": 31,
+      "wholeOriginalSourceInversesRetained": true,
+      "sharedCurrentPinAndValidatorsUnchanged": true,
+      "nonTestProductBytesUnchanged": true,
+      "isolatedV6OverlayOnly": true,
+      "normalPreviewExplicitlyUnchanged": true,
+      "nativeV6AcceptancePending": true,
+      "excludedGeneratedMetadataAdditions": [
+        "tests/fixtures/review-frame-history/current-atlas-delivery-1712.json.raw",
+        "tests/fixtures/review-frame-history/integration-inputs-1712.json.raw"
+      ],
+      "initialFailedProofSourceVersionsRetained": true,
+      "rawLogsScansModelsPrivateStateExcluded": true,
       "wholeSuitePassing": false,
       "clinicalApproval": false,
-      "patientRegistration": false
+      "spatialRegistration": false,
+      "publicDeployment": false
     },
     "strictCurrentValidatorAndPinChanged": false,
     "frozenCandidateEdited": false,
