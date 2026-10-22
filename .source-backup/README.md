@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited filtered source plus staged cooperative native head surface validation, additive tests, exact code/test preimages and synthetic QA/coordination source. Generated pins/bindings/coverage, compiled runtime/viewer assets, private records/accounts/DB/env/decisions/references, held source/assets, scans/models/masks and raw logs/media remain local. Not full/private/runnable recovery, installation or deployment.
+Inherited filtered source plus incomplete isolated renal-tour exact-source guard, pin generator, additive source/registration tests and original code preimages. Generated pin JSON and Review metadata, compiled runtime/viewer, private records/DB/env/decisions/references, held assets, scans/models/masks and raw logs/media remain local. Not a complete, integrated, runnable or private backup; no installation/deployment.

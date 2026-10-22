@@ -1,22 +1,12 @@
 {
-  "focusedCounts": {
-    "tests": 125,
-    "pass": 125,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
+  "workerSourceCheck": {
+    "sourceRefusals": 84,
+    "tourRefusals": 111,
+    "mainReviewedSourceAndEvidence": true
   },
-  "negativeControl": {
-    "oldImporterTests": 3,
-    "pass": 2,
-    "expectedFail": 1
-  },
-  "fullTypesPassed": true,
-  "productionBuildPassed": true,
-  "stockReviewModelsPolicyCatalogPassed": true,
-  "browserCases": 6,
-  "syntheticOnly": true,
+  "mainRegistrationTestNotYetRun": true,
+  "typesAndProductionBuildNotYetRunForThisAtlasDelta": true,
+  "website147RootJobLiveAtStart": true,
   "wholeSuitePassing": false,
   "ownerPreviewChanged": false,
   "clinicalApproval": false,

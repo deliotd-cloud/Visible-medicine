@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T13:39:52.523Z",
+  "at": "2026-10-22T13:55:09.298Z",
   "sourceIdentity": {
-    "websiteReceiptSha256": "67b0f4f7716d062aaa2269c22b759436c3b62e2082248d4a447197d28a3643ed",
-    "atlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
-    "atlasTree": "25acdee40ee57e0253cdcca924aa64b4b38586c8",
+    "verifiedWebsiteReceiptSha256": "67b0f4f7716d062aaa2269c22b759436c3b62e2082248d4a447197d28a3643ed",
+    "atlasBaseline": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
+    "atlasUncommittedDeltaSha256": "0bb75302ed05bac2d7a7b199ad40875130b3b6865f865bb991227b130999828d",
     "review": "811baffeb0cfa83626ea4f00383d0ed04fe6980716415d2f919151078cdad9b5"
   },
-  "parent": "38d5c8a3f997f90b7ae36ffe0180ece0e722d26e",
-  "gitParent": "38d5c8a3f997f90b7ae36ffe0180ece0e722d26e",
+  "parent": "3a208a6cd3abdda83238545b4361c1449b09846a",
+  "gitParent": "3a208a6cd3abdda83238545b4361c1449b09846a",
   "files": [
     {
       "path": "app/globals.css",
@@ -19356,6 +19356,56 @@
       "sha256": "b70d0b2e8409859d37c7d216ac91bf890a1a5dff645520f0ef4be120a4c274ef"
     },
     {
+      "path": "pending/renal-tour-source-20261022/atlas/lib/regional-tours.ts",
+      "bytes": 45186,
+      "sha256": "6925988200cc938d0db3c45f1dc8e0c75749dc56b84cbc50fe9f99392d4cca0b"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/atlas/lib/renal-tour.ts",
+      "bytes": 4873,
+      "sha256": "095d8004799abc9afcdfecc0c22df0b3bd38d49cd7671d7f77c1866c54614bfb"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/atlas/scripts/pin-renal-tour.mjs",
+      "bytes": 3282,
+      "sha256": "79caaf2abed4ed41319a8a7311711b08cf7dedc4bc2639db3a5caeb1dcb837ca"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/atlas/scripts/test-renal-tour-registration.mjs",
+      "bytes": 5205,
+      "sha256": "d679ad832e3c75f3a80889bf630043a9657cf24c00b90395369cee00840978a9"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/atlas/scripts/test-renal-tour-source.mjs",
+      "bytes": 5941,
+      "sha256": "236357c756192c4d2a9778d29ecce8aa300dbb25d92af2121285ff75361b23bc"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/coordination/checkpoint-renal-tour-pending-20261022.mjs",
+      "bytes": 9826,
+      "sha256": "519c33be495bc6eb5bf3953e6235edb4d016ece04f353aa9e94139c9641cad9c"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/coordination/prepare-renal-tour-source-20261022.mjs",
+      "bytes": 2367,
+      "sha256": "8076d4d53a2d3f695959f33d151176959f611b53870fccee2a8e9d21d593d759"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/coordination/verify-renal-tour-source-20261022.mjs",
+      "bytes": 4948,
+      "sha256": "f3785b836550b9ddc5b86f8553fcc3469f57d7f05cf36a414680c4bead963475"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/RAW/lib/regional-tours.ts",
+      "bytes": 44624,
+      "sha256": "88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97"
+    },
+    {
+      "path": "pending/renal-tour-source-20261022/RAW/lib/renal-tour.ts",
+      "bytes": 2845,
+      "sha256": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f"
+    },
+    {
       "path": "pending/review-loading-recovery-20261022/coordination/backup-review-recovery-20261022.mjs",
       "bytes": 4006,
       "sha256": "683dd2f7dc087ab1204078347c91f70734050b2b00eb891f45d2d3c01f606f37"
@@ -20897,26 +20947,16 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus staged cooperative native head surface validation, additive tests, exact code/test preimages and synthetic QA/coordination source. Generated pins/bindings/coverage, compiled runtime/viewer assets, private records/accounts/DB/env/decisions/references, held source/assets, scans/models/masks and raw logs/media remain local. Not full/private/runnable recovery, installation or deployment.",
+  "scope": "Inherited filtered source plus incomplete isolated renal-tour exact-source guard, pin generator, additive source/registration tests and original code preimages. Generated pin JSON and Review metadata, compiled runtime/viewer, private records/DB/env/decisions/references, held assets, scans/models/masks and raw logs/media remain local. Not a complete, integrated, runnable or private backup; no installation/deployment.",
   "proof": {
-    "focusedCounts": {
-      "tests": 125,
-      "pass": 125,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+    "workerSourceCheck": {
+      "sourceRefusals": 84,
+      "tourRefusals": 111,
+      "mainReviewedSourceAndEvidence": true
     },
-    "negativeControl": {
-      "oldImporterTests": 3,
-      "pass": 2,
-      "expectedFail": 1
-    },
-    "fullTypesPassed": true,
-    "productionBuildPassed": true,
-    "stockReviewModelsPolicyCatalogPassed": true,
-    "browserCases": 6,
-    "syntheticOnly": true,
+    "mainRegistrationTestNotYetRun": true,
+    "typesAndProductionBuildNotYetRunForThisAtlasDelta": true,
+    "website147RootJobLiveAtStart": true,
     "wholeSuitePassing": false,
     "ownerPreviewChanged": false,
     "clinicalApproval": false,
