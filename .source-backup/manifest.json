@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T21:07:52.455Z",
+  "at": "2026-10-22T21:16:48.235Z",
   "sourceIdentity": {
-    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "tree": "db21ed3dee259c390878450b3495468996a3af85",
-    "mainReviewSha256": "4f6f1ae7729d9e54553ad187d6dd0d1d7e1ef52b7d6fcc6f8321a632425e9ff9",
-    "targetPlanSha256": "64318525c66efc50a038e443d259632e00f69e0f7b212d5088a3413f6ab71ffd"
+    "parentSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
+    "componentBefore": "8396af75753bfaeef7ade8853893e34922277571d1717251d71550e79fcee2fa",
+    "componentAfter": "2b889e1dd98c185ea7f9b07469944dad449ab8a84586832cab3e07bcb3ebd3cf"
   },
-  "parent": "433204209336eea21a4a59c4adf21fca28380ab4",
-  "gitParent": "433204209336eea21a4a59c4adf21fca28380ab4",
+  "parent": "547957dbae469a3d115c6b9b92001639c4fc0d32",
+  "gitParent": "547957dbae469a3d115c6b9b92001639c4fc0d32",
   "files": [
     {
       "path": "app/globals.css",
@@ -16176,6 +16175,51 @@
       "sha256": "b6d7f1c97ecf5e55abdcc0a29a14ad5e52108b900558084cd319ff2382e3ffa3"
     },
     {
+      "path": "pending/head-bookmark-commit-controls-20261022/coordination/checkpoint-head-bookmark-commit-controls-20261022.mjs",
+      "bytes": 9497,
+      "sha256": "06c0d8f03095e18e696d3226bfa0fbf1455ec7e559e4f22dbe4e208570149037"
+    },
+    {
+      "path": "pending/head-bookmark-commit-controls-20261022/coordination/map-lower-limb-nerve-candidate-labels-20261022.mjs",
+      "bytes": 7327,
+      "sha256": "276b66609d44b008aafcedf02d99ace53647fc65d7ba460eba2da2a0a63a022b"
+    },
+    {
+      "path": "pending/head-bookmark-commit-controls-20261022/coordination/verify-head-bookmark-commit-controls-20261022.mjs",
+      "bytes": 4910,
+      "sha256": "3f70f9cc0d6f5b451ef918b27b1796931fb2fd1969663fcdc7b504750788c3ff"
+    },
+    {
+      "path": "pending/head-bookmark-commit-controls-20261022/fixtures/HeadLearningBookmark.original.tsx.raw",
+      "bytes": 8679,
+      "sha256": "8396af75753bfaeef7ade8853893e34922277571d1717251d71550e79fcee2fa"
+    },
+    {
+      "path": "pending/head-bookmark-commit-controls-20261022/fixtures/worker-component.tsx.raw",
+      "bytes": 9005,
+      "sha256": "443dd034292f1d5fd15b2486d9f96c29d4e27c085c28dc56ddb93b2336334869"
+    },
+    {
+      "path": "pending/head-bookmark-commit-controls-20261022/fixtures/worker-ui-test.ts.raw",
+      "bytes": 19430,
+      "sha256": "a25207f19b870750b46893b7e1f001fa1c0c650f0953eb6a151f6ca066214de6"
+    },
+    {
+      "path": "pending/head-bookmark-commit-controls-20261022/website/components/HeadLearningBookmark.tsx",
+      "bytes": 9067,
+      "sha256": "2b889e1dd98c185ea7f9b07469944dad449ab8a84586832cab3e07bcb3ebd3cf"
+    },
+    {
+      "path": "pending/head-bookmark-commit-controls-20261022/website/tests/head-bookmark-ui-loader.ts",
+      "bytes": 1104,
+      "sha256": "830a638ddf06bab56e80dbdcce04b6055f256998ff40c2ab7c9d843fed5d123d"
+    },
+    {
+      "path": "pending/head-bookmark-commit-controls-20261022/website/tests/head-learning-bookmark-ui.test.ts",
+      "bytes": 20985,
+      "sha256": "32dfef2e580d3140a089169af2a48ec05fa99689c99dcb094217e9d8960df661"
+    },
+    {
       "path": "pending/head-modality-3d-20261022/coordination/build-unbound-ui-successor.mjs",
       "bytes": 4572,
       "sha256": "b64ddd7d0916bab4e96465b0af0cd4594745a5abac0ed2cf2cffcad246980eb4"
@@ -23332,19 +23376,28 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited selected source plus metadata-only lower-limb nerve inventory scripts and an original authored editorial acquisition queue. Source-composed candidate1104 roots/108nested targets have no thigh/leg/foot nervous geometry; raw1022 roots/82augmentation rows and two independent UM catalogues remain separate units. Queue13major nerves/10branch targets is proposed, nonexhaustive and not new geometry, asset permission or clinical approval. Primary references support names only; no external diagrams, tables, assets or scans copied. Generated inventory JSON, source catalogue JSON, logs, private/binary/runtime data and canonical Git ancestry remain local. Source-only recovery, not full/private/runnable backup.",
+  "scope": "Inherited filtered source plus separately staged head saved-step bookmark commit-lifecycle repair, exact original/worker code preimages, preserved original14test bodies and20focused synthetic checks. No visible markup, stored schema, Web Lock/CAS, scan, teaching, score, access, source geometry, licence or approval change. A local lexical research map associates22of23named acquisition targets with70source-local annotation rows; every candidate remains held. Only the independently authored mapping code is selected, never annotation JSON, source IDs/labels output, coordinate files, raw logs, private/generated/binary data or canonical Git ancestry. Source-only recovery, not full/private/runnable backup. Normal preview and complete-gate source remain untouched; integration, Review rebind, full types/build/browser pending.",
   "proof": {
-    "workerV2Reproduced": true,
-    "sourceComposedRoots": 1104,
-    "nestedTargets": 108,
-    "lowerLimbNervousRoots": 0,
-    "lowerLimbNervousNestedPlacements": 0,
-    "acquisitionTargets": 23,
-    "majorNerves": 13,
-    "branchTargets": 10,
-    "scopeExhaustive": false,
-    "productChanged": false,
+    "nativeFocused": {
+      "tests": 20,
+      "pass": 20,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "originalBodiesPreserved": 14,
+    "visibleMarkupUnchanged": true,
+    "syntheticHookSimulationOnly": true,
+    "layoutRetiredWritesRefused": true,
+    "strictModeHookSimulation": true,
+    "heldTargetDefinitions": 22,
+    "unmatchedTargetDefinitions": 1,
+    "heldAnnotationRows": 70,
+    "geometryAdmitted": false,
+    "canonicalInstalled": false,
     "ownerPreviewChanged": false,
+    "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false
