@@ -1,37 +1,32 @@
 {
   "sourceOnlyPartialRecovery": true,
   "installedLocally": false,
-  "unchangedBrowserUiInputs": 6,
-  "priorUiFocusedTests": {
-    "tests": 8,
-    "pass": 8,
+  "physicalCandidateSourcePrepared": true,
+  "actualBindingInputs": 1723,
+  "addedBindingInputs": 2,
+  "changedExistingBindingInputs": 2,
+  "firstFiveRootCounts": {
+    "tests": 40,
+    "pass": 39,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "correctedAffectedFrameRoot": {
+    "tests": 20,
+    "pass": 20,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "newIsolatedBindingTests": {
-    "tests": 2,
-    "pass": 2,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "simpleInverseTests": 3,
-  "cervicalInverseAndLicenceRepresentationTests": {
-    "tests": 2,
-    "pass": 2,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "arterialMainDiffAndRoleAssertions": true,
-  "actualOriginalRuntimeCohortsDeferred": true,
+  "priorRefusalRetained": true,
+  "otherInputsUnchangedAfterNarrowTestEventBusFix": true,
   "fullTypes": false,
   "fullBuild": false,
-  "reviewRebind": false,
+  "reviewViewerBuild": false,
+  "currentPinAdmission": false,
   "completeStockSuitePending": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
