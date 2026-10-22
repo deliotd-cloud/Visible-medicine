@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T00:20:33.095Z",
+  "at": "2026-10-22T00:44:36.675Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
-    "pendingCandidateBinding": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99",
-    "addedAuthoredTestAdapterAndPreimagePaths": 5,
-    "addedAuthoredCoordinationScripts": 1
+    "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99",
+    "candidatePinSha256": "db46c1722ed839a4c8a57bd9bad4028dd90f5cb765641172ab4cdc9581e0d80f"
   },
-  "parent": "d7229660edb7d99d184e21d4e20341b46828c44b",
-  "gitParent": "d7229660edb7d99d184e21d4e20341b46828c44b",
+  "parent": "a1862b3eb0bc11c7bf747341f17d7382a2041876",
+  "gitParent": "a1862b3eb0bc11c7bf747341f17d7382a2041876",
   "files": [
     {
       "path": "app/globals.css",
@@ -12572,6 +12571,166 @@
       "sha256": "1ff0122debc54ff429998ac9bfc669a0d2ced1563a9c3101024c655db6e9b930"
     },
     {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/admit-expanded-review-delivery-20261022.mjs",
+      "bytes": 4238,
+      "sha256": "281263f640841242002efd515284947a80dc9cbf8712b0abc47be8c546a6dbe0"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/adopt-expanded-historical-assurance-20261022.mjs",
+      "bytes": 2406,
+      "sha256": "df84f7c52fde0e255d2451ccb7d20fc89903fc0817adec89bb35fd7d47602ae7"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/audit-full-baseline-interruption-20261022.mjs",
+      "bytes": 3839,
+      "sha256": "bfd6eda18a5e6d34f2eb7f2eaa1d192ba551eaa392583f3f2052997d16b00ead"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/build-expanded-review-viewer-20261022.mjs",
+      "bytes": 5713,
+      "sha256": "367c26f25808da03bbe366413ec4371dad40202700079a076efeabeb56d8d641"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/build-expanded-website-candidate-20261022.mjs",
+      "bytes": 2778,
+      "sha256": "074b1025095a05308535fdb0ff67e86f36d83f2c7479803d564f2a9c89da0b55"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/check-expanded-viewer-cohort-20261022.mjs",
+      "bytes": 2747,
+      "sha256": "67161f543d64972910dd77428c81a3df8daaaae46091a4f47c24242cfb0fd213"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/preserve-expanded-test-types-20261022.mjs",
+      "bytes": 925,
+      "sha256": "2872ea864fb9f9989292f984218510adb8a7d34c8bbeb4752a153b4b42fe876e"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/record-expanded-proof-refusal-20261022.mjs",
+      "bytes": 1066,
+      "sha256": "2477d44ee32d25a4e6c2456c5028f5d8a0d43c4d3de73fd0f5a34115a7e72a0e"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/reprioritize-full-baseline-20261022.mjs",
+      "bytes": 2966,
+      "sha256": "33ebffcb616b3053489967aa4e3ac33c1e0067af2046200369d0a5556b3384b0"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/verify-expanded-historical-cohort-20261022.mjs",
+      "bytes": 1890,
+      "sha256": "72a5c9fea32aadadfd0d9d51c274544939ae9f97e7d020b38967c51154a12ea0"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/coordination/verify-expanded-native-epochs-20261022.mjs",
+      "bytes": 2294,
+      "sha256": "6eec425b6ee61a75837bbdaade36d4d9521462b39522e4fffee0d7c18071ab55"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/atlas-cerebral-lobar-imaging.test.ts",
+      "bytes": 12865,
+      "sha256": "93fcf9f89188d0a7a7fa028896b3504e339a177f33fe168e6a19e75446d6a9f2"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/atlas-cerebral-schema-preservation.test.mjs",
+      "bytes": 7246,
+      "sha256": "e85f99e2e972dc1044c7e681e4e1aa839f1cbb307b8c822d54d87f2112c6238d"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/clinical-review-cervical-disc-tour-preservation.test.mjs",
+      "bytes": 3592,
+      "sha256": "8de916a28a5a1c438a80cadc516ee5355b1463225a7b7341175533c65a09bb99"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/clinical-review-cervical-disc-tour.test.ts",
+      "bytes": 33351,
+      "sha256": "36b41c79a10d04fedc0bbb962accf58486ec2542f819e94aca3654d70a42f365"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 12245,
+      "sha256": "7597bc43a6466e1cd60a20feb32a556b4ec73788d1638d024a98a55b85e59654"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/colic-current-admission.test.mjs",
+      "bytes": 10377,
+      "sha256": "16f4b1b33065e07e16efcd285d495db6247c7e5738ada232c96e0478bca7b633"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "b0f078527cdb040ce7afa105bc0db9ebb979be590757ce7e749583eaed0f0045"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 3659,
+      "sha256": "6245fd2eaec46558762df765274f271476cdb6e5d30d8e935f4bd829f438a777"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/expanded-viewer-type-preservation.test.mjs",
+      "bytes": 1751,
+      "sha256": "13c74f1c9c5d37207163dce2c7edf19163caf4013e9623bae0d6008036def786"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/ae84-review/AtlasRuntimeFrame.tsx.raw",
+      "bytes": 5344,
+      "sha256": "335b8b70b2ff60c3a951efb9eb18d98de8d230411c00896ff4a4123eff051261"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/ae84-review/bind-clinical-review.mjs.raw",
+      "bytes": 8202,
+      "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/ae84-review/clinical-review-desktop-layout.test.mjs.raw",
+      "bytes": 12027,
+      "sha256": "a0c4ad2500ba988fde1cd074fa4aeaf7a3cc090eeaf32e1f7bdc548e427f32fa"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/ae84-review/colic-current-admission.test.mjs.raw",
+      "bytes": 10172,
+      "sha256": "f4d74cae889c1712fb96cf442578aad918e9542b11750e9b8a197ec4cab6b01f"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/expanded-review-admission/current-atlas-delivery.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "799e1b3935e6687bb47a025e5bff33acaee2c813dff83d8bec652f1102ae3b9b"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/expanded-viewer-test-types/atlas-cerebral-lobar-imaging.test.ts.raw",
+      "bytes": 12856,
+      "sha256": "eae0849920889e68d540f0aa1c1df482c3a02b062704ce0fe0e80943e7ef6e94"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/expanded-viewer-test-types/atlas-cerebral-schema-preservation.test.mjs.raw",
+      "bytes": 7206,
+      "sha256": "23b9c25c7846f59d0622eaf722e2e8dcb27dbdb4717d125d3bb50e11a7546637"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/expanded-viewer-test-types/clinical-review-cervical-disc-tour-preservation.test.mjs.raw",
+      "bytes": 3552,
+      "sha256": "05eea336b3560fdb3f3f58822af87b58250d65d745cfd55dc1978a75ba67738a"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/expanded-viewer-test-types/clinical-review-cervical-disc-tour.test.ts.raw",
+      "bytes": 33325,
+      "sha256": "14e140f9979b17a168a70d92baa8e0eca3f8952db886aa3362f44d28577258cc"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/expanded-viewer-test-types/expanded-viewer-type-preservation.first-attempt.mjs.raw",
+      "bytes": 1652,
+      "sha256": "8a670ac88b824b6999b1d7af229b66818f437d4dc8c4893178597dbb16b3bf49"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/historical-review-ae84-preservation.test.mjs",
+      "bytes": 4863,
+      "sha256": "c0318f200e3c8434f536c15c79f8ab6b14da571d1c98b9270c514cf740ead5c4"
+    },
+    {
+      "path": "pending/expanded-viewer-verified-20261022/website/tests/historical-review-ae84.mjs",
+      "bytes": 2962,
+      "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
+    },
+    {
       "path": "pending/inline-viewer-20261022/aorta-assurance/tests/aorta-runtime-family-admission.test.mjs",
       "bytes": 2845,
       "sha256": "eb4dd6dbb509f270c5a0a1312553e0284e746704ee49f3c36bfc5674107a7f9a"
@@ -13548,26 +13707,37 @@
     }
   ],
   "removed": [],
-  "scope": "Inherits verified filtered authored source and adds five explicit cerebral assurance test/adapter/raw-source preimage paths, plus one authored local admission script. The raw witness is source code, not historical runtime data. Frozen JSON documents, licence HTML, generated Review/runtime bundles, scans, masks, pixels, models, private references/notes/decisions, patient identifiers, media, environment/credentials, databases, raw logs and raw canonical Git ancestry are NOT added. Nothing is installed or deployed. This is selected authored-source recovery only, not whole/private/runnable recovery.",
+  "scope": "Inherited filtered authored source plus explicit authored test/admission/helper source and complete raw CODE preimages only. Generated JSON pin/documents/Review revision records, runtime/viewer output, licences HTML, source scans, pixels/masks, models, private references/notes/decisions, identifiers, environment/credentials, databases, raw logs/media and raw canonical Git ancestry are NOT added. Candidate is locally built but not installed or deployed. This is selected authored-source recovery, not whole/private/runnable recovery.",
   "proof": {
-    "sourceOnlyPartialRecovery": true,
-    "installedLocally": false,
-    "exactHistoricalSchemaOneAndCurrentSchemaTwoKeptSeparate": true,
-    "entireAuthenticatedClosed59PinRequired": true,
-    "completeOriginalTestInverse": true,
-    "workerPureTests": {
-      "tests": 2,
-      "pass": 2,
-      "fail": 0
+    "selectedSourceOnly": true,
+    "reviewViewerActuallyBuilt": true,
+    "exactPackagesAndNoticesUnchanged": true,
+    "strictCurrentDeliveryAdmitted": true,
+    "focusedNativeTests": {
+      "tests": 110,
+      "pass": 110,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
-    "actualNativeCerebralLessonRootRun": false,
-    "currentValidatorAndHistoricalPinUnchanged": true,
-    "fullTypes": false,
-    "fullBuild": false,
-    "reviewViewerBuild": false,
-    "currentPinAdmission": false,
-    "completeStockSuitePending": true,
+    "historicalNativeTests": {
+      "tests": 21,
+      "pass": 21,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "fullTypes": true,
+    "productionWebsiteBuild": true,
+    "typesAnnotationsExecutableIdentity": true,
+    "earlierFullRunInterrupted": true,
+    "earlierFullRunPassing": false,
+    "freshFullRegressionStillRequired": true,
+    "additionalNativeEpochCohortRunning": true,
     "wholeSuitePassing": false,
+    "ownerPreviewChanged": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
     "legalClearance": false,

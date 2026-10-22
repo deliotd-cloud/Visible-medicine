@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {mkdirSync,readFileSync,writeFileSync,appendFileSync,existsSync} from 'node:fs';
+import {spawn} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const root='F:/VisibleMedicine/staging/20261022-viewer-assurance-candidate',website=root+'/website',step=root+'/historical-cohort';
+assert(!existsSync(step));mkdirSync(step);
+const tests=['tests/historical-review-ae84-preservation.test.mjs','tests/colic-current-admission.test.mjs','tests/clinical-review-desktop-layout.test.mjs','tests/expanded-viewer-type-preservation.test.mjs','tests/atlas-cerebral-schema-preservation.test.mjs','tests/clinical-review-cervical-disc-tour-preservation.test.mjs'];
+const sha=b=>createHash('sha256').update(b).digest('hex'),log=step+'/tests.log';writeFileSync(log,'',{flag:'wx'});
+const child=spawn(process.execPath,['--test','--test-reporter=tap','--experimental-strip-types','--test-concurrency=1',...tests],{cwd:website,windowsHide:true,env:{...process.env,VM_WEBSITE_ROOT:website,VM_ATLAS_SOURCE_REPO:'F:/VisibleMedicine/atlas',GOMAXPROCS:'2',RAYON_NUM_THREADS:'1'},stdio:['ignore','pipe','pipe']});
+for(const stream of[child.stdout,child.stderr])stream.on('data',b=>appendFileSync(log,b));
+const result=await new Promise(resolve=>{child.on('error',error=>resolve({code:null,error:String(error)}));child.on('close',(code,signal)=>resolve({code,signal}));});
+const text=readFileSync(log,'utf8'),counts={};for(const key of['tests','pass','fail','cancelled','skipped','todo'])counts[key]=Number(text.match(new RegExp('^# '+key+' (\\d+)$','m'))?.[1]??NaN);
+const receipt={at:new Date().toISOString(),...result,tests,counts,logSha256:sha(Buffer.from(text)),noPriorNativeAssertionRemoved:true};writeFileSync(step+'/RESULT.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(receipt));process.exitCode=result.code??1;
