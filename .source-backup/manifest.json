@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T05:39:33.285Z",
+  "at": "2026-10-22T06:08:58.253Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "2f6559f27e18a3363315a84a411555e506235fb3",
-  "gitParent": "2f6559f27e18a3363315a84a411555e506235fb3",
+  "parent": "811a766f4800de3ff8933e4b8f1bb7408f361a5c",
+  "gitParent": "811a766f4800de3ff8933e4b8f1bb7408f361a5c",
   "files": [
     {
       "path": "app/globals.css",
@@ -12335,6 +12335,11 @@
       "sha256": "88d760bf915c2fc7e715daff14820c7d83785146ca20cb6c4c44a0d44982355e"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-review-tour-followups-20261022.mjs",
+      "bytes": 4196,
+      "sha256": "ff1d3790d69d0361d030b99819f6a04c427c3bf58d029fc0196d16994f3b4161"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-reviewed-regression-queue-20261022.mjs",
       "bytes": 5868,
       "sha256": "e4dcff100bc71d1e64f98622a358038a07704ae2c50e26a1b0b246ff839ca5ed"
@@ -12395,6 +12400,11 @@
       "sha256": "eb4cd453b33bf802a9c4b73d242aec1e933a7ae848015758c54a4059965fe83d"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-review-tour-followups-20261022.mjs",
+      "bytes": 6134,
+      "sha256": "e1d41d9c54a781b14b16e09c7809817cf5a3a3f0562f6f1c460ce84dbfcab4ef"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-reviewed-regression-queue-20261022.mjs",
       "bytes": 7697,
       "sha256": "167d45256ea5a1f1f824efe895a3df403c6c467130542e905d9636d26d2f0021"
@@ -12453,6 +12463,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-regional-tour-orbital-family-admission-20261022.mjs",
       "bytes": 8009,
       "sha256": "b2fcd2eaafa50364b3a91b3237247f01c300bc51f5502f243f2222c1ea68fc08"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-review-tour-followups-20261022.mjs",
+      "bytes": 5933,
+      "sha256": "40d73a1e38999afd2fdedab62c9613f9b6ec3d6880bd41783c5ac8f32af4c555"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-runtime-admission-20261022.mjs",
@@ -12538,6 +12553,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/record-regression-repair-queue-20261022.mjs",
       "bytes": 8098,
       "sha256": "2788a8d4103b50bb3969747773041bfa69cd1d5c02ffc189062b3a66ece8b636"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/record-six-clinical-composition-refusal-20261022.mjs",
+      "bytes": 2380,
+      "sha256": "206da86f831d68046670ef82a8d7f501632b1ad955168eac7f8bdc1f72871cfd"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/run-coherent-full-regression-20261022.mjs",
@@ -12643,6 +12663,16 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-reviewed-regression-terminal-gates-20261022.mjs",
       "bytes": 2531,
       "sha256": "003b5999e7138f9831ecdb2b084382f991f2e3d737839ee32ccd22f70690f701"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/verify-selected-repair-roots-20261022.mjs",
+      "bytes": 5140,
+      "sha256": "b04e291e34b13343d95b788e2b86b36e282545611bdb44b46cccbccf50d3eb7a"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/verify-six-clinical-composition-20261022.mjs",
+      "bytes": 7858,
+      "sha256": "548bb7c1759f869ea47fcb711944455934b297b8553c74479fcafcebd9ae7035"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-thoracic-authored-epochs-20261022.mjs",
@@ -15865,6 +15895,326 @@
       "sha256": "3d9f04f86e160cc597854f7aa2d228cdedba1baee45c90622b75ce5ca054b14f"
     },
     {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/CODE/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8707,
+      "sha256": "1e2111111f5c9798a778710e65057680928c18ae79f954fc40796c4ca01fde4a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/CODE/tests/closed57-original-tests.test.mjs",
+      "bytes": 14066,
+      "sha256": "ac08121a7e58bf747880bd1a0c24c9479ee51ffdb8cfa0c7a2b2ef7f4ed10966"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/CODE/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8716,
+      "sha256": "e7d47048bc2b69bd13ad1ca03cc3bb7db377cd8b0e720847165189c53b2f07af"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/CODE/tests/historical-head-toolbar-css-extension.test.mjs",
+      "bytes": 6915,
+      "sha256": "b11a1e6d8216880a50e9dc8120b35d91eeeacf1e035e0762796054e2ca92af60"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/RAW/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8476,
+      "sha256": "61e2886316e369954d6902709d885357b1f6c62318eb4c5056260eb6d40ab718"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/RAW/tests/closed57-original-tests.test.mjs",
+      "bytes": 10239,
+      "sha256": "926a8367daa7311ab955b25a5fc47b0ae1edae7845a3d4229bc2b9e0fed631da"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/RAW/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8477,
+      "sha256": "a61fbe8b30ca01e50035c843399ae4cfbb0c0be214b3ec117b7424664cd5163d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/RAW/tests/historical-head-toolbar-css-extension.test.mjs",
+      "bytes": 5818,
+      "sha256": "ed5e97efb13abf3df17bea0d4175bd61b58101b35a086909672ac7091373ce19"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-closed56-57-provider-admission/SOURCE_PROOF.mjs",
+      "bytes": 9275,
+      "sha256": "cf6466cb1e9dfa756f4b8c9bd4bfb779afd0d33a1c128919729dbd062b8a59d5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/CODE/tests/fixtures/head-review-compact/current-atlas-delivery.test.mjs.raw",
+      "bytes": 17978,
+      "sha256": "07e7fd5ede613f7c81d242580f54f75bf8dcaf6a7edccccd45b761fb63659357"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/CODE/tests/fixtures/review-frame-history/atlas-runtime-frame-body-learning.raw",
+      "bytes": 23666,
+      "sha256": "0d5edad796ce655f1f62da7ea06c08a3a541f110606d5b1cbb87d2b07d782e97"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/CODE/tests/fixtures/review-frame-history/review-navigation-delivery-v5.raw",
+      "bytes": 2010,
+      "sha256": "aa78cc90a446a70f436ff161e7f2e506d257f7463442e63c9a470a0348d6aa9a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/CODE/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 6048,
+      "sha256": "d7c49de5731cdf64dcc57e6e861cf9b2614d763a784a256ade5ba7755a7fc4d4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/CODE/tests/live-learning-runtime-harness-preservation.test.mjs",
+      "bytes": 5436,
+      "sha256": "c07a432944abfd9d410b3b9cedc6387ab3a8b333b4d12e41c1d86591cb4774c0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/CODE/tests/review-frame-history-inverse.mjs",
+      "bytes": 7390,
+      "sha256": "107fac77b4f68f2ca4b91a035a53920210a69a63a14b023e7b0f09e85810041a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/CODE/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2412,
+      "sha256": "e89390f4aa8ebf4c8c709f6d6b78e9400e79e0dca7a16e58eea4de371dd8b144"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/DIAGNOSTIC/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 5934,
+      "sha256": "2edd282181bf6f2f87119e25992106ebbad88b32e93bde73e3c1b7baca5fdfd8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/DIAGNOSTIC/tests/live-learning-runtime-harness-preservation.test.mjs",
+      "bytes": 5436,
+      "sha256": "c07a432944abfd9d410b3b9cedc6387ab3a8b333b4d12e41c1d86591cb4774c0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/DIAGNOSTIC/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2412,
+      "sha256": "e89390f4aa8ebf4c8c709f6d6b78e9400e79e0dca7a16e58eea4de371dd8b144"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/RAW/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 5301,
+      "sha256": "7257e974b953d81a4858642fddba053d56f0aa6168a765b9be620a5ce009cdf1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/RAW/tests/live-learning-runtime-harness-preservation.test.mjs",
+      "bytes": 5341,
+      "sha256": "07453e8b3269f347560806b8b831a2a65026e85389888e294061ddd79e473845"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/RAW/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2010,
+      "sha256": "aa78cc90a446a70f436ff161e7f2e506d257f7463442e63c9a470a0348d6aa9a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-review-frame-history-admission/SOURCE_PROOF.mjs",
+      "bytes": 11144,
+      "sha256": "02621e90a4c8cb68b6bf29c35e6befc5b23c04225ccd8e88f5ebdff50a6706ce"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-tour-imaging.test.ts",
+      "bytes": 32992,
+      "sha256": "21186d4ade0a595cba0f7121b0c439dfe81acc597d7d93e581b0467a9c2158de"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-um-ankle-imaging.test.ts",
+      "bytes": 4081,
+      "sha256": "62449d6ba0d2719e16d7cd4acd7b48a5215d261cd44822a23d0d796da718b3ac"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-upper-venous-tour.test.ts",
+      "bytes": 5678,
+      "sha256": "d9718a82a25fd9533a7f3dcc7483acb131404738e012e7bab8ec2109dee5668f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-visceral-arterial-xray.test.ts",
+      "bytes": 24319,
+      "sha256": "be2e213ba210247d94a964bb4521c2630edab81f4496c3e2363d2cf725921c7b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 8460,
+      "sha256": "36d9b0a2d2b33c1426207c95103279966e53bbba5c61b325ecff757482a59c91"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "bytes": 16923,
+      "sha256": "d51678cc4a2f42badbc9fb3fd0afffabb6094c7af2fa2f225f4acb907c6e0fcb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/regional-tour-role-preservation-20261021.test.mjs",
+      "bytes": 16382,
+      "sha256": "99cfb5b368c4ad51545d431916fbd5ee204d3ce1e27b5ad57b74273c391b0fc5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/tongue-palate-delivery.test.ts",
+      "bytes": 16972,
+      "sha256": "5dd1101cc8ce1a84618878d905b890d82484229bef3efc1c71c8015c4546b665"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/CODE/tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "bytes": 6386,
+      "sha256": "4130539addc372692276dcad2da6bb8b1913e93b41df98394045ae42f7d58b4e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/clinical-review-tour-imaging.test.ts",
+      "bytes": 32992,
+      "sha256": "21186d4ade0a595cba0f7121b0c439dfe81acc597d7d93e581b0467a9c2158de"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/clinical-review-um-ankle-imaging.test.ts",
+      "bytes": 4081,
+      "sha256": "62449d6ba0d2719e16d7cd4acd7b48a5215d261cd44822a23d0d796da718b3ac"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/clinical-review-upper-venous-tour.test.ts",
+      "bytes": 5678,
+      "sha256": "d9718a82a25fd9533a7f3dcc7483acb131404738e012e7bab8ec2109dee5668f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/clinical-review-visceral-arterial-xray.test.ts",
+      "bytes": 24319,
+      "sha256": "be2e213ba210247d94a964bb4521c2630edab81f4496c3e2363d2cf725921c7b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 8460,
+      "sha256": "36d9b0a2d2b33c1426207c95103279966e53bbba5c61b325ecff757482a59c91"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "bytes": 16923,
+      "sha256": "d51678cc4a2f42badbc9fb3fd0afffabb6094c7af2fa2f225f4acb907c6e0fcb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/regional-tour-role-preservation-20261021.test.mjs",
+      "bytes": 16382,
+      "sha256": "99cfb5b368c4ad51545d431916fbd5ee204d3ce1e27b5ad57b74273c391b0fc5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/tongue-palate-delivery.test.ts",
+      "bytes": 14493,
+      "sha256": "fc616be2597560c66309a4fb53a40e93ba22be91ec36326dba4274132ab26f5a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/CODE/tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "bytes": 6386,
+      "sha256": "4130539addc372692276dcad2da6bb8b1913e93b41df98394045ae42f7d58b4e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/main-composition-concise-refusal.mjs",
+      "bytes": 5870,
+      "sha256": "e2646c78df74bca64a0a7d543d8b83c9e26cbe679fa212e1288486eff773fbdf"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/main-composition-first.mjs",
+      "bytes": 5807,
+      "sha256": "e2eb9dc4b81f6eddac069a746958be5d36a41866bccd1b2320fef87dfa86601d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/DIAGNOSTIC/SOURCE_PROOF.mjs",
+      "bytes": 4544,
+      "sha256": "4e8917888594b046bd0630068f68b304504eca466f0a3a7756adeb4ff4c14ba6"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-tour-imaging.test.ts",
+      "bytes": 32924,
+      "sha256": "5b6973bb2241ab63ffccb4a911a48e5c2ee9adef3f7ce8c6cfb1345d3deb4be4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-um-ankle-imaging.test.ts",
+      "bytes": 4055,
+      "sha256": "57c7250be0b65ea1756f992b822803cad98560389eb9aa3f551c33414d5bd2c5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-upper-venous-tour.test.ts",
+      "bytes": 5654,
+      "sha256": "58876d6c84dc39aab6330e7a8a24f2656efa3c9223ae72470dc6bfa47d0c395d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-visceral-arterial-xray.test.ts",
+      "bytes": 24230,
+      "sha256": "4c20690db0b8894ffd1eb583e545c61bccc6cb5894b715964f8ff2ff38fe82ca"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 8333,
+      "sha256": "957869680b17019ea178d75b9effacdc2f4333e9737abfad5bbd5906058b5c71"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "bytes": 15666,
+      "sha256": "81a6a02d6a25426c64e9cd7a313e19a3be1b4ab44183b0a89c0c90000076a038"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/regional-tour-role-preservation-20261021.test.mjs",
+      "bytes": 15177,
+      "sha256": "11900802b88e160a98b7810f18dc0afae9b4df66918f2cbaf148dc49aecba912"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/tongue-palate-delivery.test.ts",
+      "bytes": 12464,
+      "sha256": "bf4528110979d7691f05701fb9113ee6e66214156214ef9478a40d763ce61145"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/RAW/tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "bytes": 5534,
+      "sha256": "425a72be30edf51159b4c2cc19bc12c15866372b4b8e2793b465deda7eef63e2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/SNAPSHOT_SOURCE_PROOF.mjs",
+      "bytes": 6182,
+      "sha256": "fc92495eff0503c812b58f3d40753dccd527e6c3fbfc8c493ead3afdb35e2b09"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-six-clinical-runtime-admission/SOURCE_PROOF.mjs",
+      "bytes": 4560,
+      "sha256": "c846f8be6e0601da6ce1c3699851f029ebe1e8ef2ba9d4ec143d72db0f550a06"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/CODE/tests/clinical-review-quiz-disclosure.test.ts",
+      "bytes": 6443,
+      "sha256": "4629e27ef0a622a14cf3fd1eaef3bd1f939c17b725d39bba89992c17dfd7b683"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/CODE/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "bytes": 19897,
+      "sha256": "d1ef90c77d79b7ddb2b7013576f7a1c68a636b825dfd5179204d476b5a02a072"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/CODE/tests/clinical-review-tour-speed.test.ts",
+      "bytes": 5916,
+      "sha256": "455136653f2735cd0be1ca2ab2e52baf96b7efbd996fb79971154d6b781ed09e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/CODE/tests/specimen-playback-whole-source-inverse.test.mjs",
+      "bytes": 3979,
+      "sha256": "1fcd5d8fdd44974d9cc9dbe407325eff7ff75cb41cfda0d10e32ebf8967fcd47"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/RAW/tests/clinical-review-quiz-disclosure.test.ts",
+      "bytes": 6367,
+      "sha256": "5b74d78eb8080e18231b17bef7a0fd3cee7db237dcb6afef58aa862c7d044a0b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/RAW/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "bytes": 19788,
+      "sha256": "3076ac33f3096b47f09dbf9364f92687d74d8ffb5899b4c612e8134f3db1ba1c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/RAW/tests/clinical-review-tour-speed.test.ts",
+      "bytes": 5896,
+      "sha256": "e497da23a851402c9dd0988e5b2aeda899d868242a8be6586e03828ae0fdd974"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/RAW/tests/specimen-playback-whole-source-inverse.test.mjs",
+      "bytes": 2295,
+      "sha256": "8962aac6ed256b5e41ebfe2136dee07c28f02311cdf5d4ca90abcd823a2238d0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/review-tour-followups/20261022-tour-quiz-runtime-family-admission/SOURCE_PROOF.mjs",
+      "bytes": 6745,
+      "sha256": "cb52d7794ad50ade3a72cb93cd466b5cc098df2b7ec7a656603eb79729983396"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/website/lib/regional-atlas-runtime-binding.ts",
       "bytes": 1823,
       "sha256": "ad50af82562dac65d17691ebd7587509784e697e4dd0e737b8f09291c957b022"
@@ -16792,36 +17142,27 @@
     "proposedTestAndHelperPaths": 161,
     "completeOriginalSourceInverses": 161,
     "additionalCodeAndProofPaths": 65,
-    "explicitProductSourceAndPreimageFiles": 14,
+    "explicitProductSourceAndPreimageFiles": 64,
     "productProof": {
       "sourceReceiptSha256": "49a132ab76102e0fb2845df9ab111047630ecdafc0f0a2e61e81fef70a62a03f",
       "sourcePaths": 6042,
-      "headChecks": {
-        "tests": 46,
-        "pass": 46,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "craniofacialChecks": {
-        "tests": 47,
-        "pass": 47,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "fullTypes": true,
-      "productBuildReusedOnlyAfterExactNonTestIdentity": true,
-      "sourceBoundSpecimenRouteBrowserChecked": true,
-      "fullMriScanWorkflowBrowserChecked": false,
-      "browserImagesAndLogsUploaded": false,
+      "newSourceOnlyProposals": 20,
+      "nextFocusedNativeRoots": 29,
+      "allFullPreimagesAndRejectedCodePreserved": true,
+      "exactSnapshotInverseAndOriginalQuizPlacementsProved": true,
+      "generatedMetadataFixturesExcluded": [
+        "tests/fixtures/review-frame-history/current-atlas-delivery-1712.json.raw",
+        "tests/fixtures/review-frame-history/integration-inputs-1712.json.raw"
+      ],
+      "sourceCompositionReceiptSha256": "5ac13873764915178847c6ca25f7ee73b80f40b9047b3bba74e084898d60922f",
+      "originalRefusalReceiptSha256": "511e2467318cf46ff6893e5347e6def387d6dd28777edab6b2703084b6f2d168",
+      "newNativeBatchExecuted": false,
+      "existing172RootRunTerminalReceiptPresent": false,
       "canonicalInstalled": false,
       "ownerPreviewChanged": false,
+      "wholeSuitePassing": false,
       "clinicalApproval": false,
-      "patientRegistration": false,
-      "wholeSuitePassing": false
+      "patientRegistration": false
     },
     "strictCurrentValidatorAndPinChanged": false,
     "frozenCandidateEdited": false,

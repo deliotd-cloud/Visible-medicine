@@ -3,36 +3,27 @@
   "proposedTestAndHelperPaths": 161,
   "completeOriginalSourceInverses": 161,
   "additionalCodeAndProofPaths": 65,
-  "explicitProductSourceAndPreimageFiles": 14,
+  "explicitProductSourceAndPreimageFiles": 64,
   "productProof": {
     "sourceReceiptSha256": "49a132ab76102e0fb2845df9ab111047630ecdafc0f0a2e61e81fef70a62a03f",
     "sourcePaths": 6042,
-    "headChecks": {
-      "tests": 46,
-      "pass": 46,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "craniofacialChecks": {
-      "tests": 47,
-      "pass": 47,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "fullTypes": true,
-    "productBuildReusedOnlyAfterExactNonTestIdentity": true,
-    "sourceBoundSpecimenRouteBrowserChecked": true,
-    "fullMriScanWorkflowBrowserChecked": false,
-    "browserImagesAndLogsUploaded": false,
+    "newSourceOnlyProposals": 20,
+    "nextFocusedNativeRoots": 29,
+    "allFullPreimagesAndRejectedCodePreserved": true,
+    "exactSnapshotInverseAndOriginalQuizPlacementsProved": true,
+    "generatedMetadataFixturesExcluded": [
+      "tests/fixtures/review-frame-history/current-atlas-delivery-1712.json.raw",
+      "tests/fixtures/review-frame-history/integration-inputs-1712.json.raw"
+    ],
+    "sourceCompositionReceiptSha256": "5ac13873764915178847c6ca25f7ee73b80f40b9047b3bba74e084898d60922f",
+    "originalRefusalReceiptSha256": "511e2467318cf46ff6893e5347e6def387d6dd28777edab6b2703084b6f2d168",
+    "newNativeBatchExecuted": false,
+    "existing172RootRunTerminalReceiptPresent": false,
     "canonicalInstalled": false,
     "ownerPreviewChanged": false,
+    "wholeSuitePassing": false,
     "clinicalApproval": false,
-    "patientRegistration": false,
-    "wholeSuitePassing": false
+    "patientRegistration": false
   },
   "strictCurrentValidatorAndPinChanged": false,
   "frozenCandidateEdited": false,
