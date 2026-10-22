@@ -1,15 +1,17 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T23:47:18.734Z",
+  "at": "2026-10-22T00:00:40.252Z",
   "sourceIdentity": {
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
-    "stagedUiSourcePaths": 6,
-    "stagedAortaAssurancePaths": 3
+    "stagedUiSourcePaths": 9,
+    "stagedSimpleRuntimeAssurancePaths": 9,
+    "stagedArterialAssurancePaths": 3,
+    "stagedCervicalAssurancePaths": 3
   },
-  "parent": "ef46fe0b8293168e20324280934788c753a04c41",
-  "gitParent": "ef46fe0b8293168e20324280934788c753a04c41",
+  "parent": "305d81398e8cdff452b89358f26fc06a992af0f6",
+  "gitParent": "305d81398e8cdff452b89358f26fc06a992af0f6",
   "files": [
     {
       "path": "app/globals.css",
@@ -12587,6 +12589,81 @@
       "sha256": "0e2c98a68cd46e2845a0cd97f2c356b592684c96331315285a2004fedcce3d81"
     },
     {
+      "path": "pending/inline-viewer-20261022/arterial-assurance/tests/arterial-epoch-preservation.test.mjs",
+      "bytes": 4037,
+      "sha256": "95b6fc4f9d3f5ecef3dd1c37c876fb959c89ad83107f66f343d5c00e041587be"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/arterial-assurance/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 19003,
+      "sha256": "d04a1842fc6b68f0b7be42a2d0206e93598b29e9d34c40ec7b5d3b1914296dbb"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/arterial-assurance/tests/fixtures/atlas-arterial-evidence-limits.preimage.mjs.raw",
+      "bytes": 17250,
+      "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/cervical-assurance/tests/atlas-cervical-epoch-preservation.test.mjs",
+      "bytes": 6396,
+      "sha256": "ff62e76523d50e2a9e476bf3d2bda53225a23a2ff7326bc58b2ce693ee994367"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/cervical-assurance/tests/atlas-cervical-projection-xray.test.mjs",
+      "bytes": 21897,
+      "sha256": "428fb397b7d5efff567754844a282223ee8ce8068fc0eb599413cbd7fe0621df"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/cervical-assurance/tests/fixtures/atlas-cervical-projection-xray-before-epoch-20261022.test.mjs.raw",
+      "bytes": 19944,
+      "sha256": "a5848c319f0df5d21105f2c7710b62a2d94c8858db4a63368ef3a9e826a9b06b"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/atlas-bodyparts-inventory-correction.test.ts",
+      "bytes": 3805,
+      "sha256": "b3eaef696c19f6174e88c863040f523aaf8beba6b7ff8082612b5278c79ff739"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/atlas-camera-status.test.ts",
+      "bytes": 4468,
+      "sha256": "0a23842469a5d5f3ed2123cb4494151e65f7a4e5fcfe6e2f6ff6472091f77fda"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/atlas-celiac-neck.test.ts",
+      "bytes": 4090,
+      "sha256": "28613d271493a3220597fbbfd65a3315be28dbeb775dbf72acfea00dbfc2e97f"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/atlas-compact-study-checks.mjs",
+      "bytes": 15066,
+      "sha256": "fcb97ceda33ae01919888348e302bca77b310b58a8da6bb18ae382bb4465c226"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/fixtures/runtime-family-before-20261022/atlas-bodyparts-inventory-correction.test.ts.raw",
+      "bytes": 3702,
+      "sha256": "b636b01e74ba172be3dc26ee14dd43801a4111564837725481590679798cbbaf"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/fixtures/runtime-family-before-20261022/atlas-camera-status.test.ts.raw",
+      "bytes": 4398,
+      "sha256": "9bca328e5ff4a801913459676caf2233fd75ff17ae0c2794de6dcb2bb8ef4b60"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/fixtures/runtime-family-before-20261022/atlas-celiac-neck.test.ts.raw",
+      "bytes": 4013,
+      "sha256": "9f28bffd03be95f4aa7c10f30750d8fe22197f8693ad0cd0a4696e57754a7c2a"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/fixtures/runtime-family-before-20261022/atlas-compact-study-checks.mjs.raw",
+      "bytes": 15054,
+      "sha256": "959f23604a11f8563b623526cc1a616f9b5c21272956273484ae0b54cf84f9b3"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/runtime-family-forward-inverse.test.mjs",
+      "bytes": 5170,
+      "sha256": "385115d1003462f8bf07775e2f97d896f8b7a10d110531f230805582a2b21a8a"
+    },
+    {
       "path": "pending/inline-viewer-20261022/ui/components/atlas-runtime-expansion.ts",
       "bytes": 4160,
       "sha256": "bc93f073905072c8628624712a1758517471ac121483a291573e9f65fd28611b"
@@ -12602,6 +12679,16 @@
       "sha256": "7d4d9d36f5f8b7a88477355ba76b3adb4e93d080cff9356dfe5725f3fc6c76d8"
     },
     {
+      "path": "pending/inline-viewer-20261022/ui/scripts/bind-clinical-review.mjs",
+      "bytes": 8282,
+      "sha256": "0339eedafdc65e60fb35efd7f59c839a57afa274966c405e4b373f8722f95d06"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/ui/tests/atlas-runtime-expansion-binding.test.mjs",
+      "bytes": 6618,
+      "sha256": "fe79f38380aa377709aa5107a2dbd6511dda128be7cc665860e1bb8bf9137858"
+    },
+    {
       "path": "pending/inline-viewer-20261022/ui/tests/atlas-runtime-expansion.test.mjs",
       "bytes": 11291,
       "sha256": "c053028d8cdc970a49a7afcf2b06911c478b59f5e275ef2f16abe60322845fde"
@@ -12615,6 +12702,11 @@
       "path": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/AtlasRuntimeFrame.tsx.raw",
       "bytes": 5344,
       "sha256": "335b8b70b2ff60c3a951efb9eb18d98de8d230411c00896ff4a4123eff051261"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/bind-clinical-review.mjs.raw",
+      "bytes": 8202,
+      "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
     },
     {
       "path": "public/atlas-review-viewer/index.html",
@@ -13323,11 +13415,12 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently restored filtered source selection plus nine explicit staged authored UI/controller/test and exact original source-test/CSS/TSX text preimage paths. Preimages are code only, not frozen runtime/scan data. Isolated prototype and aorta test repair are not installed. No screenshots, media, scans, masks, pixels, models, source catalogues/coordinates, private runtime modules, identifiers, references, notes, decisions, credentials, environment, databases, raw logs or raw canonical Git ancestry are added. Partial selected-source recovery only, not whole/private/runnable recovery.",
+  "scope": "Inherits the independently restored filtered source selection and adds eighteen explicit authored source/test/preimage code paths. The pending UI namespace includes the actual binder change and exact original binder plus isolated behavior test. Test-only family/source-byte repairs retain complete authenticated originals. No licence HTML is added or edited. Nothing here is installed. No scans, pixels, masks, models, runtime derivatives, screenshots, patient identifiers, private references/notes/decisions, environment/credentials, databases, raw logs or raw canonical ancestry are added. Partial selected-source recovery only, not whole/private/runnable recovery.",
   "proof": {
     "sourceOnlyPartialRecovery": true,
     "installedLocally": false,
-    "stagedUiTests": {
+    "unchangedBrowserUiInputs": 6,
+    "priorUiFocusedTests": {
       "tests": 8,
       "pass": 8,
       "fail": 0,
@@ -13335,7 +13428,7 @@
       "skipped": 0,
       "todo": 0
     },
-    "stagedAortaInverseTests": {
+    "newIsolatedBindingTests": {
       "tests": 2,
       "pass": 2,
       "fail": 0,
@@ -13343,16 +13436,20 @@
       "skipped": 0,
       "todo": 0
     },
-    "actualIsolatedDesktopFullscreen": true,
-    "actualParentAndIframeEscape": true,
-    "nativeMenuEscapeRespected": true,
-    "oneMountedIframeAndSelectionPreserved": true,
-    "closedActionsReuseExisting36pxTeachingHeader": true,
-    "legacyNoDockReserves36px": true,
+    "simpleInverseTests": 3,
+    "cervicalInverseAndLicenceRepresentationTests": {
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "arterialMainDiffAndRoleAssertions": true,
+    "actualOriginalRuntimeCohortsDeferred": true,
     "fullTypes": false,
     "fullBuild": false,
     "reviewRebind": false,
-    "nativeAortaRerun": false,
     "completeStockSuitePending": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,

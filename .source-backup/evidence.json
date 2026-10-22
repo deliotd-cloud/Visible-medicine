@@ -1,7 +1,8 @@
 {
   "sourceOnlyPartialRecovery": true,
   "installedLocally": false,
-  "stagedUiTests": {
+  "unchangedBrowserUiInputs": 6,
+  "priorUiFocusedTests": {
     "tests": 8,
     "pass": 8,
     "fail": 0,
@@ -9,7 +10,7 @@
     "skipped": 0,
     "todo": 0
   },
-  "stagedAortaInverseTests": {
+  "newIsolatedBindingTests": {
     "tests": 2,
     "pass": 2,
     "fail": 0,
@@ -17,16 +18,20 @@
     "skipped": 0,
     "todo": 0
   },
-  "actualIsolatedDesktopFullscreen": true,
-  "actualParentAndIframeEscape": true,
-  "nativeMenuEscapeRespected": true,
-  "oneMountedIframeAndSelectionPreserved": true,
-  "closedActionsReuseExisting36pxTeachingHeader": true,
-  "legacyNoDockReserves36px": true,
+  "simpleInverseTests": 3,
+  "cervicalInverseAndLicenceRepresentationTests": {
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "arterialMainDiffAndRoleAssertions": true,
+  "actualOriginalRuntimeCohortsDeferred": true,
   "fullTypes": false,
   "fullBuild": false,
   "reviewRebind": false,
-  "nativeAortaRerun": false,
   "completeStockSuitePending": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
