@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T17:28:07.261Z",
+  "at": "2026-10-22T18:00:34.835Z",
   "sourceIdentity": {
     "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
     "tree": "db21ed3dee259c390878450b3495468996a3af85",
-    "review": "00127dcb4cc51240a574b99e34f8166fd446c4e07e335ca4c236484535131536",
-    "sourceReceiptSha256": "a1760b86254e9eaa8053f25867ee133eb9f442bfb1c6d3af19d68a365ac01c5a"
+    "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc",
+    "sourceReceiptSha256": "d388db43518ff7ccd443a8e7977e7ac67b2f49a696eb294529992ba64fc4132d"
   },
-  "parent": "bde2c8fcc5661e1fe0bc8048368410b842d85fc7",
-  "gitParent": "bde2c8fcc5661e1fe0bc8048368410b842d85fc7",
+  "parent": "1bb371202d1babf836497be7bef3c33f82522b73",
+  "gitParent": "1bb371202d1babf836497be7bef3c33f82522b73",
   "files": [
     {
       "path": "app/globals.css",
@@ -15936,6 +15936,241 @@
       "sha256": "bd7aed9867c51c839a10eb8fc981068244c24be92d7e4e12e3a3bd3a32ef5e3d"
     },
     {
+      "path": "pending/head-practice-exit-20261022/coordination/bind-imaging-presentation-20261022.mjs",
+      "bytes": 5346,
+      "sha256": "81426dac0dac4cfe8515f343015b828af84b9cf7ff1eed5fe51ae1732a6478bc"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/checkpoint-head-practice-exit-20261022.mjs",
+      "bytes": 12892,
+      "sha256": "95c1f6e74109dbf664ecf0010ec308dd9a7412d638bee1ae4b6e7d0106703a4b"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/diagnose-checklist-import-20261022.mjs",
+      "bytes": 3166,
+      "sha256": "e025e4e847fe9c15a663892561dcef23b63d4087db3acd182e661be3cb3664e9"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/launch-imaging-presentation-qa-20261022.mjs",
+      "bytes": 3484,
+      "sha256": "db96c2890bdf12a2690b0b9ae04eb9a4fc42c9f180a1ea269793ef144d3d9d5b"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/prepare-head-practice-exit-20261022.mjs",
+      "bytes": 3530,
+      "sha256": "e6d4b35f043c48f9d2865effed87f2ee6938a3e999558283b323688acad058f9"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/record-head-practice-exit-pending-20261022.mjs",
+      "bytes": 2286,
+      "sha256": "4828bfdfa80603bfdccd997b0e4e4ee7b4b158d852b2dfeede7fc47246686060"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/record-head-practice-exit-qa-20261022.mjs",
+      "bytes": 4953,
+      "sha256": "ac49c2dd07d88df345d2ee5bcb389a401829d1d44b8be1b899f4123ebae596fd"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/trial-head-practice-exit-20261022.mjs",
+      "bytes": 1824,
+      "sha256": "96a76b5ffecf4f06d31b19a6052cea1bdbe73af882b648733a2950ee2847dfbb"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/verify-checklist-runtime-proposal-20261022.mjs",
+      "bytes": 2136,
+      "sha256": "bfc103de92222a37438c45db98369151dccf3c492f75f374805d43c5501785c2"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordination/verify-head-practice-exit-20261022.mjs",
+      "bytes": 6352,
+      "sha256": "34ef5a9d51dd8d83373b40d41b2830258eb42ce984fbd1e3ce3c5286680ac2a1"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/coordinator-before-confirm-fixture.mjs",
+      "bytes": 5802,
+      "sha256": "d9a78f0a4990e14cbe65515c8e8eb96da5f030ac20a9bc888cac60affb6a9e86"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website-preimages/components/HeadAtlasViewer.tsx",
+      "bytes": 109920,
+      "sha256": "2597a39850383fcc7be5c11762ad767101f0c7978c33099b854d51ef8ddc0509"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website-preimages/tests/head-disclosure-harness-preservation.test.mjs",
+      "bytes": 3046,
+      "sha256": "fbde7b1c240f2f0552e86dc6b365709a068eccdd612c26381427fb60232d5a7c"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website-preimages/tests/head-history-role-preservation.test.mjs",
+      "bytes": 6863,
+      "sha256": "c721d7b4f6432e9ce9ea8a6cf76131ed24b74b6e78fd2a230676da0a55fd8b73"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website-preimages/tests/head-image-history-anchor-harness.test.mjs",
+      "bytes": 2715,
+      "sha256": "66645a662c9a0075e2728cd6d5b6c8aa1f714ed415ad8f6179fd92c1c4ef9527"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website-preimages/tests/head-image-history.test.ts",
+      "bytes": 190073,
+      "sha256": "5282143cc7d182d6a5a71bda18afe269ea2d18a2b88a57b58693936c2c6dbabc"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website-preimages/tests/head-model-access-integration.test.mjs",
+      "bytes": 8909,
+      "sha256": "214381c192fc6b1a7ad7abfd423e9ed6d58f97faa5d9f9c8ad67552ede93fd09"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website-preimages/tests/imaging-presentation.test.mjs",
+      "bytes": 11252,
+      "sha256": "3719f563bd19d38339eb1e5b5ad14a8bfddb79f5c68014e8af246baca0f43df6"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/components/HeadAtlasViewer.tsx",
+      "bytes": 111741,
+      "sha256": "97b93a4b7af313042a6a54e8f9983b42c3eb8beb8b30222e4ee2d5d9f4812d73"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/fixtures/head-practice-exit-before/components/HeadAtlasViewer.tsx.raw",
+      "bytes": 109920,
+      "sha256": "2597a39850383fcc7be5c11762ad767101f0c7978c33099b854d51ef8ddc0509"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/fixtures/head-practice-exit-before/tests/head-disclosure-harness-preservation.test.mjs.raw",
+      "bytes": 3046,
+      "sha256": "fbde7b1c240f2f0552e86dc6b365709a068eccdd612c26381427fb60232d5a7c"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/fixtures/head-practice-exit-before/tests/head-history-role-preservation.test.mjs.raw",
+      "bytes": 6863,
+      "sha256": "c721d7b4f6432e9ce9ea8a6cf76131ed24b74b6e78fd2a230676da0a55fd8b73"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/fixtures/head-practice-exit-before/tests/head-image-history-anchor-harness.test.mjs.raw",
+      "bytes": 2715,
+      "sha256": "66645a662c9a0075e2728cd6d5b6c8aa1f714ed415ad8f6179fd92c1c4ef9527"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/fixtures/head-practice-exit-before/tests/head-image-history.test.ts.raw",
+      "bytes": 190073,
+      "sha256": "5282143cc7d182d6a5a71bda18afe269ea2d18a2b88a57b58693936c2c6dbabc"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/fixtures/head-practice-exit-before/tests/head-model-access-integration.test.mjs.raw",
+      "bytes": 8909,
+      "sha256": "214381c192fc6b1a7ad7abfd423e9ed6d58f97faa5d9f9c8ad67552ede93fd09"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/fixtures/head-practice-exit-before/tests/imaging-presentation.test.mjs.raw",
+      "bytes": 11252,
+      "sha256": "3719f563bd19d38339eb1e5b5ad14a8bfddb79f5c68014e8af246baca0f43df6"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/fixtures/head-practice-exit-before/worker-v2-test.mjs.raw",
+      "bytes": 12811,
+      "sha256": "c2f804c9154e3bbab18e8328f26b138084d306afbde99fce3bb2577bbbebfea5"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-disclosure-harness-preservation.test.mjs",
+      "bytes": 3175,
+      "sha256": "6b909e39b97b23aa7b7ac6dec2a552e0958acea68601d3f2ec37f381cb0b8633"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-history-role-preservation.test.mjs",
+      "bytes": 7053,
+      "sha256": "7573d5c5d2c654bbdccfb4c249108448571fd2c4e7ce6b6bf306d2c34da0aa7f"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-image-history-anchor-harness.test.mjs",
+      "bytes": 2879,
+      "sha256": "fec315d0caa2a1bb80fb990b05250fd088776d7aeacd7baba62184795c5f3c99"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-image-history.test.ts",
+      "bytes": 190090,
+      "sha256": "eae943c637cb3049297618d15b0a7728cc932745591df2e1f72df6d62d41f20f"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-model-access-integration.test.mjs",
+      "bytes": 8909,
+      "sha256": "c63a06fa2306d39e126c91d645ef4e5a15eb2e38dd2fa9c7be78bbe49eb52e86"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-practice-confirm-harness-inverse.mjs",
+      "bytes": 2651,
+      "sha256": "e7e7f64265dac839e7edb55c68ee38c37bcd54813fa5ab91c5dd2dcf216ce1c5"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-practice-exit-inverse.mjs",
+      "bytes": 1679,
+      "sha256": "5102aa6d3399090b9e2029c459f451b67cd58f7f98f71c996265db23fa874b7c"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-practice-exit-preservation.test.mjs",
+      "bytes": 3177,
+      "sha256": "24993a7849ae982cc93a14808c4cc8fecc7ec1fd138791ed484754297a593579"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/head-practice-exit.test.mjs",
+      "bytes": 12808,
+      "sha256": "bbf4ea9e8978997ab15a4284b4dc8fa180337b72b299c263c2bf205b9562eaa4"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/website/tests/imaging-presentation.test.mjs",
+      "bytes": 11492,
+      "sha256": "9f118da67ed3d535d5d3611b034eeac97306b4dccd5208f09b22c48b02931383"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-checklist/refresh-completion-checklist.mjs",
+      "bytes": 15565,
+      "sha256": "d9fd8b94224a2f4b5232fea878b120f95c427d96479128a68d1e87c836914cb1"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-checklist/refresh-completion-checklist.preimage.mjs",
+      "bytes": 14943,
+      "sha256": "8a8d09097784389a15e514db3835345591cb29e7a1dbd6036fe491bf6a261a69"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-checklist/refresh-completion-checklist.v2.mjs",
+      "bytes": 15793,
+      "sha256": "4a324befd2eb0acba8b3212f80bf7bb7777d1c57948e4d2d96e353de9cf58007"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-checklist/runtime-schema.test.mjs",
+      "bytes": 7430,
+      "sha256": "87d70fee622c7d41936173a4ec3878b2d66a3c55026a3904b70baecb5cf2cc7e"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-checklist/runtime-schema.v2.test.mjs",
+      "bytes": 8809,
+      "sha256": "a21a2f7c5460f3e19661f6f9ecd0da095616ba1a71c7b3e5dcb4ca0daefee7a7"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-practice/components/HeadAtlasViewer.tsx",
+      "bytes": 111449,
+      "sha256": "1e24a505d9e08b868e646ebf8ebc44c6bef3a0b8f105cb1939991e6249751871"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-practice/components/HeadAtlasViewer.v2.tsx",
+      "bytes": 111741,
+      "sha256": "97b93a4b7af313042a6a54e8f9983b42c3eb8beb8b30222e4ee2d5d9f4812d73"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-practice/fixtures/HeadAtlasViewer.tsx.raw",
+      "bytes": 109920,
+      "sha256": "2597a39850383fcc7be5c11762ad767101f0c7978c33099b854d51ef8ddc0509"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-practice/tests/head-practice-exit.test.mjs",
+      "bytes": 10583,
+      "sha256": "011aa6c07a3add760198f2f347829d02cab95f836cb667f754c246ce97c4e104"
+    },
+    {
+      "path": "pending/head-practice-exit-20261022/worker-practice/tests/head-practice-exit.v2.test.mjs",
+      "bytes": 12811,
+      "sha256": "c2f804c9154e3bbab18e8328f26b138084d306afbde99fce3bb2577bbbebfea5"
+    },
+    {
       "path": "pending/head-surface-cancellation-20261022/coordination/admit-head-surface-cancellation-20261022.mjs",
       "bytes": 10181,
       "sha256": "502bd5664309de8358189bcd58936b5e68ba66bc0474c2f53917213b9c25eec4"
@@ -22317,24 +22552,35 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus exact later access-test historical reader and complete original assertion/mutation proof. Original guided/live behavioral tests remain unchanged and execute. No product, permission, approval, current source pin or dependency changes. Generated JSON/bindings/pins/coverage, compiled runtime/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries and raw logs/media remain local. Scoped source-only recovery, not whole/private/runnable backup or installation/deployment.",
+  "scope": "Inherited filtered source plus committed-scope native active-practice exit confirmation, exact original body/harness inverses, and separately unintegrated checklist runtime-schema V2 proposal. V1 correction and first389/386/3 diagnostic stay recoverable. Generated JSON/bindings/pins/coverage, compiled runtime/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries and raw logs/media remain local. Scoped source-only recovery, not whole/private/runnable backup, installation or deployment.",
   "proof": {
-    "native": {
-      "tests": 368,
-      "pass": 368,
+    "websiteNative": {
+      "tests": 391,
+      "pass": 391,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "roots": 31,
-    "allPrevious28RootsRetained": true,
-    "actualGuidedAndLiveAccessTestsIncluded": true,
-    "fullOriginalAssertionInverse": true,
-    "wholeSuitePassing": false,
-    "productChanged": false,
-    "unchangedProductTypesAndBuildWitness": true,
+    "typesAndBuildPassed": true,
+    "stockChecks": 6,
+    "sourceAndPreviousDrift": false,
+    "actualNativeBrowserCancelAndAccept": true,
+    "keyboardToolLimitationRetained": true,
+    "osFolderPickerBrowserAcceptance": false,
+    "sourceExtractedFolderGuard": true,
+    "checklistV2SyntheticOnly": {
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "realChecklistNotChanged": true,
+    "sourceOnlyProposalNotInstalled": true,
     "ownerPreviewChanged": false,
+    "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false

@@ -1,0 +1,20 @@
+// Owned loopback QA, not the normal preview. No database, secrets or scans copied.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import net from 'node:net';
+import {spawn} from 'node:child_process';
+import {pathToFileURL} from 'node:url';
+import {json,read,sha,runGit} from './source-only-backup-20261019.mjs';
+const mode=process.argv[2]??'imaging-presentation';assert(['imaging-presentation','head-practice-exit'].includes(mode));const practice=mode==='head-practice-exit';
+const root=practice?'F:/VisibleMedicine/staging/20261022-head-practice-exit-browser-qa':'F:/VisibleMedicine/staging/20261022-imaging-presentation-browser-qa',receipt=practice?'F:/VisibleMedicine/staging/20261022-head-practice-exit-candidate/SOURCE_V2.json':'F:/VisibleMedicine/staging/20261022-imaging-presentation-candidate/SOURCE.json',source=json(receipt),site=source.website;
+assert(!fs.existsSync(root));assert.equal(json(practice?'F:/VisibleMedicine/staging/20261022-head-practice-exit-candidate/verification-v2/TERMINAL.json':'F:/VisibleMedicine/staging/20261022-imaging-presentation-candidate/build-continuation-v2/TERMINAL.json').code,0);
+for(const row of source.sourceRows)assert.equal(sha(read(site+'/'+row.path)),row.sha256,row.path);
+assert.equal(runGit(['-C',source.atlas,'rev-parse','HEAD']).toString().trim(),source.atlasHead);assert.equal(runGit(['-C',source.atlas,'status','--porcelain']).toString().trim(),'');
+const {loadEnv}=await import(pathToFileURL(site+'/node_modules/vite/dist/node/index.js'));
+const existing=loadEnv('development','F:/VisibleMedicine/website','VM_LOCAL_HEAD_'),allowed=Object.fromEntries(Object.entries(existing).filter(([key])=>key==='VM_LOCAL_HEAD_ROOT'));assert(allowed.VM_LOCAL_HEAD_ROOT);
+const host='127.0.0.1',port=practice?3025:3024;await new Promise((resolve,reject)=>{const probe=net.createServer();probe.once('error',reject);probe.listen(port,host,()=>probe.close(resolve));});fs.mkdirSync(root);
+const stream=fs.createWriteStream(root+'/server.log',{flags:'wx'}),child=spawn(process.execPath,['node_modules/vinext/dist/cli.js','dev','--host',host,'--port',String(port)],{cwd:site,env:{...process.env,...allowed,VM_ATLAS_SOURCE_REPO:source.atlas,VM_LOCAL_PREVIEW_STABLE:'1',GOMAXPROCS:'2',RAYON_NUM_THREADS:'1',NODE_OPTIONS:'--max-old-space-size=4096'},windowsHide:true,stdio:['ignore','pipe','pipe']});child.stdout.pipe(stream,{end:false});child.stderr.pipe(stream,{end:false});
+const state={at:new Date().toISOString(),pid:child.pid,launcherPid:process.pid,site,sourceReceipt:receipt,sourceReceiptSha256:sha(read(receipt)),atlas:source.atlasHead,review:source.review,url:`http://${host}:${port}`,localPinnedHeadBinding:true,authenticationChanged:false,privateDataCopied:false,ownerPreviewChanged:false,canonicalInstalled:false,publicDeployment:false};
+fs.writeFileSync(root+'/OWNED_PREVIEW.json',JSON.stringify(state,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(state));
+const stop=signal=>{if(!child.killed)child.kill(signal);};process.on('SIGINT',stop);process.on('SIGTERM',stop);
+const outcome=await new Promise(resolve=>{child.once('error',error=>resolve({code:null,error:String(error)}));child.once('close',(code,signal)=>resolve({code,signal}));});await new Promise(resolve=>stream.end(resolve));fs.writeFileSync(root+'/SERVER_TERMINAL.json',JSON.stringify({...state,...outcome,at:new Date().toISOString()},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({terminal:true,...outcome,ownerPreviewChanged:false}));

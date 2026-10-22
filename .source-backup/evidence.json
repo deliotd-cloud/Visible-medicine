@@ -1,20 +1,31 @@
 {
-  "native": {
-    "tests": 368,
-    "pass": 368,
+  "websiteNative": {
+    "tests": 391,
+    "pass": 391,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "roots": 31,
-  "allPrevious28RootsRetained": true,
-  "actualGuidedAndLiveAccessTestsIncluded": true,
-  "fullOriginalAssertionInverse": true,
-  "wholeSuitePassing": false,
-  "productChanged": false,
-  "unchangedProductTypesAndBuildWitness": true,
+  "typesAndBuildPassed": true,
+  "stockChecks": 6,
+  "sourceAndPreviousDrift": false,
+  "actualNativeBrowserCancelAndAccept": true,
+  "keyboardToolLimitationRetained": true,
+  "osFolderPickerBrowserAcceptance": false,
+  "sourceExtractedFolderGuard": true,
+  "checklistV2SyntheticOnly": {
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "realChecklistNotChanged": true,
+  "sourceOnlyProposalNotInstalled": true,
   "ownerPreviewChanged": false,
+  "wholeSuitePassing": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
   "publicDeployment": false
