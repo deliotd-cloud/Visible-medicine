@@ -1,36 +1,35 @@
 {
-  "sourceReceiptSha256": "d72789221c1cbdb0686e65a6316fe42c378f4cddc6e4adfd2b556ad7b79f2f8e",
-  "sourcePaths": 6070,
-  "overlaidTestHelperPaths": 24,
+  "sourceReceiptSha256": "f36f00858d80c83c4d0b39d8930d35a9c77e76d28613919f4d8d8de738feb096",
+  "sourcePaths": 6071,
   "nonTestProductBytesChanged": 0,
-  "initialCombinedActualCounts": {
-    "tests": 65,
-    "pass": 63,
-    "fail": 2,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "exactFailedConsumerRetryCounts": {
-    "tests": 8,
-    "pass": 8,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "newAdmissionActualCounts": {
-    "tests": 22,
-    "pass": 22,
+  "originalV6AndIntermediateFailuresRetained": true,
+  "firstFocusedCounts": [
+    {
+      "tests": 34,
+      "pass": 33,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    {
+      "tests": 78,
+      "pass": 75,
+      "fail": 3,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    }
+  ],
+  "finalFocusedCounts": {
+    "tests": 44,
+    "pass": 44,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
   "fullTypesPassed": true,
-  "original65AndV6FailuresRetained": true,
-  "firstRejectedRootOverrideAndReducedShoulderCoveragePreserved": true,
-  "bothOriginalCraniofacialRuntimeEmissionsRetained": true,
   "currentValidatorOrPinChanged": false,
   "normalPreviewExplicitlyUnchanged": true,
   "wholeSuitePassing": false,

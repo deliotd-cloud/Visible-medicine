@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T08:56:03.179Z",
+  "at": "2026-10-22T09:37:27.042Z",
   "sourceIdentity": {
     "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "isolatedReview": "525f8fbe122bf6bdc15d8b89f572e49e3ac0ce09cd411b8009f67454d938a163"
   },
-  "parent": "62d523c799e3e6755d4ffdb1463b4bad2e1835d8",
-  "gitParent": "62d523c799e3e6755d4ffdb1463b4bad2e1835d8",
+  "parent": "6493bd2aba29df202fe8e91b40fb941fa8862b47",
+  "gitParent": "6493bd2aba29df202fe8e91b40fb941fa8862b47",
   "files": [
     {
       "path": "app/globals.css",
@@ -17381,6 +17381,401 @@
       "sha256": "cf78603d19a00766bc9910759810488964b6704e6f39e0141029f3afcac35856"
     },
     {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/CODE/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 16299,
+      "sha256": "0f59cf6774a73e3ee8e6bd2e94fd6e6673e35c886f0e2d6f616c9fbeaaa4df88"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/CODE/tests/plexus-dependency-rebind.test.mjs",
+      "bytes": 9242,
+      "sha256": "ec085bdbb581a0dbb3f16bc7e14d30d27ee1588cf0ac70c35e17e10808c0b16c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/CODE/tests/plexus-presentation-18-history.mjs",
+      "bytes": 1984,
+      "sha256": "375d5b10d8420ea1cab8ea0bd0b3ba4f074d5cc98e649eb5e7a02faa684ed3e6"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/CODE/tests/studio-lineage-integration.test.mjs",
+      "bytes": 8140,
+      "sha256": "bbee89861f319613982193bf101cff3838bba9d2a5ba2f5cf230064eaea6993e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/CODE/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 5937,
+      "sha256": "99cf21728b5d0615efe8d939c38c149388cd6f33c32470e3f5e513ede0c26d7f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/PROVER.before-cwd-fix.mjs",
+      "bytes": 5263,
+      "sha256": "9cf473c13df32d66db545be03abe7ca62b17445abdf0d303b2000602b59de6f1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/RAW/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 15458,
+      "sha256": "5f2e7ae49b2aeacb9d0f99adac6c736e022fe1671fb65127d5f6ee0ceb98b337"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/RAW/tests/plexus-dependency-rebind.test.mjs",
+      "bytes": 7184,
+      "sha256": "f0b6e9dc3dd155d67338253f94ba68fd73f16f3ca40b7fe711525e70444953e7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/RAW/tests/studio-lineage-integration.test.mjs",
+      "bytes": 8145,
+      "sha256": "c2d79752376e9be9dc64fc8362829500e7ec153234917a4c6f1779c6fe3443c0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-current-ui-final-closures/RAW/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 5937,
+      "sha256": "4a9e256d477dc499259f634d507eaf1361e436b0da033d3a02f1e659651fdb83"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-limb-urinary-final-closures/CODE/tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "bytes": 19981,
+      "sha256": "6199b846dcce39829e61d21ff8bcdf07648152492a9034122761b98e83d2a7c8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-limb-urinary-final-closures/CODE/tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "bytes": 8111,
+      "sha256": "5816c24ad3defd9eef3055939519cce94bc4f8af307713b915de3f2795f8dd21"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-limb-urinary-final-closures/EVIDENCE/PROVE_SOURCE.mjs",
+      "bytes": 4582,
+      "sha256": "40d25fbde9212082be35792c555e2e4f97e479590527d6af41824c9b02072894"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-limb-urinary-final-closures/RAW/tests/limb-suprahyoid-role-preservation-20261021.test.mjs",
+      "bytes": 16923,
+      "sha256": "d51678cc4a2f42badbc9fb3fd0afffabb6094c7af2fa2f225f4acb907c6e0fcb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-limb-urinary-final-closures/RAW/tests/venous-urinary-role-preservation-20261021.test.mjs",
+      "bytes": 6386,
+      "sha256": "4130539addc372692276dcad2da6bb8b1913e93b41df98394045ae42f7d58b4e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/CODE/tests/colic-later-source-inverse.mjs",
+      "bytes": 4095,
+      "sha256": "633c63a05b0afc0ee2ed5007fcd221952447271582e2c3ee8aeeb18596c0e460"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/CODE/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "303a1ba566b8dbbac99e06206f92ad5df3634579fb29bb696a64f4c5a4529cea"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/CODE/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 3659,
+      "sha256": "e49359b91d409eec89747a0857e259ea1a98bded92e8e4e51ce90f4e21bfac2d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/CODE/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 6048,
+      "sha256": "d584c8009299dda86dfd2abf9c5d938cffab63154c19910d79da042bcfc69539"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/CODE/tests/review-frame-history-inverse.mjs",
+      "bytes": 7581,
+      "sha256": "f9eda3842ae13c233880802942b29f541583247981546baf10d146688ed91117"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/CODE/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2412,
+      "sha256": "326b425f1d529b590eaa345f94a9dd440ed2bcfe5fbbb19dcb918048a002b995"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/EVIDENCE/proof.mjs",
+      "bytes": 5054,
+      "sha256": "6aadfe5a7fef93298698ef643e3f87104fca79b26230f98a834f8bfa8cb6769e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/RAW/tests/colic-later-source-inverse.mjs",
+      "bytes": 3855,
+      "sha256": "53880d21096880b81b88cf241eefd7e4f8d8853eaae8157ec3af1be7f889fa44"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/RAW/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "b0f078527cdb040ce7afa105bc0db9ebb979be590757ce7e749583eaed0f0045"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/RAW/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 3659,
+      "sha256": "6245fd2eaec46558762df765274f271476cdb6e5d30d8e935f4bd829f438a777"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/RAW/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 6048,
+      "sha256": "d7c49de5731cdf64dcc57e6e861cf9b2614d763a784a256ade5ba7755a7fc4d4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/RAW/tests/review-frame-history-inverse.mjs",
+      "bytes": 7390,
+      "sha256": "107fac77b4f68f2ca4b91a035a53920210a69a63a14b023e7b0f09e85810041a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-current-admission-count/RAW/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2412,
+      "sha256": "e89390f4aa8ebf4c8c709f6d6b78e9400e79e0dca7a16e58eea4de371dd8b144"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-direct-consumers/CODE/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 7415,
+      "sha256": "9c0cb14753b6d3b574a9f2b70f557f637b5e0b088222241673b9e363948c28f3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-direct-consumers/CODE/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 7608,
+      "sha256": "6feb900f5db6124b287629a669267736baf22751d3142aea15f8d4eda87d0e31"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-direct-consumers/CODE/tests/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16217,
+      "sha256": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-direct-consumers/RAW/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 6520,
+      "sha256": "814e5d9c32dc8a97c2150e394c281421bd91d7bcb6a0398fcdf2d11c5643d181"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-direct-consumers/RAW/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 7608,
+      "sha256": "60ef7d4039e6c89451c0392b2411d2d6314d922e4d564ef85e382bde37aa5c80"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-direct-consumers/RAW/tests/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16217,
+      "sha256": "89125a0699029efb7186800ba761ecbe0748c052753424fc02fc36231f5f5913"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/CODE/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 10036,
+      "sha256": "6367c7c6361f3bf858f27bf30850b35bf397c7ad6d7fc455c9f865d548773f9d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/CODE/tests/head-history-role-preservation.test.mjs",
+      "bytes": 5820,
+      "sha256": "fcc27c220117984a95ad0a1abfdbdd7637d9ea57e8d64f2ce5e2759b16b8b14d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/CODE/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8716,
+      "sha256": "deebc34618ff4cc27b71cbeecd189e17ae3909017cd3eb147fd6e78655bccad1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/CODE/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 8756,
+      "sha256": "d38f5b5fc705b8797a3db2626f7bdde799dc2c3799261ccafb1a90d3a9fe95a3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/RAW/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 10036,
+      "sha256": "52c9d8ef7fab7f79bda259238e6b5469b91441fd94bc60accb71e41a65675c06"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/RAW/tests/head-history-role-preservation.test.mjs",
+      "bytes": 5820,
+      "sha256": "8ca48968147e801cec9c9bf0e8db15f733d8b07eda7bcd1dde4b079e13f8a506"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/RAW/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8716,
+      "sha256": "e7d47048bc2b69bd13ad1ca03cc3bb7db377cd8b0e720847165189c53b2f07af"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/RAW/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 8756,
+      "sha256": "d2d85cd79f9b61745d961c3f16340300a734c43e27ab2f705650cba670bdc6a3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/source-proof-loader.mjs",
+      "bytes": 818,
+      "sha256": "6f9005cf0fea51b8dfca269dccf35577a438c4b503e6532d7f82dff1f3d707b9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-head-live-roles/source-proof-preload.mjs",
+      "bytes": 942,
+      "sha256": "e6670f23fb1d1357298cce7b8d57db0a5ea97b6d3d71156b9f1a777ae93cf5a7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-history-followup/CODE/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 3933,
+      "sha256": "ff6ab52cd3ced01c3ccf86f0fbc0c5cdbc3ab74e7130db8d82b83241c7778cb8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-history-followup/CODE/tests/review-frame-history-inverse.mjs",
+      "bytes": 9120,
+      "sha256": "ddd48cfb8b04495e7cfcb156b30837b0c3c2306c2b743f79b5fc17dd2e3d9280"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-history-followup/EVIDENCE/proof.mjs",
+      "bytes": 9095,
+      "sha256": "fa330c86acdb7dc10590f046106b5879f521c227e1b536ac18db79e011d2b6b3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-history-followup/RAW/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 3659,
+      "sha256": "e49359b91d409eec89747a0857e259ea1a98bded92e8e4e51ce90f4e21bfac2d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-history-followup/RAW/tests/review-frame-history-inverse.mjs",
+      "bytes": 7581,
+      "sha256": "f9eda3842ae13c233880802942b29f541583247981546baf10d146688ed91117"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/CODE/tests/craniofacial-ct-current-delivery.test.mjs",
+      "bytes": 9929,
+      "sha256": "2de47b24e78247eb1aa1d60d5d8763a35a79e3f5cc3ab3e136fef6c726490ecc"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/CODE/tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "bytes": 6516,
+      "sha256": "92a0e6cb75e50a50a336fa22520e41661dd9feecba2a4e39948bed1ce57bb349"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/CODE/tests/ui-teaching-lifecycle-contract.test.mjs",
+      "bytes": 7321,
+      "sha256": "b413cc684f0cc899e3fdb578dc747bec6cb2ae85839d03acb2c341aa519b33d2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/RAW/tests/craniofacial-ct-current-delivery.test.mjs",
+      "bytes": 9929,
+      "sha256": "5d3b6ce69f3db7e91eacca50c78e76d91dc6f2648f5f8232ca097358dd1c5e92"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/RAW/tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "bytes": 4451,
+      "sha256": "682155eee19af01a2fe3882db9534c2a59a3d77795626c18e8d398f387f3bdb8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/RAW/tests/ui-teaching-lifecycle-contract.test.mjs",
+      "bytes": 6641,
+      "sha256": "99eeebea4fd0fe9e0038f31a22752e7ee6c30fcb7cb42f4c194309c08a13d87b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/source-proof-loader.mjs",
+      "bytes": 775,
+      "sha256": "16ffd77afb6905bef2873caf38864d77e04583130b4e02d0f43acee46eb64194"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/source-proof-preload.mjs",
+      "bytes": 899,
+      "sha256": "26b249e1927d01eef49a802afa774917cef43c6c55fbc261e201e03ba2f483df"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-loading-ui-consumer-closures/verify-source-inverses.mjs",
+      "bytes": 4635,
+      "sha256": "665f983eecbefef21c01b0dc363356fa887e1616f2f42af73bd516db89810e7c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-orbital-radial-final-closures/CODE/tests/orbital-inbox-admission-history.test.mjs",
+      "bytes": 3204,
+      "sha256": "397a9ec32c5f98ed5f2d38e2d50e7c8c8f93810dd63af1a448b042138924114a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-orbital-radial-final-closures/CODE/tests/radial-eus-current-transition.test.mjs",
+      "bytes": 25366,
+      "sha256": "5a1f625dd7539e66c502b7cff0d6e237c63b9d1e793f49a5e3af5c0ac3231cbe"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-orbital-radial-final-closures/PROVE_SOURCE.mjs",
+      "bytes": 5505,
+      "sha256": "8b2306d5bdcebce95f2679a6e053a08e197d3478c0f10b40fd7647a0f5550379"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-orbital-radial-final-closures/RAW/tests/orbital-inbox-admission-history.test.mjs",
+      "bytes": 2985,
+      "sha256": "c9910c150259019ebf095c970494b61f7990d5392eabbd6ddabd1738eaa64b36"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-orbital-radial-final-closures/RAW/tests/radial-eus-current-transition.test.mjs",
+      "bytes": 21258,
+      "sha256": "adf350fe7fc229a63bf7013a5bd7e159886beb27053586d6d7f6e6e3eb505811"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-tour-refusal-comparison/CODE/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 16643,
+      "sha256": "165eb3811d6a0113886b583beac5013c61ab0072e60411ecf668a880b947a699"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-tour-refusal-comparison/CODE/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 8122,
+      "sha256": "6f48857ab2f7e4167348091bdd60fb60d9d3106f399548650aad593660c61956"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-tour-refusal-comparison/PRE_UI/CODE/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 16486,
+      "sha256": "6585dca70656dc65cadce746a19faaa538a00dc4259cbf31e2a98ac0e1c3f3fb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-tour-refusal-comparison/RAW/tests/corpus-ui-role-preservation.test.mjs",
+      "bytes": 16299,
+      "sha256": "0f59cf6774a73e3ee8e6bd2e94fd6e6673e35c886f0e2d6f616c9fbeaaa4df88"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/20261022-tour-refusal-comparison/RAW/tests/tour-discovery-current-delivery.test.mjs",
+      "bytes": 5937,
+      "sha256": "99cf21728b5d0615efe8d939c38c149388cd6f33c32470e3f5e513ede0c26d7f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/backup-seven-closure-sources-20261022.mjs",
+      "bytes": 6492,
+      "sha256": "75bffcf21fa70a765e6d7a1e8fdc2530cf7a91b5347f65183eda0072b5dca580"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/checkpoint-seven-closures-20261022.mjs",
+      "bytes": 4658,
+      "sha256": "7b25a4ce48ab466b5da3d09053c066807184bad0903efefab2bbd5b321d6e1da"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/integrate-final-loading-history-closures-20261022.mjs",
+      "bytes": 1837,
+      "sha256": "114fa82c1e76c3ccb8c314d538f8c8c2f2d64d9b362f25f08a07f69eac5da9d2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/integrate-loading-count-tour-closures-20261022.mjs",
+      "bytes": 4297,
+      "sha256": "25c7c71c4c8da2b6ac37b5a76dbb741d635aef57a411ade0ee16661abc005640"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/prepare-current-ui-final-closures-20261022.mjs",
+      "bytes": 1420,
+      "sha256": "f14923eba2d7c06ae527e98965a4ade52978e90b4df3f627e67621d0ea888616"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/prepare-final-closure-verification-20261022.mjs",
+      "bytes": 2892,
+      "sha256": "7d529d714b4fd587743534e9f228118070ecebdd1fb8f0b2615debbd0405540a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/prepare-seven-final-closures-20261022.mjs",
+      "bytes": 2510,
+      "sha256": "cfa473971665889fafeb086efe9ee371bfb1bd7a6dd7e859a3a2f858d2cff4b2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/prepare-tour-refusal-comparison-20261022.mjs",
+      "bytes": 1064,
+      "sha256": "c68bc2c0616f28be5008589f77e6df3ecc168e4f6bd3ccfd7b0084ca1e30fbd6"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/prove-current-ui-final-closures-20261022.mjs",
+      "bytes": 5368,
+      "sha256": "1ac862de8b62a471c240a81aa2e42658e718bbf2a9f5562f0ab7f9570e36bd36"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/prove-tour-refusal-comparison-20261022.mjs",
+      "bytes": 2651,
+      "sha256": "093e1213af72f8ef2b673c95dd54f3ddc2c22d899e28bab619f54fd0da4a23a5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/seven-original-closures/coordination/prove-tour-refusal-ui-composition-20261022.mjs",
+      "bytes": 2774,
+      "sha256": "913d7ad2cc23b39cbea69f3a55260dc930febf5062794f6afbc53eb9919ce44e"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/CODE/tests/radial-eus-current-transition.test.mjs",
       "bytes": 21258,
       "sha256": "adf350fe7fc229a63bf7013a5bd7e159886beb27053586d6d7f6e6e3eb505811"
@@ -19127,40 +19522,39 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited selected authored sources plus24 explicitly overlaid test/helper paths, their original preimages, rejected first proposals and named reproducible proof/orchestration sources. Product byte graph is unchanged from the verified isolated loading-bound build. Generated metadata/fixtures, raw logs/media, held local assets, scans/models/masks, private records/DB/env/decisions/references and canonical Git ancestry remain local. Not whole/private/runnable recovery or installation.",
+  "scope": "Inherited selected authored source plus exact seven original failure corrections, current loading-bound test-role closures, complete preimages and reproducible source proof scripts. Product graph remains byte-exact to the built isolated loading-bound candidate. Generated metadata/fixtures, logs/media, held assets, scans/models/masks, DB/env/private decisions/references and canonical ancestry remain local. Not full/private/runnable recovery or preview installation.",
   "proof": {
-    "sourceReceiptSha256": "d72789221c1cbdb0686e65a6316fe42c378f4cddc6e4adfd2b556ad7b79f2f8e",
-    "sourcePaths": 6070,
-    "overlaidTestHelperPaths": 24,
+    "sourceReceiptSha256": "f36f00858d80c83c4d0b39d8930d35a9c77e76d28613919f4d8d8de738feb096",
+    "sourcePaths": 6071,
     "nonTestProductBytesChanged": 0,
-    "initialCombinedActualCounts": {
-      "tests": 65,
-      "pass": 63,
-      "fail": 2,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "exactFailedConsumerRetryCounts": {
-      "tests": 8,
-      "pass": 8,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "newAdmissionActualCounts": {
-      "tests": 22,
-      "pass": 22,
+    "originalV6AndIntermediateFailuresRetained": true,
+    "firstFocusedCounts": [
+      {
+        "tests": 34,
+        "pass": 33,
+        "fail": 1,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      {
+        "tests": 78,
+        "pass": 75,
+        "fail": 3,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    ],
+    "finalFocusedCounts": {
+      "tests": 44,
+      "pass": 44,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
     "fullTypesPassed": true,
-    "original65AndV6FailuresRetained": true,
-    "firstRejectedRootOverrideAndReducedShoulderCoveragePreserved": true,
-    "bothOriginalCraniofacialRuntimeEmissionsRetained": true,
     "currentValidatorOrPinChanged": false,
     "normalPreviewExplicitlyUnchanged": true,
     "wholeSuitePassing": false,
