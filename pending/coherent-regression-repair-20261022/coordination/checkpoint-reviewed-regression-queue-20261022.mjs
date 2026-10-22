@@ -15,6 +15,7 @@ const helpers={
  'tests/atlas-thoracoabdominal-quiz.test.ts':['tests/atlas-thoracoabdominal-quiz-checks.mjs'],
 };
 for(const stem of ['main-bronchus-xray','nested-practice','orbital-ultrasound','pelvic-update','pes-anserine-study','posterior-mediastinal','practice-navigation','proper-digital-teaching','projection-ultrasound','pulmonary-hilar','pulmonary-vein-ultrasound','search-study-handoff'])helpers['tests/atlas-'+stem+'.test.ts']=['tests/atlas-nonregional-release-fixture.ts'];
+for(const name of ['clinical-review-inbox-navigation-revision.test.mjs','head-comparison-renderer-revision.test.mjs','head-mask-resource-binding.test.mjs','salpingopharyngeus-integration-register.test.mjs'])helpers['tests/'+name]=['tests/historical-navigation-43-epoch.mjs'];
 
 export function checkpointReviewedRegressionQueue({stem,queuePath,queueSha256,expectedProposals,backupPath,backupSha256,milestone}){
  assert.match(stem,/^[a-z][a-z0-9-]{1,65}$/);
