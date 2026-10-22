@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T06:26:42.926Z",
+  "at": "2026-10-22T07:07:16.945Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "249df6ac9c1419c275fb0aba613162919bcccc73",
-  "gitParent": "249df6ac9c1419c275fb0aba613162919bcccc73",
+  "parent": "27bebb4b0b5a800088b89f463478cb4cb7f9cf37",
+  "gitParent": "27bebb4b0b5a800088b89f463478cb4cb7f9cf37",
   "files": [
     {
       "path": "app/globals.css",
@@ -12290,6 +12290,11 @@
       "sha256": "59808f3dd347268c167a951c009e4a92a1442c4dec66c139184cc2ba52695490"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/audit-colic-source-closure-20261022.mjs",
+      "bytes": 2398,
+      "sha256": "c26643b4af8cb989c33c1c1ca52378e04efb075608622a8c9e4a651b7b0a08c0"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-cervical-cerebral-clinical-admission-20261022.mjs",
       "bytes": 956,
       "sha256": "6765da169c8231bb9bb0d3eabf77c77be14260f48d94b487b6cfd140c95b625d"
@@ -12348,6 +12353,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-reviewed-regression-queue-20261022.mjs",
       "bytes": 5868,
       "sha256": "e4dcff100bc71d1e64f98622a358038a07704ae2c50e26a1b0b246ff839ca5ed"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-reviewed-source-continuation-20261022.mjs",
+      "bytes": 3750,
+      "sha256": "9edf28e1357eeb93a5df477d1b29358c5fb4afc03a9e69fff7fb6707de4e8e14"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-runtime-admission-20261022.mjs",
@@ -12423,6 +12433,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-reviewed-regression-queue-20261022.mjs",
       "bytes": 7697,
       "sha256": "167d45256ea5a1f1f824efe895a3df403c6c467130542e905d9636d26d2f0021"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-reviewed-source-continuation-20261022.mjs",
+      "bytes": 5350,
+      "sha256": "71673d0cb714bf37581af1669dd59ee937e8af3757ec4ed5d80ce4f174aa75c1"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-runtime-admission-20261022.mjs",
@@ -12515,6 +12530,11 @@
       "sha256": "f5a10855f2cac6fe22468308380c4b5ef4afc293993670b617867e9baa567bf3"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/create-reviewed-source-continuation-20261022.mjs",
+      "bytes": 8709,
+      "sha256": "16fdfba93364a0deffd262a347f032a1a3a32c913a4fff980a7617862e51a23f"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/observe-coherent-full-regression-20261022.mjs",
       "bytes": 5511,
       "sha256": "8c17ab7f546e43af502037e00df97522a291b073cc396399ced6972c5fc00e0f"
@@ -12570,6 +12590,11 @@
       "sha256": "e85add4b4cc2fc787aaf906466b50fbba3cd158e138c4866afb89d58522310a8"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/prepare-reviewed-source-followups-20261022.mjs",
+      "bytes": 5935,
+      "sha256": "f58f96f3198724925bcacc7d6316b0eae5b5d947659230e5774702bc67929b73"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/prove-extra-expansion-admission-20261022.mjs",
       "bytes": 3794,
       "sha256": "2d79c9aa279d7dbd0922e25e593d4459396468c77f70d0d30fe0c7f013a98c73"
@@ -12578,6 +12603,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/prove-navigation-historical-forwarding-20261022.mjs",
       "bytes": 3309,
       "sha256": "69793fbfbc12c48dd05062dc6a76512bb43a24401d9b9f1f9d747aa64ffdd01f"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/record-preview-hold-20261022.mjs",
+      "bytes": 1123,
+      "sha256": "8f3b1f5f3f6b1c65b4413c7bd903f47445bde6570aa67eb5ee635e40ab596811"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/record-regression-repair-queue-20261022.mjs",
@@ -16315,6 +16345,326 @@
       "sha256": "cb52d7794ad50ade3a72cb93cd466b5cc098df2b7ec7a656603eb79729983396"
     },
     {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-colic-complete-source-followup/CODE/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 9444,
+      "sha256": "2add31dc03372e7c1960a2f91bdfe429e03c7eeed53d53274a638ca72fdddbb0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-colic-complete-source-followup/CODE/tests/colic-later-source-inverse.mjs",
+      "bytes": 3855,
+      "sha256": "53880d21096880b81b88cf241eefd7e4f8d8853eaae8157ec3af1be7f889fa44"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-colic-complete-source-followup/PREDECESSOR/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 8630,
+      "sha256": "1a652b9af840f497b211b67663fe085b44c4cbe6a30528ec8e2f646524d641ab"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-colic-complete-source-followup/PROVE_SOURCE.mjs",
+      "bytes": 6487,
+      "sha256": "90e6293b717c360a2c2734ee5ba8152ebd833ccf1234d7a7f9ff48b78631317f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-colic-complete-source-followup/RAW/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 4561,
+      "sha256": "8780092a4889681421adb5f696f06f28cdb5a29c157ba31271b38c1cf3ded0ff"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-desktop-frame-history-followup/CODE/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 8630,
+      "sha256": "1a652b9af840f497b211b67663fe085b44c4cbe6a30528ec8e2f646524d641ab"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-desktop-frame-history-followup/CODE/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 6148,
+      "sha256": "8c94803ea09e9389837e1b46ea41d52701e115ac1bed55f4e58444365141ca51"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-desktop-frame-history-followup/CODE/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 8430,
+      "sha256": "1dcf6afcade0e1439627ce583d13c3d5181bdca4eb04fd84e9b5bf685b0a2025"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-desktop-frame-history-followup/RAW/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 4561,
+      "sha256": "8780092a4889681421adb5f696f06f28cdb5a29c157ba31271b38c1cf3ded0ff"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-desktop-frame-history-followup/RAW/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 4177,
+      "sha256": "88aa79624b76b3cb69e52f15a378b47466dc6fd2549847339721afd4f56c1514"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-desktop-frame-history-followup/RAW/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 6383,
+      "sha256": "08836926edb3c2cd47a69ac2b0e1c6d31a58360cf4b85781b54670c8d25fa18d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-desktop-frame-history-followup/ROWS_PROOF.mjs",
+      "bytes": 2340,
+      "sha256": "4fa826c2c3fe729d74a464c49120565fbe423b5c851b9d9252b933b943a12532"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-desktop-frame-history-followup/SOURCE_PROOF.mjs",
+      "bytes": 10659,
+      "sha256": "d63aa8e6877545bd466575929f39c0d1e78793737ca1a5547b45d93d48068f58"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-heading-root-history-followup/CODE/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 6746,
+      "sha256": "c04ede4783b03fa7c7bdac213e04ad08826e93def837652e51a34541abbf265d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-heading-root-history-followup/CODE/tests/salivary-cache-guard-adaptation.test.mjs",
+      "bytes": 5414,
+      "sha256": "09bdafdb9ec5cad0b55bc613907bc6b3171cbbc2a06a078c5275f291307ad627"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-heading-root-history-followup/CODE/tests/salivary-current-family-inverse.mjs",
+      "bytes": 6680,
+      "sha256": "249a9ae1b34e811da3da475e790997bfbf0bbb27a1a92f5141d85ab90e7377b3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-heading-root-history-followup/RAW/tests/clinical-review-git-root-preservation.test.mjs",
+      "bytes": 5962,
+      "sha256": "5f17dd98df38536edc9456addccca15b5b418af35325d6a284c503dc829992d9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-heading-root-history-followup/RAW/tests/salivary-cache-guard-adaptation.test.mjs",
+      "bytes": 4234,
+      "sha256": "646bb8dc4a841aa97aedd5cf84cc3bdef1e99f14bfc53d98a9e0c9525155f69d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-heading-root-history-followup/RAW/tests/salivary-current-family-inverse.mjs",
+      "bytes": 5011,
+      "sha256": "d022a72465520efd87d4c84578a0db80cd04fb41cacdc9a8aec85a32076b6a37"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-heading-root-history-followup/SOURCE_PROOF.mjs",
+      "bytes": 9055,
+      "sha256": "40d304ea8ee2f46b68ef384eb3640440add0cced4df5d87e30b27e37d2c05ca9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-cranial-teaching-batch.test.ts",
+      "bytes": 14628,
+      "sha256": "0b914531d036027e95c36864779422da7b4979683acd2e73596977ff11b987fc"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-dorsal-hand-ultrasound.test.ts",
+      "bytes": 10744,
+      "sha256": "03226b8b33047c96788898e14ff2bdb620463f7f703fac9b69e8dbdb32fd3ccb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-elbow-arterial-ultrasound.test.ts",
+      "bytes": 10776,
+      "sha256": "b99219fd4331cf78215d02b1daa81fc54a7ee0c7a761681d0ed774a25cd3a5d1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-foot-variant-quiz.test.ts",
+      "bytes": 11257,
+      "sha256": "cc424ea799294f03ae5d8464ba19ecb0eaf28d576aeef7e453d0d5e35d2028ec"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/clinical-review-foot-venous-arch-imaging.test.ts",
+      "bytes": 9248,
+      "sha256": "f801fdd4ceeda0b08675ea04e117cd8014cfe70ea32b7082a1357e6309eb02b5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/next-five-admission-contract.test.mjs",
+      "bytes": 7042,
+      "sha256": "a4a92d981f860193765a0fb93b3a8347e1312f7de1ccb221300a77999e8bcf9d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/CODE/tests/next-six-admission-contract.test.mjs",
+      "bytes": 6920,
+      "sha256": "7dcd00b36a4bc20c5050f5161c935d7708135290654c2506cd38c5c173af5a39"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/ORIGINAL_THEOREM_PROOF.mjs",
+      "bytes": 2473,
+      "sha256": "64767788ea483b8f407ecc4ff1d29509603b939c66c02712dcfd34914a285a75"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-cranial-teaching-batch.test.ts",
+      "bytes": 14432,
+      "sha256": "33d3ac3fd9c057ea49644e58cfbbbff13a3e3cf0f4e7069ed1699e27360f4225"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-dorsal-hand-ultrasound.test.ts",
+      "bytes": 10548,
+      "sha256": "87d29750351caaf50c1a2781ab5c248a92f711483fcece79b7f15de69853c3c1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-elbow-arterial-ultrasound.test.ts",
+      "bytes": 10580,
+      "sha256": "8c7d6cfa63436615f4ace28125163796b5d55a80702ca7075b8c24ce63dc2182"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-foot-variant-quiz.test.ts",
+      "bytes": 11061,
+      "sha256": "7edc338eae04a62d73767c52ed7e5e1586a3dd2f907021cb5c4c61e150e8c938"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/clinical-review-foot-venous-arch-imaging.test.ts",
+      "bytes": 9052,
+      "sha256": "fd7b184fac2e89e4dc8b76c03c47e365686e55db23479f8d885d350c0e32b957"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/next-five-admission-contract.test.mjs",
+      "bytes": 5829,
+      "sha256": "370f887910a9a92bd25e1487ebd7533ee729d4d098c248122fa8f00f65ee90b9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/RAW/tests/next-six-admission-contract.test.mjs",
+      "bytes": 5542,
+      "sha256": "9620e31d9882dfa21338e3eba223e5f2309efd9130dcb59c00a64c35910c2e9d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/SOURCE_CLOSURE.mjs",
+      "bytes": 3244,
+      "sha256": "39cf822b7423248535556f63d90b96c49efa385c9d973380beae27b9ba0b8c56"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-laryngeal-hand-elbow-runtime-followup/SOURCE_PROOF.mjs",
+      "bytes": 5871,
+      "sha256": "7022d4c6c8ac26888e2d4f9c9218b3bcca73d9f4736d6f61f3da6e6dc988ac1c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-limb-nerve-entrypoint-followup/CODE/tests/batch-c-role-inverse.mjs",
+      "bytes": 8117,
+      "sha256": "9430a62ffbdc34903db792d3f81760827063f3b2f82e04737ef5ec7190bb9879"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-limb-nerve-entrypoint-followup/CODE/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 20197,
+      "sha256": "cffd85f99710eab36bf0df7d71f8dd86ded3cf8634a960028e94cf1c517ce8f6"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-limb-nerve-entrypoint-followup/PROVE_SOURCE.mjs",
+      "bytes": 9430,
+      "sha256": "8a7ac41df52d7b612a658b4fe26b57623453209b9c8db976774d384b98589f20"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-limb-nerve-entrypoint-followup/RAW/tests/batch-c-role-inverse.mjs",
+      "bytes": 5670,
+      "sha256": "c0fcc58347889fb7b56fe4c43006a8cf6cbfb77e207c510d26a2ae31ad9767c4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-limb-nerve-entrypoint-followup/RAW/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 18408,
+      "sha256": "fa3ff34ae74397b4f84835e0a5f5364493136114f004c26ce9d7a41acdd9d9a7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-original-failure-coverage-triage/build-evidence.mjs",
+      "bytes": 8234,
+      "sha256": "63962eb467ab15259f124f60b362ec32ab629fae3d8627ed8c0ac7f6b3b1ab22"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-paused-tour-runtime-followup/CODE/tests/atlas-paused-tour-imaging-checks.mjs",
+      "bytes": 17331,
+      "sha256": "31a271ce64e1460e701d25a5cf6cd633bf58676a20f9be6c44855903da244020"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-paused-tour-runtime-followup/PROVE_SOURCE.mjs",
+      "bytes": 5862,
+      "sha256": "7a8f79c0e81017839186cb335d174bbf7a266aa6c40f315464b024be4723f5b1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-paused-tour-runtime-followup/RAW/tests/atlas-paused-tour-imaging-checks.mjs",
+      "bytes": 14553,
+      "sha256": "cf877a8edb29119f3b9d382ceb50f51ea9d748586b77d2dd0eefa4f7ae3f0e97"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-current-imaging-preservation.test.mjs",
+      "bytes": 5629,
+      "sha256": "5d25ab54eb280d0b15c862d9c0c73b1796c877a025dcd4f93b4971e52cd2d00a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-current-quiz-preservation.test.mjs",
+      "bytes": 7527,
+      "sha256": "95e8980f44a1c686c58e6410ace272bf49b7880f6a52e27e590e815a165b4be5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-lacrimal-quiz.test.ts",
+      "bytes": 10761,
+      "sha256": "4a59cee188d717617cc5308470f629628763d1bd1c0d2785a2cb0bf4339edfac"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "bytes": 12231,
+      "sha256": "9c585b33e1f3bceb25731cb4cc68decb511aa929a792a9e5f497cbee9b545790"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "bytes": 12030,
+      "sha256": "b544e0c1d9af85d1af32c8142785bb98e53e917c0b09f57f221ee57d5c6477e0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-ocular-support-quiz.test.ts",
+      "bytes": 12551,
+      "sha256": "42c041f166b31ecd33e1049bb2676fef2328e636dc185ee03122b0e3af9ec20b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-orbital-support-quiz.test.ts",
+      "bytes": 9271,
+      "sha256": "cb661d3d5528eda4fcfb3684bdae97cc0b4d831a7075eadd63793588b524d892"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/CODE/tests/clinical-review-pectoral-ultrasound.test.ts",
+      "bytes": 12183,
+      "sha256": "8929acb72bb0f87cc459ecbd9e10faac91958039209172fb64e0710ba0054d29"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-current-imaging-preservation.test.mjs",
+      "bytes": 4489,
+      "sha256": "4a975560f129067bc08d572efe500209363d8107a234df861214edd32824b56c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-current-quiz-preservation.test.mjs",
+      "bytes": 6293,
+      "sha256": "b7ef46cdeb1c22340ce0f007b18cf02743fa5c81c21d58067743b2f0548587af"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-lacrimal-quiz.test.ts",
+      "bytes": 10565,
+      "sha256": "2134305fe2af059f405b463dfa6158a5c2e05396628fde97ddd24210df695abe"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-laryngeal-framework-quiz.test.ts",
+      "bytes": 12035,
+      "sha256": "63cc3f0c56b554f6a7ca0030eaeef44ff919dc7ec3f0d3c66ac8354f57e91deb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-laryngeal-muscle-quiz.test.ts",
+      "bytes": 11834,
+      "sha256": "806646d125fa5772174a46f3976c162a095755e257d15b961536536eff8f0aec"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-ocular-support-quiz.test.ts",
+      "bytes": 12355,
+      "sha256": "a29ccee61b27faf00d925fafc8b00e0d5b64eda4ebd6481b8b1ff4d16b7e5101"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-orbital-support-quiz.test.ts",
+      "bytes": 9075,
+      "sha256": "fe12516289eb6a2c6d971d3d0e44b186d6cfba00beda3deda7bc95150a436954"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/RAW/tests/clinical-review-pectoral-ultrasound.test.ts",
+      "bytes": 11985,
+      "sha256": "3d243b0041685bcaac16eb271be4f7d6891a2485f7fbfeff406e53b83ba0d1fc"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/SOURCE_CLOSURE.mjs",
+      "bytes": 3466,
+      "sha256": "0345ad338955289042245511aed38d5eee096e5174dd6ab36f028e068b3f03f0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/reviewed-source-continuation/20261022-six-remaining-clinical-runtime-followup/SOURCE_PROOF.mjs",
+      "bytes": 5629,
+      "sha256": "0c37c1868381d97f90e02ec8cd7a37e59a5d633c8fab0c3f4648473f3da8a4ff"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/website/lib/regional-atlas-runtime-binding.ts",
       "bytes": 1823,
       "sha256": "ad50af82562dac65d17691ebd7587509784e697e4dd0e737b8f09291c957b022"
@@ -17242,21 +17592,25 @@
     "proposedTestAndHelperPaths": 161,
     "completeOriginalSourceInverses": 161,
     "additionalCodeAndProofPaths": 65,
-    "explicitProductSourceAndPreimageFiles": 14,
+    "explicitProductSourceAndPreimageFiles": 64,
     "productProof": {
-      "planSha256": "e46623e9018cf718ca2dcfacb0f9d9f06cff867870b19ea8c8d094a5446047f1",
+      "planSha256": "3ea1ec6220680ce72cc6796925b8066107258cc1fbdd3f5328d2df332901aa71",
       "sourceReceiptSha256": "49a132ab76102e0fb2845df9ab111047630ecdafc0f0a2e61e81fef70a62a03f",
-      "selectedFollowupRepairs": 24,
-      "newSourceRepairs": 4,
-      "nextNativeRoots": 35,
-      "sourceOnlyInputRecordsVerified": 2876,
-      "exactGitBlobsVerified": 1617,
-      "wholeV5AndAllHistoricalInversesPreserved": true,
-      "firstLicenseOnlyProposalPreserved": true,
-      "licenseVerifierAndSharedPinUnchanged": true,
-      "newNativeBatchExecuted": false,
+      "selectedFollowupRepairs": 47,
+      "additions": 6,
+      "nextNativeRoots": 89,
+      "originalFailurePaths": 224,
+      "formerlyUnselectedPaths": 33,
+      "fullV5AndHistoricalTheoremsPreserved": true,
+      "colicAll13SourcePatchesProved": true,
+      "headEntrypointCurrentAndHistoricalRolesSeparate": true,
+      "pausedProposalNotSelected": true,
+      "rawDiagnosticLogsAndGeneratedMetadataFixturesExcluded": true,
+      "independentSourceProofsNotNativeAcceptance": true,
+      "current172RootRunStillUnaccepted": true,
       "canonicalInstalled": false,
       "ownerPreviewChanged": false,
+      "ownerExplicitlyHoldsNormalPreview": true,
       "wholeSuitePassing": false,
       "clinicalApproval": false,
       "patientRegistration": false
