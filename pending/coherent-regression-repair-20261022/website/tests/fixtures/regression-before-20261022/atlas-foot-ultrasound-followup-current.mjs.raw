@@ -1,0 +1,71 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+
+export const deliveryRevision=CURRENT_ATLAS_REVISION;
+const website=process.cwd(),atlas=currentAtlasDeliveryRoot();
+const epoch='a67c16de99f7a4bd8e55d66c34d432e0946ba634';
+const sourceRevision='537838f028f15e62a6642e7eb360cbaeea31fa20';
+const paths=['content/foot-ultrasound-followup-pins.json','content/foot-ultrasound-followup.ts','lib/foot-ultrasound-followup.ts'];
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const read=path=>readFileSync(website+'/'+path);
+const json=path=>JSON.parse(read(path));
+const git=(root,ref,path)=>execFileSync('git',['show',ref+':'+path],{cwd:root,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+
+/** Byte/source proof only. The full historical/resolver replay runs separately. */
+export function verifyCurrentFootDelivery(){
+  const review=json('atlas-review/manifest.json');
+  assert.equal(review.revision,deliveryRevision);
+  for(const file of review.files)assert.equal(sha(read('atlas-review/'+file.path)),file.importedSha256,'Review import '+file.path);
+  for(const path of paths){
+    const file=review.files.find(file=>file.path===path);assert(file,path);
+    const current=git(atlas,deliveryRevision,path);
+    assert.equal(sha(current),file.sourceSha256,path+' current committed source');
+    assert.deepEqual(current,git(atlas,sourceRevision,path),path+' original source retained');
+    assert.deepEqual(read('atlas-review/'+path),git(website,epoch,'atlas-review/'+path),path+' admitted bytes retained');
+  }
+  assert(!review.files.some(file=>file.path==='content/foot-ultrasound-followup.transition.json'));
+  const inventory=json('lib/atlas-model-inventory.json');
+  assert.equal(inventory.models.length,137);
+  assert.equal(inventory.models.flatMap(model=>model.paths).length,144);
+  const oldInventory=JSON.parse(git(website,epoch,'lib/atlas-model-inventory.json'));
+  assert.deepEqual(inventory.models,oldInventory.models,'all immutable model identities, byte counts and paths');
+  for(const name of ['head-neck','shoulder','female-pelvis','lower-limb','review']){
+    const base=name==='review'?'public/atlas-review-viewer/':`public/atlas-runtime/${name}/`;
+    const manifestBytes=read(base+'manifest.json'),manifest=JSON.parse(manifestBytes);
+    assert.equal(manifest.sourceCommit,deliveryRevision,name+' source');
+    const oldManifest=JSON.parse(git(website,epoch,base+'manifest.json'));
+    assert.deepEqual(manifest.files.filter(file=>file.path.startsWith('models/')),oldManifest.files.filter(file=>file.path.startsWith('models/')),name+' unchanged geometry');
+    if(name==='review'){
+      assert.equal(manifest.personalRecordsIncluded,false);
+      assert.equal(manifest.mode,'production');
+      assert.equal(manifest.websiteIntegrationSha256,review.websiteIntegrationSha256);
+    }else{
+      for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection'])assert.equal(manifest[flag],false,name+':'+flag);
+      // Shoulder's separate export schema never declares imagingConnection.
+      // Preserve that exact schema; absence is not an invented approved link.
+      assert.equal(manifest.imagingConnection,name==='shoulder'?undefined:false,name+':imagingConnection');
+      const source=inventory.sources.find(source=>source.module===name);assert(source,name+' inventory');
+      assert.equal(source.sourceCommit,deliveryRevision);
+      assert.equal(source.manifestSha256,sha(manifestBytes));
+      const inputs=json(base+'source-inputs.json');
+      for(const path of paths){
+        const input=inputs.find(file=>file.path===path);
+        assert.equal(Boolean(input),name==='head-neck'||name==='shoulder',name+':'+path);
+        if(input)assert.equal(input.sha256,review.files.find(file=>file.path===path).sourceSha256,name+':'+path+' source input');
+      }
+      assert(!inputs.some(file=>file.path==='content/foot-ultrasound-followup.transition.json'));
+    }
+    for(const file of manifest.files){
+      const bytes=read(base+file.path);
+      // Protected Review declares exact SHA256 rather than a byte-count field.
+      if(name!=='review')assert.equal(bytes.length,file.bytes,name+':'+file.path+' bytes');
+      assert.equal(sha(bytes),file.sha256,name+':'+file.path+' SHA');
+    }
+  }
+  return {deliveryRevision,sourceFiles:paths.length,reviewImports:review.files.length,models:137,modelPaths:144,runtimes:4,clinicalApproval:false,patientRegistration:false,fullHistoricalResolverReplay:false};
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)console.log(JSON.stringify(verifyCurrentFootDelivery()));

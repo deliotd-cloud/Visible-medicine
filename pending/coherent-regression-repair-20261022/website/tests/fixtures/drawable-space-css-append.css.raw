@@ -1,0 +1,18 @@
+
+/* In a desktop embedded panel the shared header and canvas already provide
+   separation. Return their duplicate vertical gutters to the real WebGL row;
+   keep every control, orientation line, caption and credit in normal flow.
+   Short and narrow layouts retain their more generous scrolling rules. */
+@media (min-width: 1101px) and (min-height: 360px) {
+  .body-app[data-presentation='panel'] > .body-topbar[data-shared-header='true']:not([hidden]) {
+    padding-block: 0;
+  }
+  .body-app[data-presentation='panel'] .body-workspace .body-canvas:not([hidden]) {
+    row-gap: 0;
+    padding-block: 0;
+    margin-bottom: 0;
+  }
+  .body-app[data-presentation='panel'] .body-workspace .body-canvas:not([hidden]) > .body-toolbar {
+    padding-block: 1px;
+  }
+}
