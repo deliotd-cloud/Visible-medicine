@@ -1,28 +1,17 @@
 {
-  "stockImportChecks": 10,
-  "canonicalByteAtlasChecks": 12,
-  "websiteTypesAndProductionBuild": true,
-  "renalNative": {
-    "originalTests": 192,
-    "pass": 191,
-    "fail": 1,
-    "correctedProofPass": 1,
-    "noNewCombined192PassRun": true
-  },
-  "assuranceNative": {
-    "tests": 74,
-    "pass": 74,
+  "native": {
+    "tests": 80,
+    "pass": 80,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "wholeOriginalAssertionInversesRetained": true,
-  "sourceOnlyTestTypeCorrection": true,
-  "renalPacketsChanged": 5,
-  "otherPacketsUnchanged": 1099,
-  "teachingPlacementsUnchanged": 9936,
-  "full71AndEightIdeasPreserved": true,
+  "roots": 8,
+  "wholeOriginalAssertionBodiesRestored": true,
+  "currentAndHistoricalRolesSeparate": true,
+  "nonTestProductBytesUnchanged": true,
+  "selectedRenalCandidateUnchanged": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
   "spatialRegistration": false,

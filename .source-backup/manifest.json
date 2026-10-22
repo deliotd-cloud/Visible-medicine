@@ -1,16 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T15:26:33.754Z",
+  "at": "2026-10-22T15:30:45.747Z",
   "sourceIdentity": {
-    "atlas": "4f20ae0b62b9e0dab5936b430575a983dcdd934e",
-    "atlasTree": "64f085e1f8b63b5f17daf8b107efcbe40bb7596c",
-    "review": "9aead9088895249b19b6a28f75fe824388b951055d6a62263ca14e6ed4e0eb5c",
-    "websiteSourceReceiptSha256": "274b98b13bdbe1e092b33d0671d2462010045242ce40149fefb1405d677366b5",
     "separateAssuranceAtlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
-    "assuranceSourceReceiptSha256": "fcccc077d15911a94d395832be0cfe28e8eb15e2b0d37e80f01463645e0c89f1"
+    "assuranceReview": "811baffeb0cfa83626ea4f00383d0ed04fe6980716415d2f919151078cdad9b5",
+    "assuranceReceiptSha256": "400dad398f35767645590505fb9af192a5b803e039c96286fbd81875bb85fb21",
+    "selectedRenalAtlas": "4f20ae0b62b9e0dab5936b430575a983dcdd934e",
+    "selectedRenalReview": "9aead9088895249b19b6a28f75fe824388b951055d6a62263ca14e6ed4e0eb5c"
   },
-  "parent": "ed7d5931765a812706e93a0360bae48d2942bc3a",
-  "gitParent": "ed7d5931765a812706e93a0360bae48d2942bc3a",
+  "parent": "2d6aaa433c5c25f1fe44efa02806fd5ec8f99e37",
+  "gitParent": "2d6aaa433c5c25f1fe44efa02806fd5ec8f99e37",
   "files": [
     {
       "path": "app/globals.css",
@@ -20273,6 +20272,41 @@
       "sha256": "f38d862f1590fdc4c8df18ff86313b5f964b6df0f1257777df05aa4d5a3679fa"
     },
     {
+      "path": "pending/review-ui-assurance-20261022/CODE/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 3920,
+      "sha256": "8e640a38c213608bde64fe2e1835e38364728d13d595e18bdff9c9b9e09145cb"
+    },
+    {
+      "path": "pending/review-ui-assurance-20261022/CODE/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16522,
+      "sha256": "4f0aed84267d3adf55699201608a13560b8b829795b1db2aee22b7d251668f8f"
+    },
+    {
+      "path": "pending/review-ui-assurance-20261022/coordination/checkpoint-review-ui-followup-20261022.mjs",
+      "bytes": 8505,
+      "sha256": "105d3ca8f78d41ff46774849b405ae3fc0cc86332a6e256f074597166795c87b"
+    },
+    {
+      "path": "pending/review-ui-assurance-20261022/coordination/prepare-review-ui-source-20261022.mjs",
+      "bytes": 3157,
+      "sha256": "e6b7ed170a899a34ef626e70972cf05c6151d7ce5e6710b16eb18a59bd6f2e02"
+    },
+    {
+      "path": "pending/review-ui-assurance-20261022/evidence/prove-source-only.mjs",
+      "bytes": 6731,
+      "sha256": "6e164019231a3f23273188806a941d8e3d3b77ed0c1932aa0ac7b3fcf32a5382"
+    },
+    {
+      "path": "pending/review-ui-assurance-20261022/RAW/review-navigation-delivery-preservation.test.mjs.raw",
+      "bytes": 2412,
+      "sha256": "326b425f1d529b590eaa345f94a9dd440ed2bcfe5fbbb19dcb918048a002b995"
+    },
+    {
+      "path": "pending/review-ui-assurance-20261022/RAW/ui-teaching-current-delivery.test.mjs.raw",
+      "bytes": 16217,
+      "sha256": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7"
+    },
+    {
       "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/CODE/tests/head-manual-migration-later-inverse.mjs",
       "bytes": 4249,
       "sha256": "80c814db779190f0354ddc5cc9bcee8cf8ee80d1ee63e23bff4c009554a9a19c"
@@ -21519,32 +21553,21 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus renal website import/source guards, exact historical admission repairs, authored proofs and code preimages. Separate old and new source roles remain explicit. Generated bindings/pins/coverage JSON, compiled runtimes/viewer, private records/DB/env/decisions/references, held assets, scans/models/masks, media/raw logs and raw canonical ancestry remain local. Not full, private or runnable recovery. Not installed or deployed.",
+  "scope": "Inherited filtered source plus two exact historical/current Review-navigation and teaching-consumer test repairs, complete source preimages and source-only proof. No product change. Generated bindings/JSON, compiled viewer/runtime, private records/DB/env/decisions/references, held assets, scans/models/masks, media/raw logs and raw canonical ancestry stay local. Not whole/private/runnable recovery or an installed update.",
   "proof": {
-    "stockImportChecks": 10,
-    "canonicalByteAtlasChecks": 12,
-    "websiteTypesAndProductionBuild": true,
-    "renalNative": {
-      "originalTests": 192,
-      "pass": 191,
-      "fail": 1,
-      "correctedProofPass": 1,
-      "noNewCombined192PassRun": true
-    },
-    "assuranceNative": {
-      "tests": 74,
-      "pass": 74,
+    "native": {
+      "tests": 80,
+      "pass": 80,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "wholeOriginalAssertionInversesRetained": true,
-    "sourceOnlyTestTypeCorrection": true,
-    "renalPacketsChanged": 5,
-    "otherPacketsUnchanged": 1099,
-    "teachingPlacementsUnchanged": 9936,
-    "full71AndEightIdeasPreserved": true,
+    "roots": 8,
+    "wholeOriginalAssertionBodiesRestored": true,
+    "currentAndHistoricalRolesSeparate": true,
+    "nonTestProductBytesUnchanged": true,
+    "selectedRenalCandidateUnchanged": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
