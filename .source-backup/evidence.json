@@ -1,20 +1,38 @@
 {
   "native": {
-    "tests": 80,
-    "pass": 80,
+    "tests": 138,
+    "pass": 138,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "roots": 8,
-  "wholeOriginalAssertionBodiesRestored": true,
-  "currentAndHistoricalRolesSeparate": true,
-  "nonTestProductBytesUnchanged": true,
-  "selectedRenalCandidateUnchanged": true,
+  "websiteTypesAndProductionBuild": true,
+  "atlasTypesAndProductionBuild": true,
+  "stockImportChecks": 10,
+  "specimenHarness": {
+    "allSixOriginalTestsPass": true,
+    "originalFailureRetained": true,
+    "noProductionChange": true
+  },
+  "historicalNative": {
+    "tests": 88,
+    "pass": 88,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "consumerTypeFailureRetained": true,
+  "allOriginalAssertionInversesRetained": true,
+  "modelAndCoverageUnchanged": true,
+  "advisoryProtocolOnly": true,
+  "independentAccessUnchanged": true,
+  "newHostBrowserAcceptance": false,
+  "ownerPreviewChanged": false,
+  "full71AndEightIdeasPreserved": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
-  "ownerPreviewChanged": false,
   "publicDeployment": false
 }

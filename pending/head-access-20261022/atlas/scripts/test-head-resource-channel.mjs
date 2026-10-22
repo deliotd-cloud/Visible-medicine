@@ -1,0 +1,41 @@
+// Fixed advisory model-resource causes cannot grant access or reuse a retired session.
+import assert from 'node:assert/strict';
+import {build} from './workspace-test-build.mjs';
+const built=await build({stdin:{contents:"export * from './lib/head-selection-channel';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const {connectHeadSelectionChannel,createHeadSelectionState,HEAD_SELECTION_PROTOCOL:type}=await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
+const origin='https://atlas.example',revision='f'.repeat(40),messages=[],listeners=new Set();
+const parent={postMessage:(message,target)=>messages.push({message,target})};
+const win={parent,location:{origin},addEventListener:(_,fn)=>listeners.add(fn),removeEventListener:(_,fn)=>listeners.delete(fn)};
+const emit=(data,source=parent,from=origin)=>{for(const listener of listeners)listener({data,source,origin:from});};
+const blocked=reason=>({status:'blocked',reason});
+const selection={kind:'root',id:'vm:anatomy:body:head-neck:midline:organ:pons',source:'a'.repeat(64),laterality:'midline'};
+const selected={status:'selected',selection};
+const request=session=>({type:type+'-request',version:1,session});
+const command=session=>({type:'vm-head-semantic-focus',version:1,revision,session,command:1,target:selection});
+const first='resource-session-12345',second='resource-session-23456',third='resource-session-34567';
+let current=blocked('sign-in'),focuses=0;
+const channel=connectHeadSelectionChannel(win,revision,()=>current,()=>{focuses++;return true;});
+emit(request(first),{},origin);emit(request(first),parent,'https://foreign.invalid');await Promise.resolve();
+assert.equal(messages.length,1,'only initial source-ready announcement before a trusted request');
+emit(request(first));await Promise.resolve();
+assert.deepEqual(messages.at(-1),{target:origin,message:{type,version:1,revision,session:first,sequence:1,...blocked('sign-in')}});
+const count=messages.length;emit(request(first));emit(command(first));channel.publish();await Promise.resolve();
+assert.equal(messages.length,count,'same resource-blocked session cannot restart or acknowledge focus');assert.equal(focuses,0);
+current=blocked('access-denied');channel.publish();await Promise.resolve();
+assert.deepEqual(messages.at(-1).message,{type:type+'-ready',version:1,revision},'changed cause requires new request');
+const changed=messages.length;channel.publish();emit(command(first));await Promise.resolve();assert.equal(messages.length,changed);
+emit(request(second));await Promise.resolve();
+assert.deepEqual(messages.at(-1).message,{type,version:1,revision,session:second,sequence:1,...blocked('access-denied')});
+current=selected;emit(command(second));assert.equal(focuses,0,'a late command cannot act between recovery and publication');
+channel.publish();await Promise.resolve();assert.deepEqual(messages.at(-1).message,{type:type+'-ready',version:1,revision});
+const recovered=messages.length;channel.publish();await Promise.resolve();assert.equal(messages.length,recovered,'no selection before fresh request');
+emit(request(third));await Promise.resolve();assert.deepEqual(messages.at(-1).message,{type,version:1,revision,session:third,sequence:1,...selected});
+emit(command(second));assert.equal(focuses,0);emit(command(third));assert.equal(focuses,1,'only current recovered session can request focus');
+channel.close();assert.equal(messages.at(-1).message.reason,'unavailable');assert.equal(listeners.size,0);
+const state=createHeadSelectionState(()=>{}),owner={};
+for(const reason of ['practice','guided','unavailable','sign-in','access-denied']){
+ state.root({nested:false,state:blocked(reason)},()=>{throw Error('blocked root focus');});assert.equal(state.focus(selection),false);
+ state.root({nested:true,state:{status:'empty'}});state.nested(owner,blocked(reason),()=>{throw Error('blocked nested focus');});
+ assert.equal(state.current().reason,reason);assert.equal(state.focus({...selection,kind:'nested'}),false);state.remove(owner);
+}
+console.log(JSON.stringify({passed:true,resourceCauses:['sign-in','access-denied'],trustedFixedPayload:true,currentSessionOnly:true,changedCauseAndRecoveryRequireFreshRequest:true,blockedFocusRefused:true,accessGranted:false}));

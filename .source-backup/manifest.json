@@ -1,15 +1,16 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T15:30:45.747Z",
+  "at": "2026-10-22T16:23:37.762Z",
   "sourceIdentity": {
-    "separateAssuranceAtlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
-    "assuranceReview": "811baffeb0cfa83626ea4f00383d0ed04fe6980716415d2f919151078cdad9b5",
-    "assuranceReceiptSha256": "400dad398f35767645590505fb9af192a5b803e039c96286fbd81875bb85fb21",
-    "selectedRenalAtlas": "4f20ae0b62b9e0dab5936b430575a983dcdd934e",
-    "selectedRenalReview": "9aead9088895249b19b6a28f75fe824388b951055d6a62263ca14e6ed4e0eb5c"
+    "atlas": "ea70b126efc1b9a4e9c9b576587f922650145e53",
+    "tree": "fa9633f09261d27efe3f90414524c86c7681bb59",
+    "review": "81089b676a14b13a461f465361858ccdbbaa5734bdc6cefc193e055c46196d00",
+    "websiteSourceReceiptSha256": "f56d329c5092b59237256be431c61294a797ba272c84047b04bdaa69257012f8",
+    "separateHistoricalAtlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
+    "separateHistoricalReview": "811baffeb0cfa83626ea4f00383d0ed04fe6980716415d2f919151078cdad9b5"
   },
-  "parent": "2d6aaa433c5c25f1fe44efa02806fd5ec8f99e37",
-  "gitParent": "2d6aaa433c5c25f1fe44efa02806fd5ec8f99e37",
+  "parent": "e724be1dce2e8b29fa7c3d75203c34684ac502c0",
+  "gitParent": "e724be1dce2e8b29fa7c3d75203c34684ac502c0",
   "files": [
     {
       "path": "app/globals.css",
@@ -15432,6 +15433,366 @@
       "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
     },
     {
+      "path": "pending/head-access-20261022/atlas-preimages/app/body-explorer.tsx",
+      "bytes": 125813,
+      "sha256": "d9df86ff0701c7405a27c391bbb534e1fdb79d841652cf82ac69e62f19b29cc7"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas-preimages/app/eye-layers.tsx",
+      "bytes": 31205,
+      "sha256": "9abf25778d49814d8ffa637bae3586473bc456424e825b55fe453289657de060"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas-preimages/app/ventricles.tsx",
+      "bytes": 93125,
+      "sha256": "b779a5b33c2095cc554d49c912a158e43d32ab32763c439bb4ef4d59c0a823a3"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas-preimages/lib/head-selection-channel.ts",
+      "bytes": 5433,
+      "sha256": "b401c5058d9bd09d5b1de1ee4b753dea232d908ad017350233f102a93b897e5d"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas-preimages/scripts/test-specimen-model-access.mjs",
+      "bytes": 8634,
+      "sha256": "a84328468f69d81ae9f9f81c210435cc0a57130c76cbc937f556b76683649288"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas-protocol-proposal-proof.mjs",
+      "bytes": 5792,
+      "sha256": "15ac713b6875e38974a7b067246e20d8cb6b22b35ca849b96d0b7ee2ae4b5215"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas/app/body-explorer.tsx",
+      "bytes": 126024,
+      "sha256": "1a549c87f016b9246edb7e6c80ffa7b5f874ea59ff87dacd99d109e79dcb7e29"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas/app/eye-layers.tsx",
+      "bytes": 31329,
+      "sha256": "3350a55d8162226b400cc8ed2ad3a28e4fcf323ced4ae7a7ec38d43d2437930d"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas/app/ventricles.tsx",
+      "bytes": 93370,
+      "sha256": "010f2c495e5c3fa290935d673531d2ca3049bee215abb22d2b88016e9a98d07e"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas/lib/head-selection-channel.ts",
+      "bytes": 5795,
+      "sha256": "2b9d5fc64b459fb6a6b2abd9fef95f19450b390e3632fd889321412343ac1212"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas/scripts/test-head-resource-channel.mjs",
+      "bytes": 4308,
+      "sha256": "8a5b302237d2cb5f39b62b7d2bbe9094adc2bd9993a2b7f925ad691edd93cd7a"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas/scripts/test-head-resource-scopes.mjs",
+      "bytes": 4265,
+      "sha256": "6492f906378d3dced5dd796b68d755d4cce64895d992e4800b2a885f0e5a4147"
+    },
+    {
+      "path": "pending/head-access-20261022/atlas/scripts/test-specimen-model-access.mjs",
+      "bytes": 9288,
+      "sha256": "1a72dd634781f6de97963033c08ff3902d58b7440921bbd115deb0ff8eacc1e8"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/admit-head-access-delivery-20261022.mjs",
+      "bytes": 3299,
+      "sha256": "e611b2b2f3518ee961d0ae021f9e7bf1ea3a4c3ca68cf17302f535daac5c40c5"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/admit-head-model-access-source-20261022.mjs",
+      "bytes": 3052,
+      "sha256": "f254c029ed9ed83a8f47dc807a7a0017932a0ea8293800c6f63790bd10ce526f"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/checkpoint-head-access-20261022.mjs",
+      "bytes": 15061,
+      "sha256": "5535b3ee2929261ae06967afedcda97454ae8061841f2574980a19c7b3c00ee9"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/export-head-model-access-20261022.mjs",
+      "bytes": 4470,
+      "sha256": "401a697029838c0586132f400f432321fe5a96564ab1379de793734dfdb89dbc"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/finish-head-access-producer-verification-20261022.mjs",
+      "bytes": 5407,
+      "sha256": "4da0b8891c05b8633e0f7402f942105798988ad61020c0561d700f6076743ef4"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/freeze-head-model-access-source-20261022.mjs",
+      "bytes": 5030,
+      "sha256": "88c28debcee22c95c9c25e6e9ce083c11da44f131e812cba4a3f94b6eb42a6e2"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/head-access-test-dependencies-20261022.mjs",
+      "bytes": 3193,
+      "sha256": "3b2b532258db422334b70bac7406c6cde9b708aa06f531eacdd64f34d9773c27"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/head-model-access-scene-branches-20261022.mjs",
+      "bytes": 4480,
+      "sha256": "d457622cb32c9ecc3ca9cb79919a2541eaba1aff93bed777614ab30826769603"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/import-head-model-access-20261022.mjs",
+      "bytes": 10290,
+      "sha256": "6c44375937b38f3698da61c009262abcb28870c5c72638baa06843a465e1cfbd"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/prepare-head-access-import-metadata-20261022.mjs",
+      "bytes": 1593,
+      "sha256": "df64caa76fca95d6e19fd2d693816515906ac5a53f50ee1675c60fff7292d40c"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/prepare-head-disclosure-history-20261022.mjs",
+      "bytes": 3345,
+      "sha256": "46b2fa95b152bd3e064834eccc588a9a8d9ad4ec6697921ec534c20024aabc7b"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/prepare-head-model-access-candidates-20261022.mjs",
+      "bytes": 3411,
+      "sha256": "bb10443f00ff32aa1a8f906c297a7fb068f0fce093151d74b90dcf0844212d1d"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/rebind-head-access-consumers-20261022.mjs",
+      "bytes": 5713,
+      "sha256": "888d0c9f0a2ae6eea6aad8fb516174a71340fd76dd47ff7737c498b27630ecf6"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/record-head-model-access-browser-20261022.mjs",
+      "bytes": 2994,
+      "sha256": "54d74213d10b70f72046458edc49471e6a64ffcd326b2ff311f5280f1ad75e9b"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/resume-head-access-producer-checks-20261022.mjs",
+      "bytes": 4445,
+      "sha256": "8cf52f3d576275258aba4d820ebd322c81706d985929d93917538a790bbb06e0"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/verify-head-access-specimen-harness-20261022.mjs",
+      "bytes": 3095,
+      "sha256": "2bb84f901f873dc865b35fd4d6ba8743eae915169a19314d130e13d83909fc83"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/verify-head-access-website-20261022.mjs",
+      "bytes": 7330,
+      "sha256": "3722c44180e222fc4483de9754e44772e4c93877703630661437d67245c6a410"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/verify-head-access-website-v2-20261022.mjs",
+      "bytes": 8139,
+      "sha256": "c787dcf72b170c3db293fdbdafff8d49474cc54c7dc9cda2c04684157df52261"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/verify-head-model-access-build-20261022.mjs",
+      "bytes": 4185,
+      "sha256": "ffc97415ba18ccf05de3d5abae87463bbeed7ebdedfba2041be8a7c6abd45df9"
+    },
+    {
+      "path": "pending/head-access-20261022/coordination/verify-head-model-access-focused-20261022.mjs",
+      "bytes": 4215,
+      "sha256": "af34a589501c0cff434967fced99cce42193f421b4cf3328e7c5b0ada51f0ee7"
+    },
+    {
+      "path": "pending/head-access-20261022/historical-assurance/main-preparer.before-output-eol.mjs",
+      "bytes": 3082,
+      "sha256": "e2e69cf57ec4486452170275b18a3ab7f9357cd0876f672290f6ed65ee4576d2"
+    },
+    {
+      "path": "pending/head-access-20261022/historical-assurance/preimages/head-disclosure-current-delivery.test.mjs.raw",
+      "bytes": 8355,
+      "sha256": "999704133a16bff87fb69948a0ef67ba3b5973218235ee3b99ef2d455cbfe58d"
+    },
+    {
+      "path": "pending/head-access-20261022/historical-assurance/preimages/head-history-role-preservation.test.mjs.raw",
+      "bytes": 6257,
+      "sha256": "969472e3491b6aff691228a5f7a6af09f9ea10bfbe44f474dc51d3469c5c799e"
+    },
+    {
+      "path": "pending/head-access-20261022/historical-assurance/source-role-proof.mjs",
+      "bytes": 2241,
+      "sha256": "15c4280849e8d6941569c2f2e586e9d32fa7fe9cb0b66cad3ef6597af1ab098a"
+    },
+    {
+      "path": "pending/head-access-20261022/historical-assurance/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 8355,
+      "sha256": "4faa65190f46ff6b4a247d4e39b864d8739d50281c5f5efb1833bc29aa4e0538"
+    },
+    {
+      "path": "pending/head-access-20261022/historical-assurance/tests/head-history-role-preservation.test.mjs",
+      "bytes": 6918,
+      "sha256": "30af3e370151316a876c83fc45a930c03407e7decb34a9427d35911ab1b8e8f3"
+    },
+    {
+      "path": "pending/head-access-20261022/integration-test-before-consumer-rebind.mjs",
+      "bytes": 8909,
+      "sha256": "e80b6f6cc0baee5f241edc2779b062d2e1916c597b69e239436d1395b3e96b0f"
+    },
+    {
+      "path": "pending/head-access-20261022/integration-test-original-proposal.mjs",
+      "bytes": 8210,
+      "sha256": "7e31a93653efcf5be9a82ce42fd4661788f45f776cf54aa43be15f90aa996d4a"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/components/HeadAtlasComparisonNavigation.tsx",
+      "bytes": 8683,
+      "sha256": "05d32d7e3fc96e56af9bab7c76ed622d2e6063cd8378ecc4d1f50d0a6f9432d4"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/components/HeadAtlasGuidedModel.tsx",
+      "bytes": 12483,
+      "sha256": "d476ced9b87984b150017ceed54c45dfe5236aa48d2f97bce053e0f59b07a0f0"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/components/HeadAtlasInlineComparison.tsx",
+      "bytes": 14110,
+      "sha256": "c64692ad3594129be18cb739063536d6bfa2bcbac72a91fdb4970c5df1e1b105"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/components/HeadAtlasLinkedModel.tsx",
+      "bytes": 7004,
+      "sha256": "2651c0125b71b8bf9e026f05564bda0ff9303f5f6fd689ef9ad5025d3e5138c6"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "5a9595a018e184e624738f566e2b8909d71278911aa6bdc5f2d47156748fdc04"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "16c74641fd8e364659b2a98f8d3690b7dbe73c73ba852bd3ab6b317cd974e01a"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/lib/head-live-selection.ts",
+      "bytes": 3339,
+      "sha256": "2919bb91217986b65b0785ee17a1d86faf32850e37667fd3d8d4c5147bf8af2d"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "14f79b373ea5a87b254e491224b630b73a3233daf774802a639602ebe887f890"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "cdb107324b105cfbf2cfbce0667195bbf9325ba6004900e6a0bbeef7a13bcd1b"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "2c22ebddc061915b2fd44c3a283d2eff9d363032efc516026c734291511aeefe"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/tests/head-guided-model.test.ts",
+      "bytes": 20239,
+      "sha256": "b14a8b2a963e5843a68966b81f7e25c48f551f091b710b52c69c3ef7a19c1557"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/tests/head-inline-frame.test.ts",
+      "bytes": 20668,
+      "sha256": "ffb35b1d698d18f31ffb6e1091f3a3ad54d8a5cd23e4729d48a456645d6196a5"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/tests/head-live-model.test.ts",
+      "bytes": 13378,
+      "sha256": "3e288203f8ba97cf211194e3e90a3de67c88f535b8ee6433d650128a395b7ed3"
+    },
+    {
+      "path": "pending/head-access-20261022/website-preimages/tests/head-live-selection.test.ts",
+      "bytes": 4573,
+      "sha256": "3302664a89fc3a761b862c2c3e68f66c69dab4fdd388146cb7796052ee3e72ea"
+    },
+    {
+      "path": "pending/head-access-20261022/website/components/HeadAtlasComparisonNavigation.tsx",
+      "bytes": 9394,
+      "sha256": "bd8164224a2b938461333ec54637ea3c82afa8e988372d07e936ddae812cac8b"
+    },
+    {
+      "path": "pending/head-access-20261022/website/components/HeadAtlasGuidedModel.tsx",
+      "bytes": 12966,
+      "sha256": "c10c75828276cf858fae4397d04cb16ca7962e1221d9ce0e2abe778d1fa9cf39"
+    },
+    {
+      "path": "pending/head-access-20261022/website/components/HeadAtlasInlineComparison.tsx",
+      "bytes": 14747,
+      "sha256": "2a93cb08ce7ee4b94868a070df8f7199823c33ae70a5cfdb2e3601b9e65605b6"
+    },
+    {
+      "path": "pending/head-access-20261022/website/components/HeadAtlasLinkedModel.tsx",
+      "bytes": 7113,
+      "sha256": "23c430e03ee9a48980873fd3b49f1f9d6808c140dd49e3489b34c7f2886a2837"
+    },
+    {
+      "path": "pending/head-access-20261022/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "b364d6a69f6664ec0be6eb11ad94f3c54dd9b067cc21005ecbdbddfcd527d003"
+    },
+    {
+      "path": "pending/head-access-20261022/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "36887695b8e1bf11eb02cbb4dd6bfa7653e26d2157f3dfaf8695c8fd8e7b94a9"
+    },
+    {
+      "path": "pending/head-access-20261022/website/lib/head-live-selection.ts",
+      "bytes": 3385,
+      "sha256": "ba55cac8c04b987b2d5dcd6935be4b5dbad4fd5ffd895722daec0e0f237cdd6a"
+    },
+    {
+      "path": "pending/head-access-20261022/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "8d2e9d04a86fdd3e77c228461a2501e2fe9f5ca20ffd8a11e4737b2cacc10bdf"
+    },
+    {
+      "path": "pending/head-access-20261022/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "593156c9c160efd9d29b3baac8a71c84ac9b95adaa07d0fe9fa52bbd7b07f0fd"
+    },
+    {
+      "path": "pending/head-access-20261022/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "7a292e8da893e28b22951aba8d1abdf51ba87bb74ae7232123db15cb73443ae6"
+    },
+    {
+      "path": "pending/head-access-20261022/website/tests/fixtures/current-atlas-delivery-before-head-access-20261022.mjs.raw",
+      "bytes": 19208,
+      "sha256": "2c22ebddc061915b2fd44c3a283d2eff9d363032efc516026c734291511aeefe"
+    },
+    {
+      "path": "pending/head-access-20261022/website/tests/head-guided-model.test.ts",
+      "bytes": 21335,
+      "sha256": "891cdbf2b508ecafd259d4bf860b62ee2e2f326ea4e8b7ac3700a6305a10e854"
+    },
+    {
+      "path": "pending/head-access-20261022/website/tests/head-inline-frame.test.ts",
+      "bytes": 23628,
+      "sha256": "e78a4778ce729c741342d45282abfe3a0a74fd6cc11b09667852c77111aabb74"
+    },
+    {
+      "path": "pending/head-access-20261022/website/tests/head-live-model.test.ts",
+      "bytes": 14240,
+      "sha256": "d94226df01904a99edf5fcab248fff0c39c5ce1227b7748bfd95b5a582a79554"
+    },
+    {
+      "path": "pending/head-access-20261022/website/tests/head-live-selection.test.ts",
+      "bytes": 5421,
+      "sha256": "c30c77ec1af633af8e978db4e15c56aa006644dcf5610c400efff78c3434e9e9"
+    },
+    {
+      "path": "pending/head-access-20261022/website/tests/head-model-access-integration.test.mjs",
+      "bytes": 8909,
+      "sha256": "1a5a5285cfede679b7a62aa8fcd21d9d0a5676011af1bf78c26215a3e63ab8f6"
+    },
+    {
+      "path": "pending/head-access-20261022/website/tests/head-model-access-navigation.test.ts",
+      "bytes": 2928,
+      "sha256": "b6d7f1c97ecf5e55abdcc0a29a14ad5e52108b900558084cd319ff2382e3ffa3"
+    },
+    {
       "path": "pending/head-modality-3d-20261022/coordination/build-unbound-ui-successor.mjs",
       "bytes": 4572,
       "sha256": "b64ddd7d0916bab4e96465b0af0cd4594745a5abac0ed2cf2cffcad246980eb4"
@@ -21553,25 +21914,43 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus two exact historical/current Review-navigation and teaching-consumer test repairs, complete source preimages and source-only proof. No product change. Generated bindings/JSON, compiled viewer/runtime, private records/DB/env/decisions/references, held assets, scans/models/masks, media/raw logs and raw canonical ancestry stay local. Not whole/private/runnable recovery or an installed update.",
+  "scope": "Inherited filtered source plus advisory sign-in/access-denied model-comparison recovery, exact-source publisher/parser/UI tests and historical disclosure/history contract repairs. Generated JSON, bindings/pins/coverage, compiled runtime/viewer, private records/DB/env/decisions/references, held assets, scans/models/masks, raw logs/media and canonical ancestry stay local. This is scoped source-only recovery, not a whole/private/runnable backup, deployment or installed update.",
   "proof": {
     "native": {
-      "tests": 80,
-      "pass": 80,
+      "tests": 138,
+      "pass": 138,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "roots": 8,
-    "wholeOriginalAssertionBodiesRestored": true,
-    "currentAndHistoricalRolesSeparate": true,
-    "nonTestProductBytesUnchanged": true,
-    "selectedRenalCandidateUnchanged": true,
+    "websiteTypesAndProductionBuild": true,
+    "atlasTypesAndProductionBuild": true,
+    "stockImportChecks": 10,
+    "specimenHarness": {
+      "allSixOriginalTestsPass": true,
+      "originalFailureRetained": true,
+      "noProductionChange": true
+    },
+    "historicalNative": {
+      "tests": 88,
+      "pass": 88,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "consumerTypeFailureRetained": true,
+    "allOriginalAssertionInversesRetained": true,
+    "modelAndCoverageUnchanged": true,
+    "advisoryProtocolOnly": true,
+    "independentAccessUnchanged": true,
+    "newHostBrowserAcceptance": false,
+    "ownerPreviewChanged": false,
+    "full71AndEightIdeasPreserved": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
-    "ownerPreviewChanged": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,
