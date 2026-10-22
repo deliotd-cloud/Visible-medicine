@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T11:42:23.907Z",
+  "at": "2026-10-22T12:14:15.933Z",
   "sourceIdentity": {
-    "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-    "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
-    "isolatedReview": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a"
+    "selectedWebsiteReceiptSha256": "d72ddc1094db40b0a44cd1192f2362ca89b43a80c460a4423b401a7f61272013",
+    "atlasCandidate": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
+    "atlasCandidateTree": "25acdee40ee57e0253cdcca924aa64b4b38586c8",
+    "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1"
   },
-  "parent": "4fa641bee1da51a2ef6ed59e6390ef327401dc1f",
-  "gitParent": "4fa641bee1da51a2ef6ed59e6390ef327401dc1f",
+  "parent": "d17b60dfa5619bcc40239c8dfc29247994ce8492",
+  "gitParent": "d17b60dfa5619bcc40239c8dfc29247994ce8492",
   "files": [
     {
       "path": "app/globals.css",
@@ -15955,6 +15956,56 @@
       "sha256": "5c4f2e4ee15dad827915a93d695f22a05ae893dca8cb3c79f8cf4c6785efea1d"
     },
     {
+      "path": "pending/neck-landmark-xray-20261022/atlas/app/body-content.ts",
+      "bytes": 82967,
+      "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/atlas/content/neck-landmark-xray.ts",
+      "bytes": 2223,
+      "sha256": "0e37047550f16fb202e3ddd270ac1294bc8e141d3b02dc26c64b1c297cbb9961"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/atlas/lib/neck-landmark-xray.ts",
+      "bytes": 4077,
+      "sha256": "8ffc386ccd1f6e6a5ec0eacaef6661bfe7d2a22b4cbe6aabd298fb6972c09a6e"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/atlas/scripts/test-neck-landmark-xray.mjs",
+      "bytes": 15210,
+      "sha256": "b905fcceb9c2a23e838120f82310db75e96ae80e66d78c169078b66799ee1f41"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/coordination/build-neck-landmark-xray-20261022.mjs",
+      "bytes": 2309,
+      "sha256": "5889d0163915e597e427e8c7f27af96f0f507fa73d5da3a554cbe7be4cec26e1"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/coordination/checkpoint-neck-landmark-xray-20261022.mjs",
+      "bytes": 14005,
+      "sha256": "e95308520214a86fad1918e4f5680f814aef5ac12e699f535e91ba7f69556a9d"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/coordination/prepare-neck-landmark-xray-20261022.mjs",
+      "bytes": 3143,
+      "sha256": "41acdab3cb8b607d3b71f4dfee0942ae5c8ca1208ecc491df566fe87ffa445b0"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/coordination/verify-neck-landmark-xray-20261022.mjs",
+      "bytes": 3604,
+      "sha256": "d79b27d58272f6a22ffb0c5e8b173579f5a505657b124ef21d1c2fd82b1be7c1"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/RAW/neck-landmark-xray.ts.preimage",
+      "bytes": 4065,
+      "sha256": "e9d4e6b3e2a6829e8491ff1ecf788a0a9a966d0e598680c57be87986578845c1"
+    },
+    {
+      "path": "pending/neck-landmark-xray-20261022/RAW/test-neck-landmark-xray.mjs.preimage",
+      "bytes": 13426,
+      "sha256": "5c71243ce7ebbfc021fdd71cf71e40d86d6be1f5fc9a81f9055d2c549c1f4e37"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/craniofacial-ct-current-delivery.test.mjs",
       "bytes": 9929,
       "sha256": "5d3b6ce69f3db7e91eacca50c78e76d91dc6f2648f5f8232ca097358dd1c5e92"
@@ -20536,29 +20587,41 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus unbound linked-tour dismissal, exact preimages, remaining historical migration consumer composition and local verification/QA/recovery helpers. Generated binding/pin JSON, private records/DB/env/decisions/references, held assets, scans/models/masks, raw logs/media and canonical Git ancestry are excluded. Not full/private/runnable recovery, deployment or installation.",
+  "scope": "Inherited filtered source plus staged source-bound hyoid/epiglottis/cricoid X-ray draft code, additive test, exact original wording preimages and coordination helpers. Generated snapshots/pins/revision JSON, article assets, raw evidence/logs, models/scans/masks, private records/DB/env/decisions/references and canonical ancestry are excluded. Not full/private/runnable recovery or installation.",
   "proof": {
-    "sourceReceiptSha256": "d72ddc1094db40b0a44cd1192f2362ca89b43a80c460a4423b401a7f61272013",
-    "sourcePaths": 6113,
-    "reviewUnchanged": true,
-    "changedProductPaths": [
-      "components/HeadAtlasLearningPicker.tsx"
-    ],
-    "native": {
-      "tests": 77,
-      "pass": 77,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+    "focusedCounts": {
+      "neck-native": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "gap-tools": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "regional-freshness": {
+        "tests": 21,
+        "pass": 21,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
     },
-    "historicalMigrationAndDirectConsumersPassed": true,
-    "qualityPassed": true,
-    "desktopSyntheticGroups": 8,
-    "livePracticeSessionTested": false,
-    "nativeNewTabWorkflowTested": false,
-    "ownerPreviewUnchanged": true,
+    "fullTypesPassed": true,
+    "productionBuildPassed": true,
+    "sourceDrift": [],
+    "changedLessons": 3,
+    "unrelatedPlacementsPreserved": 9933,
+    "sourceIdentityRefusals": 121,
+    "staleApprovalRefused": true,
+    "liveBrowserAcceptance": false,
     "wholeSuitePassing": false,
+    "ownerPreviewChanged": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false

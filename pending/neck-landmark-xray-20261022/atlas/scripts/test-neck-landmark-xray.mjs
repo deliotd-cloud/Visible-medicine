@@ -1,0 +1,206 @@
+import assert from 'node:assert/strict';
+import {test} from 'node:test';
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import ts from 'typescript';
+import {build} from './workspace-test-build.mjs';
+import {build as componentBuild} from './workspace-component-test-build.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import {bodyNoteRenderCallback} from './body-note-render-callback.mjs';
+import {currentReviewDocument} from './review-revision-evidence.mjs';
+
+assert.equal(process.argv.length,2,'No source/test overrides');
+const baseline='6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1';
+const read=path=>readFileSync(path);
+const git=path=>execFileSync('git',['show',`${baseline}:${path}`],{windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+const normalized=bytes=>bytes.toString('utf8').replaceAll('\r\n','\n');
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const ids=new Set([
+  'vm:anatomy:body:head-neck:midline:bone:hyoid-bone',
+  'vm:anatomy:body:head-neck:unpaired:organ:epiglottis',
+  'vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage',
+]);
+const compiled=await build({stdin:{contents:
+  "export {neckLandmarkXrayLesson as lesson} from './lib/neck-landmark-xray';"+
+  "export {neckLandmarkXrayTopics as topics} from './content/neck-landmark-xray';"+
+  "export {bodyLesson,bodyContent} from './app/body-content';export {bodyDisplayCatalog} from './lib/body-display-catalog';"+
+  "export {bodyContentRecords} from './lib/content-export';export {contentTabs} from './lib/content-types';"+
+  "export {structures,quizQuestions} from './app/anatomy-data';"+
+  "export * from './lib/body-review-material';export * from './lib/body-review-context';"+
+  "export * from './lib/body-review-response';export * from './lib/body-review-api';",
+  resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const old=await exactSourceHistoryApi(baseline,'display-review');
+const raw=JSON.parse(read('public/models/bodyparts3d/full-body/catalog.json'));
+const catalog=api.bodyDisplayCatalog(raw),targets=catalog.structures.filter(s=>ids.has(s.id));
+
+test('three exact source roots; full dispatch inverse preserves earlier holds and unrelated source',()=>{
+  assert.equal(targets.length,3);assert.equal(catalog.structures.length,1104);
+  assert.deepEqual(catalog,old.bodyDisplayCatalog(raw));assert.deepEqual(api.contentTabs,old.contentTabs);
+  const text=normalized(read('app/body-content.ts'));
+  const importLine="import { neckLandmarkXrayLesson } from '../lib/neck-landmark-xray';\n";
+  const branch='  const neckLandmarkXray = neckLandmarkXrayLesson(s, tab);\n  if (neckLandmarkXray) return neckLandmarkXray;\n';
+  assert.equal(text.split(importLine).length,2);assert.equal(text.split(branch).length,2);
+  assert.equal(text.replace(importLine,'').replace(branch,''),normalized(git('app/body-content.ts')));
+  assert(text.indexOf('if(arterialEvidenceLimit)return arterialEvidenceLimit;')<text.indexOf(branch));
+  for(const path of ['public/models/bodyparts3d/full-body/catalog.json','public/models/bodyparts3d/manifest.json',
+    'content/hyoid-epiglottis-ultrasound-pins.json','content/laryngeal-framework-imaging-pins.json',
+    'app/body-explorer.tsx','app/body-explorer.css','app/body-scene.tsx','lib/regional-tours.ts',
+    'lib/arterial-evidence-limits.ts','content/arterial-evidence-limits.ts','package.json','package-lock.json'])
+    assert.equal(normalized(read(path)),normalized(git(path)),path);
+});
+
+test('only three X-ray lessons change across all9936 root placements and complete exports',()=>{
+  const beforeRecords=old.bodyContentRecords(catalog),afterRecords=api.bodyContentRecords(catalog);
+  const totals={before:{},after:{}};let changed=0,preserved=0;
+  for(let index=0;index<catalog.structures.length;index++){
+    const s=catalog.structures[index],wanted=structuredClone(beforeRecords[index]);
+    for(const tab of api.contentTabs){
+      const before=old.bodyLesson(s,tab),after=api.bodyLesson(s,tab);
+      for(const [name,lesson]of [['before',before],['after',after]])totals[name][lesson.readiness]=(totals[name][lesson.readiness]??0)+1;
+      if(ids.has(s.id)&&tab==='xray'){
+        assert.equal(before.readiness,'pending');assert.equal(after.readiness,'draft');
+        assert.deepEqual(after,api.lesson(s,tab));const {readiness,...shown}=after;
+        assert.deepEqual(api.bodyContent(s,tab),shown);wanted.content[tab]=after;changed++;
+      }else{assert.deepEqual(after,before,s.id+'|'+tab);assert.equal(api.lesson(s,tab),undefined);preserved++;}
+    }
+    assert.deepEqual(afterRecords[index],wanted,'No other exported teaching/source change: '+s.id);
+  }
+  assert.equal(changed,3);assert.equal(preserved,9933);
+  assert.deepEqual(totals.before,{draft:9377,pending:528,'generated-identification':31});
+  assert.deepEqual(totals.after,{draft:9380,pending:525,'generated-identification':31});
+});
+
+test('every scalar source field, structural mutation, other root and modality refuses binding',()=>{
+  const leaves=(v,p=[])=>v===null||typeof v!=='object'?[p]:Object.entries(v).flatMap(([k,n])=>leaves(n,[...p,k]));
+  let refused=0;
+  for(const source of targets){
+    for(const path of leaves(source)){
+      const bad=structuredClone(source);let at=bad;for(const key of path.slice(0,-1))at=at[key];
+      const key=path.at(-1),value=at[key];
+      at[key]=typeof value==='number'?value+.01:typeof value==='boolean'?!value:String(value)+'-foreign';
+      assert.equal(api.lesson(bad,'xray'),undefined,source.id+':'+path.join('.'));refused++;
+    }
+    for(const mutate of [s=>{s.sources=[];},s=>s.sources.push({...s.sources[0]}),s=>{delete s.bounds;},
+      s=>{delete s.anchor;},s=>s.regions.push('pelvis'),s=>{s.partId='foreign';}]){
+      const bad=structuredClone(source);mutate(bad);assert.equal(api.lesson(bad,'xray'),undefined);refused++;
+    }
+    for(const tab of api.contentTabs.filter(tab=>tab!=='xray'))assert.equal(api.lesson(source,tab),undefined);
+  }
+  assert(refused>110,'Exercise full source records, not only names');
+  for(const source of catalog.structures.filter(s=>!ids.has(s.id)))assert.equal(api.lesson(source,'xray'),undefined);
+  console.log(JSON.stringify({scalarAndStructuralRefusals:refused,otherRoots:1101}));
+});
+
+test('distinct evidenced orientation, detached arrays and honest draft/registration scope',()=>{
+  assert.deepEqual(Object.keys(api.topics).sort(),['FMA52749','FMA55130','FMA9615']);
+  for(const s of targets){
+    const first=api.lesson(s,'xray'),next=api.lesson(s,'xray');
+    next.bullets.push('foreign');next.citations[0]='https://invalid.example/';assert.deepEqual(api.lesson(s,'xray'),first);
+    assert.match(first.title,/draft/);assert.equal(first.readiness,'draft');
+    assert.match(first.note,/revision-bound radiologist review pending/);
+    assert.match(first.note,/No article figures, copied article prose/);assert.match(first.note,/not patient registration/);
+    assert.match(first.note,/access remain independent/);assert(!Object.hasOwn(first,'correctAnswer'));
+  }
+  const h=api.lesson(targets.find(s=>s.fmaId==='FMA52749'),'xray');assert.match(h.body,/bony landmark/);
+  const e=api.lesson(targets.find(s=>s.fmaId==='FMA55130'),'xray');assert.match(e.body,/vallecular air/);
+  assert.match(e.body,/posterior margin/);assert.match(e.body,/no diagnostic measurement cutoff/);
+  assert(e.citations.includes('https://jksronline.org/DOIx.php?id=10.3348%2Fjkrs.1991.27.3.317'));
+  const c=api.lesson(targets.find(s=>s.fmaId==='FMA9615'),'xray');assert.match(c.body,/not necessarily visible/);
+  assert.match(c.body,/selected adult emergency/);assert.match(c.body,/not establish universal prevalence/);
+  assert(c.citations.includes('https://pmc.ncbi.nlm.nih.gov/articles/PMC6056368/'));
+});
+
+test('only three review packets change; stale material and tampered teaching cannot carry approval',async()=>{
+  let changed=0,preserved=0,storageCalls=0;
+  for(const s of catalog.structures){
+    const before=await old.bodyReviewMaterial(s.id),after=await api.bodyReviewMaterial(s.id);
+    assert.equal(after.approval,false);assert.equal(after.status,'worksheet-not-submitted');
+    if(!ids.has(s.id)){assert.deepEqual(after,before,s.id);preserved++;continue;}
+    const wanted=structuredClone(before);wanted.topics=after.topics;
+    wanted.fingerprints.teaching=after.fingerprints.teaching;wanted.materialHash=after.materialHash;
+    assert.deepEqual(after,wanted);assert.notEqual(after.materialHash,before.materialHash);
+    assert.notEqual(after.fingerprints.teaching,before.fingerprints.teaching);
+    assert.deepEqual(await api.parseBodyReviewResponse(after,s.id),after);
+    assert.equal(await api.parseBodyReviewResponse(before,s.id),null);
+    for(const mutate of [p=>{p.approval=true;},p=>{p.topics.find(t=>t.tab==='xray').body+=' foreign';},
+      p=>{p.topics.find(t=>t.tab==='xray').citations[0]='https://invalid.example/';}]){
+      const bad=structuredClone(after);mutate(bad);assert.equal(await api.parseBodyReviewResponse(bad,s.id),null);
+    }
+    const trusted=await api.bodyReviewContext(s.id);
+    for(const patch of [{materialHash:before.materialHash},{revisionHash:'0'.repeat(64)}]){
+      const input={catalogScope:trusted.catalogScope,structureId:s.id,track:'teaching',expectedVersion:0,
+        materialHash:trusted.materialHash,revisionHash:trusted.revisions.teaching,checklistVersion:trusted.checklistVersion,...patch};
+      const request=new Request('https://unit-test.invalid/api/body-review/decisions',{method:'POST',headers:{
+        'oai-authenticated-user-id':'unit-test-only',origin:'https://unit-test.invalid','content-type':'application/json'},body:JSON.stringify(input)});
+      const response=await api.postBodyDecision(request,{prepare(){storageCalls++;throw Error('Stale revisions must not reach storage');}});
+      assert.equal(response.status,409);
+    }
+    changed++;
+  }
+  assert.equal(changed,3);assert.equal(preserved,1101);assert.equal(storageCalls,0);
+});
+
+test('real explorer note callback renders all three complete lessons, links and no borrowed images',async()=>{
+  const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
+  const result=await componentBuild({stdin:{contents:
+    "export {SourceDisplayNotes} from './app/source-display-notes';export {ComponentImagingNotes} from './app/component-imaging-notes';"+
+    "export {teachingHeading} from './lib/teaching-heading';",resolveDir:process.cwd(),loader:'tsx'},
+    bundle:true,platform:'node',format:'cjs',write:false});
+  const scope={exports:{}};runInNewContext(result.outputFiles[0].text,{module:scope,exports:scope.exports,require});
+  const callback=bodyNoteRenderCallback(read('app/body-explorer.tsx').toString('utf8'));
+  const code=ts.transpile(`(${callback})('xray')`,{target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React});
+  for(const selected of targets){
+    const note=api.lesson(selected,'xray');
+    const html=render(runInNewContext(code,{React,...scope.exports,ScanLine:require('lucide-react').ScanLine,
+      catalog,side:'both',exam:false,openNested:()=>{throw Error('Render must not navigate');},selected,
+      bodyContent:api.bodyContent,WorkspaceModeButton:({children})=>React.createElement('button',null,children)}));
+    assert(html.includes(render(React.createElement('p',null,note.body))));
+    for(const bullet of note.bullets)assert(html.includes(render(React.createElement('li',null,bullet))));
+    for(const url of note.citations)assert(html.includes(`href="${url}"`));
+    assert(html.includes('radiologist review pending'));assert(!html.includes('<img'));
+  }
+});
+
+test('generated head snapshot, display pins and renderer provenance admit exactly the declared transition',()=>{
+  const regionalPath='content/regional-teaching/head-neck.json';
+  const before=JSON.parse(git(regionalPath)),after=JSON.parse(read(regionalPath)),wanted=structuredClone(before);
+  let count=0;for(const entry of wanted.entries){const id=JSON.parse(entry.identity).id;
+    if(ids.has(id)){entry.lessons.xray=api.lesson(targets.find(s=>s.id===id),'xray');count++;}}
+  assert.equal(count,3);assert.deepEqual(after,wanted);
+  const path='content/body-review-display-pins.json',oldPins=JSON.parse(git(path)),pins=JSON.parse(read(path)),desired=structuredClone(oldPins);
+  let changedPins=0;for(const pin of desired.pins)if(ids.has(pin.structureId)){
+    const current=pins.pins.find(p=>p.structureId===pin.structureId);assert.notEqual(current.sha256,pin.sha256);
+    pin.sha256=current.sha256;changedPins++;}
+  assert.equal(changedPins,3);assert.deepEqual(pins,desired);
+  const renderer=JSON.parse(read('content/body-renderer-revision.json')),previous=JSON.parse(git('content/body-renderer-revision.json'));
+  const changedPaths=['app/body-content.ts',path,regionalPath,'content/review-revisions.json'];
+  const added=['content/neck-landmark-xray.ts','lib/neck-landmark-xray.ts'];
+  const dependencies=[...previous.dependencies.map(row=>changedPaths.includes(row.path)?{...row,sha256:sha(normalized(read(row.path)))}:row),
+    ...added.map(path=>({path,sha256:sha(normalized(read(path)))}))].sort((a,b)=>a.path.localeCompare(b.path));
+  assert.deepEqual(renderer,{...previous,dependencies,sha256:sha(JSON.stringify(dependencies))});
+});
+
+test('stock producer repairs only the pre-existing stylesheet witness; original nine models and teaching stay exact',async()=>{
+  const path='content/review-revisions.json',before=JSON.parse(git(path)),after=JSON.parse(read(path));
+  const fresh=await currentReviewDocument(JSON.parse(read('public/models/bodyparts3d/manifest.json')),api.structures,api.quizQuestions);
+  assert.deepEqual(after,fresh,'Use the existing producer, never a hand-repinned cache');
+  const wanted=structuredClone(before),index=wanted.display.findIndex(row=>row[0]==='app/body-explorer.css');
+  assert(index>=0);assert.equal(wanted.display[index][1],'9834c72543476b41ba5acb5a47427dced3596d56320c59502d91f9e9e2524dca');
+  // This CSS is byte/semantically unchanged by the neck lesson. Its older cache
+  // did not describe the baseline source; retain that authentic evidence.
+  assert.equal(normalized(read('app/body-explorer.css')),normalized(git('app/body-explorer.css')));
+  const currentCss=sha(normalized(read('app/body-explorer.css')));
+  assert.equal(currentCss,'9722246697fafcd54f55e586797eaec33930c5f3f87d653117b064787ebe2904');
+  wanted.display[index][1]=currentCss;
+  assert.equal(Object.keys(wanted.revisions).length,9);
+  for(const [id,revision]of Object.entries(wanted.revisions)){
+    assert.notEqual(revision.geometry,after.revisions[id].geometry,'Old display-bound geometry approval must not carry');
+    revision.geometry=after.revisions[id].geometry;
+  }
+  assert.deepEqual(after,wanted,'Only source-proven display and its geometry revisions may change');
+  assert.equal(after.modelHash,before.modelHash);
+});

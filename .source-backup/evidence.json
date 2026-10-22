@@ -1,25 +1,37 @@
 {
-  "sourceReceiptSha256": "d72ddc1094db40b0a44cd1192f2362ca89b43a80c460a4423b401a7f61272013",
-  "sourcePaths": 6113,
-  "reviewUnchanged": true,
-  "changedProductPaths": [
-    "components/HeadAtlasLearningPicker.tsx"
-  ],
-  "native": {
-    "tests": 77,
-    "pass": 77,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
+  "focusedCounts": {
+    "neck-native": {
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "gap-tools": {
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "regional-freshness": {
+      "tests": 21,
+      "pass": 21,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    }
   },
-  "historicalMigrationAndDirectConsumersPassed": true,
-  "qualityPassed": true,
-  "desktopSyntheticGroups": 8,
-  "livePracticeSessionTested": false,
-  "nativeNewTabWorkflowTested": false,
-  "ownerPreviewUnchanged": true,
+  "fullTypesPassed": true,
+  "productionBuildPassed": true,
+  "sourceDrift": [],
+  "changedLessons": 3,
+  "unrelatedPlacementsPreserved": 9933,
+  "sourceIdentityRefusals": 121,
+  "staleApprovalRefused": true,
+  "liveBrowserAcceptance": false,
   "wholeSuitePassing": false,
+  "ownerPreviewChanged": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
   "publicDeployment": false

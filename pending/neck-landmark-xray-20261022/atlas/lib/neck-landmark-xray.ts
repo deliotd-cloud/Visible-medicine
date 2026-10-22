@@ -1,0 +1,78 @@
+import hyoidPins from '../content/hyoid-epiglottis-ultrasound-pins.json' with { type: 'json' };
+import frameworkPins from '../content/laryngeal-framework-imaging-pins.json' with { type: 'json' };
+import { neckLandmarkXrayTopics } from '../content/neck-landmark-xray';
+import { sourceCanonical } from './body-source-additions';
+import type { BodyStructure } from '../app/body-types';
+import type { ContentTab } from '../app/anatomy-data';
+import type { ContentLesson } from './content-types';
+
+const expected = [
+  {
+    pins: hyoidPins,
+    id: 'vm:anatomy:body:head-neck:midline:bone:hyoid-bone',
+    fmaId: 'FMA52749', side: 'midline', system: 'skeleton', category: 'bone',
+    bundle: 'head-neck-skeleton', recovered: false,
+    sources: [
+      { file: 'FJ2772', sha256: 'c8c6cfdd66285cdda16fa441829f723d3943823d0ffebf5e394ff8dc49a598b1' },
+      { file: 'FJ3201', sha256: 'c52dd55001d86286d6469190d3673cc8b2b03fb3d9c29d45cec211192950c027' },
+    ],
+  },
+  {
+    pins: hyoidPins,
+    id: 'vm:anatomy:body:head-neck:unpaired:organ:epiglottis',
+    fmaId: 'FMA55130', side: 'unpaired', system: 'organs', category: 'organ',
+    bundle: 'head-neck-organs-visceral-detail', recovered: true,
+    sources: [
+      { file: 'FJ2770', sha256: '05ae56007f7aa017fb458bdef643ea97e51ed3bd275b13da30086fa02b606054' },
+    ],
+  },
+  {
+    pins: frameworkPins,
+    id: 'vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage',
+    fmaId: 'FMA9615', side: 'midline', system: 'connective', category: 'cartilage',
+    bundle: 'head-neck-connective-recovery', recovered: true,
+    sources: [
+      { file: 'FJ2440', sha256: 'ae1e2bab875a75035aaebdc79212fd859c2c193881462245de3252853721361d' },
+      { file: 'FJ2769', sha256: '5f75fb4d2969fd1de51898787bb8810c441d5d2bd6eb0c5482b7cacd3c9bc3be' },
+    ],
+  },
+] as const;
+
+type Topic = keyof typeof neckLandmarkXrayTopics;
+const bindings: ReadonlyMap<string, { signature: string; topic: Topic }> = new Map(
+  expected.map((item) => {
+    const matches = item.pins.entries.filter((entry) => entry.identity.id === item.id);
+    if (matches.length !== 1) throw Error('Unexpected neck landmark X-ray source count.');
+    const source = matches[0].identity;
+    if (
+      source.id !== item.id || source.fmaId !== item.fmaId || source.nodeName !== item.fmaId ||
+      source.laterality !== item.side || source.region !== 'head-neck' ||
+      source.regions.length !== 1 || source.regions[0] !== 'head-neck' ||
+      source.system !== item.system || source.category !== item.category ||
+      source.bundle !== item.bundle || source.sourceTree !== 'isa' ||
+      sourceCanonical(source.sources) !== sourceCanonical(item.sources) ||
+      source.provenance.method !== 'licensed-source-mesh' ||
+      source.provenance.license !== 'CC-BY-4.0' ||
+      source.provenance.sourceVersion !== '4.0' ||
+      source.provenance.recovered !== item.recovered ||
+      source.validation.status !== 'unvalidated' || source.validation.anatomicalReview !== false
+    ) throw Error('Unexpected neck landmark X-ray source identity.');
+    return [item.id, { signature: sourceCanonical(source), topic: item.fmaId as Topic }] as const;
+  }),
+);
+
+/** Exact source-root selections only; no patient radiograph is registered to the model. */
+export function neckLandmarkXrayLesson(s: BodyStructure, tab: ContentTab): ContentLesson | undefined {
+  if (tab !== 'xray') return undefined;
+  const binding = bindings.get(s.id);
+  if (!binding || sourceCanonical(s) !== binding.signature) return undefined;
+  const topic = neckLandmarkXrayTopics[binding.topic];
+  return {
+    readiness: 'draft',
+    title: `${s.name} · ${topic.title} · draft`,
+    body: topic.body,
+    bullets: [...topic.bullets],
+    citations: [...topic.citations],
+    note: 'Source-bound educational draft; revision-bound radiologist review pending. No article figures, copied article prose, or acquired patient radiograph is supplied. Model coordinates are not patient registration. This is not diagnostic or procedural advice. Atlas, imaging-case and lecture access remain independent.',
+  };
+}
