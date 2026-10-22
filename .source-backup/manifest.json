@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T09:37:27.042Z",
+  "at": "2026-10-22T10:12:18.380Z",
   "sourceIdentity": {
     "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
-    "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "isolatedReview": "525f8fbe122bf6bdc15d8b89f572e49e3ac0ce09cd411b8009f67454d938a163"
   },
-  "parent": "6493bd2aba29df202fe8e91b40fb941fa8862b47",
-  "gitParent": "6493bd2aba29df202fe8e91b40fb941fa8862b47",
+  "parent": "8b173b5a299548b85764aa18c03626fc6520f39b",
+  "gitParent": "8b173b5a299548b85764aa18c03626fc6520f39b",
   "files": [
     {
       "path": "app/globals.css",
@@ -18816,6 +18815,201 @@
       "sha256": "c25c5298f4cbad04e82ae441985ae85ce0ba7f20934aa76c85bea5e00bef1c7d"
     },
     {
+      "path": "pending/review-queue-accessibility-20261022/20261022-final-two-epoch-comparisons/CODE/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 16445,
+      "sha256": "9a4480980925a826a37656958e6b6402b2262a8bc686311f7528aaf0352cea2a"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-final-two-epoch-comparisons/CODE/tests/ui-teaching-admission-contract.test.mjs",
+      "bytes": 13882,
+      "sha256": "62add6d3b2ed76197f9d9cb489c567fd1bd111acf6efaab8ae1604ff1cf32ee0"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-final-two-epoch-comparisons/RAW/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 15110,
+      "sha256": "e560aacdc0eaf0595345140bccb0bc2893949791d69219b495d74dc59110e403"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-final-two-epoch-comparisons/RAW/tests/ui-teaching-admission-contract.test.mjs",
+      "bytes": 13429,
+      "sha256": "978b402df48fafdab49e36969e2a11cdd7e445cf2b9a2eb24fc8fa82e3c7fa57"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-head-pane-accessible-labels/CODE/components/HeadAtlasViewer.tsx",
+      "bytes": 109509,
+      "sha256": "5a08fbf764804f266efed369859806762ac8430eae25ea69e2121bfbceb03668"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-head-pane-accessible-labels/CODE/tests/head-pane-expansion-labels.test.mjs",
+      "bytes": 4194,
+      "sha256": "bf20a5d74b0a49448eab58d29259901286903e2ffb36807816a182c85fa92a76"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-head-pane-accessible-labels/PRE_FIX/CODE/tests/head-pane-expansion-labels.test.mjs",
+      "bytes": 4104,
+      "sha256": "57189048b5e8b5f7ed4f00d8c1ce1fea66183cfcc7654bdb435655c1cc084b8d"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-head-pane-accessible-labels/PROVER.before-harness-fix.mjs",
+      "bytes": 4027,
+      "sha256": "8c26a6a4e59c72693243351d970aee683b9b6ededad3b4e59336e060a5a7246e"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-head-pane-accessible-labels/RAW/components/HeadAtlasViewer.tsx",
+      "bytes": 109363,
+      "sha256": "a14d1d851fff12960b35ffe71e282a0f2ec00e9a9077c74e72d3ed456ad25daa"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/CODE/tests/clinical-review-inbox-filter-recovery.test.mjs",
+      "bytes": 9496,
+      "sha256": "6c48543878d6ecd53fba5be41b0cf2bc5bb1863ae181b01efda07e715c598b97"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/CODE/tests/clinical-review-inbox-pagination-focus.test.mjs",
+      "bytes": 9162,
+      "sha256": "fdcb1a9bf7938ecc6a730be49faafd7a856bb5a325372f021567094db032551b"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/CODE/tests/clinical-review-inbox-priority.test.mjs",
+      "bytes": 9213,
+      "sha256": "0b34a00c07c7046cee13fb1521ddf985fae2e5bc2e766c79ece4c38bd34bb0cb"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/CODE/tests/clinical-review-inbox-return-context.test.mjs",
+      "bytes": 11185,
+      "sha256": "8293d9e7dfa102df506af4e08bd48605f32025e095dca9b86694bc8e3161788c"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/CODE/tests/clinical-review-inbox-scan-focus.test.mjs",
+      "bytes": 7684,
+      "sha256": "25e691371335ca1e2875935fa0986781f9a126f72d623d2704366946fff01d59"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/CODE/tests/clinical-review-inbox-ui.test.mjs",
+      "bytes": 19140,
+      "sha256": "4d355a9fb73556331400dce32fd56e125b41371302ccf7c022b4f4496fd5574a"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/CODE/tests/clinical-review-inbox-workbench.test.mjs",
+      "bytes": 9089,
+      "sha256": "da102fddbcb5d007bf1d25cfb33ff45b7f7a2d96012bc1e5ae9661ff918fa50d"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/RAW/tests/clinical-review-inbox-filter-recovery.test.mjs",
+      "bytes": 9369,
+      "sha256": "b26cd1809de53e92222d4cca22cd68328d1d5f9c3dd614a6e2651d9e3df1e524"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/RAW/tests/clinical-review-inbox-pagination-focus.test.mjs",
+      "bytes": 9035,
+      "sha256": "6b6e52f6f6a04731e6b21018b750f634863e927bd96ab602aa6618911c9b17b9"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/RAW/tests/clinical-review-inbox-priority.test.mjs",
+      "bytes": 9086,
+      "sha256": "fd3b217b7dfe4036d94a34184d8492c0b64b2129acfe2e5ae8b542fbb0929d0c"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/RAW/tests/clinical-review-inbox-return-context.test.mjs",
+      "bytes": 11056,
+      "sha256": "6d7e4d25b01ddb5a0576d6af8a23ffb527a98b70bce5ae72ebf71cd3c26d0e89"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/RAW/tests/clinical-review-inbox-scan-focus.test.mjs",
+      "bytes": 7571,
+      "sha256": "c34ef03b6b6f70d86cfdbdd4a726a961f8021b2d966f5add106fa10c5f58d323"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/RAW/tests/clinical-review-inbox-ui.test.mjs",
+      "bytes": 19013,
+      "sha256": "15becf13c624c4584ca391e8b288bae109387b8c747182601b8cb5ffea0eb04d"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-inbox-useid-test-adapters/RAW/tests/clinical-review-inbox-workbench.test.mjs",
+      "bytes": 8962,
+      "sha256": "7b45fad50e57c85c9c91cc40fcaf2e560229e9de50088e0c5d9a8dcd902db55a"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-review-queue-accessible-context/CODE/components/ClinicalReviewInbox.tsx",
+      "bytes": 30144,
+      "sha256": "603abf828d584b3cc28e20192dfe37d7fc43799fa2f47599bab3cd73dae8456a"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-review-queue-accessible-context/CODE/tests/clinical-review-inbox-link-context.test.mjs",
+      "bytes": 8957,
+      "sha256": "3d1815b2fc753d0a40628778c5fae2882ecf959deddc360fa34dab0ce0dd3672"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-review-queue-accessible-context/PRE_FIX/components/ClinicalReviewInbox.tsx",
+      "bytes": 30144,
+      "sha256": "603abf828d584b3cc28e20192dfe37d7fc43799fa2f47599bab3cd73dae8456a"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-review-queue-accessible-context/PRE_FIX/tests/clinical-review-inbox-link-context.test.mjs",
+      "bytes": 8722,
+      "sha256": "78ccb721309a1c4decc9485915f1f575577231e58d86d4a824b74e3869763a6d"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-review-queue-accessible-context/PROOF/prove.mjs",
+      "bytes": 5831,
+      "sha256": "e47474b3ed01a36b416f425b0e848974bad01c5beeecb71729515845cd07a6e0"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-review-queue-accessible-context/PROOF/source-adapter.mjs",
+      "bytes": 1310,
+      "sha256": "60eb0a5d4b40e312e438703bc2f9ff3bdaab2dcd75ce701e4ff73174332d7988"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/20261022-review-queue-accessible-context/RAW/components/ClinicalReviewInbox.tsx",
+      "bytes": 29415,
+      "sha256": "9e0f81a3203c564db7d184ff885140312f00609d481086588daad56f852b9c55"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/coordination/backup-review-queue-accessibility-20261022.mjs",
+      "bytes": 5701,
+      "sha256": "8c614a3fafcf1407f7bf4f592f97990956232f37e08e850697113f3fd7a7041d"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/coordination/checkpoint-review-queue-accessibility-20261022.mjs",
+      "bytes": 4608,
+      "sha256": "5211498972baaa852c7e5b4f6a73aae379bdbaa62abfb3c21af2360ae82ac113"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/coordination/prepare-final-two-epoch-overlay-20261022.mjs",
+      "bytes": 2054,
+      "sha256": "aa1674dff4dd1d775f64a269b9369f7de44f2c6dd6ee5c034828accea51d7edc"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/coordination/prepare-head-pane-labels-20261022.mjs",
+      "bytes": 1211,
+      "sha256": "78d13380cc4fd3aa2698725e41f082c6c93cdda989017d6c26024031dd47d6d6"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/coordination/prepare-review-queue-accessibility-successor-20261022.mjs",
+      "bytes": 5558,
+      "sha256": "bccfbf384b2cedd10e16209d98d2e8c12e4f696882d1c601cb6ee598b65e7bcb"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/coordination/prepare-review-queue-checks-20261022.mjs",
+      "bytes": 1331,
+      "sha256": "c3658bb8e97cdf2787937f3f8b288bdb114b42e9eeaaa0ffed2309b4ef1aafe4"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/coordination/prove-head-pane-labels-20261022.mjs",
+      "bytes": 4679,
+      "sha256": "512df9f4e1318a345204560ff1cedb2d5ec8f0c3d12b62d6a5ffa412ab9f7e40"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/coordination/verify-inbox-ui-specimen-20261022.mjs",
+      "bytes": 5140,
+      "sha256": "ea2ac6e3e999ca134164e769e91c1a17f5e82a002fc19e559094313d625e40d2"
+    },
+    {
+      "path": "pending/review-queue-accessibility-20261022/specimen/PROVER.before-config-fix.mjs",
+      "bytes": 5113,
+      "sha256": "186ddc22d2795c4a977772a0b4f00236808c63ffbd4ceb5381734dad57b0a755"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -19522,40 +19716,42 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited selected authored source plus exact seven original failure corrections, current loading-bound test-role closures, complete preimages and reproducible source proof scripts. Product graph remains byte-exact to the built isolated loading-bound candidate. Generated metadata/fixtures, logs/media, held assets, scans/models/masks, DB/env/private decisions/references and canonical ancestry remain local. Not full/private/runnable recovery or preview installation.",
+  "scope": "Inherited selected source plus exact two regression repairs, queue accessibility component/regression and seven original-assertion-preserving test adapters, raw preimages and reproducible source proof/orchestration. Separate pane-label proposal is included but unapplied. Generated bindings/fixtures, held source assets, scans/models/masks, private DB/env/decisions/references, logs/media and canonical ancestry remain local. Not whole/private/runnable recovery or preview installation.",
   "proof": {
-    "sourceReceiptSha256": "f36f00858d80c83c4d0b39d8930d35a9c77e76d28613919f4d8d8de738feb096",
-    "sourcePaths": 6071,
-    "nonTestProductBytesChanged": 0,
-    "originalV6AndIntermediateFailuresRetained": true,
-    "firstFocusedCounts": [
-      {
-        "tests": 34,
-        "pass": 33,
-        "fail": 1,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      {
-        "tests": 78,
-        "pass": 75,
-        "fail": 3,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      }
-    ],
-    "finalFocusedCounts": {
-      "tests": 44,
-      "pass": 44,
+    "sourceReceiptSha256": "c70dfa42798aba75ae16e37d8bb9c96765bc71ff00642db65c4c0814fc86c6b0",
+    "sourcePaths": 6072,
+    "wideOriginalActualCounts": {
+      "tests": 360,
+      "pass": 358,
+      "fail": 2,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "exactFailedConsumerRetryCounts": {
+      "tests": 13,
+      "pass": 13,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "inboxActualCounts": {
+      "tests": 74,
+      "pass": 74,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
     "fullTypesPassed": true,
-    "currentValidatorOrPinChanged": false,
+    "changedProductPaths": [
+      "components/ClinicalReviewInbox.tsx"
+    ],
+    "reviewBindingUnchanged": true,
+    "headPaneLabelProposalUnapplied": true,
+    "sourceOnlySpecimen48Passed": true,
+    "firstSpecimenConfigFailurePreserved": true,
     "normalPreviewExplicitlyUnchanged": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,

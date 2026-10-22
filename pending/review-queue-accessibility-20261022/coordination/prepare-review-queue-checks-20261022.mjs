@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261022-review-queue-accessibility-successor',sourceReceipt=stage+'/SOURCE.json';
+assert.equal(sha(read(sourceReceipt)),'c70dfa42798aba75ae16e37d8bb9c96765bc71ff00642db65c4c0814fc86c6b0');
+const source=json(sourceReceipt),common={sourceReceipt,sourceReceiptSha256:sha(read(sourceReceipt))};
+const tests=source.sourceRows.map(row=>row.path).filter(path=>/^tests\/clinical-review-inbox.*\.test\.(mjs|ts)$/.test(path)).sort();assert.equal(tests.length,14);
+fs.writeFileSync(stage+'/NATIVE_PLAN.json',JSON.stringify({...common,evidence:stage+'/native-inbox',scope:'Every existing clinical-review-inbox test root plus the new same-row accessible-context regression. Original45 UI callbacks remain intact. No whole-suite/browser or deployment claim.',tests},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(stage+'/TYPES_PLAN.json',JSON.stringify({...common,evidence:stage+'/types-current',kind:'types',scope:'Full TypeScript against the queue-only successor; Review binding and all bound renderers remain unchanged.',tests:[]},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({stage,entryFiles:tests.length,sourcePaths:source.sourcePaths,review:source.review}));

@@ -1,0 +1,148 @@
+/* Controlled actual-component harness; run from the website checkout with node --test. */
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+import { runInNewContext } from 'node:vm';
+import { test } from 'node:test';
+
+const require = createRequire(`${process.cwd()}/package.json`);
+const React = require('react');
+const ts = require('typescript');
+const source = readFileSync(fileURLToPath(new URL('../components/ClinicalReviewInbox.tsx', import.meta.url)), 'utf8');
+const script = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, target: ts.ScriptTarget.ES2022 } }).outputText;
+const labels = { structures: 'Structures', 'head-learning': 'Head', 'source-comparisons': 'Source', 'regional-learning': 'Regional' };
+const statuses = { 'not-started': 'Not started', 'in-progress': 'In progress', 'changes-required': 'Changes required', 're-review': 'Re-review', 'approval-recorded': 'Approval', 'inspection-required': 'Inspection', unavailable: 'Unavailable' };
+const sha = char => char.repeat(64);
+const item = i => ({ key: `item-${i}`, title: `Pons ${i}`, area: 'head-learning', scopeLabel: 'Head', href: '/workspace/atlas-review/head-learning', trackLabel: 'Teaching', revision: sha('c'), status: 'not-started', capability: 'decision' });
+const batch = (rows, page, pageCount) => ({ items: rows, catalogRevision: sha('b'), nextPage: page < pageCount ? page + 1 : null, pageCount, selectionTotal: 50 });
+const walk = (node, predicate, out = []) => { if (React.isValidElement(node)) { if (predicate(node)) out.push(node); React.Children.forEach(node.props.children, child => walk(child, predicate, out)); } return out; };
+const words = node => typeof node === 'string' || typeof node === 'number' ? String(node) : !node ? '' : Array.isArray(node) ? node.map(words).join('') : words(node.props?.children);
+
+function harness(href, server = false) {
+  let slots = [], cursor = 0, cleanup, tree, fetches = 0, pending = [], listener, queuedEffect;
+  const history = { state: { opaque: 7 }, writes: 0, replaceState(state, _title, url) { this.writes++; this.state = state; location.href = new URL(url, location.href).href; } };
+  const location = { href, reload() { throw Error('unexpected reload'); } };
+  const window = { location, history, addEventListener(type, fn) { if (type === 'popstate') listener = fn; }, removeEventListener(type, fn) { if (type === 'popstate' && listener === fn) listener = undefined; } };
+  const shim = { ...React,
+    useState(initial) { const i = cursor++; if (!(i in slots)) slots[i] = typeof initial === 'function' ? initial() : initial; return [slots[i], value => { slots[i] = typeof value === 'function' ? value(slots[i]) : value; }]; },
+    useRef(initial) { const i = cursor++; if (!(i in slots)) slots[i] = { current: initial }; return slots[i]; },
+    useEffect(fn, deps) { const i = cursor++, prior = slots[i]; if (!prior || !deps || deps.some((value, index) => !Object.is(value, prior.deps?.[index]))) { queuedEffect = () => { prior?.dispose?.(); cleanup = fn(); slots[i] = { deps, dispose: cleanup }; }; } },
+  };
+  const scope = { exports: {} };
+  runInNewContext(script, { module: scope, exports: scope.exports, AbortController, URL, window: server ? undefined : window,
+    require(name) { if (name === 'react') return shim; if (name === 'react/jsx-runtime') return require(name); if (name.endsWith('clinical-review-fetch')) return { clinicalReviewFetch: () => { fetches++; return new Promise(resolve => pending.push(resolve)); } }; if (name.endsWith('clinical-review-inbox-contract')) return { inboxAreaLabels: labels, inboxStatusLabels: statuses, parseInboxBatch: value => value }; if (name.endsWith('.css')) return {}; throw Error(name); } });
+  const component = scope.exports.ClinicalReviewInbox;
+  const render = () => { cursor = 0; tree = component(); for (const node of walk(tree, n => n.props.className === 'clinical-review-inbox-result')) node.props.ref?.({ focus() {} }); return tree; };
+  const control = label => { const parent = walk(tree, n => n.type === 'label' && words(n).startsWith(label))[0]; assert(parent, label); return walk(parent, n => n.type === 'input' || n.type === 'select')[0]; };
+  const button = label => walk(tree, n => n.type === 'button' && words(n) === label)[0];
+  const commit = () => { const effect = queuedEffect; queuedEffect = undefined; effect?.(); render(); };
+  const flush = async (rows = Array.from({ length: 50 }, (_, i) => item(i)), page = 1, pageCount = 1) => { assert(pending.length, 'expected a pending fetch'); pending.shift()( { ok: true, headers: { get: () => sha('a') }, json: async () => batch(rows, page, pageCount) }); await new Promise(resolve => setImmediate(resolve)); render(); };
+  const fail = async status => { assert(pending.length); pending.shift()({ ok: false, status, headers: { get: () => null } }); await new Promise(resolve => setImmediate(resolve)); render(); };
+  return { window, history, location, render, commit, control, button, flush, fail, get fetches() { return fetches; }, get listener() { return listener; }, unmount() { cleanup?.(); cleanup = undefined; }, get tree() { return tree; } };
+}
+
+test('server render has defaults; hydration waits until commit and retains requested page during a partial scan', async () => {
+  const server = harness('', true);
+  const serverTree = server.render();
+  assert.equal(walk(serverTree, n => n.type === 'button' && words(n) === 'Load all review statuses').length, 1);
+  assert.equal(server.fetches, 0);
+  const h = harness('https://example.test/workspace/clinical-review-inbox?unrelated=1&q=pons&area=head-learning&page=2#main-content');
+  h.render();
+  assert.equal(h.fetches, 0);
+  assert.equal(h.history.writes, 0);
+  h.commit();
+  assert.equal(h.fetches, 1);
+  assert.equal(h.history.writes, 0);
+  await h.flush(Array.from({ length: 24 }, (_, i) => item(i)), 1, 2);
+  assert.equal(h.control('Search reviews').props.value, 'pons');
+  assert.equal(h.control('Area').props.value, 'head-learning');
+  assert(words(h.tree).includes('Showing 1–24 of 24 matching loaded rows.'));
+  assert.equal(h.button('Next'), undefined, 'a one-page partial result has no pager');
+  assert.equal(new URL(h.location.href).searchParams.get('page'), '2');
+  await h.flush(Array.from({ length: 26 }, (_, i) => item(i + 24)), 2, 2);
+  assert(words(h.tree).includes('Page 2 of 3'));
+  assert.equal(h.fetches, 2);
+  assert.equal(h.history.writes, 0);
+});
+
+test('filter and page controls replace current entry, preserve unrelated URL, hash and history state', async () => {
+  const h = harness('https://example.test/workspace/clinical-review-inbox?unrelated=1#main-content');
+  h.render(); h.commit(); await h.flush();
+  h.control('Search reviews').props.onChange({ target: { value: 'pons' } }); h.render();
+  h.control('Area').props.onChange({ target: { value: 'head-learning' } }); h.render();
+  h.button('Next').props.onClick(); h.render();
+  assert.equal(new URL(h.location.href).searchParams.get('page'), '2');
+  assert.equal(new URL(h.location.href).searchParams.get('q'), 'pons');
+  assert.equal(new URL(h.location.href).searchParams.get('unrelated'), '1');
+  assert.equal(new URL(h.location.href).hash, '#main-content');
+  assert.deepEqual(h.history.state, { opaque: 7 });
+  assert.equal(h.fetches, 1);
+  h.button('Reset filters').props.onClick(); h.render();
+  assert.equal(new URL(h.location.href).search, '?unrelated=1');
+  assert.equal(h.control('Search reviews').props.value, '');
+  assert.equal(h.control('Area').props.value, 'all');
+});
+
+test('popstate and remount restore only display state, with fresh status fetch', async () => {
+  const h = harness('https://example.test/workspace/clinical-review-inbox?q=first');
+  h.render(); h.commit(); await h.flush();
+  h.location.href = 'https://example.test/workspace/clinical-review-inbox?q=pons&area=head-learning&page=2';
+  h.listener(); h.render();
+  assert.equal(h.control('Search reviews').props.value, 'pons');
+  assert.equal(h.control('Area').props.value, 'head-learning');
+  assert.equal(h.fetches, 1);
+  h.unmount();
+  const second = harness(h.location.href); second.render(); second.commit(); await second.flush();
+  assert.equal(second.control('Search reviews').props.value, 'pons');
+  assert.equal(second.fetches, 1);
+});
+
+test('malformed, duplicated, off-path and overlong values fail to defaults; history failure leaves filters usable', async () => {
+  for (const href of [
+    'https://example.test/workspace/clinical-review-inbox?q=a&q=b&area=unknown&status=approval&page=-1',
+    'https://example.test/workspace/other?q=pons&area=head-learning&page=2',
+    `https://example.test/workspace/clinical-review-inbox?q=${'x'.repeat(201)}&page=99999`,
+    'https://example.test/workspace/clinical-review-inbox?q=pons%00bad',
+  ]) {
+    const h = harness(href); h.render(); h.commit(); await h.flush();
+    assert.equal(h.control('Search reviews').props.value, '');
+    assert.equal(h.control('Area').props.value, 'all');
+    h.unmount();
+  }
+  const h = harness('https://example.test/workspace/clinical-review-inbox');
+  h.render(); h.commit(); await h.flush();
+  h.history.replaceState = () => { throw Error('history unavailable'); };
+  h.control('Search reviews').props.onChange({ target: { value: 'pons' } }); h.render();
+  assert.equal(h.control('Search reviews').props.value, 'pons');
+  assert.equal(h.fetches, 1);
+  h.window.history = undefined;
+  h.control('Search reviews').props.onChange({ target: { value: 'x'.repeat(205) + '\u0000' } }); h.render();
+  assert.equal(h.control('Search reviews').props.value.length, 200);
+  assert(!h.control('Search reviews').props.value.includes('\u0000'));
+  assert.equal(h.fetches, 1);
+});
+
+test('retained handlers and popstate cannot write after unmount, context change or invalidation', async () => {
+  const h = harness('https://example.test/workspace/clinical-review-inbox?q=first');
+  h.render(); h.commit(); await h.flush();
+  const stale = h.control('Search reviews').props.onChange;
+  const listener = h.listener;
+  h.location.href = 'https://example.test/workspace/clinical-review-inbox?q=second';
+  listener(); h.render();
+  stale({ target: { value: 'old' } }); h.render();
+  assert.equal(h.control('Search reviews').props.value, 'second');
+  assert.equal(new URL(h.location.href).searchParams.get('q'), 'second');
+  h.unmount();
+  listener(); stale({ target: { value: 'after-unmount' } });
+  assert.equal(new URL(h.location.href).searchParams.get('q'), 'second');
+
+  const invalid = harness('https://example.test/workspace/clinical-review-inbox?q=first');
+  invalid.render(); invalid.commit();
+  await invalid.flush([item(1)], 1, 2);
+  const old = invalid.control('Search reviews').props.onChange;
+  await invalid.fail(401);
+  old({ target: { value: 'after-invalid' } }); invalid.render();
+  assert.equal(new URL(invalid.location.href).searchParams.get('q'), 'first');
+  assert.equal(invalid.history.writes, 0);
+});

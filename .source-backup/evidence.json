@@ -1,36 +1,38 @@
 {
-  "sourceReceiptSha256": "f36f00858d80c83c4d0b39d8930d35a9c77e76d28613919f4d8d8de738feb096",
-  "sourcePaths": 6071,
-  "nonTestProductBytesChanged": 0,
-  "originalV6AndIntermediateFailuresRetained": true,
-  "firstFocusedCounts": [
-    {
-      "tests": 34,
-      "pass": 33,
-      "fail": 1,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    {
-      "tests": 78,
-      "pass": 75,
-      "fail": 3,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    }
-  ],
-  "finalFocusedCounts": {
-    "tests": 44,
-    "pass": 44,
+  "sourceReceiptSha256": "c70dfa42798aba75ae16e37d8bb9c96765bc71ff00642db65c4c0814fc86c6b0",
+  "sourcePaths": 6072,
+  "wideOriginalActualCounts": {
+    "tests": 360,
+    "pass": 358,
+    "fail": 2,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "exactFailedConsumerRetryCounts": {
+    "tests": 13,
+    "pass": 13,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "inboxActualCounts": {
+    "tests": 74,
+    "pass": 74,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
   "fullTypesPassed": true,
-  "currentValidatorOrPinChanged": false,
+  "changedProductPaths": [
+    "components/ClinicalReviewInbox.tsx"
+  ],
+  "reviewBindingUnchanged": true,
+  "headPaneLabelProposalUnapplied": true,
+  "sourceOnlySpecimen48Passed": true,
+  "firstSpecimenConfigFailurePreserved": true,
   "normalPreviewExplicitlyUnchanged": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
