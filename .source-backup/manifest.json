@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T07:44:24.123Z",
+  "at": "2026-10-22T08:28:40.454Z",
   "sourceIdentity": {
-    "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+    "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
-    "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
+    "isolatedReview": "525f8fbe122bf6bdc15d8b89f572e49e3ac0ce09cd411b8009f67454d938a163"
   },
-  "parent": "3972c456968195ea4dc801c6a384eced14638b50",
-  "gitParent": "3972c456968195ea4dc801c6a384eced14638b50",
+  "parent": "59d0737908aae938a92ad44b55c86542b50bf8b1",
+  "gitParent": "59d0737908aae938a92ad44b55c86542b50bf8b1",
   "files": [
     {
       "path": "app/globals.css",
@@ -15770,6 +15771,271 @@
       "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
     },
     {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/CODE/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 10036,
+      "sha256": "52c9d8ef7fab7f79bda259238e6b5469b91441fd94bc60accb71e41a65675c06"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/CODE/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 10912,
+      "sha256": "bdfa9e209e13b814b7453155ffa0f6c432ca55c35f66b60356eee652cfd8a740"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/PROVE_SOURCE.mjs",
+      "bytes": 6220,
+      "sha256": "f381627131c346602d211cde6f172f8447e34a754d742dbef46ec11951cad800"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/RAW/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 8554,
+      "sha256": "707db26812327fb29ed63642c65b5ca6f0e7fc55d12995421ff718223b18ef0c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/RAW/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8707,
+      "sha256": "1e2111111f5c9798a778710e65057680928c18ae79f954fc40796c4ca01fde4a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/CODE/tests/completion-checklist-current-transition.test.mjs",
+      "bytes": 6408,
+      "sha256": "46d16b7db39a8c489652bf4b1e6de973a06d067e302993273e98e6f525d1765a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/CODE/tests/historical-atlas-delivery-register47.mjs",
+      "bytes": 4019,
+      "sha256": "054c9f3d07a969e83e06a57c61950d560f6771fb00e5cebbeeadafe9efe41ee2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/CODE/tests/posterior-fossa-integration-register.test.mjs",
+      "bytes": 11932,
+      "sha256": "ff24477dcb815a2d74c8cc467a3282f947e335cd72b6e0bb0c0e7db990d198f4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/PROVE_SOURCE.mjs",
+      "bytes": 7245,
+      "sha256": "8a8720ea05da65ba0a2caa8d3da357b70be05f6a94cd9e63da580fe989d8abf1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/completion-checklist-current-transition.test.mjs",
+      "bytes": 5895,
+      "sha256": "0fa8e77bf740b1717d0b3fc991b87ef4a755c4246dd40058412193bbdde10a5d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/current-atlas-delivery-register47.mjs",
+      "bytes": 4632,
+      "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/posterior-fossa-integration-register.test.mjs",
+      "bytes": 11372,
+      "sha256": "5d32fe3e9628517ef9c5844fb50873d704a9e77813c76edd2484d7fcb2007f74"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/SOURCE_LOADER.mjs",
+      "bytes": 1231,
+      "sha256": "907706a3756fa1710a2f2662acba531e07f4afcd6c647fbd219effce0636b5d2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-lacrimal-closed50-composition/CODE/tests/lacrimal-current-transition.test.mjs",
+      "bytes": 14529,
+      "sha256": "05e1c9cb23419576462928813a24c65bf0c95a216ab8a85e191e564284a209ca"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-lacrimal-closed50-composition/PROVE_SOURCE.mjs",
+      "bytes": 5126,
+      "sha256": "4d9935b87e1313036cc2e7fe855b1c72f69d664961fe7f73b1c459995b70bd0a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-lacrimal-closed50-composition/RAW/tests/lacrimal-current-transition.test.mjs",
+      "bytes": 12600,
+      "sha256": "31c6b7e117eb98032ea3374cac36ee3ce0d0a33db39034884b4697297c059917"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-median-cubital-runtime-source-closure/CODE/tests/batch-c-role-inverse.mjs",
+      "bytes": 12736,
+      "sha256": "d05a0953a9b76e7bc68ee08bc220bbc3c3ac51b4e7a9c235503d71cb555b4086"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-median-cubital-runtime-source-closure/CODE/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 25494,
+      "sha256": "d03860ddeaac152fd082530c5661b79076279508a0f67cb308d3cb9de81ebb09"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-median-cubital-runtime-source-closure/PROVE_SOURCE.mjs",
+      "bytes": 12075,
+      "sha256": "79aee03af72875d7a83a2681a8a727c7dcbaf16165998dc09f14699f47332789"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-median-cubital-runtime-source-closure/RAW/tests/batch-c-role-inverse.mjs",
+      "bytes": 10413,
+      "sha256": "595daaba750d0f6d6a13aa16986ec47cfb2e6dc188c5328bc808ef05417a101b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-median-cubital-runtime-source-closure/RAW/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 25177,
+      "sha256": "4e2a4a78f39f8aa4f9f1dc69304f963541c5a60e77d7d2b97d7bb45cfad894a0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/CODE/tests/head-binding-role-preservation-20261021.test.mjs",
+      "bytes": 14856,
+      "sha256": "ba0dd3bf0eae7d4d6cbb52a19e719dd818bcb75d41df3ea7ee2a71599bf0437b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/CODE/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3923,
+      "sha256": "3d03a7d8705817642cbb258b4d6441d23132c3795551fffc7cdd31591d14f975"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/head-binding-role-preservation-20261021.test.mjs",
+      "bytes": 14856,
+      "sha256": "b9f39466cc4e8268550898a78b8dd4f8ec2f0153f15d8aa1c6b214e79acfe716"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3923,
+      "sha256": "9c70cc8acb8034b2244d256509754ff32835937936169770c1a480de1654f259"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-spinal-current-colic-semantic-followup/CODE/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 94147,
+      "sha256": "1db458f7edd9a9a1de40b50fe886cf277a3fb560f2bc629260388d81785b65ce"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-spinal-current-colic-semantic-followup/CODE/tests/spinal-current-source-inverse.mjs",
+      "bytes": 13853,
+      "sha256": "b990ba4dc4b03a95dfa8cb0f62a84dc17cc5daf903a72753b8605e3657d3e71d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-spinal-current-colic-semantic-followup/RAW/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 88551,
+      "sha256": "7a39e919130ce257d590f564b0a9839857df9b2a1c3c786cf2805527fe79e01b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-spinal-current-colic-semantic-followup/RAW/tests/spinal-current-source-inverse.mjs",
+      "bytes": 8915,
+      "sha256": "3008622e5256507d67006ca128488decf53d037ad5318f8d896c62ebc9524c89"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-spinal-current-colic-semantic-followup/SOURCE_CLOSURE.mjs",
+      "bytes": 5354,
+      "sha256": "44b11f961694a27184a355500ed6c3efa43a8e7ae3daa1bd6a9b00224659cbcb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-spinal-current-colic-semantic-followup/SOURCE_PROOF.mjs",
+      "bytes": 5355,
+      "sha256": "19a1b306760cb6c0ae25561fd71451fa53480220a0e1b966d1c2ec8469c99247"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-vocal-runtime-epoch/CODE/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 9402,
+      "sha256": "569a15c2566b982410be68f9c221f38662518289e9d2b190cf39caf5016ac9e8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-vocal-runtime-epoch/PROVE_SOURCE.mjs",
+      "bytes": 6278,
+      "sha256": "8d0f691bdc5f0e819b403bf3bc2dcbc2425cc5f967ce8bb8d1ea41abd88e6ee7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-vocal-runtime-epoch/RAW/tests/clinical-review-vocal-tissue-teaching.test.ts.raw",
+      "bytes": 8460,
+      "sha256": "36d9b0a2d2b33c1426207c95103279966e53bbba5c61b325ecff757482a59c91"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/backup-loading-binding-repair-20261022.mjs",
+      "bytes": 6562,
+      "sha256": "2d8ddf1969a157d293c4ab96a49d8dae9b307e9e74866024ba3b4458a419f546"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/build-loading-bound-successor-20261022.mjs",
+      "bytes": 9160,
+      "sha256": "500c77becb5c56a2184eeac20018cb0ad2d7737bce7deb4419cdaabb13df3f98"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/checkpoint-loading-binding-repair-20261022.mjs",
+      "bytes": 6269,
+      "sha256": "e6bc14bdd018f43430f08a0f30a3399caa26730a46dcb026f78504a3d17279fb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/diagnose-current-binder-20261022.mjs",
+      "bytes": 2520,
+      "sha256": "b672b18b81a60c872e5ef13a088f7d48ef7681f02fce5a37e3fe37558f92dd10"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/native-atlas-environment-20261022.mjs",
+      "bytes": 1320,
+      "sha256": "50c6f4915bd3163c43e3e9b3e20568ee7b5939da52b44f6e28367ef3d220d873"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/prepare-loading-bound-successor-20261022.mjs",
+      "bytes": 5976,
+      "sha256": "0cfe750905192761d17612ced4269094fd44cc77cfc2f19077d5a6aa8be5d400"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/prepare-native-focus-source-followups-20261022.mjs",
+      "bytes": 3498,
+      "sha256": "1233c458e5567801113a4d62bf22568e0e4146ee83ff0103a59d29ca385851af"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/prepare-review-loading-binding-repair-20261022.mjs",
+      "bytes": 6023,
+      "sha256": "ecf906b37380b1232192433d76526676119d215d0b598fdaac66dabb0c8129b9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/prove-native-atlas-environment-20261022.mjs",
+      "bytes": 2448,
+      "sha256": "7bb133fa2e10074eee8fde90cfe52f167045a80e10be201341d8c100d7b6f990"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/prove-native-focus-source-followups-20261022.mjs",
+      "bytes": 4436,
+      "sha256": "51aa39f72d963c01de4295d19d65a93946db07fb2a58378a9336842909173b55"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/retry-loading-bound-build-20261022.mjs",
+      "bytes": 8617,
+      "sha256": "47b0a2203bb7e28e9fd47cf39af68fdb6d259eea8d06f6bd7971517e55a49b25"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/seal-loading-bound-type-failure-20261022.mjs",
+      "bytes": 3220,
+      "sha256": "ca1cd9f36181bfb195a645115fcc2b0a3e898672a78c5871d2144f3445a4fc71"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/coordination/verify-loading-binding-repair-20261022.mjs",
+      "bytes": 4744,
+      "sha256": "1994e34e4666424036e3ea9a7db3df03c91a99e524cf7fff8bbbc31c4a0ef4d3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/diagnostics/PREPARER.before-held-assets-allowlist.mjs",
+      "bytes": 5179,
+      "sha256": "afc128aa692074f7b0b736f220cc043fbb968ebe1a4fa2e21a05cab37ace1a97"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/review-loading-completeness/CODE/tests/review-loading-bind-completeness.test.mjs",
+      "bytes": 2602,
+      "sha256": "ca7d2e133b0c073f18c36b515030d7ec708f0060aa40244efdedb1c1c3355fe0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/type-source-repair/CODE/tests/tongue-palate-delivery.test.ts",
+      "bytes": 16975,
+      "sha256": "f6e9e4fb0db975efea146e31c873fd0ece922156e8ae49906833a03bbfd30b0a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/type-source-repair/ORIGINAL-V6/tests/tongue-palate-delivery.test.ts",
+      "bytes": 16972,
+      "sha256": "5dd1101cc8ce1a84618878d905b890d82484229bef3efc1c71c8015c4546b665"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/type-source-repair/RAW/tests/tongue-palate-delivery.test.ts",
+      "bytes": 16975,
+      "sha256": "f6e9e4fb0db975efea146e31c873fd0ece922156e8ae49906833a03bbfd30b0a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/type-source-repair/RETRY_DRIVER.first-refused.mjs",
+      "bytes": 7996,
+      "sha256": "ee3d6619e83a3f65e061079855c2ee8f94fe86459d22494b21869be01dff1647"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/native-source-followups/20261022-intracranial-license-checkout-followup/CODE/tests/atlas-intracranial-arterial-ultrasound.test.mjs",
       "bytes": 34911,
       "sha256": "7e9a57a8b3169c12f3715e549a3a182c87896fb45376e6f1b3ccb3acba471eb5"
@@ -18456,55 +18722,36 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered authored-source recovery plus 161 unintegrated reviewed test/helper proposals, complete raw CODE preimages, 65 explicit CODE/proof additions and named proof/coordination scripts. Whole-original byte inverses, historical obligations, independent Review/runtime families and all strict current-source gates are retained. No generated Review/runtime JSON, geometry/models, scans/masks/pixels, patient identifiers, owner decisions, credentials/env, databases, raw logs/media, private reference notes, article assets or raw canonical Git ancestry. Selected authored-source only, not whole/private/runnable recovery or native/browser/clinical/release completion.",
+  "scope": "Inherited selected authored source plus isolated loading-binding repair tools, original type-test source and correction, route-completeness regression, and seven unapplied source-only repair packages. No generated Review/runtime metadata, private local assets, scans/models/masks, databases/env, saved decisions, raw diagnostic logs/media, article assets or canonical Git ancestry. Not a whole/private/runnable backup or deployment.",
   "proof": {
-    "selectedSourceOnly": true,
-    "proposedTestAndHelperPaths": 161,
-    "completeOriginalSourceInverses": 161,
-    "additionalCodeAndProofPaths": 65,
-    "explicitProductSourceAndPreimageFiles": 165,
-    "productProof": {
-      "selectedPlanSha256": "c434483f2f05fba330d3412655716a7fb76c3b8c50294509571fe024260fa46f",
-      "sourceReceiptSha256": "44b20981b029abc59f4a5efcaa2c8e6a9fbddb7e2e00886c0db914646681169c",
-      "selectedRepairs": 68,
-      "selectedAdditions": 7,
-      "selectedNativeRoots": 101,
-      "sourcePaths": 6049,
-      "originalTerminalCounts": {
-        "tests": 386,
-        "pass": 355,
-        "fail": 31,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "actualFailureMarkersDiagnosed": 31,
-      "wholeOriginalSourceInversesRetained": true,
-      "sharedCurrentPinAndValidatorsUnchanged": true,
-      "nonTestProductBytesUnchanged": true,
-      "isolatedV6OverlayOnly": true,
-      "normalPreviewExplicitlyUnchanged": true,
-      "nativeV6AcceptancePending": true,
-      "excludedGeneratedMetadataAdditions": [
-        "tests/fixtures/review-frame-history/current-atlas-delivery-1712.json.raw",
-        "tests/fixtures/review-frame-history/integration-inputs-1712.json.raw"
-      ],
-      "initialFailedProofSourceVersionsRetained": true,
-      "rawLogsScansModelsPrivateStateExcluded": true,
-      "wholeSuitePassing": false,
-      "clinicalApproval": false,
-      "spatialRegistration": false,
-      "publicDeployment": false
+    "sourceReceiptSha256": "bbd4ca357b137db79340eea3f4a681310fe3cbcedb51137af904078487523d1c",
+    "focusedTerminalSha256": "aa87116e60d0d9d21825754eedc1d0c323471e12e19b0ccf86a941b64a1837b3",
+    "focusedCounts": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
-    "strictCurrentValidatorAndPinChanged": false,
-    "frozenCandidateEdited": false,
-    "nativeRootsRerun": false,
-    "fullRegressionPending": true,
+    "sourcePaths": 6068,
+    "actualBinderIdempotence": true,
+    "fullTypesAndWebsiteBuildPassed": true,
+    "firstTypeFailureAndRefusedCaptureRetainedLocally": true,
+    "earlierActualRegressionCounts": {
+      "tests": 329,
+      "pass": 300,
+      "fail": 29
+    },
+    "earlierRegressionFailuresRetained": true,
+    "pendingPackagesSourceOnly": true,
+    "normalPreviewExplicitlyUnchanged": true,
     "installed": false,
+    "wholeSuitePassing": false,
     "clinicalApproval": false,
-    "patientRegistration": false,
+    "spatialRegistration": false,
     "publicDeployment": false,
-    "wholeProjectBackup": false,
+    "rawCanonicalAncestry": false,
     "privateDataBackup": false,
     "runnableProjectRecovery": false
   },
