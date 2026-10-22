@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T04:16:39.816Z",
+  "at": "2026-10-22T04:32:07.654Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "ee26b17e26c70060f6258b429b68308405c304d4",
-  "gitParent": "ee26b17e26c70060f6258b429b68308405c304d4",
+  "parent": "b36ef2ebd310079363fd57d48517065168231473",
+  "gitParent": "b36ef2ebd310079363fd57d48517065168231473",
   "files": [
     {
       "path": "app/globals.css",
@@ -12320,9 +12320,14 @@
       "sha256": "bf765b90a1109f26759d6c5632b83beab7182cf4a413f66000ab480058351f0e"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-regional-tour-orbital-family-admission-20261022.mjs",
+      "bytes": 1092,
+      "sha256": "88d760bf915c2fc7e715daff14820c7d83785146ca20cb6c4c44a0d44982355e"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-reviewed-regression-queue-20261022.mjs",
-      "bytes": 5249,
-      "sha256": "e5562fa17eb3c76a201d5f050f949005681125a3856ba1c0e73486271c361083"
+      "bytes": 5358,
+      "sha256": "79e2431a7a2fcce94a912fe86bc5709b8bf61188cf8c9e40a136ac933d88d679"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-runtime-admission-20261022.mjs",
@@ -12363,6 +12368,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-historic-schema-repairs-20261022.mjs",
       "bytes": 5780,
       "sha256": "939e3cf590f2e2d874d37eb7a22db0113232016d678df819ea6b6bdcaec01e97"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-regional-imaging-history-admission-20261022.mjs",
+      "bytes": 1165,
+      "sha256": "eb4cd453b33bf802a9c4b73d242aec1e933a7ae848015758c54a4059965fe83d"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-reviewed-regression-queue-20261022.mjs",
@@ -12415,6 +12425,11 @@
       "sha256": "7338c9c2ebfb0461396c7c7160931eb6634aa644984215baeabe3304160c4abe"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-regional-tour-orbital-family-admission-20261022.mjs",
+      "bytes": 8009,
+      "sha256": "b2fcd2eaafa50364b3a91b3237247f01c300bc51f5502f243f2222c1ea68fc08"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-runtime-admission-20261022.mjs",
       "bytes": 7929,
       "sha256": "f6fd2d20019ab9dd4ebc22c97b48f27a5210b2644f7d028bce45cff8aa96349e"
@@ -12455,6 +12470,11 @@
       "sha256": "35b4e7169ce820bee3cb3a43975c7f503c2cb06519e8f82567099054ddaf9067"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/prepare-leg-vessel-source-family-admission-20261022.mjs",
+      "bytes": 4000,
+      "sha256": "7693a02df00ae51454b04157da4942bf8b22127b19679eac7430ae04f6cf5bc3"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/prepare-reviewed-regression-candidate-20261022.mjs",
       "bytes": 7869,
       "sha256": "e85add4b4cc2fc787aaf906466b50fbba3cd158e138c4866afb89d58522310a8"
@@ -12488,6 +12508,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/save-guided-clinical-next-work-20261022.mjs",
       "bytes": 3348,
       "sha256": "e6b99d8cc7b7949d9600f7c820879b61b9c89fd21e209b3f4b95d5f09a61f7ae"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/save-regional-tour-leg-handoff-20261022.mjs",
+      "bytes": 6822,
+      "sha256": "6b816c8c6b216a76490487565a8d0018b0d965fea6c36e622a214bb374d530b2"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/stage-keyboard-module-admission-20261022.mjs",
@@ -12530,6 +12555,11 @@
       "sha256": "2f34e1287d44a2f45046dd580ef91ead343b118aa2a05788254aad404d6bdd10"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/verify-leg-vessel-source-family-admission-20261022.mjs",
+      "bytes": 3457,
+      "sha256": "0a7ce3ce044ebec584fd0b890d196296c0735eb54926be16d4daa9c16fc5fd95"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-regional-imaging-assembly-plan-20261022.mjs",
       "bytes": 1625,
       "sha256": "a3c3d34d62e7e0256af265bc499dd9ee144b2cfcda4e6a26aee97cc7ba124d9f"
@@ -12548,6 +12578,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-thoracic-authored-epochs-20261022.mjs",
       "bytes": 2214,
       "sha256": "5b51b4cc967bb7a0c4d48dbb88925d2510b383ef33df0314ffeefa440404e757"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-branch-hip-iliac-hepatic-family-admission/prove-source.mjs",
+      "bytes": 6358,
+      "sha256": "917602d9916da84cd82d168ddf09ebac7e3b63407f8f5e391a6e40c0dd790e3f"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-cervical-continuous-family-admission-v2/SOURCE_PROOF.mjs",
@@ -12573,6 +12608,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-clinical-arm-axillary-colic-admission/prove-inverse.ps1",
       "bytes": 3514,
       "sha256": "915064c9ec8ddcf48e29a831010e8d96a63e32fe315db76bc3c2f6dcdf94ab4d"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-clinical-batch-c-family-closure/SOURCE_PROOF.mjs",
+      "bytes": 10171,
+      "sha256": "4570ff52d915fa048603f599ca8ba84fa3b2c48f50b96db89db70ee480c02068"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-clinical-cardiac-canal-family-admission/SOURCE_PROOF.mjs",
@@ -12630,6 +12670,16 @@
       "sha256": "096bfdc0875ca06c62f210dca21e8af1b794909a0ae6ac69b94260d6677e2e67"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-orbital-neonatal-family-admission/prove-source.mjs",
+      "bytes": 6187,
+      "sha256": "52f213e773fb36583c53e454a9c676c4cf0a1b67e978f9d7522edf21713485b2"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-orbital-neonatal-family-admission/prove-witness-source.mjs",
+      "bytes": 3851,
+      "sha256": "51d6b0996e47fc4900f4c8e9983793655029b638164828591ba5a17fac024246"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-paused-pelvic-source-families/SOURCE_ONLY_AUDIT.ps1",
       "bytes": 3653,
       "sha256": "92b1bf03b62d156fdc6880180b15ca0b2aab6196ef82ddae1b275aec1f23dd5b"
@@ -12638,6 +12688,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-paused-pelvic-source-families/SOURCE_ONLY_INVERSE.ps1",
       "bytes": 3848,
       "sha256": "d06531945c7b858df77db4dad029da7bf2d674dec50e29818ce58b581d0cf7a6"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-regional-tour-runtime-family-admission/SOURCE_PROOF.mjs",
+      "bytes": 9250,
+      "sha256": "dd9244ee0b05d2173cd475377a33455bf7c162eaaaf8f3a16a5510bf790f951e"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-respiratory-source-family-admission/SOURCE_ONLY_AUDIT.ps1",
@@ -12718,6 +12773,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/historical-schema-batch4/prove-readonly.ps1",
       "bytes": 7865,
       "sha256": "850803661e29b9db2d79b118d1a77caa8acf2df7cbc0cd6e0e6463e4466c3d7c"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/referenced-chatgpt-conversation-this-is-an-2/verify-leg-vessel-source-family-admission-20261022.mjs",
+      "bytes": 3457,
+      "sha256": "0a7ce3ce044ebec584fd0b890d196296c0735eb54926be16d4daa9c16fc5fd95"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/arterial-history-preservation.test.mjs",
@@ -12920,6 +12980,11 @@
       "sha256": "80885a37bd0edeb9525fbf75551bf9afc8c8b8c6e16c9984851d053ebc773025"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/batch-c-role-inverse.mjs",
+      "bytes": 5670,
+      "sha256": "c0fcc58347889fb7b56fe4c43006a8cf6cbfb77e207c510d26a2ae31ad9767c4"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/cerebral-checkout-current-adapter.mjs",
       "bytes": 4228,
       "sha256": "d7337d329f19dbf4335ee3adc0e1532f9d1e177254039c0fb9ad015a240e6b8d"
@@ -12945,9 +13010,29 @@
       "sha256": "2ce808d7439d976065fa6942c7db369228c282eb2c76773f7fa8d6ee006976a0"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-epoch-batch-c-originals.test.mjs",
+      "bytes": 4953,
+      "sha256": "2cb1fdb0b6b3d0a1bc84e5160844b40c7020a27bb80f20a465b126de676a9d4a"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-epoch-batch-d-preservation.test.mjs",
+      "bytes": 4674,
+      "sha256": "7707b1b30953ffa9e60a3f301ddafa698dd5bf7d113ae8b514a7231193891005"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-family-prior-current-inverse.mjs",
       "bytes": 2801,
       "sha256": "87be0538cffa4468426a86d5fe60a32e12730c3ccebf76915dc7a74ab78a1aa8"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-orbital-neonatal-composition.mjs",
+      "bytes": 2649,
+      "sha256": "20ec56ee37530b7339b663ea43bb157629ba7c3f52002f1ed89c4b89838eb91b"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-question-role-preservation-20261021.test.mjs",
+      "bytes": 15490,
+      "sha256": "3a346f1d610e31ff7b5084f44bf7f95a4bd8eb7dfd06d3a4bfc0011d32170fee"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-abdominal-detail-xray.test.ts",
@@ -13045,6 +13130,11 @@
       "sha256": "7e54b0afc98c2ae9c85fe53deb2f59f249a056068e9de670efbbec8fc49c75ce"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-elbow-arterial-tour.test.ts",
+      "bytes": 25589,
+      "sha256": "4cfe1d8c84bd0be8f628ac4c1e5bf8d080f563e608a6918c77ed550be50b0402"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-elbow-us-followup.test.ts",
       "bytes": 36628,
       "sha256": "8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776"
@@ -13075,6 +13165,11 @@
       "sha256": "4faaa1d2a8b97ae3933f5acb889d5c5447dee2487d23676e21650b889fabef0e"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-forearm-branch-xray.test.ts",
+      "bytes": 21595,
+      "sha256": "5d6da80036a93f324b3c1c9938c0bc730e5217f3c97869a03046c3047c978c4a"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-forearm-vascular-xray.test.ts",
       "bytes": 29088,
       "sha256": "90b1c26a19220053633a277b10d94b74c4d3c2f6ebc6e3cd8ccf4bccdd2fdda4"
@@ -13100,9 +13195,79 @@
       "sha256": "d898bbd2e5be95d78445d9194dd9e6b21c9e1694db90f2124bba3b62ad2fca53"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-hepatic-arterial-xray.test.ts",
+      "bytes": 22135,
+      "sha256": "7ccc686e240ad9b77794047bcb952c14526195d574e3569465bbc53a642a74c4"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-hip-muscle-xray.test.ts",
+      "bytes": 17538,
+      "sha256": "c40c572539d3b2049b7ab3d0d563bbd289cfe340d5dec45f0cd31a17bc218cd4"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-iliac-venous-xray.test.ts",
+      "bytes": 9509,
+      "sha256": "2263dcdb09bcf8aa42a608db8c31075aa19b47e4101f500c9df5f07a677b8a74"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-imaging-status.test.ts",
       "bytes": 8900,
       "sha256": "0ca5a4c9c711c2538894fbadf599d2379407f79592a7a7902b42d48472de230e"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "bytes": 10601,
+      "sha256": "df6c0e5b9fc90ed57d60b580c0f03360daeea3997b24c286db6d036434949c35"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-leg-arterial-xray.test.ts",
+      "bytes": 25994,
+      "sha256": "73d3cb14dae874d61dca88b640db5dd88b402c0cc304159cb490eaa194ca7c91"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-leg-venous-xray.test.ts",
+      "bytes": 23128,
+      "sha256": "093925455c0b1fc5a19163502341d783f8597ffda2db00419f65cad96a68e999"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "bytes": 18408,
+      "sha256": "fa3ff34ae74397b4f84835e0a5f5364493136114f004c26ce9d7a41acdd9d9a7"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-longus-colli-quiz.test.ts",
+      "bytes": 9017,
+      "sha256": "d43126d271fa2c7a957e9e9000b60b4c13e99a77afdd71d92b18e083c8399612"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-lower-venous-tour-v2.test.ts",
+      "bytes": 20628,
+      "sha256": "a06c263636799e7238d200f38061d6e6340da28ccb9619fc51da0711166e24a9"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-medial-thigh-tour.test.ts",
+      "bytes": 17859,
+      "sha256": "558c0c4d8565651bfaacb6e9b47277dafc4446e6532deb5bf36d7e1001ee2406"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 23659,
+      "sha256": "211e92a61e4e9b7298163c20b90b04b333e9ea741654dfbada106c9537864b1f"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "bytes": 9646,
+      "sha256": "32a0194ad4c377346eccca8a4e4ce00e097d6b4f31c5cf3bf278db48701c8277"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 30225,
+      "sha256": "dee00a61a1362803c529e72646f10e71684eb2bde71cb76908bc800634f85937"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-orbital-apex-ct.test.ts",
+      "bytes": 23526,
+      "sha256": "5aa58e7c75d7e06352371170d869474f1305b70293642c369f0f4223e829ad80"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-orbital-check-evidence.test.mjs",
@@ -13110,9 +13275,39 @@
       "sha256": "61cac60df80a619c841bb4c8db2458b0ebe57a688ef1dceff72ea505c25ac6e1"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-orbital-ring-ct.test.ts",
+      "bytes": 19813,
+      "sha256": "f4d9ad254aac3858bcab2767e7a6eb19bd1e8ef05d86646a9938b2917aebc2f5"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-orbital-sensory-mri.test.ts",
+      "bytes": 12219,
+      "sha256": "1ab3a584efd8ae9e6f8b386c641398bf393b5a27b0a788e2ed77c9ba8d04e59e"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-portal-hepatic-tour.test.ts",
+      "bytes": 11162,
+      "sha256": "dd2b6307e31504c69710ae809756db7cc7b34ae4369f802576d34289ce6c34c3"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-pulmonary-venous-tour.test.ts",
+      "bytes": 6795,
+      "sha256": "ccbd8ac7c367eef9021d0da686b23bb70dc3ab16add770a5f22c3c0763f5de1b"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-regional-muscle-completion-quiz.test.ts",
       "bytes": 12718,
       "sha256": "0b8b911d3c4f24dbb69e6ce5e7ffb2cee6af5ab8470550c971a010b2c4ff0f2c"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-regional-tour.test.ts",
+      "bytes": 27247,
+      "sha256": "5e07bfe4b0fab462660f6d01c59f91b6cc4630202cdcdb5aecb8b68315cec3e7"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-short-ciliary-quiz.test.ts",
+      "bytes": 18918,
+      "sha256": "a8a605b6328d8c49d5515d949207921647361e8ac76e640d9c5217c6efd7977f"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-teaching-heading.test.ts",
@@ -13150,6 +13345,11 @@
       "sha256": "2634cef4dc4e8c916cbe82d6ccb1d7d8068db259fb6b9f28dd8d3be11f8e6f65"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/elbow-current-lifecycle-preservation.test.mjs",
+      "bytes": 9267,
+      "sha256": "4695e45bf01d9f6bb4e86eb8a181a03e61b8d3ea24b02b7e33875c8d59c97c06"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/elbow-us-followup-preservation.test.mjs",
       "bytes": 12684,
       "sha256": "8a6a1c29780e49def9403bd23a2f89a8929d8a15419ceadfa8471600b71e9431"
@@ -13173,6 +13373,36 @@
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/arterial-history-preservation.before-6d7.test.mjs.raw",
       "bytes": 3838,
       "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/batch-c-role-prior/clinical-review-iliac-venous-xray.test.ts.raw",
+      "bytes": 9480,
+      "sha256": "a55f6c33ee41cccc7720482124104b529bcdfa9336ee5760ff35ec49ce34be68"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/batch-c-role-prior/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "bytes": 10554,
+      "sha256": "582b55d1960288b58f00cac0c2bf4b5be88df0dbe851a2e270e7522b3f9a91c8"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/batch-c-role-prior/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "bytes": 18299,
+      "sha256": "74a100863fb33a27b94e7e56847c225fab618b500bfeb5f0d37971faff5781d9"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/batch-c-role-prior/clinical-review-longus-colli-quiz.test.ts.raw",
+      "bytes": 8907,
+      "sha256": "68589eca6ad26c87d2e46f57f55769b75f3e3ce0919fe5cc49ac50ae7fa32dd8"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/batch-c-role-prior/clinical-review-median-cubital-xray.test.ts.raw",
+      "bytes": 23327,
+      "sha256": "886db4ebcf56a04764fb9e416aaffd61c72f9487d5d18ddc63f66b0ed6e848a4"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/batch-c-role-prior/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "bytes": 8950,
+      "sha256": "b677b62a8c142b7e0a07ed8d225e1ba040f1e675bc3402a77d71b0883ed140b4"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
@@ -13238,6 +13468,36 @@
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/next-six-family-current/clinical-review-facial-bone-xray.test.ts.raw",
       "bytes": 10166,
       "sha256": "8c9cf3f38635d47ac1309dc8e7693f948b04df54840cce7ecb20226b12913247"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/orbital-neonatal-frozen/clinical-review-orbital-sensory-mri.test.ts.raw",
+      "bytes": 12079,
+      "sha256": "0fa989b29a130f39264b192358545f9b9d56d602a84c215e82bc76bb875ea28b"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/orbital-neonatal-frozen/clinical-review-short-ciliary-quiz.test.ts.raw",
+      "bytes": 18725,
+      "sha256": "d42841bf35bb2dd54320be3d6bbe658bd17e522b49f07763728e1485c85b1f9f"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regional-tour-role-prior/clinical-review-elbow-arterial-tour.test.ts.raw",
+      "bytes": 25445,
+      "sha256": "1b2f22d6bee38da836cc3e491b1b16fec3c0bc4fca0b577cf9e127cf0d081490"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regional-tour-role-prior/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "bytes": 20464,
+      "sha256": "f52a3fd3ba12fc9836344febb9ab59a0a6c3f2b9bd6199595e0def5ef74ad4ae"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regional-tour-role-prior/clinical-review-medial-thigh-tour.test.ts.raw",
+      "bytes": 17695,
+      "sha256": "03b265445b7937621a9d01ce849294ea170232c245f6f8c7a3f34b19325b4916"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regional-tour-role-prior/clinical-review-regional-tour.test.ts.raw",
+      "bytes": 27127,
+      "sha256": "af4d4f3efee33d61db8c1769632909680bf07e89d46e514c97601499097ea7ff"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/arterial-history-preservation.test.mjs.raw",
@@ -13460,6 +13720,21 @@
       "sha256": "a184ea1af69fb04164ea0da8d85a1829331dd7f77598e622b5649b1280eb3ed3"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-epoch-batch-c-originals.test.mjs.raw",
+      "bytes": 4384,
+      "sha256": "d3f5a72b343c8856a030ccdefd8a2d6fe733248f3cf892dcf77855bb3d0120f5"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-epoch-batch-d-preservation.test.mjs.raw",
+      "bytes": 4357,
+      "sha256": "c934a01dff830c1277b5648d7de81a86d60dfd1f977673779fa371d1f35d3746"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-question-role-preservation-20261021.test.mjs.raw",
+      "bytes": 15179,
+      "sha256": "d0bb91733cf0703739bf48db1c77bed53f592a6365e9231b984cc1d82c7c2d6a"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-abdominal-detail-xray.test.ts.raw",
       "bytes": 17482,
       "sha256": "64bfa1d4ffd9c1024902a322a42a273022066a911d5d0c79b6ace7a05523e819"
@@ -13555,6 +13830,11 @@
       "sha256": "44895bc96595267e82b9ab915bda847b54bc1cef2f9453b99eeac9d70287fc85"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-elbow-arterial-tour.test.ts.raw",
+      "bytes": 25445,
+      "sha256": "1b2f22d6bee38da836cc3e491b1b16fec3c0bc4fca0b577cf9e127cf0d081490"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-elbow-us-followup.test.ts.raw",
       "bytes": 36205,
       "sha256": "dfe5b2522ed20791134dadd37a35e6fff235b4b7d8b139953a00252595159b7a"
@@ -13585,6 +13865,11 @@
       "sha256": "00cde16bc349a8e6921094f56db467f95c35694d7163c4fb47c21d8485f7f16f"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-forearm-branch-xray.test.ts.raw",
+      "bytes": 21444,
+      "sha256": "7750f62634ba3ff4f805491da6e318cebd0b788050576f66ff7340c076142934"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-forearm-vascular-xray.test.ts.raw",
       "bytes": 28665,
       "sha256": "fca614cc591eb44623f87e36dd35cea42aa3ea0e755ede1118b368e871f06861"
@@ -13610,9 +13895,79 @@
       "sha256": "51a9cee8891bec49843158d6f34c9070e17456443dceada152014c80f43c8797"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-hepatic-arterial-xray.test.ts.raw",
+      "bytes": 22026,
+      "sha256": "aeb17b3e875ac9df4dd9d0e415777dadf845babe7da4ca4999648b233d8de961"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-hip-muscle-xray.test.ts.raw",
+      "bytes": 17382,
+      "sha256": "cfdf8ca3de7d60bb4adff40c16c13d5523841698ab9b1482bb74673908cdfabb"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-iliac-venous-xray.test.ts.raw",
+      "bytes": 9480,
+      "sha256": "a55f6c33ee41cccc7720482124104b529bcdfa9336ee5760ff35ec49ce34be68"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-imaging-status.test.ts.raw",
       "bytes": 8504,
       "sha256": "adb894f161d96664b1c219d02837942f615ec5d3115bf18e5b2fddda33ccedf2"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "bytes": 10554,
+      "sha256": "582b55d1960288b58f00cac0c2bf4b5be88df0dbe851a2e270e7522b3f9a91c8"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-leg-arterial-xray.test.ts.raw",
+      "bytes": 25792,
+      "sha256": "0b33848d2f97a5139053eb7b47cb241f42174c42a0ec2e1ec07e7456c4a59b55"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-leg-venous-xray.test.ts.raw",
+      "bytes": 22926,
+      "sha256": "d92eb50850865b6a6f1d6705a60829bec310cdc31ba5274bd57ead8445cea3cc"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "bytes": 18299,
+      "sha256": "74a100863fb33a27b94e7e56847c225fab618b500bfeb5f0d37971faff5781d9"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-longus-colli-quiz.test.ts.raw",
+      "bytes": 8907,
+      "sha256": "68589eca6ad26c87d2e46f57f55769b75f3e3ce0919fe5cc49ac50ae7fa32dd8"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "bytes": 20464,
+      "sha256": "f52a3fd3ba12fc9836344febb9ab59a0a6c3f2b9bd6199595e0def5ef74ad4ae"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-medial-thigh-tour.test.ts.raw",
+      "bytes": 17695,
+      "sha256": "03b265445b7937621a9d01ce849294ea170232c245f6f8c7a3f34b19325b4916"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-median-cubital-xray.test.ts.raw",
+      "bytes": 23327,
+      "sha256": "886db4ebcf56a04764fb9e416aaffd61c72f9487d5d18ddc63f66b0ed6e848a4"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "bytes": 8950,
+      "sha256": "b677b62a8c142b7e0a07ed8d225e1ba040f1e675bc3402a77d71b0883ed140b4"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-neonatal-cranial-us.test.ts.raw",
+      "bytes": 30026,
+      "sha256": "356212d081e871bf7998e590cdfa61afaa9644cfb7fd9a7de4ecc77bdb1e9660"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-orbital-apex-ct.test.ts.raw",
+      "bytes": 23417,
+      "sha256": "8f4a7e1eb6af862ff9643c08972c02f45dc9502db20ef03898b3723b78b05cc5"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-orbital-check-evidence.test.mjs.raw",
@@ -13620,9 +13975,39 @@
       "sha256": "781cbf5f36bfe0eb902703f2f0195f2c0d11feb6b83b5f27a73b36faba2d25eb"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-orbital-ring-ct.test.ts.raw",
+      "bytes": 19667,
+      "sha256": "1408d09004e4277d15e2d05c7a84207767892b5724dcdb40463808b23d1821bc"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-orbital-sensory-mri.test.ts.raw",
+      "bytes": 12079,
+      "sha256": "0fa989b29a130f39264b192358545f9b9d56d602a84c215e82bc76bb875ea28b"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-portal-hepatic-tour.test.ts.raw",
+      "bytes": 10971,
+      "sha256": "f6276358748589754a53ef567e03c1b963973e3ec326f6e26ae3aa20c04b0e30"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-pulmonary-venous-tour.test.ts.raw",
+      "bytes": 6597,
+      "sha256": "cb7d62d8efba6f4fb6bc2541f13a8eb3012e780815537156d67936f3dbb06a11"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-regional-muscle-completion-quiz.test.ts.raw",
       "bytes": 12345,
       "sha256": "2a5735e0b62b7845ba73afa18c87a9e6c673dc2959f30abc7111995fe7a9a63e"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-regional-tour.test.ts.raw",
+      "bytes": 27127,
+      "sha256": "af4d4f3efee33d61db8c1769632909680bf07e89d46e514c97601499097ea7ff"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-short-ciliary-quiz.test.ts.raw",
+      "bytes": 18725,
+      "sha256": "d42841bf35bb2dd54320be3d6bbe658bd17e522b49f07763728e1485c85b1f9f"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-teaching-heading.test.ts.raw",
@@ -13648,6 +14033,11 @@
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/coronary-current-lifecycle-preservation.test.mjs.raw",
       "bytes": 3692,
       "sha256": "2f66f67cb54657af1368f21fa37982c6b15ed370031f47f40119b464ad209204"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/elbow-current-lifecycle-preservation.test.mjs.raw",
+      "bytes": 9109,
+      "sha256": "7d0c39c16ad534409dc29bc0b6ad4c994f3c24b167a001ce80483db385da8e9a"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/elbow-us-followup-preservation.test.mjs.raw",
@@ -13723,6 +14113,11 @@
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/orbital-mri-delivery-transition.test.mjs.raw",
       "bytes": 8543,
       "sha256": "37ec90efd4ae774d7df4513b0cbdf59df795d5140c2543bba7d8c677ef21ae83"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/regional-tour-role-preservation-20261021.test.mjs.raw",
+      "bytes": 14950,
+      "sha256": "60d340be22a36780958c15a76fef4823d4f1c028f3279dedfe60132a3dc53645"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/shoulder-us-history-contract.test.mjs.raw",
@@ -13823,6 +14218,16 @@
       "path": "pending/coherent-regression-repair-20261022/website/tests/preimages/nonhead-frame-migration.test.mjs.before-extra-expansion.raw",
       "bytes": 2501,
       "sha256": "be0971e01d2659b0756dbc8eb6a56c43eb4fd42f6ebc5ef1dcff995a885e74ee"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/regional-tour-role-inverse.mjs",
+      "bytes": 5554,
+      "sha256": "cc24d5aa06dd0bb5b0e614222fff50238a40565d61ddd5fc31d624a08459cec4"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/regional-tour-role-preservation-20261021.test.mjs",
+      "bytes": 15177,
+      "sha256": "11900802b88e160a98b7810f18dc0afae9b4df66918f2cbaf148dc49aecba912"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/shoulder-us-history-contract.test.mjs",
@@ -15286,12 +15691,12 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered authored-source recovery plus 97 unintegrated reviewed test/helper proposals, complete raw CODE preimages, 24 explicit CODE/proof additions and named proof/coordination scripts. Whole-original byte inverses, historical obligations, independent Review/runtime families and all strict current-source gates are retained. No generated Review/runtime JSON, geometry/models, scans/masks/pixels, patient identifiers, owner decisions, credentials/env, databases, raw logs/media, private reference notes, article assets or raw canonical Git ancestry. Selected authored-source only, not whole/private/runnable recovery or native/browser/clinical/release completion.",
+  "scope": "Inherited filtered authored-source recovery plus 124 unintegrated reviewed test/helper proposals, complete raw CODE preimages, 39 explicit CODE/proof additions and named proof/coordination scripts. Whole-original byte inverses, historical obligations, independent Review/runtime families and all strict current-source gates are retained. No generated Review/runtime JSON, geometry/models, scans/masks/pixels, patient identifiers, owner decisions, credentials/env, databases, raw logs/media, private reference notes, article assets or raw canonical Git ancestry. Selected authored-source only, not whole/private/runnable recovery or native/browser/clinical/release completion.",
   "proof": {
     "selectedSourceOnly": true,
-    "proposedTestAndHelperPaths": 97,
-    "completeOriginalSourceInverses": 97,
-    "additionalCodeAndProofPaths": 24,
+    "proposedTestAndHelperPaths": 124,
+    "completeOriginalSourceInverses": 124,
+    "additionalCodeAndProofPaths": 39,
     "strictCurrentValidatorAndPinChanged": false,
     "frozenCandidateEdited": false,
     "nativeRootsRerun": false,

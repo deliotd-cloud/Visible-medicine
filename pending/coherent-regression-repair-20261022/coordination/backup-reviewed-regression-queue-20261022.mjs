@@ -27,7 +27,9 @@ export function backupReviewedRegressionQueue({queuePath,queueSha256,expectedPro
  for(const row of queue.additionalFiles){assert.equal(sha(requireCode(row.from)),row.sha256);destinations.set(prefix+'website/'+row.path,row.from);}
  for(const row of queue.sourceProofs??[]){
   assert.equal(sha(requireCode(row.script)),row.sha256);
-  destinations.set(prefix+'coordination/worker-proofs/'+path.basename(path.dirname(row.script))+'/'+path.basename(row.script),row.script);
+  // A main-owned relative script must not emit a forbidden literal '/./' path.
+  const script=path.resolve(row.script);
+  destinations.set(prefix+'coordination/worker-proofs/'+path.basename(path.dirname(script))+'/'+path.basename(script),script);
  }
  for(const name of ['backup-reviewed-regression-queue-20261022.mjs',...coordinationScripts]){
   assert.match(name,/^[a-z0-9-]+\.mjs$/);const from=path.resolve(name);requireCode(from);
