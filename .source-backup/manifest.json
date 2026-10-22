@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T02:55:57.476Z",
+  "at": "2026-10-22T03:14:28.328Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "766f99b143e5fe2950849562f1719687f171e05f",
-  "gitParent": "766f99b143e5fe2950849562f1719687f171e05f",
+  "parent": "9453aadd6781b9b2a729a9d4c47b846c69479c12",
+  "gitParent": "9453aadd6781b9b2a729a9d4c47b846c69479c12",
   "files": [
     {
       "path": "app/globals.css",
@@ -12305,6 +12305,11 @@
       "sha256": "ac94f9e97d1fb3fc1b84abb9ee970108ccb13b6558c9126eefa5059a96b6d0ad"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-reviewed-regression-queue-20261022.mjs",
+      "bytes": 5249,
+      "sha256": "e5562fa17eb3c76a201d5f050f949005681125a3856ba1c0e73486271c361083"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-runtime-admission-20261022.mjs",
       "bytes": 5114,
       "sha256": "4381d2ad2b21340d4a34665891b3494601309d76c32a0ff5af0ad0d22ac21e00"
@@ -12313,6 +12318,16 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-shared-family-admission-20261022.mjs",
       "bytes": 4854,
       "sha256": "176d7987a950a2ece6934f7628aea0c656d099948431f8c8f883de17fbd98df0"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-spinal-step-wrist-admission-20261022.mjs",
+      "bytes": 932,
+      "sha256": "c544a7179e7a07360b14412142f8a7776a00f0930d36a0e1c48dcaa8359b47df"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-extra-expansion-family-admission-20261022.mjs",
+      "bytes": 6680,
+      "sha256": "0411fd5dd59dc42fe893ac1e458ebb80de06a7cc6136196cd32a40ebf13e742b"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-historic-schema-repairs-20261022.mjs",
@@ -12348,6 +12363,16 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-shared-family-admission-20261022.mjs",
       "bytes": 8383,
       "sha256": "d6ed60cce12de5c52d5bac7ea700f4b22008bd1bf0dba160b2142c594e926073"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-spinal-step-wrist-admission-20261022.mjs",
+      "bytes": 5846,
+      "sha256": "cb85441fde60833ec2075fe03d28cb64370d317d5975d5c8a3571dc5301f8d16"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/consolidate-xray-quiz-reflow-admission-20261022.mjs",
+      "bytes": 5310,
+      "sha256": "f5a10855f2cac6fe22468308380c4b5ef4afc293993670b617867e9baa567bf3"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/observe-coherent-full-regression-20261022.mjs",
@@ -12473,6 +12498,36 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-shared-nonregional-fixture-proposal/prove-fixture.mjs",
       "bytes": 5451,
       "sha256": "b8e0a13400f22ae34aec46adcfe8511486d360bcbe9f4195639bcfbadd5891d8"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-shoulder-xray-tour-retry-admission/SOURCE_PROOF.mjs",
+      "bytes": 6459,
+      "sha256": "5d3b1c105687b7e7bdc5758f8373dbfc85c51814cb4e25f9a0c5b2b178d35f6a"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-spinal-family-admission/SOURCE_ONLY_AUDIT.ps1",
+      "bytes": 5810,
+      "sha256": "89d89b44f1ae8a057d2eaba65c81303169adddc51d2c7d15ad743f890da1e09e"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-spinal-family-admission/SOURCE_ONLY_INVERSE.ps1",
+      "bytes": 3927,
+      "sha256": "3ecb28e2950daf6003b6e7edeaba07411f42d66d38770d49da811f78b19c5a77"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-step-wrist-family-admission/SOURCE_PROOF.mjs",
+      "bytes": 7314,
+      "sha256": "4dde7f8ce36bc1155efc41527bdb342c4d47140fb3917fd058a0be237ff0f758"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-thoraco-tour-reflow-family-admission/SOURCE_ONLY_AUDIT.ps1",
+      "bytes": 4516,
+      "sha256": "8145eb512c98787a376bce22ef984f4491457e6920651a5860ea5d13c7617aa5"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/20261022-thoraco-tour-reflow-family-admission/SOURCE_ONLY_INVERSE.ps1",
+      "bytes": 4152,
+      "sha256": "6e801e9535271e0510926e55c21c9019a6342301d8a7d43c3d6e01c5b099dac2"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/worker-proofs/hand-vessel-v2/audit-text-inputs.ps1",
@@ -12640,9 +12695,39 @@
       "sha256": "4363a57939adb214414ef554af18c24c3530c2982832be179fdd4b188d87d28e"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-shoulder-soft-xray-delivery.test.ts",
+      "bytes": 6245,
+      "sha256": "b037ecec7035ebfa1c7f78be8e38a6e1f02778a42b85725ed6a42c50f0c6ffe3"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-spinal-disc-function.test.ts",
       "bytes": 5754,
       "sha256": "597a95e1a8aef11b35790265c4527004a1abdf7cd7c4b8b79190e17470a568ec"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 87983,
+      "sha256": "46feb48a3d91439396e47fa739df407ea95a3eacca0900c742fd4fe1ed6adf44"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-thoracoabdominal-quiz-checks.mjs",
+      "bytes": 21676,
+      "sha256": "f3ca5163de8acd839a68dd97c3d5cec6f950991dabeba6f8fec6f6470eeda40b"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-tour-reflow.test.ts",
+      "bytes": 12587,
+      "sha256": "3859a760e44fee758e2e8d1e09268dcda4022839d2e0f1b1b86dfeb40a7c572b"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-tour-step-navigation.test.ts",
+      "bytes": 4811,
+      "sha256": "d30957715cf6d525f058682564c158ac9ca43fde4eeefb6a4136377297a2abe3"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/atlas-wrist-imaging-correction.test.ts",
+      "bytes": 8388,
+      "sha256": "80885a37bd0edeb9525fbf75551bf9afc8c8b8c6e16c9984851d053ebc773025"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/clinical-review-abdominal-eus.test.ts",
@@ -12885,9 +12970,39 @@
       "sha256": "546349e8c57caf01b9fac4bbb72ba1d1faf8a5f2a98c4fba7c29f3dc794e3b81"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-shoulder-soft-xray-delivery.test.ts.raw",
+      "bytes": 6015,
+      "sha256": "1427c2be2e3123b70c425be26cdc962356e0a08588f8ee3f60454915c5e4208e"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-spinal-disc-function.test.ts.raw",
       "bytes": 5818,
       "sha256": "cab066369645fd2647857da4e73d27f7d59eaf18baf9fdf6b9999377abf5b82a"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-spinal-muscle-xray.test.mjs.raw",
+      "bytes": 85652,
+      "sha256": "6c202daf177a84a4cfd210673dd8a3975bc47cd77bcd47754139a9bffd6bdddc"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-thoracoabdominal-quiz-checks.mjs.raw",
+      "bytes": 19832,
+      "sha256": "0bb48b7d723c1d87262ccdf1eaa41e757c3d93f38c7fb1af8dce3bd6cc9ff6b7"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-tour-reflow.test.ts.raw",
+      "bytes": 11609,
+      "sha256": "42a2a808862f5564bf0856cd4b23076e96d882d1ff2fc6f5817365c32d71d500"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-tour-step-navigation.test.ts.raw",
+      "bytes": 4652,
+      "sha256": "d28269ffa5b667a7f039468a4c26e53f5e494ec2e5525eb96f9dcf39bd7b0534"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/atlas-wrist-imaging-correction.test.ts.raw",
+      "bytes": 8189,
+      "sha256": "a25df4cfcfde998403b55aa8016626451b164625e4606b0f3c002b8e800da7a4"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/website/tests/fixtures/regression-before-20261022/clinical-review-abdominal-eus.test.ts.raw",
@@ -14516,15 +14631,12 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered authored-source recovery plus52 unintegrated test/helper proposals, complete original raw CODE preimages, six explicit CODE/proof additions and named read-only source-proof/coordination scripts. Two additional strict SSR harnesses reuse the real expansion controller loader; nonhead migration retains every original assertion via exact inverse and adds dependency refusal checks. Runtime-family and current-Review identities remain independently authenticated. No generated Review/runtime JSON, model binaries, scans/masks/pixels, patient identifiers, owner decisions, credentials/env, databases, raw logs/media, private reference notes, article assets or raw canonical Git ancestry. Selected authored-source recovery only: not whole/private/runnable recovery or native/browser/clinical/release completion.",
+  "scope": "Inherited filtered authored-source recovery plus 58 unintegrated reviewed test/helper proposals, complete raw CODE preimages, 6 explicit CODE/proof additions and named proof/coordination scripts. Whole-original byte inverses, historical obligations, independent Review/runtime families and all strict current-source gates are retained. No generated Review/runtime JSON, geometry/models, scans/masks/pixels, patient identifiers, owner decisions, credentials/env, databases, raw logs/media, private reference notes, article assets or raw canonical Git ancestry. Selected authored-source only, not whole/private/runnable recovery or native/browser/clinical/release completion.",
   "proof": {
     "selectedSourceOnly": true,
-    "proposedTestAndHelperPaths": 52,
-    "completeOriginalSourceInverses": 52,
-    "newReviewedSourcePaths": 7,
+    "proposedTestAndHelperPaths": 58,
+    "completeOriginalSourceInverses": 58,
     "additionalCodeAndProofPaths": 6,
-    "sourceMutationRefusals": 13,
-    "realControllerLoaderReused": true,
     "strictCurrentValidatorAndPinChanged": false,
     "frozenCandidateEdited": false,
     "nativeRootsRerun": false,
