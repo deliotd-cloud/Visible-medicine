@@ -1,32 +1,42 @@
 {
-  "sourceReceiptSha256": "bbd4ca357b137db79340eea3f4a681310fe3cbcedb51137af904078487523d1c",
-  "focusedTerminalSha256": "aa87116e60d0d9d21825754eedc1d0c323471e12e19b0ccf86a941b64a1837b3",
-  "focusedCounts": {
-    "tests": 7,
-    "pass": 7,
+  "sourceReceiptSha256": "d72789221c1cbdb0686e65a6316fe42c378f4cddc6e4adfd2b556ad7b79f2f8e",
+  "sourcePaths": 6070,
+  "overlaidTestHelperPaths": 24,
+  "nonTestProductBytesChanged": 0,
+  "initialCombinedActualCounts": {
+    "tests": 65,
+    "pass": 63,
+    "fail": 2,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "exactFailedConsumerRetryCounts": {
+    "tests": 8,
+    "pass": 8,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "sourcePaths": 6068,
-  "actualBinderIdempotence": true,
-  "fullTypesAndWebsiteBuildPassed": true,
-  "firstTypeFailureAndRefusedCaptureRetainedLocally": true,
-  "earlierActualRegressionCounts": {
-    "tests": 329,
-    "pass": 300,
-    "fail": 29
+  "newAdmissionActualCounts": {
+    "tests": 22,
+    "pass": 22,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
   },
-  "earlierRegressionFailuresRetained": true,
-  "pendingPackagesSourceOnly": true,
+  "fullTypesPassed": true,
+  "original65AndV6FailuresRetained": true,
+  "firstRejectedRootOverrideAndReducedShoulderCoveragePreserved": true,
+  "bothOriginalCraniofacialRuntimeEmissionsRetained": true,
+  "currentValidatorOrPinChanged": false,
   "normalPreviewExplicitlyUnchanged": true,
-  "installed": false,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
   "publicDeployment": false,
-  "rawCanonicalAncestry": false,
   "privateDataBackup": false,
   "runnableProjectRecovery": false
 }

@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T08:28:40.454Z",
+  "at": "2026-10-22T08:56:03.179Z",
   "sourceIdentity": {
     "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "isolatedReview": "525f8fbe122bf6bdc15d8b89f572e49e3ac0ce09cd411b8009f67454d938a163"
   },
-  "parent": "59d0737908aae938a92ad44b55c86542b50bf8b1",
-  "gitParent": "59d0737908aae938a92ad44b55c86542b50bf8b1",
+  "parent": "62d523c799e3e6755d4ffdb1463b4bad2e1835d8",
+  "gitParent": "62d523c799e3e6755d4ffdb1463b4bad2e1835d8",
   "files": [
     {
       "path": "app/globals.css",
@@ -16976,6 +16976,411 @@
       "sha256": "0c37c1868381d97f90e02ec8cd7a37e59a5d633c8fab0c3f4648473f3da8a4ff"
     },
     {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-closed56-followup-consumers/CODE/tests/closed56-family-source-inverse.mjs",
+      "bytes": 3273,
+      "sha256": "a7a21ced5b6e8661de3a26937b73c451bb27cbb2b8056a97a6e5ccf830661398"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-closed56-followup-consumers/CODE/tests/closed56-whole-role-transition-20261021.test.mjs",
+      "bytes": 11578,
+      "sha256": "528d9617d057dce76e8992800a3a75a0c2fed6d51b2d40f20494882b299d88ed"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-closed56-followup-consumers/CODE/tests/closed57-original-tests.test.mjs",
+      "bytes": 13046,
+      "sha256": "8cc464c8c3db16107c0a1d283650c35c6ed087ebdb4270ae11d0712217c3c2df"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-closed56-followup-consumers/PROVE_SOURCE.mjs",
+      "bytes": 7410,
+      "sha256": "3a1f82ffcfc610035ca7132978d27f209e28160c2bff43de3a67ab94aa9ca8c4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-closed56-followup-consumers/RAW/tests/closed56-whole-role-transition-20261021.test.mjs",
+      "bytes": 10866,
+      "sha256": "1e416bf0b40fbfd09be0389cc7341325307b9a84684594db449f60094394657c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-closed56-followup-consumers/RAW/tests/closed57-original-tests.test.mjs",
+      "bytes": 14066,
+      "sha256": "ac08121a7e58bf747880bd1a0c24c9479ee51ffdb8cfa0c7a2b2ef7f4ed10966"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-lecture-context-source-repair/CODE/tests/lecture-context-route.test.mjs",
+      "bytes": 7987,
+      "sha256": "ea3c05b2e84819580509d02610dab9e0c32e5bc78ea614290f5b08ccd7968e79"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-lecture-context-source-repair/PROVE_SOURCE.mjs",
+      "bytes": 3976,
+      "sha256": "2bca8758c1e4573e46ae5af1afa469d3d4c96b33d24f818a0bdd6bc0896c369c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-lecture-context-source-repair/RAW/tests/lecture-context-route.test.mjs",
+      "bytes": 6127,
+      "sha256": "46d6aa59d2f46ce6d089aec75fea97b35aaba7be2eeaf3bba8c2e04b6a595efa"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 94147,
+      "sha256": "1db458f7edd9a9a1de40b50fe886cf277a3fb560f2bc629260388d81785b65ce"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/batch-c-role-inverse.mjs",
+      "bytes": 12736,
+      "sha256": "d05a0953a9b76e7bc68ee08bc220bbc3c3ac51b4e7a9c235503d71cb555b4086"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 25494,
+      "sha256": "d03860ddeaac152fd082530c5661b79076279508a0f67cb308d3cb9de81ebb09"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 9402,
+      "sha256": "569a15c2566b982410be68f9c221f38662518289e9d2b190cf39caf5016ac9e8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 10036,
+      "sha256": "52c9d8ef7fab7f79bda259238e6b5469b91441fd94bc60accb71e41a65675c06"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 10912,
+      "sha256": "9b666215eb5f12c2ab7564cf6ffe6e560682efb46d033a4bd13d88ecaf389f4e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/completion-checklist-current-transition.test.mjs",
+      "bytes": 6408,
+      "sha256": "46d16b7db39a8c489652bf4b1e6de973a06d067e302993273e98e6f525d1765a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/head-binding-role-preservation-20261021.test.mjs",
+      "bytes": 14856,
+      "sha256": "100638abb64fb6f850844376f35152160ec144a72d3e8ecc21cb2a3235ab8332"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/historical-atlas-delivery-register47.mjs",
+      "bytes": 4019,
+      "sha256": "054c9f3d07a969e83e06a57c61950d560f6771fb00e5cebbeeadafe9efe41ee2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/lacrimal-current-transition.test.mjs",
+      "bytes": 14529,
+      "sha256": "05e1c9cb23419576462928813a24c65bf0c95a216ab8a85e191e564284a209ca"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3923,
+      "sha256": "d16ab332cf960809365ed3378abd5ff9b84ba72472f2b24a691508f2cc9a9e23"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/posterior-fossa-integration-register.test.mjs",
+      "bytes": 11932,
+      "sha256": "ff24477dcb815a2d74c8cc467a3282f947e335cd72b6e0bb0c0e7db990d198f4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/CODE/tests/spinal-current-source-inverse.mjs",
+      "bytes": 13853,
+      "sha256": "b990ba4dc4b03a95dfa8cb0f62a84dc17cc5daf903a72753b8605e3657d3e71d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/MAIN_NATIVE_RUNNER.before-types.mjs",
+      "bytes": 4086,
+      "sha256": "11c8e2d37c08ebdedb3478cd1b5af92765d20715ee2948b8c2529dd46c97e36a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 94147,
+      "sha256": "1db458f7edd9a9a1de40b50fe886cf277a3fb560f2bc629260388d81785b65ce"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/batch-c-role-inverse.mjs",
+      "bytes": 12736,
+      "sha256": "d05a0953a9b76e7bc68ee08bc220bbc3c3ac51b4e7a9c235503d71cb555b4086"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 25494,
+      "sha256": "d03860ddeaac152fd082530c5661b79076279508a0f67cb308d3cb9de81ebb09"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 9402,
+      "sha256": "569a15c2566b982410be68f9c221f38662518289e9d2b190cf39caf5016ac9e8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 10036,
+      "sha256": "52c9d8ef7fab7f79bda259238e6b5469b91441fd94bc60accb71e41a65675c06"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 10912,
+      "sha256": "bdfa9e209e13b814b7453155ffa0f6c432ca55c35f66b60356eee652cfd8a740"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/completion-checklist-current-transition.test.mjs",
+      "bytes": 6408,
+      "sha256": "46d16b7db39a8c489652bf4b1e6de973a06d067e302993273e98e6f525d1765a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/head-binding-role-preservation-20261021.test.mjs",
+      "bytes": 14856,
+      "sha256": "ba0dd3bf0eae7d4d6cbb52a19e719dd818bcb75d41df3ea7ee2a71599bf0437b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/historical-atlas-delivery-register47.mjs",
+      "bytes": 4019,
+      "sha256": "054c9f3d07a969e83e06a57c61950d560f6771fb00e5cebbeeadafe9efe41ee2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/lacrimal-current-transition.test.mjs",
+      "bytes": 14529,
+      "sha256": "05e1c9cb23419576462928813a24c65bf0c95a216ab8a85e191e564284a209ca"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3923,
+      "sha256": "3d03a7d8705817642cbb258b4d6441d23132c3795551fffc7cdd31591d14f975"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/posterior-fossa-integration-register.test.mjs",
+      "bytes": 11932,
+      "sha256": "ff24477dcb815a2d74c8cc467a3282f947e335cd72b6e0bb0c0e7db990d198f4"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/PREVIOUS-CODE/tests/spinal-current-source-inverse.mjs",
+      "bytes": 13853,
+      "sha256": "b990ba4dc4b03a95dfa8cb0f62a84dc17cc5daf903a72753b8605e3657d3e71d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 88551,
+      "sha256": "7a39e919130ce257d590f564b0a9839857df9b2a1c3c786cf2805527fe79e01b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/batch-c-role-inverse.mjs",
+      "bytes": 10413,
+      "sha256": "595daaba750d0f6d6a13aa16986ec47cfb2e6dc188c5328bc808ef05417a101b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 25177,
+      "sha256": "4e2a4a78f39f8aa4f9f1dc69304f963541c5a60e77d7d2b97d7bb45cfad894a0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 8460,
+      "sha256": "36d9b0a2d2b33c1426207c95103279966e53bbba5c61b325ecff757482a59c91"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 8554,
+      "sha256": "707db26812327fb29ed63642c65b5ca6f0e7fc55d12995421ff718223b18ef0c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8707,
+      "sha256": "1e2111111f5c9798a778710e65057680928c18ae79f954fc40796c4ca01fde4a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/completion-checklist-current-transition.test.mjs",
+      "bytes": 5895,
+      "sha256": "0fa8e77bf740b1717d0b3fc991b87ef4a755c4246dd40058412193bbdde10a5d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/head-binding-role-preservation-20261021.test.mjs",
+      "bytes": 14856,
+      "sha256": "b9f39466cc4e8268550898a78b8dd4f8ec2f0153f15d8aa1c6b214e79acfe716"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/lacrimal-current-transition.test.mjs",
+      "bytes": 12600,
+      "sha256": "31c6b7e117eb98032ea3374cac36ee3ce0d0a33db39034884b4697297c059917"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3923,
+      "sha256": "9c70cc8acb8034b2244d256509754ff32835937936169770c1a480de1654f259"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/posterior-fossa-integration-register.test.mjs",
+      "bytes": 11372,
+      "sha256": "5d32fe3e9628517ef9c5844fb50873d704a9e77813c76edd2484d7fcb2007f74"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-loading-followup-sources/RAW/tests/spinal-current-source-inverse.mjs",
+      "bytes": 8915,
+      "sha256": "3008622e5256507d67006ca128488decf53d037ad5318f8d896c62ebc9524c89"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/CODE/tests/posterior-fossa-coverage.test.mjs",
+      "bytes": 6407,
+      "sha256": "ccc80bccd2b2f0f456ec71951e2c92017766fc8a19479bf5318bdda9441eab20"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/CODE/tests/regional-learning-catalogue-history.ts",
+      "bytes": 7628,
+      "sha256": "9dfbc21c93b745330949e8c103b333becb5613091217b14e1d08b1f9c51c8964"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/CODE/tests/regional-learning-catalogue.test.ts",
+      "bytes": 10097,
+      "sha256": "848fadf394c0106000476a9cfd580e66c3ed023d410e2da5ca1d5a87f942c46a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/CODE/tests/regional-link-role-preservation-20261021.test.mjs",
+      "bytes": 6313,
+      "sha256": "53d1f0d47e486e311f4b0d72ebb0cbb2c010851a95b17896a5aa300bd5875a2b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/CODE/tests/shoulder-us-renderer-migration.test.mjs",
+      "bytes": 6051,
+      "sha256": "ab3dd097913f298b924db07a512c1aca6f2626e6bae426732dcc9c4c510bf8d2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/CODE/tests/spinal-craniofacial-ct-current-compatibility.test.mjs",
+      "bytes": 7097,
+      "sha256": "41c17ab2d1c147fde491b6064b4fc010ea7f2d1ab34bdce2f6c1f77631ed7bf7"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/PRE_FIX/CODE/tests/posterior-fossa-coverage.test.mjs",
+      "bytes": 6407,
+      "sha256": "ccc80bccd2b2f0f456ec71951e2c92017766fc8a19479bf5318bdda9441eab20"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/PRE_FIX/CODE/tests/regional-learning-catalogue-history.ts",
+      "bytes": 7628,
+      "sha256": "9dfbc21c93b745330949e8c103b333becb5613091217b14e1d08b1f9c51c8964"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/PRE_FIX/CODE/tests/regional-learning-catalogue.test.ts",
+      "bytes": 10097,
+      "sha256": "848fadf394c0106000476a9cfd580e66c3ed023d410e2da5ca1d5a87f942c46a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/PRE_FIX/CODE/tests/shoulder-us-renderer-migration.test.mjs",
+      "bytes": 6051,
+      "sha256": "ab3dd097913f298b924db07a512c1aca6f2626e6bae426732dcc9c4c510bf8d2"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/PRE_FIX/CODE/tests/spinal-craniofacial-ct-current-compatibility.test.mjs",
+      "bytes": 6432,
+      "sha256": "9d88a35ad3492c14992b7b3674439621d7b104a2e98b8d7f2752fdf15c646f24"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/PRE_FIX/PROVE_SOURCE.mjs",
+      "bytes": 8358,
+      "sha256": "81b524669fd03db091f9dd247f096a3b21eed39ebe6f25db81d03cec1464c0c5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/PROVE_SOURCE.mjs",
+      "bytes": 14437,
+      "sha256": "7a5396e58446d6ddd5cf6ccedd9e46bfacfc1dd91f92f990495eb92be8346a0e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/RAW/tests/posterior-fossa-coverage.test.mjs",
+      "bytes": 6407,
+      "sha256": "fa353e5842870501f2d6a69c267525e9bc3d57556d12110839a2792980fb372c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/RAW/tests/regional-learning-catalogue-history.ts",
+      "bytes": 7595,
+      "sha256": "4693e9e80e7523078e5155fe48624bc01ad57caf458d30bddb3cdc48ebbd75d9"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/RAW/tests/regional-learning-catalogue.test.ts",
+      "bytes": 10048,
+      "sha256": "0453ffc954e02ecc9185ad35520d153727d52801aea3ae7cbacd6acff7b4c53e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/RAW/tests/regional-link-role-preservation-20261021.test.mjs",
+      "bytes": 5420,
+      "sha256": "05f854f0315e7e83cc7af9d9d72971708a5ff42830bac5fd316496bad86c60c3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/RAW/tests/shoulder-us-renderer-migration.test.mjs",
+      "bytes": 5904,
+      "sha256": "093711dabd8c55a071a906f1d19b20f0f0e2c2f3f481d6823d940b8945c891ef"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-remaining-runtime-admissions/RAW/tests/spinal-craniofacial-ct-current-compatibility.test.mjs",
+      "bytes": 6176,
+      "sha256": "989dc1e6c1888286c2fcb4ed178cd33373ffe92bc394b45e752b8be49cae20bb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-vascular-guard-composition/CODE/tests/vascular-live-admission-preservation.test.mjs",
+      "bytes": 10410,
+      "sha256": "54a53b053cda262b83b6cd0ded374f42d9762e5a066784c245dacdb917d07f1e"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-vascular-guard-composition/PRE_FIX/CODE/tests/vascular-live-admission-preservation.test.mjs",
+      "bytes": 10614,
+      "sha256": "a71bb3b84b146f099b0ca7a711e1fa2f8b610d36a06a105352b033c99cd4f35a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-vascular-guard-composition/PRE_FIX/PROVE_SOURCE.mjs",
+      "bytes": 3767,
+      "sha256": "5530813bbaea2a2b187b94b0439b2c93802dbd4626755cd652edcd05930c2e5b"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-vascular-guard-composition/PROVE_SOURCE.mjs",
+      "bytes": 5459,
+      "sha256": "d74890c657a7cb37cb582acc9f17cdaa7dd1907a66d2560c4e7997b20a41b78f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-vascular-guard-composition/RAW/tests/vascular-live-admission-preservation.test.mjs.raw",
+      "bytes": 3781,
+      "sha256": "59699ecd8d8173668aa7bef97132d96905e5d53e80766c95769ee1ab25959132"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-vascular-guard-composition/SOURCE_INVERSE.mjs",
+      "bytes": 3203,
+      "sha256": "d6b0925b766b3f649d63f7fcf92bdebb4f2a3c2d3b92a27dc36f2000bf7a5c74"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/20261022-vascular-guard-composition/SOURCE_LOADER.mjs",
+      "bytes": 653,
+      "sha256": "2787f0f81a2c487810626359923cebb25c4d90331469946303beb1f0f00c0010"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/coordination/apply-isolated-test-overlay.mjs",
+      "bytes": 3158,
+      "sha256": "f7d92d49804863661724854788fb33a1bd734acfb9d4b3dfe2c1cb9581cf25d8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/coordination/apply-loading-followup-sources-20261022.mjs",
+      "bytes": 4952,
+      "sha256": "4bdc564b5adb782c75ea792cfc127316b5a3fd462a39653be57fbdde640a8258"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/coordination/backup-runtime-regression-continuation-20261022.mjs",
+      "bytes": 7012,
+      "sha256": "87d5241feb7e18309f71dd43c6c3f6b115ac6900e08dc0e47cc3873c786ce60c"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/coordination/checkpoint-runtime-regression-continuation-20261022.mjs",
+      "bytes": 6548,
+      "sha256": "c5f2beb6949e5058c942698e92f84a85dfad08402ea78a507ff8dcc731bd5f3d"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/coordination/finish-runtime-admission-checks-20261022.mjs",
+      "bytes": 2838,
+      "sha256": "c077c8f43ed3c738045563c9bea24160f4d6f916b0eefcc6ff97cbc588b88133"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/coordination/prepare-loading-followup-sources-20261022.mjs",
+      "bytes": 2291,
+      "sha256": "1e278e8bc0aba65f9d8fa84379a14545cad4c449f113f5e856fceeb23f926cfb"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/runtime-regression-continuation/coordination/verify-isolated-source-native.mjs",
+      "bytes": 4385,
+      "sha256": "cf78603d19a00766bc9910759810488964b6704e6f39e0141029f3afcac35856"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/terminal-source-continuation/20261022-admission-terminal-closure/CODE/tests/radial-eus-current-transition.test.mjs",
       "bytes": 21258,
       "sha256": "adf350fe7fc229a63bf7013a5bd7e159886beb27053586d6d7f6e6e3eb505811"
@@ -18722,36 +19127,46 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited selected authored source plus isolated loading-binding repair tools, original type-test source and correction, route-completeness regression, and seven unapplied source-only repair packages. No generated Review/runtime metadata, private local assets, scans/models/masks, databases/env, saved decisions, raw diagnostic logs/media, article assets or canonical Git ancestry. Not a whole/private/runnable backup or deployment.",
+  "scope": "Inherited selected authored sources plus24 explicitly overlaid test/helper paths, their original preimages, rejected first proposals and named reproducible proof/orchestration sources. Product byte graph is unchanged from the verified isolated loading-bound build. Generated metadata/fixtures, raw logs/media, held local assets, scans/models/masks, private records/DB/env/decisions/references and canonical Git ancestry remain local. Not whole/private/runnable recovery or installation.",
   "proof": {
-    "sourceReceiptSha256": "bbd4ca357b137db79340eea3f4a681310fe3cbcedb51137af904078487523d1c",
-    "focusedTerminalSha256": "aa87116e60d0d9d21825754eedc1d0c323471e12e19b0ccf86a941b64a1837b3",
-    "focusedCounts": {
-      "tests": 7,
-      "pass": 7,
+    "sourceReceiptSha256": "d72789221c1cbdb0686e65a6316fe42c378f4cddc6e4adfd2b556ad7b79f2f8e",
+    "sourcePaths": 6070,
+    "overlaidTestHelperPaths": 24,
+    "nonTestProductBytesChanged": 0,
+    "initialCombinedActualCounts": {
+      "tests": 65,
+      "pass": 63,
+      "fail": 2,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "exactFailedConsumerRetryCounts": {
+      "tests": 8,
+      "pass": 8,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "sourcePaths": 6068,
-    "actualBinderIdempotence": true,
-    "fullTypesAndWebsiteBuildPassed": true,
-    "firstTypeFailureAndRefusedCaptureRetainedLocally": true,
-    "earlierActualRegressionCounts": {
-      "tests": 329,
-      "pass": 300,
-      "fail": 29
+    "newAdmissionActualCounts": {
+      "tests": 22,
+      "pass": 22,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
-    "earlierRegressionFailuresRetained": true,
-    "pendingPackagesSourceOnly": true,
+    "fullTypesPassed": true,
+    "original65AndV6FailuresRetained": true,
+    "firstRejectedRootOverrideAndReducedShoulderCoveragePreserved": true,
+    "bothOriginalCraniofacialRuntimeEmissionsRetained": true,
+    "currentValidatorOrPinChanged": false,
     "normalPreviewExplicitlyUnchanged": true,
-    "installed": false,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
-    "rawCanonicalAncestry": false,
     "privateDataBackup": false,
     "runnableProjectRecovery": false
   },
