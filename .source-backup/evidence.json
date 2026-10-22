@@ -1,36 +1,23 @@
 {
-  "websiteNative": {
-    "tests": 141,
-    "pass": 141,
-    "fail": 0,
+  "nativeCounts": {
+    "tests": 364,
+    "pass": 363,
+    "fail": 1,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "atlasTraversalTests": {
-    "tests": 5,
-    "pass": 5,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "existingAtlasReviewSuite": true,
-  "atlasAndWebsiteTypesAndBuild": true,
-  "stockImportChecks": 10,
-  "committedLayoutEffectAndFullInverse": true,
-  "nativeBrowserNavigationApiSyntheticCases": 5,
-  "fullAuthenticatedWorksheetBrowserAcceptance": false,
-  "previousHeadNativeQa": {
-    "source": "ea70b126efc1b9a4e9c9b576587f922650145e53",
-    "ctAndMriSignInPath": true,
-    "authenticatedModelSuccess": false,
-    "sourceNotSilentlyReattributed": true
-  },
-  "modelsAndCoverageUnchanged": true,
-  "coordinatorPreflightFailurePreserved": true,
+  "nativeAllPassing": false,
+  "retainedPreexistingFailure": [
+    "all nine consumer roots preserve their canonical original bytes under exact additive inverses"
+  ],
+  "baselineFailureIndependentlyReproduced": true,
+  "typesAndBuildPassed": true,
+  "stockChecks": 6,
+  "fontAndLicenceUnchanged": true,
+  "sourceScopedBrowserQA": true,
+  "authenticationChanged": false,
   "ownerPreviewChanged": false,
-  "full71AndEightIdeasPreserved": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
