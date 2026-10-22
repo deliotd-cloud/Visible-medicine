@@ -1,14 +1,19 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T18:00:34.835Z",
+  "at": "2026-10-22T18:11:02.995Z",
   "sourceIdentity": {
-    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "tree": "db21ed3dee259c390878450b3495468996a3af85",
-    "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc",
-    "sourceReceiptSha256": "d388db43518ff7ccd443a8e7977e7ac67b2f49a696eb294529992ba64fc4132d"
+    "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+    "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
+    "trackingDraftRevision": 128,
+    "inheritedCandidateEvidence": {
+      "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+      "tree": "db21ed3dee259c390878450b3495468996a3af85",
+      "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc",
+      "sourceReceiptSha256": "d388db43518ff7ccd443a8e7977e7ac67b2f49a696eb294529992ba64fc4132d"
+    }
   },
-  "parent": "1bb371202d1babf836497be7bef3c33f82522b73",
-  "gitParent": "1bb371202d1babf836497be7bef3c33f82522b73",
+  "parent": "c4011f492670a000daf2b70fa1b45bf70dc2fd35",
+  "gitParent": "c4011f492670a000daf2b70fa1b45bf70dc2fd35",
   "files": [
     {
       "path": "app/globals.css",
@@ -12286,6 +12291,21 @@
       "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
     },
     {
+      "path": "pending/checklist-reconciliation-20261022/checkpoint-checklist-reconciliation-20261022.mjs",
+      "bytes": 7815,
+      "sha256": "e1f03bd607d1516bc34a56b62d2e86fdffd1769a1e2fc5a43717ef1e4f4e837a"
+    },
+    {
+      "path": "pending/checklist-reconciliation-20261022/reconcile-completion-checklist-20261022.mjs",
+      "bytes": 12354,
+      "sha256": "0d36a271683806d3ba16cd0735d5ad5bd750d57add58083d351c027572e2f2e8"
+    },
+    {
+      "path": "pending/checklist-reconciliation-20261022/verify-reconciled-checklist-20261022.mjs",
+      "bytes": 2456,
+      "sha256": "01f74963cc6cec563555166fba35e6c92da0be14a302123c6c702ffeb4f6f2e5"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/audit-cerebellar-link-source-20261022.mjs",
       "bytes": 4329,
       "sha256": "59808f3dd347268c167a951c009e4a92a1442c4dec66c139184cc2ba52695490"
@@ -22552,33 +22572,17 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus committed-scope native active-practice exit confirmation, exact original body/harness inverses, and separately unintegrated checklist runtime-schema V2 proposal. V1 correction and first389/386/3 diagnostic stay recoverable. Generated JSON/bindings/pins/coverage, compiled runtime/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries and raw logs/media remain local. Scoped source-only recovery, not whole/private/runnable backup, installation or deployment.",
+  "scope": "Inherit the independently verified filtered practice-exit source snapshot and add three tracking-reconciliation coordinator scripts. Actual checklist data, installation/binding evidence, generated JSON, compiled runtimes, private state, scans/models/masks and binaries remain local. No installation or public deployment. Source-only, not whole/private/runnable recovery.",
   "proof": {
-    "websiteNative": {
-      "tests": 391,
-      "pass": 391,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "typesAndBuildPassed": true,
-    "stockChecks": 6,
-    "sourceAndPreviousDrift": false,
-    "actualNativeBrowserCancelAndAccept": true,
-    "keyboardToolLimitationRetained": true,
-    "osFolderPickerBrowserAcceptance": false,
-    "sourceExtractedFolderGuard": true,
-    "checklistV2SyntheticOnly": {
-      "tests": 6,
-      "pass": 6,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "realChecklistNotChanged": true,
-    "sourceOnlyProposalNotInstalled": true,
+    "realInstalledEvidenceAccepted": true,
+    "liveBoundInputsChecked": 1721,
+    "itemEvidenceReferences": 264,
+    "items": 71,
+    "optional": 8,
+    "statusesChanged": false,
+    "inheritedCandidateEvidenceNotRerun": true,
+    "canonicalChecklistChanged": false,
+    "canonicalGeneratorChanged": false,
     "ownerPreviewChanged": false,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
