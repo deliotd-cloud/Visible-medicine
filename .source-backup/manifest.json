@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T20:49:01.667Z",
+  "at": "2026-10-22T20:58:44.431Z",
   "sourceIdentity": {
-    "parentAcceptedSourceSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
-    "pendingUiSourceSha256": "83ca32a88ab937bcf121908f5b39579ed2b7aaf40c7112e0d7abc08f7dabee14",
-    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "reviewBindingPending": true
+    "parentSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
+    "overlayBefore": "60a15827ff4e534d7ce5c534ad14a67dad64dc6d152dea90ae136a7ca6ad92a6",
+    "overlayAfter": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
   },
-  "parent": "7beda7a636a225836499615849d79f2a28efd605",
-  "gitParent": "7beda7a636a225836499615849d79f2a28efd605",
+  "parent": "c3e65a1c8d8e22db1ef60e9223167f1e3e1c1fc5",
+  "gitParent": "c3e65a1c8d8e22db1ef60e9223167f1e3e1c1fc5",
   "files": [
     {
       "path": "app/globals.css",
@@ -11876,6 +11875,26 @@
       "sha256": "087db70291173eca0d547f827e4c49520d767f57a16010ff7fe11e41ec2b93fb"
     },
     {
+      "path": "pending/arterial-current-role-followup-20261022/arterial-history-preservation.before.mjs.raw",
+      "bytes": 6059,
+      "sha256": "60a15827ff4e534d7ce5c534ad14a67dad64dc6d152dea90ae136a7ca6ad92a6"
+    },
+    {
+      "path": "pending/arterial-current-role-followup-20261022/coordination/checkpoint-arterial-current-role-followup-20261022.mjs",
+      "bytes": 8369,
+      "sha256": "f4c94380f9d4e1b3ca90bd8317862f4b45fde2d1b3f74d1b8cb3270cae379365"
+    },
+    {
+      "path": "pending/arterial-current-role-followup-20261022/coordination/prepare-arterial-current-role-followup-20261022.mjs",
+      "bytes": 6411,
+      "sha256": "3f639c0c97e04d3a84ad0e6b55a2eff93b1c434922ca40441d8984c8dc26b4a9"
+    },
+    {
+      "path": "pending/arterial-current-role-followup-20261022/website/tests/arterial-history-preservation.test.mjs",
+      "bytes": 7772,
+      "sha256": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
+    },
+    {
       "path": "pending/body-learning-20261021/atlas/app/atlas-learning-selection-channel.tsx",
       "bytes": 3181,
       "sha256": "6fd3995d1f6a531365b0d15aa3715e2cd4b70fa8d42f6e21aa5f84b834a199ec"
@@ -23282,27 +23301,26 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus staged CT/MRI practice review commit-lifecycle control repair and tests, complete original code preimages and source-only coordinators. Actual new9-case lifecycle and eight-root64-case focused checks pass, but the UI draft is not rebound, built, browser-accepted, installed or publicly deployed. The separate stock complete suite stays on the unchanged accepted6426-source candidate. No clinical, score, mask, image, access or rights change. Generated JSON/Review/pins/tracking, full private records/references/archive, held assets, binary models/scans/fonts/runtime, raw native logs and canonical Git ancestry remain local. Source-only, not full/private/runnable recovery.",
+  "scope": "Inherited filtered source plus one pending arterial historical source-role test repair, its complete original code preimage and coordinators. Original closed6d7/190/485/87/pre-MRA theorem remains byte-exact after inverting only the current native-source scalar. Three native checks pass in an exact contained metadata/source-text fixture, not in the physical whole website. The current complete1178-entry gate remains frozen and separately running; its partial failure62 is retained. No app, source geometry, licence, source data, Review binding, score, access or approval change. Native metadata fixtures, generated JSON/Review/pins/tracking, binary models/scans/media/fonts/runtime, raw logs, private records/references/archive and canonical Git ancestry stay local. Source-only, not full/private/runnable backup.",
   "proof": {
-    "focusedNative": {
-      "tests": 64,
-      "pass": 64,
+    "native": {
+      "tests": 3,
+      "pass": 3,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "focusedRoots": 8,
-    "originalTestBodiesUnchanged": 3,
-    "allVisibleMarkupUnchanged": true,
-    "initialProposalReplayPassed": true,
-    "mainThreeAdditionalFailuresPreserved": true,
-    "reviewBindingPending": true,
-    "fullTypesBuildBrowserPending": true,
+    "fixtureOnly": true,
+    "wholeOriginalSourceInversePassed": true,
+    "originalClosedHashesUnchanged": true,
+    "foreignSourceScalarAndAssertionEditsRefused": true,
+    "physicalCandidateAcceptance": false,
     "wholeSuitePassing": false,
     "ownerPreviewChanged": false,
     "canonicalInstalled": false,
     "clinicalApproval": false,
+    "spatialRegistration": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,
