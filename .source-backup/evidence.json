@@ -1,15 +1,27 @@
 {
-  "workerSourceCheck": {
-    "sourceRefusals": 84,
-    "tourRefusals": 111,
-    "mainReviewedSourceAndEvidence": true
+  "renalTypesAndProductionBuild": true,
+  "renalPlayerTests": 75,
+  "renalReviewPacketsChanged": 5,
+  "otherReviewPacketsUnchanged": 1099,
+  "teachingPlacementsUnchanged": 9936,
+  "websiteTestOnlyChanges": 13,
+  "focusedNative": {
+    "tests": 77,
+    "pass": 77,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
   },
-  "mainRegistrationTestNotYetRun": true,
-  "typesAndProductionBuildNotYetRunForThisAtlasDelta": true,
-  "website147RootJobLiveAtStart": true,
+  "allNonTestWebsiteBytesUnchanged": true,
+  "widerPredecessor": {
+    "tests": 751,
+    "pass": 713,
+    "fail": 38
+  },
   "wholeSuitePassing": false,
-  "ownerPreviewChanged": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
+  "ownerPreviewChanged": false,
   "publicDeployment": false
 }

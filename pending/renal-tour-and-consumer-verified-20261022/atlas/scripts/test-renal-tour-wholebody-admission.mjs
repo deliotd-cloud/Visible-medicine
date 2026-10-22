@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const baseline='389bd0ca846a42c7f21055f55904bcf5df81a09f';
+const sha=b=>createHash('sha256').update(b).digest('hex');
+const prior=p=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:8e6,windowsHide:true});
+const old=prior('scripts/test-whole-body-guided-learning.mjs');
+assert.equal(sha(old),'9fda702b98b80a8eceb4c5a3839dc3e0e9e19d80f3a4c95105512875d0166871');
+// The authenticated Git object is LF. This Windows checkout is its exact CRLF
+// representation (previously measured a6cb...), not a different source epoch.
+const crlf=b=>Buffer.from(b.toString().replaceAll('\n','\r\n'));
+assert.equal(sha(crlf(old)),'a6cb11bd0397b181a1f5ba27fd4317f73b9136487909cb4748e627d27cc91101');
+const exactText=(actual,expected,message)=>assert(actual.equals(expected)||actual.equals(crlf(expected)),message);
+const from="assert.equal(player().key,'renal-organs-arteries-orientation:renal-organs-arteries-orientation-v1');";
+const to="assert.equal(player().key,'renal-organs-arteries-orientation:renal-organs-arteries-orientation-20261022-source-bound-draft');";
+const now=readFileSync('scripts/test-whole-body-guided-learning.mjs');
+assert.equal(old.toString().split(from).length,2);assert.equal(now.toString().split(to).length,2);
+exactText(now,Buffer.from(old.toString().replace(from,to)),'All other navigation, picker, disclosure, source, autoplay and scope assertions survive.');
+exactText(Buffer.from(now.toString().replace(to,from)),old,'Complete original test inverse in one of the two exact checkout representations.');
+const before=prior('lib/regional-tours.ts'),current=readFileSync('lib/regional-tours.ts');
+assert.equal(sha(before),'88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97');
+const oldImport="import { renalTour } from './renal-tour';",newImport="import { renalTour,renalTourMatches } from './renal-tour';";
+const signature='export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):BodyStructure[] {';
+const guard="\n  if(tour.id===renalTour.id&&!renalTourMatches(catalog,tour))\n    throw Error('The renal guided tour does not match the available anatomy source.');";
+assert.equal(before.toString().split(oldImport).length,2);assert.equal(before.toString().split(signature).length,2);
+const expected=Buffer.from(before.toString().replace(oldImport,newImport).replace(signature,signature+guard));
+exactText(current,expected,'Every other tour and registry assertion is byte-exact.');
+for(const mutate of [s=>s.replace(guard,''),s=>s.replace('!renalTourMatches','renalTourMatches'),s=>s+'\n// unreviewed append\n'])assert.throws(()=>exactText(Buffer.from(mutate(expected.toString())),expected,'Source mutation refused.'));
+console.log(JSON.stringify({baseline,wholebodyTestChanges:1,registryChanges:2,allOtherOriginalBytesRetained:true,clinicalApproval:false}));

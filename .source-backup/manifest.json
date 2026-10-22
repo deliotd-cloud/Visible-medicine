@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T13:55:09.298Z",
+  "at": "2026-10-22T14:42:52.149Z",
   "sourceIdentity": {
-    "verifiedWebsiteReceiptSha256": "67b0f4f7716d062aaa2269c22b759436c3b62e2082248d4a447197d28a3643ed",
-    "atlasBaseline": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
-    "atlasUncommittedDeltaSha256": "0bb75302ed05bac2d7a7b199ad40875130b3b6865f865bb991227b130999828d",
+    "atlas": "4f20ae0b62b9e0dab5936b430575a983dcdd934e",
+    "atlasTree": "64f085e1f8b63b5f17daf8b107efcbe40bb7596c",
+    "websiteSourceReceiptSha256": "be8b13e91cb8dfeb8b420b91710437248c18ebe9232e6859a6fe54778b6a8079",
     "review": "811baffeb0cfa83626ea4f00383d0ed04fe6980716415d2f919151078cdad9b5"
   },
-  "parent": "3a208a6cd3abdda83238545b4361c1449b09846a",
-  "gitParent": "3a208a6cd3abdda83238545b4361c1449b09846a",
+  "parent": "1614f7a84aaee1ffc45c95300680ea63809b609c",
+  "gitParent": "1614f7a84aaee1ffc45c95300680ea63809b609c",
   "files": [
     {
       "path": "app/globals.css",
@@ -19356,6 +19356,226 @@
       "sha256": "b70d0b2e8409859d37c7d216ac91bf890a1a5dff645520f0ef4be120a4c274ef"
     },
     {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/atlas/lib/regional-tours.ts",
+      "bytes": 45186,
+      "sha256": "6925988200cc938d0db3c45f1dc8e0c75749dc56b84cbc50fe9f99392d4cca0b"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/atlas/lib/renal-tour.ts",
+      "bytes": 4873,
+      "sha256": "095d8004799abc9afcdfecc0c22df0b3bd38d49cd7671d7f77c1866c54614bfb"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/atlas/scripts/pin-renal-tour.mjs",
+      "bytes": 3282,
+      "sha256": "79caaf2abed4ed41319a8a7311711b08cf7dedc4bc2639db3a5caeb1dcb837ca"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/atlas/scripts/test-renal-tour-registration.mjs",
+      "bytes": 5205,
+      "sha256": "d679ad832e3c75f3a80889bf630043a9657cf24c00b90395369cee00840978a9"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/atlas/scripts/test-renal-tour-source.mjs",
+      "bytes": 5941,
+      "sha256": "236357c756192c4d2a9778d29ecce8aa300dbb25d92af2121285ff75361b23bc"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/atlas/scripts/test-renal-tour-wholebody-admission.mjs",
+      "bytes": 2979,
+      "sha256": "4bd435de7b607a97617e508b7ecb8ad78824902716d5c9e5cb63ffa790aa545b"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/atlas/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 32901,
+      "sha256": "71d0663cae46850cfacbbcb3e5cf80e69f62613b78a5b0140b681a01c5859485"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/build-renal-tour-runtime-20261022.mjs",
+      "bytes": 5163,
+      "sha256": "d39242d425589c9548bc252c75eb3e367934cb7b511a40dbcbb5256552c6863e"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/checkpoint-renal-tour-and-consumer-20261022.mjs",
+      "bytes": 11597,
+      "sha256": "694658bd104d878fc228861a872f767b3584d66fbdb594950e1ec0a750864293"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/freeze-renal-tour-source-20261022.mjs",
+      "bytes": 4623,
+      "sha256": "67428f3804031244761e612a0c2537f3e2fdcf27b40f39a82c9eac32c21b625e"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/inventory-renal-predecessor-failures-20261022.mjs",
+      "bytes": 2473,
+      "sha256": "f35303e754241d496fdf0fa574a5d44b5347094dd0afd9c97f51c02ae7780999"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/prepare-current-consumer-assurance-20261022.mjs",
+      "bytes": 4427,
+      "sha256": "1ea24883092390c44497f764cbd8da2afdf36415d875a26fc8272f81512325e7"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/prepare-spinal-shoulder-history-20261022.mjs",
+      "bytes": 2865,
+      "sha256": "51060cb7f273b26d900ab7d4aa3ca7fb67eb205643affd77b3dbc363b326ff13"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/prepare-surface-spinal-consumer-20261022.mjs",
+      "bytes": 3219,
+      "sha256": "4731843ae891595348e8b55b6d6e9fd32f27a4d5a1b8a4c0b3c4c7ac45fab56f"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/verify-renal-tour-final-20261022.mjs",
+      "bytes": 4089,
+      "sha256": "aebd1c7035d127e510e917c8034a5c24efd320eaf926e564072e024fb0c19bb3"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/coordination/verify-renal-tour-source-20261022.mjs",
+      "bytes": 6199,
+      "sha256": "a325255a03ebf419d146b4adf0925719388973601b14922e2ee49a2c53536645"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/first-proposal/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 10418,
+      "sha256": "aa4545664dad3fee9885c34952856f8ef40c6c26f365814a921ca942d5b193e2"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/first-proposal/tests/four-consumer-source-inverse.mjs",
+      "bytes": 3560,
+      "sha256": "da848109b8a5fc4aa59445d3c9bafa9125272241d43984e030427ffa9c4d7d92"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/proofs/20261022-four-consumer-source-followup/verify-source.mjs",
+      "bytes": 8188,
+      "sha256": "d4007d823970aaff845f2910568699c58cae40d52839c485f5eba3e07956fb90"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/proofs/20261022-spinal-neck-row-followup/verify-source.mjs",
+      "bytes": 2670,
+      "sha256": "20600d1303e77c49c7a5e7ca659a342b3586c41a603c6fb3d0841f6088699e04"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/proofs/20261022-two-teaching-consumer-followup/prove-source-only.mjs",
+      "bytes": 5818,
+      "sha256": "324cd3a7567c5371497600663aa5588281335a34998322d02bce6bf75ce339b5"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 94147,
+      "sha256": "1db458f7edd9a9a1de40b50fe886cf277a3fb560f2bc629260388d81785b65ce"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 8306,
+      "sha256": "b198b7505c9ac9bc826d2a952ac4fcad8760dbdc250d0a488a8c09a0526b9ad3"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 25494,
+      "sha256": "d03860ddeaac152fd082530c5661b79076279508a0f67cb308d3cb9de81ebb09"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 9402,
+      "sha256": "569a15c2566b982410be68f9c221f38662518289e9d2b190cf39caf5016ac9e8"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 9625,
+      "sha256": "2c8c34f331fa4789a60dc087e9eae67f482285ef80f81a68b9c1bd19bb86a3dc"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 7415,
+      "sha256": "44a61494ef1a2bf577b6aed4937d7d99dc855a0eb4e1eda6445393696010461f"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 16602,
+      "sha256": "e6e0bf4d9fb2255a971c645a48838c98ab124669ef392956793b6265acdf01d0"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 6493,
+      "sha256": "189e900c45910ac63e2227098c0e4187eb69c9854018c893fc172ddaf32639c9"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 6048,
+      "sha256": "d584c8009299dda86dfd2abf9c5d938cffab63154c19910d79da042bcfc69539"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/RAW/website/tests/spinal-current-source-inverse.mjs",
+      "bytes": 13853,
+      "sha256": "b990ba4dc4b03a95dfa8cb0f62a84dc17cc5daf903a72753b8605e3657d3e71d"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 100785,
+      "sha256": "887c9e268da834c19d3774faa9ba8f44ac6d95cf7fdc47c4d01cc38fc6937308"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/atlas190-current-delivery.test.mjs",
+      "bytes": 8502,
+      "sha256": "2fd1d412272c940c014b12dc5ecef7483f7bee19fe3c3e60e584284e1ad12733"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/clinical-review-median-cubital-xray.test.ts",
+      "bytes": 27344,
+      "sha256": "2849d62d65fe498c4378b9705abf8934138dfe5274283c715550182721ed74f4"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "bytes": 10934,
+      "sha256": "2a8564df32041f38ab8f22f368491b04b284abb28f9b5eb442c5942a0450a098"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 11173,
+      "sha256": "cfcaa8e253a9699aba33383c13c43d718ad17aa62534583ed9ba31208fcdd567"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 8089,
+      "sha256": "cd62ac7ad157eb93c5fb225f585569c599dae5cd0eee9ddff6cef6e022d7a192"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 16982,
+      "sha256": "e59a4aa67d69c6c9cb77dc35ee683b5d68a4cbba8a56c512bb28d74e91319c07"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 8200,
+      "sha256": "bf0374b9a54789d6a8c50df44050350b274fb53d111acd2c47ee5b2d5b5fe6c5"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/four-consumer-source-inverse.mjs",
+      "bytes": 5461,
+      "sha256": "ecc4f96cfa0c495ea2fe45519774ccc90a5b4bf66efce2834917431991efca38"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 6700,
+      "sha256": "46e360890cabd5e44ef89bb5aa4c3c8fd5a0a809832a275de966a0372bff4355"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/spinal-current-source-inverse.mjs",
+      "bytes": 38461,
+      "sha256": "cd59ab680f8bbbccfe4b4d8a7b512493388329af3086d1397427b34ea41b7e4b"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/surface-binder-history-inverse.mjs",
+      "bytes": 2197,
+      "sha256": "fcf9e92f383d478d565275312839c493236d167bc88371ce2a22d8c914149bc0"
+    },
+    {
+      "path": "pending/renal-tour-and-consumer-verified-20261022/website/tests/teaching-consumer-source-inverse.mjs",
+      "bytes": 11009,
+      "sha256": "c458586d1a840956920fe60d0f093c620a3a68b1cba7ec21f81cd1a69ed7d1c7"
+    },
+    {
       "path": "pending/renal-tour-source-20261022/atlas/lib/regional-tours.ts",
       "bytes": 45186,
       "sha256": "6925988200cc938d0db3c45f1dc8e0c75749dc56b84cbc50fe9f99392d4cca0b"
@@ -20947,20 +21167,32 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus incomplete isolated renal-tour exact-source guard, pin generator, additive source/registration tests and original code preimages. Generated pin JSON and Review metadata, compiled runtime/viewer, private records/DB/env/decisions/references, held assets, scans/models/masks and raw logs/media remain local. Not a complete, integrated, runnable or private backup; no installation/deployment.",
+  "scope": "Inherited filtered source plus verified renal-tour source guard, additive tests, exact historical consumer repairs and code preimages. Generated pin/Review metadata, compiled runtime/viewer, private records/DB/env/references/decisions, held assets, scans/models/masks, raw logs/media and canonical ancestry remain local. Not full, private or runnable recovery. No installation or deployment.",
   "proof": {
-    "workerSourceCheck": {
-      "sourceRefusals": 84,
-      "tourRefusals": 111,
-      "mainReviewedSourceAndEvidence": true
+    "renalTypesAndProductionBuild": true,
+    "renalPlayerTests": 75,
+    "renalReviewPacketsChanged": 5,
+    "otherReviewPacketsUnchanged": 1099,
+    "teachingPlacementsUnchanged": 9936,
+    "websiteTestOnlyChanges": 13,
+    "focusedNative": {
+      "tests": 77,
+      "pass": 77,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
-    "mainRegistrationTestNotYetRun": true,
-    "typesAndProductionBuildNotYetRunForThisAtlasDelta": true,
-    "website147RootJobLiveAtStart": true,
+    "allNonTestWebsiteBytesUnchanged": true,
+    "widerPredecessor": {
+      "tests": 751,
+      "pass": 713,
+      "fail": 38
+    },
     "wholeSuitePassing": false,
-    "ownerPreviewChanged": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
+    "ownerPreviewChanged": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,
