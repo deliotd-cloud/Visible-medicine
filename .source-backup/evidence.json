@@ -1,34 +1,34 @@
 {
-  "native": {
-    "tests": 138,
-    "pass": 138,
+  "websiteNative": {
+    "tests": 141,
+    "pass": 141,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "websiteTypesAndProductionBuild": true,
-  "atlasTypesAndProductionBuild": true,
+  "atlasTraversalTests": {
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "existingAtlasReviewSuite": true,
+  "atlasAndWebsiteTypesAndBuild": true,
   "stockImportChecks": 10,
-  "specimenHarness": {
-    "allSixOriginalTestsPass": true,
-    "originalFailureRetained": true,
-    "noProductionChange": true
+  "committedLayoutEffectAndFullInverse": true,
+  "nativeBrowserNavigationApiSyntheticCases": 5,
+  "fullAuthenticatedWorksheetBrowserAcceptance": false,
+  "previousHeadNativeQa": {
+    "source": "ea70b126efc1b9a4e9c9b576587f922650145e53",
+    "ctAndMriSignInPath": true,
+    "authenticatedModelSuccess": false,
+    "sourceNotSilentlyReattributed": true
   },
-  "historicalNative": {
-    "tests": 88,
-    "pass": 88,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "consumerTypeFailureRetained": true,
-  "allOriginalAssertionInversesRetained": true,
-  "modelAndCoverageUnchanged": true,
-  "advisoryProtocolOnly": true,
-  "independentAccessUnchanged": true,
-  "newHostBrowserAcceptance": false,
+  "modelsAndCoverageUnchanged": true,
+  "coordinatorPreflightFailurePreserved": true,
   "ownerPreviewChanged": false,
   "full71AndEightIdeasPreserved": true,
   "wholeSuitePassing": false,

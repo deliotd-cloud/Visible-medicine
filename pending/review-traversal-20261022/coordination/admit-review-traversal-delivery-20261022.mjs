@@ -1,0 +1,22 @@
+// Current-source roles move explicitly; old contracts remain immutable witnesses.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-review-traversal-candidate',state=json(root+'/SOURCE_IMPORT.json'),site=state.website,prep=json(root+'/WEBSITE_PREPARED.json'),previous=json(prep.sourceReceipt),prior=previous.website;
+assert.equal(state.code,0);assert.equal(state.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');assert.equal(state.boundInputs,1729);assert.equal(state.importedSources,1562);assert(!fs.existsSync(root+'/DELIVERY_ADMISSION.json'));
+assert.equal(sha(read(prep.sourceReceipt)),prep.sourceReceiptSha256);
+const beforeTest=read(prior+'/tests/current-atlas-delivery.test.mjs'),beforePin=read(prior+'/tests/fixtures/current-atlas-delivery.json');
+for(const[p,b]of [['tests/current-atlas-delivery.test.mjs',beforeTest],['tests/fixtures/current-atlas-delivery.json',beforePin]])assert.equal(sha(b),previous.sourceRows.find(r=>r.path===p).sha256);
+assert.deepEqual(read(site+'/tests/current-atlas-delivery.test.mjs'),beforeTest);assert.deepEqual(read(site+'/tests/current-atlas-delivery.mjs'),read(prior+'/tests/current-atlas-delivery.mjs'));
+const seams=[[previous.atlasHead,state.source,2],[previous.atlasTree,state.tree,1],['assert.equal(sourceFiles,1561);assert.equal(inputs,1728);','assert.equal(sourceFiles,1562);assert.equal(inputs,1729);',1]];
+let next=beforeTest.toString();for(const[from,to,count]of seams){assert.equal(next.split(from).length,count+1);next=next.replaceAll(from,to);}let inverse=next;for(const[from,to]of [...seams].reverse())inverse=inverse.replaceAll(to,from);assert.equal(inverse,beforeTest.toString());
+const testFixture='tests/fixtures/current-atlas-delivery-before-review-traversal-20261022.mjs.raw',pinFixture='tests/fixtures/current-atlas-delivery-before-review-traversal-20261022.json';
+for(const[p,b]of [[testFixture,beforeTest],[pinFixture,beforePin]]){assert(!fs.existsSync(site+'/'+p));fs.writeFileSync(site+'/'+p,b,{flag:'wx'});}fs.writeFileSync(site+'/tests/current-atlas-delivery.test.mjs',next);
+const integrationPath='tests/head-model-access-integration.test.mjs',integrationBefore=read(site+'/'+integrationPath);assert.equal(sha(integrationBefore),previous.sourceRows.find(r=>r.path===integrationPath).sha256);
+const integrationSeams=[[previous.atlasHead,state.source],[previous.atlasTree,state.tree],[previous.review,state.review]];let integrationNext=integrationBefore.toString();for(const[from,to]of integrationSeams){assert.equal(integrationNext.split(from).length,2);integrationNext=integrationNext.replace(from,to);}
+let integrationInverse=integrationNext;for(const[from,to]of [...integrationSeams].reverse())integrationInverse=integrationInverse.replace(to,from);assert.equal(integrationInverse,integrationBefore.toString());
+fs.copyFileSync(site+'/'+integrationPath,root+'/head-access-integration-before-review-traversal.mjs',fs.constants.COPYFILE_EXCL);fs.writeFileSync(site+'/'+integrationPath,integrationNext);
+const missing=previous.sourceRows.filter(r=>!fs.existsSync(site+'/'+r.path));for(const row of missing){assert(/^public\/atlas-review-viewer\/assets\/[A-Za-z0-9_-]+\.(?:js|css)$/.test(row.path),row.path);assert.equal(sha(read(prior+'/'+row.path)),row.sha256);fs.mkdirSync(path.dirname(site+'/'+row.path),{recursive:true});fs.copyFileSync(prior+'/'+row.path,site+'/'+row.path,fs.constants.COPYFILE_EXCL);assert.equal(sha(read(site+'/'+row.path)),row.sha256);}
+const result={at:new Date().toISOString(),source:state.source,tree:state.tree,review:state.review,seams,integrationSeams,testFixture,pinFixture,originalTestSha256:sha(beforeTest),originalPinSha256:sha(beforePin),originalIntegrationSha256:sha(integrationBefore),currentTestSha256:sha(read(site+'/tests/current-atlas-delivery.test.mjs')),restoredCompatibilityAssets:missing,allOldAssertionsPreserved:true,validatorChanged:false,ownerPreviewChanged:false,canonicalInstalled:false,clinicalApproval:false,publicDeployment:false};
+fs.writeFileSync(root+'/DELIVERY_ADMISSION.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({receipt:root+'/DELIVERY_ADMISSION.json',sha256:sha(read(root+'/DELIVERY_ADMISSION.json')),source:state.source,review:state.review,restoredCompatibilityAssets:missing.length}));

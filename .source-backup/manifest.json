@@ -1,16 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T16:23:37.762Z",
+  "at": "2026-10-22T16:52:30.076Z",
   "sourceIdentity": {
-    "atlas": "ea70b126efc1b9a4e9c9b576587f922650145e53",
-    "tree": "fa9633f09261d27efe3f90414524c86c7681bb59",
-    "review": "81089b676a14b13a461f465361858ccdbbaa5734bdc6cefc193e055c46196d00",
-    "websiteSourceReceiptSha256": "f56d329c5092b59237256be431c61294a797ba272c84047b04bdaa69257012f8",
-    "separateHistoricalAtlas": "389bd0ca846a42c7f21055f55904bcf5df81a09f",
-    "separateHistoricalReview": "811baffeb0cfa83626ea4f00383d0ed04fe6980716415d2f919151078cdad9b5"
+    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+    "tree": "db21ed3dee259c390878450b3495468996a3af85",
+    "review": "c0f6629f7796c7238f0773bc7527b6c44896c6be5e7b6e1eede7f1ca913a93d0",
+    "sourceReceiptSha256": "3f7352fce82f43d5cb28a4adba54905302bd93e0613681515c7c6158413814a7"
   },
-  "parent": "e724be1dce2e8b29fa7c3d75203c34684ac502c0",
-  "gitParent": "e724be1dce2e8b29fa7c3d75203c34684ac502c0",
+  "parent": "849f9b3beeecad95dcd5002ff13fbff1e746f373",
+  "gitParent": "849f9b3beeecad95dcd5002ff13fbff1e746f373",
   "files": [
     {
       "path": "app/globals.css",
@@ -20633,6 +20631,186 @@
       "sha256": "f38d862f1590fdc4c8df18ff86313b5f964b6df0f1257777df05aa4d5a3679fa"
     },
     {
+      "path": "pending/review-traversal-20261022/atlas-preimages/app/review/review-dashboard.tsx",
+      "bytes": 45734,
+      "sha256": "ca4c944381926d212d4d1d8ad1bdb77994c0f98dd9c97912a3981aa9ba8fb513"
+    },
+    {
+      "path": "pending/review-traversal-20261022/atlas/app/review/review-dashboard.tsx",
+      "bytes": 46130,
+      "sha256": "eb2200f92d4a39364f8126ba2fbd3847bfa546be27c9e0352bcf810d734bdf77"
+    },
+    {
+      "path": "pending/review-traversal-20261022/atlas/lib/review-history-navigation.ts",
+      "bytes": 1785,
+      "sha256": "2bcdfac9325784c6078616174fd4cf0832139f97ee13cb321267a9238df069da"
+    },
+    {
+      "path": "pending/review-traversal-20261022/atlas/scripts/test-review-history-navigation.mjs",
+      "bytes": 6810,
+      "sha256": "984193636ce0b8006e3e0e2a0b2c1080f03529213f98ec29013a40346d9fe9cd"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/admit-review-traversal-delivery-20261022.mjs",
+      "bytes": 4422,
+      "sha256": "9dc60b5080c407a1ee54404e1efd24da91eae54a902143542a3d0b409dd87c53"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/checkpoint-review-traversal-20261022.mjs",
+      "bytes": 13463,
+      "sha256": "059a191ee79d02def14ec3c42c938112eb9c5d1751e3796c699a70abee31374d"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/freeze-export-review-traversal-20261022.mjs",
+      "bytes": 5109,
+      "sha256": "cdbcefe21fd80d889c14fa5e8662306761adf4475b55974b137824c68a28124e"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/import-review-traversal-website-20261022.mjs",
+      "bytes": 10222,
+      "sha256": "8ef204236075651349901062eb23480a8dc22117394e541b1058b794c11e5a6c"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/launch-head-access-qa-20261022.mjs",
+      "bytes": 3391,
+      "sha256": "6c5e0f7410e23f76c756ffbce74d6e07166f88fd0ba19126ffc4e68fb3f653dc"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/launch-review-traversal-fixture-20261022.mjs",
+      "bytes": 3446,
+      "sha256": "82a1b193896afd15bf0c6e3c81701936a20409c089d2e2364901f883af77662f"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/prepare-review-traversal-candidate-20261022.mjs",
+      "bytes": 2445,
+      "sha256": "1188940a9fc0ebb9229084a9c8fa469af993ec81b629a640c886b1c0ab5032a4"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/prepare-review-traversal-website-20261022.mjs",
+      "bytes": 2550,
+      "sha256": "2684e7f9ed6bb616df95af7f88e9874d61a1ac653a9dfdf7d4c6aa6d317a30b6"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/record-head-access-native-qa-20261022.mjs",
+      "bytes": 3403,
+      "sha256": "8c544e3e8004bf7a16c2faeb24660aefc43ef79ef691956545b82fa432e6d479"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/record-review-traversal-active-20261022.mjs",
+      "bytes": 2563,
+      "sha256": "67c1a6e653541e597e7a2a72684460b95c79c934a98bb1fd370fbd3e067b22fa"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/record-review-traversal-browser-20261022.mjs",
+      "bytes": 2439,
+      "sha256": "00d2d28d30e1b4dc5f0446b6c005918601ee7e3ae43aac60ad222bb9d2963967"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/review-history-delivery-20261022.test.mjs",
+      "bytes": 3544,
+      "sha256": "65a20a525733241eb078a693fd90551421d9b15df26c9e521e6caf7afb668c0a"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/verify-review-traversal-source-20261022.mjs",
+      "bytes": 3589,
+      "sha256": "3006c5a3636e624755503f0d73737940ccdf8ab1c8a6a0f2b8e3f77c602f54d6"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordination/verify-review-traversal-website-20261022.mjs",
+      "bytes": 7874,
+      "sha256": "c6497e4b9aa4537ba1b4060d1a0775148c4cfd7daf711738c8f5d32d445da0dd"
+    },
+    {
+      "path": "pending/review-traversal-20261022/coordinator-preflight-before-fix.mjs",
+      "bytes": 5081,
+      "sha256": "21cfe4486c7f1a02361b4ee15fba5928df5ac8577726a3bb19bc196aebbce0b5"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website-preimages/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "b364d6a69f6664ec0be6eb11ad94f3c54dd9b067cc21005ecbdbddfcd527d003"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website-preimages/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "36887695b8e1bf11eb02cbb4dd6bfa7653e26d2157f3dfaf8695c8fd8e7b94a9"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website-preimages/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "8d2e9d04a86fdd3e77c228461a2501e2fe9f5ca20ffd8a11e4737b2cacc10bdf"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website-preimages/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "593156c9c160efd9d29b3baac8a71c84ac9b95adaa07d0fe9fa52bbd7b07f0fd"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website-preimages/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "7a292e8da893e28b22951aba8d1abdf51ba87bb74ae7232123db15cb73443ae6"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website-preimages/tests/head-model-access-integration.test.mjs",
+      "bytes": 8909,
+      "sha256": "1a5a5285cfede679b7a62aa8fcd21d9d0a5676011af1bf78c26215a3e63ab8f6"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "d5263a59256009aa7a8670cf6eb3f4c1c9a3d67ddbbacabaceec4f6467624fe7"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "324491be6ff901aa3617c5b58789c5e65c23993e59594d76b64ee6a56738090c"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "ad4581cdc7fcaa5a4f7a68c7322aafe097a75e786cf08c89677fd88b019717c2"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "df699b7f36f8afaa33964f98cedda561c8664c96c5a734916bd57dfcb2586137"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "7f745b24ac233d3d9fca6b80a54e5387f2dc50eafa45a372cdb615520473b8b8"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website/tests/fixtures/current-atlas-delivery-before-review-traversal-20261022.mjs.raw",
+      "bytes": 19208,
+      "sha256": "7a292e8da893e28b22951aba8d1abdf51ba87bb74ae7232123db15cb73443ae6"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website/tests/head-model-access-integration.test.mjs",
+      "bytes": 8909,
+      "sha256": "3e4148fd91b12dd7952c2551a981b5071300ec31438eef1df67c56960140f459"
+    },
+    {
+      "path": "pending/review-traversal-20261022/website/tests/review-history-delivery.test.mjs",
+      "bytes": 3544,
+      "sha256": "65a20a525733241eb078a693fd90551421d9b15df26c9e521e6caf7afb668c0a"
+    },
+    {
+      "path": "pending/review-traversal-20261022/worker-proposal/app/review/review-dashboard.tsx",
+      "bytes": 46130,
+      "sha256": "eb2200f92d4a39364f8126ba2fbd3847bfa546be27c9e0352bcf810d734bdf77"
+    },
+    {
+      "path": "pending/review-traversal-20261022/worker-proposal/lib/review-history-navigation.ts",
+      "bytes": 1760,
+      "sha256": "25d015766ad904ba5362243cf5d8fdc9022dbf1b6563fcf42bad14a6ff0a6131"
+    },
+    {
+      "path": "pending/review-traversal-20261022/worker-proposal/scripts/test-review-history-navigation.mjs",
+      "bytes": 4220,
+      "sha256": "71ca0671b8ee4b4e4b5fe34daf805fa5f917da7e724cbbdf34ae743bc0a6df96"
+    },
+    {
       "path": "pending/review-ui-assurance-20261022/CODE/review-navigation-delivery-preservation.test.mjs",
       "bytes": 3920,
       "sha256": "8e640a38c213608bde64fe2e1835e38364728d13d595e18bdff9c9b9e09145cb"
@@ -21914,38 +22092,38 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus advisory sign-in/access-denied model-comparison recovery, exact-source publisher/parser/UI tests and historical disclosure/history contract repairs. Generated JSON, bindings/pins/coverage, compiled runtime/viewer, private records/DB/env/decisions/references, held assets, scans/models/masks, raw logs/media and canonical ancestry stay local. This is scoped source-only recovery, not a whole/private/runnable backup, deployment or installed update.",
+  "scope": "Inherited filtered source plus committed shoulder worksheet history safeguard, full preceding-source inverse, real imported Review binding checks and synthetic-only browser harness. Original click/unload/approval/autosave logic stays exact. Generated JSON/bindings/pins/coverage, compiled runtime/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, raw logs/media and canonical ancestry stay local. Scoped source-only recovery, not full/private/runnable backup or installed/public deployment.",
   "proof": {
-    "native": {
-      "tests": 138,
-      "pass": 138,
+    "websiteNative": {
+      "tests": 141,
+      "pass": 141,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "websiteTypesAndProductionBuild": true,
-    "atlasTypesAndProductionBuild": true,
+    "atlasTraversalTests": {
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "existingAtlasReviewSuite": true,
+    "atlasAndWebsiteTypesAndBuild": true,
     "stockImportChecks": 10,
-    "specimenHarness": {
-      "allSixOriginalTestsPass": true,
-      "originalFailureRetained": true,
-      "noProductionChange": true
+    "committedLayoutEffectAndFullInverse": true,
+    "nativeBrowserNavigationApiSyntheticCases": 5,
+    "fullAuthenticatedWorksheetBrowserAcceptance": false,
+    "previousHeadNativeQa": {
+      "source": "ea70b126efc1b9a4e9c9b576587f922650145e53",
+      "ctAndMriSignInPath": true,
+      "authenticatedModelSuccess": false,
+      "sourceNotSilentlyReattributed": true
     },
-    "historicalNative": {
-      "tests": 88,
-      "pass": 88,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "consumerTypeFailureRetained": true,
-    "allOriginalAssertionInversesRetained": true,
-    "modelAndCoverageUnchanged": true,
-    "advisoryProtocolOnly": true,
-    "independentAccessUnchanged": true,
-    "newHostBrowserAcceptance": false,
+    "modelsAndCoverageUnchanged": true,
+    "coordinatorPreflightFailurePreserved": true,
     "ownerPreviewChanged": false,
     "full71AndEightIdeasPreserved": true,
     "wholeSuitePassing": false,
