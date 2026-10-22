@@ -1,24 +1,20 @@
 {
-  "nativeCounts": {
-    "tests": 364,
-    "pass": 363,
-    "fail": 1,
+  "native": {
+    "tests": 368,
+    "pass": 368,
+    "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "nativeAllPassing": false,
-  "retainedPreexistingFailure": [
-    "all nine consumer roots preserve their canonical original bytes under exact additive inverses"
-  ],
-  "baselineFailureIndependentlyReproduced": true,
-  "typesAndBuildPassed": true,
-  "stockChecks": 6,
-  "fontAndLicenceUnchanged": true,
-  "sourceScopedBrowserQA": true,
-  "authenticationChanged": false,
-  "ownerPreviewChanged": false,
+  "roots": 31,
+  "allPrevious28RootsRetained": true,
+  "actualGuidedAndLiveAccessTestsIncluded": true,
+  "fullOriginalAssertionInverse": true,
   "wholeSuitePassing": false,
+  "productChanged": false,
+  "unchangedProductTypesAndBuildWitness": true,
+  "ownerPreviewChanged": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
   "publicDeployment": false

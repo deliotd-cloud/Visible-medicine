@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T17:21:22.027Z",
+  "at": "2026-10-22T17:28:07.261Z",
   "sourceIdentity": {
     "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
     "tree": "db21ed3dee259c390878450b3495468996a3af85",
     "review": "00127dcb4cc51240a574b99e34f8166fd446c4e07e335ca4c236484535131536",
-    "sourceReceiptSha256": "3a14500818312829ee203587b981bd3c0ab97cf561de0d5ad8c0814d3d90ca45"
+    "sourceReceiptSha256": "a1760b86254e9eaa8053f25867ee133eb9f442bfb1c6d3af19d68a365ac01c5a"
   },
-  "parent": "3b1344418f735164c5b821057b56347c78e80622",
-  "gitParent": "3b1344418f735164c5b821057b56347c78e80622",
+  "parent": "bde2c8fcc5661e1fe0bc8048368410b842d85fc7",
+  "gitParent": "bde2c8fcc5661e1fe0bc8048368410b842d85fc7",
   "files": [
     {
       "path": "app/globals.css",
@@ -15431,6 +15431,46 @@
       "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
     },
     {
+      "path": "pending/guided-access-assurance-20261022/coordination/checkpoint-guided-access-assurance-20261022.mjs",
+      "bytes": 9179,
+      "sha256": "7e237b28e7f5c522bdf6669fa588ebd039aae9667f6871225586471a066288fd"
+    },
+    {
+      "path": "pending/guided-access-assurance-20261022/coordination/prepare-guided-access-assurance-20261022.mjs",
+      "bytes": 4236,
+      "sha256": "4550d904c0e2daaa5732f498eb1f7a231af0044575a9fb66b018f94a0ba1fac4"
+    },
+    {
+      "path": "pending/guided-access-assurance-20261022/coordination/verify-guided-access-assurance-20261022.mjs",
+      "bytes": 3646,
+      "sha256": "be449a116c2be54df9452fafc366b130052ebfedce24ffa8152ebe9445a05ed2"
+    },
+    {
+      "path": "pending/guided-access-assurance-20261022/website-preimages/tests/live-learning-consumer-loader-preservation.test.mjs",
+      "bytes": 6712,
+      "sha256": "26175790b1637fa54b7f01a3d11a7bf86356e4982f6973db61cf8babfced18d6"
+    },
+    {
+      "path": "pending/guided-access-assurance-20261022/website/tests/fixtures/live-learning-access-before/live-learning-consumer-loader-preservation.test.mjs.raw",
+      "bytes": 6712,
+      "sha256": "26175790b1637fa54b7f01a3d11a7bf86356e4982f6973db61cf8babfced18d6"
+    },
+    {
+      "path": "pending/guided-access-assurance-20261022/website/tests/live-learning-consumer-access-later-inverse.mjs",
+      "bytes": 3422,
+      "sha256": "3217386afe3cb49c9efe5d46e4f103585f33ebcf962eaa9833fbc4e8e7702a4e"
+    },
+    {
+      "path": "pending/guided-access-assurance-20261022/website/tests/live-learning-consumer-access-preservation.test.mjs",
+      "bytes": 3391,
+      "sha256": "2206428af7053c006b1bfa030dec5ed3c0bcd970893e0011cfdbcc2a78e00263"
+    },
+    {
+      "path": "pending/guided-access-assurance-20261022/website/tests/live-learning-consumer-loader-preservation.test.mjs",
+      "bytes": 6847,
+      "sha256": "e83550441cc458d026bdf700f597f2444224aa0146cfc753ef5a86ea6817a783"
+    },
+    {
       "path": "pending/head-access-20261022/atlas-preimages/app/body-explorer.tsx",
       "bytes": 125813,
       "sha256": "d9df86ff0701c7405a27c391bbb534e1fdb79d841652cf82ac69e62f19b29cc7"
@@ -22277,28 +22317,24 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus two source-scope copy changes and standard self-hosted font CSS using the unchanged licensed asset. Exact full source and historical assertion inverses retained. Generated JSON/bindings/pins/coverage, compiled runtime/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries and raw logs/media remain local. Scoped source-only recovery, not whole/private/runnable backup, installation or deployment.",
+  "scope": "Inherited filtered source plus exact later access-test historical reader and complete original assertion/mutation proof. Original guided/live behavioral tests remain unchanged and execute. No product, permission, approval, current source pin or dependency changes. Generated JSON/bindings/pins/coverage, compiled runtime/viewer, private DB/env/records/decisions/references, held assets, scans/models/masks, fonts/binaries and raw logs/media remain local. Scoped source-only recovery, not whole/private/runnable backup or installation/deployment.",
   "proof": {
-    "nativeCounts": {
-      "tests": 364,
-      "pass": 363,
-      "fail": 1,
+    "native": {
+      "tests": 368,
+      "pass": 368,
+      "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "nativeAllPassing": false,
-    "retainedPreexistingFailure": [
-      "all nine consumer roots preserve their canonical original bytes under exact additive inverses"
-    ],
-    "baselineFailureIndependentlyReproduced": true,
-    "typesAndBuildPassed": true,
-    "stockChecks": 6,
-    "fontAndLicenceUnchanged": true,
-    "sourceScopedBrowserQA": true,
-    "authenticationChanged": false,
-    "ownerPreviewChanged": false,
+    "roots": 31,
+    "allPrevious28RootsRetained": true,
+    "actualGuidedAndLiveAccessTestsIncluded": true,
+    "fullOriginalAssertionInverse": true,
     "wholeSuitePassing": false,
+    "productChanged": false,
+    "unchangedProductTypesAndBuildWitness": true,
+    "ownerPreviewChanged": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false
