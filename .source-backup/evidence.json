@@ -1,18 +1,53 @@
 {
-  "sourceReviewSha256": "8fe21f7818dbdb0d258a20912bfbfb63061672d5e438faed59d57fd2bd1c665b",
-  "native": {
-    "newCurrent": 1,
-    "existingLibraryPause": 1,
-    "existingEyeAssertions": 506,
-    "existingVentricularAssertions": 201,
-    "existingSpeedCheck": true,
-    "expectedBaselineFailures": 4,
-    "countsAreNotFullSuiteTotals": true
+  "verificationSha256": "e01f297327cdd3df9828519f4702439a8da5cd9f0a0a115e1199b144fa9d3b41",
+  "guardProofSha256": "94b124dac4ff7e627337564c1d734399f5d51493db802884d37168c9877c644a",
+  "renderer": {
+    "sha256": "2e3ac138d06e52a56cca96287963459d02c13c6093a06812221b286c55f9aede",
+    "priorSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
+    "dependencies": 1492,
+    "changedInputs": [
+      {
+        "path": "app/eye-layers.tsx",
+        "sha256": "505315716203dca72e075d573e47f86d9be91d376b7bfbefc8676ecb06e6341b"
+      },
+      {
+        "path": "app/ventricles.tsx",
+        "sha256": "83ade7f6b2b75ddaf7f1378aaa8f8a25c762c3d651d4da6c0fc048a5bd781fbc"
+      },
+      {
+        "path": "app/whole-body-guided-learning.tsx",
+        "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
+      },
+      {
+        "path": "package.json",
+        "sha256": "55c8269c2a017d1454ecc2b86d6ef1bf6efffac65f3d5638a65b534686af65b8"
+      }
+    ],
+    "allDependencyBytesVerified": true
   },
-  "allPreExistingComponentBytesPreserved": true,
+  "historicalProof": {
+    "originalWholeBodyTestInverse": true,
+    "onlyTwoSignalPropsPermitted": true,
+    "foreignCodeOrSubstitutionRefused": true,
+    "oldTheoremExecuted": true,
+    "currentRegressionSeparatelyExecuted": true
+  },
+  "actualScopedReview": {
+    "passed": true,
+    "root": 1104,
+    "nested": 108,
+    "specimen": 356,
+    "geometryDisplayRevisionsChange": true,
+    "teachingAndSourcePreserved": true,
+    "imagingStillBlocked": true,
+    "privateDecisionsReadOrMigrated": false
+  },
+  "nativePassing": 83,
+  "focusedCommandRuns": 8,
+  "matchingRuntimeReviewWebsitePending": true,
+  "fullTypesBuildBrowserPending": true,
   "previewChanged": false,
   "installed": false,
   "clinicalApproval": false,
-  "wholeSuitePassing": false,
-  "fullTypesBuildBrowserPending": true
+  "wholeSuitePassing": false
 }

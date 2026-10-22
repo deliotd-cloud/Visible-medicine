@@ -1,9 +1,34 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T23:25:08.571Z",
+  "at": "2026-10-22T23:36:40.376Z",
   "sourceIdentity": {
+    "atlas": "9e1407629bd6f85061537c9f013fd72e4543e0da",
+    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
     "baseline": "7978478992f54ea68e0f53c3d195c459c7b80068",
-    "baselineTree": "17cc5a564348832c268dac9b6d713f48b6b7f530",
+    "renderer": {
+      "sha256": "2e3ac138d06e52a56cca96287963459d02c13c6093a06812221b286c55f9aede",
+      "priorSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
+      "dependencies": 1492,
+      "changedInputs": [
+        {
+          "path": "app/eye-layers.tsx",
+          "sha256": "505315716203dca72e075d573e47f86d9be91d376b7bfbefc8676ecb06e6341b"
+        },
+        {
+          "path": "app/ventricles.tsx",
+          "sha256": "83ade7f6b2b75ddaf7f1378aaa8f8a25c762c3d651d4da6c0fc048a5bd781fbc"
+        },
+        {
+          "path": "app/whole-body-guided-learning.tsx",
+          "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
+        },
+        {
+          "path": "package.json",
+          "sha256": "55c8269c2a017d1454ecc2b86d6ef1bf6efffac65f3d5638a65b534686af65b8"
+        }
+      ],
+      "allDependencyBytesVerified": true
+    },
     "sourceRows": [
       {
         "path": "app/eye-layers.tsx",
@@ -21,14 +46,29 @@
         "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
       },
       {
+        "path": "content/body-renderer-revision.json",
+        "bytes": 216695,
+        "sha256": "d2e33ed510664f3be369cc3aa322c0ac7c18f2d2832f38bcea24a3d939ab32d3"
+      },
+      {
+        "path": "package.json",
+        "bytes": 87155,
+        "sha256": "55c8269c2a017d1454ecc2b86d6ef1bf6efffac65f3d5638a65b534686af65b8"
+      },
+      {
         "path": "scripts/test-nested-tour-library-pause.mjs",
         "bytes": 10612,
         "sha256": "287d4529afe727452244af1ee7deceea49ae31502d8df3941f620bd978b2c70c"
+      },
+      {
+        "path": "scripts/test-whole-body-guided-learning.mjs",
+        "bytes": 35762,
+        "sha256": "cba724101dfeb9aaa82dfa7579a001b84dd4449bdc16f50aff6d1456e86cf4a2"
       }
     ]
   },
-  "parent": "1aace1ac6fa0a02b30fbc0982df6c00fc2a542a2",
-  "gitParent": "1aace1ac6fa0a02b30fbc0982df6c00fc2a542a2",
+  "parent": "0d93b185533573e230305202c02e7cb0fe3894fa",
+  "gitParent": "0d93b185533573e230305202c02e7cb0fe3894fa",
   "files": [
     {
       "path": "app/globals.css",
@@ -11914,6 +11954,46 @@
       "path": "pending/arterial-current-role-followup-20261022/website/tests/arterial-history-preservation.test.mjs",
       "bytes": 7772,
       "sha256": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
+    },
+    {
+      "path": "pending/atlas-playback-bound-candidate-20261023/coordination/checkpoint-atlas-playback-bound-candidate-20261023.mjs",
+      "bytes": 13034,
+      "sha256": "23d03d5dbbc11b2823a90f04177eb5f0cf934a0fb56262a8a5fc649c4ae6fd1f"
+    },
+    {
+      "path": "pending/atlas-playback-bound-candidate-20261023/coordination/prepare-atlas-playback-bound-candidate-20261023.mjs",
+      "bytes": 3251,
+      "sha256": "8fc695f27fdf05dad78730217c5c86097cffabadd02c79647813b6cd7e1d6801"
+    },
+    {
+      "path": "pending/atlas-playback-bound-candidate-20261023/coordination/prove-atlas-playback-bound-guard-20261023.mjs",
+      "bytes": 2057,
+      "sha256": "0e239598d469923442e09e966b94fb9bd18c6ae40c0670f55a06fd10f2191884"
+    },
+    {
+      "path": "pending/atlas-playback-bound-candidate-20261023/coordination/verify-atlas-playback-bound-candidate-20261023.mjs",
+      "bytes": 6172,
+      "sha256": "78ece6ffcfd0c69d033c430f0ee1a8f02182cba4e6e6f12b5a2b19498fd85a8e"
+    },
+    {
+      "path": "pending/atlas-playback-bound-candidate-20261023/current/package.json",
+      "bytes": 87155,
+      "sha256": "55c8269c2a017d1454ecc2b86d6ef1bf6efffac65f3d5638a65b534686af65b8"
+    },
+    {
+      "path": "pending/atlas-playback-bound-candidate-20261023/current/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 35762,
+      "sha256": "cba724101dfeb9aaa82dfa7579a001b84dd4449bdc16f50aff6d1456e86cf4a2"
+    },
+    {
+      "path": "pending/atlas-playback-bound-candidate-20261023/preimage/package.json",
+      "bytes": 87104,
+      "sha256": "1b941e171ea58f1b33202019aff9b441cd64ad3640bd2563a43764dc6b57fdb4"
+    },
+    {
+      "path": "pending/atlas-playback-bound-candidate-20261023/preimage/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 35039,
+      "sha256": "b720e85a3b67cfcb5d4e54c8f53b5c6aa00011b3686153f2f87b80acb0254b1e"
     },
     {
       "path": "pending/atlas-review-source-composition-20261023/coordination/admit-atlas-teaching-coverage-20261022.mjs",
@@ -24062,24 +24142,59 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus four source-only nested-tour-library pause/test files, exact three-component preimages and four task utility sources. No canonical Git ancestry, geometry, models, private/review/generated metadata, scans, masks, raw logs, decisions, process records or runtime binaries. Local sparse candidate has no model binaries and is not an admitted, installed, runnable or public delivery. Root renderer metadata, full types/build/browser/export/import/rebinding are pending. No approvals, registration, permissions, asset/dependency additions or fees. Selected source recovery is not full/private/runnable backup.",
+  "scope": "Inherited independently verified filtered source with the two new source-only test-command/history-admission changes, their exact preimages and four task utility sources. The nested-player source/test blobs already remain in the filtered parent. No canonical Git ancestry, binary/model assets, private scans/masks/decisions, generated renderer/Review metadata, raw logs, runtime or process records. Locally committed sparse Atlas candidate remains uninstalled and has no model binaries. Not full/private/runnable backup, full-release acceptance, clinical approval or spatial registration.",
   "proof": {
-    "sourceReviewSha256": "8fe21f7818dbdb0d258a20912bfbfb63061672d5e438faed59d57fd2bd1c665b",
-    "native": {
-      "newCurrent": 1,
-      "existingLibraryPause": 1,
-      "existingEyeAssertions": 506,
-      "existingVentricularAssertions": 201,
-      "existingSpeedCheck": true,
-      "expectedBaselineFailures": 4,
-      "countsAreNotFullSuiteTotals": true
+    "verificationSha256": "e01f297327cdd3df9828519f4702439a8da5cd9f0a0a115e1199b144fa9d3b41",
+    "guardProofSha256": "94b124dac4ff7e627337564c1d734399f5d51493db802884d37168c9877c644a",
+    "renderer": {
+      "sha256": "2e3ac138d06e52a56cca96287963459d02c13c6093a06812221b286c55f9aede",
+      "priorSha256": "503e5356f97e69c0e6a4654e25869e43deece62666aa23dde8433d1984f4584d",
+      "dependencies": 1492,
+      "changedInputs": [
+        {
+          "path": "app/eye-layers.tsx",
+          "sha256": "505315716203dca72e075d573e47f86d9be91d376b7bfbefc8676ecb06e6341b"
+        },
+        {
+          "path": "app/ventricles.tsx",
+          "sha256": "83ade7f6b2b75ddaf7f1378aaa8f8a25c762c3d651d4da6c0fc048a5bd781fbc"
+        },
+        {
+          "path": "app/whole-body-guided-learning.tsx",
+          "sha256": "6a1717a7b6fa5641f2eebd9a505bbab5ef0693224373db82835e7b6393e65e08"
+        },
+        {
+          "path": "package.json",
+          "sha256": "55c8269c2a017d1454ecc2b86d6ef1bf6efffac65f3d5638a65b534686af65b8"
+        }
+      ],
+      "allDependencyBytesVerified": true
     },
-    "allPreExistingComponentBytesPreserved": true,
+    "historicalProof": {
+      "originalWholeBodyTestInverse": true,
+      "onlyTwoSignalPropsPermitted": true,
+      "foreignCodeOrSubstitutionRefused": true,
+      "oldTheoremExecuted": true,
+      "currentRegressionSeparatelyExecuted": true
+    },
+    "actualScopedReview": {
+      "passed": true,
+      "root": 1104,
+      "nested": 108,
+      "specimen": 356,
+      "geometryDisplayRevisionsChange": true,
+      "teachingAndSourcePreserved": true,
+      "imagingStillBlocked": true,
+      "privateDecisionsReadOrMigrated": false
+    },
+    "nativePassing": 83,
+    "focusedCommandRuns": 8,
+    "matchingRuntimeReviewWebsitePending": true,
+    "fullTypesBuildBrowserPending": true,
     "previewChanged": false,
     "installed": false,
     "clinicalApproval": false,
-    "wholeSuitePassing": false,
-    "fullTypesBuildBrowserPending": true
+    "wholeSuitePassing": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
