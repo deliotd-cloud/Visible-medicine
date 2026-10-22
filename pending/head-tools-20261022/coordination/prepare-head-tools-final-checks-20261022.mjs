@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-head-tools-bound-successor',stage='F:/VisibleMedicine/staging/20261022-head-tools-consumer-admission',sourceReceipt=stage+'/APPLIED_SOURCE.json',source=json(sourceReceipt);
+assert.equal(source.nonTestProductBytesChanged,0);assert.equal(source.currentValidatorOrPinChanged,false);assert.equal(source.review,'3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a');
+const before=json(root+'/NATIVE_BUILT_PLAN.json');
+const tests=[...new Set([...before.tests,'tests/current-head-index-whole-role-transition-20261021.test.mjs','tests/head-tools-test-source-role.test.mjs','tests/admission485-final-role-transition-20261021.test.mjs'])];
+for(const test of tests)assert(source.sourceRows.some(row=>row.path===test));
+const common={sourceReceipt,sourceReceiptSha256:sha(read(sourceReceipt))};
+fs.writeFileSync(stage+'/NATIVE_PLAN.json',JSON.stringify({...common,evidence:stage+'/native-current',tests,scope:'All22 original affected roots plus named full-source consumer, exact two-role mutation regression and archived consumer. Original354/352/2 retained; not a whole-suite or clinical/spatial/browser acceptance.'},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(stage+'/TYPES_PLAN.json',JSON.stringify({...common,evidence:stage+'/types-current',kind:'types',tests:[],scope:'Full TypeScript after the test-only historical-role additions; all product/build inputs remain byte-identical to actual successful viewer/website build.'},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({tests:tests.length,sourcePaths:source.sourcePaths,sourceReceiptSha256:common.sourceReceiptSha256}));

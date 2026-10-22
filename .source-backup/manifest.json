@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T10:21:22.034Z",
+  "at": "2026-10-22T10:46:05.875Z",
   "sourceIdentity": {
     "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
-    "isolatedReview": "525f8fbe122bf6bdc15d8b89f572e49e3ac0ce09cd411b8009f67454d938a163"
+    "isolatedReview": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a"
   },
-  "parent": "d028d6d14a0f96aa8e05135fd7d5e8b5df0cc071",
-  "gitParent": "d028d6d14a0f96aa8e05135fd7d5e8b5df0cc071",
+  "parent": "09b1ff03da80f6892d7b61cff295967b6bc56883",
+  "gitParent": "09b1ff03da80f6892d7b61cff295967b6bc56883",
   "files": [
     {
       "path": "app/globals.css",
@@ -15430,6 +15430,171 @@
       "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
     },
     {
+      "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/components/HeadAtlasViewer.tsx",
+      "bytes": 109363,
+      "sha256": "723b2b7d5cf00c761d5541a7658dbb27489f66ae426d9c6ca73f7662607bb320"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/tests/fixtures/head-toolbar-before-compaction-20261022.tsx.raw",
+      "bytes": 109363,
+      "sha256": "a14d1d851fff12960b35ffe71e282a0f2ec00e9a9077c74e72d3ed456ad25daa"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/tests/head-toolbar-compact.test.mjs",
+      "bytes": 10762,
+      "sha256": "650daf34edcc3cd8de98c91fbe045bdf1250945356ceb3947cf14e55d1f2a3b8"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/RAW/components/HeadAtlasViewer.tsx",
+      "bytes": 109363,
+      "sha256": "a14d1d851fff12960b35ffe71e282a0f2ec00e9a9077c74e72d3ed456ad25daa"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/RAW/tests/head-toolbar-compact.test.mjs",
+      "bytes": 8231,
+      "sha256": "17936c18d1b464115327b6ffa75d2ec6988919e5f4f2e5456395ac835166c9ec"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-consumer-admission/CODE/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 16602,
+      "sha256": "e6e0bf4d9fb2255a971c645a48838c98ab124669ef392956793b6265acdf01d0"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-consumer-admission/CODE/tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "bytes": 6662,
+      "sha256": "ccfaa5573738b8137fcf81f47676b4bcb75e3cc5abf83bf2f1ebc8e1232607fe"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-consumer-admission/CODE/tests/head-tools-test-source-role.mjs",
+      "bytes": 4228,
+      "sha256": "269c23c8442a2a7ac4d79e12eb582ce9b88de1f9f52073dc85b96f61e5e4d719"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-consumer-admission/CODE/tests/head-tools-test-source-role.test.mjs",
+      "bytes": 1250,
+      "sha256": "32679363aad482bafadad79ca85b2514c8061d104add59cd6b8d3a307bae6287"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-consumer-admission/RAW/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 16445,
+      "sha256": "9a4480980925a826a37656958e6b6402b2262a8bc686311f7528aaf0352cea2a"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-consumer-admission/RAW/tests/head-disclosure-role-preservation-20261021.test.mjs",
+      "bytes": 6516,
+      "sha256": "92a0e6cb75e50a50a336fa22520e41661dd9feecba2a4e39948bed1ce57bb349"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/CODE/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 8355,
+      "sha256": "999704133a16bff87fb69948a0ef67ba3b5973218235ee3b99ef2d455cbfe58d"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/CODE/tests/head-filtered-layout.test.mjs",
+      "bytes": 4574,
+      "sha256": "5dc4a8d99ee20f02d8724bc6d952fe039a83f32c6245eb85b2efee28c646ff27"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/CODE/tests/head-tools-epoch-20261022.mjs",
+      "bytes": 2663,
+      "sha256": "b639e17e2b0d956378e596c9e6f16a306c43285034ab62c724027fb0bb2d76d7"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/PREVIOUS/CODE/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 8191,
+      "sha256": "2923516dad20e70743c260fca0ef46f651ec0d01d06a06bd0207823587ad36ab"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/PREVIOUS/SOURCE_PROOF.mjs",
+      "bytes": 5288,
+      "sha256": "b9629f0957b9a87fba293614c0aa5eed8cac8e7c2cf1a04035b9c52859ef7f5e"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/RAW/tests/head-disclosure-current-delivery.test.mjs",
+      "bytes": 7608,
+      "sha256": "6feb900f5db6124b287629a669267736baf22751d3142aea15f8d4eda87d0e31"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/RAW/tests/head-filtered-layout.test.mjs",
+      "bytes": 4402,
+      "sha256": "151e0511ce7ce925ff7a58469100759586f7aae3b40b85458db4da1ae7c05e3e"
+    },
+    {
+      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/SOURCE_PROOF.mjs",
+      "bytes": 5591,
+      "sha256": "8e292d502aceb7c8c5ac97753bfddf93b2cfd6ec586166df9a947e4d64460822"
+    },
+    {
+      "path": "pending/head-tools-20261022/combined/HeadAtlasViewer.tsx",
+      "bytes": 109509,
+      "sha256": "a9b7c4b3d8f4febab394e983ace55df020cbcc84dc33daa8b2af6e7abd90fd1b"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/build-head-tools-successor-20261022.mjs",
+      "bytes": 9066,
+      "sha256": "41f5ee3743d5eea07622321d65e96ef35493faef7fcc9d3f283ac88173f8a02c"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/checkpoint-head-tools-quality-20261022.mjs",
+      "bytes": 9921,
+      "sha256": "d88f336ca895a4646af2f3893603c5da28cf79a28f12f8ad28dae6e8eefbf2c5"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/prepare-head-tools-checks-20261022.mjs",
+      "bytes": 2192,
+      "sha256": "9cee629b2cf9fbd50eb17691a400cdca718a83b5c343845f75d9001dd82afc0f"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/prepare-head-tools-final-checks-20261022.mjs",
+      "bytes": 1768,
+      "sha256": "7b8b43a602a0055d2a0db1c323907b35eab9e365c954ff54f6c2b182aabddad2"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/prepare-head-tools-successor-20261022.mjs",
+      "bytes": 8782,
+      "sha256": "4fe2d6b9f235343b3f5906b1fd3f1790e8cac3e34750db84e27032489550dfa7"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/prepare-head-tools-test-admission-20261022.mjs",
+      "bytes": 8397,
+      "sha256": "cab305f47f7b1fc439e5e29deff8c8e7e8cfa2e419d2239dd850ddd998a1654b"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/prepare-head-tools-wide-checks-20261022.mjs",
+      "bytes": 1526,
+      "sha256": "551cf234dfe766dbc11957dff483d6bd0052a324a5333972f0c213cd82b48ced"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/qa-head-tools-20261022/entry.jsx",
+      "bytes": 4289,
+      "sha256": "57bd4fc88e0528226865076eca6a80838899ac9b7da2f2c879a7dcb2c8a92d87"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/record-head-tools-browser-20261022.mjs",
+      "bytes": 2352,
+      "sha256": "800dfedfa0fc2c293ad7ddb6f14830106fe4bf13e6dc520ffdf3ab9feea01ff1"
+    },
+    {
+      "path": "pending/head-tools-20261022/coordination/serve-head-tools-specimen-20261022.mjs",
+      "bytes": 6307,
+      "sha256": "6bf7630a9139610e0c602079666f2e9a43c061946159b65220a1eb588af93fda"
+    },
+    {
+      "path": "pending/head-tools-20261022/preparation/PREPARER.before-exact-label-order.mjs",
+      "bytes": 8782,
+      "sha256": "87967f682206e7e4b71f71a470023f4b42ed7c00e7b791877466e2fb26b29eb3"
+    },
+    {
+      "path": "pending/head-tools-20261022/specimen/entry.before-tsx-imports.jsx",
+      "bytes": 4289,
+      "sha256": "9c98d7a57b1fed871bd519391fb85405e73e39e207559977f835af475cfdacb9"
+    },
+    {
+      "path": "pending/head-tools-20261022/specimen/SERVER.before-tsx-correction.mjs",
+      "bytes": 6303,
+      "sha256": "1da8567fdace98f737a63de69818b69202b8963c87851134dadd6b3c84cf8482"
+    },
+    {
       "path": "pending/inline-viewer-20261022/aorta-assurance/tests/aorta-runtime-family-admission.test.mjs",
       "bytes": 2845,
       "sha256": "eb4dd6dbb509f270c5a0a1312553e0284e746704ee49f3c36bfc5674107a7f9a"
@@ -19741,26 +19906,40 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered sources, exact queue change and preserved regression repairs, plus five owned local build/QA/checkpoint sources. All synthetic records are explicitly fictitious. Generated bindings/fixtures/logs/media, scans/models/masks, held assets, private records/DB/env/decisions/references and canonical ancestry remain local. Not whole/private/runnable recovery or installation.",
+  "scope": "Inherited filtered source plus compact toolbar/pane labels, full preimages, authenticated historical source-role helpers/tests and reproducible local preparation/build/QA/checkpoint scripts. No scans/models/masks, generated binding/pin metadata, held assets, private records/DB/env/decisions/references, raw logs/media or canonical Git ancestry. Not whole/private/runnable recovery or installation.",
   "proof": {
-    "sourceReceiptSha256": "c70dfa42798aba75ae16e37d8bb9c96765bc71ff00642db65c4c0814fc86c6b0",
-    "sourcePaths": 6072,
-    "inboxTests": {
-      "tests": 74,
-      "pass": 74,
-      "fail": 0
+    "sourceReceiptSha256": "52a09799b2f12607f66bcf750d750531ce7119949717a525ff673d105e836f85",
+    "sourcePaths": 6097,
+    "review": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a",
+    "changedBoundInputs": [
+      "components/HeadAtlasViewer.tsx"
+    ],
+    "realProducerAndViewerBuildPassed": true,
+    "fullTypesPassed": true,
+    "websiteBuildPassed": true,
+    "focusedNative": {
+      "tests": 371,
+      "pass": 371,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
     },
-    "fullTypeScriptPassed": true,
-    "stockGatesAndProductionBuildPassed": true,
-    "syntheticDesktopDomAndKeyboardChecksPassed": true,
-    "signedInWorkflowTested": false,
+    "firstNative": {
+      "tests": 354,
+      "pass": 352,
+      "fail": 2
+    },
+    "originalHistoricalAssertionsPreserved": true,
+    "desktopSyntheticToolbarGainPx": 33.296875,
+    "actualNativeScanBrowserWorkflowTested": false,
     "screenReaderCertification": false,
-    "normalPreviewUnchanged": true,
-    "paneLabelProposalUnapplied": true,
+    "ownerPreviewUnchanged": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
-    "publicDeployment": false
+    "publicDeployment": false,
+    "wholePrivateOrRunnableBackup": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

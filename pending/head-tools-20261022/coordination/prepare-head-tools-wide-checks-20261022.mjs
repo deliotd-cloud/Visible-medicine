@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261022-head-tools-consumer-admission',sourceReceipt=stage+'/APPLIED_SOURCE.json',source=json(sourceReceipt);
+assert.equal(sha(read(sourceReceipt)),'52a09799b2f12607f66bcf750d750531ce7119949717a525ff673d105e836f85');
+const focused=json(stage+'/native-current/TERMINAL.json'),types=json(stage+'/types-current/TERMINAL.json');assert.equal(focused.code,0);assert.equal(focused.counts.pass,371);assert.equal(types.code,0);
+const oldInputs=json('F:/VisibleMedicine/staging/20261022-final-closure-verification/native-selected/INPUTS.json');assert.equal(oldInputs.tests.length,108);
+const tests=[...new Set([...oldInputs.tests.map(row=>row.path),...json(stage+'/NATIVE_PLAN.json').tests])].sort();
+for(const path of tests)assert(source.sourceRows.some(row=>row.path===path));
+const plan={sourceReceipt,sourceReceiptSha256:sha(read(sourceReceipt)),tests,evidence:stage+'/native-wider',scope:'All108 previous broader closure roots plus all25 current head-tool roots, deduplicated. New source changes make this a relevant recheck; preserve actual failure diagnosis and complete historical/current roles. Not whole1143-root or clinical/spatial acceptance.'};
+fs.writeFileSync(stage+'/WIDER_PLAN.json',JSON.stringify(plan,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({plan:stage+'/WIDER_PLAN.json',entryFiles:tests.length,sourcePaths:source.sourcePaths}));

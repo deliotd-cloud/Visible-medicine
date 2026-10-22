@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited filtered sources, exact queue change and preserved regression repairs, plus five owned local build/QA/checkpoint sources. All synthetic records are explicitly fictitious. Generated bindings/fixtures/logs/media, scans/models/masks, held assets, private records/DB/env/decisions/references and canonical ancestry remain local. Not whole/private/runnable recovery or installation.
+Inherited filtered source plus compact toolbar/pane labels, full preimages, authenticated historical source-role helpers/tests and reproducible local preparation/build/QA/checkpoint scripts. No scans/models/masks, generated binding/pin metadata, held assets, private records/DB/env/decisions/references, raw logs/media or canonical Git ancestry. Not whole/private/runnable recovery or installation.

@@ -1,20 +1,34 @@
 {
-  "sourceReceiptSha256": "c70dfa42798aba75ae16e37d8bb9c96765bc71ff00642db65c4c0814fc86c6b0",
-  "sourcePaths": 6072,
-  "inboxTests": {
-    "tests": 74,
-    "pass": 74,
-    "fail": 0
+  "sourceReceiptSha256": "52a09799b2f12607f66bcf750d750531ce7119949717a525ff673d105e836f85",
+  "sourcePaths": 6097,
+  "review": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a",
+  "changedBoundInputs": [
+    "components/HeadAtlasViewer.tsx"
+  ],
+  "realProducerAndViewerBuildPassed": true,
+  "fullTypesPassed": true,
+  "websiteBuildPassed": true,
+  "focusedNative": {
+    "tests": 371,
+    "pass": 371,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
   },
-  "fullTypeScriptPassed": true,
-  "stockGatesAndProductionBuildPassed": true,
-  "syntheticDesktopDomAndKeyboardChecksPassed": true,
-  "signedInWorkflowTested": false,
+  "firstNative": {
+    "tests": 354,
+    "pass": 352,
+    "fail": 2
+  },
+  "originalHistoricalAssertionsPreserved": true,
+  "desktopSyntheticToolbarGainPx": 33.296875,
+  "actualNativeScanBrowserWorkflowTested": false,
   "screenReaderCertification": false,
-  "normalPreviewUnchanged": true,
-  "paneLabelProposalUnapplied": true,
+  "ownerPreviewUnchanged": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
-  "publicDeployment": false
+  "publicDeployment": false,
+  "wholePrivateOrRunnableBackup": false
 }
