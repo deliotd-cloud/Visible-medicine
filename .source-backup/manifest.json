@@ -1,51 +1,69 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T22:12:30.276Z",
+  "at": "2026-10-22T22:31:40.375Z",
   "sourceIdentity": {
-    "baselineAtlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "baselineTree": "db21ed3dee259c390878450b3495468996a3af85",
-    "ct": [
+    "proposal": [
       {
-        "path": "app/anatomy-data.ts",
-        "sha256": "db23dc93b851342766d76b66cbd2982ad9814520c33d606fbf24c374f2667f43"
+        "path": "scripts/public-preview-preflight.mjs",
+        "sha256": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89"
       },
       {
-        "path": "app/body-content.ts",
-        "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
+        "path": "scripts/run-website-tests-chunked.md",
+        "sha256": "ee8b19515509518b0bef32d093b3723115f245e34675fded4d392901a5e11a32"
       },
       {
-        "path": "lib/legacy-shoulder-bone-references.ts",
-        "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649"
+        "path": "scripts/run-website-tests-chunked.mjs",
+        "sha256": "c81cc02c3c3e2ed003143c96b8beaacd900a18ffab0dbfb534f19053cf3e7682"
       },
       {
-        "path": "lib/legacy-shoulder-muscle-references.ts",
-        "sha256": "283ec0d7d4fabb4477539ea3a35c08dcea1500e0e59ba7bd078dc6770dbbfc5d"
+        "path": "scripts/run-website-tests.mjs",
+        "sha256": "9dc062a40d1a92c45c4d0d45ab02957b4f54a32af9d96f9e84ce06601d828a7a"
       },
       {
-        "path": "lib/legacy-shoulder-references.ts",
-        "sha256": "dc20f96665158308eb8f28fb6f28f1133d4048293d386fb2b494e53b84f0116c"
+        "path": "scripts/stock-website-test-inventory.mjs",
+        "sha256": "3ce73391bc8d1cead67a9d1565f91fc5432eb0acc5e71c9168023c0088b6e0dc"
       },
       {
-        "path": "scripts/test-legacy-shoulder-references.mjs",
-        "sha256": "306da2656c019fdf647675cc94e58eb829c9f3920790d9666c6aa55821ab63ad"
+        "path": "scripts/website-test-child-ready.mjs",
+        "sha256": "8c061249d672c99cb7b30c1e2c8703908ff3b015a373f0a7194173f02c45e4ff"
+      },
+      {
+        "path": "scripts/website-test-chunks.mjs",
+        "sha256": "df1c71e6635d6a05a3301a33ad6eb05e6737599c2cd42621334af2d6ed19ba08"
+      },
+      {
+        "path": "scripts/website-test-history-preflight.mjs",
+        "sha256": "7df9800439fe8d1864f3b8d2df505e84075c8968cd8bbbb596f6d930dd3d5351"
+      },
+      {
+        "path": "scripts/website-test-process.mjs",
+        "sha256": "0ad5945672d0634bab7d282ca62bf9826f2831d70c7fa068969451d03c5cae90"
+      },
+      {
+        "path": "tests/run-website-tests.test.mjs",
+        "sha256": "57d48829552a9383594830bc5d9a8a27e3a64c09e8d2d408629dccf2e27977e2"
+      },
+      {
+        "path": "tests/website-test-chunks-child-ready.test.mjs",
+        "sha256": "2b9127c8dc0b84c24e0d73fd7fa63008222c3c1aea8abf798c87f9a388754fb1"
+      },
+      {
+        "path": "tests/website-test-chunks-main.test.mjs",
+        "sha256": "1b27d48c214e305ab6dabbc8cd29718b1789e059a454be085c340768d16004e9"
+      },
+      {
+        "path": "tests/website-test-chunks-review.test.mjs",
+        "sha256": "29d894a1a436653c7dc045b8bec3bd1656dce3e60d68d35178fee1d9bff5bd07"
+      },
+      {
+        "path": "tests/website-test-chunks.test.mjs",
+        "sha256": "91c60269ce21c16bfab5514f5248f9a38a39ad7cef5ac1b76f8e6308344047fe"
       }
     ],
-    "tour": [
-      {
-        "path": "app/regional-guided-learning.tsx",
-        "sha256": "418319343ca3033bff575d35faa6da5e177fc6eab16238fa052c2de755f10f79",
-        "preimageSha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
-      },
-      {
-        "path": "scripts/test-regional-tour-player.mjs",
-        "sha256": "919f0399b7c6028ff1181cefaad67a65cd7efe47739f906bf0ed44850ad3b131",
-        "preimageSha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
-      }
-    ],
-    "selectedWebsiteSourceSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522"
+    "selectedSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522"
   },
-  "parent": "9873c0210a8e46f0652ff0396c8008ab6550ff00",
-  "gitParent": "9873c0210a8e46f0652ff0396c8008ab6550ff00",
+  "parent": "a7cdd0da95e343304fc4bcf8b88b15b17f68d6ab",
+  "gitParent": "a7cdd0da95e343304fc4bcf8b88b15b17f68d6ab",
   "files": [
     {
       "path": "app/globals.css",
@@ -12358,6 +12376,181 @@
       "sha256": "01f74963cc6cec563555166fba35e6c92da0be14a302123c6c702ffeb4f6f2e5"
     },
     {
+      "path": "pending/chunked-runner-verified-20261022/coordination/audit-chunked-full-root-contract-20261022.mjs",
+      "bytes": 6875,
+      "sha256": "34fc9d521b1efd09a16ddc5b0994fda6356f86d8e918de065f4a5529c36c2045"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/coordination/checkpoint-chunked-runner-20261022.mjs",
+      "bytes": 9741,
+      "sha256": "b375d048e60665a5e1b9fbbf68d21768d54d6bf7ac3274cbcb8961b3af2f0341"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/coordination/probe-chunked-native-counts-20261022.mjs",
+      "bytes": 1136,
+      "sha256": "2b51ca8ca95cb5b8d1396afe88df1886f87148bc0e7af6df5947691b6b2dbb54"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/coordination/probe-chunked-windows-child-20261022.mjs",
+      "bytes": 1758,
+      "sha256": "8dcec44bfadad81170cad0b2459ab6266a66f86e015ba8a5d33afe0ab403b458"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/coordination/review-chunked-runner-final-20261022.mjs",
+      "bytes": 7087,
+      "sha256": "1fffb25ee69753c5825025ace641bd742c55869dbb69fcdcfde1ce4d462daab4"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/coordination/verify-chunked-runner-review-20261022.mjs",
+      "bytes": 2447,
+      "sha256": "737aa6fc9ef2bccb6107617da984ddbed61e6e50b768e0019edd298c8d322468"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/coordination/verify-chunked-windows-final-20261022.mjs",
+      "bytes": 2775,
+      "sha256": "e34bafae4b05afd6816f449aa03cc6761700e2361a33d53d3867e1f8c3622bb7"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/public-preview-preflight.mjs",
+      "bytes": 6650,
+      "sha256": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/run-website-tests-chunked.md",
+      "bytes": 4667,
+      "sha256": "ee8b19515509518b0bef32d093b3723115f245e34675fded4d392901a5e11a32"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/run-website-tests-chunked.mjs",
+      "bytes": 24198,
+      "sha256": "c81cc02c3c3e2ed003143c96b8beaacd900a18ffab0dbfb534f19053cf3e7682"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/run-website-tests.mjs",
+      "bytes": 15736,
+      "sha256": "9dc062a40d1a92c45c4d0d45ab02957b4f54a32af9d96f9e84ce06601d828a7a"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/stock-website-test-inventory.mjs",
+      "bytes": 15758,
+      "sha256": "3ce73391bc8d1cead67a9d1565f91fc5432eb0acc5e71c9168023c0088b6e0dc"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/website-test-child-ready.mjs",
+      "bytes": 1955,
+      "sha256": "8c061249d672c99cb7b30c1e2c8703908ff3b015a373f0a7194173f02c45e4ff"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/website-test-chunks.mjs",
+      "bytes": 5576,
+      "sha256": "df1c71e6635d6a05a3301a33ad6eb05e6737599c2cd42621334af2d6ed19ba08"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/website-test-history-preflight.mjs",
+      "bytes": 3979,
+      "sha256": "7df9800439fe8d1864f3b8d2df505e84075c8968cd8bbbb596f6d930dd3d5351"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/scripts/website-test-process.mjs",
+      "bytes": 2643,
+      "sha256": "0ad5945672d0634bab7d282ca62bf9826f2831d70c7fa068969451d03c5cae90"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/tests/run-website-tests.test.mjs",
+      "bytes": 10749,
+      "sha256": "57d48829552a9383594830bc5d9a8a27e3a64c09e8d2d408629dccf2e27977e2"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/tests/website-test-chunks-child-ready.test.mjs",
+      "bytes": 6397,
+      "sha256": "2b9127c8dc0b84c24e0d73fd7fa63008222c3c1aea8abf798c87f9a388754fb1"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/tests/website-test-chunks-main.test.mjs",
+      "bytes": 3812,
+      "sha256": "1b27d48c214e305ab6dabbc8cd29718b1789e059a454be085c340768d16004e9"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/tests/website-test-chunks-review.test.mjs",
+      "bytes": 5544,
+      "sha256": "29d894a1a436653c7dc045b8bec3bd1656dce3e60d68d35178fee1d9bff5bd07"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/current/tests/website-test-chunks.test.mjs",
+      "bytes": 10640,
+      "sha256": "91c60269ce21c16bfab5514f5248f9a38a39ad7cef5ac1b76f8e6308344047fe"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/nested-fixture.mjs",
+      "bytes": 232,
+      "sha256": "71d9f5dfeab19f611bbbdecf4bafe2fdd67b22b0e1eef363328e42454d185050"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/scripts/public-preview-preflight.mjs",
+      "bytes": 6650,
+      "sha256": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/scripts/run-website-tests-chunked.md",
+      "bytes": 2374,
+      "sha256": "97af8acbd49db5ffbd31b71f713fb5ffaaa6b8d81716e6f135ef52b6b84bf881"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/scripts/run-website-tests-chunked.mjs",
+      "bytes": 21796,
+      "sha256": "283ff97296bf99f2e74f7444a97415f49afd54a36e8b6fc5f9ba462f9dff30a4"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/scripts/run-website-tests.mjs",
+      "bytes": 15736,
+      "sha256": "9dc062a40d1a92c45c4d0d45ab02957b4f54a32af9d96f9e84ce06601d828a7a"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/scripts/stock-website-test-inventory.mjs",
+      "bytes": 15758,
+      "sha256": "3ce73391bc8d1cead67a9d1565f91fc5432eb0acc5e71c9168023c0088b6e0dc"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/scripts/website-test-chunks.mjs",
+      "bytes": 4263,
+      "sha256": "27be446bbdf130cdd96579faf797e1eb2315e6e73f585baa6787334c94c1f06b"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/scripts/website-test-history-preflight.mjs",
+      "bytes": 3979,
+      "sha256": "7df9800439fe8d1864f3b8d2df505e84075c8968cd8bbbb596f6d930dd3d5351"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/scripts/website-test-process.mjs",
+      "bytes": 2643,
+      "sha256": "0ad5945672d0634bab7d282ca62bf9826f2831d70c7fa068969451d03c5cae90"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/tests/run-website-tests.test.mjs",
+      "bytes": 10749,
+      "sha256": "57d48829552a9383594830bc5d9a8a27e3a64c09e8d2d408629dccf2e27977e2"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/original/tests/website-test-chunks.test.mjs",
+      "bytes": 10640,
+      "sha256": "91c60269ce21c16bfab5514f5248f9a38a39ad7cef5ac1b76f8e6308344047fe"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/worker2/run-website-tests-chunked.md",
+      "bytes": 3204,
+      "sha256": "f39429b155feb19de36cc77df7821d50cac06477f285ca62718afb7e52ee2fcf"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/worker2/run-website-tests-chunked.mjs",
+      "bytes": 22664,
+      "sha256": "0b26b3ea0dfa8c28edf462bccef1e56e3da7dd76bbb94dbc2ec40eecde856734"
+    },
+    {
+      "path": "pending/chunked-runner-verified-20261022/preimage/worker2/website-test-chunks.mjs",
+      "bytes": 4874,
+      "sha256": "d766a34edb72842cadfb1e3b9498764de196892bcede01cef2f6aaf0ede59a52"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/audit-cerebellar-link-source-20261022.mjs",
       "bytes": 4329,
       "sha256": "59808f3dd347268c167a951c009e4a92a1442c4dec66c139184cc2ba52695490"
@@ -23614,37 +23807,59 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus two unintegrated proposals. Topic-specific primary CT references close four remaining legacy shoulder citation placements, with two scoped original CT paraphrases; no article prose/images/data/vendor software imported. Regional tour commit-lifecycle repair preserves visible playback after abandoned renders, refuses stale/speculative controls and prevents cross-source retry focus. Authored code and exact source preimages only. No scans, masks, identifiers, private references, generated Review/runtime/pin/clinical JSON, coordinates, geometry, raw logs or canonical Git ancestry. Source-only recovery, not full/private/runnable backup. No install, preview change, public deployment or clinical/spatial approval.",
+  "scope": "Inherited filtered source plus authored opt-in sequential Website test chunk/resume tooling and regression sources/preimages only. Default stock runner unchanged; this tool is not integrated or selected as the release gate. Native nested/suite result validation, permanent observed-drift invalidation and an owned-child identity-before-payload handshake are verified only within the recorded focused/synthetic fixtures. No scans, identifiers, masks, geometry, private references, generated Review/runtime/delivery JSON, raw logs, process records or canonical Git ancestry. No dependencies, assets or fees added. Source-only recovery, not whole/private/runnable backup; no preview/install/public deployment or clinical/privacy/spatial/release approval.",
   "proof": {
-    "ctNative": {
-      "tests": 5,
-      "pass": 5,
+    "focusedNative": {
+      "tests": 32,
+      "pass": 32,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "tourNative": {
-      "tests": 81,
-      "pass": 81,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+    "windows": "Actual default Windows process inspector, same short-lived synthetic test root and identical inherited environment. Two separate real coordinators pass and reuse exactly one native attempt. Not an actual Website batch or uninterrupted stock gate.",
+    "fullRootPartition": {
+      "deliveryNamedPaths": 6426,
+      "stockNamedFiles": 6244,
+      "deliveryOnlyPaths": 182,
+      "entries": 1178,
+      "executedRoots": 1177,
+      "importCovered": 1,
+      "finalArgsBudgetChecks": [
+        {
+          "chunkSize": 1,
+          "chunks": 1177,
+          "maximumCommandLength": 484,
+          "roots": 1177,
+          "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
+          "chunkRootsSha256": "8e9b6343597dccf30e788a854ac2f9bd39060b248c6e89db7b111001c4b4029b"
+        },
+        {
+          "chunkSize": 25,
+          "chunks": 48,
+          "maximumCommandLength": 1778,
+          "roots": 1177,
+          "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
+          "chunkRootsSha256": "41c06975ed0872c0621d9cabaef69a3e8c1672f6b0e7eb7e592511682ae8b623"
+        },
+        {
+          "chunkSize": 10000,
+          "chunks": 3,
+          "maximumCommandLength": 23985,
+          "roots": 1177,
+          "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
+          "chunkRootsSha256": "e7bd43be32a7fbb6bd0fdf86612de5a707cbfe524a449a9637008a07f442b0f4"
+        }
+      ],
+      "actualArgsForExecuted": true,
+      "scope": "Metadata/preflight and partition proof, not execution of Website roots. Stock named-input exclusions remain explicit."
     },
-    "originalTourTestCallSitesPreserved": 65,
-    "originalTourNativeCases": 75,
-    "newTourCases": 6,
-    "originalTourAddedRegressionFailures": 6,
-    "citationPlacements": 89,
-    "remainingExplicitCitationGaps": 0,
-    "reviewRuntimeBindingPending": true,
-    "fullTypesBuildBrowserPending": true,
+    "stockRunnerUnchanged": true,
     "integrated": false,
-    "previewChanged": false,
+    "ownerPreviewChanged": false,
+    "stockUninterruptedPassingClaim": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
-    "wholeSuitePassing": false,
     "publicDeployment": false
   },
   "wholeProjectBackup": false,

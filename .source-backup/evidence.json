@@ -1,32 +1,54 @@
 {
-  "ctNative": {
-    "tests": 5,
-    "pass": 5,
+  "focusedNative": {
+    "tests": 32,
+    "pass": 32,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0,
     "todo": 0
   },
-  "tourNative": {
-    "tests": 81,
-    "pass": 81,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
+  "windows": "Actual default Windows process inspector, same short-lived synthetic test root and identical inherited environment. Two separate real coordinators pass and reuse exactly one native attempt. Not an actual Website batch or uninterrupted stock gate.",
+  "fullRootPartition": {
+    "deliveryNamedPaths": 6426,
+    "stockNamedFiles": 6244,
+    "deliveryOnlyPaths": 182,
+    "entries": 1178,
+    "executedRoots": 1177,
+    "importCovered": 1,
+    "finalArgsBudgetChecks": [
+      {
+        "chunkSize": 1,
+        "chunks": 1177,
+        "maximumCommandLength": 484,
+        "roots": 1177,
+        "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
+        "chunkRootsSha256": "8e9b6343597dccf30e788a854ac2f9bd39060b248c6e89db7b111001c4b4029b"
+      },
+      {
+        "chunkSize": 25,
+        "chunks": 48,
+        "maximumCommandLength": 1778,
+        "roots": 1177,
+        "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
+        "chunkRootsSha256": "41c06975ed0872c0621d9cabaef69a3e8c1672f6b0e7eb7e592511682ae8b623"
+      },
+      {
+        "chunkSize": 10000,
+        "chunks": 3,
+        "maximumCommandLength": 23985,
+        "roots": 1177,
+        "orderedUnionSha256": "db32807b34c152b2de6796ea04b8d31a15e12ecc8c8b9425c2630f29738bc074",
+        "chunkRootsSha256": "e7bd43be32a7fbb6bd0fdf86612de5a707cbfe524a449a9637008a07f442b0f4"
+      }
+    ],
+    "actualArgsForExecuted": true,
+    "scope": "Metadata/preflight and partition proof, not execution of Website roots. Stock named-input exclusions remain explicit."
   },
-  "originalTourTestCallSitesPreserved": 65,
-  "originalTourNativeCases": 75,
-  "newTourCases": 6,
-  "originalTourAddedRegressionFailures": 6,
-  "citationPlacements": 89,
-  "remainingExplicitCitationGaps": 0,
-  "reviewRuntimeBindingPending": true,
-  "fullTypesBuildBrowserPending": true,
+  "stockRunnerUnchanged": true,
   "integrated": false,
-  "previewChanged": false,
+  "ownerPreviewChanged": false,
+  "stockUninterruptedPassingClaim": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
-  "wholeSuitePassing": false,
   "publicDeployment": false
 }
