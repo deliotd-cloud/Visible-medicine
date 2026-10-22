@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T00:18:19.205Z",
+  "at": "2026-10-22T00:20:33.095Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "pendingCandidateBinding": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99",
-    "addedAuthoredConsumerTestAndPreimagePaths": 18,
-    "addedAuthoredCoordinationScripts": 3
+    "addedAuthoredTestAdapterAndPreimagePaths": 5,
+    "addedAuthoredCoordinationScripts": 1
   },
-  "parent": "5020e398b273afa4fa89516a25ebce396d9d8e48",
-  "gitParent": "5020e398b273afa4fa89516a25ebce396d9d8e48",
+  "parent": "d7229660edb7d99d184e21d4e20341b46828c44b",
+  "gitParent": "d7229660edb7d99d184e21d4e20341b46828c44b",
   "files": [
     {
       "path": "app/globals.css",
@@ -12602,6 +12602,31 @@
       "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6"
     },
     {
+      "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-lobar-imaging.test.ts",
+      "bytes": 12856,
+      "sha256": "eae0849920889e68d540f0aa1c1df482c3a02b062704ce0fe0e80943e7ef6e94"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-schema-preservation.test.mjs",
+      "bytes": 7206,
+      "sha256": "23b9c25c7846f59d0622eaf722e2e8dcb27dbdb4717d125d3bb50e11a7546637"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/closed59-atlas-delivery-adapter.mjs",
+      "bytes": 1954,
+      "sha256": "9ab28e6c62da3fa3fb7ca4ba79be293d4ac35adbbc29a865ed6ed9815128251c"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/fixtures/atlas-cerebral-lobar-imaging.before-schema-admission-20261022.test.ts.raw",
+      "bytes": 11791,
+      "sha256": "15e7fe631d748d679dc8f7329916d051235abab6b22d3ce4da7f95412838b078"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
+      "bytes": 4632,
+      "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
+    },
+    {
       "path": "pending/inline-viewer-20261022/cervical-assurance/tests/atlas-cervical-epoch-preservation.test.mjs",
       "bytes": 6396,
       "sha256": "ff62e76523d50e2a9e476bf3d2bda53225a23a2ff7326bc58b2ce693ee994367"
@@ -12705,6 +12730,11 @@
       "path": "pending/inline-viewer-20261022/consumer-adoption/tests/structure-learning-ui.test.ts",
       "bytes": 10567,
       "sha256": "8dd6cd60031b2d10a9bf4a40e328cd66341ad9ca7d30c56af072e3db4fe6cb52"
+    },
+    {
+      "path": "pending/inline-viewer-20261022/coordination/admit-cerebral-schema-candidate-20261022.mjs",
+      "bytes": 4614,
+      "sha256": "ddbccf2ff2ab8c5335c20c19895d1fe6cc71eea9b562cad7a99ed0756e209627"
     },
     {
       "path": "pending/inline-viewer-20261022/coordination/admit-expansion-consumers-candidate-20261022.mjs",
@@ -13518,32 +13548,20 @@
     }
   ],
   "removed": [],
-  "scope": "Inherits the verified filtered source selection and adds eighteen explicit authored tests/helpers and complete code-only preimages, including the refused first harness version; three authored local preparation/check scripts are also saved. Actual complete application/source/private recovery is NOT represented. No generated Review/runtime artifacts, scans, masks, pixels, models, screenshots, licence evidence HTML, patient identifiers, private references/notes/decisions, databases, env/credentials, raw logs or raw canonical Git ancestry are added. Native original teaching cohorts and full rebuild are pending; candidate is not installed.",
+  "scope": "Inherits verified filtered authored source and adds five explicit cerebral assurance test/adapter/raw-source preimage paths, plus one authored local admission script. The raw witness is source code, not historical runtime data. Frozen JSON documents, licence HTML, generated Review/runtime bundles, scans, masks, pixels, models, private references/notes/decisions, patient identifiers, media, environment/credentials, databases, raw logs and raw canonical Git ancestry are NOT added. Nothing is installed or deployed. This is selected authored-source recovery only, not whole/private/runnable recovery.",
   "proof": {
     "sourceOnlyPartialRecovery": true,
     "installedLocally": false,
-    "physicalCandidateSourcePrepared": true,
-    "actualBindingInputs": 1723,
-    "addedBindingInputs": 2,
-    "changedExistingBindingInputs": 2,
-    "firstFiveRootCounts": {
-      "tests": 40,
-      "pass": 39,
-      "fail": 1,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+    "exactHistoricalSchemaOneAndCurrentSchemaTwoKeptSeparate": true,
+    "entireAuthenticatedClosed59PinRequired": true,
+    "completeOriginalTestInverse": true,
+    "workerPureTests": {
+      "tests": 2,
+      "pass": 2,
+      "fail": 0
     },
-    "correctedAffectedFrameRoot": {
-      "tests": 20,
-      "pass": 20,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "priorRefusalRetained": true,
-    "otherInputsUnchangedAfterNarrowTestEventBusFix": true,
+    "actualNativeCerebralLessonRootRun": false,
+    "currentValidatorAndHistoricalPinUnchanged": true,
     "fullTypes": false,
     "fullBuild": false,
     "reviewViewerBuild": false,
@@ -13552,6 +13570,7 @@
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
+    "legalClearance": false,
     "publicDeployment": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false
