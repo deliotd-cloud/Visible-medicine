@@ -4,7 +4,7 @@ import {spawn} from 'node:child_process';
 import {read,json,sha} from './source-only-backup-20261019.mjs';
 const root='F:/VisibleMedicine/staging/20261022-reviewed-regression-runtime-linking';
 const mode=process.argv[2],version=process.argv[3]??'V2';
-assert(['types','build','review'].includes(mode));assert(['V2','V3'].includes(version));
+assert(['types','build','review'].includes(mode));assert(['V2','V3','V5'].includes(version));
 const receiptPath=root+'/PRODUCT_SOURCE_'+version+'.json',receipt=json(receiptPath),website=receipt.website;
 const evidence=root+'/quality-'+mode+'-'+version.toLowerCase();assert(!fs.existsSync(evidence));
 for(const row of receipt.sourceRows)assert.equal(sha(read(website+'/'+row.path)),row.sha256);

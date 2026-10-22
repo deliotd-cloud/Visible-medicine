@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawn} from 'node:child_process';
+import {read,json,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-reviewed-regression-runtime-linking',sourceReceipt=root+'/PRODUCT_SOURCE_V5.json',source=json(sourceReceipt),website=source.website;
+const evidence=root+'/native-craniofacial-current';assert(!fs.existsSync(evidence));
+for(const row of source.sourceRows)assert.equal(sha(read(website+'/'+row.path)),row.sha256);
+fs.mkdirSync(evidence);const args=['--test','--experimental-strip-types','--test-concurrency=1','--test-reporter=tap','tests/craniofacial-ct-current-delivery.test.mjs','tests/current-atlas-delivery.test.mjs'];
+const output=fs.createWriteStream(evidence+'/child.tap',{flags:'wx'}),errors=fs.createWriteStream(evidence+'/child.stderr',{flags:'wx'});
+const child=spawn(process.execPath,args,{cwd:website,env:{...process.env,GOMAXPROCS:'2',RAYON_NUM_THREADS:'1'},windowsHide:true,stdio:['ignore','pipe','pipe']});
+child.stdout.pipe(output);child.stderr.pipe(errors);console.log(JSON.stringify({phase:'running',pid:child.pid,args,evidence}));
+const result=await new Promise((resolve,reject)=>{child.once('error',reject);child.once('close',(code,signal)=>resolve({code,signal}));});
+await Promise.all([output,errors].map(stream=>new Promise(resolve=>stream.closed?resolve():stream.once('close',resolve))));
+const tap=read(evidence+'/child.tap').toString('utf8'),counts={};
+for(const key of ['tests','pass','fail','cancelled','skipped','todo'])counts[key]=Number(tap.match(new RegExp('^# '+key+' (\\d+)\\r?$','m'))?.[1]??NaN);
+const sourceDrift=source.sourceRows.filter(row=>sha(read(website+'/'+row.path))!==row.sha256).map(row=>row.path);
+const terminal={at:new Date().toISOString(),terminal:true,...result,args,counts,sourceDrift,sourceReceipt,sourceReceiptSha256:sha(read(sourceReceipt)),
+ tapSha256:sha(read(evidence+'/child.tap')),stderrSha256:sha(read(evidence+'/child.stderr')),clinicalApproval:false,ownerPreviewChanged:false,productionBytesChanged:0};
+fs.writeFileSync(evidence+'/TERMINAL.json',JSON.stringify(terminal,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(terminal));
+process.exitCode=result.code===0&&counts.fail===0&&counts.skipped===0&&sourceDrift.length===0?0:1;

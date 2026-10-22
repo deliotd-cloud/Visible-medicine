@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T05:15:20.926Z",
+  "at": "2026-10-22T05:39:33.285Z",
   "sourceIdentity": {
     "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
     "candidateReview": "4db82d92f6de502a342396d290380253aff46ef754b23e6161672d40c9abce99"
   },
-  "parent": "001ff74beeeaf70d36d5e39a36982978a157aa4a",
-  "gitParent": "001ff74beeeaf70d36d5e39a36982978a157aa4a",
+  "parent": "2f6559f27e18a3363315a84a411555e506235fb3",
+  "gitParent": "2f6559f27e18a3363315a84a411555e506235fb3",
   "files": [
     {
       "path": "app/globals.css",
@@ -12315,6 +12315,11 @@
       "sha256": "c485842f7b9521491c10701eea0bf6871ec48200fcfbc0ea676b3b6308558446"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/backup-head-cranio-controls-20261022.mjs",
+      "bytes": 3599,
+      "sha256": "0e7f5df76be7c3e27f23f8f36b28986d08ada15bacb7f11c8f1215a638adc613"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/backup-historic-schema-repairs-20261022.mjs",
       "bytes": 5611,
       "sha256": "ac94f9e97d1fb3fc1b84abb9ee970108ccb13b6558c9126eefa5059a96b6d0ad"
@@ -12373,6 +12378,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-guided-clinical-shared-admission-20261022.mjs",
       "bytes": 1259,
       "sha256": "f9940762d816c1f01c37b43e14a8554d24ecdcdd3162a3916438d41517ee2368"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-head-cranio-controls-20261022.mjs",
+      "bytes": 5261,
+      "sha256": "bc43bb6137c21618364929abe01f048d540befa027b2e2669564a3a60bb8baf0"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/checkpoint-historic-schema-repairs-20261022.mjs",
@@ -12480,6 +12490,11 @@
       "sha256": "455b90371cad43e5a8da729d2c134fe69c890da9ec342a5b6f3388d183bbce89"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/prepare-craniofacial-current-followup-20261022.mjs",
+      "bytes": 1669,
+      "sha256": "1a6902ac7ad7aa4e9ecb704d6e44cd1b7ce32e7804caa8bc4fd1b5d77074ff57"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/prepare-css-notice-admission-20261022.mjs",
       "bytes": 2023,
       "sha256": "192864a23dd6c1704a49f0178e5c2fa2a4fa18600ee8bae63970d4410e5eb2e2"
@@ -12488,6 +12503,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/prepare-foot-notice-admission-20261022.mjs",
       "bytes": 2066,
       "sha256": "35b4e7169ce820bee3cb3a43975c7f503c2cb06519e8f82567099054ddaf9067"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/prepare-head-review-guard-followup-20261022.mjs",
+      "bytes": 2018,
+      "sha256": "90dcd1c6c2692ee39b38f98be84449775fef9a3b14053fca4775e8a027f071c6"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/prepare-leg-vessel-source-family-admission-20261022.mjs",
@@ -12560,9 +12580,19 @@
       "sha256": "5c42a1383b5b6268d504005317f7fc2769d565b7e11ffbc755184252177accf0"
     },
     {
+      "path": "pending/coherent-regression-repair-20261022/coordination/start-regional-runtime-qa-proxy-20261022.mjs",
+      "bytes": 3295,
+      "sha256": "799f2b3c29e95a29b764f4d24003560c104c1fb28548a2cebac50508db5e0cac"
+    },
+    {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-arterial-history-proposal-20261022.mjs",
       "bytes": 5340,
       "sha256": "fc3036bd46db11e75ba88806e876a36a09fc5e1f5cef3284baa2c62f3bf0c30f"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/verify-craniofacial-current-followup-20261022.mjs",
+      "bytes": 2319,
+      "sha256": "881b1efd5d9363f4aac21ffcc7f7aa17ffb2a988cf5130b0a25765845e6708b6"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-css-notice-source-proposal-20261022.mjs",
@@ -12578,6 +12608,11 @@
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-guided-clinical-assembly-plan-20261022.mjs",
       "bytes": 1730,
       "sha256": "2f34e1287d44a2f45046dd580ef91ead343b118aa2a05788254aad404d6bdd10"
+    },
+    {
+      "path": "pending/coherent-regression-repair-20261022/coordination/verify-head-review-guard-followup-20261022.mjs",
+      "bytes": 2880,
+      "sha256": "59245a0c06b41d313b07a98c9df8d9d90352e47ae23cac42e13a3bedf34fd029"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-leg-vessel-source-family-admission-20261022.mjs",
@@ -12596,8 +12631,8 @@
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-regional-runtime-quality-20261022.mjs",
-      "bytes": 2753,
-      "sha256": "00f88adb0630760b4eacc3533a1f29a225b61d2f34c35007888cf174ce99773a"
+      "bytes": 2758,
+      "sha256": "83ff3a90342e9f464e56a310f0358184524f6b8b9443457019032cd3dbb47ea3"
     },
     {
       "path": "pending/coherent-regression-repair-20261022/coordination/verify-reviewed-regression-planner-20261022.mjs",
@@ -15530,6 +15565,76 @@
       "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
     },
     {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/craniofacial-ct-current-delivery.test.mjs",
+      "bytes": 9929,
+      "sha256": "5d3b6ce69f3db7e91eacca50c78e76d91dc6f2648f5f8232ca097358dd1c5e92"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/head-cerebellar-review.test.ts",
+      "bytes": 19108,
+      "sha256": "7b9e809990724a602c2adceba0f4eea0a2c6d5601af2a3b69e8bb55fb8fc3d71"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/head-deep-grey-review.test.ts",
+      "bytes": 18208,
+      "sha256": "073ca72872b56f38f0acbce4b23f91253b2de422fb1538d984525073c24af8d0"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/head-hippocampal-clinical.test.ts",
+      "bytes": 24117,
+      "sha256": "16e89c02fe367c8066e087781d51ed7335ce66e2888faa61b228c0af50407df5"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/head-lobar-review.test.ts",
+      "bytes": 21091,
+      "sha256": "abd52938aabb0e1e3853163f36562366709ff1a4f1be7fc06cc3497917e715b1"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/head-ventricular-review.test.ts",
+      "bytes": 11936,
+      "sha256": "7135359a56e5b3e67f0a6753925cead4851e1a3e15eff8e3681e1e2f46b06d9f"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/proofs/craniofacial-current-family-admission.mjs",
+      "bytes": 5388,
+      "sha256": "9921eea2817a98ada4729bd4be7054865964eb1a8beac4cc717066ea72df8539"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/proofs/head-review-guard-harness.mjs",
+      "bytes": 4233,
+      "sha256": "cc03ab4e3788947bb99f07fcb8c1ea2edc3282144916b05cdb933d83f325a024"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/craniofacial-ct-current-delivery.test.mjs",
+      "bytes": 8246,
+      "sha256": "b08d39c2e6a54cf1ea04f5cdf0b5c5a92a5b6adb2e68182796f9672a686ce76a"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-cerebellar-review.test.ts",
+      "bytes": 18966,
+      "sha256": "e296846aea3e46e42c373d01ae3934c06adae223e7789f413b0b494ca8ffbdc8"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-deep-grey-review.test.ts",
+      "bytes": 18066,
+      "sha256": "bcf97aa6433919540e40960b65f4f7e069fb2cbb5a0573195c092e55d78e8915"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-hippocampal-clinical.test.ts",
+      "bytes": 23975,
+      "sha256": "3866730ce1998d887379736e2ff5a922b89bbcbf59b770300e6dac7958d39f15"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-lobar-review.test.ts",
+      "bytes": 20949,
+      "sha256": "478aa7bd74b9dabafc358b160002fe6fecf134954cd83243520977553f4fceb3"
+    },
+    {
+      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-ventricular-review.test.ts",
+      "bytes": 11794,
+      "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/next-head-harness/CODE/tests/head-cerebellar-review.test.ts",
       "bytes": 19108,
       "sha256": "7b9e809990724a602c2adceba0f4eea0a2c6d5601af2a3b69e8bb55fb8fc3d71"
@@ -16687,23 +16792,35 @@
     "proposedTestAndHelperPaths": 161,
     "completeOriginalSourceInverses": 161,
     "additionalCodeAndProofPaths": 65,
-    "explicitProductSourceAndPreimageFiles": 82,
+    "explicitProductSourceAndPreimageFiles": 14,
     "productProof": {
-      "sourceReceiptSha256": "51f4b8be426c996381e105eb60ad78ded0827076185d865c3726b14c2904747c",
-      "sourceFiles": 36,
-      "focusedNative": {
-        "tests": 404,
-        "pass": 404,
+      "sourceReceiptSha256": "49a132ab76102e0fb2845df9ab111047630ecdafc0f0a2e61e81fef70a62a03f",
+      "sourcePaths": 6042,
+      "headChecks": {
+        "tests": 46,
+        "pass": 46,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "craniofacialChecks": {
+        "tests": 47,
+        "pass": 47,
         "fail": 0,
         "cancelled": 0,
         "skipped": 0,
         "todo": 0
       },
       "fullTypes": true,
-      "containedBuild": true,
+      "productBuildReusedOnlyAfterExactNonTestIdentity": true,
+      "sourceBoundSpecimenRouteBrowserChecked": true,
+      "fullMriScanWorkflowBrowserChecked": false,
+      "browserImagesAndLogsUploaded": false,
+      "canonicalInstalled": false,
       "ownerPreviewChanged": false,
-      "patientRegistration": false,
       "clinicalApproval": false,
+      "patientRegistration": false,
       "wholeSuitePassing": false
     },
     "strictCurrentValidatorAndPinChanged": false,
