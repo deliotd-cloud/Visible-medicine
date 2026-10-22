@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {json,read,sha,runGit} from './source-only-backup-20261019.mjs';
+const atlas='F:/VisibleMedicine/staging/20261022-review-traversal-candidate/atlas';
+const selection=process.argv[2];assert(selection===undefined||['pelvis','head-neck','complete'].includes(selection));
+const region=selection==='complete'?undefined:selection;
+const stage='F:/VisibleMedicine/staging/20261022-current-teaching-priority'+(selection?'/'+selection:'');assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+const git=(...args)=>runGit(['-C',atlas,...args]).toString().trim();
+assert.equal(git('rev-parse','HEAD'),'2381efe43b75f8a7fb768a069eecd7268c508dac');assert.equal(git('status','--porcelain'),'');
+const args=['--max-old-space-size=256','scripts/report-teaching-gaps.mjs','--readiness=pending','--limit='+ (selection==='complete'?1000:40),...(region?['--region='+region]:[])];
+const started=Date.now(),r=spawnSync(process.execPath,args,{cwd:atlas,windowsHide:true,maxBuffer:8e6,env:{...process.env,GOMAXPROCS:'2',RAYON_NUM_THREADS:'1'}});
+fs.writeFileSync(stage+'/report.stdout.json',r.stdout??'',{flag:'wx'});fs.writeFileSync(stage+'/report.stderr.log',r.stderr??'',{flag:'wx'});
+const receipt={at:new Date().toISOString(),args,code:r.status,error:r.error?.message,elapsedMs:Date.now()-started,stdoutSha256:sha(read(stage+'/report.stdout.json')),stderrSha256:sha(read(stage+'/report.stderr.log')),source:git('rev-parse','HEAD'),clean:git('status','--porcelain')==='',sourceFilesWritten:false,clinicalApproval:false};
+fs.writeFileSync(stage+'/RUN.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});
+assert.equal(r.status,0,String(r.stderr??''));const report=json(stage+'/report.stdout.json');assert.equal(report.evidence.workingTreeDirty,false);
+console.log(JSON.stringify({receipt:stage+'/RUN.json',sha256:sha(read(stage+'/RUN.json')),structureCount:report.structureCount,placementCount:report.placementCount,totals:report.totals,byRegion:report.byRegion,byTopic:report.byTopic,matchingRows:report.matchingRows,rows:selection==='complete'?report.rows.filter(r=>r.topic==='mri'):report.rows}));

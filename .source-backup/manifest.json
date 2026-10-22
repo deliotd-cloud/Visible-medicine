@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T21:16:48.235Z",
+  "at": "2026-10-22T21:36:00.827Z",
   "sourceIdentity": {
-    "parentSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
-    "componentBefore": "8396af75753bfaeef7ade8853893e34922277571d1717251d71550e79fcee2fa",
-    "componentAfter": "2b889e1dd98c185ea7f9b07469944dad449ab8a84586832cab3e07bcb3ebd3cf"
+    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+    "atlasTree": "db21ed3dee259c390878450b3495468996a3af85",
+    "selectedWebsiteSourceSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
+    "hamstringModuleSha256": "14f56f53002c574fd2eb8a6a88f23f4e8fad9476495ad227434384ef59d51737"
   },
-  "parent": "547957dbae469a3d115c6b9b92001639c4fc0d32",
-  "gitParent": "547957dbae469a3d115c6b9b92001639c4fc0d32",
+  "parent": "b0f0f3703353a9381d22074e32161f4ba9f98fe1",
+  "gitParent": "b0f0f3703353a9381d22074e32161f4ba9f98fe1",
   "files": [
     {
       "path": "app/globals.css",
@@ -15815,6 +15816,61 @@
       "sha256": "e83550441cc458d026bdf700f597f2444224aa0146cfc753ef5a86ea6817a783"
     },
     {
+      "path": "pending/hamstring-guided-tours-20261022/atlas/lib/hamstring-tours.ts",
+      "bytes": 5374,
+      "sha256": "14f56f53002c574fd2eb8a6a88f23f4e8fad9476495ad227434384ef59d51737"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/atlas/lib/regional-tours.ts",
+      "bytes": 45118,
+      "sha256": "b1a1bc9d9d80b84d4d98aed1aaa08aa4e9d7313e58bdd40f3b8a10ea0bab215d"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/atlas/scripts/pin-hamstring-tours.mjs",
+      "bytes": 2578,
+      "sha256": "ac619a6d54f31867feff00c1d2cfd211b388fb60f16de5a1788454accddb571e"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/atlas/scripts/test-hamstring-tours.mjs",
+      "bytes": 11878,
+      "sha256": "86a43ce3b04e131e3b962ba943bfbd2ecd69884d62a3c08a775ff69b082ebc18"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/coordination/audit-current-root-draft-quality-20261022.mjs",
+      "bytes": 5493,
+      "sha256": "0f243dfc1fa6281543eeafccad9d7045bdae08d316404b48f6ed892710bea65a"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/coordination/capture-current-teaching-gap-report-20261022.mjs",
+      "bytes": 2197,
+      "sha256": "43bb3051d2e17644944da975397daf441ba9d555e51b2efedcb76b5ecaf8a933"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/coordination/checkpoint-hamstring-guided-tours-20261022.mjs",
+      "bytes": 10841,
+      "sha256": "15c26911ba393c12d74fca01b788ff402939ae995c8080d975342c167fbd4964"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/coordination/verify-hamstring-guided-tours-20261022.mjs",
+      "bytes": 5624,
+      "sha256": "51bcf5a2cdcbce3b59b0d33b92c1102bebf341261f6e25326884b1eec0b60981"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/fixtures/regional-tours.preimage.ts.raw",
+      "bytes": 44790,
+      "sha256": "9123a100dd7693f99a7675b3f369803e4c788de5d6ed48a850e4be9caa8534cd"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/fixtures/worker-hamstring-tours.ts.raw",
+      "bytes": 5338,
+      "sha256": "4ff65260d6cb04a6e8dc9889d259d1014747892ed78a7acc534c050d079c0b4e"
+    },
+    {
+      "path": "pending/hamstring-guided-tours-20261022/fixtures/worker-test-hamstring-tours.mjs.raw",
+      "bytes": 10218,
+      "sha256": "ebb486cab8d3ba54664e4073f87887571b3ed98ef371f451b004bad9ef239ca0"
+    },
+    {
       "path": "pending/head-access-20261022/atlas-preimages/app/body-explorer.tsx",
       "bytes": 125813,
       "sha256": "d9df86ff0701c7405a27c391bbb534e1fdb79d841652cf82ac69e62f19b29cc7"
@@ -23376,26 +23432,25 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus separately staged head saved-step bookmark commit-lifecycle repair, exact original/worker code preimages, preserved original14test bodies and20focused synthetic checks. No visible markup, stored schema, Web Lock/CAS, scan, teaching, score, access, source geometry, licence or approval change. A local lexical research map associates22of23named acquisition targets with70source-local annotation rows; every candidate remains held. Only the independently authored mapping code is selected, never annotation JSON, source IDs/labels output, coordinate files, raw logs, private/generated/binary data or canonical Git ancestry. Source-only recovery, not full/private/runnable backup. Normal preview and complete-gate source remain untouched; integration, Review rebind, full types/build/browser pending.",
+  "scope": "Inherited filtered source plus two unintegrated, main-reviewed bilateral hamstring tours and their source-only assertion/pin producers. Existing51tours preserved,8newstops,10exactsourceidentities,3bundles. Primary factual references summarized in original captions; no external images/article prose/assets imported. No generated pin JSON, teaching reports or clinical records, raw logs, anatomy metadata/data files, scans, masks, geometry, private references or canonical Git ancestry added. New authored audit code is included, its generated readiness/quality output is local-only. Source-only recovery, not whole/private/runnable backup. No selected full-gate/installed source or normal preview change.",
   "proof": {
-    "nativeFocused": {
-      "tests": 20,
-      "pass": 20,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+    "originalToursPreserved": 51,
+    "newDraftTours": 2,
+    "newStops": 8,
+    "customAssertions": {
+      "tourAndSourceRefusals": 102,
+      "sourceLeafRefusals": 349,
+      "reviewEvidenceChecks": 8
     },
-    "originalBodiesPreserved": 14,
-    "visibleMarkupUnchanged": true,
-    "syntheticHookSimulationOnly": true,
-    "layoutRetiredWritesRefused": true,
-    "strictModeHookSimulation": true,
-    "heldTargetDefinitions": 22,
-    "unmatchedTargetDefinitions": 1,
-    "heldAnnotationRows": 70,
+    "sharedPlaybackUnchanged": true,
+    "readinessDraftPlacements": 9380,
+    "readinessPendingPlacements": 525,
+    "rootSelections": 1104,
+    "readinessIsNotClinicalCompletion": true,
+    "generatedReportsUploaded": false,
+    "pinsUploaded": false,
     "geometryAdmitted": false,
-    "canonicalInstalled": false,
+    "integrated": false,
     "ownerPreviewChanged": false,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
