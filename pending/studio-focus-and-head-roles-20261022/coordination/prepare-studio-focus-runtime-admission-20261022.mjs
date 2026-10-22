@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-studio-focus-runtime-admission',priorPath='F:/VisibleMedicine/staging/20261022-studio-details-focus-successor/TEST_READY_SOURCE.json',prior=json(priorPath);
+assert.equal(sha(read(priorPath)),'7c67af87c81b999c87fbf38a0ee3ba8773325104911c856ad390318c6ae13b9d');
+const failure=json('F:/VisibleMedicine/staging/20261022-studio-details-focus-successor/native-studio-integration/TERMINAL.json');assert.deepEqual(failure.counts,{tests:84,pass:80,fail:4,cancelled:0,skipped:0,todo:0});assert.deepEqual(failure.sourceDrift,[]);
+const names=['studio-course-details-content.test.mjs','studio-course-history.test.mjs','studio-course-details-content-history.test.mjs','studio-course-details-content-role-proof.test.mjs'];
+const rows=names.map(name=>{const before=root+'/RAW/tests/'+name,code=root+'/CODE/tests/'+name,path='tests/'+name;assert.equal(sha(read(before)),prior.sourceRows.find(row=>row.path===path).sha256);return{path,code,sha256:sha(read(code)),before,beforeSha256:sha(read(before))};});
+const before=read(rows[1].before).toString(),after=read(rows[1].code).toString();
+assert.equal(after.slice(after.indexOf("test('installed Vinext")),before.slice(before.indexOf("test('installed Vinext")),'All original history behavior tests, refusals and source assertions remain whole');
+assert.equal(read(rows[0].code).toString().replace("{ marker: 'course-title', closest: () => null }","{ marker: 'course-title' }"),read(rows[0].before).toString(),'Only real Element.closest capability added to focused title double');
+assert.equal(read(rows[3].code).toString().replace('dc7c6fbf629342447ed10a4ccc76d2c6b90c56500e615c4bd1b8dcdad9652bf2','ed1502dad49b818f9f698dacbf1d7a5ba2c6990119aef9d8a9333fcc510b401b'),read(rows[3].before).toString(),'Only authenticated current test identity changed');
+fs.writeFileSync(root+'/PLAN.json',JSON.stringify({sourceReceipt:priorPath,sourceReceiptSha256:sha(read(priorPath)),rows,receipt:root+'/APPLIED_SOURCE.json',preservedFailureCounts:failure.counts,historyAssertionsAndOriginalMutantWhole:true},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({plan:root+'/PLAN.json',rows:rows.length,productChanged:false}));

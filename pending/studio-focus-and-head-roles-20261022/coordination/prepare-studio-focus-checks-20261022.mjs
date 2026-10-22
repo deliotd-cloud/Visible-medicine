@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/staging/20261022-studio-details-focus-successor',sourcePath=root+'/SOURCE.json',source=json(sourcePath);
+assert.equal(sha(read(sourcePath)),'ac4654d3c76ba13b449be34be5502f372ebf13f286c60e100d5933e221e41965');
+const previousPath='F:/VisibleMedicine/staging/20261022-head-tools-consumer-admission/native-wider/TERMINAL.json',previous=json(previousPath);
+assert.equal(previous.terminal,true);assert.deepEqual(previous.counts,{tests:669,pass:661,fail:8,cancelled:0,skipped:0,todo:0});assert.deepEqual(previous.sourceDrift,[]);
+for(const row of source.sourceRows)assert.equal(sha(read(source.website+'/'+row.path)),row.sha256,row.path);
+for(const kind of ['native','types'])fs.writeFileSync(root+'/'+kind.toUpperCase()+'_PLAN.json',JSON.stringify({kind,sourceReceipt:sourcePath,sourceReceiptSha256:sha(read(sourcePath)),tests:kind==='native'?['tests/studio-course-details-focus.test.mjs']:[],evidence:root+'/'+(kind==='native'?'native-focus':'types-focus'),scope:kind==='native'?'Six new real-JSX/hook/commit focus behaviors only; original Studio root integration pending, no whole-suite or signed-in acceptance.':'Full TypeScript for exact Studio successor, no product binding change, owner preview unchanged.'},null,2)+'\n',{flag:'wx'});
+const pointer=json('CURRENT_CHECKPOINT.json'),current=pointer.activeWork.current;
+assert.equal(current.ownerPreviewPolicy.websiteCutoverPermitted,false);
+current.completedWiderHeadRun={path:previousPath,sha256:sha(read(previousPath)),...previous};
+current.pendingStudioFocus={sourceReceipt:sourcePath,sourceReceiptSha256:sha(read(sourcePath)),sourcePaths:source.sourcePaths,componentSha256:'a8ec6119565245e8b0b71e75392c3734931212e81ad058d063ac2a75a25a90ca',browserReceipt:root+'/browser-specimen/BROWSER_RESULT.json',browserReceiptSha256:sha(read(root+'/browser-specimen/BROWSER_RESULT.json')),nativeOriginalStudioRootsAccepted:false,ownerPreviewChanged:false};
+if(pointer.activeExecutionSessions?.nativeWider)Object.assign(pointer.activeExecutionSessions.nativeWider,{terminal:true,pid:null,session:null,result:previousPath,counts:previous.counts});
+fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(pointer,null,2)+'\n');
+console.log(JSON.stringify({sourceReceipt:sourcePath,sourcePaths:source.sourcePaths,previousWiderCounts:previous.counts,ownerPreviewChanged:false}));

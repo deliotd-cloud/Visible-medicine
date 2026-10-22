@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited filtered source plus compact toolbar/pane labels, full preimages, authenticated historical source-role helpers/tests and reproducible local preparation/build/QA/checkpoint scripts. No scans/models/masks, generated binding/pin metadata, held assets, private records/DB/env/decisions/references, raw logs/media or canonical Git ancestry. Not whole/private/runnable recovery or installation.
+Inherited filtered source plus isolated Studio explicit focus/draft-preserving controls, exact preimages and test-harness/current-historical role sources, staged head-tool regression proposals, local QA and recovery helpers. Generated binding/pin JSON, private records/DB/env/decisions/references, held assets, scans/models/masks, raw logs/media and canonical Git ancestry are excluded. Not full/private/runnable recovery or installation.

@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T10:46:05.875Z",
+  "at": "2026-10-22T11:25:28.919Z",
   "sourceIdentity": {
     "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "isolatedReview": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a"
   },
-  "parent": "09b1ff03da80f6892d7b61cff295967b6bc56883",
-  "gitParent": "09b1ff03da80f6892d7b61cff295967b6bc56883",
+  "parent": "36beb9fd6ac6dc18c220a5cb443d27dcc928ae17",
+  "gitParent": "36beb9fd6ac6dc18c220a5cb443d27dcc928ae17",
   "files": [
     {
       "path": "app/globals.css",
@@ -19200,6 +19200,546 @@
       "sha256": "90e3ed54b165183ba91285542c82435a04af2851e6ea6ddadee62d539c6dc461"
     },
     {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/CODE/tests/head-manual-migration-later-inverse.mjs",
+      "bytes": 4249,
+      "sha256": "80c814db779190f0354ddc5cc9bcee8cf8ee80d1ee63e23bff4c009554a9a19c"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/CODE/tests/head-manual-recovery-migration.test.mjs",
+      "bytes": 5658,
+      "sha256": "9afec8b5d6941796297d54f8df73db118d3b03034d90b8f3e6957474d9f58637"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/CODE/tests/live-learning-consumer-loader-preservation.test.mjs",
+      "bytes": 6712,
+      "sha256": "26175790b1637fa54b7f01a3d11a7bf86356e4982f6973db61cf8babfced18d6"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/RAW/inspect-source.mjs",
+      "bytes": 2773,
+      "sha256": "8ee707c7f868384f3e33bc1704655ca9e3244884355d2d1a0639680a60ce01dc"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/RAW/tests/head-manual-recovery-migration.test.mjs",
+      "bytes": 4786,
+      "sha256": "d916732dd2c3bfc6629e830b078652a9af67e46fb7381ceaf4f75a055ab61beb"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/RAW/tests/historical-lacrimal-delivery-50.mjs",
+      "bytes": 2426,
+      "sha256": "f35a2b9bf55be9ec8e3bbe605f61eac3c9e1ac25f80b21eca7991753304eb3dd"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/RAW/tests/historical-native-head-history-delivery-52.mjs",
+      "bytes": 2978,
+      "sha256": "78b849664d237d1cd14367d306b34b8e6c5b73241252cb0f42a63fea17cc1b7c"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/RAW/tests/historical-radial-eus-delivery-51.mjs",
+      "bytes": 2283,
+      "sha256": "eb6f46cc03c1075cd07a81d97797be389b294e7e91732029438deb9fbae53501"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/RAW/tests/live-learning-consumer-loader-preservation.test.mjs",
+      "bytes": 6061,
+      "sha256": "0061b458a0b0a4b079264d5d945d871a387fafa997e1b779278de0f016ed54f2"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 10192,
+      "sha256": "4663fda6515e0faf2771f08e2b9263509bcfcc0ab99c16b4a9666bcd10c693a2"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 9625,
+      "sha256": "2c8c34f331fa4789a60dc087e9eae67f482285ef80f81a68b9c1bd19bb86a3dc"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/fixtures/head-tools-wider-consumer/desktop-learning-row-history.test.mjs.raw",
+      "bytes": 6148,
+      "sha256": "8c94803ea09e9389837e1b46ea41d52701e115ac1bed55f4e58444365141ca51"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/fixtures/head-tools-wider-consumer/drawable-epoch-current-admission.test.mjs.raw",
+      "bytes": 8430,
+      "sha256": "1dcf6afcade0e1439627ce583d13c3d5181bdca4eb04fd84e9b5bf685b0a2025"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/fixtures/head-tools-wider-consumer/head-manual-recovery-54-to-55-closed.test.mjs.raw",
+      "bytes": 8716,
+      "sha256": "deebc34618ff4cc27b71cbeecd189e17ae3909017cd3eb147fd6e78655bccad1"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/fixtures/head-tools-wider-consumer/head-native-history-current-transition.test.mjs.raw",
+      "bytes": 8756,
+      "sha256": "d38f5b5fc705b8797a3db2626f7bdde799dc2c3799261ccafb1a90d3a9fe95a3"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/head-history-role-preservation.test.mjs",
+      "bytes": 6257,
+      "sha256": "969472e3491b6aff691228a5f7a6af09f9ea10bfbe44f474dc51d3469c5c799e"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/head-tools-wider-consumer-inverse.mjs",
+      "bytes": 4245,
+      "sha256": "a154bd458a9f095ac7413a8369c92cb85ea6772fdff419553cf969777d5bac9c"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/CODE/tests/head-tools-wider-consumer-source-preservation.test.mjs",
+      "bytes": 1115,
+      "sha256": "018031d1af55b8b967a37bceddfe028d9e39e8fcc635f801a9c411b46b4c2d35"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/RAW/tests/closed54-55-provider-preservation.test.mjs",
+      "bytes": 10036,
+      "sha256": "6367c7c6361f3bf858f27bf30850b35bf397c7ad6d7fc455c9f865d548773f9d"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/RAW/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 9444,
+      "sha256": "2add31dc03372e7c1960a2f91bdfe429e03c7eeed53d53274a638ca72fdddbb0"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/RAW/tests/desktop-learning-row-history.test.mjs.raw",
+      "bytes": 6148,
+      "sha256": "8c94803ea09e9389837e1b46ea41d52701e115ac1bed55f4e58444365141ca51"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/RAW/tests/drawable-epoch-current-admission.test.mjs.raw",
+      "bytes": 8430,
+      "sha256": "1dcf6afcade0e1439627ce583d13c3d5181bdca4eb04fd84e9b5bf685b0a2025"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/RAW/tests/head-history-role-preservation.test.mjs",
+      "bytes": 5820,
+      "sha256": "fcc27c220117984a95ad0a1abfdbdd7637d9ea57e8d64f2ce5e2759b16b8b14d"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/RAW/tests/head-manual-recovery-54-to-55-closed.test.mjs.raw",
+      "bytes": 8716,
+      "sha256": "deebc34618ff4cc27b71cbeecd189e17ae3909017cd3eb147fd6e78655bccad1"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-consumers/RAW/tests/head-native-history-current-transition.test.mjs.raw",
+      "bytes": 8756,
+      "sha256": "d38f5b5fc705b8797a3db2626f7bdde799dc2c3799261ccafb1a90d3a9fe95a3"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 7415,
+      "sha256": "44a61494ef1a2bf577b6aed4937d7d99dc855a0eb4e1eda6445393696010461f"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 6493,
+      "sha256": "189e900c45910ac63e2227098c0e4187eb69c9854018c893fc172ddaf32639c9"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 8803,
+      "sha256": "269e7af836b93760fcf460bf39ce1be296a96c1549452b04076a38a52d24c9ce"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 3933,
+      "sha256": "e4ee6d1670ec14b6f5f7b722ae4b9958225ee1886aff82513e4e1a74301b8872"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8716,
+      "sha256": "07c63b0d0eb11832ba209715a2c20e42f791c9d171a6902fb950010cfd5443ad"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 8756,
+      "sha256": "6a2cf5ee21203146e830b696436fa5abc5d41637e818b7e54acfa672d5e5cfb5"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/head-tools-wider-role-preservation.test.mjs",
+      "bytes": 4386,
+      "sha256": "ddb36117daa6e148a88d1a8557154f57932fc414004cf9be5de0c9d0b9abb92d"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/review-frame-history-inverse.mjs",
+      "bytes": 10182,
+      "sha256": "48970c96717d1545bc5823f3dadf1c3726f5ae9ce0c986b24cd87c562ee5e396"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2412,
+      "sha256": "326b425f1d529b590eaa345f94a9dd440ed2bcfe5fbbb19dcb918048a002b995"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/CODE/tests/ui-teaching-admission-contract.test.mjs",
+      "bytes": 13882,
+      "sha256": "0d35c3590b0453730d4a484fc2f1c794e44119f5b1eba9c75de075d20cd0ed7b"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 7415,
+      "sha256": "9c0cb14753b6d3b574a9f2b70f557f637b5e0b088222241673b9e363948c28f3"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 6148,
+      "sha256": "8c94803ea09e9389837e1b46ea41d52701e115ac1bed55f4e58444365141ca51"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 8430,
+      "sha256": "1dcf6afcade0e1439627ce583d13c3d5181bdca4eb04fd84e9b5bf685b0a2025"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 3933,
+      "sha256": "ff6ab52cd3ced01c3ccf86f0fbc0c5cdbc3ab74e7130db8d82b83241c7778cb8"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 8716,
+      "sha256": "deebc34618ff4cc27b71cbeecd189e17ae3909017cd3eb147fd6e78655bccad1"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 8756,
+      "sha256": "d38f5b5fc705b8797a3db2626f7bdde799dc2c3799261ccafb1a90d3a9fe95a3"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/review-frame-history-inverse.mjs",
+      "bytes": 9120,
+      "sha256": "ddd48cfb8b04495e7cfcb156b30837b0c3c2306c2b743f79b5fc17dd2e3d9280"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2412,
+      "sha256": "326b425f1d529b590eaa345f94a9dd440ed2bcfe5fbbb19dcb918048a002b995"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-tools-wider-role-proposal/RAW/tests/ui-teaching-admission-contract.test.mjs",
+      "bytes": 13882,
+      "sha256": "62add6d3b2ed76197f9d9cb489c567fd1bd111acf6efaab8ae1604ff1cf32ee0"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-details-focus-proposal/CODE/components/StudioCourseEditor.tsx",
+      "bytes": 13135,
+      "sha256": "a8ec6119565245e8b0b71e75392c3734931212e81ad058d063ac2a75a25a90ca"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-details-focus-proposal/CODE/tests/studio-course-details-focus.test.mjs",
+      "bytes": 8079,
+      "sha256": "4cdb686fde2131565d9b9c23bd4031aa500fd044e1284250e3492f00202d6e4a"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-details-focus-proposal/RAW/StudioCourseEditor.preimage.tsx",
+      "bytes": 11072,
+      "sha256": "e6d0c653f7c18ea6e99afc98a2c8674de056757e7afea0a94a3edbb3fc3140e8"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-details-focus-proposal/RAW/V1/studio-course-details-focus.test.mjs",
+      "bytes": 5825,
+      "sha256": "7eafa593aa4354ae2ae49d3dcd82e8aee2bdf1580effb77c913c479671d5a01e"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-details-focus-proposal/RAW/V1/StudioCourseEditor.tsx",
+      "bytes": 12482,
+      "sha256": "cf4536daf85e5a610ade1db98157c73ce29875fbefbdea78a181051ab5ac2563"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-content-role/CODE/tests/fixtures/studio-course-editor-prefocus.tsx",
+      "bytes": 11072,
+      "sha256": "e6d0c653f7c18ea6e99afc98a2c8674de056757e7afea0a94a3edbb3fc3140e8"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-content-role/CODE/tests/studio-course-details-content-role-proof.test.mjs",
+      "bytes": 4031,
+      "sha256": "317af3bff4c3eb0dd6cea5a62c917cf1a7bf3ef8b0d338df59ec1b2190ac66ee"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-content-role/CODE/tests/studio-course-details-content.test.mjs",
+      "bytes": 11832,
+      "sha256": "c907b1a2719899803150862cfeebe5596be33ccde056ca5f98f898b392eba73c"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-content-role/RAW/studio-course-details-content.original.test.mjs",
+      "bytes": 10396,
+      "sha256": "d84c858a85405a80282cac15b02d4ee790cab21bee38fe456920bdbe8405ab32"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-details-content.test.mjs",
+      "bytes": 11021,
+      "sha256": "f8bd174d91ed3ac05de9b33efc0537fa2b9519e2db1473f38219c713a6a6e3ff"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-details-form.test.mjs",
+      "bytes": 20032,
+      "sha256": "83cb4dc6818b6e50beeb2c04fae2028f3f163c2a6f1dd79dd45aff739755bb12"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-draft-discard.test.mjs",
+      "bytes": 16036,
+      "sha256": "234963c717fc82f8a4a84e7060d115f21a535ef840ba517c2cbaf0696d4b9815"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-editor-keyboard.test.mjs",
+      "bytes": 15326,
+      "sha256": "35441cf8f6fc631b9e2edd62218c322d465c9e7209839a14aeea68c53fd98a58"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-history.test.mjs",
+      "bytes": 9107,
+      "sha256": "286f6ae77145ae66cc50820b05c83840ad20ab33a041c3cbd8ed721828e6b0a4"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-options.test.mjs",
+      "bytes": 3805,
+      "sha256": "5eaf815544a9584548c4ed0c2011231efeabc2c80afbe05cbfda7c22afd5d7f1"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-outline-link-names.test.mjs",
+      "bytes": 2963,
+      "sha256": "5aba95f8e5bf61338dabe1971b30a958104e867da42896a81c4975df8c4dd222"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-popstate-focus.test.mjs",
+      "bytes": 4328,
+      "sha256": "6811eb51e9d29987236669486532d8accc4467cb74fe2b1cc58ed24a7788e820"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-recovery-notice.test.mjs",
+      "bytes": 6378,
+      "sha256": "686c9a83981138954def428a0291cb6c29b6696585e83811113e1b4f1954a150"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-course-switch-details.test.mjs",
+      "bytes": 5580,
+      "sha256": "2617ff2c5b95e3100d1b166af9a496ed4058a15a842a614fba9b839940e7cbdb"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/CODE/tests/studio-focus-harness-source-proof.test.mjs",
+      "bytes": 4626,
+      "sha256": "5c036d6cf7d7a93e2719386c2b28a696305b4b4fac83a67b0c5441677e73f696"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-details-content.test.mjs",
+      "bytes": 10396,
+      "sha256": "d84c858a85405a80282cac15b02d4ee790cab21bee38fe456920bdbe8405ab32"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-details-form.test.mjs",
+      "bytes": 19779,
+      "sha256": "27d86526e6d43f034b23beca5d9806f50d1043c73a0310de5eeb8a5ed7e384e7"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-draft-discard.test.mjs",
+      "bytes": 15995,
+      "sha256": "82cc2e71926ecdc3c22b776b37fe9fc82d62703dc09950d5f336dad4867ff170"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-editor-keyboard.test.mjs",
+      "bytes": 15233,
+      "sha256": "3f3bf4f9dad4681a0ceb00d2c1b87b6d47179ac603044395a386d91c0e26ad4e"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-history.test.mjs",
+      "bytes": 9020,
+      "sha256": "e6001c39a22e4f1dea6942bb7eaad82aa6a035273a8feb98dd8827ea7dcb0682"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-options.test.mjs",
+      "bytes": 3763,
+      "sha256": "2772d496d27046d19d7b68a0cdd5b857f5968f4f70394aa582a374b00f152e76"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-outline-link-names.test.mjs",
+      "bytes": 2922,
+      "sha256": "572336fec79e46f0ab42bf908198b36547e2770b77ab4eeb555de7f50a5fe680"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-popstate-focus.test.mjs",
+      "bytes": 4243,
+      "sha256": "d1782cd45d0211b8a47627847f01b1a8a71df62cb85144de443577e4e3ff174f"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-recovery-notice.test.mjs",
+      "bytes": 6307,
+      "sha256": "c00afac189203c9b5f4c5a4ad263e978d277d52bb692d779f78debd757673f9c"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-harness-admission/RAW/preimages/studio-course-switch-details.test.mjs",
+      "bytes": 5270,
+      "sha256": "85226ca5d1cf56768a88952669013b019bcfba4482c727e27f25667c00b24311"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/CODE/tests/studio-course-details-content-history.test.mjs",
+      "bytes": 1037,
+      "sha256": "9f7604d004748ebb92e60bf41d21a21c4dad4e3b695366adf8491dcdbc771ee4"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/CODE/tests/studio-course-details-content-role-proof.test.mjs",
+      "bytes": 3874,
+      "sha256": "41088d26b91918182e5709523ba0059d4ded7d2f0ac967208cf5f268878fda1a"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/CODE/tests/studio-course-details-content.test.mjs",
+      "bytes": 11836,
+      "sha256": "ed1502dad49b818f9f698dacbf1d7a5ba2c6990119aef9d8a9333fcc510b401b"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-details-content.test.mjs",
+      "bytes": 10396,
+      "sha256": "d84c858a85405a80282cac15b02d4ee790cab21bee38fe456920bdbe8405ab32"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-details-form.test.mjs",
+      "bytes": 19779,
+      "sha256": "27d86526e6d43f034b23beca5d9806f50d1043c73a0310de5eeb8a5ed7e384e7"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-draft-discard.test.mjs",
+      "bytes": 15995,
+      "sha256": "82cc2e71926ecdc3c22b776b37fe9fc82d62703dc09950d5f336dad4867ff170"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-editor-keyboard.test.mjs",
+      "bytes": 15233,
+      "sha256": "3f3bf4f9dad4681a0ceb00d2c1b87b6d47179ac603044395a386d91c0e26ad4e"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-history.test.mjs",
+      "bytes": 9020,
+      "sha256": "e6001c39a22e4f1dea6942bb7eaad82aa6a035273a8feb98dd8827ea7dcb0682"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-options.test.mjs",
+      "bytes": 3763,
+      "sha256": "2772d496d27046d19d7b68a0cdd5b857f5968f4f70394aa582a374b00f152e76"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-outline-link-names.test.mjs",
+      "bytes": 2922,
+      "sha256": "572336fec79e46f0ab42bf908198b36547e2770b77ab4eeb555de7f50a5fe680"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-popstate-focus.test.mjs",
+      "bytes": 4243,
+      "sha256": "d1782cd45d0211b8a47627847f01b1a8a71df62cb85144de443577e4e3ff174f"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-recovery-notice.test.mjs",
+      "bytes": 6307,
+      "sha256": "c00afac189203c9b5f4c5a4ad263e978d277d52bb692d779f78debd757673f9c"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-main-admission/RAW/studio-course-switch-details.test.mjs",
+      "bytes": 5270,
+      "sha256": "85226ca5d1cf56768a88952669013b019bcfba4482c727e27f25667c00b24311"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-runtime-admission/CODE/tests/studio-course-details-content-history.test.mjs",
+      "bytes": 1147,
+      "sha256": "89431d527d240b452898494aea4ce9847ec4028f481418f47512cd01a1e03b71"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-runtime-admission/CODE/tests/studio-course-details-content-role-proof.test.mjs",
+      "bytes": 3874,
+      "sha256": "6dcaa759b77bc4035ed4beda57a76b86e8a98f3f48b752623efbfb6d746d9257"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-runtime-admission/CODE/tests/studio-course-details-content.test.mjs",
+      "bytes": 11857,
+      "sha256": "dc7c6fbf629342447ed10a4ccc76d2c6b90c56500e615c4bd1b8dcdad9652bf2"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-runtime-admission/CODE/tests/studio-course-history.test.mjs",
+      "bytes": 9421,
+      "sha256": "3ab2be44bd692f644192b96d10c5a2a23c9417596122cf1764bc627241388b4b"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-runtime-admission/RAW/tests/studio-course-details-content-history.test.mjs",
+      "bytes": 1037,
+      "sha256": "9f7604d004748ebb92e60bf41d21a21c4dad4e3b695366adf8491dcdbc771ee4"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-runtime-admission/RAW/tests/studio-course-details-content-role-proof.test.mjs",
+      "bytes": 3874,
+      "sha256": "41088d26b91918182e5709523ba0059d4ded7d2f0ac967208cf5f268878fda1a"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-runtime-admission/RAW/tests/studio-course-details-content.test.mjs",
+      "bytes": 11836,
+      "sha256": "ed1502dad49b818f9f698dacbf1d7a5ba2c6990119aef9d8a9333fcc510b401b"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/20261022-studio-focus-runtime-admission/RAW/tests/studio-course-history.test.mjs",
+      "bytes": 9107,
+      "sha256": "286f6ae77145ae66cc50820b05c83840ad20ab33a041c3cbd8ed721828e6b0a4"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/apply-head-tools-wider-roles-20261022.mjs",
+      "bytes": 6343,
+      "sha256": "00b4069f269f51647856c73db71d744d43b53e14c659bbdf25cf7a02599ad902"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/apply-studio-focus-tests-20261022.mjs",
+      "bytes": 5475,
+      "sha256": "4c3b74e8b56a242e7f9cabe7dece1ce76acc30554d4af15b9cb5915b188bd3f8"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/build-unbound-ui-successor.mjs",
+      "bytes": 4470,
+      "sha256": "c01afb80a081acc69a05676e89351917ba66387ae7a4ba3f73e21192840e97d1"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/checkpoint-studio-focus-quality-20261022.mjs",
+      "bytes": 11649,
+      "sha256": "a6c03ccf06e2d79f3c9e184dfd23b9cda0e28ec30d24e91b753768b7b1ebb4d7"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/prepare-studio-focus-checks-20261022.mjs",
+      "bytes": 2480,
+      "sha256": "8cf79084527839b48e3db189520f0c3078eda45d46b6a05bf8928cd52dd50d17"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/prepare-studio-focus-runtime-admission-20261022.mjs",
+      "bytes": 2323,
+      "sha256": "626b9b2f432aa5d6d92360bc041288a4a8c97222ec915b03c53470eec4184c54"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/prepare-unbound-ui-successor.mjs",
+      "bytes": 6236,
+      "sha256": "0c97333d05f150dfb8293c8fa7c7b6ec4db8caafe35d02e8dd403bc8ca08eeb4"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/qa-studio-focus-20261022/entry.jsx",
+      "bytes": 1155,
+      "sha256": "bdbbb47c9ccdb938104cea7cc7c349f591f98b0581644fc712f83a1dab985019"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/qa-studio-focus-20261022/forms.jsx",
+      "bytes": 1038,
+      "sha256": "eacea72f5e603137142042f60f21b6112b4373dc75bfd25516a227b225990c8a"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/qa-studio-focus-20261022/next.jsx",
+      "bytes": 249,
+      "sha256": "cfe66386e9d6a250f67c861224710d64bc9e78bb0fdf3867ce6cbb67a6b388a5"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/record-studio-focus-browser-20261022.mjs",
+      "bytes": 3165,
+      "sha256": "72539739c8463a8fb7452981af075b4b37c6d76b23119b390094eab10f80e8c4"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/serve-studio-focus-specimen-20261022.mjs",
+      "bytes": 5192,
+      "sha256": "bd3bc63bee88b5369481a5cb2ace6807de433b5325820829e5e143a723a791b4"
+    },
+    {
+      "path": "pending/studio-focus-and-head-roles-20261022/coordination/test-unbound-ui-plan.mjs",
+      "bytes": 1922,
+      "sha256": "1d626f85ee1e8e9b132ad5f2545684d82504a2f863a64a0051da68cf4430bf8d"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -19906,40 +20446,51 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited filtered source plus compact toolbar/pane labels, full preimages, authenticated historical source-role helpers/tests and reproducible local preparation/build/QA/checkpoint scripts. No scans/models/masks, generated binding/pin metadata, held assets, private records/DB/env/decisions/references, raw logs/media or canonical Git ancestry. Not whole/private/runnable recovery or installation.",
+  "scope": "Inherited filtered source plus isolated Studio explicit focus/draft-preserving controls, exact preimages and test-harness/current-historical role sources, staged head-tool regression proposals, local QA and recovery helpers. Generated binding/pin JSON, private records/DB/env/decisions/references, held assets, scans/models/masks, raw logs/media and canonical Git ancestry are excluded. Not full/private/runnable recovery or installation.",
   "proof": {
-    "sourceReceiptSha256": "52a09799b2f12607f66bcf750d750531ce7119949717a525ff673d105e836f85",
-    "sourcePaths": 6097,
-    "review": "3ed1585515a52a0480bc433aa135309abc38bace5f9a581cffe3b48660f23a9a",
-    "changedBoundInputs": [
-      "components/HeadAtlasViewer.tsx"
-    ],
-    "realProducerAndViewerBuildPassed": true,
-    "fullTypesPassed": true,
-    "websiteBuildPassed": true,
-    "focusedNative": {
-      "tests": 371,
-      "pass": 371,
+    "sourceReceiptSha256": "f04f3dbcbb43ab16fdc3926c799f6a1d8b743e0a9b7f4ff1d6e557fd1aefccfd",
+    "sourcePaths": 6110,
+    "studioNative": {
+      "tests": 84,
+      "pass": 84,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "firstNative": {
-      "tests": 354,
-      "pass": 352,
-      "fail": 2
+    "originalStudioCounts": {
+      "tests": 84,
+      "pass": 80,
+      "fail": 4
     },
-    "originalHistoricalAssertionsPreserved": true,
-    "desktopSyntheticToolbarGainPx": 33.296875,
-    "actualNativeScanBrowserWorkflowTested": false,
-    "screenReaderCertification": false,
+    "widerHeadCounts": {
+      "tests": 669,
+      "pass": 661,
+      "fail": 8,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "headFocusedCounts": {
+      "tests": 73,
+      "pass": 72,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "eightOriginalHeadFailuresResolvedInFocusedRun": true,
+    "additionalHistoricalFailurePredatesUi": true,
+    "unappliedMigrationProposal": true,
+    "finalTypesPassed": true,
+    "qualityPassed": true,
+    "desktopSyntheticGroups": 10,
+    "realScanOrSignedInWorkflow": false,
     "ownerPreviewUnchanged": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
-    "publicDeployment": false,
-    "wholePrivateOrRunnableBackup": false
+    "publicDeployment": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
