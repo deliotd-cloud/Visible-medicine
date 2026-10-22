@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const root='F:/VisibleMedicine/recovery/checkpoints/20261022-checklist-reconciliation-verified';
+const cp=json(root+'/checkpoint.json'),p=json('CURRENT_CHECKPOINT.json');assert(cp.sourceBackup.independentlyVerified);
+const beforeMap=read(root+'/WORKSPACE_MAP.before.md'),map=read('WORKSPACE_MAP.md').toString();
+const marker='## Previous: active practice exit protection verified in isolation; preview held — 22 October 2026';
+const offset=map.indexOf(marker);assert(offset>0);assert.deepEqual(Buffer.from(map.slice(offset).replace(marker,marker.replace('## Previous:','## Current:'))),beforeMap);
+const master='F:/VisibleMedicine/website/docs/master-plan.md',after=read(master).toString(),start=after.indexOf('Latest tracking coordination, 22 October:'),end=after.indexOf('Latest practice coordination, 22 October:',start+1);
+assert(start>0&&end>start);assert.deepEqual(Buffer.from(after.slice(0,start)+after.slice(end)),read(root+'/master-plan.before.md'));
+assert.equal(p.goal.status,'active');assert.equal(p.activeWork.current.ownerPreviewPolicy.websiteCutoverPermitted,false);
+const state={at:new Date().toISOString(),checkpointSha256:sha(read(root+'/checkpoint.json')),mapSha256:sha(read('WORKSPACE_MAP.md')),masterPlanSha256:sha(read(master)),
+ fullPrecedingPlanAndMapPreserved:true,localCoordinationOnly:true,ownerPreviewChanged:false,canonicalTrackingChanged:false,fullGoalPreserved:true};
+p.activeWork.current.localCoordination=state;
+const native='F:/VisibleMedicine/staging/20261022-remaining-native-recheck';
+if(fs.existsSync(native+'/STARTED.json')&&!fs.existsSync(native+'/TERMINAL.json'))p.activeWork.current.activeExecutionSessions=[{sessionId:85098,started:native+'/STARTED.json',pid:json(native+'/STARTED.json').pid,sourceFrozen:true,kind:'twenty remaining native release roots'}];
+p.activeWork.current.pendingWorkers=[{task:'/root/corpus_cranio_release_roles_1022',exclusiveStage:'F:/VisibleMedicine/staging/20261022-corpus-cranio-release-roles',work:'Two source-role test proposals only; no native job or candidate edits.'}];
+fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(p,null,2)+'\n');
+fs.writeFileSync(root+'/COORDINATION.json',JSON.stringify({...state,pointerSha256:sha(read('CURRENT_CHECKPOINT.json'))},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({receipt:root+'/COORDINATION.json',goalStatus:p.goal.status,sourceBackupIndependentlyVerified:true,normalPreviewChanged:false}));

@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherit the independently verified filtered practice-exit source snapshot and add three tracking-reconciliation coordinator scripts. Actual checklist data, installation/binding evidence, generated JSON, compiled runtimes, private state, scans/models/masks and binaries remain local. No installation or public deployment. Source-only, not whole/private/runnable recovery.
+Inherited filtered practice/checklist source plus two bounded release-test current-source repairs, exact original test witnesses, whole-source preservation/mutation test and coordinator scripts. All product/runtime/binding bytes unchanged. Actual tracking/evidence/generated JSON, binary runtime, private records/DB/env/decisions/references, held assets, scans/models/masks, fonts and logs remain local. Source-only, not whole/private/runnable recovery, installation or deployment.

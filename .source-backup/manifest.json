@@ -1,19 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T18:11:02.995Z",
+  "at": "2026-10-22T18:20:55.187Z",
   "sourceIdentity": {
-    "installedAtlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
-    "installedReview": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
-    "trackingDraftRevision": 128,
-    "inheritedCandidateEvidence": {
-      "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-      "tree": "db21ed3dee259c390878450b3495468996a3af85",
-      "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc",
-      "sourceReceiptSha256": "d388db43518ff7ccd443a8e7977e7ac67b2f49a696eb294529992ba64fc4132d"
-    }
+    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+    "tree": "db21ed3dee259c390878450b3495468996a3af85",
+    "review": "1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc",
+    "sourceReceiptSha256": "4148e2f10b083c9fdeec9d28ead4d13effd67e8f3499f2fdee43b9e0d1311eb7"
   },
-  "parent": "c4011f492670a000daf2b70fa1b45bf70dc2fd35",
-  "gitParent": "c4011f492670a000daf2b70fa1b45bf70dc2fd35",
+  "parent": "d40bbd34f16a39796b347eded7fd3faedaf2f627",
+  "gitParent": "d40bbd34f16a39796b347eded7fd3faedaf2f627",
   "files": [
     {
       "path": "app/globals.css",
@@ -15126,6 +15121,61 @@
       "sha256": "5cb326883f1081550cb9940f4a603b2b9258e57ef41cee068ab3d33d786fc7d9"
     },
     {
+      "path": "pending/corpus-cranio-assurance-20261022/coordination/checkpoint-corpus-cranio-assurance-20261022.mjs",
+      "bytes": 10038,
+      "sha256": "b304f5bdcb5af8aec2afec2aaf7c8c31edaeadd856784e4d5f85de48da389afa"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/coordination/finalize-checklist-reconciliation-20261022.mjs",
+      "bytes": 2560,
+      "sha256": "9d77d789d7a64df761c483dfa1f8a8be07cc53541f13010cf0438d95312de56e"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/coordination/prepare-corpus-cranio-assurance-20261022.mjs",
+      "bytes": 6077,
+      "sha256": "40d5de5c6e667a1564ab7eae1fa68b133bb838ef0606fa84332e1b2ef9663d0b"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/coordination/probe-remaining-native-20261022.mjs",
+      "bytes": 3817,
+      "sha256": "f26abf248b624534d3a174f7720003d08c7015ac9b7a018162b6c7aba77f8205"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/coordination/verify-corpus-cranio-assurance-20261022.mjs",
+      "bytes": 3415,
+      "sha256": "b9a0ba3b5d03f88005e43e639c14cdb43ef79ccd67b2b06463f8ce8a2c6ddab1"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/website/tests/corpus-cranio-role-preservation.test.mjs",
+      "bytes": 2652,
+      "sha256": "f51b1b424814c101139809d64407d593acfba4c18f47edf647634e78902ff1dc"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/website/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "bytes": 11258,
+      "sha256": "738db1aa3510dc96366398578fea0b5c4fe173a6f59b63d187b38be82191ef7e"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/website/tests/craniofacial-ct-current-delivery.test.mjs",
+      "bytes": 9929,
+      "sha256": "d12881fb54d1c052d5f598f53ab4ccd03fb078604f2685a3728eebac7126ea5e"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/website/tests/fixtures/corpus-cranio-before/corpus-xray-v2-current-delivery.test.mjs.raw",
+      "bytes": 11258,
+      "sha256": "28be69bc03dd3b78665ccf5947fb2fd33077654ed6a26bf03bad6bf9c3e6207e"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/website/tests/fixtures/corpus-cranio-before/craniofacial-ct-current-delivery.test.mjs.raw",
+      "bytes": 9929,
+      "sha256": "2de47b24e78247eb1aa1d60d5d8763a35a79e3f5cc3ab3e136fef6c726490ecc"
+    },
+    {
+      "path": "pending/corpus-cranio-assurance-20261022/worker-source-only-proof.mjs",
+      "bytes": 4830,
+      "sha256": "db3be451ccae1b8969e19f5c2747ccfd42ab9e6c6da831e5b79b9b00166ab6d9"
+    },
+    {
       "path": "pending/desktop-drawable-space-20261021/atlas/app/body-explorer.css",
       "bytes": 65201,
       "sha256": "9722246697fafcd54f55e586797eaec33930c5f3f87d653117b064787ebe2904"
@@ -22572,17 +22622,29 @@
     }
   ],
   "removed": [],
-  "scope": "Inherit the independently verified filtered practice-exit source snapshot and add three tracking-reconciliation coordinator scripts. Actual checklist data, installation/binding evidence, generated JSON, compiled runtimes, private state, scans/models/masks and binaries remain local. No installation or public deployment. Source-only, not whole/private/runnable recovery.",
+  "scope": "Inherited filtered practice/checklist source plus two bounded release-test current-source repairs, exact original test witnesses, whole-source preservation/mutation test and coordinator scripts. All product/runtime/binding bytes unchanged. Actual tracking/evidence/generated JSON, binary runtime, private records/DB/env/decisions/references, held assets, scans/models/masks, fonts and logs remain local. Source-only, not whole/private/runnable recovery, installation or deployment.",
   "proof": {
-    "realInstalledEvidenceAccepted": true,
-    "liveBoundInputsChecked": 1721,
-    "itemEvidenceReferences": 264,
-    "items": 71,
-    "optional": 8,
-    "statusesChanged": false,
-    "inheritedCandidateEvidenceNotRerun": true,
-    "canonicalChecklistChanged": false,
-    "canonicalGeneratorChanged": false,
+    "focusedNative": {
+      "tests": 51,
+      "pass": 51,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "priorRemainingRootRun": {
+      "tests": 65,
+      "pass": 40,
+      "fail": 25,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "priorRemainingRunStillFailed": true,
+    "productAndBindingsUnchanged": true,
+    "typesAndBuildNotRerun": true,
+    "realBrowserNotRerun": true,
+    "canonicalInstalled": false,
     "ownerPreviewChanged": false,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
