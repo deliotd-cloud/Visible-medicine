@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T10:12:18.380Z",
+  "at": "2026-10-22T10:21:22.034Z",
   "sourceIdentity": {
     "installedWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
     "isolatedReview": "525f8fbe122bf6bdc15d8b89f572e49e3ac0ce09cd411b8009f67454d938a163"
   },
-  "parent": "8b173b5a299548b85764aa18c03626fc6520f39b",
-  "gitParent": "8b173b5a299548b85764aa18c03626fc6520f39b",
+  "parent": "d028d6d14a0f96aa8e05135fd7d5e8b5df0cc071",
+  "gitParent": "d028d6d14a0f96aa8e05135fd7d5e8b5df0cc071",
   "files": [
     {
       "path": "app/globals.css",
@@ -19010,6 +19010,31 @@
       "sha256": "186ddc22d2795c4a977772a0b4f00236808c63ffbd4ceb5381734dad57b0a755"
     },
     {
+      "path": "pending/review-queue-quality-20261022/build.mjs",
+      "bytes": 5202,
+      "sha256": "2f63e9a6cd9e657ef3bea158535f270182f2b5db9c058f4fdd6e3ea8ef330a7b"
+    },
+    {
+      "path": "pending/review-queue-quality-20261022/checkpoint.mjs",
+      "bytes": 8578,
+      "sha256": "e4439a9ca3eb4420d7d8cfa7b72960d46a40ba0e9ac132905653071ee418555c"
+    },
+    {
+      "path": "pending/review-queue-quality-20261022/serve-before-route-correction.mjs",
+      "bytes": 4202,
+      "sha256": "1d0a53c5ea65b1f146ac054df0ea09d6d7cfd15f879707fc940af7efac4db0fe"
+    },
+    {
+      "path": "pending/review-queue-quality-20261022/serve-synthetic-qa.mjs",
+      "bytes": 4405,
+      "sha256": "3ac9bde0b063ff43649a72284c6fa352540efbdadced486acb92ca6f54f94911"
+    },
+    {
+      "path": "pending/review-queue-quality-20261022/synthetic-entry.jsx",
+      "bytes": 2271,
+      "sha256": "90e3ed54b165183ba91285542c82435a04af2851e6ea6ddadee62d539c6dc461"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -19716,49 +19741,26 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited selected source plus exact two regression repairs, queue accessibility component/regression and seven original-assertion-preserving test adapters, raw preimages and reproducible source proof/orchestration. Separate pane-label proposal is included but unapplied. Generated bindings/fixtures, held source assets, scans/models/masks, private DB/env/decisions/references, logs/media and canonical ancestry remain local. Not whole/private/runnable recovery or preview installation.",
+  "scope": "Inherited filtered sources, exact queue change and preserved regression repairs, plus five owned local build/QA/checkpoint sources. All synthetic records are explicitly fictitious. Generated bindings/fixtures/logs/media, scans/models/masks, held assets, private records/DB/env/decisions/references and canonical ancestry remain local. Not whole/private/runnable recovery or installation.",
   "proof": {
     "sourceReceiptSha256": "c70dfa42798aba75ae16e37d8bb9c96765bc71ff00642db65c4c0814fc86c6b0",
     "sourcePaths": 6072,
-    "wideOriginalActualCounts": {
-      "tests": 360,
-      "pass": 358,
-      "fail": 2,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "exactFailedConsumerRetryCounts": {
-      "tests": 13,
-      "pass": 13,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "inboxActualCounts": {
+    "inboxTests": {
       "tests": 74,
       "pass": 74,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
+      "fail": 0
     },
-    "fullTypesPassed": true,
-    "changedProductPaths": [
-      "components/ClinicalReviewInbox.tsx"
-    ],
-    "reviewBindingUnchanged": true,
-    "headPaneLabelProposalUnapplied": true,
-    "sourceOnlySpecimen48Passed": true,
-    "firstSpecimenConfigFailurePreserved": true,
-    "normalPreviewExplicitlyUnchanged": true,
+    "fullTypeScriptPassed": true,
+    "stockGatesAndProductionBuildPassed": true,
+    "syntheticDesktopDomAndKeyboardChecksPassed": true,
+    "signedInWorkflowTested": false,
+    "screenReaderCertification": false,
+    "normalPreviewUnchanged": true,
+    "paneLabelProposalUnapplied": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
-    "publicDeployment": false,
-    "privateDataBackup": false,
-    "runnableProjectRecovery": false
+    "publicDeployment": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

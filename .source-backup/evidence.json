@@ -1,43 +1,20 @@
 {
   "sourceReceiptSha256": "c70dfa42798aba75ae16e37d8bb9c96765bc71ff00642db65c4c0814fc86c6b0",
   "sourcePaths": 6072,
-  "wideOriginalActualCounts": {
-    "tests": 360,
-    "pass": 358,
-    "fail": 2,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "exactFailedConsumerRetryCounts": {
-    "tests": 13,
-    "pass": 13,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
-  },
-  "inboxActualCounts": {
+  "inboxTests": {
     "tests": 74,
     "pass": 74,
-    "fail": 0,
-    "cancelled": 0,
-    "skipped": 0,
-    "todo": 0
+    "fail": 0
   },
-  "fullTypesPassed": true,
-  "changedProductPaths": [
-    "components/ClinicalReviewInbox.tsx"
-  ],
-  "reviewBindingUnchanged": true,
-  "headPaneLabelProposalUnapplied": true,
-  "sourceOnlySpecimen48Passed": true,
-  "firstSpecimenConfigFailurePreserved": true,
-  "normalPreviewExplicitlyUnchanged": true,
+  "fullTypeScriptPassed": true,
+  "stockGatesAndProductionBuildPassed": true,
+  "syntheticDesktopDomAndKeyboardChecksPassed": true,
+  "signedInWorkflowTested": false,
+  "screenReaderCertification": false,
+  "normalPreviewUnchanged": true,
+  "paneLabelProposalUnapplied": true,
   "wholeSuitePassing": false,
   "clinicalApproval": false,
   "spatialRegistration": false,
-  "publicDeployment": false,
-  "privateDataBackup": false,
-  "runnableProjectRecovery": false
+  "publicDeployment": false
 }
