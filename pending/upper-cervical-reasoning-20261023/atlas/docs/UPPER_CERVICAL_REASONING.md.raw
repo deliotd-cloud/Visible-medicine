@@ -1,0 +1,21 @@
+# Upper cervical attachment reasoning — draft
+
+Four original reasoning prompts distinguish the paired C1–occiput muscles by attachment and listed head action. They use the eight single-file, exact source identities in `content/upper-cervical-reasoning-pins.json` at parent source `0327b6360e18b62563265d115df2b779c9397792`. The code checks the complete pinned `BodyStructure` identity through `sourceCanonical`, including source-file hashes, rather than accepting a name or FMA match alone.
+
+| Concept | Side | Pinned source ID | FMA | File | SHA-256 |
+| --- | --- | --- | --- | --- | --- |
+| Rectus capitis posterior minor | Right | `vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-minor` | FMA32532 | FJ1590 | `96eb4ad812cc9f9864f811327b30168153a6d681c93bc00ead8204e137010809` |
+| Rectus capitis posterior minor | Left | `vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-minor` | FMA32533 | FJ1568 | `9aa18031ab7d1e868b05739a043eea20391f89437919c75f2f7a982868e05b48` |
+| Obliquus capitis superior | Right | `vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-superior` | FMA32534 | FJ1585 | `6b255f0276f6f0ed75afd64ff35d333bc83d29d6825ea868b5e2498d0887a390` |
+| Obliquus capitis superior | Left | `vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-superior` | FMA32535 | FJ1564 | `21133c79db7dd82d244fdffb4febaad660e54d6825dcbfcc1581e85fcea53cc5` |
+| Rectus capitis anterior | Right | `vm:anatomy:body:spine:right:muscle:right-rectus-capitis-anterior` | FMA46313 | FJ1588 | `b7ad7dca09e8946a29dbcabf3cd2a01e724df5b4a2e5da0d67eadd5017eb736b` |
+| Rectus capitis anterior | Left | `vm:anatomy:body:spine:left:muscle:left-rectus-capitis-anterior` | FMA46314 | FJ1566 | `f063c76b3d4b1b6ebdd8f7504fa7a0d1d8f3b8d2e1e3bb45da9fb46ff42db15e` |
+| Rectus capitis lateralis | Right | `vm:anatomy:body:spine:right:muscle:right-rectus-capitis-lateralis` | FMA46317 | FJ1591 | `7c7266e6c06e8b74784c92b7be97c2bef843252fbb8a493d21db31e6c226b828` |
+| Rectus capitis lateralis | Left | `vm:anatomy:body:spine:left:muscle:left-rectus-capitis-lateralis` | FMA46318 | FJ1569 | `d5cee1b4060b42602f81ab57e0fe7ae8da4288e8dd215928d2f369715524ee1d` |
+
+## Reference purpose and limits
+
+- [UAMS muscles of the back region](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-back-region/) supports the posterior minor and superior oblique attachments, extension, and superior oblique's suboccipital triangle boundary.
+- [Texas Tech muscles of the head and neck](https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html) supports anterior and lateral rectus capitis attachments, head flexion and lateral bending respectively.
+
+The prompts and explanations are new MIT project text. No reference tables, questions, images, diagrams, or other media are redistributed. Existing source-mesh credit and licence policy remains unchanged. Mesh selection does not prove dynamic motion, CT/MRI visibility, registration, or patient-specific function. This is revision 1 with `draft` readiness; no clinical or radiologist approval is asserted. Revision-bound radiologist sign-off remains required.

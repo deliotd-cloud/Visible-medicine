@@ -1,0 +1,20 @@
+// Source-identical isolated Atlas checkout; no installed application is touched.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';import {pathToFileURL} from 'node:url';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const parent='F:/VisibleMedicine/staging/20261023-ventricular-landmark-reasoning/atlas',stage='F:/VisibleMedicine/staging/20261023-upper-cervical-reasoning',atlas=stage+'/atlas';
+const git=(root,...args)=>execFileSync('git',['-C',root,...args],{encoding:'utf8',windowsHide:true,maxBuffer:16e6}).trim();
+const head='0327b6360e18b62563265d115df2b779c9397792';assert.equal(git(parent,'rev-parse','HEAD'),head);assert.equal(git(parent,'status','--porcelain'),'');
+assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+assert(!fs.existsSync(stage));fs.mkdirSync(stage);execFileSync('git',['clone','--shared','-c','core.autocrlf=false',parent,atlas],{stdio:'pipe',windowsHide:true});git(atlas,'checkout','--detach',head);
+const files=git(parent,'ls-files','-z').split('\0').filter(Boolean).map(path=>({path,sha256:hash(parent+'/'+path)}));for(const r of files)assert.equal(hash(atlas+'/'+r.path),r.sha256);assert.equal(git(atlas,'status','--porcelain'),'');
+fs.symlinkSync(parent+'/node_modules',atlas+'/node_modules','junction');fs.mkdirSync(stage+'/preimages');
+for(const p of ['lib/reasoning-questions.ts','package.json','scripts/validate-reasoning-practice.mjs'])fs.copyFileSync(atlas+'/'+p,stage+'/preimages/'+p.replaceAll('/','_')+'.raw',fs.constants.COPYFILE_EXCL);
+fs.writeFileSync(stage+'/PREPARED.json',JSON.stringify({at:new Date().toISOString(),parent,atlas,head,tree:git(parent,'rev-parse','HEAD^{tree}'),files,previewChanged:false,installed:false},null,2)+'\n',{flag:'wx'});
+process.chdir(atlas);const {build}=await import(pathToFileURL(atlas+'/scripts/workspace-test-build.mjs'));
+const result=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog';",resolveDir:atlas,loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+const catalog=api.bodyDisplayCatalog(JSON.parse(fs.readFileSync('public/models/bodyparts3d/full-body/catalog.json')));
+const groups=[['rectus-capitis-posterior-minor',['FMA32532','FMA32533'],['FJ1590','FJ1568']],['obliquus-capitis-superior',['FMA32534','FMA32535'],['FJ1585','FJ1564']],['rectus-capitis-anterior',['FMA46313','FMA46314'],['FJ1588','FJ1566']],['rectus-capitis-lateralis',['FMA46317','FMA46318'],['FJ1591','FJ1569']]];
+const entries=groups.flatMap(([slug,fmas,sourceFiles])=>fmas.map((fma,i)=>{const matches=catalog.structures.filter(s=>s.fmaId===fma);assert.equal(matches.length,1);const identity=matches[0];assert.equal(identity.sourceTree,'isa');assert.equal(identity.region,'spine');assert.deepEqual(identity.regions,['spine']);assert.equal(identity.laterality,i===0?'right':'left');assert.equal(identity.sources.length,1);assert.equal(identity.sources[0].file,sourceFiles[i]);return{key:'upper-cervical-'+slug,identity};}));
+fs.writeFileSync(atlas+'/content/upper-cervical-reasoning-pins.json',JSON.stringify({schemaVersion:1,parentSource:head,entries},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({stage,atlas,sourcePaths:files.length,pinnedRoots:entries.length,previewChanged:false}));

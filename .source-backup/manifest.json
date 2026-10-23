@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T09:46:13.039Z",
+  "at": "2026-10-23T10:06:34.693Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "d570f3deb2930a5b893f3892063a10292dc7899dafffa51c07f324ac35ff7bbb",
-    "atlasHead": "0327b6360e18b62563265d115df2b779c9397792",
-    "atlasTree": "ec951ffcf6095d7ae7c1f6255206eb449f44f75e"
+    "sourceReceiptSha256": "dd50ff58d146382f6b9ba56bbd490f60c05327b0160faad2f602351b7fe10fc5",
+    "atlasHead": "dab0c8ffa6986a57f8456303d47fa675a37055cf",
+    "atlasTree": "47ff750bbc04bee840915ee5be61f00d8f1506b5"
   },
-  "parent": "a1130c855179b83c253954dccc1a1a59bc2ee513",
-  "gitParent": "a1130c855179b83c253954dccc1a1a59bc2ee513",
+  "parent": "46eeb8cacf9f2e628b458d01d09ff9393f2dc5ea",
+  "gitParent": "46eeb8cacf9f2e628b458d01d09ff9393f2dc5ea",
   "files": [
     {
       "path": "app/globals.css",
@@ -25345,6 +25345,96 @@
       "sha256": "ed6c69296fd3e9b1169fa67fd44dc2c3ac2fd8f5e6f17768e6021a147ed9ea18"
     },
     {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
+      "bytes": 36363,
+      "sha256": "4e5808c311689e5aa53f94c6694c7fdb52edba950cb364f8f70b1d599a3fc2b7"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/docs/UPPER_CERVICAL_REASONING.md.raw",
+      "bytes": 3204,
+      "sha256": "f8c61adb37be1a552ee6faea3e812363d7c04509df0bc7bdf05661a29f4c572d"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/lib/reasoning-questions.ts",
+      "bytes": 14625,
+      "sha256": "7e4dd8f9d0f0a5786748d5b212e4df337758129526c95f3f23b91d1cccbe3c8c"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/lib/upper-cervical-reasoning.ts",
+      "bytes": 4157,
+      "sha256": "cd85712ed3ab4f4e3ec37ae9d67c25b7057ac6f0b1c3384b0bf94c6aea8c1f45"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 356301,
+      "sha256": "303cf4c6974d202c5368f095a669ec4a2c2e042553e72b72ae1ae74547be5dbc"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/scripts/check-upper-cervical-types.mjs",
+      "bytes": 870,
+      "sha256": "6f4d95c8fe4042e675d06af23e100c8cec67cd749e96e5a5ae768b906aa42c66"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/scripts/pin-upper-cervical-reasoning.mjs",
+      "bytes": 2034,
+      "sha256": "3aae23287b63472507fad0347e56aea7a2b7f35723f0d7d5b8d5a4fbd599adb9"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/scripts/test-upper-cervical-reasoning.mjs",
+      "bytes": 10149,
+      "sha256": "ba9fe5e790353b278aee778cbd5384107dc2f9ed9280b97183f5ecf4e17a1379"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 52965,
+      "sha256": "1e248dc00c5fe1f535dd2e78a9e6a301cd3682b0c6ee258e39ab58fe15eb9553"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/audit-axioappendicular-reasoning-20261023.mjs",
+      "bytes": 1239,
+      "sha256": "ab0536383ddf1860af3e5966208b150e88fa3b72aa305dad54b7532aeadcea20"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/build-ventricular-atlas-20261023.mjs",
+      "bytes": 1196,
+      "sha256": "68955dec2251a304847ebce04a0d6d36e9b5dcee1c2ff91ae79c161a4838e018"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/checkpoint-upper-cervical-reasoning-20261023.mjs",
+      "bytes": 9844,
+      "sha256": "52eefc2876ea28566c4d310f590538aaef8e21c0f285dbd340b523ecd79e113c"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/prepare-upper-cervical-reasoning-20261023.mjs",
+      "bytes": 3466,
+      "sha256": "70fab5f02f16447ce60e7c136a740f6002749feb1d62fc331533f9b59a487faf"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/preserve-upper-cervical-reasoning-20261023.mjs",
+      "bytes": 2435,
+      "sha256": "2d528e96921448ba6bf72703a6ae9e8666a44f51e147348c90aa4e14de68c81e"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/run-upper-cervical-reasoning-20261023.mjs",
+      "bytes": 3365,
+      "sha256": "97694b5e87e59a6891665c6db84f1479dd2758e1e4e35770319d886af099d2d9"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/seal-upper-cervical-reasoning-20261023.mjs",
+      "bytes": 6903,
+      "sha256": "31152400a39eb385c3d007aa12c853aef6db8974004b47da6bbcefed398cd757"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+      "bytes": 2027,
+      "sha256": "f5183aed51dfacdf292f692fb50527bed103c7892ee3072764b77c876b6b228d"
+    },
+    {
+      "path": "pending/upper-cervical-reasoning-20261023/coordination/verify-upper-cervical-migration-20261023.mjs",
+      "bytes": 4259,
+      "sha256": "6be35eca13fe5f0d6a2b6c876aab1cf35c4086b1af60c398f79f07f0ec023f87"
+    },
+    {
       "path": "pending/ventricular-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
       "bytes": 35519,
       "sha256": "72a632437be62b52e5161c835dd6c33eaeadb92bbcd31009f0fe13cc0ad82dbc"
@@ -26301,40 +26391,36 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered authored source plus3integration/verification/recovery recipes,3authored Website code/test paths and2original preimages. No generated bindings/catalogs/pins/renderers/model/media/route declarations or raw TAP/type/browser/private evidence. Not whole/private/runnable off-device recovery. No install/restart/refresh/deployment or permission expansion.",
+  "scope": "Inherited verified filtered authored source plus9audit/integration/verification/recovery recipes,6Atlas code/test files and3original project prose/notice files. No generated source pins/catalog/renderer/display metadata or raw snapshots/TAP/type/browser/private evidence. No model/media/scan/mask/patient identifier/decision. Not whole/private/runnable off-device recovery. Installed Website/preview unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "c548e5f9aac05315ec84f08d809d40bc8b0b460df5bfbebe63554a1fa03625cd",
-    "namedSourcePaths": 6253,
-    "productionFiles": 1111,
-    "nativeCases": 120,
-    "failures": 0,
-    "skipsOrCancellations": 0,
-    "focusedTypeRoots": 2,
-    "focusedTypeAmbient": 6,
-    "focusedTypeFiles": 598,
-    "focusedTypeDiagnostics": 0,
-    "reviewSourceFiles": 1571,
-    "reviewInputs": 1740,
-    "reviewBinding": "e659f4bcc3a96c36f08203a7e84514f4b5bb01cf3d832eeb346ff12634232996",
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "protectedReviewRebound": true,
-    "addedBoundInput": "components/HeadAtlasLearningPicker.tsx",
-    "sourceGeometryTeachingAccessUnchanged": true,
-    "proposalBrowserProofReusedForExactComponents": true,
-    "authenticatedAcceptance": false,
-    "actualDeviceImeAcceptance": false,
-    "clinicalApproval": false,
-    "spatialRegistration": false,
+    "mainReviewSha256": "8d36e632d0498ebc2b2320dc6b5a817fac39805b72794d316a07bfd0403f2b72",
+    "newDraftConcepts": 4,
+    "newRootSelections": 8,
+    "concepts": 197,
+    "sourceSelections": 354,
+    "previousConceptsPreserved": 193,
+    "previousSessionsPreserved": 346,
+    "changedTeachingWorksheets": 8,
+    "unchangedTeachingWorksheets": 1096,
+    "unchangedTopicPlacements": 9936,
+    "broadPracticeChecks": 22758,
+    "broadIdentityNegatives": 5563,
+    "newIdentityNegatives": 280,
+    "newPracticePaths": 48,
+    "tamperedPacketsRefused": 40,
+    "stalePostsRefusedBeforeStorage": 8,
+    "focusedTypesFiles": 593,
+    "focusedTypesDiagnostics": 0,
+    "completeAtlasBuildPassed": true,
+    "assetsDependenciesSourceHoldsUnchanged": true,
     "privateDecisionsReadOrMigrated": false,
+    "websiteIntegrationPending": true,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
     "previewChanged": false,
     "installed": false,
-    "wholeSuitePassing": false
+    "spatialRegistration": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
