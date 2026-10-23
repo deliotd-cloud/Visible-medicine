@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T14:20:20.737Z",
+  "at": "2026-10-23T14:44:23.765Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "2d2a76bb1fae54be189ff2e4a02636c8352a37bb6ca59d13a52050c10c8f3cdb",
+    "sourceReceiptSha256": "56f24d066ff24320b5058a2c027c76d085482b85ecd53f38c1aa3d3f01083d9e",
     "atlasHead": "9eac0806a7869cfae435010b013ae611d748c0c9",
-    "atlasTree": "1d96d29f65b9739713f2dd51bfccd3bddf6bba52",
-    "latestCompleteWebsiteReceiptSha256": "29e083ec39cf546e30e577f30bc345db0464f6451acb6c1380a3ca96d91f16d5"
+    "atlasTree": "1d96d29f65b9739713f2dd51bfccd3bddf6bba52"
   },
-  "parent": "b5236bc7d93826fff3e48e6cc808c4f509616c95",
-  "gitParent": "b5236bc7d93826fff3e48e6cc808c4f509616c95",
+  "parent": "438ee4f8972a0e04da5bd2076358496cfba34ce3",
+  "gitParent": "438ee4f8972a0e04da5bd2076358496cfba34ce3",
   "files": [
     {
       "path": "app/globals.css",
@@ -26106,6 +26105,121 @@
       "sha256": "418319343ca3033bff575d35faa6da5e177fc6eab16238fa052c2de755f10f79"
     },
     {
+      "path": "pending/tour-reading-website-20261023/coordination/admit-tour-reading-coverage-20261023.mjs",
+      "bytes": 7048,
+      "sha256": "8d3acceb634276a88c2a6a965862472ee61d97f13d0ae2c578cea2ac1eab7a7a"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/coordination/check-tour-reading-website-types-20261023.mjs",
+      "bytes": 4749,
+      "sha256": "df37edd73f971c7d6dea045e2022b77b6a5d6ea28f0f05e5b97fa576f6a4e5f0"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/coordination/checkpoint-tour-reading-website-20261023.mjs",
+      "bytes": 10727,
+      "sha256": "0949a90253624730a169e19b29f232f24d4423948b647176c50d650523765c32"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/coordination/derive-tour-reading-helpers-20261023.mjs",
+      "bytes": 1181,
+      "sha256": "09964dc750e44bd138615095de8a886a47b971e10b941fdb966f942e67689582"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/coordination/finalize-tour-reading-website-20261023.mjs",
+      "bytes": 9849,
+      "sha256": "90d711215c84c9dbe728e1701ba1fc2a1b9e479d0654a0eb04f02cee51277bbb"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/coordination/integrate-tour-reading-website-20261023.mjs",
+      "bytes": 11001,
+      "sha256": "89a0b2e0ca4ad57187a5e16cd471a830c13b8c8d2eaa4269b3c6eccc8bc4d822"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/coordination/patch-tour-reading-website-20261023.mjs",
+      "bytes": 4312,
+      "sha256": "6a3690edfe31a63f232185597d19fdf0ca3662613346161b5269d5fe71bfa425"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/coordination/seal-tour-reading-website-20261023.mjs",
+      "bytes": 13374,
+      "sha256": "d19262f2249a19d2419f49e627e8a94d2fde0b4fb9488cb05e056b7621d6a0ce"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/preimages/lib/anatomy-coverage-view.ts.raw",
+      "bytes": 5290,
+      "sha256": "45b980d3ea9cac54a73caf80afbe3d7940ac3191d34554a6ee3b559745f8c8cd"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/preimages/lib/atlas-delivery-policy.ts.raw",
+      "bytes": 493,
+      "sha256": "03f5c8b1595130d7f71d74c904167c6deaf69e43dab1c21a4dcd5b73ce2d084c"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/preimages/scripts/check-anatomy-coverage.mjs.raw",
+      "bytes": 4552,
+      "sha256": "54a92c7a38098a6291021f20b3b78a557e7ea52fae5e351a40f6014fc7e2a1c3"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/preimages/scripts/import-clinical-review.mjs.raw",
+      "bytes": 6751,
+      "sha256": "f79acea12def56f5e70e386b04654422d80bf542b429b52f249cdfd0265d65b7"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/preimages/tests/carpal-reasoning-current-delivery.test.mjs.raw",
+      "bytes": 18262,
+      "sha256": "a4a4d4fe35371df8070beb3cdea7c2dbc0c03029810649ede033a4ed22cb8a4a"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/preimages/tests/current-atlas-delivery.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "2d273d5674d36a772904437efbd22bb08209125a5a1ce459ade3bef57d03ffbd"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/preimages/tests/regional-tour-entry-delivery.test.mjs.raw",
+      "bytes": 11149,
+      "sha256": "f513cf5c2d4b10045e36b80d4c404f3d8aa1da081fe722023fc95fa8b3479dec"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "e15da3745cb3a2df81ae76114a2109cb15bd71783679352e9ed1a4fbd388939e"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "43c691b6891f5f59715be53123f623f4b993553c3b490312f0d9c996756a6af9"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "d68bf9fa8c39f76419f18dedd5dfa1c80e29f423b7d4ac97bd7aee3fbd52f03c"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "f9b819556518bfd8a3eaecd4a38cc1da32186b019851b2b2765e5821885e17ba"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/website/tests/carpal-reasoning-current-delivery.test.mjs",
+      "bytes": 19386,
+      "sha256": "a871223c03d2dc61a8718d542918a68b101c30135de2766ffb69352d753b71c0"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "fcf88e28227aaa6c718bb3db4b8318f86a8eae7b0197c5cf54ad8a44f288758c"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 11149,
+      "sha256": "16d871d381cad96026f46aadcb7767959966b9b7bf921b42cf8b3074a193cb7e"
+    },
+    {
+      "path": "pending/tour-reading-website-20261023/website/tests/tour-reading-current-delivery.test.mjs",
+      "bytes": 11023,
+      "sha256": "13fe8baf44a9fcdb673cd890ee6548a3483c75223d80b6dac0c072528dca4bba"
+    },
+    {
       "path": "pending/ui-recovery-integrated-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
       "bytes": 5420,
       "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
@@ -27322,44 +27436,45 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus8main recipes,5original Atlas reader/style/test/doc paths and2original source preimages. No generated renderer/source-input/pin/catalog/binding/build/diagnostic/type/process/browser evidence or model/media/scan/mask/identifier/decision. Not a whole/private/runnable off-device backup; no installation/public deployment.",
+  "scope": "Inherited verified filtered authored source plus8main recipes,8Website code/tests and7original authored preimages. No generated import/pin/catalog/coverage/binding/renderer/build/source-input snapshots/model/media/scan/mask/identifier/decision/raw diagnostic/type/browser/process evidence. Not whole/private/runnable off-device recovery. Preview unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "1e597f44eca2c7bd89e819624e2e4ae9d20116e3282f2789bbb0ad169c685e8d",
-    "tours": 53,
+    "mainReviewSha256": "16afe1ee1a88357c1b9306590c6f1bcc8740e85daba2b15be5ebe249029552be",
+    "regionalTours": 53,
     "stops": 317,
-    "existingReferenceLinks": 416,
-    "nativeCases": 91,
+    "originalReferences": 416,
+    "nativeCases": 152,
     "failures": 0,
-    "skips": 0,
-    "cancellations": 0,
-    "strictTypeRoots": 5,
-    "strictTypeFiles": 3314,
-    "strictTypeDiagnostics": 0,
-    "completeAtlasBuildPassed": true,
-    "productionOutputs": 546,
-    "originalComponentInverse": true,
-    "originalCssPrefixPreserved": true,
-    "unchangedParentInputs": 6303,
-    "allTeachingToursModelsNoticesDependenciesAndHoldsUnchanged": true,
-    "rendererDependencies": 1504,
-    "reviewScope": {
-      "root": 1104,
-      "nested": 108,
-      "specimen": 356,
-      "geometryDisplayRevisionsChange": true,
-      "sourceAndTeachingUnchanged": true,
-      "imagingStillBlocked": true
-    },
-    "actualHydratedReaderKeyboardAndTextQA": true,
-    "privateDecisionsReadOrMigrated": false,
-    "scoreOrProgressRecorded": false,
+    "skipsOrCancellations": 0,
+    "focusedTypeRoots": 12,
+    "focusedTypeAmbient": 6,
+    "focusedTypeFiles": 2846,
+    "focusedTypeDiagnostics": 0,
+    "reviewSourceFiles": 1579,
+    "reviewInputs": 1748,
+    "reviewBinding": "7608d1452572576d0f004cbb1db3b341e8a1a80a87427e5692a85e8c9fdd3532",
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "coverageScopes": 4,
+    "coverageSourceInputs": 171,
+    "coverageImportedInputs": 145,
+    "coverageMetadataInputs": 26,
+    "allCoverageCountsGapsHoldsPreserved": true,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "allPriorWebsiteUiPreserved": true,
+    "keyboardRoleFixComposed": true,
     "newAssetsDependenciesFees": false,
-    "websiteIntegrationPending": true,
+    "privateDecisionsReadOrMigrated": false,
+    "accessExpanded": false,
+    "authenticatedAcceptance": false,
+    "clinicalApproval": false,
+    "spatialRegistration": false,
     "previewChanged": false,
     "installed": false,
-    "wholeSuitePassing": false,
-    "clinicalApproval": false,
-    "spatialRegistration": false
+    "wholeSuitePassing": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
