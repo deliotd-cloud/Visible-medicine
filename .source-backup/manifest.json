@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T20:39:10.967Z",
+  "at": "2026-10-23T21:30:24.149Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "9dc0fb6b5a1fb147e9b598ed3434d6cd7deebed4bafb14836b66d5ac7bd0c611",
-    "atlasHead": "e3a901e103e9fb495a18d9bd1622190dfc0d034b",
-    "atlasTree": "998d2640e93dc369791a6d11eaa08c59d24635c8",
-    "reviewRevision": "01d9f8b3d966aa15d987fe0ee90aa57ee34f18bd0fdaa6cbf7f9f10d8898312d",
+    "nativeSourceReceiptSha256": "c702622d3b3f9398760c9c1d58a307e897fc65a31524aadf22773df4b24a3283",
+    "atlasHead": "b0ad9e786f2f26727cd627ec028c0d3894048c72",
+    "atlasTree": "c68f9c201e0a246e8d40c6977736b0238150d5a5",
     "normalPreviewChanged": false
   },
-  "parent": "789c43a3e5818e1bd1917352661502c90685bb18",
-  "gitParent": "789c43a3e5818e1bd1917352661502c90685bb18",
+  "parent": "821c1d5a1dcc40dd4b8213fb844f8eed47abf59d",
+  "gitParent": "821c1d5a1dcc40dd4b8213fb844f8eed47abf59d",
   "files": [
     {
       "path": "app/globals.css",
@@ -27697,6 +27696,141 @@
       "sha256": "13fe8baf44a9fcdb673cd890ee6548a3483c75223d80b6dac0c072528dca4bba"
     },
     {
+      "path": "pending/tour-replay-source-20261023/atlas/app/regional-guided-learning.tsx",
+      "bytes": 18315,
+      "sha256": "c4f2b98061ddf073993a1e94e373a639c139b6106f1162eeaf3d745df545504d"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/app/shoulder-explorer.tsx",
+      "bytes": 63188,
+      "sha256": "36498e8293055014b45be7ffc52e6b9e6d5cc69d96396b0c186b165b8de703ab"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/app/shoulder-tour-player.tsx",
+      "bytes": 4402,
+      "sha256": "5ecd296dcf93127265c0908135708ce456b5583c08c278e99257d36aae4e4400"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/integration/female-pelvis/vite.config.mjs",
+      "bytes": 821,
+      "sha256": "1ab670e80b6e4136d63d505240f2f84601d06ab19c9014e137e62e67fdbd77da"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/integration/head-neck/vite.config.mjs",
+      "bytes": 1839,
+      "sha256": "23c449745d2da33ccecebc9b1d77b10cf4fb7fec6364411653a3acbc4b57bd3b"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/integration/lower-limb/vite.config.mjs",
+      "bytes": 1207,
+      "sha256": "3645ce978d68a952d1c85b4683fe09c7d89f3044f5e74abdbb02d5823785c35b"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/integration/shoulder/vite.config.mjs",
+      "bytes": 4447,
+      "sha256": "b13b88b52a579a855b5eaa34aaa72962a32f770ff8a0d00fde6827c2a9012ac3"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/scripts/test-module-three-identity.mjs",
+      "bytes": 1855,
+      "sha256": "55193f3483229a3bf3e5bd7e32bd8f567cb0f5536b25976bca2adaa40bc12e1a"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/scripts/test-regional-tour-player.mjs",
+      "bytes": 140165,
+      "sha256": "730bc0dfa7c0983e429198a824d8c934ccb57daf674b7e04f57a39c3beb2463f"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/scripts/test-shoulder-tour-session.mjs",
+      "bytes": 27903,
+      "sha256": "c6fed8365d90ac1815ea4289cf8f36b438eb1216e1446a08bf9e6cb6d935acc6"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/scripts/test-shoulder-tours.mjs",
+      "bytes": 10231,
+      "sha256": "5cb073ead2a397afa436956a54993f25adf13bda59fa8c1c04df39f318e92e60"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/scripts/test-tour-step-picker.mjs",
+      "bytes": 3728,
+      "sha256": "9753376fbcb4487ea16d3e6d67ae6a0fcfbcd400caa69698e160d3c5894f154b"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/atlas/vite.config.ts",
+      "bytes": 1865,
+      "sha256": "032d7b0bfc97d8a19354a94d38c608b62f249c7dce0e102cea10d8b22b967771"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/check-tour-replay-types-20261023.mjs",
+      "bytes": 1722,
+      "sha256": "fd8fc22267fab417c2bf08d8a64524a664ce64538e616649eb9a55e22c154356"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/checkpoint-tour-replay-source-20261023.mjs",
+      "bytes": 7498,
+      "sha256": "73f4f810094766a4ad90244b4348433bcefc2b763400699153d70f9f7f05a256"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/commit-tour-replay-source-20261023.mjs",
+      "bytes": 3625,
+      "sha256": "7f88446798824501c8a3399be4f8e687a0d0bf813a2ebd553abac62a5c3a2137"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/commit-tour-three-identity-20261023.mjs",
+      "bytes": 2660,
+      "sha256": "554b264b7482a5f22f62a17f210dcb240d9833f5f52404f2aa4dec1f659931d8"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/finalize-tour-renderer-binding-20261023.mjs",
+      "bytes": 1581,
+      "sha256": "311c303b2a0e734326b56e6c828b9740f3adae1dd8d6bf0e954a997cfcd17cfd"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/materialize-atlas-test-dependencies-20261023.mjs",
+      "bytes": 2083,
+      "sha256": "ec36b4358d2406a77bb787032ec3474e08c8092bdef71adfbf76be1d89cfc74a"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/prepare-tour-replay-20261023.mjs",
+      "bytes": 1819,
+      "sha256": "5d493276596f14284649f2b25c05dff942e26c83b6ff7f7460cda67ec73b84c6"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/prove-tour-replay-abandoned-20261023.mjs",
+      "bytes": 1334,
+      "sha256": "97a19e4194aa7232a94d265fecb1c869aa8a35e97dd19aa35a121e4b4bdc46dc"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/prove-tour-stepper-baseline-20261023.mjs",
+      "bytes": 2110,
+      "sha256": "42e4f2e822a5fe763337416c5fa82d23a3baca636cf931ed963d97768cd1a2e9"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/run-tour-final-regional-20261023.mjs",
+      "bytes": 1884,
+      "sha256": "2b902b2b0860e7abd2146e46a4be554a4996d4ff4e2204889ac3b6e74541f524"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/run-tour-replay-20261023.mjs",
+      "bytes": 3402,
+      "sha256": "6937ed03bfd31148610547dfa0430af477210244a07be343b66d3f3f5d9a5b98"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/run-tour-replay-modules-20261023.mjs",
+      "bytes": 2749,
+      "sha256": "8d0504a888e38d0df6ac5ebcc1872e2e7a3d362cfed8cd07ec0f1c6322654ea5"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/seal-tour-replay-source-20261023.mjs",
+      "bytes": 8701,
+      "sha256": "5261f73c8cc77f7758f8f68a3c9c7995efe49f0a8d1d691e50f3d9b53039a947"
+    },
+    {
+      "path": "pending/tour-replay-source-20261023/coordination/serve-tour-replay-modules-20261023.mjs",
+      "bytes": 3710,
+      "sha256": "e774a3f9cd67dc2767563c51e6e260c0773ec08025476a7829918c341efbe9b5"
+    },
+    {
       "path": "pending/ui-recovery-integrated-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
       "bytes": 5420,
       "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
@@ -28913,28 +29047,25 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus declared review entry/legacy adapter/test and coordination recipes. No geometry/catalogue/generated Review/runtime/pins/bindings, private records/scans/identifiers, node_modules, dist, emulator state, images/logs/type evidence. Full generated/local evidence stays F-only; not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored source plus explicitly declared tour controls, tests, module configs and coordination recipes. No generated pins/revisions/manifests, geometry, private studies/records, source models, node_modules, dist, browser screenshots/logs or raw evidence. Complete source/evidence receipts remain F-only; not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "818a3557ba2541ba90895d8615ef8f2f309a8ba0bb8f55a87332c4af32afa51a",
-    "nativeCases": 74,
-    "legacyKindRegionComparisons": 84,
-    "strictRoots": 12,
-    "strictActualGraphFiles": 3501,
-    "strictAmbientFiles": 6,
-    "strictDiagnostics": 0,
-    "originalPrebuild": true,
-    "originalProductionBuild": true,
-    "originalReviewVerifier": true,
-    "reviewInputs": 1779,
-    "protectedViewerFiles": 54,
-    "unchangedExistingPackages": 24,
-    "modelsUnchanged": 137,
-    "modelPathsUnchanged": 144,
-    "modelBytesUnchanged": 199072480,
-    "beforeUncompressedFDAJavaScriptBytes": 5599831,
-    "afterUncompressedFDAJavaScriptBytes": 1166383,
-    "actualEmittedFdaAndLegacyBrowserChecks": true,
-    "consoleErrorReproducedWithoutApplicationJS": true,
+    "mainReviewSha256": "04cb57324f7fbd8588d828013ba3046040c17edbb31a0f0c1b6c6ac176832a57",
+    "uniqueFocusedCasesPassed": 110,
+    "finalRegionalCasesPassed": 85,
+    "actualStrictTypeRoots": 5,
+    "actualTypeGraphFiles": 3111,
+    "typeDiagnostics": 0,
+    "stockNativeProductionBuild": true,
+    "sourceFiles": 6350,
+    "unchangedParentFiles": 6335,
+    "sourceAndDecodedGeometryUnchanged": true,
+    "displayPinsUnchanged": 1104,
+    "shoulderTeachingRevisionsUnchanged": 9,
+    "renderingBoundGeometryRevisionsFresh": 9,
+    "actualProductionResolverQueries": 12,
+    "allFourModuleConfigsShareOneThreeIdentity": true,
+    "meshValidationUnchanged": true,
+    "emittedRegionalAndShoulderBrowserReplayVerified": true,
     "normalPreviewChanged": false,
     "privateDecisionsReadOrMigrated": false,
     "clinicalApproval": false,
