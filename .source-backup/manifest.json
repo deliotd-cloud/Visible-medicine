@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T16:05:27.397Z",
+  "at": "2026-10-23T16:32:52.469Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "1deb9b7f54fe19a720dcfb0456dba41838e14741b57e716aeed79a672b9dd280",
+    "sourceReceiptSha256": "c9525d20da416a7ca112cbd1da1248b8640538f5ac65f8e62009ec1272407342",
     "atlasHead": "66ac064579ee23c5739d0907e8378e0e2d57d7bd",
     "atlasTree": "0730550af7e5f8cc1d763d7326ca0a0c05458ca7",
-    "reviewBindingSha256": "2f02e302d89d7dec23f1a3921e4f3d11587116164ddbb49c37ed2e7df078bfca"
+    "reviewBindingSha256": "2f02e302d89d7dec23f1a3921e4f3d11587116164ddbb49c37ed2e7df078bfca",
+    "reviewBindingUnchanged": true
   },
-  "parent": "461f0cd56c58b4c7458f813827a763a9967d2909",
-  "gitParent": "461f0cd56c58b4c7458f813827a763a9967d2909",
+  "parent": "0383d09ac9196169dcb7bc4952436e138dd41198",
+  "gitParent": "0383d09ac9196169dcb7bc4952436e138dd41198",
   "files": [
     {
       "path": "app/globals.css",
@@ -19836,6 +19837,186 @@
       "sha256": "b6b742dfcbdc5655a9b958bb6bd9e28f4f05d21e92297f004b573ff9f36d621d"
     },
     {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/adapt-native-disclosure-tests-20261023.mjs",
+      "bytes": 6097,
+      "sha256": "ce15a9b24edc54640cf8ea77acfb3a7910c8aacc3bf7c8a4dd71d130cb8de3ef"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/archive-native-disclosure-parent-20261023.mjs",
+      "bytes": 1874,
+      "sha256": "366f64e56729ed1f8aada5460dc90a4d51fb054ce4d1a7cb40b908fc11a37827"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/check-native-disclosure-types-20261023.mjs",
+      "bytes": 1974,
+      "sha256": "e7df659f4be8add9081ce41fa72072238e07fa186660a22b49bb10035e30249a"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/checkpoint-native-disclosures-20261023.mjs",
+      "bytes": 9312,
+      "sha256": "1e23e470d45b1f7f716ee0421e5a9c7bea7de52682556a8ec971560ab08ff66a"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/finalize-native-disclosures-20261023.mjs",
+      "bytes": 8587,
+      "sha256": "1adeccebe183c9c17dce67b8f50682b444a3f278c9e5d3bb2029ae90e1e5b8fa"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/patch-native-disclosures-20261023.mjs",
+      "bytes": 3398,
+      "sha256": "f44eabe63959e4235b8f8a48e54820d0ec4f345013ebf8d530627673b18e5eb6"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/prepare-native-disclosures-20261023.mjs",
+      "bytes": 2661,
+      "sha256": "92ef37c0c7f5e35c610325effad46dd0470456296172ea5a0967ac9c6978c81b"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/preview-native-disclosures-20261023.mjs",
+      "bytes": 8096,
+      "sha256": "89ba2298b2192a60b41ba895854103cb2ceadd3275489f404d0b992cfcb5922f"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/recover-native-disclosure-test-patch-20261023.mjs",
+      "bytes": 2116,
+      "sha256": "ccb87f935b3e0730a78c9251a1279deca00adfea96389cb85be5cb63c3096a8b"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/run-native-disclosures-20261023.mjs",
+      "bytes": 3769,
+      "sha256": "1300a9ab58762336e974438ac4104c356364734327eeebb491e77221732438c4"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/seal-native-disclosures-20261023.mjs",
+      "bytes": 8378,
+      "sha256": "869ce1903089a87d4378920178144592b39d05db7204eafc817aa3dd395d7815"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/coordination/sequence-native-disclosures-20261023.mjs",
+      "bytes": 496,
+      "sha256": "4fd42b2c0439f93aed1aee500dce6a56908d8982bc1bcdc134a80b84c43b8671"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/app/workspace/page.tsx.raw",
+      "bytes": 6053,
+      "sha256": "5db80991307ffd7f8d3164e516bb68a08544b2d9a8e040fa5f6df747550d26e5"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/components/AtlasWorkspaceNavigation.tsx.raw",
+      "bytes": 5420,
+      "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/components/StudioNavigation.tsx.raw",
+      "bytes": 1781,
+      "sha256": "78ed4dffdfc51c15cb050ab9ba6d9aa20983d39e47e31ec6153a4beb8d634d59"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-3d-context.test.mjs.raw",
+      "bytes": 5717,
+      "sha256": "a475d86168f015be3264fbfd2a5de3059944511329d1e9504232fcd1f0986ff3"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-simplification.test.ts.raw",
+      "bytes": 5858,
+      "sha256": "4de68da5696a4d4464eea47a2169d6cd216a34332c06968783fba636e78524ca"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/desktop-workspace-simplification.test.ts.raw",
+      "bytes": 10671,
+      "sha256": "0b30894747d65a9da04e07c443fb367d7f838283291dbbac6295db01ac6bd02b"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/imaging-atlas-shell.test.ts.raw",
+      "bytes": 16099,
+      "sha256": "1a4efc97f1e50fdc7a96db432649ca3d5995c8641a3f53c87119f0ec71a6c97c"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/studio-publishing-navigation.test.mjs.raw",
+      "bytes": 5241,
+      "sha256": "0a85eba974b6b041effdaf2ebb7bd8456f5771b895cbfd53e33a8b0baf3c4a10"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/studio-workspace.test.ts.raw",
+      "bytes": 5991,
+      "sha256": "abc7361a2a86767dbb37e1d4d3102b26b3b2721460c498ec8db28e1e7961d49e"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/workspace-embed-disclosure.test.mjs.raw",
+      "bytes": 7111,
+      "sha256": "72f4f6434dd3c318d7e90558c41dccb1a960e172c0b090d0c6acec39ea0f3c22"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/app/workspace/page.tsx",
+      "bytes": 6193,
+      "sha256": "f2cb7a59721ac606632f6acebbedd6dd08e001b579c6fd75a764fe2f8ed56599"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/components/AtlasWorkspaceNavigation.tsx",
+      "bytes": 5491,
+      "sha256": "bdb3b0801d047c0061ea5cd4db6080c4c2fa5e6c4777f32469844711c7458aec"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/components/NativeDisclosure.tsx",
+      "bytes": 425,
+      "sha256": "9b1c0122da7bbc97492eda2d9e3bdd1d90603203cf9f4b9dbbf7f592c123238a"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/components/StudioNavigation.tsx",
+      "bytes": 1852,
+      "sha256": "de7532406b4def25c1dfad8bfa024cfe1b249f7f04603b5853691c416c398ef1"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/docs/NATIVE_WORKSPACE_DISCLOSURES.md.raw",
+      "bytes": 1175,
+      "sha256": "00da19f970ce05174d4f8275f8a9dec3f6835528e5665bce67867baf26744d8f"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/atlas-workspace-3d-context.test.mjs",
+      "bytes": 5871,
+      "sha256": "95ad5d1441b7831f44b62129fadf48dfc95ce53f64b6fb3ad65fa0e8e03d0c3b"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/atlas-workspace-simplification.test.ts",
+      "bytes": 6155,
+      "sha256": "264448d23e2f83de8829d059553aee456396862b05b7fd2771c7391c01a65055"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/desktop-workspace-simplification.test.ts",
+      "bytes": 10938,
+      "sha256": "019de75991955429c1b24c566ac285853aadba24e44aa944e8b656f0cc505190"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/imaging-atlas-shell.test.ts",
+      "bytes": 16251,
+      "sha256": "601181ba793375e63e38a863eb4dd3d0f1c637681e2dbab869084eb1e64e373e"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/native-disclosure-source.mjs",
+      "bytes": 2695,
+      "sha256": "78f9bd3d010260fb27dd942cd9a1888da846f7b5b1ac32201b5df69d8f1f0021"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/native-disclosure.test.mjs",
+      "bytes": 5776,
+      "sha256": "97820b7c748e63d5cebb7924fa47eae72cf80cf5f5faf2738a23a002b4835685"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/studio-publishing-navigation.test.mjs",
+      "bytes": 5373,
+      "sha256": "51371ffc3912a15fa79312944dbcb2c3aea4b103190be285b41131e499428b37"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/studio-workspace.test.ts",
+      "bytes": 6130,
+      "sha256": "57663d6998b1986c72ec15ff4cda9e8b8c44deb3bd010981228c0d4a3201db21"
+    },
+    {
+      "path": "pending/native-workspace-disclosures-20261023/website/tests/workspace-embed-disclosure.test.mjs",
+      "bytes": 7594,
+      "sha256": "2186c388ebd2d5f9255ea0ac832b70deaa53c1404afaa046dd61ae434fe0ee5a"
+    },
+    {
       "path": "pending/neck-landmark-xray-20261022/atlas/app/body-content.ts",
       "bytes": 82967,
       "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
@@ -27797,28 +27978,26 @@
     }
   ],
   "removed": [],
-  "scope": "Verified inherited filtered authored source plus original Website UI/test/admission/policy code, exact raw code preimages and18main integration recipes. No generated Review/runtime/binding/pin/catalogue/inventory/model/type/build/process/browser/private patient/scan/mask/decision payloads. Full generated runnable candidate and raw evidence are F-only; not a whole/private/runnable off-device backup.",
+  "scope": "Verified inherited filtered authored source plus original new NativeDisclosure/test/doc code, actual source-loader/identity-adapter test code,10full source preimages and12main recipes. No generated Review/runtime/binding/pin/catalogue/inventory/model/type/build/process/browser/screenshot/private scan/mask/identifier/decision data. Full runnable candidate/raw evidence stay F-only; not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "296a324d987bd290162278375ca79f331ba454ad2987834c5d257aa1beabeecf",
-    "nativeCases": 169,
-    "strictTypeRoots": 15,
-    "strictTypeFiles": 3257,
+    "mainReviewSha256": "b56b73c307616603ae421de44039629ffe13589ada666426d8048bd226107aa1",
+    "nativeCases": 56,
+    "strictTypeRoots": 4,
+    "strictTypeAmbient": 6,
+    "strictTypeFiles": 613,
     "strictTypeDiagnostics": 0,
-    "productionOutputs": 1111,
-    "actualPrebuildAndFullBuildPassed": true,
-    "sourceBlobsReadBack": 1579,
-    "exactBoundInputs": 1748,
-    "protectedViewerFiles": 46,
-    "protectedViewerPackages": 22,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "allModelRowsDependenciesLicencesAndAccessUnchanged": true,
-    "coverageSourceInputs": 171,
-    "coverageImportedInputs": 145,
-    "coverageMetadataInputs": 26,
-    "allCoverageCountsGapsHoldsPreserved": true,
-    "exactOriginalTestInverses": true,
+    "actualPrebuildAndProductionBuildPassed": true,
+    "productionOutputs": 1115,
+    "wholeOriginalConsumerAndTestInverses": 10,
+    "sourceInputs": 6391,
+    "unchangedParentInputs": 6377,
+    "reviewBindingUnchanged": "2f02e302d89d7dec23f1a3921e4f3d11587116164ddbb49c37ed2e7df078bfca",
+    "all1748ReviewInputsAndFourLearnersUnchanged": true,
+    "allAnatomyTeachingModelsCssNoticesPackagesAndEntitlementsUnchanged": true,
+    "isolatedBrowser1280KeyboardNestedCallerTabAndTrue200PercentText": true,
+    "unsavedTypedTextRetained": true,
+    "syntheticSubmissions": 0,
+    "ownedTabClosedAndServerStopped": true,
     "privateDecisionsReadOrMigrated": false,
     "newAssetsDependenciesFees": false,
     "previewChanged": false,

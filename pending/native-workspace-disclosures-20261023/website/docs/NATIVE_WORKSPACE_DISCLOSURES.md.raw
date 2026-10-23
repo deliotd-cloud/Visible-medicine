@@ -1,0 +1,20 @@
+# Native Workspace disclosures
+
+Workspace options, Studio Administration and Atlas modality-link help use the
+same Escape-to-close behaviour as the existing CT/MRI information panels.
+`NativeDisclosure` renders one native `details` element: it adds no visual
+controls, wrapper, storage, network request or navigation interception.
+
+Escape closes only the connected, open, innermost disclosure and focuses its own
+summary without scrolling. An already handled event or IME composition is left
+alone. Caller keyboard handling runs first. Native Enter, Space and Tab behaviour
+is retained; links keep their ordinary click and modifier semantics.
+
+Closing does not unmount children, clear fields, submit a form, save a draft,
+approve a review or discard unsaved edits. Source role checks, independent
+entitlements, routes and initial Studio administration-open conditions are
+unchanged. The existing head-disclosure utility is reused without changing it.
+
+Synthetic DOM/SSR and isolated browser checks are engineering evidence, not
+real-role, assistive-technology, clinical or release acceptance. The normal
+owner preview remains unchanged until a separately authorized cutover.

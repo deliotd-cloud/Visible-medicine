@@ -1,0 +1,30 @@
+// Existing tests load the actual client component; no inert details substitute.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261023-native-workspace-disclosures',site=stage+'/website',rows=[],preimages=[],sha=b=>createHash('sha256').update(b).digest('hex'),contracts=json(stage+'/TRANSITIONS.json').rows.filter(r=>!r.path.startsWith('tests/')).map(r=>({path:r.path,beforeSha256:r.beforeSha256,afterSha256:sha(r.after),edits:r.edits}));
+const helper=`import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+import ts from 'typescript';
+const require=createRequire(import.meta.url),sha=b=>createHash('sha256').update(b).digest('hex');
+const contracts=${JSON.stringify(contracts)};
+export function restoreNativeDisclosureConsumer(path,bytes){
+ const row=contracts.find(r=>r.path===path);assert(row,'Only explicit native-disclosure consumers');assert.equal(sha(bytes),row.afterSha256,'Exact current consumer bytes');let source=Buffer.from(bytes).toString();
+ for(const [before,after,n=1]of row.edits.toReversed()){assert.equal(source.split(after).length-1,n);source=source.split(after).join(before);}
+ const restored=Buffer.from(source);assert.equal(sha(restored),row.beforeSha256);return restored;
+}
+let actual;
+export function loadNativeDisclosure(){
+ if(!actual){const source=readFileSync(new URL('../components/NativeDisclosure.tsx',import.meta.url),'utf8');const code=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,module={exports:{}};
+  new Function('require','module','exports',code)(name=>name==='../lib/head-disclosure-keyboard'?require('../lib/head-disclosure-keyboard.ts'):require(name),module,module.exports);actual=module.exports.NativeDisclosure;assert.equal(typeof actual,'function');}
+ return actual;
+}
+`;
+function change(path,edits){const before=fs.readFileSync(site+'/'+path,'utf8'),dest=stage+'/preimages/'+path.replaceAll('/','_')+'.raw';assert(!fs.existsSync(dest));fs.copyFileSync(site+'/'+path,dest,fs.constants.COPYFILE_EXCL);preimages.push({path,file:dest,sha256:hash(dest)});let after=before;for(const[a,b,n=1]of edits){assert.equal(after.split(a).length-1,n,path+' seam '+a);after=after.split(a).join(b);}let inverse=after;for(const[a,b,n=1]of edits.toReversed()){assert.equal(inverse.split(b).length-1,n,path+' inverse');inverse=inverse.split(b).join(a);}assert.equal(inverse,before);rows.push({path,beforeSha256:hash(site+'/'+path),edits,after});}
+const importing="import {loadNativeDisclosure} from './native-disclosure-source.mjs';\n",impAll="import {loadNativeDisclosure,restoreNativeDisclosureConsumer} from './native-disclosure-source.mjs';\n";
+change('tests/atlas-workspace-3d-context.test.mjs',[["import assert from 'node:assert/strict';",importing+"import assert from 'node:assert/strict';"],["    if(name==='./AtlasRegionNavigation')return {AtlasRegionNavigation:()=>null};","    if(name==='./NativeDisclosure')return {NativeDisclosure:loadNativeDisclosure()};\n    if(name==='./AtlasRegionNavigation')return {AtlasRegionNavigation:()=>null};"]]);
+change('tests/imaging-atlas-shell.test.ts',[["import assert from 'node:assert/strict';",importing+"import assert from 'node:assert/strict';"],["const loadComponent=(name:string):unknown=>{","const loadComponent=(name:string):unknown=>{\n  if(name==='./NativeDisclosure')return {NativeDisclosure:loadNativeDisclosure()};"]]);
+change('tests/studio-publishing-navigation.test.mjs',[["import assert from 'node:assert/strict';",importing+"import assert from 'node:assert/strict';"],["const {StudioNavigation}=compile('components/StudioNavigation.tsx',{'next/link':Link,'next/navigation':{usePathname:()=>pathname}});","const {StudioNavigation}=compile('components/StudioNavigation.tsx',{'./NativeDisclosure':{NativeDisclosure:loadNativeDisclosure()},'next/link':Link,'next/navigation':{usePathname:()=>pathname}});"]]);
+change('tests/studio-workspace.test.ts',[["import assert from \"node:assert/strict\";",importing+"import assert from \"node:assert/strict\";"],["const { StudioNavigation } = compile(\"components/StudioNavigation.tsx\", {","const { StudioNavigation } = compile(\"components/StudioNavigation.tsx\", {\n  \"./NativeDisclosure\": { NativeDisclosure: loadNativeDisclosure() },"]]);
+change('tests/workspace-embed-disclosure.test.mjs',[["import assert from 'node:assert/strict';",impAll+"import assert from 'node:assert/strict';"],['function verify(candidate){',"function verify(candidate){\n  candidate=restoreNativeDisclosureConsumer('app/workspace/page.tsx',candidate).toString();"],["  for(const [before,after] of [","  for(const [historicalBefore,historicalAfter] of ["],["    assert(source.includes(before),before);","    const adapt=text=>text.replaceAll('<details','<NativeDisclosure').replaceAll('</details>','</NativeDisclosure>');\n    const before=adapt(historicalBefore),after=adapt(historicalAfter);\n    assert(source.includes(before),before);"],["  '../../db/platform':{getPlatformSnapshot:async()=>{snapshotCalls++;return snapshot;}},","  '../../components/NativeDisclosure':{NativeDisclosure:loadNativeDisclosure()},\n  '../../db/platform':{getPlatformSnapshot:async()=>{snapshotCalls++;return snapshot;}},"]]);
+fs.writeFileSync(stage+'/TEST_TRANSITIONS.json',JSON.stringify({at:new Date().toISOString(),rows,preimages,actualCurrentSsrAndAllOriginalAssertionsRetained:true},null,2)+'\n',{flag:'wx'});const patch='*** Begin Patch\n*** Add File: '+site+'/tests/native-disclosure-source.mjs\n'+helper.trimEnd().split('\n').map(l=>'+'+l).join('\n')+'\n'+rows.map(r=>'*** Update File: '+site+'/'+r.path+'\n@@\n'+fs.readFileSync(site+'/'+r.path,'utf8').trimEnd().split('\n').map(l=>'-'+l).join('\n')+'\n'+r.after.trimEnd().split('\n').map(l=>'+'+l).join('\n')+'\n').join('')+'*** End Patch';console.log(JSON.stringify({patch}));

@@ -1,0 +1,2 @@
+import {spawnSync} from 'node:child_process';import assert from 'node:assert/strict';import {json} from './seal-simple-website-successor.mjs';
+for(const phase of process.argv.slice(2)){assert(/^[a-z]+(?:-v\d+)?$/.test(phase));assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.activeExecutionSessions.length,0);const r=spawnSync(process.execPath,['run-native-disclosures-20261023.mjs',phase],{stdio:'inherit',windowsHide:true});if(r.status!==0){process.exitCode=r.status??1;break;}}
