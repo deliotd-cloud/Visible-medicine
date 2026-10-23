@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T10:58:42.899Z",
+  "at": "2026-10-23T11:21:44.970Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "7a85dfdc8fb90e2a3a650166214ba8424e6e6f4b5eaf8b2fd5b6a5c23b76e8ff",
-    "typeResultSha256": "bacb4ba7c5947c5c26c2c49889a37513dabcd45a7b8b65da03780040b7a6e551",
-    "atlasHead": "dab0c8ffa6986a57f8456303d47fa675a37055cf",
-    "atlasTree": "47ff750bbc04bee840915ee5be61f00d8f1506b5"
+    "sourceReceiptSha256": "7839f8737585bb33535039cc1ce0ef712dbe9b40a5a687560c9bb49350e493e0",
+    "atlasHead": "39dbb747a44feb0f4bc83e757310c5e3d1b49580",
+    "atlasTree": "84e9efcd2bfd6c67901d2455907908489200678c"
   },
-  "parent": "d4cdd66ac0b66a3971d2b79075df57fc17731f8b",
-  "gitParent": "d4cdd66ac0b66a3971d2b79075df57fc17731f8b",
+  "parent": "1d904e868a88761a920a2d4d2468a0c6b32de447",
+  "gitParent": "1d904e868a88761a920a2d4d2468a0c6b32de447",
   "files": [
     {
       "path": "app/globals.css",
@@ -22721,6 +22720,86 @@
       "sha256": "b70d0b2e8409859d37c7d216ac91bf890a1a5dff645520f0ef4be120a4c274ef"
     },
     {
+      "path": "pending/regional-tour-entry-20261023/atlas/app/body-explorer.tsx",
+      "bytes": 127607,
+      "sha256": "d70e85696ceaaf0545e0651f38dc61a6ccec0ecd9d21e7bc7d36352f2ef44c3c"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/app/whole-body-guided-learning.tsx",
+      "bytes": 7567,
+      "sha256": "b7076a510f0a34b9282cd5bee8ebda600d85eb06b1fa33578b6847adb967fa66"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/docs/REGIONAL_TOUR_ENTRY.md.raw",
+      "bytes": 1659,
+      "sha256": "e8d402cec5aa3a7910722d33ed98cbc19466bbf804b8551f3d5cab4fcadf6c00"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/integration/head-neck/main.tsx",
+      "bytes": 4325,
+      "sha256": "e6fdd287be3a2239304477bbb9dcb02e5d3d553c27666091f7206097a9924e5d"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/lib/regional-tour-entry.ts",
+      "bytes": 3260,
+      "sha256": "569d254666a148c42e27f9bc6be59aa87f11c58051d92f483c283645de5dc7e2"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 356776,
+      "sha256": "e665e03cc2ef6082aaeaf543b43f50833f87d94b7bc490d17dbadc367f637896"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/package.json.raw",
+      "bytes": 87665,
+      "sha256": "d660cf5c2cb49432093b6df2287a20d426b97e633f78d1f0bee5fef69e7ae25b"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/scripts/check-regional-tour-entry-types.mjs",
+      "bytes": 1859,
+      "sha256": "9b338cdf8b342c4797515110e6f9f08f528fcf2173ecab294fa04aeda152097b"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/scripts/test-initial-regional-tour-picker.mjs",
+      "bytes": 5536,
+      "sha256": "80808f82cebd1f044f8a05219359b0525ad98eb449b0f315f15c9459f0cab332"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/scripts/test-regional-tour-entry.mjs",
+      "bytes": 8702,
+      "sha256": "a3c11b94821bfa1abde93812843bd4f78a23051502d9993c711a6b5f3dce4b0c"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/atlas/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 37219,
+      "sha256": "f96ea4f6e531ee9d52a8a5ba10d1f59395d191b6e280693389508fecf45bf6ce"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/coordination/checkpoint-regional-tour-entry-20261023.mjs",
+      "bytes": 11450,
+      "sha256": "acac7a5b3727127deb8bd8c79ca34e2d2fd36c6300a7b084050858e83592b2bc"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/coordination/prepare-regional-tour-entry-20261023.mjs",
+      "bytes": 1964,
+      "sha256": "de66a43ad566fc2ac797c893bbe70189d20cbcdef9772891856370fc0dc3c67a"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/coordination/preserve-regional-tour-entry-20261023.mjs",
+      "bytes": 7648,
+      "sha256": "c7d1746e6ba0e94bbdee603e4ac62291dcb3706f4a62a6a6973ef219471c112a"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/coordination/run-regional-tour-entry-20261023.mjs",
+      "bytes": 3056,
+      "sha256": "f61e204379da4e8107c4c986f8b88d502af5bfbdca0d2eeae8c3b9105c7a0e34"
+    },
+    {
+      "path": "pending/regional-tour-entry-20261023/coordination/seal-regional-tour-entry-20261023.mjs",
+      "bytes": 5404,
+      "sha256": "d0211f18e4f54e1d5fd42a94e44a78cb1765f6a51a04682bd16ce5357e26d51b"
+    },
+    {
       "path": "pending/release-diagnostic-successor-20261022/coordination/checkpoint-release-diagnostic-successor-20261022.mjs",
       "bytes": 10789,
       "sha256": "87e8cb541147bdfc2912382ca83dde74640f6b086195c8157b662f0d543f51df"
@@ -26567,31 +26646,37 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered authored source plus3original metadata/type-verification/recovery recipes. No product changes, raw graph/type/compiler/process/build/browser/screenshot/private evidence, generated bindings or data/model/media/scans/masks/private decisions. Not whole/private/runnable off-device recovery. No preview cutover or public deployment.",
+  "scope": "Inherited verified filtered authored source plus5main recipes,8Atlas authored code/test files and3explicit original prose/notice/package rawUTF8 snapshots. No generated renderer/source catalog/display pins/bindings, raw snapshots/diagnostics/type/process/build/log/browser/private evidence, model/media/scan/mask/patient identifier/decision. Not whole/private/runnable off-device recovery. No preview/public deployment/access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "031aa60f271aa0e8e9737f52288bec556a979d9005688befa6330ee87af7bafa",
-    "actualCompleteNamedPageTypesPassed": true,
-    "strictConfiguredCompilerOptionsUnchanged": true,
-    "moduleSubstitutions": false,
-    "roots": 2,
-    "ambient": 6,
-    "sourceFiles": 779,
-    "diagnostics": 0,
-    "heapMiB": 768,
-    "elapsedMilliseconds": 6894.7175,
-    "observedFinalPeakRssKiB": 688456,
-    "observedResultHeapUsedBytes": 465423216,
-    "sourceReceiptSha256": "7a85dfdc8fb90e2a3a650166214ba8424e6e6f4b5eaf8b2fd5b6a5c23b76e8ff",
-    "productSourcePathsChanged": 0,
-    "buildOutputsChanged": 0,
-    "priorPageFailuresPreserved": true,
+    "mainReviewSha256": "3525ffd5bdc8e966d39292dce0bf3ff53d989e99dbaef1fd874e7766470643a1",
+    "exactFreshDocumentTourEntry": true,
+    "autoplay": false,
+    "staleMalformedWrongRegionRefused": true,
+    "studyPracticeGuidedActivityPreserved": true,
+    "sourceAndEveryFrameValidated": true,
+    "initialChoiceCapturedOnce": true,
+    "nativeCasesPassed": 90,
+    "initialPickerRejectedCases": 9,
+    "historicalInputs": 1231,
+    "actualStrictTypeFiles": 3309,
+    "actualStrictTypeDiagnostics": 0,
+    "completeAtlasBuildPassed": true,
+    "unchangedTrackedInputs": 6282,
+    "sourceModelFiles": 206,
+    "sourceModelBytes": 225024401,
+    "tourDefinitionsTeachingAssetsDependenciesAndHoldsUnchanged": true,
+    "rendererRevisionChanged": true,
+    "existingApprovalsTransferred": false,
+    "embeddedExportAndWebsiteIntegrationPending": true,
+    "browserAccepted": false,
     "fullProjectTypesPassed": false,
     "wholeSuitePassing": false,
-    "authenticatedAcceptance": false,
+    "privateDecisionsReadOrMigrated": false,
     "clinicalApproval": false,
-    "spatialRegistration": false,
+    "patientSpaceRegistration": false,
     "previewChanged": false,
-    "installed": false
+    "installed": false,
+    "spatialRegistration": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

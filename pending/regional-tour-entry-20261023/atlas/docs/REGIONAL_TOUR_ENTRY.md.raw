@@ -1,0 +1,26 @@
+# Exact regional tour entry
+
+An embedded Atlas fresh document can receive `regionalTour`, `tourRevision` and
+`tourSource`. These are bounded public identifiers, not private study identifiers
+or playback commands. Duplicate, partial, malformed, unknown, wrong-region and
+stale requests select nothing. The source must match the learner's exact build
+revision. Catalogue admission, every target and every stop frame are checked
+before the first scene mounts. Whole body uses its existing regional tour union.
+
+A valid request opens Guided learning with the exact current tour selected. It
+does not start or advance playback. Existing source/model readiness, explicit
+Start/Play, smooth camera, speed, pause, reduced-motion, visibility, retry and
+exit controls remain authoritative. A study request, active practice or existing
+guided activity takes precedence. The intent is consumed once; subsequent prop
+changes and catalogue retries do not replace a mounted activity. There is no new
+runtime message channel or entitlement. Nested specimen/eye tours and the
+separate shoulder reference module are not claimed as regional-tour coverage.
+
+The initial-selection API is source-side infrastructure until the Website
+catalogue and route transport are integrated through the normal generated
+learner/Review pipeline. Do not manually append a query to an older installed
+viewer and assume it has selected the tour. Website integration and browser
+acceptance are separate milestones. Draft teaching is not clinical approval;
+semantic anatomy comparison is not patient-space registration.
+
+Original MIT application code/text; no new asset, dataset, dependency or fee.
