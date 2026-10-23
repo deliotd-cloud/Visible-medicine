@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T16:32:52.469Z",
+  "at": "2026-10-23T16:58:41.723Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "c9525d20da416a7ca112cbd1da1248b8640538f5ac65f8e62009ec1272407342",
-    "atlasHead": "66ac064579ee23c5739d0907e8378e0e2d57d7bd",
-    "atlasTree": "0730550af7e5f8cc1d763d7326ca0a0c05458ca7",
-    "reviewBindingSha256": "2f02e302d89d7dec23f1a3921e4f3d11587116164ddbb49c37ed2e7df078bfca",
-    "reviewBindingUnchanged": true
+    "sourceReceiptSha256": "feba2ee6e0127ff34a9b23eaf01b3fe9ed83b8ced45d0803c66feaacd9b3d7fc",
+    "atlasHead": "2ab63cbbc1c5e18a4d7b3a65f799e863f5be0491",
+    "atlasTree": "c625d8b1a55aabd8e6497169856e9d67b85ea0f3",
+    "websiteIntegrationPending": true
   },
-  "parent": "0383d09ac9196169dcb7bc4952436e138dd41198",
-  "gitParent": "0383d09ac9196169dcb7bc4952436e138dd41198",
+  "parent": "d7a479673a7a3d5f367fbdc43261ad1f889b6442",
+  "gitParent": "d7a479673a7a3d5f367fbdc43261ad1f889b6442",
   "files": [
     {
       "path": "app/globals.css",
@@ -19807,6 +19806,91 @@
       "sha256": "64318525c66efc50a038e443d259632e00f69e0f7b212d5088a3413f6ab71ffd"
     },
     {
+      "path": "pending/midfoot-reasoning-20261023/atlas/docs/MIDFOOT_RELATIONSHIPS_REASONING.md.raw",
+      "bytes": 2953,
+      "sha256": "371e47f1ac584bca7892473ef438ec2adc15cc6bcc104532b0399751539fb98b"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
+      "bytes": 38469,
+      "sha256": "e0ec7e6ed95eaecbc532237cb09fb6419a852d76f484f68200979a4b4639ba8e"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/atlas/lib/midfoot-relationships-reasoning.ts",
+      "bytes": 5796,
+      "sha256": "6f092fb828b95134a1d761366e1abd8bab1ccaadfafb760deab2aa007d986779"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/atlas/lib/reasoning-questions.ts",
+      "bytes": 15356,
+      "sha256": "b742feec2dbaef38794742cf574bd40260a94479c27a84262521ca1d2e775b32"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 359169,
+      "sha256": "0756feb7fa138981f99933234960278571350a198ed2ba6a10eedb0602a40276"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/atlas/package.json.raw",
+      "bytes": 88166,
+      "sha256": "1b44132b3cb215ebcac37e22d186256051a7321cdd474611c2e6a74a86677fc6"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/atlas/scripts/pin-midfoot-relationships-reasoning.mjs",
+      "bytes": 2346,
+      "sha256": "9b4dc635f47b64e2863a61501bf11b2c3462c0340bb3082520bafdf2a4d92cdb"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/atlas/scripts/test-midfoot-relationships-reasoning.mjs",
+      "bytes": 15088,
+      "sha256": "1414b09cd048523df23fabeaa5e92ef2ddb52079bbc6dae65ca5e61be7ae3b06"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 55305,
+      "sha256": "9ce578b1f4e2fb7a3b35532c01a98c32e9a578311a7fc7da2f12e155e0bcc373"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/coordination/check-midfoot-reasoning-types-20261023.mjs",
+      "bytes": 1895,
+      "sha256": "cff5c8d63bb11775bad8a31b6d2229fa436241fe369aae8a6b9844555cc5d219"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/coordination/checkpoint-midfoot-reasoning-20261023.mjs",
+      "bytes": 10698,
+      "sha256": "3f41e941eadf8ed9fb236407bbe01c5a37510f6faef457d37e0107a817517717"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/coordination/finalize-midfoot-reasoning-20261023.mjs",
+      "bytes": 8344,
+      "sha256": "a2c72ab1975cbad6768fbf79f76d82e2e3f2444b15e41930e80f4696ebcc0843"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/coordination/prepare-midfoot-reasoning-20261023.mjs",
+      "bytes": 1902,
+      "sha256": "59a0ac29e602c22d06e2f8908d4befd297d22d48b32addc680dbb5f29e68fb86"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/coordination/run-midfoot-reasoning-20261023.mjs",
+      "bytes": 3686,
+      "sha256": "5b654c929e1b4879ba1290908807969a8ea4004dd2a0a63e7ea1a469f76d1c01"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/coordination/seal-midfoot-reasoning-20261023.mjs",
+      "bytes": 7491,
+      "sha256": "321844649efda852d3522ca048caf8d48c6b44b53b95ab4d9bd050ca0f96563d"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/coordination/sequence-midfoot-reasoning-20261023.mjs",
+      "bytes": 900,
+      "sha256": "5b4aea5d4ec932ac28182e698f77decdca75a512819c881a041576b3abaf8fad"
+    },
+    {
+      "path": "pending/midfoot-reasoning-20261023/coordination/verify-midfoot-reasoning-20261023.mjs",
+      "bytes": 7430,
+      "sha256": "8c0e9fc93a97ff98d6fe717a48ceae00c226bc4d112f78ea701bc2e4b415774d"
+    },
+    {
       "path": "pending/modality-help-clarity-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
       "bytes": 5420,
       "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
@@ -27978,32 +28062,36 @@
     }
   ],
   "removed": [],
-  "scope": "Verified inherited filtered authored source plus original new NativeDisclosure/test/doc code, actual source-loader/identity-adapter test code,10full source preimages and12main recipes. No generated Review/runtime/binding/pin/catalogue/inventory/model/type/build/process/browser/screenshot/private scan/mask/identifier/decision data. Full runnable candidate/raw evidence stay F-only; not a whole/private/runnable off-device backup.",
+  "scope": "Verified inherited filtered authored source plus8recipes,5Atlas code/test files and4original project prose/package raw snapshots. No generated identity pins/catalogue/renderer/display/binding/runtime/build/type/browser/private scan/mask/identifier/review decision payload. Full source identity/evidence/runnable candidate remains F-only; not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "b56b73c307616603ae421de44039629ffe13589ada666426d8048bd226107aa1",
-    "nativeCases": 56,
-    "strictTypeRoots": 4,
-    "strictTypeAmbient": 6,
-    "strictTypeFiles": 613,
-    "strictTypeDiagnostics": 0,
-    "actualPrebuildAndProductionBuildPassed": true,
-    "productionOutputs": 1115,
-    "wholeOriginalConsumerAndTestInverses": 10,
-    "sourceInputs": 6391,
-    "unchangedParentInputs": 6377,
-    "reviewBindingUnchanged": "2f02e302d89d7dec23f1a3921e4f3d11587116164ddbb49c37ed2e7df078bfca",
-    "all1748ReviewInputsAndFourLearnersUnchanged": true,
-    "allAnatomyTeachingModelsCssNoticesPackagesAndEntitlementsUnchanged": true,
-    "isolatedBrowser1280KeyboardNestedCallerTabAndTrue200PercentText": true,
-    "unsavedTypedTextRetained": true,
-    "syntheticSubmissions": 0,
-    "ownedTabClosedAndServerStopped": true,
+    "mainReviewSha256": "b1c69a24485c0b03dd53e85df3d1dfac7c6a14d5d68b6ea9a02699b6dbfa351f",
+    "newDraftConcepts": 6,
+    "newRootSelections": 12,
+    "concepts": 210,
+    "sourceSelections": 380,
+    "previousConceptsPreserved": 204,
+    "previousSessionsPreserved": 368,
+    "changedTeachingWorksheets": 12,
+    "unchangedTeachingWorksheets": 1092,
+    "unchangedTopicPlacements": 9936,
+    "broadPracticeChecks": 24052,
+    "broadIdentityNegatives": 5965,
+    "newIdentityNegatives": 420,
+    "newPracticePaths": 72,
+    "tamperedPacketsRefused": 60,
+    "stalePostsRefusedBeforeStorage": 12,
+    "focusedTypeRoots": 5,
+    "focusedTypeFiles": 1690,
+    "focusedTypeDiagnostics": 0,
+    "completeAtlasBuildPassed": true,
+    "assetsDependenciesSourceHoldsUnchanged": true,
     "privateDecisionsReadOrMigrated": false,
-    "newAssetsDependenciesFees": false,
-    "previewChanged": false,
-    "installed": false,
+    "websiteIntegrationPending": true,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "previewChanged": false,
+    "installed": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,

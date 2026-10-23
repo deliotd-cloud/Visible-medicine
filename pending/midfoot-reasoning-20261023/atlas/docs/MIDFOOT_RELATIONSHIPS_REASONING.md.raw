@@ -1,0 +1,42 @@
+# Midfoot relationships in 3D reasoning practice
+
+Six original formative concepts add twelve exact left/right targets: the three
+cuneiforms and the first, second and fourth metatarsals. These bones already have
+text quick checks. This batch adds them to the actual whole-body/regional 3D
+reasoning engine, its existing feedback/retry flow and revision-bound Review
+worksheet. Existing questions are not rewritten or remapped.
+
+The new prompts contrast usual midfoot articulations and AP/oblique radiographic
+alignment landmarks. They select existing whole source bones; no ligament,
+articular surface, fracture, new segmentation, radiograph or patient study is
+created. A static reference mesh does not establish patient alignment, ligament
+integrity, diagnostic thresholds or spatial CT/MRI registration. All content is
+draft pending the owner's source/revision-bound radiologist review.
+
+## Evidence and commercial-use boundary
+
+Facts were checked on 23 October 2026 against primary educational institutions:
+
+- [Texas Tech lower-limb bones](https://anatomy.ttuhscep.edu/anatomytables/bones_lowerlimb.html): cuneiform positions and proximal navicular articulation.
+- [AO Surgery Reference](https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/midfoot/lisfranc-injury/treatment-of-lisfranc-injuries): second metatarsal/middle-cuneiform relationship and medial-cuneiform/second-metatarsal interval.
+- [POSNA foot-dislocation study guide](https://posna.org/physician-education/study-guide/foot-dislocations-(lisfranc-and-subtalar)): recessed second metatarsal base and AP/oblique alignment landmarks. Its pediatric injury-management recommendations are not imported or generalized to adult treatment.
+
+These are factual references, not imported anatomy datasets or permissions to
+reproduce publisher material. No external text passage, question, diagram,
+texture, font or image is copied or bundled. The prose is newly authored and no
+new dependency, model or paid service is introduced. Existing retained BodyParts3D
+source licensing, notices and holds remain unchanged.
+
+`scripts/pin-midfoot-relationships-reasoning.mjs` reproduces complete identities
+from the trusted displayed catalogue at parent source
+`66ac064579ee23c5739d0907e8378e0e2d57d7bd`. Runtime matching compares every
+identity field, source hash and side, not merely a label or FMA identifier.
+Choices remain eligible same-side source selections and honor loaded bundles and
+current scope. A changed question changes teaching-review evidence; no approval
+is inherited from a text quiz or another source revision.
+
+Run `npm run midfoot-relationships-reasoning:test` after regenerating the original
+renderer and display-pin outputs. Source tests do not prove GPU, acquired-study,
+signed-in Website, assistive-technology, clinical or release acceptance. Website
+source integration is separate and this candidate is not installed into the
+owner's unchanged local preview.
