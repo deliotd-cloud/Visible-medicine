@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T06:26:10.387Z",
+  "at": "2026-10-23T07:09:08.765Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "9580e517bbb1637c602e7a79b8e289d55624e80c30713899e5e7c985f1303845",
+    "sourceReceiptSha256": "548f7c18ac8bd30d7cf30c2681aa83ec941a3551ab0af27260246fbfd610b64a",
     "atlasHead": "ed3c8cc0e99f6cf850a915d7a08de2e6489c1b6f",
     "atlasTree": "0305c15be5fb58ea7729a3849bbbdb6e1e40649d"
   },
-  "parent": "f34b55d73113cbcde93709553b649473229f4629",
-  "gitParent": "f34b55d73113cbcde93709553b649473229f4629",
+  "parent": "d322b1085759658e70dcfa00a526add5734f4cb1",
+  "gitParent": "d322b1085759658e70dcfa00a526add5734f4cb1",
   "files": [
     {
       "path": "app/globals.css",
@@ -24490,6 +24490,91 @@
       "sha256": "1d626f85ee1e8e9b132ad5f2545684d82504a2f863a64a0051da68cf4430bf8d"
     },
     {
+      "path": "pending/studio-note-recovery-20261023/candidate/components/StudioForms.tsx",
+      "bytes": 92138,
+      "sha256": "6b255f8d200b7ad9dbacf78fe1f903c160844b1f82eca37eeca8244f47b20d94"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/lib/studio-release-note-recovery.ts",
+      "bytes": 4393,
+      "sha256": "aaf325d9eb204a9971c9bb59d7fc1407b21b70863d7412136893b234f354c1e8"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/fixtures/studio-note-recovery-before/components/StudioForms.tsx.raw",
+      "bytes": 84127,
+      "sha256": "f06f117a4f75bf85fa5f33eeebe73e79c57bbae54f2066067f078fa6cce9ebf1"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/fixtures/studio-note-recovery-before/studio-session-draft-fixture.mjs.raw",
+      "bytes": 9219,
+      "sha256": "36d2d7b2d9ee546da40a5cbe9aaceaf243d99b489639585e1348899d47f924db"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/fixtures/studio-note-recovery-before/tests/studio-context-revalidation-fixture.mjs.raw",
+      "bytes": 11389,
+      "sha256": "74297c082962fc79182e0dff7d8aa67f86df663b68730674fd56eddc62feea8a"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/studio-context-revalidation-fixture.mjs",
+      "bytes": 11464,
+      "sha256": "ce59d52ad9403bb0801620b08bfb1e4e16760959d632f3a3acbe405650e71fd9"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/studio-release-note-preservation.test.mjs",
+      "bytes": 3553,
+      "sha256": "40ab8e42acc0dc57f9b20d23bee28b049bffdd5ff442d50596db6ffb492b0804"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/studio-release-note-recovery-fixture.mjs",
+      "bytes": 8505,
+      "sha256": "08e1e827dded0fb2e5ba60b5f94d2b57db541c6a9521309cc0834cf531d0bc95"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/studio-release-note-recovery-ui.test.ts",
+      "bytes": 12500,
+      "sha256": "c4fe4fd07d38c5c3a9a6c23dcdfdbb9c690be8b69d909aa71c2265191187f7ef"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/studio-release-note-recovery.test.ts",
+      "bytes": 5933,
+      "sha256": "d36c9a606f801ef1687c867cc5bea36b8444fb23f1b4668f4c816340ae5e4f07"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/candidate/tests/studio-session-draft-fixture.mjs",
+      "bytes": 9294,
+      "sha256": "dbe1d91766bd1bd1b9b1311509405aaadd802cfa9e55f88327c02a2e3e931f40"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/coordination/check-studio-note-types-20261023.mjs",
+      "bytes": 2827,
+      "sha256": "2c64ab09dd74408dda03b1b3a5bfba2ab2be890d972b6fad1ab4812c26c0dc86"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/coordination/checkpoint-studio-note-recovery-20261023.mjs",
+      "bytes": 11093,
+      "sha256": "44185b08c1476000632fc42e34c3b60fab90e4206c1077e45e7fb795b222b2dd"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/coordination/prepare-studio-note-recovery-20261023.mjs",
+      "bytes": 2687,
+      "sha256": "805bba47b559531c3f14de586bc6b17f317c02f7f77be4ec6741c664be112f29"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/coordination/run-studio-note-recovery-20261023.mjs",
+      "bytes": 3897,
+      "sha256": "cffa696dfb6625cea86ad6b1ce2f7e21b86d3e76430d498c19d3b5260adb8d97"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/coordination/seal-studio-note-recovery-20261023.mjs",
+      "bytes": 6747,
+      "sha256": "e49039b2cb515e42ea59a48c613bd81fec70c1a99ddea90ce5de0fb09191778e"
+    },
+    {
+      "path": "pending/studio-note-recovery-20261023/coordination/serve-studio-note-browser-20261023.mjs",
+      "bytes": 2086,
+      "sha256": "14cc0c8e34888abb7f5432384ebbca7958d7142c9acdfa4cb21e4d2ee0a02991"
+    },
+    {
       "path": "pending/studio-session-drafts-20261023/candidate/components/StudioForms.tsx",
       "bytes": 84127,
       "sha256": "f06f117a4f75bf85fa5f33eeebe73e79c57bbae54f2066067f078fa6cce9ebf1"
@@ -25541,37 +25626,31 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus five authored integration/verification/recovery recipes,20selected authored Website code/test paths and seven authored whole-code preimages. All generated Review/runtime/viewer/models/coverage/catalogue/pin/revision/build metadata, private maps/scans/masks/identifiers/decisions, raw/resource/type/coordination evidence and later docs remain F-only. Not whole/private/runnable off-device backup. No installation/server/restart/refresh/deployment, fees, auth/access/permission changes or clinical/spatial approval.",
+  "scope": "Inherited independently verified filtered source plus six authored recovery/verification recipes and eleven authored helper/component/test/preimage paths. No generated runtime/Review/viewer/models/build metadata, source maps, scans, masks, identifiers, private decisions, raw/browser/type/resource/coordination evidence or later documents. Not whole/private/runnable off-device backup. No owner-preview, access, permission, clinical or spatial approval change.",
   "proof": {
-    "mainReviewSha256": "6caeb5112a87f8fa5afd83863c7aadd671279cbdad49342106cf35e31cca3430",
-    "sourcePaths": 6191,
+    "mainReviewSha256": "81b6129bdf92c456bc47c66f62cff68b08365d1ee12b3ba2714cad3e2711df9a",
+    "sourcePaths": 6199,
     "buildFiles": 1110,
     "reviewSourceFiles": 1569,
     "reviewInputs": 1737,
     "reviewBindingSha256": "fc7ad671e664f4169f035790486a1b699ddc4e2f431ba1d7daafb5b572b402ab",
     "viewerFiles": 46,
     "viewerPackages": 22,
-    "focusedNativeCasesPassed": 97,
-    "supplementalNativeCasesPassed": 2,
-    "totalPassAcrossThreeRuns": 99,
+    "focusedNativeCasesPassed": 143,
     "zeroSkipsOrCancellations": true,
-    "focusedTypeRoots": 3,
-    "focusedTypeFiles": 580,
+    "focusedTypeRoots": 2,
+    "focusedTypeFiles": 588,
     "focusedTypeDiagnostics": 0,
     "actualPrebuildPassed": true,
     "actualProductionBuildPassed": true,
-    "ultrasoundCaseComparisons": 6,
-    "validatedNormalUltrasoundMaps": 0,
-    "sourceCoverageScopes": 4,
-    "sourceCoverageInputs": 171,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
+    "actualComponentSyntheticBrowser": true,
+    "authenticatedBrowserAcceptance": false,
     "modelsDependenciesNoticesAccessUnchanged": true,
+    "historyCancellationImported": false,
+    "durableNotesRecovery": false,
     "privateDecisionsReadOrMigrated": false,
     "fullProjectTypesPassing": false,
     "wholeSuitePassing": false,
-    "authenticatedAcceptance": false,
     "previewChanged": false,
     "installed": false,
     "clinicalApproval": false,
