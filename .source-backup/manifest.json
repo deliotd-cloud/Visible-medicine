@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T21:30:24.149Z",
+  "at": "2026-10-23T21:49:08.242Z",
   "sourceIdentity": {
-    "nativeSourceReceiptSha256": "c702622d3b3f9398760c9c1d58a307e897fc65a31524aadf22773df4b24a3283",
+    "websiteSourceReceiptSha256": "c292417e48c6e36666bcb0bf29f250e944bbb8b5c037948e6c0a3d1af4074129",
     "atlasHead": "b0ad9e786f2f26727cd627ec028c0d3894048c72",
     "atlasTree": "c68f9c201e0a246e8d40c6977736b0238150d5a5",
+    "reviewRevision": "8d7ea6cff6d5f140d7dc3d492fa95b43396d6c16692915ecb5ddb138209e788d",
     "normalPreviewChanged": false
   },
-  "parent": "821c1d5a1dcc40dd4b8213fb844f8eed47abf59d",
-  "gitParent": "821c1d5a1dcc40dd4b8213fb844f8eed47abf59d",
+  "parent": "1b940b3c7a424d2cb1664683c3ba04e5e7577913",
+  "gitParent": "1b940b3c7a424d2cb1664683c3ba04e5e7577913",
   "files": [
     {
       "path": "app/globals.css",
@@ -27831,6 +27832,86 @@
       "sha256": "e774a3f9cd67dc2767563c51e6e260c0773ec08025476a7829918c341efbe9b5"
     },
     {
+      "path": "pending/tour-replay-website-20261023/coordination/admit-tour-replay-coverage-20261023.mjs",
+      "bytes": 6473,
+      "sha256": "e2a7131b20ef03ce5982ce5bab9b78a073ebf562dbd25e236b63c632fa383f9a"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/coordination/check-tour-replay-website-types-20261023.mjs",
+      "bytes": 5114,
+      "sha256": "ab11952cd8148a6073e63a33626a7d6f84d86e3d7878bbacc2120ef35548e0e9"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/coordination/checkpoint-tour-replay-website-20261023.mjs",
+      "bytes": 7802,
+      "sha256": "cc093b163bd8e87702a01449443b8289e59ea7bb58116d7bdbae64f31a5d6efc"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/coordination/integrate-tour-replay-website-20261023.mjs",
+      "bytes": 9643,
+      "sha256": "04167d971d2de1406c755a09b373295e1a7c131736e9b64d57ddd4fa084f3296"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/coordination/seal-tour-replay-website-20261023.mjs",
+      "bytes": 11583,
+      "sha256": "5da43ef9e3f8bec1d0840861917a4274ac116b3f84164e96aa85cfc007637ee0"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/coordination/serve-tour-replay-website-20261023.mjs",
+      "bytes": 3532,
+      "sha256": "1ffd5c499e874ead2634b6b33fab3a1a67a77998bef944bfacd4823c42f09b97"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "7b5d3c5b12a46cb2f702655b16aa409969dc3801d7e9a506a8dfe3f3c8f4f5cb"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "d1ba8a07ec7225d96d7343a76d6d3b758d3817abc7ac1a8d71eb70d41994355b"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "bd8c46c8ace50457fa1afe6addcfc1b13b621098fe730e862fc05c1e90fa7bb2"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "9b6d57d2c3ce6081187378c5cdfd1d92a3ae819812fc003c0e14ee7f16e1f352"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/tests/atlas-tour-completion.test.mjs",
+      "bytes": 13471,
+      "sha256": "0747b489f51f27690ed84ffa2e7dfa407aff1278578a096690f701adc1b23039"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19274,
+      "sha256": "ede34d561411580061c57ea7a642ed90127094d05ca2e56b5c0b97b432ed4ee9"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/tests/fda-reference-review-links.test.mjs",
+      "bytes": 6996,
+      "sha256": "e088a85a982f85cc795e48fecd9af091debfebbd99868c131acc58ef74f862e5"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/tests/fda-reference-website-material.test.mjs",
+      "bytes": 19570,
+      "sha256": "9fdb51f7046c0d1f38cc71c27a6a249bc07405a68de54debc61c1062cda23ceb"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/tests/tour-reading-current-delivery.test.mjs",
+      "bytes": 15564,
+      "sha256": "56b6bf24ae19ad3ef3abb689063907a536f7e1cb25c5bd1e009621ab3ef866e3"
+    },
+    {
+      "path": "pending/tour-replay-website-20261023/website/tests/tour-replay-current-delivery.test.mjs",
+      "bytes": 7417,
+      "sha256": "6f7009b98f0c0c1e5d9506def8b609104fb58fa0953d45a5d3ec00e98eda0d0a"
+    },
+    {
       "path": "pending/ui-recovery-integrated-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
       "bytes": 5420,
       "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
@@ -29047,27 +29128,36 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus explicitly declared tour controls, tests, module configs and coordination recipes. No generated pins/revisions/manifests, geometry, private studies/records, source models, node_modules, dist, browser screenshots/logs or raw evidence. Complete source/evidence receipts remain F-only; not whole/private/runnable off-device recovery.",
+  "scope": "Inherited verified filtered authored source plus declared committed-source importer, exact source/coverage guards and test-role/replay code and coordination recipes. No generated JSON fixtures/pins/coverage/registry/Review/runtime, geometry, private records/scans/identifiers, raw evidence, node_modules, dist, emulator state or images/logs/type graphs. Full generated/local evidence remains F-only; not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "04cb57324f7fbd8588d828013ba3046040c17edbb31a0f0c1b6c6ac176832a57",
-    "uniqueFocusedCasesPassed": 110,
-    "finalRegionalCasesPassed": 85,
-    "actualStrictTypeRoots": 5,
-    "actualTypeGraphFiles": 3111,
-    "typeDiagnostics": 0,
-    "stockNativeProductionBuild": true,
-    "sourceFiles": 6350,
-    "unchangedParentFiles": 6335,
-    "sourceAndDecodedGeometryUnchanged": true,
-    "displayPinsUnchanged": 1104,
-    "shoulderTeachingRevisionsUnchanged": 9,
-    "renderingBoundGeometryRevisionsFresh": 9,
-    "actualProductionResolverQueries": 12,
-    "allFourModuleConfigsShareOneThreeIdentity": true,
-    "meshValidationUnchanged": true,
-    "emittedRegionalAndShoulderBrowserReplayVerified": true,
+    "mainReviewSha256": "c2b333c6d4e1a6a2e0adc6b407e51422f37cb9d57fea06fa5866de5d758cff22",
+    "initialFocusedCases": 96,
+    "initialPasses": 89,
+    "initialFailures": 7,
+    "finalAffectedCasesPassed": 22,
+    "uniqueFocusedCasesCovered": 98,
+    "unaffectedInitialCaseFiles": 12,
+    "strictRoots": 15,
+    "strictAmbientFiles": 6,
+    "strictActualGraphFiles": 3501,
+    "strictDiagnostics": 0,
+    "stockPrebuild": true,
+    "stockFullWebsiteBuild": true,
+    "stockReviewVerifier": true,
+    "reviewSourceFiles": 1591,
+    "reviewInputs": 1779,
+    "viewerFiles": 54,
+    "unchangedExistingPackages": 24,
+    "allFourRuntimeSourcesAligned": true,
+    "modelsUnchanged": 137,
+    "modelPathsUnchanged": 144,
+    "modelBytesUnchanged": 199072480,
+    "allFourEmittedModelsBrowserLoaded": true,
+    "regionalAndShoulderBrowserReplay": true,
+    "lazyFdaReviewBoundaryUnchanged": true,
+    "sourceAndTeachingApprovalsTransferred": false,
+    "privateDecisionStateRead": false,
     "normalPreviewChanged": false,
-    "privateDecisionsReadOrMigrated": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
     "previewChanged": false,
