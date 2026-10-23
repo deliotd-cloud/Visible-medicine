@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T09:15:32.247Z",
+  "at": "2026-10-23T09:34:07.902Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "8e41a9c68f78bc5d38d855f204b99b6a46ffd0f321d830c49474d239bb7c2e89",
+    "proposalSha256": "5bc16d27a08ce03368c1aa2e46d1a0e0d8d3c97c690de2c34fabfe15fdca4afc",
     "atlasHead": "0327b6360e18b62563265d115df2b779c9397792",
     "atlasTree": "ec951ffcf6095d7ae7c1f6255206eb449f44f75e"
   },
-  "parent": "855cc288d69d4147d728273751555d46f63c33dd",
-  "gitParent": "855cc288d69d4147d728273751555d46f63c33dd",
+  "parent": "ae8fcd58ff42f9231aa94c53754d97d63782b037",
+  "gitParent": "ae8fcd58ff42f9231aa94c53754d97d63782b037",
   "files": [
     {
       "path": "app/globals.css",
@@ -17115,6 +17115,141 @@
       "sha256": "2b06ffab4788e5341508a86a70af0e78121f12b52f9881b9c6192877bfc8ea61"
     },
     {
+      "path": "pending/head-link-keyboard-20261023/coordination/build-head-link-keyboard-browser-20261023.mjs",
+      "bytes": 1632,
+      "sha256": "1adc3a4295c005d5befff19d83e0f26a999e60afcec98efa226fb2114bfcdfd4"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/coordination/check-head-link-keyboard-types-20261023.mjs",
+      "bytes": 1738,
+      "sha256": "412691dd43fe2bbca3bc44d4edebbdd20a70086deda3494c9504612aa6282eb2"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/coordination/checkpoint-head-link-keyboard-20261023.mjs",
+      "bytes": 7142,
+      "sha256": "9efcd973ad3006d3f5f7db0237ea2ae241d85902c7f5c8659884cf68d71a393f"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/coordination/prepare-head-link-keyboard-20261023.mjs",
+      "bytes": 3151,
+      "sha256": "dbcb15966059e3622dcb352d3d15bc328b486e7497e62fb292d884fbd4052c17"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/coordination/serve-head-link-keyboard-browser-20261023.mjs",
+      "bytes": 1643,
+      "sha256": "bd7089567d272b67de94e871417b7d2ea153ddf2790f5a7c50804ba9401ebf5a"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/coordination/verify-head-link-keyboard-20261023.mjs",
+      "bytes": 7867,
+      "sha256": "074f8678520298449fa5cd195edd921e3d9c3b79e955cf9767fce34ac11f7bfb"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/components/HeadAtlasComparisonNavigation.tsx.raw",
+      "bytes": 9394,
+      "sha256": "bd8164224a2b938461333ec54637ea3c82afa8e988372d07e936ddae812cac8b"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/components/HeadAtlasLearningPicker.tsx.raw",
+      "bytes": 4790,
+      "sha256": "38f0385f393dc2e1a65c2af33c843cca0e25f4d4903bb3dcffc3866cdfbcd4a0"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/tests/head-comparison-compact-ui.test.mjs.raw",
+      "bytes": 9805,
+      "sha256": "5a002c4587254a561989d66601a01ad415ff77fb25db1f0875744af94ce50f8e"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/tests/head-comparison-revision.test.ts.raw",
+      "bytes": 3833,
+      "sha256": "d5fa5ed849d4b0d5b2d70915cd77b5a6ba04e544aea6fc1a99618eca1e650762"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/tests/head-ct-facial-navigation-status.test.mjs.raw",
+      "bytes": 3421,
+      "sha256": "6a08b4a70a762fdc19735edbcf6de793f201d918324b3bd27d2da1a15ff9014f"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/tests/head-learning-picker-dismiss.test.mjs.raw",
+      "bytes": 7865,
+      "sha256": "113f62c9f89916af407d885d81aa44e3adffdbaa514b29ab50752553c446de89"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/tests/head-learning-picker.test.ts.raw",
+      "bytes": 14737,
+      "sha256": "8fd4ac56f6e38077a42ce66303b2a32abaaf595fd30fa2f836fb47afeb4c6be6"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/tests/head-model-access-navigation.test.ts.raw",
+      "bytes": 2928,
+      "sha256": "b6d7f1c97ecf5e55abdcc0a29a14ad5e52108b900558084cd319ff2382e3ffa3"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/tests/head-model-blank-recovery.test.mjs.raw",
+      "bytes": 15583,
+      "sha256": "68343ab010898a2a09b9789f588a41003af07ffa53b63eeea12bbd46c04852da"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/preimages/tests/related-lecture-entrypoints.test.ts.raw",
+      "bytes": 6969,
+      "sha256": "f0117ad634d30f3732f5f75ac37e84df4442c5eddbf5dc9bc8d49735c8c275ba"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/components/HeadAtlasComparisonNavigation.tsx",
+      "bytes": 9261,
+      "sha256": "163689252d37bf875be8e707170515a90542597bd067188baf6e27050c2c3307"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/components/HeadAtlasLearningPicker.tsx",
+      "bytes": 4668,
+      "sha256": "a58584083eddd06d07a5330040215d53127234b3792b04b55888657362cbc5bf"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/head-comparison-compact-ui.test.mjs",
+      "bytes": 9988,
+      "sha256": "f1601e643ace111d5dbe3c8d1e36d510e1e825fc4fea5cd454cb72750bd2a0b8"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/head-comparison-revision.test.ts",
+      "bytes": 3953,
+      "sha256": "cc86ee2e508d7edd6dafccdfb973610f590c4281d7cdf25fa67b479502bb72db"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/head-ct-facial-navigation-status.test.mjs",
+      "bytes": 3534,
+      "sha256": "28e5081421f42f806e18ded9db5ce1e836bf9af4f3f5bcf7b9551db03a112aa6"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/head-learning-picker-dismiss.test.mjs",
+      "bytes": 8101,
+      "sha256": "9ef3ce68d029d6053d009728bce86d3120e1b872340cc6275e9a987a4b0e6585"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/head-learning-picker.test.ts",
+      "bytes": 14780,
+      "sha256": "439cb4cfc7011b2d5479021cf7376b9ade8cc2bafe0d8791857ed6219e9f2be6"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/head-link-menu-keyboard.test.mjs",
+      "bytes": 6604,
+      "sha256": "3e57a81ba4127638789276ccea3574757c27338fe1e7793e6e7a24bed18d43b5"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/head-model-access-navigation.test.ts",
+      "bytes": 3048,
+      "sha256": "7f23397614ad4f33a448631d4c9107d6ea884c16ab78d8cef2a3c48c65ae2ca8"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/head-model-blank-recovery.test.mjs",
+      "bytes": 15696,
+      "sha256": "97aeb82bb617839f263574821be683c03d337427e9827563e96f6ba601a3384f"
+    },
+    {
+      "path": "pending/head-link-keyboard-20261023/website/tests/related-lecture-entrypoints.test.ts",
+      "bytes": 7065,
+      "sha256": "f8be4f0767a4ffb355fc96b2b425be50bac7be24143b165e035be6830999a0ae"
+    },
+    {
       "path": "pending/head-modality-3d-20261022/coordination/build-unbound-ui-successor.mjs",
       "bytes": 4572,
       "sha256": "b64ddd7d0916bab4e96465b0af0cd4594745a5abac0ed2cf2cffcad246980eb4"
@@ -26126,47 +26261,33 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus5authored integration/verification/recovery recipes,7selected Website code/test paths and5authored source preimages. No generated import/pin/catalog/coverage/renderer/build/source-input metadata or raw worker/TAP/type/resource/coordination evidence. No model/media/scan/mask/private identifier/decision. Not whole/private/runnable off-device recovery. Nothing installed/restarted/refreshed/deployed; no fee/access/permission/clinical/spatial expansion.",
+  "scope": "Inherited verified filtered authored source plus6recipes,2components,8test-fixture adaptations,1new regression file and10authored preimages. No generated models/renderers/catalogs/binding/route declarations, raw logs/screenshots/type/browser/private data. Not whole/private/runnable recovery. Proposal not installed or production-built.",
   "proof": {
-    "mainReviewSha256": "0d0c90371bd48d3161441bb655cb9a2543c887c391d566bae9d3ed7b620ddf8b",
-    "newDraftQuestions": 3,
-    "concepts": 193,
-    "sourceSelections": 346,
-    "nativeCasesPassed": 92,
-    "nativeFailures": 0,
-    "nativeSkipsOrCancellations": 0,
-    "focusedTypesRoots": 4,
-    "focusedTypesAmbientFiles": 6,
-    "focusedTypesFiles": 601,
-    "focusedTypesDiagnostics": 0,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "finalBuildHeapMiB": 384,
-    "first256MiBBuildResourceFailed": true,
-    "reviewSourceFiles": 1571,
-    "reviewInputs": 1739,
-    "reviewBindingSha256": "79d360966f539da0237ad127e024f5fa43db7c8c57c1d614c689ef85775b8b7f",
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "newModelAdmission": false,
-    "coverageInventories": 4,
-    "coverageSourceInputs": 171,
-    "coverageImportedInputs": 145,
-    "coverageMetadataInputs": 26,
-    "coverageScopeGapsHoldsUnchanged": true,
-    "privateDecisionsReadOrMigrated": false,
-    "accessExpanded": false,
-    "wholeSuitePassing": false,
-    "fullProjectTypesPassed": false,
-    "authenticatedAcceptance": false,
+    "mainReviewSha256": "02966d9f4d851d1ff0f3d26ef17f8af142d24dce025e428c0f54f289e1fc044d",
+    "nativeCases": 75,
+    "failures": 0,
+    "skipsOrCancellations": 0,
+    "focusedTypeRoots": 2,
+    "focusedTypeAmbient": 6,
+    "focusedTypeFiles": 598,
+    "focusedTypeDiagnostics": 0,
+    "actualReactBrowserFixture": true,
+    "nativeEscapeObserved": true,
+    "syntheticCompositionEvents": true,
+    "actualDeviceImeAcceptance": false,
+    "authoredComponents": 2,
+    "adaptedTestFixtures": 8,
+    "newTests": 5,
+    "originalAssertionsPreserved": true,
+    "productionWholeTextInverses": true,
+    "reviewRebindPending": true,
+    "productionBuildPending": true,
+    "fullWebsiteCandidateReplaced": false,
     "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "spatialRegistration": false,
     "previewChanged": false,
     "installed": false,
-    "spatialRegistration": false
+    "wholeSuitePassing": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
