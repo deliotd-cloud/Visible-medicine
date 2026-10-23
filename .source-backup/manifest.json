@@ -1,9 +1,11 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T03:31:28.956Z",
+  "at": "2026-10-23T03:41:21.551Z",
   "sourceIdentity": {
-    "parentReceiptSha256": "bd073fb1d6134af415e8b77f82ba218a1756e47af2c2ab503459e711ea8a6cc8",
-    "proposal": [
+    "sourceReceiptSha256": "e48afc8471eee287c2464f3bd4eb4b2709847b35954ebf54686530ac68bef5a4",
+    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
+    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
+    "selected": [
       {
         "path": "components/StudioForms.tsx",
         "bytes": 84127,
@@ -38,11 +40,31 @@
         "path": "tests/studio-session-draft-form.test.mjs",
         "bytes": 8020,
         "sha256": "f773a9531df3194dc464d5e3786af00643f973a70e78004161535f7c92d3e070"
+      },
+      {
+        "path": "components/ClinicalReviewInbox.tsx",
+        "bytes": 35559,
+        "sha256": "daa77c9e5686865053aa8ce0c156860f807a75ec75905f71f7a13a7aa7b77bb0"
+      },
+      {
+        "path": "tests/clinical-review-inbox-failure-focus.test.mjs",
+        "bytes": 12717,
+        "sha256": "ca2ffb990e87308a2ced002d614804adf9a66fb605b0c41bcb5d8c8055c33064"
+      },
+      {
+        "path": "components/AtlasWorkspaceNavigation.tsx",
+        "bytes": 5420,
+        "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
+      },
+      {
+        "path": "tests/atlas-workspace-simplification.test.ts",
+        "bytes": 5858,
+        "sha256": "4de68da5696a4d4464eea47a2169d6cd216a34332c06968783fba636e78524ca"
       }
     ]
   },
-  "parent": "36661884ca33f0e708ac42d91f24dc5aa17efce3",
-  "gitParent": "36661884ca33f0e708ac42d91f24dc5aa17efce3",
+  "parent": "5c22abac8ecfee7850bca48e735f7ac4fda10ce2",
+  "gitParent": "5c22abac8ecfee7850bca48e735f7ac4fda10ce2",
   "files": [
     {
       "path": "app/globals.css",
@@ -24220,6 +24242,76 @@
       "sha256": "4beb473e5f5c581fa9aa694735a4c1648031871da43b10d0d339f8c21c649308"
     },
     {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
+      "bytes": 5420,
+      "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/components/ClinicalReviewInbox.tsx",
+      "bytes": 35559,
+      "sha256": "daa77c9e5686865053aa8ce0c156860f807a75ec75905f71f7a13a7aa7b77bb0"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/components/StudioForms.tsx",
+      "bytes": 84127,
+      "sha256": "f06f117a4f75bf85fa5f33eeebe73e79c57bbae54f2066067f078fa6cce9ebf1"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/lib/studio-session-drafts.ts",
+      "bytes": 4080,
+      "sha256": "d67fd4c7432fcd10c4591638b3d5b9ed3ccf9c3e020dc2b0e0643cb42eaede83"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/tests/atlas-workspace-simplification.test.ts",
+      "bytes": 5858,
+      "sha256": "4de68da5696a4d4464eea47a2169d6cd216a34332c06968783fba636e78524ca"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/tests/clinical-review-inbox-failure-focus.test.mjs",
+      "bytes": 12717,
+      "sha256": "ca2ffb990e87308a2ced002d614804adf9a66fb605b0c41bcb5d8c8055c33064"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/tests/studio-course-draft-discard.test.mjs",
+      "bytes": 16123,
+      "sha256": "02ad4ecbd0ce2d4502d64395911c8920c97619d4adbb85af240da5110151c067"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/tests/studio-mutation-context-fixture.mjs",
+      "bytes": 8372,
+      "sha256": "5a0563e7cb794089b7b51dd351c45bb4f6b5f6fa70b0eb1398b2db8f79d9ade4"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/tests/studio-session-draft-fixture.mjs",
+      "bytes": 9219,
+      "sha256": "36d2d7b2d9ee546da40a5cbe9aaceaf243d99b489639585e1348899d47f924db"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/tests/studio-session-draft-form.test.mjs",
+      "bytes": 8020,
+      "sha256": "f773a9531df3194dc464d5e3786af00643f973a70e78004161535f7c92d3e070"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/candidate/tests/studio-session-drafts.test.ts",
+      "bytes": 8677,
+      "sha256": "d50a30811e597c1ed921061cc80aa46bd26ecb28ffddd70bacb360fbd01f45ba"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/coordination/check-ui-recovery-types-20261023.mjs",
+      "bytes": 2240,
+      "sha256": "758d1ba2a47a9427e046d143bc20681c4ad33b90b08716c175fd7eab2961ac33"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/coordination/checkpoint-ui-recovery-integrated-20261023.mjs",
+      "bytes": 9695,
+      "sha256": "8ef2fbbf8db52b2d6f0ad4eb19327bef8bff21b365cc4d599bbb10eaf7f8f61a"
+    },
+    {
+      "path": "pending/ui-recovery-integrated-20261023/coordination/integrate-ui-recovery-20261023.mjs",
+      "bytes": 10684,
+      "sha256": "8e6111672df6fefad6d785366071de03018e0b828ffbe86b8a62efdd8606c5a7"
+    },
+    {
       "path": "pending/ui-runtime-delivery-20261023/coordination/checkpoint-ui-runtime-delivery-20261023.mjs",
       "bytes": 12006,
       "sha256": "00f3ec445e2f73c37cdf6804913f25897530e4f38633dd3775a6a7b353514bc4"
@@ -24946,23 +25038,25 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus seven selected source files, six authored coordinator/fixture recipes and three exact authored source preimages. No generated bundles, captures, logs, private references, context records, scans, masks, model/build/private data, decisions or permissions are selected. Raw evidence remains F-only. Not whole/private/runnable off-device backup; no production preview or public deployment change.",
+  "scope": "Inherited independently verified filtered source plus three authored composition/type/recovery recipes and eleven selected authored candidate source files already assessed in three bounded proposals. All generated manifests/catalogues/builds/Review/model/private inputs and raw/type/browser evidence stay F-only, with no scans, masks, identifiers, private decisions, raw canonical ancestry or secrets selected. Not whole/private/runnable off-device recovery. No install/server/preview/restart/refresh/public deployment, identity/permission/access/clinical/spatial approval change.",
   "proof": {
-    "mainReviewSha256": "4bca93d48f7f63c16542a4c373f6cfc9a547ed949166142c1535faec80424a82",
-    "nativeCasesPassed": 62,
-    "pureStoreCases": 10,
-    "newConsumerCases": 7,
-    "unchangedExistingCases": 45,
-    "beforeNewConsumerFail": 6,
-    "beforeNewConsumerPass": 1,
-    "skips": 0,
-    "realReactSyntheticBackForward": true,
-    "explicitRecoveryAndCancel": true,
-    "contextAndFormSeparation": true,
-    "noAutomaticSubmit": true,
-    "temporaryNotDurable": true,
-    "sealed6130SourceAnd1110BuildPathsUnchanged": true,
-    "ownerPreviewChanged": false,
+    "mainReviewSha256": "71669fa11871cfbbd0a620cdfcf7c4ced098c54deda67c9fe8208d11b130df7f",
+    "hostNamedPaths": 6135,
+    "overlayPaths": 11,
+    "changedParentPaths": 6,
+    "addedPaths": 5,
+    "nativeCasesPassed": 196,
+    "zeroSkipsOrCancellations": true,
+    "focusedSemanticDependencyFiles": 624,
+    "focusedSemanticDiagnostics": 0,
+    "fullProjectTypesPassing": false,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "buildFiles": 1110,
+    "reviewBindingInputsUnchanged": 1734,
+    "reviewSourceFiles": 1567,
+    "modelPathsUnchanged": 144,
+    "lectureRowsUnchanged": 1104,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
