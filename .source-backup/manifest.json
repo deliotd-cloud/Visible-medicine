@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T09:34:07.902Z",
+  "at": "2026-10-23T09:46:13.039Z",
   "sourceIdentity": {
-    "proposalSha256": "5bc16d27a08ce03368c1aa2e46d1a0e0d8d3c97c690de2c34fabfe15fdca4afc",
+    "sourceReceiptSha256": "d570f3deb2930a5b893f3892063a10292dc7899dafffa51c07f324ac35ff7bbb",
     "atlasHead": "0327b6360e18b62563265d115df2b779c9397792",
     "atlasTree": "ec951ffcf6095d7ae7c1f6255206eb449f44f75e"
   },
-  "parent": "ae8fcd58ff42f9231aa94c53754d97d63782b037",
-  "gitParent": "ae8fcd58ff42f9231aa94c53754d97d63782b037",
+  "parent": "a1130c855179b83c253954dccc1a1a59bc2ee513",
+  "gitParent": "a1130c855179b83c253954dccc1a1a59bc2ee513",
   "files": [
     {
       "path": "app/globals.css",
@@ -19010,6 +19010,46 @@
       "sha256": "5351a55d164f65b10c72e5ef5b3023e9340b77004fd355042c85eb6c278018dc"
     },
     {
+      "path": "pending/linked-menus-website-20261023/coordination/checkpoint-linked-menus-website-20261023.mjs",
+      "bytes": 9127,
+      "sha256": "311d434500e4240938f48d1633dcc5e0844c3b0dc33aabf09153cf7fa5c72bb7"
+    },
+    {
+      "path": "pending/linked-menus-website-20261023/coordination/integrate-linked-menus-website-20261023.mjs",
+      "bytes": 8183,
+      "sha256": "2004c62a032937fb6fc3a0246b34d3a3f6a5f02172184ab2cdd451d1de7a3004"
+    },
+    {
+      "path": "pending/linked-menus-website-20261023/coordination/seal-linked-menus-website-20261023.mjs",
+      "bytes": 9959,
+      "sha256": "432952edf3afe26e8640e6fbd907c993718cdfadcf5123d9b730c4ab98e67838"
+    },
+    {
+      "path": "pending/linked-menus-website-20261023/preimages/scripts/bind-clinical-review.mjs.raw",
+      "bytes": 8344,
+      "sha256": "f345c7841c5ab546054d06d7dfe4c25551acd37095ed8f1828c530623b32fef5"
+    },
+    {
+      "path": "pending/linked-menus-website-20261023/preimages/tests/current-atlas-delivery.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "d66e163d01fdb3586c19eec54a6834357de8d20c922996ef36fc36b407227380"
+    },
+    {
+      "path": "pending/linked-menus-website-20261023/website/scripts/bind-clinical-review.mjs",
+      "bytes": 8385,
+      "sha256": "522ed95644ed526ca165a709e996db5f0bb17591a3b48b4580e6f4b8be0034a8"
+    },
+    {
+      "path": "pending/linked-menus-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "5f4f771bc5316bd5ba98469103a793f0467062aecad3986f11632d16645cd700"
+    },
+    {
+      "path": "pending/linked-menus-website-20261023/website/tests/head-link-menu-bound-delivery.test.mjs",
+      "bytes": 6810,
+      "sha256": "a22f8171463005090647ae76cf3c512d62fe08d01e71a6353bb6dfa9e12eea94"
+    },
+    {
       "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/components/HeadAtlasLearningPicker.tsx",
       "bytes": 4790,
       "sha256": "38f0385f393dc2e1a65c2af33c843cca0e25f4d4903bb3dcffc3866cdfbcd4a0"
@@ -26261,30 +26301,37 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus6recipes,2components,8test-fixture adaptations,1new regression file and10authored preimages. No generated models/renderers/catalogs/binding/route declarations, raw logs/screenshots/type/browser/private data. Not whole/private/runnable recovery. Proposal not installed or production-built.",
+  "scope": "Inherited independently verified filtered authored source plus3integration/verification/recovery recipes,3authored Website code/test paths and2original preimages. No generated bindings/catalogs/pins/renderers/model/media/route declarations or raw TAP/type/browser/private evidence. Not whole/private/runnable off-device recovery. No install/restart/refresh/deployment or permission expansion.",
   "proof": {
-    "mainReviewSha256": "02966d9f4d851d1ff0f3d26ef17f8af142d24dce025e428c0f54f289e1fc044d",
-    "nativeCases": 75,
+    "mainReviewSha256": "c548e5f9aac05315ec84f08d809d40bc8b0b460df5bfbebe63554a1fa03625cd",
+    "namedSourcePaths": 6253,
+    "productionFiles": 1111,
+    "nativeCases": 120,
     "failures": 0,
     "skipsOrCancellations": 0,
     "focusedTypeRoots": 2,
     "focusedTypeAmbient": 6,
     "focusedTypeFiles": 598,
     "focusedTypeDiagnostics": 0,
-    "actualReactBrowserFixture": true,
-    "nativeEscapeObserved": true,
-    "syntheticCompositionEvents": true,
+    "reviewSourceFiles": 1571,
+    "reviewInputs": 1740,
+    "reviewBinding": "e659f4bcc3a96c36f08203a7e84514f4b5bb01cf3d832eeb346ff12634232996",
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "protectedReviewRebound": true,
+    "addedBoundInput": "components/HeadAtlasLearningPicker.tsx",
+    "sourceGeometryTeachingAccessUnchanged": true,
+    "proposalBrowserProofReusedForExactComponents": true,
+    "authenticatedAcceptance": false,
     "actualDeviceImeAcceptance": false,
-    "authoredComponents": 2,
-    "adaptedTestFixtures": 8,
-    "newTests": 5,
-    "originalAssertionsPreserved": true,
-    "productionWholeTextInverses": true,
-    "reviewRebindPending": true,
-    "productionBuildPending": true,
-    "fullWebsiteCandidateReplaced": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
+    "privateDecisionsReadOrMigrated": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false
