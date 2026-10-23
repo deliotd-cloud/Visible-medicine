@@ -1,23 +1,48 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T02:58:23.190Z",
+  "at": "2026-10-23T03:31:28.956Z",
   "sourceIdentity": {
     "parentReceiptSha256": "bd073fb1d6134af415e8b77f82ba218a1756e47af2c2ab503459e711ea8a6cc8",
     "proposal": [
       {
-        "path": "components/ClinicalReviewInbox.tsx",
-        "bytes": 35559,
-        "sha256": "daa77c9e5686865053aa8ce0c156860f807a75ec75905f71f7a13a7aa7b77bb0"
+        "path": "components/StudioForms.tsx",
+        "bytes": 84127,
+        "sha256": "f06f117a4f75bf85fa5f33eeebe73e79c57bbae54f2066067f078fa6cce9ebf1"
       },
       {
-        "path": "tests/clinical-review-inbox-failure-focus.test.mjs",
-        "bytes": 12717,
-        "sha256": "ca2ffb990e87308a2ced002d614804adf9a66fb605b0c41bcb5d8c8055c33064"
+        "path": "tests/studio-mutation-context-fixture.mjs",
+        "bytes": 8372,
+        "sha256": "5a0563e7cb794089b7b51dd351c45bb4f6b5f6fa70b0eb1398b2db8f79d9ade4"
+      },
+      {
+        "path": "tests/studio-course-draft-discard.test.mjs",
+        "bytes": 16123,
+        "sha256": "02ad4ecbd0ce2d4502d64395911c8920c97619d4adbb85af240da5110151c067"
+      },
+      {
+        "path": "lib/studio-session-drafts.ts",
+        "bytes": 4080,
+        "sha256": "d67fd4c7432fcd10c4591638b3d5b9ed3ccf9c3e020dc2b0e0643cb42eaede83"
+      },
+      {
+        "path": "tests/studio-session-drafts.test.ts",
+        "bytes": 8677,
+        "sha256": "d50a30811e597c1ed921061cc80aa46bd26ecb28ffddd70bacb360fbd01f45ba"
+      },
+      {
+        "path": "tests/studio-session-draft-fixture.mjs",
+        "bytes": 9219,
+        "sha256": "36d2d7b2d9ee546da40a5cbe9aaceaf243d99b489639585e1348899d47f924db"
+      },
+      {
+        "path": "tests/studio-session-draft-form.test.mjs",
+        "bytes": 8020,
+        "sha256": "f773a9531df3194dc464d5e3786af00643f973a70e78004161535f7c92d3e070"
       }
     ]
   },
-  "parent": "7b63f4a17743ecb2278f0c75fff66cbff76cac2f",
-  "gitParent": "7b63f4a17743ecb2278f0c75fff66cbff76cac2f",
+  "parent": "36661884ca33f0e708ac42d91f24dc5aa17efce3",
+  "gitParent": "36661884ca33f0e708ac42d91f24dc5aa17efce3",
   "files": [
     {
       "path": "app/globals.css",
@@ -24025,6 +24050,86 @@
       "sha256": "1d626f85ee1e8e9b132ad5f2545684d82504a2f863a64a0051da68cf4430bf8d"
     },
     {
+      "path": "pending/studio-session-drafts-20261023/candidate/components/StudioForms.tsx",
+      "bytes": 84127,
+      "sha256": "f06f117a4f75bf85fa5f33eeebe73e79c57bbae54f2066067f078fa6cce9ebf1"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/candidate/lib/studio-session-drafts.ts",
+      "bytes": 4080,
+      "sha256": "d67fd4c7432fcd10c4591638b3d5b9ed3ccf9c3e020dc2b0e0643cb42eaede83"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/candidate/tests/studio-course-draft-discard.test.mjs",
+      "bytes": 16123,
+      "sha256": "02ad4ecbd0ce2d4502d64395911c8920c97619d4adbb85af240da5110151c067"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/candidate/tests/studio-mutation-context-fixture.mjs",
+      "bytes": 8372,
+      "sha256": "5a0563e7cb794089b7b51dd351c45bb4f6b5f6fa70b0eb1398b2db8f79d9ade4"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/candidate/tests/studio-session-draft-fixture.mjs",
+      "bytes": 9219,
+      "sha256": "36d2d7b2d9ee546da40a5cbe9aaceaf243d99b489639585e1348899d47f924db"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/candidate/tests/studio-session-draft-form.test.mjs",
+      "bytes": 8020,
+      "sha256": "f773a9531df3194dc464d5e3786af00643f973a70e78004161535f7c92d3e070"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/candidate/tests/studio-session-drafts.test.ts",
+      "bytes": 8677,
+      "sha256": "d50a30811e597c1ed921061cc80aa46bd26ecb28ffddd70bacb360fbd01f45ba"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/coordination/checkpoint-studio-session-drafts-20261023.mjs",
+      "bytes": 14551,
+      "sha256": "010394bf7196303f010aaebcf10502ec0f3f3d7d59ed88e72e2b7f1af80c2879"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/coordination/prepare-studio-session-drafts-20261023.mjs",
+      "bytes": 1769,
+      "sha256": "90ab96b8e8e6ba9c66f84cbed6b7da5f4903d8d7a56e31516f3a443cc70dfa23"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/coordination/run-studio-session-checks-20261023.mjs",
+      "bytes": 2301,
+      "sha256": "5e7f0e9691472d2874c757ebd575e738926cb0f13bf9ca672c6869f5d63c481c"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/coordination/studio-session-browser-20261023.mjs",
+      "bytes": 3558,
+      "sha256": "209942c052b7ff4e986888dc75579f0643cb8b259c0c6a8b155dbafd0734b796"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/coordination/studio-session-browser-entry-20261023.tsx",
+      "bytes": 2034,
+      "sha256": "3ab232ce41dc3e5fdcdf86f4572f6db8ed28a23af9cf09cb3214c086b9087042"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/coordination/studio-session-browser-router-20261023.mjs",
+      "bytes": 212,
+      "sha256": "5236c7d33845ffff4400d38e6d799e6e97ea16b62cb53c589c7d0eb0a2611a02"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/preimages/studio-course-draft-discard.before.raw",
+      "bytes": 16036,
+      "sha256": "234963c717fc82f8a4a84e7060d115f21a535ef840ba517c2cbaf0696d4b9815"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/preimages/studio-mutation-context-fixture.before.raw",
+      "bytes": 8297,
+      "sha256": "6e6c74cdc4f6c92d48cf96d95f3b9ec1f65092023675c6b530fa97e2e7e7ba5f"
+    },
+    {
+      "path": "pending/studio-session-drafts-20261023/preimages/StudioForms.before.raw",
+      "bytes": 78598,
+      "sha256": "29c0decebe1987e58c2172c02792af1230c8d9798c494cf4595cdf4297d004cf"
+    },
+    {
       "path": "pending/tour-lifecycle-ct-evidence-20261022/coordination/checkpoint-tour-lifecycle-ct-evidence-20261022.mjs",
       "bytes": 12616,
       "sha256": "8a86f58512f3699557cb29702193a4f8b2be6a0a422c3af06e96598d4e0a897c"
@@ -24841,19 +24946,23 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus six authored coordinator/test-fixture recipes, two proposal source files and the exact old authored component preimage. Browser captures, logs, generated fixture bundles, context findings, full coordination/private data, Review decisions, scan/mask/model/build data remain F-only. Source-only, not whole/private/runnable off-device recovery. No Website cutover or identity/access/clinical/public-release change.",
+  "scope": "Inherited independently verified filtered source plus seven selected source files, six authored coordinator/fixture recipes and three exact authored source preimages. No generated bundles, captures, logs, private references, context records, scans, masks, model/build/private data, decisions or permissions are selected. Raw evidence remains F-only. Not whole/private/runnable off-device backup; no production preview or public deployment change.",
   "proof": {
-    "mainReviewSha256": "b05e9dec9567fca65d1e4c1f9f0806227d290754a6b8f18a09ab00ea0b22a6df",
-    "nativeCasesPassed": 28,
-    "newBeforeCasesFail": 10,
-    "unchangedOriginalCasesPass": 18,
+    "mainReviewSha256": "4bca93d48f7f63c16542a4c373f6cfc9a547ed949166142c1535faec80424a82",
+    "nativeCasesPassed": 62,
+    "pureStoreCases": 10,
+    "newConsumerCases": 7,
+    "unchangedExistingCases": 45,
+    "beforeNewConsumerFail": 6,
+    "beforeNewConsumerPass": 1,
     "skips": 0,
-    "realReactSyntheticBrowserScenarios": 5,
-    "staleRowsStillRemoved": true,
-    "noUnrelatedFocusSteal": true,
+    "realReactSyntheticBackForward": true,
+    "explicitRecoveryAndCancel": true,
+    "contextAndFormSeparation": true,
+    "noAutomaticSubmit": true,
+    "temporaryNotDurable": true,
     "sealed6130SourceAnd1110BuildPathsUnchanged": true,
     "ownerPreviewChanged": false,
-    "fullGoalPreserved": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
