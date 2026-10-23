@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const parent='F:/VisibleMedicine/staging/20261023-fda-shoulder-ingestion/atlas';
+const stage='F:/VisibleMedicine/staging/20261023-fda-shoulder-surfaces',atlas=stage+'/atlas';
+const head='e051b79106f558428b852173ddbb32b1e854364b';
+const git=(...args)=>execFileSync('git',args,{encoding:'utf8',windowsHide:true,stdio:'pipe',maxBuffer:32e6}).trim();
+const hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+assert.equal(git('-C',parent,'rev-parse','HEAD'),head);assert.equal(git('-C',parent,'status','--porcelain'),'');
+assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+git('clone','--local','-c','core.autocrlf=false',parent,atlas);git('-C',atlas,'checkout','--detach',head);
+const files=git('-C',parent,'ls-files','-z').split('\0').filter(Boolean).map(path=>({path,sha256:hash(parent+'/'+path)}));
+for(const r of files)assert.equal(hash(atlas+'/'+r.path),r.sha256);
+assert.equal(git('-C',atlas,'status','--porcelain'),'');
+fs.writeFileSync(stage+'/PREPARED.json',JSON.stringify({at:new Date().toISOString(),parent,head,tree:git('-C',parent,'rev-parse','HEAD^{tree}'),atlas,files,installed:false,previewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({atlas,sourceFiles:files.length}));

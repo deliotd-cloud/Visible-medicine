@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T17:35:40.099Z",
+  "at": "2026-10-23T17:58:59.995Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "c377b708568ccdbe3521d4b4113c6ed64aaf55170ad7bcbb3864bc77d20616e6",
-    "atlasHead": "e051b79106f558428b852173ddbb32b1e854364b",
-    "atlasTree": "b581b96cbb4bb821224fa43f7add65a4d2e7fa85",
+    "sourceReceiptSha256": "39b073ff81a8e445129175a2478bb0e8d3762f5df2f3a3f52e78943e6db0e762",
+    "atlasHead": "d008e1b507bd08177a44cfe12716dae623dda5a4",
+    "atlasTree": "54a9e44061d37e40817b31fdc276e9ce52469e97",
     "completeWebsiteUnchanged": "2ab63cbbc1c5e18a4d7b3a65f799e863f5be0491",
-    "sourceOnlyTools": true
+    "localQuarantineNotAdmitted": true
   },
-  "parent": "e4f2d2e15d6baca726430c16eec2c3bb1eba74e2",
-  "gitParent": "e4f2d2e15d6baca726430c16eec2c3bb1eba74e2",
+  "parent": "666aba66fa8d1f2cabcd9e07c25a7ad6e88ad33c",
+  "gitParent": "666aba66fa8d1f2cabcd9e07c25a7ad6e88ad33c",
   "files": [
     {
       "path": "app/globals.css",
@@ -16882,6 +16882,96 @@
       "sha256": "84f8a7d0de925182c0ba7c6376baad513d7f58b940476a8555c1c7336f773ce5"
     },
     {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/docs/FDA_SHOULDER_SOURCE.md.raw",
+      "bytes": 6815,
+      "sha256": "87c75c01af044c883e607ba342b4203fe7faed3fd48f8c3adaefef324ad4a48c"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/scripts/abaqus-instance-transform.mjs",
+      "bytes": 2824,
+      "sha256": "ac4b3493276e29ee0203fae0e9b137663865723be073e578c5c8eabc3475b484"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/scripts/abaqus-quadratic-boundary.mjs",
+      "bytes": 7860,
+      "sha256": "b296da67a20337da65bf2dce84e64047d0e1418eb15565f4ad447319cfb1d0e1"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/scripts/check-fda-shoulder-surface-readback.mjs",
+      "bytes": 13244,
+      "sha256": "21cd5751b72e5e6c903f92a321038df9c6a3bfd739478b43bc5cb5ac3fb8465c"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/scripts/convert-pinned-fda-shoulder.mjs",
+      "bytes": 4240,
+      "sha256": "2a33b019c9c7f2d1bce4016e4e9fc07fbe824e1b68936ed73ccce66a60f856d0"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/scripts/inspect-abaqus-shoulder-source.mjs",
+      "bytes": 7989,
+      "sha256": "f5e0a659a2fb8ce8215f60413e0f0e50ffd24abd1e29ae6ea91fb74f054bbdfe"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/scripts/test-abaqus-instance-transform.mjs",
+      "bytes": 3603,
+      "sha256": "12b136d36df87c96e12b33a1db05adba758ccdd83a64cee7575d50030df55db2"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/scripts/test-abaqus-quadratic-boundary.mjs",
+      "bytes": 5790,
+      "sha256": "c6cc46c5af8a67192bd137f6ee776da169fad0f22dbe8e4e3965721741ff4641"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/atlas/scripts/test-fda-shoulder-surface-readback.mjs",
+      "bytes": 2339,
+      "sha256": "9b04ae95701febf92fa034b91d49c8d6a69b44e6e667d34487af1b905613c9c9"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/coordination/acquire-fda-element-reference-20261023.mjs",
+      "bytes": 933,
+      "sha256": "2ef30f69001e7cd0d05b4533de90a1b67626dda5199b60ebfcaedb6975489e10"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/coordination/checkpoint-fda-shoulder-surfaces-20261023.mjs",
+      "bytes": 8900,
+      "sha256": "156484acd6ac00260f5668837476e7d49b005255f16b05092ebf400dd712522a"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/coordination/prepare-fda-shoulder-surfaces-20261023.mjs",
+      "bytes": 1383,
+      "sha256": "61b670155bf66e137259b71dce92a5ff886d4fb3a63c2da833331aafddc5c507"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/coordination/run-fda-shoulder-surfaces-20261023.mjs",
+      "bytes": 2416,
+      "sha256": "0ac5f8247029f27d7b3a739df18b5d3c7f0189d16291e92a9bd71de637b3285f"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/coordination/seal-fda-shoulder-surfaces-20261023.mjs",
+      "bytes": 5387,
+      "sha256": "983c06378728da134510880cdee7cf67cca16503f9d02601e5e8db910ab64a48"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/coordination/serve-fda-shoulder-qa-20261023.mjs",
+      "bytes": 1840,
+      "sha256": "1d7b0021adc35052098575c577c0032c9396600b95102cd3fc405615cd47d409"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/visual-qa/app-before-indexed-normals.mjs",
+      "bytes": 3356,
+      "sha256": "e462d9f22f9a69f9e9bff158e949a15d436867f12e3869e326fba08efb48b14a"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/visual-qa/app.mjs",
+      "bytes": 3777,
+      "sha256": "8d8bd0a205ee0307c085a2b441800b93a5907ee717e60c993bedbbe86ff0b727"
+    },
+    {
+      "path": "pending/fda-shoulder-surfaces-20261023/visual-qa/index.html.raw",
+      "bytes": 2534,
+      "sha256": "5051e1ceb90933e20c9382a0d10f3ca6cfbc46a706c74c8cf9d7c652063c7b03"
+    },
+    {
       "path": "pending/guided-access-assurance-20261022/coordination/checkpoint-guided-access-assurance-20261022.mjs",
       "bytes": 9179,
       "sha256": "7e237b28e7f5c522bdf6669fa588ebd039aae9667f6871225586471a066288fd"
@@ -28238,30 +28328,37 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered authored sources plus explicit new original ingestion scripts, tests, project-doc raw snapshots and thoracic preservation-root proposal. No publisher model/license/Word source, geometry, source/renderer/binding/catalogue pins, runnable generated outputs, test logs, scans, identifiers or private decisions. Full quarantine/evidence/source identity stays F-only; not whole/private/runnable off-device recovery.",
+  "scope": "Inherited independently verified filtered authored code plus explicit new original geometry/tool/tests, original project-doc raw snapshot and local fixture source recipes. No publisher model/notes/licence, derived OBJ/source-node geometry, reference image, renderer/source/binding/model pins, built bundle, screenshots, logs, scans, identifiers or private decisions. Quarantine and full evidence remain F-only; not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "0526e1e936b0f96297988e0569a4e40cf6bec6cbb8c9ac8f405fa6e74a34b2ec",
-    "nativeInventoryTests": 21,
-    "inventoryTestFailures": 0,
-    "sourceParts": 7,
-    "sourceMeshElements": 348392,
-    "sourceConnectivityAndIdentitiesChecked": true,
-    "publisherCodeExecuted": false,
-    "solverRun": false,
-    "geometryExported": false,
-    "geometryAdmitted": false,
-    "constructedCartilageDistinguished": true,
-    "assemblyTransformsApplied": false,
-    "unitsOrSideInferred": false,
-    "parentAtlasFilesUnchanged": 6315,
-    "allParentWebsiteInputsUnchanged": 6413,
-    "thoracicPreservationProposalNativePasses": 4,
-    "thoracicPreservationInitialFailures": 4,
-    "thoracicWholeRootInversePass": 1,
-    "thoracicClinicalSuitesRerun": false,
-    "thoracicProductAndClinicalTestsUnchanged": true,
-    "thoracicProposalInstalled": false,
-    "newRuntimeAssetsDependenciesFees": false,
+    "mainReviewSha256": "0516d783c3540535ec31613155a42d46cabeb4da6608d85ff5d6d24d693dad63",
+    "sourceMeshParts": 7,
+    "sampledTriangles": 386648,
+    "closedOrientedVertexManifoldParts": 6,
+    "gcartNonmanifoldEdges": 2,
+    "gcartNonmanifoldVertices": 3,
+    "gcartSourceNodeIds": [
+      2798,
+      4501,
+      37871
+    ],
+    "sourceDefectsRepaired": false,
+    "exactContinuousQuadraticSurfaces": false,
+    "selfIntersectionsChecked": false,
+    "sourceAssemblyTransformsApplied": true,
+    "sourceNodeIdentityMapsPreserved": true,
+    "nativeUnitCases": 49,
+    "originalInventoryApiUnchanged": true,
+    "independentReadbackParts": 7,
+    "mutationRefusals": 8,
+    "sourceCoordinateOracle": "Separately authored Rodrigues arithmetic and boundary readback; not a second physical/clinical ground truth",
+    "untransformedPartsExactCoordinates": 5,
+    "rotatedCoordinateMaximumObservedDifference": 1.1368683772161603e-13,
+    "coordinateDifferenceUnits": "Unverified source coordinate values, not asserted millimetres",
+    "browserScope": "Isolated 1280x720 technical WebGL prototype, original source indices with vertex-normal interpolation only",
+    "normalWebsiteBrowserTabsChanged": false,
+    "temporaryTabClosed": true,
+    "temporaryServerStopped": true,
+    "newRuntimeAssetDependencyOrFee": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
     "previewChanged": false,

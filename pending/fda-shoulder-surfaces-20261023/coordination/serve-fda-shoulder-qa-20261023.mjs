@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import http from 'node:http';
+import {createRequire} from 'node:module';
+const stage='F:/VisibleMedicine/staging/20261023-fda-shoulder-surfaces',root=stage+'/visual-qa';
+const require=createRequire('F:/VisibleMedicine/staging/20261023-midfoot-reasoning/atlas/package.json');
+const esbuild=require('esbuild'),three=path.dirname(path.dirname(require.resolve('three')));
+await esbuild.build({entryPoints:[root+'/app.mjs'],outfile:root+'/app.js',bundle:true,format:'esm',platform:'browser',nodePaths:[path.dirname(three)],legalComments:'eof'});
+const allow=new Map([['/','index.html'],['/app.js','app.js']].map(([url,file])=>[url,{file:root+'/'+file,type:file.endsWith('.js')?'application/javascript':'text/html'}]));
+for(const name of ['MANIFEST.json','AC_Lig.obj','Gcart.obj','Hcart.obj','Labrum.obj','CLAVICLE.obj','Humerus.obj','SCAPULA.obj'])allow.set('/meshes/'+name,{file:stage+'/quarantine-surfaces/'+name,type:name.endsWith('.json')?'application/json':'text/plain'});
+const server=http.createServer((request,response)=>{const route=allow.get(new URL(request.url,'http://127.0.0.1').pathname);console.log(request.method+' '+request.url+' '+(route?200:404));if(!route||request.method!=='GET'){response.writeHead(404);response.end();return;}response.writeHead(200,{'Content-Type':route.type+'; charset=utf-8','Cache-Control':'no-store','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; object-src 'none'; frame-ancestors 'none'"});fs.createReadStream(route.file).pipe(response);});
+if(!process.argv.includes('--build-only'))server.listen(0,'127.0.0.1',()=>console.log('LOCAL_QA_URL=http://127.0.0.1:'+server.address().port+'/'));
+process.on('SIGINT',()=>server.close(()=>process.exit(0)));

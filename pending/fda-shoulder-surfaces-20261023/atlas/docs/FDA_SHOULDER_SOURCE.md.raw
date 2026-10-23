@@ -1,0 +1,114 @@
+# FDA shoulder source and ingestion status
+
+The [FDA shoulder tool](https://cdrh-rst.fda.gov/human-shoulder-finite-element-model)
+is a promising independent reference for missing joint soft tissues. It has not
+been admitted into the Atlas or fitted to its existing shoulder. This inventory
+does not establish clinical accuracy, laterality, units or patient-space alignment.
+
+## Exact source
+
+[Publisher repository](https://github.com/OSEL-DAM/ShoulderFiniteElementModel/tree/fc9f3e56b104c06759750495be1f8dd5d53c1741),
+commit `fc9f3e56b104c06759750495be1f8dd5d53c1741`.
+The repository LICENSE and Word model notes both declare CC0-1.0. The exact
+LICENSE SHA256 is `a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499`.
+The model notes SHA256 is `9f5a5140224b95933edead95be5a5612544e0828f73b9be0e13836db2ee7511a`.
+This is component-specific evidence, not a licence conclusion for unrelated FDA
+or NIH files. Preserve the publisher's disclaimers and credit; do not imply FDA
+endorsement or regulatory qualification. No solver, commercial software purchase
+or execution of downloaded code was needed for this text inventory.
+
+`Male-Shoulder.inp` is 59,793,091 bytes, SHA256
+`547de9cff23a4ae98d5a297ba32d8b01fe042739160c4b7144dfe7066d08c70a`.
+Its complete source, licence and notes are retained in local quarantine only;
+none is redistributed by this source-only tooling change.
+
+## Actual file inventory
+
+| Source part | Nodes | C3D10M elements | Publisher-described geometry origin |
+| --- | ---: | ---: | --- |
+| AC_Lig | 3,211 | 2,111 | CT segmentation |
+| CLAVICLE | 30,567 | 16,511 | CT segmentation |
+| Gcart | 56,257 | 36,551 | Constructed offset cartilage |
+| Hcart | 119,844 | 73,736 | Constructed offset cartilage |
+| Humerus | 68,491 | 39,827 | CT segmentation |
+| Labrum | 177,134 | 124,307 | CT segmentation |
+| SCAPULA | 103,447 | 55,349 | CT segmentation |
+
+These are seven finite-element parts, not seven newly approved Atlas structures.
+Nineteen assembly connector elements are not muscle surfaces. The model is from
+one male Visible Human donor and a constrained abduction experiment, not normal
+motion or patient-specific simulation. The [NLM source page](https://www.nlm.nih.gov/research/visible/visible_human.html)
+describes the underlying public-domain donor image collection.
+
+## Reproduce and preserve the boundary
+
+```text
+node --test scripts/test-abaqus-shoulder-source.mjs
+node scripts/inspect-abaqus-shoulder-source.mjs <local-pinned-Male-Shoulder.inp>
+```
+
+The reader validates the exact input, part/node/element identities, finite
+coordinates, ten-node connectivity and references. It refuses unsupported mesh
+types, external includes, parameters and part coordinate transforms. It records
+instance translation/axis-angle rows separately and does not apply them, emit
+surfaces or infer a millimetre frame. Humerus and Hcart have non-identity assembly
+transforms. A separate load-axis transform is reported, not mistaken for a mesh
+registration. Bounds remain explicitly raw-part bounds.
+
+The conversion below verifies ordering and placement fixtures and records the
+implemented geometry checks. Before a learner-facing reference, resolve its
+remaining unit, coordinate, topology and anatomical validation requirements and
+generate a separate source-ID catalogue with exact notices and revision-bound
+Review. Do not substitute the connectors for rotator-cuff meshes, infer missing
+capsule/bursae/other ligaments, reuse existing body IDs or transfer approvals.
+BodyParts3D and scan registration remain independently unvalidated.
+
+## Converted quarantine surfaces
+
+The separate conversion tools now extract boundary faces using the official
+[tetrahedron node layout](https://docs.software.vt.edu/abaqusv2025/English/SIMACAEELMRefMap/simaelm-r-3delem.htm)
+and apply source instance placement in the documented
+[translation then rotation order](https://docs.software.vt.edu/abaqusv2025/English/SIMACAEKEYRefMap/simakey-r-instance.htm).
+Each six-node face becomes four linear triangles using its existing corner and
+midside coordinates. This is node-sampled geometry, not the exact continuous
+quadratic surface, a solver result or a repaired mesh. OBJ doubles and source-ID
+maps remain in an external local quarantine, outside the source checkout.
+
+| Part | Boundary vertices | Sampled triangles | Implemented topology audit |
+| --- | ---: | ---: | --- |
+| AC_Lig | 798 | 1,592 | Closed oriented vertex manifold |
+| Gcart | 15,956 | 31,912 | Hold: two nonmanifold edges and three vertices |
+| Hcart | 44,686 | 89,368 | Closed oriented vertex manifold |
+| Labrum | 26,476 | 52,952 | Closed oriented vertex manifold |
+| CLAVICLE | 16,494 | 32,984 | Closed oriented vertex manifold |
+| Humerus | 30,598 | 61,192 | Closed oriented vertex manifold |
+| SCAPULA | 58,326 | 116,648 | Closed oriented vertex manifold |
+
+Gcart source nodes `2798`, `4501` and `37871` retain their original coordinates
+and abnormal vertex links. No smoothing, deletion, welding or decimation was
+used to hide them. The seven surfaces total 386,648 triangles. Self-intersections
+and anatomical attachments have not been validated; passing the stated graph
+checks is not clinical acceptance or a watertight-solid simulation guarantee.
+
+Independent readback reconstructs every source face and OBJ triangle, checks all
+source-node positions against independently computed instance placement, and
+rejects rehashed geometry/identity edits and forged approval/healthy flags. The
+five untransformed parts retain exact parsed source coordinates; the two rotated
+parts differ from the independent arithmetic oracle by at most approximately
+`1.14e-13` in unverified source coordinate values, not millimetres.
+
+```text
+node --test scripts/test-abaqus-shoulder-source.mjs scripts/test-abaqus-instance-transform.mjs scripts/test-abaqus-quadratic-boundary.mjs
+node scripts/convert-pinned-fda-shoulder.mjs <local-pinned-Male-Shoulder.inp> <NEW-external-quarantine-directory>
+node scripts/check-fda-shoulder-surface-readback.mjs <local-pinned-Male-Shoulder.inp> <quarantine-directory>
+node scripts/test-fda-shoulder-surface-readback.mjs <local-pinned-Male-Shoulder.inp> <quarantine-directory>
+```
+
+The [authors' abstract](https://pubmed.ncbi.nlm.nih.gov/35882682/) describes a
+right shoulder. That is publisher-reported laterality, not independent validation
+of model axes, an invitation to mirror it or permission to claim spatial linkage
+to the existing Atlas. Current conversion metadata keeps laterality and units
+unverified. Establish the coordinate convention/units, investigate the retained
+Gcart defects, audit intersections and anatomical fidelity, and create an exact
+source-specific catalogue/Review binding before any learner admission. Preserve
+all independent source holds and constructed-cartilage distinctions.
