@@ -1,0 +1,31 @@
+# Regional tour reading notes
+
+The shared regional and whole-body Guided learning player has a collapsed
+**Read tour notes** disclosure. It shows the existing ordered stop titles,
+captions and references without starting playback or requiring the 3D renderer
+to be ready. The current source has 53 regional tours and 317 stops.
+
+Opening, focusing or pressing within the reading disclosure synchronously pauses
+playback and suspends the optional paused-stop imaging link. Closing it never
+resumes playback. Escape closes the disclosure and returns focus to its summary;
+IME composition, prevented events and detached disclosures are left alone.
+
+The same existing tour/source/frame admission is required. An unresolved source
+does not expose a reading outline. Renderer or model delivery failure does not
+substitute anatomy, enable a quiz, unlock an imaging case or mark the tour
+complete. Existing scene recovery and Exit controls remain available.
+
+The text is the current authored draft, not independently validated anatomy or
+new material inferred from a missing model. Reading does not record scores,
+progress, clinical review or publication approval. References remain links, not
+redistributed diagrams. Only absolute HTTP/HTTPS links without credentials are
+rendered, in a clearly identified new tab.
+
+This first reading outline covers the shared regional player. Dedicated shoulder,
+nested eye/CSF and independent specimen players retain their own teaching and
+review scopes; they do not acquire this reader or any approval by association.
+
+Source and component checks do not establish assistive-technology, real WebGL,
+authenticated Website or acquired-study acceptance. Test those actual journeys
+separately before release. No new asset, dependency, font, dataset or service is
+required.

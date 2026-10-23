@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T13:46:59.987Z",
+  "at": "2026-10-23T14:20:20.737Z",
   "sourceIdentity": {
-    "parentWebsiteReceiptSha256": "29e083ec39cf546e30e577f30bc345db0464f6451acb6c1380a3ca96d91f16d5",
-    "testOnlySourceProofSha256": "5f3ce6f0fce1a3bad16a6a40c1bf1337392835693ceec74c6b445ad922da8592",
-    "atlasHead": "5f278c3d0c26c5a0899b54f2cfa2a0accb02ecf7",
-    "atlasTree": "12ebdf5d221220c4b6819abdcdeb04231048bf17",
-    "reviewBinding": "c5b457627a1e34ba49ced39e6deb7103003718e394db120e0a95de08c848b28b"
+    "sourceReceiptSha256": "2d2a76bb1fae54be189ff2e4a02636c8352a37bb6ca59d13a52050c10c8f3cdb",
+    "atlasHead": "9eac0806a7869cfae435010b013ae611d748c0c9",
+    "atlasTree": "1d96d29f65b9739713f2dd51bfccd3bddf6bba52",
+    "latestCompleteWebsiteReceiptSha256": "29e083ec39cf546e30e577f30bc345db0464f6451acb6c1380a3ca96d91f16d5"
   },
-  "parent": "27099ff643657dad6b8d3518ac1c2305280332d0",
-  "gitParent": "27099ff643657dad6b8d3518ac1c2305280332d0",
+  "parent": "b5236bc7d93826fff3e48e6cc808c4f509616c95",
+  "gitParent": "b5236bc7d93826fff3e48e6cc808c4f509616c95",
   "files": [
     {
       "path": "app/globals.css",
@@ -26032,6 +26031,81 @@
       "sha256": "4beb473e5f5c581fa9aa694735a4c1648031871da43b10d0d339f8c21c649308"
     },
     {
+      "path": "pending/tour-reading-20261023/atlas/app/regional-guided-learning.css.raw",
+      "bytes": 4960,
+      "sha256": "feb800d0045b469b0c43a6805135c9dd36a36098618a472ce41ea576e158842d"
+    },
+    {
+      "path": "pending/tour-reading-20261023/atlas/app/regional-guided-learning.tsx",
+      "bytes": 17804,
+      "sha256": "e634e0da45c2c9c7763fa38d9c7194b6e7aa0cf6e1b485722a6a7053dd4a3d20"
+    },
+    {
+      "path": "pending/tour-reading-20261023/atlas/app/tour-reading-notes.tsx",
+      "bytes": 2186,
+      "sha256": "0765610605eaa51bf93052744817c1856c64e243b26b80722d6285fb3b8c9578"
+    },
+    {
+      "path": "pending/tour-reading-20261023/atlas/docs/TOUR_READING_NOTES.md.raw",
+      "bytes": 1797,
+      "sha256": "a10418162d6c8e3702a15572c2e101777e56791808ec2958c4e393e736b17512"
+    },
+    {
+      "path": "pending/tour-reading-20261023/atlas/scripts/test-tour-reading-notes.mjs",
+      "bytes": 12989,
+      "sha256": "5c2ebe2c2acb53288630225334119c4e6a280fd4ae60e2080ebe1ad05196cae3"
+    },
+    {
+      "path": "pending/tour-reading-20261023/coordination/check-tour-reading-types-20261023.mjs",
+      "bytes": 1917,
+      "sha256": "129b19f094af01846b5271e98935e6a8c29e84a0e917d4747277ccc16e5d740d"
+    },
+    {
+      "path": "pending/tour-reading-20261023/coordination/checkpoint-tour-reading-20261023.mjs",
+      "bytes": 9518,
+      "sha256": "17f1312989d646ddd0e9abcb6fe51561dc19471c7442ba2df24e3c843f3ef82e"
+    },
+    {
+      "path": "pending/tour-reading-20261023/coordination/finalize-tour-reading-20261023.mjs",
+      "bytes": 6970,
+      "sha256": "c9ec557879187ff379ea00699f20f19523af4d314494925d3e54cd2c3a546aec"
+    },
+    {
+      "path": "pending/tour-reading-20261023/coordination/prepare-tour-reading-20261023.mjs",
+      "bytes": 1869,
+      "sha256": "01cfdf4dcba0493e16cf6723ffe9366ebfdf80e1528db3782efa07eb111e6619"
+    },
+    {
+      "path": "pending/tour-reading-20261023/coordination/preview-tour-reading-20261023.mjs",
+      "bytes": 5485,
+      "sha256": "d3951361e6855eb58606d8732774e9d7c3b4639625b984e7be7d69bf0120a84f"
+    },
+    {
+      "path": "pending/tour-reading-20261023/coordination/record-tour-reading-browser-20261023.mjs",
+      "bytes": 2615,
+      "sha256": "705e155246f09efe41c3e6e31e39297beb55cc1fe2ddb2d415c27a46853aad97"
+    },
+    {
+      "path": "pending/tour-reading-20261023/coordination/run-tour-reading-20261023.mjs",
+      "bytes": 3551,
+      "sha256": "e942a4bd9009ea378757b9f4ec4b95f0d78c99459fc0651f6b68e5f5b67b4bd6"
+    },
+    {
+      "path": "pending/tour-reading-20261023/coordination/seal-tour-reading-20261023.mjs",
+      "bytes": 8135,
+      "sha256": "0ccd51a7a079eeb5b147f073f1d46b674e750730ae664d01c0abc9ab5dae0299"
+    },
+    {
+      "path": "pending/tour-reading-20261023/preimages/app_regional-guided-learning.css.raw",
+      "bytes": 3935,
+      "sha256": "bf20a8f50606444e7b464c6393fc0d56f98a4c5bd66eb929acbe8d84e9030a61"
+    },
+    {
+      "path": "pending/tour-reading-20261023/preimages/app_regional-guided-learning.tsx.raw",
+      "bytes": 17559,
+      "sha256": "418319343ca3033bff575d35faa6da5e177fc6eab16238fa052c2de755f10f79"
+    },
+    {
       "path": "pending/ui-recovery-integrated-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
       "bytes": 5420,
       "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
@@ -27248,38 +27322,42 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus6main recipes and8explicit original test/helper/preimage paths. No generated source inputs/bindings/metadata/model/scan/mask/identifier/decision or raw diagnostic/native/process evidence. Not a whole/private/runnable off-device backup; no installation or deployment.",
+  "scope": "Inherited verified filtered authored source plus8main recipes,5original Atlas reader/style/test/doc paths and2original source preimages. No generated renderer/source-input/pin/catalog/binding/build/diagnostic/type/process/browser evidence or model/media/scan/mask/identifier/decision. Not a whole/private/runnable off-device backup; no installation/public deployment.",
   "proof": {
-    "mainReviewSha256": "f99179a88fa3f6d50b598e709bb06becade476e3bb45d53e4df9cfce4fcb175f",
-    "sourcePaths": 6337,
-    "changedTestSources": 3,
-    "newTestHelperAndCase": 2,
-    "originalPreimages": 3,
-    "unchangedParentInputs": 6329,
-    "nativeCases": 52,
+    "mainReviewSha256": "1e597f44eca2c7bd89e819624e2e4ae9d20116e3282f2789bbb0ad169c685e8d",
+    "tours": 53,
+    "stops": 317,
+    "existingReferenceLinks": 416,
+    "nativeCases": 91,
     "failures": 0,
     "skips": 0,
     "cancellations": 0,
-    "fullOriginalAssertionsPreserved": true,
-    "actualNativeGeometryAndTeachingForgeriesRefused": true,
-    "independentReadOnlyWorkerReview": true,
-    "allProductionGeneratedModelsAccessDependenciesAndBindingsByteIdentical": true,
-    "parentBuildFilesVerifiedUnchanged": 1111,
-    "noFreshBuildOrTypeClaim": true,
-    "currentEightRootAudit": {
-      "tests": 13,
-      "pass": 4,
-      "fail": 9,
-      "fileLevelHeapFailures": 2,
-      "sourceDrift": 0,
-      "previewChanged": false
+    "strictTypeRoots": 5,
+    "strictTypeFiles": 3314,
+    "strictTypeDiagnostics": 0,
+    "completeAtlasBuildPassed": true,
+    "productionOutputs": 546,
+    "originalComponentInverse": true,
+    "originalCssPrefixPreserved": true,
+    "unchangedParentInputs": 6303,
+    "allTeachingToursModelsNoticesDependenciesAndHoldsUnchanged": true,
+    "rendererDependencies": 1504,
+    "reviewScope": {
+      "root": 1104,
+      "nested": 108,
+      "specimen": 356,
+      "geometryDisplayRevisionsChange": true,
+      "sourceAndTeachingUnchanged": true,
+      "imagingStillBlocked": true
     },
-    "keyboardFirstGateResolvedOnly": true,
-    "wholeSuitePassing": false,
-    "newAssetsDependenciesFees": false,
+    "actualHydratedReaderKeyboardAndTextQA": true,
     "privateDecisionsReadOrMigrated": false,
+    "scoreOrProgressRecorded": false,
+    "newAssetsDependenciesFees": false,
+    "websiteIntegrationPending": true,
     "previewChanged": false,
     "installed": false,
+    "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false
   },

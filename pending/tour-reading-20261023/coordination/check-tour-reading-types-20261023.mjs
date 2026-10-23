@@ -1,0 +1,9 @@
+// The same five real Atlas roots/configuration; no module replacements or stubs.
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {createHash} from 'node:crypto';
+const root=process.cwd(),require=createRequire(root+'/package.json'),ts=require('typescript');
+const loaded=ts.readConfigFile('tsconfig.json',ts.sys.readFile);assert(!loaded.error);const config=ts.parseJsonConfigFileContent(loaded.config,ts.sys,root);assert.equal(config.errors.length,0);assert(config.options.strict);
+const roots=['lib/regional-tour-entry.ts','app/body-explorer.tsx','app/whole-body-guided-learning.tsx','integration/head-neck/main.tsx','worker-configuration.d.ts'];
+const program=ts.createProgram(roots,{...config.options,noEmit:true,incremental:false}),diagnostics=ts.getPreEmitDiagnostics(program),sha=value=>createHash('sha256').update(value).digest('hex');
+const result={at:new Date().toISOString(),root,roots,actualStrictConfiguration:true,fullProject:false,moduleSubstitutions:false,configSha256:sha(fs.readFileSync('tsconfig.json')),compilerOptions:config.options,sourceFiles:program.getSourceFiles().map(file=>({path:path.resolve(file.fileName),sha256:sha(fs.readFileSync(file.fileName))})),diagnostics:diagnostics.map(d=>({code:d.code,file:d.file?.fileName,start:d.start,message:ts.flattenDiagnosticMessageText(d.messageText,'\n')}))};
+fs.writeFileSync('../checks/types-v4/RESULT.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});if(diagnostics.length)console.error(ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCurrentDirectory:ts.sys.getCurrentDirectory,getCanonicalFileName:file=>file,getNewLine:()=> '\n'}));
+console.log(JSON.stringify({roots:roots.length,sourceFiles:result.sourceFiles.length,diagnostics:diagnostics.length,fullProject:false,actualStrictConfiguration:true}));assert.equal(diagnostics.length,0);
