@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T15:10:47.584Z",
+  "at": "2026-10-23T15:29:52.756Z",
   "sourceIdentity": {
-    "sourceProposalSha256": "3938ad2a30ab883d24a8e04d7c05beb96d1d611a9747c3ef6df1f0055377ae9a",
-    "atlasHead": "9eac0806a7869cfae435010b013ae611d748c0c9",
-    "atlasTree": "1d96d29f65b9739713f2dd51bfccd3bddf6bba52",
-    "integrationPending": true
+    "sourceReceiptSha256": "a32919b11982957ef10eece8526ac6767d5c5a16499ff51cf2e50c2fc912a5f4",
+    "atlasHead": "66ac064579ee23c5739d0907e8378e0e2d57d7bd",
+    "atlasTree": "0730550af7e5f8cc1d763d7326ca0a0c05458ca7",
+    "websiteIntegrationPending": true
   },
-  "parent": "7cf366478e4712e5bb9244dbe53c566c7fb93f2e",
-  "gitParent": "7cf366478e4712e5bb9244dbe53c566c7fb93f2e",
+  "parent": "ad110284b840f650348ee9d1f54bb7fdc0c7d656",
+  "gitParent": "ad110284b840f650348ee9d1f54bb7fdc0c7d656",
   "files": [
     {
       "path": "app/globals.css",
@@ -24651,6 +24651,66 @@
       "sha256": "c25c5298f4cbad04e82ae441985ae85ce0ba7f20934aa76c85bea5e00bef1c7d"
     },
     {
+      "path": "pending/review-parser-context-20261023/atlas/docs/REVIEW_TOUR_CONTEXT.md.raw",
+      "bytes": 1833,
+      "sha256": "2aa39edd24b492235b17bb3a8cd461cad31c4f672fc49b09ab90216b9baa5178"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/atlas/lib/body-review-response.ts",
+      "bytes": 16041,
+      "sha256": "177caaa5e84429e55deb91d2d1d4d8301acf162d1cef58384b9684d6b526b036"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/atlas/scripts/test-body-review-tour-context.mjs",
+      "bytes": 8276,
+      "sha256": "835613e8b874f273ff291fe364348ebdcb612332a06c065273c9ff415a48620e"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/coordination/archive-review-parser-index-20261023.mjs",
+      "bytes": 2876,
+      "sha256": "cc3aaef11e6e0a20237677bbec09a5c48dc6d75bb55e0590528e2fc809c7f058"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/coordination/check-review-parser-context-types-20261023.mjs",
+      "bytes": 1911,
+      "sha256": "1ac43bc144327303420da5142df0097a845c9376896681631a3af91d044035be"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/coordination/checkpoint-review-parser-context-20261023.mjs",
+      "bytes": 8867,
+      "sha256": "5c45d4fdf3772e525ef4352595f8b0719f0be50e1eb9c6462167d87c372ab220"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/coordination/finalize-review-parser-context-20261023.mjs",
+      "bytes": 8352,
+      "sha256": "2f54acfc89dbaff4696f6ac4c4f1df5341073e956e5eb702c1af927d58d473ef"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/coordination/prepare-review-parser-context-20261023.mjs",
+      "bytes": 1790,
+      "sha256": "d38367f9bb72ad3c04c2f47b47442d5bd922f8f849843a304abf0c5b98d4109e"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/coordination/run-review-parser-context-20261023.mjs",
+      "bytes": 3806,
+      "sha256": "f01697d73102236e0f4eba2bf5e7cec26935614cd547d49bfb41e8f374b36509"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/coordination/seal-review-parser-context-20261023.mjs",
+      "bytes": 8494,
+      "sha256": "f5a73a833f3cc857584cc9b24f28ca46b6445aea2b563a2e8b0dfb10f0fbb7af"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/preimages/body-review-response.ts.raw",
+      "bytes": 14182,
+      "sha256": "7cf2805db8524e7071e0b09c88be04664da84d79b816a5e6b468f37b1fcb5d7e"
+    },
+    {
+      "path": "pending/review-parser-context-20261023/preimages/test-body-review-tour-context.native-v2.mjs.raw",
+      "bytes": 6548,
+      "sha256": "ded7340061e4ac6742e4857a0ca553892a89cc3bf20c06dd21e6afa2610fc0bd"
+    },
+    {
       "path": "pending/review-queue-accessibility-20261022/20261022-final-two-epoch-comparisons/CODE/tests/current-head-index-whole-role-transition-20261021.test.mjs",
       "bytes": 16445,
       "sha256": "9a4480980925a826a37656958e6b6402b2262a8bc686311f7528aaf0352cea2a"
@@ -27512,32 +27572,33 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus original UI/provenance JSX, CSS as raw UTF8, test, recipes and whole preimages. No generated/runtime/binding/catalog/pin/type/browser/screenshot/process/private patient/scan/mask/decision evidence. Local-only incomplete integration, not a runnable or whole/private off-device backup.",
+  "scope": "Verified inherited filtered authored source plus seven recipes, three original parser/test/doc paths and two code preimages. No source catalogues, renderer/pin/binding/generated runtime/build/type/process/browser/private scan/mask/identifier/clinical decisions. Full raw evidence and complete runnable candidate remain F-only; not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "fb16cc9fc10be5b2fa37aa822c84a7eee206d686f2d93a695e55d96436d45013",
-    "nativeCases": 10,
-    "focusedTypeRoots": 1,
-    "focusedTypeAmbient": 6,
-    "focusedTypeFiles": 1729,
-    "focusedTypeDiagnostics": 0,
-    "actualSourceJsxCssBrowser": true,
-    "browserWidth": 1280,
-    "browserHeight": 720,
-    "previousFixtureHeight": 333.6875,
-    "compactFixtureHeight": 109.375,
-    "trueDoubleTextNoHorizontalOverflow": true,
-    "enterSpaceNestedEscapeAndFocus": true,
-    "wholeViewerInverse": true,
-    "wholeCssPrefix": true,
-    "sourceAndClinicalContentPreserved": true,
-    "integrationPending": true,
-    "freshProductionBuildPassed": false,
-    "currentSourceAdmission": false,
-    "completeWebsiteCandidate": false,
+    "mainReviewSha256": "83d112a2683b9e289f0b201af81c31be62ced34ebf1bb6a39a1e95be055753bf",
+    "nativeCases": 33,
+    "initialFinalProductNativeCases": 30,
+    "finalExtendedRootCases": 7,
+    "retainedRegionalNativeCases": 1,
+    "duplicateCases": 5,
+    "worksheets": 1104,
+    "topics": 9936,
+    "alteredPacketsRejected": 18754,
+    "strictTypeRoots": 3,
+    "strictTypeFiles": 2107,
+    "strictTypeDiagnostics": 0,
+    "completeAtlasBuildPassed": true,
+    "productionOutputs": 546,
+    "wholeOriginalParserInverse": true,
+    "unchangedParentInputs": 6308,
+    "allWorksheetHashesUnchanged": true,
+    "rendererClosureAndSourceAndTeachingUnchanged": true,
+    "privateDecisionsReadOrMigrated": false,
+    "websiteIntegrationPending": true,
+    "newAssetsDependenciesFees": false,
     "previewChanged": false,
-    "clinicalApproval": false,
     "installed": false,
     "wholeSuitePassing": false,
+    "clinicalApproval": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,

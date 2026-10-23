@@ -1,0 +1,144 @@
+import assert from 'node:assert/strict';
+import {createHash,webcrypto} from 'node:crypto';
+import {test} from 'node:test';
+import {build} from './workspace-test-build.mjs';
+
+const compiled=await build({stdin:{contents:`
+export {bodyReviewMaterial} from './lib/body-review-material';
+export {parseBodyReviewResponse} from './lib/body-review-response';
+export {bodyDisplayCatalog} from './lib/body-display-catalog';
+export {regionalTourStructures,regionalTourFrame,regionalTourStepFrames,regionalTourEvidence,regionalTours} from './lib/regional-tours';
+import raw from './public/models/bodyparts3d/full-body/catalog.json';
+import pins from './content/hamstring-tour-pins.json';
+import {bodyDisplayCatalog} from './lib/body-display-catalog';
+export const catalog=bodyDisplayCatalog(raw);
+export const hamstringPins=pins;
+`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const clone=value=>structuredClone(value);
+const wire=value=>JSON.parse(JSON.stringify(value));
+const entries=[...api.hamstringPins.entries,...api.hamstringPins.contextEntries];
+const bySide=side=>entries.filter(entry=>entry.laterality===side);
+const tours=Object.fromEntries(['right','left'].map(side=>[side,api.regionalTours.find(t=>t.id===`${side}-hamstring-orientation`)]));
+
+test('real hamstring source needs all ten pinned bilateral records for admission',()=>{
+  assert.equal(api.hamstringPins.entries.length,8);
+  assert.equal(api.hamstringPins.contextEntries.length,2);
+  assert.equal(new Set(entries.map(entry=>entry.id)).size,10);
+  assert.deepEqual(entries.map(entry=>entry.laterality),[
+    ...Array(4).fill('right'),...Array(4).fill('left'),'right','left']);
+  for(const side of ['right','left']){
+    const tour=tours[side];
+    assert(tour);
+    const five=bySide(side);
+    assert.equal(five.length,5);
+    assert.deepEqual(tour.steps.map(step=>step.selectedId),five.slice(0,4).map(entry=>entry.id));
+    assert.deepEqual(tour.contextIds,[five[4].id]);
+    assert.deepEqual(api.regionalTourStructures(api.catalog,tour).map(s=>s.id),[five[4].id,...five.slice(0,4).map(e=>e.id)]);
+    for(const entry of entries)
+      assert.deepEqual(api.catalog.structures.find(s=>s.id===entry.id),entry,'Source record changed');
+    for(const remove of [bySide(side==='right'?'left':'right')[0],bySide(side==='right'?'left':'right')[4]]){
+      const incomplete={...api.catalog,structures:api.catalog.structures.filter(s=>s.id!==remove.id)};
+      assert.throws(()=>api.regionalTourStructures(incomplete,tour),/hamstring guided tour does not match/);
+    }
+    const opposite=bySide(side==='right'?'left':'right')[0];
+    const changed={...api.catalog,structures:api.catalog.structures.map(s=>s.id===opposite.id?{...s,name:`${s.name} changed`}:s)};
+    assert.throws(()=>api.regionalTourStructures(changed,tour),/hamstring guided tour does not match/);
+  }
+});
+
+test('authored Review packets retain five source-pinned structures, bundles, order and trusted full-catalog frames',async()=>{
+  for(const side of ['right','left']){
+    const tour=tours[side],five=bySide(side);
+    for(const entry of five){
+      const packet=await api.bodyReviewMaterial(entry.id);
+      assert(packet,entry.id);
+      const guided=packet.guidedTours.find(item=>item.tour.id===tour.id);
+      assert(guided,`${entry.id}: missing ${tour.id}`);
+      assert.deepEqual(guided.structures.map(s=>s.id),[five[4].id,...five.slice(0,4).map(e=>e.id)]);
+      assert.deepEqual(guided.structures,api.regionalTourStructures(api.catalog,tour));
+      assert.deepEqual(guided.bundles,api.catalog.bundles.filter(b=>guided.structures.some(s=>s.bundle===b.id)));
+      assert.deepEqual(guided.frame,api.regionalTourFrame(api.catalog,tour));
+      assert.deepEqual(guided.stepFrames,api.regionalTourStepFrames(api.catalog,tour));
+      assert.deepEqual(wire(packet).guidedTours,packet.guidedTours);
+    }
+  }
+});
+
+test('current Review parser refuses altered tour, context, source, geometry and forged worksheet',async()=>{
+  const id=bySide('left')[4].id;
+  const genuine=wire(await api.bodyReviewMaterial(id));
+  assert.deepEqual(genuine.guidedTours.map(item=>item.tour.id),['pelvic-ring-hip-orientation','left-hamstring-orientation']);
+  const changes=[
+    ['caption',p=>{p.guidedTours[1].tour.steps[0].caption+=' altered';}],
+    ['reference',p=>{p.guidedTours[1].tour.steps[0].references[0]='https://example.org/forged';}],
+    ['step frame',p=>{p.guidedTours[1].stepFrames[0].min[0]+=1;}],
+    ['overview frame',p=>{p.guidedTours[1].frame.max[0]+=1;}],
+    ['context structure',p=>{p.guidedTours[1].structures[0].name+=' altered';}],
+    ['contralateral structure',p=>{p.guidedTours[1].structures.push(clone(api.catalog.structures.find(s=>s.id===bySide('right')[0].id)));}],
+    ['source geometry',p=>{p.guidedTours[1].structures[1].bounds.min[0]+=1;}],
+    ['bundle hash',p=>{p.guidedTours[1].bundles[0].sha256='0'.repeat(64);}],
+    ['duplicate tour',p=>{p.guidedTours.push(clone(p.guidedTours[1]));}],
+    ['missing tour',p=>{p.guidedTours.pop();}],
+    ['forged approval',p=>{p.approval=true;}],
+    ['forged material hash',p=>{p.materialHash='0'.repeat(64);}],
+    ...['source','teaching','checklist'].map(key=>[
+      `forged ${key} fingerprint`,p=>{p.fingerprints[key]='0'.repeat(64);}]),
+    ['missing fingerprints',p=>{delete p.fingerprints;}],
+    ['extra fingerprint',p=>{p.fingerprints.untrusted='0'.repeat(64);}],
+    ['forged source',p=>{p.source.structure.name+=' altered';}],
+  ];
+  for(const [label,mutate] of changes){
+    const packet=clone(genuine);mutate(packet);
+    assert.equal(await api.parseBodyReviewResponse(packet,id),null,label);
+  }
+});
+
+test('an existing non-hamstring guided Review worksheet remains readable',async()=>{
+  const id='vm:anatomy:body:pelvis:left:bone:left-hip-bone';
+  const packet=wire(await api.bodyReviewMaterial(id));
+  assert(packet);
+  assert(packet.guidedTours.some(item=>item.tour.id==='pelvic-ring-hip-orientation'));
+  assert(packet.guidedTours.every(item=>!item.tour.id.includes('hamstring')));
+  assert.deepEqual(await api.parseBodyReviewResponse(packet,id),packet);
+});
+
+test('a consistently rehashed envelope cannot legitimize forged fingerprints',async()=>{
+  const id=bySide('left')[4].id,genuine=wire(await api.bodyReviewMaterial(id));
+  const canonical=v=>Array.isArray(v)?`[${v.map(canonical).join(',')}]`:
+    v&&typeof v==='object'?`{${Object.keys(v).sort().map(k=>`${JSON.stringify(k)}:${canonical(v[k])}`).join(',')}}`:JSON.stringify(v);
+  const digest=v=>createHash('sha256').update(canonical(wire(v))).digest('hex');
+  const scope={schema:genuine.schema,kind:genuine.kind,structureId:id};
+  for(const key of ['source','teaching','checklist']){
+    const packet=clone(genuine);packet.fingerprints[key]='0'.repeat(64);
+    packet.materialHash=digest({scope,fingerprints:packet.fingerprints});
+    assert.notEqual(packet.materialHash,genuine.materialHash);
+    assert.equal(await api.parseBodyReviewResponse(packet,id),null,key);
+  }
+});
+
+test('native cryptography failure after display admission still fails closed',{concurrency:false},async()=>{
+  const id=bySide('left')[4].id,packet=wire(await api.bodyReviewMaterial(id));
+  const original=Object.getOwnPropertyDescriptor(globalThis,'crypto');
+  assert(original?.configurable);
+  try{
+    for(const failAt of [2,3,4,5]){
+      let calls=0;
+      Object.defineProperty(globalThis,'crypto',{configurable:true,value:{subtle:{async digest(...args){
+        calls++;if(calls===failAt)throw Error('late native digest rejection');
+        return webcrypto.subtle.digest(...args);
+      }}}});
+      assert.equal(await api.parseBodyReviewResponse(packet,id),null,`digest ${failAt}`);
+      assert.equal(calls,failAt);
+    }
+  }finally{Object.defineProperty(globalThis,'crypto',original);}
+});
+
+test('every current hamstring context worksheet survives the actual JSON Review wire path',async()=>{
+  for(const side of ['right','left']){
+    for(const entry of bySide(side)){
+      const packet=wire(await api.bodyReviewMaterial(entry.id));
+      assert.deepEqual(await api.parseBodyReviewResponse(packet,entry.id),packet,`${side}: ${entry.id}`);
+    }
+  }
+});

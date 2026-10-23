@@ -1,0 +1,29 @@
+# Review tour frame validation
+
+Some source contracts deliberately require more records than a tour displays.
+The bilateral hamstring contract checks eight muscle surfaces and both femurs,
+although an individual sequence displays four same-side muscles and one femur.
+
+Review packets contain that visible five-record subset. It must not replace
+the complete trusted catalogue when the parser recomputes camera frames:
+doing so fails bilateral source admission and rejects genuine worksheets.
+
+`validTours` first compares the complete received tour packet, including source
+records, bundles, frame data and captions, with independently generated trusted
+evidence. It then recomputes step frames using the same trusted full catalogue.
+The existing per-structure, bundle, identity, tour, reference, source and display
+integrity checks remain in place. No source contract or packet equality check
+is relaxed, and response-owned geometry cannot become trusted camera context.
+
+The first regression run also exposed a separate transport gap: the parser
+checked the shape, but not the value, of `materialHash`. It now recomputes all
+three worksheet fingerprints and the material hash after display-pin admission,
+using the generator's unchanged canonical JSON and original hash domains. Missing,
+extra or forged fingerprints are refused. Native WebCrypto failure stays closed;
+no full teaching corpus, fallback hash, approval or new hash domain is introduced.
+
+`scripts/test-body-review-tour-context.mjs` exercises actual JSON worksheets for
+all ten hamstring contexts, a retained non-hamstring worksheet, altered packets
+and refusal of missing or changed contralateral source records. Review packets
+remain unsubmitted drafts; successful parsing does not grant approval, access,
+spatial registration or permission to publish patient data.

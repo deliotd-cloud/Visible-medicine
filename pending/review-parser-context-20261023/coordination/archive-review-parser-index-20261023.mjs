@@ -1,0 +1,14 @@
+// Lossless index housekeeping; old candidate details remain at original JSON paths.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './seal-simple-website-successor.mjs';
+const file='CURRENT_CHECKPOINT.json',before=json(file),prior=hash(file),root='F:/VisibleMedicine/recovery/checkpoints/20261023-parser-index-archive';
+assert.equal(before.goal.status,'active');assert.equal(before.activeWork.current.ownerPreviewPolicy.restartPermitted,false);assert(!fs.existsSync(root));fs.mkdirSync(root);
+fs.copyFileSync(file,root+'/BEFORE.json',fs.constants.COPYFILE_EXCL);
+const keys=['at','checkpoint','checkpointSha256','installedAtlas','installedReview','currentCandidate','sourceReceipt','sourceReceiptSha256','sourcePaths','sourceBackup','nativeRun','typeRun','currentSourceClosureVerified','indexCompaction','pendingWorkers','next','beforeFurtherWork'];
+const p=structuredClone(before),archive={at:new Date().toISOString(),previousArchive:before.historyArchive,originalPaths:{},reason:'Superseded top-level candidate/run details and duplicate next text; latestWebsiteCandidate, currentInstalled, pending proposals, all real handles, entire goal and safety retained.'};
+for(const key of keys){assert(Object.hasOwn(p.activeWork.current,key));archive.originalPaths['activeWork.current.'+key]=p.activeWork.current[key];delete p.activeWork.current[key];}
+fs.writeFileSync(root+'/ARCHIVE.json',JSON.stringify(archive,null,2)+'\n',{flag:'wx'});
+p.historyArchive={path:root+'/ARCHIVE.json',sha256:hash(root+'/ARCHIVE.json'),readPolicy:before.historyArchive.readPolicy};
+const restored=structuredClone(p);restored.historyArchive=before.historyArchive;for(const [key,value] of Object.entries(archive.originalPaths))restored.activeWork.current[key.slice('activeWork.current.'.length)]=value;assert.deepEqual(restored,before);
+for(const k of ['goal','safety','coordination'])assert.deepEqual(p[k],before[k]);assert.deepEqual(p.activeWork.current.activeExecutionSessions,before.activeWork.current.activeExecutionSessions);assert.deepEqual(p.activeWork.current.currentInstalled,before.activeWork.current.currentInstalled);assert.deepEqual(p.activeWork.current.latestWebsiteCandidate,before.activeWork.current.latestWebsiteCandidate);
+const text=JSON.stringify(p,null,2)+'\n';assert(Buffer.byteLength(text)<60000);assert.equal(hash(file),prior);fs.writeFileSync(file,text);
+fs.writeFileSync(root+'/RECEIPT.json',JSON.stringify({at:archive.at,beforeSha256:prior,afterSha256:hash(file),originalPathsPreserved:keys.length,previousArchiveChainPreserved:true,exactWholeInverse:true,bytesBefore:fs.statSync(root+'/BEFORE.json').size,bytesAfter:Buffer.byteLength(text),goalAndRealHandlesPreserved:true,previewChanged:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({receipt:root+'/RECEIPT.json',bytes:Buffer.byteLength(text),wholeInverse:true}));
