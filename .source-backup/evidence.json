@@ -1,31 +1,42 @@
 {
-  "mainReviewSha256": "6dcaacbf95b38f05265d661c4297b99f17ad879dcbcd1978e58fb30e79679e39",
-  "originalSourceRoleCases": 6,
-  "baselinePass": 1,
-  "baselineFail": 5,
-  "finalSourceRoleCasesPassed": 13,
-  "originalHistoricalAssertionsRetained": true,
-  "originalInverseHelpersUnchanged": true,
+  "mainReviewSha256": "59667fb21a81b84e882d64f49c75632f3cfc792b080d1786a5826a8e859151e1",
+  "focusedCasesPassed": 42,
+  "fourOriginalFeatureRootsPassing": true,
+  "originalFeatureAssertionBodiesRetained": true,
+  "prior13SourceRoleCasesRetained": true,
+  "actualCurrentChecksAdded": 4,
   "genuineHistoricalValidatorFiles": 46,
   "genuineCurrentValidatorFiles": 54,
   "currentValidatorAndPinUnchanged": true,
-  "all1783CurrentInputsMatchIndependentSourceReceipt": true,
-  "viewerTransitionHunks": 16,
-  "syntaxFiles": 4,
-  "syntaxChecksPassed": true,
+  "currentReviewInputs": 1783,
+  "wholeSourceTransitionFiles": 5,
+  "exactTransitionHunks": 18,
+  "syntaxFiles": 9,
   "allNonTestProductBytesIdentical": true,
   "productionBuildReusedByExactIdentity": true,
   "newBuildProcessRun": false,
   "buildFiles": 1125,
   "allFourRuntimesAndReviewUnchanged": true,
-  "dependentFeatures": {
-    "tests": 14,
-    "pass": 9,
-    "fail": 5,
-    "skipped": 0,
-    "cancelled": 0
+  "adjacent": {
+    "baseline": {
+      "tests": 19,
+      "pass": 11,
+      "fail": 8
+    },
+    "initial": {
+      "tests": 19,
+      "pass": 10,
+      "fail": 9
+    },
+    "final": {
+      "tests": 19,
+      "pass": 11,
+      "fail": 8
+    },
+    "sameFinalOutcomes": true,
+    "preExistingFailuresUnresolved": 8
   },
-  "dependentFeatureRepairPending": true,
+  "uiAuditSourceOnly": true,
   "normalPreviewChanged": false,
   "clinicalApproval": false,
   "patientSpaceRegistration": false,

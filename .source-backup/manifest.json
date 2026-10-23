@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T23:22:50.394Z",
+  "at": "2026-10-23T23:37:21.852Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "1071697c3bd7da15fa7b3daa563f4d55ce3d9b4ae1854d9eb36fe1790a6492e0",
+    "websiteSourceReceiptSha256": "89711b205a711008b0fcc1524acb15d5fa2d16e752fc5962fcce679d6375f6b7",
     "atlasHead": "d143c28fb1e5da200712af6629a375c25d17dad7",
     "atlasTree": "486287b25d968117cffdd27bb20009fa46cda6f3",
     "reviewRevision": "35fdca381e22b1c9a5fad703d673fd8fdac427aeb9580f3375243be5f7c06709",
     "normalPreviewChanged": false
   },
-  "parent": "9cb2f02ae2b8de265b14b3e4f05fa22d1d0d5ea6",
-  "gitParent": "9cb2f02ae2b8de265b14b3e4f05fa22d1d0d5ea6",
+  "parent": "963c13d030eef2c712eb4be33f1a3a6e4cbf174c",
+  "gitParent": "963c13d030eef2c712eb4be33f1a3a6e4cbf174c",
   "files": [
     {
       "path": "app/globals.css",
@@ -18312,6 +18312,76 @@
       "sha256": "2b06ffab4788e5341508a86a70af0e78121f12b52f9881b9c6192877bfc8ea61"
     },
     {
+      "path": "pending/head-feature-roles-20261024/coordination/checkpoint-head-feature-roles-20261024.mjs",
+      "bytes": 8776,
+      "sha256": "36a463250d054eb48261012a0107f23d010de9ad95207d1bb9744359271194e6"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/coordination/finalize-head-feature-roles-20261024.mjs",
+      "bytes": 5069,
+      "sha256": "469f46565400b5ba7a717f5779d937f09d53536309209b1d42349ec568f052f4"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/coordination/prepare-head-feature-roles-20261024.mjs",
+      "bytes": 2657,
+      "sha256": "bb7a7b980eab00616c2d04896d0b051807cb4f6a2ebf09ac58ffe2c30c08e8af"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/coordination/run-head-feature-roles-20261024.mjs",
+      "bytes": 3851,
+      "sha256": "4812d0590bed1754e756bb1a18e88621c8d8569f9749b92c71fba4b3cfb7dbbf"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/coordination/verify-head-feature-roles-20261024.mjs",
+      "bytes": 9773,
+      "sha256": "a4957ffa0c1c0c57358e356ade8f1a1ef56b847060a70a044e36698c0bc313d0"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 11296,
+      "sha256": "6926164ef11cbd21c154a85f2f7f14c81dfb1b79a60f4c1b32d31f509107ce54"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/desktop-learning-row-history.test.mjs",
+      "bytes": 8600,
+      "sha256": "62ea0da6d0195750d1faaf0789a305204133e6ad2f088dbc25ff363fc1a645f8"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/drawable-epoch-current-admission.test.mjs",
+      "bytes": 14724,
+      "sha256": "0308f5bf0df4d4291c7015bbb6bb94562effc0e0d4265b83fbd84d936dc38879"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/head-feature-roles-preservation.mjs",
+      "bytes": 4438,
+      "sha256": "96e9f94a5fe02754be8aa71951dded1e37f616f4795c434e742fab2c8da80063"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/head-feature-roles-preservation.test.mjs",
+      "bytes": 2657,
+      "sha256": "8e55bd317aa8c274276c12f33c4e2d640635a3384dda369d365defa8dfdf93aa"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/head-feature-source-roles.mjs",
+      "bytes": 4716,
+      "sha256": "81ddcc2db3664fa60e9ba928e73627dc01de2d6904cdfea049c8cc24169589ef"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 9230,
+      "sha256": "3f8c85040f3d32037e554e93c9f630d81f3e82420978f9467765a887ee69e0c8"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 9409,
+      "sha256": "c03b67d158fb103a4a8b6f56c91217be08b793c21818a5ef5423f35067ddcdbd"
+    },
+    {
+      "path": "pending/head-feature-roles-20261024/website/tests/head-tools-wider-consumer-current-role.mjs",
+      "bytes": 10831,
+      "sha256": "022b44a8b228a3532a611d38a801ed1618a6abecb8ace935448b43720ac08a61"
+    },
+    {
       "path": "pending/head-link-keyboard-20261023/coordination/build-head-link-keyboard-browser-20261023.mjs",
       "bytes": 1632,
       "sha256": "1adc3a4295c005d5befff19d83e0f26a999e60afcec98efa226fb2114bfcdfd4"
@@ -29598,35 +29668,46 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus declared test-only source-role proofs, exact owned-source preimages, genuine historical validator code and coordination recipes. Generated JSON manifests/bindings/pins (including raw-suffix historical metadata), models/geometry, scans/private records/identifiers, raw logs/evidence/images/type graphs, node_modules, dist and emulator state excluded. Full local witnesses/provenance and test results remain F-only; tests still need their declared historical metadata. Not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored source plus nine selected test/helper/proof files and five coordination recipes. No generated JSON binding/pin/historical metadata, models/geometry, scans/identifiers/private records, raw logs/evidence/images, dependencies, dist or emulator state. Historical source-role metadata/provenance and test evidence stay F-local. Not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "6dcaacbf95b38f05265d661c4297b99f17ad879dcbcd1978e58fb30e79679e39",
-    "originalSourceRoleCases": 6,
-    "baselinePass": 1,
-    "baselineFail": 5,
-    "finalSourceRoleCasesPassed": 13,
-    "originalHistoricalAssertionsRetained": true,
-    "originalInverseHelpersUnchanged": true,
+    "mainReviewSha256": "59667fb21a81b84e882d64f49c75632f3cfc792b080d1786a5826a8e859151e1",
+    "focusedCasesPassed": 42,
+    "fourOriginalFeatureRootsPassing": true,
+    "originalFeatureAssertionBodiesRetained": true,
+    "prior13SourceRoleCasesRetained": true,
+    "actualCurrentChecksAdded": 4,
     "genuineHistoricalValidatorFiles": 46,
     "genuineCurrentValidatorFiles": 54,
     "currentValidatorAndPinUnchanged": true,
-    "all1783CurrentInputsMatchIndependentSourceReceipt": true,
-    "viewerTransitionHunks": 16,
-    "syntaxFiles": 4,
-    "syntaxChecksPassed": true,
+    "currentReviewInputs": 1783,
+    "wholeSourceTransitionFiles": 5,
+    "exactTransitionHunks": 18,
+    "syntaxFiles": 9,
     "allNonTestProductBytesIdentical": true,
     "productionBuildReusedByExactIdentity": true,
     "newBuildProcessRun": false,
     "buildFiles": 1125,
     "allFourRuntimesAndReviewUnchanged": true,
-    "dependentFeatures": {
-      "tests": 14,
-      "pass": 9,
-      "fail": 5,
-      "skipped": 0,
-      "cancelled": 0
+    "adjacent": {
+      "baseline": {
+        "tests": 19,
+        "pass": 11,
+        "fail": 8
+      },
+      "initial": {
+        "tests": 19,
+        "pass": 10,
+        "fail": 9
+      },
+      "final": {
+        "tests": 19,
+        "pass": 11,
+        "fail": 8
+      },
+      "sameFinalOutcomes": true,
+      "preExistingFailuresUnresolved": 8
     },
-    "dependentFeatureRepairPending": true,
+    "uiAuditSourceOnly": true,
     "normalPreviewChanged": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,

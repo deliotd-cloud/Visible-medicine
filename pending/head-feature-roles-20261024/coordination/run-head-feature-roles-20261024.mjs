@@ -1,0 +1,25 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261024-head-feature-roles',phase=process.argv[2];
+const site=phase==='neighbors-baseline'?'F:/VisibleMedicine/staging/20261024-head-tools-proof/website':stage+'/website';
+const featureRoots=['desktop-learning-row-history','drawable-epoch-current-admission','head-manual-recovery-54-to-55-closed','head-native-history-current-transition'].map(n=>'tests/'+n+'.test.mjs');
+const proofRoots=['head-tools-wider-consumer-source-preservation','head-tools-wider-role-preservation','head-feature-roles-preservation'].map(n=>'tests/'+n+'.test.mjs');
+const neighborRoots=['closed54-55-provider-preservation','colic-adapter-inverse','colic-fa1-historical-closure','current-source-closure-preservation','drawable-epoch-adapter-inverse','drawable-epoch-historical-closure','head-history-role-preservation','head-manual-recovery-migration'].map(n=>'tests/'+n+'.test.mjs');
+const roots=phase.startsWith('features')?featureRoots:phase.startsWith('neighbors')?neighborRoots:[...featureRoots,...proofRoots];
+assert(/^(?:features|combined|neighbors)(?:-v\d+)?$|^neighbors-baseline$/.test(phase));
+const dir=stage+'/checks/'+phase;assert(!fs.existsSync(dir));fs.mkdirSync(dir,{recursive:true});
+const write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+const inputs=[...roots,'tests/head-feature-source-roles.mjs','tests/current-atlas-delivery.mjs','tests/head-tools-wider-consumer-current-role.mjs'].filter(p=>fs.existsSync(site+'/'+p)).map(p=>({path:p,sha256:hash(site+'/'+p)}));
+const args=['--experimental-strip-types','--test','--test-reporter=tap','--test-concurrency=1',...roots];
+const started={at:new Date().toISOString(),phase,cwd:site,args,sourceInputs:inputs,previewChanged:false};
+const out=fs.createWriteStream(dir+'/stdout.log',{flags:'wx'}),err=fs.createWriteStream(dir+'/stderr.log',{flags:'wx'});
+assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+const child=spawn(process.execPath,['--max-old-space-size=768',...args],{cwd:site,env:{...process.env,NODE_OPTIONS:'--max-old-space-size=768',RAYON_NUM_THREADS:'1',GOMAXPROCS:'2',VM_ATLAS_SOURCE_REPO:json(stage+'/PREPARATION.json').atlas,GIT_NO_REPLACE_OBJECTS:'1'},stdio:['ignore','pipe','pipe'],windowsHide:true});
+child.stdout.pipe(out);child.stderr.pipe(err);write(dir+'/STARTED.json',{...started,pid:child.pid,driverPid:process.pid});
+function state(live){const p=json('CURRENT_CHECKPOINT.json');p.activeWork.current.activeExecutionSessions=p.activeWork.current.activeExecutionSessions.filter(r=>r.role!=='head-feature-roles');if(live)p.activeWork.current.activeExecutionSessions.push({role:'head-feature-roles',phase,pid:child.pid,driverPid:process.pid,evidence:dir,previewChanged:false});const text=JSON.stringify(p,null,2)+'\n';assert(Buffer.byteLength(text)<65536);fs.writeFileSync('CURRENT_CHECKPOINT.json',text);}
+state(true);console.log(JSON.stringify({phase,pid:child.pid}));
+const result=await new Promise(resolve=>{child.once('error',error=>resolve({code:null,error:error.message}));child.once('close',(code,signal)=>resolve({code,signal}));});
+await Promise.all([out,err].map(s=>new Promise(resolve=>s.closed?resolve():s.once('close',resolve))));
+const text=fs.readFileSync(out.path,'utf8'),counts=Object.fromEntries(['tests','pass','fail','skipped','cancelled'].map(k=>[k,Number(text.match(new RegExp('^# '+k+' (\\d+)$','m'))?.[1]??-1)]));
+write(dir+'/TERMINAL.json',{...started,...result,finishedAt:new Date().toISOString(),counts,stdoutSha256:hash(out.path),stderrSha256:hash(err.path)});
+state(false);console.log(JSON.stringify({phase,...result,counts}));process.exitCode=result.code===0?0:1;
