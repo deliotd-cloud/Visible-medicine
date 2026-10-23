@@ -1,0 +1,38 @@
+# Open an exact regional tour
+
+Guided learning catalogue rows offer **Open tour** for a currently admitted
+regional tour. The link names its exact tour revision and learner-source
+revision. It opens the existing 3D Atlas with that tour selected, not playing.
+Choose Start or Play when the viewer has admitted its source models.
+
+The catalogue retains its canonical region metadata. Tour intents use the
+shared `/atlas/3d` workspace with an explicit region; ordinary navigation still
+uses the existing dedicated regional pages. The native links do not prefetch,
+start playback, move an already mounted camera or create a new message channel.
+Use normal browser Back/Forward for page history. Existing unsaved-work guards
+and independent content access remain unchanged.
+
+Only bounded public tour ID, tour revision, source revision and region fields
+are transported. Duplicate, partial, malformed and mixed study/head-tour
+requests are refused. The embedded source validates the exact tour, source,
+region, targets and every camera frame again. An obsolete link selects nothing;
+it never silently substitutes the first tour. A model/renderer must be ready
+and the learner must explicitly start playback. Mount-only initialization
+cannot replace later user selection or active study/practice/guided activity.
+
+When an old catalogue lacks a usable direct-entry revision, its clearly labelled
+manual region link remains available only for a canonical destination. Invalid
+destinations are not turned into links. No arbitrary URL, private identifier,
+scan, quiz answer, permission or autoplay value is forwarded.
+
+This applies to the existing regional-tour registry, including Whole body's
+declared same-catalogue union. Separate specimen/nested guides and the shoulder
+reference module retain their own interfaces; no universal coverage is claimed.
+Teaching remains draft. Semantic anatomy comparison is not patient-space
+registration, and Atlas access does not grant separately paid lectures or cases.
+
+Original MIT application code/prose. No new asset, dependency, model, dataset,
+font, texture, service or fee. Existing source notices and holds are retained.
+The candidate remains unpublished and uninstalled until the owner chooses to
+change the normal preview. Validation receipts distinguish native/source/build
+proofs from browser, authentication, clinical and release acceptance.

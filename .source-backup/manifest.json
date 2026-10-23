@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T11:21:44.970Z",
+  "at": "2026-10-23T11:59:10.497Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "7839f8737585bb33535039cc1ce0ef712dbe9b40a5a687560c9bb49350e493e0",
+    "sourceReceiptSha256": "ce7ce83661f3c21ca09e9116250c58ea6c57502d36e99766c163c1eb0f98d6fe",
     "atlasHead": "39dbb747a44feb0f4bc83e757310c5e3d1b49580",
-    "atlasTree": "84e9efcd2bfd6c67901d2455907908489200678c"
+    "atlasTree": "84e9efcd2bfd6c67901d2455907908489200678c",
+    "reviewBinding": "b0f49b9d2ddbe7e0c9432263b2b7155782d6fa174fbdc435d6b47a70852c66de"
   },
-  "parent": "1d904e868a88761a920a2d4d2468a0c6b32de447",
-  "gitParent": "1d904e868a88761a920a2d4d2468a0c6b32de447",
+  "parent": "e780bc61e3bd21ce3d30ee76568caa88b2f8ea9b",
+  "gitParent": "e780bc61e3bd21ce3d30ee76568caa88b2f8ea9b",
   "files": [
     {
       "path": "app/globals.css",
@@ -22800,6 +22801,101 @@
       "sha256": "d0211f18e4f54e1d5fd42a94e44a78cb1765f6a51a04682bd16ce5357e26d51b"
     },
     {
+      "path": "pending/regional-tour-website-20261023/coordination/admit-regional-tour-coverage-20261023.mjs",
+      "bytes": 6561,
+      "sha256": "5a0a9c0ae836d293103ca8c9469096180e4a771b5f9b9f299d9b53a929ecdfed"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/coordination/check-regional-tour-website-types-20261023.mjs",
+      "bytes": 4296,
+      "sha256": "8a3599f64eb6fe8c3575140ee16daa63ddb02806c59a346e1472a6698ce6a335"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/coordination/checkpoint-regional-tour-website-20261023.mjs",
+      "bytes": 12645,
+      "sha256": "c82d67e9b4b6d6a0aa933adf3306f307408a15b2f165238aaca649dbe7ecfbf0"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/coordination/integrate-regional-tour-website-20261023.mjs",
+      "bytes": 9430,
+      "sha256": "6424727941d2bf32a289d9c7fba8973860e53cdff125588a1c4270dcec64387c"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/coordination/preview-regional-tour-website-20261023.mjs",
+      "bytes": 6609,
+      "sha256": "29d5f57cc0a6bed7076e4b41c24101848a12ae1396689b14deb49768da3c45fe"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/coordination/seal-regional-tour-website-20261023.mjs",
+      "bytes": 15801,
+      "sha256": "d77f4f1e626b8ac56ac375aacd845d7ef7777d9d79cebe8b39cc70eb45e31f6b"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/coordination/stop-regional-tour-preview-20261023.mjs",
+      "bytes": 1759,
+      "sha256": "f209fd5964ae660fc3749e04a7ced6fa3e88e8eac5b01335aa004dab71b395f0"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/app/atlas/3d/page.tsx",
+      "bytes": 5168,
+      "sha256": "45a51cd67e831aaf813aad34f3b3f1a4c34a97779f6093629f3c23b4c521cc35"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/components/RegionalLearningCatalogue.tsx",
+      "bytes": 7005,
+      "sha256": "5a08e3f8a9cc3414af7e9b68b38616291ed6f84df90ef356aedc52a8bdaa284a"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/docs/REGIONAL_TOUR_ENTRY.md.raw",
+      "bytes": 2383,
+      "sha256": "30a0c1d8762829ce001061a209a7bb9ee90ba2a2f449673a9f0c1b336dbcf60d"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "a499c40e327c9e31d874224db965f6db923da2565b041be1c9720f4624fc7cf8"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "e8b11835bd3994d07b8048d24afd8b3d789638fcbe1be9bdcf5fb7e528f7adec"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/lib/regional-tour-entry-navigation.ts",
+      "bytes": 2247,
+      "sha256": "b61054f2e9abc5640d9a0ea8ce2ac11f45e44a597eca6fc57b90916cd6a54e00"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "7a234881c2d74aec7e7d84af6626fe65acebe827f8553d16fb5b679f1221a79d"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "88128414de50706140a627a91ee204e03a940f1febd9f127150e181a0f6343e2"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "de3c9b1941bf8a365970513210ee5f05d25563fba44a2656ff1df1c644757590"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/tests/guided-learning-shared-region.test.mjs",
+      "bytes": 11847,
+      "sha256": "62f5d9416df9bd53e4c3d3e1e523fa346b8800ec328aa60556aa1ca71c1dc9ac"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 11149,
+      "sha256": "3dccc29b1ec0b7cdf32821dc0882b57373f527da20997d342c7a412bcb44012f"
+    },
+    {
+      "path": "pending/regional-tour-website-20261023/website/tests/regional-tour-entry-navigation.test.mjs",
+      "bytes": 4091,
+      "sha256": "5a90e430f78565367b070eb0f0715515ef8f033d100f3f0d9153362334319a09"
+    },
+    {
       "path": "pending/release-diagnostic-successor-20261022/coordination/checkpoint-release-diagnostic-successor-20261022.mjs",
       "bytes": 10789,
       "sha256": "87e8cb541147bdfc2912382ca83dde74640f6b086195c8157b662f0d543f51df"
@@ -26646,37 +26742,45 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus5main recipes,8Atlas authored code/test files and3explicit original prose/notice/package rawUTF8 snapshots. No generated renderer/source catalog/display pins/bindings, raw snapshots/diagnostics/type/process/build/log/browser/private evidence, model/media/scan/mask/patient identifier/decision. Not whole/private/runnable off-device recovery. No preview/public deployment/access/permission/clinical/spatial expansion.",
+  "scope": "Inherited independently verified filtered authored source plus7main source/integration/proof/fixture recipes,11explicit original Website code/test files and1original prose rawUTF8 snapshot. No generated import/binding/catalog/coverage metadata, raw snapshots/type/process/test/build/browser/screenshot/private evidence, model/media/scan/mask/patient identifier/clinical decision. Not whole/private/runnable off-device recovery. No installation/public deployment/fee/access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "3525ffd5bdc8e966d39292dce0bf3ff53d989e99dbaef1fd874e7766470643a1",
-    "exactFreshDocumentTourEntry": true,
+    "mainReviewSha256": "68b574f6a896e226037babe515c0a5667ae3ccd79508fc23b9e0242ff3027466",
+    "directExactRegionalTourEntry": true,
     "autoplay": false,
-    "staleMalformedWrongRegionRefused": true,
-    "studyPracticeGuidedActivityPreserved": true,
-    "sourceAndEveryFrameValidated": true,
-    "initialChoiceCapturedOnce": true,
-    "nativeCasesPassed": 90,
-    "initialPickerRejectedCases": 9,
-    "historicalInputs": 1231,
-    "actualStrictTypeFiles": 3309,
-    "actualStrictTypeDiagnostics": 0,
-    "completeAtlasBuildPassed": true,
-    "unchangedTrackedInputs": 6282,
-    "sourceModelFiles": 206,
-    "sourceModelBytes": 225024401,
-    "tourDefinitionsTeachingAssetsDependenciesAndHoldsUnchanged": true,
-    "rendererRevisionChanged": true,
-    "existingApprovalsTransferred": false,
-    "embeddedExportAndWebsiteIntegrationPending": true,
-    "browserAccepted": false,
-    "fullProjectTypesPassed": false,
-    "wholeSuitePassing": false,
+    "arbitraryDestinationAndMixedIntentRefused": true,
+    "oldAssertionsPreserved": true,
+    "generatedLearnerAndReviewCoherent": true,
+    "gitSourceBlobReadback": 1574,
+    "reviewInputs": 1743,
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "initialCombinedTests": 98,
+    "initialCombinedPass": 94,
+    "initialCombinedFail": 4,
+    "correctedNewRootTests": 7,
+    "correctedNewRootPass": 7,
+    "unchangedOtherCasesPassed": 91,
+    "singleFresh98CasePassClaimed": false,
+    "actualStrictNamedTypeFiles": 877,
+    "actualStrictNamedTypeDiagnostics": 0,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "browserNativeCatalogueKeyboardHistoryAndGetVerified": true,
+    "browserHydrationOrModelAcceptance": false,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "modelAssetsAndAccessUnchanged": true,
+    "sourceGeometryTourDefinitionsAndTeachingUnchanged": true,
+    "clinicalApprovalsTransferred": false,
     "privateDecisionsReadOrMigrated": false,
+    "wholeSuitePassing": false,
+    "fullProjectTypesPassed": false,
+    "authenticatedAcceptance": false,
     "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "spatialRegistration": false,
     "previewChanged": false,
-    "installed": false,
-    "spatialRegistration": false
+    "installed": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
