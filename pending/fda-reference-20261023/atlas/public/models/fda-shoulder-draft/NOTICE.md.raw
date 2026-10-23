@@ -1,0 +1,31 @@
+# Independent shoulder reference — unvalidated draft
+
+Source: OSEL-DAM / U.S. Food and Drug Administration, ShoulderFiniteElementModel,
+commit fc9f3e56b104c06759750495be1f8dd5d53c1741.
+https://github.com/OSEL-DAM/ShoulderFiniteElementModel/tree/fc9f3e56b104c06759750495be1f8dd5d53c1741
+
+The exact source LICENSE and publisher model notes declare CC0-1.0. The source
+LICENSE SHA256 is a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499.
+No FDA endorsement, regulatory qualification, medical-device clearance or fitness
+for clinical use is implied. Source scientific limitations and disclaimers still
+apply; CC0 is not clinical validation. No commercial solver is required here.
+
+Visible Medicine sampled the quadratic tetrahedral boundary at its original
+nodes and applied original instance placement. Six parts enter this draft GLB;
+source indices remain intact. Vertex normals are interpolated for display only.
+No welding, geometry smoothing, decimation, healing, mirroring or per-part fitting
+was used. One positive scale plus translation normalizes the source assembly to
+unitless display coordinates; positions use float32 with maximum inverse error
+3.3131259442598093e-6 unverified source coordinate values, not millimetres.
+
+Humeral cartilage is publisher-constructed, not segmented donor cartilage.
+Constructed glenoid cartilage is excluded: two nonmanifold edges and three source
+vertices (2798,4501,37871). Connectors are not muscle surfaces and are not loaded.
+The publisher reports a right shoulder; anatomical axes, physical units, bone
+extent, attachments, intersections and clinical fidelity remain unvalidated.
+There is no BodyParts3D or CT/MRI patient-space registration or approval transfer.
+
+This draft has no measurements, anatomical orientation presets or decision
+writing. Protected Website Review integration and radiologist sign-off are
+separate pending milestones. See docs/FDA_SHOULDER_SOURCE.md for exact input,
+conversion, source-node maps, readback and reproduction requirements.
