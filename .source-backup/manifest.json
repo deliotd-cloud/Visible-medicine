@@ -1,34 +1,110 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-22T23:53:53.527Z",
+  "at": "2026-10-23T00:11:57.620Z",
   "sourceIdentity": {
+    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
+    "atlasTree": "db21ed3dee259c390878450b3495468996a3af85",
     "frozenSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
-    "nativeAtlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "authoredCode": [
+    "sourceRows": [
       {
-        "path": "tests/historical-review-ae84.mjs",
-        "bytes": 3405,
-        "sha256": "6296daa02ffc1a1eb8dd3aaf1588ad8caf6f851122809e78bd0b8dcdf954d824"
+        "path": "tests/clinical-review-axillary-branch-xray.test.ts",
+        "bytes": 24538,
+        "sha256": "ab1425cecf8040d098eb74926b2d3dfcf4a98f25b94c64c3ad3a4ac525444166"
       },
       {
-        "path": "tests/atlas-label-keyboard.test.ts",
-        "bytes": 5616,
-        "sha256": "928e48406373c864c961cd87b1146b749a6ef403ac8de509dedc883c5b320515"
+        "path": "tests/clinical-review-continuous-guided-playback.test.ts",
+        "bytes": 19627,
+        "sha256": "92ffeb69f175623981e443c1d63d43bdb1a6f5a70798553fbadc10999fab1d89"
       },
       {
-        "path": "tests/ae84-metadata-closure.test.mjs",
-        "bytes": 3763,
-        "sha256": "02d0cc1f9669995e5e2f71302a571d24a848a8e8a0a1fe9e46c4640c9a203755"
+        "path": "tests/clinical-review-girdle-muscle-xray.test.ts",
+        "bytes": 22862,
+        "sha256": "66d1e61d1708b8bdc70468ae9d757b33ddecca409a9078b1c439d1378d7ea0e1"
       },
       {
-        "path": "tests/atlas-label-keyboard-epoch.test.mjs",
-        "bytes": 5006,
-        "sha256": "b49e4ec3eceee4d88d577055d70b406474cbf2f2d76b725e2c3c81c05a60427a"
+        "path": "tests/clinical-review-hand-arterial-xray.test.ts",
+        "bytes": 21532,
+        "sha256": "7f2ac953efdd39445c376a7c68c2a15b0c9dd121e33864ba25fb5bb591793a4f"
+      },
+      {
+        "path": "tests/clinical-review-current-admission.mjs",
+        "bytes": 3730,
+        "sha256": "1300f5856169ded33ada59087360630fee464ab4dbd26d8a42a847c480695da0"
+      },
+      {
+        "path": "tests/clinical-review-elbow-us-followup.test.ts",
+        "bytes": 36682,
+        "sha256": "8c52a386cff7675adf9862592386e28e4167d6e389f7b8a9c1780190e47fbe40"
+      },
+      {
+        "path": "tests/clinical-review-forearm-vascular-xray.test.ts",
+        "bytes": 29142,
+        "sha256": "03a72a733f624b619737793d7bac519a5e9c2fef47f849be2481ac01f33a88d4"
+      },
+      {
+        "path": "tests/renal-tour-epoch-admission.mjs",
+        "bytes": 6653,
+        "sha256": "2e0b1a061148daf71317b05c179eef9c1c4dac65cf25d79d7a5b5b3b6e8dbb8c"
+      },
+      {
+        "path": "tests/renal-tour-epoch-admission.test.mjs",
+        "bytes": 11633,
+        "sha256": "84c08a3bbe3c6790c988f2b3258d70ed21f88f6db64bd36f2d7ba82080fb9080"
+      },
+      {
+        "path": "tests/clinical-review-lower-limb-connective-xray.test.ts",
+        "bytes": 21468,
+        "sha256": "dea27b090f230482979e97ec1ff54b5343f8c830885a0e49d09a69e7e5cc2fa6"
+      },
+      {
+        "path": "tests/lower-limb-display-pin-history.mjs",
+        "bytes": 3164,
+        "sha256": "e548b371b27dc09fd26791e7643435ad6376c757f5e7ded4b536894ecd7c2f05"
+      },
+      {
+        "path": "tests/lower-limb-display-pin-history.test.mjs",
+        "bytes": 3410,
+        "sha256": "c7bc980dfdc26138151d9ed4877cf6086e19aca482c49330e6168a263aeb70a4"
+      },
+      {
+        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-axillary-branch-xray.test.ts.raw",
+        "bytes": 24463,
+        "sha256": "3e59090c898f10709b7c9c62f67481fdd51380b2afcadcf64716a9c3afdd957b"
+      },
+      {
+        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-continuous-guided-playback.test.ts.raw",
+        "bytes": 19547,
+        "sha256": "2910f8ebf8610c3d3870ca069a321fc00e05bb30cc7d099020e41c44aba3bb56"
+      },
+      {
+        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-girdle-muscle-xray.test.ts.raw",
+        "bytes": 22787,
+        "sha256": "78850a6971b9f44907ef303dadac564408c6dfa34dbfe9295a940fd7f8f35288"
+      },
+      {
+        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-hand-arterial-xray.test.ts.raw",
+        "bytes": 21508,
+        "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
+      },
+      {
+        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-current-admission.mjs.raw",
+        "bytes": 3273,
+        "sha256": "181b1df7681ca831a9432559863bc65e7154cd64da8eb8d1686b7108aa56a791"
+      },
+      {
+        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-elbow-us-followup.test.ts.raw",
+        "bytes": 36628,
+        "sha256": "8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776"
+      },
+      {
+        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-forearm-vascular-xray.test.ts.raw",
+        "bytes": 29088,
+        "sha256": "90b1c26a19220053633a277b10d94b74c4d3c2f6ebc6e3cd8ccf4bccdd2fdda4"
       }
     ]
   },
-  "parent": "541d2fcb787753320b958f54b08b03a55d898d36",
-  "gitParent": "541d2fcb787753320b958f54b08b03a55d898d36",
+  "parent": "26eba4a3eb058ff7baca7bf9515c001dc9e9afd7",
+  "gitParent": "26eba4a3eb058ff7baca7bf9515c001dc9e9afd7",
   "files": [
     {
       "path": "app/globals.css",
@@ -21701,6 +21777,176 @@
       "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
     },
     {
+      "path": "pending/renal-epoch-repair-20261023/coordination/admit-renal-runtime-html-20261023.mjs",
+      "bytes": 1555,
+      "sha256": "17e9758ed0ff79a21faac788b635255340100ad045c6988088b5e4f8e0927eeb"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/coordination/admit-renal-viewer-inputs-20261023.mjs",
+      "bytes": 1508,
+      "sha256": "db1a8cfb79769f450cc94b3fad891c8029266535ba76c2e65207dbd27e3bbfea"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/coordination/checkpoint-renal-epoch-repair-20261023.mjs",
+      "bytes": 8789,
+      "sha256": "844cf22b11235f78315a2d22e507eb0986fa74a2c65668d74dace4d46ea1469c"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/coordination/prepare-renal-epoch-repair-20261023.mjs",
+      "bytes": 2997,
+      "sha256": "4f24fd90ced115c3a767b6f6ccc4475e9c2db1403b6ef748eac48695f73e885b"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/coordination/run-lower-limb-pin-repair-20261023.mjs",
+      "bytes": 1569,
+      "sha256": "a037595343599fb660417cbf0e9b92e1155fb53503666efef36df71c3fa1ef2a"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/coordination/source-proposal-checkpoint.mjs",
+      "bytes": 7261,
+      "sha256": "b54643facacf57148d8964a597483560d78f8104efd3699e2dbd892b2704b9fa"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/coordination/verify-renal-proposal-review-20261023.mjs",
+      "bytes": 2440,
+      "sha256": "14240bf657345510f2e126e31f55a51be840d9b1902d936e13d2de5d60e59c85"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/clinical-review-axillary-branch-xray.test.ts",
+      "bytes": 24538,
+      "sha256": "ab1425cecf8040d098eb74926b2d3dfcf4a98f25b94c64c3ad3a4ac525444166"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/clinical-review-continuous-guided-playback.test.ts",
+      "bytes": 19627,
+      "sha256": "92ffeb69f175623981e443c1d63d43bdb1a6f5a70798553fbadc10999fab1d89"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/clinical-review-current-admission.mjs",
+      "bytes": 3730,
+      "sha256": "1300f5856169ded33ada59087360630fee464ab4dbd26d8a42a847c480695da0"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 36682,
+      "sha256": "8c52a386cff7675adf9862592386e28e4167d6e389f7b8a9c1780190e47fbe40"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 29142,
+      "sha256": "03a72a733f624b619737793d7bac519a5e9c2fef47f849be2481ac01f33a88d4"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/clinical-review-girdle-muscle-xray.test.ts",
+      "bytes": 22862,
+      "sha256": "66d1e61d1708b8bdc70468ae9d757b33ddecca409a9078b1c439d1378d7ea0e1"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/clinical-review-hand-arterial-xray.test.ts",
+      "bytes": 21532,
+      "sha256": "7f2ac953efdd39445c376a7c68c2a15b0c9dd121e33864ba25fb5bb591793a4f"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/clinical-review-lower-limb-connective-xray.test.ts",
+      "bytes": 21468,
+      "sha256": "dea27b090f230482979e97ec1ff54b5343f8c830885a0e49d09a69e7e5cc2fa6"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/fixtures/renal-epoch-preimage/clinical-review-axillary-branch-xray.test.ts.raw",
+      "bytes": 24463,
+      "sha256": "3e59090c898f10709b7c9c62f67481fdd51380b2afcadcf64716a9c3afdd957b"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/fixtures/renal-epoch-preimage/clinical-review-continuous-guided-playback.test.ts.raw",
+      "bytes": 19547,
+      "sha256": "2910f8ebf8610c3d3870ca069a321fc00e05bb30cc7d099020e41c44aba3bb56"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/fixtures/renal-epoch-preimage/clinical-review-current-admission.mjs.raw",
+      "bytes": 3273,
+      "sha256": "181b1df7681ca831a9432559863bc65e7154cd64da8eb8d1686b7108aa56a791"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/fixtures/renal-epoch-preimage/clinical-review-elbow-us-followup.test.ts.raw",
+      "bytes": 36628,
+      "sha256": "8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/fixtures/renal-epoch-preimage/clinical-review-forearm-vascular-xray.test.ts.raw",
+      "bytes": 29088,
+      "sha256": "90b1c26a19220053633a277b10d94b74c4d3c2f6ebc6e3cd8ccf4bccdd2fdda4"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/fixtures/renal-epoch-preimage/clinical-review-girdle-muscle-xray.test.ts.raw",
+      "bytes": 22787,
+      "sha256": "78850a6971b9f44907ef303dadac564408c6dfa34dbfe9295a940fd7f8f35288"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/fixtures/renal-epoch-preimage/clinical-review-hand-arterial-xray.test.ts.raw",
+      "bytes": 21508,
+      "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/lower-limb-display-pin-history.mjs",
+      "bytes": 3164,
+      "sha256": "e548b371b27dc09fd26791e7643435ad6376c757f5e7ded4b536894ecd7c2f05"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/lower-limb-display-pin-history.test.mjs",
+      "bytes": 3410,
+      "sha256": "c7bc980dfdc26138151d9ed4877cf6086e19aca482c49330e6168a263aeb70a4"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/renal-tour-epoch-admission.mjs",
+      "bytes": 6653,
+      "sha256": "2e0b1a061148daf71317b05c179eef9c1c4dac65cf25d79d7a5b5b3b6e8dbb8c"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/current/tests/renal-tour-epoch-admission.test.mjs",
+      "bytes": 11633,
+      "sha256": "84c08a3bbe3c6790c988f2b3258d70ed21f88f6db64bd36f2d7ba82080fb9080"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/preimage/tests/clinical-review-axillary-branch-xray.test.ts",
+      "bytes": 24463,
+      "sha256": "3e59090c898f10709b7c9c62f67481fdd51380b2afcadcf64716a9c3afdd957b"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/preimage/tests/clinical-review-continuous-guided-playback.test.ts",
+      "bytes": 19547,
+      "sha256": "2910f8ebf8610c3d3870ca069a321fc00e05bb30cc7d099020e41c44aba3bb56"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/preimage/tests/clinical-review-current-admission.mjs",
+      "bytes": 3273,
+      "sha256": "181b1df7681ca831a9432559863bc65e7154cd64da8eb8d1686b7108aa56a791"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/preimage/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 36628,
+      "sha256": "8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/preimage/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 29088,
+      "sha256": "90b1c26a19220053633a277b10d94b74c4d3c2f6ebc6e3cd8ccf4bccdd2fdda4"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/preimage/tests/clinical-review-girdle-muscle-xray.test.ts",
+      "bytes": 22787,
+      "sha256": "78850a6971b9f44907ef303dadac564408c6dfa34dbfe9295a940fd7f8f35288"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/preimage/tests/clinical-review-hand-arterial-xray.test.ts",
+      "bytes": 21508,
+      "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
+    },
+    {
+      "path": "pending/renal-epoch-repair-20261023/preimage/tests/clinical-review-lower-limb-connective-xray.test.ts",
+      "bytes": 21119,
+      "sha256": "7aa5be85013096667406747701dc40b50bec69e22a676f2163b4680a773904d3"
+    },
+    {
       "path": "pending/renal-import-admission-20261022/assurance-website-preimages/tests/colic-adapter-inverse.test.mjs",
       "bytes": 11173,
       "sha256": "cfcaa8e253a9699aba33383c13c43d718ad17aa62534583ed9ba31208fcdd567"
@@ -24167,18 +24413,21 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus four authored test/helper files, exact two source preimages and seven main task utility sources. Three authentic historical generated metadata fixtures, raw logs, private data, snapshots, geometry, runtime binaries, clinical records and canonical ancestry stay local and are excluded. This is a source-only test proposal, not a complete/runnable Website backup, installed delivery, release pass, clinical approval or registration. The frozen full stock source and owner preview are unchanged.",
+  "scope": "Inherited independently verified filtered source plus19authored test/helper/source-preimage witness paths, eight original test/helper sources and seven verification/checkpoint utility sources. The seven .raw witnesses contain exact authored source code, not generated anatomy or scan metadata. All raw logs, generated catalogs/Review/runtime documents, private decisions/patient data, binary models, process records and canonical Git ancestry stay local and are excluded. Source-only proposal recovery is not full/private/runnable backup or installed/clinical/spatial/release acceptance. Seven scoped cases pass; all eight original affected feature roots remain unverified after a256MiB resource failure.",
   "proof": {
-    "mainReviewSha256": "33f6c6338f11248bad09880019085c0ab30a7685d403e3452d6e7cfe8baa584e",
-    "focusedNative": 19,
-    "originalWholeSourceInversesPreserved": true,
-    "historicalAndCurrentDeliverySeparated": true,
-    "forgedCurrentGeometryRefused": true,
-    "renalAndPinDiagnosesNotImplemented": true,
+    "mainReviewSha256": "7c69f3c9d396055b1523f734e586986ad4d0496049ed81eb26ad60520e8a0e9f",
+    "scopedNative": 7,
+    "sourceInverses": 8,
+    "preimageWitnessesPortable": true,
+    "originalFeatureRootsPending": 8,
+    "heapMiB": 256,
+    "fullFeatureResourceFailureRetained": true,
+    "unknownDifferencesFailClosed": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
-    "clinicalApproval": false
+    "clinicalApproval": false,
+    "spatialRegistration": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

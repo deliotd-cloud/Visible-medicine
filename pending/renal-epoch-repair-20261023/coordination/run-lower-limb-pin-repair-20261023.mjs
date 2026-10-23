@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+import {nativeAtlasEnvironment} from './native-atlas-environment-20261022.mjs';
+const root='F:/VisibleMedicine/staging/20261023-renal-epoch-repair',p=json(root+'/PREPARATION.json'),unit=process.argv.includes('--unit');
+const args=['--test','--test-reporter=tap','--test-concurrency=1',...(unit?[]:['tests/clinical-review-lower-limb-connective-xray.test.ts']),'tests/lower-limb-display-pin-history.test.mjs'];
+const env=nativeAtlasEnvironment({atlas:p.atlas,revision:p.atlasHead,tree:p.atlasTree});Object.assign(env,{NODE_OPTIONS:'--max-old-space-size=256',GOMAXPROCS:'2',RAYON_NUM_THREADS:'1'});
+const r=spawnSync(process.execPath,args,{cwd:p.website,env,encoding:'utf8',windowsHide:true,maxBuffer:16*1024*1024});
+const log=(r.stdout??'')+(r.stderr??''),name=unit?'main-pin-unit':'main-pin-full-v3';fs.writeFileSync(root+'/'+name+'.tap',log,{flag:'wx'});assert.equal(r.error,undefined);assert.equal(r.status,0,log);
+const pass=Number(log.match(/^# pass (\d+)/m)?.[1]);assert.equal(Number(log.match(/^# fail (\d+)/m)?.[1]),0);assert.equal(Number(log.match(/^# skipped (\d+)/m)?.[1]),0);
+const report={at:new Date().toISOString(),args,pass,fail:0,log:root+'/'+name+'.tap',sha256:sha(read(root+'/'+name+'.tap')),source:p.atlasHead,fullWebsiteOrBrowserAcceptance:false};
+fs.writeFileSync(root+'/'+name+'.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(report));
