@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Verified inherited filtered authored source plus8recipes,5Atlas code/test files and4original project prose/package raw snapshots. No generated identity pins/catalogue/renderer/display/binding/runtime/build/type/browser/private scan/mask/identifier/review decision payload. Full source identity/evidence/runnable candidate remains F-only; not whole/private/runnable off-device recovery.
+Verified inherited filtered authored source plus10main integration recipes and selected original Website test/import/policy/coverage admission source only. No generated Review/runtime/binding/pin/catalogue/inventory/model/type/build/process/browser/private scan/mask/identifier/decision payload. Full generated runnable candidate and raw evidence remain F-only; not whole/private/runnable off-device backup.

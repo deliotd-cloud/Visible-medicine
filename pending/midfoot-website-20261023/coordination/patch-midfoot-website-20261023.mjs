@@ -1,0 +1,14 @@
+// Declared main-owned source/current-contract seams; retain exact inverse records.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261023-midfoot-website',site=stage+'/website',prep=json(stage+'/PREPARATION.json'),parent=json(prep.parentReceipt),phase=process.argv[2],rows=[];
+function change(path,edits){const before=fs.readFileSync(site+'/'+path,'utf8');let after=before;for(const[a,b,n=1]of edits){assert.equal(after.split(a).length-1,n,path+' one declared seam');after=after.split(a).join(b);}let inverse=after;for(const[a,b,n=1]of edits.toReversed()){assert.equal(inverse.split(b).length-1,n,path+' inverse');inverse=inverse.split(b).join(a);}assert.equal(inverse,before);rows.push({path,beforeSha256:hash(site+'/'+path),after,edits});}
+if(phase==='policy')change('lib/atlas-delivery-policy.ts',[[hash(parent.website+'/lib/atlas-model-inventory.json'),hash(site+'/lib/atlas-model-inventory.json')]]);
+else if(phase==='admissions'){
+ const cap=json(stage+'/CAPTURE.json');assert.equal(cap.sourceFiles,1581);assert.equal(cap.inputs,1750);
+ change('tests/current-atlas-delivery.test.mjs',[[parent.atlasHead,prep.atlasHead,3],[parent.atlasTree,prep.atlasTree],['assert.equal(sourceFiles,1579);assert.equal(inputs,1748);','assert.equal(sourceFiles,1581);assert.equal(inputs,1750);']]);
+ change('tests/regional-tour-entry-delivery.test.mjs',[['assert.equal(binding.inputs.length,1748);','assert.equal(binding.inputs.length,1750);']]);
+ change('tests/compact-head-provenance.test.mjs',[["assert.equal(current.sourceCommit,'"+parent.atlasHead+"');","assert.equal(current.sourceCommit,'"+prep.atlasHead+"');"]]);
+}else throw Error('Unknown phase');
+function diff(a,b){const left=a.trimEnd().split('\n'),right=b.trimEnd().split('\n'),n=left.length,m=right.length,dp=Array.from({length:n+1},()=>new Uint32Array(m+1));for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)dp[i][j]=left[i]===right[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);const ops=[];let i=0,j=0;while(i<n||j<m){if(i<n&&j<m&&left[i]===right[j])ops.push(' '+left[i++]),j++;else if(i<n&&(j===m||dp[i+1][j]>=dp[i][j+1]))ops.push('-'+left[i++]);else ops.push('+'+right[j++]);}const spans=[];for(let k=0;k<ops.length;k++)if(ops[k][0]!==' '){const from=Math.max(0,k-3),to=Math.min(ops.length,k+4),last=spans.at(-1);if(last&&from<=last[1])last[1]=Math.max(last[1],to);else spans.push([from,to]);}return spans.map(([a,b])=>'@@\n'+ops.slice(a,b).join('\n')+'\n').join('');}
+const patch='*** Begin Patch\n'+rows.map(r=>'*** Update File: '+site+'/'+r.path+'\n'+diff(fs.readFileSync(site+'/'+r.path,'utf8'),r.after)).join('')+'*** End Patch';
+fs.writeFileSync(stage+'/PATCH_'+phase+'.json',JSON.stringify({at:new Date().toISOString(),rows,previewChanged:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({patch}));

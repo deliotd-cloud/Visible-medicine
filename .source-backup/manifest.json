@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T16:58:41.723Z",
+  "at": "2026-10-23T17:18:41.705Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "feba2ee6e0127ff34a9b23eaf01b3fe9ed83b8ced45d0803c66feaacd9b3d7fc",
+    "sourceReceiptSha256": "02293636ab03d8631787b98d1a1c0c2d8593cdf0008f75159bc4e87fba60de16",
     "atlasHead": "2ab63cbbc1c5e18a4d7b3a65f799e863f5be0491",
     "atlasTree": "c625d8b1a55aabd8e6497169856e9d67b85ea0f3",
-    "websiteIntegrationPending": true
+    "reviewBindingSha256": "4eda97496b9ca0a8497776394557936380081c19da7923c0912877e462777942"
   },
-  "parent": "d7a479673a7a3d5f367fbdc43261ad1f889b6442",
-  "gitParent": "d7a479673a7a3d5f367fbdc43261ad1f889b6442",
+  "parent": "0a71b587bb9170bffdb75c4baad8ec006d848aae",
+  "gitParent": "0a71b587bb9170bffdb75c4baad8ec006d848aae",
   "files": [
     {
       "path": "app/globals.css",
@@ -19891,6 +19891,111 @@
       "sha256": "8c0e9fc93a97ff98d6fe717a48ceae00c226bc4d112f78ea701bc2e4b415774d"
     },
     {
+      "path": "pending/midfoot-website-20261023/coordination/admit-midfoot-coverage-20261023.mjs",
+      "bytes": 7038,
+      "sha256": "4a763ab5cde2c04ad63ab75ff5022f0a44d63b405a598bb143e06fa7118eba38"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/archive-midfoot-website-parent-20261023.mjs",
+      "bytes": 1917,
+      "sha256": "8b2d07abea294adae71d03834224a182a745865ed77897e650c06344fc235b53"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/check-midfoot-website-types-20261023.mjs",
+      "bytes": 4916,
+      "sha256": "76543812608fc448567a48e33ccef42e9fe37f0eb59ee6cc01fd47f9423adddb"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/checkpoint-midfoot-website-20261023.mjs",
+      "bytes": 10393,
+      "sha256": "749a10a6349b6f1b8acdf7a9a7d0a163baf72044ff95bfa054e60e890d890d71"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/finalize-midfoot-website-20261023.mjs",
+      "bytes": 8607,
+      "sha256": "648fc7b57ee2adbd8ce991f46bd5953f935e2271fcc24a0fd57601d395137d20"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/integrate-midfoot-website-20261023.mjs",
+      "bytes": 10211,
+      "sha256": "6e4df9c47d8cb6066c008c8bb102acb2845df84e9d37963c9d8b4565525e4eaa"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/patch-midfoot-website-20261023.mjs",
+      "bytes": 2897,
+      "sha256": "5ef4f7d0424ec5b658ad3bcdf0b0c22b2ccc30e571606a805cc237738243ae9f"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/record-midfoot-test-repair-20261023.mjs",
+      "bytes": 2382,
+      "sha256": "24767ef79d831fdb5cee92666cc3d8c9f4010aae7578edb3d748629577fe04f8"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/seal-midfoot-website-20261023.mjs",
+      "bytes": 15303,
+      "sha256": "b9526d5eb773a329771d3f002e6c9992dcfac772f3cf729eaf6b1b21d1ded16d"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/coordination/sequence-midfoot-website-20261023.mjs",
+      "bytes": 743,
+      "sha256": "d4b0db7b0a22c3e08fcebe132ecd74d2cd29a50181ac97f964d59e1becd63d94"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "ccf32d76d696b416e72ff84bb99000fc5ddda66a52598b94df8fe35970d13a17"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "effe42749ba0c4bf6dfe64cf565db024498a1532b14497b0b68c1b522f793807"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "1d423fa0cc25f5c8a6f10fdf6cfb04671a4867d04dffa582c90bbe1d54e4ea00"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "f5733bbab76d60f1a31380e85632bfc3c72e857761761bb438e384fc0b027c7c"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/tests/carpal-reasoning-current-delivery.test.mjs",
+      "bytes": 23479,
+      "sha256": "c7ede7e91a22c72024413c4a3a209f78d3b571db85c14671f2945751004f9d61"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/tests/compact-head-provenance.test.mjs",
+      "bytes": 7680,
+      "sha256": "232c3b8561c36358a51c9176af876b183bb309443e8bf41a0917ea6ea2cd1dee"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "9e99e2bdcd027c193acac352083f388d4586d26021086163e4d3ca2f13572b6b"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/tests/midfoot-reasoning-current-delivery.test.mjs",
+      "bytes": 13424,
+      "sha256": "4759fb9b9ab00f39111706200a6e285ad410806b46208cb6d11208324216fe75"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 11149,
+      "sha256": "3f354a2a1c201875ebb756a57ca4b38decc86ea093f23108859f74a4dabcadd5"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/tests/review-parser-current-delivery.test.mjs",
+      "bytes": 5630,
+      "sha256": "ac99e02ee25cda08522c6e60e3a804d6feb0990c5621bd388e79d6bfe57e41fa"
+    },
+    {
+      "path": "pending/midfoot-website-20261023/website/tests/tour-reading-current-delivery.test.mjs",
+      "bytes": 12701,
+      "sha256": "7f7fa3e128f9d466a3ae3352ff095dff884b609978afa25afa98cade20e71a52"
+    },
+    {
       "path": "pending/modality-help-clarity-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
       "bytes": 5420,
       "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
@@ -28062,36 +28167,43 @@
     }
   ],
   "removed": [],
-  "scope": "Verified inherited filtered authored source plus8recipes,5Atlas code/test files and4original project prose/package raw snapshots. No generated identity pins/catalogue/renderer/display/binding/runtime/build/type/browser/private scan/mask/identifier/review decision payload. Full source identity/evidence/runnable candidate remains F-only; not whole/private/runnable off-device recovery.",
+  "scope": "Verified inherited filtered authored source plus10main integration recipes and selected original Website test/import/policy/coverage admission source only. No generated Review/runtime/binding/pin/catalogue/inventory/model/type/build/process/browser/private scan/mask/identifier/decision payload. Full generated runnable candidate and raw evidence remain F-only; not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "b1c69a24485c0b03dd53e85df3d1dfac7c6a14d5d68b6ea9a02699b6dbfa351f",
-    "newDraftConcepts": 6,
-    "newRootSelections": 12,
+    "mainReviewSha256": "a2d00d47cef582508f600a5d794a144d813990937b974455a6481d67ca67abe5",
+    "nativeCases": 169,
+    "initialTests": 169,
+    "initialPassing": 167,
+    "initialFailures": 2,
+    "affectedRootRerunPassing": 3,
+    "uniqueNativeCasesPassed": 169,
+    "strictTypeRoots": 16,
+    "strictTypeFiles": 3260,
+    "strictTypeDiagnostics": 0,
+    "productionOutputs": 1115,
+    "actualPrebuildAndFullBuildPassed": true,
+    "sourceBlobsReadBack": 1581,
+    "exactBoundInputs": 1750,
+    "protectedViewerFiles": 46,
+    "protectedViewerPackages": 22,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "allModelsDependenciesLicencesAndAccessUnchanged": true,
+    "coverageSourceInputs": 171,
+    "coverageImportedInputs": 145,
+    "coverageMetadataInputs": 26,
+    "allCoverageCountsGapsHoldsPreserved": true,
+    "exactOriginalTestInverses": true,
+    "newDraftQuestions": 6,
+    "newSourceSelections": 12,
     "concepts": 210,
     "sourceSelections": 380,
-    "previousConceptsPreserved": 204,
-    "previousSessionsPreserved": 368,
-    "changedTeachingWorksheets": 12,
-    "unchangedTeachingWorksheets": 1092,
-    "unchangedTopicPlacements": 9936,
-    "broadPracticeChecks": 24052,
-    "broadIdentityNegatives": 5965,
-    "newIdentityNegatives": 420,
-    "newPracticePaths": 72,
-    "tamperedPacketsRefused": 60,
-    "stalePostsRefusedBeforeStorage": 12,
-    "focusedTypeRoots": 5,
-    "focusedTypeFiles": 1690,
-    "focusedTypeDiagnostics": 0,
-    "completeAtlasBuildPassed": true,
-    "assetsDependenciesSourceHoldsUnchanged": true,
     "privateDecisionsReadOrMigrated": false,
-    "websiteIntegrationPending": true,
-    "wholeSuitePassing": false,
-    "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "newAssetsDependenciesFees": false,
     "previewChanged": false,
     "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,
