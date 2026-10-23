@@ -1,0 +1,20 @@
+// Independent Atlas source candidate. Never mutate the installed Website.
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import crypto from 'node:crypto';
+const source='F:/VisibleMedicine/staging/20261023-digital-vein-ultrasound/atlas';
+const stage='F:/VisibleMedicine/staging/20261023-ventricular-landmark-reasoning',atlas=stage+'/atlas';
+const git=(root,...a)=>execFileSync('git',['-C',root,...a],{encoding:'utf8',windowsHide:true,maxBuffer:16e6}).trim();
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+assert.equal(git(source,'rev-parse','HEAD'),'ed3c8cc0e99f6cf850a915d7a08de2e6489c1b6f');assert.equal(git(source,'status','--porcelain'),'');
+assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+execFileSync('git',['clone','--shared','-c','core.autocrlf=false',source,atlas],{stdio:'pipe',windowsHide:true});
+git(atlas,'checkout','--detach',git(source,'rev-parse','HEAD'));
+const files=git(source,'ls-files','-z').split('\0').filter(Boolean).map(path=>({path,sha256:sha(source+'/'+path)}));
+for(const r of files)assert.equal(sha(atlas+'/'+r.path),r.sha256,r.path);assert.equal(git(atlas,'status','--porcelain'),'');
+fs.symlinkSync(source+'/node_modules',atlas+'/node_modules','junction');
+fs.mkdirSync(stage+'/preimages');
+for(const p of ['lib/reasoning-questions.ts','package.json'])fs.copyFileSync(atlas+'/'+p,stage+'/preimages/'+p.replaceAll('/','_')+'.raw',fs.constants.COPYFILE_EXCL);
+fs.writeFileSync(stage+'/PREPARED.json',JSON.stringify({at:new Date().toISOString(),source,atlas,head:git(atlas,'rev-parse','HEAD'),tree:git(atlas,'rev-parse','HEAD^{tree}'),files,previewChanged:false,installed:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({stage,atlas,sourcePaths:files.length,previewChanged:false}));

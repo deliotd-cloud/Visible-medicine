@@ -1,0 +1,52 @@
+# Ventricular and hypothalamic landmark reasoning — draft revision 1
+
+Three original Apply anatomy concepts distinguish CSF-producing choroid plexus,
+the posterior hypothalamic mammillary landmarks and the anterior lamina
+terminalis. They reuse existing practice controls and three existing displayed
+root selections. The parent source is
+`ed3c8cc0e99f6cf850a915d7a08de2e6489c1b6f`; no geometry, tissue or image is added.
+
+| Target | Exact existing source | Scope that must remain visible |
+| --- | --- | --- |
+| Choroid plexus of cerebral hemisphere | FMA61934; FJ1755, FJ1803 | One midline-tagged bilateral group, not all ventricular plexuses or a secretion/flow simulation |
+| Mammillary body | FMA74877; FJ1768, FJ1815 | Paired anatomy represented by one grouped selection, not separately labelled sides or resolved nuclei |
+| Lamina terminalis | FMA61975; FJ1764, FJ1812 | Source files touch at one vertex with separate normals; not a reconstructed continuous membrane or a safe procedural boundary |
+
+All three exact complete displayed identities and their two unchanged bundles
+are pinned in `content/ventricular-landmark-reasoning-pins.json`. A broad name,
+FMA-only, side-only or file-only match cannot admit a different source selection.
+The laterality tag is a source-selection property, not a claim that paired
+anatomy is anatomically unpaired. No identity hold is removed.
+
+## References, original authorship and rights
+
+Factual references inspected 23 October 2026:
+
+- [UTHealth Neuroanatomy Online: ventricles](https://nba.uth.tmc.edu/neuroanatomy/L4/Lab04p01_index.html): ventricular choroid plexus and the anterior third-ventricular wall.
+- [UTHealth Neuroanatomy Online: hypothalamic landmarks](https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p14_index.html): anterior lamina terminalis and posterior mammillary region.
+
+Questions and explanations are newly written project prose. University pages
+are factual reading references, not licences to redistribute their text, tables,
+question banks, figures, images or models; none is copied. No new third-party
+asset, texture, font, dependency, fee or required service is introduced. Original
+code/prose retain project MIT terms; existing BodyParts3D CC BY 4.0 attribution,
+source notices and model restrictions remain unchanged.
+
+## Delivery and clinical review
+
+The three questions remain editorial drafts requiring fresh revision-bound
+radiologist review. The actual practice engine supplies the worksheet snapshot:
+prompt, correct source identity, eligible same-tag alternatives, explanation and
+citations. It must not silently retain an older teaching approval. Existing
+geometry/imaging reviews are separate and their material must remain unchanged.
+All preceding 190 concept definitions/order and 343 previously bound selections
+remain exact. New totals are 193 concepts and 346 represented selections, not
+193 validated assessment items. All 9,936 nine-topic lesson placements remain
+unchanged; reasoning is additional worksheet material, not a readiness promotion.
+
+These concepts support learning usual spatial relationships relevant to later
+CT/MRI comparison. They do not establish acquired-image visibility, masks,
+patient-space registration, fluid dynamics, diagnosis or a surgical route.
+No source scan, accepted mask, clinical PACS, private decision or entitlement is
+edited. The installed Website/preview remains unchanged; generated learner and
+protected Review integration requires its own later verified candidate.

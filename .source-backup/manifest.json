@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T08:20:41.977Z",
+  "at": "2026-10-23T08:46:50.902Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "6059dd5edbe38965889b7d4866805804bf8e4685751596a1702541538a3f067f",
-    "atlasHead": "ed3c8cc0e99f6cf850a915d7a08de2e6489c1b6f",
-    "atlasTree": "0305c15be5fb58ea7729a3849bbbdb6e1e40649d"
+    "sourceReceiptSha256": "3f5d73facac719c1054619ffb876086872646eaccb4444c5fc04d055df1342ba",
+    "atlasHead": "0327b6360e18b62563265d115df2b779c9397792",
+    "atlasTree": "ec951ffcf6095d7ae7c1f6255206eb449f44f75e"
   },
-  "parent": "930683c520b19c051247364af7df4e20c9f21b89",
-  "gitParent": "930683c520b19c051247364af7df4e20c9f21b89",
+  "parent": "c86303833dba65865d3e24914483df0e75baf9a7",
+  "gitParent": "c86303833dba65865d3e24914483df0e75baf9a7",
   "files": [
     {
       "path": "app/globals.css",
@@ -25170,6 +25170,86 @@
       "sha256": "ed6c69296fd3e9b1169fa67fd44dc2c3ac2fd8f5e6f17768e6021a147ed9ea18"
     },
     {
+      "path": "pending/ventricular-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
+      "bytes": 35519,
+      "sha256": "72a632437be62b52e5161c835dd6c33eaeadb92bbcd31009f0fe13cc0ad82dbc"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/atlas/docs/VENTRICULAR_LANDMARK_REASONING.md.raw",
+      "bytes": 3498,
+      "sha256": "6233538f28b245b6d1ddd0fd6d6782ade6b44b81b6b27cd4c7acfdbbe73a2ca8"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/atlas/lib/reasoning-questions.ts",
+      "bytes": 14377,
+      "sha256": "9a093c4868f4e45576f99a2a9a9904880d72377cbb2b421f180df93b42a2f90e"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/atlas/lib/ventricular-landmark-reasoning.ts",
+      "bytes": 3588,
+      "sha256": "acfd3c87fadf424ffed3e25fbfc361f52a74d40214869e9f350c02f9e55248e4"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 355610,
+      "sha256": "e25c14a940502a7fc106a831dc6a8fed6edaa7e803998278800f162d165fe2cf"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/atlas/scripts/check-ventricular-landmark-types.mjs",
+      "bytes": 1022,
+      "sha256": "8616d8794f391148afb53232bdeafae037475fa58348d7cc1eef491ae338119a"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/atlas/scripts/pin-ventricular-landmark-reasoning.mjs",
+      "bytes": 2928,
+      "sha256": "1506f13048e147a51c5082e3228bef6bb0f6d9e74f30b2f4037189f8706842de"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/atlas/scripts/test-ventricular-landmark-reasoning.mjs",
+      "bytes": 14860,
+      "sha256": "1ec0c812de81475bae85c37d794887869485f0fb977aacd4e04096581e1bf543"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 52099,
+      "sha256": "5313ce0033d670014b0bf0c295fa9258de3cb1c3c4c8d75684551155fdcb4969"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/coordination/build-ventricular-atlas-20261023.mjs",
+      "bytes": 1196,
+      "sha256": "68955dec2251a304847ebce04a0d6d36e9b5dcee1c2ff91ae79c161a4838e018"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/coordination/checkpoint-ventricular-reasoning-20261023.mjs",
+      "bytes": 10501,
+      "sha256": "516cb61c994aaed53979ea2d2c16647eb368fd4d7b2fc9033ac1740202899208"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/coordination/prepare-ventricular-reasoning-20261023.mjs",
+      "bytes": 1833,
+      "sha256": "6d3b13a9e7f8542c9c92610d7f1d75cce5c5178733a9d6e1e7f001ee9531659f"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/coordination/run-ventricular-reasoning-phase-20261023.mjs",
+      "bytes": 3122,
+      "sha256": "2b3513af0d02105a6e81309b64d14cedfd238d197a2f39ed7587b6f7f31e3e20"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/coordination/seal-ventricular-reasoning-20261023.mjs",
+      "bytes": 7255,
+      "sha256": "8b3fea13cda75d54b7feaa04ec8296f454c4a8e5c9cf4d741f5c1a5f6a6ecc64"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+      "bytes": 2027,
+      "sha256": "f5183aed51dfacdf292f692fb50527bed103c7892ee3072764b77c876b6b228d"
+    },
+    {
+      "path": "pending/ventricular-reasoning-20261023/coordination/verify-ventricular-reasoning-preservation-20261023.mjs",
+      "bytes": 2575,
+      "sha256": "82315d3b3aaa0159f558fe155755c1d3de8766d92231ed926b6e8a2faefffbab"
+    },
+    {
       "path": "pending/window-drag-bound-20261023/candidate/lib/head-window-drag.ts",
       "bytes": 4281,
       "sha256": "02f1ccfe8b5f6fc5cfcec9ffacdbdc511b5fa079b63a60bb9fdd32b08c55effa"
@@ -25961,36 +26041,32 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus9authored integration/verification/recovery recipes,13selected current code/test paths,7authored code preimages and3authored synthetic fixture templates. No generated source/input/pin/renderer/Review/viewer/model/coverage/build metadata, scans/masks/private identifiers/decisions, raw browser/TAP/resource/type/coordination evidence or later docs. Not whole/private/runnable off-device recovery. Nothing installed/restarted/refreshed/deployed; no access/permission/fee/clinical/spatial expansion.",
+  "scope": "Inherited independently verified filtered source plus7authored recipes,6selected Atlas code/test files and3original project prose/notice files. No generated pins/catalog/source-renderer/source-input/build metadata or raw snapshots/TAP/browser/type/audit/coordination evidence. No scans, masks, private records/identifiers/decisions or assets. Not whole/private/runnable off-device recovery. Installed Website/preview unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "e50302945b0af6a25090cefba9c378c5574ed980fe40b722afb02e646735ea7b",
-    "sourcePaths": 6234,
-    "buildFiles": 1111,
-    "focusedNativeCasesPassed": 111,
-    "zeroSkipsOrCancellations": true,
-    "reviewInputs": 1737,
-    "reviewSourceFiles": 1569,
-    "reviewBindingSha256": "eb9ef2c27ddec38cece405f49923a2529956c2ba64a00fa274cb33ce8ddab86c",
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "onlyBoundInputChanged": "components/HeadAtlasViewer.tsx",
-    "protectedPackagesNoticesModelsAccessUnchanged": true,
-    "focusedHandlerTypeRoots": 2,
-    "focusedHandlerTypeFiles": 564,
-    "focusedHandlerTypeDiagnostics": 0,
-    "wholeComponentTypesPassing": false,
-    "fullProjectTypesPassing": false,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "actualBrowserNativeSlice": true,
-    "syntheticComposingEvent": true,
-    "actualDeviceImeAcceptance": false,
-    "authenticatedAcceptance": false,
-    "privateDecisionsReadOrMigrated": false,
+    "mainReviewSha256": "bd5b5d2647d5feb5ca8630e5597b2c854e271fee1cb3d06723dbae9d2f438b7b",
+    "newDraftConcepts": 3,
+    "concepts": 193,
+    "sourceSelections": 346,
+    "precedingConceptsPreserved": 190,
+    "precedingActualSessionsPreserved": 343,
+    "unchangedTopicPlacements": 9936,
+    "changedTeachingWorksheets": 3,
+    "unchangedTeachingWorksheets": 1101,
+    "combinedPracticeChecks": 22352,
+    "negativeIdentityChecks": 5443,
+    "newIdentityMutationsRejected": 117,
+    "newPracticePaths": 18,
+    "focusedTypesFiles": 591,
+    "focusedTypesDiagnostics": 0,
+    "completeAtlasBuildPassed": true,
+    "exactSourceHoldsAndAssetsUnchanged": true,
+    "privateDecisionsRead": false,
+    "websiteIntegrationPending": true,
     "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
     "previewChanged": false,
     "installed": false,
-    "clinicalApproval": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,
