@@ -1,110 +1,28 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T00:11:57.620Z",
+  "at": "2026-10-23T00:17:49.237Z",
   "sourceIdentity": {
-    "atlas": "2381efe43b75f8a7fb768a069eecd7268c508dac",
-    "atlasTree": "db21ed3dee259c390878450b3495468996a3af85",
     "frozenSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
-    "sourceRows": [
+    "authoredSource": [
       {
-        "path": "tests/clinical-review-axillary-branch-xray.test.ts",
-        "bytes": 24538,
-        "sha256": "ab1425cecf8040d098eb74926b2d3dfcf4a98f25b94c64c3ad3a4ac525444166"
+        "path": "tests/atlas-learning-loader-preservation.test.mjs",
+        "bytes": 2984,
+        "sha256": "38ecf4e66ea0c91b6a8347be5c42ed676ec2a929f04cdd5dfc401abf5afd512b"
       },
       {
-        "path": "tests/clinical-review-continuous-guided-playback.test.ts",
-        "bytes": 19627,
-        "sha256": "92ffeb69f175623981e443c1d63d43bdb1a6f5a70798553fbadc10999fab1d89"
+        "path": "tests/fixtures/learning-loader-preservation-before-expansion.test.mjs.raw",
+        "bytes": 2763,
+        "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
       },
       {
-        "path": "tests/clinical-review-girdle-muscle-xray.test.ts",
-        "bytes": 22862,
-        "sha256": "66d1e61d1708b8bdc70468ae9d757b33ddecca409a9078b1c439d1378d7ea0e1"
-      },
-      {
-        "path": "tests/clinical-review-hand-arterial-xray.test.ts",
-        "bytes": 21532,
-        "sha256": "7f2ac953efdd39445c376a7c68c2a15b0c9dd121e33864ba25fb5bb591793a4f"
-      },
-      {
-        "path": "tests/clinical-review-current-admission.mjs",
-        "bytes": 3730,
-        "sha256": "1300f5856169ded33ada59087360630fee464ab4dbd26d8a42a847c480695da0"
-      },
-      {
-        "path": "tests/clinical-review-elbow-us-followup.test.ts",
-        "bytes": 36682,
-        "sha256": "8c52a386cff7675adf9862592386e28e4167d6e389f7b8a9c1780190e47fbe40"
-      },
-      {
-        "path": "tests/clinical-review-forearm-vascular-xray.test.ts",
-        "bytes": 29142,
-        "sha256": "03a72a733f624b619737793d7bac519a5e9c2fef47f849be2481ac01f33a88d4"
-      },
-      {
-        "path": "tests/renal-tour-epoch-admission.mjs",
-        "bytes": 6653,
-        "sha256": "2e0b1a061148daf71317b05c179eef9c1c4dac65cf25d79d7a5b5b3b6e8dbb8c"
-      },
-      {
-        "path": "tests/renal-tour-epoch-admission.test.mjs",
-        "bytes": 11633,
-        "sha256": "84c08a3bbe3c6790c988f2b3258d70ed21f88f6db64bd36f2d7ba82080fb9080"
-      },
-      {
-        "path": "tests/clinical-review-lower-limb-connective-xray.test.ts",
-        "bytes": 21468,
-        "sha256": "dea27b090f230482979e97ec1ff54b5343f8c830885a0e49d09a69e7e5cc2fa6"
-      },
-      {
-        "path": "tests/lower-limb-display-pin-history.mjs",
-        "bytes": 3164,
-        "sha256": "e548b371b27dc09fd26791e7643435ad6376c757f5e7ded4b536894ecd7c2f05"
-      },
-      {
-        "path": "tests/lower-limb-display-pin-history.test.mjs",
-        "bytes": 3410,
-        "sha256": "c7bc980dfdc26138151d9ed4877cf6086e19aca482c49330e6168a263aeb70a4"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-axillary-branch-xray.test.ts.raw",
-        "bytes": 24463,
-        "sha256": "3e59090c898f10709b7c9c62f67481fdd51380b2afcadcf64716a9c3afdd957b"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-continuous-guided-playback.test.ts.raw",
-        "bytes": 19547,
-        "sha256": "2910f8ebf8610c3d3870ca069a321fc00e05bb30cc7d099020e41c44aba3bb56"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-girdle-muscle-xray.test.ts.raw",
-        "bytes": 22787,
-        "sha256": "78850a6971b9f44907ef303dadac564408c6dfa34dbfe9295a940fd7f8f35288"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-hand-arterial-xray.test.ts.raw",
-        "bytes": 21508,
-        "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-current-admission.mjs.raw",
-        "bytes": 3273,
-        "sha256": "181b1df7681ca831a9432559863bc65e7154cd64da8eb8d1686b7108aa56a791"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-elbow-us-followup.test.ts.raw",
-        "bytes": 36628,
-        "sha256": "8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-forearm-vascular-xray.test.ts.raw",
-        "bytes": 29088,
-        "sha256": "90b1c26a19220053633a277b10d94b74c4d3c2f6ebc6e3cd8ccf4bccdd2fdda4"
+        "path": "tests/learning-loader-preservation-composition.test.mjs",
+        "bytes": 2813,
+        "sha256": "41bab577baebf9c7653130fff470141052efa5403fb196f5652a518f5d8f40c6"
       }
     ]
   },
-  "parent": "26eba4a3eb058ff7baca7bf9515c001dc9e9afd7",
-  "gitParent": "26eba4a3eb058ff7baca7bf9515c001dc9e9afd7",
+  "parent": "79e6aca4782b5f71ad070d92b20bbdb3a15bca20",
+  "gitParent": "79e6aca4782b5f71ad070d92b20bbdb3a15bca20",
   "files": [
     {
       "path": "app/globals.css",
@@ -18327,6 +18245,41 @@
       "sha256": "5c4f2e4ee15dad827915a93d695f22a05ae893dca8cb3c79f8cf4c6785efea1d"
     },
     {
+      "path": "pending/loader-preservation-20261023/coordination/checkpoint-loader-preservation-20261023.mjs",
+      "bytes": 5778,
+      "sha256": "85b2916015596b5ea99d82611085d910521571cee0bf755141413009fc9e1d66"
+    },
+    {
+      "path": "pending/loader-preservation-20261023/coordination/loader-preservation-work-20261023.mjs",
+      "bytes": 3930,
+      "sha256": "a573c8bb29c6e5d3c66dcc0ba7ea07a53ff4209d3c621a50498676ae94ca8045"
+    },
+    {
+      "path": "pending/loader-preservation-20261023/coordination/source-proposal-checkpoint.mjs",
+      "bytes": 7261,
+      "sha256": "b54643facacf57148d8964a597483560d78f8104efd3699e2dbd892b2704b9fa"
+    },
+    {
+      "path": "pending/loader-preservation-20261023/current/tests/atlas-learning-loader-preservation.test.mjs",
+      "bytes": 2984,
+      "sha256": "38ecf4e66ea0c91b6a8347be5c42ed676ec2a929f04cdd5dfc401abf5afd512b"
+    },
+    {
+      "path": "pending/loader-preservation-20261023/current/tests/fixtures/learning-loader-preservation-before-expansion.test.mjs.raw",
+      "bytes": 2763,
+      "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
+    },
+    {
+      "path": "pending/loader-preservation-20261023/current/tests/learning-loader-preservation-composition.test.mjs",
+      "bytes": 2813,
+      "sha256": "41bab577baebf9c7653130fff470141052efa5403fb196f5652a518f5d8f40c6"
+    },
+    {
+      "path": "pending/loader-preservation-20261023/preimage/tests/atlas-learning-loader-preservation.test.mjs",
+      "bytes": 2763,
+      "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
+    },
+    {
       "path": "pending/lower-limb-nerve-coverage-20261022/coordination/checkpoint-lower-limb-nerve-coverage-20261022.mjs",
       "bytes": 7726,
       "sha256": "47221ed181562e5e8774304ce03c0014598b2fa189635fba6fbd727b473524f0"
@@ -24413,16 +24366,15 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus19authored test/helper/source-preimage witness paths, eight original test/helper sources and seven verification/checkpoint utility sources. The seven .raw witnesses contain exact authored source code, not generated anatomy or scan metadata. All raw logs, generated catalogs/Review/runtime documents, private decisions/patient data, binary models, process records and canonical Git ancestry stay local and are excluded. Source-only proposal recovery is not full/private/runnable backup or installed/clinical/spatial/release acceptance. Seven scoped cases pass; all eight original affected feature roots remain unverified after a256MiB resource failure.",
+  "scope": "Inherited independently verified filtered source plus three authored test/source-witness paths, one complete source preimage and three verification/checkpoint utility sources. The .raw witness is authored test source, not generated anatomy or scan data. No private decisions, scans/masks, raw logs, runtime or model binaries, generated catalogs/Review metadata, process records or canonical Git ancestry. Nine pure text/hash preservation cases pass at128MiB; no actual viewer/browser/full-feature/release/clinical/registration acceptance. This is partial source-only recovery, not whole/private/runnable backup. Stock run/source and owner preview remain unchanged.",
   "proof": {
-    "mainReviewSha256": "7c69f3c9d396055b1523f734e586986ad4d0496049ed81eb26ad60520e8a0e9f",
-    "scopedNative": 7,
-    "sourceInverses": 8,
-    "preimageWitnessesPortable": true,
-    "originalFeatureRootsPending": 8,
-    "heapMiB": 256,
-    "fullFeatureResourceFailureRetained": true,
-    "unknownDifferencesFailClosed": true,
+    "mainReviewSha256": "470ce917b5b448f19ab21ce355ad8b4aed8628c52f1022bb783a5274629e6583",
+    "nativeSourcePreservation": 9,
+    "expectedBaselineFailures": 3,
+    "completeOriginalProofRestored": true,
+    "existingViewerConsumersAndLoaderHelpersUnchanged": true,
+    "heapMiB": 128,
+    "actualViewerOrBrowserTested": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
