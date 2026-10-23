@@ -1,0 +1,2 @@
+import assert from 'node:assert/strict';import{spawnSync}from'node:child_process';
+for(const phase of ['import','shoulder','regional','lower','pelvis','exportShoulder','exportRegional','exportLower','exportPelvis','inventory','lecture','coverage']){const result=spawnSync(process.execPath,['integrate-forearm-website-20261023.mjs',phase],{cwd:process.cwd(),stdio:'inherit',windowsHide:true});assert.equal(result.status,0,phase);}

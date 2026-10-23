@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T22:33:19.109Z",
+  "at": "2026-10-23T22:48:37.472Z",
   "sourceIdentity": {
-    "nativeSourceReceiptSha256": "dda9ece3575b9b12c5a24e39a628d07cc9f6199cc8e3f4c542b56560cc5e039d",
+    "websiteSourceReceiptSha256": "cf71965d5f836d30811e17f5bcd1fc7abde902f864b325904a538b93d7a79471",
     "atlasHead": "d143c28fb1e5da200712af6629a375c25d17dad7",
     "atlasTree": "486287b25d968117cffdd27bb20009fa46cda6f3",
-    "latestCompleteWebsiteSha256": "404a7adbb83443606534ca7d463d33af66a21bd01464d5661e7ee7da7eadab1c",
+    "reviewRevision": "35fdca381e22b1c9a5fad703d673fd8fdac427aeb9580f3375243be5f7c06709",
     "normalPreviewChanged": false
   },
-  "parent": "e81328e3e4073ac8d113ac9622c572c688dc87ce",
-  "gitParent": "e81328e3e4073ac8d113ac9622c572c688dc87ce",
+  "parent": "b24fc3a5a27a18e3b3112d900aca879346ed404c",
+  "gitParent": "b24fc3a5a27a18e3b3112d900aca879346ed404c",
   "files": [
     {
       "path": "app/globals.css",
@@ -17557,6 +17557,101 @@
       "sha256": "9470f06712ddb9da8600b0aa573c124900229bce9c30256d53a9add0b51390fe"
     },
     {
+      "path": "pending/forearm-website-20261023/coordination/admit-forearm-coverage-20261023.mjs",
+      "bytes": 6465,
+      "sha256": "d431a63c39df1031ad94d76e1904172c342f070ec6c4b262b739ff693c8a07f0"
+    },
+    {
+      "path": "pending/forearm-website-20261023/coordination/build-forearm-website-modules-20261023.mjs",
+      "bytes": 430,
+      "sha256": "7d3a87abc6058c46def63097ec0b3c6d691a8891c02ae59581e56b28ff851009"
+    },
+    {
+      "path": "pending/forearm-website-20261023/coordination/check-forearm-website-types-20261023.mjs",
+      "bytes": 5194,
+      "sha256": "14d815cb6f8ae466f388fd93314f4b9dcb0587b283890b65cc404e84cfe513fa"
+    },
+    {
+      "path": "pending/forearm-website-20261023/coordination/checkpoint-forearm-website-20261023.mjs",
+      "bytes": 7590,
+      "sha256": "7a97a0ee304ee17ee8a1ce8f2968f56c826e7af482d640daae2b89d0936d50e8"
+    },
+    {
+      "path": "pending/forearm-website-20261023/coordination/finish-forearm-browser-20261023.mjs",
+      "bytes": 2520,
+      "sha256": "b93d1727788828bb7fb96fb1c222d033ba38eae94e60965415751a149f6e90fd"
+    },
+    {
+      "path": "pending/forearm-website-20261023/coordination/integrate-forearm-website-20261023.mjs",
+      "bytes": 10114,
+      "sha256": "7e659ee7acf2aef198c858a5d3a88f801c750d57a893d2f55f9043098d48dfb4"
+    },
+    {
+      "path": "pending/forearm-website-20261023/coordination/seal-forearm-website-20261023.mjs",
+      "bytes": 10215,
+      "sha256": "c42ddf42eee916c7217bdb5be51b17e943270f606d6ef88b3d71b2b10ed3510a"
+    },
+    {
+      "path": "pending/forearm-website-20261023/coordination/serve-forearm-website-20261023.mjs",
+      "bytes": 3245,
+      "sha256": "46ded8010c30e6f12de406299d6f023458ac1781ce3ea00e15e0c18b332d7964"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "204d80678299da0bead1dcc2a47202326d49de81c8ab91c783a42d6edcdefe08"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "8aeb437d08f60f15defbf0006b298e9263d5f806603fbe87ba6c14165e978c3a"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "b6d2b22ed416c0286eb48de6d2b9e2dd775de9c53c72d1ad3238bca1c17a6263"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "164d17c489a6cc116b00afa419133b1596a28d0d8f1ab131effa852a21c6375f"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19274,
+      "sha256": "5cbc7e327ad90d9242a57f279fb5bef08f1c721029a9e9247e4a970236295968"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/tests/fda-reference-review-links.test.mjs",
+      "bytes": 6997,
+      "sha256": "367aaacc1c169991eef6782b9643c424b39bae8c7a5a7a650f8d0e7c4b4d44c5"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/tests/fda-reference-website-material.test.mjs",
+      "bytes": 19575,
+      "sha256": "ae54af87058f6935dced4f36f39c4ad28c6a3a7170f9dac56a04ace6812324a9"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/tests/forearm-mechanics-current-delivery.test.mjs",
+      "bytes": 13507,
+      "sha256": "0fd288c359b59ed03bc337972a7af98bb9562129f8fdbd0c85f599e0041c7ed7"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 12828,
+      "sha256": "c3e5eeb231e2f875766bb57a400a7296e9b1d690b3b20a807faa7acfa9b5a929"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/tests/tour-reading-current-delivery.test.mjs",
+      "bytes": 15564,
+      "sha256": "e03a01fc7789e8c479c4010267c409737edb44ec656fbc0e52afbd5ea0e997bd"
+    },
+    {
+      "path": "pending/forearm-website-20261023/website/tests/tour-replay-current-delivery.test.mjs",
+      "bytes": 7417,
+      "sha256": "19978a5298dd15017aee66b2afc1d1d2f385353b120ddfddab32cfd0420461e4"
+    },
+    {
       "path": "pending/guided-access-assurance-20261022/coordination/checkpoint-guided-access-assurance-20261022.mjs",
       "bytes": 9179,
       "sha256": "7e237b28e7f5c522bdf6669fa588ebd039aae9667f6871225586471a066288fd"
@@ -29368,32 +29463,34 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus explicitly declared original forearm reasoning module, exact-source pin producer/tests/type harness, dispatcher/validator and coordination recipes. Notes/notices/package script stored as UTF8 raw text. No generated JSON pins/revisions/registries, geometry/models, private studies/records/identifiers, raw evidence/logs/images/type graphs, node_modules, dist or emulator state. Full native/local evidence remains F-only; not whole/private/runnable off-device recovery.",
+  "scope": "Inherited verified filtered authored source plus declared forearm Website importer/coverage guards, actual-engine/current-delivery test code and coordination recipes. No generated JSON fixtures/pins/coverage/registry/Review/runtime, models/geometry, scans/private records/identifiers, raw evidence/images/type graphs/logs, node_modules, dist or emulator state. Full source and evidence remain F-only; not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "a9a51b6697a45683eee6f377ed4717cc6eb1bb570cea88a2d1d3a0c5e3099126",
-    "newDraftConcepts": 6,
-    "newSourceSelections": 12,
-    "concepts": 216,
-    "representedRoots": 392,
-    "previous210DefinitionsPreserved": true,
-    "previous380TargetSessionsPreserved": true,
-    "identityNegatives": 428,
-    "practicePaths": 72,
-    "packetNegatives": 60,
-    "stalePosts": 12,
-    "strictRoots": 4,
-    "strictActualGraphFiles": 605,
+    "mainReviewSha256": "c0954a5a4c5685292cab26348c05bada2ad7e6dd00aa413f1cfeffd29a70e6ce",
+    "focusedCasesPassed": 120,
+    "strictRoots": 17,
+    "strictAmbientFiles": 6,
+    "strictActualGraphFiles": 3503,
     "strictDiagnostics": 0,
-    "stockNativeProductionBuild": true,
-    "buildFiles": 557,
-    "all1104SourceAnd9936LessonPayloadsPreserved": true,
-    "unchangedTeachingWorksheets": 1092,
-    "changedDisplayAndTeachingPins": 12,
-    "allNineShoulderRevisionsUnchanged": true,
-    "geometryDependenciesHoldsUnchanged": true,
+    "stockPrebuild": true,
+    "stockFullWebsiteBuild": true,
+    "stockReviewVerifier": true,
+    "reviewSourceFiles": 1593,
+    "reviewInputs": 1783,
+    "viewerFiles": 54,
+    "unchangedExistingPackages": 24,
+    "allFourRuntimeSourcesAligned": true,
+    "modelsUnchanged": 137,
+    "modelPathsUnchanged": 144,
+    "modelBytesUnchanged": 199072480,
+    "newDraftConcepts": 6,
+    "newSidedTargets": 12,
+    "previous210DefinitionsAnd380SessionsPreserved": true,
+    "staleDecisionsRefusedBeforeStorage": 12,
+    "browserNewForearmAnswerCorrect": true,
+    "browserNewForearmSourcesVisible": true,
+    "browserStaticEmittedModuleOnly": true,
+    "independentFdaAssetRevisionUnchanged": true,
     "normalPreviewChanged": false,
-    "fullWebsiteIntegrationPending": true,
-    "privateDecisionStateRead": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
     "previewChanged": false,
