@@ -1,12 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T04:53:49.796Z",
+  "at": "2026-10-23T05:06:52.176Z",
   "sourceIdentity": {
-    "parentReceiptSha256": "b3d5ddd1ace8d5bfe7ff9ce8abba0b3fca9254de37724956970321b4eee8b03a",
-    "componentSha256": "180d034774956e77d62a0b2d0ad517b38d70581dfc8da935fd937f1c8f4dc08a"
+    "sourceReceiptSha256": "d41eecb7d72f96eaa52b4ac494646e58cbd075f32ad337b26d309ff277fa1d2a",
+    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
+    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045"
   },
-  "parent": "a758489239ba65ad09276104136b82d51f0c338a",
-  "gitParent": "a758489239ba65ad09276104136b82d51f0c338a",
+  "parent": "f9e4f7a480014437861845655603dc8d064d4d56",
+  "gitParent": "f9e4f7a480014437861845655603dc8d064d4d56",
   "files": [
     {
       "path": "app/globals.css",
@@ -16939,6 +16940,71 @@
       "sha256": "bd7aed9867c51c839a10eb8fc981068244c24be92d7e4e12e3a3bd3a32ef5e3d"
     },
     {
+      "path": "pending/head-pan-bound-20261023/candidate/components/HeadAtlasViewer.tsx",
+      "bytes": 113702,
+      "sha256": "180d034774956e77d62a0b2d0ad517b38d70581dfc8da935fd937f1c8f4dc08a"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/candidate/tests/current-ui-delivery-transition.test.mjs",
+      "bytes": 3843,
+      "sha256": "d7d18ae9b36cd593475998420137b7611695aba5a12053abe12fb0c18c27b696"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/candidate/tests/head-pan-current-admission.mjs",
+      "bytes": 495,
+      "sha256": "600fddb55c7e02b5ccfebd3b14d34779eef48dd2d393ed59fef2666c56099f4c"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/candidate/tests/head-pan-interruption.test.ts",
+      "bytes": 13428,
+      "sha256": "5d358516ab1d17fe9a48dcbd6fe7dd82c0f8c1154b1bf9ccc38672b1aad7e65f"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/candidate/tests/head-pan-review-binding.test.mjs",
+      "bytes": 8961,
+      "sha256": "13997d80944480b4cc8c379dadfe8f1cc68fd9f02dee6a1aafb06b4bdc4c7181"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/candidate/tests/head-pan-source-transition.test.ts",
+      "bytes": 3394,
+      "sha256": "80670c3b9adaf2c3178a64ddcc97eec5682c0abe813e7da73f7a93d3d8cdfcc8"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/candidate/tests/head-slice-keyboard.test.ts",
+      "bytes": 18928,
+      "sha256": "3e3994b1bb5f82cf0480e18e199a4acbd7e6b72fc97aff1a7df8d6a2d3804820"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/candidate/tests/head-slice-zoom.test.ts",
+      "bytes": 9963,
+      "sha256": "1459b99870881d5d568b259cfb02ff84813102194c586a4bb6d9f2abd79482c1"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/candidate/tests/window-drag-review-binding.test.mjs",
+      "bytes": 6791,
+      "sha256": "caebbf23fa4e365d0b5474794802dd16b83520322d3759be7b4da9d3f8e80155"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/coordination/bind-head-pan-candidate-20261023.mjs",
+      "bytes": 12333,
+      "sha256": "71af8eadc7f385583486b7044b9ebfa4cd338c0bd6f786c15e0a8ba0a473214b"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/coordination/checkpoint-head-pan-bound-20261023.mjs",
+      "bytes": 10165,
+      "sha256": "e0d0f1960b3dc097dafe4370898c3ef54217fc34777148c0fbfb011ce2345469"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/preimages/tests/current-ui-delivery-transition.test.mjs.raw",
+      "bytes": 3843,
+      "sha256": "c3f656c447f80b71601d421acb31064550436fe43b45e3b627b7ca7cf0d17f9c"
+    },
+    {
+      "path": "pending/head-pan-bound-20261023/preimages/tests/window-drag-review-binding.test.mjs.raw",
+      "bytes": 6592,
+      "sha256": "af0acd0c534dfdff8953210aaaf40db3831c42445e16859c6ccf6e8b86f78b93"
+    },
+    {
       "path": "pending/head-pan-interruption-20261023/coordination/build-head-pan-browser-20261023.mjs",
       "bytes": 9017,
       "sha256": "cdb1861c22bfe8c13386f3611c0ed1a3e5eb44fc51c9beb43f54e9f4e0353392"
@@ -25190,19 +25256,26 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus eight selected authored component/test/whole-preimage files and seven authored coordination/fixture/checkpoint recipes. Compiled browser bundles/media/snapshots, generated metadata, raw/type diagnostics, patient/scans/masks/identifiers/decisions and raw canonical history stay F-only. Not whole/private/runnable off-device recovery. No normal server/restart/install/tab refresh or permission/deployment/fee/approval change.",
+  "scope": "Inherited independently verified filtered source plus two authored composition/recovery recipes, nine selected authored component/test files and two authored whole-test preimages. All generated Review/viewer/runtime/model/build/catalogue/pin/revision metadata, private data/decisions/scans/masks/identifiers, browser media, raw logs and type evidence stay F-only. Not whole/private/runnable off-device recovery. No installation/server/restart/refresh/public deployment, fees, authentication/entitlement/permission change or clinical/spatial approval.",
   "proof": {
-    "mainReviewSha256": "0b61dfc07411f7eabf705ee438d2af1c3508b827e721ea00e9020009552ecee8",
-    "currentNativePass": 38,
-    "newBeforeFailures": 14,
-    "unchangedOldCases": 19,
-    "wholeSourceAndOriginalTestInversesVerified": true,
-    "syntheticRealReactProbes": 3,
-    "nativeTrustedCaptureAccepted": false,
-    "semanticTypesExit": 134,
-    "semanticTypesPassing": false,
-    "fullWebsiteBuildPassing": false,
-    "ownerPreviewChanged": false,
+    "mainReviewSha256": "4165744da23fbb5a8f82171763f682e3caabfd73409373425ea039188e3dbc17",
+    "sourcePaths": 6162,
+    "reviewInputs": 1735,
+    "reviewSourceFiles": 1567,
+    "onlyBoundInputDelta": "components/HeadAtlasViewer.tsx",
+    "staleBindingRefused": true,
+    "wholeTestInversesVerified": true,
+    "targetedNativeCasesPassed": 96,
+    "zeroSkipsOrCancellations": true,
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "buildFiles": 1110,
+    "privateDecisionsReadOrMigrated": false,
+    "fullProjectTypesPassing": false,
+    "nativeTrustedPointerAcceptance": false,
+    "authenticatedAcceptance": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
