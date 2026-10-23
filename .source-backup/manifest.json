@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T22:48:37.472Z",
+  "at": "2026-10-23T23:04:24.102Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "cf71965d5f836d30811e17f5bcd1fc7abde902f864b325904a538b93d7a79471",
+    "websiteSourceReceiptSha256": "6a6f601c32176a2ac8a3c2735178245487640434a17b157aed0d473fcec48183",
     "atlasHead": "d143c28fb1e5da200712af6629a375c25d17dad7",
     "atlasTree": "486287b25d968117cffdd27bb20009fa46cda6f3",
     "reviewRevision": "35fdca381e22b1c9a5fad703d673fd8fdac427aeb9580f3375243be5f7c06709",
     "normalPreviewChanged": false
   },
-  "parent": "b24fc3a5a27a18e3b3112d900aca879346ed404c",
-  "gitParent": "b24fc3a5a27a18e3b3112d900aca879346ed404c",
+  "parent": "3735dcbd22d601aba0ca176d1bb1dd22bae9aae7",
+  "gitParent": "3735dcbd22d601aba0ca176d1bb1dd22bae9aae7",
   "files": [
     {
       "path": "app/globals.css",
@@ -20597,6 +20597,71 @@
       "sha256": "5351a55d164f65b10c72e5ef5b3023e9340b77004fd355042c85eb6c278018dc"
     },
     {
+      "path": "pending/linked-head-region-picker-20261023/coordination/check-linked-head-region-picker-types-20261023.mjs",
+      "bytes": 4654,
+      "sha256": "ed1d3ef9e0e3f85d7f3a7ebb023de63c3ac4669a0f77891637d2e7f92b42f9c9"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/coordination/checkpoint-linked-head-region-picker-20261023.mjs",
+      "bytes": 7885,
+      "sha256": "c7afbdc8840ad6f840242ac31cf7223c2ba25d39796b1c0a2a58e3f0dc9a2a1c"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/coordination/finalize-linked-head-region-picker-20261023.mjs",
+      "bytes": 4529,
+      "sha256": "306619ed2b989f21ce3a0a77b55ae396c98ddeee8f9407b4e7c81e91800b934b"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/coordination/finish-linked-head-region-picker-browser-20261023.mjs",
+      "bytes": 2290,
+      "sha256": "35bf8a5f20cccece4eac2c6e100e4d590b5fe4ffb08fa16b3c37ad52e326f92f"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/coordination/prepare-linked-head-region-picker-20261023.mjs",
+      "bytes": 2385,
+      "sha256": "c26da38de046fd93d71e23f0823e226a5216035740bd6a45fc62a21a2595ab6f"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/coordination/run-linked-head-region-picker-20261023.mjs",
+      "bytes": 3627,
+      "sha256": "2ad86656176fb6228d8a510471fc675df89fd72bc25cf21cffb1b232742bccb8"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/coordination/seal-linked-head-region-picker-20261023.mjs",
+      "bytes": 5692,
+      "sha256": "302ba13b250de96a49c06c45fd1621bf913a47ccb4a9f23863e8ee1f25009c45"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/coordination/serve-linked-head-region-picker-20261023.mjs",
+      "bytes": 4034,
+      "sha256": "f734432b34985617a5f335147845ee2ff494725f0ff2609f14ac43cfe9a8b25c"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/fixture/browser-entry.tsx",
+      "bytes": 1869,
+      "sha256": "510aad9d908f5ecc340a32f0644a23b23289d77cd9b778a8d0a511253b360a10"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/fixture/browser-next-navigation.tsx",
+      "bytes": 153,
+      "sha256": "45c34e919b2a1e8d1ba1ce39a182a1ff60f454e571ede82c63cc0c5d99a96df7"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/website/components/AtlasRegionNavigation.tsx",
+      "bytes": 3766,
+      "sha256": "204e67be4d53cf69dfc1e7de1477fb402384b4a0bfc473250d92ddc605faa0db"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/website/tests/atlas-navigation.test.ts",
+      "bytes": 13696,
+      "sha256": "fabfdb895ccede74206bcadcf3a965178ca823c1e1fc5bbddf5ada05f3e4816b"
+    },
+    {
+      "path": "pending/linked-head-region-picker-20261023/website/tests/atlas-region-picker.test.ts",
+      "bytes": 21651,
+      "sha256": "2685bc92293cbc076d44763d5261b17978c12b4a3da35899e79f3e16c050a7b0"
+    },
+    {
       "path": "pending/linked-menus-website-20261023/coordination/checkpoint-linked-menus-website-20261023.mjs",
       "bytes": 9127,
       "sha256": "311d434500e4240938f48d1633dcc5e0844c3b0dc33aabf09153cf7fa5c72bb7"
@@ -29463,13 +29528,13 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus declared forearm Website importer/coverage guards, actual-engine/current-delivery test code and coordination recipes. No generated JSON fixtures/pins/coverage/registry/Review/runtime, models/geometry, scans/private records/identifiers, raw evidence/images/type graphs/logs, node_modules, dist or emulator state. Full source and evidence remain F-only; not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored source plus declared Region picker product/test code, coordination recipes and clearly synthetic browser fixture. No generated Review/runtime/JSON pins, models/geometry, scans/private records/identifiers, raw evidence/images/type graphs/logs, node_modules, dist or emulator state. Full source and local evidence remain F-only; not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "c0954a5a4c5685292cab26348c05bada2ad7e6dd00aa413f1cfeffd29a70e6ce",
-    "focusedCasesPassed": 120,
-    "strictRoots": 17,
+    "mainReviewSha256": "a1956177a069bc3fcd711596886576b76b5af1e191336911b029135f28660b77",
+    "focusedCasesPassed": 33,
+    "strictRoots": 5,
     "strictAmbientFiles": 6,
-    "strictActualGraphFiles": 3503,
+    "strictActualGraphFiles": 1755,
     "strictDiagnostics": 0,
     "stockPrebuild": true,
     "stockFullWebsiteBuild": true,
@@ -29478,18 +29543,15 @@
     "reviewInputs": 1783,
     "viewerFiles": 54,
     "unchangedExistingPackages": 24,
-    "allFourRuntimeSourcesAligned": true,
+    "allFourLearnerRuntimesUnchanged": true,
     "modelsUnchanged": 137,
     "modelPathsUnchanged": 144,
     "modelBytesUnchanged": 199072480,
-    "newDraftConcepts": 6,
-    "newSidedTargets": 12,
-    "previous210DefinitionsAnd380SessionsPreserved": true,
-    "staleDecisionsRefusedBeforeStorage": 12,
-    "browserNewForearmAnswerCorrect": true,
-    "browserNewForearmSourcesVisible": true,
-    "browserStaticEmittedModuleOnly": true,
-    "independentFdaAssetRevisionUnchanged": true,
+    "queryScoped3dRestorationStillExact": true,
+    "ctConceptAndMriTourBrowserHistoryVerified": true,
+    "actualBrowserDocumentRemounted": true,
+    "bfCacheBrowserAcceptance": false,
+    "privateDecisionsRead": false,
     "normalPreviewChanged": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
