@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T12:36:33.254Z",
+  "at": "2026-10-23T12:56:30.448Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "2635d28d97b8812855f75b34190269cafaf4717ffb901a0bb2d5fffe4283ae33",
+    "sourceReceiptSha256": "af5814a282bedac3cb20ba7477a34696f4f0783f90a6bee310997b527c7f1bcc",
     "atlasHead": "be9b53d96c37f1ea973e60f5981ad80db0893177",
-    "atlasTree": "f94d89f76d1b29f2aeb5d66d23dd5b0cf5a55ff6"
+    "atlasTree": "f94d89f76d1b29f2aeb5d66d23dd5b0cf5a55ff6",
+    "reviewBinding": "3757dc198d4b0cc20c0a02d7498d8ebc5c53fc95580e4636b523b4231134a853"
   },
-  "parent": "1782ac56250da486d6caf232cb91c1d796b280d4",
-  "gitParent": "1782ac56250da486d6caf232cb91c1d796b280d4",
+  "parent": "0ce66480886d7b2665fa56b69ed51e1f095464f8",
+  "gitParent": "0ce66480886d7b2665fa56b69ed51e1f095464f8",
   "files": [
     {
       "path": "app/globals.css",
@@ -24795,6 +24796,81 @@
       "sha256": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7"
     },
     {
+      "path": "pending/structure-guides-20261023/coordination/check-structure-guides-types-20261023.mjs",
+      "bytes": 4205,
+      "sha256": "aea744558396962446eaa6870b3b455f001e14c0a8b26d1c006956de6dc70198"
+    },
+    {
+      "path": "pending/structure-guides-20261023/coordination/checkpoint-structure-guides-20261023.mjs",
+      "bytes": 9536,
+      "sha256": "3572c5c060c1061949bc7f4908d1445a7f7dff9fade728cf65692f6de06220aa"
+    },
+    {
+      "path": "pending/structure-guides-20261023/coordination/finalize-structure-guides-20261023.mjs",
+      "bytes": 7601,
+      "sha256": "d97970e997b5b97a35a7e4ffad616e6d01c8b13adf2ab8ae8895e9b87615bcff"
+    },
+    {
+      "path": "pending/structure-guides-20261023/coordination/prepare-structure-guides-20261023.mjs",
+      "bytes": 2292,
+      "sha256": "ccf6d1b2b1b0051b8fe272ef09b043a8c8e3db19044bc5d87b7b047d53cb8004"
+    },
+    {
+      "path": "pending/structure-guides-20261023/coordination/preview-structure-guides-20261023.mjs",
+      "bytes": 6234,
+      "sha256": "a9b29b39e690b20a499eefbece870382ea70eadb6154e8f28cb812f3b8a90aff"
+    },
+    {
+      "path": "pending/structure-guides-20261023/coordination/run-structure-guides-20261023.mjs",
+      "bytes": 3360,
+      "sha256": "6a6577cb4b045c17d9be9071fb9c5800fa8d5499f0fec5c89965dd86103e557b"
+    },
+    {
+      "path": "pending/structure-guides-20261023/coordination/seal-structure-guides-20261023.mjs",
+      "bytes": 5590,
+      "sha256": "5b3a343c6ccc817ed7202ee157c02e7597fb7078e52f76fc81237c6b711cafe3"
+    },
+    {
+      "path": "pending/structure-guides-20261023/preimages/app/learn/related-anatomy/page.tsx.raw",
+      "bytes": 7529,
+      "sha256": "fce50983af0aff8efe6707fe86b5a9f198770399bc36531ab45b591797186b92"
+    },
+    {
+      "path": "pending/structure-guides-20261023/preimages/app/learn/related-anatomy/related-anatomy.css.raw",
+      "bytes": 3239,
+      "sha256": "a02a0248740df57a63c614e79f72673a62e37b5a529564f9cacc004d6eda6824"
+    },
+    {
+      "path": "pending/structure-guides-20261023/preimages/tests/related-lectures.test.ts.raw",
+      "bytes": 28919,
+      "sha256": "04e802b57c022446599b0635999bf7b5ebbfd2d13afa3f84abc031f1da09b305"
+    },
+    {
+      "path": "pending/structure-guides-20261023/website/app/learn/related-anatomy/page.tsx",
+      "bytes": 8451,
+      "sha256": "bc8218705c3e259d5ff1fb3c7fdacb483bb0f95f8d650252273690a8ef7cb071"
+    },
+    {
+      "path": "pending/structure-guides-20261023/website/app/learn/related-anatomy/related-anatomy.css.raw",
+      "bytes": 4597,
+      "sha256": "f7dcfa7bde6db79713f65a2ee40de954c7eca44b6688ab52b7a575bf342ebdcd"
+    },
+    {
+      "path": "pending/structure-guides-20261023/website/lib/head-structure-guides.ts",
+      "bytes": 1886,
+      "sha256": "a6944a8e56bb43b9eed7c61a7f637cc1b584cf726dfccf1db5369b52f23a7e68"
+    },
+    {
+      "path": "pending/structure-guides-20261023/website/tests/head-structure-guides.test.mjs",
+      "bytes": 6083,
+      "sha256": "006e5e785884b448dedebaef7ad5bc27007e063e099ae7094f15d0f16412edea"
+    },
+    {
+      "path": "pending/structure-guides-20261023/website/tests/related-lectures.test.ts",
+      "bytes": 31320,
+      "sha256": "d3ac990e3abaa78c198f41cf6b95385f15b19312910e6b14138f21742bc2dc32"
+    },
+    {
       "path": "pending/studio-focus-and-head-roles-20261022/20261022-head-manual-migration-history-proof/CODE/tests/head-manual-migration-later-inverse.mjs",
       "bytes": 4249,
       "sha256": "80c814db779190f0354ddc5cc9bcee8cf8ee80d1ee63e23bff4c009554a9a19c"
@@ -26916,40 +26992,37 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus5main integration/verification/recovery recipes,7Website code/test paths and6original authored preimages. No generated import/pin/catalog/coverage/binding/renderer/build/source-input snapshots, model/media/scan/mask/patient identifier/decision or raw diagnostic/type/process evidence. Not whole/private/runnable off-device recovery. Preview/installed state unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
+  "scope": "Inherited verified filtered authored source plus7main preparation/check/recovery recipes,5original Website code/CSS/test paths and3original authored preimages. No generated import/pin/catalog/coverage/binding/renderer/build/source-input snapshots, browser screenshots, model/media/scan/mask/identifier/decision, session or raw diagnostic/type/process evidence. Not a whole/private/runnable off-device backup; no deployment, fee, permission, clinical or spatial expansion.",
   "proof": {
-    "mainReviewSha256": "dd4ef20935688827fed005fee09bb13cb6ce8b31bafbb9a6c06acdfb6b4fe5a9",
-    "newDraftConcepts": 3,
-    "pairedSourceSelections": 6,
-    "totalConcepts": 200,
-    "totalRepresentedRoots": 360,
-    "previousConceptsPreserved": 197,
-    "previousSessionsPreserved": 354,
-    "nativeCases": 112,
+    "mainReviewSha256": "03e06e4aa00279c91ed9c59bb15c5e36a8197da182f05df395ca8d77d840f521",
+    "existingToursOnly": true,
+    "exactConceptAndCanonicalStep": true,
+    "modalityAdmissionPreserved": true,
+    "imageOnlyNoGuessed3d": true,
+    "sourcePaths": 6314,
+    "unchangedParentInputs": 6309,
+    "changedExistingPaths": 3,
+    "newPaths": 2,
+    "nativeCases": 88,
     "failures": 0,
     "skipsOrCancellations": 0,
-    "focusedTypeRoots": 8,
-    "focusedTypeAmbient": 6,
-    "focusedTypeFiles": 915,
-    "focusedTypeDiagnostics": 0,
+    "strictTypeRoots": 2,
+    "strictTypeAmbient": 6,
+    "strictTypeFiles": 620,
+    "strictTypeDiagnostics": 0,
+    "productionBuildFiles": 1111,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
     "reviewSourceFiles": 1576,
     "reviewInputs": 1745,
     "reviewBinding": "3757dc198d4b0cc20c0a02d7498d8ebc5c53fc95580e4636b523b4231134a853",
     "viewerFiles": 46,
     "viewerPackages": 22,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "coverageScopes": 4,
-    "coverageSourceInputs": 171,
-    "coverageImportedInputs": 145,
-    "coverageMetadataInputs": 26,
-    "allCoverageCountsGapsHoldsPreserved": true,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
+    "sourceAndAccessLogicPreserved": true,
+    "allPreviousAssertionsPreserved": true,
     "newAssetsDependenciesFees": false,
     "privateDecisionsReadOrMigrated": false,
-    "accessExpanded": false,
+    "autoplayOrProgressAdded": false,
     "authenticatedAcceptance": false,
     "clinicalApproval": false,
     "spatialRegistration": false,
