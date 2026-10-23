@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T14:44:23.765Z",
+  "at": "2026-10-23T15:10:47.584Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "56f24d066ff24320b5058a2c027c76d085482b85ecd53f38c1aa3d3f01083d9e",
+    "sourceProposalSha256": "3938ad2a30ab883d24a8e04d7c05beb96d1d611a9747c3ef6df1f0055377ae9a",
     "atlasHead": "9eac0806a7869cfae435010b013ae611d748c0c9",
-    "atlasTree": "1d96d29f65b9739713f2dd51bfccd3bddf6bba52"
+    "atlasTree": "1d96d29f65b9739713f2dd51bfccd3bddf6bba52",
+    "integrationPending": true
   },
-  "parent": "438ee4f8972a0e04da5bd2076358496cfba34ce3",
-  "gitParent": "438ee4f8972a0e04da5bd2076358496cfba34ce3",
+  "parent": "7cf366478e4712e5bb9244dbe53c566c7fb93f2e",
+  "gitParent": "7cf366478e4712e5bb9244dbe53c566c7fb93f2e",
   "files": [
     {
       "path": "app/globals.css",
@@ -15805,6 +15806,81 @@
       "sha256": "5cb326883f1081550cb9940f4a603b2b9258e57ef41cee068ab3d33d786fc7d9"
     },
     {
+      "path": "pending/compact-head-provenance-20261023/coordination/check-compact-head-provenance-types-20261023.mjs",
+      "bytes": 4332,
+      "sha256": "1d269c9b463309b883f058339c4c86a9a46a4510f66bc9b6f6ba220d35d57434"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/checkpoint-compact-head-provenance-20261023.mjs",
+      "bytes": 8119,
+      "sha256": "5eae45ae6ca7b6377cbc21b8a70f51966892e065eef3c32221f16aa11dda9765"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/checks-compact-head-provenance-20261023.mjs",
+      "bytes": 3105,
+      "sha256": "a18f54447d21677bbc7d4d3370c20a1f63d9fdff9038d6c1565766a0a108efdc"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/corrected-finalize-tour-reading-website-20261023.mjs",
+      "bytes": 9846,
+      "sha256": "a64eb8bbc0afef01042d0845677990bb069c426e10be2f62dabb23993d457efc"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/derive-compact-head-provenance-types-20261023.mjs",
+      "bytes": 1663,
+      "sha256": "4e957ec352f0d955540e035c8b3f05fa3bbb1b3026d93c3b6733889f4c82a3e7"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/finalize-compact-head-provenance-20261023.mjs",
+      "bytes": 8423,
+      "sha256": "f3d869ca05e9636682da7b70ead864d849126310390f81e6a6716e40ae1bf2eb"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/patch-compact-head-provenance-20261023.mjs",
+      "bytes": 2866,
+      "sha256": "9344df6f3e6920748d409ba4e0723cb0966e38f8299f65f57eaf6d10a717fecd"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/prepare-compact-head-provenance-20261023.mjs",
+      "bytes": 2333,
+      "sha256": "56fefad88757b5aad162fc14e6cf4a30c3ff7c0c97bd0649d4541ac6e7b8bca8"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/preview-compact-head-provenance-20261023.mjs",
+      "bytes": 5894,
+      "sha256": "676bda619cadbda8cbe0fdeec49c14ea5446943859b54ec798d0cf025ca899e9"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/coordination/seal-compact-head-provenance-20261023.mjs",
+      "bytes": 7507,
+      "sha256": "2346ec8f7e79b2344ee6d4f42fe4b091b3ee247072bef6ece88749f8031eaf3b"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/preimages/components/head-atlas.css.raw",
+      "bytes": 25173,
+      "sha256": "fb22ea6087e7ea2b09cc63e8f769f8bf2c93c7aa00b8a8710d9b164f3813eb8a"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/preimages/components/HeadAtlasViewer.tsx.raw",
+      "bytes": 113530,
+      "sha256": "596981f13b27a295fc31713f23f9bf8328eb6e3337550ed27ea234c82c886fae"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/website/components/head-atlas.css.raw",
+      "bytes": 25839,
+      "sha256": "5412024d7f86db31926cd20bbd327ff6a570ca0ed8e09a9e5d74681993f15931"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/website/components/HeadAtlasViewer.tsx",
+      "bytes": 113768,
+      "sha256": "8fa8cc8d613812c1a426f29007f4b48b293c81cc13a1353b69a5987c9150118b"
+    },
+    {
+      "path": "pending/compact-head-provenance-20261023/website/tests/compact-head-provenance.test.mjs",
+      "bytes": 7005,
+      "sha256": "4a388fd1d5e9956ecda1241c161d16fabce609cf4f746eb870016a210f6dd9e5"
+    },
+    {
       "path": "pending/complete-release-followups-20261022/coordination/checkpoint-complete-release-followup-proposals-20261022.mjs",
       "bytes": 10636,
       "sha256": "657d413bd1ef20154b2e9dee99a4cb8b18a00ce963edd6874d64229e644cfcae"
@@ -27436,45 +27512,33 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus8main recipes,8Website code/tests and7original authored preimages. No generated import/pin/catalog/coverage/binding/renderer/build/source-input snapshots/model/media/scan/mask/identifier/decision/raw diagnostic/type/browser/process evidence. Not whole/private/runnable off-device recovery. Preview unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
+  "scope": "Inherited verified filtered authored source plus original UI/provenance JSX, CSS as raw UTF8, test, recipes and whole preimages. No generated/runtime/binding/catalog/pin/type/browser/screenshot/process/private patient/scan/mask/decision evidence. Local-only incomplete integration, not a runnable or whole/private off-device backup.",
   "proof": {
-    "mainReviewSha256": "16afe1ee1a88357c1b9306590c6f1bcc8740e85daba2b15be5ebe249029552be",
-    "regionalTours": 53,
-    "stops": 317,
-    "originalReferences": 416,
-    "nativeCases": 152,
-    "failures": 0,
-    "skipsOrCancellations": 0,
-    "focusedTypeRoots": 12,
+    "mainReviewSha256": "fb16cc9fc10be5b2fa37aa822c84a7eee206d686f2d93a695e55d96436d45013",
+    "nativeCases": 10,
+    "focusedTypeRoots": 1,
     "focusedTypeAmbient": 6,
-    "focusedTypeFiles": 2846,
+    "focusedTypeFiles": 1729,
     "focusedTypeDiagnostics": 0,
-    "reviewSourceFiles": 1579,
-    "reviewInputs": 1748,
-    "reviewBinding": "7608d1452572576d0f004cbb1db3b341e8a1a80a87427e5692a85e8c9fdd3532",
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "coverageScopes": 4,
-    "coverageSourceInputs": 171,
-    "coverageImportedInputs": 145,
-    "coverageMetadataInputs": 26,
-    "allCoverageCountsGapsHoldsPreserved": true,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "allPriorWebsiteUiPreserved": true,
-    "keyboardRoleFixComposed": true,
-    "newAssetsDependenciesFees": false,
-    "privateDecisionsReadOrMigrated": false,
-    "accessExpanded": false,
-    "authenticatedAcceptance": false,
-    "clinicalApproval": false,
-    "spatialRegistration": false,
+    "actualSourceJsxCssBrowser": true,
+    "browserWidth": 1280,
+    "browserHeight": 720,
+    "previousFixtureHeight": 333.6875,
+    "compactFixtureHeight": 109.375,
+    "trueDoubleTextNoHorizontalOverflow": true,
+    "enterSpaceNestedEscapeAndFocus": true,
+    "wholeViewerInverse": true,
+    "wholeCssPrefix": true,
+    "sourceAndClinicalContentPreserved": true,
+    "integrationPending": true,
+    "freshProductionBuildPassed": false,
+    "currentSourceAdmission": false,
+    "completeWebsiteCandidate": false,
     "previewChanged": false,
+    "clinicalApproval": false,
     "installed": false,
-    "wholeSuitePassing": false
+    "wholeSuitePassing": false,
+    "spatialRegistration": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
