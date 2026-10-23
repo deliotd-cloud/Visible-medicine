@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T20:13:36.994Z",
+  "at": "2026-10-23T20:39:10.967Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "a8b3415e7e7c11888b4716da7158d2c4585426e590f15a6168650681c7350698",
+    "websiteSourceReceiptSha256": "9dc0fb6b5a1fb147e9b598ed3434d6cd7deebed4bafb14836b66d5ac7bd0c611",
     "atlasHead": "e3a901e103e9fb495a18d9bd1622190dfc0d034b",
     "atlasTree": "998d2640e93dc369791a6d11eaa08c59d24635c8",
-    "reviewRevision": "6816ef5f0ed0c07c912af8eee8b4c31973d40bd86d0b3dfac0e8f8dc1b93f42f",
+    "reviewRevision": "01d9f8b3d966aa15d987fe0ee90aa57ee34f18bd0fdaa6cbf7f9f10d8898312d",
     "normalPreviewChanged": false
   },
-  "parent": "501f0bade022d462edabb11a2adb84cb9d3e8bae",
-  "gitParent": "501f0bade022d462edabb11a2adb84cb9d3e8bae",
+  "parent": "789c43a3e5818e1bd1917352661502c90685bb18",
+  "gitParent": "789c43a3e5818e1bd1917352661502c90685bb18",
   "files": [
     {
       "path": "app/globals.css",
@@ -26432,6 +26432,101 @@
       "sha256": "80205d43ec468ce26ef3707f4a066cf800a83ace907ab0077c2061246272255b"
     },
     {
+      "path": "pending/review-viewer-split-20261023/coordination/capture-review-viewer-split-20261023.mjs",
+      "bytes": 2316,
+      "sha256": "e21a7c66abecfb79f8e21caf3ae910505a8094cce8f07ea3a398eafa4b8d4c58"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/check-review-viewer-split-types-20261023.mjs",
+      "bytes": 4979,
+      "sha256": "b5774cc8cf08a80013ce44a841d8f40a7b8f5d90a2bdf4452be766b5f16ea2ab"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/checkpoint-review-viewer-split-20261023.mjs",
+      "bytes": 7181,
+      "sha256": "6257be8ad3e6d0c44fe295c808f5c9d1b4350ed7723f75434f699a4b8036fcf0"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/prepare-review-viewer-checks-20261023.mjs",
+      "bytes": 2975,
+      "sha256": "4a290f8c2a2d1c0ddc9dd07d94fb098081530afe43130d5b63544e29ddc8ddd3"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/prepare-review-viewer-split-20261023.mjs",
+      "bytes": 2122,
+      "sha256": "d7de4ad05ac2e570618d99767dfb0afd6f7dac854323f6a6db432c9255e8bec6"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/probe-review-console-20261023.mjs",
+      "bytes": 4165,
+      "sha256": "521e32170bb7167faa85d4a20898ea951e99cd3959d78090bc6b41a07c70a074"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/run-review-viewer-split-20261023.mjs",
+      "bytes": 3614,
+      "sha256": "2ad88b990db88821e090ba30bf1225df0181eef0475742334da1b31809fbfa57"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/seal-review-viewer-split-20261023.mjs",
+      "bytes": 10527,
+      "sha256": "50d65b5d7d7d6ff088d347a16755c57cbc5024de98808afa144b0f30c884cb03"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/select-next-teaching-batch-20261023.mjs",
+      "bytes": 1681,
+      "sha256": "2bfb472c01f3b9d0a2e000a781ae9b5e6f0a69c3bb907de2484bcb0b0fd8bc32"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/coordination/serve-review-viewer-split-20261023.mjs",
+      "bytes": 4128,
+      "sha256": "b6624f1ba2394782c42718766333dbe3c8e52fabcd3a48e448d5aac7fae62fe3"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/scripts/clinical-review-viewer/legacy-viewers.tsx",
+      "bytes": 2439,
+      "sha256": "4aac79572fb55d51647c93a5110877635da84141a7137906a5533d3ad577a842"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/scripts/clinical-review-viewer/main.tsx",
+      "bytes": 2038,
+      "sha256": "530a5e9e135a316b534c4800c02932b9071ede86588256a117a078abe504879e"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/tests/clinical-review-panel-presentation.test.ts",
+      "bytes": 1660,
+      "sha256": "3fdfd967a34c01524dc9e9e7dd5149c354bd5ee04fef419fbaed8acd70c7f183"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/tests/clinical-review-return.test.ts",
+      "bytes": 5497,
+      "sha256": "ed41546c290857826c8153f6126d96746c5cbd0b99fc1fc64a6dbc261b183dcd"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/tests/current-atlas-delivery.mjs",
+      "bytes": 5092,
+      "sha256": "02dd815603c922dedbdc5a5fce270fbda736b81220e335d750dcbec1124c833e"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19274,
+      "sha256": "c9e3b9fd23802c3703625a7ad2bba1bebcf612601d09b33cf2922367ea190d8c"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/tests/fda-reference-website-material.test.mjs",
+      "bytes": 19569,
+      "sha256": "ec0d2d49f3f53ca13d26dcae346236834fdb4218ccdf9c3b1070498e43b2904c"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 12437,
+      "sha256": "fb5bb3fa2b8ef397723f12a803080bbed674df0ba5aba4a582930d6001f98ae5"
+    },
+    {
+      "path": "pending/review-viewer-split-20261023/website/tests/review-viewer-lazy-boundary.test.mjs",
+      "bytes": 5596,
+      "sha256": "c05214a4aec0f75e8e6137367abecbbb262507d456093fbe1cbf9215a9ea01c6"
+    },
+    {
       "path": "pending/structure-guides-20261023/coordination/check-structure-guides-types-20261023.mjs",
       "bytes": 4205,
       "sha256": "aea744558396962446eaa6870b3b455f001e14c0a8b26d1c006956de6dc70198"
@@ -28818,31 +28913,29 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus declared Website adapter/test/producer source and coordination recipes. No geometry/catalogue/generated registry/Review/runtime/pins/bindings, private records/scans/identifiers, node_modules, dist, emulator state, images/logs/type evidence. All complete generated/local evidence remains F-only; not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored source plus declared review entry/legacy adapter/test and coordination recipes. No geometry/catalogue/generated Review/runtime/pins/bindings, private records/scans/identifiers, node_modules, dist, emulator state, images/logs/type evidence. Full generated/local evidence stays F-only; not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "bf27a236e912a3d3808b51a26efa1b80835e45477ba6dd7a38a22a4aea72bb0b",
-    "nativeCases": 90,
-    "strictRoots": 11,
-    "strictActualGraphFiles": 3500,
+    "mainReviewSha256": "818a3557ba2541ba90895d8615ef8f2f309a8ba0bb8f55a87332c4af32afa51a",
+    "nativeCases": 74,
+    "legacyKindRegionComparisons": 84,
+    "strictRoots": 12,
+    "strictActualGraphFiles": 3501,
     "strictAmbientFiles": 6,
     "strictDiagnostics": 0,
     "originalPrebuild": true,
     "originalProductionBuild": true,
-    "committedSourceReadback": 1591,
-    "originalImporterDfsReplay": true,
-    "reviewInputs": 1778,
-    "protectedViewerFiles": 50,
-    "legacySpecimenPayloadsPreserved": 356,
-    "newDraftWorksheets": 6,
+    "originalReviewVerifier": true,
+    "reviewInputs": 1779,
+    "protectedViewerFiles": 54,
+    "unchangedExistingPackages": 24,
     "modelsUnchanged": 137,
     "modelPathsUnchanged": 144,
     "modelBytesUnchanged": 199072480,
-    "localReferenceFiles": 2,
-    "localReferenceBytes": 8528090,
-    "narrowFixtureNoOverflow": true,
+    "beforeUncompressedFDAJavaScriptBytes": 5599831,
+    "afterUncompressedFDAJavaScriptBytes": 1166383,
+    "actualEmittedFdaAndLegacyBrowserChecks": true,
+    "consoleErrorReproducedWithoutApplicationJS": true,
     "normalPreviewChanged": false,
-    "geometryApprovalBlocked": true,
-    "teachingImagingRevisionNull": true,
     "privateDecisionsReadOrMigrated": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
