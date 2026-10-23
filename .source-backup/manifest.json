@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T23:04:24.102Z",
+  "at": "2026-10-23T23:22:50.394Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "6a6f601c32176a2ac8a3c2735178245487640434a17b157aed0d473fcec48183",
+    "websiteSourceReceiptSha256": "1071697c3bd7da15fa7b3daa563f4d55ce3d9b4ae1854d9eb36fe1790a6492e0",
     "atlasHead": "d143c28fb1e5da200712af6629a375c25d17dad7",
     "atlasTree": "486287b25d968117cffdd27bb20009fa46cda6f3",
     "reviewRevision": "35fdca381e22b1c9a5fad703d673fd8fdac427aeb9580f3375243be5f7c06709",
     "normalPreviewChanged": false
   },
-  "parent": "3735dcbd22d601aba0ca176d1bb1dd22bae9aae7",
-  "gitParent": "3735dcbd22d601aba0ca176d1bb1dd22bae9aae7",
+  "parent": "9cb2f02ae2b8de265b14b3e4f05fa22d1d0d5ea6",
+  "gitParent": "9cb2f02ae2b8de265b14b3e4f05fa22d1d0d5ea6",
   "files": [
     {
       "path": "app/globals.css",
@@ -19402,6 +19402,76 @@
       "sha256": "1da8567fdace98f737a63de69818b69202b8963c87851134dadd6b3c84cf8482"
     },
     {
+      "path": "pending/head-tools-proof-20261024/coordination/checkpoint-head-tools-proof-20261024.mjs",
+      "bytes": 8651,
+      "sha256": "4ffe0303fddf059e9537b28e9a7e497e53c262fa804d5c9c79939437a383dc01"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/coordination/finalize-head-tools-proof-20261024.mjs",
+      "bytes": 5912,
+      "sha256": "39b195f2c472e7111db202fe33d80a5fc291b820d7e24a1caecf8e133168aeb3"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/coordination/import-head-tools-witnesses-20261024.mjs",
+      "bytes": 2686,
+      "sha256": "bd568c1d92213c81f8910fd9443d64ae3ef712ced99851f500f74939bee3fe64"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/coordination/prepare-head-tools-proof-20261024.mjs",
+      "bytes": 2426,
+      "sha256": "7853861a6e8a0b2c607ac4859550cfbda82fa78b416bbeb3759f713536dccf65"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/coordination/run-head-tools-proof-20261024.mjs",
+      "bytes": 3853,
+      "sha256": "b8eec0a5a4681d1ea58638039d13b82c74d92b591afbfa58227f9ea418e91856"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/coordination/verify-head-tools-proof-20261024.mjs",
+      "bytes": 8204,
+      "sha256": "a4ba1e76b1d88469db833b679dcd0727f02c809ca26109f865bba6097f7e458e"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/historical/atlas-source-repo.mjs.raw",
+      "bytes": 1588,
+      "sha256": "45be52da6f2a93fdff2276235b357d6e491385af8a84ab8e0193905f6d49f356"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/historical/current-atlas-delivery.mjs.raw",
+      "bytes": 5092,
+      "sha256": "52551fd5ec16154a78b94f78e0cdfbfee6a1bea629f70714f3dd5f93ccb81bb5"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/website/tests/fixtures/head-tools-current-consumer/desktop-learning-row-history.test.mjs.raw",
+      "bytes": 6493,
+      "sha256": "189e900c45910ac63e2227098c0e4187eb69c9854018c893fc172ddaf32639c9"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/website/tests/fixtures/head-tools-role-20261022/components/HeadAtlasViewer.tsx.raw",
+      "bytes": 109509,
+      "sha256": "a9b7c4b3d8f4febab394e983ace55df020cbcc84dc33daa8b2af6e7abd90fd1b"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/website/tests/head-tools-current-role.mjs",
+      "bytes": 6036,
+      "sha256": "efbf561807c2ccebf0262824573b148911582cd71667af49b95477860c536604"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/website/tests/head-tools-wider-consumer-current-role.mjs",
+      "bytes": 10454,
+      "sha256": "99921afcf0e33fbd2faf399d95adb4968b70678043bd1f350b859c2abbbf587f"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/website/tests/head-tools-wider-consumer-source-preservation.test.mjs",
+      "bytes": 2090,
+      "sha256": "8bf500149dc025acd93651f1cfe50a2bd06194a9992166c4a2ab249eaba2bbad"
+    },
+    {
+      "path": "pending/head-tools-proof-20261024/website/tests/head-tools-wider-role-preservation.test.mjs",
+      "bytes": 8469,
+      "sha256": "6a89f52ef1baf5b1195f816a5a567762564bb8a966cf51f156db90ea8c79d99e"
+    },
+    {
       "path": "pending/hip-reasoning-20261023/atlas/docs/HIP_RELATIONSHIPS_REASONING.md.raw",
       "bytes": 3158,
       "sha256": "9e48079227d52077e2cd504e1db7b83b32557cd8de4fc0d0759feda257387138"
@@ -29528,30 +29598,35 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus declared Region picker product/test code, coordination recipes and clearly synthetic browser fixture. No generated Review/runtime/JSON pins, models/geometry, scans/private records/identifiers, raw evidence/images/type graphs/logs, node_modules, dist or emulator state. Full source and local evidence remain F-only; not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored source plus declared test-only source-role proofs, exact owned-source preimages, genuine historical validator code and coordination recipes. Generated JSON manifests/bindings/pins (including raw-suffix historical metadata), models/geometry, scans/private records/identifiers, raw logs/evidence/images/type graphs, node_modules, dist and emulator state excluded. Full local witnesses/provenance and test results remain F-only; tests still need their declared historical metadata. Not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "a1956177a069bc3fcd711596886576b76b5af1e191336911b029135f28660b77",
-    "focusedCasesPassed": 33,
-    "strictRoots": 5,
-    "strictAmbientFiles": 6,
-    "strictActualGraphFiles": 1755,
-    "strictDiagnostics": 0,
-    "stockPrebuild": true,
-    "stockFullWebsiteBuild": true,
-    "stockReviewVerifier": true,
-    "reviewSourceFiles": 1593,
-    "reviewInputs": 1783,
-    "viewerFiles": 54,
-    "unchangedExistingPackages": 24,
-    "allFourLearnerRuntimesUnchanged": true,
-    "modelsUnchanged": 137,
-    "modelPathsUnchanged": 144,
-    "modelBytesUnchanged": 199072480,
-    "queryScoped3dRestorationStillExact": true,
-    "ctConceptAndMriTourBrowserHistoryVerified": true,
-    "actualBrowserDocumentRemounted": true,
-    "bfCacheBrowserAcceptance": false,
-    "privateDecisionsRead": false,
+    "mainReviewSha256": "6dcaacbf95b38f05265d661c4297b99f17ad879dcbcd1978e58fb30e79679e39",
+    "originalSourceRoleCases": 6,
+    "baselinePass": 1,
+    "baselineFail": 5,
+    "finalSourceRoleCasesPassed": 13,
+    "originalHistoricalAssertionsRetained": true,
+    "originalInverseHelpersUnchanged": true,
+    "genuineHistoricalValidatorFiles": 46,
+    "genuineCurrentValidatorFiles": 54,
+    "currentValidatorAndPinUnchanged": true,
+    "all1783CurrentInputsMatchIndependentSourceReceipt": true,
+    "viewerTransitionHunks": 16,
+    "syntaxFiles": 4,
+    "syntaxChecksPassed": true,
+    "allNonTestProductBytesIdentical": true,
+    "productionBuildReusedByExactIdentity": true,
+    "newBuildProcessRun": false,
+    "buildFiles": 1125,
+    "allFourRuntimesAndReviewUnchanged": true,
+    "dependentFeatures": {
+      "tests": 14,
+      "pass": 9,
+      "fail": 5,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "dependentFeatureRepairPending": true,
     "normalPreviewChanged": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
