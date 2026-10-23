@@ -1,214 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T00:31:04.761Z",
+  "at": "2026-10-23T00:46:22.487Z",
   "sourceIdentity": {
-    "frozenSourceReceiptSha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522",
-    "successorSourceReceiptSha256": "0dd282c43570998f10d8497fd32f6bcca12ea122f81aec8efd8cdc06379a1512",
-    "authoredSource": [
-      {
-        "path": "tests/ae84-metadata-closure.test.mjs",
-        "bytes": 3763,
-        "sha256": "02d0cc1f9669995e5e2f71302a571d24a848a8e8a0a1fe9e46c4640c9a203755"
-      },
-      {
-        "path": "tests/arterial-history-preservation.test.mjs",
-        "bytes": 7772,
-        "sha256": "31d98d7601b3a4413d6ef7c62e4694ba7241962f627830913e68802738938cb5"
-      },
-      {
-        "path": "tests/atlas-label-keyboard-epoch.test.mjs",
-        "bytes": 5006,
-        "sha256": "b49e4ec3eceee4d88d577055d70b406474cbf2f2d76b725e2c3c81c05a60427a"
-      },
-      {
-        "path": "tests/atlas-label-keyboard.test.ts",
-        "bytes": 5616,
-        "sha256": "928e48406373c864c961cd87b1146b749a6ef403ac8de509dedc883c5b320515"
-      },
-      {
-        "path": "tests/atlas-learning-loader-preservation.test.mjs",
-        "bytes": 2984,
-        "sha256": "38ecf4e66ea0c91b6a8347be5c42ed676ec2a929f04cdd5dfc401abf5afd512b"
-      },
-      {
-        "path": "tests/clinical-review-axillary-branch-xray.test.ts",
-        "bytes": 24538,
-        "sha256": "ab1425cecf8040d098eb74926b2d3dfcf4a98f25b94c64c3ad3a4ac525444166"
-      },
-      {
-        "path": "tests/clinical-review-continuous-guided-playback.test.ts",
-        "bytes": 19627,
-        "sha256": "92ffeb69f175623981e443c1d63d43bdb1a6f5a70798553fbadc10999fab1d89"
-      },
-      {
-        "path": "tests/clinical-review-current-admission.mjs",
-        "bytes": 3730,
-        "sha256": "1300f5856169ded33ada59087360630fee464ab4dbd26d8a42a847c480695da0"
-      },
-      {
-        "path": "tests/clinical-review-elbow-us-followup.test.ts",
-        "bytes": 36682,
-        "sha256": "8c52a386cff7675adf9862592386e28e4167d6e389f7b8a9c1780190e47fbe40"
-      },
-      {
-        "path": "tests/clinical-review-forearm-vascular-xray.test.ts",
-        "bytes": 29142,
-        "sha256": "03a72a733f624b619737793d7bac519a5e9c2fef47f849be2481ac01f33a88d4"
-      },
-      {
-        "path": "tests/clinical-review-girdle-muscle-xray.test.ts",
-        "bytes": 22862,
-        "sha256": "66d1e61d1708b8bdc70468ae9d757b33ddecca409a9078b1c439d1378d7ea0e1"
-      },
-      {
-        "path": "tests/clinical-review-hand-arterial-xray.test.ts",
-        "bytes": 21532,
-        "sha256": "7f2ac953efdd39445c376a7c68c2a15b0c9dd121e33864ba25fb5bb591793a4f"
-      },
-      {
-        "path": "tests/clinical-review-lower-limb-connective-xray.test.ts",
-        "bytes": 21468,
-        "sha256": "dea27b090f230482979e97ec1ff54b5343f8c830885a0e49d09a69e7e5cc2fa6"
-      },
-      {
-        "path": "tests/fixtures/learning-loader-preservation-before-expansion.test.mjs.raw",
-        "bytes": 2763,
-        "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/arterial-history-preservation.test.mjs.raw",
-        "bytes": 6059,
-        "sha256": "60a15827ff4e534d7ce5c534ad14a67dad64dc6d152dea90ae136a7ca6ad92a6"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/atlas-label-keyboard.test.ts.raw",
-        "bytes": 5458,
-        "sha256": "34e80eada4c9163021072db22f2a3978c231e0ffbe61e408cc1540835143e4c9"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/atlas-learning-loader-preservation.test.mjs.raw",
-        "bytes": 2763,
-        "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/clinical-review-axillary-branch-xray.test.ts.raw",
-        "bytes": 24463,
-        "sha256": "3e59090c898f10709b7c9c62f67481fdd51380b2afcadcf64716a9c3afdd957b"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/clinical-review-continuous-guided-playback.test.ts.raw",
-        "bytes": 19547,
-        "sha256": "2910f8ebf8610c3d3870ca069a321fc00e05bb30cc7d099020e41c44aba3bb56"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/clinical-review-current-admission.mjs.raw",
-        "bytes": 3273,
-        "sha256": "181b1df7681ca831a9432559863bc65e7154cd64da8eb8d1686b7108aa56a791"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/clinical-review-elbow-us-followup.test.ts.raw",
-        "bytes": 36628,
-        "sha256": "8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/clinical-review-forearm-vascular-xray.test.ts.raw",
-        "bytes": 29088,
-        "sha256": "90b1c26a19220053633a277b10d94b74c4d3c2f6ebc6e3cd8ccf4bccdd2fdda4"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/clinical-review-girdle-muscle-xray.test.ts.raw",
-        "bytes": 22787,
-        "sha256": "78850a6971b9f44907ef303dadac564408c6dfa34dbfe9295a940fd7f8f35288"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/clinical-review-hand-arterial-xray.test.ts.raw",
-        "bytes": 21508,
-        "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/clinical-review-lower-limb-connective-xray.test.ts.raw",
-        "bytes": 21119,
-        "sha256": "7aa5be85013096667406747701dc40b50bec69e22a676f2163b4680a773904d3"
-      },
-      {
-        "path": "tests/fixtures/release-epoch-before/historical-review-ae84.mjs.raw",
-        "bytes": 2962,
-        "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-axillary-branch-xray.test.ts.raw",
-        "bytes": 24463,
-        "sha256": "3e59090c898f10709b7c9c62f67481fdd51380b2afcadcf64716a9c3afdd957b"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-continuous-guided-playback.test.ts.raw",
-        "bytes": 19547,
-        "sha256": "2910f8ebf8610c3d3870ca069a321fc00e05bb30cc7d099020e41c44aba3bb56"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-current-admission.mjs.raw",
-        "bytes": 3273,
-        "sha256": "181b1df7681ca831a9432559863bc65e7154cd64da8eb8d1686b7108aa56a791"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-elbow-us-followup.test.ts.raw",
-        "bytes": 36628,
-        "sha256": "8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-forearm-vascular-xray.test.ts.raw",
-        "bytes": 29088,
-        "sha256": "90b1c26a19220053633a277b10d94b74c4d3c2f6ebc6e3cd8ccf4bccdd2fdda4"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-girdle-muscle-xray.test.ts.raw",
-        "bytes": 22787,
-        "sha256": "78850a6971b9f44907ef303dadac564408c6dfa34dbfe9295a940fd7f8f35288"
-      },
-      {
-        "path": "tests/fixtures/renal-epoch-preimage/clinical-review-hand-arterial-xray.test.ts.raw",
-        "bytes": 21508,
-        "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
-      },
-      {
-        "path": "tests/historical-review-ae84.mjs",
-        "bytes": 3405,
-        "sha256": "6296daa02ffc1a1eb8dd3aaf1588ad8caf6f851122809e78bd0b8dcdf954d824"
-      },
-      {
-        "path": "tests/learning-loader-preservation-composition.test.mjs",
-        "bytes": 2813,
-        "sha256": "41bab577baebf9c7653130fff470141052efa5403fb196f5652a518f5d8f40c6"
-      },
-      {
-        "path": "tests/lower-limb-display-pin-history.mjs",
-        "bytes": 3164,
-        "sha256": "e548b371b27dc09fd26791e7643435ad6376c757f5e7ded4b536894ecd7c2f05"
-      },
-      {
-        "path": "tests/lower-limb-display-pin-history.test.mjs",
-        "bytes": 3410,
-        "sha256": "c7bc980dfdc26138151d9ed4877cf6086e19aca482c49330e6168a263aeb70a4"
-      },
-      {
-        "path": "tests/release-epoch-composition-preservation.test.mjs",
-        "bytes": 18026,
-        "sha256": "c83a412e19c1fc20be054320af5cb166dbbcc828c2af47d4d8f490a383d023fe"
-      },
-      {
-        "path": "tests/renal-tour-epoch-admission.mjs",
-        "bytes": 6653,
-        "sha256": "2e0b1a061148daf71317b05c179eef9c1c4dac65cf25d79d7a5b5b3b6e8dbb8c"
-      },
-      {
-        "path": "tests/renal-tour-epoch-admission.test.mjs",
-        "bytes": 11633,
-        "sha256": "84c08a3bbe3c6790c988f2b3258d70ed21f88f6db64bd36f2d7ba82080fb9080"
-      }
-    ]
+    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
+    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
+    "materializedReceiptSha256": "2ad32ac583cf72d59abdcefabbfe03d79ddf5378aaec825067d6dc60748bfa2f",
+    "unboundReviewManifestSha256": "3cbce747d54a343ee58a180a9cad28829330f7000896a4cb9cf770b340e66ea7",
+    "sourceImporterSha256": "f19b8cafa9173a319348e946d7b4fc3ae1048a191d0393dc9006a9fe3ca5feb2"
   },
-  "parent": "96f3d999f1a6ce368c609c51cebf2cba8be39613",
-  "gitParent": "96f3d999f1a6ce368c609c51cebf2cba8be39613",
+  "parent": "69248b33bd67d624cbd749d620f9d41d5520b695",
+  "gitParent": "69248b33bd67d624cbd749d620f9d41d5520b695",
   "files": [
     {
       "path": "app/globals.css",
@@ -12234,6 +12035,36 @@
       "path": "pending/atlas-review-source-composition-20261023/preimage/tests/head-learning-bookmark-ui.test.ts",
       "bytes": 15470,
       "sha256": "df11f5e9f38bcdd8cc4d34145086ea37c84fed76d746c58c9690e11aafe82936"
+    },
+    {
+      "path": "pending/atlas-runtime-rollforward-20261023/coordination/checkpoint-atlas-runtime-rollforward-20261023.mjs",
+      "bytes": 9075,
+      "sha256": "917157a9b57254687d0b673f8641065fb6caa3c55ab3138c74975c12583436e6"
+    },
+    {
+      "path": "pending/atlas-runtime-rollforward-20261023/coordination/materialize-atlas-runtime-inputs-20261023.mjs",
+      "bytes": 7607,
+      "sha256": "87123d045fcec3cb9b573ca2d41636bf47d5cceef22c7407f0c03401fa502200"
+    },
+    {
+      "path": "pending/atlas-runtime-rollforward-20261023/coordination/prepare-atlas-review-9e14-import-20261023.mjs",
+      "bytes": 5741,
+      "sha256": "3fcc356fc6b56b6662a2c950e3c6238546ebca4936d6db9aeafb75db38df6d87"
+    },
+    {
+      "path": "pending/atlas-runtime-rollforward-20261023/coordination/review-atlas-runtime-rollforward-20261023.mjs",
+      "bytes": 12066,
+      "sha256": "f5cd0a7e600052691526b66297a431f0ba570274a85fce0e8a6df984ded9afc0"
+    },
+    {
+      "path": "pending/atlas-runtime-rollforward-20261023/current/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "f19b8cafa9173a319348e946d7b4fc3ae1048a191d0393dc9006a9fe3ca5feb2"
+    },
+    {
+      "path": "pending/atlas-runtime-rollforward-20261023/preimage/import-clinical-review.before.mjs.raw",
+      "bytes": 6751,
+      "sha256": "d1985571c8ab0f155cfe4143ad602a35506ea2ebbfb7dba9003a0faa8a790681"
     },
     {
       "path": "pending/atlas-teaching-tour-composition-20261022/coordination/checkpoint-atlas-teaching-tour-composition-20261022.mjs",
@@ -24767,24 +24598,24 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus40explicit authored test/helper/source-witness texts for the joint successor and3main coordination utility sources. The three authentic generated ae84 metadata fixtures remain F-only, as do full source manifests, stock/classification/native logs and process/resource records. No scans/masks/identifiers, private decisions/references, generated anatomy/Review/runtime data, model/media binaries, credentials or canonical Git ancestry. Fourteen small source-preservation cases pass on the6457-path isolated candidate, whose production/binding bytes remain unchanged; not complete affected-feature, build/browser/full-release/clinical/spatial acceptance. Source-only partial recovery, not whole/private/runnable backup. Normal preview is held unchanged.",
+  "scope": "Inherited verified filtered source plus one existing importer with a single reviewed exact7978-to9e14commit literal change, its complete authored code preimage and four main source-preparation/review/checkpoint utilities. Native Atlas materialization6272files/146tracked GLBs is local-only and does not admit or approve146models. The actual128MiB producer imports1567source files and all raw imports/source hashes verify, but Review is intentionally UNBOUND: no runtime/export, protected viewer, Website binding, private decisions, clinical/spatial/public-release acceptance or preview cutover. Full materialized/imported generated metadata, model/media binaries, raw logs, source manifests/resource/process facts, private data/references/decisions and canonical Git ancestry remain F-only. Source-only partial recovery, not whole/private/runnable backup.",
   "proof": {
-    "mainReviewSha256": "5ac2d4ffea46a8830162fe06e260a4454776084c1598e42642df3a6defd1c806",
-    "completeOriginalSourceInverses": 12,
-    "nativeSourcePreservation": {
-      "tests": 14,
-      "pass": 14,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
+    "mainReviewSha256": "1ebca28e8cd5c6a990b53cf584eb8ef00863d9c09fb68a07ff4d0cf72ffaf80f",
+    "materializedFiles": 6272,
+    "allTrackedWorkingBytesMatchGitBlobs": true,
+    "localTrackedModels": 146,
+    "newModelAdmission": false,
+    "actualSourceImportExit": 0,
     "heapMiB": 128,
-    "fullCandidateAndPredecessorSourceDrift": [],
-    "productionAndBindingBytesUnchanged": true,
-    "classificationEventsIndependentlyMatched": 110,
-    "topLevelResults": 6037,
-    "nestedPasses": 7,
+    "importedFiles": 1567,
+    "allImportedBytesAndSourceHashesVerified": true,
+    "changedImportedSources": 4,
+    "completeOriginalImporterInverse": true,
+    "oldHostBindingExactInverses": 2,
+    "unboundReview": true,
+    "protectedReviewReady": false,
+    "runtimeBuiltOrExported": false,
+    "fullTypesBuildBrowserPending": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
