@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T12:20:38.208Z",
+  "at": "2026-10-23T12:36:33.254Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "5aaae85bd8efef3ffdb439ae1e88b2f3dc5b660031232507be296f76e4eca919",
+    "sourceReceiptSha256": "2635d28d97b8812855f75b34190269cafaf4717ffb901a0bb2d5fffe4283ae33",
     "atlasHead": "be9b53d96c37f1ea973e60f5981ad80db0893177",
     "atlasTree": "f94d89f76d1b29f2aeb5d66d23dd5b0cf5a55ff6"
   },
-  "parent": "f64b22d8aa3810a6a123a42a514cd7a797bebd6f",
-  "gitParent": "f64b22d8aa3810a6a123a42a514cd7a797bebd6f",
+  "parent": "1782ac56250da486d6caf232cb91c1d796b280d4",
+  "gitParent": "1782ac56250da486d6caf232cb91c1d796b280d4",
   "files": [
     {
       "path": "app/globals.css",
@@ -18240,6 +18240,96 @@
       "sha256": "d560f9a09dbb7cbf60d479227ba0fa3cf507d0d6684f3a84afd2b5f52e2bab5b"
     },
     {
+      "path": "pending/hip-website-20261023/coordination/admit-hip-coverage-20261023.mjs",
+      "bytes": 7030,
+      "sha256": "fa935b6366fed0794620d2861e0120fb1b175ab67bbde1c32d03b08cf274bd4e"
+    },
+    {
+      "path": "pending/hip-website-20261023/coordination/check-hip-website-types-20261023.mjs",
+      "bytes": 4557,
+      "sha256": "70cfe6de48318fd45f7fc31274f37ed8fd42cec9ecc797d74daeb868f159271d"
+    },
+    {
+      "path": "pending/hip-website-20261023/coordination/checkpoint-hip-website-20261023.mjs",
+      "bytes": 11347,
+      "sha256": "95a279729aa82167f9fce75cd0a3d476d93440b1a0c60e8d6a1f0830a801b468"
+    },
+    {
+      "path": "pending/hip-website-20261023/coordination/integrate-hip-website-20261023.mjs",
+      "bytes": 9337,
+      "sha256": "d16cf0676f48833bbe38d66879a76e5aa68fbeee27016f25c46a03e3a9f54d52"
+    },
+    {
+      "path": "pending/hip-website-20261023/coordination/seal-hip-website-20261023.mjs",
+      "bytes": 13535,
+      "sha256": "ff18ae6d1d319eb5f535a272b41c485488b96b34bce9f18b3425787d6a0ea899"
+    },
+    {
+      "path": "pending/hip-website-20261023/preimages/lib/anatomy-coverage-view.ts.raw",
+      "bytes": 5290,
+      "sha256": "a499c40e327c9e31d874224db965f6db923da2565b041be1c9720f4624fc7cf8"
+    },
+    {
+      "path": "pending/hip-website-20261023/preimages/lib/atlas-delivery-policy.ts.raw",
+      "bytes": 493,
+      "sha256": "e8b11835bd3994d07b8048d24afd8b3d789638fcbe1be9bdcf5fb7e528f7adec"
+    },
+    {
+      "path": "pending/hip-website-20261023/preimages/scripts/check-anatomy-coverage.mjs.raw",
+      "bytes": 4552,
+      "sha256": "7a234881c2d74aec7e7d84af6626fe65acebe827f8553d16fb5b679f1221a79d"
+    },
+    {
+      "path": "pending/hip-website-20261023/preimages/scripts/import-clinical-review.mjs.raw",
+      "bytes": 6751,
+      "sha256": "88128414de50706140a627a91ee204e03a940f1febd9f127150e181a0f6343e2"
+    },
+    {
+      "path": "pending/hip-website-20261023/preimages/tests/current-atlas-delivery.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "de3c9b1941bf8a365970513210ee5f05d25563fba44a2656ff1df1c644757590"
+    },
+    {
+      "path": "pending/hip-website-20261023/preimages/tests/regional-tour-entry-delivery.test.mjs.raw",
+      "bytes": 11149,
+      "sha256": "3dccc29b1ec0b7cdf32821dc0882b57373f527da20997d342c7a412bcb44012f"
+    },
+    {
+      "path": "pending/hip-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "4ea0f8cb7a3050a5df1be59a8e511ec7cc3aa441638fa2efbea711331861fb05"
+    },
+    {
+      "path": "pending/hip-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "f39ff4543470672b6c28bb5b1e6b7087d69ad379fe5fd185f06aef8bacdac4bb"
+    },
+    {
+      "path": "pending/hip-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "5fca193c9dcfa97c6a415512f3787f00fcb039b8b5e3c413549533d444d30902"
+    },
+    {
+      "path": "pending/hip-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "d2b55430dc2d293cbb32dcab1fa4fecd9f13a69245915ba657072d64e40d6093"
+    },
+    {
+      "path": "pending/hip-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "897c630c1c24f7c5360911af6082e34cd2423004dca0c42cdc733775dd61d5a7"
+    },
+    {
+      "path": "pending/hip-website-20261023/website/tests/hip-reasoning-current-delivery.test.mjs",
+      "bytes": 18133,
+      "sha256": "a41d7aee3030fce79c614db6db28bcf485ae96c91b0f4108ac76c1bda4b0acec"
+    },
+    {
+      "path": "pending/hip-website-20261023/website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 11149,
+      "sha256": "330ba976697803df697d032236ebcfecc6586575ceabecfb8f2a03c7366e70ab"
+    },
+    {
       "path": "pending/historical-admission-assurance-20261022/coordination/checkpoint-historical-admission-assurance-20261022.mjs",
       "bytes": 12981,
       "sha256": "cabe4fb0d9d80093ec4f7582c2bac14047f62ced1e06444112516c61e9cdbf0a"
@@ -26826,36 +26916,46 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus7main recipes,6Atlas code/test files and4original project prose/package raw snapshots. No generated identity pins/catalog/renderer/display metadata or raw diagnostic/type/build/browser/private evidence. No models/media/scans/masks/patient identifiers/decisions. Not whole/private/runnable off-device recovery. Preview/canonical installation unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
+  "scope": "Inherited verified filtered authored source plus5main integration/verification/recovery recipes,7Website code/test paths and6original authored preimages. No generated import/pin/catalog/coverage/binding/renderer/build/source-input snapshots, model/media/scan/mask/patient identifier/decision or raw diagnostic/type/process evidence. Not whole/private/runnable off-device recovery. Preview/installed state unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "950de7a02f241055da6c5e0a3eb2ad07fa6e2f015cbbca1da74cc708b7cf2dda",
+    "mainReviewSha256": "dd4ef20935688827fed005fee09bb13cb6ce8b31bafbb9a6c06acdfb6b4fe5a9",
     "newDraftConcepts": 3,
-    "newRootSelections": 6,
-    "concepts": 200,
-    "sourceSelections": 360,
+    "pairedSourceSelections": 6,
+    "totalConcepts": 200,
+    "totalRepresentedRoots": 360,
     "previousConceptsPreserved": 197,
     "previousSessionsPreserved": 354,
-    "changedTeachingWorksheets": 6,
-    "unchangedTeachingWorksheets": 1098,
-    "unchangedTopicPlacements": 9936,
-    "broadPracticeChecks": 23012,
-    "broadIdentityNegatives": 5665,
-    "newIdentityNegatives": 214,
-    "newPracticePaths": 48,
-    "tamperedPacketsRefused": 30,
-    "stalePostsRefusedBeforeStorage": 6,
-    "focusedTypesFiles": 595,
-    "focusedTypesDiagnostics": 0,
-    "completeAtlasBuildPassed": true,
-    "assetsDependenciesSourceHoldsUnchanged": true,
+    "nativeCases": 112,
+    "failures": 0,
+    "skipsOrCancellations": 0,
+    "focusedTypeRoots": 8,
+    "focusedTypeAmbient": 6,
+    "focusedTypeFiles": 915,
+    "focusedTypeDiagnostics": 0,
+    "reviewSourceFiles": 1576,
+    "reviewInputs": 1745,
+    "reviewBinding": "3757dc198d4b0cc20c0a02d7498d8ebc5c53fc95580e4636b523b4231134a853",
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "coverageScopes": 4,
+    "coverageSourceInputs": 171,
+    "coverageImportedInputs": 145,
+    "coverageMetadataInputs": 26,
+    "allCoverageCountsGapsHoldsPreserved": true,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "newAssetsDependenciesFees": false,
     "privateDecisionsReadOrMigrated": false,
-    "websiteIntegrationPending": true,
-    "wholeSuitePassing": false,
+    "accessExpanded": false,
+    "authenticatedAcceptance": false,
     "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "spatialRegistration": false,
     "previewChanged": false,
     "installed": false,
-    "spatialRegistration": false
+    "wholeSuitePassing": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
