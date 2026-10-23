@@ -1,23 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T03:53:31.801Z",
+  "at": "2026-10-23T04:05:33.987Z",
   "sourceIdentity": {
-    "parentReceiptSha256": "e48afc8471eee287c2464f3bd4eb4b2709847b35954ebf54686530ac68bef5a4",
-    "proposal": [
-      {
-        "path": "lib/head-window-drag.ts",
-        "bytes": 4281,
-        "sha256": "02f1ccfe8b5f6fc5cfcec9ffacdbdc511b5fa079b63a60bb9fdd32b08c55effa"
-      },
-      {
-        "path": "tests/head-window-drag-interruption.test.ts",
-        "bytes": 5084,
-        "sha256": "9d9f57a26dc08bd6bd8c07832ca30505959de352ff40255ceda34279302dfa65"
-      }
-    ]
+    "sourceReceiptSha256": "b3d5ddd1ace8d5bfe7ff9ce8abba0b3fca9254de37724956970321b4eee8b03a",
+    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
+    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045"
   },
-  "parent": "40df8a5f5a4ad948b2a9e0c5612cb3941d354f41",
-  "gitParent": "40df8a5f5a4ad948b2a9e0c5612cb3941d354f41",
+  "parent": "c31403aed5f586c4e8682de66c77c4a80a08d78a",
+  "gitParent": "c31403aed5f586c4e8682de66c77c4a80a08d78a",
   "files": [
     {
       "path": "app/globals.css",
@@ -24285,6 +24275,61 @@
       "sha256": "ed6c69296fd3e9b1169fa67fd44dc2c3ac2fd8f5e6f17768e6021a147ed9ea18"
     },
     {
+      "path": "pending/window-drag-bound-20261023/candidate/lib/head-window-drag.ts",
+      "bytes": 4281,
+      "sha256": "02f1ccfe8b5f6fc5cfcec9ffacdbdc511b5fa079b63a60bb9fdd32b08c55effa"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/candidate/scripts/bind-clinical-review.mjs",
+      "bytes": 8344,
+      "sha256": "f345c7841c5ab546054d06d7dfe4c25551acd37095ed8f1828c530623b32fef5"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/candidate/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "c5b6838122635cf1ea39521dd99d2b74bb31468e2a7bcc82c885c00ca4e26827"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/candidate/tests/current-ui-delivery-transition.test.mjs",
+      "bytes": 3843,
+      "sha256": "c3f656c447f80b71601d421acb31064550436fe43b45e3b627b7ca7cf0d17f9c"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/candidate/tests/head-window-drag-interruption.test.ts",
+      "bytes": 5084,
+      "sha256": "9d9f57a26dc08bd6bd8c07832ca30505959de352ff40255ceda34279302dfa65"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/candidate/tests/window-drag-review-binding.test.mjs",
+      "bytes": 6592,
+      "sha256": "af0acd0c534dfdff8953210aaaf40db3831c42445e16859c6ccf6e8b86f78b93"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/coordination/bind-window-drag-candidate-20261023.mjs",
+      "bytes": 13500,
+      "sha256": "84f226e9cb2cc679607a35ebd366e1d3ba36ff03959640b0a7afc11b87dad091"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/coordination/checkpoint-window-drag-bound-20261023.mjs",
+      "bytes": 9783,
+      "sha256": "7e1db96e6db2156d022471d93b17c99553a0cfa7425eece3a9e42c0f2138ff39"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/preimages/scripts/bind-clinical-review.mjs.raw",
+      "bytes": 8315,
+      "sha256": "56feeaebfcbea52a28077a7e4a15e645c2a9c3fbd0be30a7e411d692d1ff9c97"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/preimages/tests/current-atlas-delivery.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "551b7cff540e3e355b0a9b747b8d07e0d4341a25c82ae5009be795924ae63a2c"
+    },
+    {
+      "path": "pending/window-drag-bound-20261023/preimages/tests/current-ui-delivery-transition.test.mjs.raw",
+      "bytes": 3562,
+      "sha256": "dbd58881096c1d895455986137d49b83509778c548832821abf3666722c4b585"
+    },
+    {
       "path": "pending/window-drag-interruption-20261023/candidate/lib/head-window-drag.ts",
       "bytes": 4281,
       "sha256": "02f1ccfe8b5f6fc5cfcec9ffacdbdc511b5fa079b63a60bb9fdd32b08c55effa"
@@ -25021,19 +25066,25 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus three authored coordinator recipes, display-only drag module, eight-case regression and exact original authored preimage. No scans/masks/patient data, private decisions/records, generated Review/model/build/type/browser outputs, raw logs, private context/evidence or canonical Git ancestry selected. Evidence stays F-only. Not whole/private/runnable off-device recovery; no preview install/restart/refresh/server/deploy, fee, identity/access or clinical/spatial approval change.",
+  "scope": "Inherited verified filtered source plus two authored composition/recovery recipes, six selected authored source/test/binder files and three exact authored preimages. All generated Review/viewer/runtime/model/build/catalogue/pin/revision metadata, private data/decisions/scans/masks, raw/type/browser/coordination evidence and raw canonical ancestry stay F-only. Not whole/private/runnable off-device recovery. No owner-preview install/restart/refresh/server, public deploy, fee, access/identity/approval change or decision migration.",
   "proof": {
-    "mainReviewSha256": "27c793baa4e2d12e728b91a102db4b8a1814e7ba7ac4f298551a4cc0cbce2170",
-    "nativeCasesPassed": 14,
-    "beforeNewCasesFailed": 8,
-    "unchangedOriginalCasesPassed": 6,
+    "mainReviewSha256": "889c226e525c28bf4c5265a7456650b77ec9631888f756b1c41fe912bb2274e2",
+    "sourcePaths": 6146,
+    "reviewInputs": 1735,
+    "reviewSourceFiles": 1567,
+    "staleBindingRefused": true,
+    "exactInputDeltaAndOriginalInverseVerified": true,
+    "targetedNativeCasesPassed": 64,
     "zeroSkipsOrCancellations": true,
-    "strictModuleTypesPassed": true,
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "packagesUnchanged": true,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "buildFiles": 1110,
+    "privateDecisionsReadOrMigrated": false,
     "fullProjectTypesPassing": false,
-    "latest6135SourceAnd1110BuildPathsUnchanged": true,
-    "reviewBindingAndBrowserPending": true,
-    "cranialFeatureDownstreamUnverified": true,
-    "fullGoalPreserved": true,
+    "authenticatedAcceptance": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
