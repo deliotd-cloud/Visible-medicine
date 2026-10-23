@@ -1,23 +1,23 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T02:39:26.059Z",
+  "at": "2026-10-23T02:58:23.190Z",
   "sourceIdentity": {
     "parentReceiptSha256": "bd073fb1d6134af415e8b77f82ba218a1756e47af2c2ab503459e711ea8a6cc8",
-    "proposalRows": [
+    "proposal": [
       {
-        "path": "components/AtlasWorkspaceNavigation.tsx",
-        "bytes": 5420,
-        "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
+        "path": "components/ClinicalReviewInbox.tsx",
+        "bytes": 35559,
+        "sha256": "daa77c9e5686865053aa8ce0c156860f807a75ec75905f71f7a13a7aa7b77bb0"
       },
       {
-        "path": "tests/atlas-workspace-simplification.test.ts",
-        "bytes": 5858,
-        "sha256": "4de68da5696a4d4464eea47a2169d6cd216a34332c06968783fba636e78524ca"
+        "path": "tests/clinical-review-inbox-failure-focus.test.mjs",
+        "bytes": 12717,
+        "sha256": "ca2ffb990e87308a2ced002d614804adf9a66fb605b0c41bcb5d8c8055c33064"
       }
     ]
   },
-  "parent": "c0d9fb14d38f38f8be54894cce213f9153722417",
-  "gitParent": "c0d9fb14d38f38f8be54894cce213f9153722417",
+  "parent": "7b63f4a17743ecb2278f0c75fff66cbff76cac2f",
+  "gitParent": "7b63f4a17743ecb2278f0c75fff66cbff76cac2f",
   "files": [
     {
       "path": "app/globals.css",
@@ -17885,6 +17885,51 @@
       "sha256": "b5cf2da9274c8fc24748cdd57e2d6cca1a435883129842b9d7f3e73fdfa747fb"
     },
     {
+      "path": "pending/inbox-failure-focus-20261023/candidate/components/ClinicalReviewInbox.tsx",
+      "bytes": 35559,
+      "sha256": "daa77c9e5686865053aa8ce0c156860f807a75ec75905f71f7a13a7aa7b77bb0"
+    },
+    {
+      "path": "pending/inbox-failure-focus-20261023/candidate/tests/clinical-review-inbox-failure-focus.test.mjs",
+      "bytes": 12717,
+      "sha256": "ca2ffb990e87308a2ced002d614804adf9a66fb605b0c41bcb5d8c8055c33064"
+    },
+    {
+      "path": "pending/inbox-failure-focus-20261023/coordination/checkpoint-inbox-focus-20261023.mjs",
+      "bytes": 12397,
+      "sha256": "58d86b2cd1af9d033e0d003230c76e5064135cc89ed5b355a97b3a6f30f6e8ad"
+    },
+    {
+      "path": "pending/inbox-failure-focus-20261023/coordination/compact-current-index-20261023.mjs",
+      "bytes": 3838,
+      "sha256": "f775438a41b790ce2f7699e29d699ab583759ac97f0457f516dcaa5b804b2c38"
+    },
+    {
+      "path": "pending/inbox-failure-focus-20261023/coordination/inbox-focus-browser-20261023.mjs",
+      "bytes": 3203,
+      "sha256": "0a38170e7b9e725de8977ce8635533c21788982dec9eb7be65954b5f2219765e"
+    },
+    {
+      "path": "pending/inbox-failure-focus-20261023/coordination/inbox-focus-browser-entry-20261023.tsx",
+      "bytes": 2773,
+      "sha256": "2eb7e9a317f311265ee235d434302be5cfe6a41dcdfe3d336e308b43452dc1e4"
+    },
+    {
+      "path": "pending/inbox-failure-focus-20261023/coordination/review-inbox-failure-focus-20261023.mjs",
+      "bytes": 2996,
+      "sha256": "fab29b3879bfa8d231b7154bbae9420aacef36d52617f2d20751921a84ca822d"
+    },
+    {
+      "path": "pending/inbox-failure-focus-20261023/coordination/run-inbox-focus-checks-20261023.mjs",
+      "bytes": 2429,
+      "sha256": "93b8e909b830071ef9dca8813b12b7ac6b53751deb32d331b735123a2360a7cb"
+    },
+    {
+      "path": "pending/inbox-failure-focus-20261023/preimages/ClinicalReviewInbox.before.raw",
+      "bytes": 33804,
+      "sha256": "f6ae6018afa5e5f98087a4213742d07c10a3c914d4700d92eb3af721313b5631"
+    },
+    {
       "path": "pending/inline-viewer-20261022/aorta-assurance/tests/aorta-runtime-family-admission.test.mjs",
       "bytes": 2845,
       "sha256": "eb4dd6dbb509f270c5a0a1312553e0284e746704ee49f3c36bfc5674107a7f9a"
@@ -24796,25 +24841,19 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus2main coordinator recipes,2literal-only UI/test edits and2whole exact original source preimages. Browser screenshots/AX, auth-triage notes, local runtime/storage records and generated/private build/Review/model/scan/decision data remain F-only. No full/private/runnable off-device recovery, normal preview install/restart/refresh, authentication change, permission/entitlement widening, public deployment, clinical approval or patient registration. Thin copy proposal is not integrated into the sealed6130-path built candidate.",
+  "scope": "Inherited independently verified filtered source plus six authored coordinator/test-fixture recipes, two proposal source files and the exact old authored component preimage. Browser captures, logs, generated fixture bundles, context findings, full coordination/private data, Review decisions, scan/mask/model/build data remain F-only. Source-only, not whole/private/runnable off-device recovery. No Website cutover or identity/access/clinical/public-release change.",
   "proof": {
-    "mainReviewSha256": "fbf2d898d4a1dd9e9ddacf6d023816f5c509c868b5945b1eb0add7fd1eca1a41",
-    "anonymousRuntimeQa": true,
-    "initialObservedViewport": "1280x720",
-    "retainedScreenshotPixels": [
-      "1280x720",
-      "1265x712"
-    ],
-    "builtSourceAndBuildBytesUnchanged": true,
-    "noScanOrMeshGpuAcceptance": true,
-    "signedOutReviewGateObserved": true,
-    "auth404ClassifiedEnvironmentOnly": true,
-    "ownedQaServerStopped": true,
-    "nativeCasesPassed": 5,
-    "oldExpectationRedCases": 1,
-    "wholeCodeAndTestInversesVerified": true,
-    "literalOnlyCopyProposal": true,
-    "notIntegratedIntoBuiltCandidate": true,
+    "mainReviewSha256": "b05e9dec9567fca65d1e4c1f9f0806227d290754a6b8f18a09ab00ea0b22a6df",
+    "nativeCasesPassed": 28,
+    "newBeforeCasesFail": 10,
+    "unchangedOriginalCasesPass": 18,
+    "skips": 0,
+    "realReactSyntheticBrowserScenarios": 5,
+    "staleRowsStillRemoved": true,
+    "noUnrelatedFocusSteal": true,
+    "sealed6130SourceAnd1110BuildPathsUnchanged": true,
+    "ownerPreviewChanged": false,
+    "fullGoalPreserved": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
