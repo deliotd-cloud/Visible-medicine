@@ -1,0 +1,64 @@
+# Private independent-reference assets
+
+The FDA shoulder reference has a separate, read-only delivery path. This is
+groundwork for the protected review inspector, not learner admission, an
+installed update, clinical approval or a registered CT/MRI overlay. The existing
+learner model inventory, anatomy coverage, review source and approvals are unchanged.
+
+The generated registry is `lib/clinical-review-reference-assets.json`. Its two
+files are the exact catalogue and six-part GLB from committed Atlas
+`e3a901e103e9fb495a18d9bd1622190dfc0d034b`. Catalogue revision:
+`56cf325c006a00e4349a6b45844797800a11c005448d32a08f40e64664288b44`.
+GLB: 8,518,472 bytes,
+`38f96ede01a6cd6467fbcc4cb42eac4b673fe18c2ef54b07731e070c0968a5f6`.
+
+## Boundaries
+
+- Requests use `/api/atlas-delivery/references/<id>/<catalogue-sha>/models/...`.
+  There is no raw/public alias, filesystem fallback, arbitrary object key or upload API.
+- Every request rechecks the existing Clinical Review account/institution policy,
+  including HEAD, ranges, cached conditionals and missing paths. No new role is granted.
+- Registry entries are explicitly local-only. The handler additionally refuses
+  non-loopback hosts. Hosted admission needs a separately authorized policy change;
+  a successful local test does not provide that authority.
+- Exact object key, size and stored SHA-256 are verified at both metadata and body
+  reads. Responses stream with private/no-store and same-origin headers. Client-side
+  source/catalogue/GLB verification remains required when the inspector is connected.
+- The source frame is unitless. Anatomical axes, scale, independently confirmed
+  side, bone extent, attachments and intersections remain unvalidated. Constructed
+  humeral cartilage is not segmented cartilage; constructed glenoid cartilage stays held.
+  Do not fit this donor into BodyParts3D or scans, enable measurements or transfer approvals.
+- No patient studies, masks, identifiers, saved decisions or desktop PACS data are used.
+
+## Reproduce in a fresh isolated checkout
+
+Use an absolute F-drive staging package outside the Website source tree. Do not
+run these commands in the owner's installed preview. Dependencies are the existing
+locked Website packages; no new service or dependency is required.
+
+```powershell
+node --experimental-strip-types scripts/prepare-private-reference-assets.mjs --atlas F:/VisibleMedicine/staging/20261023-fda-review-source/atlas --output F:/VisibleMedicine/staging/NEW-private-reference-package
+node --experimental-strip-types scripts/stage-private-reference-local.mjs --package F:/VisibleMedicine/staging/NEW-private-reference-package
+```
+
+The first command refuses to overwrite an existing registry/package and checks the
+committed source, catalogue shape/digest and exact GLB bytes. The second refuses any
+existing emulator state, uses only the isolated local FILES bucket, and verifies an
+immutable write by full readback. It has no remote option or database binding.
+Generated registry, objects and emulator state are local recovery material, not
+cleared hosted/GitHub artifacts. See `LICENSES/PRIVATE_REFERENCE_LOCAL_ONLY.md`.
+
+## Verification and next integration
+
+Focused registry/guard and delivery tests, actual ephemeral workerd/R2 stream tests,
+strict configured types and the stock Website build are separate evidence. Runtime
+tests use a synthetic identity/DB fixture and cannot establish real signed-in routing,
+institution membership changes, browser/GPU performance or clinical acceptance.
+The test asks for identity encoding when checking canonical Content-Length; the first
+auto-gzip header mismatch is retained, not hidden as a green first run.
+
+Still required: import the current Atlas through the original source importer;
+connect the private independent inspector and exact worksheet return identity;
+bind renderer/material revisions after all Website adaptations; verify forged/stale
+links, authentication/role/institution changes, unsaved navigation and actual browser
+rendering together. Keep the owner's preview unchanged until new instructions.

@@ -1,15 +1,16 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T19:01:22.168Z",
+  "at": "2026-10-23T19:24:02.900Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "e5dfa9ae125faf78800486ae4261d07869781fb5d6379ed52a537abc924645c2",
-    "atlasHead": "e3a901e103e9fb495a18d9bd1622190dfc0d034b",
-    "atlasTree": "998d2640e93dc369791a6d11eaa08c59d24635c8",
-    "latestCompleteWebsiteUnchanged": true,
-    "sourceReviewNotInstalled": true
+    "websiteSourceReceiptSha256": "4f44ff9045b910b2ff5fe6b06fdc58a798d2da9ec48e5e1bd35d7e038591d4e7",
+    "renderedAtlasHead": "2ab63cbbc1c5e18a4d7b3a65f799e863f5be0491",
+    "reviewRevision": "4eda97496b9ca0a8497776394557936380081c19da7923c0912877e462777942",
+    "privateReferenceAtlasHead": "e3a901e103e9fb495a18d9bd1622190dfc0d034b",
+    "privateRegistrySha256": "96426038d22f2d80445911a80380cb2a2b646fcfa0137ee041d6e5d9e81b328e",
+    "normalPreviewChanged": false
   },
-  "parent": "994b1dd276e12ede40ea53c122588286b7245142",
-  "gitParent": "994b1dd276e12ede40ea53c122588286b7245142",
+  "parent": "d4f1ccbf03cf41570e922fc31a3258e6417c2e53",
+  "gitParent": "d4f1ccbf03cf41570e922fc31a3258e6417c2e53",
   "files": [
     {
       "path": "app/globals.css",
@@ -16812,6 +16813,101 @@
       "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
     },
     {
+      "path": "pending/fda-private-delivery-20261023/coordination/archive-fda-private-delivery-parent-20261023.mjs",
+      "bytes": 3144,
+      "sha256": "4016543732cfea0d08b2b177205c0f370285619bcb930ed14a03850afa4738a9"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/coordination/checkpoint-fda-private-delivery-20261023.mjs",
+      "bytes": 8080,
+      "sha256": "fde47364bade60a2b0ce251f9870393d8aa23aa06fe0c16d4c9bddc6b52e9adf"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/coordination/prepare-fda-private-delivery-20261023.mjs",
+      "bytes": 2546,
+      "sha256": "7d2b034d53cc9af88317f3cc8cdf9c0377d8ec17b3aa8a63dd1a675b2eead464"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/coordination/run-fda-private-delivery-20261023.mjs",
+      "bytes": 3099,
+      "sha256": "b75871b3f1db2c83bddccae22b0ee23ba1d0f6421321489c263ecad60c94ac11"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/coordination/seal-fda-private-delivery-20261023.mjs",
+      "bytes": 10120,
+      "sha256": "0b943df68c22a4b6c9f45bf8a9083b4102d93e4eb96117bc116edd981eec7939"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/app/api/atlas-delivery/references/[...asset]/route.ts",
+      "bytes": 611,
+      "sha256": "734f2e5cce9030b4601e8e52453dac9beab0a63b472fbc0d72e310bc4c948419"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/docs/PRIVATE_REFERENCE_ASSETS.md.raw",
+      "bytes": 4073,
+      "sha256": "6c2b9a613a789a34c8f9792411a83a57701e5168f078aa9338f8e7603b9e4d2c"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/lib/clinical-review-reference-delivery.ts",
+      "bytes": 4655,
+      "sha256": "ad948601cea4d66e7d76cc23b229e5da74a6230baf3e00d043ef05006b1514f3"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/lib/clinical-review-reference-registry.ts",
+      "bytes": 4399,
+      "sha256": "d6b054f2042a06ec3a654d8918be6371b526d0c215ed4fb1c5a0a6678a387b89"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/LICENSES/PRIVATE_REFERENCE_LOCAL_ONLY.md.raw",
+      "bytes": 1567,
+      "sha256": "64f2ad1e054ac2843f0a09c933efa4b6f4d628ed8b449968e74c5a6e33087649"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/scripts/check-private-reference-types.mjs",
+      "bytes": 1831,
+      "sha256": "3eda8edd1ed659f4f49ab1bfc33d68204826879ae26b771788bfb865650997b4"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/scripts/local-atlas-development-plugin.mjs",
+      "bytes": 2683,
+      "sha256": "ec15f312dbb17f8857be985bc83bd35ec389975c7d1719be77ec35773e73a8f0"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/scripts/prepare-private-reference-assets.mjs",
+      "bytes": 3851,
+      "sha256": "788e062eb4f255799373ae68595b6d221d2882ee1b3231684710f97203ee60f8"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/scripts/stage-private-reference-local.mjs",
+      "bytes": 3199,
+      "sha256": "043574802fd9cdd9366a868040a8addf27c4c2c3089c59670c385c64ddf76d81"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/tests/clinical-review-reference-delivery.test.ts",
+      "bytes": 9964,
+      "sha256": "65f08e6b43aa481d47c83062f170e5ef5c2104e3827f2f775e5d3f230268c0e7"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/tests/clinical-review-reference-registry.test.ts",
+      "bytes": 3640,
+      "sha256": "a53ddfa346291907f61e317ae39b98e0f9877f755faf971247f6b8dcef33aa43"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/tests/clinical-review-reference-routing.test.mjs",
+      "bytes": 2635,
+      "sha256": "04dcaea24b21b3d72acc8cad05893a795adbb1822ff27eef0143cc96569ac74a"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/tests/clinical-review-reference-workerd.test.mjs",
+      "bytes": 10459,
+      "sha256": "9783a3ca55a6c03e8fa196dcda16a07ca7f08aaaa1340567708225f5518e848e"
+    },
+    {
+      "path": "pending/fda-private-delivery-20261023/website/vite.config.ts",
+      "bytes": 4207,
+      "sha256": "9ea2e538c39d9220f214bbda10fdaab2ff0fc82b834ee83d8a8cfabd7fe1ff8b"
+    },
+    {
       "path": "pending/fda-reference-20261023/atlas/app/fda-shoulder-reference.css.raw",
       "bytes": 5166,
       "sha256": "f3613a01d986eb0668514d7c1cefd5c0044bd487036cc22432d009ecd8e6cdc9"
@@ -28558,36 +28654,30 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered authored-source snapshots plus new source adapter, native source inspector route, guarded links, Review registration, original source docs raw snapshots, preserved validators, installed-framework SSR fixture and original checks/recipes. No geometry/catalogue, generated renderer/source/binding/pilot metadata, built outputs, logs/screenshots/scans/identifiers/private decisions or acquired-image data. Full local evidence and generated materials remain F-only; not whole/private/runnable off-device backup.",
+  "scope": "Inherited independently verified filtered authored sources plus exact new read-only transport/registry types/local producer/stager/API/Vite guard/test source and raw documentation snapshots/coordination recipes. No geometry/catalogue, generated private registry/Review/runtime/binding/pilot metadata, emulator objects/state, node_modules, dist, images/logs/scans/identifiers/private decisions. Full evidence and generated/local data remain F-only; not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "32336c32fa0a106b17d9c90b4feddd9e438e4e8d991e6527122a74318a51bf4f",
-    "sourceNativeFdaReviewSelections": 6,
-    "nativeUniqueFdaCases": 7,
-    "existingReviewIndexCases": 27,
-    "firstExistingBatchPass": 25,
-    "firstExistingBatchFail": 2,
-    "fullLegacyPacketsEqual": 356,
-    "originalLegacyValidatorPassed": true,
-    "allOriginalValidatorBytesRecoverable": true,
-    "sourceViewAndWorksheetBound": true,
-    "heldAndForeignIdsRefused": true,
-    "draftPrivateApiAndAppendOnlyVersionsVerified": true,
-    "approvalBlockedBeforeDatabase": true,
-    "teachingAndImagingRevisionNull": true,
-    "strictActualRoots": 5,
-    "strictActualGraphFiles": 2912,
+    "mainReviewSha256": "d7c4a3019dcfacecdd044fd6eb1bdcaff59fb6bafccc783d8604b0670640bc72",
+    "nativeCases": 21,
+    "focusedRegistryAndRoutingAndOldGuardCases": 11,
+    "pureDeliveryCases": 5,
+    "realWorkerdR2Cases": 5,
+    "strictRoots": 4,
+    "strictActualGraphFiles": 792,
     "strictDiagnostics": 0,
-    "originalAtlasProductionBuildPassed": true,
-    "productionFiles": 557,
-    "pilotUnsignedSelectionsRefreshed": 11,
-    "oldPilotIdentitiesUnchanged": true,
-    "clinicalRecordsRead": false,
-    "privateDecisionsMigrated": false,
-    "newPackagesOrMigrationOrFee": false,
-    "websiteIntegrationPending": true,
-    "normalWebsitePreviewChanged": false,
+    "originalPrebuildPassed": true,
+    "originalWebsiteProductionBuildPassed": true,
+    "existingReviewInputsExact": 1750,
+    "learnerInventoryModelsUnchanged": 137,
+    "learnerInventoryPathsUnchanged": 144,
+    "oldSourceFilesExact": 6411,
+    "localOnlyObjects": 2,
+    "privateReferenceBytes": 8528090,
+    "publicGeometryInBuild": false,
+    "normalPreviewChanged": false,
+    "privateDecisionsReadOrMigrated": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
+    "fullWebsiteInspectorWorksheetCompositionPending": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,

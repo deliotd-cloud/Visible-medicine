@@ -1,0 +1,9 @@
+// Exact real roots and configured transitive graph. No replacement modules or relaxed types.
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import ts from 'typescript';import {createHash} from 'node:crypto';
+const root=path.resolve(import.meta.dirname,'..'),out=process.argv[2];assert(path.isAbsolute(out));
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex'),config=root+'/tsconfig.json',loaded=ts.readConfigFile(config,ts.sys.readFile);assert(!loaded.error);
+const parsed=ts.parseJsonConfigFileContent(loaded.config,ts.sys,root);assert.equal(parsed.errors.length,0);assert.equal(parsed.options.strict,true);
+const roots=['lib/clinical-review-reference-registry.ts','lib/clinical-review-reference-delivery.ts','app/api/atlas-delivery/references/[...asset]/route.ts','vite.config.ts'].map(p=>root+'/'+p),ambient=parsed.fileNames.filter(p=>p.endsWith('.d.ts'));
+const overrides={noEmit:true,incremental:false,composite:false,tsBuildInfoFile:undefined},program=ts.createProgram([...roots,...ambient],{...parsed.options,...overrides}),diags=ts.getPreEmitDiagnostics(program);
+const result={at:new Date().toISOString(),roots,ambient,typescriptVersion:ts.version,configSha256:sha(config),configuredCompilerOptions:parsed.options,overrides,files:program.getSourceFiles().map(f=>({path:f.fileName,sha256:sha(f.fileName)})),diagnostics:diags.map(d=>({code:d.code,path:d.file?.fileName,start:d.start,message:ts.flattenDiagnosticMessageText(d.messageText,'\n')})),moduleSubstitutions:false,fullProjectTypesPassed:false,previewChanged:false};
+fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({roots:roots.length,ambient:ambient.length,files:result.files.length,diagnostics:diags.length}));process.exitCode=diags.length?1:0;
