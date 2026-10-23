@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {read,sha} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261023-window-drag-interruption',site=stage+'/website',phase=process.argv[2];
+assert(['before','current','original','types'].includes(phase));const dir=stage+'/checks/'+phase;assert(!fs.existsSync(dir));fs.mkdirSync(dir,{recursive:true});
+const tests=phase==='original'?['tests/head-window-drag.test.ts']:['tests/head-window-drag-interruption.test.ts'];
+const args=phase==='types'?['--max-old-space-size=128','node_modules/typescript/bin/tsc','--noEmit','--strict','--skipLibCheck','--target','ES2017','--module','esnext','--moduleResolution','bundler','--allowImportingTsExtensions','--lib','dom,dom.iterable,esnext','--types','node','lib/head-window-drag.ts']:['--max-old-space-size=128','--experimental-strip-types','--test','--test-concurrency=1','--test-reporter=tap',...tests];
+const started={at:new Date().toISOString(),args,cwd:site,componentSha256:sha(read(site+'/lib/head-window-drag.ts')),tests:tests.map(path=>({path,sha256:sha(read(site+'/'+path))}))};
+fs.writeFileSync(dir+'/STARTED.json',JSON.stringify(started,null,2)+'\n',{flag:'wx'});const out=fs.openSync(dir+'/stdout.log','wx'),err=fs.openSync(dir+'/stderr.log','wx');
+const r=spawnSync(process.execPath,args,{cwd:site,env:{...process.env,NODE_OPTIONS:'--max-old-space-size=128'},stdio:['ignore',out,err],windowsHide:true});fs.closeSync(out);fs.closeSync(err);
+const stdout=read(dir+'/stdout.log').toString(),counts=Object.fromEntries(['tests','pass','fail','skipped','cancelled'].map(k=>[k,Number(stdout.match(new RegExp('^# '+k+' (\\d+)$','m'))?.[1]??-1)]));
+const result={...started,finishedAt:new Date().toISOString(),exitCode:r.status,signal:r.signal,error:r.error?String(r.error):null,counts,stdoutSha256:sha(read(dir+'/stdout.log')),stderrSha256:sha(read(dir+'/stderr.log'))};fs.writeFileSync(dir+'/TERMINAL.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({phase,exit:r.status,counts}));assert.equal(r.status,phase==='before'?1:0);
