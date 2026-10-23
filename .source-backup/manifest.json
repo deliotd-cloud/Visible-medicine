@@ -1,15 +1,58 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T00:46:22.487Z",
+  "at": "2026-10-23T01:06:03.419Z",
   "sourceIdentity": {
-    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
-    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
-    "materializedReceiptSha256": "2ad32ac583cf72d59abdcefabbfe03d79ddf5378aaec825067d6dc60748bfa2f",
-    "unboundReviewManifestSha256": "3cbce747d54a343ee58a180a9cad28829330f7000896a4cb9cf770b340e66ea7",
-    "sourceImporterSha256": "f19b8cafa9173a319348e946d7b4fc3ae1048a191d0393dc9006a9fe3ca5feb2"
+    "sourceReceiptSha256": "0dd282c43570998f10d8497fd32f6bcca12ea122f81aec8efd8cdc06379a1512",
+    "authoredSources": [
+      {
+        "path": "tests/regional-reference-review-index.test.ts",
+        "bytes": 17540,
+        "sha256": "a23d35d1cdf460dd1a5d3f58aaaa1429a7d2ad69073f627f82996047ae0e43fa"
+      },
+      {
+        "path": "tests/disk-catalogue-test-loader.mjs",
+        "bytes": 1816,
+        "sha256": "d88d0f7dd85c56b6dce2b7674a4fb5f8c00c1cfa1fbbac461e0ab1074004c61e"
+      },
+      {
+        "path": "tests/disk-catalogue-test-loader.test.mjs",
+        "bytes": 5592,
+        "sha256": "3b5d0cb54d5217dbd8e484ecb2392023a7421129d44b8db2e6509817a1492268"
+      },
+      {
+        "path": "tests/reference-catalogue-delivery-role.mjs",
+        "bytes": 2649,
+        "sha256": "28eb2698ed60fed3cfdba857c71a0a0451a5b0fc13f0d0feb6a5b1df1201628a"
+      },
+      {
+        "path": "tests/fixtures/regional-reference-before-disk-loader.test.ts.raw",
+        "bytes": 17422,
+        "sha256": "bc6c4172fe97f496320cb4d3170c83aeccbaa68f6b13b9786804fb2dd0f2e589"
+      },
+      {
+        "path": "tests/closed56-family-source-inverse.mjs",
+        "bytes": 3822,
+        "sha256": "3220ab5b39e7b2cc59e02288dbacba1be8f1f734653bd78908e11352fe7d07c3"
+      },
+      {
+        "path": "tests/closed56-current-role.test.mjs",
+        "bytes": 3148,
+        "sha256": "112335b618cc4a1dc3c7a701104b82e8cca4df797cd751d03c2f294dc47dbe64"
+      },
+      {
+        "path": "tests/fixtures/closed56-family-source-inverse-before-current.mjs.raw",
+        "bytes": 3273,
+        "sha256": "a7a21ced5b6e8661de3a26937b73c451bb27cbb2b8056a97a6e5ccf830661398"
+      },
+      {
+        "path": "tests/fixtures/closed56-femoral-epoch-current-2381.mjs.raw",
+        "bytes": 10912,
+        "sha256": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7"
+      }
+    ]
   },
-  "parent": "69248b33bd67d624cbd749d620f9d41d5520b695",
-  "gitParent": "69248b33bd67d624cbd749d620f9d41d5520b695",
+  "parent": "fb3e2fe6733bf85676e0287de5557d78a93ee59d",
+  "gitParent": "fb3e2fe6733bf85676e0287de5557d78a93ee59d",
   "files": [
     {
       "path": "app/globals.css",
@@ -18512,6 +18555,61 @@
       "sha256": "684fffbf6ed7010a8bfc8a266a2c4866519f3c7dc580594c1e0da2dfb6e5d75c"
     },
     {
+      "path": "pending/reference-links-closed56-20261023/coordination/checkpoint-reference-links-closed56-20261023.mjs",
+      "bytes": 11416,
+      "sha256": "24ba3860fa6963e6330d223fe2aafe20650d612bdbfeddb0137881f2d62b23bb"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/coordination/regional-reference-current-role-work-20261023.mjs",
+      "bytes": 7447,
+      "sha256": "30e595b6bb5f7f2913bf37d47f5148acddd2dc6203515e27bcaf226272d53ac1"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/closed56-current-role.test.mjs",
+      "bytes": 3148,
+      "sha256": "112335b618cc4a1dc3c7a701104b82e8cca4df797cd751d03c2f294dc47dbe64"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/closed56-family-source-inverse.mjs",
+      "bytes": 3822,
+      "sha256": "3220ab5b39e7b2cc59e02288dbacba1be8f1f734653bd78908e11352fe7d07c3"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/disk-catalogue-test-loader.mjs",
+      "bytes": 1816,
+      "sha256": "d88d0f7dd85c56b6dce2b7674a4fb5f8c00c1cfa1fbbac461e0ab1074004c61e"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/disk-catalogue-test-loader.test.mjs",
+      "bytes": 5592,
+      "sha256": "3b5d0cb54d5217dbd8e484ecb2392023a7421129d44b8db2e6509817a1492268"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/fixtures/closed56-family-source-inverse-before-current.mjs.raw",
+      "bytes": 3273,
+      "sha256": "a7a21ced5b6e8661de3a26937b73c451bb27cbb2b8056a97a6e5ccf830661398"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/fixtures/closed56-femoral-epoch-current-2381.mjs.raw",
+      "bytes": 10912,
+      "sha256": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/fixtures/regional-reference-before-disk-loader.test.ts.raw",
+      "bytes": 17422,
+      "sha256": "bc6c4172fe97f496320cb4d3170c83aeccbaa68f6b13b9786804fb2dd0f2e589"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/reference-catalogue-delivery-role.mjs",
+      "bytes": 2649,
+      "sha256": "28eb2698ed60fed3cfdba857c71a0a0451a5b0fc13f0d0feb6a5b1df1201628a"
+    },
+    {
+      "path": "pending/reference-links-closed56-20261023/current/tests/regional-reference-review-index.test.ts",
+      "bytes": 17540,
+      "sha256": "a23d35d1cdf460dd1a5d3f58aaaa1429a7d2ad69073f627f82996047ae0e43fa"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/craniofacial-ct-current-delivery.test.mjs",
       "bytes": 9929,
       "sha256": "5d3b6ce69f3db7e91eacca50c78e76d91dc6f2648f5f8232ca097358dd1c5e92"
@@ -24598,24 +24696,17 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus one existing importer with a single reviewed exact7978-to9e14commit literal change, its complete authored code preimage and four main source-preparation/review/checkpoint utilities. Native Atlas materialization6272files/146tracked GLBs is local-only and does not admit or approve146models. The actual128MiB producer imports1567source files and all raw imports/source hashes verify, but Review is intentionally UNBOUND: no runtime/export, protected viewer, Website binding, private decisions, clinical/spatial/public-release acceptance or preview cutover. Full materialized/imported generated metadata, model/media binaries, raw logs, source manifests/resource/process facts, private data/references/decisions and canonical Git ancestry remain F-only. Source-only partial recovery, not whole/private/runnable backup.",
+  "scope": "Inherited verified filtered source plus9explicit authored test/helper/source-witness texts and2main verification/checkpoint utilities. The catalogue test uses the same complete source and exports with a disk-backed generated ESM fixture, removing the in-memory/base64 bootstrap copies: at the same128MiB it reaches all5original feature cases and resolves35draft links. Three old header literals remain authenticated historical ae84/190 obligations and exact current headers retain the12document/native source checks. Main also installs the closed56 helper and runs both unmodified old consumers, retaining full old source/three family spans/four precise roles and mutation refusals. Actual5feature and16separate support cases pass, not full Website/browser/GPU/release/clinical/registration acceptance. Generated catalogue bundles, imported/metadata/model/private data, raw logs/process evidence and canonical Git ancestry stay F-only. Source-only partial recovery, not whole/private/runnable backup; normal preview remains held unchanged.",
   "proof": {
-    "mainReviewSha256": "1ebca28e8cd5c6a990b53cf584eb8ef00863d9c09fb68a07ff4d0cf72ffaf80f",
-    "materializedFiles": 6272,
-    "allTrackedWorkingBytesMatchGitBlobs": true,
-    "localTrackedModels": 146,
-    "newModelAdmission": false,
-    "actualSourceImportExit": 0,
+    "mainReviewSha256": "3095da5735a3f4c2d5fc264924ca72fe65791f5ab75082c245499f7fc682776c",
+    "catalogueFeatureCases": 5,
+    "publicDraftLinks": 35,
+    "separateMainSupportCases": 16,
+    "originalClosed56ConsumerCases": 8,
     "heapMiB": 128,
-    "importedFiles": 1567,
-    "allImportedBytesAndSourceHashesVerified": true,
-    "changedImportedSources": 4,
-    "completeOriginalImporterInverse": true,
-    "oldHostBindingExactInverses": 2,
-    "unboundReview": true,
-    "protectedReviewReady": false,
-    "runtimeBuiltOrExported": false,
-    "fullTypesBuildBrowserPending": true,
+    "oldCompleteSourcesAndAllCasesPreserved": true,
+    "allSelectedProductionAndMetadataInputsUnchanged": true,
+    "initialResourceAndHeaderFailuresRetained": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
