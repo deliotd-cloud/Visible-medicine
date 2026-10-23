@@ -1,0 +1,11 @@
+// Test-only successor; the complete Website and owner preview remain immutable.
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';import {containedTarget} from './prepare-reviewed-regression-candidate-20261022.mjs';
+const stage='F:/VisibleMedicine/staging/20261023-keyboard-role-repair',site=stage+'/website',parentReceipt='F:/VisibleMedicine/staging/20261023-carpal-website/SOURCE_BOUND.json',parentSha256='29e083ec39cf546e30e577f30bc345db0464f6451acb6c1380a3ca96d91f16d5';
+assert.equal(hash(parentReceipt),parentSha256);const parent=json(parentReceipt);assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+execFileSync('git',['clone','--shared','--no-checkout','F:/VisibleMedicine/website',site],{stdio:'pipe',windowsHide:true});execFileSync('git',['-C',site,'read-tree','HEAD'],{stdio:'pipe',windowsHide:true});
+for(const r of parent.sourceRows){assert.equal(hash(parent.website+'/'+r.path),r.sha256);const target=containedTarget(site,r.path);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(parent.website+'/'+r.path,target,fs.constants.COPYFILE_EXCL);assert.equal(hash(target),r.sha256);}
+fs.symlinkSync(parent.website+'/node_modules',site+'/node_modules','junction');
+const allowed=['tests/atlas-label-keyboard.test.ts','tests/atlas-label-keyboard-epoch.test.mjs','tests/release-epoch-composition-preservation.test.mjs'];
+const preimages=allowed.map(p=>{const file='tests/fixtures/keyboard-teaching-role-before/'+path.basename(p)+'.raw',target=site+'/'+file;fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(site+'/'+p,target,fs.constants.COPYFILE_EXCL);return{path:p,file,sha256:hash(target)};});
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify({at:new Date().toISOString(),website:site,parentWebsite:parent.website,parentReceipt,parentReceiptSha256:parentSha256,atlas:parent.atlas,atlasHead:parent.atlasHead,atlasTree:parent.atlasTree,sourcePaths:parent.sourceRows.length,allowed,preimages,testOnly:true,previewChanged:false,installed:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({stage,sourcePaths:parent.sourceRows.length,preimages}));

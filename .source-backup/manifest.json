@@ -1,13 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T13:29:14.624Z",
+  "at": "2026-10-23T13:46:59.987Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "29e083ec39cf546e30e577f30bc345db0464f6451acb6c1380a3ca96d91f16d5",
+    "parentWebsiteReceiptSha256": "29e083ec39cf546e30e577f30bc345db0464f6451acb6c1380a3ca96d91f16d5",
+    "testOnlySourceProofSha256": "5f3ce6f0fce1a3bad16a6a40c1bf1337392835693ceec74c6b445ad922da8592",
     "atlasHead": "5f278c3d0c26c5a0899b54f2cfa2a0accb02ecf7",
-    "atlasTree": "12ebdf5d221220c4b6819abdcdeb04231048bf17"
+    "atlasTree": "12ebdf5d221220c4b6819abdcdeb04231048bf17",
+    "reviewBinding": "c5b457627a1e34ba49ced39e6deb7103003718e394db120e0a95de08c848b28b"
   },
-  "parent": "659b34170317272f91f822f008969797d636806a",
-  "gitParent": "659b34170317272f91f822f008969797d636806a",
+  "parent": "27099ff643657dad6b8d3518ac1c2305280332d0",
+  "gitParent": "27099ff643657dad6b8d3518ac1c2305280332d0",
   "files": [
     {
       "path": "app/globals.css",
@@ -19410,6 +19412,76 @@
       "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
     },
     {
+      "path": "pending/keyboard-role-repair-20261023/coordination/checkpoint-keyboard-role-repair-20261023.mjs",
+      "bytes": 6622,
+      "sha256": "90661b58a4baada899f2b2d6dbcba68f800e30eafdcbea215b05455b173a1f5e"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/coordination/finalize-keyboard-role-repair-20261023.mjs",
+      "bytes": 5911,
+      "sha256": "02726c130b81da2f3d26e957ff6ab3a1c7de4a6225b60ecf535c97e90a0fce00"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/coordination/prepare-keyboard-role-repair-20261023.mjs",
+      "bytes": 2369,
+      "sha256": "a5953bd0b9965b6b6abf6a7ab9fd6735a818972c3436cba9cd361d363a9626a0"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/coordination/run-carpal-regression-audit-20261023.mjs",
+      "bytes": 4244,
+      "sha256": "0c71d43dd59b8925774138cf1f3d658fe8e4750dcdd8dfbe94b37fa2cc5f2f60"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/coordination/run-keyboard-role-repair-20261023.mjs",
+      "bytes": 3704,
+      "sha256": "58915c67c0c7aa7da1d56cbf6650d3c23b66439deda54f96bf881f37fb8f3ac6"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/coordination/seal-keyboard-role-repair-20261023.mjs",
+      "bytes": 3750,
+      "sha256": "e8cd776cd822f9e983d9772559f21f5b49b570ca391167ac6580c70d5916950f"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/website/tests/atlas-label-keyboard-epoch.test.mjs",
+      "bytes": 5116,
+      "sha256": "dc94729330cfb733028d37fed50debc5d15a2ee94df5b5dc3cfd0f6f842e1b93"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/website/tests/atlas-label-keyboard.test.ts",
+      "bytes": 5622,
+      "sha256": "be016a602f7c8534ce640d81b79e2fd7cc4beb28429bd400983bf97f36d34f1d"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/website/tests/fixtures/keyboard-teaching-role-before/atlas-label-keyboard-epoch.test.mjs.raw",
+      "bytes": 5006,
+      "sha256": "b49e4ec3eceee4d88d577055d70b406474cbf2f2d76b725e2c3c81c05a60427a"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/website/tests/fixtures/keyboard-teaching-role-before/atlas-label-keyboard.test.ts.raw",
+      "bytes": 5616,
+      "sha256": "928e48406373c864c961cd87b1146b749a6ef403ac8de509dedc883c5b320515"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/website/tests/fixtures/keyboard-teaching-role-before/release-epoch-composition-preservation.test.mjs.raw",
+      "bytes": 18026,
+      "sha256": "c83a412e19c1fc20be054320af5cb166dbbcc828c2af47d4d8f490a383d023fe"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/website/tests/keyboard-teaching-source-role.mjs",
+      "bytes": 1078,
+      "sha256": "6f94b15c16f04f86074ccde153392fd3b725af20588ceaa6bb16e172c8e99d7b"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/website/tests/keyboard-teaching-source-role.test.mjs",
+      "bytes": 6772,
+      "sha256": "fe0a8f0606411b66442269a34fe0cead9e11554dd23f310c993706a23a86633f"
+    },
+    {
+      "path": "pending/keyboard-role-repair-20261023/website/tests/release-epoch-composition-preservation.test.mjs",
+      "bytes": 18199,
+      "sha256": "5ea736ccb86faee5f8b012dbf266c89b79d141a64262e08bbb05c0379e7fbcf8"
+    },
+    {
       "path": "pending/legacy-shoulder-references-20261022/atlas/app/anatomy-data.ts",
       "bytes": 26547,
       "sha256": "85497e2ee6b2e11dc2ee855dac8bd6ac4116f492e732fc4ebe07b3a4bb819d0b"
@@ -27176,47 +27248,40 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus6main integration/check/recovery recipes,7Website code/test paths and6original authored preimages. No generated import/pin/catalog/coverage/binding/renderer/build/source-input snapshots, model/media/scan/mask/patient identifier/decision, raw diagnostic/type/browser/process evidence. Not whole/private/runnable off-device recovery. Preview/installed state unchanged; no deployment, fee, access, permission, clinical or spatial expansion.",
+  "scope": "Inherited verified filtered authored source plus6main recipes and8explicit original test/helper/preimage paths. No generated source inputs/bindings/metadata/model/scan/mask/identifier/decision or raw diagnostic/native/process evidence. Not a whole/private/runnable off-device backup; no installation or deployment.",
   "proof": {
-    "mainReviewSha256": "235555ba7fdb478bf237f2d4d39e0243000ac243c0a923869f4c24448b82234c",
-    "newDraftConcepts": 4,
-    "pairedSourceSelections": 8,
-    "totalConcepts": 204,
-    "totalRepresentedRoots": 368,
-    "previousConceptsPreserved": 200,
-    "previousSessionsPreserved": 360,
-    "nativeCases": 137,
+    "mainReviewSha256": "f99179a88fa3f6d50b598e709bb06becade476e3bb45d53e4df9cfce4fcb175f",
+    "sourcePaths": 6337,
+    "changedTestSources": 3,
+    "newTestHelperAndCase": 2,
+    "originalPreimages": 3,
+    "unchangedParentInputs": 6329,
+    "nativeCases": 52,
     "failures": 0,
-    "skipsOrCancellations": 0,
-    "focusedTypeRoots": 10,
-    "focusedTypeAmbient": 6,
-    "focusedTypeFiles": 940,
-    "focusedTypeDiagnostics": 0,
-    "reviewSourceFiles": 1578,
-    "reviewInputs": 1747,
-    "reviewBinding": "c5b457627a1e34ba49ced39e6deb7103003718e394db120e0a95de08c848b28b",
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "coverageScopes": 4,
-    "coverageSourceInputs": 171,
-    "coverageImportedInputs": 145,
-    "coverageMetadataInputs": 26,
-    "allCoverageCountsGapsHoldsPreserved": true,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "structureGuidesUiAndAllPriorWebsiteUiPreserved": true,
+    "skips": 0,
+    "cancellations": 0,
+    "fullOriginalAssertionsPreserved": true,
+    "actualNativeGeometryAndTeachingForgeriesRefused": true,
+    "independentReadOnlyWorkerReview": true,
+    "allProductionGeneratedModelsAccessDependenciesAndBindingsByteIdentical": true,
+    "parentBuildFilesVerifiedUnchanged": 1111,
+    "noFreshBuildOrTypeClaim": true,
+    "currentEightRootAudit": {
+      "tests": 13,
+      "pass": 4,
+      "fail": 9,
+      "fileLevelHeapFailures": 2,
+      "sourceDrift": 0,
+      "previewChanged": false
+    },
+    "keyboardFirstGateResolvedOnly": true,
+    "wholeSuitePassing": false,
     "newAssetsDependenciesFees": false,
     "privateDecisionsReadOrMigrated": false,
-    "accessExpanded": false,
-    "authenticatedAcceptance": false,
-    "clinicalApproval": false,
-    "spatialRegistration": false,
     "previewChanged": false,
     "installed": false,
-    "wholeSuitePassing": false
+    "clinicalApproval": false,
+    "spatialRegistration": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
