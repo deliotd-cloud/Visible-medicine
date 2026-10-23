@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T05:06:52.176Z",
+  "at": "2026-10-23T05:23:07.822Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "d41eecb7d72f96eaa52b4ac494646e58cbd075f32ad337b26d309ff277fa1d2a",
+    "parentReceiptSha256": "d41eecb7d72f96eaa52b4ac494646e58cbd075f32ad337b26d309ff277fa1d2a",
     "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
     "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045"
   },
-  "parent": "f9e4f7a480014437861845655603dc8d064d4d56",
-  "gitParent": "f9e4f7a480014437861845655603dc8d064d4d56",
+  "parent": "36ece0441392a9784bdf717a3f12e535082d393f",
+  "gitParent": "36ece0441392a9784bdf717a3f12e535082d393f",
   "files": [
     {
       "path": "app/globals.css",
@@ -15745,6 +15745,61 @@
       "sha256": "db3be451ccae1b8969e19f5c2747ccfd42ab9e6c6da831e5b79b9b00166ab6d9"
     },
     {
+      "path": "pending/cranial-xray-epoch-20261023/coordination/check-cranial-xray-types-20261023.mjs",
+      "bytes": 3134,
+      "sha256": "517f931c8c0804df8b9b43df363bb29cbd49c49be8a0414ef3c3b8d5e7251379"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/coordination/checkpoint-cranial-xray-epoch-20261023.mjs",
+      "bytes": 10310,
+      "sha256": "100af4af3738ee05d3f2308075dcf994753114dd0a23b29fc52f445313cec648"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/coordination/prepare-cranial-xray-epoch-20261023.mjs",
+      "bytes": 2151,
+      "sha256": "f2bc30443c460fa3d3a309b7c1fd96e6ad3e6756015b48e3e338dd9377c42928"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/coordination/verify-cranial-xray-epoch-20261023.mjs",
+      "bytes": 2686,
+      "sha256": "7d59ddf3a9131672ebc6654d2b70960613896c7d2a846cc6c788c9e89ba32db0"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/tests/tests/atlas-emitted-teaching-search.test.ts",
+      "bytes": 4314,
+      "sha256": "7209b71e11a7d340da329d7223e527acd60e42dfc5f1ec55e88da4a4f389702b"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/tests/tests/atlas-emitted-teaching.ts",
+      "bytes": 3337,
+      "sha256": "407396ddf4b0e4398efabf691fcdec75e90c79caafea280234f3438645af8cf2"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/tests/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "bytes": 10715,
+      "sha256": "b9316d69da95e7391348f336bc06ded2ae73418981f04310956f25a47266fed7"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/tests/tests/cranial-xray-current-epoch.mjs",
+      "bytes": 2150,
+      "sha256": "118ce373e447dd5dd1f086ef035d7f19a83352e8afc69bad01821d2225195c0c"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/tests/tests/cranial-xray-current-epoch.test.mjs",
+      "bytes": 3056,
+      "sha256": "00a687b8cf3350b67ebf3f69cc5c9058e6a2dd8ccb7eb0dc519b16e98c3b37f6"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/tests/tests/fixtures/cranial-xray-before/atlas-emitted-teaching.ts.raw",
+      "bytes": 1302,
+      "sha256": "3191c4777baac4c1f3dc7e201654f7e9b40f87ef2406750f410ec73f8ae0a388"
+    },
+    {
+      "path": "pending/cranial-xray-epoch-20261023/tests/tests/fixtures/cranial-xray-before/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "bytes": 10601,
+      "sha256": "df6c0e5b9fc90ed57d60b580c0f03360daeea3997b24c286db6d036434949c35"
+    },
+    {
       "path": "pending/current-source-closure-assurance-20261022/coordination/checkpoint-current-source-closure-assurance-20261022.mjs",
       "bytes": 11563,
       "sha256": "68df891912b740eb4bfd1616153b53b076b71ae69a2dbe85305c37d4184c152d"
@@ -25256,29 +25311,28 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus two authored composition/recovery recipes, nine selected authored component/test files and two authored whole-test preimages. All generated Review/viewer/runtime/model/build/catalogue/pin/revision metadata, private data/decisions/scans/masks/identifiers, browser media, raw logs and type evidence stay F-only. Not whole/private/runnable off-device recovery. No installation/server/restart/refresh/public deployment, fees, authentication/entitlement/permission change or clinical/spatial approval.",
+  "scope": "Inherited verified filtered source plus seven authored test/helper/whole-preimage files and four authored coordination/verification/recovery recipes. All generated binding/runtime/model/build/catalogue/pin metadata, raw resource/type/browser/coordination evidence, private code maps/data/decisions/scans/masks/identifiers and canonical ancestry stay F-only. Not whole/private/runnable off-device recovery. No application changes, installation/server/restart/refresh, public deployment, fee, permission/access/identity or approval change.",
   "proof": {
-    "mainReviewSha256": "4165744da23fbb5a8f82171763f682e3caabfd73409373425ea039188e3dbc17",
-    "sourcePaths": 6162,
-    "reviewInputs": 1735,
-    "reviewSourceFiles": 1567,
-    "onlyBoundInputDelta": "components/HeadAtlasViewer.tsx",
-    "staleBindingRefused": true,
-    "wholeTestInversesVerified": true,
-    "targetedNativeCasesPassed": 96,
-    "zeroSkipsOrCancellations": true,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "buildFiles": 1110,
-    "privateDecisionsReadOrMigrated": false,
+    "mainReviewSha256": "991b1a98e9c75cf82f58deadb407032cde5aa7d37a751b0bb8f23b32f647998f",
+    "testOnly": true,
+    "productChanged": false,
+    "actualXrayFeatureCasePassed": true,
+    "structures": 12,
+    "supportCasesPassed": 8,
+    "nativeHeapMiB": 128,
+    "aggregateStringOOMRetained": true,
+    "streamEquivalenceAndTamperRefusal": true,
+    "wholeOriginalTestAndHelperInverses": true,
+    "focusedTypeRoots": 3,
+    "focusedTypeFiles": 569,
+    "focusedTypeDiagnostics": 0,
     "fullProjectTypesPassing": false,
-    "nativeTrustedPointerAcceptance": false,
-    "authenticatedAcceptance": false,
+    "wholeSuitePassing": false,
+    "unchangedParentSourcePaths": 6162,
+    "unchangedParentBuildFiles": 1110,
+    "neonatalSourceAndMemoryGatesStillOpen": true,
     "previewChanged": false,
     "installed": false,
-    "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false
   },

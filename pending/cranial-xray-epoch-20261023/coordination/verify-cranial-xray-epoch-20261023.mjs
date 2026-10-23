@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261023-cranial-xray-epoch',prep=json(stage+'/PREPARATION.json');
+assert.equal(sha(read(prep.parentReceipt)),prep.parentReceiptSha256);
+const phase=process.argv[2];assert(['contract','feature','contract-v2','feature-v2','stream','stream-v2'].includes(phase));
+const paths=['tests/cranial-xray-current-epoch.mjs','tests/cranial-xray-current-epoch.test.mjs','tests/clinical-review-intracranial-arterial-xray.test.ts','tests/atlas-emitted-teaching.ts'];
+const rows=paths.map(path=>({path,sha256:sha(read(prep.website+'/'+path))}));
+const dir=stage+'/checks/'+phase;assert(!fs.existsSync(dir));fs.mkdirSync(dir,{recursive:true});
+const entry=phase.startsWith('stream')?'tests/atlas-emitted-teaching-search.test.ts':phase.startsWith('contract')?'tests/cranial-xray-current-epoch.test.mjs':'tests/clinical-review-intracranial-arterial-xray.test.ts';
+const args=['--max-old-space-size=128','--experimental-strip-types','--test','--test-concurrency=1',entry];
+fs.writeFileSync(dir+'/STARTED.json',JSON.stringify({at:new Date().toISOString(),args,cwd:prep.website,rows,previewChanged:false},null,2)+'\n',{flag:'wx'});
+const out=fs.openSync(dir+'/stdout.log','wx'),err=fs.openSync(dir+'/stderr.log','wx');
+const result=spawnSync(process.execPath,args,{cwd:prep.website,windowsHide:true,env:{...process.env,NODE_OPTIONS:'--max-old-space-size=128',VM_ATLAS_SOURCE_REPO:prep.atlas,RAYON_NUM_THREADS:'1',GOMAXPROCS:'2'},stdio:['ignore',out,err]});
+fs.closeSync(out);fs.closeSync(err);
+const stdout=read(dir+'/stdout.log'),stderr=read(dir+'/stderr.log'),combined=stdout.toString()+'\n'+stderr;
+const counts=Object.fromEntries(['tests','pass','fail','skipped','cancelled'].map(k=>[k,Number(stdout.toString().match(new RegExp('^.? '+k+' (\\d+)$','m'))?.[1]??-1)]));
+// The default reporter can use either TAP (#) or spec (ℹ) summary prefixes.
+const terminal={at:new Date().toISOString(),phase,exitCode:result.status,signal:result.signal,error:result.error?String(result.error):null,args,rows,counts,resourceFailure:/heap out of memory|Reached heap limit/i.test(combined),stdoutSha256:sha(stdout),stderrSha256:sha(stderr),previewChanged:false,productChanged:false};
+fs.writeFileSync(dir+'/TERMINAL.json',JSON.stringify(terminal,null,2)+'\n',{flag:'wx'});
+for(const r of rows)assert.equal(sha(read(prep.website+'/'+r.path)),r.sha256);
+console.log(JSON.stringify({phase,exitCode:result.status,counts,resourceFailure:terminal.resourceFailure}));
+process.exitCode=result.status===0?0:1;
