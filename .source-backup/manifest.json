@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T07:09:08.765Z",
+  "at": "2026-10-23T07:32:09.087Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "548f7c18ac8bd30d7cf30c2681aa83ec941a3551ab0af27260246fbfd610b64a",
+    "sourceReceiptSha256": "15f469f99adb410c29a07947ddb46c9b096159e899f7a47d2e1a36bce99e685f",
     "atlasHead": "ed3c8cc0e99f6cf850a915d7a08de2e6489c1b6f",
     "atlasTree": "0305c15be5fb58ea7729a3849bbbdb6e1e40649d"
   },
-  "parent": "d322b1085759658e70dcfa00a526add5734f4cb1",
-  "gitParent": "d322b1085759658e70dcfa00a526add5734f4cb1",
+  "parent": "e5df8980227ce0bc71135da833883a59d4c32229",
+  "gitParent": "e5df8980227ce0bc71135da833883a59d4c32229",
   "files": [
     {
       "path": "app/globals.css",
@@ -24575,6 +24575,116 @@
       "sha256": "14cc0c8e34888abb7f5432384ebbca7958d7142c9acdfa4cb21e4d2ee0a02991"
     },
     {
+      "path": "pending/studio-review-queue-20261023/candidate/app/studio/publishing/page.tsx",
+      "bytes": 6839,
+      "sha256": "82522b4e4998bd17b90c952a15a191710a1b684f57813d39831889c76a1d61f3"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/app/studio/workspace/page.tsx",
+      "bytes": 4247,
+      "sha256": "b90998eea1dd9941a1ac5da0ec42a6c57dbf6d83bf5d1e72eb283824ba9d0ce6"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/lib/studio-queues.ts",
+      "bytes": 1799,
+      "sha256": "df664961181d6baf6fb66deb45cf1cdd87acf85465e5670ab96f91e37685e13e"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/lib/studio-review-queue.ts",
+      "bytes": 2406,
+      "sha256": "e42711ebdd5f15144ae8f382ec2a3ec9aed2a260f0e725412d22f6d4c64f8e63"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/fixtures/studio-review-queue-before/app/studio/publishing/page.tsx.raw",
+      "bytes": 5672,
+      "sha256": "f95c8948bc30b7cee76745c7b371c6491f7d2589e8ad293387b87b297ee2edec"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/fixtures/studio-review-queue-before/app/studio/workspace/page.tsx.raw",
+      "bytes": 3623,
+      "sha256": "ecfece2052646223fe5b98dc0bdaf37b64b110e79fab2e036916902b19f17283"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/fixtures/studio-review-queue-before/lib/studio-queues.ts.raw",
+      "bytes": 1483,
+      "sha256": "4e9ffaa969173560611ce3ef5d8c130694159a4dce3378eaaebc8513963ced4d"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/fixtures/studio-review-queue-before/studio-publishing-navigation.test.mjs.raw",
+      "bytes": 5136,
+      "sha256": "3fa36278a3c80ec7a74fd18cc537167c69ff4102b9c9928f1eda7c23631cbab1"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/fixtures/studio-review-queue-before/studio-queues.test.ts.raw",
+      "bytes": 10065,
+      "sha256": "33884643db01d5d48c1192fc2adea4e8b1ab020617f07ee10a4a294f2317bf21"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/studio-publishing-navigation.test.mjs",
+      "bytes": 5241,
+      "sha256": "0a85eba974b6b041effdaf2ebb7bd8456f5771b895cbfd53e33a8b0baf3c4a10"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/studio-queues.test.ts",
+      "bytes": 10389,
+      "sha256": "676ef43bf1022779613e371db85c094b4fe1e932ac525162b5d08b84f74ed255"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/studio-review-queue-page-fixture.mjs",
+      "bytes": 3186,
+      "sha256": "c9b65c74ba945f091b3e8f4bd8508ba8802b674046dcd9a83cb3e8300662d222"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/studio-review-queue-pages.test.mjs",
+      "bytes": 4463,
+      "sha256": "4bb5ef7aa590a305fc967dcdc87032457ce355a9e3323ca628f3e5a9356662a8"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/studio-review-queue-preservation.test.mjs",
+      "bytes": 4919,
+      "sha256": "1fe45c2be60db650b915e20dfc1c8eaa00fb469f1be71ef78571d4f372c9364b"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/candidate/tests/studio-review-queue.test.ts",
+      "bytes": 5719,
+      "sha256": "63b4d485374ccbe962c5219dfba20e963e18dd6651136e3c1f50c2a0d5e3cb7f"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/coordination/check-studio-review-queue-types-20261023.mjs",
+      "bytes": 2844,
+      "sha256": "9a0df9cbc60633dc775579347d70832ba8b74071288050372488cae9f73df297"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/coordination/checkpoint-studio-review-queue-20261023.mjs",
+      "bytes": 11174,
+      "sha256": "0eeb65f330acbc585d1f8d43b9bf75000ec40136b542ffdc2b54b86333ea8491"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/coordination/prepare-studio-review-queue-20261023.mjs",
+      "bytes": 2549,
+      "sha256": "8a5834e3dd2e3db072a0a40b9e3c1ef902a4d4a0549c11b45cbdd50901be5345"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/coordination/run-studio-review-queue-20261023.mjs",
+      "bytes": 3735,
+      "sha256": "cbb21f19db9e12b15941b73557697c3c6096ec481455e84f5ec80aa5dc944e6e"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/coordination/seal-simple-website-successor.mjs",
+      "bytes": 5081,
+      "sha256": "f1462af1d8227684b24eb45b544c24ba1fbd2db55f60a479195cbc01a950952a"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/coordination/seal-studio-review-queue-20261023.mjs",
+      "bytes": 3139,
+      "sha256": "a7989f827a104cb966cceac593019bc6f6c5284a4e4ac03576bc72b3504ce53d"
+    },
+    {
+      "path": "pending/studio-review-queue-20261023/coordination/serve-studio-review-queue-20261023.mjs",
+      "bytes": 4061,
+      "sha256": "f535a024f428fa3c9d68a16d60e9bfb3bf6ba2f2f0e0e5bb4eb8a839d25e8ffe"
+    },
+    {
       "path": "pending/studio-session-drafts-20261023/candidate/components/StudioForms.tsx",
       "bytes": 84127,
       "sha256": "f06f117a4f75bf85fa5f33eeebe73e79c57bbae54f2066067f078fa6cce9ebf1"
@@ -25626,31 +25736,33 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus six authored recovery/verification recipes and eleven authored helper/component/test/preimage paths. No generated runtime/Review/viewer/models/build metadata, source maps, scans, masks, identifiers, private decisions, raw/browser/type/resource/coordination evidence or later documents. Not whole/private/runnable off-device backup. No owner-preview, access, permission, clinical or spatial approval change.",
+  "scope": "Inherited independently verified filtered source plus7authored preparation/check/seal/recovery recipes and15explicit authored UI/helper/test/preimage paths. No generated runtime/Review/viewer/models/build metadata, private maps/scans/masks/identifiers/decisions, raw/browser/type/resource/coordination evidence or later docs. Not whole/private/runnable off-device recovery. No preview install/restart/refresh/deployment, fees, permission/auth/access/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "81b6129bdf92c456bc47c66f62cff68b08365d1ee12b3ba2714cad3e2711df9a",
-    "sourcePaths": 6199,
-    "buildFiles": 1110,
-    "reviewSourceFiles": 1569,
-    "reviewInputs": 1737,
-    "reviewBindingSha256": "fc7ad671e664f4169f035790486a1b699ddc4e2f431ba1d7daafb5b572b402ab",
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "focusedNativeCasesPassed": 143,
+    "mainReviewSha256": "a46caedc060708bd98a7082f0927f9e8a514c7435a07665addee31f4a9847236",
+    "sourcePaths": 6209,
+    "buildFiles": 1111,
+    "focusedNativeCasesPassed": 137,
     "zeroSkipsOrCancellations": true,
-    "focusedTypeRoots": 2,
-    "focusedTypeFiles": 588,
+    "focusedTypeRoots": 4,
+    "focusedTypeFiles": 597,
     "focusedTypeDiagnostics": 0,
     "actualPrebuildPassed": true,
     "actualProductionBuildPassed": true,
-    "actualComponentSyntheticBrowser": true,
-    "authenticatedBrowserAcceptance": false,
-    "modelsDependenciesNoticesAccessUnchanged": true,
-    "historyCancellationImported": false,
-    "durableNotesRecovery": false,
-    "privateDecisionsReadOrMigrated": false,
-    "fullProjectTypesPassing": false,
+    "reviewInputs": 1737,
+    "reviewSourceFiles": 1569,
+    "reviewBindingSha256": "fc7ad671e664f4169f035790486a1b699ddc4e2f431ba1d7daafb5b572b402ab",
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "modelsDependenciesNoticesAccessAndAuthorityUnchanged": true,
+    "desktopSyntheticPageWidth": 1280,
+    "desktopSyntheticMaxScrollWidth": 1265,
+    "homeQueueCards": 3,
+    "reviewFilterPreserved": true,
+    "selfReviewActionOffered": false,
+    "browserIdentityAndWorkflowSynthetic": true,
+    "authenticatedAcceptance": false,
     "wholeSuitePassing": false,
+    "fullProjectTypesPassing": false,
     "previewChanged": false,
     "installed": false,
     "clinicalApproval": false,
