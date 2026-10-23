@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T17:18:41.705Z",
+  "at": "2026-10-23T17:35:40.099Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "02293636ab03d8631787b98d1a1c0c2d8593cdf0008f75159bc4e87fba60de16",
-    "atlasHead": "2ab63cbbc1c5e18a4d7b3a65f799e863f5be0491",
-    "atlasTree": "c625d8b1a55aabd8e6497169856e9d67b85ea0f3",
-    "reviewBindingSha256": "4eda97496b9ca0a8497776394557936380081c19da7923c0912877e462777942"
+    "sourceReceiptSha256": "c377b708568ccdbe3521d4b4113c6ed64aaf55170ad7bcbb3864bc77d20616e6",
+    "atlasHead": "e051b79106f558428b852173ddbb32b1e854364b",
+    "atlasTree": "b581b96cbb4bb821224fa43f7add65a4d2e7fa85",
+    "completeWebsiteUnchanged": "2ab63cbbc1c5e18a4d7b3a65f799e863f5be0491",
+    "sourceOnlyTools": true
   },
-  "parent": "0a71b587bb9170bffdb75c4baad8ec006d848aae",
-  "gitParent": "0a71b587bb9170bffdb75c4baad8ec006d848aae",
+  "parent": "e4f2d2e15d6baca726430c16eec2c3bb1eba74e2",
+  "gitParent": "e4f2d2e15d6baca726430c16eec2c3bb1eba74e2",
   "files": [
     {
       "path": "app/globals.css",
@@ -16811,6 +16812,76 @@
       "sha256": "d6e4bbb9e02ec60d64e685c8565f4d9baa73f9cdf2fa75d6857e83a5ddcd3a37"
     },
     {
+      "path": "pending/fda-shoulder-source-20261023/atlas/docs/FDA_SHOULDER_SOURCE.md.raw",
+      "bytes": 3655,
+      "sha256": "7ca6f8808337cd2640d651295251cf4956c1fc394df724d53209ec37a40cdc56"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/atlas/docs/UPPER_JOINT_SOURCE_SCREEN_20260918.md.raw",
+      "bytes": 1991,
+      "sha256": "d3fe8daf7d55f142a13af3f04085235422ccaab0436afaddf63694dd3cac8188"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/atlas/scripts/inspect-abaqus-shoulder-source.mjs",
+      "bytes": 7743,
+      "sha256": "c7d947dcb8773e53c6cc0d4bfedf580c309a216e95f2e3df678fc49bdaeb4767"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/atlas/scripts/test-abaqus-shoulder-source.mjs",
+      "bytes": 3868,
+      "sha256": "62065407f6fcc8d789e1501e2267a07f8d6e11888fce75b9073e4b02588882b6"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/coordination/acquire-fda-shoulder-20261023.mjs",
+      "bytes": 2003,
+      "sha256": "9743a476519f39f50f2397c5e1895b08853e62daef1d14602d95a46267e2df48"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/coordination/checkpoint-fda-shoulder-source-20261023.mjs",
+      "bytes": 9015,
+      "sha256": "d42ede70b757c422f335a79b1560e696f32e5f507fb4a3e03769e08f3da8de89"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/coordination/inspect-fda-shoulder-20261023.mjs",
+      "bytes": 1667,
+      "sha256": "d3bf0ce07ce1ab49f698503d7f1652f233c0b98afecd6dc18d0b9a8fe790dce6"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/coordination/prepare-fda-shoulder-source-20261023.mjs",
+      "bytes": 1379,
+      "sha256": "8bd4e229186bf7e41d8c97be800e526c91df200d4cf2170ccb469d8137f287ca"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/coordination/seal-fda-shoulder-source-20261023.mjs",
+      "bytes": 4343,
+      "sha256": "44468c95e14686c3eec3006de7a2e83082fa7637bd02c6c01c1f412add98157e"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/release-proposal/candidate-loader.mjs",
+      "bytes": 532,
+      "sha256": "a03ae0a6164fb58406111f8a1ddd000b45eb9fdd3ae53f31759242f8daa762cd"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/release-proposal/derive-prior-expected.mjs",
+      "bytes": 1082,
+      "sha256": "ff35d50e90317b6c823e4b54fb9a995abd1e5f0584342a51a64ed9292aef6a7e"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/release-proposal/thoracic-root.preimage.raw",
+      "bytes": 11280,
+      "sha256": "f039d55de30426540fae3c2f8aecaab1cdc9b5ad7e6004e8639a3336f8c14855"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/release-proposal/thoracic-teaching-role-preservation.test.mjs",
+      "bytes": 21650,
+      "sha256": "968abf8fc90cf382d9e67e45011f62c7db6a1b26d3c6dcecebaf9b977765c967"
+    },
+    {
+      "path": "pending/fda-shoulder-source-20261023/release-proposal/verify-root-patch.test.mjs",
+      "bytes": 1601,
+      "sha256": "84f8a7d0de925182c0ba7c6376baad513d7f58b940476a8555c1c7336f773ce5"
+    },
+    {
       "path": "pending/guided-access-assurance-20261022/coordination/checkpoint-guided-access-assurance-20261022.mjs",
       "bytes": 9179,
       "sha256": "7e237b28e7f5c522bdf6669fa588ebd039aae9667f6871225586471a066288fd"
@@ -28167,43 +28238,35 @@
     }
   ],
   "removed": [],
-  "scope": "Verified inherited filtered authored source plus10main integration recipes and selected original Website test/import/policy/coverage admission source only. No generated Review/runtime/binding/pin/catalogue/inventory/model/type/build/process/browser/private scan/mask/identifier/decision payload. Full generated runnable candidate and raw evidence remain F-only; not whole/private/runnable off-device backup.",
+  "scope": "Inherited independently verified filtered authored sources plus explicit new original ingestion scripts, tests, project-doc raw snapshots and thoracic preservation-root proposal. No publisher model/license/Word source, geometry, source/renderer/binding/catalogue pins, runnable generated outputs, test logs, scans, identifiers or private decisions. Full quarantine/evidence/source identity stays F-only; not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "a2d00d47cef582508f600a5d794a144d813990937b974455a6481d67ca67abe5",
-    "nativeCases": 169,
-    "initialTests": 169,
-    "initialPassing": 167,
-    "initialFailures": 2,
-    "affectedRootRerunPassing": 3,
-    "uniqueNativeCasesPassed": 169,
-    "strictTypeRoots": 16,
-    "strictTypeFiles": 3260,
-    "strictTypeDiagnostics": 0,
-    "productionOutputs": 1115,
-    "actualPrebuildAndFullBuildPassed": true,
-    "sourceBlobsReadBack": 1581,
-    "exactBoundInputs": 1750,
-    "protectedViewerFiles": 46,
-    "protectedViewerPackages": 22,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "allModelsDependenciesLicencesAndAccessUnchanged": true,
-    "coverageSourceInputs": 171,
-    "coverageImportedInputs": 145,
-    "coverageMetadataInputs": 26,
-    "allCoverageCountsGapsHoldsPreserved": true,
-    "exactOriginalTestInverses": true,
-    "newDraftQuestions": 6,
-    "newSourceSelections": 12,
-    "concepts": 210,
-    "sourceSelections": 380,
-    "privateDecisionsReadOrMigrated": false,
-    "newAssetsDependenciesFees": false,
+    "mainReviewSha256": "0526e1e936b0f96297988e0569a4e40cf6bec6cbb8c9ac8f405fa6e74a34b2ec",
+    "nativeInventoryTests": 21,
+    "inventoryTestFailures": 0,
+    "sourceParts": 7,
+    "sourceMeshElements": 348392,
+    "sourceConnectivityAndIdentitiesChecked": true,
+    "publisherCodeExecuted": false,
+    "solverRun": false,
+    "geometryExported": false,
+    "geometryAdmitted": false,
+    "constructedCartilageDistinguished": true,
+    "assemblyTransformsApplied": false,
+    "unitsOrSideInferred": false,
+    "parentAtlasFilesUnchanged": 6315,
+    "allParentWebsiteInputsUnchanged": 6413,
+    "thoracicPreservationProposalNativePasses": 4,
+    "thoracicPreservationInitialFailures": 4,
+    "thoracicWholeRootInversePass": 1,
+    "thoracicClinicalSuitesRerun": false,
+    "thoracicProductAndClinicalTestsUnchanged": true,
+    "thoracicProposalInstalled": false,
+    "newRuntimeAssetsDependenciesFees": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
-    "clinicalApproval": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,

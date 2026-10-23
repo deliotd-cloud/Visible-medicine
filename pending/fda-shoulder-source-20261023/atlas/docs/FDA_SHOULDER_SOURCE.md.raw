@@ -1,0 +1,65 @@
+# FDA shoulder source and ingestion status
+
+The [FDA shoulder tool](https://cdrh-rst.fda.gov/human-shoulder-finite-element-model)
+is a promising independent reference for missing joint soft tissues. It has not
+been admitted into the Atlas or fitted to its existing shoulder. This inventory
+does not establish clinical accuracy, laterality, units or patient-space alignment.
+
+## Exact source
+
+[Publisher repository](https://github.com/OSEL-DAM/ShoulderFiniteElementModel/tree/fc9f3e56b104c06759750495be1f8dd5d53c1741),
+commit `fc9f3e56b104c06759750495be1f8dd5d53c1741`.
+The repository LICENSE and Word model notes both declare CC0-1.0. The exact
+LICENSE SHA256 is `a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499`.
+The model notes SHA256 is `9f5a5140224b95933edead95be5a5612544e0828f73b9be0e13836db2ee7511a`.
+This is component-specific evidence, not a licence conclusion for unrelated FDA
+or NIH files. Preserve the publisher's disclaimers and credit; do not imply FDA
+endorsement or regulatory qualification. No solver, commercial software purchase
+or execution of downloaded code was needed for this text inventory.
+
+`Male-Shoulder.inp` is 59,793,091 bytes, SHA256
+`547de9cff23a4ae98d5a297ba32d8b01fe042739160c4b7144dfe7066d08c70a`.
+Its complete source, licence and notes are retained in local quarantine only;
+none is redistributed by this source-only tooling change.
+
+## Actual file inventory
+
+| Source part | Nodes | C3D10M elements | Publisher-described geometry origin |
+| --- | ---: | ---: | --- |
+| AC_Lig | 3,211 | 2,111 | CT segmentation |
+| CLAVICLE | 30,567 | 16,511 | CT segmentation |
+| Gcart | 56,257 | 36,551 | Constructed offset cartilage |
+| Hcart | 119,844 | 73,736 | Constructed offset cartilage |
+| Humerus | 68,491 | 39,827 | CT segmentation |
+| Labrum | 177,134 | 124,307 | CT segmentation |
+| SCAPULA | 103,447 | 55,349 | CT segmentation |
+
+These are seven finite-element parts, not seven newly approved Atlas structures.
+Nineteen assembly connector elements are not muscle surfaces. The model is from
+one male Visible Human donor and a constrained abduction experiment, not normal
+motion or patient-specific simulation. The [NLM source page](https://www.nlm.nih.gov/research/visible/visible_human.html)
+describes the underlying public-domain donor image collection.
+
+## Reproduce and preserve the boundary
+
+```text
+node --test scripts/test-abaqus-shoulder-source.mjs
+node scripts/inspect-abaqus-shoulder-source.mjs <local-pinned-Male-Shoulder.inp>
+```
+
+The reader validates the exact input, part/node/element identities, finite
+coordinates, ten-node connectivity and references. It refuses unsupported mesh
+types, external includes, parameters and part coordinate transforms. It records
+instance translation/axis-angle rows separately and does not apply them, emit
+surfaces or infer a millimetre frame. Humerus and Hcart have non-identity assembly
+transforms. A separate load-axis transform is reported, not mistaken for a mesh
+registration. Bounds remain explicitly raw-part bounds.
+
+Before a learner-facing reference: verify the official quadratic tetrahedron face
+and midside ordering; test translation/rotation order with known fixtures; audit
+surface winding, degeneracy, connected components and nonmanifold edges; establish
+documented units and side; and retain constructed cartilage provenance. Then
+generate a separate source-ID catalogue with exact notices and revision-bound
+Review. Do not substitute the connectors for rotator-cuff meshes, infer missing
+capsule/bursae/other ligaments, reuse existing body IDs or transfer approvals.
+BodyParts3D and scan registration remain independently unvalidated.

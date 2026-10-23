@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Verified inherited filtered authored source plus10main integration recipes and selected original Website test/import/policy/coverage admission source only. No generated Review/runtime/binding/pin/catalogue/inventory/model/type/build/process/browser/private scan/mask/identifier/decision payload. Full generated runnable candidate and raw evidence remain F-only; not whole/private/runnable off-device backup.
+Inherited independently verified filtered authored sources plus explicit new original ingestion scripts, tests, project-doc raw snapshots and thoracic preservation-root proposal. No publisher model/license/Word source, geometry, source/renderer/binding/catalogue pins, runnable generated outputs, test logs, scans, identifiers or private decisions. Full quarantine/evidence/source identity stays F-only; not whole/private/runnable off-device recovery.
