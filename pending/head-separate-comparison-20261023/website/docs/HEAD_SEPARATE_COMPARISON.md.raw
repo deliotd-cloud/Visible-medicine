@@ -1,0 +1,27 @@
+# Keep a native scan open during comparison
+
+An optional **Open CT/MRI (new tab)** link sits beside existing guided-step and
+selected-structure modality links. The normal same-tab links and existing inline
+3D Atlas comparison are retained. This is not a new default navigation mode or
+an automatic pop-up.
+
+The optional action uses a canonical, revision-bound concept or complete guided
+step and opens a new tab with `noopener noreferrer`. Unknown, stale, partial,
+foreign and private query fields do not create an action. MRI-only concepts do
+not acquire CT targets. An unavailable local guided mask can still have its
+existing canonical destination; the destination checks its own availability.
+
+The current study, slice, overlays and unanswered practice stay in their own
+tab. No files, handles, patient coordinates, crosshairs, answer state, entitlement
+or approval are transferred by this link. The new tab follows normal sign-in,
+access and approved-source selection. A configured local preview may open its
+existing approved source; otherwise select the approved folder there.
+
+These are separate, unregistered CT/MRI subjects. This feature adds no spatial
+synchronization, registration, segmentation, case publication or clinical
+approval. It changes neither accepted masks nor the desktop clinical PACS.
+No new package, media, font, dataset, service, licence obligation or fee.
+
+Local isolated candidate only. Refer to its current source-bound checkpoint for
+tests, browser evidence and installation status; source availability is not a
+deployment or signed-in/acquired-study acceptance claim.

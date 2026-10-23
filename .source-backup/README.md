@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited verified filtered authored source plus declared committed-source importer, exact source/coverage guards and test-role/replay code and coordination recipes. No generated JSON fixtures/pins/coverage/registry/Review/runtime, geometry, private records/scans/identifiers, raw evidence, node_modules, dist, emulator state or images/logs/type graphs. Full generated/local evidence remains F-only; not whole/private/runnable off-device backup.
+Inherited verified filtered authored source plus declared optional-comparison controls, strict helper/tests, source preflight/rebinding/checkpoint recipes and clearly synthetic component fixture. New documentation saved as UTF8 raw text. No generated JSON registry/Review/runtime, models, scans/private records/identifiers, raw evidence/images/type graphs, node_modules, dist or emulator state. Local full source and evidence remain F-only; not whole/private/runnable off-device backup.

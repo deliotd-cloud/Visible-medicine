@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T21:49:08.242Z",
+  "at": "2026-10-23T22:12:23.189Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "c292417e48c6e36666bcb0bf29f250e944bbb8b5c037948e6c0a3d1af4074129",
+    "websiteSourceReceiptSha256": "404a7adbb83443606534ca7d463d33af66a21bd01464d5661e7ee7da7eadab1c",
     "atlasHead": "b0ad9e786f2f26727cd627ec028c0d3894048c72",
     "atlasTree": "c68f9c201e0a246e8d40c6977736b0238150d5a5",
-    "reviewRevision": "8d7ea6cff6d5f140d7dc3d492fa95b43396d6c16692915ecb5ddb138209e788d",
+    "reviewRevision": "0b68b6403e0f5df6dcc6f18bdc275b49ee22d3c72c0e1f2988dc36d52083885f",
     "normalPreviewChanged": false
   },
-  "parent": "1b940b3c7a424d2cb1664683c3ba04e5e7577913",
-  "gitParent": "1b940b3c7a424d2cb1664683c3ba04e5e7577913",
+  "parent": "95dc9e1465473f6b5291a8c80990f9381d937afa",
+  "gitParent": "95dc9e1465473f6b5291a8c80990f9381d937afa",
   "files": [
     {
       "path": "app/globals.css",
@@ -18817,6 +18817,151 @@
       "sha256": "a73b5459612ce11a95229c7466b83f9e55320a0a2ef500bc241fb26912387eac"
     },
     {
+      "path": "pending/head-separate-comparison-20261023/coordination/capture-head-separate-comparison-20261023.mjs",
+      "bytes": 2567,
+      "sha256": "1cebe134cb1c955174aaf5bddddc7f72523c2e0d9c56393f01a38b7f85f78127"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/check-head-separate-comparison-types-20261023.mjs",
+      "bytes": 4739,
+      "sha256": "a32106c7f65ca655e32efb967f5603729886fbfc702577785802bfe845549f39"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/checkpoint-head-separate-comparison-20261023.mjs",
+      "bytes": 8186,
+      "sha256": "7a6f1fbd166100ff047c5503c10eb39bfb28226fc1c173917b2a26b8603a2c51"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/close-head-separate-browser-20261023.mjs",
+      "bytes": 2007,
+      "sha256": "da89a5c98fa5e2b9c225fb131064bdd397078de60c4fd46a8de434d205a659d3"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/finish-head-separate-browser-20261023.mjs",
+      "bytes": 1421,
+      "sha256": "ebaa346ef66bdebc198c1123b43a837aefd91273b27687b932e0023363082026"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/prepare-head-separate-comparison-20261023.mjs",
+      "bytes": 2494,
+      "sha256": "95ba403bdf089b441c1468e80790221fbbe8121d1db53fd1ee28f73cfa7ef0bb"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/prepare-head-separate-test-adapters-20261023.mjs",
+      "bytes": 2622,
+      "sha256": "9fb1b40e2a66cdf7e322cbbbfeb0fe6ae3996fbb831f2b2a66ccbf2583d39151"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/repair-head-separate-adapter-patch-20261023.mjs",
+      "bytes": 1325,
+      "sha256": "bd8abe4803e6bd47fe15f6b6b89f6a2284fe481ed1488d1984163d5569989a4d"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/resume-head-separate-comparison-preparation-20261023.mjs",
+      "bytes": 2578,
+      "sha256": "19a0b34f1963eb6fc671089000477bc3d8117e8ef9268d6b2a10a0be19b3d4d4"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/run-head-separate-comparison-20261023.mjs",
+      "bytes": 4062,
+      "sha256": "a1f3bfb8b2f4f3c3767d87bf4b756f55fe7e51e725d012c45c4bcd445205efb0"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/seal-head-separate-comparison-20261023.mjs",
+      "bytes": 12016,
+      "sha256": "092688a1cbf47511b5d853655e38c6807fd5093c6ecfb32796971988f797dd89"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/coordination/serve-head-separate-comparison-20261023.mjs",
+      "bytes": 3871,
+      "sha256": "08c5b5f94e06a236d6c5cb9b2aed364e8fd251610e4e0fda28e19e4b26f54179"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/fixture/browser-entry.tsx",
+      "bytes": 2857,
+      "sha256": "cb30cd014939706c423ed8e273c8bed3e5b0d4f701802ef1cc06522e3b6037ed"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/fixture/browser-next-link.tsx",
+      "bytes": 220,
+      "sha256": "a2014a02b1965ba2de05fbd4bb89d95278a42995bc929bbf9fd9162008339c6d"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/components/HeadAtlasGuidedLearning.tsx",
+      "bytes": 13677,
+      "sha256": "b5cd947f7bef048ffa8dcb0fb4b98b77ee2a54d83049822fed700b1f8be8ba95"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/components/HeadAtlasViewer.tsx",
+      "bytes": 113951,
+      "sha256": "a41c34769f419e0ec471a0a07cb6c25aee070ee706bcc6e9cae0344485edfd72"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/components/HeadSeparateComparisonLink.tsx",
+      "bytes": 543,
+      "sha256": "51bee0fab7830d93eed5ba1ed8fc22ddbcc1a28b0750ccd83183e7c58202f437"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/docs/HEAD_SEPARATE_COMPARISON.md.raw",
+      "bytes": 1603,
+      "sha256": "5f3727a314d3db782edfa5d4d44bbad97212dfb961c01dd17badc6e7a1e335e7"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/lib/head-separate-comparison.ts",
+      "bytes": 1535,
+      "sha256": "4201c24e59631d1ad6dd16dbcd0bfa559a8868c994eec11a12883516729146be"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/scripts/bind-clinical-review.mjs",
+      "bytes": 9284,
+      "sha256": "bf201092f943f16899ef930278cb841786e8d0659124cc439726acfd19d5e3f3"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19274,
+      "sha256": "7331be18da1ac7ed0dab4a62c8cc9c4a8556f7364c661e36c0d55a7ca504020e"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/fda-reference-website-material.test.mjs",
+      "bytes": 19575,
+      "sha256": "ffdd3b60b667cc93c69ad62a93e5c7b16c7e975e31128ca5ec8af9eae9af99bd"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/head-guided-availability.test.ts",
+      "bytes": 10080,
+      "sha256": "8c107613a9580ec5878487f6d03f150d0934c68aaa30c2ac5376f85242d6f599"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/head-guided-lifecycle.test.ts",
+      "bytes": 10442,
+      "sha256": "62bfef4eda5445afc3ff7f3fc458206a38cdd6a8c66b3080b1b4462105b56841"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/head-image-history.test.ts",
+      "bytes": 190242,
+      "sha256": "6773f8d360f0406c6d662219666d02ba23804f4464049a2f7f049d95a6f0c00f"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/head-separate-comparison.test.ts",
+      "bytes": 5897,
+      "sha256": "3caae2813185028e154a2ac4e261c8296ae4cd11fbaf9b5a18ef7bbc4a32b870"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/head-separate-component-loader.ts",
+      "bytes": 1035,
+      "sha256": "24d8d1fbc88a85c79abed657699c10b38873c5847c949a3ed84e11d2d936412f"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 12828,
+      "sha256": "868ee0ac812350f05bf38acf9ffc9a8360aa83f4ea051b7fb99dcf5c2e5f04a7"
+    },
+    {
+      "path": "pending/head-separate-comparison-20261023/website/tests/structure-learning-ui.test.ts",
+      "bytes": 11302,
+      "sha256": "117fa2fa55024682e2029a457eacbc5495a5d5f20fca45aa8efe2914f54c4d50"
+    },
+    {
       "path": "pending/head-surface-cancellation-20261022/coordination/admit-head-surface-cancellation-20261022.mjs",
       "bytes": 10181,
       "sha256": "502bd5664309de8358189bcd58936b5e68ba66bc0474c2f53917213b9c25eec4"
@@ -29128,34 +29273,30 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus declared committed-source importer, exact source/coverage guards and test-role/replay code and coordination recipes. No generated JSON fixtures/pins/coverage/registry/Review/runtime, geometry, private records/scans/identifiers, raw evidence, node_modules, dist, emulator state or images/logs/type graphs. Full generated/local evidence remains F-only; not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored source plus declared optional-comparison controls, strict helper/tests, source preflight/rebinding/checkpoint recipes and clearly synthetic component fixture. New documentation saved as UTF8 raw text. No generated JSON registry/Review/runtime, models, scans/private records/identifiers, raw evidence/images/type graphs, node_modules, dist or emulator state. Local full source and evidence remain F-only; not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "c2b333c6d4e1a6a2e0adc6b407e51422f37cb9d57fea06fa5866de5d758cff22",
-    "initialFocusedCases": 96,
-    "initialPasses": 89,
-    "initialFailures": 7,
-    "finalAffectedCasesPassed": 22,
-    "uniqueFocusedCasesCovered": 98,
-    "unaffectedInitialCaseFiles": 12,
-    "strictRoots": 15,
+    "mainReviewSha256": "29025ca327b0cfd6f3c73ba937c6ad7f8be7f00a7181814dd51c5572fce1b305",
+    "focusedCasesPassed": 335,
+    "strictRoots": 7,
     "strictAmbientFiles": 6,
-    "strictActualGraphFiles": 3501,
+    "strictActualGraphFiles": 1753,
     "strictDiagnostics": 0,
     "stockPrebuild": true,
     "stockFullWebsiteBuild": true,
     "stockReviewVerifier": true,
     "reviewSourceFiles": 1591,
-    "reviewInputs": 1779,
+    "reviewInputs": 1781,
     "viewerFiles": 54,
     "unchangedExistingPackages": 24,
     "allFourRuntimeSourcesAligned": true,
+    "allFourLearnerRuntimesUnchanged": true,
     "modelsUnchanged": 137,
     "modelPathsUnchanged": 144,
     "modelBytesUnchanged": 199072480,
-    "allFourEmittedModelsBrowserLoaded": true,
-    "regionalAndShoulderBrowserReplay": true,
-    "lazyFdaReviewBoundaryUnchanged": true,
-    "sourceAndTeachingApprovalsTransferred": false,
+    "optionalExactStepNewTabsBrowserVerified": true,
+    "syntheticParentContextRetained": true,
+    "browserFixtureOnly": true,
+    "realSignedInOrAcquiredStudyAcceptance": false,
     "privateDecisionStateRead": false,
     "normalPreviewChanged": false,
     "clinicalApproval": false,
