@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited independently verified filtered authored source plus8recipes,6Website UI/parser/test paths,1original authored note stored as rawUTF8text and1old test preimage. No generated source/binding/inventory/coverage/build metadata, raw TAP/type/process/browser/screenshot/private evidence or model/media/scans/masks/private identifiers/decisions. Not whole/private/runnable off-device recovery; no installation/restart/refresh/deployment or permission expansion.
+Inherited independently verified filtered authored source plus3original metadata/type-verification/recovery recipes. No product changes, raw graph/type/compiler/process/build/browser/screenshot/private evidence, generated bindings or data/model/media/scans/masks/private decisions. Not whole/private/runnable off-device recovery. No preview cutover or public deployment.

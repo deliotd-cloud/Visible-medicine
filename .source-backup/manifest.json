@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T10:48:56.735Z",
+  "at": "2026-10-23T10:58:42.899Z",
   "sourceIdentity": {
     "sourceReceiptSha256": "7a85dfdc8fb90e2a3a650166214ba8424e6e6f4b5eaf8b2fd5b6a5c23b76e8ff",
+    "typeResultSha256": "bacb4ba7c5947c5c26c2c49889a37513dabcd45a7b8b65da03780040b7a6e551",
     "atlasHead": "dab0c8ffa6986a57f8456303d47fa675a37055cf",
     "atlasTree": "47ff750bbc04bee840915ee5be61f00d8f1506b5"
   },
-  "parent": "23c64f61041fde9bb8eb48ff975db905e14682f2",
-  "gitParent": "23c64f61041fde9bb8eb48ff975db905e14682f2",
+  "parent": "d4cdd66ac0b66a3971d2b79075df57fc17731f8b",
+  "gitParent": "d4cdd66ac0b66a3971d2b79075df57fc17731f8b",
   "files": [
     {
       "path": "app/globals.css",
@@ -16590,6 +16591,21 @@
       "sha256": "e83550441cc458d026bdf700f597f2444224aa0146cfc753ef5a86ea6817a783"
     },
     {
+      "path": "pending/guided-page-types-20261023/coordination/checkpoint-guided-page-types-20261023.mjs",
+      "bytes": 8351,
+      "sha256": "95a825f7554ea2874e4d548f145f002f49575c48b65505a4aa1f928ea9f6adb9"
+    },
+    {
+      "path": "pending/guided-page-types-20261023/coordination/guided-page-type-graph-inspect.mjs",
+      "bytes": 7200,
+      "sha256": "46fd300a9f25f13086e7c240861cb290e1f9689a3b7302aa00936c9b323179b2"
+    },
+    {
+      "path": "pending/guided-page-types-20261023/coordination/verify-guided-page-types-20261023.mjs",
+      "bytes": 5013,
+      "sha256": "6ab96972a079b4e67b5365ee29f05ebeb80cba312791456a06f5a890d76ca2d4"
+    },
+    {
       "path": "pending/guided-region-website-ready-20261023/coordination/check-guided-region-controls-types-20261023.mjs",
       "bytes": 2882,
       "sha256": "a9f7591644ed48ec8184886008bcc211c31955a0682a77fa513e38dad431e035"
@@ -26551,49 +26567,31 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered authored source plus8recipes,6Website UI/parser/test paths,1original authored note stored as rawUTF8text and1old test preimage. No generated source/binding/inventory/coverage/build metadata, raw TAP/type/process/browser/screenshot/private evidence or model/media/scans/masks/private identifiers/decisions. Not whole/private/runnable off-device recovery; no installation/restart/refresh/deployment or permission expansion.",
+  "scope": "Inherited independently verified filtered authored source plus3original metadata/type-verification/recovery recipes. No product changes, raw graph/type/compiler/process/build/browser/screenshot/private evidence, generated bindings or data/model/media/scans/masks/private decisions. Not whole/private/runnable off-device recovery. No preview cutover or public deployment.",
   "proof": {
-    "mainReviewSha256": "677a317ebba002de4d41496d9a4cdcfae7693fe92668ad97d9fce0f68f4b0d42",
-    "namedSourcePaths": 6272,
-    "productionFiles": 1111,
-    "nativeCases": 100,
-    "failures": 0,
-    "skipsOrCancellations": 0,
-    "focusedTypeRoots": 2,
-    "focusedTypeAmbient": 6,
-    "focusedTypeFiles": 565,
-    "focusedTypeDiagnostics": 0,
-    "typeScope": "Actual changed parser and Regional UI only; no module substitutions",
-    "actualPageSemanticTypesPassed": false,
-    "pageTypesResourceGatedAtHeapMiB": [
-      256,
-      384
-    ],
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "reviewSourceFiles": 1573,
-    "reviewInputs": 1742,
-    "reviewBinding": "50fa169527b1c504d9503352fa228f6ecdeb7a2e417c3bda1bbc5508c90290b0",
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "sourceGeometryTeachingAssetsPackagesAccessUnchanged": true,
-    "browserViewport": {
-      "width": 1280,
-      "height": 720
-    },
-    "browserNativeGetKeyboardHistoryVerified": true,
-    "browserSyntheticOnly": true,
-    "browserHydrationOrAuthenticatedAcceptance": false,
-    "ownerPreviewChanged": false,
-    "privateDecisionsReadOrMigrated": false,
-    "previewChanged": false,
-    "installed": false,
+    "mainReviewSha256": "031aa60f271aa0e8e9737f52288bec556a979d9005688befa6330ee87af7bafa",
+    "actualCompleteNamedPageTypesPassed": true,
+    "strictConfiguredCompilerOptionsUnchanged": true,
+    "moduleSubstitutions": false,
+    "roots": 2,
+    "ambient": 6,
+    "sourceFiles": 779,
+    "diagnostics": 0,
+    "heapMiB": 768,
+    "elapsedMilliseconds": 6894.7175,
+    "observedFinalPeakRssKiB": 688456,
+    "observedResultHeapUsedBytes": 465423216,
+    "sourceReceiptSha256": "7a85dfdc8fb90e2a3a650166214ba8424e6e6f4b5eaf8b2fd5b6a5c23b76e8ff",
+    "productSourcePathsChanged": 0,
+    "buildOutputsChanged": 0,
+    "priorPageFailuresPreserved": true,
+    "fullProjectTypesPassed": false,
     "wholeSuitePassing": false,
+    "authenticatedAcceptance": false,
     "clinicalApproval": false,
-    "spatialRegistration": false
+    "spatialRegistration": false,
+    "previewChanged": false,
+    "installed": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
