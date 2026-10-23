@@ -1,0 +1,28 @@
+/* Presentation adapter only: native source geometry, controls and provenance remain intact. */
+.review-fda{height:100dvh;min-height:0;overflow:hidden;overscroll-behavior:contain}
+.review-fda .fda-reference{height:100%;min-height:0;max-width:none;margin:0;padding:10px;display:flex;flex-direction:column}
+.review-fda .fda-reference .fda-reference-heading{flex:none;gap:10px;margin-bottom:8px}
+.review-fda .fda-reference .fda-reference-heading h1{font-size:22px;margin:3px 0;letter-spacing:-.5px}
+.review-fda .fda-reference .fda-reference-heading p{font-size:11px;margin:3px 0}
+.review-fda .fda-reference .fda-reference-grid{flex:1;height:auto;min-height:0;max-height:none;grid-template-columns:175px minmax(0,1fr) 220px}
+.review-fda .fda-reference .fda-reference-main{min-height:0;display:flex;flex-direction:column}
+.review-fda .fda-reference .fda-reference-canvas{flex:1;height:auto;min-height:180px}
+.review-fda .fda-reference .fda-reference-toolbar,.review-fda .fda-reference .fda-reference-help{flex:none}
+.review-fda .fda-reference .fda-reference-toolbar{padding:7px;gap:5px}
+.review-fda .fda-reference .fda-reference-parts,.review-fda .fda-reference .fda-reference-info{min-height:0;overflow:auto;overscroll-behavior:contain;padding:12px 10px}
+.review-fda .fda-reference .fda-reference-info{grid-column:auto}
+.review-fda .fda-reference .fda-reference-info h2{font-size:18px}
+.review-fda .fda-reference .fda-reference-parts,.review-fda .fda-reference .fda-reference-list button,.review-fda .fda-reference .fda-reference-list button>span:last-child{min-width:0}
+.review-fda .fda-reference .fda-reference-list button>span:last-child{overflow-wrap:anywhere}
+@media(max-width:960px){
+ .review-fda .fda-reference .fda-reference-grid{display:grid;grid-template-columns:150px minmax(0,1fr);grid-template-rows:minmax(180px,1fr) minmax(80px,120px)}
+ .review-fda .fda-reference .fda-reference-parts{grid-column:1;grid-row:1/3;border-right:1px solid #dce5df}
+ .review-fda .fda-reference .fda-reference-main{grid-column:2;grid-row:1;order:initial}
+ .review-fda .fda-reference .fda-reference-info{grid-column:2;grid-row:2;border-left:0;border-top:1px solid #dce5df}
+ .review-fda .fda-reference .fda-reference-list{grid-template-columns:1fr}
+ .review-fda .fda-reference .fda-reference-canvas{min-height:100px}
+ .review-fda .fda-reference .fda-reference-help{font-size:9px;line-height:1.4;padding:8px 10px}
+ .review-fda .fda-reference .fda-reference-canvas-caption{font-size:9px;bottom:10px;left:10px;right:10px}
+ .review-fda .fda-reference .fda-reference-toolbar button{font-size:10px;padding:6px}
+ .review-fda .fda-reference .fda-reference-badge{font-size:10px;padding:5px}
+}

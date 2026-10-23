@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited independently verified filtered authored sources plus exact new read-only transport/registry types/local producer/stager/API/Vite guard/test source and raw documentation snapshots/coordination recipes. No geometry/catalogue, generated private registry/Review/runtime/binding/pilot metadata, emulator objects/state, node_modules, dist, images/logs/scans/identifiers/private decisions. Full evidence and generated/local data remain F-only; not whole/private/runnable off-device backup.
+Inherited verified filtered authored source plus declared Website adapter/test/producer source and coordination recipes. No geometry/catalogue/generated registry/Review/runtime/pins/bindings, private records/scans/identifiers, node_modules, dist, emulator state, images/logs/type evidence. All complete generated/local evidence remains F-only; not whole/private/runnable off-device backup.
