@@ -1,13 +1,23 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T02:16:43.985Z",
+  "at": "2026-10-23T02:39:26.059Z",
   "sourceIdentity": {
-    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
-    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
-    "sourceReceiptSha256": "bd073fb1d6134af415e8b77f82ba218a1756e47af2c2ab503459e711ea8a6cc8"
+    "parentReceiptSha256": "bd073fb1d6134af415e8b77f82ba218a1756e47af2c2ab503459e711ea8a6cc8",
+    "proposalRows": [
+      {
+        "path": "components/AtlasWorkspaceNavigation.tsx",
+        "bytes": 5420,
+        "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
+      },
+      {
+        "path": "tests/atlas-workspace-simplification.test.ts",
+        "bytes": 5858,
+        "sha256": "4de68da5696a4d4464eea47a2169d6cd216a34332c06968783fba636e78524ca"
+      }
+    ]
   },
-  "parent": "a1ce54487a239d9043b6c417c7b01b37f83344cc",
-  "gitParent": "a1ce54487a239d9043b6c417c7b01b37f83344cc",
+  "parent": "c0d9fb14d38f38f8be54894cce213f9153722417",
+  "gitParent": "c0d9fb14d38f38f8be54894cce213f9153722417",
   "files": [
     {
       "path": "app/globals.css",
@@ -18355,6 +18365,36 @@
       "sha256": "64318525c66efc50a038e443d259632e00f69e0f7b212d5088a3413f6ab71ffd"
     },
     {
+      "path": "pending/modality-help-clarity-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
+      "bytes": 5420,
+      "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
+    },
+    {
+      "path": "pending/modality-help-clarity-20261023/candidate/tests/atlas-workspace-simplification.test.ts",
+      "bytes": 5858,
+      "sha256": "4de68da5696a4d4464eea47a2169d6cd216a34332c06968783fba636e78524ca"
+    },
+    {
+      "path": "pending/modality-help-clarity-20261023/coordination/checkpoint-modality-help-clarity-20261023.mjs",
+      "bytes": 14997,
+      "sha256": "21a27af30888604fa8b92d2d989e35365cb6082dfb09eecf9b773d6f2e01d2da"
+    },
+    {
+      "path": "pending/modality-help-clarity-20261023/coordination/modality-help-clarity-20261023.mjs",
+      "bytes": 3279,
+      "sha256": "a60da228f68f1df7586eb5de2fb7878d6a3d12f865d182679909ecc8c4d1fc7a"
+    },
+    {
+      "path": "pending/modality-help-clarity-20261023/preimages/atlas-workspace-simplification.test.ts.raw",
+      "bytes": 5853,
+      "sha256": "bd7aed9867c51c839a10eb8fc981068244c24be92d7e4e12e3a3bd3a32ef5e3d"
+    },
+    {
+      "path": "pending/modality-help-clarity-20261023/preimages/AtlasWorkspaceNavigation.tsx.raw",
+      "bytes": 5415,
+      "sha256": "b6b742dfcbdc5655a9b958bb6bd9e28f4f05d21e92297f004b573ff9f36d621d"
+    },
+    {
       "path": "pending/neck-landmark-xray-20261022/atlas/app/body-content.ts",
       "bytes": 82967,
       "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
@@ -24756,27 +24796,25 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus2main coordinator recipes and4explicit original/current test/validator code/preimage paths. Omits all generated delivery fixtures/catalogues/builds/Review/runtime/model data, private packets/asset maps, decisions/scans/masks, raw logs/type/resource records and canonical Git ancestry. Full source closure/build manifest/evidence stays F-only. Not full/private/runnable off-device recovery. No preview/server/restart/install/deploy, permission/entitlement widening, clinical approval or patient-space registration.",
+  "scope": "Inherited verified filtered source plus2main coordinator recipes,2literal-only UI/test edits and2whole exact original source preimages. Browser screenshots/AX, auth-triage notes, local runtime/storage records and generated/private build/Review/model/scan/decision data remain F-only. No full/private/runnable off-device recovery, normal preview install/restart/refresh, authentication change, permission/entitlement widening, public deployment, clinical approval or patient registration. Thin copy proposal is not integrated into the sealed6130-path built candidate.",
   "proof": {
-    "mainReviewSha256": "2dbc45a4cd17edf0c79f4189c7d78be9f5493f66f47c7f34aa44f9717550e0c9",
-    "hostNamedPaths": 6130,
-    "changedExistingPaths": 3,
-    "addedPaths": 4,
-    "wholeOriginalTestsInverseVerified": true,
-    "validatorUnchanged": true,
-    "nativeCasesPassed": 78,
-    "currentDeliveryTests": 41,
-    "transitionGuards": 3,
-    "lectureFeatureCases": 34,
-    "actualPrebuildPassed": true,
-    "actualProductionWebsiteBuildPassed": true,
-    "buildFiles": 1110,
-    "buildOutputBytes": 406636283,
-    "fullTypesResourceFailure": true,
-    "typeHeapCapMiB": 384,
-    "lectureRows": 1104,
-    "lectureContentAndLinksUnchanged": true,
-    "privateDecisionsReadOrMigrated": false,
+    "mainReviewSha256": "fbf2d898d4a1dd9e9ddacf6d023816f5c509c868b5945b1eb0add7fd1eca1a41",
+    "anonymousRuntimeQa": true,
+    "initialObservedViewport": "1280x720",
+    "retainedScreenshotPixels": [
+      "1280x720",
+      "1265x712"
+    ],
+    "builtSourceAndBuildBytesUnchanged": true,
+    "noScanOrMeshGpuAcceptance": true,
+    "signedOutReviewGateObserved": true,
+    "auth404ClassifiedEnvironmentOnly": true,
+    "ownedQaServerStopped": true,
+    "nativeCasesPassed": 5,
+    "oldExpectationRedCases": 1,
+    "wholeCodeAndTestInversesVerified": true,
+    "literalOnlyCopyProposal": true,
+    "notIntegratedIntoBuiltCandidate": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
