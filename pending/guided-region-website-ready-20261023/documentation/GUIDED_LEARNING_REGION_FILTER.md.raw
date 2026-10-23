@@ -1,0 +1,34 @@
+# One region filter for Guided learning
+
+The main catalogue uses one native GET form for search, view and region. Its
+region allowlist is the existing Atlas navigation list, not a new anatomy
+mapping. Selecting a region applies to the regional 3D results and the linked
+head catalogue together. Head CT/MRI sequences appear only for All regions or
+Head & neck. Other regions in CT/MRI show an explicit unavailable state, with
+separate choices to browse that region's 3D tours or head imaging tours.
+
+Search, view changes and Clear search retain the selected region in the URL.
+Browser Back/Forward therefore restores the full catalogue filter. A regional
+search opens its results in All tours/3D; CT/MRI never auto-expand 3D controls.
+Embedded regional results suppress their duplicate search/region controls.
+Other uses of the regional component keep their original interactive defaults.
+No matching tours means zero results, not a fallback to another region.
+
+These are discovery controls. They do not start tours, open scans, store scores,
+grant access, add mappings or approve content. Existing canonical tour links,
+source revisions, draft notices, independent entitlements and approval gates
+are unchanged. Regional 3D surfaces and CT/MRI remain separate subjects unless
+independently validated; this is not spatial synchronization.
+
+The isolated candidate has native page/parser/component tests, an actual
+production build, and a 1280×720 browser check of native GET navigation using
+synthetic catalogue metadata. That fixture is server-rendered, not a hydrated
+or authenticated Website session, and loads no patient study or 3D model.
+Strict configured checks cover the actual changed parser and regional controls.
+The full actual page's larger import graph failed at 256 and 384 MiB heap limits;
+that semantic type check remains resource-gated, not passed or replaced by the
+focused scope. Whole-project, authenticated and clinical acceptance remain open.
+
+The owner's normal local preview is unchanged. All browser evidence and failed
+resource checks stay on F drive; only selected authored source is eligible for
+the separate verified GitHub source backup.
