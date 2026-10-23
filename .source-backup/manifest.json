@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T04:05:33.987Z",
+  "at": "2026-10-23T04:32:10.696Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "b3d5ddd1ace8d5bfe7ff9ce8abba0b3fca9254de37724956970321b4eee8b03a",
-    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
-    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045"
+    "atlasHead": "ed3c8cc0e99f6cf850a915d7a08de2e6489c1b6f",
+    "atlasTree": "0305c15be5fb58ea7729a3849bbbdb6e1e40649d",
+    "base": "9e1407629bd6f85061537c9f013fd72e4543e0da",
+    "sourceReceiptSha256": "1848ea68a67f87cf505e0b92366d2578c8472d8adb5d3f3231df4904fd55e5cc"
   },
-  "parent": "c31403aed5f586c4e8682de66c77c4a80a08d78a",
-  "gitParent": "c31403aed5f586c4e8682de66c77c4a80a08d78a",
+  "parent": "5809a091713ed0f658827b73d39049b0c12c5ad4",
+  "gitParent": "5809a091713ed0f658827b73d39049b0c12c5ad4",
   "files": [
     {
       "path": "app/globals.css",
@@ -16125,6 +16126,56 @@
       "sha256": "1ff0122debc54ff429998ac9bfc669a0d2ced1563a9c3101024c655db6e9b930"
     },
     {
+      "path": "pending/digital-vein-us-20261023/atlas/app/body-content.ts",
+      "bytes": 83327,
+      "sha256": "74c9db63ce6699fd9384bdb89d96b142e6d053423fc5fb144dbc23742c474ac0"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/atlas/content/digital-vein-ultrasound.ts",
+      "bytes": 1864,
+      "sha256": "ecab34ab09296093e3663b9a9da2fe22f5e89a57f29d96e560f536626d9d9a06"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/atlas/lib/digital-vein-ultrasound.ts",
+      "bytes": 1227,
+      "sha256": "73bce70782ce307e5aebdb291d002dfb6489929ebb3c5f3aa4f082970978366e"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/atlas/scripts/check-digital-vein-us-types.mjs",
+      "bytes": 1019,
+      "sha256": "e60f386f9a860bcbce8f6e17dfb7acab830fedbae9bba54b702f0f1cdf60424c"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/atlas/scripts/test-digital-vein-ultrasound.mjs",
+      "bytes": 15436,
+      "sha256": "f9ba25e48e8e585d52db5eafab7e70576ff7030cdb550da06f4d7936b94c9101"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/coordination/checkpoint-digital-vein-us-20261023.mjs",
+      "bytes": 10751,
+      "sha256": "fc8965909066f8a961a943f43d9ad672157979ca228e3b5ab025ab5a8d62b119"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/coordination/prepare-digital-vein-us-20261023.mjs",
+      "bytes": 3386,
+      "sha256": "3060305f5ca3a46b367a20409aa13e7f59ccc89ef5c5241ff4e36e4d753850e0"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/coordination/select-teaching-batch-20261023.mjs",
+      "bytes": 2285,
+      "sha256": "9f41e347f7ff940130f3bf213ad29da7c0ebf89f0e37d1db2a13dfd09aced3b6"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/coordination/verify-digital-vein-us-20261023.mjs",
+      "bytes": 2286,
+      "sha256": "7739b3f15043a1636096cf41340a69ca59d7eb4e51ffbf59b252f1656572a24c"
+    },
+    {
+      "path": "pending/digital-vein-us-20261023/preimages/body-content.ts.raw",
+      "bytes": 83121,
+      "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
+    },
+    {
       "path": "pending/expanded-viewer-verified-20261022/coordination/admit-expanded-review-delivery-20261022.mjs",
       "bytes": 4238,
       "sha256": "281263f640841242002efd515284947a80dc9cbf8712b0abc47be8c546a6dbe0"
@@ -25066,29 +25117,42 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus two authored composition/recovery recipes, six selected authored source/test/binder files and three exact authored preimages. All generated Review/viewer/runtime/model/build/catalogue/pin/revision metadata, private data/decisions/scans/masks, raw/type/browser/coordination evidence and raw canonical ancestry stay F-only. Not whole/private/runnable off-device recovery. No owner-preview install/restart/refresh/server, public deploy, fee, access/identity/approval change or decision migration.",
+  "scope": "Inherited verified filtered source plus five explicitly selected Atlas source/test files, four authored coordination/selection recipes and exact resolver preimage. Generated metadata, source maps/models, raw logs/research, Markdown evidence, decisions/scans/masks/identifiers/builds and canonical history excluded. Full source/metadata recovery is local F checkpoint only; not whole/private/runnable remote backup. No Website import/preview/restart/refresh/deploy or permission/fee/approval change.",
   "proof": {
-    "mainReviewSha256": "889c226e525c28bf4c5265a7456650b77ec9631888f756b1c41fe912bb2274e2",
-    "sourcePaths": 6146,
-    "reviewInputs": 1735,
-    "reviewSourceFiles": 1567,
-    "staleBindingRefused": true,
-    "exactInputDeltaAndOriginalInverseVerified": true,
-    "targetedNativeCasesPassed": 64,
-    "zeroSkipsOrCancellations": true,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "packagesUnchanged": true,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "buildFiles": 1110,
-    "privateDecisionsReadOrMigrated": false,
-    "fullProjectTypesPassing": false,
-    "authenticatedAcceptance": false,
+    "mainReviewSha256": "19e1a37f29b9ce25ff4029b87daa8dc30ff49dd088163dc1943c613ff65505c1",
+    "native": {
+      "tests": 10,
+      "pass": 10,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "changedPlacements": 6,
+      "preservedPlacements": 9930,
+      "changedWorksheets": 6,
+      "mutationsRefused": 282,
+      "forgedPacketsRefused": 30,
+      "staleRequestsRefused": 18,
+      "storageCalls": 0,
+      "ssrSelections": 6
+    },
+    "focusedTypes": {
+      "roots": [
+        "lib/digital-vein-ultrasound.ts",
+        "content/digital-vein-ultrasound.ts"
+      ],
+      "sourceFiles": 573,
+      "diagnostics": 0,
+      "fullProject": false,
+      "options": "Existing configured strict options; only noEmit/incremental execution flags set"
+    },
+    "threeActualProducersChecked": true,
+    "normalVeinVisibilityValidated": false,
+    "websiteIntegrated": false,
+    "allOtherSourceBytesExact": true,
+    "clinicalApproval": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
-    "clinicalApproval": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,
