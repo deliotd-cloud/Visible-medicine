@@ -1,0 +1,15 @@
+# Hip relationships reasoning draft
+
+This batch adds three original, revision 1, draft anatomy questions. Existing `limb-*` reasoning concepts already cover piriformis, obturator internus, both gemelli, and quadratus femoris; this batch does not revise them. The implementation is `lib/hip-relationships-reasoning.ts`; its exact identity record is `content/hip-relationships-reasoning-pins.json`, generated against parent source `39dbb747a44feb0f4bc83e757310c5e3d1b49580`. The six records below bind to one BodyParts3D/isa source file per side. All have region `thigh` and muscle tissue by default. Ordered source regions are `[thigh, pelvis]` except tensor fasciae latae, which has `[thigh]`.
+
+| Concept suffix | Right ID / FMA / file / SHA-256 | Left ID / FMA / file / SHA-256 |
+| --- | --- | --- |
+| obturator-externus | `vm:anatomy:body:thigh:right:muscle:right-obturator-externus` / FMA22326 / FJ1425 / `ccf94b03dc0f4c669c2ac96441127c17ad9287edc0001b5923879df99c75f3ae` | `vm:anatomy:body:thigh:left:muscle:left-obturator-externus` / FMA22327 / FJ1425M / `706257705ecc5fd6b12fa106eceea754e1200a68745e1d474ab4098e186c402a` |
+| gluteus-minimus | `vm:anatomy:body:thigh:right:muscle:right-gluteus-minimus` / FMA22332 / FJ1420 / `61ebd1c4cd97adb69324aa74325c05425dbf37f83862a34c6a2f7400c3c017cd` | `vm:anatomy:body:thigh:left:muscle:left-gluteus-minimus` / FMA22333 / FJ1420M / `d4fd7a31338758607094164c2d8e3a39f8cd1f5baee7624a0391a7ddd8168272` |
+| tensor-fasciae-latae | `vm:anatomy:body:thigh:right:muscle:right-tensor-fasciae-latae` / FMA22425 / FJ1438 / `181553f080c8fad285e54ebca81432a691442a44d2e23d2dde6c21e000bc9ab0` | `vm:anatomy:body:thigh:left:muscle:left-tensor-fasciae-latae` / FMA22426 / FJ1438M / `4a1bf02b6a7b3574d60f61ed9bbd264e9e52693b9b4a68dbfb6ac6474245f272` |
+
+## Sources and limits
+
+University of Washington Radiology's individual [Muscle Atlas pages](https://rad.uw.edu/muscle-atlas) support the ordinary attachment and action facts. [UAMS's lower limb table](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/) corroborates the trochanteric fossa attachment of obturator externus. Main checked the indexed official UAMS page after a direct-fetch timeout; this is not an imported reference asset. These links establish teaching facts, not the identity or accuracy of a specific mesh. The UW obturator externus innervation field describes another muscle, so this batch makes no innervation claims. No nerve-root, pathology, diagnosis, procedure, imaging-visibility, registration, or observed-motion claim is included.
+
+The BodyParts3D CC-BY-4.0 credit and source hold remain as already configured. All new question and explanation text is original project text under MIT; no UW or UAMS image, table, or other media was copied or imported. The UW images are copyright protected and have not been licensed for this batch. Source meshes represent named anatomy, not a demonstrated individual's attachments or function. Questions remain draft pending revision-bound radiologist review; no clinical sign-off or release approval is implied.

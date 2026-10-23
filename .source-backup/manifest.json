@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T11:59:10.497Z",
+  "at": "2026-10-23T12:20:38.208Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "ce7ce83661f3c21ca09e9116250c58ea6c57502d36e99766c163c1eb0f98d6fe",
-    "atlasHead": "39dbb747a44feb0f4bc83e757310c5e3d1b49580",
-    "atlasTree": "84e9efcd2bfd6c67901d2455907908489200678c",
-    "reviewBinding": "b0f49b9d2ddbe7e0c9432263b2b7155782d6fa174fbdc435d6b47a70852c66de"
+    "sourceReceiptSha256": "5aaae85bd8efef3ffdb439ae1e88b2f3dc5b660031232507be296f76e4eca919",
+    "atlasHead": "be9b53d96c37f1ea973e60f5981ad80db0893177",
+    "atlasTree": "f94d89f76d1b29f2aeb5d66d23dd5b0cf5a55ff6"
   },
-  "parent": "e780bc61e3bd21ce3d30ee76568caa88b2f8ea9b",
-  "gitParent": "e780bc61e3bd21ce3d30ee76568caa88b2f8ea9b",
+  "parent": "f64b22d8aa3810a6a123a42a514cd7a797bebd6f",
+  "gitParent": "f64b22d8aa3810a6a123a42a514cd7a797bebd6f",
   "files": [
     {
       "path": "app/globals.css",
@@ -18156,6 +18155,91 @@
       "sha256": "1da8567fdace98f737a63de69818b69202b8963c87851134dadd6b3c84cf8482"
     },
     {
+      "path": "pending/hip-reasoning-20261023/atlas/docs/HIP_RELATIONSHIPS_REASONING.md.raw",
+      "bytes": 3158,
+      "sha256": "9e48079227d52077e2cd504e1db7b83b32557cd8de4fc0d0759feda257387138"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
+      "bytes": 37107,
+      "sha256": "01a0fa1d4dfa31bac1f60a6c456a4a9f5eadea35b5a4782207a84ce3bd10157f"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/lib/hip-relationships-reasoning.ts",
+      "bytes": 4633,
+      "sha256": "26ebcd56d95a261231eef97a596b5b200972abc5d60f661a2f6f85742ae34b1c"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/lib/reasoning-questions.ts",
+      "bytes": 14891,
+      "sha256": "8dd67839ac8afb59864d7ae022207f5a5190898813261e0b4e5a2ac67391d2c4"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 357684,
+      "sha256": "d55f207636a54a01c5f9c37bb6255cbb627b428bd636e8660f12281900b497f0"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/package.json.raw",
+      "bytes": 87825,
+      "sha256": "0e156c9a0e6546a680dff4705006878eac47cee33d296fdbf6e35812cb79ccc9"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/scripts/check-hip-relationships-types.mjs",
+      "bytes": 1028,
+      "sha256": "3af2c07041aae705bed8ef0e8699e00bc9591b8570c7be3c82984900e07c9b85"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/scripts/pin-hip-relationships-reasoning.mjs",
+      "bytes": 1981,
+      "sha256": "a7d9a54c650c1e2e8e5c2603eb2973662296273fe1c9e9e75e9b5560b9defe3d"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/scripts/test-hip-relationships-reasoning.mjs",
+      "bytes": 12835,
+      "sha256": "6a10bfda19eacc64c48ba80be8bf2f888f5ee618a01db602ca85fc9aaef574b5"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 53713,
+      "sha256": "9b24baf900ec867d9899c814e946633a9646726e29746711b66ff3a70d8bdde0"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/coordination/build-ventricular-atlas-20261023.mjs",
+      "bytes": 1196,
+      "sha256": "68955dec2251a304847ebce04a0d6d36e9b5dcee1c2ff91ae79c161a4838e018"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/coordination/checkpoint-hip-reasoning-20261023.mjs",
+      "bytes": 8905,
+      "sha256": "ddd924ae6092f44bc23d4961b70e0d5a92fb64f29194a978c1515f737adb905d"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/coordination/prepare-hip-reasoning-20261023.mjs",
+      "bytes": 3625,
+      "sha256": "d05316e80d02336384b2de3160606f93f5016cc786221ba2cf411bc4e7279aaa"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/coordination/run-hip-reasoning-20261023.mjs",
+      "bytes": 3417,
+      "sha256": "75ec673657217c45360ce80b1706d126489556ab4d47286f075cdc5cd021179a"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/coordination/seal-hip-reasoning-20261023.mjs",
+      "bytes": 7309,
+      "sha256": "28ef54f3c25d047d51bcb30a37c8762ffb878c67a042527847acc6697c116508"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+      "bytes": 2027,
+      "sha256": "f5183aed51dfacdf292f692fb50527bed103c7892ee3072764b77c876b6b228d"
+    },
+    {
+      "path": "pending/hip-reasoning-20261023/coordination/verify-hip-reasoning-20261023.mjs",
+      "bytes": 6083,
+      "sha256": "d560f9a09dbb7cbf60d479227ba0fa3cf507d0d6684f3a84afd2b5f52e2bab5b"
+    },
+    {
       "path": "pending/historical-admission-assurance-20261022/coordination/checkpoint-historical-admission-assurance-20261022.mjs",
       "bytes": 12981,
       "sha256": "cabe4fb0d9d80093ec4f7582c2bac14047f62ced1e06444112516c61e9cdbf0a"
@@ -26742,45 +26826,36 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered authored source plus7main source/integration/proof/fixture recipes,11explicit original Website code/test files and1original prose rawUTF8 snapshot. No generated import/binding/catalog/coverage metadata, raw snapshots/type/process/test/build/browser/screenshot/private evidence, model/media/scan/mask/patient identifier/clinical decision. Not whole/private/runnable off-device recovery. No installation/public deployment/fee/access/permission/clinical/spatial expansion.",
+  "scope": "Inherited verified filtered authored source plus7main recipes,6Atlas code/test files and4original project prose/package raw snapshots. No generated identity pins/catalog/renderer/display metadata or raw diagnostic/type/build/browser/private evidence. No models/media/scans/masks/patient identifiers/decisions. Not whole/private/runnable off-device recovery. Preview/canonical installation unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "68b574f6a896e226037babe515c0a5667ae3ccd79508fc23b9e0242ff3027466",
-    "directExactRegionalTourEntry": true,
-    "autoplay": false,
-    "arbitraryDestinationAndMixedIntentRefused": true,
-    "oldAssertionsPreserved": true,
-    "generatedLearnerAndReviewCoherent": true,
-    "gitSourceBlobReadback": 1574,
-    "reviewInputs": 1743,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "initialCombinedTests": 98,
-    "initialCombinedPass": 94,
-    "initialCombinedFail": 4,
-    "correctedNewRootTests": 7,
-    "correctedNewRootPass": 7,
-    "unchangedOtherCasesPassed": 91,
-    "singleFresh98CasePassClaimed": false,
-    "actualStrictNamedTypeFiles": 877,
-    "actualStrictNamedTypeDiagnostics": 0,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "browserNativeCatalogueKeyboardHistoryAndGetVerified": true,
-    "browserHydrationOrModelAcceptance": false,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
-    "modelAssetsAndAccessUnchanged": true,
-    "sourceGeometryTourDefinitionsAndTeachingUnchanged": true,
-    "clinicalApprovalsTransferred": false,
+    "mainReviewSha256": "950de7a02f241055da6c5e0a3eb2ad07fa6e2f015cbbca1da74cc708b7cf2dda",
+    "newDraftConcepts": 3,
+    "newRootSelections": 6,
+    "concepts": 200,
+    "sourceSelections": 360,
+    "previousConceptsPreserved": 197,
+    "previousSessionsPreserved": 354,
+    "changedTeachingWorksheets": 6,
+    "unchangedTeachingWorksheets": 1098,
+    "unchangedTopicPlacements": 9936,
+    "broadPracticeChecks": 23012,
+    "broadIdentityNegatives": 5665,
+    "newIdentityNegatives": 214,
+    "newPracticePaths": 48,
+    "tamperedPacketsRefused": 30,
+    "stalePostsRefusedBeforeStorage": 6,
+    "focusedTypesFiles": 595,
+    "focusedTypesDiagnostics": 0,
+    "completeAtlasBuildPassed": true,
+    "assetsDependenciesSourceHoldsUnchanged": true,
     "privateDecisionsReadOrMigrated": false,
+    "websiteIntegrationPending": true,
     "wholeSuitePassing": false,
-    "fullProjectTypesPassed": false,
-    "authenticatedAcceptance": false,
     "clinicalApproval": false,
-    "spatialRegistration": false,
+    "patientSpaceRegistration": false,
     "previewChanged": false,
-    "installed": false
+    "installed": false,
+    "spatialRegistration": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
