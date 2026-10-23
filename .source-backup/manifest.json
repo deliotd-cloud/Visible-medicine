@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T10:06:34.693Z",
+  "at": "2026-10-23T10:27:56.637Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "dd50ff58d146382f6b9ba56bbd490f60c05327b0160faad2f602351b7fe10fc5",
+    "sourceReceiptSha256": "844ebfc007eeb515b1985f005f20109c9c48794279dcf60139692379f7b165ce",
     "atlasHead": "dab0c8ffa6986a57f8456303d47fa675a37055cf",
     "atlasTree": "47ff750bbc04bee840915ee5be61f00d8f1506b5"
   },
-  "parent": "46eeb8cacf9f2e628b458d01d09ff9393f2dc5ea",
-  "gitParent": "46eeb8cacf9f2e628b458d01d09ff9393f2dc5ea",
+  "parent": "0a4c01b0a7e74f4af529f6a6b020e53ec4801c67",
+  "gitParent": "0a4c01b0a7e74f4af529f6a6b020e53ec4801c67",
   "files": [
     {
       "path": "app/globals.css",
@@ -25435,6 +25435,86 @@
       "sha256": "6be35eca13fe5f0d6a2b6c876aab1cf35c4086b1af60c398f79f07f0ec023f87"
     },
     {
+      "path": "pending/upper-cervical-website-20261023/coordination/admit-upper-cervical-coverage-20261023.mjs",
+      "bytes": 6407,
+      "sha256": "1149211f58f314044d6c50e42b7ea4590d87ba69767d8485954a497402b6d41b"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/coordination/check-upper-cervical-website-types-20261023.mjs",
+      "bytes": 2935,
+      "sha256": "f2e5cc161b1c7eb1f7a9effd565c828fb53eb8f72c2ff56acc1bd3b6a9949959"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/coordination/checkpoint-upper-cervical-website-20261023.mjs",
+      "bytes": 11673,
+      "sha256": "1ab2766da7b4e9c832ee2e90e39f4a22cce8101389518293d2d0b2d0455def46"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/coordination/integrate-upper-cervical-website-20261023.mjs",
+      "bytes": 9486,
+      "sha256": "1f8276a79ef212f330f73e0201566191143610235907a8f3eecfc1051c34136c"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/coordination/verify-upper-cervical-website-20261023.mjs",
+      "bytes": 13756,
+      "sha256": "cfdb58f9da71afa9277ff8903861cba75c80c7ffd909599e6c309639e7560384"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/preimages/lib/anatomy-coverage-view.ts.raw",
+      "bytes": 5290,
+      "sha256": "d7b68ee714a5bb753fa0b3449a315dcf49ad37ac57587ebb6df71fc9450a9330"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/preimages/lib/atlas-delivery-policy.ts.raw",
+      "bytes": 493,
+      "sha256": "e15901477c60e3eb2d7499042ff5afb89e4cff0d7a789cc3f5586ca52553bc67"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/preimages/scripts/check-anatomy-coverage.mjs.raw",
+      "bytes": 4552,
+      "sha256": "ca90989871289d1690f88e267da67c17fc86f54a90f9f644e2d6e30a8f094270"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/preimages/scripts/import-clinical-review.mjs.raw",
+      "bytes": 6751,
+      "sha256": "4ffaf14870efccd4cc62d487672945d2b21760c24cccbb8d54f7a44ea26f7283"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/preimages/tests/current-atlas-delivery.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "5f4f771bc5316bd5ba98469103a793f0467062aecad3986f11632d16645cd700"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "f06c58a250b74075b46841264185ec2e3d30a44d446a3375b153393844f12a72"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "97dc5b85f28fd736db4b2a4058f560353676cb595026b355b08320e09a945c54"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "8a0c1abb1083329ccc52b46d9957f7867c4e07b6eba414312576a84bfe484ef4"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "94f670542cd6219e1640c8394a6ef7d7fcfce957a2aaf2e036e9214149145e6a"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "59b6f70688aa7df4369b1c82b3f0763ab35f18f3d5fd66a695e69de149ee26ba"
+    },
+    {
+      "path": "pending/upper-cervical-website-20261023/website/tests/upper-cervical-current-delivery.test.mjs",
+      "bytes": 15905,
+      "sha256": "5c1c0ddbefef5a3aceabdc6c95ec30446ea73000fb78c467e7047aba5dcadab4"
+    },
+    {
       "path": "pending/ventricular-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
       "bytes": 35519,
       "sha256": "72a632437be62b52e5161c835dd6c33eaeadb92bbcd31009f0fe13cc0ad82dbc"
@@ -26391,36 +26471,45 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus9audit/integration/verification/recovery recipes,6Atlas code/test files and3original project prose/notice files. No generated source pins/catalog/renderer/display metadata or raw snapshots/TAP/type/browser/private evidence. No model/media/scan/mask/patient identifier/decision. Not whole/private/runnable off-device recovery. Installed Website/preview unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
+  "scope": "Inherited independently verified filtered authored source plus5integration/verification/recovery recipes,6selected Website code/test paths and5authored source preimages. No generated imports/pins/catalogs/coverage/renderer/build/source-input metadata, model/media/scan/mask/private identifier/decision or raw proof/type/process evidence. Not whole/private/runnable off-device recovery. No installation/restart/refresh/deployment or access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "8d36e632d0498ebc2b2320dc6b5a817fac39805b72794d316a07bfd0403f2b72",
+    "mainReviewSha256": "e43d3e7f6efe386d59e3412d25c6c0d3c8ae004148f576679c32ecb66bd3fa85",
     "newDraftConcepts": 4,
-    "newRootSelections": 8,
-    "concepts": 197,
-    "sourceSelections": 354,
-    "previousConceptsPreserved": 193,
-    "previousSessionsPreserved": 346,
-    "changedTeachingWorksheets": 8,
-    "unchangedTeachingWorksheets": 1096,
-    "unchangedTopicPlacements": 9936,
-    "broadPracticeChecks": 22758,
-    "broadIdentityNegatives": 5563,
-    "newIdentityNegatives": 280,
-    "newPracticePaths": 48,
-    "tamperedPacketsRefused": 40,
-    "stalePostsRefusedBeforeStorage": 8,
-    "focusedTypesFiles": 593,
-    "focusedTypesDiagnostics": 0,
-    "completeAtlasBuildPassed": true,
-    "assetsDependenciesSourceHoldsUnchanged": true,
+    "pairedSourceSelections": 8,
+    "totalConcepts": 197,
+    "totalRepresentedRoots": 354,
+    "nativeCases": 102,
+    "failures": 0,
+    "skipsOrCancellations": 0,
+    "focusedTypeRoots": 4,
+    "focusedTypeAmbient": 6,
+    "focusedTypeFiles": 603,
+    "focusedTypeDiagnostics": 0,
+    "reviewSourceFiles": 1573,
+    "reviewInputs": 1742,
+    "reviewBinding": "50fa169527b1c504d9503352fa228f6ecdeb7a2e417c3bda1bbc5508c90290b0",
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "coverageScopes": 4,
+    "coverageSourceInputs": 171,
+    "coverageImportedInputs": 145,
+    "coverageMetadataInputs": 26,
+    "allCoverageCountsGapsHoldsPreserved": true,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "buildHeapMiB": 384,
+    "newAssetsDependenciesFees": false,
     "privateDecisionsReadOrMigrated": false,
-    "websiteIntegrationPending": true,
-    "wholeSuitePassing": false,
+    "accessExpanded": false,
+    "authenticatedAcceptance": false,
     "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "spatialRegistration": false,
     "previewChanged": false,
     "installed": false,
-    "spatialRegistration": false
+    "wholeSuitePassing": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
