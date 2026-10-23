@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T08:46:50.902Z",
+  "at": "2026-10-23T09:15:32.247Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "3f5d73facac719c1054619ffb876086872646eaccb4444c5fc04d055df1342ba",
+    "sourceReceiptSha256": "8e41a9c68f78bc5d38d855f204b99b6a46ffd0f321d830c49474d239bb7c2e89",
     "atlasHead": "0327b6360e18b62563265d115df2b779c9397792",
     "atlasTree": "ec951ffcf6095d7ae7c1f6255206eb449f44f75e"
   },
-  "parent": "c86303833dba65865d3e24914483df0e75baf9a7",
-  "gitParent": "c86303833dba65865d3e24914483df0e75baf9a7",
+  "parent": "855cc288d69d4147d728273751555d46f63c33dd",
+  "gitParent": "855cc288d69d4147d728273751555d46f63c33dd",
   "files": [
     {
       "path": "app/globals.css",
@@ -25250,6 +25250,91 @@
       "sha256": "82315d3b3aaa0159f558fe155755c1d3de8766d92231ed926b6e8a2faefffbab"
     },
     {
+      "path": "pending/ventricular-website-20261023/coordination/admit-ventricular-coverage-20261023.mjs",
+      "bytes": 6401,
+      "sha256": "96b090f0ea3cfcc8ee034fd6459dbcc46fbf31241a6e3873d0edbd29fed08142"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/coordination/check-ventricular-website-types-20261023.mjs",
+      "bytes": 2909,
+      "sha256": "a37c624285fef90c508de31ae0cc28d84d56c24d7aa34adbde833d3bf557f9ae"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/coordination/checkpoint-ventricular-website-20261023.mjs",
+      "bytes": 12838,
+      "sha256": "fb1245fa270ea263e7719f801495997a776303f7893928391615ed5cec35313a"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/coordination/integrate-ventricular-website-20261023.mjs",
+      "bytes": 9706,
+      "sha256": "40fdc21dab11f4f48165b83fe5b0dc49717829ef146143cb6efcb5c7e0c8b2d7"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/coordination/verify-ventricular-website-20261023.mjs",
+      "bytes": 11433,
+      "sha256": "66a87f997772ad5c3ff9aa744238351925c718420adb1a7fecf3c6465e83e41a"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/preimages/lib/anatomy-coverage-view.ts.raw",
+      "bytes": 5290,
+      "sha256": "b894ecb4da8b677f10036243d9ef7727ce154e00de2b8b41891aac8e7cf3739c"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/preimages/lib/atlas-delivery-policy.ts.raw",
+      "bytes": 493,
+      "sha256": "aeb62f4bff9ea571fa66145ab8c7157963d9d2b87c4067c6bba32241d41a5eaa"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/preimages/scripts/check-anatomy-coverage.mjs.raw",
+      "bytes": 4552,
+      "sha256": "f06c00c0d3ed555a6ed605ae357750c8c0c7fa78b6669c07e6a1429388157eac"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/preimages/scripts/import-clinical-review.mjs.raw",
+      "bytes": 6751,
+      "sha256": "905db45e5388561214a34f14669713b3d5b2878b6a5558d0593a485e486dd020"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/preimages/tests/current-atlas-delivery.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "0f03c8eb4d5b69bc27626ab45ca6642cdd6b06d528c3416b0a90de6a57d7c862"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "d7b68ee714a5bb753fa0b3449a315dcf49ad37ac57587ebb6df71fc9450a9330"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "e15901477c60e3eb2d7499042ff5afb89e4cff0d7a789cc3f5586ca52553bc67"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "ca90989871289d1690f88e267da67c17fc86f54a90f9f644e2d6e30a8f094270"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "4ffaf14870efccd4cc62d487672945d2b21760c24cccbb8d54f7a44ea26f7283"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "d66e163d01fdb3586c19eec54a6834357de8d20c922996ef36fc36b407227380"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/website/tests/image-tools-escape.test.mjs",
+      "bytes": 4535,
+      "sha256": "01e3fc4b4c3f672ab8be6053061fa75a2993cefe553bf1b04b98eb29a7d1364b"
+    },
+    {
+      "path": "pending/ventricular-website-20261023/website/tests/ventricular-current-delivery.test.mjs",
+      "bytes": 15367,
+      "sha256": "58b2762d6da0803b058a83384d21bb7cfdf66e6397b72cf5e6034f2e4a294349"
+    },
+    {
       "path": "pending/window-drag-bound-20261023/candidate/lib/head-window-drag.ts",
       "bytes": 4281,
       "sha256": "02f1ccfe8b5f6fc5cfcec9ffacdbdc511b5fa079b63a60bb9fdd32b08c55effa"
@@ -26041,28 +26126,42 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus7authored recipes,6selected Atlas code/test files and3original project prose/notice files. No generated pins/catalog/source-renderer/source-input/build metadata or raw snapshots/TAP/browser/type/audit/coordination evidence. No scans, masks, private records/identifiers/decisions or assets. Not whole/private/runnable off-device recovery. Installed Website/preview unchanged; no deployment/fee/access/permission/clinical/spatial expansion.",
+  "scope": "Inherited independently verified filtered source plus5authored integration/verification/recovery recipes,7selected Website code/test paths and5authored source preimages. No generated import/pin/catalog/coverage/renderer/build/source-input metadata or raw worker/TAP/type/resource/coordination evidence. No model/media/scan/mask/private identifier/decision. Not whole/private/runnable off-device recovery. Nothing installed/restarted/refreshed/deployed; no fee/access/permission/clinical/spatial expansion.",
   "proof": {
-    "mainReviewSha256": "bd5b5d2647d5feb5ca8630e5597b2c854e271fee1cb3d06723dbae9d2f438b7b",
-    "newDraftConcepts": 3,
+    "mainReviewSha256": "0d0c90371bd48d3161441bb655cb9a2543c887c391d566bae9d3ed7b620ddf8b",
+    "newDraftQuestions": 3,
     "concepts": 193,
     "sourceSelections": 346,
-    "precedingConceptsPreserved": 190,
-    "precedingActualSessionsPreserved": 343,
-    "unchangedTopicPlacements": 9936,
-    "changedTeachingWorksheets": 3,
-    "unchangedTeachingWorksheets": 1101,
-    "combinedPracticeChecks": 22352,
-    "negativeIdentityChecks": 5443,
-    "newIdentityMutationsRejected": 117,
-    "newPracticePaths": 18,
-    "focusedTypesFiles": 591,
+    "nativeCasesPassed": 92,
+    "nativeFailures": 0,
+    "nativeSkipsOrCancellations": 0,
+    "focusedTypesRoots": 4,
+    "focusedTypesAmbientFiles": 6,
+    "focusedTypesFiles": 601,
     "focusedTypesDiagnostics": 0,
-    "completeAtlasBuildPassed": true,
-    "exactSourceHoldsAndAssetsUnchanged": true,
-    "privateDecisionsRead": false,
-    "websiteIntegrationPending": true,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "finalBuildHeapMiB": 384,
+    "first256MiBBuildResourceFailed": true,
+    "reviewSourceFiles": 1571,
+    "reviewInputs": 1739,
+    "reviewBindingSha256": "79d360966f539da0237ad127e024f5fa43db7c8c57c1d614c689ef85775b8b7f",
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "newModelAdmission": false,
+    "coverageInventories": 4,
+    "coverageSourceInputs": 171,
+    "coverageImportedInputs": 145,
+    "coverageMetadataInputs": 26,
+    "coverageScopeGapsHoldsUnchanged": true,
+    "privateDecisionsReadOrMigrated": false,
+    "accessExpanded": false,
     "wholeSuitePassing": false,
+    "fullProjectTypesPassed": false,
+    "authenticatedAcceptance": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
     "previewChanged": false,
