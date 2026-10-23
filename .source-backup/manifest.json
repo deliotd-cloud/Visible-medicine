@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T01:36:54.238Z",
+  "at": "2026-10-23T02:02:14.732Z",
   "sourceIdentity": {
     "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
     "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
-    "hostSourceReceiptSha256": "9c609ee742d75147a944d92012c0dd6d7f2243e1c65178684992b52fb2373ffa",
-    "runtimeVerificationSha256": "eac90490187c0bb1c173790a9aae4807f9aa836dca2b2c81f0e948162057139d"
+    "sourceReceiptSha256": "b7e4b807f9323b864ca67bbf2148a6213c94e454a0e727dc7cbe92f5b23efecf",
+    "websiteIntegrationSha256": "24c0f60ef9ba0fdf00a3217ffa0035b4fdbff7e1b8c17dc26a3362612c6c3d5d"
   },
-  "parent": "5c6e9d96ae8eac8dbfaadf7c66c3a9cfcfa02d7d",
-  "gitParent": "5c6e9d96ae8eac8dbfaadf7c66c3a9cfcfa02d7d",
+  "parent": "eba76108f485a2bfbb4d4bca3dc96f0a47bbe72d",
+  "gitParent": "eba76108f485a2bfbb4d4bca3dc96f0a47bbe72d",
   "files": [
     {
       "path": "app/globals.css",
@@ -22806,6 +22806,61 @@
       "sha256": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f"
     },
     {
+      "path": "pending/review-bound-ui-20261023/candidate/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "44225e9719ba5b8b3e1e89801a3af69bedf9472b87aa50d4a9f4a2b5b3d5ae18"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/candidate/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "035636926739313558e4bef7111ca0c5412b525ed3bb3d4ec6b2b12f05662beb"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/candidate/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "5ee08a24de03be326d76d311c7bb1679fce5cc76bda1ca41ba9fe3d54aa6f378"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/coordination/checkpoint-review-bound-ui-20261023.mjs",
+      "bytes": 10869,
+      "sha256": "e69c51fa060e4be3ae5f0209dbf48192e3326479ca2c6daba27a26e5b8ae87ca"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/coordination/prepare-review-bound-ui-20261023.mjs",
+      "bytes": 3109,
+      "sha256": "66f455b0fe86b8b9e49c557417cf122e0defc3b84012ac875b0fd1f53f5adfa9"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/coordination/review-bound-ui-coverage-20261023.mjs",
+      "bytes": 5009,
+      "sha256": "3aa61de7f279c62f73a1ac433c79dab1a0aa4e6611508dd77c5b1a3d79d1dbfe"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/coordination/run-review-bound-ui-20261023.mjs",
+      "bytes": 4264,
+      "sha256": "afc71388c922eb7894895d1fa5ea9130ed31cff2e1c4bfaac0108db9b33d12b3"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/coordination/seal-review-bound-ui-20261023.mjs",
+      "bytes": 9595,
+      "sha256": "08ca772a7cb9f583cee6aa9a95f7c4bb1712e9cca12381fa5d2c6c8ee028973a"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/preimages/atlas-delivery-policy.ts.raw",
+      "bytes": 493,
+      "sha256": "324491be6ff901aa3617c5b58789c5e65c23993e59594d76b64ee6a56738090c"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/preimages/lib__anatomy-coverage-view.ts.before.raw",
+      "bytes": 5290,
+      "sha256": "7e5e3ba0528d10a0702219251412d6630ba95e6f14e14cf003ba1768ff788b60"
+    },
+    {
+      "path": "pending/review-bound-ui-20261023/preimages/scripts__check-anatomy-coverage.mjs.before.raw",
+      "bytes": 4552,
+      "sha256": "81a8ff15afbbee869023162e4aae48a3793b001a5b3195fb11dafabe91d5db6c"
+    },
+    {
       "path": "pending/review-loading-recovery-20261022/coordination/backup-review-recovery-20261022.mjs",
       "bytes": 4006,
       "sha256": "683dd2f7dc087ab1204078347c91f70734050b2b00eb891f45d2d3c01f606f37"
@@ -24672,23 +24727,28 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus4main coordinator recipe/checkpoint sources. Two real384MiB-heap-capped module builds,128MiB source checks and create-only exports pass;137existing model byte identities and144inventory paths are unchanged. The6078-path unserved Website source assembly includes21reviewed teaching/UI/test overlays, exact raw9e14Review and complete new module outputs. This backup omits all generated modules/Review/inventory/data, models/media/fonts, raw logs/process/resource records, private source maps/references/decisions/scans and canonical Git ancestry. Full generated/legal/private evidence stays F-only. Source-only partial recovery, not a full/private/runnable backup; no preview change, public deployment, permission/entitlement widening, clinical approval or patient-space registration. Binding, protected viewer, policy/current-delivery and full release/type/browser acceptance remain pending.",
+  "scope": "Inherited verified filtered source plus5coordinator recipes,3narrow inventory/coverage code changes and3exact source preimages. Excludes all generated Review/viewer/runtime/model/inventory data, clinical/private packets and asset maps, source inventories/legal outputs, raw process/log/replay records, scans/identifiers/decisions/masks, and canonical Git ancestry. Full generated evidence/complete source-manifest closure remain F-only; not full/private/runnable off-device recovery. No preview restart/install/refresh, public deployment, entitlement or permission widening, clinical approval or patient registration.",
   "proof": {
-    "mainReviewSha256": "6861ad747fe7cc443bbd1e61fda9ebfd757e124cc19e9f1fc09ce5563a89fa37",
-    "sourceHoldAssertions": 9388,
-    "geometryScreenAssertions": 236,
-    "rawObjFilesRechecked": 0,
-    "actualModuleBuilds": 2,
-    "buildNodeHeapCapMiB": 384,
-    "actualModuleExports": 2,
-    "uniqueExistingModelByteIdentities": 137,
+    "mainReviewSha256": "0e58d2c3ef8de9a5e76104dd120d4e56bbfc0094077c28ed60b4394552191757",
+    "namedHostSourcePaths": 6126,
+    "changedExistingPaths": 11,
+    "narrowCodeChanges": 3,
+    "wholeOriginalRoleCodeInversesVerified": true,
+    "sourceFiles": 1567,
+    "reviewInputs": 1734,
+    "actualProductionViewerBuild": true,
+    "viewerFiles": 46,
+    "bundledPackages": 22,
+    "actualCoverageScopes": 4,
+    "coverageSourceInputs": 171,
+    "coverageContentCountsAndHoldsUnchanged": true,
+    "focusedNativeCasesPassed": 7,
+    "expectedStaleConfigurationsRefused": 2,
+    "models": 137,
     "inventoryPaths": 144,
-    "allRuntimeFileAndSourceInputHashesVerified": true,
-    "bundledPackagesPerModule": 22,
-    "hostNamedSourcePaths": 6078,
-    "hostMergeConflicts": 0,
-    "protectedReviewBound": false,
+    "audienceUnchanged": "administrator-review",
     "privateDecisionsReadOrMigrated": false,
+    "heldPlexusUnchanged": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
