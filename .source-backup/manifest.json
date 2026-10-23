@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T05:56:55.652Z",
+  "at": "2026-10-23T06:26:10.387Z",
   "sourceIdentity": {
-    "parentReceiptSha256": "d41eecb7d72f96eaa52b4ac494646e58cbd075f32ad337b26d309ff277fa1d2a",
-    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
-    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045"
+    "sourceReceiptSha256": "9580e517bbb1637c602e7a79b8e289d55624e80c30713899e5e7c985f1303845",
+    "atlasHead": "ed3c8cc0e99f6cf850a915d7a08de2e6489c1b6f",
+    "atlasTree": "0305c15be5fb58ea7729a3849bbbdb6e1e40649d"
   },
-  "parent": "aec78db47a8ae76a624ce038d88b6c762abcf884",
-  "gitParent": "aec78db47a8ae76a624ce038d88b6c762abcf884",
+  "parent": "f34b55d73113cbcde93709553b649473229f4629",
+  "gitParent": "f34b55d73113cbcde93709553b649473229f4629",
   "files": [
     {
       "path": "app/globals.css",
@@ -16230,6 +16230,166 @@
       "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
     },
     {
+      "path": "pending/digital-vein-website-20261023/candidate/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "b894ecb4da8b677f10036243d9ef7727ce154e00de2b8b41891aac8e7cf3739c"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "aeb62f4bff9ea571fa66145ab8c7157963d9d2b87c4067c6bba32241d41a5eaa"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "f06c00c0d3ed555a6ed605ae357750c8c0c7fa78b6669c07e6a1429388157eac"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "905db45e5388561214a34f14669713b3d5b2878b6a5558d0593a485e486dd020"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/atlas-emitted-teaching-search.test.ts",
+      "bytes": 4314,
+      "sha256": "7209b71e11a7d340da329d7223e527acd60e42dfc5f1ec55e88da4a4f389702b"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/atlas-emitted-teaching.ts",
+      "bytes": 3337,
+      "sha256": "407396ddf4b0e4398efabf691fcdec75e90c79caafea280234f3438645af8cf2"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/clinical-review-intracranial-arterial-xray.test.ts",
+      "bytes": 10715,
+      "sha256": "b9316d69da95e7391348f336bc06ded2ae73418981f04310956f25a47266fed7"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 31843,
+      "sha256": "ed23b3a23e83fffbdffecb0e67d31ffbc6e62999cac30adbbf81cbf49612b73f"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/cranial-tour-current-epoch.mjs",
+      "bytes": 4711,
+      "sha256": "83a4a9b991e4bb9c2e3a0f66b4031a8a56eed1bd076b3b6c4b8a1c3e118a2163"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/cranial-tour-current-epoch.test.mjs",
+      "bytes": 5908,
+      "sha256": "2373a303124766b905bb8c2f4dd06c8f68188c0271c8a69f33b6f1968d11b7f4"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/cranial-xray-current-epoch.mjs",
+      "bytes": 2150,
+      "sha256": "118ce373e447dd5dd1f086ef035d7f19a83352e8afc69bad01821d2225195c0c"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/cranial-xray-current-epoch.test.mjs",
+      "bytes": 3056,
+      "sha256": "00a687b8cf3350b67ebf3f69cc5c9058e6a2dd8ccb7eb0dc519b16e98c3b37f6"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "0f03c8eb4d5b69bc27626ab45ca6642cdd6b06d528c3416b0a90de6a57d7c862"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/digital-vein-current-delivery.test.mjs",
+      "bytes": 15027,
+      "sha256": "b308e76aeafab40626557cfd08a1fa048cacf4cb643d2c7ecb5baf43d2357448"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/fixtures/cranial-xray-before/atlas-emitted-teaching.ts.raw",
+      "bytes": 1302,
+      "sha256": "3191c4777baac4c1f3dc7e201654f7e9b40f87ef2406750f410ec73f8ae0a388"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/fixtures/cranial-xray-before/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "bytes": 10601,
+      "sha256": "df6c0e5b9fc90ed57d60b580c0f03360daeea3997b24c286db6d036434949c35"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/fixtures/neonatal-current-before/clinical-review-neonatal-cranial-us.test.ts.raw",
+      "bytes": 31702,
+      "sha256": "94b81cb4b06e64a1781a5bbea45d349d1524dc3e346cdcce0fc54c31a8f3ab5c"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/neonatal-inbox-contexts.mjs",
+      "bytes": 11058,
+      "sha256": "fe4dc1d2eb068c9be29507f7b5341d4bf189c1e27a8c5c273e2938a2d9f2c6f1"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/neonatal-inbox-contexts.test.mjs",
+      "bytes": 3568,
+      "sha256": "eb663f3ca4f7eae089ce3fe8bb28e94246647888cd502ac6cda6612bb3943c64"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/candidate/tests/neonatal-native-memory.mjs",
+      "bytes": 789,
+      "sha256": "6caa751004e74b104d5a4842d1086ca3ce75210c91f48f7480e1caa2395a2a5a"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/coordination/admit-digital-vein-coverage-20261023.mjs",
+      "bytes": 4746,
+      "sha256": "d8160f15d00bc10b20f1730ec01f5ca920f2c5b9239b87fb970a6ec99afe7576"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/coordination/check-digital-vein-site-types-20261023.mjs",
+      "bytes": 2992,
+      "sha256": "094febc4522e8debbe3b035940a25bd589a867a3c46425bf1876929a1f8d3cc0"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/coordination/checkpoint-digital-vein-website-20261023.mjs",
+      "bytes": 12452,
+      "sha256": "dc8ff36df9c196925e7af465ad395eb3aab7dbc98b19c957fe308b0bf0f9a303"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/coordination/integrate-digital-vein-website-20261023.mjs",
+      "bytes": 11288,
+      "sha256": "78252ef31a6784b417625d38d928acf53330bc7a8aa9933fa6a381458fdb2558"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/coordination/verify-digital-vein-website-20261023.mjs",
+      "bytes": 11822,
+      "sha256": "b7175bda143c73cebed9f91838912cea9cf04bb7f6f78103ff11b44afffa4cdc"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/preimages/lib/anatomy-coverage-view.ts.raw",
+      "bytes": 5290,
+      "sha256": "44225e9719ba5b8b3e1e89801a3af69bedf9472b87aa50d4a9f4a2b5b3d5ae18"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/preimages/lib/atlas-delivery-policy.ts.raw",
+      "bytes": 493,
+      "sha256": "035636926739313558e4bef7111ca0c5412b525ed3bb3d4ec6b2b12f05662beb"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/preimages/scripts/check-anatomy-coverage.mjs.raw",
+      "bytes": 4552,
+      "sha256": "5ee08a24de03be326d76d311c7bb1679fce5cc76bda1ca41ba9fe3d54aa6f378"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/preimages/scripts/import-clinical-review.mjs.raw",
+      "bytes": 6751,
+      "sha256": "f19b8cafa9173a319348e946d7b4fc3ae1048a191d0393dc9006a9fe3ca5feb2"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/preimages/tests/current-atlas-delivery.mjs.raw",
+      "bytes": 5092,
+      "sha256": "52551fd5ec16154a78b94f78e0cdfbfee6a1bea629f70714f3dd5f93ccb81bb5"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/preimages/tests/current-atlas-delivery.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "c5b6838122635cf1ea39521dd99d2b74bb31468e2a7bcc82c885c00ca4e26827"
+    },
+    {
+      "path": "pending/digital-vein-website-20261023/preimages/tests/current-ui-delivery-transition.test.mjs.raw",
+      "bytes": 3843,
+      "sha256": "d7d18ae9b36cd593475998420137b7611695aba5a12053abe12fb0c18c27b696"
+    },
+    {
       "path": "pending/expanded-viewer-verified-20261022/coordination/admit-expanded-review-delivery-20261022.mjs",
       "bytes": 4238,
       "sha256": "281263f640841242002efd515284947a80dc9cbf8712b0abc47be8c546a6dbe0"
@@ -25381,34 +25541,39 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited independently verified filtered source plus eight authored test/helper/observer/whole-preimage files and six authored coordination/verification/recovery recipes. Generated bindings/pins/runtime/models/build/catalogue metadata, private code maps/data/decisions/scans/masks/identifiers, context output/resource/raw/type evidence and canonical ancestry stay F-only. Not whole/private/runnable off-device recovery. No installation/server/restart/refresh/publication, fees, identity/access/permission changes or clinical/spatial approvals.",
+  "scope": "Inherited independently verified filtered source plus five authored integration/verification/recovery recipes,20selected authored Website code/test paths and seven authored whole-code preimages. All generated Review/runtime/viewer/models/coverage/catalogue/pin/revision/build metadata, private maps/scans/masks/identifiers/decisions, raw/resource/type/coordination evidence and later docs remain F-only. Not whole/private/runnable off-device backup. No installation/server/restart/refresh/deployment, fees, auth/access/permission changes or clinical/spatial approval.",
   "proof": {
-    "mainReviewSha256": "a002a160ebc050bdd61ff8501fcc1fd7352b93f3bae129c64d36342a339ac0a0",
-    "productChanged": false,
-    "originalInboxCasePassed": true,
-    "sourceBoundSelections": 10,
-    "currentAndHistoricalContextCount": 20,
-    "serialContextChildOldSpaceMiB": 128,
-    "inboxOldSpaceMiB": 256,
-    "inboxPeakRSSKiB": 525952,
-    "inboxV8HeapLimitBytes": 469762048,
-    "totalNativePassAcrossTwoRuns": 8,
-    "wholeOriginalTestInverse": true,
-    "historicalTours": 51,
-    "historicalStops": 309,
-    "currentTours": 53,
-    "currentStops": 317,
-    "broaderAnatomyMatrixPassed": false,
-    "broaderMatrixOldSpaceMiB": 256,
-    "focusedTypeRoots": 2,
-    "focusedTypeFiles": 572,
+    "mainReviewSha256": "6caeb5112a87f8fa5afd83863c7aadd671279cbdad49342106cf35e31cca3430",
+    "sourcePaths": 6191,
+    "buildFiles": 1110,
+    "reviewSourceFiles": 1569,
+    "reviewInputs": 1737,
+    "reviewBindingSha256": "fc7ad671e664f4169f035790486a1b699ddc4e2f431ba1d7daafb5b572b402ab",
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "focusedNativeCasesPassed": 97,
+    "supplementalNativeCasesPassed": 2,
+    "totalPassAcrossThreeRuns": 99,
+    "zeroSkipsOrCancellations": true,
+    "focusedTypeRoots": 3,
+    "focusedTypeFiles": 580,
     "focusedTypeDiagnostics": 0,
+    "actualPrebuildPassed": true,
+    "actualProductionBuildPassed": true,
+    "ultrasoundCaseComparisons": 6,
+    "validatedNormalUltrasoundMaps": 0,
+    "sourceCoverageScopes": 4,
+    "sourceCoverageInputs": 171,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "modelsDependenciesNoticesAccessUnchanged": true,
+    "privateDecisionsReadOrMigrated": false,
     "fullProjectTypesPassing": false,
-    "unchangedParentSourcePaths": 6162,
-    "unchangedParentBuildFiles": 1110,
+    "wholeSuitePassing": false,
+    "authenticatedAcceptance": false,
     "previewChanged": false,
     "installed": false,
-    "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false
   },
