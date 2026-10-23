@@ -1,0 +1,57 @@
+# Forearm mechanics in 3D reasoning practice
+
+Six original formative concepts bind twelve existing left/right whole-muscle
+representations. The prompts distinguish middle versus distal phalangeal flexion,
+second versus third versus fifth metacarpal wrist attachments, and common finger
+versus additional index extension. Flexor digitorum profundus is represented as
+one whole muscle; the question makes no claim about individual finger or nerve
+territories. The existing reason-mode choices, feedback and retry path are used.
+
+The University of Washington Radiology muscle atlas was checked on 23 October
+2026 for the named attachments and actions: [flexor digitorum superficialis](https://rad.uw.edu/muscle-atlas/flexor-digitorum-superficialis),
+[flexor digitorum profundus](https://rad.uw.edu/muscle-atlas/flexor-digitorum-profundus),
+[extensor carpi radialis brevis](https://rad.uw.edu/muscle-atlas/extensor-carpi-radialis-brevis),
+[extensor carpi radialis longus](https://rad.uw.edu/muscle-atlas/extensor-carpi-radialis-longus),
+[extensor carpi ulnaris](https://rad.uw.edu/muscle-atlas/extensor-carpi-ulnaris),
+[extensor digitorum](https://rad.uw.edu/muscle-atlas/extensor-digitorum) and
+[extensor indicis](https://rad.uw.edu/muscle-atlas/extensor-indicis).
+Its illustrations are copyrighted and are not licensed into this batch. Only
+factual citations and newly written questions/explanations are used. No image,
+table, proprietary question, scan, geometry, compartment assertion or patient
+diagnosis is imported. Source holds and licensing remain in force.
+
+## Exact retained source identities
+
+The pairs below come from displayed BodyParts3D ISA catalogue identities at
+`b0ad9e786f2f26727cd627ec028c0d3894048c72`. File and hash order is
+significant for the two compound representations.
+
+| Displayed root | FMA | Ordered source file: SHA-256 |
+| --- | --- | --- |
+| vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-superficialis | FMA38470 | FJ1475: 9b3877dcb9838ac4e37f2a1fbf0542fca888a32650285bb07278d6ba9fa968e1; FJ1499: 7f148f7db90d9723dcfe6742c55afc2100b712c00992d83356373ca27a2b0dc0 |
+| vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-superficialis | FMA38471 | FJ1475M: 9174a210f8b7ce149355545208551a4d001f6c78570256a8596d3410023fb1ec; FJ1499M: 471bfecbbe7dc3b66fc843daddcac42cd12e76e4df9f982d6b779a516433c083 |
+| vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-profundus | FMA38479 | FJ1497: e62f8adfa454bee523974952500aa32a16f086b249a434b4bbeabc333878ac39 |
+| vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-profundus | FMA38480 | FJ1497M: c3d1710b4b9465ab35cd53d18a3f00f38b37340d084c57fed2cb011d585a5013 |
+| vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-brevis | FMA38498 | FJ1489: 31ccd9ec738252ec2eae88cf68068679d0663425c98b8d90dcbca18b3cbd1988 |
+| vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-brevis | FMA38499 | FJ1489M: 8c6a0274a546389ad6a4f615379ff0e9a020a7fb054cfd5e1e20401d4ecb06f7 |
+| vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-ulnaris | FMA38507 | FJ1472: f6aadd5b1df9440ec0c4fabf21641f72447d5190bcaf58f357e8b5a76b3f5889; FJ1517: e6a4cec704d3601a33704b40ee1f3f7bce484017dd563d1f4d2da43331b3ffce |
+| vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-ulnaris | FMA38508 | FJ1472M: 6c47a0290d3c5952e858227ed655b6ef1caac88661a13d15618a8364d0af765f; FJ1517M: dad2acf99146ad290d327a6d3e9e0c8fa214c26880d9f85292d4c4eb4554500f |
+| vm:anatomy:body:forearm:right:muscle:right-extensor-digitorum | FMA38501 | FJ1492: 31f528b3ba6a8fb26177c9f1455692be3acfbb173b4c4cbf9dc3d597acb5c5ff |
+| vm:anatomy:body:forearm:left:muscle:left-extensor-digitorum | FMA38502 | FJ1492M: c2fa9cb48e9d70d9a180553623df0e8be92c507f323074b8b5bed41b266f47f2 |
+| vm:anatomy:body:forearm:right:muscle:right-extensor-indicis | FMA38525 | FJ1493: b23d7087dbe581fa03e316dfed18f73ba4ccb54b16091d442ac057f9aa9c7b60 |
+| vm:anatomy:body:forearm:left:muscle:left-extensor-indicis | FMA38526 | FJ1493M: 67cc3af9eeaf1eecc32d6816dc86f2b7343fdec0be413a9e32313ca49b846d75 |
+
+`scripts/pin-forearm-mechanics-reasoning.mjs --check` reproduces the exact
+identities from the displayed catalogue. Runtime compares the whole pinned
+source identity, including side, geometry metadata and ordered source hashes.
+All choices must be eligible in the current scope, same side and loaded bundle.
+The pre-existing extensor carpi radialis longus concept supplies one real
+comparison for brevis without changing its definition.
+
+These are drafts, not anatomical or clinical approvals. The meshes do not
+demonstrate dynamic motion, individual tendon/nerve territories, patient-space
+registration or clinical diagnosis. Review evidence is bound to this teaching
+revision; no approval transfers from a prior quiz or source revision. Main
+integration should run the focused test once after dispatch integration, then
+perform the shared validation and release checks. No deployment or installed
+preview is claimed by this candidate.

@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T22:12:23.189Z",
+  "at": "2026-10-23T22:33:19.109Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "404a7adbb83443606534ca7d463d33af66a21bd01464d5661e7ee7da7eadab1c",
-    "atlasHead": "b0ad9e786f2f26727cd627ec028c0d3894048c72",
-    "atlasTree": "c68f9c201e0a246e8d40c6977736b0238150d5a5",
-    "reviewRevision": "0b68b6403e0f5df6dcc6f18bdc275b49ee22d3c72c0e1f2988dc36d52083885f",
+    "nativeSourceReceiptSha256": "dda9ece3575b9b12c5a24e39a628d07cc9f6199cc8e3f4c542b56560cc5e039d",
+    "atlasHead": "d143c28fb1e5da200712af6629a375c25d17dad7",
+    "atlasTree": "486287b25d968117cffdd27bb20009fa46cda6f3",
+    "latestCompleteWebsiteSha256": "404a7adbb83443606534ca7d463d33af66a21bd01464d5661e7ee7da7eadab1c",
     "normalPreviewChanged": false
   },
-  "parent": "95dc9e1465473f6b5291a8c80990f9381d937afa",
-  "gitParent": "95dc9e1465473f6b5291a8c80990f9381d937afa",
+  "parent": "e81328e3e4073ac8d113ac9622c572c688dc87ce",
+  "gitParent": "e81328e3e4073ac8d113ac9622c572c688dc87ce",
   "files": [
     {
       "path": "app/globals.css",
@@ -17462,6 +17462,101 @@
       "sha256": "5051e1ceb90933e20c9382a0d10f3ca6cfbc46a706c74c8cf9d7c652063c7b03"
     },
     {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/docs/FOREARM_MECHANICS_REASONING.md.raw",
+      "bytes": 4993,
+      "sha256": "07f66b33e5e2ba162e26750c3bc249ec0e5bf50da80555e907dc8edd12cc7e50"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
+      "bytes": 39166,
+      "sha256": "b311e65d95f2c217f78ac4eec9478acbca2549de68bc12ec5991a2b57f6c07d3"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/lib/forearm-mechanics-reasoning.ts",
+      "bytes": 6083,
+      "sha256": "864880bb2926b003a45aaefd67f09d3fc4c9290742749096f448a63a51ae2199"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/lib/reasoning-questions.ts",
+      "bytes": 15622,
+      "sha256": "a9b244ff75aa7912a5a4c70d2946070fd776d6eaadcc01b200484b94f7ea4bd1"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 360863,
+      "sha256": "d396254257da2c9965ad17ab5570e15af067c34a705fdca9cacae19a6c6f5df0"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/package.json.raw",
+      "bytes": 88326,
+      "sha256": "0fb6c7faa59a0bfa1e2f554ac46ba27dba52e07c1e50d38dfe4a907e8c6e8bb3"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/scripts/check-forearm-mechanics-types.mjs",
+      "bytes": 1618,
+      "sha256": "403f99d1a405fd3d2cab21512a797844d43146dc14af4d472ffc01788430e94b"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/scripts/pin-forearm-mechanics-reasoning.mjs",
+      "bytes": 2609,
+      "sha256": "8c79f48541873f2c7c2aa519321cbd79d09e59f2bd562f41f563314011f5214f"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/scripts/test-forearm-mechanics-reasoning.mjs",
+      "bytes": 14958,
+      "sha256": "b636964eb8187f5e928d4094c6836c14ff2cd88271e33683103c5079954ee034"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 56715,
+      "sha256": "f71ff8428aff12ab26307e77e4e64db52a799973ced5f560aa234f91b9803b52"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/archive-composed-replay-pointer-20261023.mjs",
+      "bytes": 1932,
+      "sha256": "dded9bb804e9907038901ff72d7acb1d6d70d8c3d9026da2ba5ad50714f1aca7"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/audit-reasoning-priority-20261023.mjs",
+      "bytes": 2534,
+      "sha256": "3979b78702d13cae3fac74e50c48e50b87497af107058a9854e1fe18ca112b38"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/checkpoint-forearm-mechanics-reasoning-20261023.mjs",
+      "bytes": 8336,
+      "sha256": "2b2ec437d29fe08ddfc54b7d9f12a093ff0d51b0403a19d63cc5f41b09a899ad"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/prepare-forearm-mechanics-reasoning-20261023.mjs",
+      "bytes": 2824,
+      "sha256": "7692ffe6758b9c0570fc222d39f5300019952b70f790d3976981c4c5aeb9bcce"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/preserve-forearm-mechanics-reasoning-20261023.mjs",
+      "bytes": 3866,
+      "sha256": "05ecce1a611867a91a80dc680a071118cd8f65b347f830dbd1345e726be47226"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/resume-forearm-mechanics-preparation-20261023.mjs",
+      "bytes": 2993,
+      "sha256": "034c2cb91dff111199623dd0f8a38fd4edab7a3e2541a6f3212de9cfff357a33"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/run-forearm-mechanics-reasoning-20261023.mjs",
+      "bytes": 3765,
+      "sha256": "adfd3188c6a0a07053f5ce28d6711c5a2b0f72655a7108462c35a8aa1c40c4b6"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/seal-forearm-mechanics-reasoning-20261023.mjs",
+      "bytes": 9579,
+      "sha256": "b458a049198320ddc9ebd80df5c3baa734e38afd3eed149d56d356fd54a222ba"
+    },
+    {
+      "path": "pending/forearm-mechanics-reasoning-20261023/coordination/verify-forearm-mechanics-reasoning-20261023.mjs",
+      "bytes": 398,
+      "sha256": "9470f06712ddb9da8600b0aa573c124900229bce9c30256d53a9add0b51390fe"
+    },
+    {
       "path": "pending/guided-access-assurance-20261022/coordination/checkpoint-guided-access-assurance-20261022.mjs",
       "bytes": 9179,
       "sha256": "7e237b28e7f5c522bdf6669fa588ebd039aae9667f6871225586471a066288fd"
@@ -29273,32 +29368,32 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus declared optional-comparison controls, strict helper/tests, source preflight/rebinding/checkpoint recipes and clearly synthetic component fixture. New documentation saved as UTF8 raw text. No generated JSON registry/Review/runtime, models, scans/private records/identifiers, raw evidence/images/type graphs, node_modules, dist or emulator state. Local full source and evidence remain F-only; not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored source plus explicitly declared original forearm reasoning module, exact-source pin producer/tests/type harness, dispatcher/validator and coordination recipes. Notes/notices/package script stored as UTF8 raw text. No generated JSON pins/revisions/registries, geometry/models, private studies/records/identifiers, raw evidence/logs/images/type graphs, node_modules, dist or emulator state. Full native/local evidence remains F-only; not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "29025ca327b0cfd6f3c73ba937c6ad7f8be7f00a7181814dd51c5572fce1b305",
-    "focusedCasesPassed": 335,
-    "strictRoots": 7,
-    "strictAmbientFiles": 6,
-    "strictActualGraphFiles": 1753,
+    "mainReviewSha256": "a9a51b6697a45683eee6f377ed4717cc6eb1bb570cea88a2d1d3a0c5e3099126",
+    "newDraftConcepts": 6,
+    "newSourceSelections": 12,
+    "concepts": 216,
+    "representedRoots": 392,
+    "previous210DefinitionsPreserved": true,
+    "previous380TargetSessionsPreserved": true,
+    "identityNegatives": 428,
+    "practicePaths": 72,
+    "packetNegatives": 60,
+    "stalePosts": 12,
+    "strictRoots": 4,
+    "strictActualGraphFiles": 605,
     "strictDiagnostics": 0,
-    "stockPrebuild": true,
-    "stockFullWebsiteBuild": true,
-    "stockReviewVerifier": true,
-    "reviewSourceFiles": 1591,
-    "reviewInputs": 1781,
-    "viewerFiles": 54,
-    "unchangedExistingPackages": 24,
-    "allFourRuntimeSourcesAligned": true,
-    "allFourLearnerRuntimesUnchanged": true,
-    "modelsUnchanged": 137,
-    "modelPathsUnchanged": 144,
-    "modelBytesUnchanged": 199072480,
-    "optionalExactStepNewTabsBrowserVerified": true,
-    "syntheticParentContextRetained": true,
-    "browserFixtureOnly": true,
-    "realSignedInOrAcquiredStudyAcceptance": false,
-    "privateDecisionStateRead": false,
+    "stockNativeProductionBuild": true,
+    "buildFiles": 557,
+    "all1104SourceAnd9936LessonPayloadsPreserved": true,
+    "unchangedTeachingWorksheets": 1092,
+    "changedDisplayAndTeachingPins": 12,
+    "allNineShoulderRevisionsUnchanged": true,
+    "geometryDependenciesHoldsUnchanged": true,
     "normalPreviewChanged": false,
+    "fullWebsiteIntegrationPending": true,
+    "privateDecisionStateRead": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
     "previewChanged": false,
