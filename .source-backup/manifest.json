@@ -1,13 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T05:23:07.822Z",
+  "at": "2026-10-23T05:56:55.652Z",
   "sourceIdentity": {
     "parentReceiptSha256": "d41eecb7d72f96eaa52b4ac494646e58cbd075f32ad337b26d309ff277fa1d2a",
     "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
     "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045"
   },
-  "parent": "36ece0441392a9784bdf717a3f12e535082d393f",
-  "gitParent": "36ece0441392a9784bdf717a3f12e535082d393f",
+  "parent": "aec78db47a8ae76a624ce038d88b6c762abcf884",
+  "gitParent": "aec78db47a8ae76a624ce038d88b6c762abcf884",
   "files": [
     {
       "path": "app/globals.css",
@@ -18805,6 +18805,76 @@
       "sha256": "303a1ba566b8dbbac99e06206f92ad5df3634579fb29bb696a64f4c5a4529cea"
     },
     {
+      "path": "pending/neonatal-current-epoch-20261023/coordination/check-focused-site-types-20261023.mjs",
+      "bytes": 3277,
+      "sha256": "6f056dcea5359be82d4cc60f5e287cb31c240791ab27d291064f51ddf9a0ba20"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/coordination/checkpoint-neonatal-current-20261023.mjs",
+      "bytes": 11818,
+      "sha256": "237805580ab327ffc79aca2b2d892cf3ecc3a828729916cff03aa9303d558c38"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/coordination/compact-neonatal-index-20261023.mjs",
+      "bytes": 2672,
+      "sha256": "da80254425d6c90c8100d0f04bb58a220e4c4bd01ab9f363cfeaf4bab1a754f8"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/coordination/materialize-neonatal-bound-inputs-20261023.mjs",
+      "bytes": 1621,
+      "sha256": "4709f1cc5aab78323639852c5af0e00958a3dc2f683e4b25d75f8c147eca3040"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/coordination/prepare-neonatal-current-20261023.mjs",
+      "bytes": 2420,
+      "sha256": "b0bc12c78c3cf8e7e1726d97d69ae6d7bc2dfbffe753f1f80f52f4d658b1bed8"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/coordination/verify-neonatal-current-20261023.mjs",
+      "bytes": 3879,
+      "sha256": "b21d827ceeedcf856b031f6ed11f2924806e1be3c9d17072e07d0b762e62adeb"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/tests/tests/atlas-emitted-teaching.ts",
+      "bytes": 3337,
+      "sha256": "407396ddf4b0e4398efabf691fcdec75e90c79caafea280234f3438645af8cf2"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/tests/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 31843,
+      "sha256": "ed23b3a23e83fffbdffecb0e67d31ffbc6e62999cac30adbbf81cbf49612b73f"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.mjs",
+      "bytes": 4711,
+      "sha256": "83a4a9b991e4bb9c2e3a0f66b4031a8a56eed1bd076b3b6c4b8a1c3e118a2163"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.test.mjs",
+      "bytes": 5908,
+      "sha256": "2373a303124766b905bb8c2f4dd06c8f68188c0271c8a69f33b6f1968d11b7f4"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/tests/tests/fixtures/neonatal-current-before/clinical-review-neonatal-cranial-us.test.ts.raw",
+      "bytes": 31702,
+      "sha256": "94b81cb4b06e64a1781a5bbea45d349d1524dc3e346cdcce0fc54c31a8f3ab5c"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.mjs",
+      "bytes": 11058,
+      "sha256": "fe4dc1d2eb068c9be29507f7b5341d4bf189c1e27a8c5c273e2938a2d9f2c6f1"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.test.mjs",
+      "bytes": 3568,
+      "sha256": "eb663f3ca4f7eae089ce3fe8bb28e94246647888cd502ac6cda6612bb3943c64"
+    },
+    {
+      "path": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-native-memory.mjs",
+      "bytes": 789,
+      "sha256": "6caa751004e74b104d5a4842d1086ca3ce75210c91f48f7480e1caa2395a2a5a"
+    },
+    {
       "path": "pending/nested-tour-library-pause-20261023/coordination/checkpoint-nested-tour-library-pause-20261023.mjs",
       "bytes": 12695,
       "sha256": "2d4c64d8c69c2c34e70641e99b0d5dc2e442c192c42767df63b6a639167e4a9a"
@@ -25311,28 +25381,34 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus seven authored test/helper/whole-preimage files and four authored coordination/verification/recovery recipes. All generated binding/runtime/model/build/catalogue/pin metadata, raw resource/type/browser/coordination evidence, private code maps/data/decisions/scans/masks/identifiers and canonical ancestry stay F-only. Not whole/private/runnable off-device recovery. No application changes, installation/server/restart/refresh, public deployment, fee, permission/access/identity or approval change.",
+  "scope": "Inherited independently verified filtered source plus eight authored test/helper/observer/whole-preimage files and six authored coordination/verification/recovery recipes. Generated bindings/pins/runtime/models/build/catalogue metadata, private code maps/data/decisions/scans/masks/identifiers, context output/resource/raw/type evidence and canonical ancestry stay F-only. Not whole/private/runnable off-device recovery. No installation/server/restart/refresh/publication, fees, identity/access/permission changes or clinical/spatial approvals.",
   "proof": {
-    "mainReviewSha256": "991b1a98e9c75cf82f58deadb407032cde5aa7d37a751b0bb8f23b32f647998f",
-    "testOnly": true,
+    "mainReviewSha256": "a002a160ebc050bdd61ff8501fcc1fd7352b93f3bae129c64d36342a339ac0a0",
     "productChanged": false,
-    "actualXrayFeatureCasePassed": true,
-    "structures": 12,
-    "supportCasesPassed": 8,
-    "nativeHeapMiB": 128,
-    "aggregateStringOOMRetained": true,
-    "streamEquivalenceAndTamperRefusal": true,
-    "wholeOriginalTestAndHelperInverses": true,
-    "focusedTypeRoots": 3,
-    "focusedTypeFiles": 569,
+    "originalInboxCasePassed": true,
+    "sourceBoundSelections": 10,
+    "currentAndHistoricalContextCount": 20,
+    "serialContextChildOldSpaceMiB": 128,
+    "inboxOldSpaceMiB": 256,
+    "inboxPeakRSSKiB": 525952,
+    "inboxV8HeapLimitBytes": 469762048,
+    "totalNativePassAcrossTwoRuns": 8,
+    "wholeOriginalTestInverse": true,
+    "historicalTours": 51,
+    "historicalStops": 309,
+    "currentTours": 53,
+    "currentStops": 317,
+    "broaderAnatomyMatrixPassed": false,
+    "broaderMatrixOldSpaceMiB": 256,
+    "focusedTypeRoots": 2,
+    "focusedTypeFiles": 572,
     "focusedTypeDiagnostics": 0,
     "fullProjectTypesPassing": false,
-    "wholeSuitePassing": false,
     "unchangedParentSourcePaths": 6162,
     "unchangedParentBuildFiles": 1110,
-    "neonatalSourceAndMemoryGatesStillOpen": true,
     "previewChanged": false,
     "installed": false,
+    "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false
   },

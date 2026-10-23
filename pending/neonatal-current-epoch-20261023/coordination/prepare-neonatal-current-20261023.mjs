@@ -1,0 +1,12 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261023-neonatal-current-epoch',site=stage+'/website';
+const file='F:/VisibleMedicine/staging/20261023-head-pan-bound/SOURCE_BOUND.json';assert.equal(sha(read(file)),'d41eecb7d72f96eaa52b4ac494646e58cbd075f32ad337b26d309ff277fa1d2a');
+const parent=json(file);assert(!fs.existsSync(stage));assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);fs.mkdirSync(site,{recursive:true});
+const rows=parent.sourceRows.filter(r=>r.path.startsWith('tests/')||['package.json','tsconfig.json'].includes(r.path));
+for(const r of rows){assert.equal(sha(read(parent.website+'/'+r.path)),r.sha256);const to=site+'/'+r.path;fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(parent.website+'/'+r.path,to,fs.constants.COPYFILE_EXCL);}
+const links=['atlas-review','public','lib','app','components','.local','node_modules'];for(const p of links)fs.symlinkSync(parent.website+'/'+p,site+'/'+p,'junction');
+const preimage='tests/fixtures/neonatal-current-before/clinical-review-neonatal-cranial-us.test.ts.raw';fs.mkdirSync(path.dirname(site+'/'+preimage),{recursive:true});fs.copyFileSync(site+'/tests/clinical-review-neonatal-cranial-us.test.ts',site+'/'+preimage,fs.constants.COPYFILE_EXCL);
+const prior='F:/VisibleMedicine/recovery/checkpoints/20261023-cranial-xray-epoch/checkpoint.json';assert.equal(sha(read(prior)),'dec952debab7e7b91bd034bcbde9d3a2d35258c648288fd9ba29ce69de78c493');
+const utility=json(prior).sourceRows.find(r=>r.path==='tests/atlas-emitted-teaching.ts');assert(utility);const utilityPath='F:/VisibleMedicine/staging/20261023-cranial-xray-epoch/website/'+utility.path;assert.equal(sha(read(utilityPath)),utility.sha256);fs.copyFileSync(utilityPath,site+'/'+utility.path);
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify({at:new Date().toISOString(),website:site,parentReceipt:file,parentReceiptSha256:sha(read(file)),parentWebsite:parent.website,atlas:parent.atlas,rows,preimage,utilityCheckpoint:prior,utilityCheckpointSha256:sha(read(prior)),utility,readOnlyDirectoryJunctions:links,previewChanged:false,productChanged:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({stage,selectedInputs:rows.length,previewChanged:false}));
