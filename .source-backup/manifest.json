@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T15:29:52.756Z",
+  "at": "2026-10-23T16:05:27.397Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "a32919b11982957ef10eece8526ac6767d5c5a16499ff51cf2e50c2fc912a5f4",
+    "sourceReceiptSha256": "1deb9b7f54fe19a720dcfb0456dba41838e14741b57e716aeed79a672b9dd280",
     "atlasHead": "66ac064579ee23c5739d0907e8378e0e2d57d7bd",
     "atlasTree": "0730550af7e5f8cc1d763d7326ca0a0c05458ca7",
-    "websiteIntegrationPending": true
+    "reviewBindingSha256": "2f02e302d89d7dec23f1a3921e4f3d11587116164ddbb49c37ed2e7df078bfca"
   },
-  "parent": "ad110284b840f650348ee9d1f54bb7fdc0c7d656",
-  "gitParent": "ad110284b840f650348ee9d1f54bb7fdc0c7d656",
+  "parent": "461f0cd56c58b4c7458f813827a763a9967d2909",
+  "gitParent": "461f0cd56c58b4c7458f813827a763a9967d2909",
   "files": [
     {
       "path": "app/globals.css",
@@ -25186,6 +25186,231 @@
       "sha256": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7"
     },
     {
+      "path": "pending/review-ui-website-20261023/coordination/admit-review-ui-coverage-20261023.mjs",
+      "bytes": 7042,
+      "sha256": "932cabc46c9df59ee6b0302ed0e1f860ed36380aef5c7471cc390b473a811a26"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/archive-review-ui-composition-20261023.mjs",
+      "bytes": 2871,
+      "sha256": "e102637769ba21382f1983b21727e26ace2789f3d672c2fbee94b09ef4fcd294"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/check-review-ui-website-types-20261023.mjs",
+      "bytes": 4868,
+      "sha256": "992928f8a6636f5319d2cc1f9bb25d7786ab738eb7edb673add00e0eb961383c"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/checkpoint-review-ui-website-20261023.mjs",
+      "bytes": 9634,
+      "sha256": "d821d7eb2ba154edfe8741bd7320d7841403d9aaea64be39c3440311247d3b63"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/compose-playback-reasoning-epoch-20261023.mjs",
+      "bytes": 5991,
+      "sha256": "7f4ab6271a93bdba9712783d479d9b99d4612681098043cbed0dc3488b02ee51"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/compose-review-ui-release-20261023.mjs",
+      "bytes": 2551,
+      "sha256": "8b626b99a84c6172490ab30261228424c5e28f432702aba5c518ecf954bffd33"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/correct-playback-renal-history-20261023.mjs",
+      "bytes": 2488,
+      "sha256": "916377dff2a84e4fa0867aa2c7894ebb18e64ab30734633419afc25b25ca06c1"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/derive-playback-preservation-20261023.mjs",
+      "bytes": 4169,
+      "sha256": "4ef559b5ddf02193d57ba90709c1e22535c7684b4a07909047f4e47bf38ff03f"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/derive-review-ui-helpers-20261023.mjs",
+      "bytes": 1675,
+      "sha256": "05fd09bc8815b9ae61f1e756c4e3f233668171ad87b948cf44d29cbfcffa3833"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/extend-playback-consumer-preservation-20261023.mjs",
+      "bytes": 2403,
+      "sha256": "6b1478b44f387c4e4b52f7081d25229b501b8c4ba2f56df345f55ef0e4330748"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/finalize-review-ui-website-20261023.mjs",
+      "bytes": 9049,
+      "sha256": "773e4715633d227f3d56057dbfb07ff0decb6f0c29167a3ba36105784f2a2753"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/finish-review-ui-verification-20261023.mjs",
+      "bytes": 2022,
+      "sha256": "2fe9e34b2a88c780d66e4ccfbf284bc9dd77b1a67bbd37f7a3d5db6f91f6187b"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/integrate-review-ui-website-20261023.mjs",
+      "bytes": 10864,
+      "sha256": "53a51220329033fb202998851451efa3342b51e8f59164a5ac78ce8ab5689df3"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/patch-review-ui-website-20261023.mjs",
+      "bytes": 5977,
+      "sha256": "66f5edda439f381fe3c71bc3861f13faf49fe051510b2d3c547f73ff4e219474"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/seal-review-ui-website-20261023.mjs",
+      "bytes": 13234,
+      "sha256": "6dd2f3c0aac8205805e8ef31355893f4573582c7205a2cd67843fabbbf805376"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/sequence-review-ui-website-20261023.mjs",
+      "bytes": 773,
+      "sha256": "c099a57afd20e97c8d25ee03d803d82b09ceca23b8c98943102fbb7af3614777"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/update-review-ui-reasoning-verification-20261023.mjs",
+      "bytes": 1647,
+      "sha256": "f7a8e35389999447dd4afbe866c0a645a467efb3b04d1d10ad8ea64db76a1775"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/coordination/update-review-ui-verification-20261023.mjs",
+      "bytes": 1226,
+      "sha256": "a9f3fe572b56b06871adb5b25c5a824464f0590802af65e75af89c1c048bfc7c"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/components/head-atlas.css.raw",
+      "bytes": 25839,
+      "sha256": "5412024d7f86db31926cd20bbd327ff6a570ca0ed8e09a9e5d74681993f15931"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/components/HeadAtlasViewer.tsx",
+      "bytes": 113768,
+      "sha256": "8fa8cc8d613812c1a426f29007f4b48b293c81cc13a1353b69a5987c9150118b"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "a385de73f0acd90a391739b833c7b578e86beabeff5987fe79ac4d2d8f7107e8"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "0ebda112bd4c1d37c4a16d5618051ebcb2a27168e0d9f6c9d20bb3c20d573be4"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "22c44f538e46b123b2925e4c0fc4fdb5d97270ad5116e0b4fb634df2dc3f1596"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/scripts/import-clinical-review.mjs",
+      "bytes": 6751,
+      "sha256": "d11fff348d1a4de38eb39ba7dec80f6be8cdce8d36f6c4c2aa5c0fc2ec926423"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/carpal-reasoning-current-delivery.test.mjs",
+      "bytes": 19810,
+      "sha256": "ff70164375489e449a5b14315beab30eebf0f49a5cd4cee76deb202d8e886ec3"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/clinical-review-continuous-guided-playback.original.ts.raw.preimage.raw",
+      "bytes": 19627,
+      "sha256": "92ffeb69f175623981e443c1d63d43bdb1a6f5a70798553fbadc10999fab1d89"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/clinical-review-continuous-guided-playback.test.ts",
+      "bytes": 21419,
+      "sha256": "ec0b983804dbf82fa318d9958f8241766c05452c9246d2914318e4fda482c0b3"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/clinical-review-continuous-guided-playback.test.ts.preimage.raw",
+      "bytes": 20412,
+      "sha256": "48a051a355f695571cbfd29cf9c8e874e55d14c3ef7fa7495442d585923a95a7"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/compact-head-provenance.test.mjs",
+      "bytes": 7680,
+      "sha256": "3615303441a1ab7602387803c3f30305ed85e727809685de5a234c56d23f9c4e"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "8e80aeefd25e8efb2794d7e134a719bdc9a1819e7c7608dc3e3d098869d84983"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/fixtures/review-ui-delivery-before/continuous-playback.before-reasoning.ts.raw",
+      "bytes": 20699,
+      "sha256": "e22ed14aad0078dedcbca0bd4b5f7dddebf5bf67563e740f91a13d155e7e2daa"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/keyboard-teaching-source-role.test.mjs",
+      "bytes": 6975,
+      "sha256": "be8445d1573510f17768e08e7a58aa418be863c85feff966e7c4e9ba947c6040"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/playback-reasoning-epoch.mjs",
+      "bytes": 1804,
+      "sha256": "552298156d1d935f1362972d8f06658235e7d510fa3f1f4762139950b07ae023"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/playback-reasoning-epoch.test.mjs",
+      "bytes": 1058,
+      "sha256": "a758ecfba7daea8cb4cf0120a957794a1754797cd9b44ee392f6aa1ffe43c36c"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/release-epoch-composition-preservation.test.mjs",
+      "bytes": 18387,
+      "sha256": "b7ae9527cab549c1af47985b08dc03e22b730660ec08ef0db69cbf4c3bd37efd"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/review-parser-current-delivery.test.mjs",
+      "bytes": 3999,
+      "sha256": "638044159b109d960be9b6f35cddd8815ace3c8a54f777ac797b377296217b69"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/source-role-helper.test.mjs.preimage.raw",
+      "bytes": 2059,
+      "sha256": "0143dc8185c94bab3f5df3452cdd8f76e1d8a919ddb406311ca814c8b3978170"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/source-role-inverse.test.mjs.preimage.raw",
+      "bytes": 4096,
+      "sha256": "08d41edd3752a7fe9a64a4ca685c466bdf76aff5d7d1c658e368368b13f9c6d4"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/tour-playback-role-inverse.mjs",
+      "bytes": 5502,
+      "sha256": "1ae0aed1816fe9d0e357a45924892ecdb7806c8122b2d9c12e24df4f5529fb34"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/tour-playback-role-inverse.test.mjs",
+      "bytes": 1031,
+      "sha256": "f0ebfb37980d8a2eb3342f0914e4d2fe2013e61b887276f524be196b0b9897e0"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/tour-playback-source-role-inverse.test.mjs",
+      "bytes": 7961,
+      "sha256": "214f1e74e1721dbfd9db125dd79c432039b01a896af519d24f6e0e97c8ed02d3"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/tour-playback-source-role.mjs",
+      "bytes": 7020,
+      "sha256": "775cc7c79587352fc95d388f23682cac6090218f661d58b08cf0325480780b89"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/tour-playback-source-role.mjs.preimage.raw",
+      "bytes": 6146,
+      "sha256": "7deb128dfb905bf7100d81e4f5ac149fae8ad8d83826e172f67a0d07fbf2257a"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/tour-playback-source-role.test.mjs",
+      "bytes": 2077,
+      "sha256": "04045d8b5d9109c586cfa19cfad5ad78540e6e384a59550f83e2207c2beb26b8"
+    },
+    {
+      "path": "pending/review-ui-website-20261023/website/tests/tour-reading-current-delivery.test.mjs",
+      "bytes": 11854,
+      "sha256": "80205d43ec468ce26ef3707f4a066cf800a83ace907ab0077c2061246272255b"
+    },
+    {
       "path": "pending/structure-guides-20261023/coordination/check-structure-guides-types-20261023.mjs",
       "bytes": 4205,
       "sha256": "aea744558396962446eaa6870b3b455f001e14c0a8b26d1c006956de6dc70198"
@@ -27572,28 +27797,29 @@
     }
   ],
   "removed": [],
-  "scope": "Verified inherited filtered authored source plus seven recipes, three original parser/test/doc paths and two code preimages. No source catalogues, renderer/pin/binding/generated runtime/build/type/process/browser/private scan/mask/identifier/clinical decisions. Full raw evidence and complete runnable candidate remain F-only; not a whole/private/runnable off-device backup.",
+  "scope": "Verified inherited filtered authored source plus original Website UI/test/admission/policy code, exact raw code preimages and18main integration recipes. No generated Review/runtime/binding/pin/catalogue/inventory/model/type/build/process/browser/private patient/scan/mask/decision payloads. Full generated runnable candidate and raw evidence are F-only; not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "83d112a2683b9e289f0b201af81c31be62ced34ebf1bb6a39a1e95be055753bf",
-    "nativeCases": 33,
-    "initialFinalProductNativeCases": 30,
-    "finalExtendedRootCases": 7,
-    "retainedRegionalNativeCases": 1,
-    "duplicateCases": 5,
-    "worksheets": 1104,
-    "topics": 9936,
-    "alteredPacketsRejected": 18754,
-    "strictTypeRoots": 3,
-    "strictTypeFiles": 2107,
+    "mainReviewSha256": "296a324d987bd290162278375ca79f331ba454ad2987834c5d257aa1beabeecf",
+    "nativeCases": 169,
+    "strictTypeRoots": 15,
+    "strictTypeFiles": 3257,
     "strictTypeDiagnostics": 0,
-    "completeAtlasBuildPassed": true,
-    "productionOutputs": 546,
-    "wholeOriginalParserInverse": true,
-    "unchangedParentInputs": 6308,
-    "allWorksheetHashesUnchanged": true,
-    "rendererClosureAndSourceAndTeachingUnchanged": true,
+    "productionOutputs": 1111,
+    "actualPrebuildAndFullBuildPassed": true,
+    "sourceBlobsReadBack": 1579,
+    "exactBoundInputs": 1748,
+    "protectedViewerFiles": 46,
+    "protectedViewerPackages": 22,
+    "models": 137,
+    "modelPaths": 144,
+    "modelBytes": 199072480,
+    "allModelRowsDependenciesLicencesAndAccessUnchanged": true,
+    "coverageSourceInputs": 171,
+    "coverageImportedInputs": 145,
+    "coverageMetadataInputs": 26,
+    "allCoverageCountsGapsHoldsPreserved": true,
+    "exactOriginalTestInverses": true,
     "privateDecisionsReadOrMigrated": false,
-    "websiteIntegrationPending": true,
     "newAssetsDependenciesFees": false,
     "previewChanged": false,
     "installed": false,

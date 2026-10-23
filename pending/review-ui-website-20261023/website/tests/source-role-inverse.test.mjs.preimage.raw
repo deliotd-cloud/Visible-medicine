@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import test from 'node:test';
+const sha=v=>createHash('sha256').update(v).digest('hex');
+const originalBytes=readFileSync(new URL('./clinical-review-continuous-guided-playback.original.ts.raw',import.meta.url));
+const original=originalBytes.toString('utf8').replaceAll('\r\n','\n');
+const candidate=readFileSync(new URL('./clinical-review-continuous-guided-playback.test.ts',import.meta.url),'utf8').replaceAll('\r\n','\n');
+const one=(source,before,after)=>{assert.equal(source.split(before).length,2,'Unique authenticated seam: '+before.slice(0,70));return source.replace(before,after);};
+const edits=[
+ ["import {assertRenalTourEpoch} from './renal-tour-epoch-admission.mjs';","import {assertHistoricalRenalTourEpoch,assertCurrentTourAdditions,assertCurrentGuidedReviewAdditions} from './tour-playback-source-role.mjs';"],
+ ["const playbackCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';","const playbackCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';\nconst reviewedRenalEpoch='2381efe43b75f8a7fb768a069eecd7268c508dac';"],
+ ["  assert.equal(imported.regionalTours.length,51);\n  assert.equal(imported.regionalTours.reduce((count:number,tour:any)=>count+tour.steps.length,0),309);","  const {exactSourceHistoryApi}=await import(pathToFileURL(atlas+'/scripts/exact-source-history-api.mjs').href);\n  const renal=await exactSourceHistoryApi(reviewedRenalEpoch,'regional-tour-review');\n  assertCurrentTourAdditions(renal.regionalTours,imported.regionalTours,{atlasRoot:atlas,sourceCommit:liveCommit});"],
+ ["  const playback=await exactSourceHistoryApi(playbackCommit,'regional-tour-review');","  const playback=await exactSourceHistoryApi(playbackCommit,'regional-tour-review');\n  const renal=await exactSourceHistoryApi(reviewedRenalEpoch,'regional-tour-review');"],
+ ["  assertRenalTourEpoch(old.regionalTours,current.regionalTours);\n  assertRenalTourEpoch(epoch.regionalTours,current.regionalTours);","  for(const earlier of [old.regionalTours,epoch.regionalTours])\n    assertHistoricalRenalTourEpoch(earlier,renal.regionalTours,{atlasRoot:atlas,helperSource:new URL('./renal-tour-epoch-admission.mjs',import.meta.url)});\n  assertCurrentTourAdditions(renal.regionalTours,current.regionalTours,{atlasRoot:atlas,sourceCommit:liveCommit});"],
+ ["    const atPlayback=wire(await playback.bodyReviewMaterial(structure.id));","    const atPlayback=wire(await playback.bodyReviewMaterial(structure.id));\n    const atRenal=wire(await renal.bodyReviewMaterial(structure.id));"],
+ ["    assert(before&&atEpoch&&atPlayback&&after&&imported,structure.id);packets++;","    assert(before&&atEpoch&&atPlayback&&atRenal&&after&&imported,structure.id);packets++;"],
+ ["    assert.deepEqual(after.guidedTours,atEpoch.guidedTours,\n      `${structure.id}: live guide evidence remains exactly the playback epoch`);","    assert.deepEqual(atRenal.guidedTours,atEpoch.guidedTours,\n      `${structure.id}: historical guide evidence remains exactly the playback epoch`);\n    assertCurrentGuidedReviewAdditions(atRenal.guidedTours,after.guidedTours,current.regionalTours);"],
+];
+test('complete old test source has only eight exact role seams and a byte-exact inverse',()=>{
+ assert.equal(sha(originalBytes),'92ffeb69f175623981e443c1d63d43bdb1a6f5a70798553fbadc10999fab1d89');
+ let forward=original;
+ for(const [before,after] of edits)forward=one(forward,before,after);
+ assert.equal(forward,candidate,'Complete candidate equals exact forward role composition');
+ let inverse=candidate;
+ for(const [before,after] of edits.toReversed())inverse=one(inverse,after,before);
+ assert.equal(inverse,original,'Every original assertion and refusal restored');
+ assert(candidate.includes('assert.deepEqual(await current.parseBodyReviewResponse(after,structure.id),after);'),'Current parser acceptance remains mandatory');
+ assert.notEqual(candidate.replace('assert.deepEqual(await current.parseBodyReviewResponse(after,structure.id),after);',''),forward,'Removing parser gate is refused');
+});

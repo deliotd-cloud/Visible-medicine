@@ -1,0 +1,6 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const edits=new Map([
+ ['integrate-review-ui-website-20261023.mjs',[["'tests/tour-playback-source-role-inverse.test.mjs']]","'tests/tour-playback-source-role-inverse.test.mjs','tests/tour-playback-role-inverse.test.mjs']]"]]],
+ ['seal-review-ui-website-20261023.mjs',[["['import','policy','admissions']","['import','policy','admissions','preservation']"],["'verify','tests','release-tests','prebuild'","'verify','tests-v2','release-tests','prebuild'"],["['tests','release-tests']","['tests-v2','release-tests']",2],["const added=['tests/compact-head-provenance.test.mjs'","const added=['tests/tour-playback-role-inverse.mjs','tests/tour-playback-role-inverse.test.mjs','tests/compact-head-provenance.test.mjs'"]]],
+]);
+const patch='*** Begin Patch\n'+[...edits].map(([p,rows])=>{const before=fs.readFileSync(p,'utf8');let after=before;for(const[a,b,n=1]of rows){assert.equal(after.split(a).length-1,n,p+' '+a);after=after.split(a).join(b);}return'*** Update File: '+p+'\n@@\n'+before.trimEnd().split('\n').map(l=>'-'+l).join('\n')+'\n'+after.trimEnd().split('\n').map(l=>'+'+l).join('\n')+'\n';}).join('')+'*** End Patch';console.log(JSON.stringify({patch}));

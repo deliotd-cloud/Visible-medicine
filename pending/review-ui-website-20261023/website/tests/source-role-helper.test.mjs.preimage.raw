@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {exactSourceHistoryApi} from 'file:///F:/VisibleMedicine/staging/20261023-tour-reading/atlas/scripts/exact-source-history-api.mjs';
+import {assertHistoricalRenalTourEpoch,assertCurrentTourAdditions,assertCurrentGuidedReviewAdditions} from './tour-playback-source-role.mjs';
+const atlasRoot='F:/VisibleMedicine/staging/20261023-tour-reading/atlas';
+const helperSource='F:/VisibleMedicine/staging/20261023-tour-reading-website/website/tests/renal-tour-epoch-admission.mjs';
+const reviewed='2381efe43b75f8a7fb768a069eecd7268c508dac';
+const current='9eac0806a7869cfae435010b013ae611d748c0c9';
+test('genuine old renal theorem and current two-tour role both reject forged source',async()=>{
+ const before=await exactSourceHistoryApi('840fcbf73e29a9c146a84ca8c232ca5c762c1672','regional-tour-review');
+ const renal=await exactSourceHistoryApi(reviewed,'regional-tour-review');
+ const now=await exactSourceHistoryApi(current,'regional-tour-review');
+ assertHistoricalRenalTourEpoch(before.regionalTours,renal.regionalTours,{atlasRoot,helperSource});
+ assertCurrentTourAdditions(renal.regionalTours,now.regionalTours,{atlasRoot,sourceCommit:current});
+ const changed=structuredClone(now.regionalTours);changed[0].steps[0].caption+=' forged';
+ assert.throws(()=>assertCurrentTourAdditions(renal.regionalTours,changed,{atlasRoot,sourceCommit:current}));
+ assert.throws(()=>assertCurrentTourAdditions(renal.regionalTours,now.regionalTours,{atlasRoot,sourceCommit:reviewed}));
+ const id='vm:anatomy:body:thigh:left:bone:left-femur';
+ const oldPacket=await renal.bodyReviewMaterial(id),newPacket=await now.bodyReviewMaterial(id);
+ assert.deepEqual(assertCurrentGuidedReviewAdditions(oldPacket.guidedTours,newPacket.guidedTours,now.regionalTours),['left-hamstring-orientation']);
+ const forged=structuredClone(newPacket.guidedTours);forged.at(-1).continuousPlayback.stepDurationsMs[0]=1;
+ assert.throws(()=>assertCurrentGuidedReviewAdditions(oldPacket.guidedTours,forged,now.regionalTours));
+});

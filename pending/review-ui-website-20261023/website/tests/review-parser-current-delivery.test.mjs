@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import test from 'node:test';
+import {build} from 'esbuild';
+import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+
+const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root)),sha=b=>createHash('sha256').update(b).digest('hex'),wire=v=>JSON.parse(JSON.stringify(v));
+const source='66ac064579ee23c5739d0907e8378e0e2d57d7bd',tree='0730550af7e5f8cc1d763d7326ca0a0c05458ca7';
+const stage='F:/VisibleMedicine/staging/20261023-review-parser-context',receiptBytes=readFileSync(stage+'/SOURCE_BOUND.json');
+assert.equal(sha(receiptBytes),'a32919b11982957ef10eece8526ac6767d5c5a16499ff51cf2e50c2fc912a5f4');
+const receipt=JSON.parse(receiptBytes);assert.equal(receipt.head,source);assert.equal(receipt.tree,tree);
+
+test('actual imported parser and producer bind exact committed source through the current Website delivery',()=>{
+ const current=validateCurrentAtlasDelivery();assert.equal(current.source,source);
+ const manifest=JSON.parse(read('atlas-review/manifest.json'));assert.equal(manifest.revision,source);
+ for(const p of ['lib/body-review-response.ts','lib/body-review-material.ts','lib/body-review-display-integrity.ts','content/body-review-display-pins.json','content/hamstring-tour-pins.json']){
+  const authored=readFileSync(stage+'/atlas/'+p),row=receipt.sourceRows.find(r=>r.path===p),imported=manifest.files.find(r=>r.path===p);assert(row&&imported,p);
+  assert.equal(sha(authored),row.sha256);assert.equal(imported.sourceSha256,row.sha256);
+  const adapted=p.endsWith('.ts')?Buffer.from(authored.toString().replace(/(['"])@\//g,'$1@/atlas-review/')):authored;
+  assert.deepEqual(read('atlas-review/'+p),adapted,p);assert.equal(sha(adapted),imported.importedSha256);
+ }
+ const expected=receipt.sourceRows.find(r=>r.path==='lib/body-review-response.ts').sha256;
+ const prior=JSON.parse(readFileSync('F:/VisibleMedicine/staging/20261023-tour-reading/SOURCE_BOUND.json'));
+ assert.notEqual(expected,prior.sourceRows.find(r=>r.path==='lib/body-review-response.ts').sha256,'Actual repaired parser is delivered, not the former rejected-packet implementation');
+});
+
+test('actual Website-imported JSON worksheet path accepts all ten hamstring contexts and refuses altered packets',async()=>{
+ const resolveDir=new URL('../',import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1');
+ const compiled=await build({stdin:{contents:"export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';export {parseBodyReviewResponse} from './atlas-review/lib/body-review-response';",resolveDir,loader:'ts'},bundle:true,write:false,format:'esm',platform:'node',packages:'external',alias:{'@':resolveDir}});
+ const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+ const pins=JSON.parse(read('atlas-review/content/hamstring-tour-pins.json')),entries=[...pins.entries,...pins.contextEntries];assert.equal(entries.length,10);
+ for(const entry of entries){
+  const packet=wire(await api.bodyReviewMaterial(entry.id));assert(packet);assert.equal(packet.approval,false);assert.equal(packet.status,'worksheet-not-submitted');
+  assert(packet.guidedTours.some(g=>g.tour.id===`${entry.laterality}-hamstring-orientation`));
+  assert.deepEqual(await api.parseBodyReviewResponse(packet,entry.id),packet);
+  for(const [label,mutate]of [
+   ['material hash',p=>{p.materialHash='0'.repeat(64);}],
+   ['source fingerprint',p=>{p.fingerprints.source='0'.repeat(64);}],
+   ['teaching fingerprint',p=>{p.fingerprints.teaching='0'.repeat(64);}],
+   ['checklist fingerprint',p=>{p.fingerprints.checklist='0'.repeat(64);}],
+   ['tour caption',p=>{p.guidedTours.at(-1).tour.steps[0].caption+=' altered';}],
+   ['approval',p=>{p.approval=true;}],
+  ]){const altered=wire(packet);mutate(altered);assert.equal(await api.parseBodyReviewResponse(altered,entry.id),null,`${entry.id}: ${label}`);}
+ }
+});
