@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';
+const parent='F:/VisibleMedicine/staging/20261023-fda-shoulder-reference/atlas',stage='F:/VisibleMedicine/staging/20261023-fda-review-source',atlas=stage+'/atlas',head='65005a2435d732ba71b5dfc48a3842756b711494';
+const git=(...a)=>execFileSync('git',a,{encoding:'utf8',windowsHide:true,stdio:'pipe',maxBuffer:32e6}).trim(),hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+assert.equal(git('-C',parent,'rev-parse','HEAD'),head);assert.equal(git('-C',parent,'status','--porcelain'),'');assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+git('clone','--local','-c','core.autocrlf=false',parent,atlas);git('-C',atlas,'checkout','--detach',head);
+const files=git('-C',parent,'ls-files','-z').split('\0').filter(Boolean).map(path=>({path,sha256:hash(parent+'/'+path)}));for(const row of files)assert.equal(hash(atlas+'/'+row.path),row.sha256);
+fs.mkdirSync(atlas+'/node_modules');const real=fs.realpathSync(parent+'/node_modules');let copied=0;
+for(const e of fs.readdirSync(real,{withFileTypes:true})){if(['three','three-mesh-bvh'].includes(e.name)){fs.cpSync(real+'/'+e.name,atlas+'/node_modules/'+e.name,{recursive:true,dereference:false,errorOnExist:true});copied++;}else if(e.isDirectory()||e.isSymbolicLink())fs.symlinkSync(fs.realpathSync(real+'/'+e.name),atlas+'/node_modules/'+e.name,'junction');else fs.copyFileSync(real+'/'+e.name,atlas+'/node_modules/'+e.name);}
+fs.writeFileSync(stage+'/PREPARED.json',JSON.stringify({at:new Date().toISOString(),parent,head,tree:git('-C',parent,'rev-parse','HEAD^{tree}'),atlas,files,physicallyCopiedDependencies:copied,previewChanged:false,installed:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({stage,sourcePaths:files.length,copiedPackageDirectories:copied}));
