@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T02:02:14.732Z",
+  "at": "2026-10-23T02:16:43.985Z",
   "sourceIdentity": {
     "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
     "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
-    "sourceReceiptSha256": "b7e4b807f9323b864ca67bbf2148a6213c94e454a0e727dc7cbe92f5b23efecf",
-    "websiteIntegrationSha256": "24c0f60ef9ba0fdf00a3217ffa0035b4fdbff7e1b8c17dc26a3362612c6c3d5d"
+    "sourceReceiptSha256": "bd073fb1d6134af415e8b77f82ba218a1756e47af2c2ab503459e711ea8a6cc8"
   },
-  "parent": "eba76108f485a2bfbb4d4bca3dc96f0a47bbe72d",
-  "gitParent": "eba76108f485a2bfbb4d4bca3dc96f0a47bbe72d",
+  "parent": "a1ce54487a239d9043b6c417c7b01b37f83344cc",
+  "gitParent": "a1ce54487a239d9043b6c417c7b01b37f83344cc",
   "files": [
     {
       "path": "app/globals.css",
@@ -15931,6 +15930,36 @@
       "sha256": "4f133d589d8f9e0c02c71abaf693e497c8221462b5f8e4d2927602cf69b81eb3"
     },
     {
+      "path": "pending/current-ui-delivery-20261023/candidate/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19208,
+      "sha256": "551b7cff540e3e355b0a9b747b8d07e0d4341a25c82ae5009be795924ae63a2c"
+    },
+    {
+      "path": "pending/current-ui-delivery-20261023/candidate/tests/current-ui-delivery-transition.test.mjs",
+      "bytes": 3562,
+      "sha256": "dbd58881096c1d895455986137d49b83509778c548832821abf3666722c4b585"
+    },
+    {
+      "path": "pending/current-ui-delivery-20261023/candidate/tests/fixtures/current-ui-delivery-before-9e14/contract.test.mjs.raw",
+      "bytes": 19208,
+      "sha256": "7f745b24ac233d3d9fca6b80a54e5387f2dc50eafa45a372cdb615520473b8b8"
+    },
+    {
+      "path": "pending/current-ui-delivery-20261023/candidate/tests/fixtures/current-ui-delivery-before-9e14/validator.mjs.raw",
+      "bytes": 5092,
+      "sha256": "52551fd5ec16154a78b94f78e0cdfbfee6a1bea629f70714f3dd5f93ccb81bb5"
+    },
+    {
+      "path": "pending/current-ui-delivery-20261023/coordination/checkpoint-current-ui-delivery-20261023.mjs",
+      "bytes": 14028,
+      "sha256": "c312f622562818a8f9b9249e6f0b307a829e8f0c5ef666876b5c3e8b19cc135a"
+    },
+    {
+      "path": "pending/current-ui-delivery-20261023/coordination/current-ui-delivery-20261023.mjs",
+      "bytes": 8751,
+      "sha256": "e15303b85bb981182f669392ae53e84ae4e6d0da6969e3a8fa04dfe267473f69"
+    },
+    {
       "path": "pending/desktop-drawable-space-20261021/atlas/app/body-explorer.css",
       "bytes": 65201,
       "sha256": "9722246697fafcd54f55e586797eaec33930c5f3f87d653117b064787ebe2904"
@@ -24727,28 +24756,27 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus5coordinator recipes,3narrow inventory/coverage code changes and3exact source preimages. Excludes all generated Review/viewer/runtime/model/inventory data, clinical/private packets and asset maps, source inventories/legal outputs, raw process/log/replay records, scans/identifiers/decisions/masks, and canonical Git ancestry. Full generated evidence/complete source-manifest closure remain F-only; not full/private/runnable off-device recovery. No preview restart/install/refresh, public deployment, entitlement or permission widening, clinical approval or patient registration.",
+  "scope": "Inherited verified filtered source plus2main coordinator recipes and4explicit original/current test/validator code/preimage paths. Omits all generated delivery fixtures/catalogues/builds/Review/runtime/model data, private packets/asset maps, decisions/scans/masks, raw logs/type/resource records and canonical Git ancestry. Full source closure/build manifest/evidence stays F-only. Not full/private/runnable off-device recovery. No preview/server/restart/install/deploy, permission/entitlement widening, clinical approval or patient-space registration.",
   "proof": {
-    "mainReviewSha256": "0e58d2c3ef8de9a5e76104dd120d4e56bbfc0094077c28ed60b4394552191757",
-    "namedHostSourcePaths": 6126,
-    "changedExistingPaths": 11,
-    "narrowCodeChanges": 3,
-    "wholeOriginalRoleCodeInversesVerified": true,
-    "sourceFiles": 1567,
-    "reviewInputs": 1734,
-    "actualProductionViewerBuild": true,
-    "viewerFiles": 46,
-    "bundledPackages": 22,
-    "actualCoverageScopes": 4,
-    "coverageSourceInputs": 171,
-    "coverageContentCountsAndHoldsUnchanged": true,
-    "focusedNativeCasesPassed": 7,
-    "expectedStaleConfigurationsRefused": 2,
-    "models": 137,
-    "inventoryPaths": 144,
-    "audienceUnchanged": "administrator-review",
+    "mainReviewSha256": "2dbc45a4cd17edf0c79f4189c7d78be9f5493f66f47c7f34aa44f9717550e0c9",
+    "hostNamedPaths": 6130,
+    "changedExistingPaths": 3,
+    "addedPaths": 4,
+    "wholeOriginalTestsInverseVerified": true,
+    "validatorUnchanged": true,
+    "nativeCasesPassed": 78,
+    "currentDeliveryTests": 41,
+    "transitionGuards": 3,
+    "lectureFeatureCases": 34,
+    "actualPrebuildPassed": true,
+    "actualProductionWebsiteBuildPassed": true,
+    "buildFiles": 1110,
+    "buildOutputBytes": 406636283,
+    "fullTypesResourceFailure": true,
+    "typeHeapCapMiB": 384,
+    "lectureRows": 1104,
+    "lectureContentAndLinksUnchanged": true,
     "privateDecisionsReadOrMigrated": false,
-    "heldPlexusUnchanged": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
