@@ -1,14 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T12:56:30.448Z",
+  "at": "2026-10-23T13:14:37.819Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "af5814a282bedac3cb20ba7477a34696f4f0783f90a6bee310997b527c7f1bcc",
-    "atlasHead": "be9b53d96c37f1ea973e60f5981ad80db0893177",
-    "atlasTree": "f94d89f76d1b29f2aeb5d66d23dd5b0cf5a55ff6",
-    "reviewBinding": "3757dc198d4b0cc20c0a02d7498d8ebc5c53fc95580e4636b523b4231134a853"
+    "sourceReceiptSha256": "b60beb3c9c6436031a269c28138f0688fbbe0c6098394e50d37a938bf072af25",
+    "atlasHead": "5f278c3d0c26c5a0899b54f2cfa2a0accb02ecf7",
+    "atlasTree": "12ebdf5d221220c4b6819abdcdeb04231048bf17"
   },
-  "parent": "0ce66480886d7b2665fa56b69ed51e1f095464f8",
-  "gitParent": "0ce66480886d7b2665fa56b69ed51e1f095464f8",
+  "parent": "89b98e047c5a9e3234db2cb79509b8dec8889fb8",
+  "gitParent": "89b98e047c5a9e3234db2cb79509b8dec8889fb8",
   "files": [
     {
       "path": "app/globals.css",
@@ -12609,6 +12608,96 @@
       "path": "pending/body-learning-20261021/website/tests/structure-learning-ui.test.ts",
       "bytes": 10409,
       "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/docs/CARPAL_RELATIONSHIPS_REASONING.md.raw",
+      "bytes": 2721,
+      "sha256": "57ea90392446e6ca92d51e3f8c738ef3f1e800b4acfdd0af07137e3de104d8c5"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
+      "bytes": 37740,
+      "sha256": "ecebbbcd34994d421bf1959ceb60accce937681756d8a81397ca342f7aac8045"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/lib/carpal-relationships-reasoning.ts",
+      "bytes": 4284,
+      "sha256": "c5b2e5e02d684861b848d73d4560b6191449f7301ef45a64b9c159ca577a2b3d"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/lib/reasoning-questions.ts",
+      "bytes": 15121,
+      "sha256": "9f1426b2800b4b40ce633f131ba5a56b975ac17ded0abbe2a2fd09c506816562"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 358429,
+      "sha256": "2bedfbd4a50eb7db3df48445de6646e315a65765f66dfb2951e30239549af0f0"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/package.json.raw",
+      "bytes": 87994,
+      "sha256": "8f1262f745cd453603e25f9ef6b2ca7cfff4be89c32a0798f24a55420d107a22"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/scripts/check-carpal-relationships-types.mjs",
+      "bytes": 907,
+      "sha256": "150bd9c40f6afc6e7b77da90c722897172350b71de9d10ab7a97ba8f65ae735b"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/scripts/pin-carpal-relationships-reasoning.mjs",
+      "bytes": 2083,
+      "sha256": "5dba3cdd06d570415ef53a5748a0e4538ed466636923bb47995f682158708020"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/scripts/test-carpal-relationships-reasoning.mjs",
+      "bytes": 14333,
+      "sha256": "49edb6bc9015791e36570af57913e531d15680a60cde2ecee05ccfdf90161ba4"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 54465,
+      "sha256": "db1c16ef3c0abd8540a9fb67c909553f6e008484a6e7a4e7774105daa9d34324"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/coordination/build-ventricular-atlas-20261023.mjs",
+      "bytes": 1196,
+      "sha256": "68955dec2251a304847ebce04a0d6d36e9b5dcee1c2ff91ae79c161a4838e018"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/coordination/checkpoint-carpal-reasoning-20261023.mjs",
+      "bytes": 9199,
+      "sha256": "c81e7ffc6ea8c51f50cc41d6ab5f3e30c11ca867b295136b98ae57b2e742169b"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/coordination/finalize-carpal-reasoning-20261023.mjs",
+      "bytes": 7152,
+      "sha256": "c84a3be765af6673fe4a801d61b7a3d463267e0a08e48e19d32e55ffdf56ec86"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/coordination/prepare-carpal-reasoning-20261023.mjs",
+      "bytes": 3661,
+      "sha256": "01d3e3fec5ccd2738630899722b7853cd9df936c2a49e2c81914c6e3e6e02de9"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/coordination/run-carpal-reasoning-20261023.mjs",
+      "bytes": 3559,
+      "sha256": "85c27137a1962c4109e3a4322062fe43b80433822da517567f76d99f375ab883"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/coordination/seal-carpal-reasoning-20261023.mjs",
+      "bytes": 7087,
+      "sha256": "d676594966c5c1a4806f9686ddf372b87be076fdd9cd66b24c9edb477a3f350a"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+      "bytes": 2027,
+      "sha256": "f5183aed51dfacdf292f692fb50527bed103c7892ee3072764b77c876b6b228d"
+    },
+    {
+      "path": "pending/carpal-reasoning-20261023/coordination/verify-carpal-reasoning-20261023.mjs",
+      "bytes": 6859,
+      "sha256": "e65e0c85a877973fd88b846c27f9f0af1f895008795db57790c281a1d058c7dd"
     },
     {
       "path": "pending/checklist-reconciliation-20261022/checkpoint-checklist-reconciliation-20261022.mjs",
@@ -26992,43 +27081,36 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus7main preparation/check/recovery recipes,5original Website code/CSS/test paths and3original authored preimages. No generated import/pin/catalog/coverage/binding/renderer/build/source-input snapshots, browser screenshots, model/media/scan/mask/identifier/decision, session or raw diagnostic/type/process evidence. Not a whole/private/runnable off-device backup; no deployment, fee, permission, clinical or spatial expansion.",
+  "scope": "Inherited verified filtered authored source plus8main recipes,6Atlas code/test files and4original project prose/package raw snapshots. No generated identity pins/catalog/renderer/display metadata, models/media/scans/masks/patient identifiers/decisions, raw diagnostic/type/build/browser/private evidence. Not a whole/private/runnable off-device backup. Normal preview/canonical installation unchanged; no deployment, fee, access, permission, clinical or spatial expansion.",
   "proof": {
-    "mainReviewSha256": "03e06e4aa00279c91ed9c59bb15c5e36a8197da182f05df395ca8d77d840f521",
-    "existingToursOnly": true,
-    "exactConceptAndCanonicalStep": true,
-    "modalityAdmissionPreserved": true,
-    "imageOnlyNoGuessed3d": true,
-    "sourcePaths": 6314,
-    "unchangedParentInputs": 6309,
-    "changedExistingPaths": 3,
-    "newPaths": 2,
-    "nativeCases": 88,
-    "failures": 0,
-    "skipsOrCancellations": 0,
-    "strictTypeRoots": 2,
-    "strictTypeAmbient": 6,
-    "strictTypeFiles": 620,
-    "strictTypeDiagnostics": 0,
-    "productionBuildFiles": 1111,
-    "actualPrebuildPassed": true,
-    "actualProductionBuildPassed": true,
-    "reviewSourceFiles": 1576,
-    "reviewInputs": 1745,
-    "reviewBinding": "3757dc198d4b0cc20c0a02d7498d8ebc5c53fc95580e4636b523b4231134a853",
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "sourceAndAccessLogicPreserved": true,
-    "allPreviousAssertionsPreserved": true,
-    "newAssetsDependenciesFees": false,
+    "mainReviewSha256": "addbb4643b77d4026cc076a21167fd42121a09267a6edd4ba3c74b89df615dd6",
+    "newDraftConcepts": 4,
+    "newRootSelections": 8,
+    "concepts": 204,
+    "sourceSelections": 368,
+    "previousConceptsPreserved": 200,
+    "previousSessionsPreserved": 360,
+    "changedTeachingWorksheets": 8,
+    "unchangedTeachingWorksheets": 1096,
+    "unchangedTopicPlacements": 9936,
+    "broadPracticeChecks": 23446,
+    "broadIdentityNegatives": 5785,
+    "newIdentityNegatives": 280,
+    "newPracticePaths": 48,
+    "tamperedPacketsRefused": 40,
+    "stalePostsRefusedBeforeStorage": 8,
+    "focusedTypeFiles": 597,
+    "focusedTypeDiagnostics": 0,
+    "completeAtlasBuildPassed": true,
+    "assetsDependenciesSourceHoldsUnchanged": true,
     "privateDecisionsReadOrMigrated": false,
-    "autoplayOrProgressAdded": false,
-    "authenticatedAcceptance": false,
+    "websiteIntegrationPending": true,
+    "wholeSuitePassing": false,
     "clinicalApproval": false,
-    "spatialRegistration": false,
+    "patientSpaceRegistration": false,
     "previewChanged": false,
     "installed": false,
-    "wholeSuitePassing": false
+    "spatialRegistration": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
