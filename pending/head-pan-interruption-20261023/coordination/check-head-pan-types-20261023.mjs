@@ -1,0 +1,20 @@
+// Read-only semantic overlay of this one component on its exact full source parent.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';
+import {json,read,sha} from './source-only-backup-20261019.mjs';
+const stage='F:/VisibleMedicine/staging/20261023-head-pan-interruption',base='F:/VisibleMedicine/staging/20261023-window-drag-bound/website';
+const current=stage+'/website/components/HeadAtlasViewer.tsx';
+assert.equal(sha(read('F:/VisibleMedicine/staging/20261023-window-drag-bound/SOURCE_BOUND.json')),'b3d5ddd1ace8d5bfe7ff9ce8abba0b3fca9254de37724956970321b4eee8b03a');
+const directory=stage+'/checks/focused-types';assert(!fs.existsSync(directory));fs.mkdirSync(directory);
+const code=`import ts from 'typescript';import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const cwd=process.cwd(),file=path.resolve(cwd,'components/HeadAtlasViewer.tsx'),overlay=${JSON.stringify(current)};
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const config=ts.readConfigFile('tsconfig.json',ts.sys.readFile);assert(!config.error);const parsed=ts.parseJsonConfigFileContent(config.config,ts.sys,cwd);assert.equal(parsed.errors.length,0);
+const ambient=parsed.fileNames.filter(f=>f.endsWith('.d.ts'));const options={...parsed.options,noEmit:true,incremental:false};
+const host=ts.createCompilerHost(options),prior=host.readFile.bind(host);host.readFile=p=>path.resolve(p)===file?fs.readFileSync(overlay,'utf8'):prior(p);
+const program=ts.createProgram([file,...ambient],options,host);assert.equal(program.getSourceFile(file).text,fs.readFileSync(overlay,'utf8'));
+const diagnostics=ts.getPreEmitDiagnostics(program);if(diagnostics.length)console.error(ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCurrentDirectory:()=>cwd,getCanonicalFileName:f=>f,getNewLine:()=> '\\n'}));
+console.log(JSON.stringify({sourceSha256:hash(fs.readFileSync(overlay)),configSha256:hash(fs.readFileSync('tsconfig.json')),ambient:ambient.map(f=>({path:path.relative(cwd,f).replaceAll('\\\\','/'),sha256:hash(fs.readFileSync(f))})),sourceFiles:program.getSourceFiles().length,diagnostics:diagnostics.length,fullProject:false,baseUnmodified:true}));assert.equal(diagnostics.length,0);`;
+const args=['--max-old-space-size=384','--input-type=module','-e',code],start={at:new Date().toISOString(),cwd:base,args,sourceSha256:sha(read(current)),previewChanged:false};
+fs.writeFileSync(directory+'/STARTED.json',JSON.stringify(start,null,2)+'\n',{flag:'wx'});
+const out=fs.openSync(directory+'/stdout.log','wx'),err=fs.openSync(directory+'/stderr.log','wx');const r=spawnSync(process.execPath,args,{cwd:base,env:{...process.env,NODE_OPTIONS:'--max-old-space-size=384',RAYON_NUM_THREADS:'1',GOMAXPROCS:'2'},stdio:['ignore',out,err],windowsHide:true});fs.closeSync(out);fs.closeSync(err);
+const terminal={...start,finishedAt:new Date().toISOString(),exitCode:r.status,signal:r.signal,error:r.error?String(r.error):null,stdoutSha256:sha(read(directory+'/stdout.log')),stderrSha256:sha(read(directory+'/stderr.log'))};fs.writeFileSync(directory+'/TERMINAL.json',JSON.stringify(terminal,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({exitCode:r.status,evidence:directory}));assert.equal(r.status,0);console.log(read(directory+'/stdout.log').toString());

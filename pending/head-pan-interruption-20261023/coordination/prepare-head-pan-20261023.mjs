@@ -1,0 +1,9 @@
+// Thin source-only staging from the latest built Website; no normal preview use.
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {read,sha,json} from './source-only-backup-20261019.mjs';
+const parent='F:/VisibleMedicine/staging/20261023-window-drag-bound',stage='F:/VisibleMedicine/staging/20261023-head-pan-interruption',site=stage+'/website';
+assert.equal(sha(read(parent+'/SOURCE_BOUND.json')),'b3d5ddd1ace8d5bfe7ff9ce8abba0b3fca9254de37724956970321b4eee8b03a');assert(!fs.existsSync(stage));fs.mkdirSync(site,{recursive:true});
+const files=['package.json','tsconfig.json','components/HeadAtlasViewer.tsx','lib/head-slice-viewport.ts','lib/head-atlas-geometry.mjs','lib/head-atlas-geometry.d.mts','lib/head-disclosure-keyboard.ts','lib/head-atlas-slice-controls.ts','lib/head-atlas-practice.ts','lib/head-atlas-display.ts','tests/head-slice-keyboard.test.ts','tests/head-slice-zoom.test.ts','tests/head-slice-viewport.test.ts'];
+const rows=files.map(p=>{const expected=json(parent+'/SOURCE_BOUND.json').sourceRows.find(r=>r.path===p);assert(expected,p);assert.equal(sha(read(parent+'/website/'+p)),expected.sha256);fs.mkdirSync(path.dirname(site+'/'+p),{recursive:true});fs.copyFileSync(parent+'/website/'+p,site+'/'+p,fs.constants.COPYFILE_EXCL);return expected;});
+fs.symlinkSync(parent+'/website/node_modules',site+'/node_modules','junction');fs.mkdirSync(stage+'/preimages');fs.copyFileSync(site+'/components/HeadAtlasViewer.tsx',stage+'/preimages/HeadAtlasViewer.tsx.raw',fs.constants.COPYFILE_EXCL);
+fs.writeFileSync(stage+'/PREPARED.json',JSON.stringify({at:new Date().toISOString(),parent,parentReceipt:parent+'/SOURCE_BOUND.json',sourceRows:rows,site,previewChanged:false,installed:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({stage,sourceRows:rows.length}));

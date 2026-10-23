@@ -1,37 +1,18 @@
 {
-  "mainReviewSha256": "19e1a37f29b9ce25ff4029b87daa8dc30ff49dd088163dc1943c613ff65505c1",
-  "native": {
-    "tests": 10,
-    "pass": 10,
-    "fail": 0,
-    "skipped": 0,
-    "cancelled": 0,
-    "changedPlacements": 6,
-    "preservedPlacements": 9930,
-    "changedWorksheets": 6,
-    "mutationsRefused": 282,
-    "forgedPacketsRefused": 30,
-    "staleRequestsRefused": 18,
-    "storageCalls": 0,
-    "ssrSelections": 6
-  },
-  "focusedTypes": {
-    "roots": [
-      "lib/digital-vein-ultrasound.ts",
-      "content/digital-vein-ultrasound.ts"
-    ],
-    "sourceFiles": 573,
-    "diagnostics": 0,
-    "fullProject": false,
-    "options": "Existing configured strict options; only noEmit/incremental execution flags set"
-  },
-  "threeActualProducersChecked": true,
-  "normalVeinVisibilityValidated": false,
-  "websiteIntegrated": false,
-  "allOtherSourceBytesExact": true,
-  "clinicalApproval": false,
+  "mainReviewSha256": "0b61dfc07411f7eabf705ee438d2af1c3508b827e721ea00e9020009552ecee8",
+  "currentNativePass": 38,
+  "newBeforeFailures": 14,
+  "unchangedOldCases": 19,
+  "wholeSourceAndOriginalTestInversesVerified": true,
+  "syntheticRealReactProbes": 3,
+  "nativeTrustedCaptureAccepted": false,
+  "semanticTypesExit": 134,
+  "semanticTypesPassing": false,
+  "fullWebsiteBuildPassing": false,
+  "ownerPreviewChanged": false,
   "previewChanged": false,
   "installed": false,
   "wholeSuitePassing": false,
+  "clinicalApproval": false,
   "spatialRegistration": false
 }

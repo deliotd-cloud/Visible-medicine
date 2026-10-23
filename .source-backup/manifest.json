@@ -1,14 +1,12 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T04:32:10.696Z",
+  "at": "2026-10-23T04:53:49.796Z",
   "sourceIdentity": {
-    "atlasHead": "ed3c8cc0e99f6cf850a915d7a08de2e6489c1b6f",
-    "atlasTree": "0305c15be5fb58ea7729a3849bbbdb6e1e40649d",
-    "base": "9e1407629bd6f85061537c9f013fd72e4543e0da",
-    "sourceReceiptSha256": "1848ea68a67f87cf505e0b92366d2578c8472d8adb5d3f3231df4904fd55e5cc"
+    "parentReceiptSha256": "b3d5ddd1ace8d5bfe7ff9ce8abba0b3fca9254de37724956970321b4eee8b03a",
+    "componentSha256": "180d034774956e77d62a0b2d0ad517b38d70581dfc8da935fd937f1c8f4dc08a"
   },
-  "parent": "5809a091713ed0f658827b73d39049b0c12c5ad4",
-  "gitParent": "5809a091713ed0f658827b73d39049b0c12c5ad4",
+  "parent": "a758489239ba65ad09276104136b82d51f0c338a",
+  "gitParent": "a758489239ba65ad09276104136b82d51f0c338a",
   "files": [
     {
       "path": "app/globals.css",
@@ -16941,6 +16939,81 @@
       "sha256": "bd7aed9867c51c839a10eb8fc981068244c24be92d7e4e12e3a3bd3a32ef5e3d"
     },
     {
+      "path": "pending/head-pan-interruption-20261023/coordination/build-head-pan-browser-20261023.mjs",
+      "bytes": 9017,
+      "sha256": "cdb1861c22bfe8c13386f3611c0ed1a3e5eb44fc51c9beb43f54e9f4e0353392"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/coordination/check-head-pan-types-20261023.mjs",
+      "bytes": 3377,
+      "sha256": "bd8e911f68ecd10b2638b185f76223e725c80ce1356a49bf0365218f4d8d7a40"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/coordination/checkpoint-head-pan-20261023.mjs",
+      "bytes": 11753,
+      "sha256": "917dc4ad00561bd2ff0b0802206566398d65122c2c370073af6881a3e9c9e17b"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/coordination/compact-pan-index-20261023.mjs",
+      "bytes": 2668,
+      "sha256": "0ad113030110c77ec0892fc9c167fa88208e9c9d7577ff56cbbe72ff82f4394a"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/coordination/prepare-head-pan-20261023.mjs",
+      "bytes": 1843,
+      "sha256": "635f925d5991d77ab542fb07f3efaf3a4f5b57ede0324344323b51bfca846280"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/coordination/serve-head-pan-browser-20261023.mjs",
+      "bytes": 709,
+      "sha256": "752be5b14c34e456703de7fc6a5d97484bae66d36f5d0e40117ef7bf17333a93"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/coordination/verify-head-pan-20261023.mjs",
+      "bytes": 2742,
+      "sha256": "bfa629c24efa21066284d2b35aaccf3363e45be379c124231ac6fb3027bbc540"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/website/components/HeadAtlasViewer.tsx",
+      "bytes": 113702,
+      "sha256": "180d034774956e77d62a0b2d0ad517b38d70581dfc8da935fd937f1c8f4dc08a"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/website/tests/fixtures/head-pan-before/head-slice-keyboard.test.ts.raw",
+      "bytes": 18895,
+      "sha256": "b91b78e07bd2008101c2ce73bffd72b5544aeebf13bdb54fc56c596095acfd8c"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/website/tests/fixtures/head-pan-before/head-slice-zoom.test.ts.raw",
+      "bytes": 9953,
+      "sha256": "000b5646f88041c82ed048469dc7c316adac2a134d4f9099fb8cdfe5125a4d76"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/website/tests/fixtures/head-pan-before/HeadAtlasViewer.tsx.raw",
+      "bytes": 111741,
+      "sha256": "97b93a4b7af313042a6a54e8f9983b42c3eb8beb8b30222e4ee2d5d9f4812d73"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/website/tests/head-pan-interruption.test.ts",
+      "bytes": 13428,
+      "sha256": "5d358516ab1d17fe9a48dcbd6fe7dd82c0f8c1154b1bf9ccc38672b1aad7e65f"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/website/tests/head-pan-source-transition.test.ts",
+      "bytes": 3394,
+      "sha256": "80670c3b9adaf2c3178a64ddcc97eec5682c0abe813e7da73f7a93d3d8cdfcc8"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/website/tests/head-slice-keyboard.test.ts",
+      "bytes": 18928,
+      "sha256": "3e3994b1bb5f82cf0480e18e199a4acbd7e6b72fc97aff1a7df8d6a2d3804820"
+    },
+    {
+      "path": "pending/head-pan-interruption-20261023/website/tests/head-slice-zoom.test.ts",
+      "bytes": 9963,
+      "sha256": "1459b99870881d5d568b259cfb02ff84813102194c586a4bb6d9f2abd79482c1"
+    },
+    {
       "path": "pending/head-practice-exit-20261022/coordination/bind-imaging-presentation-20261022.mjs",
       "bytes": 5346,
       "sha256": "81426dac0dac4cfe8515f343015b828af84b9cf7ff1eed5fe51ae1732a6478bc"
@@ -25117,42 +25190,23 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus five explicitly selected Atlas source/test files, four authored coordination/selection recipes and exact resolver preimage. Generated metadata, source maps/models, raw logs/research, Markdown evidence, decisions/scans/masks/identifiers/builds and canonical history excluded. Full source/metadata recovery is local F checkpoint only; not whole/private/runnable remote backup. No Website import/preview/restart/refresh/deploy or permission/fee/approval change.",
+  "scope": "Inherited verified filtered source plus eight selected authored component/test/whole-preimage files and seven authored coordination/fixture/checkpoint recipes. Compiled browser bundles/media/snapshots, generated metadata, raw/type diagnostics, patient/scans/masks/identifiers/decisions and raw canonical history stay F-only. Not whole/private/runnable off-device recovery. No normal server/restart/install/tab refresh or permission/deployment/fee/approval change.",
   "proof": {
-    "mainReviewSha256": "19e1a37f29b9ce25ff4029b87daa8dc30ff49dd088163dc1943c613ff65505c1",
-    "native": {
-      "tests": 10,
-      "pass": 10,
-      "fail": 0,
-      "skipped": 0,
-      "cancelled": 0,
-      "changedPlacements": 6,
-      "preservedPlacements": 9930,
-      "changedWorksheets": 6,
-      "mutationsRefused": 282,
-      "forgedPacketsRefused": 30,
-      "staleRequestsRefused": 18,
-      "storageCalls": 0,
-      "ssrSelections": 6
-    },
-    "focusedTypes": {
-      "roots": [
-        "lib/digital-vein-ultrasound.ts",
-        "content/digital-vein-ultrasound.ts"
-      ],
-      "sourceFiles": 573,
-      "diagnostics": 0,
-      "fullProject": false,
-      "options": "Existing configured strict options; only noEmit/incremental execution flags set"
-    },
-    "threeActualProducersChecked": true,
-    "normalVeinVisibilityValidated": false,
-    "websiteIntegrated": false,
-    "allOtherSourceBytesExact": true,
-    "clinicalApproval": false,
+    "mainReviewSha256": "0b61dfc07411f7eabf705ee438d2af1c3508b827e721ea00e9020009552ecee8",
+    "currentNativePass": 38,
+    "newBeforeFailures": 14,
+    "unchangedOldCases": 19,
+    "wholeSourceAndOriginalTestInversesVerified": true,
+    "syntheticRealReactProbes": 3,
+    "nativeTrustedCaptureAccepted": false,
+    "semanticTypesExit": 134,
+    "semanticTypesPassing": false,
+    "fullWebsiteBuildPassing": false,
+    "ownerPreviewChanged": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
+    "clinicalApproval": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,
