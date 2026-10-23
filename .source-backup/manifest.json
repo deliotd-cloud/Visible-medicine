@@ -1,58 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T01:06:03.419Z",
+  "at": "2026-10-23T01:36:54.238Z",
   "sourceIdentity": {
-    "sourceReceiptSha256": "0dd282c43570998f10d8497fd32f6bcca12ea122f81aec8efd8cdc06379a1512",
-    "authoredSources": [
-      {
-        "path": "tests/regional-reference-review-index.test.ts",
-        "bytes": 17540,
-        "sha256": "a23d35d1cdf460dd1a5d3f58aaaa1429a7d2ad69073f627f82996047ae0e43fa"
-      },
-      {
-        "path": "tests/disk-catalogue-test-loader.mjs",
-        "bytes": 1816,
-        "sha256": "d88d0f7dd85c56b6dce2b7674a4fb5f8c00c1cfa1fbbac461e0ab1074004c61e"
-      },
-      {
-        "path": "tests/disk-catalogue-test-loader.test.mjs",
-        "bytes": 5592,
-        "sha256": "3b5d0cb54d5217dbd8e484ecb2392023a7421129d44b8db2e6509817a1492268"
-      },
-      {
-        "path": "tests/reference-catalogue-delivery-role.mjs",
-        "bytes": 2649,
-        "sha256": "28eb2698ed60fed3cfdba857c71a0a0451a5b0fc13f0d0feb6a5b1df1201628a"
-      },
-      {
-        "path": "tests/fixtures/regional-reference-before-disk-loader.test.ts.raw",
-        "bytes": 17422,
-        "sha256": "bc6c4172fe97f496320cb4d3170c83aeccbaa68f6b13b9786804fb2dd0f2e589"
-      },
-      {
-        "path": "tests/closed56-family-source-inverse.mjs",
-        "bytes": 3822,
-        "sha256": "3220ab5b39e7b2cc59e02288dbacba1be8f1f734653bd78908e11352fe7d07c3"
-      },
-      {
-        "path": "tests/closed56-current-role.test.mjs",
-        "bytes": 3148,
-        "sha256": "112335b618cc4a1dc3c7a701104b82e8cca4df797cd751d03c2f294dc47dbe64"
-      },
-      {
-        "path": "tests/fixtures/closed56-family-source-inverse-before-current.mjs.raw",
-        "bytes": 3273,
-        "sha256": "a7a21ced5b6e8661de3a26937b73c451bb27cbb2b8056a97a6e5ccf830661398"
-      },
-      {
-        "path": "tests/fixtures/closed56-femoral-epoch-current-2381.mjs.raw",
-        "bytes": 10912,
-        "sha256": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7"
-      }
-    ]
+    "atlasHead": "9e1407629bd6f85061537c9f013fd72e4543e0da",
+    "atlasTree": "9404fb39a8b08aff7ef5300d2ef963abd5639045",
+    "hostSourceReceiptSha256": "9c609ee742d75147a944d92012c0dd6d7f2243e1c65178684992b52fb2373ffa",
+    "runtimeVerificationSha256": "eac90490187c0bb1c173790a9aae4807f9aa836dca2b2c81f0e948162057139d"
   },
-  "parent": "fb3e2fe6733bf85676e0287de5557d78a93ee59d",
-  "gitParent": "fb3e2fe6733bf85676e0287de5557d78a93ee59d",
+  "parent": "5c6e9d96ae8eac8dbfaadf7c66c3a9cfcfa02d7d",
+  "gitParent": "5c6e9d96ae8eac8dbfaadf7c66c3a9cfcfa02d7d",
   "files": [
     {
       "path": "app/globals.css",
@@ -23990,6 +23946,26 @@
       "sha256": "4beb473e5f5c581fa9aa694735a4c1648031871da43b10d0d339f8c21c649308"
     },
     {
+      "path": "pending/ui-runtime-delivery-20261023/coordination/checkpoint-ui-runtime-delivery-20261023.mjs",
+      "bytes": 12006,
+      "sha256": "00f3ec445e2f73c37cdf6804913f25897530e4f38633dd3775a6a7b353514bc4"
+    },
+    {
+      "path": "pending/ui-runtime-delivery-20261023/coordination/compose-ui-runtime-website-20261023.mjs",
+      "bytes": 8169,
+      "sha256": "a2b1ac948bfa3c29d4ee9051cc39578c9f4c7cf9a935bbf1e622619966347e07"
+    },
+    {
+      "path": "pending/ui-runtime-delivery-20261023/coordination/inventory-ui-runtime-website-20261023.mjs",
+      "bytes": 4433,
+      "sha256": "1f6011e13450565d9ce879d8bf9d01aaf5dd03756143fdaec005ff33c1fc4456"
+    },
+    {
+      "path": "pending/ui-runtime-delivery-20261023/coordination/run-atlas-runtime-preflight-20261023.mjs",
+      "bytes": 10614,
+      "sha256": "ed6c69296fd3e9b1169fa67fd44dc2c3ac2fd8f5e6f17768e6021a147ed9ea18"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
@@ -24696,17 +24672,23 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered source plus9explicit authored test/helper/source-witness texts and2main verification/checkpoint utilities. The catalogue test uses the same complete source and exports with a disk-backed generated ESM fixture, removing the in-memory/base64 bootstrap copies: at the same128MiB it reaches all5original feature cases and resolves35draft links. Three old header literals remain authenticated historical ae84/190 obligations and exact current headers retain the12document/native source checks. Main also installs the closed56 helper and runs both unmodified old consumers, retaining full old source/three family spans/four precise roles and mutation refusals. Actual5feature and16separate support cases pass, not full Website/browser/GPU/release/clinical/registration acceptance. Generated catalogue bundles, imported/metadata/model/private data, raw logs/process evidence and canonical Git ancestry stay F-only. Source-only partial recovery, not whole/private/runnable backup; normal preview remains held unchanged.",
+  "scope": "Inherited independently verified filtered source plus4main coordinator recipe/checkpoint sources. Two real384MiB-heap-capped module builds,128MiB source checks and create-only exports pass;137existing model byte identities and144inventory paths are unchanged. The6078-path unserved Website source assembly includes21reviewed teaching/UI/test overlays, exact raw9e14Review and complete new module outputs. This backup omits all generated modules/Review/inventory/data, models/media/fonts, raw logs/process/resource records, private source maps/references/decisions/scans and canonical Git ancestry. Full generated/legal/private evidence stays F-only. Source-only partial recovery, not a full/private/runnable backup; no preview change, public deployment, permission/entitlement widening, clinical approval or patient-space registration. Binding, protected viewer, policy/current-delivery and full release/type/browser acceptance remain pending.",
   "proof": {
-    "mainReviewSha256": "3095da5735a3f4c2d5fc264924ca72fe65791f5ab75082c245499f7fc682776c",
-    "catalogueFeatureCases": 5,
-    "publicDraftLinks": 35,
-    "separateMainSupportCases": 16,
-    "originalClosed56ConsumerCases": 8,
-    "heapMiB": 128,
-    "oldCompleteSourcesAndAllCasesPreserved": true,
-    "allSelectedProductionAndMetadataInputsUnchanged": true,
-    "initialResourceAndHeaderFailuresRetained": true,
+    "mainReviewSha256": "6861ad747fe7cc443bbd1e61fda9ebfd757e124cc19e9f1fc09ce5563a89fa37",
+    "sourceHoldAssertions": 9388,
+    "geometryScreenAssertions": 236,
+    "rawObjFilesRechecked": 0,
+    "actualModuleBuilds": 2,
+    "buildNodeHeapCapMiB": 384,
+    "actualModuleExports": 2,
+    "uniqueExistingModelByteIdentities": 137,
+    "inventoryPaths": 144,
+    "allRuntimeFileAndSourceInputHashesVerified": true,
+    "bundledPackagesPerModule": 22,
+    "hostNamedSourcePaths": 6078,
+    "hostMergeConflicts": 0,
+    "protectedReviewBound": false,
+    "privateDecisionsReadOrMigrated": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
