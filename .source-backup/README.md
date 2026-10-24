@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited verified filtered authored-source plus five coordination/fixture code files, source CSS as UTF8rawtext and two reviewqueue tests. No generated JSON/pins/manifests, geometry/models/scans/identifiers/private clinical decisions/references, dependencies/dist/emulatorstate, raw QA/screenshots/logs/typegraphs. Complete proofs remainF-only, notwhole/private/runnableoffdevicebackup.
+Inherited verified 5991 filtered authored-source paths plus eight native UI/helper/test files. All three coordination recipes, generated pins/metadata, models/scans/private data/references, dependencies, production output and raw evidence remain F-local. Not a whole private or runnable off-device backup.

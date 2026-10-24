@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T00:57:25.604Z",
+  "at": "2026-10-24T01:38:45.497Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "41c2b65e9e163089cb5d6ae8d5190dce7b0c3d6affb751151111a5eb1845f2df",
-    "atlasHead": "aa13c067197cad87bd0a9b2da5549bc4b33bfdf7",
-    "reviewBinding": "5216ef1195e37903db9806b5c77d87f4ba1b141b1dbc82b0087651727fc3e429",
+    "nativeSourceReceiptSha256": "c2bb9a2b66420a989cc6b0df029ba0eb97832168fe190992008f0801c7372854",
+    "atlasHead": "5e75b9ce7e46fed291748108edd7565c97dee101",
+    "atlasTree": "005b7656f517efbd86e32a282e3d7880fc052bfe",
+    "latestCompleteWebsiteSha256": "41c2b65e9e163089cb5d6ae8d5190dce7b0c3d6affb751151111a5eb1845f2df",
     "normalPreviewChanged": false
   },
-  "parent": "22846cd1caa58a5d692715ede070a6731fc39969",
-  "gitParent": "22846cd1caa58a5d692715ede070a6731fc39969",
+  "parent": "fdccf78663957081a09af53740598d1de16af3cf",
+  "gitParent": "fdccf78663957081a09af53740598d1de16af3cf",
   "files": [
     {
       "path": "app/globals.css",
@@ -28256,6 +28257,46 @@
       "sha256": "29c0decebe1987e58c2172c02792af1230c8d9798c494cf4595cdf4297d004cf"
     },
     {
+      "path": "pending/tour-explore-20261024/atlas/app/body-explorer.tsx",
+      "bytes": 129988,
+      "sha256": "31d89ad077a10defb1abfc229a11021a45fcb867a35057125bc931d848f92d84"
+    },
+    {
+      "path": "pending/tour-explore-20261024/atlas/app/regional-guided-learning.tsx",
+      "bytes": 19053,
+      "sha256": "c63a02fd7d425bea2776f24d6ee2ce9dd57bc2f3a0e4eb4d4ade698a2b226330"
+    },
+    {
+      "path": "pending/tour-explore-20261024/atlas/app/whole-body-guided-learning.tsx",
+      "bytes": 8042,
+      "sha256": "ec784e0d85b02d784ba899b8dd73cca4804e0354496880b86d22731a83328cb1"
+    },
+    {
+      "path": "pending/tour-explore-20261024/atlas/lib/tour-explore.ts",
+      "bytes": 2914,
+      "sha256": "8465b58e632909e0503195e468cb499c85f00d29dab76eabf48b5032df2b3930"
+    },
+    {
+      "path": "pending/tour-explore-20261024/atlas/scripts/test-initial-regional-tour-picker.mjs",
+      "bytes": 6676,
+      "sha256": "bf1cd1dbb0716dc6143e5b275a890fb47906c8e7cc8c670688cc8c53b1f1c69b"
+    },
+    {
+      "path": "pending/tour-explore-20261024/atlas/scripts/test-renderer-review-scope.mjs",
+      "bytes": 3513,
+      "sha256": "888692eb7647eca6ef84c2295ca2cf473933a33c0be97ad21aab7a2c063aa752"
+    },
+    {
+      "path": "pending/tour-explore-20261024/atlas/scripts/test-tour-explore.mjs",
+      "bytes": 11512,
+      "sha256": "20123147cb0b9e2fa4b96cc6aad70fa79b620f16de82af0ea1decd07a3cc381b"
+    },
+    {
+      "path": "pending/tour-explore-20261024/atlas/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 38482,
+      "sha256": "faec9235a9b0d8ea716eda7daafb912449a0c546cca8b8d636db115eb8248c7f"
+    },
+    {
       "path": "pending/tour-lifecycle-ct-evidence-20261022/coordination/checkpoint-tour-lifecycle-ct-evidence-20261022.mjs",
       "bytes": 12616,
       "sha256": "8a86f58512f3699557cb29702193a4f8b2be6a0a422c3af06e96598d4e0a897c"
@@ -29967,38 +30008,29 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored-source plus five coordination/fixture code files, source CSS as UTF8rawtext and two reviewqueue tests. No generated JSON/pins/manifests, geometry/models/scans/identifiers/private clinical decisions/references, dependencies/dist/emulatorstate, raw QA/screenshots/logs/typegraphs. Complete proofs remainF-only, notwhole/private/runnableoffdevicebackup.",
+  "scope": "Inherited verified 5991 filtered authored-source paths plus eight native UI/helper/test files. All three coordination recipes, generated pins/metadata, models/scans/private data/references, dependencies, production output and raw evidence remain F-local. Not a whole private or runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "722fd2c638234ca70e43bd8f7ec331cca27609077fc8e19f052637ea9d1195c0",
-    "cssAppendOnly": true,
-    "priorCssByteExact": true,
-    "inboxCodeAndReviewServerContractsUnchanged": true,
-    "sourcePaths": 6489,
-    "focusedCases": 108,
-    "strictTypeRoots": 1,
-    "strictTypeGraphFiles": 565,
-    "typeDiagnostics": 0,
-    "productionBuildOutputs": 1125,
-    "actualPrebuildAndBuild": true,
-    "allFourLearnerRuntimesAndProtectedReviewUnchanged": true,
-    "reviewBinding": "5216ef1195e37903db9806b5c77d87f4ba1b141b1dbc82b0087651727fc3e429",
-    "sourceAtlas": "aa13c067197cad87bd0a9b2da5549bc4b33bfdf7",
-    "syntheticPageHeightBefore": 2907,
-    "syntheticPageHeightAfter": 737,
-    "innerListHeight": 288,
-    "nativeKeyboardScrollTop": 250,
-    "paginationRestoresSummaryFocus": true,
-    "smallWindowNormalFlowPreserved": true,
-    "twoHundredPercentTextNoHorizontalOverflow": true,
-    "signedInOrAssistiveTechnologyAcceptance": false,
-    "unlocalizedMutationObserverBeforeAndAfter": true,
-    "privateDataRead": false,
+    "mainReviewSha256": "72fb68ad75b5f53b2fd793d951ad60d2b423b8e97d5b3071a1c7c6a194a38342",
+    "exactRegisteredStopHandoff": true,
+    "pausedReadyCommittedActionOnly": true,
+    "staleForeignRepeatedRequestsRefused": true,
+    "normalExitPreserved": true,
+    "nestedTourHandoff": false,
+    "all1104WorksheetsAnd222Concepts404SessionsPreserved": true,
+    "rendererDisplayRevisionAdvanced": true,
+    "allNineShoulderRevisionsUnchanged": true,
+    "strictRoots": 5,
+    "strictActualGraphFiles": 3322,
+    "strictDiagnostics": 0,
+    "stockNativeBuildPassed": true,
+    "buildFiles": 557,
+    "fullWebsiteIntegrationPending": true,
     "normalPreviewChanged": false,
-    "installed": false,
-    "previewChanged": false,
-    "wholeSuitePassing": false,
     "clinicalApproval": false,
-    "spatialRegistration": false
+    "spatialRegistration": false,
+    "previewChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
