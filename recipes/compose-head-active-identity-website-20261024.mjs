@@ -1,0 +1,40 @@
+// Test-only coherent successor, separate from the owner-installed preview.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261024-head-active-identity-website',site=stage+'/website';
+const parentFile='F:/VisibleMedicine/staging/20261024-portable-head-review-website/PREPARATION.json',parentHash='4254380b3a9ff660e07244b39838b47fa71b480f759ae98e5c582d7dece793f6';
+const finite='F:/VisibleMedicine/staging/20261024-head-active-identity-portable-main',finiteFile=finite+'/PREPARATION.json',finiteHash='7c0f819b45e087ace937e7944bdfc607e6d8b11380a66844bd9a18d5ae392ef0';
+const planFile=stage+'-patchset/PATCHSET.json';
+const save=(file,v)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(v,null,2)+'\n',{flag:'wx'});};
+const git=(...args)=>execFileSync('git',args,{encoding:'utf8',windowsHide:true,maxBuffer:4*1024*1024}).trim();
+const memory=()=>JSON.parse(execFileSync('powershell',['-NoProfile','-NonInteractive','-Command','$m=Get-CimInstance Win32_PerfFormattedData_PerfOS_Memory; $d=Get-PSDrive F; [pscustomobject]@{availableMiB=$m.AvailableMBytes;commitPercent=$m.PercentCommittedBytesInUse;freeBytes=$d.Free} | ConvertTo-Json -Compress'],{encoding:'utf8',windowsHide:true}));
+const mode=process.argv[2];assert(['plan','snapshot'].includes(mode));const minimum=mode==='plan'?512:2048,measured=memory();
+if(measured.availableMiB<minimum||measured.commitPercent>90||(mode==='snapshot'&&measured.freeBytes<2*1024**3)){console.log(JSON.stringify({admitted:false,mode,measured,minimumMiB:minimum}));process.exit(75);}
+assert.equal(hash(parentFile),parentHash);assert.equal(hash(finiteFile),finiteHash);const parent=json(parentFile),surface=json(finiteFile),rows=new Map(parent.sourceRows.map(r=>[r.path,r]));
+const terminal=json(finite+'/runtime-attempt-1/TERMINAL.json');assert.equal(terminal.passing,true);assert.equal(terminal.counts.pass,21);assert.deepEqual(terminal.sourceDrift,[]);assert.deepEqual(terminal.dependencyDrift,[]);
+assert.equal(surface.ownedPaths.length,34);assert.equal(new Set(surface.ownedPaths).size,34);assert.equal(parent.sourcePaths,6639);
+const entries=surface.ownedPaths.map(target=>{assert(/^tests\/[A-Za-z0-9_./-]+$/.test(target)&&!target.split('/').includes('..'));const r=surface.files.find(r=>r.path===target);assert(r);assert.equal(hash(surface.root+'/'+target),r.sha256);assert.equal(fs.statSync(surface.root+'/'+target).size,r.bytes);const old=rows.get(target);if(old)assert.equal(hash(parent.website+'/'+target),old.sha256);else assert(!fs.existsSync(parent.website+'/'+target));return{target,source:surface.root+'/'+target,bytes:r.bytes,sha256:r.sha256,action:old?'replace':'add',parent:old??null};});
+assert.equal(entries.filter(r=>r.action==='replace').length,1);assert.equal(entries.filter(r=>r.action==='add').length,33);
+if(mode==='plan'){
+ assert(!fs.existsSync(path.dirname(planFile)));save(planFile,{schema:'vm-head-active-identity-test-successor/1',at:new Date().toISOString(),parentFile,parentHash,finiteFile,finiteHash,measured,entries,expectedSourcePaths:6672,productionOrReviewSourceChanges:[],built:false,installed:false,previewChanged:false});console.log(JSON.stringify({planFile,sha256:hash(planFile),entries:34,expectedSourcePaths:6672}));
+}else{
+ const planHash=process.argv[3];assert.match(planHash??'',/^[a-f0-9]{64}$/);assert.equal(hash(planFile),planHash);const plan=json(planFile);assert.deepEqual(plan.entries,entries);assert.equal(plan.parentHash,parentHash);assert.equal(plan.finiteHash,finiteHash);assert(!fs.existsSync(stage));
+ assert.equal(git('-C','F:/VisibleMedicine/website','rev-parse','HEAD'),'b953ff3f5f1891599cb6e91cb91311d9d6006270');assert.equal(git('-C','F:/VisibleMedicine/atlas','rev-parse','HEAD'),'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');
+ assert.equal(git('-C',parent.atlas,'rev-parse','HEAD'),parent.atlasHead);assert.equal(git('-C',parent.atlas,'rev-parse','HEAD^{tree}'),parent.atlasTree);assert.equal(git('-C',parent.atlas,'status','--porcelain'),'');
+ assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+ const final=memory();if(final.availableMiB<2048||final.commitPercent>90||final.freeBytes<2*1024**3){console.log(JSON.stringify({admitted:false,mode,measured:final,minimumMiB:2048}));process.exit(75);}
+ fs.mkdirSync(stage);save(stage+'/STARTED.json',{at:new Date().toISOString(),final,parentFile,parentHash,planFile,planHash,previewChanged:false});
+ try{
+  git('clone','--shared','--no-checkout',parent.website,site);git('-C',site,'read-tree','HEAD');
+  for(const r of parent.sourceRows){assert.equal(hash(parent.website+'/'+r.path),r.sha256);const to=path.resolve(site,r.path);assert(to.startsWith(path.resolve(site)+path.sep));fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(parent.website+'/'+r.path,to,fs.constants.COPYFILE_EXCL);assert.equal(hash(to),r.sha256);}
+  const preimages=[];for(const r of entries){const to=site+'/'+r.target;assert.equal(hash(r.source),r.sha256);if(r.parent){assert.equal(hash(to),r.parent.sha256);const saved=stage+'/preimage/'+r.target+'.raw';fs.mkdirSync(path.dirname(saved),{recursive:true});fs.copyFileSync(to,saved,fs.constants.COPYFILE_EXCL);preimages.push({path:r.target,saved,sha256:hash(saved)});}else assert(!fs.existsSync(to));fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(r.source,to,r.action==='add'?fs.constants.COPYFILE_EXCL:0);assert.equal(hash(to),r.sha256);rows.set(r.target,{path:r.target,bytes:r.bytes,sha256:r.sha256});}
+  fs.symlinkSync(parent.website+'/node_modules',site+'/node_modules','junction');fs.symlinkSync(parent.atlas,stage+'/atlas','junction');fs.mkdirSync(site+'/.next/types',{recursive:true});fs.copyFileSync(parent.website+'/.next/types/routes.d.ts',site+'/.next/types/routes.d.ts',fs.constants.COPYFILE_EXCL);
+  const historicalFixtures=[];for(const r of parent.historicalFixtures){assert(r.path&&!r.path.includes('..')&&!path.isAbsolute(r.path));const from=path.dirname(parent.website)+'/before/'+r.path,to=stage+'/before/'+r.path;assert.equal(hash(from),r.sha256);fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);historicalFixtures.push({...r,source:from});}
+  const sourceRows=[...rows.values()].sort((a,b)=>a.path.localeCompare(b.path));assert.equal(sourceRows.length,6672);for(const r of sourceRows){assert.equal(hash(site+'/'+r.path),r.sha256);assert.equal(fs.statSync(site+'/'+r.path).size,r.bytes);}assert.equal(hash(parentFile),parentHash);assert.equal(hash(finiteFile),finiteHash);assert.equal(hash(planFile),planHash);assert.equal(json(site+'/atlas-review/integration-inputs.json').sha256,parent.reviewBindingSha256);
+  save(stage+'/PREPARATION.json',{schema:'vm-unbuilt-test-successor/2',at:new Date().toISOString(),website:site,parentWebsite:parent.website,parentFile,parentHash,atlas:parent.atlas,atlasHead:parent.atlasHead,atlasTree:parent.atlasTree,sourceRows,sourcePaths:6672,patchset:planFile,patchsetSha256:planHash,preimages,historicalFixtures,reviewBindingSha256:parent.reviewBindingSha256,productionAndReviewSourcesUnchanged:true,changedTestPaths:34,previousPassingChecksNotRelabelled:true,originalSuitesRunHere:false,strictRun:false,buildRun:false,wholeSuitePassing:false,previewChanged:false,installed:false,clinicalApproval:false,spatialRegistration:false});
+  save(stage+'/TERMINAL.json',{at:new Date().toISOString(),status:'complete-source-snapshot-unbuilt',sourcePaths:6672,changedTestPaths:34,preparationSha256:hash(stage+'/PREPARATION.json'),previewChanged:false,installed:false});console.log(JSON.stringify({stage,sourcePaths:6672,preparationSha256:hash(stage+'/PREPARATION.json'),built:false,installed:false}));
+ }catch(error){save(stage+'/FAILURE.json',{at:new Date().toISOString(),message:error.message,stack:error.stack,passing:false});throw error;}
+}
