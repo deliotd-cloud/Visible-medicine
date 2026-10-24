@@ -1,13 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T16:09:02.611Z",
+  "at": "2026-10-24T16:30:43.412Z",
   "sourceIdentity": {
-    "websiteParent": "cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e",
-    "native": "6e810b188dde401f6c19a970928f316a479696df",
-    "kind": "partial-source-only-test-repair-proposal"
+    "parentNative": "6e810b188dde401f6c19a970928f316a479696df",
+    "parentNativeTree": "90afe5163dbd9386aa37c93d525fa4c70e8c1b9e",
+    "kind": "partial-original-educational-draft-only",
+    "target": "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein"
   },
-  "parent": "d210bd12b317c9c30861e2ea1691d4224aafc7d1",
-  "gitParent": "d210bd12b317c9c30861e2ea1691d4224aafc7d1",
+  "parent": "f37690bc881db321c5557308dc3f1472b0a556c4",
+  "gitParent": "f37690bc881db321c5557308dc3f1472b0a556c4",
   "files": [
     {
       "path": "app/globals.css",
@@ -26575,6 +26576,36 @@
       "sha256": "c05214a4aec0f75e8e6137367abecbbb262507d456093fbe1cbf9215a9ea01c6"
     },
     {
+      "path": "pending/right-gastric-eus-proposal-20261024/content/abdominal-eus-orientation.ts",
+      "bytes": 3376,
+      "sha256": "2bbcce6f530bfca6e1c5cf6733ed8c16d05f8b6b3e990f3724804fa408111431"
+    },
+    {
+      "path": "pending/right-gastric-eus-proposal-20261024/lib/abdominal-eus-orientation.ts",
+      "bytes": 3122,
+      "sha256": "18ad65fba17274ddc4f4f60699b88dd4aee88e8cbdeb17a25db0d6bdc0225100"
+    },
+    {
+      "path": "pending/right-gastric-eus-proposal-20261024/recipes/prepare-right-gastric-eus-proposal-20261024.mjs",
+      "bytes": 3583,
+      "sha256": "0edd10ec0c323f3f91d1fa7b59a7608e3288b7226c5338a9c71a8936933a256c"
+    },
+    {
+      "path": "pending/right-gastric-eus-proposal-20261024/recipes/run-right-gastric-eus-unit-20261024.mjs",
+      "bytes": 4956,
+      "sha256": "6b7e3f9fcfdcf3d4043863c6c27c05b4bfb64b3734aff0a1b7346af872d8ce39"
+    },
+    {
+      "path": "pending/right-gastric-eus-proposal-20261024/recipes/save-right-gastric-eus-proposal-20261024.mjs",
+      "bytes": 6493,
+      "sha256": "ea4c644f9be05e0aaab85f403b7e342d16b2a09a1998a13d26918f72101090b4"
+    },
+    {
+      "path": "pending/right-gastric-eus-proposal-20261024/scripts/test-right-gastric-eus-unit.mjs",
+      "bytes": 7610,
+      "sha256": "6f7a7f72147b52df4874782ed6afc6cc0a5dc49f17a31fa3772989efd777eb65"
+    },
+    {
       "path": "pending/structure-guides-20261023/coordination/check-structure-guides-types-20261023.mjs",
       "bytes": 4205,
       "sha256": "aea744558396962446eaa6870b3b455f001e14c0a8b26d1c006956de6dc70198"
@@ -29821,38 +29852,23 @@
     }
   ],
   "removed": [],
-  "scope": "Selected text/code ancestry plus eleven changed test files, two new test-only modules, one deterministic source-inverse fixture (retained as a byte-identical .json.raw text fixture), four recipes and two worker producers. The fixture contains only the eleven named, hash-bound code transformations; it is not runtime/clinical metadata. The original .json restore name is recorded in local recovery. No scans, masks, models, patient identifiers, private references/decisions, generated delivery, dependencies, build output or raw QA logs; not a whole/private/runnable off-device backup. No public deployment or installation.",
+  "scope": "Verified inherited filtered source ancestry plus two changed original educational/binder source files, one unit test and three recipes. No copied publisher assets/text, scans, masks, models, patient identifiers, private references/decisions, generated delivery, dependencies, build output or raw QA. Notice addendum, evidence ledger, current inventory and later coordination remain F-local. Not a whole/private/runnable off-device backup; no deployment or installation.",
   "proof": {
-    "mainReviewSha256": "88c65c14aeccc3d8260f01e8db2ea619337b399ee081cdaa90a57ef32c5cbfe3",
+    "mainReviewSha256": "1ded8d10a9b78c995d8e1d97181552b2647443b3fb92105f6b6ddd10630fcc37",
     "partialOnly": true,
-    "changedTests": 11,
-    "wholeOriginalsRecovered": 11,
-    "pureUnitCounts": {
-      "tests": 29,
-      "pass": 29,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "syntaxSources": 13,
-    "existingArterialCurrentRoleInverseUnchanged": true,
-    "existingCompleteReleaseArterialRowFunctionsExercised": 2,
-    "coverageExtraSources": [
-      "lib/legacy-shoulder-bone-references.ts",
-      "lib/legacy-shoulder-muscle-references.ts",
-      "lib/legacy-shoulder-references.ts"
-    ],
-    "rawCodeFixture": {
-      "sourcePath": "tests/fixtures/release-diagnostic-repair-20261024.json",
-      "backupPath": "tests/fixtures/release-diagnostic-repair-20261024.json.raw",
-      "sha256": "f998a4979db532ae55ef4eea5ef8ff3c5a999e3379c4f628dcc24a7d00e7de9b",
-      "schema": "vm-release-diagnostic-source-inverse-1",
-      "restore": "Remove only the final .raw suffix after byte verification; do not treat this partial tree as runnable."
-    },
-    "originalMedicalSuitesRun": false,
-    "currentProductionDeliveryRetested": false,
-    "fullStockRunStillSeparate": true,
+    "actualModuleUnitCases": 7,
+    "wrongSelectionMutations": 28,
+    "sequentialSmallBundles": 2,
+    "wholeOriginalSourceInverses": 2,
+    "previousThreeLessonsExactlyPreserved": true,
+    "sourceUnvalidated": true,
+    "noNewAssetDependencyOrFee": true,
+    "articleAssetLicenceReliedUpon": false,
+    "fullResolverCohortRun": false,
+    "strictTypecheck": false,
+    "generatorsOrBuild": false,
+    "learnerOrReviewExport": false,
+    "websiteIntegration": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
