@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T06:26:00.887Z",
+  "at": "2026-10-24T07:06:53.197Z",
   "sourceIdentity": {
+    "websiteSourceReceiptSha256": "d2c288a5be7b54dda220a0f539e72c15988f63543124323c5b08c60533950df2",
     "atlasHead": "b79e110d2d28f18993263926ba35aa7a3f478b20",
     "atlasTree": "0dd97cc55ef9aff3493b91752309d1d661c0b0c8",
-    "parentAtlas": "7659453d7d99da78742b06ee6e6665a467e5d972",
-    "latestCompleteWebsiteSha256": "c5fceb2bc64d8b0d4464b3da940bd3721111657d9a4d57f2dbf5b8b30fe0b6f3",
+    "reviewBinding": "e5e71eaee78003764fd2fdc9e7a85907751ef44c566cf2ac953318c1937c9969",
     "normalPreviewChanged": false
   },
-  "parent": "9b155173cb7e0c1fc201eb7686a1a71dbf96e0cc",
-  "gitParent": "9b155173cb7e0c1fc201eb7686a1a71dbf96e0cc",
+  "parent": "9e3cd9076a31d102fe5e47640fc307364ed3dfc2",
+  "gitParent": "9e3cd9076a31d102fe5e47640fc307364ed3dfc2",
   "files": [
     {
       "path": "app/globals.css",
@@ -12260,6 +12260,146 @@
       "path": "pending/cervical-vascular-draft-20261024/recipes/run-cervical-vascular-draft-20261024.mjs",
       "bytes": 4196,
       "sha256": "ee5230cd267ce01d997cf2b21e3016c20cafa6e180f3215edd92d549464fbaa1"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/provenance/closure-assertion-first-attempt.mjs.raw",
+      "bytes": 18498,
+      "sha256": "d6a38f981d11d8e6fd5c90a1a84b8775679e8b4646392d114ee507cbe23997a2"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/provenance/worker-test.before-main.mjs.raw",
+      "bytes": 16766,
+      "sha256": "dacb9df12f13bfd7b2ba4f6059887dea9a24cb4dede4b5289ae18b4e8854ca00"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/acquire-cervical-vascular-website-slot-20261024.mjs",
+      "bytes": 1360,
+      "sha256": "d87f471fea7d160bdece8f60e90c901b0bbabde043f010101425d8d0e3fa2c92"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/admit-cervical-vascular-coverage-20261024.mjs",
+      "bytes": 6485,
+      "sha256": "4b3ab8058fb164565f96f05bb226c34bdc5c484d41f65edd9679990b4bdbeb28"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/check-cervical-vascular-website-types-20261024.mjs",
+      "bytes": 6363,
+      "sha256": "07570a1bdced5a013b212304ff2341a1a977a3b4ce38bf08d5a9538ac0683861"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/checkpoint-cervical-vascular-website-20261024.mjs",
+      "bytes": 16026,
+      "sha256": "efdbed080c454c71618f5447f8d19c61802e96e2bef6a5fde9cbad2c4c64a783"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/complete-cervical-vascular-website-tools-20261024.mjs",
+      "bytes": 2376,
+      "sha256": "54f426f59ed9affe7339612d24937aa0cfe9203bbb814225380b89c3bb48a36a"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/derive-cervical-vascular-qa-20261024.mjs",
+      "bytes": 1285,
+      "sha256": "e46e9994ebb487ef66702a4176e1ea879c217ab37c12c6f86839c58d5d5a158e"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/derive-cervical-vascular-website-20261024.mjs",
+      "bytes": 2518,
+      "sha256": "dd2da75b4d4b305b4a84a8e7b069b09c07370d0da8793b1739853beacb82655e"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/finish-source-website-checkpoint.mjs",
+      "bytes": 4925,
+      "sha256": "a0c234b9bac4d7db515ca49eee11203f1ffe97828df0b9ef2b6cc45d5bbc33db"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/integrate-cervical-vascular-website-20261024.mjs",
+      "bytes": 11002,
+      "sha256": "9172bf872c60b5060894009d9fe0818dcb8e64aa26cf0a56c5ea44ca0f8caea8"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/prepare-cervical-vascular-website-proofs-20261024.mjs",
+      "bytes": 2597,
+      "sha256": "ebfd0112c201e9064a1bddde5c7f83aa0ded347143077c71b0ae47bd32b29a1e"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/reconcile-cervical-vascular-website-checks-20261024.mjs",
+      "bytes": 4270,
+      "sha256": "2be9a12042a5050be96112fdb37939aa555d725e79d836c1c1316acaa70432f8"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/record-cervical-vascular-qa-20261024.mjs",
+      "bytes": 2899,
+      "sha256": "5613613630cbff1aed01fea8d4b91a9bc978de166365ecc17a220611210a83a3"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/seal-cervical-vascular-website-20261024.mjs",
+      "bytes": 13295,
+      "sha256": "e8ed0892b7e88765a67370b6b34071812c581ae24e757778d1fdd15ca4d3e18c"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/recipes/serve-cervical-vascular-qa-20261024.mjs",
+      "bytes": 3805,
+      "sha256": "1b842e2227d9fccc4e110083e62b08c7e743fceb3a1f537edbfc43e135ebf4c8"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "5f1b300fce399e60a55c32cd198b9b21fce84029d75d86bafbd2f0ec6018a161"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "108ac0218d9e0b13bc543b2a6dae107680b40e268dcee3d80ecfc18b31ef3480"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "2f205eb5fbec1dd4bf3e9cfdf0fc5d253bd804b777a1ddfd66ece488424433b5"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "42ca56d3da239d885c427fcfbdcaec0ec889f65d2b1f59386f4634bf561b6274"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/tests/cervical-vascular-current-delivery.test.mjs",
+      "bytes": 20410,
+      "sha256": "4ba964cf66b56e2bdc24a78ace3b9d1e48b8fa53b855ed581c93a984fae98f78"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/tests/cervical-vascular-source-roles.test.mjs",
+      "bytes": 4198,
+      "sha256": "cb6a175ebfe1f23d9eea34b632058a7bb92bcfed2e6d3cf7a881560f21fbf943"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19274,
+      "sha256": "039172c405c7bfa8709acd13bdf086f1437c4624a478f45390267f06d4bebcbf"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/tests/fixtures/current-atlas-delivery-765-navigation.mjs.raw",
+      "bytes": 19274,
+      "sha256": "0eca67e7d49a4d83c70abca8c4f1aad56899dfb723605fe1a8a35c5f625937ec"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/tests/fixtures/guided-review-completeness-765.mjs.raw",
+      "bytes": 11460,
+      "sha256": "91d97d74c87da6a75e3d8642360fae280d671afdd05a76292ffe4081b4965a39"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/tests/guided-review-completeness-b79.test.mjs",
+      "bytes": 11460,
+      "sha256": "b65227528c2489fac161273a4a538be17e42a8accc5acb393071168668b3303b"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/tests/guided-review-completeness.mjs",
+      "bytes": 2075,
+      "sha256": "6b25cda5e7598f26845741fba9c371fcc73669332451979cd8d281e8a5cd6f40"
+    },
+    {
+      "path": "pending/cervical-vascular-website-20261024/website/tests/practice-actions-current-delivery.test.mjs",
+      "bytes": 10773,
+      "sha256": "8353f922418bf6ff15d5be472f9ed9026513ed6d73ed180040d33dc2b29c7f56"
     },
     {
       "path": "pending/checklist-reconciliation-20261022/checkpoint-checklist-reconciliation-20261022.mjs",
@@ -29813,39 +29953,61 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited5948verified filtered source paths plus12explicit native authored code/package/test/recipe paths, no removals. Prior99exact source aliases/reconstruction remain linked by verified parent receipt/ancestry. Generated pins/JSON, licence/docs prose, models/scans/identifiers/private references/decisions, raw evidence/build/dependency state and later coordination stay F-local. Not a whole/private/runnable off-device backup.",
+  "scope": "Inherited5960verified filtered source paths plus28explicit Website code/test/preimage/recipe paths, no removals. Existing99aliases/reconstruction remain linked by verified parent receipt/ancestry; no unique inherited source omitted. Generated pins/metadata/JSON, models/scans/identifiers/private references/decisions, dependency/build/emulator state, raw evidence and later coordination remain F-local. Not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "a0c347049c2203ac5f23aa181a6577cd2c12f5e3790355dfc2008ca10b13d6fe",
+    "mainReviewSha256": "4dc47c9c923192ff28e767300e9dfe53a8b160fb31fef61c22825e60fc55e312",
+    "sourcePaths": 6511,
     "atlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
     "tree": "0dd97cc55ef9aff3493b91752309d1d661c0b0c8",
-    "sourcePaths": 6380,
-    "focusedCases": 5,
-    "practiceChecks": 26341,
-    "negativeIdentityCases": 6865,
-    "strictTypeRoots": 6,
-    "strictTypeGraphFiles": 3337,
+    "reviewSourceFiles": 1603,
+    "reviewInputs": 1806,
+    "reviewBinding": "e5e71eaee78003764fd2fdc9e7a85907751ef44c566cf2ac953318c1937c9969",
+    "viewerFiles": 54,
+    "viewerPackages": 24,
+    "focusedCases": 207,
+    "initialUnchangedCases": 203,
+    "affectedRerunCases": 4,
+    "initialNewHarnessFailuresRetained": 2,
+    "fullCohortSinglePassingInvocation": false,
+    "strictTypeRoots": 37,
+    "strictTypeFiles": 3683,
     "typeDiagnostics": 0,
-    "fullNativeBuild": true,
-    "buildFiles": 557,
+    "stockPrebuildAndProductionBuild": true,
+    "buildFiles": 1125,
+    "originalReviewVerifier": true,
     "newDraftConcepts": 4,
     "newSourceSelections": 8,
     "reasoningConcepts": 236,
     "reasoningSelections": 432,
-    "prior232DefinitionsAnd424SessionsPreserved": true,
-    "all1104SourcesAnd9936LessonsUnchanged": true,
-    "unchangedTeachingWorksheets": 1096,
-    "changedDisplayPins": 8,
-    "packetMutationsRejected": 40,
-    "stalePostsRejectedBeforeStorage": 8,
-    "allOriginalTheoremsReconstruct": true,
-    "allNineShoulderRevisionsUnchanged": true,
-    "modelsDependenciesLicenceTermsAndHoldsUnchanged": true,
-    "oneReferenceBoundaryNoticeAdded": true,
-    "actualBrowserVerified": false,
-    "websiteIntegrationPending": true,
+    "allPrior232DefinitionsAnd424SessionsPreserved": true,
+    "all1104SourceAnd9936LessonsUnchanged": true,
+    "allModelsDependenciesLicenceTermsHoldsAndAccessUnchanged": true,
+    "sourceAndClinicalApprovalsNotTransferred": true,
+    "currentGuideProof": {
+      "source": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+      "sourceFiles": 1129,
+      "structures": 1104,
+      "guidedStructures": 320,
+      "placements": 414,
+      "rehashOmissionRefusals": 414,
+      "otherMutationRefusals": 69,
+      "wholeGenuine765AndEarlier5f3TheoremsPreserved": true
+    },
+    "actualExportedBrowserSample": "F:/VisibleMedicine/staging/20261024-cervical-vascular-website/browser/RESULT.json",
+    "actualExportedBrowserSampleSha256": "5f9decda91f4aa14f81e6814162cb458388d5dadc6690511cc085e5db539c2ef",
+    "browserQuestionsObserved": 1,
+    "browserAvailableQuestions": 4,
+    "integratedAuthenticatedBrowserAcceptance": false,
     "normalPreviewChanged": false,
-    "previewChanged": false,
     "installed": false,
+    "inheritedExactAliases": {
+      "count": 99,
+      "parentReceipt": "F:/VisibleMedicine/recovery/checkpoints/20261024-cervical-vascular-draft-source-backup/github-backup.json",
+      "parentReceiptSha256": "25678ce195951e0e644890a5c586c5df20393f4737d128d5463cf924a452df49",
+      "reconstructionEvidence": "F:/VisibleMedicine/recovery/checkpoints/20261024-practice-actions-website/ALIASES_VERIFIED.json",
+      "reconstructionEvidenceSha256": "aa5f804d38c5ea931c34f3218172203e2b2c2d92bfcca1fa4c6eb1ad542c75fd"
+    },
+    "previewChanged": false,
     "wholeSuitePassing": false,
     "clinicalApproval": false,
     "spatialRegistration": false
