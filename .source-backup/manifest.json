@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T05:57:37.205Z",
+  "at": "2026-10-24T06:11:47.763Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "c5fceb2bc64d8b0d4464b3da940bd3721111657d9a4d57f2dbf5b8b30fe0b6f3",
+    "applicationSourceReceiptSha256": "c5fceb2bc64d8b0d4464b3da940bd3721111657d9a4d57f2dbf5b8b30fe0b6f3",
+    "proofSourceReceiptSha256": "cb626284d1a7604e46b1a42fb226a20b46052911c4d820ffc01913516751c02e",
     "atlasHead": "7659453d7d99da78742b06ee6e6665a467e5d972",
     "atlasTree": "386b175434aa1f7cbcd705e05f0946b3b594ca54",
-    "reviewBinding": "520bd2b7a5a59dc2a95b38339f6ecfbebab2bb0b05507ce509bc227ab76259ee",
     "normalPreviewChanged": false
   },
-  "parent": "0b21dcb0ea8bcd0e1a44dec8dac45101409323f7",
-  "gitParent": "0b21dcb0ea8bcd0e1a44dec8dac45101409323f7",
+  "parent": "322f8a84283891c41d84a0c53801685ae5e7f5e8",
+  "gitParent": "322f8a84283891c41d84a0c53801685ae5e7f5e8",
   "files": [
     {
       "path": "app/globals.css",
@@ -16797,6 +16797,41 @@
       "sha256": "7ea6fb84f875c31ae096965d8afbe35ced971e7d9ffa2d0d7f92affae78f0463"
     },
     {
+      "path": "pending/guided-review-current-proof-20261024/recipes/finish-guided-review-current-proof-20261024.mjs",
+      "bytes": 18868,
+      "sha256": "25ecec0873ecb795cce9043d291b65bf2c0b4fc7d61b771d164e68914fd78c3e"
+    },
+    {
+      "path": "pending/guided-review-current-proof-20261024/recipes/prepare-guided-review-current-proof-20261024.mjs",
+      "bytes": 3558,
+      "sha256": "30a57e1b6a56351893bd82811cbf86b79681dec8d70d17f3758d64eccf9774e1"
+    },
+    {
+      "path": "pending/guided-review-current-proof-20261024/recipes/run-guided-review-current-proof-20261024.mjs",
+      "bytes": 3722,
+      "sha256": "10a9e668541b571a695e797f008b7b9af393cb1cbfd0df6c5dbb6572881a5a36"
+    },
+    {
+      "path": "pending/guided-review-current-proof-20261024/website/tests/fixtures/guided-review-completeness-5f3.mjs.raw",
+      "bytes": 11460,
+      "sha256": "9f49b5e2f09babc83cb2954a0cdf3a1bed2b47a8af9c54ecd7ec76bab5dc4aa1"
+    },
+    {
+      "path": "pending/guided-review-current-proof-20261024/website/tests/guided-review-completeness-765.test.mjs",
+      "bytes": 11460,
+      "sha256": "91d97d74c87da6a75e3d8642360fae280d671afdd05a76292ffe4081b4965a39"
+    },
+    {
+      "path": "pending/guided-review-current-proof-20261024/website/tests/guided-review-completeness-role.test.mjs",
+      "bytes": 2249,
+      "sha256": "80d7a1c14056ae106fe92dd921f8bcdb251bb796b46a93c349a2bfec6321e566"
+    },
+    {
+      "path": "pending/guided-review-current-proof-20261024/website/tests/guided-review-completeness.mjs",
+      "bytes": 2075,
+      "sha256": "6b25cda5e7598f26845741fba9c371fcc73669332451979cd8d281e8a5cd6f40"
+    },
+    {
       "path": "pending/guided-review-navigation-20261024/recipes/check-guided-review-navigation-types-20261024.mjs",
       "bytes": 6310,
       "sha256": "cc36728e851fca0d7c2033de5a8b3cd3b9150460d9f400e043e4ea514a7313ae"
@@ -29718,102 +29753,41 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited5917verified filtered authored-source paths plus24explicit Website code/test/recipe paths, no removals. Prior99exact aliases and reconstruction evidence remain bound by parent receipt/ancestry; no unique inherited source is omitted. Generated metadata/pins/JSON, meshes/scans/identifiers/private references/decisions, dependencies/build/emulator state, raw evidence/type graphs and later coordination stay F-local. Not a whole/private/runnable off-device backup.",
+  "scope": "Inherited5941verified filtered authored-source paths plus7explicit test/preimage/recipe paths, no removals. Existing99exact duplicate aliases and reconstruction preserved through verified parent receipt/commit. Generated metadata/models/scans/identifiers/private references/decisions, dependencies/build/emulator state, raw evidence and later coordination remain F-local. Not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "bdcd105d791e01ca9bc87ce8162ba7cb7c9b15f486188bc68444bb97ace6b909",
-    "sourcePaths": 6503,
-    "reviewSourceFiles": 1601,
-    "reviewInputs": 1804,
-    "reviewBinding": "520bd2b7a5a59dc2a95b38339f6ecfbebab2bb0b05507ce509bc227ab76259ee",
-    "viewerFiles": 54,
-    "viewerPackages": 24,
-    "focusedCases": 198,
-    "strictTypeRoots": 36,
-    "strictTypeActualGraphFiles": 3681,
-    "typeDiagnostics": 0,
-    "stockPrebuildAndProductionBuild": true,
-    "buildFiles": 1125,
-    "originalReviewVerifier": true,
-    "newSequenceEntries": 12,
-    "newPacketGroups": 6,
-    "existingFacialEntryPreserved": true,
-    "sourceBoundStepLinksUnchanged": true,
-    "allNativeExportsByteExact": true,
-    "allModelsLicensingDependenciesAccessAndTeachingUnchanged": true,
-    "allOriginalSourceBodiesInvert": true,
-    "browser": {
-      "ownedTabs": [
-        "185",
-        "186"
-      ],
-      "ownedTabsClosed": true,
-      "serverPid": 362980,
-      "serverToolSession": 29977,
-      "sourceComponent": "components/HeadTeachingReviewNavigator.tsx",
-      "actualComponentBundledWithoutRuntimeModuleSubstitution": true,
-      "sourceSequenceTargets": 12,
-      "samePageNavigationVerified": true,
-      "syntheticNotePreserved": true,
-      "syntheticNote": "Unsaved QA note",
-      "selectionIsInert": true,
-      "nestedTargetOpened": true,
-      "focusVerified": true,
-      "targets": [
-        {
-          "label": "Parietal and occipital coverage",
-          "openedDetails": 2,
-          "focusedTag": "SUMMARY"
-        },
-        {
-          "label": "Nasal and ethmoid coverage",
-          "focusedTag": "H3"
-        },
-        {
-          "label": "Cerebellar orientation",
-          "focusedTag": "OL",
-          "focusedId": "head-guided-sequence-cerebellar-orientation",
-          "tabindex": "-1"
-        }
-      ],
-      "urlBeforeAndAfter": "http://127.0.0.1:62923/navigation",
-      "sampledNavigatorConsole": {
-        "limit": 10,
-        "errors": 0,
-        "warnings": 0
-      },
-      "staticControl": {
-        "scripts": 0,
-        "frames": 0,
-        "sampledErrors": 0,
-        "sampledWarnings": 0
-      },
-      "observerConclusion": "The previously observed error did not appear in this script-free control or in this non-iframe navigator harness. The separate Atlas iframe diagnostic still showed one error without a stack and captured no frame error event. Context/callsite remains unlocalized; no observer or anatomy source fix is justified by these results alone.",
-      "syntheticPlaceholdersOnly": true,
-      "authenticatedReviewAcceptance": false,
-      "actualPrivateDraftOrStudyRead": false,
-      "fullReviewPageVisualAcceptance": false,
-      "screenshotsArchived": false,
-      "ownerTabsChanged": false,
-      "previewChanged": false,
-      "clinicalApproval": false,
-      "patientSpaceRegistration": false
-    },
-    "authenticatedAcceptance": false,
-    "observerReplay": "F:/VisibleMedicine/staging/20261024-observer-stack/RESULT.json",
-    "observerReplaySha256": "c6f8513badf99c309bcd493a972061526419ae17d1c3b80538e78e7d4b305a79",
-    "inheritedExactDuplicateAliases": {
+    "mainReviewSha256": "7e3472ec5ccc0e3a4969473609ca86ec5fe3f979447ee7086bf4c8cea54a9edc",
+    "applicationSourceReceipt": "F:/VisibleMedicine/staging/20261024-guided-review-navigation/SOURCE_BOUND.json",
+    "applicationSourceReceiptSha256": "c5fceb2bc64d8b0d4464b3da940bd3721111657d9a4d57f2dbf5b8b30fe0b6f3",
+    "currentAtlas": "7659453d7d99da78742b06ee6e6665a467e5d972",
+    "currentTree": "386b175434aa1f7cbcd705e05f0946b3b594ca54",
+    "totalSourcePaths": 6507,
+    "inheritedSourcePaths": 6503,
+    "productSourceChanges": false,
+    "focusedCases": 3,
+    "actualImportedClosureFiles": 1127,
+    "structures": 1104,
+    "guidedStructures": 320,
+    "guidePlacements": 414,
+    "rehashOmissionRefusals": 414,
+    "otherMutationRefusals": 69,
+    "wholeOriginalTheoremAndHelperPreserved": true,
+    "exactSourceCountSeams": 3,
+    "newTypesBuildBrowserPerformed": false,
+    "historicalProposalIntegrated": false,
+    "fullReleasePending": true,
+    "normalPreviewChanged": false,
+    "inheritedExactAliases": {
       "count": 99,
-      "receipt": "F:/VisibleMedicine/recovery/checkpoints/20261024-practice-actions-website-source-backup/github-backup.json",
-      "receiptSha256": "5652708000d7b1b1c61503002a8a489047984437de6a0a6abace9fa58aef1bbc",
-      "parentManifestHead": "0b21dcb0ea8bcd0e1a44dec8dac45101409323f7",
-      "independentlyReconstructedEvidence": "F:/VisibleMedicine/recovery/checkpoints/20261024-practice-actions-website/ALIASES_VERIFIED.json",
-      "independentlyReconstructedEvidenceSha256": "aa5f804d38c5ea931c34f3218172203e2b2c2d92bfcca1fa4c6eb1ad542c75fd"
+      "parentReceipt": "F:/VisibleMedicine/recovery/checkpoints/20261024-guided-review-navigation-source-backup/github-backup.json",
+      "parentReceiptSha256": "fd698a0bddc067001ac6758fd1696a4c4a5d4946fa86e393b1306cd6d2ec798e",
+      "parentHead": "322f8a84283891c41d84a0c53801685ae5e7f5e8",
+      "reconstructionEvidence": "F:/VisibleMedicine/recovery/checkpoints/20261024-practice-actions-website/ALIASES_VERIFIED.json",
+      "reconstructionEvidenceSha256": "aa5f804d38c5ea931c34f3218172203e2b2c2d92bfcca1fa4c6eb1ad542c75fd"
     },
     "previewChanged": false,
     "installed": false,
-    "clinicalApproval": false,
-    "patientSpaceRegistration": false,
     "wholeSuitePassing": false,
+    "clinicalApproval": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,
