@@ -1,0 +1,94 @@
+.vm-practice-action-bar {
+  position: sticky;
+  inset-block-end: 0;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-start: 1rem;
+  padding-block: 0.75rem;
+  border-block-start: 1px solid #cbd9d2;
+  background: #fff;
+  color: #002b36;
+  box-shadow: 0 -0.5rem 0.75rem rgb(255 255 255 / 94%);
+}
+
+.vm-practice-action-score {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 0.125rem;
+  font-size: 0.75rem;
+}
+
+.vm-practice-action-score strong {
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.vm-practice-action-buttons {
+  display: flex;
+  flex: 1 1 9rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  min-inline-size: 0;
+}
+
+.vm-practice-action-buttons > button {
+  min-block-size: 2.75rem;
+  max-inline-size: 100%;
+  white-space: normal;
+}
+
+/* Let the bar meet the actual scrollport edge: inherited pane/result padding
+   must not leave a transparent strip of reading below the controls. Reserve
+   focus-scroll clearance so a keyboard-revealed choice/link stays above it. */
+:is(.body-info, .eye-layer-controls):has(.vm-practice-action-bar) {
+  padding-block-end: 0;
+  scroll-padding-block-end: 9rem;
+}
+
+.vm-practice-result:has(> .vm-practice-action-bar) {
+  padding-block-end: 0;
+}
+
+/* Sheets keep their explicit Return to model/close controls in normal flow. */
+.anatomy-controls-popup .vm-practice-action-bar {
+  position: static;
+  box-shadow: none;
+}
+
+/* Long Quiz explanations belong in the permanent info rail, even when the
+   tools rail becomes a drawer. Keep the deliberate whole-document layout for
+   other short-window learning modes, mobile info sheets and Focus view. */
+.body-app[data-presentation='panel'][data-panel-short='true'][data-panel-info='false'][data-focus-view='false'][data-workspace-mode='practice'] {
+  overflow: hidden;
+}
+
+.body-app[data-presentation='panel'][data-panel-short='true'][data-panel-info='false'][data-focus-view='false'][data-workspace-mode='practice'] > .body-layout {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.body-app[data-presentation='panel'][data-panel-short='true'][data-panel-info='false'][data-focus-view='false'][data-workspace-mode='practice'] .body-workspace {
+  overflow-y: auto;
+}
+
+/* An exceptionally short viewport must not become mostly pinned controls. */
+@media (max-height: 480px) {
+  .vm-practice-action-bar {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .vm-practice-action-bar {
+    background: Canvas;
+    color: CanvasText;
+    border-color: CanvasText;
+    box-shadow: none;
+  }
+}

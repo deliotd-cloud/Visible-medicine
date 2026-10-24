@@ -1,15 +1,16 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T04:12:31.444Z",
+  "at": "2026-10-24T05:13:29.034Z",
   "sourceIdentity": {
-    "applicationSourceReceiptSha256": "40fd40cba3b6f75253e0f3b825bd02d6a94e876e6d8aafedb5e8a043ce1ed8e2",
-    "proofReceiptSha256": "58f9008850632b65a0919114fe59c1acab82ac862132f68c0af9c6f1645b8960",
-    "atlasHead": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
-    "atlasTree": "9263c23e98b24068a8b4b4f0c4635bdd133c2fa5",
+    "nativeSourceReceiptSha256": "65f5d2747c9a2229cb0c3e723315103f618db6d8bc2fdec2fc41d60939e8f660",
+    "atlasHead": "7659453d7d99da78742b06ee6e6665a467e5d972",
+    "atlasTree": "386b175434aa1f7cbcd705e05f0946b3b594ca54",
+    "parentAtlas": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
+    "latestCompleteWebsiteUnchanged": true,
     "normalPreviewChanged": false
   },
-  "parent": "e6d070f820f6e15689daf9f104a420b2070909e9",
-  "gitParent": "e6d070f820f6e15689daf9f104a420b2070909e9",
+  "parent": "6db6626d1dd5bedad6f17962c4cf6b3cf438cd96",
+  "gitParent": "6db6626d1dd5bedad6f17962c4cf6b3cf438cd96",
   "files": [
     {
       "path": "app/globals.css",
@@ -21572,6 +21573,76 @@
       "sha256": "684fffbf6ed7010a8bfc8a266a2c4866519f3c7dc580594c1e0da2dfb6e5d75c"
     },
     {
+      "path": "pending/practice-actions-20261024/atlas/app/body-explorer.tsx",
+      "bytes": 130839,
+      "sha256": "6ffcc34eb81bbad3e4ad7a23efe411ee4b9e0cebdfa54fde2ad93fb49e45154e"
+    },
+    {
+      "path": "pending/practice-actions-20261024/atlas/app/nested-practice.tsx",
+      "bytes": 11029,
+      "sha256": "483fc8ddf2c9d1fce636aacde0bb6c8672eeb1dec11079d9f87bcd25b793062e"
+    },
+    {
+      "path": "pending/practice-actions-20261024/atlas/app/practice-action-bar.css",
+      "bytes": 2587,
+      "sha256": "212bf9c112104537666e383413342b980e4b83c6ec6b92ea0f67ce10f55503f2"
+    },
+    {
+      "path": "pending/practice-actions-20261024/atlas/app/practice-action-bar.tsx",
+      "bytes": 676,
+      "sha256": "4b8e00e03cecda278ea03bbd04ca253200c67048068bda36bc4955094322c8ac"
+    },
+    {
+      "path": "pending/practice-actions-20261024/atlas/app/shoulder-explorer.tsx",
+      "bytes": 63239,
+      "sha256": "4096396d647711652aa7d8a605c32c45edfc8e8c0aa90c9af31250d19464a045"
+    },
+    {
+      "path": "pending/practice-actions-20261024/atlas/app/um-limb-learning.tsx",
+      "bytes": 14960,
+      "sha256": "f9cfc3a661a7e03d48d505e18baeae2ce0cfaae4830fdfea558a196e18c4c2a8"
+    },
+    {
+      "path": "pending/practice-actions-20261024/atlas/package.json",
+      "bytes": 88709,
+      "sha256": "b51990d7c2ba55532c33532d7fdeadc3526db1ce6ec64edc242f71033ab39890"
+    },
+    {
+      "path": "pending/practice-actions-20261024/atlas/scripts/test-practice-action-bar.mjs",
+      "bytes": 6239,
+      "sha256": "a880b2d0b844ab00ac77deca1dcd7394911a498f29bce637ef0f1e767b36c7b3"
+    },
+    {
+      "path": "pending/practice-actions-20261024/recipes/checkpoint-practice-actions-20261024.mjs",
+      "bytes": 8190,
+      "sha256": "ee333ce8423eacaee8a9a315cb8cad55533e65fea554669d0707c2314e394b3d"
+    },
+    {
+      "path": "pending/practice-actions-20261024/recipes/finish-practice-actions-20261024.mjs",
+      "bytes": 4830,
+      "sha256": "3f47756308f5a1e8db0f3f5ad05d341f52b68675fda9982ad46c77e1be30dbe2"
+    },
+    {
+      "path": "pending/practice-actions-20261024/recipes/run-practice-actions-20261024.mjs",
+      "bytes": 4505,
+      "sha256": "87d256e90d3665f47a7715380a1651822f9361de254cebec56e6bbfc91bda70d"
+    },
+    {
+      "path": "pending/practice-actions-20261024/recipes/seal-practice-actions-20261024.mjs",
+      "bytes": 6378,
+      "sha256": "506d2e8ee919e8890aeb84a4d4a0b41b1e01c7d90e90dc797ef8a07b04b1c6e4"
+    },
+    {
+      "path": "pending/practice-actions-20261024/recipes/source-proposal-checkpoint.mjs",
+      "bytes": 11217,
+      "sha256": "eb89d2e8903536a2f1141f75c3aec9426509b283ebcb599d0203b5c960c29bbf"
+    },
+    {
+      "path": "pending/practice-actions-20261024/recipes/test-proposal-source-artifacts-20261024.mjs",
+      "bytes": 805,
+      "sha256": "282a5e32c417269663ed7fea29c8c1f4b48585d4615d8c12064aae9962bce98a"
+    },
+    {
       "path": "pending/reference-links-closed56-20261023/coordination/checkpoint-reference-links-closed56-20261023.mjs",
       "bytes": 11416,
       "sha256": "24ba3860fa6963e6330d223fe2aafe20650d612bdbfeddb0137881f2d62b23bb"
@@ -29938,30 +30009,106 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited5954independently verified filtered authored-source paths plus31explicit current/historical test-code and recipe paths. No removals. Generated metadata including two190aJSON.raw fixtures, models, scans, private references/decisions, raw logs, Review/build/dependency state and coordination documents remain F-local. Historical test-code selection is not integration or runnable off-device recovery. Not a whole/private/runnable backup.",
+  "scope": "Inherited5985 independently verified filtered authored-source paths plus14explicit native code/style/package/test and recovery-helper paths, no removals. Generated revisions/metadata, meshes/scans/private references/decisions, dependencies/build state, raw logs/screenshots/type graphs, later coordination and additional local recipes stay F-local. Not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "1d334d03478e1eb50626c4f529f00b852c0665bf617c460dc0d6d0d1c4f8112a",
-    "currentAtlas": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
-    "currentTree": "9263c23e98b24068a8b4b4f0c4635bdd133c2fa5",
-    "inheritedSourcePaths": 6496,
-    "totalSourcePaths": 6498,
-    "newTestPaths": 2,
-    "actualImportedClosureFiles": 1127,
-    "focusedCases": 2,
-    "structures": 1104,
-    "guidedStructures": 320,
-    "guidePlacements": 414,
-    "omissionsRejectedWithRecomputedTransportHashes": 414,
-    "independentMutationRefusals": 69,
-    "allInheritedSourceExact": true,
-    "productSourceChanges": false,
-    "historicalSource": "5e75b9ce7e46fed291748108edd7565c97dee101",
-    "historicalRoots": 16,
-    "historicalCases": 37,
-    "historicalProposalIntegrated": false,
-    "independentShoulderFixtureProvenanceVerified": true,
-    "workerFullHelperClosureSealsAtExecutionUnavailable": true,
-    "newTypesBuildBrowserPerformed": false,
+    "mainReviewSha256": "29a50f04016096239c9a937e0192a78fc4e6b9bdf72f7e24fd451059dbb6f78e",
+    "sourcePaths": 6374,
+    "featureCases": 7,
+    "strictRoots": 7,
+    "strictActualGraphFiles": 3337,
+    "strictDiagnostics": 0,
+    "nativeProductionBuildPassed": true,
+    "buildFiles": 557,
+    "sharedActionBarPlayers": 4,
+    "actualRootExportBrowserAcceptance": true,
+    "browser": {
+      "sourceCommit": "7659453d7d99da78742b06ee6e6665a467e5d972",
+      "ownedTab": "183",
+      "ownedTabClosed": true,
+      "ownerTabsChanged": false,
+      "desktop": {
+        "frameWidth": 1280,
+        "frameHeight": 600,
+        "panelTop": 87,
+        "panelBottom": 600,
+        "barTop": 531,
+        "barBottom": 600,
+        "nextTop": 544,
+        "nextBottom": 588,
+        "nextButtonVisible": true,
+        "footerMeetsPanelEdge": true,
+        "sourcesExpanded": true,
+        "score": "0/1"
+      },
+      "keyboardSourceLink": {
+        "focused": true,
+        "linkBottom": 401.140625,
+        "barTop": 531,
+        "notCovered": true
+      },
+      "compact": {
+        "frameWidth": 1000,
+        "frameHeight": 580,
+        "panelTop": 115,
+        "panelBottom": 580,
+        "panelHeight": 465,
+        "barTop": 511,
+        "barBottom": 580,
+        "nextTop": 524,
+        "nextBottom": 568,
+        "panelScrollHeight": 919,
+        "nextButtonVisible": true,
+        "footerMeetsPanelEdge": true,
+        "sourcesExpanded": true,
+        "score": "0/1"
+      },
+      "completion": {
+        "viewport": "1000x580",
+        "score": "0/5",
+        "allSkipped": true,
+        "retryAvailable": 5,
+        "retryVisible": true,
+        "dismissVisible": true,
+        "barBottom": 580,
+        "retryTop": 472,
+        "retryBottom": 516,
+        "dismissTop": 524,
+        "dismissBottom": 568,
+        "retryStarted": "Question 1 of 5"
+      },
+      "sessionScores": [
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "priorMixedFeedbackRun": {
+        "source": "1d25c92489593e14546855dd7b1be977d10bbc8f",
+        "record": "browser-v2/RESULT-PARTIAL.json",
+        "notAFinalSourceReplay": true
+      },
+      "screenshotsInspected": true,
+      "screenshotsArchived": false,
+      "consoleSample": {
+        "limit": 10,
+        "mutationObserverErrors": 1,
+        "clockDeprecations": 2,
+        "observerMessage": "Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+        "causeLocalized": false,
+        "runtimeCleanClaimed": false
+      },
+      "actualExportedPublicModuleOnly": true,
+      "authenticatedWebsiteAcceptance": false,
+      "otherThreePlayerBrowserAcceptance": false,
+      "clinicalApproval": false,
+      "patientSpaceRegistration": false,
+      "previewChanged": false
+    },
+    "all1104Worksheets9936Lessons232Concepts424SelectionsExact": true,
+    "shoulderDisplayRevisionsAdvanced": 9,
+    "sourceGeometryAndLicensingAndDependenciesUnchanged": true,
+    "websiteIntegrationPending": true,
     "normalPreviewChanged": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
