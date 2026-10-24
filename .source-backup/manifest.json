@@ -1,0 +1,190 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-24T19:16:56.241Z",
+  "sourceIdentity": {
+    "kind": "incremental-source-supplement-not-cumulative-snapshot",
+    "websiteSourceSha256": "cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e",
+    "requiredBase": {
+      "branch": "backup/additional-release-proposals-20261024",
+      "head": "af04f91f94762bbd10db4967db993f3af07f2714",
+      "tree": "191b051fe043317b3f724de64df819d5e335ea8f",
+      "receiptSha256": "be39d82703ea49be9bb0e1cce720b4569f8fdc2c23f0b7fbdef2330e2d483ee8"
+    },
+    "baseCoverage": [
+      {
+        "canonicalPath": "app/review/body/review-dashboard.tsx",
+        "basePath": "pending/review-heading-proposal-20261024/atlas/app/review/body/review-dashboard.tsx",
+        "sha256": "9fd07d7f5e3249d0e993b919f97ec71763f63efa259f7198e526ba74af65902d"
+      },
+      {
+        "canonicalPath": "content/abdominal-eus-orientation.ts",
+        "basePath": "pending/right-gastric-eus-proposal-20261024/content/abdominal-eus-orientation.ts",
+        "sha256": "2bbcce6f530bfca6e1c5cf6733ed8c16d05f8b6b3e990f3724804fa408111431"
+      },
+      {
+        "canonicalPath": "lib/abdominal-eus-orientation.ts",
+        "basePath": "pending/right-gastric-eus-proposal-20261024/lib/abdominal-eus-orientation.ts",
+        "sha256": "18ad65fba17274ddc4f4f60699b88dd4aee88e8cbdeb17a25db0d6bdc0225100"
+      },
+      {
+        "canonicalPath": "package.json",
+        "basePath": "pending/right-gastric-native-prepared-20261024/atlas/package.json",
+        "sha256": "55824dd743250fb9f2b225f6b993b6cd55a2baf077c0e0dcc6a17dc4138b5d0c"
+      },
+      {
+        "canonicalPath": "scripts/test-right-gastric-eus-integration.mjs",
+        "basePath": "pending/right-gastric-native-prepared-20261024/atlas/scripts/test-right-gastric-eus-integration.mjs",
+        "sha256": "a2b850c328c18fd9f0640536298448d819d93914f600e59c69592c9d6b784305"
+      },
+      {
+        "canonicalPath": "scripts/test-teaching-heading.mjs",
+        "basePath": "pending/review-heading-proposal-20261024/atlas/scripts/test-teaching-heading.mjs",
+        "sha256": "261577dff6c3dfba4b5b62d280f8b85f8fc92b5b17b668ae636a714965d10b94"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "atlas/scripts/test-right-gastric-eus-unit.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-combined-atlas/atlas/scripts/test-right-gastric-eus-unit.mjs"
+      },
+      {
+        "path": "atlas/scripts/exact-source-history-api.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-combined-atlas/atlas/scripts/exact-source-history-api.mjs"
+      },
+      {
+        "path": "recipes/try-bounded-eus-unit-20261024.mjs",
+        "restore": "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/try-bounded-eus-unit-20261024.mjs"
+      },
+      {
+        "path": "pending/review-links-harness-20261024/tests/clinical-review-integration.test.ts",
+        "restore": "F:/VisibleMedicine/staging/20261024-review-links-harness-proposal/candidate/tests/clinical-review-integration.test.ts"
+      },
+      {
+        "path": "pending/compact-css-20261024/tests/atlas-compact-study-checks.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-compact-css-proposal/candidate/tests/atlas-compact-study-checks.mjs"
+      },
+      {
+        "path": "pending/compact-css-20261024/tests/runtime-family-forward-inverse.test.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-compact-css-proposal/candidate/tests/runtime-family-forward-inverse.test.mjs"
+      },
+      {
+        "path": "pending/compact-css-20261024/tests/fixtures/compact-css-discovery-seam-20261024.json",
+        "restore": "F:/VisibleMedicine/staging/20261024-compact-css-proposal/candidate/tests/fixtures/compact-css-discovery-seam-20261024.json"
+      },
+      {
+        "path": "pending/compact-css-20261024/tests/compact-css-pure-check.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-compact-css-proposal/candidate/tests/compact-css-pure-check.mjs"
+      },
+      {
+        "path": "pending/compact-css-20261024/tests/compact-css-negative-controls.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-compact-css-proposal/candidate/tests/compact-css-negative-controls.mjs"
+      },
+      {
+        "path": "recipes/streaming-release-failures-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\streaming-release-failures-20261024.mjs"
+      },
+      {
+        "path": "recipes/test-streaming-release-failures-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\test-streaming-release-failures-20261024.mjs"
+      },
+      {
+        "path": "recipes/verify-review-links-harness-proposal-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\verify-review-links-harness-proposal-20261024.mjs"
+      },
+      {
+        "path": "recipes/save-review-harness-preparation-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\save-review-harness-preparation-20261024.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/scripts/test-right-gastric-eus-unit.mjs",
+      "bytes": 8058,
+      "sha256": "75cd91557a648d5a608c4f55fa6cd8cef74a4934b05dae8a7416b2e5e462fe88"
+    },
+    {
+      "path": "atlas/scripts/exact-source-history-api.mjs",
+      "bytes": 22873,
+      "sha256": "a5906e8bc993c7fb33775cb03908d565d059666b68ab1c510a388512760bc633"
+    },
+    {
+      "path": "recipes/try-bounded-eus-unit-20261024.mjs",
+      "bytes": 4899,
+      "sha256": "004397e1ebb30f65b70ae2962b196f0ff626cac032d77b6236cb4bcc861e6dfe"
+    },
+    {
+      "path": "pending/review-links-harness-20261024/tests/clinical-review-integration.test.ts",
+      "bytes": 46834,
+      "sha256": "fe8568a5feaa11650586cd3e6720c0c1062d37dd450061d9a55b2fc464f00884"
+    },
+    {
+      "path": "pending/compact-css-20261024/tests/atlas-compact-study-checks.mjs",
+      "bytes": 16189,
+      "sha256": "be1f3c2ac2d92a14df6d566b27fa348b36a8815141ee83b83a35ebb674ed1d72"
+    },
+    {
+      "path": "pending/compact-css-20261024/tests/runtime-family-forward-inverse.test.mjs",
+      "bytes": 5819,
+      "sha256": "ede2122cef8eed8889f5c4ad9c6478036ac160f01fb045d7e11c81c55c9070b4"
+    },
+    {
+      "path": "pending/compact-css-20261024/tests/fixtures/compact-css-discovery-seam-20261024.json",
+      "bytes": 6836,
+      "sha256": "459bfe4f69a040a4b7ef1c4a54ff57bd68a29faa66f2e13135901943904c7ae8"
+    },
+    {
+      "path": "pending/compact-css-20261024/tests/compact-css-pure-check.mjs",
+      "bytes": 2574,
+      "sha256": "2310576d8ed1abbde5cee3f1e30d8da3c95f01141a17f6d6d404b2461a79451e"
+    },
+    {
+      "path": "pending/compact-css-20261024/tests/compact-css-negative-controls.mjs",
+      "bytes": 6711,
+      "sha256": "cb16398bd410f888b57860eb390f4f6505f35df2babf9269441c57f149c6b483"
+    },
+    {
+      "path": "recipes/streaming-release-failures-20261024.mjs",
+      "bytes": 5572,
+      "sha256": "060ca740692bcf456d97106da595a20f533c688b580391cd20ed6d7cd5301e63"
+    },
+    {
+      "path": "recipes/test-streaming-release-failures-20261024.mjs",
+      "bytes": 3420,
+      "sha256": "66bb150eebec3b30b74cdb04523f7a76034f46df5d424362fc7818413f585749"
+    },
+    {
+      "path": "recipes/verify-review-links-harness-proposal-20261024.mjs",
+      "bytes": 3461,
+      "sha256": "7cb37c8003db74a739d79f0c13d24a8ecbca003ecafefdbdbb4046e41f396781"
+    },
+    {
+      "path": "recipes/save-review-harness-preparation-20261024.mjs",
+      "bytes": 11179,
+      "sha256": "c79f0942749f1afa156823987195880fa77495dca1ba68dafafeeaa1998c782b"
+    }
+  ],
+  "removed": [],
+  "scope": "Only explicit first-party source/test/JSON-fixture recipes, <=192KiB selected. Includes the prior three-file portability supplement, plus proposed Review-link/compact-CSS harness changes and bounded streaming-diagnostic tools. Recovery requires exact earlier filtered base branch/head/tree; no earlier unique source removed. Not a cumulative, whole/private or runnable backup. No scans, models, masks, private references, licence-notice addendum, dependencies, raw QA or later coordination uploaded. Source controls are not application/browser/clinical/release acceptance.",
+  "proof": {
+    "sourceOnlyControls": true,
+    "originalSuiteUnrun": true,
+    "selectedPayloadBytes": 144425,
+    "memoryAtStart": {
+      "AvailableMBytes": 862,
+      "PercentCommittedBytesInUse": 84
+    },
+    "requiredBaseRemoteHeadReadback": true,
+    "rawQaUploaded": false,
+    "previewChanged": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

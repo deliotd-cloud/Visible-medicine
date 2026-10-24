@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Only explicit first-party source/test/JSON-fixture recipes, <=192KiB selected. Includes the prior three-file portability supplement, plus proposed Review-link/compact-CSS harness changes and bounded streaming-diagnostic tools. Recovery requires exact earlier filtered base branch/head/tree; no earlier unique source removed. Not a cumulative, whole/private or runnable backup. No scans, models, masks, private references, licence-notice addendum, dependencies, raw QA or later coordination uploaded. Source controls are not application/browser/clinical/release acceptance.
