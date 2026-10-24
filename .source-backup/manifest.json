@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T06:11:47.763Z",
+  "at": "2026-10-24T06:26:00.887Z",
   "sourceIdentity": {
-    "applicationSourceReceiptSha256": "c5fceb2bc64d8b0d4464b3da940bd3721111657d9a4d57f2dbf5b8b30fe0b6f3",
-    "proofSourceReceiptSha256": "cb626284d1a7604e46b1a42fb226a20b46052911c4d820ffc01913516751c02e",
-    "atlasHead": "7659453d7d99da78742b06ee6e6665a467e5d972",
-    "atlasTree": "386b175434aa1f7cbcd705e05f0946b3b594ca54",
+    "atlasHead": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+    "atlasTree": "0dd97cc55ef9aff3493b91752309d1d661c0b0c8",
+    "parentAtlas": "7659453d7d99da78742b06ee6e6665a467e5d972",
+    "latestCompleteWebsiteSha256": "c5fceb2bc64d8b0d4464b3da940bd3721111657d9a4d57f2dbf5b8b30fe0b6f3",
     "normalPreviewChanged": false
   },
-  "parent": "322f8a84283891c41d84a0c53801685ae5e7f5e8",
-  "gitParent": "322f8a84283891c41d84a0c53801685ae5e7f5e8",
+  "parent": "9b155173cb7e0c1fc201eb7686a1a71dbf96e0cc",
+  "gitParent": "9b155173cb7e0c1fc201eb7686a1a71dbf96e0cc",
   "files": [
     {
       "path": "app/globals.css",
@@ -12200,6 +12200,66 @@
       "path": "pending/carpal-website-20261023/website/tests/regional-tour-entry-delivery.test.mjs",
       "bytes": 11149,
       "sha256": "f513cf5c2d4b10045e36b80d4c404f3d8aa1da081fe722023fc95fa8b3479dec"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/atlas/lib/cervical-vascular-reasoning.ts",
+      "bytes": 4643,
+      "sha256": "b54ef0cf0a863079f5935a7e37768983c767abcf3373498af40c531ab3e8565b"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/atlas/lib/reasoning-questions.ts",
+      "bytes": 16237,
+      "sha256": "462883b2806932ec7a58585cc56078758e01f52b8f0b08b42fd732edd25352ee"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/atlas/package.json",
+      "bytes": 88911,
+      "sha256": "247a9b3e6264eca6b29fb6d749448f064b31b3fd7ad52996e70cbd67f3b980ed"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/atlas/scripts/pin-cervical-vascular-reasoning.mjs",
+      "bytes": 2555,
+      "sha256": "f8ed257630de18edcf4350a1050fc7bd304080afc2b71d71604f867c03b4dc9d"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/atlas/scripts/test-cervical-vascular-reasoning.mjs",
+      "bytes": 5068,
+      "sha256": "d9abfc47919f9c6c95d57dd975a55aa0ff7598ac494c9080f1f7b4930dbf611d"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/atlas/scripts/test-cervical-vascular-review.mjs",
+      "bytes": 5900,
+      "sha256": "0a345be033927732ca058b20bb726af2d58f6a5cf81e9d7ce3c1696e2e9d607e"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 60014,
+      "sha256": "133222be87df4150969d05a82ac77c7d084db553db53be54c8bd35ffb7a8654c"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/recipes/check-cervical-vascular-types-20261024.mjs",
+      "bytes": 1918,
+      "sha256": "bb7e408c5a4e9bacc85529c92c06b5a95b8f0068fd2c08aaee4dc16f68dd6482"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/recipes/checkpoint-cervical-vascular-draft-20261024.mjs",
+      "bytes": 24799,
+      "sha256": "7d64db005255be73926024fc99506c75b4809886b728bb32a938e2c340ab6fde"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/recipes/prepare-cervical-vascular-draft-20261024.mjs",
+      "bytes": 1799,
+      "sha256": "503d2e02cebf101ee486610ac1ec926ba38cd12154f26617259138709b3ccd3c"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/recipes/preserve-cervical-vascular-draft-20261024.mjs",
+      "bytes": 6247,
+      "sha256": "bb3bfe9682296bf265834eecb36f3f9f51782217fbc541d31867d3aabff3925f"
+    },
+    {
+      "path": "pending/cervical-vascular-draft-20261024/recipes/run-cervical-vascular-draft-20261024.mjs",
+      "bytes": 4196,
+      "sha256": "ee5230cd267ce01d997cf2b21e3016c20cafa6e180f3215edd92d549464fbaa1"
     },
     {
       "path": "pending/checklist-reconciliation-20261022/checkpoint-checklist-reconciliation-20261022.mjs",
@@ -29753,37 +29813,37 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited5941verified filtered authored-source paths plus7explicit test/preimage/recipe paths, no removals. Existing99exact duplicate aliases and reconstruction preserved through verified parent receipt/commit. Generated metadata/models/scans/identifiers/private references/decisions, dependencies/build/emulator state, raw evidence and later coordination remain F-local. Not a whole/private/runnable off-device backup.",
+  "scope": "Inherited5948verified filtered source paths plus12explicit native authored code/package/test/recipe paths, no removals. Prior99exact source aliases/reconstruction remain linked by verified parent receipt/ancestry. Generated pins/JSON, licence/docs prose, models/scans/identifiers/private references/decisions, raw evidence/build/dependency state and later coordination stay F-local. Not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "7e3472ec5ccc0e3a4969473609ca86ec5fe3f979447ee7086bf4c8cea54a9edc",
-    "applicationSourceReceipt": "F:/VisibleMedicine/staging/20261024-guided-review-navigation/SOURCE_BOUND.json",
-    "applicationSourceReceiptSha256": "c5fceb2bc64d8b0d4464b3da940bd3721111657d9a4d57f2dbf5b8b30fe0b6f3",
-    "currentAtlas": "7659453d7d99da78742b06ee6e6665a467e5d972",
-    "currentTree": "386b175434aa1f7cbcd705e05f0946b3b594ca54",
-    "totalSourcePaths": 6507,
-    "inheritedSourcePaths": 6503,
-    "productSourceChanges": false,
-    "focusedCases": 3,
-    "actualImportedClosureFiles": 1127,
-    "structures": 1104,
-    "guidedStructures": 320,
-    "guidePlacements": 414,
-    "rehashOmissionRefusals": 414,
-    "otherMutationRefusals": 69,
-    "wholeOriginalTheoremAndHelperPreserved": true,
-    "exactSourceCountSeams": 3,
-    "newTypesBuildBrowserPerformed": false,
-    "historicalProposalIntegrated": false,
-    "fullReleasePending": true,
+    "mainReviewSha256": "a0c347049c2203ac5f23aa181a6577cd2c12f5e3790355dfc2008ca10b13d6fe",
+    "atlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+    "tree": "0dd97cc55ef9aff3493b91752309d1d661c0b0c8",
+    "sourcePaths": 6380,
+    "focusedCases": 5,
+    "practiceChecks": 26341,
+    "negativeIdentityCases": 6865,
+    "strictTypeRoots": 6,
+    "strictTypeGraphFiles": 3337,
+    "typeDiagnostics": 0,
+    "fullNativeBuild": true,
+    "buildFiles": 557,
+    "newDraftConcepts": 4,
+    "newSourceSelections": 8,
+    "reasoningConcepts": 236,
+    "reasoningSelections": 432,
+    "prior232DefinitionsAnd424SessionsPreserved": true,
+    "all1104SourcesAnd9936LessonsUnchanged": true,
+    "unchangedTeachingWorksheets": 1096,
+    "changedDisplayPins": 8,
+    "packetMutationsRejected": 40,
+    "stalePostsRejectedBeforeStorage": 8,
+    "allOriginalTheoremsReconstruct": true,
+    "allNineShoulderRevisionsUnchanged": true,
+    "modelsDependenciesLicenceTermsAndHoldsUnchanged": true,
+    "oneReferenceBoundaryNoticeAdded": true,
+    "actualBrowserVerified": false,
+    "websiteIntegrationPending": true,
     "normalPreviewChanged": false,
-    "inheritedExactAliases": {
-      "count": 99,
-      "parentReceipt": "F:/VisibleMedicine/recovery/checkpoints/20261024-guided-review-navigation-source-backup/github-backup.json",
-      "parentReceiptSha256": "fd698a0bddc067001ac6758fd1696a4c4a5d4946fa86e393b1306cd6d2ec798e",
-      "parentHead": "322f8a84283891c41d84a0c53801685ae5e7f5e8",
-      "reconstructionEvidence": "F:/VisibleMedicine/recovery/checkpoints/20261024-practice-actions-website/ALIASES_VERIFIED.json",
-      "reconstructionEvidenceSha256": "aa5f804d38c5ea931c34f3218172203e2b2c2d92bfcca1fa4c6eb1ad542c75fd"
-    },
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
