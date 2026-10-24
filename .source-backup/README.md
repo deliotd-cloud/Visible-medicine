@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited5960verified filtered source paths plus28explicit Website code/test/preimage/recipe paths, no removals. Existing99aliases/reconstruction remain linked by verified parent receipt/ancestry; no unique inherited source omitted. Generated pins/metadata/JSON, models/scans/identifiers/private references/decisions, dependency/build/emulator state, raw evidence and later coordination remain F-local. Not a whole/private/runnable off-device backup.
+Inherited5988verified filtered source paths consolidate88byte-identical historical paths with explicit aliases and preserved Git ancestry, then17new selected code/test/preimage/recipe paths; no unique source omitted. Prior99aliases remain via parent receipts. Generated metadata/pins/models/scans/identifiers/private references/decisions, dependencies/build/emulator state, raw evidence and later coordination stay F-local. Not whole/private/runnable off-device recovery.
