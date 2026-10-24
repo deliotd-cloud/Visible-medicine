@@ -1,0 +1,261 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-24T23:05:34.063Z",
+  "sourceIdentity": {
+    "kind": "selected-native-authored-generated-text-and-recipes-not-cumulative",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "nativeTree": "6940282a3ae0462961b9b99a690c70f282ab8ce7",
+    "localNativeSourceSha256": "18226a6f5e49d4e382e8c6a0397a1672be92af280bd0133a1de986b6d8d7fa38",
+    "requiredLocalNativeBaseline": {
+      "head": "6e810b188dde401f6c19a970928f316a479696df",
+      "tree": "90afe5163dbd9386aa37c93d525fa4c70e8c1b9e",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredBase": {
+      "branch": "backup/additional-release-proposals-20261024",
+      "head": "af04f91f94762bbd10db4967db993f3af07f2714",
+      "tree": "191b051fe043317b3f724de64df819d5e335ea8f",
+      "receiptSha256": "be39d82703ea49be9bb0e1cce720b4569f8fdc2c23f0b7fbdef2330e2d483ee8"
+    },
+    "requiredSupplements": [
+      {
+        "branch": "backup/combined-atlas-portability-supplement-20261024",
+        "head": "6dce8336d13d5635cdb2033654c6c6769ae727b2",
+        "tree": "c2c51382194867352e97f698ad411e2bddd9b1aa",
+        "receiptSha256": "6490cb7ebd51eeadfcec35fa5e69b1845583f815888f4c48e9a11b4c1ef7cc2c"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "pending/native-built-20261025/atlas/app/review/body/review-dashboard.tsx",
+        "restore": "atlas/app/review/body/review-dashboard.tsx"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/content/abdominal-eus-orientation.ts",
+        "restore": "atlas/content/abdominal-eus-orientation.ts"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/content/body-renderer-revision.json",
+        "restore": "atlas/content/body-renderer-revision.json"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/content/body-review-display-pins.json",
+        "restore": "atlas/content/body-review-display-pins.json"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/content/regional-teaching/abdomen.json",
+        "restore": "atlas/content/regional-teaching/abdomen.json"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/lib/abdominal-eus-orientation.ts",
+        "restore": "atlas/lib/abdominal-eus-orientation.ts"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+        "restore": "atlas/LICENSES/THIRD_PARTY_NOTICES.md"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/package.json",
+        "restore": "atlas/package.json"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/scripts/exact-source-history-api.mjs",
+        "restore": "atlas/scripts/exact-source-history-api.mjs"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/scripts/test-right-gastric-eus-integration.mjs",
+        "restore": "atlas/scripts/test-right-gastric-eus-integration.mjs"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/scripts/test-right-gastric-eus-unit.mjs",
+        "restore": "atlas/scripts/test-right-gastric-eus-unit.mjs"
+      },
+      {
+        "path": "pending/native-built-20261025/atlas/scripts/test-teaching-heading.mjs",
+        "restore": "atlas/scripts/test-teaching-heading.mjs"
+      },
+      {
+        "path": "recipes/source-only-backup-20261019.mjs",
+        "restore": "coordination/source-only-backup-20261019.mjs"
+      },
+      {
+        "path": "recipes/run-native-metadata-tail-20261024.mjs",
+        "restore": "coordination/run-native-metadata-tail-20261024.mjs"
+      },
+      {
+        "path": "recipes/record-native-metadata-and-active-tests-20261024.mjs",
+        "restore": "coordination/record-native-metadata-and-active-tests-20261024.mjs"
+      },
+      {
+        "path": "recipes/check-combined-native-eus-20261024.mjs",
+        "restore": "coordination/check-combined-native-eus-20261024.mjs"
+      },
+      {
+        "path": "recipes/check-native-generated-gates-20261024.mjs",
+        "restore": "coordination/check-native-generated-gates-20261024.mjs"
+      },
+      {
+        "path": "recipes/check-native-generated-gates-v2-20261024.mjs",
+        "restore": "coordination/check-native-generated-gates-v2-20261024.mjs"
+      },
+      {
+        "path": "recipes/prepare-native-strict-heap-successor-20261024.mjs",
+        "restore": "coordination/prepare-native-strict-heap-successor-20261024.mjs"
+      },
+      {
+        "path": "recipes/commit-native-verified-source-20261024.mjs",
+        "restore": "coordination/commit-native-verified-source-20261024.mjs"
+      },
+      {
+        "path": "recipes/build-combined-native-20261024.mjs",
+        "restore": "coordination/build-combined-native-20261024.mjs"
+      },
+      {
+        "path": "recipes/backup-native-built-source-20261025.mjs",
+        "restore": "coordination/backup-native-built-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "pending/native-built-20261025/atlas/app/review/body/review-dashboard.tsx",
+      "bytes": 29639,
+      "sha256": "9fd07d7f5e3249d0e993b919f97ec71763f63efa259f7198e526ba74af65902d"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/content/abdominal-eus-orientation.ts",
+      "bytes": 3376,
+      "sha256": "2bbcce6f530bfca6e1c5cf6733ed8c16d05f8b6b3e990f3724804fa408111431"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/content/body-renderer-revision.json",
+      "bytes": 220873,
+      "sha256": "4feb8bb284144ef9bc4806849a0388c85f4731de636160d98314e491d35077a9"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "ed8e702f22b810cb284a641121f06caebd9cb187c1c19007710d63a256cc09eb"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/content/regional-teaching/abdomen.json",
+      "bytes": 920003,
+      "sha256": "aee2a6bf8d6f88e8129de039fb898f0ffe2d307c985ed8bbeaa0e8cfe9d1b5a5"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/lib/abdominal-eus-orientation.ts",
+      "bytes": 3122,
+      "sha256": "18ad65fba17274ddc4f4f60699b88dd4aee88e8cbdeb17a25db0d6bdc0225100"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 365569,
+      "sha256": "27e6b849eca5c98a140b610eb618d103d0d7f51c0d624fb5e71f7ab299555471"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/package.json",
+      "bytes": 89406,
+      "sha256": "55824dd743250fb9f2b225f6b993b6cd55a2baf077c0e0dcc6a17dc4138b5d0c"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/scripts/exact-source-history-api.mjs",
+      "bytes": 22873,
+      "sha256": "a5906e8bc993c7fb33775cb03908d565d059666b68ab1c510a388512760bc633"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/scripts/test-right-gastric-eus-integration.mjs",
+      "bytes": 9979,
+      "sha256": "a2b850c328c18fd9f0640536298448d819d93914f600e59c69592c9d6b784305"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/scripts/test-right-gastric-eus-unit.mjs",
+      "bytes": 8058,
+      "sha256": "75cd91557a648d5a608c4f55fa6cd8cef74a4934b05dae8a7416b2e5e462fe88"
+    },
+    {
+      "path": "pending/native-built-20261025/atlas/scripts/test-teaching-heading.mjs",
+      "bytes": 9704,
+      "sha256": "261577dff6c3dfba4b5b62d280f8b85f8fc92b5b17b668ae636a714965d10b94"
+    },
+    {
+      "path": "recipes/source-only-backup-20261019.mjs",
+      "bytes": 7700,
+      "sha256": "3f8ea65871f15558d46c1c2a36feb0dee95d2408207f9d2762976ae66ead5212"
+    },
+    {
+      "path": "recipes/run-native-metadata-tail-20261024.mjs",
+      "bytes": 7620,
+      "sha256": "8246c2e0b7eb81b888d21b9b22be02ffbab7c39ea3a6859c47afc3c9349886a2"
+    },
+    {
+      "path": "recipes/record-native-metadata-and-active-tests-20261024.mjs",
+      "bytes": 13939,
+      "sha256": "3eb8b36221f5b5bb553b42a89aff9f69fe0fa0fe178765f2732ddc501c65d1e0"
+    },
+    {
+      "path": "recipes/check-combined-native-eus-20261024.mjs",
+      "bytes": 4050,
+      "sha256": "88fbf25f3402f414132d5d1e9201452a5338b0e50ef09cff849ab196fd5f5e40"
+    },
+    {
+      "path": "recipes/check-native-generated-gates-20261024.mjs",
+      "bytes": 5456,
+      "sha256": "b192cf3308e93dffa5e2351939a4d32d272141814efda9e40587bfd72adff11b"
+    },
+    {
+      "path": "recipes/check-native-generated-gates-v2-20261024.mjs",
+      "bytes": 5545,
+      "sha256": "0666793b73f2ceab07b38f2135de2618fa110fa5a1bc39f604bc780fc7a3d93d"
+    },
+    {
+      "path": "recipes/prepare-native-strict-heap-successor-20261024.mjs",
+      "bytes": 2555,
+      "sha256": "1e1e7fc67b17bc29e1d65b7b85f28cc203d1cfd5910449c465cf9a279fa86b68"
+    },
+    {
+      "path": "recipes/commit-native-verified-source-20261024.mjs",
+      "bytes": 5140,
+      "sha256": "db2bce61ab3c0d29d3c04a7830ec73275c2f7f4c7c5329859b9cdf2209363a6c"
+    },
+    {
+      "path": "recipes/build-combined-native-20261024.mjs",
+      "bytes": 7903,
+      "sha256": "5579386d08d964c74d99a92288ece42e51c48de41c9ca177821de50a81b1e59b"
+    },
+    {
+      "path": "recipes/backup-native-built-source-20261025.mjs",
+      "bytes": 7329,
+      "sha256": "6d38ad202295e912b1f94d67fb056e78bbb6e19bebc0a73f33d851f38af54160"
+    }
+  ],
+  "removed": [],
+  "scope": "12explicit changed first-party native source/teaching-definition/review-metadata/notice files plus10recipes. No models, textures, scans, masks, patient identifiers, private records, compiled build or dependency packages, raw QA or native Git ancestry. Draft teaching remains unsigned. Incremental source supplement, not cumulative or whole/private/runnable Atlas/Website backup; exact local native baseline and stated earlier source supplements still required. No earlier unique source removed.",
+  "proof": {
+    "originalEusCasesPass": 13,
+    "originalRegionalAndHeadingCasesPass": 27,
+    "fourFreshnessChecksPass": true,
+    "fullStrictRoots": 1300,
+    "fullStrictPassed": true,
+    "strictInitial1GiBOomRetained": true,
+    "actualStockProductionBuildPassed": true,
+    "nativeBuildFiles": 557,
+    "allSourceGlbUnchanged": 147,
+    "publicModelTransportVerified": 141,
+    "sourcePathsChecked": 6389,
+    "selectedBytes": 1953056,
+    "sourceOnly": true,
+    "rawQaUploaded": false,
+    "buildAssetsUploaded": false,
+    "previewChanged": false,
+    "installed": false,
+    "clinicalApproval": false,
+    "spatialRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

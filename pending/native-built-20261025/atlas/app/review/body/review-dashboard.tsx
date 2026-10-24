@@ -1,0 +1,756 @@
+'use client';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
+import { ReviewSignInLink } from '@/components/review-sign-in-link';
+import { Brand } from '../../brand';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from '@/components/ui/select';
+import { bodySystems } from '../../body-types';
+import {
+  bodyReviewQueue,
+  type BodyReviewSummary,
+} from '@/lib/body-review-search';
+import type { BodyReviewMaterial } from '@/lib/body-review-material';
+import { parseBodyReviewResponse } from '@/lib/body-review-response';
+import { teachingHeading } from '@/lib/teaching-heading';
+import { BodyDecisionEditor } from './body-decision-editor';
+import { ReviewModelPreview } from '../review-model-preview';
+
+const labels = {
+  anatomy: 'Anatomy',
+  function: 'Function',
+  ct: 'CT',
+  mri: 'MRI',
+  xray: 'X-ray',
+  ultrasound: 'Ultrasound',
+  pathology: 'Pathology',
+  clinical: 'Clinical',
+  quiz: 'Quiz notes',
+};
+const readiness = {
+  draft: 'Draft',
+  pending: 'Pending',
+  'identity-only': 'Identity only',
+  'generated-identification': 'Identification prompt only',
+};
+type LeaveIntent =
+  | { kind: 'structure'; id: string }
+  | { kind: 'query'; value: string }
+  | { kind: 'region'; value: string }
+  | { kind: 'system'; value: string }
+  | { kind: 'link'; anchor: HTMLAnchorElement; href: string };
+
+type LeaveContext = {
+  selected: string | null;
+  material: BodyReviewMaterial | null;
+  region: string;
+  system: string;
+  query: string;
+  queue: string;
+  rows: BodyReviewSummary[];
+  dirty: boolean;
+};
+
+type PendingLeave = { intent: LeaveIntent; context: LeaveContext };
+
+function sameLeaveContext(a: LeaveContext, b: LeaveContext) {
+  return (
+    a.selected === b.selected &&
+    a.material === b.material &&
+    a.region === b.region &&
+    a.system === b.system &&
+    a.query === b.query &&
+    a.queue === b.queue &&
+    a.rows === b.rows &&
+    a.dirty === b.dirty
+  );
+}
+
+export function BodyReviewDashboard({
+  rows,
+  regions,
+  initialId,
+  initialRegion,
+  initialTrack = 'geometry',
+}: {
+  rows: BodyReviewSummary[];
+  regions: { id: string; name: string }[];
+  initialId: string | null;
+  initialRegion: string;
+  initialTrack?: 'geometry' | 'teaching';
+}) {
+  const [region, setRegion] = useState(initialRegion),
+    [system, setSystem] = useState('all'),
+    [query, setQuery] = useState('');
+  const [page, setPage] = useState(() => {
+      const index = bodyReviewQueue(rows, initialRegion, 'all', '').findIndex(
+        (s) => s.id === initialId,
+      );
+      return Math.floor(Math.max(0, index) / 20);
+    }),
+    [selected, setSelected] = useState(initialId);
+  const [dirty, setDirty] = useState(false);
+  const [pendingLeave, setPendingLeave] = useState<PendingLeave | null>(null);
+  const pendingLeaveRef = useRef<PendingLeave | null>(null);
+  const latestContextRef = useRef<LeaveContext | null>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
+  const queryInputRef = useRef<HTMLInputElement | null>(null);
+  const cancelButtonRef = useRef<HTMLButtonElement | null>(null);
+  const focusTokenRef = useRef(0);
+  const bypassAnchorRef = useRef<HTMLAnchorElement | null>(null);
+  const allowUnloadRef = useRef(false);
+  useLayoutEffect(() => {
+    // A confirmed link may remain on this page. Every subsequent dirty draft
+    // restores native exit protection before its beforeunload listener runs.
+    if (dirty) allowUnloadRef.current = false;
+  }, [dirty]);
+  useEffect(() => {
+    if (!dirty) return;
+    const guard = (event: BeforeUnloadEvent) => {
+      if (allowUnloadRef.current) return;
+      event.preventDefault();
+      event.returnValue = '';
+    };
+    window.addEventListener('beforeunload', guard);
+    return () => window.removeEventListener('beforeunload', guard);
+  }, [dirty]);
+  const [material, setMaterial] = useState<BodyReviewMaterial | null>(null),
+    [error, setError] = useState(''),
+    [loading, setLoading] = useState(false),
+    [attempt, setAttempt] = useState(0);
+  const matches = useMemo(
+    () => bodyReviewQueue(rows, region, system, query),
+    [rows, region, system, query],
+  );
+  const context: LeaveContext = {
+    selected,
+    material,
+    region,
+    system,
+    query,
+    queue: matches.map((row) => row.id).join('\u0000'),
+    rows,
+    dirty,
+  };
+  useLayoutEffect(() => {
+    latestContextRef.current = context;
+  });
+  function resetSelection() {
+    setDirty(false);
+    setPage(0);
+    setSelected(null);
+    setMaterial(null);
+    setError('');
+  }
+  function syncStructureQuery(id: string | null) {
+    const url = new URL(window.location.href);
+    if (id === null) url.searchParams.delete('structure');
+    else url.searchParams.set('structure', id);
+    const next = `${url.pathname}${url.search}${url.hash}`;
+    const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    // Worksheet changes replace this history entry; Back still leaves the review page.
+    if (next !== current) window.history.replaceState(window.history.state, '', next);
+  }
+  function performLeave(intent: LeaveIntent) {
+    switch (intent.kind) {
+      case 'structure': {
+        const index = matches.findIndex((row) => row.id === intent.id);
+        if (index < 0 || intent.id === selected) return;
+        setDirty(false);
+        setMaterial(null);
+        setError('');
+        setPage(Math.floor(index / 20));
+        setSelected(intent.id);
+        syncStructureQuery(intent.id);
+        return;
+      }
+      case 'query':
+        setQuery(intent.value);
+        resetSelection();
+        syncStructureQuery(null);
+        return;
+      case 'region':
+        setRegion(intent.value);
+        resetSelection();
+        syncStructureQuery(null);
+        return;
+      case 'system':
+        setSystem(intent.value);
+        resetSelection();
+        syncStructureQuery(null);
+        return;
+      case 'link':
+        if (!intent.anchor.isConnected || intent.anchor.href !== intent.href) return;
+        resetSelection();
+        allowUnloadRef.current = true;
+        bypassAnchorRef.current = intent.anchor;
+        try {
+          intent.anchor.click();
+        } finally {
+          bypassAnchorRef.current = null;
+        }
+    }
+  }
+  function requestLeave(intent: LeaveIntent, focusTarget?: HTMLElement | null) {
+    // Keep the first requested destination while the dialog is open.
+    if (pendingLeaveRef.current) return;
+    if (!dirty) {
+      performLeave(intent);
+      return;
+    }
+    const pending = { intent, context };
+    pendingLeaveRef.current = pending;
+    focusTokenRef.current++;
+    returnFocusRef.current = focusTarget ??
+      (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+    setPendingLeave(pending);
+  }
+  function cancelLeave(expected: PendingLeave | null) {
+    if (!expected || pendingLeaveRef.current !== expected) return;
+    pendingLeaveRef.current = null;
+    setPendingLeave(null);
+    const focusTarget = returnFocusRef.current;
+    returnFocusRef.current = null;
+    const focusToken = ++focusTokenRef.current;
+    // A delayed close cannot focus behind a newer dialog.
+    requestAnimationFrame(() => {
+      if (focusToken !== focusTokenRef.current || pendingLeaveRef.current) return;
+      if (focusTarget?.isConnected) focusTarget.focus({ preventScroll: true });
+      else if (queryInputRef.current?.isConnected) queryInputRef.current.focus({ preventScroll: true });
+    });
+  }
+  function confirmLeave() {
+    const pending = pendingLeaveRef.current;
+    if (!pending || pending !== pendingLeave) return;
+    const latest = latestContextRef.current;
+    if (!latest || !sameLeaveContext(pending.context, latest) ||
+        (pending.intent.kind === 'link' &&
+          (!pending.intent.anchor.isConnected || pending.intent.anchor.href !== pending.intent.href))) {
+      cancelLeave(pending);
+      return;
+    }
+    pendingLeaveRef.current = null; // Consume before dispatch, including link click re-entry.
+    focusTokenRef.current++;
+    setPendingLeave(null);
+    returnFocusRef.current = null;
+    performLeave(pending.intent);
+  }
+  const currentPage = Math.min(
+    page,
+    Math.max(0, Math.ceil(matches.length / 20) - 1),
+  );
+  const visible = matches.slice(currentPage * 20, currentPage * 20 + 20);
+  const selectedIndex = matches.findIndex((s) => s.id === selected);
+  const nextId = selectedIndex >= 0 ? matches[selectedIndex + 1]?.id : undefined;
+  const previousStructure = selectedIndex > 0 ? matches[selectedIndex - 1] : null;
+  const nextStructure =
+    selectedIndex >= 0 ? matches[selectedIndex + 1] ?? null : null;
+  function selectStructure(id: string) {
+    // Clicking the current row must retain its editor and unsaved draft.
+    if (id === selected) return;
+    const index = matches.findIndex((s) => s.id === id);
+    if (index < 0) return;
+    requestLeave({ kind: 'structure', id });
+  }
+  useEffect(() => {
+    const controller = new AbortController();
+    let current = true;
+    setMaterial(null);
+    setError('');
+    if (!selected) {
+      setLoading(false);
+      return () => controller.abort();
+    }
+    setLoading(true);
+    fetch(`/api/body-review?structure=${encodeURIComponent(selected)}`, {
+      signal: controller.signal,
+      cache: 'no-store',
+    })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok)
+          throw new Error(
+            data &&
+              typeof data === 'object' &&
+              'error' in data &&
+              typeof data.error === 'string'
+              ? data.error
+              : 'Unable to load the worksheet.',
+          );
+        const parsed = await parseBodyReviewResponse(data, selected);
+        if (!parsed) throw new Error('Unexpected worksheet. Please retry.');
+        if (current) setMaterial(parsed);
+      })
+      .catch((e) => {
+        if (current && !controller.signal.aborted)
+          setError(
+            e instanceof Error ? e.message : 'Unable to load the worksheet.',
+          );
+      })
+      .finally(() => {
+        if (current) setLoading(false);
+      });
+    return () => {
+      current = false;
+      controller.abort();
+    };
+  }, [selected, attempt]);
+  return (
+    <div
+      className="body-review-app"
+      onClickCapture={(event) => {
+        // New-tab/window/download gestures do not leave this dirty worksheet.
+        // Do not replay them as an unmodified same-tab anchor click.
+        if (event.defaultPrevented || (event.button !== undefined && event.button !== 0) ||
+            event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        const anchor = (event.target as Element).closest('a');
+        if (anchor === bypassAnchorRef.current) return;
+        if (
+          !anchor ||
+          anchor.target === '_blank' ||
+          anchor.hasAttribute('download') ||
+          anchor.getAttribute('href')?.startsWith('/api/body-review')
+        )
+          return;
+        if (dirty || pendingLeaveRef.current) {
+          event.preventDefault();
+          event.stopPropagation();
+          requestLeave({ kind: 'link', anchor, href: anchor.href }, anchor);
+        }
+      }}
+    >
+      <header className="body-review-header">
+        <Brand />
+        <span>Body review workspace</span>
+        <Link href="/review/overview">Clinical review home</Link>
+        <Link href="/">Back to atlas</Link>
+      </header>
+      <main className="body-review-shell">
+        <h1>Review the wider body</h1>
+        <p>
+          Source details and current teaching for {rows.length.toLocaleString()}{' '}
+          body selections. Keep private, versioned corrections and review
+          records without adding controls to the learner's atlas.
+        </p>
+        <div className="body-review-grid">
+          <aside className="body-review-queue" aria-label="Body review queue">
+            <label htmlFor="body-review-query">Find a structure</label>
+            <Input
+              ref={queryInputRef}
+              id="body-review-query"
+              value={query}
+              maxLength={256}
+              placeholder="Name or anatomical ID"
+              onChange={(e) => {
+                requestLeave({ kind: 'query', value: e.target.value }, e.currentTarget);
+              }}
+            />
+            <label id="body-review-region-label">Region</label>
+            <Select
+              value={region}
+              onValueChange={(v) => {
+                if (v && v !== region) requestLeave({ kind: 'region', value: v });
+              }}
+            >
+              <SelectTrigger aria-labelledby="body-review-region-label">
+                <SelectValue>{region === 'all' ? 'All regions' : regions.find((r) => r.id === region)?.name ?? region}</SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All regions</SelectItem>
+                {regions.map((r) => (
+                  <SelectItem value={r.id} key={r.id}>
+                    {r.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <label id="body-review-system-label">System</label>
+            <Select
+              value={system}
+              onValueChange={(v) => {
+                if (v && v !== system) requestLeave({ kind: 'system', value: v });
+              }}
+            >
+              <SelectTrigger aria-labelledby="body-review-system-label">
+                <SelectValue>{system === 'all' ? 'All systems' : bodySystems[system as keyof typeof bodySystems]?.name ?? system}</SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All systems</SelectItem>
+                {Object.entries(bodySystems).map(([id, s]) => (
+                  <SelectItem value={id} key={id}>
+                    {s.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <p role="status">{matches.length} matching selections</p>
+            <ul>
+              {visible.map((s) => (
+                <li key={s.id}>
+                  <Button
+                    variant={selected === s.id ? 'secondary' : 'ghost'}
+                    aria-pressed={selected === s.id}
+                    onClick={() => selectStructure(s.id)}
+                  >
+                    {s.name}
+                    <small>
+                      {s.fmaId} · {s.laterality}
+                    </small>
+                  </Button>
+                </li>
+              ))}
+            </ul>
+            {!matches.length && <p>No matches. Try another region or name.</p>}
+            <nav aria-label="Review queue pages">
+              <Button
+                variant="outline"
+                disabled={currentPage === 0}
+                onClick={() => setPage(currentPage - 1)}
+              >
+                Previous
+              </Button>
+              <span>
+                {matches.length ? currentPage + 1 : 0} /{' '}
+                {Math.ceil(matches.length / 20)}
+              </span>
+              <Button
+                variant="outline"
+                disabled={(currentPage + 1) * 20 >= matches.length}
+                onClick={() => setPage(currentPage + 1)}
+              >
+                Next
+              </Button>
+            </nav>
+          </aside>
+          <section
+            className="body-review-paper"
+            aria-label="Selected review worksheet"
+            aria-busy={loading}
+          >
+            <nav
+              className="body-review-structure-navigation"
+              aria-label="Structures in the filtered review queue"
+            >
+              <Button
+                variant="outline"
+                disabled={!previousStructure}
+                onClick={() => {
+                  if (previousStructure) selectStructure(previousStructure.id);
+                }}
+              >
+                Previous structure
+              </Button>
+              <p role="status" aria-atomic="true">
+                {selectedIndex >= 0
+                  ? `Structure ${selectedIndex + 1} of ${matches.length} in the filtered queue`
+                  : selected
+                    ? 'Selected structure is outside the filtered queue'
+                    : 'No structure selected'}
+              </p>
+              <Button
+                variant="outline"
+                disabled={!nextStructure}
+                onClick={() => {
+                  if (nextStructure) selectStructure(nextStructure.id);
+                }}
+              >
+                Next structure
+              </Button>
+            </nav>
+            {loading && (
+              <p role="status">Loading the selected source and teaching…</p>
+            )}
+            {error && (
+              <div role="alert">
+                <p>{error}</p>
+                <Button
+                  variant="outline"
+                  onClick={() => setAttempt((n) => n + 1)}
+                >
+                  Retry
+                </Button>
+                <p>
+                  <ReviewSignInLink target={{ scope: 'body', structure: selected }}>
+                    Sign in to the review workspace
+                  </ReviewSignInLink>
+                  . No review decision has been saved.
+                </p>
+              </div>
+            )}
+            {!selected && (
+              <p>Choose a structure to inspect its source and teaching.</p>
+            )}
+            {material?.structureId === selected && (
+              <div className="body-review-selected">
+                <ReviewModelPreview
+                  key={material.materialHash}
+                  href={material.atlasLink}
+                  name={material.source.structure.name}
+                  revision={material.materialHash}
+                />
+                <div className="body-review-worksheet">
+                <BodyReviewDetails material={material} />
+                <BodyDecisionEditor
+                  key={`${material.structureId}-${material.materialHash}`}
+                  id={material.structureId}
+                  materialHash={material.materialHash}
+                  initialTrack={initialTrack}
+                  onDirty={setDirty}
+                  canAdvance={!!nextId}
+                  onApproved={() => {
+                    // The editor invokes this only after a confirmed approval,
+                    // with no other dirty tracks. Never advance a retired view.
+                    const current = latestContextRef.current;
+                    if (pendingLeaveRef.current || current?.selected !== material.structureId ||
+                        current.material?.materialHash !== material.materialHash) return;
+                    if (nextId) performLeave({ kind: 'structure', id: nextId });
+                  }}
+                />
+                <Button
+                  variant="outline"
+                  disabled={!nextId}
+                  onClick={(event) => {
+                    if (nextId) requestLeave({ kind: 'structure', id: nextId }, event.currentTarget);
+                  }}
+                >Skip for now</Button>
+                </div>
+              </div>
+            )}
+          </section>
+        </div>
+      </main>
+      <AlertDialog
+        open={pendingLeave !== null}
+        onOpenChange={(open) => { if (!open) cancelLeave(pendingLeave); }}
+      >
+        <AlertDialogContent initialFocus={cancelButtonRef} finalFocus={false}>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Discard unsaved review edits?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Leaving this structure will discard its unsaved review edits. Export or save them first if needed.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel ref={cancelButtonRef} onClick={() => cancelLeave(pendingLeave)}>Keep editing</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmLeave}>Discard edits and continue</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </div>
+  );
+}
+
+export function BodyReviewDetails({
+  material,
+}: {
+  material: BodyReviewMaterial;
+}) {
+  const s = material.source.structure;
+  return (
+    <>
+      <h2>{s.name}</h2>
+      <p>
+        {s.fmaId} · {s.laterality} · {s.sources.length} source parts
+      </p>
+      <div className="body-review-actions">
+        {material.atlasLink && (
+          <a href={material.atlasLink} target="_blank" rel="noopener noreferrer">
+            Open this model in a separate tab
+          </a>
+        )}
+        <a
+          href={`/api/body-review?structure=${encodeURIComponent(s.id)}&download=1`}
+        >
+          Download review worksheet
+        </a>
+      </div>
+      {s.coverageNote && (
+        <p className="body-review-caution">{s.coverageNote}</p>
+      )}
+      <details>
+        <summary>Source & scope</summary>
+        <p>{material.source.credit}</p>
+        <p>
+          {material.source.licence} · source version{' '}
+          {material.source.sourceVersion} · {s.sourceTree}
+        </p>
+        <code>{s.id}</code>
+        <p>Canonical model checksum</p>
+        <code>{material.source.bundle.sha256}</code>
+        <p>Worksheet material fingerprint (not an approval or signature)</p>
+        <code>{material.materialHash}</code>
+        {s.presentationParts && <details>
+          <summary>Source-file display parts · not separate FMA identities</summary>
+          <p>Both sides uses the complete group. Unilateral views use only the corresponding original file. Verify this mapping and its displayed bounds before sign-off.</p>
+          <ul>{s.presentationParts.map(p => <li key={p.nodeName}>
+            {p.displaySide} display · {p.source.file} · node <code>{p.nodeName}</code>
+            <code>{p.source.sha256}</code>
+            <p>Scene bounds: {p.bounds.min.join(', ')} to {p.bounds.max.join(', ')}. Label anchor: {p.anchor.join(', ')}.</p>
+          </li>)}</ul>
+        </details>}
+        <ul>
+          {s.sources.map((p) => (
+            <li key={p.file}>
+              {p.file}
+              <code>{p.sha256}</code>
+            </li>
+          ))}
+        </ul>
+        <ul>
+          {material.limits.map((limit) => (
+            <li key={limit}>{limit}</li>
+          ))}
+        </ul>
+      </details>
+      <h3>Current teaching</h3>
+      <p>
+        Readiness describes available copy, not clinical approval. Expand a
+        topic to review it.
+      </p>
+      {material.topics.map((topic) => (
+        <details key={topic.tab}>
+          <summary>
+            {labels[topic.tab]} <span>{readiness[topic.readiness]}</span>
+          </summary>
+          <h4>{teachingHeading(topic.title, s.name)}</h4>
+          <p>{topic.body}</p>
+          {topic.bullets && (
+            <ul>
+              {topic.bullets.map((b, i) => (
+                <li key={i}>{b}</li>
+              ))}
+            </ul>
+          )}
+          {topic.correctAnswer && <p><strong>Draft answer key:</strong> {topic.correctAnswer}</p>}
+          {topic.explanation && <p><strong>Draft explanation:</strong> {topic.explanation}</p>}
+          {topic.additionalChecks && <section aria-label="Supplemental draft questions">
+            <h4>Additional checks · Nerve relationships</h4>
+            {topic.additionalChecks.map(check=><section key={check.key}>
+              <h5>{check.key}</h5><p>{check.body}</p>
+              <ul>{check.bullets.map(choice=><li key={choice}>{choice}</li>)}</ul>
+              <p><strong>Draft answer key:</strong> {check.correctAnswer}</p>
+              <p><strong>Draft explanation:</strong> {check.explanation}</p>
+              <p>{check.note}</p>
+              {check.citations.map((url,i)=><a className="body-review-reference" href={url}
+                target="_blank" rel="noopener noreferrer" key={`${check.key}:${i}`}>Reference {i+1} ↗</a>)}
+            </section>)}
+          </section>}
+          {topic.note && <p>{topic.note}</p>}
+          {topic.citations?.map((url, i) =>
+            /^https?:\/\//i.test(url) ? (
+              <a
+                className="body-review-reference"
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                key={`${url}-${i}`}
+              >
+                Reference {i + 1} ↗
+              </a>
+            ) : (
+              <p key={i}>{url}</p>
+            ),
+          )}
+        </details>
+      ))}
+      {material.guidedTours.map(evidence=><details key={evidence.tour.id}>
+        <summary>Guided learning · {evidence.tour.title} · Draft</summary>
+        <p>{evidence.limitations}</p>
+        <p>Revision {evidence.tour.revision} · Manual sweep {evidence.transitionMs/1000}s · Full tour sweep {evidence.continuousPlayback.transitionMs/1000}s · {evidence.transition} · no separation</p>
+        <p>Full tour advances automatically with caption reading time, pauses for interactive learning and holds at the final stop. Reduced motion disables camera sweeps.</p>
+        <ol>{evidence.tour.steps.map((step,index)=><li key={step.id}>
+          <h4>{step.title}</h4><p>{step.caption}</p>
+          <p>{step.view} · {step.durationMs/1000}s · {step.fadeOthers?'Others faded':'Full context'} · <code>{step.selectedId}</code></p>
+          <p>Full tour: {evidence.continuousPlayback.stepDurationsMs[index]/1000}s including arrival and caption reading.</p>
+          {step.frameIds&&<p>Camera close-up: {step.frameIds.map(id=>evidence.structures.find(s=>s.id===id)?.name??id).join(', ')}. Other context can extend outside the view.</p>}
+          {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
+        </li>)}</ol>
+        <details><summary>Exact source surfaces & bundles</summary>
+          {evidence.structures.map(s=><p key={s.id}>{s.name} · <code>{s.id}</code> · {s.sources.map(p=>`${p.file}: ${p.sha256}`).join('; ')}</p>)}
+          {evidence.bundles.map(b=><p key={b.id}>{b.id}: <code>{b.sha256}</code></p>)}
+        </details>
+        <p>Use Guided learning in the {evidence.tour.region} learner to inspect framing and transitions. This material does not approve images or linked lectures.</p>
+      </details>)}
+      <details>
+        <summary>Interactive reasoning · Draft</summary>
+        {material.reasoning ? (
+          <>
+            <h4>{material.reasoning.prompt}</h4>
+            <p>Draft answer key for review. This question is not clinically approved.</p>
+            <ul>
+              {material.reasoning.choices.map(choice => (
+                <li key={choice.id}>
+                  <strong>{choice.id === material.reasoning?.answerId ? 'Correct answer' : 'Alternative'}:</strong>{' '}
+                  {choice.name} · {choice.laterality}
+                </li>
+              ))}
+            </ul>
+            <p><strong>Draft explanation:</strong> {material.reasoning.explanation}</p>
+            {material.reasoning.references.map((reference, i) => (
+              <a className="body-review-reference" href={reference.url} target="_blank"
+                rel="noreferrer" key={`${reference.url}-${i}`}>
+                {reference.title} ↗
+              </a>
+            ))}
+            <p>{material.reasoning.scope}</p>
+            <p>Question <code>{material.reasoning.key}</code> · revision {material.reasoning.revision}</p>
+            <details>
+              <summary>Exact choice sources & checksums · {material.reasoning.choices.length} choices</summary>
+              {material.reasoning.choices.map(choice => (
+                <details key={choice.id}>
+                  <summary>{choice.name} · {choice.id === material.reasoning?.answerId ? 'Correct answer' : 'Alternative'}</summary>
+                  <p>{choice.fmaId} · {choice.laterality} · {choice.regions.join(', ')} · {choice.sourceTree}</p>
+                  <code>{choice.id}</code>
+                  <p>Node <code>{choice.nodeName}</code> · bundle <code>{choice.bundle}</code></p>
+                  <p>Canonical model checksum</p>
+                  <code>{choice.bundleSha256}</code>
+                  <ul>{choice.sources.map(part => (
+                    <li key={part.file}>{part.file}<code>{part.sha256}</code></li>
+                  ))}</ul>
+                </details>
+              ))}
+            </details>
+          </>
+        ) : (
+          <p>No eligible interactive reasoning question is available for this exact source selection. This does not indicate review or approval.</p>
+        )}
+      </details>
+      <details>
+        <summary>Review checklist & handoff</summary>
+        <p>
+          Download the worksheet to record reviewer details, evidence and
+          corrections externally. The worksheet cannot be imported as a
+          sign-off. Use the separate private record below to save revision-bound
+          decisions.
+        </p>
+        {Object.entries(material.checklist).map(([track, items]) => (
+          <section key={track}>
+            <h4>{track}</h4>
+            <ul>
+              {items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </details>
+    </>
+  );
+}

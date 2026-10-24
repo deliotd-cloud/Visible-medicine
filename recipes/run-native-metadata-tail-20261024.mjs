@@ -1,0 +1,38 @@
+// Three remaining STOCK writers, one explicit, freshly admitted phase per call.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {execFileSync,spawnSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const root='F:/VisibleMedicine/staging/20261024-combined-atlas',atlas=root+'/atlas',tail=root+'/metadata-preparation/remaining-v1';
+const compositionFile=root+'/COMPOSITION.json',compositionHash='d707e62ad55ec2d4d6c9d8721cb6d4bc3dbd95aec6b254d23679044766bae05a';
+const phases={2:{name:'body-renderer',script:'scripts/body-renderer-revisions.mjs',output:'content/body-renderer-revision.json'},3:{name:'body-display',script:'scripts/generate-body-review-display-pins.mjs',output:'content/body-review-display-pins.json'},4:{name:'review-revisions',script:'scripts/review-revisions.mjs',output:'content/review-revisions.json'}};
+const phase=Number(process.argv[2]),spec=phases[phase];assert(spec);const attempt=tail+'/phase-'+phase+'-'+spec.name;
+const save=(name,v)=>fs.writeFileSync(attempt+'/'+name,JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+const git=(...args)=>execFileSync('git',['-C',atlas,...args],{encoding:'utf8',windowsHide:true,maxBuffer:4*1024*1024}).trim();
+const status=()=>{const raw=execFileSync('git',['-C',atlas,'-c','core.quotepath=false','status','--porcelain=v1','-z','--untracked-files=all'],{encoding:'utf8',windowsHide:true});return raw.split('\0').filter(Boolean).map(s=>({code:s.slice(0,2),path:s.slice(3)})).sort((a,b)=>a.path.localeCompare(b.path));};
+const resources=()=>JSON.parse(execFileSync('powershell',['-NoProfile','-NonInteractive','-Command',"$m=Get-CimInstance Win32_PerfFormattedData_PerfOS_Memory; $p=@(Get-CimInstance Win32_Process -Filter 'ProcessId=364884 OR ProcessId=372448 OR ProcessId=157816'); [pscustomobject]@{availableMiB=$m.AvailableMBytes;commitPercent=$m.PercentCommittedBytesInUse;priorProcessIds=@($p|ForEach-Object {$_.ProcessId})}|ConvertTo-Json -Compress"],{encoding:'utf8',windowsHide:true}));
+const admitted=m=>m.availableMiB>=4096&&m.commitPercent<=90&&Array.isArray(m.priorProcessIds)&&m.priorProcessIds.length===0;
+assert(!fs.existsSync(attempt),'One attempt per phase; classify failure before any successor');const memory=resources();if(!admitted(memory)){console.log(JSON.stringify({admitted:false,phase,memory,minimumMiB:4096}));process.exit(75);}
+assert.equal(hash(compositionFile),compositionHash);const composition=json(compositionFile),expected=new Map(composition.sourceRows.map(r=>[r.path,r]));
+assert.equal(git('rev-parse','HEAD'),composition.parentHead);assert.equal(git('rev-parse','HEAD^{tree}'),composition.parentTree);assert.equal(expected.get(spec.script)?.sha256,hash(atlas+'/'+spec.script));
+const fullTerminal=json('F:/VisibleMedicine/staging/20261024-pancreatic-us-release-diagnostic/TERMINAL.json');assert.equal(fullTerminal.terminal,true);assert.equal(fullTerminal.sourceSha256,'cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e');
+const first=root+'/metadata-preparation/attempt-1';const firstTerminal=json(first+'/TERMINAL.json'),firstAfter=json(first+'/after.json');assert.equal(firstTerminal.status,'generated-scoped');assert.equal(firstTerminal.outcome.code,0);assert.equal(firstAfter.status,'generated-scoped');assert.deepEqual(firstAfter.readFailures,[]);assert.equal(firstAfter.output.length,12);
+const lineage=[{phase:1,terminal:first+'/TERMINAL.json',terminalSha256:hash(first+'/TERMINAL.json'),afterSha256:hash(first+'/after.json')}];
+for(const r of firstAfter.output){assert(expected.has(r.path));expected.set(r.path,r);}let expectedDirty=firstAfter.dirty;
+for(let n=2;n<phase;n++){const dir=tail+'/phase-'+n+'-'+phases[n].name,t=json(dir+'/TERMINAL.json'),after=json(dir+'/after.json');assert.equal(t.status,'generated-scoped');assert.equal(t.exitCode,0);assert.equal(t.afterSha256,hash(dir+'/after.json'));assert.equal(after.output.length,1);assert.equal(after.output[0].path,phases[n].output);expected.set(phases[n].output,after.output[0]);expectedDirty=after.dirty;lineage.push({phase:n,terminal:dir+'/TERMINAL.json',terminalSha256:hash(dir+'/TERMINAL.json'),afterSha256:hash(dir+'/after.json')});}
+const fingerprint=p=>({path:p,bytes:fs.statSync(atlas+'/'+p).size,sha256:hash(atlas+'/'+p)});
+const expectedRows=[...expected.values()].sort((a,b)=>a.path.localeCompare(b.path));
+for(const r of expectedRows){const actual=fingerprint(r.path);assert.deepEqual(actual,{path:r.path,bytes:r.bytes,sha256:r.sha256},'Whole native prestate: '+r.path);}
+const beforeDirty=status();assert.deepEqual(beforeDirty,expectedDirty,'Only exact previous stock output changes may precede the next writer');assert(!beforeDirty.some(r=>r.path===spec.output),'Output must not already have unreviewed changes');
+const outputBefore=fingerprint(spec.output),sourceBefore=expectedRows.filter(r=>r.path!==spec.output);const final=resources();if(!admitted(final)){console.log(JSON.stringify({admitted:false,phase,memory:final,minimumMiB:4096}));process.exit(75);}
+fs.mkdirSync(attempt,{recursive:true});fs.copyFileSync(atlas+'/'+spec.output,attempt+'/output-before.raw',fs.constants.COPYFILE_EXCL);
+save('before.json',{at:new Date().toISOString(),phase,spec,memory:final,compositionSha256:compositionHash,lineage,source:sourceBefore,output:[outputBefore],dirty:beforeDirty,stockScriptSha256:hash(atlas+'/'+spec.script)});
+const stdout=fs.openSync(attempt+'/stdout.log','wx'),stderr=fs.openSync(attempt+'/stderr.log','wx');let result,error=null;
+try{result=spawnSync(process.execPath,['--max-old-space-size=128',spec.script],{cwd:atlas,env:{...process.env,GOMEMLIMIT:'64MiB',GOMAXPROCS:'1',RAYON_NUM_THREADS:'1'},windowsHide:true,stdio:['ignore',stdout,stderr],timeout:180000});}catch(cause){error=String(cause.stack??cause);}finally{fs.closeSync(stdout);fs.closeSync(stderr);}
+const drift=[],readFailures=[],afterRows=[];for(const r of sourceBefore)try{const actual=fingerprint(r.path);afterRows.push(actual);if(actual.bytes!==r.bytes||actual.sha256!==r.sha256)drift.push(r.path);}catch(cause){readFailures.push({path:r.path,error:cause.code??cause.message});}
+let output=[],dirty=[];try{output=[fingerprint(spec.output)];}catch(cause){readFailures.push({path:spec.output,error:cause.code??cause.message});}try{dirty=status();}catch(cause){readFailures.push({operation:'git-status',error:cause.message});}
+const allowed=new Set([...beforeDirty.map(r=>r.path),spec.output]),unexpectedDirty=dirty.filter(r=>!allowed.has(r.path));
+const passing=!error&&!result?.error&&result?.status===0&&!result.signal&&!drift.length&&!readFailures.length&&!unexpectedDirty.length&&output.length===1;
+const after={at:new Date().toISOString(),phase,output,dirty,sourceDrift:drift,readFailures,unexpectedDirty,unchangedNonOutputSources:afterRows.length};save('after.json',after);
+save('TERMINAL.json',{at:new Date().toISOString(),phase,spec,status:passing?'generated-scoped':'failed-review-required',exitCode:result?.status??null,signal:result?.signal??null,error:error??result?.error?.message??null,sourceDrift:drift,readFailures,unexpectedDirty,beforeSha256:hash(attempt+'/before.json'),afterSha256:hash(attempt+'/after.json'),stdoutSha256:hash(attempt+'/stdout.log'),stderrSha256:hash(attempt+'/stderr.log'),wholeNativeSourcePaths:expectedRows.length,stockWriterOnly:true,fullNativeBuildPassed:false,installed:false,previewChanged:false});console.log(JSON.stringify({attempt,phase,status:passing?'generated-scoped':'failed-review-required',exitCode:result?.status??null,sourceDrift:drift,readFailures,unexpectedDirty}));process.exitCode=passing?0:1;
