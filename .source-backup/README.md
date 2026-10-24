@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Carry5975verified filtered source paths/full ancestry and add11explicit test/helper/preimage/recipe paths, no removals. Exclude source receipts, raw evidence/generated/private/model/image/scan data, dependencies/builds and later coordination; not whole/private/runnable off-device recovery.
+Carry5986verified filtered source paths/full ancestry; add10explicit native authored code/package/test/recipe paths, no removals. Generated identity/teaching/review JSON, licence/docs text, models/scans/private data, raw evidence/build/dependencies and later coordination stay F-local. Not whole/private/runnable off-device backup.

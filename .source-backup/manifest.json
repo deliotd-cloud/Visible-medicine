@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T11:46:36.190Z",
+  "at": "2026-10-24T12:12:58.479Z",
   "sourceIdentity": {
-    "testOnlyProposalReceiptSha256": "85d4cf8730567e0da11b5832c16275313cd2a14f7c1eb0bfd070db839fd77778",
-    "completeWebsiteParentSha256": "3d9c3ca38a29d2f7320222711bca73d22f5c85771a28a3fe6c3219acd03ac4eb",
-    "review": "c8bdd276ab1f832ec5e6854df40bbd83102c7a4dbfe99c5cdde87aad89b5815d",
-    "productCodeChanged": false
+    "atlasHead": "80d323ec504afc7867e3e716bf735681a29ab5bc",
+    "atlasTree": "6bef533e9242fbd33d8393cf62082030bf6e1042",
+    "parentAtlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+    "latestCompleteWebsiteSha256": "3d9c3ca38a29d2f7320222711bca73d22f5c85771a28a3fe6c3219acd03ac4eb",
+    "sourceReceiptSha256": "b7b656f8419b42e26ea239e821f0b4726e6b673f2460834a52fec1d962231029"
   },
-  "parent": "1acc58cd09a962a907f491b74174941a1524e90f",
-  "gitParent": "1acc58cd09a962a907f491b74174941a1524e90f",
+  "parent": "ef49ebc47f6d51d2dd5ce7b048ed3caecefdf257",
+  "gitParent": "ef49ebc47f6d51d2dd5ce7b048ed3caecefdf257",
   "files": [
     {
       "path": "app/globals.css",
@@ -21231,6 +21232,56 @@
       "sha256": "684fffbf6ed7010a8bfc8a266a2c4866519f3c7dc580594c1e0da2dfb6e5d75c"
     },
     {
+      "path": "pending/orbital-ct-draft-20261024/atlas/app/body-content.ts",
+      "bytes": 83504,
+      "sha256": "02c63d939b89da398da3abc035e83077610fcf18e97ab45f7f70324e93bbeb6d"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/atlas/lib/body-orbital-ct.ts",
+      "bytes": 5870,
+      "sha256": "3aad9ab3bdf5e94de40b47b4819793efb9c26b3741c12fcd1bc2ee736c5f50c5"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/atlas/package.json",
+      "bytes": 88994,
+      "sha256": "8a80cb2453f3d4fbce9e981c01ade8cbf762f2c38249b263375946bf44f072d9"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/atlas/scripts/test-body-orbital-ct.mjs",
+      "bytes": 9059,
+      "sha256": "3384916dbba363f003e1526b66698484d64060f7487c44a489a4e441a5772b4a"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/recipes/check-orbital-ct-types-20261024.mjs",
+      "bytes": 1559,
+      "sha256": "4f39ea4c10ee995196115231dba50550728e65277ae12bce8fe3d2e22b9df9a6"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/recipes/checkpoint-orbital-ct-draft-20261024.mjs",
+      "bytes": 18225,
+      "sha256": "b196dff164e963200572a3ec3dd5f946946bfce6ff047d9b6cda24d2db70355a"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/recipes/prepare-orbital-ct-draft-20261024.mjs",
+      "bytes": 3031,
+      "sha256": "c2386c9683ba6175a019a10c88fac6be9789069be2d92f6844070140eaa6204e"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/recipes/preserve-orbital-ct-draft-20261024.mjs",
+      "bytes": 5413,
+      "sha256": "cd21195a5c80d8a7ddd7bb288a9ffd6c99feb062171a4d99114645beb4a32bb0"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/recipes/run-orbital-ct-draft-20261024.mjs",
+      "bytes": 3733,
+      "sha256": "5d838a1ec12b736d8ab28778a51217302304da30414e02d3a1a44f0b663375f2"
+    },
+    {
+      "path": "pending/orbital-ct-draft-20261024/recipes/run-orbital-ct-extra-20261024.mjs",
+      "bytes": 3054,
+      "sha256": "bb01309c207c30627719d81f9113b1958146be9a4a3af763115fe15efa5f0f1b"
+    },
+    {
       "path": "pending/practice-actions-20261024/atlas/app/body-explorer.tsx",
       "bytes": 130839,
       "sha256": "6ffcc34eb81bbad3e4ad7a23efe411ee4b9e0cebdfa54fde2ad93fb49e45154e"
@@ -29942,17 +29993,28 @@
     }
   ],
   "removed": [],
-  "scope": "Carry5975verified filtered source paths/full ancestry and add11explicit test/helper/preimage/recipe paths, no removals. Exclude source receipts, raw evidence/generated/private/model/image/scan data, dependencies/builds and later coordination; not whole/private/runnable off-device recovery.",
+  "scope": "Carry5986verified filtered source paths/full ancestry; add10explicit native authored code/package/test/recipe paths, no removals. Generated identity/teaching/review JSON, licence/docs text, models/scans/private data, raw evidence/build/dependencies and later coordination stay F-local. Not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "fba3511eb2d87b2db89f246577bdf70e876abd6aebcf1d9dfbcb86b17d1227e9",
-    "focusedCases": 20,
-    "baselineCases": 16,
-    "baselinePass": 13,
-    "baselineFail": 3,
-    "sourceInputs": 6586,
-    "currentDeliveryViewerFiles": 54,
-    "productCodeChanged": false,
-    "remoteNewPaths": 11,
+    "mainReviewSha256": "d0530b064ae601e3b6d762994bdeedde062f3e809e7d55facf6ce4e4a2bbbac8",
+    "atlas": "80d323ec504afc7867e3e716bf735681a29ab5bc",
+    "tree": "6bef533e9242fbd33d8393cf62082030bf6e1042",
+    "sourcePaths": 6382,
+    "focusedCases": 6,
+    "strictRoots": 2,
+    "strictFiles": 1527,
+    "typeDiagnostics": 0,
+    "fullNativeBuild": true,
+    "buildFiles": 557,
+    "sourceSelections": 4,
+    "changedCtLessons": 4,
+    "unchangedLessons": 9932,
+    "unchangedWorksheets": 1100,
+    "sourceIdentityNegatives": 108,
+    "forgedPacketsRejected": 12,
+    "stalePostsRejectedBeforeStorage": 4,
+    "modelsDependenciesSourceHoldsUnchanged": true,
+    "websiteIntegrationPending": true,
+    "remoteNewPaths": 10,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
