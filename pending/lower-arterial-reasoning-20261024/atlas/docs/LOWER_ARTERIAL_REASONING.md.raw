@@ -1,0 +1,34 @@
+# Lower arterial reasoning · draft revision 1
+
+Six original formative questions cover usual named lower-limb arterial course and branching. The concepts bind 12 whole right/left BodyParts3D source records from parent Atlas commit `d143c28fb1e5da200712af6629a375c25d17dad7`. Each displayed record must match the complete pinned identity in `content/lower-arterial-reasoning-pins.json`, including source tree, ordered region membership, source-file order and SHA-256 hashes. The deep femoral pair is `partof`; the other five pairs are `isa`. No source geometry was added or changed for this draft.
+
+## Factual anchors
+
+- [UAMS lower-limb artery table](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/artery-tables/arteries-of-the-lower-limb/): external iliac/femoral and femoral/popliteal naming transitions; deep femoral, lateral circumflex and descending-branch hierarchy; popliteal/tibial branching; anterior tibial to dorsalis pedis; posterior tibial to plantar branches.
+- [TTUHSC anterior and medial thigh anatomy](https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html): femoral and deep femoral thigh routes and the adductor-hiatus transition.
+- [TTUHSC hip, posterior thigh and leg anatomy](https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_tables.html): posterior regional anatomy used to frame the deep femoral, popliteal and tibial questions.
+
+Questions and explanations are original short factual statements. No institutional figure, table, or question-bank text is reproduced. Each thigh question offers the other two selected thigh arteries and the existing femoral vein as distractors. Each leg question offers the other two selected leg arteries and the existing popliteal vein. Those choices test named identity, not measured geometry.
+
+## Exact pinned source identities
+
+The IDs below are canonical catalogue IDs. Files and hashes are shown in their pinned order. All have vessel system/category; region and ordered memberships are `thigh` / `[thigh,pelvis,leg]` for femoral and deep femoral, `thigh` / `[thigh,leg]` for descending lateral circumflex, and `leg` / `[leg,foot]` for popliteal and tibial records.
+
+| Concept / side | Canonical ID · FMA | Ordered source file: SHA-256 |
+| --- | --- | --- |
+| Femoral / right | `vm:anatomy:body:thigh:right:vessel:right-femoral-artery` · FMA70249 | `FJ2143`: `d9decbcc37ddafa41a0c01e316cff52a9259ed5292ddf2e199cf09414e872bae` |
+| Femoral / left | `vm:anatomy:body:thigh:left:vessel:left-femoral-artery` · FMA70250 | `FJ2074`: `df045596a410cfcc3c15f9aff1d02c5c7bcba234c9ebe6346ec1053d605de4d0` |
+| Deep femoral / right | `vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery` · FMA20796 | `FJ2137`: `46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96`; `FJ2158`: `604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6` |
+| Deep femoral / left | `vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery` · FMA20797 | `FJ2069`: `055eaa7fd2a8683f4d81d824437925f2c1019c2081558fe4ee2d4ab161085b76`; `FJ2078`: `fc1867693af0aa210a96a79c3f53c80fedacd4f136b21c6d4f839ce06575b8ac` |
+| Descending lateral circumflex / right | `vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery` · FMA21422 | `FJ2057`: `b9a4618409103711ee922dac578f542734951f4bc65fa1368b12bdec331bc930` |
+| Descending lateral circumflex / left | `vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery` · FMA21423 | `FJ2063`: `095e3e9d4ef41d5b56b165998622bf54ca7998dc123ca09cf1c14a0a48b414fb` |
+| Popliteal / right | `vm:anatomy:body:leg:right:vessel:right-popliteal-artery` · FMA77380 | `FJ2170`: `4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0` |
+| Popliteal / left | `vm:anatomy:body:leg:left:vessel:left-popliteal-artery` · FMA77381 | `FJ2086`: `20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c` |
+| Anterior tibial / right | `vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery` · FMA43896 | `FJ2130`: `56de59319a67eb9a3fbc9815d9dc66f371b3f116b211c2b03abfbb84ae21568c` |
+| Anterior tibial / left | `vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery` · FMA43897 | `FJ2065`: `c6388ae15cdf1b00cbbbb6007784022a7c03d1e349b780193488f1f804150c1e` |
+| Posterior tibial / right | `vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery` · FMA43898 | `FJ2172`: `4e82371d5860733555c3b4c096134586128646ad31fb58cdcb6ee97df0849f08` |
+| Posterior tibial / left | `vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery` · FMA43899 | `FJ2087`: `88e45ecb2bbe5b278d052c240649bf1f576ea3808272e60a4990fc5d8066bbb5` |
+
+## Boundary and review
+
+Whole source meshes do not independently validate an arterial junction, branch variant or a continuous branching path. The deep femoral selection includes grouped source components; its two ordered files are one pinned identity, not two separately approved vessels. The lateral circumflex parent is not a separate selectable structure in this set. Course and branching statements describe usual reference anatomy only. This draft does not establish patient registration or clinical completion. Revision-bound radiologist sign-off remains required before an accepted teaching or anatomical claim is made.

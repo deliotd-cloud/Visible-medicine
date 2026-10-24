@@ -1,0 +1,403 @@
+# Source-bound anatomical reasoning pilot
+
+## Lower-limb arterial pathways — 24 October 2026
+
+Six original draft questions add twelve existing paired arterial targets:
+femoral, deep femoral, descending lateral circumflex femoral, popliteal,
+anterior tibial and posterior tibial. They distinguish usual named course and
+branch relationships using visible same-side alternatives in the existing
+reasoning mode. All216 preceding concepts and392 target sessions remain; the
+bank now has222 concepts and404 represented roots. Exact source memberships
+remain unchanged, including the two-file PARTOF deep femoral aggregates.
+No vessel geometry, lumen, flow, branch variant, scan visibility or patient
+registration is inferred. Factual university references are not imported assets.
+[Exact identities and draft review limits](LOWER_ARTERIAL_REASONING.md).
+
+## Forearm mechanics — 23 October 2026
+
+Six original draft concepts add twelve existing left/right forearm-muscle
+targets, distinguishing finger-joint flexion, wrist attachments and common
+versus additional index extension. All210previous concepts and380previous
+source-target sessions are retained; the bank now has216concepts/392represented
+roots. The existing reasoning mode, feedback and retry are reused without
+another control. Whole source identities, including two ordered components for
+FDS and ECU, are pinned. No new mesh, nerve territory, dynamic function, scan,
+imaging visibility, diagnosis or approval is inferred.
+[Sources and validation scope](FOREARM_MECHANICS_REASONING.md).
+
+## Midfoot relationships — 23 October 2026
+
+Six original draft concepts add twelve existing paired cuneiform/metatarsal
+targets to interactive 3D reasoning. Questions compare usual midfoot joints and
+AP/oblique alignment landmarks without importing scans, images or publisher
+questions. All204previous definitions and368source-target sessions remain
+unchanged; the bank now has210concepts/380represented roots. Existing text quick
+checks are retained, not counted as new anatomy. Full source matching, feedback,
+retry and revision-bound Review remain in use. No diagnostic threshold,
+ligament integrity or patient registration is inferred.
+[Sources, licence boundary and validation scope](MIDFOOT_RELATIONSHIPS_REASONING.md).
+
+## Proximal carpal relationships — 23 October 2026
+
+Four original draft questions distinguish scaphoid, lunate, triquetrum and
+pisiform across eight existing paired hand-bone selections. Each uses the three
+other same-side proximal-row bones as alternatives, with exact complete source
+records and revision-bound Review. All200preceding concepts and360source-target
+sessions remain intact. The bank now has204concepts/368represented roots; this
+is not a measure of anatomical or clinical completion. No bone, scan, motion,
+imaging visibility or clinical approval is added. [Evidence and scope](CARPAL_RELATIONSHIPS_REASONING.md).
+
+## Hip attachments and routes — 23 October 2026
+
+Three original draft concepts add6exact paired source selections: obturator
+externus, gluteus minimus and tensor fasciae latae. Existing questions for
+piriformis, obturator internus, both gemelli and quadratus femoris are retained,
+not duplicated. Apply anatomy, feedback/retry and revision-bound Review are
+reused. Externus and minimus respect their thigh/pelvis membership; tensor
+fasciae latae stays in its supplied thigh scope. The bank now has200concepts
+over360represented roots; all197preceding definitions remain unchanged. No
+surface, nerve, tendon sublayer, scan, imaging visibility or clinical approval
+is added. [Exact source and reference scope](HIP_RELATIONSHIPS_REASONING.md).
+
+## Upper cervical attachments — 23 October 2026
+
+Four original draft concepts distinguish rectus capitis posterior minor,
+obliquus capitis superior, rectus capitis anterior and rectus capitis lateralis
+over eight exact existing left/right source selections. They connect C1 and
+occipital attachments with the referenced usual actions, not a patient diagnosis
+or simulated movement. They appear through the existing Apply anatomy and
+revision-bound Review paths; the selected catalogue places these roots in the
+spine region. No geometry, modality mapping or existing question is replaced.
+[Source identities, reference purpose and clinical limits](UPPER_CERVICAL_REASONING.md).
+All 193 previous concepts remain unchanged; these four extend the draft pool to
+197 concepts over 354 represented roots. Draft authoring is not clinical approval.
+
+## Ventricular and hypothalamic landmarks — 23 October 2026
+
+Three original draft concepts distinguish cerebral-hemisphere choroid plexus,
+the mammillary-body source group and lamina terminalis through existing Apply
+anatomy controls. The bank now has 193 concepts / 346 source representations;
+all preceding 190 definitions and 343 actual per-target practice sessions remain
+exact. Only three teaching worksheets expand; all 9,936 nine-topic placements
+and 1,101 other worksheets remain unchanged. Paired anatomy retains its supplied
+grouped midline tag, and the lamina source is not a reconstructed continuous
+membrane. No new surface, scan, registration, approval or licence is introduced.
+See [source scope, references and review gates](VENTRICULAR_LANDMARK_REASONING.md).
+Current source-candidate verification is distinct from installed Website delivery.
+
+## Abdominal spatial relationships — 10 October 2026
+
+Four new draft concepts cover six existing displayed roots: liver, corrected
+pancreas, paired kidneys and adrenal glands. They reuse Apply anatomy and bind
+complete source identities; no new geometry or clinical approval. The bank now
+has 190 concepts / 343 representations. The preceding 186 concepts / 337 roots
+and nine-topic lessons remain outside this authored change. See
+[source scope and reference limits](ABDOMINAL_SPATIAL_REASONING.md).
+Current verification is recorded with the coordinating checkpoint; the historical
+brain-connections transition below remains pinned to its completed Git epoch.
+
+## Brain connections — 10 October 2026
+
+Four appended draft concepts cover six existing roots: paired amygdala and fornix,
+anterior commissure and corpus callosum. They reuse Apply anatomy and explain
+regional relationships without claiming traced axons or scan registration.
+Current bank:186 concepts /337 representations. The previous182 concepts and331
+bound questions remain unchanged, as do all9,936 topic placements. Exact current
+teaching revisions require new radiologist review; no approvals transfer. See
+[scope, primary references and source pins](BRAIN_CONNECTIONS_REASONING.md).
+Older milestone counts below are historical.
+
+## Abdominal vessels — 10 October 2026
+
+Six appended draft concepts cover six exact source records using existing Apply
+anatomy controls. Current bank: 182 concepts / 331 representations. All prior
+176 definitions and 325 bound questions are preserved. Six teaching worksheets
+expand; all 9,936 topic placements remain unchanged. No geometry, flow model,
+patient registration or approval is added. See [scope and source pins](ABDOMINAL_VESSEL_REASONING.md).
+Counts in older milestones below are historical.
+
+## Lower-limb veins — 3 October 2026
+
+Six appended draft concepts cover 12 exact bilateral source selections using the
+existing practice controls. Current bank: 176 concepts / 325 representations;
+all preceding 170 concepts and 313 bound questions preserved. Only 12 teaching
+worksheets expand; all 9,936 topic placements remain exact. See
+[scope, source pins and radiologist checks](LOWER_VENOUS_REASONING.md).
+Older milestone counts below are historical, not current totals.
+
+## Heart, lungs and main bronchi — 2 October 2026
+
+Four appended concepts cover five exact roots through existing Apply anatomy:
+systemic pumping, pulmonary gas exchange and sided main-bronchus conduction.
+The current bank is170 concepts/313 representations; the preceding166 questions
+and the same-side answer/filter/retry engine remain exact. No new panel or model.
+Heart is a partial56-source root; lung roots are supplied bronchovascular groups,
+not alveolar/parenchymal models. See [exact scope](THORACIC_CORE_REASONING.md).
+The actual root-specific question/answer/alternatives/explanation/references are
+included in the current review worksheet: five teaching fingerprints advance,
+the other1,099 remain exact. Geometry/imaging and clinical assessment validation
+remain separate. Older "current bank" counts and worksheet limitations below
+describe their dated milestones, not today's coverage or approval.
+
+## Upper arm and scapular muscles — 29 September 2026
+
+Seven new draft concepts cover anconeus, short-head biceps, medial/lateral
+triceps, levator scapulae and both rhomboids. The current bank contains
+153 concepts / 282 source representations, with 20 concepts available in the
+shoulder-arm region. The preceding 146 ordered concepts are unchanged.
+Existing same-side choices, feedback and retry controls are reused, with no
+new UI. See [scope and review gates](UPPER_ARM_REASONING_20260929.md).
+Historical counts and review limitations below describe their dated checkpoints;
+the current body-review contract includes revision-bound reasoning snapshots.
+
+## Thoracic vessels — 27 September 2026
+
+Six original draft concepts extend Apply anatomy to the ascending aorta, arch,
+descending thoracic aorta, superior vena cava, azygos and hemiazygos veins.
+The bank now contains 146 concepts / 268 source representations; counts below are
+historical. All preceding 140 concepts remain ordered and hash-pinned unchanged.
+No new models or global admission of arbitrary vessels. See
+[source contract and review limits](THORACIC_VESSEL_REASONING.md).
+
+These questions are separate from the seven thoracic Structure checks in Quiz
+notes. The current body-review worksheet explicitly excludes the interactive
+reasoning bank: do not treat a worksheet approval as assessment sign-off.
+Dedicated revision-bound bank review and website delivery remain required.
+
+## Deep-brain structures — 24 September 2026
+
+Six original draft concepts add caudate, putamen, pallidum, thalamus and the
+two geniculate bodies, using twelve exact bilateral source representations.
+The current bank is **132 concepts / 250 representations**; prior counts below
+are historical. All preceding 126 questions remain ordered and unchanged.
+The existing Apply anatomy mode, focused/sided choices, delayed explanations
+and missed-answer retry are reused. See [scope, sources and review limits](DEEP_BRAIN_REASONING.md).
+
+## Thoracic organs — 17 September 2026
+
+Three original draft questions add trachea, oesophagus and thymus to Apply anatomy.
+The current bank contains126 concepts /238 exact source representations. Thorax
+has10 concepts including the prior seven muscle concepts. All preceding123
+questions are hash-pinned unchanged; no source geometry or other teaching changes.
+
+These three unpaired organs retain complete ordered partof identities:
+FMA7394/FJ2541, FMA7131/FJ2563 and FMA9607/FJ3150+FJ3151. They offer three choices
+in thorax-only practice; whole-body adds one curated abdominal alternative for
+four choices. No unavailable structure is invented to fill an answer slot. The
+existing loading, scope, side, focus, retry, answer-once and feedback gates apply.
+
+[Texas Tech lungs and mediastina](https://anatomy.ttuhscep.edu/schemes/lungs_ans.html)
+supports the airway/alimentary relationships and thymic immune function. The short
+original prompts and explanations remain below200 words total for this source;
+no publisher questions, media, tables or scans are copied. No new asset,
+dependency, fee or entitlement is introduced. Geometry, cellular function, lumen
+patency and patient-specific imaging are not validated by these questions.
+Revision-bound radiologist and educator acceptance remain pending.
+
+The focused reasoning validator checks complete official source membership,
+unchanged earlier questions, all three views of thorax and whole body, exclusion
+when unloaded or isolated, actual feedback rendering and answer/skip behavior.
+Browser and recovery outcomes are recorded separately in the coordinating
+checkpoint; source implementation is not publication or clinical approval.
+
+## Abdominal organs — 17 September 2026
+
+Seven original draft questions extend the existing Apply anatomy mode to stomach,
+gallbladder, spleen, cystic duct, common hepatic duct, ileocecal junction and appendix.
+Abdomen now has nine available concepts with all relevant structures loaded (two
+previous muscle concepts plus seven organs); whole-body practice shares the same
+questions without duplication. The total is 123 concepts / 235 exact source
+representations. The earlier totals below are historical milestones.
+
+Organs must be explicitly authored as organ/system pairs; the default contract
+remains muscle-only. Unpaired is the exact source tag, not a midline or inferred
+left/right label. The appendix retains ordered abdomen/pelvis membership but is
+not offered alone in pelvic practice without a valid available alternative.
+All seven questions have three curated organ alternatives in abdomen and whole
+body, including sided views that retain unpaired organs. Loading, visibility,
+answer-once, retry and delayed explanation/reference gates remain unchanged.
+
+References were read directly: [Texas Tech abdominal viscera](https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html)
+(197 words in new prompts/explanations), [UAMS abdominal viscera](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/viscera-tables/visceral-structures-of-the-abdomen/)
+(101 words), and [OpenStax intestinal anatomy](https://openstax.org/books/anatomy-and-physiology/pages/23-5-the-small-and-large-intestines)
+(50 words). Only original short synthesis and reference links are included, not
+publisher questions, illustrations, media or scans. Existing asset licences and
+independent lecture/case entitlements are unchanged. No new dependency or fee.
+
+The proposed large-intestine question was withheld: this catalogue's six retained
+files omit FJ2571 and FJ2599 from the official eight-file partof definition. The
+test caught that mismatch; no membership exception was added to make it pass.
+This does not remove the existing model or label it clinically complete.
+
+Tests preserve the exact ordered hash of all preceding 116 concepts and exercise
+the actual display catalogue, all seven new targets, four choices, source/scope
+rejection, absence of unavailable questions and feedback only after answering.
+The drafts teach typical relationships, not luminal continuity, biliary variants,
+valve function, diagnostic competence or patient registration. Owner radiologist
+and educator review remain required at the new renderer/content revision.
+
+Verification for this extension: 13,656 reasoning checks (3,624 negative identity
+cases), 56,435 general practice checks, content-contract and revision-bound review
+tests pass. Production and contained-module builds and TypeScript pass. Four
+actual production-module browser journeys exercise all seven questions in abdomen
+and whole body at 1440px and 390px widths: correct, wrong and skipped answers,
+delayed explanations and reference links, completed results and return to Explore.
+See [browser evidence](abdominal-reasoning-browser-20260917.json). Desktop uses
+keyboard answers; mobile viewport uses pointer answers. This is not physical-device
+or screen-reader acceptance. The first harness missed closing the mobile drawer;
+a later keyboard-only mobile run lost answer focus. Final runs use the real
+Return to model control and mobile pointer interaction, without app-state injection.
+
+Closed Practice selects now show their full labels rather than internal values
+(`reason`, `landmarks`, or a bare number); the four browser journeys assert these
+labels. No new panel, selection algorithm or source geometry was introduced.
+The content-contract check exposed a stale shoulder export from an earlier renderer
+revision; regeneration changed only its nine geometry-review fingerprints, not
+teaching, geometry files, identities or approval status. The complete contract then
+passed. Website runtime activation remains behind the existing two-model upload
+and byte-verification gate; these source changes are not a new hosted release.
+
+Open **Practice → Practice options → Apply anatomy · draft** in a body region. Spine & back, Thorax and Abdomen join the head/neck and limb regions. Whole-body practice uses concepts whose targets and alternatives are loaded and visible. Pelvis shares eight hip/gluteal concepts; Abdomen offers seven organs alongside external oblique and the shared lumbar rotator, not a complete abdominal curriculum. Narrow scopes with no valid alternative show an explicit unavailable state. No new top-level control or note tab was added.
+
+Before the organ extension, 116 original draft concepts bound to 228 existing representations. The limb extension added12 concepts/24 sided selections; all preceding104 records remain hash-pinned unchanged and ordered. The preceding trunk extension has sixteen paired concepts and four explicitly midline-tagged concepts (diaphragm and three bilateral intercostal groups). Nine muscle representations have multiple files; complete official source membership and retained order are required. Pectoralis major explicitly uses the `partof` source tree, now also used by stomach and gallbladder; other bindings default to `isa`. No label matching, relabelled sides, inferred nerves or new meshes are introduced.
+
+## Limb relationships extension — 17 September 2026
+
+The three deltoid parts, abductor pollicis longus, both long forearm thumb
+extensors, iliacus and five deep hip rotators now have original reasoning
+questions. The hip set distinguishes piriformis, obturator internus, quadratus
+femoris and both gemelli. Each binds two existing, exact isa/FMA/side/file
+records. The six hip concepts retain ordered `['thigh','pelvis']` membership;
+pelvic practice now has eight concepts, not just the two gluteal questions.
+No new panel, model, anatomical landmark, motion or surgical simulation is added.
+
+References read directly: [Loyola deltoid](https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/delt.htm),
+[Texas Tech upper limb](https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html),
+[UAMS lower limb](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/),
+and [Loyola deep gluteal relationships](https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/labs/le/glut_post_th/g3.html).
+The new prompts/explanations contain respectively114,103,135 and83 words
+attributed to those pages. These links support factual teaching, not permission
+to redistribute the source tables, publisher questions or images. Only original
+prose and links are included. No new dependency, font, model or texture licence.
+
+Questions use the full distinguishing relationship, not an isolated shared
+action: a tuberosity origin alone does not distinguish inferior gemellus
+from quadratus femoris. Deltoid parts remain parts, and explanation of movement
+does not imply validated model kinematics. Typical tendon routes do not prove
+every tendon slip or patient-specific nerve relationship is represented.
+
+Tests require all12 concepts on both sides, four same-side choices in every
+declared region and whole body, and rejection of unavailable targets. Existing
+hash, exact-source, response-once and delayed-feedback guards remain. The
+identification validator now uses the runtime's `bodyDisplayCatalog`, preserving
+the archived catalogue hash and checking its immutability: source-added focus
+targets such as tentorium were absent from its stale raw-catalogue fixture.
+This is a test-fixture repair, not a change to identification behavior.
+
+Browser results and source/GitHub/D recovery are recorded in the coordinating
+checkpoint. Drafts require the owner's revision-bound radiologist/educator
+review; availability is not validated competency, clinical or device acceptance.
+
+## Neck attachment extension — 17 September 2026
+
+Four new original draft questions distinguish anterior/middle/posterior scalene
+and sternocleidomastoid. Eight exact existing isa/FMA/side/file/head-neck
+bindings retain their complete official membership. The other three same-side
+muscles are curated alternatives; a target cannot become a one-choice question
+when its alternatives are hidden or unavailable. No mesh, procedure, simulated
+movement, new panel or validated competency claim is added.
+
+Factual references were opened and checked directly: [UAMS head/neck muscle
+anatomy](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-head-and-neck/)
+and the [University of Iowa neck anatomy table](https://iowaprotocols.medicine.uiowa.edu/protocols/posterolateral-neck-dissection-and-anatomy).
+The [Texas Tech first-rib reference](https://anatomy.ttuhscep.edu/anatomytables/bones_alpha.html)
+cross-checks the tubercle landmark. The questions distinguish tubercle versus
+posterior first-rib attachment, second-rib attachment and the mastoid route.
+No fixed vertebral origin/root ranges are taught where reference tables differ.
+
+Only short original prompts/explanations and factual links are included:
+103 words attributable to the new UAMS-linked records and98 to Iowa. These
+public university pages are not commercial grants for their figures or tables;
+no illustrations, source tables, article text, patient data or question banks
+are imported or relicensed. Existing notices and commercial obligations remain.
+
+The neck extension originally checked104 concepts/204 representations, all four neck
+concepts on each side, exact identity mutations, answer-once/skip feedback and
+the unchanged preceding100-concept hash. Regional counts are computed from the
+actual registry, not hard-coded report totals. Local browser evidence is recorded
+in the coordinating checkpoint and work/neck-reasoning-browser-20260917.json;
+do not infer a browser pass from source counts alone. All new questions retain
+draft status pending the owner's anatomical/educator review. This is not complete
+neck teaching or evidence of clinical, physical-device or hosted acceptance.
+
+Shoulder/arm: supraspinatus, infraspinatus, subscapularis, teres minor/major, serratus anterior, brachialis, coracobrachialis and the long heads of biceps/triceps. Forearm: pronator quadratus, supinator, brachioradialis, extensor carpi radialis longus, flexor carpi radialis and flexor pollicis longus. These sixteen earlier question records are hash-pinned unchanged by the hand extension.
+
+Hand: three hypothenar selections, abductor pollicis brevis, opponens pollicis, the two separate adductor heads, and the existing lumbrical/palmar-interosseous/dorsal-interosseous sets. The grouped meshes remain grouped: their presence neither validates an individual muscle count nor supplies per-digit segmentation. Missing intrinsic structures, such as an independently selectable flexor pollicis brevis, are not inferred. Each adductor-head prompt specifically distinguishes that head, not the entire muscle.
+
+Hip/thigh: rectus femoris, vastus intermedius, sartorius, gracilis, adductor longus/magnus, semitendinosus, semimembranosus, both biceps femoris heads and gluteus maximus/medius. The two gluteal selections preserve exact ordered `thigh, pelvis` memberships, rather than changing the catalogue or accepting arbitrary regions. Their appearance in both regional scopes does not duplicate them in whole-body sessions. All 26 earlier question records are hash-pinned unchanged.
+
+Lower leg: both tibialis muscles, all three supplied fibularis muscles, the four long toe flexors/extensors, soleus, popliteus, plantaris and the two gastrocnemius heads. These cover the 28 sided muscle/head records currently assigned primarily to this region; they do not establish complete leg anatomy. Foot: abductor hallucis, abductor digiti minimi, flexor digiti minimi brevis, flexor digitorum brevis, flexor accessorius, extensor hallucis brevis and the two adductor hallucis heads. The retained flexor accessorius label is explicit; toe slips and its individual heads are not invented. All 38 earlier question records are hash-pinned unchanged.
+
+Head/neck: the six globe-moving muscles plus levator palpebrae; digastric, geniohyoid, mylohyoid, stylohyoid, omohyoid, sternohyoid, sternothyroid and thyrohyoid; posterior/lateral cricoarytenoid, oblique arytenoid, thyroarytenoid and vocalis. This is a source-bound subset, not complete head/neck, cranial-nerve, speech or swallowing teaching. All 60 earlier questions are hash-pinned unchanged.
+
+Questions test distinctions in attachments, joint actions or motor supply. Alternatives are curated, have matching catalogue laterality and are actually loaded/visible; at least one must remain. The four midline-tagged selections compare only with each other, never an invented left/right subdivision. Each session asks a concept once, not again on its opposite side, and retains the maximum of 20 questions. Focus selection and retry respect current eligibility, including lost distractors. Landmark size preference is not applied to authored concepts; the setup note explains this.
+
+Choose an answer button or a displayed alternative on the model. Both are graded by the same answer-once session reducer. Names are offered as answer choices; there is no correct-answer hint in labels, landmarks, selected-structure highlighting or an isolated-only target. Long stems remain in the Practice panel; the model overlay stays short. Skip counts as missed. Explanations and sources appear after answer/skip, and can be reviewed in completed results. Questions and results remain in memory, not a learner record/database.
+
+`lib/atlas-practice.ts` wraps the unchanged identification engine, so the dedicated shoulder's existing practice and source/review fingerprints are preserved. `app/reasoning-feedback.tsx` gates explanation/citation rendering on an actual response. `lib/reasoning-questions.ts` composes the original prompts/rationales and regional `*-reasoning.ts` modules. They contain exact bindings, explicit regions, revisions and factual source references. A binding uses either one `file` or an ordered `files` tuple with two or more members, never both. An identity cannot inherit a question after its primary region, ordered memberships, side or complete ordered source component IDs change. This identity contract is not a fresh geometry-byte audit.
+
+## Verification
+
+Run `npm run reasoning-practice:test`, `npm run practice:test`, TypeScript and the affected component/content/review regressions. [Reasoning report](reasoning-practice-validation.json) records official source membership, identity/scope/component mutation rejections (including cross-region swaps), region/side/focus/loaded/retry cases, count/random edge cases, no contralateral repeats, detached session references, reducer guards and original identification-mode parity. The actual React component is server-rendered with real React/ReactDOM to check feedback gating; this is not browser/DOM, pointer/touch or visual acceptance.
+
+The generated [current status](CURRENT_STATUS.md) counts interactive reasoning separately from Quiz-tab text. The questions do not promote any body topic readiness or create clinical approvals.
+
+## Factual references, rights and review
+
+### Trunk/back extension — 11 September 2026
+
+Twenty new concepts: twelve primarily in Spine & back (psoas major, lumbar rotator, iliocostalis lumborum, longissimus capitis, semispinalis capitis, both splenius portions, obliquus capitis inferior, rectus capitis posterior major and three trapezius portions); seven in Thorax (pectoralis major/minor, transversus thoracis, diaphragm and three intercostal groups); one in Abdomen (external oblique). Existing source memberships also place the lumbar rotator in Abdomen and psoas in Hip & thigh. Membership alone does not promise an available question: psoas has no curated alternative in thigh-only scope. Current fully loaded region pools offer twelve spinal, seven thoracic and two abdominal concepts; all previous regional pools remain unchanged.
+
+Midline is a catalogue tag, not a statement that all intercostal muscles are one median muscle. Diaphragm remains a whole source surface; intercostals remain bilateral groups. Left/right filtering retains these groups exactly as the existing viewer does, without dividing them. Pectoralis major requires its explicit `partof` tree and both ordered components, checked against the official part-of index; it cannot match an `isa` substitute. All earlier question bindings remain strict and unchanged. The four grouped targets have only grouped alternatives; pectoral targets have three choices in thorax-only scope and the abdominal pair has two. Lost alternatives disable a question rather than revealing a single correct choice.
+
+Original stems distinguish attachments and anatomical systems rather than diagnose pain, weakness or nerve lesions. Each full clue was checked against its curated alternatives. No individual intercostal space, lumbar slip, diaphragm side, pectoral head or nerve path is inferred. Membranous continuations and the neurovascular plane are teaching relationships, not newly rendered surfaces or safe procedural corridors. Muscle contributions are not an activation or respiratory simulation.
+
+Primary educational references were opened on 11 September 2026: individual Loyola pages linked in `lib/trunk-reasoning.ts`, [UAMS back anatomy](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-back-region/) and [Texas Tech thoracic-wall teaching](https://anatomy.ttuhscep.edu/cardiovascular_system/thorax_wall_tables.html). Inconsistent legacy wording about intercostal fibre directions/respiratory action and certain suboccipital descriptions was not adopted. Brief original factual synthesis totals at most 131 words per new referenced URL, including prompts and explanations. No source table, diagram, article, image, protocol or question bank is imported; public access is not an image licence. Original content and existing commercial attribution obligations remain separate.
+
+Tests verify every new question is playable, all answer choices and skipping use the same grading gate, real React feedback is hidden before answers, and source references appear afterwards. They also check exact source-tree/group membership, left/right scope, no single-choice fallback and the original 80-concept hash. These checks do not replace educator/clinician or browser/touch/accessibility acceptance. Reference anatomy, source geometry and all teaching remain unvalidated.
+
+References checked while authoring: [TTUHSC upper-limb anatomy](https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html); NCBI-hosted references for [teres minor](https://www.ncbi.nlm.nih.gov/books/NBK513324/), [serratus anterior](https://www.ncbi.nlm.nih.gov/books/NBK531457/), [brachialis](https://www.ncbi.nlm.nih.gov/books/NBK551630/), [arm muscles](https://www.ncbi.nlm.nih.gov/books/NBK554420/) and [triceps](https://www.ncbi.nlm.nih.gov/books/NBK536996/). These are factual citations, not imported article text, publisher questions or media. In particular, the NCBI-hosted StatPearls material's non-commercial/no-derivatives terms are not a commercial asset grant; those articles/assets are not included or relicensed.
+
+Original prompts/rationales retain the project's authored-code/content terms. Existing BodyParts3D CC BY 4.0 and dependency notices remain. No font, texture, model, patient image, paid API or dependency is added.
+
+Forearm extension (2026-09-09): the TTUHSC reference was rechecked for the six short original questions. Its copyrighted table and illustrations are not imported or relicensed. Distractors were checked against each stem: alternatives may share an action, but do not satisfy the complete clue. This authoring check is not independent educator approval.
+
+Hand extension (2026-09-09): factual references include the same TTUHSC table, [Loyola University flexor digiti minimi brevis](https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/fdmh.htm), and [Skoff's original report on abductor pollicis brevis](https://pubmed.ncbi.nlm.nih.gov/9604109/). Only short original factual teaching and links are included, not university diagrams, article prose, clinical images or publisher questions. The abductor question does not diagnose neuropathy; the small report does not validate an examination or individual patient diagnosis. A sought ultrasound review could not be fully retrieved and is not used as authority for this extension.
+
+Independent anatomical/educator review is still required for every stem, distractor, rationale, scope and age/side representation. This small pilot is not comprehensive regional teaching, a diagnostic exercise or a validated competency examination. No review score, clinical diagnosis or learner tracking is inferred from a practice score.
+
+## Hip/thigh extension — 9 September 2026
+
+The twelve new questions cover joint-spanning distinctions, attachment routes and selected motor-supply differences. Wording distinguishes whole-muscle selections from the two biceps heads and does not split the adductor magnus mesh into new portions. Each stem was checked against its three curated alternatives: a shared action is not enough to satisfy the full anatomical clue. This authoring review is not independent approval.
+
+Factual references were checked directly at [UAMS lower-limb anatomy](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/) and the University of Washington's individual pages: [rectus femoris](https://rad.uw.edu/muscle-atlas/rectus-femoris), [vastus intermedius](https://rad.uw.edu/muscle-atlas/vastus-intermedius), [adductor longus](https://rad.uw.edu/muscle-atlas/adductor-longus), [adductor magnus](https://rad.uw.edu/muscle-atlas/adductor-magnus), [semitendinosus](https://rad.uw.edu/muscle-atlas/semitendinosus), [semimembranosus](https://rad.uw.edu/muscle-atlas/semimembranosus), [biceps long head](https://rad.uw.edu/muscle-atlas/biceps-femoris-long-head), [biceps short head](https://rad.uw.edu/muscle-atlas/biceps-femoris-short-head), [gluteus maximus](https://rad.uw.edu/muscle-atlas/gluteus-maximus) and [gluteus medius](https://rad.uw.edu/muscle-atlas/gluteus-medius).
+
+The UW pages are publicly retrievable but carry an unpublished label; they are factual references, not an assertion of publication review. Their copyrighted illustrations are not copied, embedded, stored or relicensed. Neither university table, publisher question bank nor image asset was imported. Rotation descriptions differ between some references, so no adductor-rotation rule was authored. No clinical diagnosis, procedure, missing nerve mesh or imaging-registration claim is added. Existing licences/notices remain unchanged.
+
+## Lower-leg and foot extension — 9 September 2026
+
+Twenty-two new original questions distinguish attachments, movement combinations and selected motor-supply facts. Each stem was checked against its three exact, same-side alternatives; a similar name or shared action must not make a distractor satisfy the complete clue. Popliteus wording specifies the fixed-foot frame when describing rotation. The two gastrocnemius and two adductor hallucis heads remain separate questions about source heads, not generic whole-muscle substitutions. This is authoring review, not independent medical/educator approval.
+
+The factual sources are the individual [Loyola University muscle references](https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/alpha.htm), opened and checked directly: `tiba`, `tibp`, `perl`, `perb`, `pert`, `exdl`, `exhl`, `fdl`, `fhl`, `sole`, `pop`, `plnt`, `gast`, `abhf`, `admf`, `fdmf`, `fdbf`, `qp`, `ehb` and `adhf`. Each question links to its specific `.htm` source, not the index. The initially timed-out `perl.htm` page was successfully retrieved before use. [UAMS](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/) supports the bounded plantaris/popliteus teaching; the retained quadratus plantae/flexor accessorius alias is supported by [FIPAT's terminology entry](https://anatomy.ttuhscep.edu/AnatomicalTerminology/TA2.pdf). The public university references contain inconsistent legacy wording in some entries; nerve-root levels, universal tendon variants and whole-arch/whole-joint functional claims are not added.
+
+Only short original prompts/explanations and factual links are included. University diagrams, complete source tables, publisher questions, PDF files and clinical images are not copied into the product. Existing BodyParts3D/dependency licences and notices remain unchanged. No external course, paid asset, patient data, review approval or imaging resource was imported. Clinical accuracy, mesh boundaries and educator acceptance remain separate open gates.
+
+## Head/neck and multipart extension — 9 September 2026
+
+Twenty original questions add eye-versus-lid movement, selected motor-supply distinctions, hyoid attachment routes and laryngeal muscle actions. Alternatives are checked against the complete clue. For example, levator and superior rectus share a nerve division but act on different structures; both inferior rectus and superior oblique can depress the eye, so that action alone is insufficient. Thyroarytenoid and vocalis are not opposing answer alternatives for a clue that both could satisfy. Source-side labels are retained for the crossing oblique arytenoids and are not interpreted as ipsilateral-only attachments.
+
+Multipart support is exercised by left/right digastric (three/two components) and left/right thyroarytenoid (two components each). Full official element membership and catalogue order are pinned; omissions, reversals, extra parts and substitutions are rejected. Existing single-file bindings remain byte-identical. Do not assign anatomical belly names to component files from their count, split an existing selection, or infer left/right mesh symmetry. Unpaired uvular/transverse arytenoid entries and other head/neck muscles remain outside this authored set; the existing identification modes still operate independently.
+
+Fresh primary educational references are the individual Loyola muscle pages, each opened directly: `dig`, `genh`, `myl`, `omo`, `steh`, `sthr`, `styh`, `thyh`, `io`, `ir`, `lr`, `lps`, `mr`, `so`, `sr`, `lcri`, `oary`, `pcay` and `thar`, linked in `lib/head-neck-reasoning.ts`. [UAMS head/neck muscle references](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-head-and-neck/) support the bounded thyroarytenoid/vocalis relationship and tension-adjustment teaching. Only short original factual summaries are included; no source figures, entire tables, publisher questions or assets were copied. Inconsistent legacy table wording, including a specific facial-nerve branch attribution for stylohyoid, was not adopted.
+
+The static meshes do not demonstrate normal gaze kinematics, muscle activation, nerve conduction, complete tongue/laryngeal tissue layers, swallowing, airflow or voice. Clinical/educator approval is still required. No paid resource, authentication/billing implementation, external scan correspondence or review approval is added. The existing licences and commercial-use attribution obligations are unchanged.

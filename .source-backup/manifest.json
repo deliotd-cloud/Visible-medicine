@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T00:08:03.564Z",
+  "at": "2026-10-24T00:26:45.253Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "60d396a0aa37cb827fcaaafe6b06de90ded0c8ea39c01c528c718ff4b11f3199",
-    "atlasHead": "d143c28fb1e5da200712af6629a375c25d17dad7",
-    "atlasTree": "486287b25d968117cffdd27bb20009fa46cda6f3",
-    "reviewRevision": "66fbc8e06fb904de670300fa4418cb297a16950dbc2e7c25ad28a5eab1415f2a",
+    "nativeSourceReceiptSha256": "85c73d35ac10e1dd6f010cbf6826cab30441eaf4e6e2cfdd101e4fbc55642746",
+    "atlasHead": "aa13c067197cad87bd0a9b2da5549bc4b33bfdf7",
+    "atlasTree": "1ce3d1dbac28ff05f9aef22502c48e518304d18b",
+    "latestCompleteWebsiteSha256": "60d396a0aa37cb827fcaaafe6b06de90ded0c8ea39c01c528c718ff4b11f3199",
     "normalPreviewChanged": false
   },
-  "parent": "cdd07f4573d559229cde4accdb5b0726927572b4",
-  "gitParent": "cdd07f4573d559229cde4accdb5b0726927572b4",
+  "parent": "5f575561a768f249f59894909c00f49b486caf51",
+  "gitParent": "5f575561a768f249f59894909c00f49b486caf51",
   "files": [
     {
       "path": "app/globals.css",
@@ -21057,6 +21057,106 @@
       "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
     },
     {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/docs/LOWER_ARTERIAL_REASONING.md.raw",
+      "bytes": 5336,
+      "sha256": "e299f7361bfc035113b7b473f68a591c831fd8b21b39690e98aff66d6568e3d7"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/docs/REASONING_PRACTICE.md.raw",
+      "bytes": 39975,
+      "sha256": "d4aa9009ef7dd7c47035892b4859ab628b942fbf131e46200e1ed5acf6cbde5e"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/lib/lower-arterial-reasoning.ts",
+      "bytes": 7522,
+      "sha256": "03b55b19a8237859f9680e2f78cefe89249f5dd4351d6749e48031ea5db25fb4"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/lib/reasoning-questions.ts",
+      "bytes": 15822,
+      "sha256": "740bd1d83e2a26ac565f521806d32426368f88712df51353f35f9e3ca854b71f"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 361707,
+      "sha256": "db298b1f78820a96c7ca44099733942a52830bb4222d140407dd745dbc056eaa"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/package.json.raw",
+      "bytes": 88477,
+      "sha256": "da6412b9fc0244c3eba7145808d9fea6aa6560ee3368abf5e17005059a53d78b"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/scripts/check-lower-arterial-types.mjs",
+      "bytes": 1628,
+      "sha256": "70a89b08435ff826bde3338f5a07b611b21c3c8a6597f9511541ca7fb6f9f40d"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/scripts/pin-lower-arterial-reasoning.mjs",
+      "bytes": 2632,
+      "sha256": "aac7911993bde0cb5f460d39ddf6d0459daa0207eb4f8debea50878ba6098ebd"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/scripts/test-lower-arterial-reasoning.mjs",
+      "bytes": 11006,
+      "sha256": "f287fc82927e9ad89824c361c59357553385cb0e7ff80e117e136ad0f4e3ec20"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 57948,
+      "sha256": "37c83788a97d2513fa419f1ae16db40b78288e1e3b0bbdd67403fa0354311222"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/archive-composed-forearm-pointer-20261024.mjs",
+      "bytes": 2078,
+      "sha256": "feec2a8471ec71b8ec328a10d84200a7e45839ede67e0960d88ddece13526fb3"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/build-ventricular-atlas-20261023.mjs",
+      "bytes": 1196,
+      "sha256": "68955dec2251a304847ebce04a0d6d36e9b5dcee1c2ff91ae79c161a4838e018"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/checkpoint-lower-arterial-reasoning-20261024.mjs",
+      "bytes": 8677,
+      "sha256": "6b8b2db90148631a4f05ae1827eda62ff2d322ecd71363c9958612e088c0dc78"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/finish-lower-arterial-reasoning-20261024.mjs",
+      "bytes": 4771,
+      "sha256": "cce062dd876663b3a30c67cec3c04b31a4ea187bf517d0ed72fd9fe32b0246a5"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/prepare-lower-arterial-reasoning-20261024.mjs",
+      "bytes": 3243,
+      "sha256": "d5031acd00f819a58813215ff1a70d66c8be323564b18e5f3b318e9ad785d365"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/preserve-lower-arterial-reasoning-20261024.mjs",
+      "bytes": 4403,
+      "sha256": "be257c7ef570a0cf49c6602356353b32f7ff7c1e34f4f8480586ba2141458a11"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/run-lower-arterial-reasoning-20261024.mjs",
+      "bytes": 3762,
+      "sha256": "ebc65ea659938a7975b57205327ed6bfee926201ce31cb7b21f9fc7277e1a309"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/seal-lower-arterial-reasoning-20261024.mjs",
+      "bytes": 9955,
+      "sha256": "98b92ac33c58ad75c2e6971a615b5c86e06341f69ad442a9082b8211b01f7eb6"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+      "bytes": 2027,
+      "sha256": "f5183aed51dfacdf292f692fb50527bed103c7892ee3072764b77c876b6b228d"
+    },
+    {
+      "path": "pending/lower-arterial-reasoning-20261024/coordination/verify-lower-arterial-reasoning-20261024.mjs",
+      "bytes": 403,
+      "sha256": "edfebbf3b007a49d242079bae00e621465a83fba55d34f5bfcf0f232c3f337ef"
+    },
+    {
       "path": "pending/lower-limb-nerve-coverage-20261022/coordination/checkpoint-lower-limb-nerve-coverage-20261022.mjs",
       "bytes": 7726,
       "sha256": "47221ed181562e5e8774304ce03c0014598b2fa189635fba6fbd727b473524f0"
@@ -29758,44 +29858,36 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus9selectedproduct/test codepaths and9coordinationrecipes. No generatedbinding/pin/historicalmetadata, models/geometry, scans/identifiers/private records/references, rawlogs/screenshots/evidence, dependencies, dist or emulatorstate. Generateddelivery andhistoricalsourcerole witnesses stayF-local. Notwhole/private/runnableoffdevicebackup.",
+  "scope": "Inherited verified filtered authoredsource plusnewlowerarterial code/tests/type/pinproducer/dispatcher/validator and10coordinationrecipes; originaldraftnotes/notices/packagescripts asUTF8rawtext. No generatedJSONpins/revisions/registries, geometry/models, scans/identifiers/privateclinicalrecords/references, rawlogs/evidence/screenshots/typegraphs, dependencies/dist/emulatorstate. Fullnative/localidentity evidence staysF-only; notwhole/private/runnableoffdevicebackup.",
   "proof": {
-    "mainReviewSha256": "1953c303538b5c80b4dc3bc968157a519986bf13e171191f953a0b7021085225",
-    "focusedCasesPassed": 83,
-    "baselineMissingNavigationProtections": 9,
-    "strictTypeRoots": 7,
-    "strictTypeGraphFiles": 1739,
-    "typeDiagnostics": 0,
-    "actualPrebuildAndProductionBuildPassed": true,
-    "productionOutputs": 1125,
-    "reviewVerifierPassed": true,
-    "reviewInputs": 1786,
-    "reviewSourceFiles": 1593,
-    "viewerFiles": 54,
-    "viewerPackages": 24,
-    "allFourLearnerRuntimesUnchanged": true,
-    "modelsAndLicencesUnchanged": true,
-    "oldTestAssertionsUnchanged": true,
-    "unchangedCss": true,
-    "actualComponentBrowserWithSyntheticConfirmation": true,
-    "nativeConfirmationUiTested": false,
-    "viewportNoOverflow": [
-      [
-        1280,
-        720
-      ],
-      [
-        1024,
-        600
-      ]
-    ],
-    "consoleMutationObserverErrorOpen": true,
-    "ordinaryLinkAndRegionGoOnly": true,
-    "browserHistoryAndUnloadProtectionNotClaimed": true,
-    "authenticatedAcceptance": false,
+    "mainReviewSha256": "652ab5e31642330dfe6d0ff794ccdb8572a5a7e9007af280ee04e199adcfdcd6",
+    "newDraftConcepts": 6,
+    "newSourceSelections": 12,
+    "concepts": 222,
+    "representedRoots": 404,
+    "previous216DefinitionsPreserved": true,
+    "previous392TargetSessionsPreserved": true,
+    "identityNegatives": 416,
+    "practicePaths": 120,
+    "packetNegatives": 60,
+    "stalePosts": 12,
+    "strictRoots": 4,
+    "strictActualGraphFiles": 607,
+    "strictDiagnostics": 0,
+    "completePracticeValidatorChecks": 25152,
+    "completePracticeNegativeIdentityCases": 6385,
+    "stockNativeProductionBuild": true,
+    "buildFiles": 557,
+    "all1104SourceAnd9936LessonPayloadsPreserved": true,
+    "unchangedTeachingWorksheets": 1092,
+    "changedDisplayAndTeachingPins": 12,
+    "allNineShoulderRevisionsUnchanged": true,
+    "geometryDependenciesHoldsUnchanged": true,
+    "normalPreviewChanged": false,
+    "fullWebsiteIntegrationPending": true,
+    "privateDecisionStateRead": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
-    "normalPreviewChanged": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
