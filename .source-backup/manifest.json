@@ -1,14 +1,87 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T10:28:11.907Z",
+  "at": "2026-10-24T10:48:46.347Z",
   "sourceIdentity": {
-    "thinProposalReceiptSha256": "45e11123d1ab36e11a3cf42466a840907842391a31f794e532a9e0368bcbe433",
-    "componentSha256": "9797cd2ce54405d0909d125f38fa4ea0184f367b7ac772406952f6dacd0b7ae5",
-    "completeWebsiteParentSha256": "53a006afac76eb558c769c83c6e36a594e3965de99b602e796a9ef48636089b6",
-    "coherentWebsiteReviewIntegrationPending": true
+    "websiteSourceReceiptSha256": "37ea31d0ab36e57311e11dcdb9c01a93770220cbf8c40d439fa35b08aff9c968",
+    "atlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+    "review": "c8bdd276ab1f832ec5e6854df40bbd83102c7a4dbfe99c5cdde87aad89b5815d",
+    "sourceArtifactBindings": [
+      {
+        "websitePath": "components/HeadAtlasViewer.tsx",
+        "sha256": "9797cd2ce54405d0909d125f38fa4ea0184f367b7ac772406952f6dacd0b7ae5",
+        "snapshotPath": "pending/head-study-set-commit-20261024/website/components/HeadAtlasViewer.tsx",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-tour-study-set.test.ts",
+        "sha256": "e8cb2650f83e4c41478c0fa9643b1979be0df70f2ee81494afbafed5383e99e4",
+        "snapshotPath": "pending/head-study-set-commit-20261024/website/tests/head-tour-study-set.test.ts",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/adjacent-current-tour-source-role.mjs",
+        "sha256": "f655fa9b4b1199264eab534b68639dcf4198853add4c6279db3c090210041cb9",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/native-slice-commit-scope.test.mjs",
+        "sha256": "1d2c464f8a7f58a1c1db004706367e6a3edff50500edd5d1c07d4116be005b76",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/native-slice-commit-scope.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/native-slice-website-composition.test.mjs",
+        "sha256": "2ecc5cd7f033e250d24934c6603cb59fdcbb3cb6cdd386feb21b7fdde4413da2",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/native-slice-website-composition.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/native-slice-display-epoch.test.mjs",
+        "sha256": "5f6a60195f15e64d46e5eb32bfb811ddb4368c8f2bf67d66bbb913d8e14635ad",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/native-slice-display-epoch.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-commit.test.mjs",
+        "sha256": "3d8ec007a8a742c2004a92fc7e8c1841c606849065874ed15f292a2e77773dd1",
+        "snapshotPath": "pending/head-study-set-commit-20261024/website/tests/head-study-set-commit.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-study-set-current-display.mjs",
+        "sha256": "31b6444f24147cec44ecc4711dfa7b89c0b22e395170eae6b9c7c402885c3576",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-current-display.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-website-composition.test.mjs",
+        "sha256": "49a7b31cf1aa3721b3e0e1947d96ee9239e2c3232fb2f0365c175df82d9bb7dc",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-website-composition.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-display-epoch.test.mjs",
+        "sha256": "7affdcc8b4d3c29ef942df8145fa5d756412391fd870cd4f50a4684c546599d4",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-display-epoch.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-historical-source.mjs",
+        "sha256": "0e34f7414c671934ec23e10efe1b9925d50d325db1c6c682757c448aba6ea057",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-historical-source.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-historical-roles.test.mjs",
+        "sha256": "856b2e9ed19d7a7a004ca64faae8d9932f2be26db96ace54d296bd89fbb08b31",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-historical-roles.test.mjs",
+        "inherited": false
+      }
+    ]
   },
-  "parent": "8e5589705b53d34f252e83d50dbfcb4a8b8840b1",
-  "gitParent": "8e5589705b53d34f252e83d50dbfcb4a8b8840b1",
+  "parent": "dcc9ef3b11d90da5681fc5042c78185717f30e5a",
+  "gitParent": "dcc9ef3b11d90da5681fc5042c78185717f30e5a",
   "files": [
     {
       "path": "app/globals.css",
@@ -18331,6 +18404,76 @@
       "sha256": "e8cb2650f83e4c41478c0fa9643b1979be0df70f2ee81494afbafed5383e99e4"
     },
     {
+      "path": "pending/head-study-set-website-20261024/recipes/capture-head-study-set-website-pin-20261024.mjs",
+      "bytes": 1732,
+      "sha256": "5ff8a5649c2a029c19843615b4a6e45b58a2c1ef139355b89c64c8a1f92b8a31"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/recipes/checkpoint-head-study-set-website-20261024.mjs",
+      "bytes": 20897,
+      "sha256": "1154786c7169757e19f36afceba958f3a10cbd3021eca9e280a18cd869bec759"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/recipes/integrate-head-study-set-proofs-20261024.mjs",
+      "bytes": 1621,
+      "sha256": "df1c59cc419b4fda0b889a0b370e9ae61699a934f76917a79221f5b32b1287fe"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/recipes/prepare-head-study-set-website-20261024.mjs",
+      "bytes": 6759,
+      "sha256": "6fdda59acd6ecd5f709749225e593ca5c9404e711d3896e48f5ffd8e5d88407b"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/recipes/run-head-study-set-website-20261024.mjs",
+      "bytes": 8630,
+      "sha256": "142efcd6b48c4584392323f5cd60b23a31cc1e975d571bf33e7f4587969a7340"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+      "bytes": 4388,
+      "sha256": "f655fa9b4b1199264eab534b68639dcf4198853add4c6279db3c090210041cb9"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/head-study-set-current-display.mjs",
+      "bytes": 3166,
+      "sha256": "31b6444f24147cec44ecc4711dfa7b89c0b22e395170eae6b9c7c402885c3576"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/head-study-set-display-epoch.test.mjs",
+      "bytes": 5508,
+      "sha256": "7affdcc8b4d3c29ef942df8145fa5d756412391fd870cd4f50a4684c546599d4"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/head-study-set-historical-roles.test.mjs",
+      "bytes": 3240,
+      "sha256": "856b2e9ed19d7a7a004ca64faae8d9932f2be26db96ace54d296bd89fbb08b31"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/head-study-set-historical-source.mjs",
+      "bytes": 1928,
+      "sha256": "0e34f7414c671934ec23e10efe1b9925d50d325db1c6c682757c448aba6ea057"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/head-study-set-website-composition.test.mjs",
+      "bytes": 10855,
+      "sha256": "49a7b31cf1aa3721b3e0e1947d96ee9239e2c3232fb2f0365c175df82d9bb7dc"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/native-slice-commit-scope.test.mjs",
+      "bytes": 2748,
+      "sha256": "1d2c464f8a7f58a1c1db004706367e6a3edff50500edd5d1c07d4116be005b76"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/native-slice-display-epoch.test.mjs",
+      "bytes": 2854,
+      "sha256": "5f6a60195f15e64d46e5eb32bfb811ddb4368c8f2bf67d66bbb913d8e14635ad"
+    },
+    {
+      "path": "pending/head-study-set-website-20261024/website/tests/native-slice-website-composition.test.mjs",
+      "bytes": 10929,
+      "sha256": "2ecc5cd7f033e250d24934c6603cb59fdcbb3cb6cdd386feb21b7fdde4413da2"
+    },
+    {
       "path": "pending/head-surface-cancellation-20261022/coordination/admit-head-surface-cancellation-20261022.mjs",
       "bytes": 10181,
       "sha256": "502bd5664309de8358189bcd58936b5e68ba66bc0474c2f53917213b9c25eec4"
@@ -29697,17 +29840,92 @@
     }
   ],
   "removed": [],
-  "scope": "Carry verified5927filtered source paths and complete existing parent ancestry, add10explicit authored source/test/preimage/recipe paths. No removals; all prior exact aliases retain their parent ancestry. No images/models/scans/private data, raw QA logs/metadata, generated Review bindings, dependencies/builds or later coordination. Not a whole/private/runnable off-device backup.",
+  "scope": "Carry verified5937filtered source paths and ancestry, bind3unchanged code/test files to existing exact source, add9new changed proof/role code files and5critical integration/recovery recipes. No removals. Generated Review bindings/bundles/delivery fixture, models/images/scans/private data, raw QA/source receipts/type graphs/dependencies/builds and later coordination remain F-local. Not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "a8a8d0903688b8097fd48b6675ce2e4b29ef43ebc30d356d1164a0e3dfc18e97",
-    "focusedCases": 79,
-    "strictGraphFiles": 1733,
+    "mainReviewSha256": "360681747e3c22104db3335fb6d0593129291bc3aa694ff8c1aa32bf1cf5314f",
+    "focusedCases": 319,
+    "sourceInputs": 6580,
+    "strictRoots": 3,
+    "strictGraphFiles": 1739,
     "typeDiagnostics": 0,
-    "sourceOverlayCount": 1,
-    "actualLoadedAnonymousBrowserReplay": true,
-    "coherentWebsiteReviewIntegrationPending": true,
-    "retainedInitialAndHistoricalFailures": true,
-    "remoteNewPaths": 10,
+    "stockProductionAndReviewBuildPassed": true,
+    "actualAnonymousLoadedWebsiteReplay": true,
+    "sourceOverlay": false,
+    "sourceArtifactBindings": [
+      {
+        "websitePath": "components/HeadAtlasViewer.tsx",
+        "sha256": "9797cd2ce54405d0909d125f38fa4ea0184f367b7ac772406952f6dacd0b7ae5",
+        "snapshotPath": "pending/head-study-set-commit-20261024/website/components/HeadAtlasViewer.tsx",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-tour-study-set.test.ts",
+        "sha256": "e8cb2650f83e4c41478c0fa9643b1979be0df70f2ee81494afbafed5383e99e4",
+        "snapshotPath": "pending/head-study-set-commit-20261024/website/tests/head-tour-study-set.test.ts",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/adjacent-current-tour-source-role.mjs",
+        "sha256": "f655fa9b4b1199264eab534b68639dcf4198853add4c6279db3c090210041cb9",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/native-slice-commit-scope.test.mjs",
+        "sha256": "1d2c464f8a7f58a1c1db004706367e6a3edff50500edd5d1c07d4116be005b76",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/native-slice-commit-scope.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/native-slice-website-composition.test.mjs",
+        "sha256": "2ecc5cd7f033e250d24934c6603cb59fdcbb3cb6cdd386feb21b7fdde4413da2",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/native-slice-website-composition.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/native-slice-display-epoch.test.mjs",
+        "sha256": "5f6a60195f15e64d46e5eb32bfb811ddb4368c8f2bf67d66bbb913d8e14635ad",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/native-slice-display-epoch.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-commit.test.mjs",
+        "sha256": "3d8ec007a8a742c2004a92fc7e8c1841c606849065874ed15f292a2e77773dd1",
+        "snapshotPath": "pending/head-study-set-commit-20261024/website/tests/head-study-set-commit.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-study-set-current-display.mjs",
+        "sha256": "31b6444f24147cec44ecc4711dfa7b89c0b22e395170eae6b9c7c402885c3576",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-current-display.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-website-composition.test.mjs",
+        "sha256": "49a7b31cf1aa3721b3e0e1947d96ee9239e2c3232fb2f0365c175df82d9bb7dc",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-website-composition.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-display-epoch.test.mjs",
+        "sha256": "7affdcc8b4d3c29ef942df8145fa5d756412391fd870cd4f50a4684c546599d4",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-display-epoch.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-historical-source.mjs",
+        "sha256": "0e34f7414c671934ec23e10efe1b9925d50d325db1c6c682757c448aba6ea057",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-historical-source.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-historical-roles.test.mjs",
+        "sha256": "856b2e9ed19d7a7a004ca64faae8d9932f2be26db96ace54d296bd89fbb08b31",
+        "snapshotPath": "pending/head-study-set-website-20261024/website/tests/head-study-set-historical-roles.test.mjs",
+        "inherited": false
+      }
+    ],
+    "remoteNewPaths": 14,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
