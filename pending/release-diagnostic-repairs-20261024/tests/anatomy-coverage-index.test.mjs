@@ -1,0 +1,92 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+import {buildCoverageIndex} from '../scripts/build-anatomy-coverage-index.mjs';
+import {coverageArtifacts,coverageRevision,verifyCoverageSources,parseCoverageArgs,checkCoverage} from '../scripts/check-anatomy-coverage.mjs';
+const hash=b=>createHash('sha256').update(b).digest('hex'),revision='a'.repeat(40),h='b'.repeat(64);
+function fixtures(){
+ const shared={sourceRevision:revision,evidence:{sourceInputs:{'lib/source.ts':h}},anatomicalCompletenessProven:false};
+ const categories={'unsupported-no-current-evidence':1};
+ return {root:{...shared,schema:'vm-root-anatomy-coverage-ledger-1',counts:{rootRepresentations:1,declaredTargetGroups:1},representations:[{id:'root'}],declaredTargets:[{id:'gap',state:'held'}]},
+  nested:{...shared,schema:'vm-nested-anatomy-coverage-ledger-1',counts:{nestedSelections:1,sourceBoundTeachingConcepts:1},selections:[{teachingConceptId:'concept'}]},
+  independent:{...shared,schema:'vm-independent-source-coverage-ledger-1',counts:{independentViews:1,independentSelectionMemberships:1,dedicatedShoulderSelections:1,dedicatedShoulderSourcePartBindings:2},views:[{surfaces:[{id:'independent'}]}],dedicatedShoulder:{structures:[{id:'shoulder'}],parts:[{},{}]},withheldCatalogs:[]},
+  reference:{...shared,schemaVersion:1,counts:{rootSelections:1,reachableNestedSelections:1,shoulderBindings:2,currentRootDifferences:1,referenceFiles:1,categories,currentDifferenceCategories:categories},backlog:[{file:'FJ1',category:'unsupported-no-current-evidence'}]}};
+}
+const artifacts=data=>Object.entries(data).map(([scope,d])=>{const bytes=Buffer.from(JSON.stringify(d));return {scope,path:scope+'.json',bytes,sha256:hash(bytes)};});
+test('distinct units remain distinct, detached and without an aggregate completion count',()=>{
+ const data=fixtures(),result=buildCoverageIndex(artifacts(data));
+ assert.deepEqual(Object.keys(result.scopedCounts),['root','nested','independent','reference']);
+ assert.equal(result.assessment.anatomicalCompletenessProven,false);assert.equal(result.assessment.clinicalDecisionsRead,false);
+ assert(!Object.keys(result).some(k=>/percent|totalAnatomy|completeCount/.test(k)));
+ result.documentedRootTargetGroups[0].state='changed';assert.equal(data.root.declaredTargets[0].state,'held');
+});
+test('bytes, scopes, source revisions and dependency hashes fail closed',()=>{
+ const base=artifacts(fixtures());base[0].bytes=Buffer.from('{}');assert.throws(()=>buildCoverageIndex(base),/bytes differ/);
+ for(const mutate of [d=>{d.nested.sourceRevision='c'.repeat(40);},d=>{d.reference.evidence={sourceInputs:{'lib/source.ts':'c'.repeat(64)}};},d=>{d.root.schema='foreign';},d=>{d.independent.clinicalApprovalAsserted=true;},d=>{d.root.evidence={sourceInputs:{'../escape':h}};}]){
+  const data=fixtures();mutate(data);assert.throws(()=>buildCoverageIndex(artifacts(data)));
+ }
+ const duplicate=artifacts(fixtures());duplicate[3]=duplicate[0];assert.throws(()=>buildCoverageIndex(duplicate),/repeated/);
+});
+test('count drift and changed file classifications cannot produce a misleading index',()=>{
+ for(const mutate of [d=>{d.root.counts.rootRepresentations=2;},d=>{d.nested.counts.sourceBoundTeachingConcepts=2;},d=>{d.independent.counts.independentSelectionMemberships=2;},d=>{d.reference.counts.shoulderBindings=1;},d=>{d.reference.counts.referenceFiles=2;},d=>{d.reference.backlog[0].category='admitted-current-or-reachable-nested';}]){
+  const data=fixtures();mutate(data);assert.throws(()=>buildCoverageIndex(artifacts(data)));
+ }
+});
+function sourceFixture(){
+ const bytes=Buffer.from('export const source = true;'),index={sourceRevision:coverageRevision,evidence:{sourceInputs:{'lib/source.ts':hash(bytes)}}};
+ return {index,ports:{readSource:()=>bytes,committedSource:()=>bytes,head:()=>coverageRevision,status:()=>''}};
+}
+test('source verification requires exact committed and working bytes',()=>{
+ const {index,ports}=sourceFixture();assert.equal(verifyCoverageSources(index,ports),index);
+ assert.throws(()=>verifyCoverageSources(index,{...ports,committedSource:()=>Buffer.from('changed')}),/committed source mismatch/);
+ assert.throws(()=>verifyCoverageSources(index,{...ports,readSource:()=>Buffer.from('changed')}),/working source mismatch/);
+});
+test('stale and dirty sources fail before reading dependencies',()=>{
+ const {index,ports}=sourceFixture();const readSource=()=>assert.fail('must not read');
+ assert.throws(()=>verifyCoverageSources(index,{...ports,readSource,head:()=>revision}),/stale/);
+ assert.throws(()=>verifyCoverageSources(index,{...ports,readSource,status:()=>' M lib/source.ts'}),/clean/);
+ assert.throws(()=>verifyCoverageSources({...index,sourceRevision:revision},ports),/Unexpected/);
+});
+test('source changes during verification fail and nothing is rewritten',()=>{
+ const {index,ports}=sourceFixture();let calls=0;
+ assert.throws(()=>verifyCoverageSources(index,{...ports,head:()=>++calls===1?coverageRevision:revision}),/changed during/);
+ calls=0;assert.throws(()=>verifyCoverageSources(index,{...ports,status:()=>++calls===1?'':' M changed.ts'}),/changed during/);
+});
+test('CLI rejects conflicting modes and malformed roots',()=>{
+ assert.deepEqual(parseCoverageArgs(['--source-root','X:/atlas','--check']),{sourceRoot:'X:/atlas',write:false});
+ assert.deepEqual(parseCoverageArgs(['--source-root','X:/atlas','--write']),{sourceRoot:'X:/atlas',write:true});
+ for(const args of [['--source-root'],['--source-root','--check'],['--check','--write'],['--write','--write'],['--force'],['--source-root','x','--source-root','y']])assert.throws(()=>parseCoverageArgs(args));
+});
+test('actual repository metadata keeps four exact artifacts and explicit unproven scope',()=>{
+ const loaded=coverageArtifacts.map(a=>({...a,bytes:readFileSync(a.path)})),index=buildCoverageIndex(loaded);
+ assert.deepEqual(JSON.parse(readFileSync('docs/anatomy-coverage/index.json','utf8')),index);
+ assert.equal(index.sourceRevision,coverageRevision);assert.equal(Object.keys(index.evidence.sourceInputs).length,171);
+ assert.equal(coverageRevision,CURRENT_ATLAS_REVISION);
+ const sourceRoot=currentAtlasDeliveryRoot();
+ assert.deepEqual(index,checkCoverage({sourceRoot,websiteRoot:process.cwd()}));
+ const packageBytes=execFileSync('git',['--no-replace-objects','-C',sourceRoot,'show',`${CURRENT_ATLAS_REVISION}:package.json`],{maxBuffer:32e6});
+ assert.equal(index.evidence.sourceInputs['package.json'],hash(packageBytes));
+ assert.equal(index.scopedCounts.root.rootRepresentations,1104);assert.equal(index.scopedCounts.nested.nestedSelections,108);
+ assert.equal(index.scopedCounts.reference.currentRootDifferences,441);assert.equal(index.scopedCounts.reference.referenceFiles,2234);
+ assert.equal(index.assessment.expectedCurriculumInventoried,false);assert.equal(index.assessment.anatomicalCompletenessProven,false);
+ assert.equal(index.assessment.clinicalApprovalAsserted,false);assert.equal(index.assessment.patientRegistrationAsserted,false);
+ assert(!JSON.stringify(index.sourceArtifacts).includes('F:/'));
+});
+test('original index assertions remain exact and a past package identity cannot verify as current',()=>{
+ const original=readFileSync('tests/fixtures/anatomy-coverage-index-before-20261016.mjs.txt');
+ assert.equal(hash(original),'c97e01aa9935aeccbca8c048560a326790bc56b8fee9ba255396ab994c0361cf');
+ const registrations=value=>[...value.matchAll(/^test\('([^']+)'/gm)].map(match=>match[1]);
+ const before=registrations(original.toString()),after=registrations(readFileSync('tests/anatomy-coverage-index.test.mjs','utf8'));
+ assert.equal(before.length,8);assert.equal(after.length,9);assert.deepEqual(after.slice(0,8),before);
+ const root=currentAtlasDeliveryRoot(),index=checkCoverage({sourceRoot:root,websiteRoot:process.cwd()}),past=structuredClone(index);
+ past.evidence.sourceInputs['package.json']='25c8f2e4d5cea2762605025eb4b72bed390a5a24234af9e4a39a71219ab648dd';
+ const git=(...args)=>execFileSync('git',['--no-replace-objects','-C',root,...args],{maxBuffer:32e6});
+ assert.equal(hash(git('show','408759d57644b05402e98a937e7cf6338b5509cf:package.json')),past.evidence.sourceInputs['package.json']);
+ assert.throws(()=>verifyCoverageSources(past,{
+  head:()=>git('rev-parse','HEAD').toString().trim(),status:()=>git('status','--porcelain').toString().trim(),
+  committedSource:path=>git('show',`${CURRENT_ATLAS_REVISION}:${path}`),readSource:path=>readFileSync(root+'/'+path),
+ }),/package\.json: committed source mismatch/);
+});

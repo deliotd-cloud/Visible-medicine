@@ -1,0 +1,208 @@
+{
+  "schema": "vm-release-diagnostic-source-inverse-1",
+  "parentReceipt": "F:/VisibleMedicine/staging/20261024-pancreatic-us-website/SOURCE_BOUND.json",
+  "parentSha256": "cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e",
+  "records": [
+    {
+      "path": "tests/adjacent-current-tour-source-roles.test.mjs",
+      "beforeSha256": "7ec572e4493961965d5c7b0204d323f26d0d253e14d412673ad7b2e7647406a9",
+      "seams": [
+        [
+          "import {assertCurrentTourSource,assertCurrentTourDelivery,assertCompleteGuidedReview} from './adjacent-current-tour-source-role.mjs';",
+          "import {assertCurrentTourSource,assertCurrentTourDelivery,assertCompleteGuidedReview} from 'file:///F:/VisibleMedicine/staging/20261024-adjacent-regression-current/website/tests/adjacent-current-tour-source-role.mjs';"
+        ],
+        [
+          "const transition=JSON.parse(transitionBytes);",
+          "const transition=JSON.parse(transitionBytes);\nassert.equal(sha(readFileSync('F:/VisibleMedicine/staging/20261024-adjacent-regression-current/website/tests/adjacent-current-tour-source-role.mjs')),\n '56534358796baebd68291bda23afa5e19f01c47462f6c4ff14a132499d93db8f');\nconst historicalAtlas='F:/VisibleMedicine/staging/20261024-cervical-vascular-website/atlas';"
+        ],
+        [
+          " const atlasRoot=process.env.VM_ATLAS_SOURCE_REPO;assert(atlasRoot);",
+          " const atlasRoot=historicalAtlas;assert(atlasRoot);"
+        ],
+        [
+          "import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {pathToFileURL} from 'node:url';\n",
+          "import {restoreReleaseDiagnosticContext} from './release-diagnostic-context-inverse.mjs';\nimport test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {pathToFileURL} from 'node:url';\n"
+        ],
+        [
+          "sha(read('adjacent-current-role-inverse.mjs'))",
+          "sha(restoreReleaseDiagnosticContext('tests/adjacent-current-role-inverse.mjs',read('adjacent-current-role-inverse.mjs')))"
+        ]
+      ],
+      "afterSha256": "6182e1fa105c7755e2b56a1c6b1cec9e88b88ec97f83945ded1d09c6b9cd2135"
+    },
+    {
+      "path": "tests/adjacent-shoulder-source-roles.test.mjs",
+      "beforeSha256": "edbd7db6962055a068a87450cdbde4ddc24a0457c78241cbb1a4b599f89d9fdb",
+      "seams": [
+        [
+          "import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';",
+          "import {validateCurrentAtlasDelivery as validateDelivery} from './current-atlas-delivery.mjs';"
+        ],
+        [
+          " env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});",
+          " env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});\n\nconst b79Stage='F:/VisibleMedicine/staging/20261024-cervical-vascular-website';\nconst b79Site=b79Stage+'/website',b79Root=b79Stage+'/atlas';\nfunction validateCurrentAtlasDelivery(){\n const receiptBytes=readFileSync(b79Stage+'/SOURCE_BOUND.json');\n assert.equal(sha(receiptBytes),'d2c288a5be7b54dda220a0f539e72c15988f63543124323c5b08c60533950df2');\n const receipt=JSON.parse(receiptBytes);\n assert.equal(receipt.atlasHead,'b79e110d2d28f18993263926ba35aa7a3f478b20');\n assert.equal(receipt.atlasTree,'0dd97cc55ef9aff3493b91752309d1d661c0b0c8');\n const pinPath='tests/fixtures/current-atlas-delivery.json';\n const pinBytes=readFileSync(b79Site+'/'+pinPath);\n assert.equal(sha(pinBytes),receipt.sourceRows.find(row=>row.path===pinPath)?.sha256);\n return validateDelivery({pin:JSON.parse(pinBytes),root:b79Site,\n  read:path=>readFileSync(b79Site+'/'+path)});\n}\nfunction checkedB79HistoryRepo(revision){\n checkedAtlasHistoryRepo(revision);\n assert.equal(git(b79Root,['rev-parse','HEAD']).toString().trim(),'b79e110d2d28f18993263926ba35aa7a3f478b20');\n assert.equal(git(b79Root,['rev-parse','HEAD^{tree}']).toString().trim(),'0dd97cc55ef9aff3493b91752309d1d661c0b0c8');\n assert.equal(git(b79Root,['status','--porcelain']).toString().trim(),'');\n return b79Root;\n}"
+        ],
+        [
+          "test('authenticated 190a shoulder role remains separate from exact b79 delivery',()=>{\n const current=validateCurrentAtlasDelivery();\n assert.equal(assertHistoricalShoulderSourceRole(current),historical);\n const root=checkedAtlasHistoryRepo(historical);",
+          "test('authenticated 190a shoulder role remains separate from exact b79 delivery',()=>{\n const current=validateCurrentAtlasDelivery();\n assert.equal(assertHistoricalShoulderSourceRole(current),historical);\n const root=checkedB79HistoryRepo(historical);"
+        ],
+        [
+          "test('every historical shoulder input matches the independent 190a Git source',()=>{\n const root=checkedAtlasHistoryRepo(historical);",
+          "test('every historical shoulder input matches the independent 190a Git source',()=>{\n const root=checkedB79HistoryRepo(historical);"
+        ]
+      ],
+      "afterSha256": "b90d6c6f0b5f58150528ba874aac043a7e2150b173ae252940251c40e0d16c32"
+    },
+    {
+      "path": "tests/arterial-history-preservation.test.mjs",
+      "beforeSha256": "c4697cc3a83d1515a434d07e680790a9d494174cd45b801d3db7b67f5471d05e",
+      "seams": [
+        [
+          "import {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';",
+          "import {CURRENT_ATLAS_REVISION} from 'file:///F:/VisibleMedicine/staging/20261024-adjacent-regression-current/website/tests/current-atlas-delivery.mjs';"
+        ],
+        [
+          "import assert from 'node:assert/strict';\n",
+          "import {restoreReleaseDiagnosticContext} from './release-diagnostic-context-inverse.mjs';\nimport assert from 'node:assert/strict';\n"
+        ],
+        [
+          "function nativeSource6d7(bytes){",
+          "function nativeSource6d7(bytes){\n bytes=restoreReleaseDiagnosticContext('tests/atlas-arterial-evidence-limits.test.mjs',bytes);"
+        ],
+        [
+          " const text=readFileSync(admitted).toString(),native=",
+          " const text=restoreReleaseDiagnosticContext('tests/atlas-arterial-evidence-limits.test.mjs',readFileSync(admitted)).toString(),native="
+        ]
+      ],
+      "afterSha256": "145f1ad320601b00e5cbed4d8d02c06d83d020e460d4601d28e8d1d0b3d4cd8b"
+    },
+    {
+      "path": "tests/atlas-back-topic-completion.test.ts",
+      "beforeSha256": "d4767a7a19c9fdfb8967c1fa345c374cfc4031bb8b3f26c0af3eff70dfe86ca6",
+      "seams": [
+        [
+          "const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');",
+          "const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');\n// Compare both teaching states against the complete milestone registry.\nconst milestoneRegistryBytes = milestoneWebsiteBytes('atlas-review/lib/specimen-review-material.ts');\nassert.equal(sha256(milestoneRegistryBytes),\n  '33e4deca7d8c2fed6cab7753ab9a6671fbaeb73e5c26a49bda42274b782b68e1');"
+        ],
+        [
+          "    plugins: revision === 'latest' ? [] : [{name: 'historical-back-topic-teaching', setup(plugin) {",
+          "    plugins: revision === 'latest' ? [] : [{name: 'historical-back-topic-teaching', setup(plugin) {\n      plugin.onLoad({filter: /[\\\\/]lib[\\\\/]specimen-review-material\\.ts$/, args => ({\n        contents: milestoneRegistryBytes.toString('utf8'), loader: 'ts', resolveDir: dirname(args.path),\n      }));"
+        ],
+        [
+          "test('356 source contexts stay fixed; 48 back teaching changes reject 144 stale or foreign submissions before storage', {timeout: 120000}, async () => {",
+          "test('356 source contexts stay fixed; 48 back teaching changes reject 144 stale or foreign submissions before storage', {timeout: 120000}, async () => {\n  const currentRegistryBytes = readFileSync('atlas-review/lib/specimen-review-material.ts');\n  assert.equal(sha256(currentRegistryBytes),\n    '485d3153101e3481eab586108053a824111d732f4dd48ef3f81c07b40e2a39c5');\n  assert(!milestoneRegistryBytes.toString('utf8').includes('fdaSpecimenReviewRows'));\n  assert(currentRegistryBytes.toString('utf8').includes('...fdaSpecimenReviewRows'));\n  const fdaCatalogueBytes = readFileSync('atlas-review/public/models/fda-shoulder-draft/catalog.json');\n  assert.equal(sha256(fdaCatalogueBytes),\n    '56cf325c006a00e4349a6b45844797800a11c005448d32a08f40e64664288b44');\n  assert.deepEqual(JSON.parse(fdaCatalogueBytes.toString('utf8')).structures.map((s: any) => s.id), [\n    'vm:reference:fda-shoulder-fc9f3e56:ac-ligament',\n    'vm:reference:fda-shoulder-fc9f3e56:humeral-cartilage',\n    'vm:reference:fda-shoulder-fc9f3e56:labrum',\n    'vm:reference:fda-shoulder-fc9f3e56:clavicle',\n    'vm:reference:fda-shoulder-fc9f3e56:humerus-source',\n    'vm:reference:fda-shoulder-fc9f3e56:scapula',\n  ]);"
+        ]
+      ],
+      "afterSha256": "abf8805953e77b91596ee1f775b29f15961976c8ea60a4ed19da2f092844944e"
+    },
+    {
+      "path": "tests/ae84-metadata-closure.test.mjs",
+      "beforeSha256": "02d0cc1f9669995e5e2f71302a571d24a848a8e8a0a1fe9e46c4640c9a203755",
+      "seams": [
+        [
+          "import {createHash} from 'node:crypto';\n",
+          "import {createHash} from 'node:crypto';\nimport {pathToFileURL} from 'node:url';\nimport {join} from 'node:path';\n"
+        ],
+        [
+          "const historical=p=>historicalReviewAe84Read(p,read);\n",
+          "const historicalValidatorPath='F:/VisibleMedicine/staging/20261023-ae84-metadata-closure/website/tests/current-atlas-delivery.mjs';\nassert.equal(sha(readFileSync(historicalValidatorPath)),'52551fd5ec16154a78b94f78e0cdfbfee6a1bea629f70714f3dd5f93ccb81bb5','Historical validator source changed');\nconst {validateCurrentAtlasDelivery:validateHistoricalAe84Delivery}=await import(pathToFileURL(historicalValidatorPath).href);\nconst historicalReceiptPath='F:/VisibleMedicine/staging/20261022-release-diagnostic-successor/SOURCE.json';\nconst historicalReceiptBytes=readFileSync(historicalReceiptPath);\nassert.equal(sha(historicalReceiptBytes),'65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522','Historical source receipt changed');\nconst historicalReceipt=JSON.parse(historicalReceiptBytes);\nassert.equal(historicalReceipt.website,'F:/VisibleMedicine/staging/20261022-release-diagnostic-successor/website');\nconst historicalPin=historicalReviewAe84Pin(read);\nconst historicalRuntimePaths=['shoulder','lower-limb','female-pelvis'].flatMap(name=>['manifest.json','source-inputs.json'].map(file=>`public/atlas-runtime/${name}/${file}`));\nconst historicalRuntimeRows=new Map(historicalRuntimePaths.map(p=>{\n const rows=historicalReceipt.sourceRows.filter(row=>row.path===p);\n assert.equal(rows.length,1,'Exactly one old source row: '+p);\n assert.equal(rows[0].sha256,historicalPin.documents[p],'Receipt and ae84 pin agree: '+p);\n return [p,rows[0]];\n}));\nconst historicalLive=p=>{\n const row=historicalRuntimeRows.get(p);if(!row)return read(p);\n const bytes=readFileSync(join(historicalReceipt.website,p));\n assert.equal(bytes.length,row.bytes,'Old source byte length: '+p);\n assert.equal(sha(bytes),row.sha256,'Old source row hash: '+p);\n assert.equal(sha(bytes),historicalPin.documents[p],'Ae84 pin document hash: '+p);\n return bytes;\n};\nconst historical=p=>historicalReviewAe84Read(p,historicalLive);\n"
+        ],
+        [
+          "const packet=validateCurrentAtlasDelivery({pin,read:p=>{seen.push(p);return historical(p);}});",
+          "const packet=validateHistoricalAe84Delivery({pin,read:p=>{seen.push(p);return historical(p);}});"
+        ],
+        [
+          "assert.throws(()=>validateCurrentAtlasDelivery({pin:old}),/Current delivery changed/);",
+          "assert.throws(()=>validateCurrentAtlasDelivery({pin:old}),error=>error?.code==='ERR_ASSERTION'&&error.actual===46&&error.expected===54);"
+        ]
+      ],
+      "afterSha256": "1697815f590b76473843d2a07ab39715cf99ad55ca4caa4d065f99514dfe9f66"
+    },
+    {
+      "path": "tests/anatomy-coverage-index.test.mjs",
+      "beforeSha256": "df3b794855f4f14e842f2c94637c265fc381f5ef980ff3aa8380336fc9823275",
+      "seams": [
+        [
+          "assert.equal(Object.keys(index.evidence.sourceInputs).length,168);",
+          "assert.equal(Object.keys(index.evidence.sourceInputs).length,171);"
+        ]
+      ],
+      "afterSha256": "3ba31ab13c8619bf59aee90289952337424acc4327660f69e40119b55db31cb4"
+    },
+    {
+      "path": "tests/anatomy-coverage-view.test.ts",
+      "beforeSha256": "31aa011d789ef87b3ccea9583a83ca137095397696812615fe441b053db8166f",
+      "seams": [
+        [
+          "assert.equal(imported.length,142);",
+          "assert.equal(imported.length,145);"
+        ]
+      ],
+      "afterSha256": "65a5f6259fabd946e65d3824cd6662f8910977dd2eab0119c97d511c6084d132"
+    },
+    {
+      "path": "tests/atlas-arterial-evidence-limits.test.mjs",
+      "beforeSha256": "35aa317814977114af7caf761ca5b4504b319b92a76e3e18dd8b281fa50d608d",
+      "seams": [
+        [
+          "  assert.equal(CURRENT_ATLAS_REVISION,'2381efe43b75f8a7fb768a069eecd7268c508dac');",
+          "  assert.equal(CURRENT_ATLAS_REVISION,'6e810b188dde401f6c19a970928f316a479696df');"
+        ],
+        [
+          "  assert.deepEqual(pin.runtimeSources,{'head-neck':CURRENT_ATLAS_REVISION,\n    shoulder:historical,'lower-limb':historical,'female-pelvis':historical});",
+          "  assert.deepEqual(pin.runtimeSources,{'head-neck':CURRENT_ATLAS_REVISION,\n    shoulder:CURRENT_ATLAS_REVISION,'lower-limb':CURRENT_ATLAS_REVISION,'female-pelvis':CURRENT_ATLAS_REVISION});"
+        ],
+        [
+          "    wrong.runtimeSources[name]=name==='head-neck'?historical:CURRENT_ATLAS_REVISION;",
+          "    wrong.runtimeSources[name]=historical;"
+        ]
+      ],
+      "afterSha256": "a6cbf916326c68b471e7cc16998e59715cb1dd4a44c32fff18fc975f096f58f3"
+    },
+    {
+      "path": "tests/adjacent-current-role-inverse.mjs",
+      "beforeSha256": "c2df3cea3cebd3dd340d62407e14dd1b17b66f2c2d34ea226bff74a49bc7ee04",
+      "seams": [
+        [
+          "// Generated exact inverse data for declared test-only seams.\n",
+          "import {restoreReleaseDiagnosticContext} from './release-diagnostic-context-inverse.mjs';\n// Generated exact inverse data for declared test-only seams.\n"
+        ],
+        [
+          "export function restoreAdjacentSharedRole(name,bytes){",
+          "export function restoreAdjacentSharedRole(name,bytes){bytes=restoreReleaseDiagnosticContext(name,bytes);"
+        ]
+      ],
+      "afterSha256": "064c45e32a766fe893bd07f72df6476da7bd8fd6231054b5f1c32223b7a43c46"
+    },
+    {
+      "path": "tests/complete-release-followup-preservation.test.mjs",
+      "beforeSha256": "7f1975b2b0e55db9a41e7407baa514403b774a214a5e0355dd1f62cf34c94bdb",
+      "seams": [
+        [
+          "import test from 'node:test';\n",
+          "import {restoreReleaseDiagnosticContext} from './release-diagnostic-context-inverse.mjs';\nimport test from 'node:test';\n"
+        ],
+        [
+          "function original(row,bytes){",
+          "function original(row,bytes){if(row.path==='tests/atlas-arterial-evidence-limits.test.mjs')bytes=restoreReleaseDiagnosticContext(row.path,bytes);"
+        ]
+      ],
+      "afterSha256": "05ddef14443fa4c4866b574ac678bb13c2a1962a93c81e9af67e4a08a130970a"
+    },
+    {
+      "path": "tests/complete-release-five-followups-preservation.test.mjs",
+      "beforeSha256": "d46a30421857ae56905c699f4e4117b63dfe980cdd5cd9656e289c7b064c2239",
+      "seams": [
+        [
+          "import test from 'node:test';\n",
+          "import {restoreReleaseDiagnosticContext} from './release-diagnostic-context-inverse.mjs';\nimport test from 'node:test';\n"
+        ],
+        [
+          "function inverse(row,bytes){",
+          "function inverse(row,bytes){if(row.path==='tests/atlas-arterial-evidence-limits.test.mjs')bytes=restoreReleaseDiagnosticContext(row.path,bytes);"
+        ]
+      ],
+      "afterSha256": "fcb713b0f6f27456101f3ee06bd69d066be1d8021658371d804190f7a61bb4c4"
+    }
+  ]
+}

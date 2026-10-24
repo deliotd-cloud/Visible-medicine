@@ -1,82 +1,13 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T15:34:35.626Z",
+  "at": "2026-10-24T16:09:02.611Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e",
-    "atlas": "6e810b188dde401f6c19a970928f316a479696df",
-    "tree": "90afe5163dbd9386aa37c93d525fa4c70e8c1b9e",
-    "review": "8e87c25ff5c1deef69324e197f412090d6ea7b30ed528004f458e4118a421640",
-    "sourceArtifactBindings": [
-      {
-        "websitePath": "lib/anatomy-coverage-view.ts",
-        "sha256": "9fd8f21d685f73850bda61d41b20c782d0b902a9456f604200bda69ae65b4b51",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/lib/anatomy-coverage-view.ts",
-        "inherited": false
-      },
-      {
-        "websitePath": "lib/atlas-delivery-policy.ts",
-        "sha256": "f7988c791145c0d4d26f9a2ee94f749d31f904fc409981929026cf7d5a220e13",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/lib/atlas-delivery-policy.ts",
-        "inherited": false
-      },
-      {
-        "websitePath": "scripts/check-anatomy-coverage.mjs",
-        "sha256": "d4b8440d02875f130ff91a5479487e569045b3da70c6936b53877c53ce255e06",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/scripts/check-anatomy-coverage.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "scripts/import-clinical-review.mjs",
-        "sha256": "05ba4ccaaeb016b466ad7e95d7e58fc3c59efff04d6196b5154616599197a7e7",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/scripts/import-clinical-review.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-        "sha256": "af47eaa4b2a802d2790cd164c293a74f032d3a9e66aebb112b7a63ec1b2659b2",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/current-atlas-delivery.test.mjs",
-        "sha256": "6206a2a13dff34b18ad4ff05d731e2c6fc3d9b62683c13e0b781cc8e68cd5276",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/current-atlas-delivery.test.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/review-pager-website-composition.test.mjs",
-        "sha256": "17cd2fa54421856625b1756f3157051a85991c1fd5ce29208986c4ec28ac6433",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/review-pager-website-composition.test.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/pancreatic-us-current-source-role.mjs",
-        "sha256": "55e43b65e67958b46a3b2047b7a59738b0d9285ada39d243d39d293f0655fda5",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-current-source-role.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/pancreatic-us-current-source-role.test.mjs",
-        "sha256": "aa9f6148f60050a6e9d84135b05d622650f9b07b7352001b96acc75a3fe6973a",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-current-source-role.test.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/pancreatic-us-review-pager-history.mjs",
-        "sha256": "0c946bbaa0f70f5922152f5b8850c4e2b9642f8c5c3931ecab3947509271b527",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-review-pager-history.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/pancreatic-us-website-composition.test.mjs",
-        "sha256": "2a5ce7946111d2f7bc0eed17db6cb72f703d62cc0efb3b11c9b4b2fbca711412",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-website-composition.test.mjs",
-        "inherited": false
-      }
-    ]
+    "websiteParent": "cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e",
+    "native": "6e810b188dde401f6c19a970928f316a479696df",
+    "kind": "partial-source-only-test-repair-proposal"
   },
-  "parent": "8b240854360bf2a1f79a90360b9c10e905f7e099",
-  "gitParent": "8b240854360bf2a1f79a90360b9c10e905f7e099",
+  "parent": "d210bd12b317c9c30861e2ea1691d4224aafc7d1",
+  "gitParent": "d210bd12b317c9c30861e2ea1691d4224aafc7d1",
   "files": [
     {
       "path": "app/globals.css",
@@ -24279,6 +24210,106 @@
       "sha256": "5a90e430f78565367b070eb0f0715515ef8f033d100f3f0d9153362334319a09"
     },
     {
+      "path": "pending/release-diagnostic-repairs-20261024/recipes/compose-release-repair-batch-20261024.mjs",
+      "bytes": 6879,
+      "sha256": "1e94c2ead66d13d9dd3fb2c4e089fdc9f169c7ad13b3f2d426bf0b196a9e00fe"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/recipes/observe-pancreatic-us-release-20261024.mjs",
+      "bytes": 4297,
+      "sha256": "24c366580197ab17dc798940f63f42e3fbbfb0769d1a40ebb16adb6bdc829de7"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/recipes/run-release-repair-pure-checks-20261024.mjs",
+      "bytes": 2628,
+      "sha256": "744d0d2a52a0bf048862531e87c61e3b2f4429a29f76879371610999dbba3882"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/recipes/save-release-repair-proposal-20261024.mjs",
+      "bytes": 7463,
+      "sha256": "10d6f17605b790470799f0fce0b2d520d91c841869949638b009f513766088e5"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/adjacent-current-role-inverse.mjs",
+      "bytes": 20219,
+      "sha256": "064c45e32a766fe893bd07f72df6476da7bd8fd6231054b5f1c32223b7a43c46"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/adjacent-current-tour-source-roles.test.mjs",
+      "bytes": 5617,
+      "sha256": "6182e1fa105c7755e2b56a1c6b1cec9e88b88ec97f83945ded1d09c6b9cd2135"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/adjacent-shoulder-source-roles.test.mjs",
+      "bytes": 5437,
+      "sha256": "b90d6c6f0b5f58150528ba874aac043a7e2150b173ae252940251c40e0d16c32"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/ae84-metadata-closure.test.mjs",
+      "bytes": 5743,
+      "sha256": "1697815f590b76473843d2a07ab39715cf99ad55ca4caa4d065f99514dfe9f66"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/anatomy-coverage-index.test.mjs",
+      "bytes": 8717,
+      "sha256": "3ba31ab13c8619bf59aee90289952337424acc4327660f69e40119b55db31cb4"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/anatomy-coverage-view.test.ts",
+      "bytes": 4187,
+      "sha256": "65a5f6259fabd946e65d3824cd6662f8910977dd2eab0119c97d511c6084d132"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/arterial-history-preservation.test.mjs",
+      "bytes": 8572,
+      "sha256": "145f1ad320601b00e5cbed4d8d02c06d83d020e460d4601d28e8d1d0b3d4cd8b"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 18997,
+      "sha256": "a6cbf916326c68b471e7cc16998e59715cb1dd4a44c32fff18fc975f096f58f3"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/atlas-back-topic-completion.test.ts",
+      "bytes": 18033,
+      "sha256": "abf8805953e77b91596ee1f775b29f15961976c8ea60a4ed19da2f092844944e"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/complete-release-five-followups-preservation.test.mjs",
+      "bytes": 12295,
+      "sha256": "fcb713b0f6f27456101f3ee06bd69d066be1d8021658371d804190f7a61bb4c4"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/complete-release-followup-preservation.test.mjs",
+      "bytes": 5736,
+      "sha256": "05ddef14443fa4c4866b574ac678bb13c2a1962a93c81e9af67e4a08a130970a"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/fixtures/release-diagnostic-repair-20261024.json.raw",
+      "bytes": 16016,
+      "sha256": "f998a4979db532ae55ef4eea5ef8ff3c5a999e3379c4f628dcc24a7d00e7de9b"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/release-diagnostic-context-inverse.mjs",
+      "bytes": 1879,
+      "sha256": "2ff4c495122272e8619fca56b13b84d03b22127d913cfd1761092932904eb520"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/tests/release-diagnostic-context-inverse.test.mjs",
+      "bytes": 5949,
+      "sha256": "03b4e420c5ab1aa8020b781e6d5b0021fc9c384726838f634c036d442fbc9c4d"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/workers/ae84/produce.mjs",
+      "bytes": 4731,
+      "sha256": "857c5887264aa77a092aa481150f659e0870086064f3ad2762ca55b79eab73dd"
+    },
+    {
+      "path": "pending/release-diagnostic-repairs-20261024/workers/b79-back/repair.mjs",
+      "bytes": 10574,
+      "sha256": "ccbaa88b998c6b8b643cfd2785e0b51d3fbd3c336bc2af00edf3d9a99c6c7a55"
+    },
+    {
       "path": "pending/release-diagnostic-successor-20261022/coordination/checkpoint-release-diagnostic-successor-20261022.mjs",
       "bytes": 10789,
       "sha256": "87e8cb541147bdfc2912382ca83dde74640f6b086195c8157b662f0d543f51df"
@@ -29790,89 +29821,38 @@
     }
   ],
   "removed": [],
-  "scope": "Carry5917 independently verified selected source blobs and filtered parent ancestry, including the previously verified93exact duplicate aliases. Add authored Website source/tests/recipes only; no new omissions. Generated Review/exports/metadata, models/scans/private data/raw QA/build/dependencies and later coordination stay F-local. Not whole/private/runnable off-device recovery.",
+  "scope": "Selected text/code ancestry plus eleven changed test files, two new test-only modules, one deterministic source-inverse fixture (retained as a byte-identical .json.raw text fixture), four recipes and two worker producers. The fixture contains only the eleven named, hash-bound code transformations; it is not runtime/clinical metadata. The original .json restore name is recorded in local recovery. No scans, masks, models, patient identifiers, private references/decisions, generated delivery, dependencies, build output or raw QA logs; not a whole/private/runnable off-device backup. No public deployment or installation.",
   "proof": {
-    "mainReviewSha256": "bc35622f8b04d9b9f6b7246b66680c6d6ad6ca065c75ddee49ebc45565c0b458",
-    "focusedCases": 404,
-    "focusedRoots": 62,
-    "strictTypeRoots": 39,
-    "strictTypeFiles": 3685,
-    "typeDiagnostics": 0,
-    "stockPrebuildBuildAndReviewVerifierPassed": true,
-    "reviewSources": 1605,
-    "reviewInputs": 1808,
-    "changedUsLessons": 1,
-    "otherNativeLessonsPreserved": 9935,
-    "sourceArtifactBindings": [
-      {
-        "websitePath": "lib/anatomy-coverage-view.ts",
-        "sha256": "9fd8f21d685f73850bda61d41b20c782d0b902a9456f604200bda69ae65b4b51",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/lib/anatomy-coverage-view.ts",
-        "inherited": false
-      },
-      {
-        "websitePath": "lib/atlas-delivery-policy.ts",
-        "sha256": "f7988c791145c0d4d26f9a2ee94f749d31f904fc409981929026cf7d5a220e13",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/lib/atlas-delivery-policy.ts",
-        "inherited": false
-      },
-      {
-        "websitePath": "scripts/check-anatomy-coverage.mjs",
-        "sha256": "d4b8440d02875f130ff91a5479487e569045b3da70c6936b53877c53ce255e06",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/scripts/check-anatomy-coverage.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "scripts/import-clinical-review.mjs",
-        "sha256": "05ba4ccaaeb016b466ad7e95d7e58fc3c59efff04d6196b5154616599197a7e7",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/scripts/import-clinical-review.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-        "sha256": "af47eaa4b2a802d2790cd164c293a74f032d3a9e66aebb112b7a63ec1b2659b2",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/current-atlas-delivery.test.mjs",
-        "sha256": "6206a2a13dff34b18ad4ff05d731e2c6fc3d9b62683c13e0b781cc8e68cd5276",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/current-atlas-delivery.test.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/review-pager-website-composition.test.mjs",
-        "sha256": "17cd2fa54421856625b1756f3157051a85991c1fd5ce29208986c4ec28ac6433",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/review-pager-website-composition.test.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/pancreatic-us-current-source-role.mjs",
-        "sha256": "55e43b65e67958b46a3b2047b7a59738b0d9285ada39d243d39d293f0655fda5",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-current-source-role.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/pancreatic-us-current-source-role.test.mjs",
-        "sha256": "aa9f6148f60050a6e9d84135b05d622650f9b07b7352001b96acc75a3fe6973a",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-current-source-role.test.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/pancreatic-us-review-pager-history.mjs",
-        "sha256": "0c946bbaa0f70f5922152f5b8850c4e2b9642f8c5c3931ecab3947509271b527",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-review-pager-history.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/pancreatic-us-website-composition.test.mjs",
-        "sha256": "2a5ce7946111d2f7bc0eed17db6cb72f703d62cc0efb3b11c9b4b2fbca711412",
-        "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-website-composition.test.mjs",
-        "inherited": false
-      }
+    "mainReviewSha256": "88c65c14aeccc3d8260f01e8db2ea619337b399ee081cdaa90a57ef32c5cbfe3",
+    "partialOnly": true,
+    "changedTests": 11,
+    "wholeOriginalsRecovered": 11,
+    "pureUnitCounts": {
+      "tests": 29,
+      "pass": 29,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "syntaxSources": 13,
+    "existingArterialCurrentRoleInverseUnchanged": true,
+    "existingCompleteReleaseArterialRowFunctionsExercised": 2,
+    "coverageExtraSources": [
+      "lib/legacy-shoulder-bone-references.ts",
+      "lib/legacy-shoulder-muscle-references.ts",
+      "lib/legacy-shoulder-references.ts"
     ],
-    "remoteNewPaths": 25,
-    "uniqueSourceOmissions": 0,
+    "rawCodeFixture": {
+      "sourcePath": "tests/fixtures/release-diagnostic-repair-20261024.json",
+      "backupPath": "tests/fixtures/release-diagnostic-repair-20261024.json.raw",
+      "sha256": "f998a4979db532ae55ef4eea5ef8ff3c5a999e3379c4f628dcc24a7d00e7de9b",
+      "schema": "vm-release-diagnostic-source-inverse-1",
+      "restore": "Remove only the final .raw suffix after byte verification; do not treat this partial tree as runnable."
+    },
+    "originalMedicalSuitesRun": false,
+    "currentProductionDeliveryRetested": false,
+    "fullStockRunStillSeparate": true,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,

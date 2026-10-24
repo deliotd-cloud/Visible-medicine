@@ -1,85 +1,34 @@
 {
-  "mainReviewSha256": "bc35622f8b04d9b9f6b7246b66680c6d6ad6ca065c75ddee49ebc45565c0b458",
-  "focusedCases": 404,
-  "focusedRoots": 62,
-  "strictTypeRoots": 39,
-  "strictTypeFiles": 3685,
-  "typeDiagnostics": 0,
-  "stockPrebuildBuildAndReviewVerifierPassed": true,
-  "reviewSources": 1605,
-  "reviewInputs": 1808,
-  "changedUsLessons": 1,
-  "otherNativeLessonsPreserved": 9935,
-  "sourceArtifactBindings": [
-    {
-      "websitePath": "lib/anatomy-coverage-view.ts",
-      "sha256": "9fd8f21d685f73850bda61d41b20c782d0b902a9456f604200bda69ae65b4b51",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/lib/anatomy-coverage-view.ts",
-      "inherited": false
-    },
-    {
-      "websitePath": "lib/atlas-delivery-policy.ts",
-      "sha256": "f7988c791145c0d4d26f9a2ee94f749d31f904fc409981929026cf7d5a220e13",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/lib/atlas-delivery-policy.ts",
-      "inherited": false
-    },
-    {
-      "websitePath": "scripts/check-anatomy-coverage.mjs",
-      "sha256": "d4b8440d02875f130ff91a5479487e569045b3da70c6936b53877c53ce255e06",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/scripts/check-anatomy-coverage.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "scripts/import-clinical-review.mjs",
-      "sha256": "05ba4ccaaeb016b466ad7e95d7e58fc3c59efff04d6196b5154616599197a7e7",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/scripts/import-clinical-review.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-      "sha256": "af47eaa4b2a802d2790cd164c293a74f032d3a9e66aebb112b7a63ec1b2659b2",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/current-atlas-delivery.test.mjs",
-      "sha256": "6206a2a13dff34b18ad4ff05d731e2c6fc3d9b62683c13e0b781cc8e68cd5276",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/current-atlas-delivery.test.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/review-pager-website-composition.test.mjs",
-      "sha256": "17cd2fa54421856625b1756f3157051a85991c1fd5ce29208986c4ec28ac6433",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/review-pager-website-composition.test.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/pancreatic-us-current-source-role.mjs",
-      "sha256": "55e43b65e67958b46a3b2047b7a59738b0d9285ada39d243d39d293f0655fda5",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-current-source-role.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/pancreatic-us-current-source-role.test.mjs",
-      "sha256": "aa9f6148f60050a6e9d84135b05d622650f9b07b7352001b96acc75a3fe6973a",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-current-source-role.test.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/pancreatic-us-review-pager-history.mjs",
-      "sha256": "0c946bbaa0f70f5922152f5b8850c4e2b9642f8c5c3931ecab3947509271b527",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-review-pager-history.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/pancreatic-us-website-composition.test.mjs",
-      "sha256": "2a5ce7946111d2f7bc0eed17db6cb72f703d62cc0efb3b11c9b4b2fbca711412",
-      "snapshotPath": "pending/pancreatic-us-website-20261024/website/tests/pancreatic-us-website-composition.test.mjs",
-      "inherited": false
-    }
+  "mainReviewSha256": "88c65c14aeccc3d8260f01e8db2ea619337b399ee081cdaa90a57ef32c5cbfe3",
+  "partialOnly": true,
+  "changedTests": 11,
+  "wholeOriginalsRecovered": 11,
+  "pureUnitCounts": {
+    "tests": 29,
+    "pass": 29,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "syntaxSources": 13,
+  "existingArterialCurrentRoleInverseUnchanged": true,
+  "existingCompleteReleaseArterialRowFunctionsExercised": 2,
+  "coverageExtraSources": [
+    "lib/legacy-shoulder-bone-references.ts",
+    "lib/legacy-shoulder-muscle-references.ts",
+    "lib/legacy-shoulder-references.ts"
   ],
-  "remoteNewPaths": 25,
-  "uniqueSourceOmissions": 0,
+  "rawCodeFixture": {
+    "sourcePath": "tests/fixtures/release-diagnostic-repair-20261024.json",
+    "backupPath": "tests/fixtures/release-diagnostic-repair-20261024.json.raw",
+    "sha256": "f998a4979db532ae55ef4eea5ef8ff3c5a999e3379c4f628dcc24a7d00e7de9b",
+    "schema": "vm-release-diagnostic-source-inverse-1",
+    "restore": "Remove only the final .raw suffix after byte verification; do not treat this partial tree as runnable."
+  },
+  "originalMedicalSuitesRun": false,
+  "currentProductionDeliveryRetested": false,
+  "fullStockRunStillSeparate": true,
   "previewChanged": false,
   "installed": false,
   "wholeSuitePassing": false,
