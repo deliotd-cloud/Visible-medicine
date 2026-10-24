@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T00:26:45.253Z",
+  "at": "2026-10-24T00:44:23.830Z",
   "sourceIdentity": {
-    "nativeSourceReceiptSha256": "85c73d35ac10e1dd6f010cbf6826cab30441eaf4e6e2cfdd101e4fbc55642746",
+    "websiteSourceReceiptSha256": "7c1829a1af5f7d0df175312c6c665516957979b9a48efa917e499fd03ae381dd",
     "atlasHead": "aa13c067197cad87bd0a9b2da5549bc4b33bfdf7",
     "atlasTree": "1ce3d1dbac28ff05f9aef22502c48e518304d18b",
-    "latestCompleteWebsiteSha256": "60d396a0aa37cb827fcaaafe6b06de90ded0c8ea39c01c528c718ff4b11f3199",
+    "reviewBinding": "5216ef1195e37903db9806b5c77d87f4ba1b141b1dbc82b0087651727fc3e429",
     "normalPreviewChanged": false
   },
-  "parent": "5f575561a768f249f59894909c00f49b486caf51",
-  "gitParent": "5f575561a768f249f59894909c00f49b486caf51",
+  "parent": "9171a31a3ba951520e72986386e1df8b16bebdfc",
+  "gitParent": "9171a31a3ba951520e72986386e1df8b16bebdfc",
   "files": [
     {
       "path": "app/globals.css",
@@ -21157,6 +21157,76 @@
       "sha256": "edfebbf3b007a49d242079bae00e621465a83fba55d34f5bfcf0f232c3f337ef"
     },
     {
+      "path": "pending/lower-arterial-website-20261024/coordination/admit-lower-arterial-coverage-20261024.mjs",
+      "bytes": 6479,
+      "sha256": "f7f7b716ea0f036ad5ec8f1b32e2b14fd9e768b0045974c7b1fb41ec748aab5a"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/coordination/build-lower-arterial-website-modules-20261024.mjs",
+      "bytes": 440,
+      "sha256": "921579d61d01ff578a583556d78c2cdbb1532857c994dc6cab4655fd18fdcb5a"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/coordination/check-lower-arterial-website-types-20261024.mjs",
+      "bytes": 5453,
+      "sha256": "9a918d0bca0989e72188fd6d70288605d09da2eb74c43a63057801d2616644c2"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/coordination/checkpoint-lower-arterial-website-20261024.mjs",
+      "bytes": 8064,
+      "sha256": "d3c9d13d031c79f097332c58e184dd042eba77f5e5c706eb6eb6825665fe7a5a"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/coordination/finish-lower-arterial-website-20261024.mjs",
+      "bytes": 4992,
+      "sha256": "84bdf029a1ded5426c51bca4c0397a92f7536f02830aefdf2e59fdf7a83d3f8f"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/coordination/integrate-lower-arterial-website-20261024.mjs",
+      "bytes": 10256,
+      "sha256": "f4f2c29a5645307f686f6683f01377e6397ee689dbb73855da6377870b1eb7a5"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/coordination/seal-lower-arterial-website-20261024.mjs",
+      "bytes": 12474,
+      "sha256": "c0d74ab04d6d8ad009284f72ddabfead0c0d0e660a732dd9ed760fd95756617e"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/coordination/serve-lower-arterial-website-20261024.mjs",
+      "bytes": 3258,
+      "sha256": "f86f18b8d834d40c5ad42b6cc0d859757626c09f78ef54600da5122822bf5be6"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "d62c80908bdda098263c6c07b1d777a030ef2fcd7993f0138cd8f0b1e5866232"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "1316823781e1b897e8f9dfac75c13e3d08ac84bcc9b9eef32a6ae4a66819d24c"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "81dfa41144652b9d7d01cc2883d9c466c1e8de69db7dbb0047f46918483bb997"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "a94f2926ad01c4070ec2850fdd5cdb7dc9f7bacd390b231873677ac051e7e672"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19274,
+      "sha256": "fb84049455d3349569c6abd2e1dd7a0cb7a46be399fcfe709cd0eb1d2e34465c"
+    },
+    {
+      "path": "pending/lower-arterial-website-20261024/website/tests/lower-arterial-current-delivery.test.mjs",
+      "bytes": 17875,
+      "sha256": "73b3e6c05882b7369f4273913d257aede15bc33515259246311025af99db0489"
+    },
+    {
       "path": "pending/lower-limb-nerve-coverage-20261022/coordination/checkpoint-lower-limb-nerve-coverage-20261022.mjs",
       "bytes": 7726,
       "sha256": "47221ed181562e5e8774304ce03c0014598b2fa189635fba6fbd727b473524f0"
@@ -29858,38 +29928,38 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authoredsource plusnewlowerarterial code/tests/type/pinproducer/dispatcher/validator and10coordinationrecipes; originaldraftnotes/notices/packagescripts asUTF8rawtext. No generatedJSONpins/revisions/registries, geometry/models, scans/identifiers/privateclinicalrecords/references, rawlogs/evidence/screenshots/typegraphs, dependencies/dist/emulatorstate. Fullnative/localidentity evidence staysF-only; notwhole/private/runnableoffdevicebackup.",
+  "scope": "Inherited verified authored-source filter plus eight coordination recipes and six Website authored code/test paths. No generated JSON/pins/manifests/inventory, models/geometry/scans/identifiers/private clinical decisions/references, dependencies/dist/emulator state, raw QA/screenshots/logs/type graphs. Complete local proofs remain on F. Not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "652ab5e31642330dfe6d0ff794ccdb8572a5a7e9007af280ee04e199adcfdcd6",
+    "mainReviewSha256": "118042470bcaf7b27fe008b38283429c5f64fbf988883ecd39cbffde1e1d7740",
+    "sourcePaths": 6488,
+    "allFourSources": "aa13c067197cad87bd0a9b2da5549bc4b33bfdf7",
     "newDraftConcepts": 6,
     "newSourceSelections": 12,
     "concepts": 222,
-    "representedRoots": 404,
-    "previous216DefinitionsPreserved": true,
-    "previous392TargetSessionsPreserved": true,
-    "identityNegatives": 416,
-    "practicePaths": 120,
-    "packetNegatives": 60,
-    "stalePosts": 12,
-    "strictRoots": 4,
-    "strictActualGraphFiles": 607,
-    "strictDiagnostics": 0,
-    "completePracticeValidatorChecks": 25152,
-    "completePracticeNegativeIdentityCases": 6385,
-    "stockNativeProductionBuild": true,
-    "buildFiles": 557,
-    "all1104SourceAnd9936LessonPayloadsPreserved": true,
-    "unchangedTeachingWorksheets": 1092,
-    "changedDisplayAndTeachingPins": 12,
-    "allNineShoulderRevisionsUnchanged": true,
-    "geometryDependenciesHoldsUnchanged": true,
-    "normalPreviewChanged": false,
-    "fullWebsiteIntegrationPending": true,
-    "privateDecisionStateRead": false,
-    "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "selections": 404,
+    "previous216DefinitionsAnd392SessionsPreserved": true,
+    "reviewSourceFiles": 1595,
+    "reviewInputs": 1788,
+    "reviewBinding": "5216ef1195e37903db9806b5c77d87f4ba1b141b1dbc82b0087651727fc3e429",
+    "viewerFiles": 54,
+    "viewerPackages": 24,
+    "focusedCases": 144,
+    "typeRoots": 24,
+    "typeAmbient": 6,
+    "typeActualGraphFiles": 3624,
+    "typeDiagnostics": 0,
+    "stockPrebuildAndWebsiteBuild": true,
+    "buildFiles": 1125,
+    "originalReviewVerifier": true,
+    "allModelsGeometryLicensesAccessUnchanged": true,
+    "allCoverageCountsAndHoldsUnchanged": true,
+    "oneGenuineRandomNewQuestionAnsweredInBrowser": true,
+    "allSixManualBrowserAcceptance": false,
+    "privateStateRead": false,
     "previewChanged": false,
     "installed": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
     "wholeSuitePassing": false,
     "spatialRegistration": false
   },
