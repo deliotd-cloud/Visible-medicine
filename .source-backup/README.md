@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited verified filtered authored source plus new upper-vascular authored code/tests/pin producer/dispatcher/validator and nine coordination recipes; original draft notes/notices/package scripts as UTF8 raw text. No generated JSON pins/revisions/registries, geometry/models, scans/identifiers/private records/references, raw logs/screenshots/type graphs, dependencies/dist/emulator state. Full native identity/evidence stays F-local; not a whole/private/runnable off-device backup.
+Inherited5947 independently verified filtered authored-source paths plus seven Website code/test paths; no removals or alias consolidation. Coordination recipes, generated metadata/pins/JSON, models/geometry/scans/identifiers/private references/decisions, dependency/production/emulator state and raw logs/screenshots/type graphs remain F-local. Not a whole/private/runnable off-device backup.

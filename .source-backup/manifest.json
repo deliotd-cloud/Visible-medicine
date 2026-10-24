@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T03:20:53.631Z",
+  "at": "2026-10-24T03:49:22.491Z",
   "sourceIdentity": {
-    "nativeSourceReceiptSha256": "1f2625d80c17a6d43d12bb538bc397facd3db1b5ac23c20d0b55aab4080db03c",
+    "websiteSourceReceiptSha256": "40fd40cba3b6f75253e0f3b825bd02d6a94e876e6d8aafedb5e8a043ce1ed8e2",
     "atlasHead": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
     "atlasTree": "9263c23e98b24068a8b4b4f0c4635bdd133c2fa5",
-    "latestCompleteWebsiteSha256": "8603c4cf03014055a2ca5c13670ca00e25bae723a4938c8093a8d8ffe1f513f4",
+    "reviewBinding": "dc88d72f453d9f033d23224b16ac0b07d0a209ad3d5f22d0c75b82a34afe547e",
     "normalPreviewChanged": false
   },
-  "parent": "6126829227eb5814cea92b5ce5508f825160ebce",
-  "gitParent": "6126829227eb5814cea92b5ce5508f825160ebce",
+  "parent": "6ef5f4b277be371b72328f11be20752f7404f5c8",
+  "gitParent": "6ef5f4b277be371b72328f11be20752f7404f5c8",
   "files": [
     {
       "path": "app/globals.css",
@@ -28792,6 +28792,41 @@
       "sha256": "a09dd53f160e30988602e6e7ea06050e914d9d9d8e4a1740ae1939028a923cc8"
     },
     {
+      "path": "pending/upper-vascular-website-20261024/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "b8597188f60f4fcc91034fe31e6a44f41f75fad6331a65de7475f3878acb52c9"
+    },
+    {
+      "path": "pending/upper-vascular-website-20261024/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "4bc6bc3b9c745924a5382786921fd99181d04a4bfd16634439658c74ce4d3d81"
+    },
+    {
+      "path": "pending/upper-vascular-website-20261024/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "fe78855150d712e01707ffffb9bdbe9dc6764bcf2470dc3171f5eccd0006adbc"
+    },
+    {
+      "path": "pending/upper-vascular-website-20261024/website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "9141b7b66b9b6f53677d802e633558888324873901ea2fd96136512185b3e1bf"
+    },
+    {
+      "path": "pending/upper-vascular-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19274,
+      "sha256": "5dd0b74703d40e2d52931a30b890de9c2cc30909c959cfaba7228808f493ac14"
+    },
+    {
+      "path": "pending/upper-vascular-website-20261024/website/tests/tour-explore-focus-current-delivery.test.mjs",
+      "bytes": 9502,
+      "sha256": "46d250b47f206c5200b5e6b0f0f9ea5de57a2f7da59ff2657809b7bdbde4817b"
+    },
+    {
+      "path": "pending/upper-vascular-website-20261024/website/tests/upper-vascular-current-delivery.test.mjs",
+      "bytes": 17272,
+      "sha256": "0eae4c4376f6d288b880b2ea591c416a6c5d648b4736abea2ab9c02f2338b23d"
+    },
+    {
       "path": "pending/ventricular-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
       "bytes": 35519,
       "sha256": "72a632437be62b52e5161c835dd6c33eaeadb92bbcd31009f0fe13cc0ad82dbc"
@@ -29748,39 +29783,116 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus new upper-vascular authored code/tests/pin producer/dispatcher/validator and nine coordination recipes; original draft notes/notices/package scripts as UTF8 raw text. No generated JSON pins/revisions/registries, geometry/models, scans/identifiers/private records/references, raw logs/screenshots/type graphs, dependencies/dist/emulator state. Full native identity/evidence stays F-local; not a whole/private/runnable off-device backup.",
+  "scope": "Inherited5947 independently verified filtered authored-source paths plus seven Website code/test paths; no removals or alias consolidation. Coordination recipes, generated metadata/pins/JSON, models/geometry/scans/identifiers/private references/decisions, dependency/production/emulator state and raw logs/screenshots/type graphs remain F-local. Not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "9136505f3d0991f118e1f6e3ee2d05330416730213ee76f4eac61c7d23c9289f",
+    "mainReviewSha256": "1a1dac982644c1abc0d787b7533675d7c1923e79b1efbe160c82657a96ea6f35",
+    "sourcePaths": 6496,
+    "allFourSources": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
+    "reviewSourceFiles": 1599,
+    "reviewInputs": 1792,
+    "reviewBinding": "dc88d72f453d9f033d23224b16ac0b07d0a209ad3d5f22d0c75b82a34afe547e",
+    "viewerFiles": 54,
+    "viewerPackages": 24,
+    "focusedCases": 140,
+    "typeRoots": 25,
+    "typeAmbient": 6,
+    "typeActualGraphFiles": 3628,
+    "typeDiagnostics": 0,
+    "stockPrebuildAndWebsiteBuild": true,
+    "buildFiles": 1125,
+    "originalReviewVerifier": true,
+    "optionalTourToExplore": true,
+    "sourceBoundHeadingFocusPreserved": true,
+    "actualExportedPublicRootPracticeVerified": true,
+    "actualWebsiteBrowserReplayPerformed": false,
+    "allModelsGeometryLicensesAccessUnchanged": true,
+    "allCoverageCountsAndHoldsUnchanged": true,
+    "concepts": 232,
+    "selections": 424,
     "newDraftConcepts": 10,
     "newSourceSelections": 20,
-    "concepts": 232,
-    "representedRoots": 424,
-    "previous222DefinitionsAnd404SessionsPreserved": true,
-    "identityNegatives": 672,
-    "practicePaths": 150,
-    "refusedRegionalPaths": 6,
-    "packetNegatives": 100,
-    "stalePosts": 20,
-    "strictRoots": 6,
-    "strictActualGraphFiles": 3334,
-    "strictDiagnostics": 0,
-    "completePracticeChecks": 25995,
-    "completePracticeNegativeIdentityCases": 6721,
-    "stockNativeProductionBuild": true,
-    "buildFiles": 557,
-    "all1104SourceAnd9936LessonPayloadsPreserved": true,
-    "unchangedTeachingWorksheets": 1084,
-    "changedDisplayAndTeachingPins": 20,
-    "allNineShoulderRevisionsUnchanged": true,
-    "dispatcherPackageAndOriginalValidatorWholeInverseVerified": true,
-    "geometryDependenciesHoldsUnchanged": true,
-    "normalPreviewChanged": false,
-    "fullWebsiteIntegrationPending": true,
-    "privateDecisionStateRead": false,
-    "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "packagedTeachingVerified": true,
+    "browser": {
+      "schema": "vm-exported-vascular-practice-browser-check/1",
+      "sourceCommit": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
+      "ownedTab": "180",
+      "url": "http://127.0.0.1:51916/atlas-runtime/head-neck/index.html?region=forearm",
+      "surface": "Actual original exported head-neck/root regional module, not a substituted component or signed-in Website shell",
+      "applicationBytesUnmodified": true,
+      "mode": "Quiz / Apply anatomy · draft",
+      "scope": "Forearm, vessels on, bones/muscles/connective off; both sides; default five-question session",
+      "availableUniqueConcepts": 6,
+      "session": [
+        {
+          "target": "Left basilic vein",
+          "response": "correct",
+          "score": "1/1"
+        },
+        {
+          "target": "Left anterior interosseous artery",
+          "selected": "Left radial artery",
+          "response": "Not quite",
+          "score": "1/2"
+        },
+        {
+          "target": "Left ulnar artery",
+          "response": "Skipped / No answer recorded",
+          "score": "1/3"
+        },
+        {
+          "target": "Left cephalic vein",
+          "response": "correct",
+          "score": "2/4"
+        },
+        {
+          "target": "Right common interosseous artery",
+          "response": "correct",
+          "score": "3/5"
+        }
+      ],
+      "resultsHeadingFocused": true,
+      "questionHeadingFocusedAfterAdvance": true,
+      "feedbackContainerFocusedAfterAnswer": true,
+      "explanationHiddenBeforeAnswer": true,
+      "expandedSourceLinkObserved": "University of Arkansas for Medical Sciences · Selected veins of the upper limb",
+      "draftAndReviewLimitationsObserved": true,
+      "retryAvailable": 2,
+      "retryTargets": [
+        "Left anterior interosseous artery",
+        "Left ulnar artery"
+      ],
+      "retryFinalScore": "2/2",
+      "correctTargetsNotRepeatedInRetry": true,
+      "renderedSameSideChoicesObserved": true,
+      "screenshotInspected": true,
+      "screenshotArchived": false,
+      "sampledConsole": {
+        "levels": [
+          "error",
+          "warn"
+        ],
+        "limit": 10,
+        "entriesReturned": 1,
+        "errorsReturned": 0,
+        "warning": "THREE.Clock deprecated; use THREE.Timer",
+        "warningTimestamp": "2026-10-24T03:36:13.220Z",
+        "consoleCleanClaimed": false
+      },
+      "ownedTabExplicitlyClosed": true,
+      "normalPreviewChanged": false,
+      "ownerTabsOrDraftsChanged": false,
+      "authenticatedWebsiteAcceptance": false,
+      "privateReviewBrowserAcceptance": false,
+      "assistiveTechnologyAcceptance": false,
+      "performanceAcceptance": false,
+      "clinicalApproval": false,
+      "patientSpaceRegistration": false,
+      "limits": "One desktop exported-module session and exact missed-target retry. No full signed-in Website/private Review, acquired-study, actual browser zoom, mobile, assistive-technology or performance acceptance; renderer deprecation remains open. Screenshot inspected in tool output, not archived. The normal preview was never installed/restarted/refreshed."
+    },
     "previewChanged": false,
     "installed": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
     "wholeSuitePassing": false,
     "spatialRegistration": false
   },
