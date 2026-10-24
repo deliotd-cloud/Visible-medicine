@@ -1,0 +1,133 @@
+{
+  "schema": "vm-head-review-legacy-fixture/1",
+  "sourceReceiptSha256": "dc0532736094fcd7225e1229af3a41322aacc591789bf1179c44476b98b7077e",
+  "sourceRows": [
+    {
+      "bytes": 15741,
+      "fixture": "source/app/workspace/atlas-review/head-learning/page.tsx.raw",
+      "sha256": "7da7521176d7867a1233e87d5ee4ba5dbcf6b4d44dd22383e9e996b0517a4913",
+      "path": "app/workspace/atlas-review/head-learning/page.tsx"
+    },
+    {
+      "bytes": 15427,
+      "fixture": "source/lib/head-atlas-links.ts.raw",
+      "sha256": "f60f84744f5346ee5e09c7414819148ef8d0b17ad157be19d805e0741177c149",
+      "path": "lib/head-atlas-links.ts"
+    },
+    {
+      "bytes": 2267,
+      "fixture": "source/lib/head-cerebellar-learning.ts.raw",
+      "sha256": "f726d8102b03bd3324545f66af326488a0c61bc034ca621fc4237eca26f4b99c",
+      "path": "lib/head-cerebellar-learning.ts"
+    },
+    {
+      "bytes": 6138,
+      "fixture": "source/lib/head-cerebellar-teaching.ts.raw",
+      "sha256": "9a3f47f4caa57f400f17c2c26f2088f2f030d51ae1da8a415200da43dc66d8b7",
+      "path": "lib/head-cerebellar-teaching.ts"
+    },
+    {
+      "bytes": 3906,
+      "fixture": "source/lib/head-ct-bone-comparison-review.ts.raw",
+      "sha256": "cdd5448b66bbb304a3157022545d92d28815770202bdb92a9df053356ec4667c",
+      "path": "lib/head-ct-bone-comparison-review.ts"
+    },
+    {
+      "bytes": 1532,
+      "fixture": "source/lib/head-image-only-comparison-review.ts.raw",
+      "sha256": "8a69bb7b2ad1ec366f35d6af4962996f8a40cacb8b4d2d91136917edc7b746e4",
+      "path": "lib/head-image-only-comparison-review.ts"
+    },
+    {
+      "bytes": 4718,
+      "fixture": "source/lib/head-image-only-links.ts.raw",
+      "sha256": "ee74f4c5077ba9f90eb3dcdfd6db7c4751d90ba03458f742b5cdf4d427924bdc",
+      "path": "lib/head-image-only-links.ts"
+    },
+    {
+      "bytes": 3796,
+      "fixture": "source/lib/head-insula-comparison-review.ts.raw",
+      "sha256": "5031ba7f912fb8843363c9dadabb8d6879a5e0a74f516c02f354e211fdbe73cc",
+      "path": "lib/head-insula-comparison-review.ts"
+    },
+    {
+      "bytes": 2334,
+      "fixture": "source/lib/head-insula-learning.ts.raw",
+      "sha256": "8500b4c9cfe8d137649401d92bf09962cf6452d59d898581d38f9ef790071085",
+      "path": "lib/head-insula-learning.ts"
+    },
+    {
+      "bytes": 5082,
+      "fixture": "source/lib/head-insula-teaching.ts.raw",
+      "sha256": "8e8f20b39e10dad052d52685e5144c14fdd90d6bee888394f52fdc6df8b9872e",
+      "path": "lib/head-insula-teaching.ts"
+    },
+    {
+      "bytes": 4441,
+      "fixture": "source/lib/head-mri-comparison-review.ts.raw",
+      "sha256": "e213c788f25a4c1940a1ba1cb1c138f934b36b04e7f445083742b3895cb3a211",
+      "path": "lib/head-mri-comparison-review.ts"
+    },
+    {
+      "bytes": 2388,
+      "fixture": "source/lib/head-mri-learning.ts.raw",
+      "sha256": "cd36a4c1bcbdb4eca49aa72402c79d3866824893060123c66004df6421df9714",
+      "path": "lib/head-mri-learning.ts"
+    },
+    {
+      "bytes": 7450,
+      "fixture": "source/lib/head-mri-only-teaching.ts.raw",
+      "sha256": "76d230c142f69f4ce1877145a4b7c79a75617066ab749a3a387709ed0a05942c",
+      "path": "lib/head-mri-only-teaching.ts"
+    },
+    {
+      "bytes": 7912,
+      "fixture": "source/lib/head-mri-review-draft-contract.ts.raw",
+      "sha256": "79cff730e612456ead32224ceb45db2c5fffcae7ca77a0b78183d0a3b2437b90",
+      "path": "lib/head-mri-review-draft-contract.ts"
+    },
+    {
+      "bytes": 3567,
+      "fixture": "source/lib/head-orbital-comparison-review.ts.raw",
+      "sha256": "ceea235ab41dd3ed1d2c85b383bcd96245e95818ba4c4581244be1413978bbab",
+      "path": "lib/head-orbital-comparison-review.ts"
+    },
+    {
+      "bytes": 5680,
+      "fixture": "source/lib/head-orbital-teaching.ts.raw",
+      "sha256": "6be7251a8ba426149a2498bfe453f619f02fc5d656fa83c68b1a73b8df14bd0b",
+      "path": "lib/head-orbital-teaching.ts"
+    },
+    {
+      "bytes": 25840,
+      "fixture": "source/tests/head-mri-comparison-page.test.ts.raw",
+      "sha256": "4ec8991cd826c4b614b780607b74584c4bd8bec2544782c02c31944c79351363",
+      "path": "tests/head-mri-comparison-page.test.ts"
+    }
+  ],
+  "modulePaths": [
+    "lib/head-atlas-links.ts",
+    "lib/head-cerebellar-learning.ts",
+    "lib/head-cerebellar-teaching.ts",
+    "lib/head-ct-bone-comparison-review.ts",
+    "lib/head-image-only-comparison-review.ts",
+    "lib/head-image-only-links.ts",
+    "lib/head-insula-comparison-review.ts",
+    "lib/head-insula-learning.ts",
+    "lib/head-insula-teaching.ts",
+    "lib/head-mri-comparison-review.ts",
+    "lib/head-mri-learning.ts",
+    "lib/head-mri-only-teaching.ts",
+    "lib/head-mri-review-draft-contract.ts",
+    "lib/head-orbital-comparison-review.ts",
+    "lib/head-orbital-teaching.ts",
+    "tests/head-mri-comparison-page.test.ts"
+  ],
+  "pagePath": "app/workspace/atlas-review/head-learning/page.tsx",
+  "entryPath": "tests/head-mri-comparison-page.test.ts",
+  "thirdPartyVersions": {
+    "typescript": "5.9.3",
+    "react-dom": "19.2.8",
+    "react": "19.2.8"
+  }
+}
