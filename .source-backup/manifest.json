@@ -1,76 +1,57 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T14:00:25.691Z",
+  "at": "2026-10-24T14:24:00.607Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "f03b2e81719843b3d62f6089d3362bb20404751f8f85f9f3525c85d386014ea1",
+    "websiteSourceReceiptSha256": "4058a3a368dc9573efc74c16d3b7e636057566bebfbb88232095322a459d21ea",
     "atlas": "b8ec59eeb0ec554b86d7ce01be992967e203b6a5",
-    "tree": "777e90bcf7448bf530ce381f401d71739b0019c5",
     "review": "51e53d8646aa309abbfd7161ccbdb27813d677d95e53e19bd31cb6ba2625e8b5",
     "sourceArtifactBindings": [
       {
-        "websitePath": "lib/anatomy-coverage-view.ts",
-        "sha256": "2e5ac088a78334c6556bc6484dceb6c53a1556c051040fc8a9c47f62a20f17b0",
-        "snapshotPath": "pending/toolbar-website-20261024/website/lib/anatomy-coverage-view.ts",
-        "inherited": false
-      },
-      {
-        "websitePath": "lib/atlas-delivery-policy.ts",
-        "sha256": "d6c4a9569486c746493d92105386e250bf5d027c6d8b4e24d6c408f31cf628f1",
-        "snapshotPath": "pending/toolbar-website-20261024/website/lib/atlas-delivery-policy.ts",
-        "inherited": false
-      },
-      {
-        "websitePath": "scripts/check-anatomy-coverage.mjs",
-        "sha256": "bae057379641a0b01fa9c82199b54e44b76006678957a9ff7c8668ec0d25e25b",
-        "snapshotPath": "pending/toolbar-website-20261024/website/scripts/check-anatomy-coverage.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "scripts/import-clinical-review.mjs",
-        "sha256": "e29f41c4ccc793362c3e4a7fe699b89366d1f593802175f7d0c684fb93af748b",
-        "snapshotPath": "pending/toolbar-website-20261024/website/scripts/import-clinical-review.mjs",
+        "websitePath": "components/ClinicalReviewInbox.tsx",
+        "sha256": "c80e693ec12ceae85f959563d1ee1746d4b543bc78ebf03c909bf6eb6e2a7897",
+        "snapshotPath": "pending/review-pager-website-20261024/website/components/ClinicalReviewInbox.tsx",
         "inherited": false
       },
       {
         "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-        "sha256": "6e42f5fa7cdd4ab2f76a98cc9c448f560e9f7ba69b8d819ee62052985489320a",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+        "sha256": "c5270715151599eb4c3ebcb5d58cc5049bbca25ecb5440ec854c7d9cff7792fd",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/current-atlas-delivery.test.mjs",
-        "sha256": "eb2a63d4b48e7aeafffaab41b42b414effe07862598f8e401fd8e851377670d1",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+        "websitePath": "tests/clinical-review-inbox-short-desktop.test.mjs",
+        "sha256": "ae22b55ce1509250dc440071251ca8c9b070362988b5c94ecb4beee59ed9a1d9",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/clinical-review-inbox-short-desktop.test.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/orbital-ct-website-composition.test.mjs",
-        "sha256": "d677fe4311023b075bcdd6075d2e58f2961d05915c7b324c486a0f9c3433bd45",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/orbital-ct-website-composition.test.mjs",
+        "websitePath": "tests/clinical-review-inbox-return-pager-focus.test.mjs",
+        "sha256": "041f00ddb2c092c2f364bfccd9ad6c6b24ba54aee00ba13067d3aaaf155955cc",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/clinical-review-inbox-return-pager-focus.test.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/toolbar-current-source-role.mjs",
-        "sha256": "9d8f2be6f476568696772d5b2621e0043907a6e44e72ca8eb2065af4f2ac1abb",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-current-source-role.mjs",
+        "websitePath": "tests/review-pager-ui-source-role.mjs",
+        "sha256": "8828eb38b9f2baf6742dbc4ad4ade033172e5ae90021c2eb8616dd5938543b6c",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-ui-source-role.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/toolbar-current-source-role.test.mjs",
-        "sha256": "f437be71446e5572f565b57fa42d505c1a24ed7cbe27c584bcd66eae93caa779",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-current-source-role.test.mjs",
+        "websitePath": "tests/review-pager-website-composition.test.mjs",
+        "sha256": "35ba1237ac60dc89b1bc4812e66525f85a6879fb9e8671883308d12018755547",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-website-composition.test.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/toolbar-website-composition.test.mjs",
-        "sha256": "b2d0b82a12782b0f5e242112c6d02c896e448a83cb6b974fb02bd1cc430fbbb1",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-website-composition.test.mjs",
+        "websitePath": "tests/review-pager-inbox-history.mjs",
+        "sha256": "7752628c064e83a09754e0d8812322f0e189d6df26dc2fd3d705582ea53b9ed6",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-inbox-history.mjs",
         "inherited": false
       }
     ]
   },
-  "parent": "024f0db6b9e6cbdefa199281866253fa386cccff",
-  "gitParent": "024f0db6b9e6cbdefa199281866253fa386cccff",
+  "parent": "cad126a2483f3ff142d171bd89b6e824f45f73c2",
+  "gitParent": "cad126a2483f3ff142d171bd89b6e824f45f73c2",
   "files": [
     {
       "path": "app/globals.css",
@@ -25778,6 +25759,126 @@
       "sha256": "c25c5298f4cbad04e82ae441985ae85ce0ba7f20934aa76c85bea5e00bef1c7d"
     },
     {
+      "path": "pending/review-pager-website-20261024/recipes/adapt-review-pager-history-20261024.mjs",
+      "bytes": 1334,
+      "sha256": "fa7b2e3b39acfef44200d95aafc5c82cb157f17a92a2331b6bf145754b1fe088"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/check-review-pager-website-types-20261024.mjs",
+      "bytes": 4707,
+      "sha256": "730c4b9b3bc2eba94181194a27898d8a7862d58ab66b4f60c569ebc8ffdd007a"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/checkpoint-review-pager-website-20261024.mjs",
+      "bytes": 10970,
+      "sha256": "af7937e24080a8c7b42200b2cb0ac8140b80b2ce090b4a718179f09195f046c1"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/prepare-review-pager-proof-20261024.mjs",
+      "bytes": 2751,
+      "sha256": "7a14de22d5d6922f5fce9bb3a4313cd960ec6af138ea6f54b5a11e956766baac"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/prepare-review-pager-website-20261024.mjs",
+      "bytes": 4030,
+      "sha256": "726b65e472c7ba2b6246ad723f4ad8788fe6b07674cdceab02b5c4091feda687"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/record-review-pager-browser-20261024.mjs",
+      "bytes": 3864,
+      "sha256": "19f160e180f3e12241078cc78417d4584a2475d2454e2e73dfc2f68ff8077258"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/review-pager-focus-browser-20261024.mjs",
+      "bytes": 4944,
+      "sha256": "5395fb252930657844f137425ec7bd5d956b532f85930d965535d5d84268a9e5"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/review-pager-focus-browser-20261024.tsx",
+      "bytes": 2596,
+      "sha256": "a60ed810d529b74de561b68c4bec3c1c13080cb1f9c228e75fc538049e2f4473"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/review-pager-inbox-history.template.mjs",
+      "bytes": 1389,
+      "sha256": "7752628c064e83a09754e0d8812322f0e189d6df26dc2fd3d705582ea53b9ed6"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/review-pager-ui-source-role.template.mjs",
+      "bytes": 2692,
+      "sha256": "8828eb38b9f2baf6742dbc4ad4ade033172e5ae90021c2eb8616dd5938543b6c"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/review-pager-website-composition.template.mjs",
+      "bytes": 2346,
+      "sha256": "914d0f382bd826fc1e29197d258a7c362c3541e29e07026aa751e230d0406d38"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/run-review-pager-proof-20261024.mjs",
+      "bytes": 3521,
+      "sha256": "215e9b1e9d9bec3b143ba4d504ef4cf93af10270f5fb4d74ae84e087db27e2f7"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/run-review-pager-website-20261024.mjs",
+      "bytes": 4355,
+      "sha256": "07f6e230302350f2a57ca49ba74cf6da9f9c9f2151b09909b64a18c66938950b"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/run-review-pager-website-series-20261024.mjs",
+      "bytes": 413,
+      "sha256": "f05544b5f6820ba9333bb6aa7e6fe321a5e18c2c0ac1fcdbd43d8b555974844b"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/seal-review-pager-website-20261024.mjs",
+      "bytes": 4210,
+      "sha256": "71fc93ddea8be17364b070ddd8eb1a6476ec76f1b29d25ae24707ba5a44ba8b0"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/test-review-pager-website-20261024.mjs",
+      "bytes": 4070,
+      "sha256": "b0cf46a4df279ae0b44f8cb640f3d719c2aa1971d48b9e145b4508e95683c72f"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/recipes/wire-review-pager-website-20261024.mjs",
+      "bytes": 2194,
+      "sha256": "f0b0f79cd10cf6b0a67a3c00c6efb7eb4e8293f5dbe14b39484df7fa0e014b10"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/website/components/ClinicalReviewInbox.tsx",
+      "bytes": 35679,
+      "sha256": "c80e693ec12ceae85f959563d1ee1746d4b543bc78ebf03c909bf6eb6e2a7897"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+      "bytes": 6550,
+      "sha256": "c5270715151599eb4c3ebcb5d58cc5049bbca25ecb5440ec854c7d9cff7792fd"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/website/tests/clinical-review-inbox-return-pager-focus.test.mjs",
+      "bytes": 11223,
+      "sha256": "041f00ddb2c092c2f364bfccd9ad6c6b24ba54aee00ba13067d3aaaf155955cc"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/website/tests/clinical-review-inbox-short-desktop.test.mjs",
+      "bytes": 2568,
+      "sha256": "ae22b55ce1509250dc440071251ca8c9b070362988b5c94ecb4beee59ed9a1d9"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/website/tests/review-pager-inbox-history.mjs",
+      "bytes": 1389,
+      "sha256": "7752628c064e83a09754e0d8812322f0e189d6df26dc2fd3d705582ea53b9ed6"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/website/tests/review-pager-ui-source-role.mjs",
+      "bytes": 2692,
+      "sha256": "8828eb38b9f2baf6742dbc4ad4ade033172e5ae90021c2eb8616dd5938543b6c"
+    },
+    {
+      "path": "pending/review-pager-website-20261024/website/tests/review-pager-website-composition.test.mjs",
+      "bytes": 3450,
+      "sha256": "35ba1237ac60dc89b1bc4812e66525f85a6879fb9e8671883308d12018755547"
+    },
+    {
       "path": "pending/review-parser-context-20261023/atlas/docs/REVIEW_TOUR_CONTEXT.md.raw",
       "bytes": 1833,
       "sha256": "2aa39edd24b492235b17bb3a8cd461cad31c4f672fc49b09ab90216b9baa5178"
@@ -29919,81 +30020,63 @@
     }
   ],
   "removed": [],
-  "scope": "Carry5944 independently verified selected source blobs and parent linkage, preserving inherited exact duplicate aliases; add explicit authored source/styles/test/recipe code only, no removals. Generated metadata/Review/exports, models/scans/private data/raw QA/build/dependencies and later coordination stay F-local. Not whole/private/runnable off-device recovery.",
+  "scope": "Carry5969independently verified selected source blobs and verified parent linkage/inherited duplicate aliases; add explicit authored code/tests/recipes only, no removals. Models/scans/private data/generated Review/exports/raw browser QA/build/dependencies and later coordination stay F-local; not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "47d863d59584fb291df76a4ddec317794871ee2084650082437dd73a6a1ed4d3",
-    "focusedCases": 382,
-    "focusedRoots": 57,
-    "strictTypeRoots": 38,
-    "strictTypeFiles": 3684,
+    "mainReviewSha256": "c9dedd290f7522e7c3af416006338faa77c2d1e8c4f274963261cd0da666cd68",
+    "focusedCases": 126,
+    "focusedRoots": 17,
+    "strictTypeRoots": 1,
+    "strictTypeFiles": 565,
     "typeDiagnostics": 0,
     "stockPrebuildBuildAndReviewVerifierPassed": true,
-    "reviewSources": 1604,
-    "reviewInputs": 1807,
+    "reviewInputsUnchanged": 1807,
+    "actualProductionReactFixtureScenarios": 5,
+    "signedInAcceptance": false,
     "sourceArtifactBindings": [
       {
-        "websitePath": "lib/anatomy-coverage-view.ts",
-        "sha256": "2e5ac088a78334c6556bc6484dceb6c53a1556c051040fc8a9c47f62a20f17b0",
-        "snapshotPath": "pending/toolbar-website-20261024/website/lib/anatomy-coverage-view.ts",
-        "inherited": false
-      },
-      {
-        "websitePath": "lib/atlas-delivery-policy.ts",
-        "sha256": "d6c4a9569486c746493d92105386e250bf5d027c6d8b4e24d6c408f31cf628f1",
-        "snapshotPath": "pending/toolbar-website-20261024/website/lib/atlas-delivery-policy.ts",
-        "inherited": false
-      },
-      {
-        "websitePath": "scripts/check-anatomy-coverage.mjs",
-        "sha256": "bae057379641a0b01fa9c82199b54e44b76006678957a9ff7c8668ec0d25e25b",
-        "snapshotPath": "pending/toolbar-website-20261024/website/scripts/check-anatomy-coverage.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "scripts/import-clinical-review.mjs",
-        "sha256": "e29f41c4ccc793362c3e4a7fe699b89366d1f593802175f7d0c684fb93af748b",
-        "snapshotPath": "pending/toolbar-website-20261024/website/scripts/import-clinical-review.mjs",
+        "websitePath": "components/ClinicalReviewInbox.tsx",
+        "sha256": "c80e693ec12ceae85f959563d1ee1746d4b543bc78ebf03c909bf6eb6e2a7897",
+        "snapshotPath": "pending/review-pager-website-20261024/website/components/ClinicalReviewInbox.tsx",
         "inherited": false
       },
       {
         "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-        "sha256": "6e42f5fa7cdd4ab2f76a98cc9c448f560e9f7ba69b8d819ee62052985489320a",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+        "sha256": "c5270715151599eb4c3ebcb5d58cc5049bbca25ecb5440ec854c7d9cff7792fd",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/current-atlas-delivery.test.mjs",
-        "sha256": "eb2a63d4b48e7aeafffaab41b42b414effe07862598f8e401fd8e851377670d1",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+        "websitePath": "tests/clinical-review-inbox-short-desktop.test.mjs",
+        "sha256": "ae22b55ce1509250dc440071251ca8c9b070362988b5c94ecb4beee59ed9a1d9",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/clinical-review-inbox-short-desktop.test.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/orbital-ct-website-composition.test.mjs",
-        "sha256": "d677fe4311023b075bcdd6075d2e58f2961d05915c7b324c486a0f9c3433bd45",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/orbital-ct-website-composition.test.mjs",
+        "websitePath": "tests/clinical-review-inbox-return-pager-focus.test.mjs",
+        "sha256": "041f00ddb2c092c2f364bfccd9ad6c6b24ba54aee00ba13067d3aaaf155955cc",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/clinical-review-inbox-return-pager-focus.test.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/toolbar-current-source-role.mjs",
-        "sha256": "9d8f2be6f476568696772d5b2621e0043907a6e44e72ca8eb2065af4f2ac1abb",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-current-source-role.mjs",
+        "websitePath": "tests/review-pager-ui-source-role.mjs",
+        "sha256": "8828eb38b9f2baf6742dbc4ad4ade033172e5ae90021c2eb8616dd5938543b6c",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-ui-source-role.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/toolbar-current-source-role.test.mjs",
-        "sha256": "f437be71446e5572f565b57fa42d505c1a24ed7cbe27c584bcd66eae93caa779",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-current-source-role.test.mjs",
+        "websitePath": "tests/review-pager-website-composition.test.mjs",
+        "sha256": "35ba1237ac60dc89b1bc4812e66525f85a6879fb9e8671883308d12018755547",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-website-composition.test.mjs",
         "inherited": false
       },
       {
-        "websitePath": "tests/toolbar-website-composition.test.mjs",
-        "sha256": "b2d0b82a12782b0f5e242112c6d02c896e448a83cb6b974fb02bd1cc430fbbb1",
-        "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-website-composition.test.mjs",
+        "websitePath": "tests/review-pager-inbox-history.mjs",
+        "sha256": "7752628c064e83a09754e0d8812322f0e189d6df26dc2fd3d705582ea53b9ed6",
+        "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-inbox-history.mjs",
         "inherited": false
       }
     ],
-    "remoteNewPaths": 25,
-    "uniqueSourceOmissions": 0,
+    "remoteNewPaths": 24,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,

@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Carry5944 independently verified selected source blobs and parent linkage, preserving inherited exact duplicate aliases; add explicit authored source/styles/test/recipe code only, no removals. Generated metadata/Review/exports, models/scans/private data/raw QA/build/dependencies and later coordination stay F-local. Not whole/private/runnable off-device recovery.
+Carry5969independently verified selected source blobs and verified parent linkage/inherited duplicate aliases; add explicit authored code/tests/recipes only, no removals. Models/scans/private data/generated Review/exports/raw browser QA/build/dependencies and later coordination stay F-local; not whole/private/runnable off-device recovery.

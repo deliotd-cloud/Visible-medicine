@@ -1,0 +1,13 @@
+import {readInboxHistoricalSource} from './review-pager-inbox-history.mjs';
+import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {createHash} from 'node:crypto';import test from 'node:test';import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url)),parent='F:/VisibleMedicine/staging/20261024-lower-arterial-website',sha=b=>createHash('sha256').update(b).digest('hex');
+const receipt=readFileSync(parent+'/SOURCE_BOUND.json');assert.equal(sha(receipt),'7c1829a1af5f7d0df175312c6c665516957979b9a48efa917e499fd03ae381dd');const source=JSON.parse(receipt),read=p=>readInboxHistoricalSource(p,root),prior=p=>{const row=source.sourceRows.find(r=>r.path===p);assert(row);const bytes=readFileSync(source.website+'/'+p);assert.equal(sha(bytes),row.sha256);return bytes;};
+test('short-desktop sizing is an append-only bounded CSS improvement, not a whole-page scroll lock',()=>{
+ const old=prior('components/clinical-review-inbox.css').toString(),css=read('components/clinical-review-inbox.css').toString();assert(css.startsWith(old));const extra=css.slice(old.length);assert.equal(extra.split('@media').length,3);assert(extra.includes('@media(min-width:901px) and (min-height:480px) and (max-height:680px)'));assert(extra.includes('@media(min-width:1100px) and (min-height:480px) and (max-height:680px)'));assert(extra.includes('.clinical-review-inbox-list { max-height:min(48vh,30rem); overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; scrollbar-gutter:stable; }'));assert(extra.includes('grid-template-columns:minmax(15.5rem, .8fr) minmax(0, 1.9fr)'));assert(extra.includes('grid-template-columns:repeat(2,minmax(0,1fr))'));assert(!/\b(?:body|html)\b\s*\{|overflow-y:hidden|height:100vh|position:fixed|font-size:|display:none|tab-index/.test(extra));
+});
+test('actual inbox behavior, IDs, focus/navigation and server/access contracts are unchanged',()=>{
+ for(const p of ['components/ClinicalReviewInbox.tsx','lib/clinical-review-fetch.ts','lib/clinical-review-inbox-contract.ts','lib/clinical-review-inbox.ts','app/api/atlas-review/inbox/route.ts'])assert.deepEqual(read(p),prior(p),p);
+});
+test('every original workbench assertion survives the precise title clarification',()=>{
+ const p='tests/clinical-review-inbox-workbench.test.mjs',old=prior(p).toString(),now=read(p).toString();assert.equal(now.replace("test('original tall-desktop scroll containment and width thresholds remain intact'","test('scroll containment applies only above desktop width and height thresholds'"),old);
+});
