@@ -1,0 +1,18 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const phase=process.argv[2],stage='F:/VisibleMedicine/staging/20261024-native-slice-commit',site=stage+'/website';
+assert(['extended-baseline','lifecycle','focused','focused-v2','historical-parent'].includes(phase));const dir=stage+'/checks/'+phase;assert(!fs.existsSync(dir));fs.mkdirSync(dir,{recursive:true});
+const focused=['native-slice-commit.test.mjs','native-slice-commit-scope.test.mjs','native-slice-legacy-adapters.test.mjs','head-slice-keyboard.test.ts','head-mask-picking-ui.test.ts','head-slice-zoom.test.ts','head-pan-source-transition.test.ts','head-pan-interruption.test.ts','head-pane-expansion-labels.test.mjs','native-locate-composed.test.mjs','head-window-drag.test.ts','head-window-drag-interruption.test.ts','slice-wheel.test.mjs','head-slice-viewport.test.ts'];
+const parent=json(stage+'/PREPARATION.json').parentWebsite,cwd=phase==='historical-parent'?parent:site;
+const selected=phase==='historical-parent'?['head-pan-source-transition.test.ts']:phase==='focused-v2'?focused.filter(p=>p!=='head-pan-source-transition.test.ts'):phase==='focused'?focused:['native-slice-commit.test.mjs'];
+const roots=selected.map(p=>'tests/'+p);
+const source=phase==='extended-baseline'?stage+'/before/HeadAtlasViewer.tsx':cwd+'/components/HeadAtlasViewer.tsx';
+const inputs=[source,...roots.map(p=>cwd+'/'+p),cwd+'/lib/head-window-drag.ts',cwd+'/lib/slice-wheel.mjs',cwd+'/lib/head-atlas-geometry.mjs',cwd+'/lib/head-slice-viewport.ts'].map(p=>({path:p,sha256:hash(p)}));
+const args=['--max-old-space-size=256','--test','--test-concurrency=1',...roots];
+const at=new Date().toISOString(),result=spawnSync(process.execPath,args,{cwd,env:{...process.env,VM_NATIVE_SLICE_SOURCE:source},windowsHide:true,encoding:'utf8',maxBuffer:32*1024*1024});
+fs.writeFileSync(dir+'/stdout.log',result.stdout??'');fs.writeFileSync(dir+'/stderr.log',result.stderr??'');
+for(const r of inputs)assert.equal(hash(r.path),r.sha256,r.path);
+const out=result.stdout??'',counts=Object.fromEntries(['tests','pass','fail','cancelled','skipped'].map(k=>[k,Number(out.match(new RegExp('(?:ℹ|#) '+k+' (\\d+)'))?.[1]??NaN)]));
+const terminal={at,finished:new Date().toISOString(),phase,command:[process.execPath,...args],cwd,source,inputs,code:result.status,signal:result.signal,error:result.error?.message??null,counts,stdoutSha256:hash(dir+'/stdout.log'),stderrSha256:hash(dir+'/stderr.log'),previewChanged:false,installed:false};
+fs.writeFileSync(dir+'/TERMINAL.json',JSON.stringify(terminal,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({phase,code:result.status,counts,receipt:dir+'/TERMINAL.json'}));if(result.status)process.exitCode=result.status;
