@@ -1,15 +1,130 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T12:12:58.479Z",
+  "at": "2026-10-24T12:43:39.442Z",
   "sourceIdentity": {
-    "atlasHead": "80d323ec504afc7867e3e716bf735681a29ab5bc",
-    "atlasTree": "6bef533e9242fbd33d8393cf62082030bf6e1042",
-    "parentAtlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
-    "latestCompleteWebsiteSha256": "3d9c3ca38a29d2f7320222711bca73d22f5c85771a28a3fe6c3219acd03ac4eb",
-    "sourceReceiptSha256": "b7b656f8419b42e26ea239e821f0b4726e6b673f2460834a52fec1d962231029"
+    "websiteSourceReceiptSha256": "bdbb6eada06ea817ec27ef1da386563be94c5a417a140b03e37c54bf17e0a758",
+    "atlas": "80d323ec504afc7867e3e716bf735681a29ab5bc",
+    "tree": "6bef533e9242fbd33d8393cf62082030bf6e1042",
+    "review": "aaf4f5364036f6cdcfb3460b78a74071bf0c498b6107997b9ca425a3bfaea4ce",
+    "sourceArtifactBindings": [
+      {
+        "websitePath": "lib/anatomy-coverage-view.ts",
+        "sha256": "efc61f67fadce4f8075bbde933df3774c9b1354c32a845567b39e3bf2a4e64b1",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/lib/anatomy-coverage-view.ts",
+        "inherited": false
+      },
+      {
+        "websitePath": "lib/atlas-delivery-policy.ts",
+        "sha256": "7bbd3bd0d28bfde8254d3b4e735e5667395ca0ce2d7a0307a946b656863a95cf",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/lib/atlas-delivery-policy.ts",
+        "inherited": false
+      },
+      {
+        "websitePath": "scripts/check-anatomy-coverage.mjs",
+        "sha256": "e74ea567afc79fc9225aeb43d193efa20f9997db2ffe0c9a0b0ea9ec6260e699",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/scripts/check-anatomy-coverage.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "scripts/import-clinical-review.mjs",
+        "sha256": "81bf539cf56c39507c90d3c75753cc132119a13efd9422b358dd8f0d84b5205c",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/scripts/import-clinical-review.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/adjacent-current-tour-source-role.mjs",
+        "sha256": "51981ba5db87572eec4134f28f3e42553a43557b9cb18b37f85344fa8df02e4c",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/current-atlas-delivery.test.mjs",
+        "sha256": "e4700413f47c9bf03e23bca5573d2c355e2c5299ba7179644be937d915d6865a",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-filtered-layout.test.mjs",
+        "sha256": "d90c2525ed3c8669fe3a7dd84f295797d9c33b2b894adcb1325a3190a16c322e",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/website/tests/head-filtered-layout.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-study-set-display-epoch.test.mjs",
+        "sha256": "4a6b266a15981fe6f54da574ba191c5656ed1610a8eea9c8c6c5ca8a3e9f36d3",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/head-study-set-display-epoch.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-website-composition.test.mjs",
+        "sha256": "5dc556d90ad379071256b61e39a67f06b3d8a6fb2861ce4aa937885e598b5238",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/head-study-set-website-composition.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-toolbar-compact.test.mjs",
+        "sha256": "fb89183c694748217ddbaac5482355bae13c30b81992e4dabe57d0f0a8c9d60d",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/website/tests/head-toolbar-compact.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/fixtures/current-atlas-delivery-studio-b79.mjs.raw",
+        "sha256": "039172c405c7bfa8709acd13bdf086f1437c4624a478f45390267f06d4bebcbf",
+        "snapshotPath": "pending/cervical-vascular-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-layout-current-delivery.test.mjs",
+        "sha256": "fb8cb0d32e422b882dc9a86216a54f0e2d0d5543e8ff6a268a2c6e38cbf4f525",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/recipes/head-layout-current-delivery.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-layout-history-adapter.mjs",
+        "sha256": "c1e2fd589cdb8c4f5571c2d503bcb7f8418ffe20d4dc2aa1af6bfa09d1a6341d",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/website/tests/head-layout-history-adapter.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-layout-history-adapter.test.mjs",
+        "sha256": "461404ecbd81aea66aa31db2ac03d1fd76cb4e2bc2a09babff44ee059873b76f",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/website/tests/head-layout-history-adapter.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-study-website-historical-source.mjs",
+        "sha256": "e0c85aa5f56bc52da2d2f33cb6e2d386de6bef7cd179b2e9448772837af826b1",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/head-study-website-historical-source.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-website-historical-source.test.mjs",
+        "sha256": "f03281b8d425f6a3ce05b372bfbc1069bdc06321dbccd962c7404f99bb660d82",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/head-study-website-historical-source.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/orbital-ct-current-source-role.mjs",
+        "sha256": "5c116b7987b8baf8fe5322dcabeb1dab1ba32c4ad989d11507e15c3afc990063",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-current-source-role.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/orbital-ct-current-source-role.test.mjs",
+        "sha256": "d5df624c7dfb5603ab7a6515a5ed9f603b348fce756c714d6bed82be21ed865f",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-current-source-role.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/orbital-ct-website-composition.test.mjs",
+        "sha256": "46be06255820a70fb676c1eaa96d626b3d97880fe98dca066040df8107fa5ba0",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-website-composition.test.mjs",
+        "inherited": false
+      }
+    ]
   },
-  "parent": "ef49ebc47f6d51d2dd5ce7b048ed3caecefdf257",
-  "gitParent": "ef49ebc47f6d51d2dd5ce7b048ed3caecefdf257",
+  "parent": "6f42a5d8d88e3d3375229e72084583eccbd3123f",
+  "gitParent": "6f42a5d8d88e3d3375229e72084583eccbd3123f",
   "files": [
     {
       "path": "app/globals.css",
@@ -17597,11 +17712,6 @@
       "sha256": "d90c2525ed3c8669fe3a7dd84f295797d9c33b2b894adcb1325a3190a16c322e"
     },
     {
-      "path": "pending/head-layout-history-verified-20261024/website/tests/head-layout-current-delivery.test.mjs",
-      "bytes": 1419,
-      "sha256": "fb8cb0d32e422b882dc9a86216a54f0e2d0d5543e8ff6a268a2c6e38cbf4f525"
-    },
-    {
       "path": "pending/head-layout-history-verified-20261024/website/tests/head-layout-history-adapter.mjs",
       "bytes": 7232,
       "sha256": "c1e2fd589cdb8c4f5571c2d503bcb7f8418ffe20d4dc2aa1af6bfa09d1a6341d"
@@ -18552,11 +18662,6 @@
       "sha256": "a14d1d851fff12960b35ffe71e282a0f2ec00e9a9077c74e72d3ed456ad25daa"
     },
     {
-      "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/tests/head-toolbar-compact.test.mjs",
-      "bytes": 10762,
-      "sha256": "650daf34edcc3cd8de98c91fbe045bdf1250945356ceb3947cf14e55d1f2a3b8"
-    },
-    {
       "path": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/RAW/tests/head-toolbar-compact.test.mjs",
       "bytes": 8231,
       "sha256": "17936c18d1b464115327b6ffa75d2ec6988919e5f4f2e5456395ac835166c9ec"
@@ -18585,11 +18690,6 @@
       "path": "pending/head-tools-20261022/20261022-head-tools-consumer-admission/RAW/tests/head-disclosure-role-preservation-20261021.test.mjs",
       "bytes": 6516,
       "sha256": "92a0e6cb75e50a50a336fa22520e41661dd9feecba2a4e39948bed1ce57bb349"
-    },
-    {
-      "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/CODE/tests/head-filtered-layout.test.mjs",
-      "bytes": 4574,
-      "sha256": "5dc4a8d99ee20f02d8724bc6d952fe039a83f32c6245eb85b2efee28c646ff27"
     },
     {
       "path": "pending/head-tools-20261022/20261022-head-tools-role-admission/CODE/tests/head-tools-epoch-20261022.mjs",
@@ -19207,11 +19307,6 @@
       "sha256": "4654b27334f5f7d874f61dbe01b378df58da8419022e0504341a9144d5eb4578"
     },
     {
-      "path": "pending/image-tools-bound-20261023/preimages/tests/studio-history-controller-migration.test.mjs.raw",
-      "bytes": 5329,
-      "sha256": "71ccdedf73e0508619f27ecfddee7b8dac7cf5af487998d2df8b602c62ae088e"
-    },
-    {
       "path": "pending/imaging-desktop-layout-20261024/coordination/capture-imaging-desktop-layout-20261024.mjs",
       "bytes": 3606,
       "sha256": "40c8b45c8f7874b1da20df30a3bd68da2fb2ea090a4d66eaa12d3e05fde1f326"
@@ -19347,34 +19442,9 @@
       "sha256": "c68f3335a54954f60c09acb1fa0ef06da1177923fd3be10b4c618409806cb0e2"
     },
     {
-      "path": "pending/imaging-presentation-20261022/website-preimages/app/globals.css",
-      "bytes": 171538,
-      "sha256": "67dbecc0822dd7c5b08633192ec9dbae32e16d097e8cf87bb7aaaceb4bc45c32"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website-preimages/app/layout.tsx",
-      "bytes": 3215,
-      "sha256": "e99b6206d0554964d022640760a5abefa573b76d910a71c3586a21536315a1be"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website-preimages/components/HeadAtlasViewer.tsx",
-      "bytes": 109509,
-      "sha256": "a9b7c4b3d8f4febab394e983ace55df020cbcc84dc33daa8b2af6e7abd90fd1b"
-    },
-    {
       "path": "pending/imaging-presentation-20261022/website-preimages/tests/font-alias-scope.test.mjs",
       "bytes": 1404,
       "sha256": "260cab95ad4cbf654cbaff873670a325e8646735311fa7b646f9cc1f09583acd"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website-preimages/tests/head-disclosure-harness-preservation.test.mjs",
-      "bytes": 2845,
-      "sha256": "b3e4fcef813339ee685f821c5d40de52965f81d7a7a2f75f0d678b8b82f84b29"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website-preimages/tests/head-history-role-preservation.test.mjs",
-      "bytes": 6257,
-      "sha256": "969472e3491b6aff691228a5f7a6af09f9ea10bfbe44f474dc51d3469c5c799e"
     },
     {
       "path": "pending/imaging-presentation-20261022/website-preimages/tests/head-model-access-integration.test.mjs",
@@ -19402,84 +19472,14 @@
       "sha256": "d56ffa8ae93e59626c46a1d4347078b4c3c8b7601f9487e80a293d57d74af977"
     },
     {
-      "path": "pending/imaging-presentation-20261022/website/components/HeadAtlasViewer.tsx",
-      "bytes": 109920,
-      "sha256": "2597a39850383fcc7be5c11762ad767101f0c7978c33099b854d51ef8ddc0509"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/app/globals.css.raw",
-      "bytes": 171538,
-      "sha256": "67dbecc0822dd7c5b08633192ec9dbae32e16d097e8cf87bb7aaaceb4bc45c32"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/app/layout.tsx.raw",
-      "bytes": 3215,
-      "sha256": "e99b6206d0554964d022640760a5abefa573b76d910a71c3586a21536315a1be"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/components/HeadAtlasViewer.tsx.raw",
-      "bytes": 109509,
-      "sha256": "a9b7c4b3d8f4febab394e983ace55df020cbcc84dc33daa8b2af6e7abd90fd1b"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/font-alias-scope.test.mjs.raw",
-      "bytes": 1404,
-      "sha256": "260cab95ad4cbf654cbaff873670a325e8646735311fa7b646f9cc1f09583acd"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-disclosure-harness-preservation.test.mjs.raw",
-      "bytes": 2845,
-      "sha256": "b3e4fcef813339ee685f821c5d40de52965f81d7a7a2f75f0d678b8b82f84b29"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-history-role-preservation.test.mjs.raw",
-      "bytes": 6257,
-      "sha256": "969472e3491b6aff691228a5f7a6af09f9ea10bfbe44f474dc51d3469c5c799e"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-model-access-integration.test.mjs.raw",
-      "bytes": 8909,
-      "sha256": "3e4148fd91b12dd7952c2551a981b5071300ec31438eef1df67c56960140f459"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-open-state.test.ts.raw",
-      "bytes": 8263,
-      "sha256": "17bfb804d6eda7bf55cd9a57795c4d8ca58c237126caf5f6784f7fc4b9b910af"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/local-font-distribution.test.mjs.raw",
-      "bytes": 2780,
-      "sha256": "a753076617d8f98e5dfa23b6fd7713af874b70c42b1b6e6102ef3e4e86e28396"
-    },
-    {
       "path": "pending/imaging-presentation-20261022/website/tests/font-alias-scope.test.mjs",
       "bytes": 1492,
       "sha256": "f2dbda35cf85c710f9d956e5c8a16fa2b126e60a375ee74eff13de32f901b75c"
     },
     {
-      "path": "pending/imaging-presentation-20261022/website/tests/head-disclosure-harness-preservation.test.mjs",
-      "bytes": 3046,
-      "sha256": "fbde7b1c240f2f0552e86dc6b365709a068eccdd612c26381427fb60232d5a7c"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/head-history-role-preservation.test.mjs",
-      "bytes": 6863,
-      "sha256": "c721d7b4f6432e9ce9ea8a6cf76131ed24b74b6e78fd2a230676da0a55fd8b73"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/head-model-access-integration.test.mjs",
-      "bytes": 8909,
-      "sha256": "214381c192fc6b1a7ad7abfd423e9ed6d58f97faa5d9f9c8ad67552ede93fd09"
-    },
-    {
       "path": "pending/imaging-presentation-20261022/website/tests/head-open-state.test.ts",
       "bytes": 8261,
       "sha256": "fb2f1d72fbb883d385445e340b50873f9c206a270ab59f9ca9dc219b3ce5a675"
-    },
-    {
-      "path": "pending/imaging-presentation-20261022/website/tests/imaging-presentation.test.mjs",
-      "bytes": 11252,
-      "sha256": "3719f563bd19d38339eb1e5b5ad14a8bfddb79f5c68014e8af246baca0f43df6"
     },
     {
       "path": "pending/imaging-presentation-20261022/website/tests/local-font-distribution.test.mjs",
@@ -19552,26 +19552,6 @@
       "sha256": "95b6fc4f9d3f5ecef3dd1c37c876fb959c89ad83107f66f343d5c00e041587be"
     },
     {
-      "path": "pending/inline-viewer-20261022/arterial-assurance/tests/atlas-arterial-evidence-limits.test.mjs",
-      "bytes": 19003,
-      "sha256": "d04a1842fc6b68f0b7be42a2d0206e93598b29e9d34c40ec7b5d3b1914296dbb"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/arterial-assurance/tests/fixtures/atlas-arterial-evidence-limits.preimage.mjs.raw",
-      "bytes": 17250,
-      "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-lobar-imaging.test.ts",
-      "bytes": 12856,
-      "sha256": "eae0849920889e68d540f0aa1c1df482c3a02b062704ce0fe0e80943e7ef6e94"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-schema-preservation.test.mjs",
-      "bytes": 7206,
-      "sha256": "23b9c25c7846f59d0622eaf722e2e8dcb27dbdb4717d125d3bb50e11a7546637"
-    },
-    {
       "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/closed59-atlas-delivery-adapter.mjs",
       "bytes": 1954,
       "sha256": "9ab28e6c62da3fa3fb7ca4ba79be293d4ac35adbbc29a865ed6ed9815128251c"
@@ -19582,16 +19562,6 @@
       "sha256": "15e7fe631d748d679dc8f7329916d051235abab6b22d3ce4da7f95412838b078"
     },
     {
-      "path": "pending/inline-viewer-20261022/cerebral-assurance/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
-      "bytes": 4632,
-      "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/cervical-assurance/tests/atlas-cervical-epoch-preservation.test.mjs",
-      "bytes": 6396,
-      "sha256": "ff62e76523d50e2a9e476bf3d2bda53225a23a2ff7326bc58b2ce693ee994367"
-    },
-    {
       "path": "pending/inline-viewer-20261022/cervical-assurance/tests/atlas-cervical-projection-xray.test.mjs",
       "bytes": 21897,
       "sha256": "428fb397b7d5efff567754844a282223ee8ce8068fc0eb599413cbd7fe0621df"
@@ -19600,11 +19570,6 @@
       "path": "pending/inline-viewer-20261022/cervical-assurance/tests/fixtures/atlas-cervical-projection-xray-before-epoch-20261022.test.mjs.raw",
       "bytes": 19944,
       "sha256": "a5848c319f0df5d21105f2c7710b62a2d94c8858db4a63368ef3a9e826a9b06b"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/consumer-adoption/tests/atlas-body-learning-component.test.mjs",
-      "bytes": 13913,
-      "sha256": "fdb9016dee124c1a68278b281ec39a67fe6b27dc30b37161b434932823584c2d"
     },
     {
       "path": "pending/inline-viewer-20261022/consumer-adoption/tests/atlas-runtime-expansion-adoption-proof.test.mjs",
@@ -19642,21 +19607,6 @@
       "sha256": "2d83763dce79709915e3d50e5f4fa27fb26e10f483a48240b0eecfbb394443d6"
     },
     {
-      "path": "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/atlas-body-learning-component.test.mjs.raw",
-      "bytes": 13728,
-      "sha256": "7c54485091bb493623d11a4fe59602488cbe7fa8c2f77c589327cf7892f23600"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/atlas-runtime-frame.test.mjs.raw",
-      "bytes": 23666,
-      "sha256": "0d5edad796ce655f1f62da7ea06c08a3a541f110606d5b1cbb87d2b07d782e97"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/body-learning-layout-history-preservation.test.mjs.raw",
-      "bytes": 8293,
-      "sha256": "de95cdf5b16db2679b45b915fb7933ccbb42bdc3c83e06548fd700858f60e530"
-    },
-    {
       "path": "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-first-attempt-20261022/atlas-runtime-frame.test.mjs.raw",
       "bytes": 26674,
       "sha256": "59b12339da1e90be4f6516ba636ba057b1748482dbc34595a239c47956623943"
@@ -19665,26 +19615,6 @@
       "path": "pending/inline-viewer-20261022/consumer-adoption/tests/live-learning-consumer-loader-preservation.test.mjs",
       "bytes": 6061,
       "sha256": "0061b458a0b0a4b079264d5d945d871a387fafa997e1b779278de0f016ed54f2"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/atlas-study-transport-migration.test.mjs.raw",
-      "bytes": 4882,
-      "sha256": "4758aa6bc8ced1e1a5388d2515b2ec7fcc42f092a390a8e88b876db63ad1558d"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/atlas-study-transport.test.ts.raw",
-      "bytes": 11108,
-      "sha256": "0d44faf7793eafd0dbf0eb0dd903f84a65bbab54639d3a003f626458f7f01e94"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/live-learning-consumer-loader-preservation.test.mjs.raw",
-      "bytes": 4606,
-      "sha256": "8abe3479f168cfffb148e5ec29f34ba436ae559fa60c015b0fa8166ba1b6306e"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/structure-learning-ui.test.ts.raw",
-      "bytes": 10409,
-      "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
     },
     {
       "path": "pending/inline-viewer-20261022/consumer-adoption/tests/structure-learning-ui.test.ts",
@@ -19747,11 +19677,6 @@
       "sha256": "9f28bffd03be95f4aa7c10f30750d8fe22197f8693ad0cd0a4696e57754a7c2a"
     },
     {
-      "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/fixtures/runtime-family-before-20261022/atlas-compact-study-checks.mjs.raw",
-      "bytes": 15054,
-      "sha256": "959f23604a11f8563b623526cc1a616f9b5c21272956273484ae0b54cf84f9b3"
-    },
-    {
       "path": "pending/inline-viewer-20261022/runtime-family-assurance/tests/runtime-family-forward-inverse.test.mjs",
       "bytes": 5170,
       "sha256": "385115d1003462f8bf07775e2f97d896f8b7a10d110531f230805582a2b21a8a"
@@ -19772,11 +19697,6 @@
       "sha256": "7d4d9d36f5f8b7a88477355ba76b3adb4e93d080cff9356dfe5725f3fc6c76d8"
     },
     {
-      "path": "pending/inline-viewer-20261022/ui/scripts/bind-clinical-review.mjs",
-      "bytes": 8282,
-      "sha256": "0339eedafdc65e60fb35efd7f59c839a57afa274966c405e4b373f8722f95d06"
-    },
-    {
       "path": "pending/inline-viewer-20261022/ui/tests/atlas-runtime-expansion-binding.test.mjs",
       "bytes": 6618,
       "sha256": "fe79f38380aa377709aa5107a2dbd6511dda128be7cc665860e1bb8bf9137858"
@@ -19790,16 +19710,6 @@
       "path": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/atlas-runtime-frame.css.raw",
       "bytes": 1893,
       "sha256": "f4ba294204a84b573b41baf9d64219a3b7814e8833b9ba4572003637ae62d1c8"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/AtlasRuntimeFrame.tsx.raw",
-      "bytes": 5344,
-      "sha256": "335b8b70b2ff60c3a951efb9eb18d98de8d230411c00896ff4a4123eff051261"
-    },
-    {
-      "path": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/bind-clinical-review.mjs.raw",
-      "bytes": 8202,
-      "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
     },
     {
       "path": "pending/keyboard-role-repair-20261023/coordination/checkpoint-keyboard-role-repair-20261023.mjs",
@@ -19877,16 +19787,6 @@
       "sha256": "85497e2ee6b2e11dc2ee855dac8bd6ac4116f492e732fc4ebe07b3a4bb819d0b"
     },
     {
-      "path": "pending/legacy-shoulder-references-20261022/atlas/app/body-content.ts",
-      "bytes": 83121,
-      "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
-    },
-    {
-      "path": "pending/legacy-shoulder-references-20261022/atlas/lib/legacy-shoulder-bone-references.ts",
-      "bytes": 2164,
-      "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649"
-    },
-    {
       "path": "pending/legacy-shoulder-references-20261022/atlas/lib/legacy-shoulder-muscle-references.ts",
       "bytes": 4454,
       "sha256": "9fabee47ed5f1b926b69a1247ed972039d91230a995ddb2030723b166cdc7936"
@@ -19910,16 +19810,6 @@
       "path": "pending/legacy-shoulder-references-20261022/coordination/verify-legacy-shoulder-references-20261022.mjs",
       "bytes": 6410,
       "sha256": "7e8384e3a16d5785f5ed563116dd5b5bdb2130a027a0aaf676dfe6f975ab1143"
-    },
-    {
-      "path": "pending/legacy-shoulder-references-20261022/fixtures/anatomy-data.ts.raw",
-      "bytes": 25438,
-      "sha256": "75a91a07a3bf268088f7b6e011e71ffd27bbc0366d2d01a3dbbd7f28da64a4cb"
-    },
-    {
-      "path": "pending/legacy-shoulder-references-20261022/fixtures/body-content.ts.raw",
-      "bytes": 82967,
-      "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
     },
     {
       "path": "pending/legacy-shoulder-references-20261022/fixtures/worker-muscle-references.ts.raw",
@@ -20032,16 +19922,6 @@
       "sha256": "a22f8171463005090647ae76cf3c512d62fe08d01e71a6353bb6dfa9e12eea94"
     },
     {
-      "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/components/HeadAtlasLearningPicker.tsx",
-      "bytes": 4790,
-      "sha256": "38f0385f393dc2e1a65c2af33c843cca0e25f4d4903bb3dcffc3866cdfbcd4a0"
-    },
-    {
-      "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/tests/head-learning-picker-dismiss.test.mjs",
-      "bytes": 7865,
-      "sha256": "113f62c9f89916af407d885d81aa44e3adffdbaa514b29ab50752553c446de89"
-    },
-    {
       "path": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/RAW/build-unbound-ui-successor.before-picker.mjs",
       "bytes": 4470,
       "sha256": "c01afb80a081acc69a05676e89351917ba66387ae7a4ba3f73e21192840e97d1"
@@ -20070,21 +19950,6 @@
       "path": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/inspect-source.mjs",
       "bytes": 2685,
       "sha256": "624a7d6bef1af83c835edb6b3929e203861294649ff2293687dcf1d6f5322045"
-    },
-    {
-      "path": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/atlas-runtime-expansion-adoption-proof.test.mjs.raw",
-      "bytes": 4071,
-      "sha256": "8e260374718c266b434234478ed32d14b91402bfdfb878e7126b62ad06777784"
-    },
-    {
-      "path": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/live-learning-consumer-loader-preservation.test.mjs.raw",
-      "bytes": 6061,
-      "sha256": "0061b458a0b0a4b079264d5d945d871a387fafa997e1b779278de0f016ed54f2"
-    },
-    {
-      "path": "pending/linked-tour-dismiss-20261022/coordination/build-unbound-ui-successor.mjs",
-      "bytes": 4566,
-      "sha256": "047d7da1bfc1109ad30c826144d06e8db761f0b3e937df9429fb3066dc969ac0"
     },
     {
       "path": "pending/linked-tour-dismiss-20261022/coordination/checkpoint-linked-tour-dismiss-20261022.mjs",
@@ -20142,19 +20007,9 @@
       "sha256": "38ecf4e66ea0c91b6a8347be5c42ed676ec2a929f04cdd5dfc401abf5afd512b"
     },
     {
-      "path": "pending/loader-preservation-20261023/current/tests/fixtures/learning-loader-preservation-before-expansion.test.mjs.raw",
-      "bytes": 2763,
-      "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
-    },
-    {
       "path": "pending/loader-preservation-20261023/current/tests/learning-loader-preservation-composition.test.mjs",
       "bytes": 2813,
       "sha256": "41bab577baebf9c7653130fff470141052efa5403fb196f5652a518f5d8f40c6"
-    },
-    {
-      "path": "pending/loader-preservation-20261023/preimage/tests/atlas-learning-loader-preservation.test.mjs",
-      "bytes": 2763,
-      "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
     },
     {
       "path": "pending/lower-arterial-reasoning-20261024/atlas/docs/LOWER_ARTERIAL_REASONING.md.raw",
@@ -20212,11 +20067,6 @@
       "sha256": "feec2a8471ec71b8ec328a10d84200a7e45839ede67e0960d88ddece13526fb3"
     },
     {
-      "path": "pending/lower-arterial-reasoning-20261024/coordination/build-ventricular-atlas-20261023.mjs",
-      "bytes": 1196,
-      "sha256": "68955dec2251a304847ebce04a0d6d36e9b5dcee1c2ff91ae79c161a4838e018"
-    },
-    {
       "path": "pending/lower-arterial-reasoning-20261024/coordination/checkpoint-lower-arterial-reasoning-20261024.mjs",
       "bytes": 8677,
       "sha256": "6b8b2db90148631a4f05ae1827eda62ff2d322ecd71363c9958612e088c0dc78"
@@ -20245,11 +20095,6 @@
       "path": "pending/lower-arterial-reasoning-20261024/coordination/seal-lower-arterial-reasoning-20261024.mjs",
       "bytes": 9955,
       "sha256": "98b92ac33c58ad75c2e6971a615b5c86e06341f69ad442a9082b8211b01f7eb6"
-    },
-    {
-      "path": "pending/lower-arterial-reasoning-20261024/coordination/snapshot-ventricular-reasoning-20261023.mjs",
-      "bytes": 2027,
-      "sha256": "f5183aed51dfacdf292f692fb50527bed103c7892ee3072764b77c876b6b228d"
     },
     {
       "path": "pending/lower-arterial-reasoning-20261024/coordination/verify-lower-arterial-reasoning-20261024.mjs",
@@ -20362,11 +20207,6 @@
       "sha256": "c2a31c1e93739e4c9d753ee4e2dee5ddb554d47d6c0ca42768eaf9d416d93fb1"
     },
     {
-      "path": "pending/lower-limb-regression-current-20261024/recipes/finish-source-website-checkpoint.mjs",
-      "bytes": 5972,
-      "sha256": "3cf6324f220281ca0389986b68aa781d5ea82e4de2634598d33d4eb9b7743859"
-    },
-    {
       "path": "pending/lower-limb-regression-current-20261024/recipes/integrate-lower-limb-regression-current-20261024.mjs",
       "bytes": 3131,
       "sha256": "577fc2f5da3ef2df759fa700988c726bce5ac1268eb205c0992c4b15bc817fe3"
@@ -20385,11 +20225,6 @@
       "path": "pending/lower-limb-regression-current-20261024/recipes/seal-lower-limb-regression-current-20261024.mjs",
       "bytes": 5972,
       "sha256": "ce5150414af6297521e48607b3d79cfb7df4d195e79eb9089a8e797525e0eaec"
-    },
-    {
-      "path": "pending/lower-limb-regression-current-20261024/website/tests/clinical-review-lower-limb-connective-xray.test.ts",
-      "bytes": 21671,
-      "sha256": "c848b411bd7b92e91e47dbfb0c9c9829131ead5bd64feb5ffe7f78e7f90ea829"
     },
     {
       "path": "pending/lower-limb-regression-current-20261024/website/tests/fixtures/lower-limb-b79-preimage/clinical-review-lower-limb-connective-xray.test.ts.raw",
@@ -20412,34 +20247,9 @@
       "sha256": "b7ae9527cab549c1af47985b08dc03e22b730660ec08ef0db69cbf4c3bd37efd"
     },
     {
-      "path": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-current-role-inverse.mjs",
-      "bytes": 1667,
-      "sha256": "4eb7bc4c2fdc72944621abee34e0a3d2a9cde642f28c25de697b2819d2569877"
-    },
-    {
-      "path": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-current-source-roles.test.mjs",
-      "bytes": 4844,
-      "sha256": "cdeb65858f9b5a2de46a76e7fae301985e8db418d202fa68dbe6f4bfb8ef988c"
-    },
-    {
-      "path": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-display-pin-history.mjs",
-      "bytes": 6035,
-      "sha256": "948ca66d04c9a4c5b5ab6a82d1f2ed488d82f0b6ba00320dce70807d57734fa7"
-    },
-    {
-      "path": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-display-pin-history.test.mjs",
-      "bytes": 3572,
-      "sha256": "e8581483d1f6823e30bc4517ff067dbc7da50d94d849d9ac3d3e26edd8fcf5a9"
-    },
-    {
       "path": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-pin-history-source-roles.test.mjs",
       "bytes": 5897,
       "sha256": "3651d6de89f5777b268dc9b40cbd6c64bd18e696380cf1e24b3d6001e27bdc33"
-    },
-    {
-      "path": "pending/lower-limb-regression-current-20261024/website/tests/release-epoch-composition-preservation.test.mjs",
-      "bytes": 18584,
-      "sha256": "bb89e3cc046c21483093e8029ed9a2eca31e9029dd107d29a50af79fd4ab1e24"
     },
     {
       "path": "pending/midfoot-reasoning-20261023/atlas/docs/MIDFOOT_RELATIONSHIPS_REASONING.md.raw",
@@ -20652,39 +20462,9 @@
       "sha256": "a60da228f68f1df7586eb5de2fb7878d6a3d12f865d182679909ecc8c4d1fc7a"
     },
     {
-      "path": "pending/modality-help-clarity-20261023/preimages/atlas-workspace-simplification.test.ts.raw",
-      "bytes": 5853,
-      "sha256": "bd7aed9867c51c839a10eb8fc981068244c24be92d7e4e12e3a3bd3a32ef5e3d"
-    },
-    {
-      "path": "pending/modality-help-clarity-20261023/preimages/AtlasWorkspaceNavigation.tsx.raw",
-      "bytes": 5415,
-      "sha256": "b6b742dfcbdc5655a9b958bb6bd9e28f4f05d21e92297f004b573ff9f36d621d"
-    },
-    {
-      "path": "pending/native-slice-commit-20261024/before/HeadAtlasViewer.tsx.raw",
-      "bytes": 115200,
-      "sha256": "6296ff18c86691f22cfa02294dae295395b9f8035768a3990a9af4fe16beeff1"
-    },
-    {
       "path": "pending/native-slice-commit-20261024/before/tests/head-mask-picking-ui.test.ts.raw",
       "bytes": 10893,
       "sha256": "635e74753f3467f8b85b4d1f431955e8fb921e8d5a5c377af0023e95ffc48022"
-    },
-    {
-      "path": "pending/native-slice-commit-20261024/before/tests/head-pan-source-transition.test.ts.raw",
-      "bytes": 3394,
-      "sha256": "80670c3b9adaf2c3178a64ddcc97eec5682c0abe813e7da73f7a93d3d8cdfcc8"
-    },
-    {
-      "path": "pending/native-slice-commit-20261024/before/tests/head-slice-keyboard.test.ts.raw",
-      "bytes": 18928,
-      "sha256": "3e3994b1bb5f82cf0480e18e199a4acbd7e6b72fc97aff1a7df8d6a2d3804820"
-    },
-    {
-      "path": "pending/native-slice-commit-20261024/before/tests/head-slice-zoom.test.ts.raw",
-      "bytes": 9963,
-      "sha256": "1459b99870881d5d568b259cfb02ff84813102194c586a4bb6d9f2abd79482c1"
     },
     {
       "path": "pending/native-slice-commit-20261024/recipes/checkpoint-native-slice-commit-20261024.mjs",
@@ -20715,11 +20495,6 @@
       "path": "pending/native-slice-commit-20261024/recipes/type-native-slice-commit-20261024.mjs",
       "bytes": 2915,
       "sha256": "7d60df0ca76b417ac8b54b7fda60064f6742ce53aec97ac311bdb40ecbe544ba"
-    },
-    {
-      "path": "pending/native-slice-commit-20261024/website/components/HeadAtlasViewer.tsx",
-      "bytes": 115367,
-      "sha256": "9df2752e85f7b9f2c3516be27e03ceb05e23527bc8efd333bf5170e0a6a919fa"
     },
     {
       "path": "pending/native-slice-commit-20261024/website/tests/head-mask-picking-ui.test.ts",
@@ -20862,34 +20637,9 @@
       "sha256": "5db80991307ffd7f8d3164e516bb68a08544b2d9a8e040fa5f6df747550d26e5"
     },
     {
-      "path": "pending/native-workspace-disclosures-20261023/preimages/components/AtlasWorkspaceNavigation.tsx.raw",
-      "bytes": 5420,
-      "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
-    },
-    {
       "path": "pending/native-workspace-disclosures-20261023/preimages/components/StudioNavigation.tsx.raw",
       "bytes": 1781,
       "sha256": "78ed4dffdfc51c15cb050ab9ba6d9aa20983d39e47e31ec6153a4beb8d634d59"
-    },
-    {
-      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-3d-context.test.mjs.raw",
-      "bytes": 5717,
-      "sha256": "a475d86168f015be3264fbfd2a5de3059944511329d1e9504232fcd1f0986ff3"
-    },
-    {
-      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-simplification.test.ts.raw",
-      "bytes": 5858,
-      "sha256": "4de68da5696a4d4464eea47a2169d6cd216a34332c06968783fba636e78524ca"
-    },
-    {
-      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/desktop-workspace-simplification.test.ts.raw",
-      "bytes": 10671,
-      "sha256": "0b30894747d65a9da04e07c443fb367d7f838283291dbbac6295db01ac6bd02b"
-    },
-    {
-      "path": "pending/native-workspace-disclosures-20261023/preimages/tests/imaging-atlas-shell.test.ts.raw",
-      "bytes": 16099,
-      "sha256": "1a4efc97f1e50fdc7a96db432649ca3d5995c8641a3f53c87119f0ec71a6c97c"
     },
     {
       "path": "pending/native-workspace-disclosures-20261023/preimages/tests/studio-publishing-navigation.test.mjs.raw",
@@ -20975,11 +20725,6 @@
       "path": "pending/native-workspace-disclosures-20261023/website/tests/workspace-embed-disclosure.test.mjs",
       "bytes": 7594,
       "sha256": "2186c388ebd2d5f9255ea0ac832b70deaa53c1404afaa046dd61ae434fe0ee5a"
-    },
-    {
-      "path": "pending/neck-landmark-xray-20261022/atlas/app/body-content.ts",
-      "bytes": 82967,
-      "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
     },
     {
       "path": "pending/neck-landmark-xray-20261022/atlas/content/neck-landmark-xray.ts",
@@ -21097,11 +20842,6 @@
       "sha256": "edfe931326e44419d70725c0f84b2b45fe84518c16f7f809135ce59188b17e5f"
     },
     {
-      "path": "pending/neck-xray-website-20261022/website/tests/current-atlas-delivery.test.mjs",
-      "bytes": 19208,
-      "sha256": "172e1153b7213b1e32ec1fff745ebb3594cef5fdce49168734670325e8ac827e"
-    },
-    {
       "path": "pending/neck-xray-website-20261022/website/tests/fixtures/current-atlas-delivery-before-neck-xray-20261022.mjs.raw",
       "bytes": 19208,
       "sha256": "303a1ba566b8dbbac99e06206f92ad5df3634579fb29bb696a64f4c5a4529cea"
@@ -21135,46 +20875,6 @@
       "path": "pending/neonatal-current-epoch-20261023/coordination/verify-neonatal-current-20261023.mjs",
       "bytes": 3879,
       "sha256": "b21d827ceeedcf856b031f6ed11f2924806e1be3c9d17072e07d0b762e62adeb"
-    },
-    {
-      "path": "pending/neonatal-current-epoch-20261023/tests/tests/atlas-emitted-teaching.ts",
-      "bytes": 3337,
-      "sha256": "407396ddf4b0e4398efabf691fcdec75e90c79caafea280234f3438645af8cf2"
-    },
-    {
-      "path": "pending/neonatal-current-epoch-20261023/tests/tests/clinical-review-neonatal-cranial-us.test.ts",
-      "bytes": 31843,
-      "sha256": "ed23b3a23e83fffbdffecb0e67d31ffbc6e62999cac30adbbf81cbf49612b73f"
-    },
-    {
-      "path": "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.mjs",
-      "bytes": 4711,
-      "sha256": "83a4a9b991e4bb9c2e3a0f66b4031a8a56eed1bd076b3b6c4b8a1c3e118a2163"
-    },
-    {
-      "path": "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.test.mjs",
-      "bytes": 5908,
-      "sha256": "2373a303124766b905bb8c2f4dd06c8f68188c0271c8a69f33b6f1968d11b7f4"
-    },
-    {
-      "path": "pending/neonatal-current-epoch-20261023/tests/tests/fixtures/neonatal-current-before/clinical-review-neonatal-cranial-us.test.ts.raw",
-      "bytes": 31702,
-      "sha256": "94b81cb4b06e64a1781a5bbea45d349d1524dc3e346cdcce0fc54c31a8f3ab5c"
-    },
-    {
-      "path": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.mjs",
-      "bytes": 11058,
-      "sha256": "fe4dc1d2eb068c9be29507f7b5341d4bf189c1e27a8c5c273e2938a2d9f2c6f1"
-    },
-    {
-      "path": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.test.mjs",
-      "bytes": 3568,
-      "sha256": "eb663f3ca4f7eae089ce3fe8bb28e94246647888cd502ac6cda6612bb3943c64"
-    },
-    {
-      "path": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-native-memory.mjs",
-      "bytes": 789,
-      "sha256": "6caa751004e74b104d5a4842d1086ca3ce75210c91f48f7480e1caa2395a2a5a"
     },
     {
       "path": "pending/nested-tour-library-pause-20261023/coordination/checkpoint-nested-tour-library-pause-20261023.mjs",
@@ -21215,16 +20915,6 @@
       "path": "pending/nested-tour-library-pause-20261023/current/scripts/test-nested-tour-library-pause.mjs",
       "bytes": 10612,
       "sha256": "287d4529afe727452244af1ee7deceea49ae31502d8df3941f620bd978b2c70c"
-    },
-    {
-      "path": "pending/nested-tour-library-pause-20261023/preimage/app/eye-layers.tsx",
-      "bytes": 31329,
-      "sha256": "3350a55d8162226b400cc8ed2ad3a28e4fcf323ced4ae7a7ec38d43d2437930d"
-    },
-    {
-      "path": "pending/nested-tour-library-pause-20261023/preimage/app/ventricles.tsx",
-      "bytes": 93370,
-      "sha256": "010f2c495e5c3fa290935d673531d2ca3049bee215abb22d2b88016e9a98d07e"
     },
     {
       "path": "pending/nested-tour-library-pause-20261023/preimage/app/whole-body-guided-learning.tsx",
@@ -21280,6 +20970,136 @@
       "path": "pending/orbital-ct-draft-20261024/recipes/run-orbital-ct-extra-20261024.mjs",
       "bytes": 3054,
       "sha256": "bb01309c207c30627719d81f9113b1958146be9a4a3af763115fe15efa5f0f1b"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/admit-orbital-ct-coverage-20261024.mjs",
+      "bytes": 6471,
+      "sha256": "faaf2295a52269b3f34b394c4f968f5fcb3fbf7cfdf1d12b89b14ef5d2b7763a"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/capture-orbital-ct-website-20261024.mjs",
+      "bytes": 2454,
+      "sha256": "be537c2310183813dd137431c8dc2b5c4e8018d8445bf2e8354d99ca3627d37a"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/check-orbital-ct-website-types-20261024.mjs",
+      "bytes": 6396,
+      "sha256": "55d51851b2b3e8d4015acadb15def2b3bf1a8ae40f732c2b0f03b3a02195cf9a"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/checkpoint-orbital-ct-website-20261024.mjs",
+      "bytes": 13740,
+      "sha256": "f3389e33149a8de07ec10ba66e3aedb4126b22e07d9bb520ce73fee40c13c51f"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/integrate-orbital-ct-head-history-20261024.mjs",
+      "bytes": 1350,
+      "sha256": "75329fc8c5531ec4c252426d89bf107977e57d6724925da9f528b5cdf3f01da0"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/integrate-orbital-ct-source-proofs-20261024.mjs",
+      "bytes": 3011,
+      "sha256": "bd3f49c9e690a9b52dd5e93d0d11674833ec1ef25006e1b400f4287d75753481"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/orbital-ct-website-source-20261024.mjs",
+      "bytes": 1643,
+      "sha256": "29dfcd623399ce029b644f783cbc09c30da20485f37e333cd054043c15249b83"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/prepare-orbital-ct-website-20261024.mjs",
+      "bytes": 4529,
+      "sha256": "310a94486825c7697f580c9ce5157561e8ba5c8a71631a436bb9f78e99ca882c"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/restore-orbital-ct-history-fixture-20261024.mjs",
+      "bytes": 1916,
+      "sha256": "4cfcf12e8e88740362ba02c52db651fac2023579f476d8f5d88e2c5e1f530ed9"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/run-orbital-ct-website-20261024.mjs",
+      "bytes": 4205,
+      "sha256": "2ab23008acbbb8a0090e5a2d598ada2db074391a5be6419465cfe7fef56ecdf2"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/seal-orbital-ct-website-20261024.mjs",
+      "bytes": 11104,
+      "sha256": "e385d8f26983e41b6cda54d0fe4cd1a5610e37089ca0211f884abbfd99542137"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/specialize-orbital-ct-website-20261024.mjs",
+      "bytes": 1674,
+      "sha256": "abc92912ff3e9eb5834b5d0705007bb931d75fa43467e9a64a01065764e0e9a5"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/recipes/test-orbital-ct-website-20261024.mjs",
+      "bytes": 4330,
+      "sha256": "16b0bc34a36041f466b9db060dea209ba4a20b6343db86d5660ec809215fdf2e"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "efc61f67fadce4f8075bbde933df3774c9b1354c32a845567b39e3bf2a4e64b1"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "7bbd3bd0d28bfde8254d3b4e735e5667395ca0ce2d7a0307a946b656863a95cf"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "e74ea567afc79fc9225aeb43d193efa20f9997db2ffe0c9a0b0ea9ec6260e699"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "81bf539cf56c39507c90d3c75753cc132119a13efd9422b358dd8f0d84b5205c"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+      "bytes": 5209,
+      "sha256": "51981ba5db87572eec4134f28f3e42553a43557b9cb18b37f85344fa8df02e4c"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 19274,
+      "sha256": "e4700413f47c9bf03e23bca5573d2c355e2c5299ba7179644be937d915d6865a"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/head-study-set-display-epoch.test.mjs",
+      "bytes": 5582,
+      "sha256": "4a6b266a15981fe6f54da574ba191c5656ed1610a8eea9c8c6c5ca8a3e9f36d3"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/head-study-set-website-composition.test.mjs",
+      "bytes": 10969,
+      "sha256": "5dc556d90ad379071256b61e39a67f06b3d8a6fb2861ce4aa937885e598b5238"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/head-study-website-historical-source.mjs",
+      "bytes": 2011,
+      "sha256": "e0c85aa5f56bc52da2d2f33cb6e2d386de6bef7cd179b2e9448772837af826b1"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/head-study-website-historical-source.test.mjs",
+      "bytes": 3347,
+      "sha256": "f03281b8d425f6a3ce05b372bfbc1069bdc06321dbccd962c7404f99bb660d82"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-current-source-role.mjs",
+      "bytes": 6945,
+      "sha256": "5c116b7987b8baf8fe5322dcabeb1dab1ba32c4ad989d11507e15c3afc990063"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-current-source-role.test.mjs",
+      "bytes": 1904,
+      "sha256": "d5df624c7dfb5603ab7a6515a5ed9f603b348fce756c714d6bed82be21ed865f"
+    },
+    {
+      "path": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-website-composition.test.mjs",
+      "bytes": 6085,
+      "sha256": "46be06255820a70fb676c1eaa96d626b3d97880fe98dca066040df8107fa5ba0"
     },
     {
       "path": "pending/practice-actions-20261024/atlas/app/body-explorer.tsx",
@@ -21472,11 +21292,6 @@
       "sha256": "a7a21ced5b6e8661de3a26937b73c451bb27cbb2b8056a97a6e5ccf830661398"
     },
     {
-      "path": "pending/reference-links-closed56-20261023/current/tests/fixtures/closed56-femoral-epoch-current-2381.mjs.raw",
-      "bytes": 10912,
-      "sha256": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7"
-    },
-    {
       "path": "pending/reference-links-closed56-20261023/current/tests/fixtures/regional-reference-before-disk-loader.test.ts.raw",
       "bytes": 17422,
       "sha256": "bc6c4172fe97f496320cb4d3170c83aeccbaa68f6b13b9786804fb2dd0f2e589"
@@ -21602,36 +21417,6 @@
       "sha256": "cc03ab4e3788947bb99f07fcb8c1ea2edc3282144916b05cdb933d83f325a024"
     },
     {
-      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/craniofacial-ct-current-delivery.test.mjs",
-      "bytes": 8246,
-      "sha256": "b08d39c2e6a54cf1ea04f5cdf0b5c5a92a5b6adb2e68182796f9672a686ce76a"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-cerebellar-review.test.ts",
-      "bytes": 18966,
-      "sha256": "e296846aea3e46e42c373d01ae3934c06adae223e7789f413b0b494ca8ffbdc8"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-deep-grey-review.test.ts",
-      "bytes": 18066,
-      "sha256": "bcf97aa6433919540e40960b65f4f7e069fb2cbb5a0573195c092e55d78e8915"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-hippocampal-clinical.test.ts",
-      "bytes": 23975,
-      "sha256": "3866730ce1998d887379736e2ff5a922b89bbcbf59b770300e6dac7958d39f15"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-lobar-review.test.ts",
-      "bytes": 20949,
-      "sha256": "478aa7bd74b9dabafc358b160002fe6fecf134954cd83243520977553f4fceb3"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-ventricular-review.test.ts",
-      "bytes": 11794,
-      "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
-    },
-    {
       "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/CODE/tests/closed54-55-provider-preservation.test.mjs",
       "bytes": 10036,
       "sha256": "52c9d8ef7fab7f79bda259238e6b5469b91441fd94bc60accb71e41a65675c06"
@@ -21645,11 +21430,6 @@
       "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/PROVE_SOURCE.mjs",
       "bytes": 6220,
       "sha256": "f381627131c346602d211cde6f172f8447e34a754d742dbef46ec11951cad800"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/RAW/tests/closed54-55-provider-preservation.test.mjs",
-      "bytes": 8554,
-      "sha256": "707db26812327fb29ed63642c65b5ca6f0e7fc55d12995421ff718223b18ef0c"
     },
     {
       "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/RAW/tests/closed56-femoral-epoch.test.mjs",
@@ -21680,11 +21460,6 @@
       "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/completion-checklist-current-transition.test.mjs",
       "bytes": 5895,
       "sha256": "0fa8e77bf740b1717d0b3fc991b87ef4a755c4246dd40058412193bbdde10a5d"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/current-atlas-delivery-register47.mjs",
-      "bytes": 4632,
-      "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
     },
     {
       "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/posterior-fossa-integration-register.test.mjs",
@@ -21745,16 +21520,6 @@
       "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/CODE/tests/native-focus-review-binding.test.mjs",
       "bytes": 3923,
       "sha256": "3d03a7d8705817642cbb258b4d6441d23132c3795551fffc7cdd31591d14f975"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/head-binding-role-preservation-20261021.test.mjs",
-      "bytes": 14856,
-      "sha256": "b9f39466cc4e8268550898a78b8dd4f8ec2f0153f15d8aa1c6b214e79acfe716"
-    },
-    {
-      "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/native-focus-review-binding.test.mjs",
-      "bytes": 3923,
-      "sha256": "9c70cc8acb8034b2244d256509754ff32835937936169770c1a480de1654f259"
     },
     {
       "path": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-spinal-current-colic-semantic-followup/CODE/tests/atlas-spinal-muscle-xray.test.mjs",
@@ -29992,29 +29757,919 @@
       "sha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056"
     }
   ],
-  "removed": [],
-  "scope": "Carry5986verified filtered source paths/full ancestry; add10explicit native authored code/package/test/recipe paths, no removals. Generated identity/teaching/review JSON, licence/docs text, models/scans/private data, raw evidence/build/dependencies and later coordination stay F-local. Not whole/private/runnable off-device backup.",
+  "removed": [
+    "pending/head-layout-history-verified-20261024/website/tests/head-layout-current-delivery.test.mjs",
+    "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/tests/head-toolbar-compact.test.mjs",
+    "pending/head-tools-20261022/20261022-head-tools-role-admission/CODE/tests/head-filtered-layout.test.mjs",
+    "pending/image-tools-bound-20261023/preimages/tests/studio-history-controller-migration.test.mjs.raw",
+    "pending/imaging-presentation-20261022/website-preimages/app/globals.css",
+    "pending/imaging-presentation-20261022/website-preimages/app/layout.tsx",
+    "pending/imaging-presentation-20261022/website-preimages/components/HeadAtlasViewer.tsx",
+    "pending/imaging-presentation-20261022/website-preimages/tests/head-disclosure-harness-preservation.test.mjs",
+    "pending/imaging-presentation-20261022/website-preimages/tests/head-history-role-preservation.test.mjs",
+    "pending/imaging-presentation-20261022/website/components/HeadAtlasViewer.tsx",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/app/globals.css.raw",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/app/layout.tsx.raw",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/components/HeadAtlasViewer.tsx.raw",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/font-alias-scope.test.mjs.raw",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-disclosure-harness-preservation.test.mjs.raw",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-history-role-preservation.test.mjs.raw",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-model-access-integration.test.mjs.raw",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-open-state.test.ts.raw",
+    "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/local-font-distribution.test.mjs.raw",
+    "pending/imaging-presentation-20261022/website/tests/head-disclosure-harness-preservation.test.mjs",
+    "pending/imaging-presentation-20261022/website/tests/head-history-role-preservation.test.mjs",
+    "pending/imaging-presentation-20261022/website/tests/head-model-access-integration.test.mjs",
+    "pending/imaging-presentation-20261022/website/tests/imaging-presentation.test.mjs",
+    "pending/inline-viewer-20261022/arterial-assurance/tests/atlas-arterial-evidence-limits.test.mjs",
+    "pending/inline-viewer-20261022/arterial-assurance/tests/fixtures/atlas-arterial-evidence-limits.preimage.mjs.raw",
+    "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-lobar-imaging.test.ts",
+    "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-schema-preservation.test.mjs",
+    "pending/inline-viewer-20261022/cerebral-assurance/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
+    "pending/inline-viewer-20261022/cervical-assurance/tests/atlas-cervical-epoch-preservation.test.mjs",
+    "pending/inline-viewer-20261022/consumer-adoption/tests/atlas-body-learning-component.test.mjs",
+    "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/atlas-body-learning-component.test.mjs.raw",
+    "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/atlas-runtime-frame.test.mjs.raw",
+    "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/body-learning-layout-history-preservation.test.mjs.raw",
+    "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/atlas-study-transport-migration.test.mjs.raw",
+    "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/atlas-study-transport.test.ts.raw",
+    "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/live-learning-consumer-loader-preservation.test.mjs.raw",
+    "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/structure-learning-ui.test.ts.raw",
+    "pending/inline-viewer-20261022/runtime-family-assurance/tests/fixtures/runtime-family-before-20261022/atlas-compact-study-checks.mjs.raw",
+    "pending/inline-viewer-20261022/ui/scripts/bind-clinical-review.mjs",
+    "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/AtlasRuntimeFrame.tsx.raw",
+    "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/bind-clinical-review.mjs.raw",
+    "pending/legacy-shoulder-references-20261022/atlas/app/body-content.ts",
+    "pending/legacy-shoulder-references-20261022/atlas/lib/legacy-shoulder-bone-references.ts",
+    "pending/legacy-shoulder-references-20261022/fixtures/anatomy-data.ts.raw",
+    "pending/legacy-shoulder-references-20261022/fixtures/body-content.ts.raw",
+    "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/components/HeadAtlasLearningPicker.tsx",
+    "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/tests/head-learning-picker-dismiss.test.mjs",
+    "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/atlas-runtime-expansion-adoption-proof.test.mjs.raw",
+    "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/live-learning-consumer-loader-preservation.test.mjs.raw",
+    "pending/linked-tour-dismiss-20261022/coordination/build-unbound-ui-successor.mjs",
+    "pending/loader-preservation-20261023/current/tests/fixtures/learning-loader-preservation-before-expansion.test.mjs.raw",
+    "pending/loader-preservation-20261023/preimage/tests/atlas-learning-loader-preservation.test.mjs",
+    "pending/lower-arterial-reasoning-20261024/coordination/build-ventricular-atlas-20261023.mjs",
+    "pending/lower-arterial-reasoning-20261024/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+    "pending/lower-limb-regression-current-20261024/recipes/finish-source-website-checkpoint.mjs",
+    "pending/lower-limb-regression-current-20261024/website/tests/clinical-review-lower-limb-connective-xray.test.ts",
+    "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-current-role-inverse.mjs",
+    "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-current-source-roles.test.mjs",
+    "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-display-pin-history.mjs",
+    "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-display-pin-history.test.mjs",
+    "pending/lower-limb-regression-current-20261024/website/tests/release-epoch-composition-preservation.test.mjs",
+    "pending/modality-help-clarity-20261023/preimages/atlas-workspace-simplification.test.ts.raw",
+    "pending/modality-help-clarity-20261023/preimages/AtlasWorkspaceNavigation.tsx.raw",
+    "pending/native-slice-commit-20261024/before/HeadAtlasViewer.tsx.raw",
+    "pending/native-slice-commit-20261024/before/tests/head-pan-source-transition.test.ts.raw",
+    "pending/native-slice-commit-20261024/before/tests/head-slice-keyboard.test.ts.raw",
+    "pending/native-slice-commit-20261024/before/tests/head-slice-zoom.test.ts.raw",
+    "pending/native-slice-commit-20261024/website/components/HeadAtlasViewer.tsx",
+    "pending/native-workspace-disclosures-20261023/preimages/components/AtlasWorkspaceNavigation.tsx.raw",
+    "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-3d-context.test.mjs.raw",
+    "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-simplification.test.ts.raw",
+    "pending/native-workspace-disclosures-20261023/preimages/tests/desktop-workspace-simplification.test.ts.raw",
+    "pending/native-workspace-disclosures-20261023/preimages/tests/imaging-atlas-shell.test.ts.raw",
+    "pending/neck-landmark-xray-20261022/atlas/app/body-content.ts",
+    "pending/neck-xray-website-20261022/website/tests/current-atlas-delivery.test.mjs",
+    "pending/neonatal-current-epoch-20261023/tests/tests/atlas-emitted-teaching.ts",
+    "pending/neonatal-current-epoch-20261023/tests/tests/clinical-review-neonatal-cranial-us.test.ts",
+    "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.mjs",
+    "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.test.mjs",
+    "pending/neonatal-current-epoch-20261023/tests/tests/fixtures/neonatal-current-before/clinical-review-neonatal-cranial-us.test.ts.raw",
+    "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.mjs",
+    "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.test.mjs",
+    "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-native-memory.mjs",
+    "pending/nested-tour-library-pause-20261023/preimage/app/eye-layers.tsx",
+    "pending/nested-tour-library-pause-20261023/preimage/app/ventricles.tsx",
+    "pending/reference-links-closed56-20261023/current/tests/fixtures/closed56-femoral-epoch-current-2381.mjs.raw",
+    "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/craniofacial-ct-current-delivery.test.mjs",
+    "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-cerebellar-review.test.ts",
+    "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-deep-grey-review.test.ts",
+    "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-hippocampal-clinical.test.ts",
+    "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-lobar-review.test.ts",
+    "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-ventricular-review.test.ts",
+    "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/RAW/tests/closed54-55-provider-preservation.test.mjs",
+    "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/current-atlas-delivery-register47.mjs",
+    "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/head-binding-role-preservation-20261021.test.mjs",
+    "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/native-focus-review-binding.test.mjs"
+  ],
+  "scope": "Filtered authored code/styles/recipes only. Consolidate96byte-identical inherited duplicate paths, preserving all unique bytes and full parent ancestry; preserve current bound sources. No working file deletion. Generated Review/delivery/pins/JSON, models/scans/private data/raw QA/build/dependencies and later coordination remain F-local; not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "d0530b064ae601e3b6d762994bdeedde062f3e809e7d55facf6ce4e4a2bbbac8",
-    "atlas": "80d323ec504afc7867e3e716bf735681a29ab5bc",
-    "tree": "6bef533e9242fbd33d8393cf62082030bf6e1042",
-    "sourcePaths": 6382,
-    "focusedCases": 6,
-    "strictRoots": 2,
-    "strictFiles": 1527,
+    "mainReviewSha256": "124d0ca7318eda87c1214e1f8a1db0216c3e4957de5da55ccb11f6b809544e3f",
+    "focusedCases": 371,
+    "focusedRoots": 55,
+    "strictTypeRoots": 38,
+    "strictTypeFiles": 3684,
     "typeDiagnostics": 0,
-    "fullNativeBuild": true,
-    "buildFiles": 557,
-    "sourceSelections": 4,
-    "changedCtLessons": 4,
-    "unchangedLessons": 9932,
-    "unchangedWorksheets": 1100,
-    "sourceIdentityNegatives": 108,
-    "forgedPacketsRejected": 12,
-    "stalePostsRejectedBeforeStorage": 4,
-    "modelsDependenciesSourceHoldsUnchanged": true,
-    "websiteIntegrationPending": true,
-    "remoteNewPaths": 10,
+    "stockPrebuildBuildAndReviewVerifierPassed": true,
+    "reviewSources": 1604,
+    "reviewInputs": 1807,
+    "sourceArtifactBindings": [
+      {
+        "websitePath": "lib/anatomy-coverage-view.ts",
+        "sha256": "efc61f67fadce4f8075bbde933df3774c9b1354c32a845567b39e3bf2a4e64b1",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/lib/anatomy-coverage-view.ts",
+        "inherited": false
+      },
+      {
+        "websitePath": "lib/atlas-delivery-policy.ts",
+        "sha256": "7bbd3bd0d28bfde8254d3b4e735e5667395ca0ce2d7a0307a946b656863a95cf",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/lib/atlas-delivery-policy.ts",
+        "inherited": false
+      },
+      {
+        "websitePath": "scripts/check-anatomy-coverage.mjs",
+        "sha256": "e74ea567afc79fc9225aeb43d193efa20f9997db2ffe0c9a0b0ea9ec6260e699",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/scripts/check-anatomy-coverage.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "scripts/import-clinical-review.mjs",
+        "sha256": "81bf539cf56c39507c90d3c75753cc132119a13efd9422b358dd8f0d84b5205c",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/scripts/import-clinical-review.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/adjacent-current-tour-source-role.mjs",
+        "sha256": "51981ba5db87572eec4134f28f3e42553a43557b9cb18b37f85344fa8df02e4c",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/current-atlas-delivery.test.mjs",
+        "sha256": "e4700413f47c9bf03e23bca5573d2c355e2c5299ba7179644be937d915d6865a",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-filtered-layout.test.mjs",
+        "sha256": "d90c2525ed3c8669fe3a7dd84f295797d9c33b2b894adcb1325a3190a16c322e",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/website/tests/head-filtered-layout.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-study-set-display-epoch.test.mjs",
+        "sha256": "4a6b266a15981fe6f54da574ba191c5656ed1610a8eea9c8c6c5ca8a3e9f36d3",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/head-study-set-display-epoch.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-set-website-composition.test.mjs",
+        "sha256": "5dc556d90ad379071256b61e39a67f06b3d8a6fb2861ce4aa937885e598b5238",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/head-study-set-website-composition.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-toolbar-compact.test.mjs",
+        "sha256": "fb89183c694748217ddbaac5482355bae13c30b81992e4dabe57d0f0a8c9d60d",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/website/tests/head-toolbar-compact.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/fixtures/current-atlas-delivery-studio-b79.mjs.raw",
+        "sha256": "039172c405c7bfa8709acd13bdf086f1437c4624a478f45390267f06d4bebcbf",
+        "snapshotPath": "pending/cervical-vascular-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-layout-current-delivery.test.mjs",
+        "sha256": "fb8cb0d32e422b882dc9a86216a54f0e2d0d5543e8ff6a268a2c6e38cbf4f525",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/recipes/head-layout-current-delivery.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-layout-history-adapter.mjs",
+        "sha256": "c1e2fd589cdb8c4f5571c2d503bcb7f8418ffe20d4dc2aa1af6bfa09d1a6341d",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/website/tests/head-layout-history-adapter.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-layout-history-adapter.test.mjs",
+        "sha256": "461404ecbd81aea66aa31db2ac03d1fd76cb4e2bc2a09babff44ee059873b76f",
+        "snapshotPath": "pending/head-layout-history-verified-20261024/website/tests/head-layout-history-adapter.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/head-study-website-historical-source.mjs",
+        "sha256": "e0c85aa5f56bc52da2d2f33cb6e2d386de6bef7cd179b2e9448772837af826b1",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/head-study-website-historical-source.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/head-study-website-historical-source.test.mjs",
+        "sha256": "f03281b8d425f6a3ce05b372bfbc1069bdc06321dbccd962c7404f99bb660d82",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/head-study-website-historical-source.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/orbital-ct-current-source-role.mjs",
+        "sha256": "5c116b7987b8baf8fe5322dcabeb1dab1ba32c4ad989d11507e15c3afc990063",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-current-source-role.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/orbital-ct-current-source-role.test.mjs",
+        "sha256": "d5df624c7dfb5603ab7a6515a5ed9f603b348fce756c714d6bed82be21ed865f",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-current-source-role.test.mjs",
+        "inherited": false
+      },
+      {
+        "websitePath": "tests/orbital-ct-website-composition.test.mjs",
+        "sha256": "46be06255820a70fb676c1eaa96d626b3d97880fe98dca066040df8107fa5ba0",
+        "snapshotPath": "pending/orbital-ct-website-20261024/website/tests/orbital-ct-website-composition.test.mjs",
+        "inherited": false
+      }
+    ],
+    "remoteNewPaths": 26,
+    "uniqueSourceOmissions": 0,
+    "exactDuplicateConsolidation": {
+      "schema": "vm-exact-inherited-source-aliases/1",
+      "parentHead": "6f42a5d8d88e3d3375229e72084583eccbd3123f",
+      "parentTree": "6fc87bc4459819616bc00921d3d072f0ff51351d",
+      "targetCount": 5900,
+      "maxOmissions": 128,
+      "omittedPaths": [
+        "pending/head-layout-history-verified-20261024/website/tests/head-layout-current-delivery.test.mjs",
+        "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/tests/head-toolbar-compact.test.mjs",
+        "pending/head-tools-20261022/20261022-head-tools-role-admission/CODE/tests/head-filtered-layout.test.mjs",
+        "pending/image-tools-bound-20261023/preimages/tests/studio-history-controller-migration.test.mjs.raw",
+        "pending/imaging-presentation-20261022/website-preimages/app/globals.css",
+        "pending/imaging-presentation-20261022/website-preimages/app/layout.tsx",
+        "pending/imaging-presentation-20261022/website-preimages/components/HeadAtlasViewer.tsx",
+        "pending/imaging-presentation-20261022/website-preimages/tests/head-disclosure-harness-preservation.test.mjs",
+        "pending/imaging-presentation-20261022/website-preimages/tests/head-history-role-preservation.test.mjs",
+        "pending/imaging-presentation-20261022/website/components/HeadAtlasViewer.tsx",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/app/globals.css.raw",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/app/layout.tsx.raw",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/components/HeadAtlasViewer.tsx.raw",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/font-alias-scope.test.mjs.raw",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-disclosure-harness-preservation.test.mjs.raw",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-history-role-preservation.test.mjs.raw",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-model-access-integration.test.mjs.raw",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-open-state.test.ts.raw",
+        "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/local-font-distribution.test.mjs.raw",
+        "pending/imaging-presentation-20261022/website/tests/head-disclosure-harness-preservation.test.mjs",
+        "pending/imaging-presentation-20261022/website/tests/head-history-role-preservation.test.mjs",
+        "pending/imaging-presentation-20261022/website/tests/head-model-access-integration.test.mjs",
+        "pending/imaging-presentation-20261022/website/tests/imaging-presentation.test.mjs",
+        "pending/inline-viewer-20261022/arterial-assurance/tests/atlas-arterial-evidence-limits.test.mjs",
+        "pending/inline-viewer-20261022/arterial-assurance/tests/fixtures/atlas-arterial-evidence-limits.preimage.mjs.raw",
+        "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-lobar-imaging.test.ts",
+        "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-schema-preservation.test.mjs",
+        "pending/inline-viewer-20261022/cerebral-assurance/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
+        "pending/inline-viewer-20261022/cervical-assurance/tests/atlas-cervical-epoch-preservation.test.mjs",
+        "pending/inline-viewer-20261022/consumer-adoption/tests/atlas-body-learning-component.test.mjs",
+        "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/atlas-body-learning-component.test.mjs.raw",
+        "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/atlas-runtime-frame.test.mjs.raw",
+        "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/body-learning-layout-history-preservation.test.mjs.raw",
+        "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/atlas-study-transport-migration.test.mjs.raw",
+        "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/atlas-study-transport.test.ts.raw",
+        "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/live-learning-consumer-loader-preservation.test.mjs.raw",
+        "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/structure-learning-ui.test.ts.raw",
+        "pending/inline-viewer-20261022/runtime-family-assurance/tests/fixtures/runtime-family-before-20261022/atlas-compact-study-checks.mjs.raw",
+        "pending/inline-viewer-20261022/ui/scripts/bind-clinical-review.mjs",
+        "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/AtlasRuntimeFrame.tsx.raw",
+        "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/bind-clinical-review.mjs.raw",
+        "pending/legacy-shoulder-references-20261022/atlas/app/body-content.ts",
+        "pending/legacy-shoulder-references-20261022/atlas/lib/legacy-shoulder-bone-references.ts",
+        "pending/legacy-shoulder-references-20261022/fixtures/anatomy-data.ts.raw",
+        "pending/legacy-shoulder-references-20261022/fixtures/body-content.ts.raw",
+        "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/components/HeadAtlasLearningPicker.tsx",
+        "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/tests/head-learning-picker-dismiss.test.mjs",
+        "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/atlas-runtime-expansion-adoption-proof.test.mjs.raw",
+        "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/live-learning-consumer-loader-preservation.test.mjs.raw",
+        "pending/linked-tour-dismiss-20261022/coordination/build-unbound-ui-successor.mjs",
+        "pending/loader-preservation-20261023/current/tests/fixtures/learning-loader-preservation-before-expansion.test.mjs.raw",
+        "pending/loader-preservation-20261023/preimage/tests/atlas-learning-loader-preservation.test.mjs",
+        "pending/lower-arterial-reasoning-20261024/coordination/build-ventricular-atlas-20261023.mjs",
+        "pending/lower-arterial-reasoning-20261024/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+        "pending/lower-limb-regression-current-20261024/recipes/finish-source-website-checkpoint.mjs",
+        "pending/lower-limb-regression-current-20261024/website/tests/clinical-review-lower-limb-connective-xray.test.ts",
+        "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-current-role-inverse.mjs",
+        "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-current-source-roles.test.mjs",
+        "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-display-pin-history.mjs",
+        "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-display-pin-history.test.mjs",
+        "pending/lower-limb-regression-current-20261024/website/tests/release-epoch-composition-preservation.test.mjs",
+        "pending/modality-help-clarity-20261023/preimages/atlas-workspace-simplification.test.ts.raw",
+        "pending/modality-help-clarity-20261023/preimages/AtlasWorkspaceNavigation.tsx.raw",
+        "pending/native-slice-commit-20261024/before/HeadAtlasViewer.tsx.raw",
+        "pending/native-slice-commit-20261024/before/tests/head-pan-source-transition.test.ts.raw",
+        "pending/native-slice-commit-20261024/before/tests/head-slice-keyboard.test.ts.raw",
+        "pending/native-slice-commit-20261024/before/tests/head-slice-zoom.test.ts.raw",
+        "pending/native-slice-commit-20261024/website/components/HeadAtlasViewer.tsx",
+        "pending/native-workspace-disclosures-20261023/preimages/components/AtlasWorkspaceNavigation.tsx.raw",
+        "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-3d-context.test.mjs.raw",
+        "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-simplification.test.ts.raw",
+        "pending/native-workspace-disclosures-20261023/preimages/tests/desktop-workspace-simplification.test.ts.raw",
+        "pending/native-workspace-disclosures-20261023/preimages/tests/imaging-atlas-shell.test.ts.raw",
+        "pending/neck-landmark-xray-20261022/atlas/app/body-content.ts",
+        "pending/neck-xray-website-20261022/website/tests/current-atlas-delivery.test.mjs",
+        "pending/neonatal-current-epoch-20261023/tests/tests/atlas-emitted-teaching.ts",
+        "pending/neonatal-current-epoch-20261023/tests/tests/clinical-review-neonatal-cranial-us.test.ts",
+        "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.mjs",
+        "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.test.mjs",
+        "pending/neonatal-current-epoch-20261023/tests/tests/fixtures/neonatal-current-before/clinical-review-neonatal-cranial-us.test.ts.raw",
+        "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.mjs",
+        "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.test.mjs",
+        "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-native-memory.mjs",
+        "pending/nested-tour-library-pause-20261023/preimage/app/eye-layers.tsx",
+        "pending/nested-tour-library-pause-20261023/preimage/app/ventricles.tsx",
+        "pending/reference-links-closed56-20261023/current/tests/fixtures/closed56-femoral-epoch-current-2381.mjs.raw",
+        "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/craniofacial-ct-current-delivery.test.mjs",
+        "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-cerebellar-review.test.ts",
+        "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-deep-grey-review.test.ts",
+        "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-hippocampal-clinical.test.ts",
+        "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-lobar-review.test.ts",
+        "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-ventricular-review.test.ts",
+        "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/RAW/tests/closed54-55-provider-preservation.test.mjs",
+        "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/current-atlas-delivery-register47.mjs",
+        "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/head-binding-role-preservation-20261021.test.mjs",
+        "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/native-focus-review-binding.test.mjs"
+      ],
+      "aliases": [
+        {
+          "omittedPath": "pending/head-layout-history-verified-20261024/website/tests/head-layout-current-delivery.test.mjs",
+          "retainedPath": "pending/head-layout-history-verified-20261024/recipes/head-layout-current-delivery.test.mjs",
+          "bytes": 1419,
+          "sha256": "fb8cb0d32e422b882dc9a86216a54f0e2d0d5543e8ff6a268a2c6e38cbf4f525"
+        },
+        {
+          "omittedPath": "pending/head-tools-20261022/20261022-head-toolbar-compact-proposal/CODE/tests/head-toolbar-compact.test.mjs",
+          "retainedPath": "pending/head-layout-history-verified-20261024/before/head-toolbar-compact.test.mjs.raw",
+          "bytes": 10762,
+          "sha256": "650daf34edcc3cd8de98c91fbe045bdf1250945356ceb3947cf14e55d1f2a3b8"
+        },
+        {
+          "omittedPath": "pending/head-tools-20261022/20261022-head-tools-role-admission/CODE/tests/head-filtered-layout.test.mjs",
+          "retainedPath": "pending/head-layout-history-verified-20261024/before/head-filtered-layout.test.mjs.raw",
+          "bytes": 4574,
+          "sha256": "5dc4a8d99ee20f02d8724bc6d952fe039a83f32c6245eb85b2efee28c646ff27"
+        },
+        {
+          "omittedPath": "pending/image-tools-bound-20261023/preimages/tests/studio-history-controller-migration.test.mjs.raw",
+          "retainedPath": "pending/image-tools-bound-20261023/candidate/tests/fixtures/studio-history-controller-migration.before-current.mjs.raw",
+          "bytes": 5329,
+          "sha256": "71ccdedf73e0508619f27ecfddee7b8dac7cf5af487998d2df8b602c62ae088e"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website-preimages/app/globals.css",
+          "retainedPath": "app/globals.css",
+          "bytes": 171538,
+          "sha256": "67dbecc0822dd7c5b08633192ec9dbae32e16d097e8cf87bb7aaaceb4bc45c32"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website-preimages/app/layout.tsx",
+          "retainedPath": "evidence/20261021-local-source190-integrated/installed-website/app/layout.tsx",
+          "bytes": 3215,
+          "sha256": "e99b6206d0554964d022640760a5abefa573b76d910a71c3586a21536315a1be"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website-preimages/components/HeadAtlasViewer.tsx",
+          "retainedPath": "pending/head-tools-20261022/combined/HeadAtlasViewer.tsx",
+          "bytes": 109509,
+          "sha256": "a9b7c4b3d8f4febab394e983ace55df020cbcc84dc33daa8b2af6e7abd90fd1b"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website-preimages/tests/head-disclosure-harness-preservation.test.mjs",
+          "retainedPath": "evidence/20261021-head-history-tour-verified/installed-website/tests/head-disclosure-harness-preservation.test.mjs",
+          "bytes": 2845,
+          "sha256": "b3e4fcef813339ee685f821c5d40de52965f81d7a7a2f75f0d678b8b82f84b29"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website-preimages/tests/head-history-role-preservation.test.mjs",
+          "retainedPath": "pending/head-access-20261022/historical-assurance/preimages/head-history-role-preservation.test.mjs.raw",
+          "bytes": 6257,
+          "sha256": "969472e3491b6aff691228a5f7a6af09f9ea10bfbe44f474dc51d3469c5c799e"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/components/HeadAtlasViewer.tsx",
+          "retainedPath": "pending/head-practice-exit-20261022/website-preimages/components/HeadAtlasViewer.tsx",
+          "bytes": 109920,
+          "sha256": "2597a39850383fcc7be5c11762ad767101f0c7978c33099b854d51ef8ddc0509"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/app/globals.css.raw",
+          "retainedPath": "app/globals.css",
+          "bytes": 171538,
+          "sha256": "67dbecc0822dd7c5b08633192ec9dbae32e16d097e8cf87bb7aaaceb4bc45c32"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/app/layout.tsx.raw",
+          "retainedPath": "evidence/20261021-local-source190-integrated/installed-website/app/layout.tsx",
+          "bytes": 3215,
+          "sha256": "e99b6206d0554964d022640760a5abefa573b76d910a71c3586a21536315a1be"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/components/HeadAtlasViewer.tsx.raw",
+          "retainedPath": "pending/head-tools-20261022/combined/HeadAtlasViewer.tsx",
+          "bytes": 109509,
+          "sha256": "a9b7c4b3d8f4febab394e983ace55df020cbcc84dc33daa8b2af6e7abd90fd1b"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/font-alias-scope.test.mjs.raw",
+          "retainedPath": "pending/imaging-presentation-20261022/website-preimages/tests/font-alias-scope.test.mjs",
+          "bytes": 1404,
+          "sha256": "260cab95ad4cbf654cbaff873670a325e8646735311fa7b646f9cc1f09583acd"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-disclosure-harness-preservation.test.mjs.raw",
+          "retainedPath": "evidence/20261021-head-history-tour-verified/installed-website/tests/head-disclosure-harness-preservation.test.mjs",
+          "bytes": 2845,
+          "sha256": "b3e4fcef813339ee685f821c5d40de52965f81d7a7a2f75f0d678b8b82f84b29"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-history-role-preservation.test.mjs.raw",
+          "retainedPath": "pending/head-access-20261022/historical-assurance/preimages/head-history-role-preservation.test.mjs.raw",
+          "bytes": 6257,
+          "sha256": "969472e3491b6aff691228a5f7a6af09f9ea10bfbe44f474dc51d3469c5c799e"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-model-access-integration.test.mjs.raw",
+          "retainedPath": "pending/imaging-presentation-20261022/website-preimages/tests/head-model-access-integration.test.mjs",
+          "bytes": 8909,
+          "sha256": "3e4148fd91b12dd7952c2551a981b5071300ec31438eef1df67c56960140f459"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/head-open-state.test.ts.raw",
+          "retainedPath": "pending/imaging-presentation-20261022/website-preimages/tests/head-open-state.test.ts",
+          "bytes": 8263,
+          "sha256": "17bfb804d6eda7bf55cd9a57795c4d8ca58c237126caf5f6784f7fc4b9b910af"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/fixtures/imaging-presentation-before/tests/local-font-distribution.test.mjs.raw",
+          "retainedPath": "pending/imaging-presentation-20261022/website-preimages/tests/local-font-distribution.test.mjs",
+          "bytes": 2780,
+          "sha256": "a753076617d8f98e5dfa23b6fd7713af874b70c42b1b6e6102ef3e4e86e28396"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/head-disclosure-harness-preservation.test.mjs",
+          "retainedPath": "pending/head-practice-exit-20261022/website-preimages/tests/head-disclosure-harness-preservation.test.mjs",
+          "bytes": 3046,
+          "sha256": "fbde7b1c240f2f0552e86dc6b365709a068eccdd612c26381427fb60232d5a7c"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/head-history-role-preservation.test.mjs",
+          "retainedPath": "pending/head-practice-exit-20261022/website-preimages/tests/head-history-role-preservation.test.mjs",
+          "bytes": 6863,
+          "sha256": "c721d7b4f6432e9ce9ea8a6cf76131ed24b74b6e78fd2a230676da0a55fd8b73"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/head-model-access-integration.test.mjs",
+          "retainedPath": "pending/head-practice-exit-20261022/website-preimages/tests/head-model-access-integration.test.mjs",
+          "bytes": 8909,
+          "sha256": "214381c192fc6b1a7ad7abfd423e9ed6d58f97faa5d9f9c8ad67552ede93fd09"
+        },
+        {
+          "omittedPath": "pending/imaging-presentation-20261022/website/tests/imaging-presentation.test.mjs",
+          "retainedPath": "pending/head-practice-exit-20261022/website-preimages/tests/imaging-presentation.test.mjs",
+          "bytes": 11252,
+          "sha256": "3719f563bd19d38339eb1e5b5ad14a8bfddb79f5c68014e8af246baca0f43df6"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/arterial-assurance/tests/atlas-arterial-evidence-limits.test.mjs",
+          "retainedPath": "pending/complete-release-followups-20261022/website/tests/fixtures/complete-release-before/atlas-arterial-evidence-limits.test.mjs.raw",
+          "bytes": 19003,
+          "sha256": "d04a1842fc6b68f0b7be42a2d0206e93598b29e9d34c40ec7b5d3b1914296dbb"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/arterial-assurance/tests/fixtures/atlas-arterial-evidence-limits.preimage.mjs.raw",
+          "retainedPath": "evidence/20261021-review-return-verified/applied-candidate/tests/atlas-arterial-evidence-limits.test.mjs",
+          "bytes": 17250,
+          "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-lobar-imaging.test.ts",
+          "retainedPath": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/expanded-viewer-test-types/atlas-cerebral-lobar-imaging.test.ts.raw",
+          "bytes": 12856,
+          "sha256": "eae0849920889e68d540f0aa1c1df482c3a02b062704ce0fe0e80943e7ef6e94"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/cerebral-assurance/tests/atlas-cerebral-schema-preservation.test.mjs",
+          "retainedPath": "pending/expanded-viewer-verified-20261022/website/tests/fixtures/expanded-viewer-test-types/atlas-cerebral-schema-preservation.test.mjs.raw",
+          "bytes": 7206,
+          "sha256": "23b9c25c7846f59d0622eaf722e2e8dcb27dbdb4717d125d3bb50e11a7546637"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/cerebral-assurance/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
+          "retainedPath": "pending/body-learning-20261021/website/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
+          "bytes": 4632,
+          "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/cervical-assurance/tests/atlas-cervical-epoch-preservation.test.mjs",
+          "retainedPath": "pending/complete-release-followups-20261022/website/tests/fixtures/complete-release-before/atlas-cervical-epoch-preservation.test.mjs.raw",
+          "bytes": 6396,
+          "sha256": "ff62e76523d50e2a9e476bf3d2bda53225a23a2ff7326bc58b2ce693ee994367"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/atlas-body-learning-component.test.mjs",
+          "retainedPath": "pending/complete-release-followups-20261022/website/tests/fixtures/complete-release-before/atlas-body-learning-component.test.mjs.raw",
+          "bytes": 13913,
+          "sha256": "fdb9016dee124c1a68278b281ec39a67fe6b27dc30b37161b434932823584c2d"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/atlas-body-learning-component.test.mjs.raw",
+          "retainedPath": "pending/body-learning-20261021/website/tests/atlas-body-learning-component.test.mjs",
+          "bytes": 13728,
+          "sha256": "7c54485091bb493623d11a4fe59602488cbe7fa8c2f77c589327cf7892f23600"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/atlas-runtime-frame.test.mjs.raw",
+          "retainedPath": "pending/body-learning-20261021/website/tests/atlas-runtime-frame.test.mjs",
+          "bytes": 23666,
+          "sha256": "0d5edad796ce655f1f62da7ea06c08a3a541f110606d5b1cbb87d2b07d782e97"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/fixtures/expansion-consumer-adoption-20261022/body-learning-layout-history-preservation.test.mjs.raw",
+          "retainedPath": "pending/desktop-drawable-space-20261021/website/tests/body-learning-layout-history-preservation.test.mjs",
+          "bytes": 8293,
+          "sha256": "de95cdf5b16db2679b45b915fb7933ccbb42bdc3c83e06548fd700858f60e530"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/atlas-study-transport-migration.test.mjs.raw",
+          "retainedPath": "pending/body-learning-20261021/website/tests/atlas-study-transport-migration.test.mjs",
+          "bytes": 4882,
+          "sha256": "4758aa6bc8ced1e1a5388d2515b2ec7fcc42f092a390a8e88b876db63ad1558d"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/atlas-study-transport.test.ts.raw",
+          "retainedPath": "pending/body-learning-20261021/website/tests/atlas-study-transport.test.ts",
+          "bytes": 11108,
+          "sha256": "0d44faf7793eafd0dbf0eb0dd903f84a65bbab54639d3a003f626458f7f01e94"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/live-learning-consumer-loader-preservation.test.mjs.raw",
+          "retainedPath": "pending/body-learning-20261021/website/tests/live-learning-consumer-loader-preservation.test.mjs",
+          "bytes": 4606,
+          "sha256": "8abe3479f168cfffb148e5ec29f34ba436ae559fa60c015b0fa8166ba1b6306e"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/preimages/structure-learning-ui.test.ts.raw",
+          "retainedPath": "pending/body-learning-20261021/website/tests/structure-learning-ui.test.ts",
+          "bytes": 10409,
+          "sha256": "1a3468a31f0e023dbd26f00594e41d0b3f8bf82b2af0eccf83e50310583e3798"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/runtime-family-assurance/tests/fixtures/runtime-family-before-20261022/atlas-compact-study-checks.mjs.raw",
+          "retainedPath": "tests/atlas-compact-study-checks.mjs",
+          "bytes": 15054,
+          "sha256": "959f23604a11f8563b623526cc1a616f9b5c21272956273484ae0b54cf84f9b3"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/ui/scripts/bind-clinical-review.mjs",
+          "retainedPath": "pending/head-surface-cancellation-20261022/RAW/scripts/bind-clinical-review.mjs",
+          "bytes": 8282,
+          "sha256": "0339eedafdc65e60fb35efd7f59c839a57afa274966c405e4b373f8722f95d06"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/AtlasRuntimeFrame.tsx.raw",
+          "retainedPath": "pending/body-learning-20261021/website/components/AtlasRuntimeFrame.tsx",
+          "bytes": 5344,
+          "sha256": "335b8b70b2ff60c3a951efb9eb18d98de8d230411c00896ff4a4123eff051261"
+        },
+        {
+          "omittedPath": "pending/inline-viewer-20261022/ui/tests/fixtures/atlas-runtime-expansion-before-20261022/bind-clinical-review.mjs.raw",
+          "retainedPath": "pending/body-learning-20261021/website/scripts/bind-clinical-review.mjs",
+          "bytes": 8202,
+          "sha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d"
+        },
+        {
+          "omittedPath": "pending/legacy-shoulder-references-20261022/atlas/app/body-content.ts",
+          "retainedPath": "pending/atlas-teaching-tour-composition-20261022/current/app/body-content.ts",
+          "bytes": 83121,
+          "sha256": "d95dd28332f4adc58b689301d69e0563d45eea2a2c3c25f6713308eb93ea6b56"
+        },
+        {
+          "omittedPath": "pending/legacy-shoulder-references-20261022/atlas/lib/legacy-shoulder-bone-references.ts",
+          "retainedPath": "pending/atlas-teaching-tour-composition-20261022/current/lib/legacy-shoulder-bone-references.ts",
+          "bytes": 2164,
+          "sha256": "11283e70f46cb8e63d0a3acba1bf8c2e9e9699a2d9e88ddc332e0b97857ba649"
+        },
+        {
+          "omittedPath": "pending/legacy-shoulder-references-20261022/fixtures/anatomy-data.ts.raw",
+          "retainedPath": "pending/atlas-teaching-tour-composition-20261022/preimage/app/anatomy-data.ts",
+          "bytes": 25438,
+          "sha256": "75a91a07a3bf268088f7b6e011e71ffd27bbc0366d2d01a3dbbd7f28da64a4cb"
+        },
+        {
+          "omittedPath": "pending/legacy-shoulder-references-20261022/fixtures/body-content.ts.raw",
+          "retainedPath": "pending/atlas-teaching-tour-composition-20261022/preimage/app/body-content.ts",
+          "bytes": 82967,
+          "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
+        },
+        {
+          "omittedPath": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/components/HeadAtlasLearningPicker.tsx",
+          "retainedPath": "pending/head-link-keyboard-20261023/preimages/components/HeadAtlasLearningPicker.tsx.raw",
+          "bytes": 4790,
+          "sha256": "38f0385f393dc2e1a65c2af33c843cca0e25f4d4903bb3dcffc3866cdfbcd4a0"
+        },
+        {
+          "omittedPath": "pending/linked-tour-dismiss-20261022/20261022-linked-tour-dismiss-proposal/CODE/tests/head-learning-picker-dismiss.test.mjs",
+          "retainedPath": "pending/head-link-keyboard-20261023/preimages/tests/head-learning-picker-dismiss.test.mjs.raw",
+          "bytes": 7865,
+          "sha256": "113f62c9f89916af407d885d81aa44e3adffdbaa514b29ab50752553c446de89"
+        },
+        {
+          "omittedPath": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/atlas-runtime-expansion-adoption-proof.test.mjs.raw",
+          "retainedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/atlas-runtime-expansion-adoption-proof.test.mjs",
+          "bytes": 4071,
+          "sha256": "8e260374718c266b434234478ed32d14b91402bfdfb878e7126b62ad06777784"
+        },
+        {
+          "omittedPath": "pending/linked-tour-dismiss-20261022/20261022-migration-next-consumer-proposal/RAW/tests/live-learning-consumer-loader-preservation.test.mjs.raw",
+          "retainedPath": "pending/inline-viewer-20261022/consumer-adoption/tests/live-learning-consumer-loader-preservation.test.mjs",
+          "bytes": 6061,
+          "sha256": "0061b458a0b0a4b079264d5d945d871a387fafa997e1b779278de0f016ed54f2"
+        },
+        {
+          "omittedPath": "pending/linked-tour-dismiss-20261022/coordination/build-unbound-ui-successor.mjs",
+          "retainedPath": "pending/head-modality-3d-20261022/coordination/RAW/build-unbound-ui-successor.mjs",
+          "bytes": 4566,
+          "sha256": "047d7da1bfc1109ad30c826144d06e8db761f0b3e937df9429fb3066dc969ac0"
+        },
+        {
+          "omittedPath": "pending/loader-preservation-20261023/current/tests/fixtures/learning-loader-preservation-before-expansion.test.mjs.raw",
+          "retainedPath": "pending/body-learning-20261021/website/tests/atlas-learning-loader-preservation.test.mjs",
+          "bytes": 2763,
+          "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
+        },
+        {
+          "omittedPath": "pending/loader-preservation-20261023/preimage/tests/atlas-learning-loader-preservation.test.mjs",
+          "retainedPath": "pending/body-learning-20261021/website/tests/atlas-learning-loader-preservation.test.mjs",
+          "bytes": 2763,
+          "sha256": "ae9552c5477878b564f6b8a30c78d153acdb3e293b6ea05beafab41441ab91dd"
+        },
+        {
+          "omittedPath": "pending/lower-arterial-reasoning-20261024/coordination/build-ventricular-atlas-20261023.mjs",
+          "retainedPath": "pending/carpal-reasoning-20261023/coordination/build-ventricular-atlas-20261023.mjs",
+          "bytes": 1196,
+          "sha256": "68955dec2251a304847ebce04a0d6d36e9b5dcee1c2ff91ae79c161a4838e018"
+        },
+        {
+          "omittedPath": "pending/lower-arterial-reasoning-20261024/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+          "retainedPath": "pending/carpal-reasoning-20261023/coordination/snapshot-ventricular-reasoning-20261023.mjs",
+          "bytes": 2027,
+          "sha256": "f5183aed51dfacdf292f692fb50527bed103c7892ee3072764b77c876b6b228d"
+        },
+        {
+          "omittedPath": "pending/lower-limb-regression-current-20261024/recipes/finish-source-website-checkpoint.mjs",
+          "retainedPath": "pending/adjacent-regression-current-20261024/recipes/finish-source-website-checkpoint.mjs",
+          "bytes": 5972,
+          "sha256": "3cf6324f220281ca0389986b68aa781d5ea82e4de2634598d33d4eb9b7743859"
+        },
+        {
+          "omittedPath": "pending/lower-limb-regression-current-20261024/website/tests/clinical-review-lower-limb-connective-xray.test.ts",
+          "retainedPath": "pending/adjacent-regression-current-20261024/website/tests/fixtures/adjacent-b79-preimage/clinical-review-lower-limb-connective-xray.test.ts.raw",
+          "bytes": 21671,
+          "sha256": "c848b411bd7b92e91e47dbfb0c9c9829131ead5bd64feb5ffe7f78e7f90ea829"
+        },
+        {
+          "omittedPath": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-current-role-inverse.mjs",
+          "retainedPath": "pending/adjacent-regression-current-20261024/website/tests/fixtures/adjacent-b79-preimage/lower-limb-current-role-inverse.mjs.raw",
+          "bytes": 1667,
+          "sha256": "4eb7bc4c2fdc72944621abee34e0a3d2a9cde642f28c25de697b2819d2569877"
+        },
+        {
+          "omittedPath": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-current-source-roles.test.mjs",
+          "retainedPath": "pending/adjacent-regression-current-20261024/website/tests/fixtures/adjacent-reviewed5e75/lower-limb-current-source-roles.test.mjs.cdeb65858f9b.raw",
+          "bytes": 4844,
+          "sha256": "cdeb65858f9b5a2de46a76e7fae301985e8db418d202fa68dbe6f4bfb8ef988c"
+        },
+        {
+          "omittedPath": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-display-pin-history.mjs",
+          "retainedPath": "pending/adjacent-regression-current-20261024/website/tests/fixtures/adjacent-b79-preimage/lower-limb-display-pin-history.mjs.raw",
+          "bytes": 6035,
+          "sha256": "948ca66d04c9a4c5b5ab6a82d1f2ed488d82f0b6ba00320dce70807d57734fa7"
+        },
+        {
+          "omittedPath": "pending/lower-limb-regression-current-20261024/website/tests/lower-limb-display-pin-history.test.mjs",
+          "retainedPath": "pending/adjacent-regression-current-20261024/website/tests/fixtures/adjacent-b79-preimage/lower-limb-display-pin-history.test.mjs.raw",
+          "bytes": 3572,
+          "sha256": "e8581483d1f6823e30bc4517ff067dbc7da50d94d849d9ac3d3e26edd8fcf5a9"
+        },
+        {
+          "omittedPath": "pending/lower-limb-regression-current-20261024/website/tests/release-epoch-composition-preservation.test.mjs",
+          "retainedPath": "pending/adjacent-regression-current-20261024/website/tests/fixtures/adjacent-b79-preimage/release-epoch-composition-preservation.test.mjs.raw",
+          "bytes": 18584,
+          "sha256": "bb89e3cc046c21483093e8029ed9a2eca31e9029dd107d29a50af79fd4ab1e24"
+        },
+        {
+          "omittedPath": "pending/modality-help-clarity-20261023/preimages/atlas-workspace-simplification.test.ts.raw",
+          "retainedPath": "pending/head-modality-3d-20261022/website/tests/atlas-workspace-simplification.test.ts",
+          "bytes": 5853,
+          "sha256": "bd7aed9867c51c839a10eb8fc981068244c24be92d7e4e12e3a3bd3a32ef5e3d"
+        },
+        {
+          "omittedPath": "pending/modality-help-clarity-20261023/preimages/AtlasWorkspaceNavigation.tsx.raw",
+          "retainedPath": "pending/head-modality-3d-20261022/website/components/AtlasWorkspaceNavigation.tsx",
+          "bytes": 5415,
+          "sha256": "b6b742dfcbdc5655a9b958bb6bd9e28f4f05d21e92297f004b573ff9f36d621d"
+        },
+        {
+          "omittedPath": "pending/native-slice-commit-20261024/before/HeadAtlasViewer.tsx.raw",
+          "retainedPath": "pending/imaging-desktop-layout-20261024/website/components/HeadAtlasViewer.tsx",
+          "bytes": 115200,
+          "sha256": "6296ff18c86691f22cfa02294dae295395b9f8035768a3990a9af4fe16beeff1"
+        },
+        {
+          "omittedPath": "pending/native-slice-commit-20261024/before/tests/head-pan-source-transition.test.ts.raw",
+          "retainedPath": "pending/head-pan-bound-20261023/candidate/tests/head-pan-source-transition.test.ts",
+          "bytes": 3394,
+          "sha256": "80670c3b9adaf2c3178a64ddcc97eec5682c0abe813e7da73f7a93d3d8cdfcc8"
+        },
+        {
+          "omittedPath": "pending/native-slice-commit-20261024/before/tests/head-slice-keyboard.test.ts.raw",
+          "retainedPath": "pending/head-pan-bound-20261023/candidate/tests/head-slice-keyboard.test.ts",
+          "bytes": 18928,
+          "sha256": "3e3994b1bb5f82cf0480e18e199a4acbd7e6b72fc97aff1a7df8d6a2d3804820"
+        },
+        {
+          "omittedPath": "pending/native-slice-commit-20261024/before/tests/head-slice-zoom.test.ts.raw",
+          "retainedPath": "pending/head-pan-bound-20261023/candidate/tests/head-slice-zoom.test.ts",
+          "bytes": 9963,
+          "sha256": "1459b99870881d5d568b259cfb02ff84813102194c586a4bb6d9f2abd79482c1"
+        },
+        {
+          "omittedPath": "pending/native-slice-commit-20261024/website/components/HeadAtlasViewer.tsx",
+          "retainedPath": "pending/head-study-set-commit-20261024/before/HeadAtlasViewer.tsx.raw",
+          "bytes": 115367,
+          "sha256": "9df2752e85f7b9f2c3516be27e03ceb05e23527bc8efd333bf5170e0a6a919fa"
+        },
+        {
+          "omittedPath": "pending/native-workspace-disclosures-20261023/preimages/components/AtlasWorkspaceNavigation.tsx.raw",
+          "retainedPath": "pending/modality-help-clarity-20261023/candidate/components/AtlasWorkspaceNavigation.tsx",
+          "bytes": 5420,
+          "sha256": "10ee9a5fa4e20c6413be5f3608c58c7728c59bd7930a6bb243762fc284db58bc"
+        },
+        {
+          "omittedPath": "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-3d-context.test.mjs.raw",
+          "retainedPath": "pending/head-modality-3d-20261022/website/tests/atlas-workspace-3d-context.test.mjs",
+          "bytes": 5717,
+          "sha256": "a475d86168f015be3264fbfd2a5de3059944511329d1e9504232fcd1f0986ff3"
+        },
+        {
+          "omittedPath": "pending/native-workspace-disclosures-20261023/preimages/tests/atlas-workspace-simplification.test.ts.raw",
+          "retainedPath": "pending/modality-help-clarity-20261023/candidate/tests/atlas-workspace-simplification.test.ts",
+          "bytes": 5858,
+          "sha256": "4de68da5696a4d4464eea47a2169d6cd216a34332c06968783fba636e78524ca"
+        },
+        {
+          "omittedPath": "pending/native-workspace-disclosures-20261023/preimages/tests/desktop-workspace-simplification.test.ts.raw",
+          "retainedPath": "evidence/20261021-review-navigation-verified/website/tests/desktop-workspace-simplification.test.ts",
+          "bytes": 10671,
+          "sha256": "0b30894747d65a9da04e07c443fb367d7f838283291dbbac6295db01ac6bd02b"
+        },
+        {
+          "omittedPath": "pending/native-workspace-disclosures-20261023/preimages/tests/imaging-atlas-shell.test.ts.raw",
+          "retainedPath": "evidence/20261021-imaging-comparison-label-verified/candidate/tests/imaging-atlas-shell.test.ts",
+          "bytes": 16099,
+          "sha256": "1a4efc97f1e50fdc7a96db432649ca3d5995c8641a3f53c87119f0ec71a6c97c"
+        },
+        {
+          "omittedPath": "pending/neck-landmark-xray-20261022/atlas/app/body-content.ts",
+          "retainedPath": "pending/atlas-teaching-tour-composition-20261022/preimage/app/body-content.ts",
+          "bytes": 82967,
+          "sha256": "ffb559ac6ca94d8b5713c2b2aac44aa6b9f47766dd47ff162f6625f51f4e1382"
+        },
+        {
+          "omittedPath": "pending/neck-xray-website-20261022/website/tests/current-atlas-delivery.test.mjs",
+          "retainedPath": "pending/head-surface-cancellation-20261022/RAW/tests/current-atlas-delivery.test.mjs",
+          "bytes": 19208,
+          "sha256": "172e1153b7213b1e32ec1fff745ebb3594cef5fdce49168734670325e8ac827e"
+        },
+        {
+          "omittedPath": "pending/neonatal-current-epoch-20261023/tests/tests/atlas-emitted-teaching.ts",
+          "retainedPath": "pending/cranial-xray-epoch-20261023/tests/tests/atlas-emitted-teaching.ts",
+          "bytes": 3337,
+          "sha256": "407396ddf4b0e4398efabf691fcdec75e90c79caafea280234f3438645af8cf2"
+        },
+        {
+          "omittedPath": "pending/neonatal-current-epoch-20261023/tests/tests/clinical-review-neonatal-cranial-us.test.ts",
+          "retainedPath": "pending/digital-vein-website-20261023/candidate/tests/clinical-review-neonatal-cranial-us.test.ts",
+          "bytes": 31843,
+          "sha256": "ed23b3a23e83fffbdffecb0e67d31ffbc6e62999cac30adbbf81cbf49612b73f"
+        },
+        {
+          "omittedPath": "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.mjs",
+          "retainedPath": "pending/digital-vein-website-20261023/candidate/tests/cranial-tour-current-epoch.mjs",
+          "bytes": 4711,
+          "sha256": "83a4a9b991e4bb9c2e3a0f66b4031a8a56eed1bd076b3b6c4b8a1c3e118a2163"
+        },
+        {
+          "omittedPath": "pending/neonatal-current-epoch-20261023/tests/tests/cranial-tour-current-epoch.test.mjs",
+          "retainedPath": "pending/digital-vein-website-20261023/candidate/tests/cranial-tour-current-epoch.test.mjs",
+          "bytes": 5908,
+          "sha256": "2373a303124766b905bb8c2f4dd06c8f68188c0271c8a69f33b6f1968d11b7f4"
+        },
+        {
+          "omittedPath": "pending/neonatal-current-epoch-20261023/tests/tests/fixtures/neonatal-current-before/clinical-review-neonatal-cranial-us.test.ts.raw",
+          "retainedPath": "pending/digital-vein-website-20261023/candidate/tests/fixtures/neonatal-current-before/clinical-review-neonatal-cranial-us.test.ts.raw",
+          "bytes": 31702,
+          "sha256": "94b81cb4b06e64a1781a5bbea45d349d1524dc3e346cdcce0fc54c31a8f3ab5c"
+        },
+        {
+          "omittedPath": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.mjs",
+          "retainedPath": "pending/digital-vein-website-20261023/candidate/tests/neonatal-inbox-contexts.mjs",
+          "bytes": 11058,
+          "sha256": "fe4dc1d2eb068c9be29507f7b5341d4bf189c1e27a8c5c273e2938a2d9f2c6f1"
+        },
+        {
+          "omittedPath": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-inbox-contexts.test.mjs",
+          "retainedPath": "pending/digital-vein-website-20261023/candidate/tests/neonatal-inbox-contexts.test.mjs",
+          "bytes": 3568,
+          "sha256": "eb663f3ca4f7eae089ce3fe8bb28e94246647888cd502ac6cda6612bb3943c64"
+        },
+        {
+          "omittedPath": "pending/neonatal-current-epoch-20261023/tests/tests/neonatal-native-memory.mjs",
+          "retainedPath": "pending/digital-vein-website-20261023/candidate/tests/neonatal-native-memory.mjs",
+          "bytes": 789,
+          "sha256": "6caa751004e74b104d5a4842d1086ca3ce75210c91f48f7480e1caa2395a2a5a"
+        },
+        {
+          "omittedPath": "pending/nested-tour-library-pause-20261023/preimage/app/eye-layers.tsx",
+          "retainedPath": "pending/head-access-20261022/atlas/app/eye-layers.tsx",
+          "bytes": 31329,
+          "sha256": "3350a55d8162226b400cc8ed2ad3a28e4fcf323ced4ae7a7ec38d43d2437930d"
+        },
+        {
+          "omittedPath": "pending/nested-tour-library-pause-20261023/preimage/app/ventricles.tsx",
+          "retainedPath": "pending/head-access-20261022/atlas/app/ventricles.tsx",
+          "bytes": 93370,
+          "sha256": "010f2c495e5c3fa290935d673531d2ca3049bee215abb22d2b88016e9a98d07e"
+        },
+        {
+          "omittedPath": "pending/reference-links-closed56-20261023/current/tests/fixtures/closed56-femoral-epoch-current-2381.mjs.raw",
+          "retainedPath": "pending/current-source-closure-assurance-20261022/website/tests/closed56-femoral-epoch.test.mjs",
+          "bytes": 10912,
+          "sha256": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/craniofacial-ct-current-delivery.test.mjs",
+          "retainedPath": "evidence/20261021-head-role-union-verified/installed-website/tests/craniofacial-ct-current-delivery.test.mjs",
+          "bytes": 8246,
+          "sha256": "b08d39c2e6a54cf1ea04f5cdf0b5c5a92a5b6adb2e68182796f9672a686ce76a"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-cerebellar-review.test.ts",
+          "retainedPath": "evidence/20261021-combined-source-verified/website/tests/head-cerebellar-review.test.ts",
+          "bytes": 18966,
+          "sha256": "e296846aea3e46e42c373d01ae3934c06adae223e7789f413b0b494ca8ffbdc8"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-deep-grey-review.test.ts",
+          "retainedPath": "evidence/20261021-combined-source-verified/website/tests/head-deep-grey-review.test.ts",
+          "bytes": 18066,
+          "sha256": "bcf97aa6433919540e40960b65f4f7e069fb2cbb5a0573195c092e55d78e8915"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-hippocampal-clinical.test.ts",
+          "retainedPath": "evidence/20261021-combined-source-verified/website/tests/head-hippocampal-clinical.test.ts",
+          "bytes": 23975,
+          "sha256": "3866730ce1998d887379736e2ff5a922b89bbcbf59b770300e6dac7958d39f15"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-lobar-review.test.ts",
+          "retainedPath": "evidence/20261021-combined-source-verified/website/tests/head-lobar-review.test.ts",
+          "bytes": 20949,
+          "sha256": "478aa7bd74b9dabafc358b160002fe6fecf134954cd83243520977553f4fceb3"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/head-cranio-controls/RAW/tests/head-ventricular-review.test.ts",
+          "retainedPath": "evidence/20261021-combined-source-verified/website/tests/head-ventricular-review.test.ts",
+          "bytes": 11794,
+          "sha256": "a9ae1ea7a1770cf5c8a1a4fb3393f5bd3a1cb5d76412b59fab995eb218e54bec"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-closed-epoch-preservation/RAW/tests/closed54-55-provider-preservation.test.mjs",
+          "retainedPath": "pending/body-learning-20261021/website/tests/closed54-55-provider-preservation.test.mjs",
+          "bytes": 8554,
+          "sha256": "707db26812327fb29ed63642c65b5ca6f0e7fc55d12995421ff718223b18ef0c"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-historical-schema-refusals/RAW/tests/current-atlas-delivery-register47.mjs",
+          "retainedPath": "pending/body-learning-20261021/website/tests/fixtures/body-learning-current-admission/current-atlas-delivery-190.mjs.raw",
+          "bytes": 4632,
+          "sha256": "dfcce9763cba89e6d94f6e7e75ceb59f79ca73ac0d6056552bbe00139e804d62"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/head-binding-role-preservation-20261021.test.mjs",
+          "retainedPath": "evidence/20261021-head-binding-verified/installed-website/tests/head-binding-role-preservation-20261021.test.mjs",
+          "bytes": 14856,
+          "sha256": "b9f39466cc4e8268550898a78b8dd4f8ec2f0153f15d8aa1c6b214e79acfe716"
+        },
+        {
+          "omittedPath": "pending/regional-runtime-linking-20261022/loading-binding-repair/20261022-native-focus-current-source-followups/RAW/tests/native-focus-review-binding.test.mjs",
+          "retainedPath": "evidence/20261021-head-binding-verified/installed-website/tests/native-focus-review-binding.test.mjs",
+          "bytes": 3923,
+          "sha256": "9c70cc8acb8034b2244d256509754ff32835937936169770c1a480de1654f259"
+        }
+      ],
+      "omittedBytes": 2039673,
+      "inheritedPathsBefore": 5996,
+      "inheritedPathsAfter": 5900
+    },
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,

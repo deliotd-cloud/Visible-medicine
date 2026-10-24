@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261024-orbital-ct-website',parent='F:/VisibleMedicine/staging/20261024-head-study-set-website/before';
+const expected={'HeadAtlasViewer.tsx':'6296ff18c86691f22cfa02294dae295395b9f8035768a3990a9af4fe16beeff1','tests/head-slice-keyboard.test.ts':'3e3994b1bb5f82cf0480e18e199a4acbd7e6b72fc97aff1a7df8d6a2d3804820','tests/head-mask-picking-ui.test.ts':'635e74753f3467f8b85b4d1f431955e8fb921e8d5a5c377af0023e95ffc48022','tests/head-slice-zoom.test.ts':'1459b99870881d5d568b259cfb02ff84813102194c586a4bb6d9f2abd79482c1','tests/head-pan-source-transition.test.ts':'80670c3b9adaf2c3178a64ddcc97eec5682c0abe813e7da73f7a93d3d8cdfcc8'};
+assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.activeExecutionSessions.length,0);
+const initial=json(stage+'/checks/tests/TERMINAL.json');assert.equal(initial.code,1);assert.equal(initial.counts.fail,5);assert.deepEqual(initial.sourceDrift,[]);assert.deepEqual(initial.parentSourceDrift,[]);
+const files=Object.entries(expected).map(([p,sha256])=>{const from=parent+'/'+p,to=stage+'/before/'+p;assert.equal(hash(from),sha256);fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);return{from,to,sha256};});
+fs.writeFileSync(stage+'/HISTORICAL_FIXTURE.json',JSON.stringify({at:new Date().toISOString(),files,originalAssertionsUnchanged:true,initialTestFailure:'Five missing exact external historical component/test preimages; not observed product regressions.',initialTerminal:stage+'/checks/tests/TERMINAL.json',initialTerminalSha256:hash(stage+'/checks/tests/TERMINAL.json'),previewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({fixturesRestored:files.length,sourceEdited:false,previewChanged:false}));

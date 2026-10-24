@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Carry5986verified filtered source paths/full ancestry; add10explicit native authored code/package/test/recipe paths, no removals. Generated identity/teaching/review JSON, licence/docs text, models/scans/private data, raw evidence/build/dependencies and later coordination stay F-local. Not whole/private/runnable off-device backup.
+Filtered authored code/styles/recipes only. Consolidate96byte-identical inherited duplicate paths, preserving all unique bytes and full parent ancestry; preserve current bound sources. No working file deletion. Generated Review/delivery/pins/JSON, models/scans/private data/raw QA/build/dependencies and later coordination remain F-local; not whole/private/runnable off-device recovery.
