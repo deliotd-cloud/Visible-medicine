@@ -1,0 +1,7 @@
+import assert from 'node:assert/strict';import test from 'node:test';import {readFileSync} from 'node:fs';import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';import {restoreHeadFilteredCssCurrent,restoreHeadViewerTo20261023} from './head-layout-history-adapter.mjs';
+const read=p=>readFileSync(new URL('./'+p,import.meta.url));
+test('head history adapters do not replace the actual current delivery validator or admit stale and forged source',()=>{
+ const result=validateCurrentAtlasDelivery();assert(result);const current=JSON.parse(read('fixtures/current-atlas-delivery.json')),old=JSON.parse(read('fixtures/current-delivery-before-filtered-layout.json'));assert.equal(current.viewerFiles,54);assert.throws(()=>validateCurrentAtlasDelivery({pin:old}));assert.throws(()=>validateCurrentAtlasDelivery({pin:{...old,viewerFiles:54}}));
+ const currentCss=read('../components/head-atlas.css'),filtered=restoreHeadFilteredCssCurrent(currentCss);assert.throws(()=>restoreHeadFilteredCssCurrent(filtered));assert.throws(()=>restoreHeadFilteredCssCurrent(Buffer.concat([currentCss,Buffer.from('\n/* foreign */')])));
+ const currentViewer=read('../components/HeadAtlasViewer.tsx'),historical=restoreHeadViewerTo20261023(currentViewer);assert.throws(()=>restoreHeadViewerTo20261023(historical));assert.throws(()=>restoreHeadViewerTo20261023(Buffer.concat([currentViewer,Buffer.from('\n// foreign')])));
+});

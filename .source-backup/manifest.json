@@ -1,51 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T11:36:02.008Z",
+  "at": "2026-10-24T11:46:36.190Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "3d9c3ca38a29d2f7320222711bca73d22f5c85771a28a3fe6c3219acd03ac4eb",
-    "atlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+    "testOnlyProposalReceiptSha256": "85d4cf8730567e0da11b5832c16275313cd2a14f7c1eb0bfd070db839fd77778",
+    "completeWebsiteParentSha256": "3d9c3ca38a29d2f7320222711bca73d22f5c85771a28a3fe6c3219acd03ac4eb",
     "review": "c8bdd276ab1f832ec5e6854df40bbd83102c7a4dbfe99c5cdde87aad89b5815d",
-    "sourceArtifactBindings": [
-      {
-        "websitePath": "components/StudioNavigation.tsx",
-        "sha256": "d2ac47b267ac7122e664c5341bcdb7e3d21f1f60882b186968c54b86bc894232",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/components/StudioNavigation.tsx",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-disclosure-source.mjs",
-        "sha256": "2d5e8cf76a02501d700be54867fd81068195815542d3aaf1304d7dd002da7efa",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure-source.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-disclosure.test.mjs",
-        "sha256": "d92086fc687a425baf39cd3555960b1b402074546ec2bcde0db6d1038be0d6dd",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/studio-route-disclosure-source.mjs",
-        "sha256": "9ff99dfd3b3b6d4a70f09d843fe21d704b7065380a0d5d4185ac45ebb3c965c0",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure-source.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/studio-route-disclosure.test.mjs",
-        "sha256": "1e550aca879c2b2dc1ad97f6728eeba8e169a61c3b1fa88610b81e4ff6201384",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/studio-route-website-composition.test.mjs",
-        "sha256": "a4eb832e145934f4126c13efc67a8de9014134d8a60229a17fc15704290acdd1",
-        "snapshotPath": "pending/studio-route-website-20261024/website/tests/studio-route-website-composition.test.mjs",
-        "inherited": false
-      }
-    ]
+    "productCodeChanged": false
   },
-  "parent": "5265469b4368ee924087ac75ea172338ccbd3e5a",
-  "gitParent": "5265469b4368ee924087ac75ea172338ccbd3e5a",
+  "parent": "1acc58cd09a962a907f491b74174941a1524e90f",
+  "gitParent": "1acc58cd09a962a907f491b74174941a1524e90f",
   "files": [
     {
       "path": "app/globals.css",
@@ -17598,6 +17561,61 @@
       "sha256": "022b44a8b228a3532a611d38a801ed1618a6abecb8ace935448b43720ac08a61"
     },
     {
+      "path": "pending/head-layout-history-verified-20261024/before/head-filtered-layout.test.mjs.raw",
+      "bytes": 4574,
+      "sha256": "5dc4a8d99ee20f02d8724bc6d952fe039a83f32c6245eb85b2efee28c646ff27"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/before/head-toolbar-compact.test.mjs.raw",
+      "bytes": 10762,
+      "sha256": "650daf34edcc3cd8de98c91fbe045bdf1250945356ceb3947cf14e55d1f2a3b8"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/recipes/checkpoint-head-layout-history-20261024.mjs",
+      "bytes": 11829,
+      "sha256": "9835fbadc95df5a121a74be513052ef3970fcb046b1b4eccd269138dd495006a"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/recipes/head-layout-current-delivery.test.mjs",
+      "bytes": 1419,
+      "sha256": "fb8cb0d32e422b882dc9a86216a54f0e2d0d5543e8ff6a268a2c6e38cbf4f525"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/recipes/prepare-head-layout-history-20261024.mjs",
+      "bytes": 3947,
+      "sha256": "0618db948fd2e4cf25c6edaa36975de73330cb22b4bc59d27b27ddae14d23973"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/recipes/run-head-layout-history-20261024.mjs",
+      "bytes": 3552,
+      "sha256": "d84ab5da13a7b4048b6378582a11adb5dac18a33614a3c89382299b8fa850470"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/website/tests/head-filtered-layout.test.mjs",
+      "bytes": 4743,
+      "sha256": "d90c2525ed3c8669fe3a7dd84f295797d9c33b2b894adcb1325a3190a16c322e"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/website/tests/head-layout-current-delivery.test.mjs",
+      "bytes": 1419,
+      "sha256": "fb8cb0d32e422b882dc9a86216a54f0e2d0d5543e8ff6a268a2c6e38cbf4f525"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/website/tests/head-layout-history-adapter.mjs",
+      "bytes": 7232,
+      "sha256": "c1e2fd589cdb8c4f5571c2d503bcb7f8418ffe20d4dc2aa1af6bfa09d1a6341d"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/website/tests/head-layout-history-adapter.test.mjs",
+      "bytes": 4128,
+      "sha256": "461404ecbd81aea66aa31db2ac03d1fd76cb4e2bc2a09babff44ee059873b76f"
+    },
+    {
+      "path": "pending/head-layout-history-verified-20261024/website/tests/head-toolbar-compact.test.mjs",
+      "bytes": 10898,
+      "sha256": "fb89183c694748217ddbaac5482355bae13c30b81992e4dabe57d0f0a8c9d60d"
+    },
+    {
       "path": "pending/head-link-keyboard-20261023/coordination/build-head-link-keyboard-browser-20261023.mjs",
       "bytes": 1632,
       "sha256": "1adc3a4295c005d5befff19d83e0f26a999e60afcec98efa226fb2114bfcdfd4"
@@ -29924,56 +29942,17 @@
     }
   ],
   "removed": [],
-  "scope": "Carry5970verified filtered source paths/full ancestry; reuse5exact prior source files; add1composition test and4recipes. No removals. No generated Review/delivery/bundles, models/images/scans/private data, raw evidence/type graphs/dependencies/builds/later coordination. Not whole/private/runnable off-device backup.",
+  "scope": "Carry5975verified filtered source paths/full ancestry and add11explicit test/helper/preimage/recipe paths, no removals. Exclude source receipts, raw evidence/generated/private/model/image/scan data, dependencies/builds and later coordination; not whole/private/runnable off-device recovery.",
   "proof": {
-    "mainReviewSha256": "37db26a0621c14247a1ffee6606b2319a98fb12f0328d398e445beeea7a54576",
-    "focusedCases": 24,
-    "sourceInputs": 6583,
-    "strictRoots": 1,
-    "strictGraphFiles": 565,
-    "typeDiagnostics": 0,
-    "sourceOverlayCount": 0,
-    "stockPrebuildBuildAndReviewVerifierPassed": true,
-    "protectedReviewInputsUnchanged": 1806,
-    "sourceArtifactBindings": [
-      {
-        "websitePath": "components/StudioNavigation.tsx",
-        "sha256": "d2ac47b267ac7122e664c5341bcdb7e3d21f1f60882b186968c54b86bc894232",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/components/StudioNavigation.tsx",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-disclosure-source.mjs",
-        "sha256": "2d5e8cf76a02501d700be54867fd81068195815542d3aaf1304d7dd002da7efa",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure-source.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-disclosure.test.mjs",
-        "sha256": "d92086fc687a425baf39cd3555960b1b402074546ec2bcde0db6d1038be0d6dd",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/studio-route-disclosure-source.mjs",
-        "sha256": "9ff99dfd3b3b6d4a70f09d843fe21d704b7065380a0d5d4185ac45ebb3c965c0",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure-source.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/studio-route-disclosure.test.mjs",
-        "sha256": "1e550aca879c2b2dc1ad97f6728eeba8e169a61c3b1fa88610b81e4ff6201384",
-        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/studio-route-website-composition.test.mjs",
-        "sha256": "a4eb832e145934f4126c13efc67a8de9014134d8a60229a17fc15704290acdd1",
-        "snapshotPath": "pending/studio-route-website-20261024/website/tests/studio-route-website-composition.test.mjs",
-        "inherited": false
-      }
-    ],
-    "remoteNewPaths": 5,
+    "mainReviewSha256": "fba3511eb2d87b2db89f246577bdf70e876abd6aebcf1d9dfbcb86b17d1227e9",
+    "focusedCases": 20,
+    "baselineCases": 16,
+    "baselinePass": 13,
+    "baselineFail": 3,
+    "sourceInputs": 6586,
+    "currentDeliveryViewerFiles": 54,
+    "productCodeChanged": false,
+    "remoteNewPaths": 11,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
