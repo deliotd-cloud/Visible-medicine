@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261024-practice-actions-website';
+const assignment='F:/VisibleMedicine/recovery/checkpoints/20261024-practice-actions/RELIABILITY_ASSIGNMENT.json';
+assert.equal(hash(assignment),'616d3937625cf6c047a8fe2e18a1262fedd6251a57f6ba6d9b5caba022bb443f');
+assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.activeExecutionSessions.length,0);
+const command="@(Get-CimInstance Win32_Process -Filter \"Name = 'node.exe'\" | Where-Object { $_.CommandLine -match '20261024-(adjacent-native-execution|practice-actions|upper-vascular)' -and $_.ProcessId -ne "+process.pid+" } | Select-Object ProcessId,ParentProcessId,CommandLine) | ConvertTo-Json -Depth 3 -Compress";
+const live=execFileSync('powershell',['-NoProfile','-Command',command],{encoding:'utf8',windowsHide:true}).trim();
+assert(!live||live==='[]','Other validator is live');
+fs.writeFileSync(stage+'/VALIDATION_SLOT_ACQUIRED.json',JSON.stringify({at:new Date().toISOString(),authority:'Main serial validator; specialist observer assignment is read-only and explicitly prohibits builds/types/broad validation.',assignment,assignmentSha256:hash(assignment),matchingLiveProcesses:[],previewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log('Exclusive serial validation slot acquired; owner preview unchanged.');
