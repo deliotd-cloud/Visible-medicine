@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Carry verified5951filtered source paths and full parent ancestry; add19explicit authored component/test/preimage/recipe/synthetic fixture source paths, no removals. Exclude generated browser bundles, raw QA, scans/models/private data, dependencies/builds/generated Review and later coordination; not whole/private/runnable off-device backup.
+Carry5970verified filtered source paths/full ancestry; reuse5exact prior source files; add1composition test and4recipes. No removals. No generated Review/delivery/bundles, models/images/scans/private data, raw evidence/type graphs/dependencies/builds/later coordination. Not whole/private/runnable off-device backup.

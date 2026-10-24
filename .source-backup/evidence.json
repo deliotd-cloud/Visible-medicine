@@ -1,13 +1,52 @@
 {
-  "mainReviewSha256": "a094490356cbb9443b76bacb8f2c6f9a9ccbaa1902185be12116db49d71d4cb2",
-  "focusedCases": 22,
+  "mainReviewSha256": "37db26a0621c14247a1ffee6606b2319a98fb12f0328d398e445beeea7a54576",
+  "focusedCases": 24,
+  "sourceInputs": 6583,
+  "strictRoots": 1,
   "strictGraphFiles": 565,
   "typeDiagnostics": 0,
-  "sourceOverlayCount": 1,
-  "actualProductionReactSyntheticRouteReplay": true,
-  "retainedInitialAndHistoricalFailures": true,
-  "completeWebsiteIntegrationPending": true,
-  "remoteNewPaths": 19,
+  "sourceOverlayCount": 0,
+  "stockPrebuildBuildAndReviewVerifierPassed": true,
+  "protectedReviewInputsUnchanged": 1806,
+  "sourceArtifactBindings": [
+    {
+      "websitePath": "components/StudioNavigation.tsx",
+      "sha256": "d2ac47b267ac7122e664c5341bcdb7e3d21f1f60882b186968c54b86bc894232",
+      "snapshotPath": "pending/studio-route-disclosure-20261024/website/components/StudioNavigation.tsx",
+      "inherited": true
+    },
+    {
+      "websitePath": "tests/native-disclosure-source.mjs",
+      "sha256": "2d5e8cf76a02501d700be54867fd81068195815542d3aaf1304d7dd002da7efa",
+      "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure-source.mjs",
+      "inherited": true
+    },
+    {
+      "websitePath": "tests/native-disclosure.test.mjs",
+      "sha256": "d92086fc687a425baf39cd3555960b1b402074546ec2bcde0db6d1038be0d6dd",
+      "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure.test.mjs",
+      "inherited": true
+    },
+    {
+      "websitePath": "tests/studio-route-disclosure-source.mjs",
+      "sha256": "9ff99dfd3b3b6d4a70f09d843fe21d704b7065380a0d5d4185ac45ebb3c965c0",
+      "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure-source.mjs",
+      "inherited": true
+    },
+    {
+      "websitePath": "tests/studio-route-disclosure.test.mjs",
+      "sha256": "1e550aca879c2b2dc1ad97f6728eeba8e169a61c3b1fa88610b81e4ff6201384",
+      "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure.test.mjs",
+      "inherited": true
+    },
+    {
+      "websitePath": "tests/studio-route-website-composition.test.mjs",
+      "sha256": "a4eb832e145934f4126c13efc67a8de9014134d8a60229a17fc15704290acdd1",
+      "snapshotPath": "pending/studio-route-website-20261024/website/tests/studio-route-website-composition.test.mjs",
+      "inherited": false
+    }
+  ],
+  "remoteNewPaths": 5,
   "previewChanged": false,
   "installed": false,
   "wholeSuitePassing": false,

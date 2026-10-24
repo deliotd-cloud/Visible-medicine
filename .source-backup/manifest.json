@@ -1,14 +1,51 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T11:27:13.176Z",
+  "at": "2026-10-24T11:36:02.008Z",
   "sourceIdentity": {
-    "thinProposalReceiptSha256": "3d1845cd2f6734797a5d6af1551f30bf2d27ca6a25f0a32892b41c7761898f71",
-    "componentSha256": "d2ac47b267ac7122e664c5341bcdb7e3d21f1f60882b186968c54b86bc894232",
-    "completeWebsiteParentSha256": "37ea31d0ab36e57311e11dcdb9c01a93770220cbf8c40d439fa35b08aff9c968",
-    "completeWebsiteIntegrationPending": true
+    "websiteSourceReceiptSha256": "3d9c3ca38a29d2f7320222711bca73d22f5c85771a28a3fe6c3219acd03ac4eb",
+    "atlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+    "review": "c8bdd276ab1f832ec5e6854df40bbd83102c7a4dbfe99c5cdde87aad89b5815d",
+    "sourceArtifactBindings": [
+      {
+        "websitePath": "components/StudioNavigation.tsx",
+        "sha256": "d2ac47b267ac7122e664c5341bcdb7e3d21f1f60882b186968c54b86bc894232",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/components/StudioNavigation.tsx",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/native-disclosure-source.mjs",
+        "sha256": "2d5e8cf76a02501d700be54867fd81068195815542d3aaf1304d7dd002da7efa",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure-source.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/native-disclosure.test.mjs",
+        "sha256": "d92086fc687a425baf39cd3555960b1b402074546ec2bcde0db6d1038be0d6dd",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/studio-route-disclosure-source.mjs",
+        "sha256": "9ff99dfd3b3b6d4a70f09d843fe21d704b7065380a0d5d4185ac45ebb3c965c0",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure-source.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/studio-route-disclosure.test.mjs",
+        "sha256": "1e550aca879c2b2dc1ad97f6728eeba8e169a61c3b1fa88610b81e4ff6201384",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/studio-route-website-composition.test.mjs",
+        "sha256": "a4eb832e145934f4126c13efc67a8de9014134d8a60229a17fc15704290acdd1",
+        "snapshotPath": "pending/studio-route-website-20261024/website/tests/studio-route-website-composition.test.mjs",
+        "inherited": false
+      }
+    ]
   },
-  "parent": "9873cb42816a4dfd4f8cc2c58a7122525920b508",
-  "gitParent": "9873cb42816a4dfd4f8cc2c58a7122525920b508",
+  "parent": "5265469b4368ee924087ac75ea172338ccbd3e5a",
+  "gitParent": "5265469b4368ee924087ac75ea172338ccbd3e5a",
   "files": [
     {
       "path": "app/globals.css",
@@ -27761,6 +27798,31 @@
       "sha256": "1e550aca879c2b2dc1ad97f6728eeba8e169a61c3b1fa88610b81e4ff6201384"
     },
     {
+      "path": "pending/studio-route-website-20261024/recipes/checkpoint-studio-route-website-20261024.mjs",
+      "bytes": 14236,
+      "sha256": "34982fcfc63ab10945d5d0d85f2d96fb84dc8e4bda0e7b838259e16e4d40b652"
+    },
+    {
+      "path": "pending/studio-route-website-20261024/recipes/prepare-studio-route-website-20261024.mjs",
+      "bytes": 3209,
+      "sha256": "4b91e6abd32581ae54acb0f5b86970a311a8031990edccfb150aba5b12f8241a"
+    },
+    {
+      "path": "pending/studio-route-website-20261024/recipes/run-studio-route-website-20261024.mjs",
+      "bytes": 5342,
+      "sha256": "6634220518df14703777eabcffca8629aaf1f3d05915b8ddf95092653c34951c"
+    },
+    {
+      "path": "pending/studio-route-website-20261024/recipes/studio-route-website-composition.test.mjs",
+      "bytes": 2465,
+      "sha256": "a4eb832e145934f4126c13efc67a8de9014134d8a60229a17fc15704290acdd1"
+    },
+    {
+      "path": "pending/studio-route-website-20261024/website/tests/studio-route-website-composition.test.mjs",
+      "bytes": 2465,
+      "sha256": "a4eb832e145934f4126c13efc67a8de9014134d8a60229a17fc15704290acdd1"
+    },
+    {
       "path": "pending/studio-session-drafts-20261023/candidate/components/StudioForms.tsx",
       "bytes": 84127,
       "sha256": "f06f117a4f75bf85fa5f33eeebe73e79c57bbae54f2066067f078fa6cce9ebf1"
@@ -29862,17 +29924,56 @@
     }
   ],
   "removed": [],
-  "scope": "Carry verified5951filtered source paths and full parent ancestry; add19explicit authored component/test/preimage/recipe/synthetic fixture source paths, no removals. Exclude generated browser bundles, raw QA, scans/models/private data, dependencies/builds/generated Review and later coordination; not whole/private/runnable off-device backup.",
+  "scope": "Carry5970verified filtered source paths/full ancestry; reuse5exact prior source files; add1composition test and4recipes. No removals. No generated Review/delivery/bundles, models/images/scans/private data, raw evidence/type graphs/dependencies/builds/later coordination. Not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "a094490356cbb9443b76bacb8f2c6f9a9ccbaa1902185be12116db49d71d4cb2",
-    "focusedCases": 22,
+    "mainReviewSha256": "37db26a0621c14247a1ffee6606b2319a98fb12f0328d398e445beeea7a54576",
+    "focusedCases": 24,
+    "sourceInputs": 6583,
+    "strictRoots": 1,
     "strictGraphFiles": 565,
     "typeDiagnostics": 0,
-    "sourceOverlayCount": 1,
-    "actualProductionReactSyntheticRouteReplay": true,
-    "retainedInitialAndHistoricalFailures": true,
-    "completeWebsiteIntegrationPending": true,
-    "remoteNewPaths": 19,
+    "sourceOverlayCount": 0,
+    "stockPrebuildBuildAndReviewVerifierPassed": true,
+    "protectedReviewInputsUnchanged": 1806,
+    "sourceArtifactBindings": [
+      {
+        "websitePath": "components/StudioNavigation.tsx",
+        "sha256": "d2ac47b267ac7122e664c5341bcdb7e3d21f1f60882b186968c54b86bc894232",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/components/StudioNavigation.tsx",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/native-disclosure-source.mjs",
+        "sha256": "2d5e8cf76a02501d700be54867fd81068195815542d3aaf1304d7dd002da7efa",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure-source.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/native-disclosure.test.mjs",
+        "sha256": "d92086fc687a425baf39cd3555960b1b402074546ec2bcde0db6d1038be0d6dd",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/native-disclosure.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/studio-route-disclosure-source.mjs",
+        "sha256": "9ff99dfd3b3b6d4a70f09d843fe21d704b7065380a0d5d4185ac45ebb3c965c0",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure-source.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/studio-route-disclosure.test.mjs",
+        "sha256": "1e550aca879c2b2dc1ad97f6728eeba8e169a61c3b1fa88610b81e4ff6201384",
+        "snapshotPath": "pending/studio-route-disclosure-20261024/website/tests/studio-route-disclosure.test.mjs",
+        "inherited": true
+      },
+      {
+        "websitePath": "tests/studio-route-website-composition.test.mjs",
+        "sha256": "a4eb832e145934f4126c13efc67a8de9014134d8a60229a17fc15704290acdd1",
+        "snapshotPath": "pending/studio-route-website-20261024/website/tests/studio-route-website-composition.test.mjs",
+        "inherited": false
+      }
+    ],
+    "remoteNewPaths": 5,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
