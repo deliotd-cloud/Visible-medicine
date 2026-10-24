@@ -1,0 +1,49 @@
+{
+  "actualUnitCases": 7,
+  "originalBodiesPreserved": 7,
+  "rawQaUploaded": false,
+  "selectedPayloadBytes": 35830,
+  "memoryAtStart": {
+    "AvailableMBytes": 545,
+    "PercentCommittedBytesInUse": 86
+  },
+  "noRawCanonicalAncestry": true,
+  "requiredBaseIndependentlyVerified": true,
+  "requiredBaseRemoteHeadReadback": true,
+  "baseCoverage": [
+    {
+      "canonicalPath": "app/review/body/review-dashboard.tsx",
+      "basePath": "pending/review-heading-proposal-20261024/atlas/app/review/body/review-dashboard.tsx",
+      "sha256": "9fd07d7f5e3249d0e993b919f97ec71763f63efa259f7198e526ba74af65902d"
+    },
+    {
+      "canonicalPath": "content/abdominal-eus-orientation.ts",
+      "basePath": "pending/right-gastric-eus-proposal-20261024/content/abdominal-eus-orientation.ts",
+      "sha256": "2bbcce6f530bfca6e1c5cf6733ed8c16d05f8b6b3e990f3724804fa408111431"
+    },
+    {
+      "canonicalPath": "lib/abdominal-eus-orientation.ts",
+      "basePath": "pending/right-gastric-eus-proposal-20261024/lib/abdominal-eus-orientation.ts",
+      "sha256": "18ad65fba17274ddc4f4f60699b88dd4aee88e8cbdeb17a25db0d6bdc0225100"
+    },
+    {
+      "canonicalPath": "package.json",
+      "basePath": "pending/right-gastric-native-prepared-20261024/atlas/package.json",
+      "sha256": "55824dd743250fb9f2b225f6b993b6cd55a2baf077c0e0dcc6a17dc4138b5d0c"
+    },
+    {
+      "canonicalPath": "scripts/test-right-gastric-eus-integration.mjs",
+      "basePath": "pending/right-gastric-native-prepared-20261024/atlas/scripts/test-right-gastric-eus-integration.mjs",
+      "sha256": "a2b850c328c18fd9f0640536298448d819d93914f600e59c69592c9d6b784305"
+    },
+    {
+      "canonicalPath": "scripts/test-teaching-heading.mjs",
+      "basePath": "pending/review-heading-proposal-20261024/atlas/scripts/test-teaching-heading.mjs",
+      "sha256": "261577dff6c3dfba4b5b62d280f8b85f8fc92b5b17b668ae636a714965d10b94"
+    }
+  ],
+  "licenceNoticeAndModelsUploaded": false,
+  "previewChanged": false,
+  "installed": false,
+  "clinicalApproval": false
+}

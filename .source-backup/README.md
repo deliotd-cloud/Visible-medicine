@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Only two complete updated test/helper scripts and one bounded-unit runner, <=192KiB selected payload. This standalone filtered commit is an INCREMENTAL SUPPLEMENT, not a replacement cumulative snapshot. Recovery of the six other changed code paths requires the exact independently verified base branch/head/tree recorded in the manifest; that base remains unchanged. No source/unique path was removed from any earlier branch. The licence-notice addendum, models, scans, masks, private data, source graph/runtime dependencies, raw QA and later coordination remain F-local. Not whole/private/runnable off-device recovery, application acceptance or public deployment.

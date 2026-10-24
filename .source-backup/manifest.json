@@ -1,0 +1,136 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-24T18:28:40.400Z",
+  "sourceIdentity": {
+    "kind": "tiny-incremental-source-supplement-not-cumulative-snapshot",
+    "compositionSha256": "d707e62ad55ec2d4d6c9d8721cb6d4bc3dbd95aec6b254d23679044766bae05a",
+    "nativeParent": "6e810b188dde401f6c19a970928f316a479696df",
+    "requiredBase": {
+      "branch": "backup/additional-release-proposals-20261024",
+      "head": "af04f91f94762bbd10db4967db993f3af07f2714",
+      "tree": "191b051fe043317b3f724de64df819d5e335ea8f",
+      "receiptSha256": "be39d82703ea49be9bb0e1cce720b4569f8fdc2c23f0b7fbdef2330e2d483ee8"
+    },
+    "baseCoverage": [
+      {
+        "canonicalPath": "app/review/body/review-dashboard.tsx",
+        "basePath": "pending/review-heading-proposal-20261024/atlas/app/review/body/review-dashboard.tsx",
+        "sha256": "9fd07d7f5e3249d0e993b919f97ec71763f63efa259f7198e526ba74af65902d"
+      },
+      {
+        "canonicalPath": "content/abdominal-eus-orientation.ts",
+        "basePath": "pending/right-gastric-eus-proposal-20261024/content/abdominal-eus-orientation.ts",
+        "sha256": "2bbcce6f530bfca6e1c5cf6733ed8c16d05f8b6b3e990f3724804fa408111431"
+      },
+      {
+        "canonicalPath": "lib/abdominal-eus-orientation.ts",
+        "basePath": "pending/right-gastric-eus-proposal-20261024/lib/abdominal-eus-orientation.ts",
+        "sha256": "18ad65fba17274ddc4f4f60699b88dd4aee88e8cbdeb17a25db0d6bdc0225100"
+      },
+      {
+        "canonicalPath": "package.json",
+        "basePath": "pending/right-gastric-native-prepared-20261024/atlas/package.json",
+        "sha256": "55824dd743250fb9f2b225f6b993b6cd55a2baf077c0e0dcc6a17dc4138b5d0c"
+      },
+      {
+        "canonicalPath": "scripts/test-right-gastric-eus-integration.mjs",
+        "basePath": "pending/right-gastric-native-prepared-20261024/atlas/scripts/test-right-gastric-eus-integration.mjs",
+        "sha256": "a2b850c328c18fd9f0640536298448d819d93914f600e59c69592c9d6b784305"
+      },
+      {
+        "canonicalPath": "scripts/test-teaching-heading.mjs",
+        "basePath": "pending/review-heading-proposal-20261024/atlas/scripts/test-teaching-heading.mjs",
+        "sha256": "261577dff6c3dfba4b5b62d280f8b85f8fc92b5b17b668ae636a714965d10b94"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "atlas/scripts/test-right-gastric-eus-unit.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-combined-atlas/atlas/scripts/test-right-gastric-eus-unit.mjs"
+      },
+      {
+        "path": "atlas/scripts/exact-source-history-api.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-combined-atlas/atlas/scripts/exact-source-history-api.mjs"
+      },
+      {
+        "path": "recipes/try-bounded-eus-unit-20261024.mjs",
+        "restore": "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/try-bounded-eus-unit-20261024.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/scripts/test-right-gastric-eus-unit.mjs",
+      "bytes": 8058,
+      "sha256": "75cd91557a648d5a608c4f55fa6cd8cef74a4934b05dae8a7416b2e5e462fe88"
+    },
+    {
+      "path": "atlas/scripts/exact-source-history-api.mjs",
+      "bytes": 22873,
+      "sha256": "a5906e8bc993c7fb33775cb03908d565d059666b68ab1c510a388512760bc633"
+    },
+    {
+      "path": "recipes/try-bounded-eus-unit-20261024.mjs",
+      "bytes": 4899,
+      "sha256": "004397e1ebb30f65b70ae2962b196f0ff626cac032d77b6236cb4bcc861e6dfe"
+    }
+  ],
+  "removed": [],
+  "scope": "Only two complete updated test/helper scripts and one bounded-unit runner, <=192KiB selected payload. This standalone filtered commit is an INCREMENTAL SUPPLEMENT, not a replacement cumulative snapshot. Recovery of the six other changed code paths requires the exact independently verified base branch/head/tree recorded in the manifest; that base remains unchanged. No source/unique path was removed from any earlier branch. The licence-notice addendum, models, scans, masks, private data, source graph/runtime dependencies, raw QA and later coordination remain F-local. Not whole/private/runnable off-device recovery, application acceptance or public deployment.",
+  "proof": {
+    "actualUnitCases": 7,
+    "originalBodiesPreserved": 7,
+    "rawQaUploaded": false,
+    "selectedPayloadBytes": 35830,
+    "memoryAtStart": {
+      "AvailableMBytes": 545,
+      "PercentCommittedBytesInUse": 86
+    },
+    "noRawCanonicalAncestry": true,
+    "requiredBaseIndependentlyVerified": true,
+    "requiredBaseRemoteHeadReadback": true,
+    "baseCoverage": [
+      {
+        "canonicalPath": "app/review/body/review-dashboard.tsx",
+        "basePath": "pending/review-heading-proposal-20261024/atlas/app/review/body/review-dashboard.tsx",
+        "sha256": "9fd07d7f5e3249d0e993b919f97ec71763f63efa259f7198e526ba74af65902d"
+      },
+      {
+        "canonicalPath": "content/abdominal-eus-orientation.ts",
+        "basePath": "pending/right-gastric-eus-proposal-20261024/content/abdominal-eus-orientation.ts",
+        "sha256": "2bbcce6f530bfca6e1c5cf6733ed8c16d05f8b6b3e990f3724804fa408111431"
+      },
+      {
+        "canonicalPath": "lib/abdominal-eus-orientation.ts",
+        "basePath": "pending/right-gastric-eus-proposal-20261024/lib/abdominal-eus-orientation.ts",
+        "sha256": "18ad65fba17274ddc4f4f60699b88dd4aee88e8cbdeb17a25db0d6bdc0225100"
+      },
+      {
+        "canonicalPath": "package.json",
+        "basePath": "pending/right-gastric-native-prepared-20261024/atlas/package.json",
+        "sha256": "55824dd743250fb9f2b225f6b993b6cd55a2baf077c0e0dcc6a17dc4138b5d0c"
+      },
+      {
+        "canonicalPath": "scripts/test-right-gastric-eus-integration.mjs",
+        "basePath": "pending/right-gastric-native-prepared-20261024/atlas/scripts/test-right-gastric-eus-integration.mjs",
+        "sha256": "a2b850c328c18fd9f0640536298448d819d93914f600e59c69592c9d6b784305"
+      },
+      {
+        "canonicalPath": "scripts/test-teaching-heading.mjs",
+        "basePath": "pending/review-heading-proposal-20261024/atlas/scripts/test-teaching-heading.mjs",
+        "sha256": "261577dff6c3dfba4b5b62d280f8b85f8fc92b5b17b668ae636a714965d10b94"
+      }
+    ],
+    "licenceNoticeAndModelsUploaded": false,
+    "previewChanged": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
