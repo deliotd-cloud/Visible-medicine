@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {json} from './seal-simple-website-successor.mjs';
+const write=(p,s)=>fs.writeFileSync(p,s,{flag:'wx'});
+let collector=fs.readFileSync('orbital-ct-website-source-20261024.mjs','utf8').replaceAll('20261024-orbital-ct-website','20261024-toolbar-website');
+collector=collector.replace(" if(fs.existsSync(stage+'/HEAD_HISTORY_INTEGRATION.json'))", " for(const p of ['tests/toolbar-current-source-role.mjs','tests/toolbar-current-source-role.test.mjs','tests/toolbar-website-composition.test.mjs'])paths.add(p);\n if(fs.existsSync(stage+'/HEAD_HISTORY_INTEGRATION.json'))");write('toolbar-website-source-20261024.mjs',collector);
+let test=fs.readFileSync('test-orbital-ct-website-20261024.mjs','utf8').replaceAll('orbital-ct-website-source-20261024.mjs','toolbar-website-source-20261024.mjs').replaceAll('orbital-ct-website-tests','toolbar-website-tests');
+test=test.replace("['tests/orbital-ct-current-source-role.test.mjs','tests/orbital-ct-website-composition.test.mjs']", "['tests/toolbar-current-source-role.test.mjs','tests/toolbar-website-composition.test.mjs','tests/orbital-ct-current-source-role.test.mjs','tests/orbital-ct-website-composition.test.mjs']");
+test=test.replace("'head-study-website-historical-source.test.mjs']", "'head-study-website-historical-source.test.mjs','toolbar-current-source-role.test.mjs','toolbar-website-composition.test.mjs']");
+test=test.replace("const external=phase==='tests-v2'?json(stage+'/HISTORICAL_FIXTURE.json').files:[];", "const external=json(stage+'/PREPARATION.json').historicalFixtures.map(r=>({...r,to:stage+'/before/'+r.path}));");
+write('test-toolbar-website-20261024.mjs',test);
+write('check-toolbar-website-types-20261024.mjs',fs.readFileSync('check-orbital-ct-website-types-20261024.mjs','utf8').replaceAll('20261024-orbital-ct-website','20261024-toolbar-website').replaceAll('orbital-ct-website-types','toolbar-website-types'));

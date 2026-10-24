@@ -1,45 +1,77 @@
 {
-  "mainReviewSha256": "879e1ce7366f9eaeb9a4d998a745430993ab5d2569a8a96fc42e681ca3e4e32a",
-  "focusedCases": 5,
-  "strictRoots": 1,
-  "strictGraph": 575,
+  "mainReviewSha256": "47d863d59584fb291df76a4ddec317794871ee2084650082437dd73a6a1ed4d3",
+  "focusedCases": 382,
+  "focusedRoots": 57,
+  "strictTypeRoots": 38,
+  "strictTypeFiles": 3684,
   "typeDiagnostics": 0,
-  "fullNativeBuild": true,
-  "buildFiles": 557,
-  "actualExportedModuleBrowser": true,
-  "selectedContrast": 8.286358448899682,
-  "hoverContrast": 16.630924475325397,
-  "mouseSpaceEnterTransitions": 5,
-  "modelAndTeachingBytesUnchanged": true,
-  "geometryPresentationRevisionsAdvanced": 9,
-  "approvalTransfer": false,
+  "stockPrebuildBuildAndReviewVerifierPassed": true,
+  "reviewSources": 1604,
+  "reviewInputs": 1807,
   "sourceArtifactBindings": [
     {
-      "atlasPath": "app/body-explorer.css",
-      "sha256": "98fbce0ff8572b6f2055b42e2199bbfe5ca37e322743cb36adabc3ac98e0d2e9",
-      "snapshotPath": "pending/toolbar-button-contrast-20261024/atlas/app/body-explorer.css",
+      "websitePath": "lib/anatomy-coverage-view.ts",
+      "sha256": "2e5ac088a78334c6556bc6484dceb6c53a1556c051040fc8a9c47f62a20f17b0",
+      "snapshotPath": "pending/toolbar-website-20261024/website/lib/anatomy-coverage-view.ts",
       "inherited": false
     },
     {
-      "atlasPath": "components/ui/button.tsx",
-      "sha256": "8b08acebef60d691ff022edd0b70e3297b36b9ee2da1bd4f9d33793939a1e772",
-      "snapshotPath": "pending/toolbar-button-contrast-20261024/atlas/components/ui/button.tsx",
+      "websitePath": "lib/atlas-delivery-policy.ts",
+      "sha256": "d6c4a9569486c746493d92105386e250bf5d027c6d8b4e24d6c408f31cf628f1",
+      "snapshotPath": "pending/toolbar-website-20261024/website/lib/atlas-delivery-policy.ts",
       "inherited": false
     },
     {
-      "atlasPath": "package.json",
-      "sha256": "8ce707f6d9955e3592509b35582bd5e9dfbdb500ba80c30c0e62973656aa3074",
-      "snapshotPath": "pending/toolbar-button-contrast-20261024/atlas/package.json",
+      "websitePath": "scripts/check-anatomy-coverage.mjs",
+      "sha256": "bae057379641a0b01fa9c82199b54e44b76006678957a9ff7c8668ec0d25e25b",
+      "snapshotPath": "pending/toolbar-website-20261024/website/scripts/check-anatomy-coverage.mjs",
       "inherited": false
     },
     {
-      "atlasPath": "scripts/test-toolbar-contrast.mjs",
-      "sha256": "42f4ee34878bd0acd4a6ee97fb40233beeda0669e772fbb1d5ad528b43c8a726",
-      "snapshotPath": "pending/toolbar-button-contrast-20261024/atlas/scripts/test-toolbar-contrast.mjs",
+      "websitePath": "scripts/import-clinical-review.mjs",
+      "sha256": "e29f41c4ccc793362c3e4a7fe699b89366d1f593802175f7d0c684fb93af748b",
+      "snapshotPath": "pending/toolbar-website-20261024/website/scripts/import-clinical-review.mjs",
+      "inherited": false
+    },
+    {
+      "websitePath": "tests/adjacent-current-tour-source-role.mjs",
+      "sha256": "6e42f5fa7cdd4ab2f76a98cc9c448f560e9f7ba69b8d819ee62052985489320a",
+      "snapshotPath": "pending/toolbar-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
+      "inherited": false
+    },
+    {
+      "websitePath": "tests/current-atlas-delivery.test.mjs",
+      "sha256": "eb2a63d4b48e7aeafffaab41b42b414effe07862598f8e401fd8e851377670d1",
+      "snapshotPath": "pending/toolbar-website-20261024/website/tests/current-atlas-delivery.test.mjs",
+      "inherited": false
+    },
+    {
+      "websitePath": "tests/orbital-ct-website-composition.test.mjs",
+      "sha256": "d677fe4311023b075bcdd6075d2e58f2961d05915c7b324c486a0f9c3433bd45",
+      "snapshotPath": "pending/toolbar-website-20261024/website/tests/orbital-ct-website-composition.test.mjs",
+      "inherited": false
+    },
+    {
+      "websitePath": "tests/toolbar-current-source-role.mjs",
+      "sha256": "9d8f2be6f476568696772d5b2621e0043907a6e44e72ca8eb2065af4f2ac1abb",
+      "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-current-source-role.mjs",
+      "inherited": false
+    },
+    {
+      "websitePath": "tests/toolbar-current-source-role.test.mjs",
+      "sha256": "f437be71446e5572f565b57fa42d505c1a24ed7cbe27c584bcd66eae93caa779",
+      "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-current-source-role.test.mjs",
+      "inherited": false
+    },
+    {
+      "websitePath": "tests/toolbar-website-composition.test.mjs",
+      "sha256": "b2d0b82a12782b0f5e242112c6d02c896e448a83cb6b974fb02bd1cc430fbbb1",
+      "snapshotPath": "pending/toolbar-website-20261024/website/tests/toolbar-website-composition.test.mjs",
       "inherited": false
     }
   ],
-  "remoteNewPaths": 18,
+  "remoteNewPaths": 25,
+  "uniqueSourceOmissions": 0,
   "previewChanged": false,
   "installed": false,
   "wholeSuitePassing": false,
