@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+const dir='F:/VisibleMedicine/staging/20261024-imaging-desktop-layout/browser-before';
+const cmd="$p=Get-CimInstance Win32_Process -Filter 'ProcessId=351144'; $l=@(Get-NetTCPConnection -LocalPort 57406 -State Listen -ErrorAction SilentlyContinue); [pscustomobject]@{processPresent=($null -ne $p);listenerCount=$l.Count}|ConvertTo-Json -Compress; exit 0";
+const observed=JSON.parse(execFileSync('powershell',['-NoProfile','-NonInteractive','-Command',cmd],{encoding:'utf8',windowsHide:true,stdio:'pipe'}));
+assert.equal(observed.processPresent,false);assert.equal(observed.listenerCount,0);
+fs.writeFileSync(dir+'/TERMINAL.json',JSON.stringify({at:new Date().toISOString(),pid:351144,tabId:'172',tabClosed:true,verifiedProcessAbsent:true,verifiedPortClosed:true,normalExitCodeUnknown:true,reason:'Plain-pipe stdin was already closed; the exact owned node command line and listener were checked before stopping only PID351144. This is verified teardown, not a claimed graceful code0 shutdown. Buffered request log was not recovered.',requestLogAvailable:false,previewChanged:false},null,2)+'\n',{flag:'wx'});
+const file='CURRENT_CHECKPOINT.json',p=JSON.parse(fs.readFileSync(file));
+p.activeWork.current.activeExecutionSessions=p.activeWork.current.activeExecutionSessions.filter(row=>!(row.role==='imaging-desktop-layout-browser'&&row.pid===351144));
+const text=JSON.stringify(p,null,2)+'\n';assert(Buffer.byteLength(text)<65536);fs.writeFileSync(file,text);
+console.log(JSON.stringify({fixtureStopped:true,ownerPreviewChanged:false,observation:observed}));

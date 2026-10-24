@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited verified filtered authored source plus nine selected test/helper/proof files and five coordination recipes. No generated JSON binding/pin/historical metadata, models/geometry, scans/identifiers/private records, raw logs/evidence/images, dependencies, dist or emulator state. Historical source-role metadata/provenance and test evidence stay F-local. Not whole/private/runnable off-device backup.
+Inherited verified filtered authored source plus9selectedproduct/test codepaths and9coordinationrecipes. No generatedbinding/pin/historicalmetadata, models/geometry, scans/identifiers/private records/references, rawlogs/screenshots/evidence, dependencies, dist or emulatorstate. Generateddelivery andhistoricalsourcerole witnesses stayF-local. Notwhole/private/runnableoffdevicebackup.

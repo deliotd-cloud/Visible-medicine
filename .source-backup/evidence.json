@@ -1,45 +1,40 @@
 {
-  "mainReviewSha256": "59667fb21a81b84e882d64f49c75632f3cfc792b080d1786a5826a8e859151e1",
-  "focusedCasesPassed": 42,
-  "fourOriginalFeatureRootsPassing": true,
-  "originalFeatureAssertionBodiesRetained": true,
-  "prior13SourceRoleCasesRetained": true,
-  "actualCurrentChecksAdded": 4,
-  "genuineHistoricalValidatorFiles": 46,
-  "genuineCurrentValidatorFiles": 54,
-  "currentValidatorAndPinUnchanged": true,
-  "currentReviewInputs": 1783,
-  "wholeSourceTransitionFiles": 5,
-  "exactTransitionHunks": 18,
-  "syntaxFiles": 9,
-  "allNonTestProductBytesIdentical": true,
-  "productionBuildReusedByExactIdentity": true,
-  "newBuildProcessRun": false,
-  "buildFiles": 1125,
-  "allFourRuntimesAndReviewUnchanged": true,
-  "adjacent": {
-    "baseline": {
-      "tests": 19,
-      "pass": 11,
-      "fail": 8
-    },
-    "initial": {
-      "tests": 19,
-      "pass": 10,
-      "fail": 9
-    },
-    "final": {
-      "tests": 19,
-      "pass": 11,
-      "fail": 8
-    },
-    "sameFinalOutcomes": true,
-    "preExistingFailuresUnresolved": 8
-  },
-  "uiAuditSourceOnly": true,
-  "normalPreviewChanged": false,
+  "mainReviewSha256": "1953c303538b5c80b4dc3bc968157a519986bf13e171191f953a0b7021085225",
+  "focusedCasesPassed": 83,
+  "baselineMissingNavigationProtections": 9,
+  "strictTypeRoots": 7,
+  "strictTypeGraphFiles": 1739,
+  "typeDiagnostics": 0,
+  "actualPrebuildAndProductionBuildPassed": true,
+  "productionOutputs": 1125,
+  "reviewVerifierPassed": true,
+  "reviewInputs": 1786,
+  "reviewSourceFiles": 1593,
+  "viewerFiles": 54,
+  "viewerPackages": 24,
+  "allFourLearnerRuntimesUnchanged": true,
+  "modelsAndLicencesUnchanged": true,
+  "oldTestAssertionsUnchanged": true,
+  "unchangedCss": true,
+  "actualComponentBrowserWithSyntheticConfirmation": true,
+  "nativeConfirmationUiTested": false,
+  "viewportNoOverflow": [
+    [
+      1280,
+      720
+    ],
+    [
+      1024,
+      600
+    ]
+  ],
+  "consoleMutationObserverErrorOpen": true,
+  "ordinaryLinkAndRegionGoOnly": true,
+  "browserHistoryAndUnloadProtectionNotClaimed": true,
+  "authenticatedAcceptance": false,
   "clinicalApproval": false,
   "patientSpaceRegistration": false,
+  "normalPreviewChanged": false,
   "previewChanged": false,
   "installed": false,
   "wholeSuitePassing": false,

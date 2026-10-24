@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-23T23:37:21.852Z",
+  "at": "2026-10-24T00:08:03.564Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "89711b205a711008b0fcc1524acb15d5fa2d16e752fc5962fcce679d6375f6b7",
+    "websiteSourceReceiptSha256": "60d396a0aa37cb827fcaaafe6b06de90ded0c8ea39c01c528c718ff4b11f3199",
     "atlasHead": "d143c28fb1e5da200712af6629a375c25d17dad7",
     "atlasTree": "486287b25d968117cffdd27bb20009fa46cda6f3",
-    "reviewRevision": "35fdca381e22b1c9a5fad703d673fd8fdac427aeb9580f3375243be5f7c06709",
+    "reviewRevision": "66fbc8e06fb904de670300fa4418cb297a16950dbc2e7c25ad28a5eab1415f2a",
     "normalPreviewChanged": false
   },
-  "parent": "963c13d030eef2c712eb4be33f1a3a6e4cbf174c",
-  "gitParent": "963c13d030eef2c712eb4be33f1a3a6e4cbf174c",
+  "parent": "cdd07f4573d559229cde4accdb5b0726927572b4",
+  "gitParent": "cdd07f4573d559229cde4accdb5b0726927572b4",
   "files": [
     {
       "path": "app/globals.css",
@@ -20112,6 +20112,96 @@
       "sha256": "71ccdedf73e0508619f27ecfddee7b8dac7cf5af487998d2df8b602c62ae088e"
     },
     {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/capture-imaging-desktop-layout-20261024.mjs",
+      "bytes": 3606,
+      "sha256": "40c8b45c8f7874b1da20df30a3bd68da2fb2ea090a4d66eaa12d3e05fde1f326"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/check-imaging-desktop-layout-types-20261024.mjs",
+      "bytes": 4494,
+      "sha256": "df140e2a88cd1bf9dd736eb2a024802f6c082a37af5492c5f6da39ed4d373cb2"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/checkpoint-imaging-desktop-layout-20261024.mjs",
+      "bytes": 8099,
+      "sha256": "1744fb6cc63af0e4703ba98ea620b6de659782c71a0e6ce6d74f5ea63563518e"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/finalize-imaging-desktop-layout-20261024.mjs",
+      "bytes": 8143,
+      "sha256": "c6c54c60334abd43514a18e50b3d90adf479330e232a280309b9ee5cda40183a"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/prepare-imaging-desktop-layout-20261024.mjs",
+      "bytes": 2135,
+      "sha256": "263cc2353b7626603ee4ce4af8e97fb82c198146fbc9e76b1553a51fc3ca819c"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/record-imaging-layout-baseline-stop-20261024.mjs",
+      "bytes": 1671,
+      "sha256": "6b937a38aa91bdb66c54e2767e0c7aaa77ec13a57014c70cf908afb18a9aefcd"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/run-imaging-desktop-layout-20261024.mjs",
+      "bytes": 4223,
+      "sha256": "81c8ab7e53438ca9bc9e425fd0dd0c0ce69dc747c27dd594abef1ccf9b48a367"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/seal-imaging-desktop-layout-20261024.mjs",
+      "bytes": 8499,
+      "sha256": "18ab0c56549d09f665694f7467f3c0c15eb8f4ad5dd8624807a4e5d548d37dd6"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/coordination/serve-imaging-desktop-layout-20261024.mjs",
+      "bytes": 9709,
+      "sha256": "3c6b90305cb3b0cf7f1bf0638361a5c32b44efae13d4550e8e31b0fd5da0e32e"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/components/AtlasRegionNavigation.tsx",
+      "bytes": 4051,
+      "sha256": "95eb6a442695674856de1355c1f765885070164a4760dd2d882a11552b9a64ab"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/components/AtlasWorkspaceNavigation.tsx",
+      "bytes": 5603,
+      "sha256": "16e15296f9a3c5241a4b76edf99dbb608be9b4d5206c4e1f86b5a0df02484ba1"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/components/HeadAtlasViewer.tsx",
+      "bytes": 115200,
+      "sha256": "6296ff18c86691f22cfa02294dae295395b9f8035768a3990a9af4fe16beeff1"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/components/ImagingAtlasShell.tsx",
+      "bytes": 6623,
+      "sha256": "e58b1fd56bb1ae280633e6fcafd6f4f4c9ace6d38ac6731dc7c0718cc6a25d80"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/lib/head-practice-navigation.ts",
+      "bytes": 1081,
+      "sha256": "7cff1bdc4572c6105f5cf1ede265ce567b4cc7ec2512fbf116687c6602599a7b"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/scripts/bind-clinical-review.mjs",
+      "bytes": 9402,
+      "sha256": "005a591d9f9779f7ec614a5f992ced2e9da59169fa9dc5f45b5f38847e974fa9"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/tests/head-practice-navigation-delivery.test.mjs",
+      "bytes": 6140,
+      "sha256": "87bb0e737434becc7082d2955753b1466b033aa6b21492f33133a2cecaaeb301"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/tests/head-practice-navigation-integration.test.mjs",
+      "bytes": 11353,
+      "sha256": "504086cf8ed76fa616f93ad3bf944742d42831badc6f3e18c86bbc8f7a891437"
+    },
+    {
+      "path": "pending/imaging-desktop-layout-20261024/website/tests/head-practice-navigation-policy.test.ts",
+      "bytes": 2888,
+      "sha256": "cc322bbbf305e8456af0d18d6ea3d9686055cf52eb1becedaab4f85a201e4cd6"
+    },
+    {
       "path": "pending/imaging-presentation-20261022/coordination/bind-imaging-presentation-20261022.mjs",
       "bytes": 5162,
       "sha256": "5f0e4badbb1314cb0138d0a5a812b13e796328d3586e2b33ccc9c9b638acc078"
@@ -29668,49 +29758,44 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified filtered authored source plus nine selected test/helper/proof files and five coordination recipes. No generated JSON binding/pin/historical metadata, models/geometry, scans/identifiers/private records, raw logs/evidence/images, dependencies, dist or emulator state. Historical source-role metadata/provenance and test evidence stay F-local. Not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored source plus9selectedproduct/test codepaths and9coordinationrecipes. No generatedbinding/pin/historicalmetadata, models/geometry, scans/identifiers/private records/references, rawlogs/screenshots/evidence, dependencies, dist or emulatorstate. Generateddelivery andhistoricalsourcerole witnesses stayF-local. Notwhole/private/runnableoffdevicebackup.",
   "proof": {
-    "mainReviewSha256": "59667fb21a81b84e882d64f49c75632f3cfc792b080d1786a5826a8e859151e1",
-    "focusedCasesPassed": 42,
-    "fourOriginalFeatureRootsPassing": true,
-    "originalFeatureAssertionBodiesRetained": true,
-    "prior13SourceRoleCasesRetained": true,
-    "actualCurrentChecksAdded": 4,
-    "genuineHistoricalValidatorFiles": 46,
-    "genuineCurrentValidatorFiles": 54,
-    "currentValidatorAndPinUnchanged": true,
-    "currentReviewInputs": 1783,
-    "wholeSourceTransitionFiles": 5,
-    "exactTransitionHunks": 18,
-    "syntaxFiles": 9,
-    "allNonTestProductBytesIdentical": true,
-    "productionBuildReusedByExactIdentity": true,
-    "newBuildProcessRun": false,
-    "buildFiles": 1125,
-    "allFourRuntimesAndReviewUnchanged": true,
-    "adjacent": {
-      "baseline": {
-        "tests": 19,
-        "pass": 11,
-        "fail": 8
-      },
-      "initial": {
-        "tests": 19,
-        "pass": 10,
-        "fail": 9
-      },
-      "final": {
-        "tests": 19,
-        "pass": 11,
-        "fail": 8
-      },
-      "sameFinalOutcomes": true,
-      "preExistingFailuresUnresolved": 8
-    },
-    "uiAuditSourceOnly": true,
-    "normalPreviewChanged": false,
+    "mainReviewSha256": "1953c303538b5c80b4dc3bc968157a519986bf13e171191f953a0b7021085225",
+    "focusedCasesPassed": 83,
+    "baselineMissingNavigationProtections": 9,
+    "strictTypeRoots": 7,
+    "strictTypeGraphFiles": 1739,
+    "typeDiagnostics": 0,
+    "actualPrebuildAndProductionBuildPassed": true,
+    "productionOutputs": 1125,
+    "reviewVerifierPassed": true,
+    "reviewInputs": 1786,
+    "reviewSourceFiles": 1593,
+    "viewerFiles": 54,
+    "viewerPackages": 24,
+    "allFourLearnerRuntimesUnchanged": true,
+    "modelsAndLicencesUnchanged": true,
+    "oldTestAssertionsUnchanged": true,
+    "unchangedCss": true,
+    "actualComponentBrowserWithSyntheticConfirmation": true,
+    "nativeConfirmationUiTested": false,
+    "viewportNoOverflow": [
+      [
+        1280,
+        720
+      ],
+      [
+        1024,
+        600
+      ]
+    ],
+    "consoleMutationObserverErrorOpen": true,
+    "ordinaryLinkAndRegionGoOnly": true,
+    "browserHistoryAndUnloadProtectionNotClaimed": true,
+    "authenticatedAcceptance": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
+    "normalPreviewChanged": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
