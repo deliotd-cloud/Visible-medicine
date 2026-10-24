@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261024-adjacent-regression-current',prep=json(stage+'/PREPARATION.json'),parent=json(prep.parentReceipt),site=prep.website;
+const allowed=['tests/arterial-history-preservation.test.mjs','tests/clinical-review-axillary-branch-xray.test.ts','tests/clinical-review-continuous-guided-playback.test.ts','tests/clinical-review-elbow-us-followup.test.ts','tests/clinical-review-forearm-vascular-xray.test.ts','tests/clinical-review-girdle-muscle-xray.test.ts','tests/clinical-review-hand-arterial-xray.test.ts','tests/release-epoch-composition-preservation.test.mjs','tests/renal-tour-epoch-admission.mjs','tests/renal-tour-epoch-admission.test.mjs','tests/tour-playback-role-inverse.mjs','tests/tour-playback-source-role.mjs','tests/lower-limb-current-source-roles.test.mjs'];
+const changed=[];for(const r of parent.sourceRows){assert.equal(hash(parent.website+'/'+r.path),r.sha256);if(hash(site+'/'+r.path)!==r.sha256){assert(allowed.includes(r.path),r.path);changed.push(r.path);}}assert.deepEqual(new Set(changed),new Set(allowed));
+const extras=[];
+for(const p of ['tests/arterial-current-role-inverse.mjs','tests/hand-current-role-inverse.mjs','tests/historical-shoulder-source-role.mjs','tests/shoulder-current-role-inverse.mjs','tests/clinical-structure-current-role-inverse.mjs','tests/adjacent-current-role-inverse.mjs','tests/adjacent-current-tour-source-role.mjs','tests/adjacent-current-tour-source-roles.test.mjs','tests/adjacent-shoulder-source-roles.test.mjs','tests/adjacent-clinical-source-roles.test.mjs'])extras.push(p);
+for(const prefix of ['tests/fixtures/adjacent-b79-preimage','tests/fixtures/adjacent-reviewed5e75','tests/fixtures/renal-epoch-preimage']){
+ for(const entry of fs.readdirSync(site+'/'+prefix,{withFileTypes:true})){assert(entry.isFile()&&!entry.isSymbolicLink());const p=prefix+'/'+entry.name;assert(p.endsWith('.raw'));if(!parent.sourceRows.some(r=>r.path===p))extras.push(p);}
+}
+const paths=[...parent.sourceRows.map(r=>r.path),...extras].sort();assert.equal(new Set(paths).size,paths.length);
+const sourceRows=paths.map(p=>({path:p,bytes:fs.statSync(site+'/'+p).size,sha256:hash(site+'/'+p)}));
+fs.writeFileSync(stage+'/CANDIDATE_INPUTS.json',JSON.stringify({at:new Date().toISOString(),parentReceipt:prep.parentReceipt,parentReceiptSha256:hash(prep.parentReceipt),changedPaths:changed,newPaths:extras,sourceRows,sourcePaths:sourceRows.length,allProductGeneratedCodeUnchanged:true,previewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({sourcePaths:sourceRows.length,changed:changed.length,new:extras.length}));
