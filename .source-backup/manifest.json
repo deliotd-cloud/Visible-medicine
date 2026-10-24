@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T07:58:26.899Z",
+  "at": "2026-10-24T08:40:28.154Z",
   "sourceIdentity": {
-    "testProofSha256": "735826554c547111135ae8e02070c334be88da65645d96cea552940095755fbe",
-    "unchangedProductSourceReceipt": "d2c288a5be7b54dda220a0f539e72c15988f63543124323c5b08c60533950df2",
+    "websiteSourceReceiptSha256": "a58bdf58304bfc74e16639ea8708463c6cdde9d94b99d73214ced179b613f958",
     "atlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+    "review": "e5e71eaee78003764fd2fdc9e7a85907751ef44c566cf2ac953318c1937c9969",
     "previewChanged": false
   },
-  "parent": "f17d928db1982b05f92b46b9f22b18813e8fe444",
-  "gitParent": "f17d928db1982b05f92b46b9f22b18813e8fe444",
+  "parent": "1e3ab678240c3258f982f47e95ad3b280136873c",
+  "gitParent": "1e3ab678240c3258f982f47e95ad3b280136873c",
   "files": [
     {
       "path": "app/globals.css",
@@ -21626,6 +21626,76 @@
       "sha256": "a23d35d1cdf460dd1a5d3f58aaaa1429a7d2ad69073f627f82996047ae0e43fa"
     },
     {
+      "path": "pending/regional-discovery-ui-20261024/recipes/checkpoint-regional-discovery-ui-20261024.mjs",
+      "bytes": 17309,
+      "sha256": "26239b3357e901281fdb914ca63158113b456123212674ada60b8fc8f3540f66"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/recipes/seal-simple-website-successor.mjs",
+      "bytes": 5382,
+      "sha256": "8e15dcfed86a8c97ed6ed558b891908acfef767c05a80947361876ad82b2d0c7"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/components/regional-learning-catalogue.css",
+      "bytes": 3575,
+      "sha256": "58adb1d02a9af767678a11bee967e9981ae131fb94afd8206e65c4ca488388a3"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/components/RegionalLearningCatalogue.tsx",
+      "bytes": 9779,
+      "sha256": "61a1a6d50a7509befd2e9ecc9f5ac7cede14bb171ee3b240ffa47c0b434b0db1"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/fixtures/regional-discovery-ui-before/guided-learning-view-navigation.test.mjs.raw",
+      "bytes": 15127,
+      "sha256": "a06d882bb0e3d11c482bac4264f6e458b99681c70b480f61ea9d48e16e1448db"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/fixtures/regional-discovery-ui-before/head-learning-discovery-page.test.ts.raw",
+      "bytes": 16331,
+      "sha256": "7ea6fb84f875c31ae096965d8afbe35ced971e7d9ffa2d0d7f92affae78f0463"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/fixtures/regional-discovery-ui-before/regional-learning-catalogue-ui.test.mjs.raw",
+      "bytes": 7757,
+      "sha256": "8ba3cb909e400552fda93e713123dcdd82360cb16af5095b3c286f927b11b063"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/fixtures/regional-discovery-ui-before/regional-tour-entry-delivery.test.mjs.raw",
+      "bytes": 12828,
+      "sha256": "c3e5eeb231e2f875766bb57a400a7296e9b1d690b3b20a807faa7acfa9b5a929"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/guided-learning-view-navigation.test.mjs",
+      "bytes": 15303,
+      "sha256": "85297e167d9049e0e658c6bcf7b5eefe9f1e5a94777542c10d542529850295dd"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/head-learning-discovery-page.test.ts",
+      "bytes": 16559,
+      "sha256": "255ca72bb6a32cc5e89b3f3b651191efd8d75d24e5d8e7bed28e6544f78fa5a1"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/regional-discovery-source-contract.test.mjs",
+      "bytes": 8037,
+      "sha256": "f47b6d02cd1be666f6e808f1a7cd38124a75f5be63abfa6dd7d1457d5ecfef7e"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/regional-learning-catalogue-ui.test.mjs",
+      "bytes": 7757,
+      "sha256": "26b41c71e6dd67d8de19b3df7f842b8349885f7a778f3a66ffc86d5d87bed064"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/regional-learning-discovery-ui.test.mjs",
+      "bytes": 9599,
+      "sha256": "5a9a61d32f2bd1175fa6a163b0baee6c7b92d7b57c250873aa4a000cb1952bf8"
+    },
+    {
+      "path": "pending/regional-discovery-ui-20261024/website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 12901,
+      "sha256": "26e38fb183cf21a4be497036c7a2c8c31cc54d2505572b05308cac0dded949c1"
+    },
+    {
       "path": "pending/regional-runtime-linking-20261022/head-cranio-controls/CODE/tests/craniofacial-ct-current-delivery.test.mjs",
       "bytes": 9929,
       "sha256": "5d3b6ce69f3db7e91eacca50c78e76d91dc6f2648f5f8232ca097358dd1c5e92"
@@ -29937,32 +30007,23 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited5917verified filtered source paths plus68explicit code/test/preimage/recipe paths, no removals. Prior88/99exact aliases/reconstruction remain linked by verified parent receipts/ancestry. Generated metadata/pins/models/scans/identifiers/private references/decisions, dependencies/build/emulator state, raw evidence and later coordination stay F-local. Not whole/private/runnable off-device recovery.",
+  "scope": "5985 verified inherited selected source paths plus12changed/new Website code/test/preimage paths and2validation/recovery recipes, no removals. Prior88/99exact aliases retained through verified parent ancestry. QA preparation/server recipes, generated assets/models/metadata, studies/masks/private data, dependencies/builds/raw evidence and later coordination remain F-local. Not whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "6dafa165af589ae3affaa908e8bdaf4b7dc5a7c42bcb3216d88866fb98cf452f",
-    "distinctCurrentCases": 54,
-    "original16RootsIncluded": 16,
-    "totalRoots": 21,
-    "initialCurrentPasses": 53,
-    "initialCurrentFailuresRetained": 1,
-    "correctedRerunRoots": 7,
-    "correctedRerunPasses": 19,
-    "singleGreen54CaseInvocation": false,
-    "retainedBaselineCases": 33,
-    "retainedBaselineFailures": 13,
-    "all6562CorrectedInputsSealedBeforeAndAfter": true,
-    "allOriginalTheoremsAndNegativeAssertionsRetained": true,
-    "all1120HistoricalShoulderInputsGitVerified": true,
-    "strictGuideMembershipAdded": true,
-    "exactRecordedRenalRevisionOnly": true,
-    "productUnchanged": true,
-    "latestCompleteWebsiteUnchanged": true,
-    "newProductionTypesBuildOrBrowserRun": false,
-    "workerModel": "gpt-6-sol",
-    "workerEffort": "medium",
-    "workerActualTokens": "unavailable",
-    "inheritedAliasEvidence": "F:/VisibleMedicine/recovery/checkpoints/20261024-lower-limb-regression-current/ALIASES_VERIFIED.json",
-    "inheritedAliasEvidenceSha256": "e026ef435a0138d78e4fb6ab299548c387a8bdea728627dc850b3bac3f6bdde7",
+    "mainReviewSha256": "b80750c4592d6bc90f3c473060095bbd9a6c33300416c28c17ae0f9f4b306662",
+    "sourceInputs": 6568,
+    "focusedCases": 38,
+    "oneCurrentGreenInvocation": true,
+    "typeRoots": 3,
+    "typeGraphFiles": 780,
+    "typeDiagnostics": 0,
+    "actualPrebuildBuildAndReviewVerifierPassed": true,
+    "browserQa": "F:/VisibleMedicine/staging/20261024-regional-discovery-ui/BROWSER_QA.json",
+    "browserQaSha256": "d6a04f35e02b9d3fe5f9a8cdc40c5cf1d9f749ca11097efc700717c0de14e846",
+    "regionalTours": 53,
+    "regionalSteps": 317,
+    "originalTestAssertionsRetainedExceptTwoExplicitUiExpectations": true,
+    "allLaterAdjacentTestRepairsPreserved": true,
+    "actualIntegratedWebsiteAcceptance": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
