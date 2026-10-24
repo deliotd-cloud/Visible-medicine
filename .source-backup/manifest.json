@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T16:47:00.043Z",
+  "at": "2026-10-24T17:10:10.171Z",
   "sourceIdentity": {
-    "nativeParent": "6e810b188dde401f6c19a970928f316a479696df",
-    "nativeParentTree": "90afe5163dbd9386aa37c93d525fa4c70e8c1b9e",
-    "preparedSourceManifest": "F:/VisibleMedicine/staging/20261024-right-gastric-eus-native/SOURCE_STATE.json",
-    "preparedSourceManifestSha256": "2f4fd70257a5fe0ceeb88725a4dd27712d1a2ad09b0f5f34e0ddd55db4fbc111",
-    "kind": "uncommitted-unbuilt-native-source-preparation"
+    "frozenWebsiteReceipt": "cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e",
+    "kind": "two-unintegrated-QA-only-proposals",
+    "selectedPhysicalRoot": "F:/VisibleMedicine/staging",
+    "explicitPathsOnly": true
   },
-  "parent": "5dcf67440fce6b397b652a248a925c8b7d9da655",
-  "gitParent": "5dcf67440fce6b397b652a248a925c8b7d9da655",
+  "parent": "05934ad1f55bc43e9dc43532ac03c9a39b246c8e",
+  "gitParent": "05934ad1f55bc43e9dc43532ac03c9a39b246c8e",
   "files": [
     {
       "path": "app/globals.css",
@@ -18952,6 +18951,61 @@
       "sha256": "f6ae6018afa5e5f98087a4213742d07c10a3c914d4700d92eb3af721313b5631"
     },
     {
+      "path": "pending/independent-qa-proposals-20261024/20261024-eye-epoch-repair-main/candidate/tests/atlas-eye-layer-guide.test.ts",
+      "bytes": 20073,
+      "sha256": "34028e3a00d5b015b1332dc989b70a0289bc80cb7419270d8fd01152228df660"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/20261024-eye-epoch-repair-main/test-eye-history-closure-unit.mjs",
+      "bytes": 10625,
+      "sha256": "546997f5d2973670e4d3d47e0a99aee5be97e1fbda1dc6c885d23b2919c08dfa"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/20261024-studio-storage-browser-preparation/proposal/bundle.mjs",
+      "bytes": 6966,
+      "sha256": "2621aa886f52bf16f8be3df8cd823bcd1ef8a86e4ca1451a32ab535c0c7306d0"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/20261024-studio-storage-browser-preparation/proposal/entry.mjs",
+      "bytes": 7705,
+      "sha256": "d1111f5328613be074c54a6825aada391d6509cd93d6e8234cc994d8e02b10f0"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/20261024-studio-storage-browser-preparation/proposal/fixture.css",
+      "bytes": 1431,
+      "sha256": "619008a274d6c1d29d6669289a643318cb1318f97a480d3290cd8fd45848da1b"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/20261024-studio-storage-browser-preparation/proposal/router.mjs",
+      "bytes": 1435,
+      "sha256": "29f0cda0bedf75f164ed14e1a293395aaa37f13279d15769e9cf542d978e7cdf"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/20261024-studio-storage-browser-preparation/proposal/server.mjs",
+      "bytes": 1125,
+      "sha256": "b37664a1afbc4d25474fea4c1c8bd0c8a915ae9047799b3eda6ef0423a157e3b"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/recipes/compact-independent-qa-index-20261024.mjs",
+      "bytes": 3549,
+      "sha256": "b40d5650f2666dc49af767e82683f8510b604291364c7aa363e41a3f1253ff85"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/recipes/inspect-esbuild-stdin-20261024.mjs",
+      "bytes": 1794,
+      "sha256": "5b8a5541233a82446cc8043a45de91e53ae70c2b5e0de4d20ed8141f5fd99902"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/recipes/run-eye-history-pure-20261024.mjs",
+      "bytes": 2555,
+      "sha256": "1ce804b2af9b18b5554dda1bd1908001a6d56a762e9716c66285990cef305332"
+    },
+    {
+      "path": "pending/independent-qa-proposals-20261024/recipes/save-independent-qa-proposals-20261024.mjs",
+      "bytes": 10179,
+      "sha256": "1947ef31381f229b7021dac1c3f8f8091eb329a7f81016b5e5ef0d6354d5a432"
+    },
+    {
       "path": "pending/inline-viewer-20261022/aorta-assurance/tests/aorta-runtime-family-admission.test.mjs",
       "bytes": 2845,
       "sha256": "eb4dd6dbb509f270c5a0a1312553e0284e746704ee49f3c36bfc5674107a7f9a"
@@ -29883,27 +29937,25 @@
     }
   ],
   "removed": [],
-  "scope": "Verified filtered source ancestry, the new actual integration regression, package command and four preparation/verification/recovery recipes. The two authored EUS source edits and unit test remain in inherited verified backup5dcf. Native notice addition, complete local manifests, QA/assignment evidence and later coordination remain F-local. No scans, masks, models, patient data, private decisions/references, generated runtime/build/dependencies or raw logs. Not whole/private/runnable off-device recovery; no installation or public deployment.",
+  "scope": "Verified inherited filtered source plus the candidate eye theorem, lightweight control script, four Studio fixture scripts/CSS and four recipes. HTML/replay instructions, original/v2 handoffs, manifests, raw/initial QA, history archive and later coordination remain F-local. No product source installation, scans, masks, models, patient/private account data, publisher assets, generated runtime/build/dependencies or raw logs uploaded. Not whole/private/runnable off-device recovery; restore selected files to their recorded physical paths before use. No public deployment.",
   "proof": {
-    "mainReviewSha256": "8d0984408cfc73d6e597c0acfb80bb9347f5d211540684b1039575aba03a98b2",
-    "preparedSourcePaths": 6389,
-    "intendedChangedPaths": 6,
-    "unaffectedSuccessorParentPaths": 6383,
-    "wholeOriginalSourceInverses": 2,
-    "wholePreviousPackageRestored": true,
-    "wholePreviousNoticePreserved": true,
-    "dependenciesAndDispatchUnchanged": true,
-    "actualHeadStillParent": true,
-    "sourceUnitCasesPreviouslyPassed": 7,
-    "workerOriginalSyntaxChecked": true,
-    "correctedIntegrationSyntaxChecked": true,
-    "integrationCasesAuthored": 6,
-    "integrationCasesExecuted": false,
-    "generatedRevisionsStillParent": true,
-    "strictTypesRun": false,
-    "productionBuild": false,
-    "learnerOrReviewExport": false,
-    "websiteIntegration": false,
+    "mainReviewSha256": "5151d6cc3ceeb0f46a4d3a74c95a88f810fb9ae7ec25f6d5efa68a1379b2077c",
+    "selectedTextPaths": 9,
+    "eyeLightweightControls": 11,
+    "tinyEsbuildStdinABIProbeApplicationInputs": 0,
+    "oldOriginalTestWholeFileInverse": true,
+    "originalAssertionChanges": 0,
+    "namedHistoricalRoles": 2,
+    "windowsPosixFileUrlAndUnknownPathRefusals": true,
+    "historicalGitReplacementDisabled": true,
+    "candidateSyntaxChecked": true,
+    "studioSyntaxSources": 4,
+    "studioActualFrozenSourceChecksPrepared": true,
+    "studioStorageFailureAndHeldSaveRemainSynthetic": true,
+    "studioCssWhitelistedWithoutSourceOutputCollision": true,
+    "studioCompiledOutputsIsolated": true,
+    "originalApplicationTestOrBundleRun": false,
+    "studioRuntimeOrBrowserRun": false,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,
