@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';import {containedTarget} from './prepare-reviewed-regression-candidate-20261022.mjs';
+const stage='F:/VisibleMedicine/staging/20261024-guided-review-navigation',site=stage+'/website';
+const file='F:/VisibleMedicine/staging/20261024-practice-actions-website/SOURCE_BOUND.json';assert.equal(hash(file),'dc0532736094fcd7225e1229af3a41322aacc591789bf1179c44476b98b7077e');const parent=json(file);
+assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);assert(!fs.existsSync(stage));fs.mkdirSync(stage);
+execFileSync('git',['clone','--shared','--no-checkout','F:/VisibleMedicine/website',site],{windowsHide:true,stdio:'pipe'});execFileSync('git',['-C',site,'read-tree','HEAD'],{windowsHide:true,stdio:'pipe'});
+for(const r of parent.sourceRows){assert.equal(hash(parent.website+'/'+r.path),r.sha256,r.path);const target=containedTarget(site,r.path);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(parent.website+'/'+r.path,target,fs.constants.COPYFILE_EXCL);}
+fs.symlinkSync(parent.website+'/node_modules',site+'/node_modules','junction');fs.symlinkSync(parent.atlas,stage+'/atlas','junction');
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify({at:new Date().toISOString(),stage,website:site,parentReceipt:file,parentReceiptSha256:hash(file),sourcePaths:parent.sourcePaths,atlas:parent.atlas,atlasHead:parent.atlasHead,atlasTree:parent.atlasTree,allOriginalSourceBytesVerified:true,allFourNativeExportsUnchanged:true,previewChanged:false,installed:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({stage,sourcePaths:parent.sourcePaths,previewChanged:false}));
