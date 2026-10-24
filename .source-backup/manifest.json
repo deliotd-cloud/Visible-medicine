@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T00:44:23.830Z",
+  "at": "2026-10-24T00:57:25.604Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "7c1829a1af5f7d0df175312c6c665516957979b9a48efa917e499fd03ae381dd",
+    "websiteSourceReceiptSha256": "41c2b65e9e163089cb5d6ae8d5190dce7b0c3d6affb751151111a5eb1845f2df",
     "atlasHead": "aa13c067197cad87bd0a9b2da5549bc4b33bfdf7",
-    "atlasTree": "1ce3d1dbac28ff05f9aef22502c48e518304d18b",
     "reviewBinding": "5216ef1195e37903db9806b5c77d87f4ba1b141b1dbc82b0087651727fc3e429",
     "normalPreviewChanged": false
   },
-  "parent": "9171a31a3ba951520e72986386e1df8b16bebdfc",
-  "gitParent": "9171a31a3ba951520e72986386e1df8b16bebdfc",
+  "parent": "22846cd1caa58a5d692715ede070a6731fc39969",
+  "gitParent": "22846cd1caa58a5d692715ede070a6731fc39969",
   "files": [
     {
       "path": "app/globals.css",
@@ -26752,6 +26751,46 @@
       "sha256": "90e3ed54b165183ba91285542c82435a04af2851e6ea6ddadee62d539c6dc461"
     },
     {
+      "path": "pending/review-queue-short-desktop-20261024/coordination/checkpoint-review-queue-short-desktop-20261024.mjs",
+      "bytes": 8450,
+      "sha256": "1ace518bc6266412ae9126472510aecb72c0bb88317e9817c08ed37dbbb3c902"
+    },
+    {
+      "path": "pending/review-queue-short-desktop-20261024/coordination/finish-review-queue-short-desktop-20261024.mjs",
+      "bytes": 4758,
+      "sha256": "2473da31c4487e7c232273eab35a30b480646c204efbcb7a8dc8a9249e1f38cf"
+    },
+    {
+      "path": "pending/review-queue-short-desktop-20261024/coordination/improve-review-queue-20261024.mjs",
+      "bytes": 10905,
+      "sha256": "f2727ea7a6d443245a274623e1df47680c6cbdf10ee0c6f5b53f16a26bddaf9e"
+    },
+    {
+      "path": "pending/review-queue-short-desktop-20261024/coordination/qa-review-queue-short-desktop-20261024.jsx.raw",
+      "bytes": 1438,
+      "sha256": "5533f26e64f059176ef980206956fcc854247a1acff7352c4da7e573c8a30df2"
+    },
+    {
+      "path": "pending/review-queue-short-desktop-20261024/coordination/seal-review-queue-short-desktop-20261024.mjs",
+      "bytes": 4728,
+      "sha256": "5d94c5a62cce734785a2f4645f1af7184462d8aea4a7c84c5c0997cd1a407960"
+    },
+    {
+      "path": "pending/review-queue-short-desktop-20261024/website/components/clinical-review-inbox.css.raw",
+      "bytes": 8860,
+      "sha256": "d806de511f262abf919a7e0cf05a0a0ce7a131ba70851510c97af0aa182131a5"
+    },
+    {
+      "path": "pending/review-queue-short-desktop-20261024/website/tests/clinical-review-inbox-short-desktop.test.mjs",
+      "bytes": 2483,
+      "sha256": "6304953a3243ca3600ed2d42789a3f6393aee2928348f6349e31a481e5c0ab28"
+    },
+    {
+      "path": "pending/review-queue-short-desktop-20261024/website/tests/clinical-review-inbox-workbench.test.mjs",
+      "bytes": 9091,
+      "sha256": "1e32b3f80c1d1472779379d8367589492a553658c0a56b938a5ca003a27328b1"
+    },
+    {
       "path": "pending/review-return-refresh-20261022/coordination/checkpoint-review-return-refresh-20261022.mjs",
       "bytes": 8893,
       "sha256": "919734a5917daf82a9a86c5af0c79b1395fbf6b5a38a292de5fdab1a8ff48178"
@@ -29928,39 +29967,37 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited verified authored-source filter plus eight coordination recipes and six Website authored code/test paths. No generated JSON/pins/manifests/inventory, models/geometry/scans/identifiers/private clinical decisions/references, dependencies/dist/emulator state, raw QA/screenshots/logs/type graphs. Complete local proofs remain on F. Not whole/private/runnable off-device backup.",
+  "scope": "Inherited verified filtered authored-source plus five coordination/fixture code files, source CSS as UTF8rawtext and two reviewqueue tests. No generated JSON/pins/manifests, geometry/models/scans/identifiers/private clinical decisions/references, dependencies/dist/emulatorstate, raw QA/screenshots/logs/typegraphs. Complete proofs remainF-only, notwhole/private/runnableoffdevicebackup.",
   "proof": {
-    "mainReviewSha256": "118042470bcaf7b27fe008b38283429c5f64fbf988883ecd39cbffde1e1d7740",
-    "sourcePaths": 6488,
-    "allFourSources": "aa13c067197cad87bd0a9b2da5549bc4b33bfdf7",
-    "newDraftConcepts": 6,
-    "newSourceSelections": 12,
-    "concepts": 222,
-    "selections": 404,
-    "previous216DefinitionsAnd392SessionsPreserved": true,
-    "reviewSourceFiles": 1595,
-    "reviewInputs": 1788,
-    "reviewBinding": "5216ef1195e37903db9806b5c77d87f4ba1b141b1dbc82b0087651727fc3e429",
-    "viewerFiles": 54,
-    "viewerPackages": 24,
-    "focusedCases": 144,
-    "typeRoots": 24,
-    "typeAmbient": 6,
-    "typeActualGraphFiles": 3624,
+    "mainReviewSha256": "722fd2c638234ca70e43bd8f7ec331cca27609077fc8e19f052637ea9d1195c0",
+    "cssAppendOnly": true,
+    "priorCssByteExact": true,
+    "inboxCodeAndReviewServerContractsUnchanged": true,
+    "sourcePaths": 6489,
+    "focusedCases": 108,
+    "strictTypeRoots": 1,
+    "strictTypeGraphFiles": 565,
     "typeDiagnostics": 0,
-    "stockPrebuildAndWebsiteBuild": true,
-    "buildFiles": 1125,
-    "originalReviewVerifier": true,
-    "allModelsGeometryLicensesAccessUnchanged": true,
-    "allCoverageCountsAndHoldsUnchanged": true,
-    "oneGenuineRandomNewQuestionAnsweredInBrowser": true,
-    "allSixManualBrowserAcceptance": false,
-    "privateStateRead": false,
-    "previewChanged": false,
+    "productionBuildOutputs": 1125,
+    "actualPrebuildAndBuild": true,
+    "allFourLearnerRuntimesAndProtectedReviewUnchanged": true,
+    "reviewBinding": "5216ef1195e37903db9806b5c77d87f4ba1b141b1dbc82b0087651727fc3e429",
+    "sourceAtlas": "aa13c067197cad87bd0a9b2da5549bc4b33bfdf7",
+    "syntheticPageHeightBefore": 2907,
+    "syntheticPageHeightAfter": 737,
+    "innerListHeight": 288,
+    "nativeKeyboardScrollTop": 250,
+    "paginationRestoresSummaryFocus": true,
+    "smallWindowNormalFlowPreserved": true,
+    "twoHundredPercentTextNoHorizontalOverflow": true,
+    "signedInOrAssistiveTechnologyAcceptance": false,
+    "unlocalizedMutationObserverBeforeAndAfter": true,
+    "privateDataRead": false,
+    "normalPreviewChanged": false,
     "installed": false,
-    "clinicalApproval": false,
-    "patientSpaceRegistration": false,
+    "previewChanged": false,
     "wholeSuitePassing": false,
+    "clinicalApproval": false,
     "spatialRegistration": false
   },
   "wholeProjectBackup": false,
