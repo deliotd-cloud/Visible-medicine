@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+const root=process.cwd().replaceAll('\\','/'),ts=createRequire(root+'/package.json')('typescript'),config=root+'/tsconfig.json',sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const loaded=ts.readConfigFile(config,ts.sys.readFile);assert(!loaded.error);const parsed=ts.parseJsonConfigFileContent(loaded.config,ts.sys,root);assert.equal(parsed.errors.length,0);assert(parsed.options.strict);
+const roots=[root+'/components/ui/button.tsx'],ambient=parsed.fileNames.filter(p=>p.endsWith('.d.ts'));
+const expectedAmbient=fs.existsSync(root+'/next-env.d.ts')?['next-env.d.ts','worker-configuration.d.ts','.next/types/routes.d.ts']:['worker-configuration.d.ts'];
+assert.deepEqual(ambient.map(p=>p.slice(root.length+1)),expectedAmbient);
+const overrides={noEmit:true,incremental:false,composite:false,tsBuildInfoFile:undefined},program=ts.createProgram([...roots,...ambient],{...parsed.options,...overrides}),diagnostics=ts.getPreEmitDiagnostics(program);
+const result={at:new Date().toISOString(),root,config,configSha256:sha(config),typescriptVersion:ts.version,roots,ambient,configuredCompilerOptions:parsed.options,overrides,sourceFiles:program.getSourceFiles().map(f=>({path:f.fileName,sha256:sha(f.fileName)})),diagnosticCount:diagnostics.length,diagnostics:diagnostics.map(d=>({code:d.code,path:d.file?.fileName,message:ts.flattenDiagnosticMessageText(d.messageText,'\n')})),sourceOverlayCount:0,moduleSubstitutions:false,fullProjectTypesPassed:false};
+fs.writeFileSync(process.argv[2],JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({roots:roots.length,ambient:ambient.length,files:result.sourceFiles.length,diagnostics:diagnostics.length}));if(diagnostics.length)process.exitCode=1;
