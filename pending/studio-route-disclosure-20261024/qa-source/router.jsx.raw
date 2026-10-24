@@ -1,0 +1,16 @@
+import React,{createContext,useContext,useEffect,useState} from 'react';
+const RouteContext=createContext(null);
+export function RouteProvider({variant,children}){
+ const prefix='/'+variant;
+ const read=()=>window.location.pathname.slice(prefix.length)||'/studio/cohorts';
+ const [pathname,setPathname]=useState(read);
+ const navigate=href=>{window.history.pushState({},'',prefix+href);setPathname(href);};
+ useEffect(()=>{const pop=()=>setPathname(read());window.addEventListener('popstate',pop);return()=>window.removeEventListener('popstate',pop);},[]);
+ return <RouteContext.Provider value={{pathname,navigate}}>{children}</RouteContext.Provider>;
+}
+export function usePathname(){return useContext(RouteContext).pathname;}
+export function useFixtureNavigate(){return useContext(RouteContext).navigate;}
+export default function Link({href,children,onClick,...props}){
+ const {navigate}=useContext(RouteContext);
+ return <a {...props} href={href} onClick={event=>{onClick?.(event);if(!event.defaultPrevented){event.preventDefault();navigate(href);}}}>{children}</a>;
+}

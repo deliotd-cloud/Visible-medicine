@@ -1,0 +1,13 @@
+import React from 'react';import {createRoot} from 'react-dom/client';
+import {StudioNavigation} from 'vm-studio-navigation';import {RouteProvider,usePathname,useFixtureNavigate} from './router.jsx';
+import './fixture.css';import 'vm-studio-css';
+const variant=window.location.pathname.split('/')[1];
+function Fixture(){const path=usePathname(),navigate=useFixtureNavigate();return <>
+ <header><strong>Synthetic Studio navigation QA · {variant}</strong><p>No account, saved course, review decision or patient data. Actual navigation/disclosure components; synthetic Next routing and role props.</p></header>
+ <main className="fixture-layout"><aside><StudioNavigation educationRoles={['administrator']}/></aside><section>
+ <h1>Studio route context</h1><p role="status">Current route: {path}</p>
+ <nav aria-label="Test route controls"><button onClick={()=>navigate('/studio/cohorts')}>View groups</button><button onClick={()=>navigate('/studio/analytics')}>View reports</button><button onClick={()=>navigate('/studio/courses')}>View courses</button></nav>
+ <label>Unsent synthetic note<textarea defaultValue="Keep this synthetic draft"/></label>
+ <p>Manual disclosure closure is allowed. Changing to a different administrative route should reveal its current navigation destination.</p>
+ </section></main></>;}
+createRoot(document.getElementById('app')).render(<RouteProvider variant={variant}><Fixture/></RouteProvider>);
