@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited independently verified filtered authored source plus four native component/test files only. Coordination recipes, generated metadata, model/scans/private data/references, dependencies, production output and raw evidence remain F-local. Not a whole private or runnable off-device backup.
+Inherited5922 independently verified filtered authored-source paths plus seven Website code/test paths. No removals or new alias consolidation. Coordination recipes, generated metadata/pins/JSON, models/geometry/scans/identifiers/private references/decisions, dependency/production/emulator state and raw logs/screenshots/type graphs remain F-local. Not a whole/private/runnable off-device backup
