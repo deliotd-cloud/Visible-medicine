@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Inherited5947 independently verified filtered authored-source paths plus seven Website code/test paths; no removals or alias consolidation. Coordination recipes, generated metadata/pins/JSON, models/geometry/scans/identifiers/private references/decisions, dependency/production/emulator state and raw logs/screenshots/type graphs remain F-local. Not a whole/private/runnable off-device backup.
+Inherited5954independently verified filtered authored-source paths plus31explicit current/historical test-code and recipe paths. No removals. Generated metadata including two190aJSON.raw fixtures, models, scans, private references/decisions, raw logs, Review/build/dependency state and coordination documents remain F-local. Historical test-code selection is not integration or runnable off-device recovery. Not a whole/private/runnable backup.

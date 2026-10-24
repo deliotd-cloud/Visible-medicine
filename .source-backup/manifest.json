@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T03:49:22.491Z",
+  "at": "2026-10-24T04:12:31.444Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "40fd40cba3b6f75253e0f3b825bd02d6a94e876e6d8aafedb5e8a043ce1ed8e2",
+    "applicationSourceReceiptSha256": "40fd40cba3b6f75253e0f3b825bd02d6a94e876e6d8aafedb5e8a043ce1ed8e2",
+    "proofReceiptSha256": "58f9008850632b65a0919114fe59c1acab82ac862132f68c0af9c6f1645b8960",
     "atlasHead": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
     "atlasTree": "9263c23e98b24068a8b4b4f0c4635bdd133c2fa5",
-    "reviewBinding": "dc88d72f453d9f033d23224b16ac0b07d0a209ad3d5f22d0c75b82a34afe547e",
     "normalPreviewChanged": false
   },
-  "parent": "6ef5f4b277be371b72328f11be20752f7404f5c8",
-  "gitParent": "6ef5f4b277be371b72328f11be20752f7404f5c8",
+  "parent": "e6d070f820f6e15689daf9f104a420b2070909e9",
+  "gitParent": "e6d070f820f6e15689daf9f104a420b2070909e9",
   "files": [
     {
       "path": "app/globals.css",
@@ -17292,6 +17292,161 @@
       "sha256": "7ea6fb84f875c31ae096965d8afbe35ced971e7d9ffa2d0d7f92affae78f0463"
     },
     {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/arterial-current-role-inverse.mjs",
+      "bytes": 4752,
+      "sha256": "ac622816f7dc1188c8cf028bd623a3c3b441c901e63bdb2d948636447a51a038"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/arterial-history-preservation.test.mjs",
+      "bytes": 8223,
+      "sha256": "772ae526217164d2e24809eec7d29460aff7ed082d35937323c9741b369887df"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/clinical-review-axillary-branch-xray.test.ts",
+      "bytes": 24540,
+      "sha256": "61f897b2e0a9eb612f986fb2aa3c32e29efe23ac8828e5119897080400462663"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/clinical-review-continuous-guided-playback.test.ts",
+      "bytes": 21751,
+      "sha256": "5b6614bf7aa0d511e54a9a38562be8ad6bbfdc03fd79c1d7af0314fe0d3e50f7"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/clinical-review-elbow-us-followup.test.ts",
+      "bytes": 36658,
+      "sha256": "a616bb4740f54199616366f7e63ff5e15e1b12d064c5a78a9bec0348a8048462"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "bytes": 29118,
+      "sha256": "9de1e1bc33127d9a7deea3bb6f2785e09c215c7382e526625faf4bcdf1427b75"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/clinical-review-girdle-muscle-xray.test.ts",
+      "bytes": 22864,
+      "sha256": "f3947bb370e3fa79a8929c7d57d5dd65dc809e6104bbdcdddd1e8e65231b52ae"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/clinical-review-hand-arterial-xray.test.ts",
+      "bytes": 21678,
+      "sha256": "57e5b84e74f7c65df0d942a220ad8985dabc532b07c24f74cce1a696ba636594"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/clinical-review-lower-limb-connective-xray.test.ts",
+      "bytes": 21671,
+      "sha256": "c848b411bd7b92e91e47dbfb0c9c9829131ead5bd64feb5ffe7f78e7f90ea829"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/clinical-structure-current-role-inverse.mjs",
+      "bytes": 1907,
+      "sha256": "dfa5b5b080c5f4fb2c51d3879d4a891c10bba3b8ab50a7843d7d58d858a9a26b"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/fixtures/renal-epoch-preimage/renal-tour-epoch-admission.mjs.raw",
+      "bytes": 6653,
+      "sha256": "2e0b1a061148daf71317b05c179eef9c1c4dac65cf25d79d7a5b5b3b6e8dbb8c"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/hand-current-role-inverse.mjs",
+      "bytes": 1564,
+      "sha256": "ee65bce349ac119f907b48b6f6f442be290487ff1ca329b28f124f77db352dd0"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/historical-shoulder-source-role.mjs",
+      "bytes": 1380,
+      "sha256": "faf1f46246eb2689066b9e61152dbf19bff5ab97917163800702aa1cdeb8cf5d"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/lower-limb-current-role-inverse.mjs",
+      "bytes": 1667,
+      "sha256": "4eb7bc4c2fdc72944621abee34e0a3d2a9cde642f28c25de697b2819d2569877"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/lower-limb-display-pin-history.mjs",
+      "bytes": 5362,
+      "sha256": "8a0d81bfd166f6f922a07b68642d4806f9a179c24a48d47998418d696c6573c5"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/lower-limb-display-pin-history.test.mjs",
+      "bytes": 3580,
+      "sha256": "1b4ba50d702cead36d21f131f7d9366d481432be8ee1650caf037c90a4510aa9"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/release-epoch-composition-preservation.test.mjs",
+      "bytes": 19498,
+      "sha256": "0bc8ab0d9928b19bac75b36ffc8a0870d0e6cc4b7aba5fd7487dce553fc49a9a"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/renal-tour-epoch-admission.mjs",
+      "bytes": 10812,
+      "sha256": "38ae31b79ab7d0d307da83c92994d9937e63f175f00c8728b49d8f6f1bbb4188"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/renal-tour-epoch-admission.test.mjs",
+      "bytes": 14221,
+      "sha256": "704bc9543c5ba904a600048e1a3576ea5b942d5323ea5a6658a9de617c28a97a"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/shoulder-current-role-inverse.mjs",
+      "bytes": 1989,
+      "sha256": "87178811a9bfe0d11d6ab5f2e003cebbcff668b4adf64a90b0eef2064c8eaa5d"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/tour-playback-role-inverse.mjs",
+      "bytes": 8476,
+      "sha256": "4abac7db86a9aba47ee51894e98f874c56a5cb00bc17ffcfdd3cca1141cee77c"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/historical-proposal/tests/tour-playback-source-role.mjs",
+      "bytes": 9521,
+      "sha256": "6811145340655e9cd80c066dc65a8fc8c116906979d978a3c70d5c7017b03546"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/recipes/audit-adjacent-result-20261024.mjs",
+      "bytes": 9038,
+      "sha256": "a09169d3a0387ea87a8e0fcda73b252d9136fc16977aae04e618e46e0537348d"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/recipes/checkpoint-guided-review-proof-20261024.mjs",
+      "bytes": 9190,
+      "sha256": "e02a1fc431f985f88cdc932b617809c7c4e6e9186f01848ddbe47adc6f2f8434"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/recipes/compact-guide-proof-index-20261024.mjs",
+      "bytes": 3786,
+      "sha256": "57b2d28d1acb3e0e77ece2fe8c56f5ec9413436652d8014320ad7af4e586ecd5"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/recipes/finish-guided-review-proof-20261024.mjs",
+      "bytes": 5564,
+      "sha256": "01acc33b6068e226b7a450a653fdbbb664bac781142e3b366ecc462fd1a7bb7b"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/recipes/prepare-guided-review-proof-20261024.mjs",
+      "bytes": 2316,
+      "sha256": "8012357e2278954a9f29d9b821cc1c5afb7bc4cd354964d8cc98ff5a09839a00"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/recipes/run-guided-review-proof-20261024.mjs",
+      "bytes": 4485,
+      "sha256": "6fc9195ae07e063cf5559caf5ac34f6378df01927aedff43827a3b2b715a0978"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/recipes/seal-guided-review-proof-20261024.mjs",
+      "bytes": 4056,
+      "sha256": "cbf8d471d3b7205ff99a22def40e67ee79dd4bdebde317b13f064e641129578a"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/website/tests/guided-review-completeness.mjs",
+      "bytes": 2075,
+      "sha256": "6b25cda5e7598f26845741fba9c371fcc73669332451979cd8d281e8a5cd6f40"
+    },
+    {
+      "path": "pending/guided-review-proof-20261024/website/tests/guided-review-completeness.test.mjs",
+      "bytes": 11460,
+      "sha256": "9f49b5e2f09babc83cb2954a0cdf3a1bed2b47a8af9c54ecd7ec76bab5dc4aa1"
+    },
+    {
       "path": "pending/hamstring-guided-tours-20261022/atlas/lib/hamstring-tours.ts",
       "bytes": 5374,
       "sha256": "14f56f53002c574fd2eb8a6a88f23f4e8fad9476495ad227434384ef59d51737"
@@ -29783,116 +29938,35 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited5947 independently verified filtered authored-source paths plus seven Website code/test paths; no removals or alias consolidation. Coordination recipes, generated metadata/pins/JSON, models/geometry/scans/identifiers/private references/decisions, dependency/production/emulator state and raw logs/screenshots/type graphs remain F-local. Not a whole/private/runnable off-device backup.",
+  "scope": "Inherited5954independently verified filtered authored-source paths plus31explicit current/historical test-code and recipe paths. No removals. Generated metadata including two190aJSON.raw fixtures, models, scans, private references/decisions, raw logs, Review/build/dependency state and coordination documents remain F-local. Historical test-code selection is not integration or runnable off-device recovery. Not a whole/private/runnable backup.",
   "proof": {
-    "mainReviewSha256": "1a1dac982644c1abc0d787b7533675d7c1923e79b1efbe160c82657a96ea6f35",
-    "sourcePaths": 6496,
-    "allFourSources": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
-    "reviewSourceFiles": 1599,
-    "reviewInputs": 1792,
-    "reviewBinding": "dc88d72f453d9f033d23224b16ac0b07d0a209ad3d5f22d0c75b82a34afe547e",
-    "viewerFiles": 54,
-    "viewerPackages": 24,
-    "focusedCases": 140,
-    "typeRoots": 25,
-    "typeAmbient": 6,
-    "typeActualGraphFiles": 3628,
-    "typeDiagnostics": 0,
-    "stockPrebuildAndWebsiteBuild": true,
-    "buildFiles": 1125,
-    "originalReviewVerifier": true,
-    "optionalTourToExplore": true,
-    "sourceBoundHeadingFocusPreserved": true,
-    "actualExportedPublicRootPracticeVerified": true,
-    "actualWebsiteBrowserReplayPerformed": false,
-    "allModelsGeometryLicensesAccessUnchanged": true,
-    "allCoverageCountsAndHoldsUnchanged": true,
-    "concepts": 232,
-    "selections": 424,
-    "newDraftConcepts": 10,
-    "newSourceSelections": 20,
-    "packagedTeachingVerified": true,
-    "browser": {
-      "schema": "vm-exported-vascular-practice-browser-check/1",
-      "sourceCommit": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
-      "ownedTab": "180",
-      "url": "http://127.0.0.1:51916/atlas-runtime/head-neck/index.html?region=forearm",
-      "surface": "Actual original exported head-neck/root regional module, not a substituted component or signed-in Website shell",
-      "applicationBytesUnmodified": true,
-      "mode": "Quiz / Apply anatomy · draft",
-      "scope": "Forearm, vessels on, bones/muscles/connective off; both sides; default five-question session",
-      "availableUniqueConcepts": 6,
-      "session": [
-        {
-          "target": "Left basilic vein",
-          "response": "correct",
-          "score": "1/1"
-        },
-        {
-          "target": "Left anterior interosseous artery",
-          "selected": "Left radial artery",
-          "response": "Not quite",
-          "score": "1/2"
-        },
-        {
-          "target": "Left ulnar artery",
-          "response": "Skipped / No answer recorded",
-          "score": "1/3"
-        },
-        {
-          "target": "Left cephalic vein",
-          "response": "correct",
-          "score": "2/4"
-        },
-        {
-          "target": "Right common interosseous artery",
-          "response": "correct",
-          "score": "3/5"
-        }
-      ],
-      "resultsHeadingFocused": true,
-      "questionHeadingFocusedAfterAdvance": true,
-      "feedbackContainerFocusedAfterAnswer": true,
-      "explanationHiddenBeforeAnswer": true,
-      "expandedSourceLinkObserved": "University of Arkansas for Medical Sciences · Selected veins of the upper limb",
-      "draftAndReviewLimitationsObserved": true,
-      "retryAvailable": 2,
-      "retryTargets": [
-        "Left anterior interosseous artery",
-        "Left ulnar artery"
-      ],
-      "retryFinalScore": "2/2",
-      "correctTargetsNotRepeatedInRetry": true,
-      "renderedSameSideChoicesObserved": true,
-      "screenshotInspected": true,
-      "screenshotArchived": false,
-      "sampledConsole": {
-        "levels": [
-          "error",
-          "warn"
-        ],
-        "limit": 10,
-        "entriesReturned": 1,
-        "errorsReturned": 0,
-        "warning": "THREE.Clock deprecated; use THREE.Timer",
-        "warningTimestamp": "2026-10-24T03:36:13.220Z",
-        "consoleCleanClaimed": false
-      },
-      "ownedTabExplicitlyClosed": true,
-      "normalPreviewChanged": false,
-      "ownerTabsOrDraftsChanged": false,
-      "authenticatedWebsiteAcceptance": false,
-      "privateReviewBrowserAcceptance": false,
-      "assistiveTechnologyAcceptance": false,
-      "performanceAcceptance": false,
-      "clinicalApproval": false,
-      "patientSpaceRegistration": false,
-      "limits": "One desktop exported-module session and exact missed-target retry. No full signed-in Website/private Review, acquired-study, actual browser zoom, mobile, assistive-technology or performance acceptance; renderer deprecation remains open. Screenshot inspected in tool output, not archived. The normal preview was never installed/restarted/refreshed."
-    },
-    "previewChanged": false,
-    "installed": false,
+    "mainReviewSha256": "1d334d03478e1eb50626c4f529f00b852c0665bf617c460dc0d6d0d1c4f8112a",
+    "currentAtlas": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
+    "currentTree": "9263c23e98b24068a8b4b4f0c4635bdd133c2fa5",
+    "inheritedSourcePaths": 6496,
+    "totalSourcePaths": 6498,
+    "newTestPaths": 2,
+    "actualImportedClosureFiles": 1127,
+    "focusedCases": 2,
+    "structures": 1104,
+    "guidedStructures": 320,
+    "guidePlacements": 414,
+    "omissionsRejectedWithRecomputedTransportHashes": 414,
+    "independentMutationRefusals": 69,
+    "allInheritedSourceExact": true,
+    "productSourceChanges": false,
+    "historicalSource": "5e75b9ce7e46fed291748108edd7565c97dee101",
+    "historicalRoots": 16,
+    "historicalCases": 37,
+    "historicalProposalIntegrated": false,
+    "independentShoulderFixtureProvenanceVerified": true,
+    "workerFullHelperClosureSealsAtExecutionUnavailable": true,
+    "newTypesBuildBrowserPerformed": false,
+    "normalPreviewChanged": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
+    "previewChanged": false,
+    "installed": false,
     "wholeSuitePassing": false,
     "spatialRegistration": false
   },
