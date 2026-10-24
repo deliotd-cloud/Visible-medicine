@@ -1,0 +1,65 @@
+# Upper-limb vascular reasoning drafts
+
+Ten original formative questions are bound to twenty complete right/left source
+records in `content/upper-vascular-reasoning-pins.json`. They supplement, rather
+than replace, the existing identification and teaching material. All remain
+**draft revision 1**, requiring exact-revision radiologist review.
+
+The questions distinguish named arterial transitions/branches, palmar-arch
+contributions and superficial venous drainage. They use the existing geometry;
+no vessel junction, lumen, patency, flow, variation, acquired-image visibility or
+CT/MRI registration is established by a named surface mesh. The wording concerns
+usual anatomy, not a diagnostic or procedural recommendation.
+
+## Sources and commercial-use boundary
+
+Factual references checked 24 October 2026:
+
+- [UAMS: arteries of the upper limb](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/artery-tables/arteries-of-the-upper-limb/): axillary, brachial and deep brachial questions.
+- [TTUHSC El Paso: forearm and wrist](https://anatomy.ttuhscep.edu/musculoskeletal_system/forearm_tables.html): radial, ulnar, common interosseous and anterior interosseous questions.
+- [UAMS: selected veins of the upper limb](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/vein-tables/selected-veins-of-the-upper-limb/): axillary, cephalic and basilic questions.
+
+The stems and explanations are newly written factual summaries. No table,
+publisher question, figure, image, model, texture or font was copied from those
+sites. Public availability of a reference is not a licence to redistribute its
+assets. Existing model provenance, licence notices and release gates are
+unchanged; this addition imports no new dependency or asset and incurs no fee.
+
+## Scope and review
+
+The source pin generator reproduces the entire displayed record, including its
+official FMA/file identity, ordered memberships, bundle, source tree, geometry
+bounds and source SHA-256. Runtime matching refuses a changed or additional
+identity field; it does not match by name alone. Membership is not broadened to
+make more questions available.
+
+Answers and alternatives must be loaded, visible in the selected catalogue
+scope and on the same side. The two axillary-vein targets have a thorax
+membership but no authored alternative in that thorax-only scope, so the
+question must remain unavailable there. Whole-body and the relevant upper-limb
+regions can offer it. Absent, isolated or unloaded alternatives must not
+be silently substituted from another region or side.
+
+Review material includes the exact question, choices, explanation and sources.
+Adding a question changes its teaching fingerprint; previous material cannot
+be submitted as though it reviewed the new question. No existing clinical
+approval is transferred, and no private review decision is written by this work.
+
+Reviewer: check each usual-pattern statement, branch/drainage terminology,
+laterality and source representation; confirm one defensible answer and suitable
+alternatives in each available region. Correct variants and educational wording
+before approval. Acquired CT/MRI/US relevance and patient-space synchronization
+are separate review tasks, not implied by passing these quiz checks.
+
+## Reproduction
+
+From the prepared native candidate, run `npm run upper-vascular-reasoning:test`.
+Its exact-parent comparison requires the sibling `PREPARED.json` and immutable
+cf9b source checkout identified there. Preserve that historical role; do not
+relabel another source as the old baseline. The check exercises unchanged prior
+concepts/lessons, source mutation refusals, regional answer/skip/retry paths and
+revision-bound Review refusal before storage. These focused checks do not
+substitute for browser, accessibility, clinical or full-release acceptance.
+
+The isolated draft is not installed or publicly deployed. The normal preview
+must remain unchanged until the owner separately authorizes a cutover.

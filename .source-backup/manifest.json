@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T02:53:06.170Z",
+  "at": "2026-10-24T03:20:53.631Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "8603c4cf03014055a2ca5c13670ca00e25bae723a4938c8093a8d8ffe1f513f4",
-    "atlasHead": "cf9b5091db90219981929f6a9cbfdf1056bac9d6",
-    "atlasTree": "927b2ba6fed5e1ca5d4c7eb6f362903213f6a779",
-    "reviewBinding": "f92264ede359b06bbfd53f8ee574803100fa7dd564ca74b8ec77745b54bbbfbd",
+    "nativeSourceReceiptSha256": "1f2625d80c17a6d43d12bb538bc397facd3db1b5ac23c20d0b55aab4080db03c",
+    "atlasHead": "5f3c0a9518b03ae23f3992129a09c4b6edeeda2b",
+    "atlasTree": "9263c23e98b24068a8b4b4f0c4635bdd133c2fa5",
+    "latestCompleteWebsiteSha256": "8603c4cf03014055a2ca5c13670ca00e25bae723a4938c8093a8d8ffe1f513f4",
     "normalPreviewChanged": false
   },
-  "parent": "15b3ef8376ec9b7c6c3d44dd3e79987739ce5c32",
-  "gitParent": "15b3ef8376ec9b7c6c3d44dd3e79987739ce5c32",
+  "parent": "6126829227eb5814cea92b5ce5508f825160ebce",
+  "gitParent": "6126829227eb5814cea92b5ce5508f825160ebce",
   "files": [
     {
       "path": "app/globals.css",
@@ -28702,6 +28702,96 @@
       "sha256": "5c1c0ddbefef5a3aceabdc6c95ec30446ea73000fb78c467e7047aba5dcadab4"
     },
     {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/docs/REASONING_PRACTICE.md.raw",
+      "bytes": 40712,
+      "sha256": "b042033945db361c8d740b1407fac89691cebdfcb200eb78717012bb230b13e2"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/docs/UPPER_VASCULAR_REASONING.md.raw",
+      "bytes": 4068,
+      "sha256": "dcc36b463673612ccb3c4d19580e422e37794a99906bf888ece621d39ca2b51d"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/lib/reasoning-questions.ts",
+      "bytes": 16022,
+      "sha256": "73e9c8accb4be75ba8b9d409f7e8570efcc032312a73243619f9783978608944"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/lib/upper-vascular-reasoning.ts",
+      "bytes": 9361,
+      "sha256": "8da54bcbb23e9130db8ce96888f5020efc505ee85b9e67fd8ffb4efcdee17767"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/LICENSES/THIRD_PARTY_NOTICES.md.raw",
+      "bytes": 362413,
+      "sha256": "b53c8ec520fc7cef8a3b2066c08d7ec9b658c0f5ae62176fab42bfb6ae7dfddf"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/package.json.raw",
+      "bytes": 88628,
+      "sha256": "8b3ec5c5f4c0d820464b95e2aab6bc2be72eaa405cd3cb246e7bd2527b407c8e"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/scripts/pin-upper-vascular-reasoning.mjs",
+      "bytes": 3395,
+      "sha256": "66576d6fda69a0c4a249f9c8171e12e1f51a954337826792401fac24223f558c"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/scripts/test-upper-vascular-reasoning.mjs",
+      "bytes": 11390,
+      "sha256": "1f23a97de69d3127e2adda9e21715c7c12006902c2afcd4780b1c74650fc662b"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/atlas/scripts/validate-reasoning-practice.mjs",
+      "bytes": 59025,
+      "sha256": "8e48b5eea90cda2e944e54b03a0e96470b9583b8ea5fbab5667b586dd02f1c16"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/acquire-upper-vascular-slot-20261024.mjs",
+      "bytes": 1783,
+      "sha256": "fa7150c89669439e26da8157c55a458a9289414599737807a1487029eeeadb36"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/check-upper-vascular-types-20261024.mjs",
+      "bytes": 1926,
+      "sha256": "9acee8d76f05130e4cdacb8b9d5de1a0b75457bb44fc50543dae10728a21b3a9"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/checkpoint-upper-vascular-20261024.mjs",
+      "bytes": 7139,
+      "sha256": "08c97d6287c22083aaad25f30b8edc572c972335150607ab481cb245f43eab51"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/finish-upper-vascular-20261024.mjs",
+      "bytes": 5780,
+      "sha256": "454dbb00ca31b2da6a3adccfb3b4a5b96917e988e1d44c8960b6bfb0a2567d6f"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/index-upper-vascular-work-20261024.mjs",
+      "bytes": 2940,
+      "sha256": "353119fd50db62f683162d80634ffee35237377c654f0bae019ed27d5928b9bf"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/prepare-upper-vascular-reasoning-20261024.mjs",
+      "bytes": 2495,
+      "sha256": "bebfc98c284a42375e424bbc666959802cbdc36e699d1a5f6be17c8a2e5ddd47"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/preserve-upper-vascular-20261024.mjs",
+      "bytes": 5666,
+      "sha256": "08c6955d8ab872daae240dfb91d6779645ce66530ba0bf98c94f857a44f7c384"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/run-upper-vascular-20261024.mjs",
+      "bytes": 4107,
+      "sha256": "86f8865a5edb788ca796116ef01cb9554390c6c5741f5013299571053026a198"
+    },
+    {
+      "path": "pending/upper-vascular-reasoning-20261024/coordination/seal-upper-vascular-20261024.mjs",
+      "bytes": 8740,
+      "sha256": "a09dd53f160e30988602e6e7ea06050e914d9d9d8e4a1740ae1939028a923cc8"
+    },
+    {
       "path": "pending/ventricular-reasoning-20261023/atlas/docs/REASONING_PRACTICE.md.raw",
       "bytes": 35519,
       "sha256": "72a632437be62b52e5161c835dd6c33eaeadb92bbcd31009f0fe13cc0ad82dbc"
@@ -29658,94 +29748,39 @@
     }
   ],
   "removed": [],
-  "scope": "Inherited5922 independently verified filtered authored-source paths plus seven Website code/test paths. No removals or new alias consolidation. Coordination recipes, generated metadata/pins/JSON, models/geometry/scans/identifiers/private references/decisions, dependency/production/emulator state and raw logs/screenshots/type graphs remain F-local. Not a whole/private/runnable off-device backup",
+  "scope": "Inherited verified filtered authored source plus new upper-vascular authored code/tests/pin producer/dispatcher/validator and nine coordination recipes; original draft notes/notices/package scripts as UTF8 raw text. No generated JSON pins/revisions/registries, geometry/models, scans/identifiers/private records/references, raw logs/screenshots/type graphs, dependencies/dist/emulator state. Full native identity/evidence stays F-local; not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "09d797214e14fb01b658bc04bb0735a3110c5a9b51102c528a1ae8a9836479a1",
-    "sourcePaths": 6493,
-    "allFourSources": "cf9b5091db90219981929f6a9cbfdf1056bac9d6",
-    "reviewSourceFiles": 1597,
-    "reviewInputs": 1790,
-    "reviewBinding": "f92264ede359b06bbfd53f8ee574803100fa7dd564ca74b8ec77745b54bbbfbd",
-    "viewerFiles": 54,
-    "viewerPackages": 24,
-    "focusedCases": 136,
-    "typeRoots": 24,
-    "typeAmbient": 6,
-    "typeActualGraphFiles": 3626,
-    "typeDiagnostics": 0,
-    "stockPrebuildAndWebsiteBuild": true,
-    "buildFiles": 1125,
-    "originalReviewVerifier": true,
-    "optionalTourToExplore": true,
-    "sourceBoundHeadingFocus": true,
-    "nativeRegionalPayloadQaReusedExactly": true,
-    "actualWebsiteBrowserReplayPerformed": false,
-    "allModelsGeometryLicensesAccessUnchanged": true,
-    "allCoverageCountsAndHoldsUnchanged": true,
-    "concepts": 222,
-    "selections": 404,
-    "packagedTeachingRendered": true,
-    "browser": {
-      "at": "2026-10-24T02:50:59.195Z",
-      "sourceCommit": "cf9b5091db90219981929f6a9cbfdf1056bac9d6",
-      "route": "http://127.0.0.1:49333/thorax",
-      "actualExportedRegionalModule": true,
-      "sample": "Thoracic airways & vessels, manual stop 1, Trachea FMA7394",
-      "keyboardTrigger": "Native Enter on the actual Explore this structure button, not synthetic DOM events",
-      "desktopHeadingFocused": true,
-      "desktopHeading": "Trachea",
-      "desktopActiveElement": "H2",
-      "desktopDocumentHidden": false,
-      "desktopInnerDocumentScroll": 0,
-      "desktopOuterHarnessScrollBefore": 92,
-      "desktopOuterHarnessScrollAfter": 92,
-      "focusSheetHeadingFocused": true,
-      "focusSheetAutomaticallyOpened": true,
-      "focusSheetSide": "right",
-      "focusSheetClosed": false,
-      "focusSheetHeadingInert": false,
-      "focusSheetSettledActiveElement": "H2",
-      "focusSheetSettledActiveText": "Trachea",
-      "focusSheetInnerDocumentScroll": 0,
-      "focusSheetOuterHarnessScrollBeforeKeyboardAction": 0,
-      "focusSheetOuterHarnessScrollAfterKeyboardAction": 92,
-      "outerHarnessLimit": "Focus-view action changed the outer test wrapper's scroll by 92px while the inner viewer remained at 0. The automation focuses the target button before Enter; its contribution versus existing sheet autofocus is not localized. No claim of unchanged outer host-page scroll in this case or complete embedded Website acceptance.",
-      "targetVisuallyFramedWithFadedContext": true,
-      "actualSourceBackedTeachingNotesRendered": true,
-      "draftSourceLimitAndIndependentAccessNoticesVisible": true,
-      "screenshotVisuallyInspectedButNotArchived": true,
-      "locatorRecovery": "A Focus view locator matched but its click reported no node at location. Fresh native AX state identified the checkbox; native click succeeded. No forced click, state injection or application mutation.",
-      "consoleSample": {
-        "clockDeprecationWarnings": 5,
-        "unlocalizedMutationObserverErrors": 1,
-        "observerMessage": "Failed to execute observe on MutationObserver: parameter 1 is not of type Node.",
-        "observerFirstSeen": "2026-10-24T02:26:56.537Z",
-        "observerPrecededTourHandoff": true,
-        "consoleCleanClaim": false
-      },
-      "ownedQaTab179Closed": true,
-      "normalPreviewChanged": false,
-      "ownerTabsOrDraftsChanged": false,
-      "fullWebsiteAuthenticatedAcquiredStudyATOrPerformanceAcceptance": false,
-      "clinicalApproval": false,
-      "patientSpaceRegistration": false,
-      "nativeObservation": "F:/VisibleMedicine/staging/20261024-tour-explore-focus/browser/RESULT.json",
-      "nativeObservationSha256": "acd2df59f78936b3cf1c03a26443b9a56b04e83ebd9896d3db6ad03c4c73ed5c",
-      "nativeSourceReceipt": "F:/VisibleMedicine/staging/20261024-tour-explore-focus/SOURCE_BOUND.json",
-      "nativeSourceReceiptSha256": "135d808650bd4646cbcd0216fc4d028f8daca35a9502f2258d26fc982016fc04",
-      "websiteRegionalManifest": "F:/VisibleMedicine/staging/20261024-tour-focus-website/website/public/atlas-runtime/head-neck/manifest.json",
-      "websiteRegionalManifestSha256": "8ccba29d1c3bc75d6f2cafbdb05b72201f262f9fd16ed531c1c984a4d7fefeba",
-      "nativeRegionalManifest": "F:/VisibleMedicine/staging/20261024-tour-explore-focus/qa/public/atlas-runtime/head-neck/manifest.json",
-      "nativeRegionalManifestSha256": "8ccba29d1c3bc75d6f2cafbdb05b72201f262f9fd16ed531c1c984a4d7fefeba",
-      "websiteRuntimeBytesExactlyMatchNativeQa": true,
-      "actualBrowserReplayPerformed": false,
-      "reuseScope": "Only the identical actual-tested native regional payload is admitted; no new signed-in Website, outer-host scrolling, private Review, acquired-study, assistive-technology or performance acceptance.",
-      "authenticatedWebsiteAcceptance": false
-    },
-    "previewChanged": false,
-    "installed": false,
+    "mainReviewSha256": "9136505f3d0991f118e1f6e3ee2d05330416730213ee76f4eac61c7d23c9289f",
+    "newDraftConcepts": 10,
+    "newSourceSelections": 20,
+    "concepts": 232,
+    "representedRoots": 424,
+    "previous222DefinitionsAnd404SessionsPreserved": true,
+    "identityNegatives": 672,
+    "practicePaths": 150,
+    "refusedRegionalPaths": 6,
+    "packetNegatives": 100,
+    "stalePosts": 20,
+    "strictRoots": 6,
+    "strictActualGraphFiles": 3334,
+    "strictDiagnostics": 0,
+    "completePracticeChecks": 25995,
+    "completePracticeNegativeIdentityCases": 6721,
+    "stockNativeProductionBuild": true,
+    "buildFiles": 557,
+    "all1104SourceAnd9936LessonPayloadsPreserved": true,
+    "unchangedTeachingWorksheets": 1084,
+    "changedDisplayAndTeachingPins": 20,
+    "allNineShoulderRevisionsUnchanged": true,
+    "dispatcherPackageAndOriginalValidatorWholeInverseVerified": true,
+    "geometryDependenciesHoldsUnchanged": true,
+    "normalPreviewChanged": false,
+    "fullWebsiteIntegrationPending": true,
+    "privateDecisionStateRead": false,
     "clinicalApproval": false,
     "patientSpaceRegistration": false,
+    "previewChanged": false,
+    "installed": false,
     "wholeSuitePassing": false,
     "spatialRegistration": false
   },
