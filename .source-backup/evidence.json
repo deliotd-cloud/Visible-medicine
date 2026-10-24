@@ -1,62 +1,676 @@
 {
-  "mainReviewSha256": "c9dedd290f7522e7c3af416006338faa77c2d1e8c4f274963261cd0da666cd68",
-  "focusedCases": 126,
-  "focusedRoots": 17,
-  "strictTypeRoots": 1,
-  "strictTypeFiles": 565,
+  "nativeSourceReceiptSha256": "b7f04acd1800aa5a01712923159ea26638bdd63f35cb2c9f29ba8ac3ba120c71",
+  "focusedCasesPassed": 10,
+  "strictTypeFiles": 1530,
   "typeDiagnostics": 0,
-  "stockPrebuildBuildAndReviewVerifierPassed": true,
-  "reviewInputsUnchanged": 1807,
-  "actualProductionReactFixtureScenarios": 5,
-  "signedInAcceptance": false,
-  "sourceArtifactBindings": [
-    {
-      "websitePath": "components/ClinicalReviewInbox.tsx",
-      "sha256": "c80e693ec12ceae85f959563d1ee1746d4b543bc78ebf03c909bf6eb6e2a7897",
-      "snapshotPath": "pending/review-pager-website-20261024/website/components/ClinicalReviewInbox.tsx",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-      "sha256": "c5270715151599eb4c3ebcb5d58cc5049bbca25ecb5440ec854c7d9cff7792fd",
-      "snapshotPath": "pending/review-pager-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/clinical-review-inbox-short-desktop.test.mjs",
-      "sha256": "ae22b55ce1509250dc440071251ca8c9b070362988b5c94ecb4beee59ed9a1d9",
-      "snapshotPath": "pending/review-pager-website-20261024/website/tests/clinical-review-inbox-short-desktop.test.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/clinical-review-inbox-return-pager-focus.test.mjs",
-      "sha256": "041f00ddb2c092c2f364bfccd9ad6c6b24ba54aee00ba13067d3aaaf155955cc",
-      "snapshotPath": "pending/review-pager-website-20261024/website/tests/clinical-review-inbox-return-pager-focus.test.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/review-pager-ui-source-role.mjs",
-      "sha256": "8828eb38b9f2baf6742dbc4ad4ade033172e5ae90021c2eb8616dd5938543b6c",
-      "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-ui-source-role.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/review-pager-website-composition.test.mjs",
-      "sha256": "35ba1237ac60dc89b1bc4812e66525f85a6879fb9e8671883308d12018755547",
-      "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-website-composition.test.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/review-pager-inbox-history.mjs",
-      "sha256": "7752628c064e83a09754e0d8812322f0e189d6df26dc2fd3d705582ea53b9ed6",
-      "snapshotPath": "pending/review-pager-website-20261024/website/tests/review-pager-inbox-history.mjs",
-      "inherited": false
-    }
-  ],
-  "remoteNewPaths": 24,
+  "stockNativeBuildPassed": true,
+  "websiteIntegrationPending": true,
+  "exactDuplicateConsolidation": {
+    "schema": "vm-exact-inherited-source-aliases/1",
+    "parentHead": "330543ffa4211a01be7b8caf7d8ef612ddf61e5b",
+    "parentTree": "b46ccf6bb23e34154c217af310607ed58635d333",
+    "targetCount": 5900,
+    "maxOmissions": 128,
+    "omittedPaths": [
+      "evidence/20261021-corpus-current-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "evidence/20261021-corpus-current-verified/controls/emit-coordination-checkpoint.mjs",
+      "evidence/20261021-corpus-current-verified/preimages/tests/corpus-ui-role-preservation.test.mjs",
+      "evidence/20261021-corpus-current-verified/preimages/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "evidence/20261021-corpus-current-verified/preimages/tests/tour-discovery-current-delivery.test.mjs",
+      "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-desktop-layout.test.mjs",
+      "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-elbow-us-followup.test.ts",
+      "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-girdle-muscle-xray-original.ts.raw",
+      "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-model-inspection.test.mjs.raw",
+      "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-orbital-sensory-mri.test.ts.raw",
+      "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-pancreatic-vessel-teaching.test.ts.raw",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/controls/admit-closed56-role-repair-20261021.mjs",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/current-delivery-admission-485.test.mjs",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/atlas190-current-delivery.test.mjs",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/current-atlas-delivery.test.mjs",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/current-delivery-admission-485.test.mjs",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/head-filtered-layout.test.mjs",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/head-index-tab-stop.test.mjs",
+      "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/salivary-cache-guard-adaptation.test.mjs",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-neonatal-cranial-us-original.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-nested-duct-xray-original.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-apex-ct-original.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-ring-ct-original.ts.raw",
+      "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-support-mri-original.ts.raw",
+      "evidence/20261021-dental-mri-proposal/proposal/app/body-content.ts",
+      "evidence/20261021-dental-mri-proposal/proposal/content/dental-mri-pins.json",
+      "evidence/20261021-dental-mri-proposal/proposal/content/dental-mri.ts",
+      "evidence/20261021-dental-mri-proposal/proposal/lib/dental-mri.ts",
+      "evidence/20261021-dental-mri-proposal/proposal/originals/app/body-content.ts.raw",
+      "evidence/20261021-dental-mri-proposal/worker-original/tests/test-dental-mri-content.mjs",
+      "evidence/20261021-desktop-qa/proposals/coverage-arterial/originals/tests/anatomy-coverage-revision-admission.test.mjs",
+      "evidence/20261021-desktop-qa/proposals/coverage-arterial/originals/tests/atlas-arterial-evidence-limits.test.mjs",
+      "evidence/20261021-desktop-qa/proposals/coverage-arterial/tests/anatomy-coverage-revision-admission.test.mjs",
+      "evidence/20261021-desktop-qa/proposals/coverage-arterial/tests/atlas-arterial-evidence-limits.test.mjs",
+      "evidence/20261021-desktop-qa/proposals/header-keyboard/components/SiteHeader.tsx",
+      "evidence/20261021-desktop-qa/proposals/header-keyboard/originals/components/SiteHeader.tsx.raw",
+      "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/types.log",
+      "evidence/20261021-four-modules-verified/atlas/.gitattributes",
+      "evidence/20261021-four-modules-verified/atlas/app/body-content.ts",
+      "evidence/20261021-four-modules-verified/atlas/app/fitted-camera.tsx",
+      "evidence/20261021-four-modules-verified/atlas/app/regional-guided-learning.tsx",
+      "evidence/20261021-four-modules-verified/atlas/content/body-review-display-pins.json",
+      "evidence/20261021-four-modules-verified/atlas/content/dental-mri-pins.json",
+      "evidence/20261021-four-modules-verified/atlas/content/dental-mri.ts",
+      "evidence/20261021-four-modules-verified/atlas/content/regional-teaching/head-neck.json",
+      "evidence/20261021-four-modules-verified/atlas/docs/DENTAL_MRI_EVIDENCE.md",
+      "evidence/20261021-four-modules-verified/atlas/docs/KEYBOARD_ZOOM.md",
+      "evidence/20261021-four-modules-verified/atlas/lib/camera-keyboard.ts",
+      "evidence/20261021-four-modules-verified/atlas/lib/dental-mri.ts",
+      "evidence/20261021-four-modules-verified/atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "evidence/20261021-four-modules-verified/atlas/package.json",
+      "evidence/20261021-four-modules-verified/atlas/scripts/hip-quick-check-history-context.mjs",
+      "evidence/20261021-four-modules-verified/atlas/scripts/test-camera-keyboard-zoom.mjs",
+      "evidence/20261021-four-modules-verified/atlas/scripts/test-dental-mri-native.mjs",
+      "evidence/20261021-four-modules-verified/atlas/scripts/test-hip-history-entry-refusals.mjs",
+      "evidence/20261021-four-modules-verified/atlas/scripts/test-hip-quick-check-history.mjs",
+      "evidence/20261021-four-modules-verified/atlas/scripts/test-regional-tour-player.mjs",
+      "evidence/20261021-four-modules-verified/atlas/scripts/verify-dental-mri-transition.mjs",
+      "evidence/20261021-four-modules-verified/preimages/content/body-renderer-revision.json",
+      "evidence/20261021-guided-limb-reliability-checkpoint/controls/admission.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/controls/checkpoint-reviewed-test-batch.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/controls/emit-coordination-checkpoint.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/admission485-final-role-transition-20261021.test.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/current-delivery-admission-485.test.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/corpus-ui-role-preservation.test.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/admission485-final-role-transition-20261021.test.mjs.raw",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/corpus-xray-v2-current-delivery.test.mjs.raw",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/current-delivery-admission-485.test.mjs.raw",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/current-head-index-whole-role-transition-20261021.test.mjs.raw",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/tongue-palate-a247-inverse.test.mjs.raw",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/tour-discovery-current-delivery.test.mjs.raw",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/ui-teaching-current-delivery.test.mjs.raw",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/ui-teaching-lifecycle-contract.test.mjs.raw",
+      "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/tour-discovery-current-delivery.test.mjs",
+      "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-suprahyoid-quiz.test.ts",
+      "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-um-ankle-imaging.test.ts",
+      "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "evidence/20261021-head-binding-verified/controls/admission.mjs",
+      "evidence/20261021-head-binding-verified/controls/advance-scoped-routing.mjs",
+      "evidence/20261021-head-binding-verified/controls/checkpoint-reviewed-test-batch.mjs",
+      "evidence/20261021-head-binding-verified/controls/emit-coordination-checkpoint.mjs"
+    ],
+    "aliases": [
+      {
+        "omittedPath": "evidence/20261021-corpus-current-verified/controls/checkpoint-reviewed-test-batch.mjs",
+        "retainedPath": "evidence/20261021-clinical-teaching-current-verified/controls/checkpoint-reviewed-test-batch.mjs",
+        "bytes": 7636,
+        "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+      },
+      {
+        "omittedPath": "evidence/20261021-corpus-current-verified/controls/emit-coordination-checkpoint.mjs",
+        "retainedPath": "evidence/20261021-clinical-teaching-current-verified/controls/emit-coordination-checkpoint.mjs",
+        "bytes": 7627,
+        "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+      },
+      {
+        "omittedPath": "evidence/20261021-corpus-current-verified/preimages/tests/corpus-ui-role-preservation.test.mjs",
+        "retainedPath": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/corpus-ui-role-preservation-before-epoch-20261021.mjs.raw",
+        "bytes": 3905,
+        "sha256": "b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667"
+      },
+      {
+        "omittedPath": "evidence/20261021-corpus-current-verified/preimages/tests/corpus-xray-v2-current-delivery.test.mjs",
+        "retainedPath": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/corpus-xray-v2-current-delivery-before-epoch-20261021.mjs.raw",
+        "bytes": 7883,
+        "sha256": "a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905"
+      },
+      {
+        "omittedPath": "evidence/20261021-corpus-current-verified/preimages/tests/tour-discovery-current-delivery.test.mjs",
+        "retainedPath": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/tour-discovery-current-delivery-before-epoch-20261021.mjs.raw",
+        "bytes": 5772,
+        "sha256": "689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-desktop-layout.test.mjs",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/fixtures/clinical-review-desktop-layout-actual485-20261020.mjs.raw",
+        "bytes": 10666,
+        "sha256": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-elbow-us-followup.test.ts",
+        "retainedPath": "evidence/20261021-combined-source-verified/website/tests/clinical-review-elbow-us-followup.test.ts",
+        "bytes": 35278,
+        "sha256": "52ebcddab39cc165bf4c3c94dee0659abfea6814c92e55f85bf86f25eb6c57d8"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-girdle-muscle-xray-original.ts.raw",
+        "retainedPath": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-girdle-muscle-xray.test.ts",
+        "bytes": 21356,
+        "sha256": "0e9acbdf4079b27520a30de4ad4efc257463260196e2199b219db454c3752e77"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-model-inspection.test.mjs.raw",
+        "retainedPath": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-model-inspection.test.mjs",
+        "bytes": 5809,
+        "sha256": "c1f906808fdf36a4dc76209df0a47f53e575235f02cfc531adbdafb931e3579a"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-orbital-sensory-mri.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-orbital-sensory-mri.test.ts",
+        "bytes": 11258,
+        "sha256": "1127b1186b5339a0a4be8d21ca1361cb61a338c93083c571f0e2705b61e86e64"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-epoch-proofs-verified/proposed-website/tests/fixtures/clinical-review-pancreatic-vessel-teaching.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-epoch-proofs-verified/preimages/tests/clinical-review-pancreatic-vessel-teaching.test.ts",
+        "bytes": 8966,
+        "sha256": "6c0240e376991077706fb4ffddd2fab6fc53631259fade28bdc0b36f8be5e81e"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/controls/admit-closed56-role-repair-20261021.mjs",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/controls/admit-closed56-role-repair-20261021.mjs",
+        "bytes": 9768,
+        "sha256": "31e8d86755d16d4402ca239b5d6dc6ebaee401f9fdd75879178a3eaf0f0f3017"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/current-delivery-admission-485.test.mjs",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/fixtures/current-delivery-admission-485-before-final-role-20261021.mjs.raw",
+        "bytes": 3873,
+        "sha256": "c962c340de4e7479d03b533ba283e6da2775d291a8051f69a2d1afc3dfe430c0"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/fixtures/current-head-index-whole-role-transition-before-final-role-20261021.mjs.raw",
+        "bytes": 8362,
+        "sha256": "cb83ee91c39131833dfc60afb16c3ef70fd04bddcc3d0c14135178262e66ba33"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/atlas190-current-delivery.test.mjs",
+        "retainedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/atlas190-current-delivery-before-role-20261021.mjs.raw",
+        "bytes": 5172,
+        "sha256": "8b6e741d1565be147f25258163ffdc00830aafcca2f4a04b39a0f4edbd5e62cf"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/current-atlas-delivery.test.mjs",
+        "retainedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/current-atlas-delivery-before-role-20261021.mjs.raw",
+        "bytes": 17978,
+        "sha256": "82d6c024dca59dab2dbaf944bed6f3066bf7905f99871e96033d9bf02a4c5821"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/current-delivery-admission-485.test.mjs",
+        "retainedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/current-delivery-admission-485-before-role-20261021.mjs.raw",
+        "bytes": 3554,
+        "sha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/head-filtered-layout.test.mjs",
+        "retainedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/head-filtered-layout-before-role-20261021.mjs.raw",
+        "bytes": 4094,
+        "sha256": "79a174b171076f301c8a33cf82bf8de4a3d1e5438ba2b51047ca78fb3bcbc80e"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/head-index-tab-stop.test.mjs",
+        "retainedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/head-index-tab-stop-before-role-20261021.mjs.raw",
+        "bytes": 6172,
+        "sha256": "baef44aa7d0cbde7c9b2aa6f246670ef738c523444ec2ef2a9cbc85724f241b3"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/preimages/tests/salivary-cache-guard-adaptation.test.mjs",
+        "retainedPath": "evidence/20261021-current-head-index-roles-and-thorax-qa/installed-website/tests/fixtures/salivary-cache-guard-adaptation-before-role-20261021.mjs.raw",
+        "bytes": 3586,
+        "sha256": "fb0a1ad5a1fb5e2a1c2598acdc96cc3dbb7bf1dade9859e5e3b2a5bfb144c468"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-iliac-venous-xray.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-iliac-venous-xray.test.ts",
+        "bytes": 8867,
+        "sha256": "4b3e6d5f6fc24cbeb19fcb43af72a97ad10160ff7778266b6f66c256fc873dba"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-intracranial-arterial-xray.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-intracranial-arterial-xray.test.ts",
+        "bytes": 9941,
+        "sha256": "4fb65a161ac7114957cc6551efab2c7d3834344ee250b875240ca407bb28d740"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-limb-nerve-quiz.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-limb-nerve-quiz.test.ts",
+        "bytes": 16253,
+        "sha256": "2fc0a37e63dee23f82cff25fb7caa5af6b07c2feb886802a99a2cc84d004b432"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-longus-colli-quiz.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-longus-colli-quiz.test.ts",
+        "bytes": 8090,
+        "sha256": "d050051128140219b110774454dcfdda235565d35d4c9a7a18a719330013585d"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-lower-venous-tour-v2.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-lower-venous-tour-v2.test.ts",
+        "bytes": 15632,
+        "sha256": "c4eef1a6057e7bb9e9d5e197d858601b4ee353d64d0a8c09663de5a005de6d84"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-medial-thigh-tour.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-medial-thigh-tour.test.ts",
+        "bytes": 14837,
+        "sha256": "a72852540281e6e6525e67dad75ce888483c3040e2d6c0a780459b35bdaa62b0"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-median-cubital-xray.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-median-cubital-xray.test.ts",
+        "bytes": 21757,
+        "sha256": "3d7f3026f1c679ae695209c8bbe2b9f66c160fc67745d86804ea880e2b4492f4"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-epoch-batch-c-original/clinical-review-mesenteric-vessel-teaching.test.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+        "bytes": 8522,
+        "sha256": "cc50a3c5d8a8334b3cd9f6eb92c4f7d1a1dbbd5088ba5f0a0c0c13fc1c64c26c"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-neonatal-cranial-us-original.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-neonatal-cranial-us.test.ts",
+        "bytes": 24520,
+        "sha256": "b7a37a2afd7488ed89a8f4b2552f03dff2578c06750282033dbf38cba1befce9"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-nested-duct-xray-original.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-nested-duct-xray.test.ts",
+        "bytes": 27718,
+        "sha256": "bcb8f7ba8ac05454522a2b9cfed2f4f7273db016a049259872c8dfb6258614bf"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-apex-ct-original.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-orbital-apex-ct.test.ts",
+        "bytes": 19663,
+        "sha256": "2622078169a37612f97a4c31c66db312421e42f2b3dfd33ec2d8c305c110872b"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-ring-ct-original.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-orbital-ring-ct.test.ts",
+        "bytes": 15391,
+        "sha256": "f72ae4a6eb2522d15fccc2237015be88193500d21fbc183683166f9d0d003b2d"
+      },
+      {
+        "omittedPath": "evidence/20261021-current-matrix-source-verified/proposed-website/tests/fixtures/clinical-review-orbital-support-mri-original.ts.raw",
+        "retainedPath": "evidence/20261021-current-matrix-source-verified/preimages/tests/clinical-review-orbital-support-mri.test.ts",
+        "bytes": 11223,
+        "sha256": "c4829b9a32b117712aa85723e27517207f20dc13e769e1de360d965c581b5236"
+      },
+      {
+        "omittedPath": "evidence/20261021-dental-mri-proposal/proposal/app/body-content.ts",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/app/body-content.ts",
+        "bytes": 82603,
+        "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+      },
+      {
+        "omittedPath": "evidence/20261021-dental-mri-proposal/proposal/content/dental-mri-pins.json",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/content/dental-mri-pins.json",
+        "bytes": 57639,
+        "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+      },
+      {
+        "omittedPath": "evidence/20261021-dental-mri-proposal/proposal/content/dental-mri.ts",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/content/dental-mri.ts",
+        "bytes": 3508,
+        "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+      },
+      {
+        "omittedPath": "evidence/20261021-dental-mri-proposal/proposal/lib/dental-mri.ts",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/lib/dental-mri.ts",
+        "bytes": 1866,
+        "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+      },
+      {
+        "omittedPath": "evidence/20261021-dental-mri-proposal/proposal/originals/app/body-content.ts.raw",
+        "retainedPath": "evidence/20261021-combined-integration-batch/originals/atlas/app/body-content.ts.raw",
+        "bytes": 82477,
+        "sha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6"
+      },
+      {
+        "omittedPath": "evidence/20261021-dental-mri-proposal/worker-original/tests/test-dental-mri-content.mjs",
+        "retainedPath": "evidence/20261021-dental-mri-proposal/proposal/tests/test-dental-mri-content.mjs",
+        "bytes": 3386,
+        "sha256": "569ca0c81f955e5a7a02382a996aa8791f38b628a3d694ac38e521c09b14e47f"
+      },
+      {
+        "omittedPath": "evidence/20261021-desktop-qa/proposals/coverage-arterial/originals/tests/anatomy-coverage-revision-admission.test.mjs",
+        "retainedPath": "evidence/20261021-combined-integration-batch/originals/website-485-assurance/tests/anatomy-coverage-revision-admission.test.mjs.raw",
+        "bytes": 14371,
+        "sha256": "3611dc20929cac9bb27c5ac4aac85c27498d4862b2feb5a5a716f3ed4f2b95a0"
+      },
+      {
+        "omittedPath": "evidence/20261021-desktop-qa/proposals/coverage-arterial/originals/tests/atlas-arterial-evidence-limits.test.mjs",
+        "retainedPath": "evidence/20261021-combined-integration-batch/originals/website-485-assurance/tests/atlas-arterial-evidence-limits.test.mjs.raw",
+        "bytes": 17250,
+        "sha256": "7b105f5146aab1653aedca9a7150a73733575f87e7e848063cb07e8faea9b843"
+      },
+      {
+        "omittedPath": "evidence/20261021-desktop-qa/proposals/coverage-arterial/tests/anatomy-coverage-revision-admission.test.mjs",
+        "retainedPath": "evidence/20261021-combined-integration-batch/batch/website-485-assurance/tests/anatomy-coverage-revision-admission.test.mjs",
+        "bytes": 17502,
+        "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+      },
+      {
+        "omittedPath": "evidence/20261021-desktop-qa/proposals/coverage-arterial/tests/atlas-arterial-evidence-limits.test.mjs",
+        "retainedPath": "evidence/20261021-combined-integration-batch/batch/website-485-assurance/tests/atlas-arterial-evidence-limits.test.mjs",
+        "bytes": 17250,
+        "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"
+      },
+      {
+        "omittedPath": "evidence/20261021-desktop-qa/proposals/header-keyboard/components/SiteHeader.tsx",
+        "retainedPath": "evidence/20261021-combined-integration-batch/batch/website-ui/components/SiteHeader.tsx",
+        "bytes": 14418,
+        "sha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b"
+      },
+      {
+        "omittedPath": "evidence/20261021-desktop-qa/proposals/header-keyboard/originals/components/SiteHeader.tsx.raw",
+        "retainedPath": "evidence/20261021-combined-integration-batch/batch/website-ui/tests/fixtures/header-before-keyboard-focus/SiteHeader.tsx.raw",
+        "bytes": 14391,
+        "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+      },
+      {
+        "omittedPath": "evidence/20261021-desktop-review-copy-and-tour-qa/evidence/types.log",
+        "retainedPath": "evidence/20261021-after-suite-dental-queue/evidence/AFTER_SUITE_QUEUE_SYNTAX.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/.gitattributes",
+        "retainedPath": "evidence/20261021-combined-source-verified/atlas/.gitattributes",
+        "bytes": 4314,
+        "sha256": "a2d6fc41ff2490afdc779609d1e5bc3886f06d52760f7db1347d09d0193c4424"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/app/body-content.ts",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/app/body-content.ts",
+        "bytes": 82603,
+        "sha256": "3deda6b748ed897afcd980ff24256aa20b165f8c1615fdc1e2f887211d69c1d2"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/app/fitted-camera.tsx",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/app/fitted-camera.tsx",
+        "bytes": 12876,
+        "sha256": "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/app/regional-guided-learning.tsx",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/app/regional-guided-learning.tsx",
+        "bytes": 15876,
+        "sha256": "1ce542d87a5687711e6eeb40ffaa8da79a636099b3fcbb133d9dc0a612a9c59c"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/content/body-review-display-pins.json",
+        "retainedPath": "evidence/20261021-combined-source-verified/atlas/content/body-review-display-pins.json",
+        "bytes": 203217,
+        "sha256": "37c64990ca92b3c5c2eaef7676812661deb5cc2f7be4353d3e7d665928685905"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/content/dental-mri-pins.json",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/content/dental-mri-pins.json",
+        "bytes": 57639,
+        "sha256": "d1f2fb69a16e7c5bfe42db85e1a3d7f247e00249c6bfb5dd1ffe9bc20359b1af"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/content/dental-mri.ts",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/content/dental-mri.ts",
+        "bytes": 3508,
+        "sha256": "97dd461a6acd19704bc2ea968a71fb5e19d5f40dc0c016261ee9abf3d4807c3d"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/content/regional-teaching/head-neck.json",
+        "retainedPath": "evidence/20261021-combined-source-verified/atlas/content/regional-teaching/head-neck.json",
+        "bytes": 2457934,
+        "sha256": "e6a486cc4ab9745eae110615b340fa1797bb0e6e0b72195f083bec766543da25"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/docs/DENTAL_MRI_EVIDENCE.md",
+        "retainedPath": "evidence/20261021-combined-source-verified/atlas/docs/DENTAL_MRI_EVIDENCE.md",
+        "bytes": 4542,
+        "sha256": "760cce657a32acbb5ba6a6d24e65525629a464dbee69fd0171bd2bdef58b2799"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/docs/KEYBOARD_ZOOM.md",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/docs/KEYBOARD_ZOOM.md",
+        "bytes": 1456,
+        "sha256": "6324f5066434b362cb47d43b288e933dc180bffb1777c2eda93a9f5b200e2b6f"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/lib/camera-keyboard.ts",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/lib/camera-keyboard.ts",
+        "bytes": 9666,
+        "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/lib/dental-mri.ts",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/lib/dental-mri.ts",
+        "bytes": 1866,
+        "sha256": "4d0581d6c2dd3281a95fc846d201bc68ef84c7799e08e2f5e3af55d70552410e"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/LICENSES/THIRD_PARTY_NOTICES.md",
+        "bytes": 354693,
+        "sha256": "5820205a79a1b8c2ceedef049aad18943eec3f76be6a2a350493131165bbd0cd"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/package.json",
+        "retainedPath": "evidence/20261021-combined-source-verified/atlas/package.json",
+        "bytes": 86739,
+        "sha256": "f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/scripts/hip-quick-check-history-context.mjs",
+        "retainedPath": "atlas-source/scripts/hip-quick-check-history-context.mjs",
+        "bytes": 9024,
+        "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/scripts/test-camera-keyboard-zoom.mjs",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/scripts/test-camera-keyboard-zoom.mjs",
+        "bytes": 11426,
+        "sha256": "6b3a3c9783763464f02be03f35e546563ffa942dff3c3987b5d273bd0c606369"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/scripts/test-dental-mri-native.mjs",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/scripts/test-dental-mri-native.mjs",
+        "bytes": 8870,
+        "sha256": "de724a2777ff8bf16ac5ed42984c20bf27b0498a6f94eaca35feae427519d9ad"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/scripts/test-hip-history-entry-refusals.mjs",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/scripts/test-hip-history-entry-refusals.mjs",
+        "bytes": 6786,
+        "sha256": "e362b253aa2bb716f557df8db8be2710236c057809fc2d1f08052ebed91ea51e"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/scripts/test-hip-quick-check-history.mjs",
+        "retainedPath": "atlas-source/scripts/test-hip-quick-check-history.mjs",
+        "bytes": 4609,
+        "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/scripts/test-regional-tour-player.mjs",
+        "retainedPath": "evidence/20261021-atlas-source-assembly/source/scripts/test-regional-tour-player.mjs",
+        "bytes": 126985,
+        "sha256": "243e6099cb4f72082c5eeb5a40887449e56bb898382f9159d6dad3e93dc54ba5"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/atlas/scripts/verify-dental-mri-transition.mjs",
+        "retainedPath": "evidence/20261021-combined-source-verified/atlas/scripts/verify-dental-mri-transition.mjs",
+        "bytes": 17132,
+        "sha256": "7703ae8953d678bc71926ae18978a4d6178125acc2430617fc720a686527f158"
+      },
+      {
+        "omittedPath": "evidence/20261021-four-modules-verified/preimages/content/body-renderer-revision.json",
+        "retainedPath": "evidence/20261021-combined-source-verified/atlas/content/body-renderer-revision.json",
+        "bytes": 214791,
+        "sha256": "ff43508e300d8f6e12c138c300e1e4adabba0104f180aaf09ec6dcf2e6fab0c7"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/controls/admission.mjs",
+        "retainedPath": "evidence/20261021-clinical-teaching-current-verified/controls/admission.mjs",
+        "bytes": 10037,
+        "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/controls/checkpoint-reviewed-test-batch.mjs",
+        "retainedPath": "evidence/20261021-clinical-teaching-current-verified/controls/checkpoint-reviewed-test-batch.mjs",
+        "bytes": 7636,
+        "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/controls/emit-coordination-checkpoint.mjs",
+        "retainedPath": "evidence/20261021-clinical-teaching-current-verified/controls/emit-coordination-checkpoint.mjs",
+        "bytes": 7627,
+        "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/admission485-final-role-transition-20261021.test.mjs",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/admission485-final-role-transition-20261021.test.mjs",
+        "bytes": 8867,
+        "sha256": "45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/current-delivery-admission-485.test.mjs",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/current-delivery-admission-485.test.mjs",
+        "bytes": 5305,
+        "sha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+        "bytes": 11708,
+        "sha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/corpus-ui-role-preservation.test.mjs",
+        "retainedPath": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/corpus-ui-role-preservation-before-epoch-20261021.mjs.raw",
+        "bytes": 3905,
+        "sha256": "b7ea9cc56c67cece27882e9e71ea0d5fadce01ec306337d8a353ac8c1d06a667"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/corpus-xray-v2-current-delivery.test.mjs",
+        "retainedPath": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/corpus-xray-v2-current-delivery-before-epoch-20261021.mjs.raw",
+        "bytes": 7883,
+        "sha256": "a31204d0bd516fdfc47b3f03ffd97a5996345f0bce5272da8c175e34c3cf3905"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/admission485-final-role-transition-20261021.test.mjs.raw",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/admission485-final-role-transition-20261021.test.mjs",
+        "bytes": 8867,
+        "sha256": "45bec981d9a16a0a1146e0ef27b17670a2abbc02917195cacd9647a6817613af"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/corpus-xray-v2-current-delivery.test.mjs.raw",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/corpus-xray-v2-current-delivery.test.mjs",
+        "bytes": 6670,
+        "sha256": "90d7a670937e05a5a607c813e3a712e62b19a9d0ea608f64841f6d167e2858ef"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/current-delivery-admission-485.test.mjs.raw",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/current-delivery-admission-485.test.mjs",
+        "bytes": 5305,
+        "sha256": "3c9d57988e6a4cbc8d67a7b5c392aa8e4dbc5dc656978aaaa3c6a659ba9d7611"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/current-head-index-whole-role-transition-20261021.test.mjs.raw",
+        "retainedPath": "evidence/20261021-admission485-roles-verified/installed-website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+        "bytes": 11708,
+        "sha256": "e23e0467fd460da384ba6eddef1ea1b57b7e28f5978b6cc4228dad8544c90e11"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/tongue-palate-a247-inverse.test.mjs.raw",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/tongue-palate-a247-inverse.test.mjs",
+        "bytes": 7526,
+        "sha256": "afbc95685a8204a658074dad3a3a45a2e53ab21fd27de3c829ec8f0df6f2b18e"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/tour-discovery-current-delivery.test.mjs.raw",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/tour-discovery-current-delivery.test.mjs",
+        "bytes": 5206,
+        "sha256": "6498c2a73732c6f6d3ed2689559860f2da21c8ce5bf77f4de967f08d6d6fa129"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/ui-teaching-current-delivery.test.mjs.raw",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/ui-teaching-current-delivery.test.mjs",
+        "bytes": 16195,
+        "sha256": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/ui-teaching-lifecycle-contract.test.mjs.raw",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/corpus-ui-preimages/tests/ui-teaching-lifecycle-contract.test.mjs",
+        "bytes": 5210,
+        "sha256": "dcb00033b133b94f52750c513b11704604abbff6b33625691dba7d32b82578b5"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/tour-discovery-current-delivery.test.mjs",
+        "retainedPath": "evidence/20261021-corpus-current-verified/installed-website/tests/fixtures/tour-discovery-current-delivery-before-epoch-20261021.mjs.raw",
+        "bytes": 5772,
+        "sha256": "689b4dafa4b18465aa59379dcf61a88371af2f4f2fc194ccc6d3595887da0b3b"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-shoulder-girdle-artery-quiz.test.ts.raw",
+        "bytes": 6836,
+        "sha256": "31323ff1f752edf060a9ecc335b7338ffb023773e1e76df3796249c5d978ef5c"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-suprahyoid-quiz.test.ts",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-suprahyoid-quiz.test.ts.raw",
+        "bytes": 9138,
+        "sha256": "44f4f13cc6a1feafd40369977b8d4c89f08ab7472387275c36d4ca450c5268a3"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-um-ankle-imaging.test.ts",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-um-ankle-imaging.test.ts.raw",
+        "bytes": 3400,
+        "sha256": "e453387dfd045a0dcd744996165fd949d08446ef0afd5b6adaaf4e8c49e9176b"
+      },
+      {
+        "omittedPath": "evidence/20261021-guided-limb-reliability-checkpoint/preimages/tests/clinical-review-upper-limb-completion-quiz.test.ts",
+        "retainedPath": "evidence/20261021-guided-limb-reliability-checkpoint/installed-website/tests/fixtures/limb-suprahyoid-before-role-batch-20261021/clinical-review-upper-limb-completion-quiz.test.ts.raw",
+        "bytes": 10657,
+        "sha256": "17a3cc58b361390d3e42570a86a9fb2c192c8cf80f985eae523af16e76d84c72"
+      },
+      {
+        "omittedPath": "evidence/20261021-head-binding-verified/controls/admission.mjs",
+        "retainedPath": "evidence/20261021-clinical-teaching-current-verified/controls/admission.mjs",
+        "bytes": 10037,
+        "sha256": "03e5546f13f9ad922af7ced7811abfd90764aa78d8fb343a811076c9442f105e"
+      },
+      {
+        "omittedPath": "evidence/20261021-head-binding-verified/controls/advance-scoped-routing.mjs",
+        "retainedPath": "evidence/20261021-closed54-55-provider-verified/controls/advance-scoped-routing.mjs",
+        "bytes": 3835,
+        "sha256": "2cfb2457f247ec619e08ec64b63b6d63c4a7f28abba991d7aec49a14e41b9c22"
+      },
+      {
+        "omittedPath": "evidence/20261021-head-binding-verified/controls/checkpoint-reviewed-test-batch.mjs",
+        "retainedPath": "evidence/20261021-clinical-teaching-current-verified/controls/checkpoint-reviewed-test-batch.mjs",
+        "bytes": 7636,
+        "sha256": "b2d607900d62544cff4da11377584513ed9086d5468fd6d8f271057799d7b645"
+      },
+      {
+        "omittedPath": "evidence/20261021-head-binding-verified/controls/emit-coordination-checkpoint.mjs",
+        "retainedPath": "evidence/20261021-clinical-teaching-current-verified/controls/emit-coordination-checkpoint.mjs",
+        "bytes": 7627,
+        "sha256": "5af61a9cb63fe788722984fb0566ca00ec2374486d2471907b447c79e6f5dfc9"
+      }
+    ],
+    "omittedBytes": 4608935,
+    "inheritedPathsBefore": 5993,
+    "inheritedPathsAfter": 5900
+  },
   "previewChanged": false,
-  "installed": false,
-  "wholeSuitePassing": false,
   "clinicalApproval": false,
-  "spatialRegistration": false
+  "patientSpaceRegistration": false
 }

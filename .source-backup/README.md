@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Carry5969independently verified selected source blobs and verified parent linkage/inherited duplicate aliases; add explicit authored code/tests/recipes only, no removals. Models/scans/private data/generated Review/exports/raw browser QA/build/dependencies and later coordination stay F-local; not whole/private/runnable off-device recovery.
+Selected original authored native Atlas teaching, tests, notices and recipes on the verified filtered source parent; exact inherited duplicate aliases retain reconstructible bytes. Not a whole project, private data, generated Review/learner delivery, model/media/build/dependency or runnable backup. Native candidate is built but not Website-integrated, installed, clinically approved or patient-space registered.
