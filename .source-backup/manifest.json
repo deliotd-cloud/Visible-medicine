@@ -1,87 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T09:31:29.563Z",
+  "at": "2026-10-24T10:28:11.907Z",
   "sourceIdentity": {
-    "websiteSourceReceiptSha256": "53a006afac76eb558c769c83c6e36a594e3965de99b602e796a9ef48636089b6",
-    "atlas": "b79e110d2d28f18993263926ba35aa7a3f478b20",
-    "review": "bc4cc568418147387cfeccf649c743256a9c936279bed16cec3f7eed2712f75e",
-    "sourceArtifactBindings": [
-      {
-        "websitePath": "components/HeadAtlasViewer.tsx",
-        "sha256": "9df2752e85f7b9f2c3516be27e03ceb05e23527bc8efd333bf5170e0a6a919fa",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/components/HeadAtlasViewer.tsx",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/head-slice-keyboard.test.ts",
-        "sha256": "c4fdb080964380eac3dbb176c2e61a34d5ce42d719f4b2825f0763463962f5d8",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-slice-keyboard.test.ts",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/head-mask-picking-ui.test.ts",
-        "sha256": "c4b2f6c4781b54630c95100f8d68c6cba449ef3530e899970c7d4c7691ae87ac",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-mask-picking-ui.test.ts",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/head-slice-zoom.test.ts",
-        "sha256": "c44c29891c41992a6df145d13ccd976dd46cc1a9c411ff2e8ad620b98df72e30",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-slice-zoom.test.ts",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/head-pan-source-transition.test.ts",
-        "sha256": "8a3164ff927cb93cdd3582bd872c1e2827f08d8071284e0449d851c640e31619",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-pan-source-transition.test.ts",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-        "sha256": "ad40279ba7069f99d3412db3792b9645bb468974c984ed37f293302f52ce4513",
-        "snapshotPath": "pending/native-slice-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/native-slice-commit.test.mjs",
-        "sha256": "4a486e0bf568a1cdcbbe78a5eda12f0ddbdc3d283e995434dc738f2143b811b6",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-commit.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-slice-commit-scope.test.mjs",
-        "sha256": "6ee6025534cfa14bd57fe2d4530d7e8ae3ba5bb4279aa0bb1ce531492fabbd96",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-commit-scope.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-slice-legacy-adapters.test.mjs",
-        "sha256": "2fb94a12bcaebdf735faf55d9387a6f9ceb6a6991c368e3496810ee3ba4c7ec3",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-legacy-adapters.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-slice-website-composition.test.mjs",
-        "sha256": "de56659b8ba2b18ab6b9960f8580f84bf6f31da3426ce4800b180563f4adf5dd",
-        "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-website-composition.test.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/native-slice-current-display.mjs",
-        "sha256": "6e0108275d67204120bb1259ab278780471263d232e6ef2ba733486ca9e45e1b",
-        "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-current-display.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/native-slice-display-epoch.test.mjs",
-        "sha256": "eee92c8c0e531b39cb40f76818e1a69e276f4263cc864b6cd498f0cb0d147cbc",
-        "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-display-epoch.test.mjs",
-        "inherited": false
-      }
-    ]
+    "thinProposalReceiptSha256": "45e11123d1ab36e11a3cf42466a840907842391a31f794e532a9e0368bcbe433",
+    "componentSha256": "9797cd2ce54405d0909d125f38fa4ea0184f367b7ac772406952f6dacd0b7ae5",
+    "completeWebsiteParentSha256": "53a006afac76eb558c769c83c6e36a594e3965de99b602e796a9ef48636089b6",
+    "coherentWebsiteReviewIntegrationPending": true
   },
-  "parent": "30e4bbaf5f2a865cc632d361b047d0532652528d",
-  "gitParent": "30e4bbaf5f2a865cc632d361b047d0532652528d",
+  "parent": "8e5589705b53d34f252e83d50dbfcb4a8b8840b1",
+  "gitParent": "8e5589705b53d34f252e83d50dbfcb4a8b8840b1",
   "files": [
     {
       "path": "app/globals.css",
@@ -18354,6 +18281,56 @@
       "sha256": "117fa2fa55024682e2029a457eacbc5495a5d5f20fca45aa8efe2914f54c4d50"
     },
     {
+      "path": "pending/head-study-set-commit-20261024/before/head-tour-study-set.test.ts.raw",
+      "bytes": 6676,
+      "sha256": "ae46472ca20d6a422c09fb38314b3276694430455a080df748c933b23a96aee9"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/before/HeadAtlasViewer.tsx.raw",
+      "bytes": 115367,
+      "sha256": "9df2752e85f7b9f2c3516be27e03ceb05e23527bc8efd333bf5170e0a6a919fa"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/recipes/checkpoint-head-study-set-commit-20261024.mjs",
+      "bytes": 16131,
+      "sha256": "e8a38e76b3ad6760ec780bbe2af47837e0ea5726aaf3aedffc8069e255a6418f"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/recipes/prepare-head-study-set-commit-20261024.mjs",
+      "bytes": 2073,
+      "sha256": "55b0532203e508f32921ec4d995589aed6c1c0afdef9e32c49a2a41470b7f9fa"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/recipes/prepare-head-study-set-legacy-20261024.mjs",
+      "bytes": 787,
+      "sha256": "67c76429d4eb009547ae9fb2b0ea5d52681f0d2af879b83689cb04ff38840176"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/recipes/run-head-study-set-commit-20261024.mjs",
+      "bytes": 4532,
+      "sha256": "5234a486e9268ed065dbc70cca88380c2c7e244bd6bed8cd8e255ba4c641b3d3"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/recipes/type-head-study-set-commit-20261024.mjs",
+      "bytes": 2718,
+      "sha256": "91829ffac42e931d089a8526bfbe21d35a06d0bcbf84efe1dfda2c64730e5921"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/website/components/HeadAtlasViewer.tsx",
+      "bytes": 115651,
+      "sha256": "9797cd2ce54405d0909d125f38fa4ea0184f367b7ac772406952f6dacd0b7ae5"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/website/tests/head-study-set-commit.test.mjs",
+      "bytes": 8030,
+      "sha256": "3d8ec007a8a742c2004a92fc7e8c1841c606849065874ed15f292a2e77773dd1"
+    },
+    {
+      "path": "pending/head-study-set-commit-20261024/website/tests/head-tour-study-set.test.ts",
+      "bytes": 6836,
+      "sha256": "e8cb2650f83e4c41478c0fa9643b1979be0df70f2ee81494afbafed5383e99e4"
+    },
+    {
       "path": "pending/head-surface-cancellation-20261022/coordination/admit-head-surface-cancellation-20261022.mjs",
       "bytes": 10181,
       "sha256": "502bd5664309de8358189bcd58936b5e68ba66bc0474c2f53917213b9c25eec4"
@@ -29720,92 +29697,17 @@
     }
   ],
   "removed": [],
-  "scope": "Verified inherited5919filtered source paths, including all8unchanged proposal code/test files, plus4new changed/current display proof/helper files and4critical integration/recovery recipes. No removals; prior99exact aliases retained through verified parent ancestry. Generated delivery fixture/bindings/bundles/models, scans/private modules/data, raw evidence/type graphs and later coordination remain F-local. Not whole/private/runnable off-device recovery.",
+  "scope": "Carry verified5927filtered source paths and complete existing parent ancestry, add10explicit authored source/test/preimage/recipe paths. No removals; all prior exact aliases retain their parent ancestry. No images/models/scans/private data, raw QA logs/metadata, generated Review bindings, dependencies/builds or later coordination. Not a whole/private/runnable off-device backup.",
   "proof": {
-    "mainReviewSha256": "22c66f4d6065888ca2cc02eda18cf898330ae833ffdab49b6cc94ed6381cdb05",
-    "focusedCases": 233,
-    "sourceInputs": 6574,
-    "strictRoots": 3,
-    "strictGraphFiles": 1739,
+    "mainReviewSha256": "a8a8d0903688b8097fd48b6675ce2e4b29ef43ebc30d356d1164a0e3dfc18e97",
+    "focusedCases": 79,
+    "strictGraphFiles": 1733,
     "typeDiagnostics": 0,
-    "stockProductionAndReviewBuildAndVerifierPassed": true,
-    "actualSyntheticReactBrowser": true,
-    "actualIntegratedWebsiteBrowser": false,
-    "sourceArtifactBindings": [
-      {
-        "websitePath": "components/HeadAtlasViewer.tsx",
-        "sha256": "9df2752e85f7b9f2c3516be27e03ceb05e23527bc8efd333bf5170e0a6a919fa",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/components/HeadAtlasViewer.tsx",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/head-slice-keyboard.test.ts",
-        "sha256": "c4fdb080964380eac3dbb176c2e61a34d5ce42d719f4b2825f0763463962f5d8",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-slice-keyboard.test.ts",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/head-mask-picking-ui.test.ts",
-        "sha256": "c4b2f6c4781b54630c95100f8d68c6cba449ef3530e899970c7d4c7691ae87ac",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-mask-picking-ui.test.ts",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/head-slice-zoom.test.ts",
-        "sha256": "c44c29891c41992a6df145d13ccd976dd46cc1a9c411ff2e8ad620b98df72e30",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-slice-zoom.test.ts",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/head-pan-source-transition.test.ts",
-        "sha256": "8a3164ff927cb93cdd3582bd872c1e2827f08d8071284e0449d851c640e31619",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-pan-source-transition.test.ts",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-        "sha256": "ad40279ba7069f99d3412db3792b9645bb468974c984ed37f293302f52ce4513",
-        "snapshotPath": "pending/native-slice-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/native-slice-commit.test.mjs",
-        "sha256": "4a486e0bf568a1cdcbbe78a5eda12f0ddbdc3d283e995434dc738f2143b811b6",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-commit.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-slice-commit-scope.test.mjs",
-        "sha256": "6ee6025534cfa14bd57fe2d4530d7e8ae3ba5bb4279aa0bb1ce531492fabbd96",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-commit-scope.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-slice-legacy-adapters.test.mjs",
-        "sha256": "2fb94a12bcaebdf735faf55d9387a6f9ceb6a6991c368e3496810ee3ba4c7ec3",
-        "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-legacy-adapters.test.mjs",
-        "inherited": true
-      },
-      {
-        "websitePath": "tests/native-slice-website-composition.test.mjs",
-        "sha256": "de56659b8ba2b18ab6b9960f8580f84bf6f31da3426ce4800b180563f4adf5dd",
-        "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-website-composition.test.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/native-slice-current-display.mjs",
-        "sha256": "6e0108275d67204120bb1259ab278780471263d232e6ef2ba733486ca9e45e1b",
-        "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-current-display.mjs",
-        "inherited": false
-      },
-      {
-        "websitePath": "tests/native-slice-display-epoch.test.mjs",
-        "sha256": "eee92c8c0e531b39cb40f76818e1a69e276f4263cc864b6cd498f0cb0d147cbc",
-        "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-display-epoch.test.mjs",
-        "inherited": false
-      }
-    ],
-    "remoteNewPaths": 8,
+    "sourceOverlayCount": 1,
+    "actualLoadedAnonymousBrowserReplay": true,
+    "coherentWebsiteReviewIntegrationPending": true,
+    "retainedInitialAndHistoricalFailures": true,
+    "remoteNewPaths": 10,
     "previewChanged": false,
     "installed": false,
     "wholeSuitePassing": false,

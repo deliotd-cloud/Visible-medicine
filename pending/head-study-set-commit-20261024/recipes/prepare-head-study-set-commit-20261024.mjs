@@ -1,0 +1,12 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261024-head-study-set-commit',source='F:/VisibleMedicine/staging/20261024-native-slice-website/SOURCE_BOUND.json',parent=json(source),site=stage+'/website';
+assert.equal(hash(source),'53a006afac76eb558c769c83c6e36a594e3965de99b602e796a9ef48636089b6');assert(!fs.existsSync(stage));assert.deepEqual(json('CURRENT_CHECKPOINT.json').activeWork.current.activeExecutionSessions,[]);assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+const copy=(a,b)=>{fs.mkdirSync(path.dirname(b),{recursive:true});fs.copyFileSync(a,b,fs.constants.COPYFILE_EXCL);};
+fs.mkdirSync(stage);fs.mkdirSync(site+'/tests',{recursive:true});
+fs.cpSync(parent.website+'/components',site+'/components',{recursive:true,errorOnExist:true,force:false});
+copy(parent.website+'/components/HeadAtlasViewer.tsx',stage+'/before/HeadAtlasViewer.tsx');
+for(const name of ['head-study-set.test.ts','head-study-set-ui.test.ts','head-study-set-order.test.ts','head-study-set-order-ui.test.ts','head-tour-study-set.test.ts','head-review-study-set.test.ts','head-review-study-set-ui.test.ts','head-comparison-exit.test.ts'])copy(parent.website+'/tests/'+name,site+'/tests/'+name);
+for(const name of ['lib','node_modules'])fs.symlinkSync(parent.website+'/'+name,site+'/'+name,'junction');
+copy(parent.website+'/package.json',site+'/package.json');
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify({at:new Date().toISOString(),stage,website:site,parentWebsite:parent.website,parentReceipt:source,parentReceiptSha256:hash(source),beforeComponentSha256:hash(stage+'/before/HeadAtlasViewer.tsx'),thinProposal:true,applicationInstalled:false,generatedReviewCoherent:false,privateSourceBytesCopied:false,previewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({stage,parentReceiptSha256:hash(source),thinProposal:true,previewChanged:false}));

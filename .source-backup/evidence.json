@@ -1,88 +1,13 @@
 {
-  "mainReviewSha256": "22c66f4d6065888ca2cc02eda18cf898330ae833ffdab49b6cc94ed6381cdb05",
-  "focusedCases": 233,
-  "sourceInputs": 6574,
-  "strictRoots": 3,
-  "strictGraphFiles": 1739,
+  "mainReviewSha256": "a8a8d0903688b8097fd48b6675ce2e4b29ef43ebc30d356d1164a0e3dfc18e97",
+  "focusedCases": 79,
+  "strictGraphFiles": 1733,
   "typeDiagnostics": 0,
-  "stockProductionAndReviewBuildAndVerifierPassed": true,
-  "actualSyntheticReactBrowser": true,
-  "actualIntegratedWebsiteBrowser": false,
-  "sourceArtifactBindings": [
-    {
-      "websitePath": "components/HeadAtlasViewer.tsx",
-      "sha256": "9df2752e85f7b9f2c3516be27e03ceb05e23527bc8efd333bf5170e0a6a919fa",
-      "snapshotPath": "pending/native-slice-commit-20261024/website/components/HeadAtlasViewer.tsx",
-      "inherited": true
-    },
-    {
-      "websitePath": "tests/head-slice-keyboard.test.ts",
-      "sha256": "c4fdb080964380eac3dbb176c2e61a34d5ce42d719f4b2825f0763463962f5d8",
-      "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-slice-keyboard.test.ts",
-      "inherited": true
-    },
-    {
-      "websitePath": "tests/head-mask-picking-ui.test.ts",
-      "sha256": "c4b2f6c4781b54630c95100f8d68c6cba449ef3530e899970c7d4c7691ae87ac",
-      "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-mask-picking-ui.test.ts",
-      "inherited": true
-    },
-    {
-      "websitePath": "tests/head-slice-zoom.test.ts",
-      "sha256": "c44c29891c41992a6df145d13ccd976dd46cc1a9c411ff2e8ad620b98df72e30",
-      "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-slice-zoom.test.ts",
-      "inherited": true
-    },
-    {
-      "websitePath": "tests/head-pan-source-transition.test.ts",
-      "sha256": "8a3164ff927cb93cdd3582bd872c1e2827f08d8071284e0449d851c640e31619",
-      "snapshotPath": "pending/native-slice-commit-20261024/website/tests/head-pan-source-transition.test.ts",
-      "inherited": true
-    },
-    {
-      "websitePath": "tests/adjacent-current-tour-source-role.mjs",
-      "sha256": "ad40279ba7069f99d3412db3792b9645bb468974c984ed37f293302f52ce4513",
-      "snapshotPath": "pending/native-slice-website-20261024/website/tests/adjacent-current-tour-source-role.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/native-slice-commit.test.mjs",
-      "sha256": "4a486e0bf568a1cdcbbe78a5eda12f0ddbdc3d283e995434dc738f2143b811b6",
-      "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-commit.test.mjs",
-      "inherited": true
-    },
-    {
-      "websitePath": "tests/native-slice-commit-scope.test.mjs",
-      "sha256": "6ee6025534cfa14bd57fe2d4530d7e8ae3ba5bb4279aa0bb1ce531492fabbd96",
-      "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-commit-scope.test.mjs",
-      "inherited": true
-    },
-    {
-      "websitePath": "tests/native-slice-legacy-adapters.test.mjs",
-      "sha256": "2fb94a12bcaebdf735faf55d9387a6f9ceb6a6991c368e3496810ee3ba4c7ec3",
-      "snapshotPath": "pending/native-slice-commit-20261024/website/tests/native-slice-legacy-adapters.test.mjs",
-      "inherited": true
-    },
-    {
-      "websitePath": "tests/native-slice-website-composition.test.mjs",
-      "sha256": "de56659b8ba2b18ab6b9960f8580f84bf6f31da3426ce4800b180563f4adf5dd",
-      "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-website-composition.test.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/native-slice-current-display.mjs",
-      "sha256": "6e0108275d67204120bb1259ab278780471263d232e6ef2ba733486ca9e45e1b",
-      "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-current-display.mjs",
-      "inherited": false
-    },
-    {
-      "websitePath": "tests/native-slice-display-epoch.test.mjs",
-      "sha256": "eee92c8c0e531b39cb40f76818e1a69e276f4263cc864b6cd498f0cb0d147cbc",
-      "snapshotPath": "pending/native-slice-website-20261024/website/tests/native-slice-display-epoch.test.mjs",
-      "inherited": false
-    }
-  ],
-  "remoteNewPaths": 8,
+  "sourceOverlayCount": 1,
+  "actualLoadedAnonymousBrowserReplay": true,
+  "coherentWebsiteReviewIntegrationPending": true,
+  "retainedInitialAndHistoricalFailures": true,
+  "remoteNewPaths": 10,
   "previewChanged": false,
   "installed": false,
   "wholeSuitePassing": false,
