@@ -1,14 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-24T16:30:43.412Z",
+  "at": "2026-10-24T16:47:00.043Z",
   "sourceIdentity": {
-    "parentNative": "6e810b188dde401f6c19a970928f316a479696df",
-    "parentNativeTree": "90afe5163dbd9386aa37c93d525fa4c70e8c1b9e",
-    "kind": "partial-original-educational-draft-only",
-    "target": "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein"
+    "nativeParent": "6e810b188dde401f6c19a970928f316a479696df",
+    "nativeParentTree": "90afe5163dbd9386aa37c93d525fa4c70e8c1b9e",
+    "preparedSourceManifest": "F:/VisibleMedicine/staging/20261024-right-gastric-eus-native/SOURCE_STATE.json",
+    "preparedSourceManifestSha256": "2f4fd70257a5fe0ceeb88725a4dd27712d1a2ad09b0f5f34e0ddd55db4fbc111",
+    "kind": "uncommitted-unbuilt-native-source-preparation"
   },
-  "parent": "f37690bc881db321c5557308dc3f1472b0a556c4",
-  "gitParent": "f37690bc881db321c5557308dc3f1472b0a556c4",
+  "parent": "5dcf67440fce6b397b652a248a925c8b7d9da655",
+  "gitParent": "5dcf67440fce6b397b652a248a925c8b7d9da655",
   "files": [
     {
       "path": "app/globals.css",
@@ -26606,6 +26607,36 @@
       "sha256": "6f7a7f72147b52df4874782ed6afc6cc0a5dc49f17a31fa3772989efd777eb65"
     },
     {
+      "path": "pending/right-gastric-native-prepared-20261024/atlas/package.json",
+      "bytes": 89406,
+      "sha256": "55824dd743250fb9f2b225f6b993b6cd55a2baf077c0e0dcc6a17dc4138b5d0c"
+    },
+    {
+      "path": "pending/right-gastric-native-prepared-20261024/atlas/scripts/test-right-gastric-eus-integration.mjs",
+      "bytes": 9979,
+      "sha256": "a2b850c328c18fd9f0640536298448d819d93914f600e59c69592c9d6b784305"
+    },
+    {
+      "path": "pending/right-gastric-native-prepared-20261024/recipes/flatten-right-gastric-native-objects-20261024.mjs",
+      "bytes": 3947,
+      "sha256": "4dd5d246f327631da0ccf68578ec0d267be7c245d1faa0d186ef2aabb7fc1b7a"
+    },
+    {
+      "path": "pending/right-gastric-native-prepared-20261024/recipes/prepare-right-gastric-eus-native-20261024.mjs",
+      "bytes": 4132,
+      "sha256": "9aa6de07c1bb6793fdfad0e9b773daed900f4ac55f6e3a12a032357e9fb46328"
+    },
+    {
+      "path": "pending/right-gastric-native-prepared-20261024/recipes/save-right-gastric-native-preparation-20261024.mjs",
+      "bytes": 6728,
+      "sha256": "d5d00ca8c3e0f1d62a1f8f60057fd3d5abd2029ec47c59aecb297509f336127a"
+    },
+    {
+      "path": "pending/right-gastric-native-prepared-20261024/recipes/verify-right-gastric-native-source-20261024.mjs",
+      "bytes": 6640,
+      "sha256": "3fe201a3d3da8d34e7541630d27586cb9a7d8bbd252642a6f5c69ec9c896f93f"
+    },
+    {
       "path": "pending/structure-guides-20261023/coordination/check-structure-guides-types-20261023.mjs",
       "bytes": 4205,
       "sha256": "aea744558396962446eaa6870b3b455f001e14c0a8b26d1c006956de6dc70198"
@@ -29852,21 +29883,25 @@
     }
   ],
   "removed": [],
-  "scope": "Verified inherited filtered source ancestry plus two changed original educational/binder source files, one unit test and three recipes. No copied publisher assets/text, scans, masks, models, patient identifiers, private references/decisions, generated delivery, dependencies, build output or raw QA. Notice addendum, evidence ledger, current inventory and later coordination remain F-local. Not a whole/private/runnable off-device backup; no deployment or installation.",
+  "scope": "Verified filtered source ancestry, the new actual integration regression, package command and four preparation/verification/recovery recipes. The two authored EUS source edits and unit test remain in inherited verified backup5dcf. Native notice addition, complete local manifests, QA/assignment evidence and later coordination remain F-local. No scans, masks, models, patient data, private decisions/references, generated runtime/build/dependencies or raw logs. Not whole/private/runnable off-device recovery; no installation or public deployment.",
   "proof": {
-    "mainReviewSha256": "1ded8d10a9b78c995d8e1d97181552b2647443b3fb92105f6b6ddd10630fcc37",
-    "partialOnly": true,
-    "actualModuleUnitCases": 7,
-    "wrongSelectionMutations": 28,
-    "sequentialSmallBundles": 2,
+    "mainReviewSha256": "8d0984408cfc73d6e597c0acfb80bb9347f5d211540684b1039575aba03a98b2",
+    "preparedSourcePaths": 6389,
+    "intendedChangedPaths": 6,
+    "unaffectedSuccessorParentPaths": 6383,
     "wholeOriginalSourceInverses": 2,
-    "previousThreeLessonsExactlyPreserved": true,
-    "sourceUnvalidated": true,
-    "noNewAssetDependencyOrFee": true,
-    "articleAssetLicenceReliedUpon": false,
-    "fullResolverCohortRun": false,
-    "strictTypecheck": false,
-    "generatorsOrBuild": false,
+    "wholePreviousPackageRestored": true,
+    "wholePreviousNoticePreserved": true,
+    "dependenciesAndDispatchUnchanged": true,
+    "actualHeadStillParent": true,
+    "sourceUnitCasesPreviouslyPassed": 7,
+    "workerOriginalSyntaxChecked": true,
+    "correctedIntegrationSyntaxChecked": true,
+    "integrationCasesAuthored": 6,
+    "integrationCasesExecuted": false,
+    "generatedRevisionsStillParent": true,
+    "strictTypesRun": false,
+    "productionBuild": false,
     "learnerOrReviewExport": false,
     "websiteIntegration": false,
     "previewChanged": false,
