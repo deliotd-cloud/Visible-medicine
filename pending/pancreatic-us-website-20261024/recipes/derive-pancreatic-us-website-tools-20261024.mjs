@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261024-pancreatic-us-website',records=[];
+function derive(from,to,seams){assert(!fs.existsSync(to));const original=fs.readFileSync(from,'utf8');let text=original;for(const[a,b]of seams){assert(text.includes(a),a);text=text.replaceAll(a,b);}let inverse=text;for(const[a,b]of [...seams].reverse())inverse=inverse.replaceAll(b,a);assert.equal(inverse,original);fs.writeFileSync(to,text,{flag:'wx'});records.push({from,to,fromSha256:hash(from),toSha256:hash(to),seams,completeInverseVerified:true});}
+const common=[['20261024-toolbar-website','20261024-pancreatic-us-website'],['toolbar-website-types','pancreatic-us-website-types']];
+derive('run-toolbar-website-20261024.mjs','run-pancreatic-us-website-20261024.mjs',[common[0],["role:'toolbar-website'","role:'pancreatic-us-website'"],["r.role!=='toolbar-website'","r.role!=='pancreatic-us-website'"]]);
+derive('capture-toolbar-website-20261024.mjs','capture-pancreatic-us-website-20261024.mjs',[common[0]]);
+derive('admit-toolbar-coverage-20261024.mjs','admit-pancreatic-us-coverage-20261024.mjs',[common[0]]);
+derive('check-toolbar-website-types-20261024.mjs','check-pancreatic-us-website-types-20261024.mjs',[...common,["'atlas-review/lib/body-orbital-ct.ts',","'atlas-review/lib/body-orbital-ct.ts','atlas-review/lib/body-pancreatic-venous-us.ts',"]]);
+derive('toolbar-website-source-20261024.mjs','pancreatic-us-website-source-20261024.mjs',[common[0],[" if(fs.existsSync(stage+'/HEAD_HISTORY_INTEGRATION.json'))"," for(const p of ['tests/pancreatic-us-current-source-role.mjs','tests/pancreatic-us-current-source-role.test.mjs','tests/pancreatic-us-website-composition.test.mjs'])paths.add(p);\n if(fs.existsSync(stage+'/HEAD_HISTORY_INTEGRATION.json'))"]]);
+fs.writeFileSync(stage+'/TOOLS_TRANSITION.json',JSON.stringify({at:new Date().toISOString(),records,previewChanged:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({derived:records.length}));

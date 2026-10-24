@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash} from './seal-simple-website-successor.mjs';
+const from='test-toolbar-website-20261024.mjs',to='test-pancreatic-us-website-20261024.mjs',original=fs.readFileSync(from,'utf8');assert(!fs.existsSync(to));
+const feature="['tests/toolbar-current-source-role.test.mjs','tests/toolbar-website-composition.test.mjs','tests/orbital-ct-current-source-role.test.mjs','tests/orbital-ct-website-composition.test.mjs']";
+const fresh="['tests/current-atlas-delivery.test.mjs','tests/pancreatic-us-current-source-role.test.mjs','tests/pancreatic-us-website-composition.test.mjs','tests/clinical-review-inbox-return-pager-focus.test.mjs']";
+const tail="'toolbar-current-source-role.test.mjs','toolbar-website-composition.test.mjs'].map";
+const extended="'toolbar-current-source-role.test.mjs','toolbar-website-composition.test.mjs','clinical-review-inbox-return-pager-focus.test.mjs','clinical-review-inbox-short-desktop.test.mjs','review-pager-website-composition.test.mjs','pancreatic-us-current-source-role.test.mjs','pancreatic-us-website-composition.test.mjs'].map";
+const seams=[[feature,fresh],[tail,extended],["from './toolbar-website-source-20261024.mjs'","from './pancreatic-us-website-source-20261024.mjs'"],["'toolbar-website-tests'","'pancreatic-us-website-tests'"]];
+let text=original;for(const[a,b]of seams){assert(text.includes(a),a);text=text.replaceAll(a,b);}let inverse=text;for(const[a,b]of [...seams].reverse())inverse=inverse.replaceAll(b,a);assert.equal(inverse,original);
+fs.writeFileSync(to,text,{flag:'wx'});fs.writeFileSync('F:/VisibleMedicine/staging/20261024-pancreatic-us-website/TEST_TOOLS_TRANSITION.json',JSON.stringify({at:new Date().toISOString(),from,to,fromSha256:hash(from),toSha256:hash(to),seams,wholeOriginalInverseVerified:true,previewChanged:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({derived:to,wholeOriginalInverseVerified:true}));
