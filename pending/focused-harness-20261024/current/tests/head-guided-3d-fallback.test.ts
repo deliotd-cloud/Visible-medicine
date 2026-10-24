@@ -1,0 +1,132 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import {separateComparisonAwareRequire} from './head-separate-comparison-test-source.ts';
+import ts from 'typescript';
+import type {HeadEntry,LoadedStudy,Modality} from '../lib/head-atlas-import.ts';
+import {HEAD_LINK_REVISION} from '../lib/head-atlas-links.ts';
+import {headImageOnlyComparisonPacket} from '../lib/head-image-only-links.ts';
+import {headLearningLinks,headLearningSteps,type HeadLearningPosition} from '../lib/head-atlas-learning.ts';
+import {practiceEntries} from '../lib/head-atlas-practice.ts';
+import * as lectureTour from '../lib/lecture-tour-context.ts';
+import * as relatedLectures from '../lib/lecture-related-links.ts';
+
+type Node={type:unknown;props:Record<string,any>};
+const require=separateComparisonAwareRequire(createRequire(import.meta.url));
+const source=readFileSync(new URL('../components/HeadAtlasGuidedLearning.tsx',import.meta.url),'utf8');
+const code=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+const ponsPosition:HeadLearningPosition={sequenceId:'brainstem',conceptId:'brainstem-pons'};
+
+function nodes(value:unknown):Node[]{
+  if(Array.isArray(value))return value.flatMap(nodes);
+  if(!value||typeof value!=='object'||!('props' in value))return [];
+  const node=value as Node;
+  return [node,...nodes(node.props.children)];
+}
+function content(value:unknown):string{
+  if(Array.isArray(value))return value.map(content).join('');
+  if(value&&typeof value==='object'&&'props' in value)return content((value as Node).props.children);
+  return value==null?'':String(value);
+}
+function render(modality:Modality,position:HeadLearningPosition,entries:HeadEntry[],comparisonReady:boolean,revision=HEAD_LINK_REVISION,hasInline=true){
+  const mod={exports:{} as {HeadAtlasGuidedLearning:(props:any)=>Node}};
+  const refs:Array<{current:unknown}>=[];let refIndex=0;
+  new Function('require','module','exports',code)((id:string)=>
+    id==='react'?{useEffect:()=>{},useLayoutEffect:()=>{},useRef:(initial:unknown)=>refs[refIndex++]??(refs[refIndex-1]={current:initial}),useState:(initial:unknown)=>[initial,()=>{}]}:
+    id==='../lib/head-atlas-import'?{HEAD_MANIFEST_SHA256:revision}:
+    id==='../lib/head-atlas-learning'?require('../lib/head-atlas-learning.ts'):
+    id==='../lib/head-atlas-practice'?{practiceEntries}:
+    id==='./HeadAtlasTeaching'?{HeadAtlasTeaching:()=>null}:
+    id==='./HeadAtlasConceptTeaching'?{HeadAtlasConceptTeaching:()=>null}:
+    id==='./HeadLearningBookmark'?{HeadLearningBookmark:()=>null}:
+    id==='../lib/head-atlas-focus'?{focusHeadLearningContent:()=>{}}:
+    id==='../lib/lecture-tour-context'?lectureTour:
+    id==='../lib/lecture-related-links'?relatedLectures:require(id),mod,mod.exports);
+  const study={definition:{entries}} as LoadedStudy;
+  const tree=mod.exports.HeadAtlasGuidedLearning({study,modality,position,onPositionChange:()=>{},onSelect:()=>{},onPractice:()=>{},onCompare:hasInline?()=>{}:undefined,comparisonReady});
+  const all=nodes(tree);
+  return {text:content(tree),anchors:all.filter(node=>node.type==='a'&&String(node.props.href).startsWith('/atlas/head-neck-3d?')),
+    inline:all.filter(node=>node.type==='button'&&content(node)==='Compare this step beside 3D')};
+}
+function exactEntry(modality:Modality,position=ponsPosition):HeadEntry{
+  const id=modality==='CT'?'cth.bst.pons':'mrb.bst.pons';
+  const entry={id,label:'Pons — regional mask',family:'bst',laterality:'midline_or_unpaired',representation:'partial-mask',color:[1,0,0],opacity:{fill:.2,outline:1}} as HeadEntry;
+  assert.equal(headLearningSteps([entry],position.sequenceId,modality,HEAD_LINK_REVISION).find(step=>step.conceptId===position.conceptId)?.entry,entry);
+  return entry;
+}
+function assertExactAtlasLink(view:ReturnType<typeof render>,position:HeadLearningPosition){
+  const expected=headLearningLinks(position)?.atlasHref;
+  assert(expected);
+  assert.equal(view.anchors.length,1,'one full Atlas destination is available');
+  const anchor=view.anchors[0];
+  assert.equal(anchor.props.href,expected,'preserve the authored exact destination');
+  assert.equal(anchor.props.target,'_blank');
+  assert.equal(anchor.props.rel,'noopener noreferrer');
+  assert.match(anchor.props['aria-label'],/new tab/);
+  const query=new URL(expected,'https://example.invalid').searchParams;
+  for(const key of ['headTour','headStep','headRevision','source'])assert(query.has(key),`${key} remains pinned`);
+}
+
+test('CT and MRI mapped entries retain their exact full Atlas link while inline comparison is unavailable',()=>{
+  for(const modality of ['CT','MRI'] as const){
+    // The entry is indexed, but its asynchronous native mask has not loaded or failed.
+    const view=render(modality,ponsPosition,[exactEntry(modality)],false);
+    assertExactAtlasLink(view,ponsPosition);
+    assert.equal(view.inline.length,0,'no inert inline action replaces the destination');
+  }
+});
+
+test('a ready mapped entry keeps only the existing inline comparison action',()=>{
+  for(const modality of ['CT','MRI'] as const){
+    const view=render(modality,ponsPosition,[exactEntry(modality)],true);
+    assert.equal(view.anchors.length,0,'no duplicate full Atlas control');
+    assert.equal(view.inline.length,1);
+    assert.equal(view.inline[0].props.disabled,false);
+  }
+});
+
+test('external-only consumers keep the exact link without promising inline comparison',()=>{
+  const view=render('CT',ponsPosition,[exactEntry('CT')],true,HEAD_LINK_REVISION,false);
+  assertExactAtlasLink(view,ponsPosition);
+  assert.equal(view.inline.length,0);
+  assert.match(view.text,/Mapped 3D Atlas links open separately in a new tab/);
+  assert.doesNotMatch(view.text,/compared beside this scan|Inline comparison becomes available/);
+});
+
+test('canonical missing masks keep the one authored destination for both modalities',()=>{
+  for(const modality of ['CT','MRI'] as const){
+    const view=render(modality,ponsPosition,[],false);
+    assertExactAtlasLink(view,ponsPosition);
+    assert.equal(view.inline.length,0);
+  }
+});
+
+test('nested destinations retain their parent and part source pins',()=>{
+  const nested:HeadLearningPosition={sequenceId:'ventricles',conceptId:'ventricle-third'};
+  const nestedHref=headLearningLinks(nested)?.atlasHref;
+  assert(nestedHref);
+  const nestedQuery=new URL(nestedHref,'https://example.invalid').searchParams;
+  assert(nestedQuery.has('partSource'),'fixture is a nested authored destination');
+  for(const modality of ['CT','MRI'] as const){
+    const entry={id:modality==='CT'?'cth.vnt.third_ventricle':'mrb.vnt.third_ventricle',label:'Third ventricle — regional mask',family:'vnt',laterality:'midline_or_unpaired',representation:'mask',color:[1,0,0],opacity:{fill:.2,outline:1}} as HeadEntry;
+    assert.equal(headLearningSteps([entry],nested.sequenceId,modality,HEAD_LINK_REVISION).find(step=>step.conceptId===nested.conceptId)?.entry,entry);
+    for(const entries of [[],[entry]]){
+      const view=render(modality,nested,entries,false);
+      assertExactAtlasLink(view,nested);
+      assert.equal(view.anchors[0].props.href,nestedHref);
+      assert.equal(view.inline.length,0);
+    }
+    for(const key of ['source','partSource','headTour','headStep','headRevision'])assert(nestedQuery.has(key));
+  }
+});
+
+test('image-only anatomy and stale revision expose no invented Atlas destination',()=>{
+  const imageOnly:HeadLearningPosition={sequenceId:'cerebellar-orientation',conceptId:'cerebellum-left-hemisphere'};
+  assert.equal(headLearningLinks(imageOnly)?.atlasHref,undefined);
+  for(const modality of ['CT','MRI'] as const){
+    const entry={...headImageOnlyComparisonPacket().bindings[0][modality==='CT'?'ct':'mri'],family:'cer',color:[1,0,0],opacity:{fill:.2,outline:1}} as HeadEntry;
+    assert.equal(render(modality,imageOnly,[entry],false).anchors.length,0);
+    assert.equal(render(modality,ponsPosition,[exactEntry(modality)],false,'stale').anchors.length,0);
+  }
+});

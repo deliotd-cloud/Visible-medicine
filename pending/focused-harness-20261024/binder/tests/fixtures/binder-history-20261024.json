@@ -1,0 +1,255 @@
+{
+  "schema": "vm-binder-history-roles/1",
+  "historical": {
+    "receipt": "F:/VisibleMedicine/staging/20261022-studio-details-focus-successor/SOURCE.json",
+    "receiptSha256": "ac4654d3c76ba13b449be34be5502f372ebf13f286c60e100d5933e221e41965",
+    "website": "F:/VisibleMedicine/staging/20261022-studio-details-focus-successor/website",
+    "binderPath": "scripts/bind-clinical-review.mjs",
+    "binderSha256": "0339eedafdc65e60fb35efd7f59c839a57afa274966c405e4b373f8722f95d06",
+    "preExpansionFixtureSha256": "d8ce02c58eba914cc3243714c59dd35cbc0c38f7ddab90df626b14fdf0c7ef8d",
+    "binderFixturePath": "tests/fixtures/binder-history-20261024/bind-clinical-review.mjs.raw",
+    "binderBytes": 8282
+  },
+  "current": {
+    "receipt": "F:/VisibleMedicine/staging/20261024-pancreatic-us-website/SOURCE_BOUND.json",
+    "receiptSha256": "cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e",
+    "website": "F:/VisibleMedicine/staging/20261024-pancreatic-us-website/website",
+    "binderPath": "scripts/bind-clinical-review.mjs",
+    "binderSha256": "79f43a5e9bbf18fce99594e684eb00ebd1701791766f3503f34816ee83550a5c"
+  },
+  "addedInputGroups": {
+    "privateReferencesAndAccess": [
+      "lib/clinical-review-reference-selection.ts",
+      "lib/clinical-review-reference-assets.json",
+      "lib/clinical-review-reference-registry.ts",
+      "lib/clinical-review-reference-delivery.ts",
+      "app/api/atlas-delivery/references/[...asset]/route.ts",
+      "lib/clinical-review-server.ts",
+      "lib/clinical-review-access.ts",
+      "lib/atlas-static-boundary.ts",
+      "worker/index.ts",
+      "app/api/atlas-review/reviews/route.ts",
+      "app/api/atlas-review/body-review/route.ts",
+      "app/api/atlas-review/body-review/decisions/route.ts",
+      "app/api/atlas-review/nested-review/route.ts",
+      "app/api/atlas-review/specimen-review/route.ts",
+      "app/api/atlas-review/review-overview/route.ts",
+      "vite.config.ts",
+      "scripts/local-atlas-development-plugin.mjs"
+    ],
+    "guidedPacketInspection": [
+      "components/HeadMriComparisonReview.tsx",
+      "components/HeadInsulaComparisonReview.tsx",
+      "components/HeadOrbitalComparisonReview.tsx",
+      "components/HeadCtBoneLearningReview.tsx",
+      "components/HeadImageOnlyComparisonReview.tsx",
+      "lib/head-mri-learning.ts",
+      "lib/head-insula-learning.ts",
+      "lib/head-orbital-learning.ts",
+      "lib/head-ct-bone-learning.ts",
+      "lib/head-cerebellar-learning.ts"
+    ],
+    "headValidationAndNavigation": [
+      "lib/head-surface-validation.ts",
+      "components/HeadAtlasLearningPicker.tsx",
+      "lib/head-window-drag.ts",
+      "lib/head-practice-navigation.ts",
+      "components/AtlasWorkspaceNavigation.tsx",
+      "components/AtlasRegionNavigation.tsx",
+      "components/HeadSeparateComparisonLink.tsx",
+      "lib/head-separate-comparison.ts"
+    ]
+  },
+  "realCurrentInputRows": [
+    {
+      "path": "components/AtlasRuntimeFrame.tsx",
+      "bytes": 7352,
+      "sha256": "7d4d9d36f5f8b7a88477355ba76b3adb4e93d080cff9356dfe5725f3fc6c76d8"
+    },
+    {
+      "path": "components/atlas-runtime-expansion.ts",
+      "bytes": 4160,
+      "sha256": "bc93f073905072c8628624712a1758517471ac121483a291573e9f65fd28611b"
+    },
+    {
+      "path": "components/atlas-runtime-frame.css",
+      "bytes": 5371,
+      "sha256": "ec6e4c9562253b899353edb40f069e324acf9b0d88541675b616af35a04e58ea"
+    },
+    {
+      "path": "lib/clinical-review-reference-selection.ts",
+      "bytes": 1917,
+      "sha256": "ceac4d7a62f01acde942ffea229357c9a2589e4a3938223fb5f2db5fb98885a3"
+    },
+    {
+      "path": "lib/clinical-review-reference-assets.json",
+      "bytes": 985,
+      "sha256": "96426038d22f2d80445911a80380cb2a2b646fcfa0137ee041d6e5d9e81b328e"
+    },
+    {
+      "path": "lib/clinical-review-reference-registry.ts",
+      "bytes": 4399,
+      "sha256": "d6b054f2042a06ec3a654d8918be6371b526d0c215ed4fb1c5a0a6678a387b89"
+    },
+    {
+      "path": "lib/clinical-review-reference-delivery.ts",
+      "bytes": 4655,
+      "sha256": "ad948601cea4d66e7d76cc23b229e5da74a6230baf3e00d043ef05006b1514f3"
+    },
+    {
+      "path": "app/api/atlas-delivery/references/[...asset]/route.ts",
+      "bytes": 611,
+      "sha256": "734f2e5cce9030b4601e8e52453dac9beab0a63b472fbc0d72e310bc4c948419"
+    },
+    {
+      "path": "lib/clinical-review-server.ts",
+      "bytes": 2507,
+      "sha256": "4be6354dc8999a72e1e27095e0002deba98a2e47111ac866b4e477b43387e7be"
+    },
+    {
+      "path": "lib/clinical-review-access.ts",
+      "bytes": 1894,
+      "sha256": "37f4f7a9c228dae469ce8b7b6b7cc2e8220c27a347d9f74c420b057a56780d7a"
+    },
+    {
+      "path": "lib/atlas-static-boundary.ts",
+      "bytes": 1207,
+      "sha256": "4424c11f0fdf77aa0a989d326f1095efe53b773001eed083a1ea193b89c2cab1"
+    },
+    {
+      "path": "worker/index.ts",
+      "bytes": 10942,
+      "sha256": "52ed1bdd1802a04cba8ecf6414812590ecd04a307a1c35e4c3216076e56569ce"
+    },
+    {
+      "path": "app/api/atlas-review/reviews/route.ts",
+      "bytes": 334,
+      "sha256": "39679075e5bc555c0afb12ff982e45cbf1f6a7c20824511ed70834052c66fdb8"
+    },
+    {
+      "path": "app/api/atlas-review/body-review/route.ts",
+      "bytes": 255,
+      "sha256": "fd35bb4fc072ea6c5fd99f9e0f7dcd6d9c82f7ddd660619cf9fcd26d89a68032"
+    },
+    {
+      "path": "app/api/atlas-review/body-review/decisions/route.ts",
+      "bytes": 348,
+      "sha256": "fe641fc1a20f17b1ee6f512c811ccfa8139f584ee73460b23ac8c80042a10e2d"
+    },
+    {
+      "path": "app/api/atlas-review/nested-review/route.ts",
+      "bytes": 340,
+      "sha256": "5c49bca85c3240e4dd600e634f4c3b852b7555eaba684a7e2056001efc17b334"
+    },
+    {
+      "path": "app/api/atlas-review/specimen-review/route.ts",
+      "bytes": 342,
+      "sha256": "38e8d5c15df76747c4be5816ccf24883b18598d9e18d624d95f2d8b0320072f9"
+    },
+    {
+      "path": "app/api/atlas-review/review-overview/route.ts",
+      "bytes": 406,
+      "sha256": "39f5bb37688cdad0b4d21e04b91a5b7cba8e7a95760d96f40ff8d7b97f699384"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 4207,
+      "sha256": "9ea2e538c39d9220f214bbda10fdaab2ff0fc82b834ee83d8a8cfabd7fe1ff8b"
+    },
+    {
+      "path": "scripts/local-atlas-development-plugin.mjs",
+      "bytes": 2683,
+      "sha256": "ec15f312dbb17f8857be985bc83bd35ec389975c7d1719be77ec35773e73a8f0"
+    },
+    {
+      "path": "components/HeadMriComparisonReview.tsx",
+      "bytes": 4847,
+      "sha256": "c7a6f033484d1d828a63d4367f17918a7f89b0b86336d504d959f0f1ed351aae"
+    },
+    {
+      "path": "components/HeadInsulaComparisonReview.tsx",
+      "bytes": 4771,
+      "sha256": "42d2bf0b0109ef298ce1118550f6860181160fceb8ef0c9902c43e982d1aa2c2"
+    },
+    {
+      "path": "components/HeadOrbitalComparisonReview.tsx",
+      "bytes": 4522,
+      "sha256": "a54578edd7aaefa3d80492d40e20e63ce5771400f735bf224422f1f1eeaf82bb"
+    },
+    {
+      "path": "components/HeadCtBoneLearningReview.tsx",
+      "bytes": 1484,
+      "sha256": "cb07bab5ae3e6397db22f54424f7aa9be5abdae90d521a81ba387a83e403d60c"
+    },
+    {
+      "path": "components/HeadImageOnlyComparisonReview.tsx",
+      "bytes": 4875,
+      "sha256": "d32d72472b7893cc168d3817110542f32b04a767f4af79f35f778d7f6e034f02"
+    },
+    {
+      "path": "lib/head-mri-learning.ts",
+      "bytes": 2388,
+      "sha256": "cd36a4c1bcbdb4eca49aa72402c79d3866824893060123c66004df6421df9714"
+    },
+    {
+      "path": "lib/head-insula-learning.ts",
+      "bytes": 2334,
+      "sha256": "8500b4c9cfe8d137649401d92bf09962cf6452d59d898581d38f9ef790071085"
+    },
+    {
+      "path": "lib/head-orbital-learning.ts",
+      "bytes": 2526,
+      "sha256": "a95b731689ea7121dbecb63b3ee510deabb09f11f6ca93dcf7e1062e405cb8fe"
+    },
+    {
+      "path": "lib/head-ct-bone-learning.ts",
+      "bytes": 2790,
+      "sha256": "de9752cd2ab5af4cd32ed535f843b0aa0034f4401f24530aad9d36822eab92ad"
+    },
+    {
+      "path": "lib/head-cerebellar-learning.ts",
+      "bytes": 2267,
+      "sha256": "f726d8102b03bd3324545f66af326488a0c61bc034ca621fc4237eca26f4b99c"
+    },
+    {
+      "path": "lib/head-surface-validation.ts",
+      "bytes": 1333,
+      "sha256": "85597c4c6a59fb18c862eb404a3da21c3043306985f44f6d2985703b8c1022b6"
+    },
+    {
+      "path": "components/HeadAtlasLearningPicker.tsx",
+      "bytes": 4668,
+      "sha256": "a58584083eddd06d07a5330040215d53127234b3792b04b55888657362cbc5bf"
+    },
+    {
+      "path": "lib/head-window-drag.ts",
+      "bytes": 4281,
+      "sha256": "02f1ccfe8b5f6fc5cfcec9ffacdbdc511b5fa079b63a60bb9fdd32b08c55effa"
+    },
+    {
+      "path": "lib/head-practice-navigation.ts",
+      "bytes": 1081,
+      "sha256": "7cff1bdc4572c6105f5cf1ede265ce567b4cc7ec2512fbf116687c6602599a7b"
+    },
+    {
+      "path": "components/AtlasWorkspaceNavigation.tsx",
+      "bytes": 5603,
+      "sha256": "16e15296f9a3c5241a4b76edf99dbb608be9b4d5206c4e1f86b5a0df02484ba1"
+    },
+    {
+      "path": "components/AtlasRegionNavigation.tsx",
+      "bytes": 4051,
+      "sha256": "95eb6a442695674856de1355c1f765885070164a4760dd2d882a11552b9a64ab"
+    },
+    {
+      "path": "components/HeadSeparateComparisonLink.tsx",
+      "bytes": 543,
+      "sha256": "51bee0fab7830d93eed5ba1ed8fc22ddbcc1a28b0750ccd83183e7c58202f437"
+    },
+    {
+      "path": "lib/head-separate-comparison.ts",
+      "bytes": 1535,
+      "sha256": "4201c24e59631d1ad6dd16dbcd0bfa559a8868c994eec11a12883516729146be"
+    }
+  ]
+}

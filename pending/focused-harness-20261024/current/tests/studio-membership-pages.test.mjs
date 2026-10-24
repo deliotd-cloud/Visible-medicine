@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';import test from 'node:test';import {readFileSync} from 'node:fs';import {createRequire} from 'node:module';import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';
+import {loadPinnedReviewQueue,readPinnedStudioSource} from './studio-membership-source.mjs';
+const require=createRequire(import.meta.url),ts=require('typescript');
+const sourceRoot=new URL('../',import.meta.url),reviewQueue=loadPinnedReviewQueue(sourceRoot,ts);
+function load(file,mocks){const source=readPinnedStudioSource(sourceRoot,file),admitted=file==='app/studio/publishing/page.tsx'?{...mocks,'@/lib/studio-review-queue':reviewQueue}:mocks;const code=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,module={exports:{}};new Function('require','module','exports',code)(id=>{if(Object.hasOwn(admitted,id))return admitted[id];if(id==='react/jsx-runtime')return require(id);throw new Error(`Unexpected Studio page import: ${id}`);},module,module.exports);readPinnedStudioSource(sourceRoot,file);return module.exports;}
+const scope={actorId:'edu:synthetic-author',organizationId:'synthetic-school'},user={userId:'synthetic-author',email:'synthetic@example.invalid',displayName:'Synthetic'};
+const Link=({children,...props})=>React.createElement('a',props,children),Shell=({children})=>children;
+test('cohort server page forwards the authenticated actor and snapshot organization to both forms',async()=>{
+ const captured=[],workbook={id:'workbook:one',courseId:'course:one',status:'published'};
+ const snapshot={organization:{id:scope.organizationId},courses:[{id:'course:one'}],cohorts:[{id:'cohort:one',code:'SYN',title:'Synthetic',courseId:'course:one',status:'active',courseTitle:'Synthetic',memberCount:0,workbookCount:1}],workbooks:[workbook,{id:'foreign',courseId:'course:two',status:'published'}]};
+ const {default:Page}=load('app/studio/cohorts/page.tsx',{'../../chatgpt-auth':{requireChatGPTUser:async()=>user},'@/components/StudioShell':{StudioShell:Shell},'@/components/StudioForms':{CreateCohortForm:props=>{captured.push(['create',props]);return null;},AssignCohortWorkbookForm:props=>{captured.push(['assign',props]);return null;}},'@/lib/education-platform':{getStudioSnapshot:async()=>snapshot}});
+ renderToStaticMarkup(await Page());assert.equal(captured.length,2);for(const [,props]of captured)assert.deepEqual(props.recoveryScope,scope);
+ const assigned=captured.find(([kind])=>kind==='assign')[1];assert.equal(assigned.cohortId,'cohort:one');assert.deepEqual(assigned.workbooks,[workbook]);
+});
+test('publishing server page scopes invitation without replacing independent release workflow authorization',async()=>{
+ let invitation,workflow;const release={id:'release:one',courseId:'course:one',status:'published',accessModel:'invitation',visibility:'private',version:1,title:'Synthetic',summary:'Synthetic',workbookCount:1};
+ const snapshot={organization:{id:scope.organizationId},courses:[{id:'course:one',title:'Synthetic'}],releases:[release],releaseHistory:[],educationRoles:['administrator']};
+ const {default:Page}=load('app/studio/publishing/page.tsx',{'next/link':Link,'../../chatgpt-auth':{requireChatGPTUser:async()=>user},'@/components/StudioShell':{StudioShell:Shell},'@/components/StudioForms':{ReleaseWorkflowActions:props=>{workflow=props;return null;}},'@/components/CourseInvitationPanel':{CourseInvitationPanel:props=>{invitation=props;return null;}},'@/lib/education-platform':{getStudioSnapshot:async()=>snapshot},'@/lib/pilot-readiness':{releaseReadiness:()=>({complete:0,checks:[]})},'@/lib/studio-queues':{parseReleaseQueue:()=>({valid:true,status:'all',course:''}),filterReleaseQueue:items=>items,RELEASE_QUEUE_STATUSES:['published']}});
+ renderToStaticMarkup(await Page({searchParams:Promise.resolve({})}));assert.deepEqual(invitation,{releaseId:release.id,recoveryScope:scope,canCreate:true});assert.equal(workflow.release,release);assert.equal(workflow.canPublish,true);assert.deepEqual(workflow.recoveryScope,scope);
+ release.status='draft';invitation=null;renderToStaticMarkup(await Page({searchParams:Promise.resolve({})}));assert.equal(invitation.canCreate,false,'old invitation metadata remains inspectable without creating draft-release invitations');
+});

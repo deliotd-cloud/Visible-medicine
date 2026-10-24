@@ -1,0 +1,258 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-24T20:27:54.481Z",
+  "sourceIdentity": {
+    "kind": "incremental-selected-text-supplement-not-cumulative",
+    "websiteSourceSha256": "cf587b88877f0a51b082e1ac039792938ccd6f0a6272a958669651a651b22a8e",
+    "requiredBase": {
+      "branch": "backup/additional-release-proposals-20261024",
+      "head": "af04f91f94762bbd10db4967db993f3af07f2714",
+      "tree": "191b051fe043317b3f724de64df819d5e335ea8f",
+      "receiptSha256": "be39d82703ea49be9bb0e1cce720b4569f8fdc2c23f0b7fbdef2330e2d483ee8"
+    },
+    "requiredSupplement": {
+      "branch": "backup/review-harness-preparation-20261024",
+      "head": "7340bdba2554dde5b8933cc92152e4005f2bb13e",
+      "tree": "c9de18b942755d37118bc8ad3f7e6a37d5ebe664",
+      "receiptSha256": "921b507be13b204084ffb0422e587de5330e80b2c6312ccfdedaa690a4610705"
+    },
+    "localCheckpoints": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261024-returned-harness-main-review/checkpoint.json",
+        "sha256": "f3c78255ae9aa2ec10bb952f22f1789b339a0a576e5e8380a7e1816de5aec22b"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261024-head-studio-focused/checkpoint.json",
+        "sha256": "b31b781dc7d81281c51d3d7fbec9f0639e79235693ee71cd9b9d18dc22d48800"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "pending/focused-harness-20261024/binder/tests/atlas-runtime-expansion-binding.test.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-binder-history-repair/candidate/tests/atlas-runtime-expansion-binding.test.mjs"
+      },
+      {
+        "path": "pending/focused-harness-20261024/binder/tests/binder-history-controls.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-binder-history-repair/candidate/tests/binder-history-controls.mjs"
+      },
+      {
+        "path": "pending/focused-harness-20261024/binder/tests/fixtures/binder-history-20261024.json",
+        "restore": "F:/VisibleMedicine/staging/20261024-binder-history-repair/candidate/tests/fixtures/binder-history-20261024.json"
+      },
+      {
+        "path": "pending/focused-harness-20261024/binder/tests/fixtures/binder-history-20261024/bind-clinical-review.mjs.raw",
+        "restore": "F:/VisibleMedicine/staging/20261024-binder-history-repair/candidate/tests/fixtures/binder-history-20261024/bind-clinical-review.mjs.raw"
+      },
+      {
+        "path": "pending/focused-harness-20261024/studio/tests/studio-course-draft-discard.test.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-studio-draft-harness-repair/candidate/tests/studio-course-draft-discard.test.mjs"
+      },
+      {
+        "path": "pending/focused-harness-20261024/studio/tests/studio-draft-scope.test.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-studio-draft-harness-repair/candidate/tests/studio-draft-scope.test.mjs"
+      },
+      {
+        "path": "pending/focused-harness-20261024/studio/tests/studio-draft-dependency-source.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-studio-draft-harness-repair/candidate/tests/studio-draft-dependency-source.mjs"
+      },
+      {
+        "path": "pending/focused-harness-20261024/current/tests/head-gap-concept-teaching.test.ts",
+        "restore": "F:/VisibleMedicine/staging/20261024-head-comparison-harness-proposal/candidate/tests/head-gap-concept-teaching.test.ts"
+      },
+      {
+        "path": "pending/focused-harness-20261024/current/tests/head-guided-3d-fallback.test.ts",
+        "restore": "F:/VisibleMedicine/staging/20261024-head-comparison-harness-proposal/candidate/tests/head-guided-3d-fallback.test.ts"
+      },
+      {
+        "path": "pending/focused-harness-20261024/current/tests/head-separate-comparison-test-source.ts",
+        "restore": "F:/VisibleMedicine/staging/20261024-head-comparison-harness-proposal/candidate/tests/head-separate-comparison-test-source.ts"
+      },
+      {
+        "path": "pending/focused-harness-20261024/current/tests/head-separate-comparison-test-source.test.ts",
+        "restore": "F:/VisibleMedicine/staging/20261024-head-comparison-harness-proposal/candidate/tests/head-separate-comparison-test-source.test.ts"
+      },
+      {
+        "path": "pending/focused-harness-20261024/current/tests/head-guided-steps.test.ts",
+        "restore": "F:/VisibleMedicine/staging/20261024-guided-current-copy-proposal/candidate/tests/head-guided-steps.test.ts"
+      },
+      {
+        "path": "pending/focused-harness-20261024/current/tests/studio-membership-pages.test.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-studio-terminal-failure-audit/candidate/tests/studio-membership-pages.test.mjs"
+      },
+      {
+        "path": "pending/focused-harness-20261024/current/tests/studio-membership-source.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261024-studio-terminal-failure-audit/candidate/tests/studio-membership-source.mjs"
+      },
+      {
+        "path": "recipes/source-test-overlay-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\source-test-overlay-20261024.mjs"
+      },
+      {
+        "path": "recipes/run-head-source-overlay-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\run-head-source-overlay-20261024.mjs"
+      },
+      {
+        "path": "recipes/run-returned-harness-mirror-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\run-returned-harness-mirror-20261024.mjs"
+      },
+      {
+        "path": "recipes/verify-returned-harnesses-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\verify-returned-harnesses-20261024.mjs"
+      },
+      {
+        "path": "recipes/verify-membership-harness-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\verify-membership-harness-20261024.mjs"
+      },
+      {
+        "path": "recipes/verify-guided-copy-epoch-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\verify-guided-copy-epoch-20261024.mjs"
+      },
+      {
+        "path": "recipes/source-only-backup-20261019.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\source-only-backup-20261019.mjs"
+      },
+      {
+        "path": "recipes/backup-focused-harness-source-20261024.mjs",
+        "restore": "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\backup-focused-harness-source-20261024.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "pending/focused-harness-20261024/binder/tests/atlas-runtime-expansion-binding.test.mjs",
+      "bytes": 10433,
+      "sha256": "8e0185da3020249853a6704f5bec0f0e02c98cae0ecc9344aa59bf87c098087f"
+    },
+    {
+      "path": "pending/focused-harness-20261024/binder/tests/binder-history-controls.mjs",
+      "bytes": 3717,
+      "sha256": "03acf90a36c570a697bb51516944c8addb98facee611cfb43bf3f92fe63d635c"
+    },
+    {
+      "path": "pending/focused-harness-20261024/binder/tests/fixtures/binder-history-20261024.json",
+      "bytes": 9646,
+      "sha256": "634943d1384052b71fcac402fa27acfde9d7c8fb165b60a194ae787b10ee8609"
+    },
+    {
+      "path": "pending/focused-harness-20261024/binder/tests/fixtures/binder-history-20261024/bind-clinical-review.mjs.raw",
+      "bytes": 8282,
+      "sha256": "0339eedafdc65e60fb35efd7f59c839a57afa274966c405e4b373f8722f95d06"
+    },
+    {
+      "path": "pending/focused-harness-20261024/studio/tests/studio-course-draft-discard.test.mjs",
+      "bytes": 16246,
+      "sha256": "e68c6ec19ca3b01334a589e6e8123d4e966e6b675978ec2f20889e7e48cc2da3"
+    },
+    {
+      "path": "pending/focused-harness-20261024/studio/tests/studio-draft-scope.test.mjs",
+      "bytes": 17352,
+      "sha256": "ff5cbcdbccc1f3a6839b173efeadc47e5d8279b69d79e33d8334c088c802f6d5"
+    },
+    {
+      "path": "pending/focused-harness-20261024/studio/tests/studio-draft-dependency-source.mjs",
+      "bytes": 2389,
+      "sha256": "7dcc1e1b0bc35519b8b3790d6d422377f73c667744a0dfd6edf40ea93c00a6b5"
+    },
+    {
+      "path": "pending/focused-harness-20261024/current/tests/head-gap-concept-teaching.test.ts",
+      "bytes": 11135,
+      "sha256": "9ab90e22ade18a728d9a049566f5cecce2feeccb07b3cef254a957be6569c8c9"
+    },
+    {
+      "path": "pending/focused-harness-20261024/current/tests/head-guided-3d-fallback.test.ts",
+      "bytes": 8225,
+      "sha256": "e4cd6c0644e20544b4b92ce41d043b5c04d37182a0de30005e27db655133eafb"
+    },
+    {
+      "path": "pending/focused-harness-20261024/current/tests/head-separate-comparison-test-source.ts",
+      "bytes": 2436,
+      "sha256": "395b5006f811e5db7f7dff713985d2e67ded3dde8845ae40298af67affe826bb"
+    },
+    {
+      "path": "pending/focused-harness-20261024/current/tests/head-separate-comparison-test-source.test.ts",
+      "bytes": 1964,
+      "sha256": "17c0c682fde84804918b2f9c9eec8b5ac441ac9e26a235858bb6c47ec02dbc92"
+    },
+    {
+      "path": "pending/focused-harness-20261024/current/tests/head-guided-steps.test.ts",
+      "bytes": 39604,
+      "sha256": "17af4dd8120925156c8fac0bdea086d19e7a28f2108fc5fd7cd31039874838ff"
+    },
+    {
+      "path": "pending/focused-harness-20261024/current/tests/studio-membership-pages.test.mjs",
+      "bytes": 4355,
+      "sha256": "687a9a848f51422e68e9a01036cf7314ea9c7fa345bd49fb38cf0d67526d8abc"
+    },
+    {
+      "path": "pending/focused-harness-20261024/current/tests/studio-membership-source.mjs",
+      "bytes": 1797,
+      "sha256": "90ef0f9eb28850ebede5cb9e395eadaa6bf3c0b6d9f8694b83edc33ed7e02a1d"
+    },
+    {
+      "path": "recipes/source-test-overlay-20261024.mjs",
+      "bytes": 3072,
+      "sha256": "bfcf7aeadc08796421f30831853af066d8c85f6112959fea1e5dba50b7489708"
+    },
+    {
+      "path": "recipes/run-head-source-overlay-20261024.mjs",
+      "bytes": 8620,
+      "sha256": "9e6eb2bef3138627c39fab4966899c2ffc5b2fd068f3d0b7cf4f23ac6f3f7144"
+    },
+    {
+      "path": "recipes/run-returned-harness-mirror-20261024.mjs",
+      "bytes": 7851,
+      "sha256": "f467df7681250abd5d4a9ccd5dd237f78e6cbdb4e89acdd9fa8bee02409a5271"
+    },
+    {
+      "path": "recipes/verify-returned-harnesses-20261024.mjs",
+      "bytes": 8712,
+      "sha256": "24cec9e272f2d31df744638e76f25157b6c56259c2ca2bae19499acca5d3aadd"
+    },
+    {
+      "path": "recipes/verify-membership-harness-20261024.mjs",
+      "bytes": 3370,
+      "sha256": "e8a133ab928775b1c5e972ad08ee2e4f3dfa918b01d7418680f1210f6f232883"
+    },
+    {
+      "path": "recipes/verify-guided-copy-epoch-20261024.mjs",
+      "bytes": 4280,
+      "sha256": "6c601e345ec170c40df16317c35f33d1234fbe8a6c989ddeaab3051018be7489"
+    },
+    {
+      "path": "recipes/source-only-backup-20261019.mjs",
+      "bytes": 7700,
+      "sha256": "3f8ea65871f15558d46c1c2a36feb0dee95d2408207f9d2762976ae66ead5212"
+    },
+    {
+      "path": "recipes/backup-focused-harness-source-20261024.mjs",
+      "bytes": 6282,
+      "sha256": "63eef4cb2adf1610c2499d118475861c31bec36a2c0ae0e4a4d1dc2e908e68af"
+    }
+  ],
+  "removed": [],
+  "scope": "22explicit first-party text test/helper/JSON provenance fixture and recipe files only, <=192KiB. Requires the exact earlier filtered base and Review-harness supplement; no earlier unique source removed. Not a cumulative, whole/private or runnable backup. No scans, masks, models, actual private references, identifiers, licence addenda, dependencies, raw QA, local decision records or later coordination uploaded. One source-bound guided copy assertion is corrected without a product or navigation change. No deployment or clinical approval.",
+  "proof": {
+    "focusedDistinctCasesPassed": 66,
+    "sourceControlsPassed": 9,
+    "focusedSkipped": 0,
+    "fullStockReleaseStillFailing": true,
+    "sourceOnly": true,
+    "rawQaUploaded": false,
+    "selectedBytes": 187468,
+    "memoryAtStart": {
+      "AvailableMBytes": 884,
+      "PercentCommittedBytesInUse": 61
+    },
+    "previewChanged": false,
+    "installed": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
