@@ -1,0 +1,47 @@
+{
+  "parentReportedPass": 57,
+  "parentWholeRoots": 11,
+  "mandatoryOriginalChildCounts": [
+    {
+      "role": "epoch2",
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "passing": true
+    },
+    {
+      "role": "original6",
+      "counts": {
+        "tests": 6,
+        "pass": 6,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "passing": true
+    }
+  ],
+  "diagnosticGuardCases": 3,
+  "originalAssertionsAndSourceRolesPreserved": true,
+  "sourcePathsChecked": 6802,
+  "strictGraphByteInputsPreserved": 6204,
+  "actualStrictAndProductionSourceSha256": "70de9af5459217c393f1f73be44aa93d3c967f88e8254ae15afdd759ffbec84e",
+  "freshStrictOrBuildForThisSource": false,
+  "reusedProductionArtifacts": 1141,
+  "nativeJobMemoryCeilingMiB": 2048,
+  "calibrationRefusedAllocationExit": 42,
+  "fullStockComplete": false,
+  "fullStockPassing": false,
+  "noticeMismatchStillNotPassing": true,
+  "medicalDataOrRawQaUploaded": false,
+  "selectedBytes": 155400,
+  "ownerPreviewChanged": false,
+  "installed": false,
+  "clinicalApproval": false
+}

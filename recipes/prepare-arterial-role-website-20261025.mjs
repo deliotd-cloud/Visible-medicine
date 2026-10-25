@@ -1,0 +1,34 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {hash,json} from './seal-simple-website-successor.mjs';
+import {memoryGate} from './native-website-integration-stage-20261025.mjs';
+const memory=memoryGate(2048),parent='F:/VisibleMedicine/staging/20261025-wave4-digest-guard-website',parentFile=parent+'/SOURCE_CANDIDATE.json',parentHash='fef734825da049d23349b5eff39683a11f28749ddc30511511f1485600f705c5';
+const stage='F:/VisibleMedicine/staging/20261025-arterial-role-website',site=stage+'/website',proposal='F:/VisibleMedicine/staging/20261025-arterial-delivery-roles-proposal';
+assert(!fs.existsSync(stage));assert.equal(hash(parentFile),parentHash);assert.deepEqual(json('CURRENT_CHECKPOINT.json').activeWork.current.activeExecutionSessions,[]);
+const old=json(parentFile),patch=json(proposal+'/PATCHSET.json');assert.equal(hash(proposal+'/PATCHSET.json'),'250b801a2c226b62665e27f739aa2df562613ca97f1aaf043497ed0d33464802');assert.equal(patch.files.length,9);
+for(const r of old.sourceRows)assert.equal(hash(old.website+'/'+r.path),r.sha256,r.path);
+fs.mkdirSync(site,{recursive:true});fs.cpSync(old.website+'/.git',site+'/.git',{recursive:true,errorOnExist:true,force:false,dereference:false});
+for(const r of old.sourceRows){const to=site+'/'+r.path;fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(old.website+'/'+r.path,to,fs.constants.COPYFILE_EXCL);}
+fs.symlinkSync(fs.realpathSync(old.website+'/node_modules'),site+'/node_modules','junction');fs.symlinkSync(old.atlas,stage+'/atlas','junction');fs.mkdirSync(site+'/.next/types',{recursive:true});fs.copyFileSync(old.website+'/.next/types/routes.d.ts',site+'/.next/types/routes.d.ts',fs.constants.COPYFILE_EXCL);
+for(const r of json('F:/VisibleMedicine/staging/20261025-studio-access-website/PREPARATION.json').historicalFixtures){const to=stage+'/before/'+r.path;fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(parent+'/before/'+r.path,to,fs.constants.COPYFILE_EXCL);assert.equal(hash(to),r.sha256);}
+const rows=new Map(old.sourceRows.map(r=>[r.path,r])),changed=[],added=[];
+for(const r of patch.files){assert(r.path.startsWith('tests/')&&!r.path.includes('..'));assert.equal(hash(patch.candidateRoot+'/'+r.path),r.candidateSha256,r.path);const to=site+'/'+r.path;if(r.status==='changed'){assert.equal(hash(to),r.beforeSha256,r.path);changed.push(r.path);}else{assert.equal(r.status,'added');assert(!fs.existsSync(to));added.push(r.path);}fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(patch.candidateRoot+'/'+r.path,to);}
+// Tighten inconsistent TAP rejection; all original positive/count assertions remain.
+const mainRepairs=[];
+function repair(p,before,after){const file=site+'/'+p,bytes=fs.readFileSync(file,'utf8');assert.equal(bytes.split(before).length,2,p);const beforeHash=hash(file);fs.writeFileSync(file,bytes.replace(before,after));mainRepairs.push({path:p,beforeSha256:beforeHash,sha256:hash(file),scope:'Reject contradictory failed/skip/todo top-level points, even with a forged all-pass footer.'});}
+const seam=" assert.equal(plans.length,1,'One final native TAP plan');";
+repair('tests/arterial-delivery-roles.mjs',seam," assert(!/^not ok \\d+/m.test(tap),'No failed original top-level point');\n assert(!/^(?:not )?ok \\d+.*#\\s*(?:skip|todo)\\b/im.test(tap),'No skipped or todo original top-level point');\n"+seam);
+const negative="for(const broken of [terminal(cases-1),";
+repair('tests/arterial-delivery-role-integrity.test.mjs',negative,"for(const broken of [tap.replace('ok 1 -','not ok 1 -'),tap.replace('ok 1 - original case 1','ok 1 - original case 1 # SKIP'),tap.replace('ok 1 - original case 1','ok 1 - original case 1 # TODO'),terminal(cases-1),");
+for(const r of patch.files)rows.set(r.path,{path:r.path,bytes:fs.statSync(site+'/'+r.path).size,sha256:hash(site+'/'+r.path)});assert.equal(rows.size,6802);
+for(const r of patch.protectedUnchanged)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+for(const r of rows.values())assert.equal(hash(site+'/'+r.path),r.sha256,r.path);for(const r of old.sourceRows)assert.equal(hash(old.website+'/'+r.path),r.sha256,r.path);
+const typedFile='F:/VisibleMedicine/staging/20261025-studio-access-website/checks/types-full-attempt-2/RESULT.json',typed=json(typedFile),typedRoot='F:/VisibleMedicine/staging/20261025-studio-access-website/website';
+for(const r of typed.sourceFiles){const target=r.path.startsWith(typedRoot+'/')?site+r.path.slice(typedRoot.length):r.path;assert.equal(hash(target),r.sha256,r.path);}
+const artifactFile=old.buildArtifacts,build=json(artifactFile);assert.equal(hash(artifactFile),old.buildArtifactsSha256);fs.mkdirSync(site+'/dist');for(const r of build.files){const to=site+'/dist/'+r.path;fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(build.root+'/'+r.path,to,fs.constants.COPYFILE_EXCL);assert.equal(hash(to),r.sha256);}
+const file=stage+'/SOURCE_CANDIDATE.json';fs.writeFileSync(file,JSON.stringify({...old,at:new Date().toISOString(),website:site,parent:parentFile,parentSha256:parentHash,sourceRows:[...rows.values()].sort((a,b)=>a.path.localeCompare(b.path)),sourcePaths:rows.size,changedPaths:changed,addedPaths:added,testOnlyProposal:proposal+'/PATCHSET.json',testOnlyProposalSha256:hash(proposal+'/PATCHSET.json'),mainRepairs,productionSourceUnchanged:true,fullStrictGraphByteInputsPreserved:typed.sourceFiles.length,freshStrictOrBuildForThisSource:false,wholeSuitePassing:false,installed:false},null,2)+'\n',{flag:'wx'});
+const configuration=json(proposal+'/LOCAL_ONLY/CONFIGURATION.json');fs.writeFileSync(stage+'/LOCAL_TEST_CONFIGURATION.json',JSON.stringify(configuration,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify({at:new Date().toISOString(),memory,parent:parentFile,parentSha256:parentHash,source:file,sourceSha256:hash(file),sourcePaths:rows.size,patchset:proposal+'/PATCHSET.json',patchsetSha256:hash(proposal+'/PATCHSET.json'),mainRepairs,strictGraphInputSha256:hash(typedFile),strictGraphFilesPreserved:6204,buildArtifacts:artifactFile,buildArtifactsSha256:hash(artifactFile),privateStateCopied:false,ownerPreviewChanged:false},null,2)+'\n',{flag:'wx'});
+const index=json('CURRENT_CHECKPOINT.json');index.activeWork.current.pendingArterialRuntimeTriage={...index.activeWork.current.pendingArterialRuntimeTriage,state:'reviewed and integrated into separate6802source candidate; no runtime claim',source:file,sourceSha256:hash(file),sourcePaths:rows.size,mainTightenedContradictoryTapRefusals:true};fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(index,null,2)+'\n');
+console.log(JSON.stringify({source:file,sha256:hash(file),paths:rows.size,changed:changed.length,added:added.length,mainRepairs:mainRepairs.length,originalSixAndTwoAndThreePreserved:true}));

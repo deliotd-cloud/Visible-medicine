@@ -1,0 +1,288 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T04:20:23.112Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-arterial-role-and-diagnostic-guard-not-cumulative",
+    "websiteSourceSha256": "8d329c4241b7d0fadee3890e24b69f5a9af366a4adad16a090d4bfe08fdc92f2",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalParent": {
+      "path": "F:/VisibleMedicine/staging/20261025-wave4-digest-guard-website/SOURCE_CANDIDATE.json",
+      "sha256": "fef734825da049d23349b5eff39683a11f28749ddc30511511f1485600f705c5",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/studio-access-source-20261025",
+      "head": "6a6c52089211d1ee2f8f76f0d78a27dc2c95db29",
+      "tree": "a25403b34b3486194dda9a656259ab43bca9e145",
+      "receiptSha256": "22c63f5e811e85df390f835bf760ef1b98930b5ef554965d5db4fb2ba013aa3a"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/arterial-epoch-preservation.test.mjs",
+        "restore": "website/tests/arterial-epoch-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-arterial-evidence-limits.test.mjs",
+        "restore": "website/tests/atlas-arterial-evidence-limits.test.mjs"
+      },
+      {
+        "path": "website/tests/release-diagnostic-context-inverse.mjs",
+        "restore": "website/tests/release-diagnostic-context-inverse.mjs"
+      },
+      {
+        "path": "website/tests/arterial-delivery-role-integrity.test.mjs",
+        "restore": "website/tests/arterial-delivery-role-integrity.test.mjs"
+      },
+      {
+        "path": "website/tests/arterial-delivery-roles.mjs",
+        "restore": "website/tests/arterial-delivery-roles.mjs"
+      },
+      {
+        "path": "website/tests/atlas-arterial-current-delivery.test.mjs",
+        "restore": "website/tests/atlas-arterial-current-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/arterial-delivery-roles/manifest.json",
+        "restore": "website/tests/fixtures/arterial-delivery-roles/manifest.json"
+      },
+      {
+        "path": "website/tests/fixtures/arterial-delivery-roles/original-six.mjs.raw",
+        "restore": "website/tests/fixtures/arterial-delivery-roles/original-six.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/arterial-delivery-roles/original-two.mjs.raw",
+        "restore": "website/tests/fixtures/arterial-delivery-roles/original-two.mjs.raw"
+      },
+      {
+        "path": "website/tests/atlas-current-history-wave4-contract.test.mjs",
+        "restore": "website/tests/atlas-current-history-wave4-contract.test.mjs"
+      },
+      {
+        "path": "website/tests/wave4-notice-digest-guard.test.mjs",
+        "restore": "website/tests/wave4-notice-digest-guard.test.mjs"
+      },
+      {
+        "path": "recipes/prepare-wave4-digest-guard-website-20261025.mjs",
+        "restore": "coordination/prepare-wave4-digest-guard-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/wave4-notice-digest-guard.template.mjs",
+        "restore": "coordination/wave4-notice-digest-guard.template.mjs"
+      },
+      {
+        "path": "recipes/check-wave4-digest-guard-20261025.mjs",
+        "restore": "coordination/check-wave4-digest-guard-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-wave4-guard-replay-20261025.mjs",
+        "restore": "coordination/prepare-wave4-guard-replay-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-arterial-role-website-20261025.mjs",
+        "restore": "coordination/prepare-arterial-role-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-arterial-role-native-check-20261025.mjs",
+        "restore": "coordination/run-arterial-role-native-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-arterial-role-native-check-v2-20261025.mjs",
+        "restore": "coordination/run-arterial-role-native-check-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-arterial-inverse-consumers-20261025.mjs",
+        "restore": "coordination/check-arterial-inverse-consumers-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-arterial-inverse-consumers-v2-20261025.mjs",
+        "restore": "coordination/check-arterial-inverse-consumers-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/repair-arterial-normalization-boundary-20261025.mjs",
+        "restore": "coordination/repair-arterial-normalization-boundary-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-arterial-guard-source-20261025.mjs",
+        "restore": "coordination/backup-arterial-guard-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/native-job-supervisor-2g.ps1",
+        "restore": "coordination/native-job-supervisor-2g.ps1"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/arterial-epoch-preservation.test.mjs",
+      "bytes": 260,
+      "sha256": "52e471a4cc43e14c4180f85a3542d21675bcbcde93356c5e8e6925e78282dcc9"
+    },
+    {
+      "path": "website/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 19322,
+      "sha256": "6efaa114e376ee2394d8ba773883dc36754e142eda97f16c6e3ae8ec9a3ff237"
+    },
+    {
+      "path": "website/tests/release-diagnostic-context-inverse.mjs",
+      "bytes": 4269,
+      "sha256": "baec9aaf4dd35321d811f13f8b2a8dc1f0c6c10da9a9b8d4ae710cb646f06bdd"
+    },
+    {
+      "path": "website/tests/arterial-delivery-role-integrity.test.mjs",
+      "bytes": 5009,
+      "sha256": "afb44c4237a3de7d24b7b7db0fa3593f89b3d860b2877847ee948d1b6b6892c4"
+    },
+    {
+      "path": "website/tests/arterial-delivery-roles.mjs",
+      "bytes": 14247,
+      "sha256": "f98f5f571e73adebceb22c8db1e8d2e9990266577790d6fb0e9aeddcc713263c"
+    },
+    {
+      "path": "website/tests/atlas-arterial-current-delivery.test.mjs",
+      "bytes": 17594,
+      "sha256": "cd5b7082922746ae5af6e781c4538db225c30a0776eb41646a39c5a8e61a5df6"
+    },
+    {
+      "path": "website/tests/fixtures/arterial-delivery-roles/manifest.json",
+      "bytes": 3068,
+      "sha256": "cffc1441ba02daf23c92565a6368be51b6c2794413f8718104afb426f5cc6951"
+    },
+    {
+      "path": "website/tests/fixtures/arterial-delivery-roles/original-six.mjs.raw",
+      "bytes": 18997,
+      "sha256": "a6cbf916326c68b471e7cc16998e59715cb1dd4a44c32fff18fc975f096f58f3"
+    },
+    {
+      "path": "website/tests/fixtures/arterial-delivery-roles/original-two.mjs.raw",
+      "bytes": 4037,
+      "sha256": "95b6fc4f9d3f5ecef3dd1c37c876fb959c89ad83107f66f343d5c00e041587be"
+    },
+    {
+      "path": "website/tests/atlas-current-history-wave4-contract.test.mjs",
+      "bytes": 8600,
+      "sha256": "14d2dd9df8c1923fe9a6a338e80e79b87ccf5a5882859975af27f223beb67847"
+    },
+    {
+      "path": "website/tests/wave4-notice-digest-guard.test.mjs",
+      "bytes": 2256,
+      "sha256": "cf8505c4815bda3498c6bb8fd981a900026b8066be395851ea1ccaa4478edce4"
+    },
+    {
+      "path": "recipes/prepare-wave4-digest-guard-website-20261025.mjs",
+      "bytes": 5986,
+      "sha256": "a39fc97092d82497738ffe3ed309051b51e880feab0a20c1ae7e1629b583e9c1"
+    },
+    {
+      "path": "recipes/wave4-notice-digest-guard.template.mjs",
+      "bytes": 2256,
+      "sha256": "cf8505c4815bda3498c6bb8fd981a900026b8066be395851ea1ccaa4478edce4"
+    },
+    {
+      "path": "recipes/check-wave4-digest-guard-20261025.mjs",
+      "bytes": 668,
+      "sha256": "6ff987e2975d035ebfd46bb1c4f0f98fa0ff7e7b1e4e3a3f5c0aebda3acfa299"
+    },
+    {
+      "path": "recipes/prepare-wave4-guard-replay-20261025.mjs",
+      "bytes": 3663,
+      "sha256": "c39f7e792f5e0a5d44c70991de07ac926f1ee51304069010d3d95f52afd00bae"
+    },
+    {
+      "path": "recipes/prepare-arterial-role-website-20261025.mjs",
+      "bytes": 6810,
+      "sha256": "8c68c8680806fe263f1cbbedcf12ae94233e27484fbd0e4306573cd9816dbf18"
+    },
+    {
+      "path": "recipes/run-arterial-role-native-check-20261025.mjs",
+      "bytes": 7824,
+      "sha256": "0bd8af950c55ec772b58d29a4da45ca33eb5032f67b45c6baf3da52853c1515c"
+    },
+    {
+      "path": "recipes/run-arterial-role-native-check-v2-20261025.mjs",
+      "bytes": 8008,
+      "sha256": "1c847a11cade100eb0f756cbeaf88d44142a2a70b8f759a480012444d80693e5"
+    },
+    {
+      "path": "recipes/check-arterial-inverse-consumers-20261025.mjs",
+      "bytes": 1353,
+      "sha256": "50d1d61671d660ef649fd44c2a1be158a55241381c49fc118f173ef69c62a1c8"
+    },
+    {
+      "path": "recipes/check-arterial-inverse-consumers-v2-20261025.mjs",
+      "bytes": 1373,
+      "sha256": "6d466bcd4638f6b27a7397d3fc907b76852e9d3f2db2edc3d9b8b1b4c7fe2ec2"
+    },
+    {
+      "path": "recipes/repair-arterial-normalization-boundary-20261025.mjs",
+      "bytes": 3912,
+      "sha256": "1d88cd9bde5fe3c0bae66c945decbd0e4ceb071a9b97aad394e48daab3c8cc7c"
+    },
+    {
+      "path": "recipes/backup-arterial-guard-source-20261025.mjs",
+      "bytes": 6847,
+      "sha256": "b5b31d3fc7fe9497f7ad0ba13220ec99019d41c0115dbc19cf3f847aa4e32535"
+    },
+    {
+      "path": "recipes/native-job-supervisor-2g.ps1",
+      "bytes": 9041,
+      "sha256": "1239eab31096552e7f78b508b58b873ea85d1bb3d8f3ee8ac4e4cfe7039bd2ee"
+    }
+  ],
+  "removed": [],
+  "scope": "Eleven first-party test/helper/code-fixture paths, eleven workflow recipes, one calibrated native process-job supervisor source. No medical images, scans, masks, annotations/coordinates, private closure inventories, local configuration, raw QA, personal decisions, dependencies, geometry or canonical Git ancestry. Incremental selected source supplement only; not cumulative, whole/private or runnable backup. Historical child cases remain distinct from parent counts; no full-suite, clinical, registration, installation or public deployment claim.",
+  "proof": {
+    "parentReportedPass": 57,
+    "parentWholeRoots": 11,
+    "mandatoryOriginalChildCounts": [
+      {
+        "role": "epoch2",
+        "counts": {
+          "tests": 2,
+          "pass": 2,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      },
+      {
+        "role": "original6",
+        "counts": {
+          "tests": 6,
+          "pass": 6,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      }
+    ],
+    "diagnosticGuardCases": 3,
+    "originalAssertionsAndSourceRolesPreserved": true,
+    "sourcePathsChecked": 6802,
+    "strictGraphByteInputsPreserved": 6204,
+    "actualStrictAndProductionSourceSha256": "70de9af5459217c393f1f73be44aa93d3c967f88e8254ae15afdd759ffbec84e",
+    "freshStrictOrBuildForThisSource": false,
+    "reusedProductionArtifacts": 1141,
+    "nativeJobMemoryCeilingMiB": 2048,
+    "calibrationRefusedAllocationExit": 42,
+    "fullStockComplete": false,
+    "fullStockPassing": false,
+    "noticeMismatchStillNotPassing": true,
+    "medicalDataOrRawQaUploaded": false,
+    "selectedBytes": 155400,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

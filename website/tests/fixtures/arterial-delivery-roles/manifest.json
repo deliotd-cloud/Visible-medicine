@@ -1,0 +1,80 @@
+{
+  "schema": "vm-arterial-delivery-roles/1",
+  "original6": {
+    "bytes": 18997,
+    "sha256": "a6cbf916326c68b471e7cc16998e59715cb1dd4a44c32fff18fc975f096f58f3"
+  },
+  "epoch2": {
+    "bytes": 4037,
+    "sha256": "95b6fc4f9d3f5ecef3dd1c37c876fb959c89ad83107f66f343d5c00e041587be"
+  },
+  "childCases": {
+    "original6": 6,
+    "epoch2": 2
+  },
+  "collectors": {
+    "original6": "6efaa114e376ee2394d8ba773883dc36754e142eda97f16c6e3ae8ec9a3ff237",
+    "epoch2": "52e471a4cc43e14c4180f85a3542d21675bcbcde93356c5e8e6925e78282dcc9"
+  },
+  "identities": {
+    "original6": {
+      "source": "6e810b188dde401f6c19a970928f316a479696df",
+      "sourceTree": "90afe5163dbd9386aa37c93d525fa4c70e8c1b9e",
+      "runtimeSources": {
+        "head-neck": "6e810b188dde401f6c19a970928f316a479696df",
+        "shoulder": "6e810b188dde401f6c19a970928f316a479696df",
+        "lower-limb": "6e810b188dde401f6c19a970928f316a479696df",
+        "female-pelvis": "6e810b188dde401f6c19a970928f316a479696df"
+      },
+      "reviewIntegration": "8e87c25ff5c1deef69324e197f412090d6ea7b30ed528004f458e4118a421640",
+      "reviewSourceFiles": 1605
+    },
+    "current": {
+      "source": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+      "sourceTree": "6940282a3ae0462961b9b99a690c70f282ab8ce7",
+      "runtimeSources": {
+        "head-neck": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+        "shoulder": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+        "lower-limb": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+        "female-pelvis": "727ed5b451ae940a01e56272c8fbc703ea3b0095"
+      },
+      "reviewIntegration": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+      "reviewSourceFiles": 1605
+    },
+    "installed": {
+      "source": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+      "sourceTree": "e9165d7122361f809a267af1414b337b69097fe2",
+      "runtimeSources": {
+        "head-neck": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+        "shoulder": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+        "lower-limb": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+        "female-pelvis": "190a63238eadcf906abe89dcbb6a67c88afe70b9"
+      },
+      "reviewIntegration": "ae8413f4b4371381ad4451f7fb33478fa761330c35acbd95025d5bf8f3ebcd59",
+      "reviewSourceFiles": 1558
+    }
+  },
+  "currentPrefix": {
+    "bytes": 15612,
+    "sha256": "12a6a60d6596a70dff395f00de0b29505fff032b5e8d28de3bfe5c32222712a2"
+  },
+  "localClosure": {
+    "sha256": "bb7f63aee42681cd7caa0bf66e9b7aae2ada2524600bf06500ac83dd4be87e5b",
+    "counts": {
+      "original6": {
+        "historicalWebsite": 1241,
+        "historicalAtlas": 12
+      },
+      "epoch2": {
+        "historicalWebsite": 3,
+        "installedWebsite": 16
+      }
+    }
+  },
+  "historyOriginalSha256": "145f1ad320601b00e5cbed4d8d02c06d83d020e460d4601d28e8d1d0b3d4cd8b",
+  "historicalReceipt": {
+    "sha256": "327c71c66e4cbd2f2483bb19047241cc7224a321542131f037e312e05db18ce2",
+    "receiptRowsCrossChecked": 1237,
+    "sourceRows": 6672
+  }
+}

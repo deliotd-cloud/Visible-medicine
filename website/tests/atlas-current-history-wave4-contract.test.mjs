@@ -1,0 +1,129 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
+
+const originals=JSON.parse(readFileSync(new URL('./fixtures/current-history-wave4-before-20261016/manifest.json',import.meta.url)));
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const registrations=text=>[...text.matchAll(/^test\(['"]([^'"]+)['"]/gm)].map(match=>match[1]);
+const git=(repo,revision,path)=>execFileSync('git',['-C',repo,'show',`${revision}:${path}`],{maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+
+test('seven exact originals retain all seven registered tests and imported checks',()=>{
+ assert.equal(originals.schema,'vm-current-history-wave4-originals-1');
+ assert.equal(originals.files.length,7);
+ let total=0;
+ for(const file of originals.files){
+  const previous=readFileSync(new URL(`./fixtures/current-history-wave4-before-20261016/${file.name}.txt`,import.meta.url));
+  const active=readFileSync(new URL(`./${file.name}`,import.meta.url));
+  assert.equal(sha(previous),file.sha256,file.name);
+  const oldTests=registrations(previous.toString()),newTests=registrations(active.toString());
+  assert.equal(oldTests.length,file.registrations,file.name);
+  assert.deepEqual(newTests,oldTests,file.name);
+  assert(!/^\s*(?:test|describe)\.skip\(/m.test(active.toString()),file.name);
+  assert([...active.toString().matchAll(/\bassert\./g)].length >= [...previous.toString().matchAll(/\bassert\./g)].length,file.name);
+  total+=newTests.length;
+ }
+ assert.equal(total,7);
+});
+
+test('closed current source rejects previous admissions and binds selected Review inputs',()=>{
+ const pin=validateCurrentAtlasDelivery(),atlas=currentAtlasDeliveryRoot();
+ assert.equal(pin.source,CURRENT_ATLAS_REVISION);
+ for(const previous of ['408759d57644b05402e98a937e7cf6338b5509cf','9fba9a1e24b6669aafd48e945d55fc0939d50ab2']){
+  const stale=structuredClone(pin);stale.source=previous;
+  assert.throws(()=>validateCurrentAtlasDelivery({pin:stale}),previous);
+ }
+ const forged=structuredClone(pin);forged.documents['atlas-review/manifest.json']='0'.repeat(64);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:forged}));
+ const review=JSON.parse(readFileSync('atlas-review/manifest.json'));
+ assert.equal(review.revision,CURRENT_ATLAS_REVISION);
+ for(const path of ['lib/carpal-tour.ts','lib/regional-tours.ts','content/cricothyroid-teaching.ts',
+  'content/circle-willis-imaging.ts','lib/circle-willis-imaging.ts',
+  'lib/coronary-venous-context.ts','public/models/bodyparts3d/coronary-venous/root-vessel-context.json']){
+  const entry=review.files.find(file=>file.path===path);
+  assert(entry,path);
+  assert.equal(entry.sourceSha256,sha(git(atlas,CURRENT_ATLAS_REVISION,path)),path);
+  assert.equal(entry.importedSha256,sha(readFileSync('atlas-review/'+path)),path);
+ }
+});
+
+test('carpal, cricothyroid, Circle and coronary feature inputs replay immutable source bytes',()=>{
+ const website=process.cwd();
+ const epochs=[
+  {site:'047d488a84ae0f1b24d4da47f4b8ce42969f00b3',source:'53e1ff32cc7b5ac81ec9d5e151c6e419fcb6a723',
+   manifest:'385a15326b61c5b98e21122b48824aa269a3e831e8970ab204d272560990c319',
+   paths:['lib/carpal-tour.ts','lib/regional-tours.ts']},
+  {site:'6302b12afe5e915fbec2cae855fef5cfe790490b',source:'e1aeae3e97e01fe059b7de505e3d901a4f6b3695',
+   manifest:'18660f6bc9d9eaec47c14f53bdd9f8e6f082fb8c5b67c7aca18ae38019dff04d',
+   paths:['content/cricothyroid-teaching.ts']},
+  {site:'f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6',source:'88cea927d48729769b96ad8fe680b0872b7e6687',
+   manifest:'c368f353345bc0a03dbff54410f2f8ad68ebcc01142cfb0aa06d43bafb02115c',
+   paths:['content/circle-willis-imaging.ts','lib/circle-willis-imaging.ts']},
+ ];
+ for(const epoch of epochs){
+  assert.equal(execFileSync('git',['rev-parse',`${epoch.site}^{commit}`],{encoding:'utf8'}).trim(),epoch.site);
+  const atlas=checkedAtlasHistoryRepo(epoch.source);
+  const manifestBytes=git(website,epoch.site,'atlas-review/manifest.json');
+  assert.equal(sha(manifestBytes),epoch.manifest);
+  const manifest=JSON.parse(manifestBytes);
+  assert.equal(manifest.revision,epoch.source);
+  for(const path of epoch.paths){
+   const entry=manifest.files.find(file=>file.path===path);
+   assert(entry,`${epoch.site}: ${path}`);
+   assert.equal(entry.sourceSha256,sha(git(atlas,epoch.source,path)),path);
+   assert.equal(entry.importedSha256,sha(git(website,epoch.site,'atlas-review/'+path)),path);
+  }
+ }
+ const atlas=checkedAtlasHistoryRepo('910c553d21529f24d872c4c9e74d59aa7abc464a');
+ const context='public/models/bodyparts3d/coronary-venous/root-vessel-context.json';
+ assert.equal(sha(git(atlas,'910c553d21529f24d872c4c9e74d59aa7abc464a',context)),
+  'e5dcb3890adab48be1e13134f76d7e4c4b274c1248aca84791c240f429ab3ffd');
+ assert.equal(sha(readFileSync('atlas-review/'+context)),'e5dcb3890adab48be1e13134f76d7e4c4b274c1248aca84791c240f429ab3ffd');
+});
+
+test('current notices match committed source and protected Viewer keeps the historical dependency tail',()=>{
+ const pin=validateCurrentAtlasDelivery();
+ const atlas=currentAtlasDeliveryRoot(),path='LICENSES/THIRD_PARTY_NOTICES.md';
+ const source=git(atlas,CURRENT_ATLAS_REVISION,path);
+ const noticeFeature='589263554141ba94548f9073327d4e51674bc33b';
+ const historicalNotice=git(atlas,noticeFeature,path);
+ assert.equal(sha(historicalNotice),'359dd59a89232c8530662fb7c81558070abf8c5629b5254f180788818870190b');
+ // New source-bound notices may be inserted or appended; never remove or
+ // rewrite the complete original corpus to fit a new current revision.
+ const delta=execFileSync('git',['--no-replace-objects','-C',atlas,'diff','--no-ext-diff','--no-textconv',
+  '--no-renames','--numstat',noticeFeature,CURRENT_ATLAS_REVISION,'--',path],{encoding:'utf8',maxBuffer:32e6});
+ if(delta==='')assert.deepEqual(source,historicalNotice);
+ else assert.match(delta,/^[0-9]+\t0\tLICENSES\/THIRD_PARTY_NOTICES\.md\n$/,'All historical notice lines are retained');
+ assert.deepEqual(readFileSync('atlas-review/'+path),source);
+ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb']){
+  const root=`public/atlas-runtime/${name}/`,manifest=JSON.parse(readFileSync(root+'manifest.json'));
+  assert.equal(manifest.sourceCommit,pin.runtimeSources[name]);
+  assert.equal(manifest.patientDataIncluded,false);
+  assert.equal(manifest.clinicalApproved,false);
+  const bytes=readFileSync(root+path),entry=manifest.files.find(file=>file.path===path);
+  const runtimeSource=git(atlas,pin.runtimeSources[name],path);
+  const familyDelta=execFileSync('git',['--no-replace-objects','-C',atlas,'diff','--no-ext-diff','--no-textconv',
+   '--no-renames','--numstat',noticeFeature,pin.runtimeSources[name],'--',path],{encoding:'utf8',maxBuffer:32e6});
+  if(familyDelta==='')assert.deepEqual(runtimeSource,historicalNotice,name);
+  else assert.match(familyDelta,/^[0-9]+\t0\tLICENSES\/THIRD_PARTY_NOTICES\.md\n$/,'Each exact runtime source retains the complete historical notice corpus: '+name);
+  assert.deepEqual(bytes,runtimeSource,name);
+  assert.equal(entry.bytes,bytes.length);
+  assert.equal(entry.sha256,sha(bytes));
+ }
+ const oldEpoch='f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6';
+ const oldSource=git(process.cwd(),oldEpoch,'atlas-review/'+path);
+ const oldViewer=git(process.cwd(),oldEpoch,'public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt');
+ const oldPrefix=Buffer.from('# Clinical Review third-party notices\n\nAtlas source: 88cea927d48729769b96ad8fe680b0872b7e6687\n\n');
+ const nowPrefix=Buffer.from(`# Clinical Review third-party notices\n\nAtlas source: ${CURRENT_ATLAS_REVISION}\n\n`);
+ assert.deepEqual(oldViewer.subarray(0,oldPrefix.length),oldPrefix);
+ const tail=oldViewer.subarray(oldPrefix.length+oldSource.length);
+ const viewer=readFileSync('public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt');
+ assert.equal(sha(viewer),sha(Buffer.concat([nowPrefix,source,tail])),'Protected Viewer notice bytes differ; inspect the source-bound notice comparison without a large Buffer diff');
+ assert.deepEqual(viewer,Buffer.concat([nowPrefix,source,tail]));
+ const viewerManifest=JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json'));
+ assert.equal(viewerManifest.sourceCommit,CURRENT_ATLAS_REVISION);
+ assert.equal(viewerManifest.files.find(file=>file.path==='THIRD_PARTY_NOTICES.txt').sha256,sha(viewer));
+});
