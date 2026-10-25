@@ -1,0 +1,145 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T10:37:41.967Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-teaching-display-region-cli-test-and-workflow-source-not-cumulative",
+    "requiredLocalNativeSourceHead": "7ae4c216f1524773366b08dee89489738af4e6d9",
+    "requiredLocalNativeSourceSha256": "1c19f55fbf325845f040cf6ab91852a1425c88628da1cf0751a082960af9b2fc",
+    "requiredSourceSupplement": {
+      "branch": "backup/current-delivery-1809-source-20261025",
+      "head": "039b950ac9870c585e27a441183f4121e9dc853e",
+      "tree": "cc461343cc5cf964ff43e2d3ae96833b14dbfa60",
+      "receiptSha256": "d3faf6a9c3be190e69c3f0e188403ebe44967d706de0c386687ce6659c2cb724"
+    },
+    "restorePaths": [
+      {
+        "path": "atlas/scripts/report-teaching-gaps.mjs",
+        "restore": "atlas/scripts/report-teaching-gaps.mjs"
+      },
+      {
+        "path": "atlas/scripts/test-teaching-gap-cli.mjs",
+        "restore": "atlas/scripts/test-teaching-gap-cli.mjs"
+      },
+      {
+        "path": "recipes/prepare-teaching-display-region-native-20261025.mjs",
+        "restore": "coordination/prepare-teaching-display-region-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-teaching-display-region-native-20261025.mjs",
+        "restore": "coordination/check-teaching-display-region-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/repair-display-region-catalogue-test-20261025.mjs",
+        "restore": "coordination/repair-display-region-catalogue-test-20261025.mjs"
+      },
+      {
+        "path": "recipes/finalize-teaching-display-region-native-20261025.mjs",
+        "restore": "coordination/finalize-teaching-display-region-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/repair-owned-native-index-20261025.mjs",
+        "restore": "coordination/repair-owned-native-index-20261025.mjs"
+      },
+      {
+        "path": "recipes/review-native-inventory-and-search-20261025.mjs",
+        "restore": "coordination/review-native-inventory-and-search-20261025.mjs"
+      },
+      {
+        "path": "recipes/serve-body-learning-search-built-worker-20261025.mjs",
+        "restore": "coordination/serve-body-learning-search-built-worker-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-teaching-display-region-source-20261025.mjs",
+        "restore": "coordination/backup-teaching-display-region-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/scripts/report-teaching-gaps.mjs",
+      "bytes": 4565,
+      "sha256": "4fd9ad033bf5cc5878b0d8c9bc25720524df084d787eb8a7c1865682706f6b67"
+    },
+    {
+      "path": "atlas/scripts/test-teaching-gap-cli.mjs",
+      "bytes": 6303,
+      "sha256": "0cb6d3ad241ab88867f66110afef1216fae0796dd8ac3548fb919a604beb2b98"
+    },
+    {
+      "path": "recipes/prepare-teaching-display-region-native-20261025.mjs",
+      "bytes": 5082,
+      "sha256": "adb747af65cd688bcd71dd784a124e07483a22ff2215424bcadb7fe6cd024d07"
+    },
+    {
+      "path": "recipes/check-teaching-display-region-native-20261025.mjs",
+      "bytes": 2321,
+      "sha256": "5e43096185f0b4999f75cac02025b53523903873422690ec43d516b706fe51dd"
+    },
+    {
+      "path": "recipes/repair-display-region-catalogue-test-20261025.mjs",
+      "bytes": 2600,
+      "sha256": "d4e3ea36fa924a710cfe72a3bd17536bf554d025e677e3bd1d65cfa524df7786"
+    },
+    {
+      "path": "recipes/finalize-teaching-display-region-native-20261025.mjs",
+      "bytes": 5987,
+      "sha256": "ed4b8482237b71347195fd1bae72d6cce6c7c37ff149d35a9770fa12598ebc7d"
+    },
+    {
+      "path": "recipes/repair-owned-native-index-20261025.mjs",
+      "bytes": 2904,
+      "sha256": "e6218d75cbd53edae841dd1c06346b3858d22dcd9861534f8f69de6ce4eca7c6"
+    },
+    {
+      "path": "recipes/review-native-inventory-and-search-20261025.mjs",
+      "bytes": 8171,
+      "sha256": "d81c588daf7a40b8088638722740fa68d081b4c524c8ba285ac1255c86165504"
+    },
+    {
+      "path": "recipes/serve-body-learning-search-built-worker-20261025.mjs",
+      "bytes": 3415,
+      "sha256": "de12dee41aaba1984a94620a4e1db082defc2e98b26d4a86367d0a2a36298b26"
+    },
+    {
+      "path": "recipes/backup-teaching-display-region-source-20261025.mjs",
+      "bytes": 5018,
+      "sha256": "e82287ef72ecf19e8315c385507fbab71eba50c85096a930c1b6a01fb504968d"
+    }
+  ],
+  "removed": [],
+  "scope": "Two first-party Atlas CLI/test sources and eight workflow recipes only. Prior source/data branches required; not whole/private/runnable backup. No rawQA, medical references/content/data, inventories, generated coverage docs, private configuration/source closure, scans/masks/medical coordinates, private decisions, models/dependencies/generated runtime or canonical/native ancestry uploaded.",
+  "proof": {
+    "focusedWholeRootCases": 6,
+    "focusedWholeRoots": 2,
+    "fail": 0,
+    "skip": 0,
+    "initialCaseFailureRetained": true,
+    "stockRequirementCheckPassed": true,
+    "actualCommittedCliAdmissionPassed": true,
+    "globalStructures": 1104,
+    "globalPlacements": 9936,
+    "globalPending": 513,
+    "displayedShoulderPending": {
+      "mri": 2,
+      "xray": 2,
+      "ultrasound": 2
+    },
+    "primaryOwnershipFilterPreserved": true,
+    "all215publicAssetBytesPreserved": true,
+    "actualPrivateWebsiteStateCopied": false,
+    "importedIntoWebsite": false,
+    "sourceBytes": 46366,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
