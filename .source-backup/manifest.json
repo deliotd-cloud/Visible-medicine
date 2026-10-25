@@ -1,0 +1,136 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T20:15:33.867Z",
+  "sourceIdentity": {
+    "candidateReceiptSha256": "078a315d863ce312d0d3cd28ab4464407ea2a57a9234762cbb5c2c3014400255",
+    "previousFilteredSupplementHead": "7d076191bbc4bb51ee6d102c0c293aee35e87cc1"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/institution-operations.ts",
+      "restore": "website/lib/institution-operations.ts",
+      "bytes": 25782,
+      "sha256": "a89425f4404b977bb9e124a3e3c29caddf501350bdca0afca52c9427a04a2d94"
+    },
+    {
+      "path": "website/lib/platform-governance.ts",
+      "restore": "website/lib/platform-governance.ts",
+      "bytes": 45330,
+      "sha256": "8310baceef6ed1ba25f0f2ace1d1e511fce22f7f4502904199168ca1a39d44cf"
+    },
+    {
+      "path": "website/tests/atlas-structure-search.test.mjs",
+      "restore": "website/tests/atlas-structure-search.test.mjs",
+      "bytes": 8142,
+      "sha256": "3eb5db8c795971f48c6c434979ae549ca05fbbf092c576091fb20abeb2e55ee7"
+    },
+    {
+      "path": "website/tests/guest-core-prerequisites-source.mjs",
+      "restore": "website/tests/guest-core-prerequisites-source.mjs",
+      "bytes": 2504,
+      "sha256": "07bb1e4bce319a1d513454f635b1b9b09e00c981b243469368095a228a253703"
+    },
+    {
+      "path": "website/tests/guest-core-prerequisites.test.mjs",
+      "restore": "website/tests/guest-core-prerequisites.test.mjs",
+      "bytes": 6602,
+      "sha256": "c8d188f576c77bc3c2176e3d5a7c5718f1b1d3bffd276f44b59dfd073b9132f1"
+    },
+    {
+      "path": "website/tests/public-search-bootstrap.test.mjs",
+      "restore": "website/tests/public-search-bootstrap.test.mjs",
+      "bytes": 5378,
+      "sha256": "126bf14d7807dc8571cd0ea46d4678cca83af7f32e494d8603322868a4c68657"
+    },
+    {
+      "path": "website/tests/rate-limit-atomic.test.mjs",
+      "restore": "website/tests/rate-limit-atomic.test.mjs",
+      "bytes": 8660,
+      "sha256": "882ae1685dceb59da2603fe124b5e0d8f7195aff8d8d58f44fa24431ebb8a633"
+    },
+    {
+      "path": "recipes/verify-guest-core-final-production-20261025.mjs",
+      "restore": "coordination/verify-guest-core-final-production-20261025.mjs",
+      "bytes": 4820,
+      "sha256": "48c3388ab0fa6335e087f8bfc108dfeb5009abd0967459427a1055f0a3aa758d"
+    },
+    {
+      "path": "recipes/seal-guest-core-final-20261025.mjs",
+      "restore": "coordination/seal-guest-core-final-20261025.mjs",
+      "bytes": 10969,
+      "sha256": "806ebe21d9e3051a3595b2da85cd99230a8c46c25c4db3df29329f90fcb81074"
+    },
+    {
+      "path": "recipes/backup-guest-core-final-source-20261025.mjs",
+      "restore": "coordination/backup-guest-core-final-source-20261025.mjs",
+      "bytes": 5378,
+      "sha256": "5fd21c394dae13efaa4ff3dbafd691ef4feb6b134ee6982942c00da0de6c87e2"
+    },
+    {
+      "path": "recipes/guest-api-harness-v3/common.mjs",
+      "restore": "coordination/guest-api-harness-v3/common.mjs",
+      "bytes": 2392,
+      "sha256": "8dd764d378d7435b439ed905d2e1a93c9f5a529b90bf81721568e5bf97ea22de"
+    },
+    {
+      "path": "recipes/guest-api-harness-v3/serve.mjs",
+      "restore": "coordination/guest-api-harness-v3/serve.mjs",
+      "bytes": 3710,
+      "sha256": "269582179e2c941af2d8406143fc572e65c4c82aa72575db9c59c90d46af3641"
+    },
+    {
+      "path": "recipes/guest-api-harness-v3/inspect-first.mjs",
+      "restore": "coordination/guest-api-harness-v3/inspect-first.mjs",
+      "bytes": 5259,
+      "sha256": "b75bd820d122342cd8b59121841dc643573aad59c1d0a96cee4a32da010b5880"
+    },
+    {
+      "path": "recipes/guest-api-harness-v3/cleanup.mjs",
+      "restore": "coordination/guest-api-harness-v3/cleanup.mjs",
+      "bytes": 3188,
+      "sha256": "7acff8a80d016b876f8739f2b42aaa89b15fc6c1b5cc9d135a159103acc9ce0d"
+    },
+    {
+      "path": "recipes/guest-api-harness-v3/run-sequential.mjs",
+      "restore": "coordination/guest-api-harness-v3/run-sequential.mjs",
+      "bytes": 4485,
+      "sha256": "9a575c464b26a16261732c7a73358c9290f77304a0d1cd8c6a8bcfd318f15363"
+    },
+    {
+      "path": "recipes/guest-api-harness-v3/README.md",
+      "restore": "coordination/guest-api-harness-v3/README.md",
+      "bytes": 2127,
+      "sha256": "adf9e76fae78fb394ffa0bfd2a1a7611952a0981c90fc59e053d394129da0285"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental first-party guest core-prerequisite source recovery only. Overlay the seven website source paths on the exact retained local predecessor; selected checking recipes require their earlier local helpers and receipts. Baseline and prior source supplements remain required. Raw QA, local databases, inspector responses, private configuration/references/decisions, generated medical and Review records, scans/masks/identifiers, models/assets, dependencies, runtime, source receipts containing medical records and canonical/native ancestry are excluded. Not a complete private, runnable or whole-project backup.",
+  "proof": {
+    "wholeCurrentRoots": 9,
+    "wholeCurrentCases": 51,
+    "fullTypeRoots": 2662,
+    "fullTypeFiles": 6220,
+    "diagnostics": 0,
+    "actualStockProductionArtifacts": 1142,
+    "completeBothProductionModuleInverses": true,
+    "guestCoreNegativeRequestCriteriaVerified": true,
+    "framework404ExceptionsDisclosed": true,
+    "all1816ProtectedInputsUnchanged": true,
+    "anonymousIdentityProvisioningNotIntroduced": true,
+    "schemaSqlAuthAccessAndRateAlgorithmOtherwiseUnchanged": true,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "wholeStockSuitePassing": false,
+    "original316FailuresAnd3SkipsUnadjusted": true,
+    "incrementalOnly": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

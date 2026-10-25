@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental first-party guest core-prerequisite source recovery only. Overlay the seven website source paths on the exact retained local predecessor; selected checking recipes require their earlier local helpers and receipts. Baseline and prior source supplements remain required. Raw QA, local databases, inspector responses, private configuration/references/decisions, generated medical and Review records, scans/masks/identifiers, models/assets, dependencies, runtime, source receipts containing medical records and canonical/native ancestry are excluded. Not a complete private, runnable or whole-project backup.
