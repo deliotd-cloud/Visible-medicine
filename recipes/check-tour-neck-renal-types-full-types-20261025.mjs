@@ -1,0 +1,67 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawn,execFileSync} from 'node:child_process';
+import {finished} from 'node:stream/promises';
+import {hash,json} from './seal-simple-website-successor.mjs';
+import {memoryGate} from './native-website-integration-stage-20261025.mjs';
+const sourceFile='F:/VisibleMedicine/staging/20261025-tour-neck-renal-types-website/SOURCE_CANDIDATE.json';
+const sourceSha256='04659d023c2fb36b0ee03ae47583aefa31478653abbf7f461759df62d4629fbf';
+assert.equal(hash(sourceFile),sourceSha256);const source=json(sourceFile),site=source.website;
+const dir='F:/VisibleMedicine/staging/20261025-tour-neck-renal-types-website/checks/types-full-attempt-1';
+assert(!fs.existsSync(dir));
+const oldTerminal=json('F:/VisibleMedicine/staging/20261025-coherent-stock-runtime-diagnostic/evidence/PROCESS-TERMINAL.json');
+assert(oldTerminal.terminalObserved&&!oldTerminal.interrupted&&oldTerminal.exitCode===1);
+const live=execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',"@(Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Where-Object { $_.CommandLine -match 'scripts[/\\\\]run-website-tests[.]mjs|types-full-attempt-1[/\\\\]checker[.]mjs' } | Select-Object ProcessId,CreationDate) | ConvertTo-Json -Compress"],{encoding:'utf8',windowsHide:true}).trim();
+assert(live===''||live==='[]','No active broad test runner or duplicate strict checker');
+const memory=memoryGate(6144);
+function verify(){
+ assert.equal(hash(sourceFile),sourceSha256);
+ for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+ for(const d of source.dependencies){assert.equal(hash(d.file),d.sha256);assert.equal(hash(d.entry),d.entrySha256);}
+ for(const [repo,head] of [[source.atlas,source.atlasHead],['F:/VisibleMedicine/website','b953ff3f5f1891599cb6e91cb91311d9d6006270'],['F:/VisibleMedicine/atlas','6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1']])
+  assert.equal(execFileSync('git',['--no-replace-objects','-C',repo,'rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).trim(),head);
+ assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+}
+verify();fs.mkdirSync(dir,{recursive:true});
+const checker=`import assert from 'node:assert/strict';
+import fs from 'node:fs';import {createRequire} from 'node:module';import {createHash} from 'node:crypto';
+const site=process.cwd(),ts=createRequire(site+'/package.json')('typescript');
+const hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const config=site+'/tsconfig.json',loaded=ts.readConfigFile(config,ts.sys.readFile);assert(!loaded.error);
+const parsed=ts.parseJsonConfigFileContent(loaded.config,ts.sys,site);assert.equal(parsed.errors.length,0);assert(parsed.options.strict);assert(parsed.fileNames.length>2600);
+const overrides={noEmit:true,incremental:false,composite:false,tsBuildInfoFile:undefined};
+const program=ts.createProgram(parsed.fileNames,{...parsed.options,...overrides}),diagnostics=ts.getPreEmitDiagnostics(program);
+const result={at:new Date().toISOString(),roots:parsed.fileNames,fullProjectTypes:true,scopeExclusionsAdded:false,configSha256:hash(config),typescriptVersion:ts.version,configuredCompilerOptions:parsed.options,overrides,sourceFiles:program.getSourceFiles().map(f=>({path:f.fileName,sha256:hash(f.fileName)})),diagnosticCount:diagnostics.length,diagnostics:diagnostics.map(d=>({path:d.file?.fileName,start:d.start,code:d.code,message:ts.flattenDiagnosticMessageText(d.messageText,'\\n')})),actualTransitiveGraph:true,substitutions:false};
+fs.writeFileSync(new URL('./TYPE_RESULT.json',import.meta.url),JSON.stringify(result,null,2)+'\\n',{flag:'wx'});
+console.log(JSON.stringify({roots:result.roots.length,files:result.sourceFiles.length,diagnostics:result.diagnosticCount,full:true}));process.exitCode=diagnostics.length?1:0;
+`;
+fs.writeFileSync(dir+'/checker.mjs',checker,{flag:'wx'});
+const base='F:/VisibleMedicine/staging/20261025-wave4-memory-repro-v2-proposal/supervise.ps1';
+assert.equal(hash(base),'1239eab31096552e7f78b508b58b873ea85d1bb3d8f3ee8ac4e4cfe7039bd2ee');
+let supervisor=fs.readFileSync(base,'utf8');
+function change(a,b){assert.equal(supervisor.split(a).length,2,a);supervisor=supervisor.replace(a,b);}
+change('2UL*1024UL*1024UL*1024UL','4UL*1024UL*1024UL*1024UL');
+change('scripts/run-website-tests.mjs --run','--max-old-space-size=3072 ../checks/types-full-attempt-1/checker.mjs');
+change("$_.CommandLine -match 'run-website-tests\\.mjs'","$_.CommandLine -match 'types-full-attempt-1[/\\\\]checker[.]mjs|scripts[/\\\\]run-website-tests[.]mjs'");
+change('An existing stock runner is active; leave it alone and do not launch another','An existing broad runner/checker is active; leave it alone and do not duplicate');
+change("command=@('node.exe','scripts/run-website-tests.mjs','--run')","command=@('node.exe','--max-old-space-size=3072','../checks/types-full-attempt-1/checker.mjs')");
+change('jobMemoryMiB=2048','jobMemoryMiB=4096');
+change('$before.availableMiB -lt 4096','$before.availableMiB -lt 6144');
+change('require available >=4096 MiB','require available >=6144 MiB');
+fs.writeFileSync(dir+'/supervise.ps1',supervisor,{flag:'wx'});
+const envBase=Object.fromEntries(Object.entries(process.env).filter(([k])=>/^(path|systemroot|windir|comspec|pathext|temp|tmp|os|processor_architecture|number_of_processors)$/i.test(k)));
+const env={...envBase,NODE_OPTIONS:'--max-old-space-size=3072',GOMEMLIMIT:'64MiB',GOMAXPROCS:'1',RAYON_NUM_THREADS:'1',GIT_OPTIONAL_LOCKS:'0',GIT_NO_REPLACE_OBJECTS:'1',NO_COLOR:'1'};
+const save=(p,v)=>fs.writeFileSync(dir+'/'+p,JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+save('CONFIGURATION.json',{node:process.execPath,site,evidence:dir,environment:env,maxMinutes:30});
+save('PREPARATION.json',{at:new Date().toISOString(),memory,source:sourceFile,sourceSha256,sourcePaths:source.sourcePaths,sourceCheckerSha256:hash(dir+'/checker.mjs'),baseSupervisor:{path:base,sha256:hash(base)},supervisorSha256:hash(dir+'/supervise.ps1'),heapMiB:3072,aggregateNativeJobMiB:4096,minimumFreeMiB:6144,freeFloorMiB:2048,commitCeilingPercent:90,killOnCloseSuspendedAssignResumeUnchanged:true,scopeExclusionsAdded:false,oldBroadProcessTerminal:oldTerminal,installed:false,ownerPreviewChanged:false});
+const out=fs.createWriteStream(dir+'/supervisor.stdout.log',{flags:'wx'}),err=fs.createWriteStream(dir+'/supervisor.stderr.log',{flags:'wx'});
+const child=spawn('powershell.exe',['-NoProfile','-NonInteractive','-File',dir+'/supervise.ps1','-Configuration',dir+'/CONFIGURATION.json'],{env:envBase,windowsHide:true,shell:false,stdio:['ignore','pipe','pipe']});
+child.stdout.pipe(out);child.stderr.pipe(err);save('SUPERVISOR-HANDLE.json',{at:new Date().toISOString(),pid:child.pid,parentPid:process.pid});
+console.log(JSON.stringify({started:true,supervisorPid:child.pid,sourceSha256,evidence:dir,fullProjectTypes:true}));
+const result=await new Promise(resolve=>{child.once('error',e=>resolve({error:String(e)}));child.once('close',(code,signal)=>resolve({code,signal}));});
+await Promise.all([finished(out),finished(err)]);verify();
+const terminal=fs.existsSync(dir+'/PROCESS-TERMINAL.json')?json(dir+'/PROCESS-TERMINAL.json'):null;
+const types=fs.existsSync(dir+'/TYPE_RESULT.json')?json(dir+'/TYPE_RESULT.json'):null;
+const passing=result.code===0&&!result.error&&!result.signal&&terminal?.terminalObserved&&!terminal.interrupted&&terminal.exitCode===0&&types?.fullProjectTypes&&types.diagnosticCount===0;
+save('TERMINAL.json',{at:new Date().toISOString(),supervisor:result,process:terminal,passing,source:sourceFile,sourceSha256,typeResult:types?{path:dir+'/TYPE_RESULT.json',sha256:hash(dir+'/TYPE_RESULT.json'),roots:types.roots.length,files:types.sourceFiles.length,diagnostics:types.diagnosticCount}:null,sourceAndDependencyEntriesUnchanged:true,wholeSuitePassing:false,clinicalApproval:false,installed:false,ownerPreviewChanged:false});
+console.log(JSON.stringify({terminal:dir+'/TERMINAL.json',passing,roots:types?.roots.length,files:types?.sourceFiles.length,diagnostics:types?.diagnosticCount,process:terminal}));process.exitCode=passing?0:1;

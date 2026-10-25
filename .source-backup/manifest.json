@@ -1,0 +1,265 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T08:26:11.347Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-tour-neck-renal-test-and-workflow-source-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "04659d023c2fb36b0ee03ae47583aefa31478653abbf7f461759df62d4629fbf",
+    "requiredSourceSupplement": {
+      "branch": "backup/nested-respiratory-role-source-20261025",
+      "head": "a8e1ce1888b8cab44ae82d24a63b8ab3a8ed0287",
+      "tree": "0c13d7f6fe20e2f4958992d1a7e9477bca5da1b0",
+      "receiptSha256": "73c969a7b1caf35616ba03b7bb4baf43e6cd69c4f5a3b36a4b776e52448db6f8"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/atlas-nested-answer-focus.test.ts",
+        "restore": "website/tests/atlas-nested-answer-focus.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-tour-library-pause.test.ts",
+        "restore": "website/tests/atlas-tour-library-pause.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-tour-reading-focus.test.ts",
+        "restore": "website/tests/atlas-tour-reading-focus.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-tour-reference-reading.test.ts",
+        "restore": "website/tests/atlas-tour-reference-reading.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-neck-landmark-xray.test.mjs",
+        "restore": "website/tests/atlas-neck-landmark-xray.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-neck-xray-delivery-transition.test.mjs",
+        "restore": "website/tests/atlas-neck-xray-delivery-transition.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-renal-delivery-transition.test.mjs",
+        "restore": "website/tests/atlas-renal-delivery-transition.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-renal-source-tour.test.mjs",
+        "restore": "website/tests/atlas-renal-source-tour.test.mjs"
+      },
+      {
+        "path": "website/tests/neck-renal-current-role.test.mjs",
+        "restore": "website/tests/neck-renal-current-role.test.mjs"
+      },
+      {
+        "path": "website/tests/neck-renal-original-context.mjs",
+        "restore": "website/tests/neck-renal-original-context.mjs"
+      },
+      {
+        "path": "recipes/check-neck-renal-archived-originals-20261025.mjs",
+        "restore": "coordination/check-neck-renal-archived-originals-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-tour-reading-genuine-originals-20261025.mjs",
+        "restore": "coordination/check-tour-reading-genuine-originals-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-neck-renal-role-shadow-20261025.mjs",
+        "restore": "coordination/check-neck-renal-role-shadow-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-tour-neck-renal-website-20261025.mjs",
+        "restore": "coordination/prepare-tour-neck-renal-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-tour-reading-type-compatibility-20261025.mjs",
+        "restore": "coordination/prepare-tour-reading-type-compatibility-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-tour-neck-renal-types-website-20261025.mjs",
+        "restore": "coordination/prepare-tour-neck-renal-types-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-tour-neck-renal-types-full-types-20261025.mjs",
+        "restore": "coordination/check-tour-neck-renal-types-full-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-tour-reading-types-focused-20261025.mjs",
+        "restore": "coordination/check-tour-reading-types-focused-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-tour-neck-renal-website-v2-20261025.mjs",
+        "restore": "coordination/build-tour-neck-renal-website-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/audit-coherent-stock-terminal-20261025.mjs",
+        "restore": "coordination/audit-coherent-stock-terminal-20261025.mjs"
+      },
+      {
+        "path": "recipes/compact-current-index-navigation-20261025.mjs",
+        "restore": "coordination/compact-current-index-navigation-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-tour-neck-renal-source-20261025.mjs",
+        "restore": "coordination/backup-tour-neck-renal-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-nested-answer-focus.test.ts",
+      "bytes": 3512,
+      "sha256": "e078c19b7fc5ed7f02706ff2a2c1f7f8e612a8b3243eae621641c609c5900db2"
+    },
+    {
+      "path": "website/tests/atlas-tour-library-pause.test.ts",
+      "bytes": 10881,
+      "sha256": "6c02719029d94fced48ea737d7310ab93bb189913eda39551a01f093c69affac"
+    },
+    {
+      "path": "website/tests/atlas-tour-reading-focus.test.ts",
+      "bytes": 7083,
+      "sha256": "340e7d8f3d4723718e6c0297cc9691747a25bb95359d52c29cbf6c14d5127cf2"
+    },
+    {
+      "path": "website/tests/atlas-tour-reference-reading.test.ts",
+      "bytes": 11657,
+      "sha256": "28ab5bd2a44659b9dec60be5e2c31f8207e7bdffe04b5c3229174695023103e4"
+    },
+    {
+      "path": "website/tests/atlas-neck-landmark-xray.test.mjs",
+      "bytes": 293,
+      "sha256": "46e7fc2d29ac3f4e87f76d0f5b2c2c4c825677e545f454b4125164b1b26d96cb"
+    },
+    {
+      "path": "website/tests/atlas-neck-xray-delivery-transition.test.mjs",
+      "bytes": 601,
+      "sha256": "4fd48b8de5f4ca71ede42a16140d245b4b160ed9a21245259f877348fd813851"
+    },
+    {
+      "path": "website/tests/atlas-renal-delivery-transition.test.mjs",
+      "bytes": 297,
+      "sha256": "cf7e52df1a2c29487194e3009484b63c4ff62a547fbf2c366335c73932f0d993"
+    },
+    {
+      "path": "website/tests/atlas-renal-source-tour.test.mjs",
+      "bytes": 288,
+      "sha256": "e6a36503888a1a3eac285135bff3ecb218418fbcc495d6c2fce980b3b3b3c7b5"
+    },
+    {
+      "path": "website/tests/neck-renal-current-role.test.mjs",
+      "bytes": 15123,
+      "sha256": "7edef16c8516d1efa378a365a8b01a12fd238a997dd6f0ac55a6b12035a748a8"
+    },
+    {
+      "path": "website/tests/neck-renal-original-context.mjs",
+      "bytes": 9468,
+      "sha256": "09132c2277a7a83fc77594a8b993e2e8cb09ab971cf5566682d8371d503d190b"
+    },
+    {
+      "path": "recipes/check-neck-renal-archived-originals-20261025.mjs",
+      "bytes": 7683,
+      "sha256": "45e43e0c8b5c533cd6346b7c1046ea7895cf6ad92ea478c219da73dc4cabf52a"
+    },
+    {
+      "path": "recipes/check-tour-reading-genuine-originals-20261025.mjs",
+      "bytes": 6115,
+      "sha256": "0998c9d7a5294d7b98b2fb1f930c825fd4b606ebea233282f9a9b8ee4d5fe364"
+    },
+    {
+      "path": "recipes/check-neck-renal-role-shadow-20261025.mjs",
+      "bytes": 6850,
+      "sha256": "689894bb4399d3d963bc1a5f0630e44c87c1b5e6614c11ac3eb3e118ae85fe9a"
+    },
+    {
+      "path": "recipes/prepare-tour-neck-renal-website-20261025.mjs",
+      "bytes": 7211,
+      "sha256": "753dad1b9d3c4cf38c82f39d84e6dc402b23a544346a654521648e22564d7126"
+    },
+    {
+      "path": "recipes/prepare-tour-reading-type-compatibility-20261025.mjs",
+      "bytes": 3373,
+      "sha256": "bd733155744f2683bf492122c2de294c2b268ea0339fe9fbc01805ec06c34088"
+    },
+    {
+      "path": "recipes/prepare-tour-neck-renal-types-website-20261025.mjs",
+      "bytes": 4481,
+      "sha256": "271450415704bc29c0698a5edacabc02a8ae62df4c83026de13af0f99e542fd9"
+    },
+    {
+      "path": "recipes/check-tour-neck-renal-types-full-types-20261025.mjs",
+      "bytes": 8135,
+      "sha256": "222486165a64b11e846694108135cd2c9d9c78337aacf2ec731b5ce0b490db37"
+    },
+    {
+      "path": "recipes/check-tour-reading-types-focused-20261025.mjs",
+      "bytes": 6821,
+      "sha256": "3b48e723c98b1b83f7de4eb03d8c83beee4343057c35a250bb3acee6e6855f09"
+    },
+    {
+      "path": "recipes/build-tour-neck-renal-website-v2-20261025.mjs",
+      "bytes": 7426,
+      "sha256": "274ac5f1538e998ca3ea13f4e939a8fc11ef0ff5a78395cfafbc7a465ccdcd71"
+    },
+    {
+      "path": "recipes/audit-coherent-stock-terminal-20261025.mjs",
+      "bytes": 4440,
+      "sha256": "c93567b8f947b8a8e2aa688fe4e5453a9451654deeb59775129e89a1c9815df7"
+    },
+    {
+      "path": "recipes/compact-current-index-navigation-20261025.mjs",
+      "bytes": 2861,
+      "sha256": "e0002a8c9bdeec368c7f980d825ae795f91989a68f8be52dd24d3a6d2f103673"
+    },
+    {
+      "path": "recipes/backup-tour-neck-renal-source-20261025.mjs",
+      "bytes": 6137,
+      "sha256": "421158331cec6500cddd0026ab19a9664d6af0306b484dac96cf4df60c4de0b2"
+    }
+  ],
+  "removed": [],
+  "scope": "Ten first-party test/helper files and twelve workflow recipes only. No raw QA, private configurations/closures/source inventories, historical checkout/anatomy, scans/masks/medical coordinates, decisions, models/dependencies or canonical ancestry. Prior source supplements required; not a whole/private/runnable project backup. New test-only UTF-8 compatibility expressions preserve all previous assertion bytes by exact inverses. No publication, clinical approval or registration claim.",
+  "proof": {
+    "currentNeckRenalParentPass": 7,
+    "requiredWholeOriginalChildren": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "historicalNeckRenalIndependentPass": [
+      3,
+      2
+    ],
+    "tourHistoricalWholeOriginalPass": [
+      2,
+      1
+    ],
+    "tourEarlierResourceOrSourceFailuresRetained": true,
+    "currentTourAndNestedFocusPass": 8,
+    "wholeRoots": 4,
+    "fullProjectTypes": true,
+    "typeRoots": 2654,
+    "typeFiles": 6209,
+    "diagnostics": 0,
+    "priorFullTypesFiveDiagnosticsRetained": true,
+    "sourceBoundSyntheticEventsNotPhysicalBrowserAcceptance": true,
+    "productionSourceChanged": false,
+    "fullStockReported": {
+      "tests": 6692,
+      "pass": 6373,
+      "fail": 316,
+      "skipped": 3
+    },
+    "fullStockCompleteOrPassingClaim": false,
+    "sourceBytes": 130736,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
