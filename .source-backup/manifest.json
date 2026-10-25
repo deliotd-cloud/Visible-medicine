@@ -1,0 +1,211 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T09:49:09.357Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-canonical-body-learning-source-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "8d47aad2ab2b18318f39fc28c33a696473d6dde7cd4fcd0bc92972fc0bae496e",
+    "requiredSourceSupplement": {
+      "branch": "backup/studio-ui-epoch-source-20261025",
+      "head": "e2f89e96f4acc9dd45d7a7cb51b1ede41975147d",
+      "tree": "b5906689464e6215a65f4ca1f061535c2349db44",
+      "receiptSha256": "ee74c830e4012044ca5462ffa254ee59ae47c53271eb2a13c1538bf636d51e27"
+    },
+    "restorePaths": [
+      {
+        "path": "website/components/AtlasBodyLearning.tsx",
+        "restore": "website/components/AtlasBodyLearning.tsx"
+      },
+      {
+        "path": "website/components/atlas-runtime-state.ts",
+        "restore": "website/components/atlas-runtime-state.ts"
+      },
+      {
+        "path": "website/scripts/bind-clinical-review.mjs",
+        "restore": "website/scripts/bind-clinical-review.mjs"
+      },
+      {
+        "path": "website/tests/atlas-body-learning-component.test.mjs",
+        "restore": "website/tests/atlas-body-learning-component.test.mjs"
+      },
+      {
+        "path": "recipes/prepare-canonical-body-learning-draft-20261025.mjs",
+        "restore": "coordination/prepare-canonical-body-learning-draft-20261025.mjs"
+      },
+      {
+        "path": "recipes/canonical-body-learning-integration-20261025.mjs",
+        "restore": "coordination/canonical-body-learning-integration-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-canonical-body-learning-units-20261025.mjs",
+        "restore": "coordination/check-canonical-body-learning-units-20261025.mjs"
+      },
+      {
+        "path": "recipes/bind-canonical-body-learning-review-20261025.mjs",
+        "restore": "coordination/bind-canonical-body-learning-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-canonical-body-learning-guarded-20261025.mjs",
+        "restore": "coordination/run-canonical-body-learning-guarded-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-canonical-body-learning-review-20261025.mjs",
+        "restore": "coordination/build-canonical-body-learning-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/capture-canonical-body-learning-delivery-20261025.mjs",
+        "restore": "coordination/capture-canonical-body-learning-delivery-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-canonical-body-learning-validation-20261025.mjs",
+        "restore": "coordination/prepare-canonical-body-learning-validation-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-canonical-body-learning-bound-20261025.mjs",
+        "restore": "coordination/check-canonical-body-learning-bound-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-canonical-body-learning-full-types-20261025.mjs",
+        "restore": "coordination/check-canonical-body-learning-full-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-canonical-body-learning-website-20261025.mjs",
+        "restore": "coordination/build-canonical-body-learning-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/serve-canonical-body-learning-built-worker-20261025.mjs",
+        "restore": "coordination/serve-canonical-body-learning-built-worker-20261025.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-built-preview-v2-20261025.ps1",
+        "restore": "coordination/stop-owned-built-preview-v2-20261025.ps1"
+      },
+      {
+        "path": "recipes/backup-canonical-body-learning-source-20261025.mjs",
+        "restore": "coordination/backup-canonical-body-learning-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/AtlasBodyLearning.tsx",
+      "bytes": 6554,
+      "sha256": "058b63bd82d999cbc2020bc0e9221990432156f1d943b958b7aed1c222185af7"
+    },
+    {
+      "path": "website/components/atlas-runtime-state.ts",
+      "bytes": 2134,
+      "sha256": "e407402b94c41b03fdec57cf0cdafe20e4d47515ff3b8e2dd0a071dd0d542b49"
+    },
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "bytes": 9896,
+      "sha256": "1c43d98bd38117d371eafc48e13d37511951f8bfc7b180641f5c1a78c635fec0"
+    },
+    {
+      "path": "website/tests/atlas-body-learning-component.test.mjs",
+      "bytes": 17085,
+      "sha256": "77047b19fb6aaa40b79f3395799a34a28c6cb5620dc7dc6cb0276cfe72315ca5"
+    },
+    {
+      "path": "recipes/prepare-canonical-body-learning-draft-20261025.mjs",
+      "bytes": 5151,
+      "sha256": "24a3ceeec9b04098d55a288172381482eaa9ac6dcc8c7394dd516d206b814f0b"
+    },
+    {
+      "path": "recipes/canonical-body-learning-integration-20261025.mjs",
+      "bytes": 2464,
+      "sha256": "46a594119b8af8cc26127396c21b96dd84cc0772bcb21ff591886904610b86a1"
+    },
+    {
+      "path": "recipes/check-canonical-body-learning-units-20261025.mjs",
+      "bytes": 5332,
+      "sha256": "a5b177a96495dea6fa2452cc5a7c29455b3e85167be7db54d0705b705d5676a6"
+    },
+    {
+      "path": "recipes/bind-canonical-body-learning-review-20261025.mjs",
+      "bytes": 5171,
+      "sha256": "2d1aafa7a54815cb57217cb71ac71de43217178ba73ad8ae99b0f3f4ef013155"
+    },
+    {
+      "path": "recipes/run-canonical-body-learning-guarded-20261025.mjs",
+      "bytes": 4144,
+      "sha256": "4fc973918f747ad092d3830adb70a33bf0b5fa56a1452e7abd7c234ab66a8907"
+    },
+    {
+      "path": "recipes/build-canonical-body-learning-review-20261025.mjs",
+      "bytes": 3473,
+      "sha256": "49ee82ea94fcc49954877b2be4f3c74bcaef023c18d167d8934ad53cc2d6d784"
+    },
+    {
+      "path": "recipes/capture-canonical-body-learning-delivery-20261025.mjs",
+      "bytes": 5553,
+      "sha256": "e8ec72d9455ec94a4a2b9bff0e1798b7f580e2dfc702559df0366c32b9539dc2"
+    },
+    {
+      "path": "recipes/prepare-canonical-body-learning-validation-20261025.mjs",
+      "bytes": 2344,
+      "sha256": "38f882d09af842b26fd787c1a03c10677fd68b41373f1ec6fe3716cacd03c23a"
+    },
+    {
+      "path": "recipes/check-canonical-body-learning-bound-20261025.mjs",
+      "bytes": 5151,
+      "sha256": "10f9a16457491740aa214602d30da451b977131feb150a4447014529e76ad08f"
+    },
+    {
+      "path": "recipes/check-canonical-body-learning-full-types-20261025.mjs",
+      "bytes": 8139,
+      "sha256": "49d5022aa9155efd349f6e1b8d4fdf859a9411b785722e115d63f88d5ca86f06"
+    },
+    {
+      "path": "recipes/build-canonical-body-learning-website-20261025.mjs",
+      "bytes": 7446,
+      "sha256": "b1854fa974cda17d21e41ad24c2c67e421fc22c9769ffda7b3e0b0c1de335369"
+    },
+    {
+      "path": "recipes/serve-canonical-body-learning-built-worker-20261025.mjs",
+      "bytes": 3418,
+      "sha256": "16382191bec65bc5783ae16f400106897e5af85a62c71e84fadbf3ddb80ec7b0"
+    },
+    {
+      "path": "recipes/stop-owned-built-preview-v2-20261025.ps1",
+      "bytes": 3079,
+      "sha256": "0e613dc2e1c673b00cca3a5e333e20c3aacc88127b540a8b35692d674115349a"
+    },
+    {
+      "path": "recipes/backup-canonical-body-learning-source-20261025.mjs",
+      "bytes": 5635,
+      "sha256": "669ae1e1d9f2023cc2079ac16083dcbf6693d12712accd2744147df435a3ecc5"
+    }
+  ],
+  "removed": [],
+  "scope": "Four first-party component/helper/binder/test paths and fourteen workflow scripts only. Prior source branches required; not whole/private/runnable backup. No rawQA, private configuration/source inventories/closure, historical checkout/anatomy, scans/masks/medical coordinates, private decisions, model/dependency binaries or canonical ancestry uploaded. Generated Review/runtime assets and current delivery pin stay local.",
+  "proof": {
+    "currentCases": 36,
+    "wholeCurrentRoots": 3,
+    "fail": 0,
+    "skip": 0,
+    "unchangedBaselineNewRegressionFailures": 2,
+    "reviewInputCount": 1809,
+    "sourceRevisionFormulaePreserved": true,
+    "packages": 24,
+    "noticeBytesPreserved": true,
+    "fullTypeRoots": 2654,
+    "fullTypeGraphFiles": 6209,
+    "fullTypeDiagnostics": 0,
+    "freshProductionBuild": true,
+    "buildFiles": 1142,
+    "sourceBytes": 102169,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
