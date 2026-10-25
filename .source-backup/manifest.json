@@ -1,0 +1,128 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T05:38:23.460Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-lecture-navigation-proposal-not-installed-or-cumulative",
+    "patchsetSha256": "40a384847dee246fbf363e03246bb4ab6008049c8d43ab776683224a0f44b2f9",
+    "requiredLocalParent": {
+      "path": "F:/VisibleMedicine/staging/20261025-viewer-notice-role-website/SOURCE_CANDIDATE.json",
+      "sha256": "27a063972c0e96feda2e0185c29408797e9036c811675fc8f485c00aaf208c24",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/viewer-notice-role-source-20261025",
+      "head": "34d5913e3f1c10464f63f567787f95143ef9c8b1",
+      "tree": "312e4a6a33f90b5bc3115c5a853ce4a0214de87b",
+      "receiptSha256": "8baa7d862e255f620b45ff22dadabb334e0b152f8755640c14f2a0a90d4bac2e"
+    },
+    "restorePaths": [
+      {
+        "path": "website/lib/learning-draft-navigation.ts",
+        "restore": "website/lib/learning-draft-navigation.ts"
+      },
+      {
+        "path": "website/components/LectureEditor.tsx",
+        "restore": "website/components/LectureEditor.tsx"
+      },
+      {
+        "path": "website/tests/lecture-draft-navigation.test.ts",
+        "restore": "website/tests/lecture-draft-navigation.test.ts"
+      },
+      {
+        "path": "recipes/check-lecture-history-unit-shadow-20261025.mjs",
+        "restore": "coordination/check-lecture-history-unit-shadow-20261025.mjs"
+      },
+      {
+        "path": "recipes/repair-lecture-history-unit-followup-20261025.mjs",
+        "restore": "coordination/repair-lecture-history-unit-followup-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-lecture-history-unit-shadow-v2-20261025.mjs",
+        "restore": "coordination/check-lecture-history-unit-shadow-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-lecture-history-guard-source-20261025.mjs",
+        "restore": "coordination/backup-lecture-history-guard-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/learning-draft-navigation.ts",
+      "bytes": 5473,
+      "sha256": "b9d434ccea7b21587f394c486921a9e054707434d38db7953fd034993e7aa724"
+    },
+    {
+      "path": "website/components/LectureEditor.tsx",
+      "bytes": 41929,
+      "sha256": "5de1af5d6d4feba287a8936cd6a10d142b8b9238a0cbff118a58807ee2a0c8be"
+    },
+    {
+      "path": "website/tests/lecture-draft-navigation.test.ts",
+      "bytes": 15660,
+      "sha256": "7b0ab0aa3b421af3729c09e9c3b4a1584ce23ff8953c48ea6c1f0a3c456ff906"
+    },
+    {
+      "path": "recipes/check-lecture-history-unit-shadow-20261025.mjs",
+      "bytes": 6192,
+      "sha256": "b7e46ff1bde52c7e2769f3254bd354db0ae50112af48322d787598c272a5a1f6"
+    },
+    {
+      "path": "recipes/repair-lecture-history-unit-followup-20261025.mjs",
+      "bytes": 5031,
+      "sha256": "6dc7777c17afeedadf17216d229c9c8b6a9a9e3a74c88f09fcd2f74b989ddd09"
+    },
+    {
+      "path": "recipes/check-lecture-history-unit-shadow-v2-20261025.mjs",
+      "bytes": 6330,
+      "sha256": "f7338b2bbb0c60cdb38a7b036b9dfaa36f109f369a5faa0f064bf51958f91eaf"
+    },
+    {
+      "path": "recipes/backup-lecture-history-guard-source-20261025.mjs",
+      "bytes": 5787,
+      "sha256": "01c8f42bf8f150f18f56009da57d2af9bec867b58ed284b6446d4e2b3f29d428"
+    }
+  ],
+  "removed": [],
+  "scope": "Three first-party lecture draft guard/component/test files plus four unit/repair/backup recipes. No private source inventories/configuration, scans/masks/images/medical annotations or coordinates, personal decisions, raw QA, dependencies/models or canonical Git ancestry. Incremental selected-source supplement only, not cumulative/whole/private/runnable backup. Actual unit-handler logic and default compatibility pass; combined Website types/build and real-browser acceptance remain pending. No clinical/registration/install/public-deployment claim.",
+  "proof": {
+    "focusedReportedCases": 17,
+    "focusedWholeRoots": 3,
+    "focusedPassing": true,
+    "oldMyLearningCases": 9,
+    "baselineCounts": {
+      "tests": 17,
+      "pass": 10,
+      "fail": 7,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "reviewedProposalCounts": {
+      "tests": 17,
+      "pass": 16,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "baselineInterpretation": "First new history-refusal scenario reaches the actual missing-guard assertion; other baseline failures are not seven independently reproduced browser defects.",
+    "retainedInitialUnitSetupAndExpectationFailures": true,
+    "supportedHistory": "Trusted cancellable same-document native traversal only; no history sentinels/replay/trapping; unsupported/non-cancellable traversal retains browser escape behavior.",
+    "combinedCandidateTypesBuildAndBrowserPending": true,
+    "fullStockComplete": false,
+    "wholeSuitePassing": false,
+    "localInventoriesOrMedicalDataUploaded": false,
+    "selectedBytes": 86402,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
