@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Original four-group CT educational draft text for28existing tooth records, first-party mapper/test, exact integration and local pin reconstruction recipes plus bounded workflow recipes. References are links and original fact paraphrases only; no figures, datasets, article text or patient data. Prior source/data branches and local independently captured CT baseline required; not whole/private/runnable backup. Pin coordinates, model assets, generated caches/revisions/inventories, rawQA, private configuration/source closure, scans/masks, private decisions, dependencies/generated runtime and canonical/native ancestry are excluded. Source-draft readiness is not clinical approval; production build/export/Website import remain pending.
