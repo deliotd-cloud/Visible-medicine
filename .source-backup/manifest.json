@@ -1,0 +1,341 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T02:03:39.934Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-effective-entitlement-and-type-test-repair-not-cumulative",
+    "websiteSourceSha256": "24cdf7e2f5bb47142fb0c27a6730269d03539d425f75b1a1ba3536282d5ab482",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalWebsiteParent": {
+      "path": "F:/VisibleMedicine/staging/20261025-pan-and-adjacent-website/SOURCE_CORRECTED_V2.json",
+      "sha256": "3ce7a4d80506ceb739fd3bfc586ac6d37672a3009ac1c6a744725cbfc80e4dd3",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/pan-adjacent-source-20261025",
+      "head": "b092e00313249517a103e59cb3bda416b3abddfc",
+      "tree": "348f3b4989f5e4e742d9b26e5d7e8b462e49d2bd",
+      "receiptSha256": "b93b641a3121ff2e7d2d38faff70b73bc0be67dad4df4a611d17612c020d288b"
+    },
+    "restorePaths": [
+      {
+        "path": "website/db/platform.ts",
+        "restore": "website/db/platform.ts"
+      },
+      {
+        "path": "website/tests/lecture-repository.test.ts",
+        "restore": "website/tests/lecture-repository.test.ts"
+      },
+      {
+        "path": "website/tests/clinical-review-abdominal-eus-current.test.ts",
+        "restore": "website/tests/clinical-review-abdominal-eus-current.test.ts"
+      },
+      {
+        "path": "website/tests/clinical-review-model-access.test.ts",
+        "restore": "website/tests/clinical-review-model-access.test.ts"
+      },
+      {
+        "path": "website/tests/head-separate-comparison-test-source.test.ts",
+        "restore": "website/tests/head-separate-comparison-test-source.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-back-topic-completion.test.ts",
+        "restore": "website/tests/atlas-back-topic-completion.test.ts"
+      },
+      {
+        "path": "website/tests/studio-release-note-recovery-ui.test.ts",
+        "restore": "website/tests/studio-release-note-recovery-ui.test.ts"
+      },
+      {
+        "path": "website/tests/release-diagnostic-context-inverse.mjs",
+        "restore": "website/tests/release-diagnostic-context-inverse.mjs"
+      },
+      {
+        "path": "website/tests/platform-effective-entitlements.test.mjs",
+        "restore": "website/tests/platform-effective-entitlements.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-delivery-access-sql-source.mjs",
+        "restore": "website/tests/atlas-delivery-access-sql-source.mjs"
+      },
+      {
+        "path": "website/tests/atlas-delivery-access-sql.test.mjs",
+        "restore": "website/tests/atlas-delivery-access-sql.test.mjs"
+      },
+      {
+        "path": "website/tests/clinical-review-principal-policy.test.mjs",
+        "restore": "website/tests/clinical-review-principal-policy.test.mjs"
+      },
+      {
+        "path": "website/tests/back-topic-type-repair-inverse.test.mjs",
+        "restore": "website/tests/back-topic-type-repair-inverse.test.mjs"
+      },
+      {
+        "path": "recipes/source-only-backup-20261019.mjs",
+        "restore": "coordination/source-only-backup-20261019.mjs"
+      },
+      {
+        "path": "recipes/seal-simple-website-successor.mjs",
+        "restore": "coordination/seal-simple-website-successor.mjs"
+      },
+      {
+        "path": "recipes/native-website-integration-stage-20261025.mjs",
+        "restore": "coordination/native-website-integration-stage-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-effective-entitlement-website-20261025.mjs",
+        "restore": "coordination/prepare-effective-entitlement-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-effective-entitlement-20261025.mjs",
+        "restore": "coordination/integrate-effective-entitlement-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-bound-website-check-20261025.mjs",
+        "restore": "coordination/run-bound-website-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-effective-entitlements-20261025.mjs",
+        "restore": "coordination/check-effective-entitlements-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-entitlement-policy-tests-20261025.mjs",
+        "restore": "coordination/integrate-entitlement-policy-tests-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-effective-entitlement-20261025.mjs",
+        "restore": "coordination/verify-effective-entitlement-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-entitlement-combined-20261025.mjs",
+        "restore": "coordination/check-entitlement-combined-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-small-test-types-20261025.mjs",
+        "restore": "coordination/prepare-small-test-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-entitlement-test-types-20261025.mjs",
+        "restore": "coordination/integrate-entitlement-test-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-effective-entitlement-final-v3-20261025.mjs",
+        "restore": "coordination/verify-effective-entitlement-final-v3-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-entitlement-final-v3-20261025.mjs",
+        "restore": "coordination/check-entitlement-final-v3-20261025.mjs"
+      },
+      {
+        "path": "recipes/refine-back-topic-byte-types-20261025.mjs",
+        "restore": "coordination/refine-back-topic-byte-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/compose-back-topic-diagnostic-inverse-20261025.mjs",
+        "restore": "coordination/compose-back-topic-diagnostic-inverse-20261025.mjs"
+      },
+      {
+        "path": "recipes/finalize-entitlement-recipes-20261025.mjs",
+        "restore": "coordination/finalize-entitlement-recipes-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-effective-entitlement-source-20261025.mjs",
+        "restore": "coordination/backup-effective-entitlement-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/checkpoint-effective-entitlement-ready-20261025.mjs",
+        "restore": "coordination/checkpoint-effective-entitlement-ready-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/db/platform.ts",
+      "bytes": 28044,
+      "sha256": "e118322fa73026e13fe1477409e633a15a1c3109a2c4ce0af9b316f0239f340d"
+    },
+    {
+      "path": "website/tests/lecture-repository.test.ts",
+      "bytes": 25441,
+      "sha256": "0f38fc75a24f3876469d6fd9b1998ab7b61aef729b624e18a1c21ef11fe8b27d"
+    },
+    {
+      "path": "website/tests/clinical-review-abdominal-eus-current.test.ts",
+      "bytes": 15594,
+      "sha256": "a8bbf923042b6225c3b3d87843b308f77fabf44a06d195eb02dfd7b7d50ccd66"
+    },
+    {
+      "path": "website/tests/clinical-review-model-access.test.ts",
+      "bytes": 4639,
+      "sha256": "541f5d2732b5e552f1cc41c7bf6f2cf7d720a3373d39140c5694aee87a34b275"
+    },
+    {
+      "path": "website/tests/head-separate-comparison-test-source.test.ts",
+      "bytes": 1981,
+      "sha256": "4ea4755b1fc81f1e8161f69849324165828a6e8f45f9bde9e029f8a79690b879"
+    },
+    {
+      "path": "website/tests/atlas-back-topic-completion.test.ts",
+      "bytes": 18060,
+      "sha256": "b91845f88daa8cbed299cbe565b8a589744a6596d745a4952936d2006d4116b4"
+    },
+    {
+      "path": "website/tests/studio-release-note-recovery-ui.test.ts",
+      "bytes": 13323,
+      "sha256": "c5638c009c1d126ee1463d0aaee74c175030600fada2701d6e70f4b86369cb44"
+    },
+    {
+      "path": "website/tests/release-diagnostic-context-inverse.mjs",
+      "bytes": 4142,
+      "sha256": "9326a268e7b86d74b8c769b18a73643f18ff7476f597671396e033f33d8f32a6"
+    },
+    {
+      "path": "website/tests/platform-effective-entitlements.test.mjs",
+      "bytes": 7024,
+      "sha256": "6077ca67285fa787324367f2dc22a885402eaad454c8e9c8a2337582835b6f15"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-source.mjs",
+      "bytes": 7140,
+      "sha256": "40dde351a0558b4f0a746b1a380ac2a6281ee9c9dceff995dd8041e355b7511d"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql.test.mjs",
+      "bytes": 7264,
+      "sha256": "bbb370b38f5c8ad31ac69deef99fae39d3fe4715b6989b6cc7085fcb4d2b1277"
+    },
+    {
+      "path": "website/tests/clinical-review-principal-policy.test.mjs",
+      "bytes": 8708,
+      "sha256": "cf0b40f57a74aa40675926a71d3ce9926b134932f50d35a26953da51cf63ac45"
+    },
+    {
+      "path": "website/tests/back-topic-type-repair-inverse.test.mjs",
+      "bytes": 2227,
+      "sha256": "d07b1cca55077bd9b59f049291294d6210ecc2d3b6c250764e2f7dddba419c97"
+    },
+    {
+      "path": "recipes/source-only-backup-20261019.mjs",
+      "bytes": 7700,
+      "sha256": "3f8ea65871f15558d46c1c2a36feb0dee95d2408207f9d2762976ae66ead5212"
+    },
+    {
+      "path": "recipes/seal-simple-website-successor.mjs",
+      "bytes": 5382,
+      "sha256": "8e15dcfed86a8c97ed6ed558b891908acfef767c05a80947361876ad82b2d0c7"
+    },
+    {
+      "path": "recipes/native-website-integration-stage-20261025.mjs",
+      "bytes": 3081,
+      "sha256": "6d090826c5c74de71e9f3da52622397ce18ea461a8587b3d3cd1de6516ee3186"
+    },
+    {
+      "path": "recipes/prepare-effective-entitlement-website-20261025.mjs",
+      "bytes": 3183,
+      "sha256": "95e141e0cb762ba3fb07e9dde3f15985d1f05215663e610636fa4484c0bed985"
+    },
+    {
+      "path": "recipes/integrate-effective-entitlement-20261025.mjs",
+      "bytes": 4613,
+      "sha256": "1312417d7a3fb06e52baebccc1f73196ae5a5bc590e41ce5a122853f0243c29a"
+    },
+    {
+      "path": "recipes/run-bound-website-check-20261025.mjs",
+      "bytes": 4395,
+      "sha256": "9aa58909fca0fd06493bd78dab25fb0fe1c2c75c8c3e8bc0a29b650e109ef7d7"
+    },
+    {
+      "path": "recipes/check-effective-entitlements-20261025.mjs",
+      "bytes": 935,
+      "sha256": "85407d4e72902ffe18bd62c140468e4938c3abc604ef3392f0b45bdc7d76cd44"
+    },
+    {
+      "path": "recipes/integrate-entitlement-policy-tests-20261025.mjs",
+      "bytes": 4982,
+      "sha256": "a7c899e9f2089d461d284b3c3280b3f049ff21820638068f3561670552d1bcd3"
+    },
+    {
+      "path": "recipes/verify-effective-entitlement-20261025.mjs",
+      "bytes": 7941,
+      "sha256": "cac4216233b0f4ef4d428552123e1785898771ad6eaf898ab0897e6c28aee489"
+    },
+    {
+      "path": "recipes/check-entitlement-combined-20261025.mjs",
+      "bytes": 2815,
+      "sha256": "8c8f01ad6cdf469f8e404ba7e9eb7a6c74a78c5ac276b4b33c15b434bc194ffe"
+    },
+    {
+      "path": "recipes/prepare-small-test-types-20261025.mjs",
+      "bytes": 2166,
+      "sha256": "7544308535e1cdc715557311728d9853922f187052b03cadb932da07ee84fa38"
+    },
+    {
+      "path": "recipes/integrate-entitlement-test-types-20261025.mjs",
+      "bytes": 6191,
+      "sha256": "bc9bbf1449a9502847fd91d6adde1c2248a4cc8aed649cc60d3f8229a08423dd"
+    },
+    {
+      "path": "recipes/verify-effective-entitlement-final-v3-20261025.mjs",
+      "bytes": 7901,
+      "sha256": "b63c7b3316b9b6fc648fcc4e8b288b234d91cf25b376d34744126c5135572bd9"
+    },
+    {
+      "path": "recipes/check-entitlement-final-v3-20261025.mjs",
+      "bytes": 3058,
+      "sha256": "16a4653a35abda289c57215823847ba87a2be3d28766f4c407323a86a3cb19c2"
+    },
+    {
+      "path": "recipes/refine-back-topic-byte-types-20261025.mjs",
+      "bytes": 4285,
+      "sha256": "8a6ea06413acf53d1196593936e498f8dac79caba62787fc3a77708ae2457f94"
+    },
+    {
+      "path": "recipes/compose-back-topic-diagnostic-inverse-20261025.mjs",
+      "bytes": 9583,
+      "sha256": "e2a23944250a12bc5c66a45055d48832f4c1893494444dc9616456fc95f17539"
+    },
+    {
+      "path": "recipes/finalize-entitlement-recipes-20261025.mjs",
+      "bytes": 4045,
+      "sha256": "ff4009770688e00d50f37d701adb1081a5fcceb867f59e78b77d7c14c65c581a"
+    },
+    {
+      "path": "recipes/backup-effective-entitlement-source-20261025.mjs",
+      "bytes": 6423,
+      "sha256": "30dfc8c7198e440cb45cd938c779e6cda737dab3aea666e2fa66af79c7b46f16"
+    },
+    {
+      "path": "recipes/checkpoint-effective-entitlement-ready-20261025.mjs",
+      "bytes": 15037,
+      "sha256": "8fec658638560e5f656526e82d8d23a0d4ea7379a8576d2235dbdb9dcb4304a9"
+    }
+  ],
+  "removed": [],
+  "scope": "13explicit first-party database/test source files and19coordination recipes. Synthetic fixture identities only. No scans, images, masks, medical annotation coordinates, private decisions/cases, complete private-source inventories, raw QA, geometry, runtime/dependency packages or canonical Git ancestry. Incremental source supplement, not cumulative, whole/private or runnable Website/Atlas backup. No new clinical approval, patient-space registration, owner-preview install or public deployment.",
+  "proof": {
+    "focusedReportedPass": 649,
+    "wholeRoots": 57,
+    "historicalCollectorsRepeatCases": true,
+    "fullStrictRoots": 2653,
+    "fullStrictFiles": 6204,
+    "fullStrictDiagnostics": 0,
+    "fullStrictConfigExclusionsAdded": false,
+    "stockProductionBuildPassed": true,
+    "buildFiles": 1133,
+    "sourcePathsChecked": 6776,
+    "originalTestAssertionsAndEpochRolesPreserved": true,
+    "actualAccountsOrDatabaseWrites": false,
+    "privateMedicalDataOrRawQaUploaded": false,
+    "selectedBytes": 247303,
+    "clinicalApproval": false,
+    "installed": false,
+    "ownerPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
