@@ -1,0 +1,393 @@
+{
+  "schema": "visible-medicine.public-focus-lossless-epochs/1",
+  "provenance": {
+    "historical": "20261021-review-destination-application/preimages/tests",
+    "historicalReceipt": {
+      "path": "20261021-review-destination-application/FINAL_NAVIGATION.json",
+      "sha256": "3bf7d73d8fb4f50c7cbcd11ae63f838f39d37a59a4a09df8ac9668dfefe0022b"
+    },
+    "currentSnapshot": {
+      "path": "20261021-closed54-55-provider-application/SOURCE_INPUTS_AFTER.json",
+      "sha256": "b5124ca90bfaa4c2c8ee277a86caa8cbb28a54b10cbdf54af5b55d92f17e2210"
+    },
+    "interpretation": "The complete original guard and original before-public-focus source fixtures retain the historical epoch. Current Review authorization has a distinct header contract; no historical assertion is replaced by a current hash. Every current byte is reconstructed by exact declared source seams from authenticated historical post-adapter bytes."
+  },
+  "rows": {
+    "header-session.test.ts": {
+      "originalSha256": "7f81e39dbce1732fd8a8e0fdfb33b08b12aa62e73ee8e0ea5bd409eed01f43c4",
+      "historicalSha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2",
+      "historicalBytes": 17803,
+      "currentSha256": "4d0d921ccfd799238e3a1525487ea169875efc754fb488fc6699ef4e49b2ff00",
+      "currentBytes": 22736,
+      "publicFocusSeams": [
+        [
+          "import ts from 'typescript';",
+          "import ts from 'typescript';\nimport { isPublicFocusPath, shouldFocusPublicRoute } from '../lib/public-route-focus.ts';"
+        ],
+        [
+          "  './workspace-navigation.css': {},",
+          "  '../lib/public-route-focus': { isPublicFocusPath, shouldFocusPublicRoute },\n  './workspace-navigation.css': {},"
+        ]
+      ],
+      "publishingDisclosure": null,
+      "currentSeams": [
+        {
+          "at": 359,
+          "before": "",
+          "after": "import { optionalReviewAvailability, reviewDestination, reviewDestinationActive } from '../lib/review-destination.ts';\n",
+          "ordinal": 1,
+          "meaning": "Import independently testable optionalReviewAvailability and Review destination functions"
+        },
+        {
+          "at": 493,
+          "before": "  const source = readFileSync(new URL('../' + path, import.meta.url), 'utf8');\n",
+          "after": "  const sourcePath = new URL('../' + path, import.meta.url);\n  const source = readFileSync(sourcePath, 'utf8');\n",
+          "ordinal": 2,
+          "meaning": "Name sourcePath before unchanged real-source read"
+        },
+        {
+          "at": 1506,
+          "before": "}) as { SiteHeader: React.ComponentType<{ signedIn: boolean }> };\n",
+          "after": "  '../lib/review-destination': { reviewDestination, reviewDestinationActive },\n}) as { SiteHeader: React.ComponentType<{ signedIn: boolean; reviewAvailable: boolean }> };\n",
+          "ordinal": 3,
+          "meaning": "Mock SiteHeader Review destination dependency and type its explicit availability prop"
+        },
+        {
+          "at": 1840,
+          "before": "",
+          "after": "  '../lib/review-destination': { reviewDestination, reviewDestinationActive },\n",
+          "ordinal": 4,
+          "meaning": "Mock SiteFrame Review destination dependency"
+        },
+        {
+          "at": 1876,
+          "before": "}) as { SiteFrame: React.ComponentType<React.PropsWithChildren<{ signedIn: boolean }>> };\ntype TreeNode = React.ReactElement<{ children: TreeNode[]; signedIn?: boolean }>;\n",
+          "after": "}) as { SiteFrame: React.ComponentType<React.PropsWithChildren<{ signedIn: boolean; reviewAvailable: boolean }>> };\ntype TreeNode = React.ReactElement<{ children: TreeNode[]; signedIn?: boolean; reviewAvailable?: boolean }>;\n",
+          "ordinal": 5,
+          "meaning": "Type SiteFrame and inspected tree with independent Review availability"
+        },
+        {
+          "at": 2391,
+          "before": "      const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn }, 'content'));\n",
+          "after": "      const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn, reviewAvailable: false }, 'content'));\n",
+          "ordinal": 6,
+          "meaning": "Public-route renders explicitly deny Review availability"
+        },
+        {
+          "at": 5310,
+          "before": "  }) as { SiteHeader: (props: { signedIn: boolean }) => React.ReactElement };\n",
+          "after": "    '../lib/review-destination': { reviewDestination, reviewDestinationActive },\n  }) as { SiteHeader: (props: { signedIn: boolean; reviewAvailable: boolean }) => React.ReactElement };\n",
+          "ordinal": 7,
+          "meaning": "Interactive SiteHeader dependency mock and availability prop type"
+        },
+        {
+          "at": 6023,
+          "before": "    tree = InteractiveHeader({ signedIn: true });\n",
+          "after": "    tree = InteractiveHeader({ signedIn: true, reviewAvailable: false });\n",
+          "ordinal": 8,
+          "meaning": "Interactive-header dismissal fixture explicitly denies Review availability"
+        },
+        {
+          "at": 11181,
+          "before": "      const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn }, 'content'));\n",
+          "after": "      const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn, reviewAvailable: false }, 'content'));\n",
+          "ordinal": 9,
+          "meaning": "Workspace-route renders explicitly deny Review availability"
+        },
+        {
+          "at": 12250,
+          "before": "  const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true }, 'content'));\n",
+          "after": "  const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true, reviewAvailable: false }, 'content'));\n",
+          "ordinal": 10,
+          "meaning": "Account-route render explicitly denies Review availability"
+        },
+        {
+          "at": 12585,
+          "before": "test('actual root layout supplies only request-scoped boolean with no identity leakage', async () => {\n",
+          "after": "test('actual root layout supplies only request-scoped booleans with no identity leakage', async () => {\n",
+          "ordinal": 11,
+          "meaning": "Name the separate two-boolean layout contract"
+        },
+        {
+          "at": 12733,
+          "before": "",
+          "after": "  let reviewCalls = 0;\n  let reviewAllowed = false;\n",
+          "ordinal": 12,
+          "meaning": "Track request-scoped Review authorization calls and availability"
+        },
+        {
+          "at": 13273,
+          "before": "",
+          "after": "    '../lib/clinical-review-server': { authorizeClinicalReview: async () => { reviewCalls++; if (!reviewAllowed) throw Error('unavailable'); } },\n    '../lib/review-destination': { optionalReviewAvailability },\n",
+          "ordinal": 13,
+          "meaning": "Mock only root-layout server authorization boundary and optional availability adapter"
+        },
+        {
+          "at": 13546,
+          "before": "  for (const value of [null, { userId: 'fixture-private-id', email: 'fixture-private@example.invalid', displayName: 'Private fixture' }, null]) {\n",
+          "after": "  for (const [value, allowed] of [\n    [null, false],\n    [{ userId: 'fixture-private-id', email: 'fixture-private@example.invalid', displayName: 'Private fixture' }, true],\n    [{ userId: 'fixture-private-id', email: 'fixture-private@example.invalid', displayName: 'Private fixture' }, false],\n    [null, true],\n  ] as const) {\n",
+          "ordinal": 14,
+          "meaning": "Expand session matrix to independent allowed/denied Review requests"
+        },
+        {
+          "at": 13710,
+          "before": "",
+          "after": "    reviewAllowed = allowed;\n",
+          "ordinal": 15,
+          "meaning": "Set request-specific Review authorization result"
+        },
+        {
+          "at": 13840,
+          "before": "    assert.deepEqual(Object.keys(frame.props).sort(), ['children', 'signedIn']);\n",
+          "after": "    assert.deepEqual(Object.keys(frame.props).sort(), ['children', 'reviewAvailable', 'signedIn']);\n",
+          "ordinal": 16,
+          "meaning": "Require only children plus two independent boolean props"
+        },
+        {
+          "at": 13977,
+          "before": "",
+          "after": "    assert.equal(frame.props.reviewAvailable, value !== null && allowed);\n",
+          "ordinal": 17,
+          "meaning": "Assert Review availability requires a session and successful authorization"
+        },
+        {
+          "at": 14184,
+          "before": "",
+          "after": "    assert.equal(/href=\"\\/workspace\\/clinical-review-inbox\"[^>]*><b>Clinical Review<\\/b>/.test(html), value !== null && allowed);\n",
+          "ordinal": 18,
+          "meaning": "Assert root-rendered Review destination exists only with session and authorization"
+        },
+        {
+          "at": 14188,
+          "before": "  assert.equal(calls, 3, 'No process-global session cache');\n",
+          "after": "  assert.equal(calls, 4, 'No process-global session cache');\n  assert.equal(reviewCalls, 2, 'Only signed-in requests call the independently mocked server guard');\n",
+          "ordinal": 19,
+          "meaning": "Retain no-global-cache assertion across four cases and require two authorized guard calls"
+        },
+        {
+          "at": 14841,
+          "before": "      const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn }, 'content'));\n",
+          "after": "      const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn, reviewAvailable: false }, 'content'));\n",
+          "ordinal": 20,
+          "meaning": "Contextual navigation renders explicitly deny top-level Review availability"
+        },
+        {
+          "at": 16209,
+          "before": "      assert.equal(Boolean(topReview), reviewRoute, route);\n",
+          "after": "      assert.equal(Boolean(topReview), false, route);\n",
+          "ordinal": 21,
+          "meaning": "Unavailable contextual Review route has no top-level Review destination"
+        },
+        {
+          "at": 16359,
+          "before": "      assert.equal(Boolean(topWorkspace), !reviewRoute, route);\n      if (reviewRoute) assert(topReview!.includes('aria-current=\"page\"'), route);\n      else assert(topWorkspace!.includes('aria-current=\"page\"'), route);\n",
+          "after": "      assert.equal(Boolean(topWorkspace), true, route);\n      if (!reviewRoute) assert(topWorkspace!.includes('aria-current=\"page\"'), route);\n      else assert(!topWorkspace!.includes('aria-current=\"page\"'), route);\n",
+          "ordinal": 22,
+          "meaning": "Unavailable Review retains ordinary Workspace destination and exact active-state behavior"
+        },
+        {
+          "at": 17803,
+          "before": "",
+          "after": "\ntest('authorized Review and secondary Administration are request-scoped across public and workspace routes', () => {\n  for (const route of ['/', '/atlas/head-neck-3d', '/courses', '/workspace', '/workspace/clinical-review-inbox', '/workspace/atlas-review/source-comparisons/optic']) {\n    pathname = route;\n    const authorized = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true, reviewAvailable: true }, 'content'));\n    const unavailable = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true, reviewAvailable: false }, 'content'));\n    const anonymous = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: false, reviewAvailable: true }, 'content'));\n    assert.match(authorized, /href=\"\\/workspace\\/clinical-review-inbox\"[^>]*>(?:<b>)?Clinical Review/);\n    assert.match(authorized, /href=\"\\/workspace\"[^>]*>(?:<b>)?Administration/);\n    assert.doesNotMatch(unavailable, /href=\"\\/workspace\\/clinical-review-inbox\"[^>]*>(?:<b>)?Clinical Review/);\n    assert.doesNotMatch(anonymous, /href=\"\\/workspace\\/clinical-review-inbox\"[^>]*>(?:<b>)?Clinical Review/);\n    assert.match(unavailable, /href=\"\\/workspace\"[^>]*>(?:<b>)?Workspace/);\n    if (route.startsWith('/workspace')) assert.match(anonymous, /href=\"\\/workspace\"[^>]*>(?:<b>)?Workspace/);\n    if (route.startsWith('/workspace/')) {\n      // A directly requested path still renders its contextual navigation in\n      // this presentation fixture; the real destination guard owns access.\n      assert.match(authorized, /institution-app-nav/);\n      assert.match(unavailable, /institution-app-nav/);\n      assert.match(anonymous, /institution-app-nav/);\n    }\n  }\n});\n\ntest('embedded context bar defaults Review availability to false', () => {\n  const { WorkspaceContextBar } = compile('components/SiteFrame.tsx', {\n    'next/link': Link, 'next/navigation': navigation,\n    './SiteHeader': { SiteHeader }, './SiteFooter': { SiteFooter: () => null },\n    '../lib/public-route-focus': { isPublicFocusPath, shouldFocusPublicRoute },\n    '../lib/review-destination': { reviewDestination, reviewDestinationActive },\n    './workspace-navigation.css': {},\n  }) as { WorkspaceContextBar: React.ComponentType<{ pathname: string; signedIn: boolean; reviewAvailable?: boolean }> };\n  const html = renderToStaticMarkup(React.createElement(WorkspaceContextBar, { pathname: '/workspace', signedIn: true }));\n  assert.match(html, /href=\"\\/workspace\"[^>]*>Workspace/);\n  assert.doesNotMatch(html, /href=\"\\/workspace\\/clinical-review-inbox\"[^>]*>Clinical Review/);\n});\n\ntest('availability and destination functions fail closed on non-true inputs', async () => {\n  let calls = 0;\n  const authorize = async () => { calls++; return { fixtureOnly: true }; };\n  assert.equal(await optionalReviewAvailability(false, authorize), false);\n  assert.equal(calls, 0);\n  assert.equal(await optionalReviewAvailability(true, authorize), true);\n  assert.equal(calls, 1);\n  assert.equal(await optionalReviewAvailability(true, async () => { throw Error('revoked'); }), false);\n  for (const [signedIn, available] of [[false, false], [false, true], [true, false], [true, true]] as const) {\n    const destination = reviewDestination(signedIn, available);\n    assert.equal(destination.href, signedIn && available ? '/workspace/clinical-review-inbox' : '/workspace');\n  }\n  assert.equal(reviewDestination(true, undefined as unknown as boolean).href, '/workspace');\n  assert.equal(reviewDestination(undefined as unknown as boolean, true).href, '/workspace');\n});\n",
+          "ordinal": 23,
+          "meaning": "Append three complete current tests: authorized/unavailable/anonymous route matrix, embedded fail-closed default, availability/destination refusal matrix"
+        }
+      ]
+    },
+    "desktop-workspace-simplification.test.ts": {
+      "originalSha256": "96cc515d5c8927e8737285bf4ebfb4c54b3a0c0ee40d28c70bbe8f8720247e9c",
+      "historicalSha256": "9a1f3e90e1a895c37d06f4ab61510ea2bd0296422b1448b916d9cea6d47f0036",
+      "historicalBytes": 10404,
+      "currentSha256": "019de75991955429c1b24c566ac285853aadba24e44aa944e8b656f0cc505190",
+      "currentBytes": 10938,
+      "publicFocusSeams": [
+        [
+          "import ts from \"typescript\";",
+          "import ts from \"typescript\";\nimport { isPublicFocusPath, shouldFocusPublicRoute } from \"../lib/public-route-focus.ts\";"
+        ],
+        [
+          "  \"./SiteFooter\": { SiteFooter: () => null }, \"./workspace-navigation.css\": {},",
+          "  \"./SiteFooter\": { SiteFooter: () => null }, \"./workspace-navigation.css\": {},\n  \"../lib/public-route-focus\": { isPublicFocusPath, shouldFocusPublicRoute },"
+        ]
+      ],
+      "publishingDisclosure": {
+        "before": "  assert.match(examiner, /<details class=\"studio-manage-navigation\" open=\"\">/);",
+        "after": "  assert.doesNotMatch(examiner, /<details class=\"studio-manage-navigation\" open=\"\">/);"
+      },
+      "currentSeams": [
+        {
+          "at": 359,
+          "before": "",
+          "after": "import { reviewDestination, reviewDestinationActive } from \"../lib/review-destination.ts\";\n",
+          "ordinal": 1,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        },
+        {
+          "at": 1645,
+          "before": "}) as { SiteFrame: React.ComponentType<React.PropsWithChildren<{ signedIn: boolean }>> };\n",
+          "after": "  \"../lib/review-destination\": { reviewDestination, reviewDestinationActive },\n}) as { SiteFrame: React.ComponentType<React.PropsWithChildren<{ signedIn: boolean; reviewAvailable: boolean }>> };\n",
+          "ordinal": 2,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        },
+        {
+          "at": 1735,
+          "before": "",
+          "after": "const { NativeDisclosure } = compile(\"components/NativeDisclosure.tsx\", {\n  \"../lib/head-disclosure-keyboard\": require(\"../lib/head-disclosure-keyboard.ts\"),\n});\n",
+          "ordinal": 3,
+          "meaning": "NativeDisclosure compile dependency preserved"
+        },
+        {
+          "at": 1809,
+          "before": "  \"next/link\": Link, \"next/navigation\": navMock,\n",
+          "after": "  \"next/link\": Link, \"next/navigation\": navMock, \"./NativeDisclosure\": { NativeDisclosure },\n",
+          "ordinal": 4,
+          "meaning": "Studio navigation mock includes NativeDisclosure"
+        },
+        {
+          "at": 2903,
+          "before": "",
+          "after": "  \"../../components/NativeDisclosure\": { NativeDisclosure },\n",
+          "ordinal": 5,
+          "meaning": "Workspace page mock includes NativeDisclosure"
+        },
+        {
+          "at": 7950,
+          "before": "    const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true }, \"content\"));\n",
+          "after": "    const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true, reviewAvailable: true }, \"content\"));\n",
+          "ordinal": 6,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        },
+        {
+          "at": 8409,
+          "before": "  const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true }, \"content\"));\n",
+          "after": "  const html = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true, reviewAvailable: false }, \"content\"));\n",
+          "ordinal": 7,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        },
+        {
+          "at": 8981,
+          "before": "    const ordinary = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true }, \"content\"));\n",
+          "after": "    const ordinary = renderToStaticMarkup(React.createElement(SiteFrame, { signedIn: true, reviewAvailable: false }, \"content\"));\n",
+          "ordinal": 8,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        }
+      ]
+    },
+    "atlas-region-picker.test.ts": {
+      "originalSha256": "509f4758b5f496c6a140e3f402ae3619fd7f158859fadb27bda007ba843831fa",
+      "historicalSha256": "5ba45ca88c427c30d33b548f905a0fb01cd23aa131b85da37ffdcf65b44734b3",
+      "historicalBytes": 16527,
+      "currentSha256": "2685bc92293cbc076d44763d5261b17978c12b4a3da35899e79f3e16c050a7b0",
+      "currentBytes": 21651,
+      "publicFocusSeams": [
+        [
+          "import type { AtlasModalityId } from '../lib/atlas-navigation.ts';",
+          "import type { AtlasModalityId } from '../lib/atlas-navigation.ts';\nimport { isPublicFocusPath, shouldFocusPublicRoute } from '../lib/public-route-focus.ts';"
+        ],
+        [
+          "    './SiteFooter': { SiteFooter: () => null },",
+          "    './SiteFooter': { SiteFooter: () => null },\n    '../lib/public-route-focus': { isPublicFocusPath, shouldFocusPublicRoute },"
+        ]
+      ],
+      "publishingDisclosure": null,
+      "currentSeams": [
+        {
+          "at": 399,
+          "before": "",
+          "after": "import { HEAD_LINK_REVISION } from '../lib/head-atlas-links.ts';\nimport { headImageHref } from '../lib/head-atlas-navigation.ts';\nimport { headLearningSequencesForModality } from '../lib/head-atlas-learning.ts';\n",
+          "ordinal": 1,
+          "meaning": "Source-bound head link and tour imports"
+        },
+        {
+          "at": 489,
+          "before": "",
+          "after": "import * as reviewDestination from '../lib/review-destination.ts';\n",
+          "ordinal": 2,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        },
+        {
+          "at": 9270,
+          "before": "",
+          "after": "test('linked CT/MRI head region picker restores the route choice without changing its concept or tour URL', () => {\n  for (const modality of ['ct', 'mri'] as const) {\n    const source = modality.toUpperCase() as 'CT' | 'MRI';\n    const sequence = headLearningSequencesForModality(source)[0];\n    assert(sequence, `${source} has a source-bound tour`);\n    const links = [\n      headImageHref(source, 'brainstem-pons', null, HEAD_LINK_REVISION),\n      headImageHref(source, null, { sequenceId: sequence.id, conceptId: null }, HEAD_LINK_REVISION),\n    ];\n    for (const linkedHref of links) {\n      assert(linkedHref, `${source} has a mapped head link`);\n      assert(linkedHref.includes('?'), `${source} link has a revision-bound query`);\n      assert.equal(pageShowListeners.size, 0);\n      mountedHooks = { ref: { current: null } };\n      pageHref = linkedHref;\n      const navigationCount = destinations.length;\n      const documentCount = documentDestinations.length;\n      try {\n        const pickerState = renderMountedPicker(modality, 'head-neck', { value: 'thorax' });\n        assert.equal(pageShowListeners.size, 1);\n        assert.equal(pickerState.node.value, 'head-neck', 'initial subscription corrects a history-restored choice on the linked route');\n        assert.equal(pageHref, linkedHref, 'initial correction preserves the exact query bytes');\n\n        pickerState.node.value = 'thorax';\n        flushRestores();\n        assert.equal(pickerState.node.value, 'head-neck', 'deferred correction follows native form restoration');\n        pickerState.node.value = 'thorax';\n        renderMountedPicker(modality, 'head-neck', pickerState.node);\n        assert.equal(pickerState.node.value, 'thorax', 'ordinary same-scope rerender retains an unsent user choice');\n        assert.equal(pendingRestores.size, 0);\n\n        const listener = [...pageShowListeners][0];\n        listener();\n        assert.equal(pickerState.node.value, 'head-neck', 'pageshow corrects a restored choice on the linked route');\n        pickerState.node.value = 'thorax';\n        flushRestores();\n        assert.equal(pickerState.node.value, 'head-neck', 'deferred pageshow correction survives late native restoration');\n        assert.equal(pageHref, linkedHref, 'history correction preserves the exact concept or tour query');\n        assert.equal(destinations.length, navigationCount, 'restoration does not navigate through the client router');\n        assert.equal(documentDestinations.length, documentCount, 'restoration does not navigate the document');\n      } finally {\n        mountedHooks.cleanup?.();\n        assert.equal(pageShowListeners.size, 0);\n        assert.equal(pendingRestores.size, 0);\n        mountedHooks = null;\n        pageHref = '/atlas/3d';\n      }\n    }\n  }\n});\n\ntest('linked head restoration rejects other modality and route prefixes, and retires deferred work', () => {\n  const linkedHref = headImageHref('CT', 'brainstem-pons', null, HEAD_LINK_REVISION);\n  assert(linkedHref);\n  assert.equal(pageShowListeners.size, 0);\n  mountedHooks = { ref: { current: null } };\n  pageHref = linkedHref;\n  try {\n    const pickerState = renderMountedPicker('ct', 'head-neck');\n    flushRestores();\n    const listener = [...pageShowListeners][0];\n    for (const wrongRoute of [\n      linkedHref.replace('/atlas/ct-head', '/atlas/mri-head'),\n      linkedHref.replace('/atlas/ct-head', '/atlas/ct-head-extra'),\n      linkedHref.replace('/atlas/ct-head', '/atlas/ct-head/child'),\n      linkedHref.replace('/atlas/ct-head', '/atlas/ct'),\n    ]) {\n      pageHref = wrongRoute;\n      pickerState.node.value = 'thorax';\n      listener();\n      flushRestores();\n      assert.equal(pickerState.node.value, 'thorax', `foreign route does not reset CT picker: ${wrongRoute}`);\n    }\n    pageHref = linkedHref;\n    listener();\n    assert.equal(pendingRestores.size, 1);\n    const deferred = [...pendingRestores.values()][0];\n    pageHref = linkedHref.replace('/atlas/ct-head', '/atlas/mri-head');\n    pickerState.node.value = 'thorax';\n    assert(deferred, 'history callback is queued');\n    flushRestores();\n    assert.equal(pickerState.node.value, 'thorax', 'queued restore rechecks the exact owned route');\n    pageHref = linkedHref;\n    listener();\n    const retired = [...pendingRestores.values()][0];\n    mountedHooks.cleanup?.();\n    assert.equal(pageShowListeners.size, 0);\n    assert.equal(pendingRestores.size, 0);\n    pickerState.node.value = 'thorax';\n    listener();\n    retired();\n    assert.equal(pickerState.node.value, 'thorax', 'unmounted listener and callback cannot reset a later choice');\n    assert.equal(pendingRestores.size, 0, 'unmounted listener cannot queue further work');\n  } finally {\n    mountedHooks.cleanup?.();\n    mountedHooks = null;\n    pageHref = '/atlas/3d';\n  }\n});\n\n",
+          "ordinal": 3,
+          "meaning": "Complete linked CT/MRI restoration and foreign-route refusal tests"
+        },
+        {
+          "at": 15536,
+          "before": "",
+          "after": "    '../lib/review-destination': reviewDestination,\n",
+          "ordinal": 4,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        }
+      ]
+    },
+    "disc-comparison.test.ts": {
+      "originalSha256": "b0b6e0fbdd37e7dd06eb0a4b3deee363d5a3f63e3a00acf7efe705c496b4ad73",
+      "historicalSha256": "fcd88b100d6de2ad8a615079a0f153631bb581900b2ee51706c7f30a06277504",
+      "historicalBytes": 14875,
+      "currentSha256": "40a164d650c18f49f109c73201ce1e74be529b0c32c1c0daca22b0e30aabbb51",
+      "currentBytes": 14998,
+      "publicFocusSeams": [
+        [
+          "import ts from 'typescript';",
+          "import ts from 'typescript';\r\nimport {isPublicFocusPath,shouldFocusPublicRoute} from '../lib/public-route-focus.ts';"
+        ],
+        [
+          "  id==='./SiteHeader'?{SiteHeader:()=>null}:",
+          "  id==='./SiteHeader'?{SiteHeader:()=>null}:\r\n  id==='../lib/public-route-focus'?{isPublicFocusPath,shouldFocusPublicRoute}:"
+        ]
+      ],
+      "publishingDisclosure": null,
+      "currentSeams": [
+        {
+          "at": 590,
+          "before": "",
+          "after": "import * as reviewDestination from '../lib/review-destination.ts';\r\n",
+          "ordinal": 1,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        },
+        {
+          "at": 1721,
+          "before": "",
+          "after": "  id==='../lib/review-destination'?reviewDestination:\r\n",
+          "ordinal": 2,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        }
+      ]
+    },
+    "workspace-utilities-dismissal.test.mjs": {
+      "originalSha256": "9a7ebf80a73f903873e6b9227f68aefaf1bf5c710360b3b8793aa4b77a1a6aea",
+      "historicalSha256": "e51e1c845ec7f64946cb860f154d9c5bda1d0063e3ac4d626e7150078b449202",
+      "historicalBytes": 4143,
+      "currentSha256": "0b06f9be790ceb6f9e2bad8d984d78dd279c9502227197b1742c328c486f6cf4",
+      "currentBytes": 4306,
+      "publicFocusSeams": [
+        [
+          "import ts from 'typescript';",
+          "import ts from 'typescript';\nimport {isPublicFocusPath,shouldFocusPublicRoute} from '../lib/public-route-focus.ts';"
+        ],
+        [
+          "  './SiteFooter':{SiteFooter:()=>null},'./workspace-navigation.css':{}};",
+          "  './SiteFooter':{SiteFooter:()=>null},'./workspace-navigation.css':{},\n  '../lib/public-route-focus':{isPublicFocusPath,shouldFocusPublicRoute}};"
+        ]
+      ],
+      "publishingDisclosure": null,
+      "currentSeams": [
+        {
+          "at": 350,
+          "before": "",
+          "after": "import {reviewDestination,reviewDestinationActive} from '../lib/review-destination.ts';\n",
+          "ordinal": 1,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        },
+        {
+          "at": 941,
+          "before": "  '../lib/public-route-focus':{isPublicFocusPath,shouldFocusPublicRoute}};\n",
+          "after": "  '../lib/public-route-focus':{isPublicFocusPath,shouldFocusPublicRoute},\n  '../lib/review-destination':{reviewDestination,reviewDestinationActive}};\n",
+          "ordinal": 2,
+          "meaning": "Review dependency adapter: import/mock or explicit availability prop"
+        }
+      ]
+    }
+  }
+}

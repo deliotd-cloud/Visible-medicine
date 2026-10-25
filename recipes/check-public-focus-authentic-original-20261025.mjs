@@ -1,0 +1,16 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';import {pathToFileURL} from 'node:url';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const receipt='F:/VisibleMedicine/staging/20261020-combined-website-ui/SOURCE_SCOPE.json';assert.equal(hash(receipt),'2271f2371d14d669ad2eb75b955b7ab17e0b939b830af9fd7c5c203b3490570c');const original=json(receipt),site=original.site;
+const dir='F:/VisibleMedicine/staging/20261025-public-focus-authentic-original';assert(!fs.existsSync(dir));
+const root='tests/public-focus-adapter-preservation.test.mjs',rootSha='122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3';assert.equal(hash(site+'/'+root),rootSha);
+const current='F:/VisibleMedicine/staging/20261025-studio-ui-epoch-website/website';const {assertCompleteOriginal}=await import(pathToFileURL(current+'/tests/deepbrain-foot-roles.mjs'));
+function verify(){assert.equal(hash(receipt),'2271f2371d14d669ad2eb75b955b7ab17e0b939b830af9fd7c5c203b3490570c');const seen=new Set();for(const r of original.files){assert(!seen.has(r.path));seen.add(r.path);assert(!r.path.includes('..')&&!r.path.includes('\\'));assert.equal(fs.statSync(site+'/'+r.path).size,r.bytes,r.path+' bytes');assert.equal(hash(site+'/'+r.path),r.sha256,r.path);}assert.equal(hash(site+'/'+root),rootSha);return seen.size;}
+const rows=verify();assert.equal(rows,5005);fs.mkdirSync(dir);
+const env=Object.fromEntries(Object.entries(process.env).filter(([k])=>/^(path|systemroot|windir|comspec|pathext|temp|tmp|os|processor_architecture|number_of_processors)$/i.test(k)));Object.assign(env,{VM_PUBLIC_FOCUS_ROOT:pathToFileURL(site+'/').href,NODE_OPTIONS:'--max-old-space-size=128'});
+const args=['--max-old-space-size=128','--test','--test-concurrency=1','--test-reporter=tap',root];
+const result=spawnSync(process.execPath,args,{cwd:site,env,windowsHide:true,maxBuffer:2*1024*1024,encoding:'utf8'});
+fs.writeFileSync(dir+'/stdout.tap',result.stdout??'',{flag:'wx'});fs.writeFileSync(dir+'/stderr.log',result.stderr??'',{flag:'wx'});verify();
+let counts=null,error=null;try{counts=assertCompleteOriginal({code:result.status,signal:result.signal,...(result.error?{error:String(result.error)}:{})},result.stdout,8);}catch(e){error=String(e);}
+const report={at:new Date().toISOString(),sourceReceipt:{path:receipt,sha256:hash(receipt)},declaredSourceRowsVerifiedBeforeAfter:rows,wholeOriginal:{path:site+'/'+root,sha256:rootSha},process:{code:result.status,signal:result.signal},counts,error,passing:!!counts,
+ scope:'Complete original eight-case source-text guard runs unchanged as an actual native Node module against its receipt-backed real Website files. No intercepted reads, rewritten imports/test registrations or fabricated app exports. Uses Node builtins only. The five historical text fixture bodies remain part of this source-only control; it is not a full historical application/browser run or a clean historical Git revision.',sourceUnchanged:true,currentProductAcceptance:false,clinicalApproval:false,ownerPreviewChanged:false};
+fs.writeFileSync(dir+'/RESULT.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({result:dir+'/RESULT.json',sha256:hash(dir+'/RESULT.json'),rows,passing:!!counts,counts,error}));process.exitCode=counts?0:1;
