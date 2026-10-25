@@ -1,0 +1,73 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T16:51:51.440Z",
+  "sourceIdentity": {
+    "candidateReceiptSha256": "cf8bad61e8e33160f94be74994bf13c270c68dcdf395a9d040b5bdb5c2b164f5",
+    "changedTestSha256": "58c81211c27c1965a5b1f4fc41790606b1d1572cff8eb369da67b07e8bb1bb8f",
+    "requiresExactLocalBaselineSha256": "1dc597765ecc6838a09fa2bfb152a7fda450f9e450ca46ae7f2fa2ae55b7f02f"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "patches/HISTORY_BROWSER_RECIPE.json",
+      "restore": "coordination/HISTORY_BROWSER_RECIPE.json",
+      "bytes": 3514,
+      "sha256": "e4d003cc443a35647d7bc030bf8db2669096164ab300f7aa3dad4e5e454e8cc9"
+    },
+    {
+      "path": "recipes/restore-source-recipe.mjs",
+      "restore": "coordination/restore-source-recipe.mjs",
+      "bytes": 1607,
+      "sha256": "c015d1a75fe9565af5a19c1b764aaad43edb028a20be0acbe51e934bac022289"
+    },
+    {
+      "path": "recipes/run-navigation-regression-batch-20261025.mjs",
+      "restore": "coordination/run-navigation-regression-batch-20261025.mjs",
+      "bytes": 4066,
+      "sha256": "93f13d5fe3e06034b314a370d813c05c0d8fadffec80a70fe4bccc965c78e5b9"
+    },
+    {
+      "path": "recipes/prepare-navigation-history-website-20261025.mjs",
+      "restore": "coordination/prepare-navigation-history-website-20261025.mjs",
+      "bytes": 5297,
+      "sha256": "846cb25c8a66b9b7b6035bc34383158dd9828238e739ea01541a309f37f0b3a8"
+    },
+    {
+      "path": "recipes/seal-navigation-history-20261025.mjs",
+      "restore": "coordination/seal-navigation-history-20261025.mjs",
+      "bytes": 7126,
+      "sha256": "7db2744df23cc8bf5baf4906c9f76b2af4f6b754d521997ddb981a25d1224b3b"
+    },
+    {
+      "path": "recipes/backup-navigation-history-source-20261025.mjs",
+      "restore": "coordination/backup-navigation-history-source-20261025.mjs",
+      "bytes": 4849,
+      "sha256": "e1dab73bc2d7e106149a181a01cdc611cb4869b5e7b1364a952c53b49e319e2f"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental source-only recovery: one exact-preimage browser-harness recipe plus mechanical restoration/check scripts. Requires the exact local baseline and preceding filtered source supplements. No complete medical test fixture, coordinates, generated Review data, raw QA, private configuration, scans, masks, models, dependencies, runtime, database, owner session or canonical/native Git ancestry is included. Not a complete website/private-data/runnable backup.",
+  "proof": {
+    "wholeUnfilteredRoots": 2,
+    "wholeCases": 8,
+    "originalAssertionExpressions": 59,
+    "finalAssertionExpressions": 71,
+    "allOriginalAssertionsPreserved": true,
+    "actualCompleteLocalRecipeRestorationVerified": true,
+    "priorTypeGraphInputsByteExact": 6217,
+    "newTypeCheckOrBuildExecuted": false,
+    "priorSupplementBranch": "backup/head-review-regression-source-20261025",
+    "priorSupplementHead": "cb7ea73f9074a7a8487c5e75b175d9b0af48f5b6",
+    "incrementalOnly": true,
+    "fullStockSuitePassing": false,
+    "ownerPreviewChanged": false,
+    "privateDataUploaded": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

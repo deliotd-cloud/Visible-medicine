@@ -1,0 +1,72 @@
+{
+  "schema": "vm-exact-local-source-recipe/1",
+  "path": "tests/head-view-history-client.test.mjs",
+  "beforeSha256": "d420ca293609f7d8feea622f3f664603c2f4e77cf60caf45bdf556182bcc6a16",
+  "afterSha256": "58c81211c27c1965a5b1f4fc41790606b1d1572cff8eb369da67b07e8bb1bb8f",
+  "exactLocalBaselineRequired": true,
+  "copyNumbersAreCharacterSpans": true,
+  "pieces": [
+    {
+      "copy": [
+        0,
+        2907
+      ]
+    },
+    "  function set(href){const url=new URL(href,origin);location.href=url.href;location.pathname=url.pathname;location.search=url.search;location.hash=url.hash;}\n",
+    {
+      "copy": [
+        3042,
+        3322
+      ]
+    },
+    "  const priorWindow=globalThis.window,priorDocument=globalThis.document;\n  const priorElement=globalThis.Element,priorAnchor=globalThis.HTMLAnchorElement;\n  const documentClicks=new Set();\n  class TestElement {closest(selector){assert.equal(selector,'a[href]');return this;}}\n  class TestAnchor extends TestElement {\n    constructor(href){super();this.href=href;this.target='';}\n    hasAttribute(name){assert.equal(name,'download');return false;}\n  }\n  globalThis.window=browserState.window;\n  globalThis.Element=TestElement;globalThis.HTMLAnchorElement=TestAnchor;\n  globalThis.document={\n    addEventListener(name,listener,capture){assert.equal(name,'click');assert.equal(capture,true);documentClicks.add(listener);},\n    removeEventListener(name,listener,capture){assert.equal(name,'click');assert.equal(capture,true);assert(documentClicks.delete(listener),'registered click guard removed');},\n  };\n  const clickLink=href=>{\n    const event={target:new TestAnchor(href),button:0,defaultPrevented:false,\n      metaKey:false,ctrlKey:false,shiftKey:false,altKey:false,\n      preventDefault(){this.defaultPrevented=true;}};\n    for(const listener of documentClicks)listener(event);\n    return event;\n  };\n",
+    {
+      "copy": [
+        6441,
+        6657
+      ]
+    },
+    "  const dispose=()=>{disposed=true;for(const effect of layouts.values())effect.cleanup?.();for(const effect of effects.values())effect.cleanup?.();globalThis.window=priorWindow;globalThis.document=priorDocument;globalThis.Element=priorElement;globalThis.HTMLAnchorElement=priorAnchor;};\n  return {flush,settle,walk,find,native,act,choose,share,dispose,entryRequests,practice,clickLink,documentClickListeners:()=>documentClicks.size,get tree(){return tree;},setPractice(value){active=value;dirty=true;}};\n",
+    {
+      "copy": [
+        13438,
+        8438
+      ]
+    },
+    "    h.setPractice(true);h.flush();assert.equal(h.documentClickListeners(),1);\n    let confirmCalls=0;b.window.confirm=()=>{confirmCalls++;return false;};\n    const refused=h.clickLink('https://example.test/learn');\n    assert.equal(confirmCalls,1,'ordinary same-tab navigation asks before leaving active practice');\n    assert.equal(refused.defaultPrevented,true,'refused navigation is cancelled by document capture');\n",
+    {
+      "copy": [
+        21956,
+        48
+      ]
+    },
+    "    h.native().props.onCursor(",
+    {
+      "copy": [
+        21936,
+        7
+      ]
+    },
+    ");h.flush();\n    assert.deepEqual(saved()?.cursor,",
+    {
+      "copy": [
+        14238,
+        8
+      ]
+    },
+    ");\n    h.setPractice(false);h.flush();assert.equal(h.documentClickListeners(),0);assert.deepEqual(saved()?.cursor,",
+    {
+      "copy": [
+        14238,
+        8
+      ]
+    },
+    ");\n",
+    {
+      "copy": [
+        22083,
+        429
+      ]
+    }
+  ]
+}
