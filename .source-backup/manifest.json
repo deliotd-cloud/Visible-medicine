@@ -1,0 +1,174 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T04:50:33.383Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-cervical-role-source-not-cumulative",
+    "websiteSourceSha256": "77d9a0e3ddbae2b32376e8c6205451d1deb8d2109378697d64e9ed59b6999270",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalParent": {
+      "path": "F:/VisibleMedicine/staging/20261025-arterial-role-website/SOURCE_CANDIDATE_V2.json",
+      "sha256": "8d329c4241b7d0fadee3890e24b69f5a9af366a4adad16a090d4bfe08fdc92f2",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/arterial-guard-source-20261025",
+      "head": "e66f803808142bcdd13f3ec3ad328ff3a7d6dc91",
+      "tree": "995befc842431d2f7665746bc029aee969444f12",
+      "receiptSha256": "2f7cf06173e14c7c6301f2b212fa95874efa846be81331966473750b20e65b6d"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/atlas-cervical-projection-xray.test.mjs",
+        "restore": "website/tests/atlas-cervical-projection-xray.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-cervical-epoch-preservation.test.mjs",
+        "restore": "website/tests/atlas-cervical-epoch-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/cervical-history-preservation.test.mjs",
+        "restore": "website/tests/cervical-history-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-cervical-current-delivery.test.mjs",
+        "restore": "website/tests/atlas-cervical-current-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/cervical-delivery-roles.mjs",
+        "restore": "website/tests/cervical-delivery-roles.mjs"
+      },
+      {
+        "path": "website/tests/cervical-delivery-role-integrity.test.mjs",
+        "restore": "website/tests/cervical-delivery-role-integrity.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/cervical-delivery-roles/manifest.json",
+        "restore": "website/tests/fixtures/cervical-delivery-roles/manifest.json"
+      },
+      {
+        "path": "website/tests/fixtures/cervical-delivery-roles/original-one.mjs.raw",
+        "restore": "website/tests/fixtures/cervical-delivery-roles/original-one.mjs.raw"
+      },
+      {
+        "path": "recipes/prepare-cervical-role-website-20261025.mjs",
+        "restore": "coordination/prepare-cervical-role-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-cervical-native-check-20261025.mjs",
+        "restore": "coordination/prepare-cervical-native-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-cervical-role-native-check-20261025.mjs",
+        "restore": "coordination/run-cervical-role-native-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-cervical-role-source-20261025.mjs",
+        "restore": "coordination/backup-cervical-role-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-cervical-projection-xray.test.mjs",
+      "bytes": 235,
+      "sha256": "a3ce4a7961bb975e7261ec32863c091f137baa52398504957cd2d56bb1d522b5"
+    },
+    {
+      "path": "website/tests/atlas-cervical-epoch-preservation.test.mjs",
+      "bytes": 7778,
+      "sha256": "4d8ff2445019a1ab272e166b23b2246d83681154127e29e83e269ea2a6a6e8e1"
+    },
+    {
+      "path": "website/tests/cervical-history-preservation.test.mjs",
+      "bytes": 5771,
+      "sha256": "4b37d30466dc3fbba9b921e2316cd8cebcad7c0458dc999a300b21165cfbd275"
+    },
+    {
+      "path": "website/tests/atlas-cervical-current-delivery.test.mjs",
+      "bytes": 23006,
+      "sha256": "bc039e7935afb1b9350be102e660dd1a97a72b55eaf0beacccb1162ad7eb134e"
+    },
+    {
+      "path": "website/tests/cervical-delivery-roles.mjs",
+      "bytes": 12754,
+      "sha256": "a6510d9707ae9c37be33f459913e62f24680044a877dfb2a10cad870c1237112"
+    },
+    {
+      "path": "website/tests/cervical-delivery-role-integrity.test.mjs",
+      "bytes": 3807,
+      "sha256": "8507cb91f9f2506b8bacf6039c9398dda3d8fdf8b14ccfce36606dc1ee394f11"
+    },
+    {
+      "path": "website/tests/fixtures/cervical-delivery-roles/manifest.json",
+      "bytes": 2408,
+      "sha256": "b61aa774c2d31d60926c0b25ffc212e99bba9a886f15b0ba654cfb1a5d2fadd1"
+    },
+    {
+      "path": "website/tests/fixtures/cervical-delivery-roles/original-one.mjs.raw",
+      "bytes": 21897,
+      "sha256": "428fb397b7d5efff567754844a282223ee8ce8068fc0eb599413cbd7fe0621df"
+    },
+    {
+      "path": "recipes/prepare-cervical-role-website-20261025.mjs",
+      "bytes": 7133,
+      "sha256": "1172f9925bf748f924404477aae91ad8b112f94b54c580a82cd22569cdb7f839"
+    },
+    {
+      "path": "recipes/prepare-cervical-native-check-20261025.mjs",
+      "bytes": 3905,
+      "sha256": "d09ded4928a77e57ce63f2da5601ecfdb83a98c1e7525b128a5a08db12e46e84"
+    },
+    {
+      "path": "recipes/run-cervical-role-native-check-20261025.mjs",
+      "bytes": 8102,
+      "sha256": "5b62b85649f7329e75b53cb0923984df0f92035836031c89b4a0a14e7008f0e5"
+    },
+    {
+      "path": "recipes/backup-cervical-role-source-20261025.mjs",
+      "bytes": 5820,
+      "sha256": "16983c92fe74b0b84b5f589ae6edcd93c689cfe867622956bcb69d0d33450fa3"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight first-party cervical test/helper/code-fixture source paths and four workflow recipes. No local closure/configuration, inventories, scans/masks/images/medical annotations or coordinates, personal decisions, raw QA, dependencies, geometry or canonical Git ancestry. Incremental selected source supplement only, not cumulative/whole/private/runnable backup. Nine reported parent cases and one mandatory complete unchanged child case are distinct counts, not ten unique clinical scenarios. No clinical/registration/install/public-deployment claim.",
+  "proof": {
+    "parentReportedPass": 9,
+    "parentWholeRoots": 5,
+    "mandatoryOriginalChildCounts": [
+      {
+        "counts": {
+          "tests": 1,
+          "pass": 1,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      }
+    ],
+    "currentSourceAndSixXrayDraftApplicationAndEmissionVerified": true,
+    "originalTwoAndTwoPreservationAssertionBodiesRetained": true,
+    "sourcePathsChecked": 6807,
+    "strictGraphByteInputsPreserved": 6204,
+    "actualStrictAndProductionSourceSha256": "70de9af5459217c393f1f73be44aa93d3c967f88e8254ae15afdd759ffbec84e",
+    "freshStrictOrBuildForThisSource": false,
+    "reusedProductionArtifacts": 1141,
+    "nativeJobMemoryCeilingMiB": 2048,
+    "fullStockComplete": false,
+    "wholeSuitePassing": false,
+    "localInventoriesOrMedicalDataUploaded": false,
+    "selectedBytes": 102616,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
