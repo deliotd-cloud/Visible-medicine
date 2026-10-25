@@ -1,0 +1,217 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T22:42:05.742Z",
+  "sourceIdentity": {
+    "kind": "compact-model-access-presentation-and-exact-test-source",
+    "requiredLocalWebsiteSourceSha256": "78fb4e35a0c9a20347232edfd881f4aeb19ad280fe0d1c6523e699c3496876c1",
+    "requiredNativeHead": "7e2552a300df29faf346be146929ffc727880ec5",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261025-nasal-website-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "1dd670355669f32029c35d7a82d7a68f423b300883233901df306e72172a8842",
+        "branch": "backup/nasal-website-source-20261025",
+        "head": "adee95e8de426dcf24b21a3b91b60ecb560d6d07",
+        "tree": "19d8e3e4a5c2b4c866f8707615159d1a371d1930"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/components/HeadAtlasComparisonNavigation.tsx",
+        "restore": "website/components/HeadAtlasComparisonNavigation.tsx"
+      },
+      {
+        "path": "website/app/atlas/head-neck-3d/head-learning.css",
+        "restore": "website/app/atlas/head-neck-3d/head-learning.css"
+      },
+      {
+        "path": "website/tests/head-link-menu-keyboard.test.mjs",
+        "restore": "website/tests/head-link-menu-keyboard.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/compact-model-access-before/HeadAtlasComparisonNavigation.tsx.raw",
+        "restore": "website/tests/fixtures/compact-model-access-before/HeadAtlasComparisonNavigation.tsx.raw"
+      },
+      {
+        "path": "website/tests/fixtures/compact-model-access-before/head-link-menu-keyboard.test.mjs.raw",
+        "restore": "website/tests/fixtures/compact-model-access-before/head-link-menu-keyboard.test.mjs.raw"
+      },
+      {
+        "path": "recipes/prepare-compact-access-website-20261025.mjs",
+        "restore": "coordination/prepare-compact-access-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/regenerate-compact-access-review-20261025.mjs",
+        "restore": "coordination/regenerate-compact-access-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-compact-access-tests-20261025.mjs",
+        "restore": "coordination/integrate-compact-access-tests-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-compact-access-source-20261025.mjs",
+        "restore": "coordination/seal-compact-access-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-compact-access-production-20261025.mjs",
+        "restore": "coordination/prepare-compact-access-production-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-compact-access-production-20261025.mjs",
+        "restore": "coordination/verify-compact-access-production-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-compact-access-production-v2-20261025.mjs",
+        "restore": "coordination/verify-compact-access-production-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-compact-access-preview-20261025.mjs",
+        "restore": "coordination/prepare-compact-access-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/serve-compact-access-built-worker-20261025.mjs",
+        "restore": "coordination/serve-compact-access-built-worker-20261025.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-compact-access-preview-20261025.mjs",
+        "restore": "coordination/stop-owned-compact-access-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/record-compact-access-verification-20261025.mjs",
+        "restore": "coordination/record-compact-access-verification-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-compact-access-source-20261025.mjs",
+        "restore": "coordination/backup-compact-access-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasComparisonNavigation.tsx",
+      "bytes": 9916,
+      "sha256": "fc108d33bfa2da4ecac39f98145110d6218f2cb49566bfc902262561778c18ac"
+    },
+    {
+      "path": "website/app/atlas/head-neck-3d/head-learning.css",
+      "bytes": 17121,
+      "sha256": "3b512f4d13a5c73cf99e5e78ac347ed0f729f0e5118db1a742adc6ef8a5e5117"
+    },
+    {
+      "path": "website/tests/head-link-menu-keyboard.test.mjs",
+      "bytes": 9937,
+      "sha256": "f1c7fc4cd4f4b6330e3ee5d6f82dd8fde0b2eec7ac08bbcaf485861beeb6230b"
+    },
+    {
+      "path": "website/tests/fixtures/compact-model-access-before/HeadAtlasComparisonNavigation.tsx.raw",
+      "bytes": 9261,
+      "sha256": "163689252d37bf875be8e707170515a90542597bd067188baf6e27050c2c3307"
+    },
+    {
+      "path": "website/tests/fixtures/compact-model-access-before/head-link-menu-keyboard.test.mjs.raw",
+      "bytes": 6604,
+      "sha256": "3e57a81ba4127638789276ccea3574757c27338fe1e7793e6e7a24bed18d43b5"
+    },
+    {
+      "path": "recipes/prepare-compact-access-website-20261025.mjs",
+      "bytes": 5670,
+      "sha256": "0e09b6321d9240e6b6f46a73c76a6f612fa04652e6928a11da3490caacd97a86"
+    },
+    {
+      "path": "recipes/regenerate-compact-access-review-20261025.mjs",
+      "bytes": 6278,
+      "sha256": "ad603c1a5cc9cd22c83780d320df566711075c393dfdb15e0d1b21f5c3842f1a"
+    },
+    {
+      "path": "recipes/integrate-compact-access-tests-20261025.mjs",
+      "bytes": 4228,
+      "sha256": "dbddd9d42db17431ada4bd8a8526feea429c8d77f477b37cf4cebe502882ef4a"
+    },
+    {
+      "path": "recipes/seal-compact-access-source-20261025.mjs",
+      "bytes": 7934,
+      "sha256": "26576431ea3e272f0be7e4bda937373ed4556d6e8ebb991d95e683ff9ab737b1"
+    },
+    {
+      "path": "recipes/prepare-compact-access-production-20261025.mjs",
+      "bytes": 1128,
+      "sha256": "af488fe9d843db1c996ba40e7876c7f1667c0fe80cb7d70e96bcbaa9c782b73f"
+    },
+    {
+      "path": "recipes/verify-compact-access-production-20261025.mjs",
+      "bytes": 4810,
+      "sha256": "7a0f6c08c40c455adfc87b2b528179a81e20a0177fd6ea1cc901c912f278ed58"
+    },
+    {
+      "path": "recipes/verify-compact-access-production-v2-20261025.mjs",
+      "bytes": 4864,
+      "sha256": "39f91ea409e6420679282e89f5750a05eb3d9773d7d7923406c4a39ea5071c8f"
+    },
+    {
+      "path": "recipes/prepare-compact-access-preview-20261025.mjs",
+      "bytes": 1604,
+      "sha256": "aa3febcc1e8629775d7158a03b374889950aa5c239f18e96438f7e563e8e9c3b"
+    },
+    {
+      "path": "recipes/serve-compact-access-built-worker-20261025.mjs",
+      "bytes": 3877,
+      "sha256": "d677ef796e0317f760ef3e3b4ace441c0ab7c31cada9dbb5cd05a3e2f807b4c8"
+    },
+    {
+      "path": "recipes/stop-owned-compact-access-preview-20261025.mjs",
+      "bytes": 2560,
+      "sha256": "1958b872ecdb5fcc57c565b38c6928d5e2a9a9fefc6e1a8c0ba30f69046f4bc8"
+    },
+    {
+      "path": "recipes/record-compact-access-verification-20261025.mjs",
+      "bytes": 6120,
+      "sha256": "ca748c80b204f540b2f99ff1b30262e568cb6f48800248b477f5cf1b2a690b86"
+    },
+    {
+      "path": "recipes/backup-compact-access-source-20261025.mjs",
+      "bytes": 5467,
+      "sha256": "deb2ed8305bcc7a6e864f4f672798cc4bee41dde80e8af635a55910eafe665b3"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party presentation/component/CSS, whole test with two first-party source-text fixtures, and recovery recipes only. Exact local Website/native baseline, private pins/data and prior supplements remain required. No raw QA/browser observations/logs/screenshots, generated Review or medical data/pins/registry, private configuration/decisions, scans/masks/identifiers/patient coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. This is not a whole/private/runnable backup.",
+  "proof": {
+    "sourcePaths": 6869,
+    "currentWholeRoots": 18,
+    "currentWholeCases": 86,
+    "skips": 0,
+    "strictTypeRoots": 2669,
+    "strictTypeFiles": 6227,
+    "diagnostics": 0,
+    "stockProductionArtifacts": 1145,
+    "originalWholeFiveKeyboardPurposesRetained": true,
+    "onlyAccessDisclosureExpectationUpdated": true,
+    "allOtherHistoricalTestRootsAndFixturesUnchanged": true,
+    "priorLicenceAndPackageBytesUnchanged": true,
+    "nativeAndFourLearnerExportsUnchanged": true,
+    "reviewSourceFiles": 1614,
+    "protectedReviewInputs": 1818,
+    "desktopWidths": [
+      1280,
+      1440
+    ],
+    "fallbackWidth": 390,
+    "escapeAndRetryVerified": true,
+    "modelHead401": 1,
+    "modelGets": 0,
+    "selectedBytes": 107379,
+    "normalPreviewUnchanged": true,
+    "installed": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false,
+    "wholeStockSuitePassing": false,
+    "original316StockFailuresAnd3SkipsUnadjusted": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
