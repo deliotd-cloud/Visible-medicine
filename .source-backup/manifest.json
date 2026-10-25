@@ -1,0 +1,201 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T06:29:38.814Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-body-test-harness-and-deepbrain-foot-role-source-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "27a063972c0e96feda2e0185c29408797e9036c811675fc8f485c00aaf208c24",
+    "requiredSourceSupplement": {
+      "branch": "backup/original-reader-workflow-source-20261025",
+      "head": "3cedd5ef1f474adba8ed231eab5d118617debd06",
+      "tree": "d49d2ab2f729baef24ee4fa679a8d0597b8ddae3",
+      "receiptSha256": "242657e49c38758fefa9a02894b7987583215b5639503119930aeacf6fbb47c9"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/lecture-body-ui.test.mjs",
+        "restore": "website/tests/lecture-body-ui.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-deep-brain-practice.test.ts",
+        "restore": "website/tests/atlas-deep-brain-practice.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-foot-notice-epoch.test.ts",
+        "restore": "website/tests/atlas-foot-notice-epoch.test.ts"
+      },
+      {
+        "path": "website/tests/deepbrain-foot-roles.mjs",
+        "restore": "website/tests/deepbrain-foot-roles.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/deepbrain-foot-roles/manifest.json",
+        "restore": "website/tests/fixtures/deepbrain-foot-roles/manifest.json"
+      },
+      {
+        "path": "website/tests/fixtures/deepbrain-foot-roles/original-deep-brain.ts.raw",
+        "restore": "website/tests/fixtures/deepbrain-foot-roles/original-deep-brain.ts.raw"
+      },
+      {
+        "path": "website/tests/fixtures/deepbrain-foot-roles/original-foot.ts.raw",
+        "restore": "website/tests/fixtures/deepbrain-foot-roles/original-foot.ts.raw"
+      },
+      {
+        "path": "website/tests/deepbrain-foot-role-integrity.test.mjs",
+        "restore": "website/tests/deepbrain-foot-role-integrity.test.mjs"
+      },
+      {
+        "path": "recipes/prepare-lecture-history-context-check-20261025.mjs",
+        "restore": "coordination/prepare-lecture-history-context-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-lecture-history-context-20261025.mjs",
+        "restore": "coordination/check-lecture-history-context-20261025.mjs"
+      },
+      {
+        "path": "recipes/repair-lecture-body-guard-dependency-20261025.mjs",
+        "restore": "coordination/repair-lecture-body-guard-dependency-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-lecture-history-context-v2-20261025.mjs",
+        "restore": "coordination/check-lecture-history-context-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-deepbrain-foot-role-shadow-20261025.mjs",
+        "restore": "coordination/check-deepbrain-foot-role-shadow-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-lecture-context-feature-role-source-20261025.mjs",
+        "restore": "coordination/backup-lecture-context-feature-role-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/lecture-body-ui.test.mjs",
+      "bytes": 13254,
+      "sha256": "66e52047a680d5e15eaf0fbb60fcbd321286520e1786bfb3b7012fc039fa37fd"
+    },
+    {
+      "path": "website/tests/atlas-deep-brain-practice.test.ts",
+      "bytes": 10134,
+      "sha256": "d42378e9cc4ecac90ec12ba2faa52cdfda667e9d38fc653c3350aec740807c60"
+    },
+    {
+      "path": "website/tests/atlas-foot-notice-epoch.test.ts",
+      "bytes": 12459,
+      "sha256": "80e6554120154d3dd7a7c200a0a39f8c46c0e1ca570fa382bfc0cb0c2cef4490"
+    },
+    {
+      "path": "website/tests/deepbrain-foot-roles.mjs",
+      "bytes": 8584,
+      "sha256": "e433a112aed86f6f8d1eeace2614b23b60bc9a9892052648449aaa3c25257449"
+    },
+    {
+      "path": "website/tests/fixtures/deepbrain-foot-roles/manifest.json",
+      "bytes": 3154,
+      "sha256": "ad8b4130208c9d6d7da3daff3c5c44733f31f46dd4175049898d535548721eb1"
+    },
+    {
+      "path": "website/tests/fixtures/deepbrain-foot-roles/original-deep-brain.ts.raw",
+      "bytes": 2249,
+      "sha256": "6462d91fff9a296e169524b40f74d9c0f41da493a53cd35b75da5dec0896f739"
+    },
+    {
+      "path": "website/tests/fixtures/deepbrain-foot-roles/original-foot.ts.raw",
+      "bytes": 10675,
+      "sha256": "2469a7c09f153665ecf08afa5ed7861e6ba143829fe160cf7514f808da831f52"
+    },
+    {
+      "path": "website/tests/deepbrain-foot-role-integrity.test.mjs",
+      "bytes": 1399,
+      "sha256": "776f3fadb7fd06150aa531e49c8839015bb9a32821d8b95b462a3d36c91aefdc"
+    },
+    {
+      "path": "recipes/prepare-lecture-history-context-check-20261025.mjs",
+      "bytes": 951,
+      "sha256": "d7e4546f50ffbd22ffd474414b931806c6fc4cc2e6fe7d4e94eea6929fa82345"
+    },
+    {
+      "path": "recipes/check-lecture-history-context-20261025.mjs",
+      "bytes": 6847,
+      "sha256": "8948d9edc331985fff36a68fc906ab871b54ee73032db48007f466d0b4cab0bd"
+    },
+    {
+      "path": "recipes/repair-lecture-body-guard-dependency-20261025.mjs",
+      "bytes": 3579,
+      "sha256": "53fb7c2a17e696bc8e6f07fad740dcf5ef85b53fcb057b102cbe1032dda74638"
+    },
+    {
+      "path": "recipes/check-lecture-history-context-v2-20261025.mjs",
+      "bytes": 6850,
+      "sha256": "a537a2982c56d16d98f5105886179e376e239f58150bab2f62d56f981270824e"
+    },
+    {
+      "path": "recipes/check-deepbrain-foot-role-shadow-20261025.mjs",
+      "bytes": 7605,
+      "sha256": "37f79b0a6a8e20fe32a88cd91afcf2f75a734769ae0da2ae79b38c2ad6510718"
+    },
+    {
+      "path": "recipes/backup-lecture-context-feature-role-source-20261025.mjs",
+      "bytes": 6621,
+      "sha256": "9e88fac2554fc58dd0d30e58b18b96c66ad4abe6118d9d3eb3c83c5c0b2c17e4"
+    }
+  ],
+  "removed": [],
+  "scope": "One actual-module body harness adjustment, seven first-party test/helper/immutable raw-code/public source-binding fixture paths, and six recipes. Small immutable public source path/hash bindings are included; detailed local configuration/closure data, historical checkout bytes, model geometry, scans/masks/medical coordinates, personal decisions, raw QA, dependencies and canonical ancestry are excluded. Incremental selected-source supplement only, not cumulative/whole/private/runnable backup. Original assertions remain with genuine historical children; no clinical/registration/install/public acceptance inferred.",
+  "proof": {
+    "newLectureCases": 18,
+    "lectureWholeRoots": 2,
+    "earlierFirstThreeGuardSourcesByteExact": true,
+    "totalReportedFocusedLecturePass": 62,
+    "lectureRootsAcrossSeparateProofs": 7,
+    "roleParentCases": 11,
+    "roleWholeRoots": 4,
+    "mandatoryOriginalChildren": [
+      {
+        "role": "deep-brain",
+        "counts": {
+          "tests": 1,
+          "pass": 1,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      },
+      {
+        "role": "foot-notices",
+        "counts": {
+          "tests": 2,
+          "pass": 2,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      }
+    ],
+    "currentDeepBrainSixTargetFactoryAndRealCatalogVerified": true,
+    "current24NoticeRecipeAnd22OldSectionsVerified": true,
+    "originalFootPrefixAndSevenSubjectTheoremRetained": true,
+    "actualModuleLoaderNoStub": true,
+    "initialSixHarnessLoadFailuresRetained": true,
+    "combinedWebsiteTypesBuildBrowserPending": true,
+    "fullStockComplete": false,
+    "wholeSuitePassing": false,
+    "selectedBytes": 94361,
+    "privateDataUploaded": false,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

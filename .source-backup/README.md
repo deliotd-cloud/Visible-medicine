@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+One actual-module body harness adjustment, seven first-party test/helper/immutable raw-code/public source-binding fixture paths, and six recipes. Small immutable public source path/hash bindings are included; detailed local configuration/closure data, historical checkout bytes, model geometry, scans/masks/medical coordinates, personal decisions, raw QA, dependencies and canonical ancestry are excluded. Incremental selected-source supplement only, not cumulative/whole/private/runnable backup. Original assertions remain with genuine historical children; no clinical/registration/install/public acceptance inferred.
