@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental first-party isolated test-context source, complete archived historical45-case root, explicit two-lane runner and source-only recovery recipes. Test context is not promoted into the primary Website; raw stock command compatibility is not established. Exact local baseline/private pins/data and prior source supplements remain required. No rawQA/results/logs/receipts/screenshots, generated medical/Review content/pins, private configuration/records, scans/masks/identifiers/patient coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Not a whole/private/runnable backup.

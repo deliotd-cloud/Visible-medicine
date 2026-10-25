@@ -1,0 +1,111 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T22:51:14.810Z",
+  "sourceIdentity": {
+    "kind": "explicit-isolated-historical-and-current-delivery-epoch-test-source",
+    "testContextReceiptSha256": "e216153ecef3705403c111a46d4cc5863355a8a1b9094086d301b7b2eefe71b9",
+    "primaryWebsiteReceiptSha256": "78fb4e35a0c9a20347232edfd881f4aeb19ad280fe0d1c6523e699c3496876c1",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261025-compact-access-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "e39904ce100a2b8265e5ad25575e49aa1769b88f915455ebb97a0646d1a07198",
+        "branch": "backup/compact-access-source-20261025",
+        "head": "175925049e92d07e3a0a6fc0d8d9c68db64175e4",
+        "tree": "3cf3ddc99ac713312c131ead91277c7b8af6da9b"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "test-context/tests/current-atlas-delivery.test.mjs",
+        "restore": "test-context/tests/current-atlas-delivery.test.mjs"
+      },
+      {
+        "path": "test-context/tests/fixtures/current-atlas-delivery-27b-45.mjs.raw",
+        "restore": "test-context/tests/fixtures/current-atlas-delivery-27b-45.mjs.raw"
+      },
+      {
+        "path": "recipes/two-lane-runner.mjs",
+        "restore": "coordination/current-delivery-two-epoch-runner.mjs"
+      },
+      {
+        "path": "recipes/prepare-current-delivery-two-epoch-context-20261025.mjs",
+        "restore": "coordination/prepare-current-delivery-two-epoch-context-20261025.mjs"
+      },
+      {
+        "path": "recipes/repair-current-delivery-two-epoch-runner-20261025.mjs",
+        "restore": "coordination/repair-current-delivery-two-epoch-runner-20261025.mjs"
+      },
+      {
+        "path": "recipes/record-current-delivery-two-epoch-20261025.mjs",
+        "restore": "coordination/record-current-delivery-two-epoch-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-current-delivery-epochs-source-20261025.mjs",
+        "restore": "coordination/backup-current-delivery-epochs-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "test-context/tests/current-atlas-delivery.test.mjs",
+      "bytes": 9275,
+      "sha256": "dd37bd580970921b1a81f3584dcf06b69cc6ffcd05f50ab794ab380c33ad7af0"
+    },
+    {
+      "path": "test-context/tests/fixtures/current-atlas-delivery-27b-45.mjs.raw",
+      "bytes": 27354,
+      "sha256": "6e1ba842cb4d2fdf2370c12df9ccbb1a42785369d7e042db6ed3b67048e99275"
+    },
+    {
+      "path": "recipes/two-lane-runner.mjs",
+      "bytes": 11694,
+      "sha256": "adf6b4fd7fe3c5fbe57f8f15b10259e08e075bcd7618d955ebb63c990c6448a8"
+    },
+    {
+      "path": "recipes/prepare-current-delivery-two-epoch-context-20261025.mjs",
+      "bytes": 5529,
+      "sha256": "72dd9f74bb28e46652b6ae75cd77d84a53063c2fb0387575d9e944729b168abd"
+    },
+    {
+      "path": "recipes/repair-current-delivery-two-epoch-runner-20261025.mjs",
+      "bytes": 2449,
+      "sha256": "abbfc0fceba81c5a833d496dc073c1d5f9d42ccc72f43e69725ef1b2a3043baa"
+    },
+    {
+      "path": "recipes/record-current-delivery-two-epoch-20261025.mjs",
+      "bytes": 4497,
+      "sha256": "fe5b6249cb16ad3bf4dc3f8ae10ff0580f0e8b20596909e2c2949f6bbf5d4030"
+    },
+    {
+      "path": "recipes/backup-current-delivery-epochs-source-20261025.mjs",
+      "bytes": 4903,
+      "sha256": "6db31b6eb5a5b7d12de897bd610c630bf7d6b10fed2d3bafcaca9bd5e6a23d1d"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental first-party isolated test-context source, complete archived historical45-case root, explicit two-lane runner and source-only recovery recipes. Test context is not promoted into the primary Website; raw stock command compatibility is not established. Exact local baseline/private pins/data and prior source supplements remain required. No rawQA/results/logs/receipts/screenshots, generated medical/Review content/pins, private configuration/records, scans/masks/identifiers/patient coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Not a whole/private/runnable backup.",
+  "proof": {
+    "historicalWholeCases": 45,
+    "currentWholeCases": 29,
+    "skips": 0,
+    "authenticHistoricalAndCurrentContextsRehashedBeforeAndAfter": true,
+    "old45AndPredecessor44ByteExact": true,
+    "guardedSerialJobsTerminal": true,
+    "rawStockCommandCompatibility": false,
+    "wholeStockSuitePassing": false,
+    "original316StockFailuresAnd3SkipsUnadjusted": true,
+    "primaryCandidateReplaced": false,
+    "normalPreviewUnchanged": true,
+    "sourceBytes": 65701,
+    "privateDataUploaded": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
