@@ -1,0 +1,110 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T17:28:58.450Z",
+  "sourceIdentity": {
+    "candidateReceiptSha256": "90d21dddfcdffbe42dd6265facb532655c73ff93d85c29acdfd1ded76bb8a509",
+    "verifierSourceSha256": "e1d464069e41a3e2b19465cdd13b61d023837149525cd2ed1e26806d27b5e90b",
+    "previousFilteredSupplementHead": "aa382b8208f6aef2fb296ef63bf0ac4172ded7c3"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/refresh-completion-checklist.mjs",
+      "restore": "website/scripts/refresh-completion-checklist.mjs",
+      "bytes": 27838,
+      "sha256": "e1d464069e41a3e2b19465cdd13b61d023837149525cd2ed1e26806d27b5e90b"
+    },
+    {
+      "path": "website/tests/completion-checklist-installed-contract.test.mjs",
+      "restore": "website/tests/completion-checklist-installed-contract.test.mjs",
+      "bytes": 14547,
+      "sha256": "d7568454f530f843c4eb29cb3a4ef41ee1dcc06b9371cd642cbf5012baefe2f9"
+    },
+    {
+      "path": "website/tests/completion-checklist-local-import.test.mjs",
+      "restore": "website/tests/completion-checklist-local-import.test.mjs",
+      "bytes": 3436,
+      "sha256": "7252c5d4d5796d5e7534a6fe25036d0b2c3199722890dea6465c24c6dd410a02"
+    },
+    {
+      "path": "recipes/restore-checklist-v1-fixtures.mjs",
+      "restore": "coordination/restore-checklist-v1-fixtures.mjs",
+      "bytes": 2032,
+      "sha256": "aa397de61f4f6752e00c78e882124433e74f81f33546e4126c8bd9d29df5213e"
+    },
+    {
+      "path": "recipes/run-checklist-regression-batch-20261025.mjs",
+      "restore": "coordination/run-checklist-regression-batch-20261025.mjs",
+      "bytes": 4429,
+      "sha256": "d44d4a347d943b212e5cf404441c1826a426241fce33dfe10a325ff5bc977c31"
+    },
+    {
+      "path": "recipes/authenticate-installed-checklist-source-20261025.mjs",
+      "restore": "coordination/authenticate-installed-checklist-source-20261025.mjs",
+      "bytes": 6732,
+      "sha256": "167d897053a6c87b7e5de96a49f4e03d99b1669425e6191f47cc8658fa747184"
+    },
+    {
+      "path": "recipes/authenticate-pending-checklist-source-20261025.mjs",
+      "restore": "coordination/authenticate-pending-checklist-source-20261025.mjs",
+      "bytes": 2520,
+      "sha256": "c7f00652048bdd459475f3ace9e66496d72328c5a2b2728e68be096f73e68a6b"
+    },
+    {
+      "path": "recipes/seal-checklist-workflow-verification-20261025.mjs",
+      "restore": "coordination/seal-checklist-workflow-verification-20261025.mjs",
+      "bytes": 6523,
+      "sha256": "5441e89bd5c24ae3838a34ae93ac2445c21e4d2fbf4650378535a0b74639f802"
+    },
+    {
+      "path": "recipes/apply-verified-checklist-workflow-20261025.mjs",
+      "restore": "coordination/apply-verified-checklist-workflow-20261025.mjs",
+      "bytes": 6918,
+      "sha256": "19254dd2ae4bb0f6e0a251dc243f4d6942338b18da6f5fa9b6bbe0fccc07ab4e"
+    },
+    {
+      "path": "recipes/prepare-checklist-workflow-website-20261025.mjs",
+      "restore": "coordination/prepare-checklist-workflow-website-20261025.mjs",
+      "bytes": 10035,
+      "sha256": "eec8a9b050d9c57957845a4e18d6f5de3ad77c7d3a2c5898b1505257a160b453"
+    },
+    {
+      "path": "recipes/prepare-checklist-child-env-website-20261025.mjs",
+      "restore": "coordination/prepare-checklist-child-env-website-20261025.mjs",
+      "bytes": 4534,
+      "sha256": "8299c10c6bcd1ff43ac7734aea10f88c6693cc0ca85067872e480799c0ec8ba0"
+    },
+    {
+      "path": "recipes/backup-checklist-workflow-source-20261025.mjs",
+      "restore": "coordination/backup-checklist-workflow-source-20261025.mjs",
+      "bytes": 5184,
+      "sha256": "afe29f985f0c3b601ea334700fbf5c7d7e5879e706934097bb5b1ffb3f6d9f74"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental developer-workflow source recovery only. Exact installed receipts/readback, current checklist data, raw legacy data fixtures, raw QA, private configuration/decisions, scans/masks, identifiers, models/assets, dependencies, runtime and canonical/native Git ancestry are excluded. Restoring the four original compatibility fixtures requires the exact retained local baseline; restoring installation records and current checklist state requires their separate local checkpoint. This is not a whole website, private-data, runnable or complete off-device backup.",
+  "proof": {
+    "wholeParentRoots": 4,
+    "wholeParentCases": 64,
+    "originalV1ChildCases": 19,
+    "originalBehaviorCasesPreserved": 54,
+    "newRefusalRenderingCases": 28,
+    "actualCanonicalChecklistCliPassed": true,
+    "allItems": 71,
+    "optionalIdeas": 8,
+    "originalAndCurrentEpochsKeptSeparate": true,
+    "all6217ActualPriorCompilerGraphInputsUnchanged": true,
+    "newTypeCheckOrBuildExecuted": false,
+    "actualLocalFourFixtureRestoreVerified": true,
+    "incrementalOnly": true,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "fullStockSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

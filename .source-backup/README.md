@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental developer-workflow source recovery only. Exact installed receipts/readback, current checklist data, raw legacy data fixtures, raw QA, private configuration/decisions, scans/masks, identifiers, models/assets, dependencies, runtime and canonical/native Git ancestry are excluded. Restoring the four original compatibility fixtures requires the exact retained local baseline; restoring installation records and current checklist state requires their separate local checkpoint. This is not a whole website, private-data, runnable or complete off-device backup.
