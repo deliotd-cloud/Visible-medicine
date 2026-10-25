@@ -1,0 +1,149 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T19:23:41.992Z",
+  "sourceIdentity": {
+    "candidateReceiptSha256": "b19555c9c2645c67c546408d13ac212ce3408ef1e3bb0a40899c0adec9bf87d9",
+    "previousFilteredSupplementHead": "4f2925b32f9e62b33b73aa01727dbd6f6499510c"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/search/page.tsx",
+      "restore": "website/app/search/page.tsx",
+      "bytes": 4574,
+      "sha256": "8a147c6a0529d1e09c7293048e3144a655bef94d60a866b5d870f9858f81ab6a"
+    },
+    {
+      "path": "website/app/search/search.css",
+      "restore": "website/app/search/search.css",
+      "bytes": 5138,
+      "sha256": "da0ca909a4f11aff97cf9fb89f1f87a46edc0fc9639e2667ab857dd17f70bb4f"
+    },
+    {
+      "path": "website/lib/atlas-structure-search.ts",
+      "restore": "website/lib/atlas-structure-search.ts",
+      "bytes": 1988,
+      "sha256": "c343da2d52579962c5204f6dad02759a01ff2b5e12ebea88054b0ca3653b69e5"
+    },
+    {
+      "path": "website/lib/public-education-search.ts",
+      "restore": "website/lib/public-education-search.ts",
+      "bytes": 1742,
+      "sha256": "f60f9990c4af2f97192955a4ccf7635caed97d076c292813594a35207f22ed19"
+    },
+    {
+      "path": "website/lib/structure-learning-search.ts",
+      "restore": "website/lib/structure-learning-search.ts",
+      "bytes": 2902,
+      "sha256": "1a0f054cf3a323c558de112b74bd5ab012b8d32c6c5902736353a63b959c2e8e"
+    },
+    {
+      "path": "website/tests/atlas-structure-search.test.mjs",
+      "restore": "website/tests/atlas-structure-search.test.mjs",
+      "bytes": 7845,
+      "sha256": "011825e18fd1df74992a0fca2f4748502f9c0fe00f94297439480f3efe195d25"
+    },
+    {
+      "path": "website/tests/lecture-body-integration.test.mjs",
+      "restore": "website/tests/lecture-body-integration.test.mjs",
+      "bytes": 7892,
+      "sha256": "ae0377d022c4f6ac16e3baedafdd9876dcfe42d48293fe0ce8645b6ee3f07cb6"
+    },
+    {
+      "path": "website/tests/public-education-search.test.ts",
+      "restore": "website/tests/public-education-search.test.ts",
+      "bytes": 4341,
+      "sha256": "928fc4af431705666db57edd5a751ac78e3deaaae197ce5a52b595215f31c8e9"
+    },
+    {
+      "path": "website/tests/related-lectures.test.ts",
+      "restore": "website/tests/related-lectures.test.ts",
+      "bytes": 32989,
+      "sha256": "9ef85b13e3c58ff5886250756e08cf9bcbdf93f248c45f67327823ce19415dba"
+    },
+    {
+      "path": "website/tests/structure-learning-search.test.ts",
+      "restore": "website/tests/structure-learning-search.test.ts",
+      "bytes": 4586,
+      "sha256": "1756f5327bf5bcf44e36fd391bdf70b0b9c4e66feb0e5a31ee0c623063f65a6b"
+    },
+    {
+      "path": "website/tests/unified-search-concepts.test.ts",
+      "restore": "website/tests/unified-search-concepts.test.ts",
+      "bytes": 8334,
+      "sha256": "52c02d178ebc3776a1113382600187b74bff4b9b16b8804ac40f1aed4fcaa0da"
+    },
+    {
+      "path": "recipes/prepare-head-search-direct-website-20261025.mjs",
+      "restore": "coordination/prepare-head-search-direct-website-20261025.mjs",
+      "bytes": 5297,
+      "sha256": "95d5d0964f5d81d151754ca3101939012f8cb348cd45e3dc73de224b644628a2"
+    },
+    {
+      "path": "recipes/prepare-head-search-resilient-website-20261025.mjs",
+      "restore": "coordination/prepare-head-search-resilient-website-20261025.mjs",
+      "bytes": 6283,
+      "sha256": "5de55b1142ab4576b6d8630786473db2a975214e0e7bfa0eb00835d6e3d3e0b2"
+    },
+    {
+      "path": "recipes/verify-head-search-resilient-production-20261025.mjs",
+      "restore": "coordination/verify-head-search-resilient-production-20261025.mjs",
+      "bytes": 4813,
+      "sha256": "ff14adf4941d4af6f60a795add0637b02d4cee16ff1f02751c539e55c5e2b349"
+    },
+    {
+      "path": "recipes/serve-head-search-resilient-built-worker-20261025.mjs",
+      "restore": "coordination/serve-head-search-resilient-built-worker-20261025.mjs",
+      "bytes": 3693,
+      "sha256": "7c022ccbc26aa71851e9f19dd70ef7b6046619d25070c7d65b9deb09002e1fe3"
+    },
+    {
+      "path": "recipes/stop-owned-head-search-preview-20261025.mjs",
+      "restore": "coordination/stop-owned-head-search-preview-20261025.mjs",
+      "bytes": 2576,
+      "sha256": "8620202d50777c47cd94062a9a4b457ea7bc9813f4c89ed95cf97683a67c8ad7"
+    },
+    {
+      "path": "recipes/seal-head-search-resilient-20261025.mjs",
+      "restore": "coordination/seal-head-search-resilient-20261025.mjs",
+      "bytes": 5700,
+      "sha256": "750ff2d41ee3bff77bc6914de05878c99b71ba9659bda8f6f483ef1943c2242b"
+    },
+    {
+      "path": "recipes/backup-head-search-source-20261025.mjs",
+      "restore": "coordination/backup-head-search-source-20261025.mjs",
+      "bytes": 5189,
+      "sha256": "b26605322496a7b8484ebbaf83da1aa9d1189534c8dc73c2960e6a0b572f42e3"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental first-party website search source/recovery only:11production/test source files and7coordination recipes. Exact local baseline and prior supplements are required. Complete medical fixtures, QA observations/screenshots/diagnostics, private references/configuration/decisions, generated Review/current pins/source-context records, scans/masks/identifiers, models/assets, dependencies, runtime and native/canonical Git ancestry are excluded. No complete private, runnable or whole-project/off-device backup is claimed.",
+  "proof": {
+    "currentWholeRoots": 6,
+    "currentWholeCases": 36,
+    "fullTypeRoots": 2662,
+    "fullTypeFiles": 6220,
+    "diagnostics": 0,
+    "actualStockProductionArtifacts": 1142,
+    "actualFirstColdPartialMetadataResult": true,
+    "actualDirect3dCtAndCtToMriNavigation": true,
+    "actualSeparateGuestLectureRedirect": true,
+    "geometryClinicalImagesAndSignedInPaidAccessAcceptance": false,
+    "initialUnderlyingColdErrorRootCauseStillUnconfirmed": true,
+    "all1816ProtectedInputsAndOriginalSqlAuthAccessPoliciesExact": true,
+    "noNewDependenciesLicencesOrExternalMedia": true,
+    "originalStock316FailuresAnd3SkipsUnadjusted": true,
+    "wholeStockSuitePassing": false,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "incrementalOnly": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
