@@ -1,0 +1,403 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T15:25:13.911Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-studio-outline-tests-and-coordinate-free-integration-recovery",
+    "requiredLocalWebsiteSourceSha256": "d1ad04d547ab70a392f3e3ad9f49a026e319abf5cbc0fca1bdd34aa45652490f",
+    "requiredLocalNativeHead": "27b341001718b7d5bb4f45aad0c8d8784e287c3b",
+    "requiredPriorSupplements": [
+      {
+        "branch": "backup/contained-model-preflight-source-20261025",
+        "head": "eb7f304847ca68cf5ad350009b4c0370ed1d0d83",
+        "tree": "f53e5a3e25503a471cd94877498b42e50e4a8f85"
+      },
+      {
+        "branch": "backup/abdominal-arterial-us-source-20261025",
+        "head": "ec4e383a0e8741670adfa3822af60260510a56bd",
+        "tree": "35b6e11406b6fe09bdc331bb1783a2ccd6700724"
+      },
+      {
+        "branch": "backup/abdominal-arterial-us-build-source-20261025",
+        "head": "c434f3f98044451967250eb910585105610c7c88",
+        "tree": "51734164ab581e0862bd163c430f9014d13d7fa6"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/components/StudioCourseEditor.tsx",
+        "restore": "website/components/StudioCourseEditor.tsx"
+      },
+      {
+        "path": "website/tests/studio-course-details-content-role-proof.test.mjs",
+        "restore": "website/tests/studio-course-details-content-role-proof.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-course-details-content.test.mjs",
+        "restore": "website/tests/studio-course-details-content.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-course-outline-link-names.test.mjs",
+        "restore": "website/tests/studio-course-outline-link-names.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-course-outline-order.test.mjs",
+        "restore": "website/tests/studio-course-outline-order.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-draft-dependency-source.mjs",
+        "restore": "website/tests/studio-draft-dependency-source.mjs"
+      },
+      {
+        "path": "website/tests/current-private-review-binding.test.mjs",
+        "restore": "website/tests/current-private-review-binding.test.mjs"
+      },
+      {
+        "path": "website/tests/current-atlas-delivery.test.mjs",
+        "restore": "website/tests/current-atlas-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/current-atlas-delivery-before-abdominal-us-27b.mjs.raw",
+        "restore": "website/tests/fixtures/current-atlas-delivery-before-abdominal-us-27b.mjs.raw"
+      },
+      {
+        "path": "recipes/prepare-abdominal-us-coverage-seams.mjs",
+        "restore": "coordination/prepare-abdominal-us-coverage-seams.mjs"
+      },
+      {
+        "path": "recipes/prepare-abdominal-us-delivery-successor.mjs",
+        "restore": "coordination/prepare-abdominal-us-delivery-successor.mjs"
+      },
+      {
+        "path": "recipes/abdominal-us-delivery-successor-case.mjs.raw",
+        "restore": "coordination/abdominal-us-delivery-successor-case.mjs.raw"
+      },
+      {
+        "path": "recipes/private-review-v2/verify-source-inverse.mjs",
+        "restore": "coordination/private-review-v2/verify-source-inverse.mjs"
+      },
+      {
+        "path": "recipes/private-review-v2/fixtures/current-private-review-binding.v1.mjs.raw",
+        "restore": "coordination/private-review-v2/fixtures/current-private-review-binding.v1.mjs.raw"
+      },
+      {
+        "path": "recipes/run-private-review-historical.mjs",
+        "restore": "coordination/run-private-review-historical.mjs"
+      },
+      {
+        "path": "recipes/run-private-review-compact-predecessor.mjs",
+        "restore": "coordination/run-private-review-compact-predecessor.mjs"
+      },
+      {
+        "path": "recipes/whole-project-type-checker.mjs",
+        "restore": "coordination/whole-project-type-checker.mjs"
+      },
+      {
+        "path": "recipes/prepare-abdominal-us-website-20261025.mjs",
+        "restore": "coordination/prepare-abdominal-us-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/import-abdominal-us-website-stock-small-20261025.mjs",
+        "restore": "coordination/import-abdominal-us-website-stock-small-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-abdominal-us-website-studio-20261025.mjs",
+        "restore": "coordination/integrate-abdominal-us-website-studio-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-abdominal-us-studio-focused-20261025.mjs",
+        "restore": "coordination/run-abdominal-us-studio-focused-20261025.mjs"
+      },
+      {
+        "path": "recipes/generate-abdominal-us-website-coverage-20261025.mjs",
+        "restore": "coordination/generate-abdominal-us-website-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/install-abdominal-us-website-coverage-20261025.mjs",
+        "restore": "coordination/install-abdominal-us-website-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-abdominal-us-website-review-20261025.mjs",
+        "restore": "coordination/build-abdominal-us-website-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/refresh-abdominal-us-website-delivery-pin-20261025.mjs",
+        "restore": "coordination/refresh-abdominal-us-website-delivery-pin-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-abdominal-us-private-review-test-20261025.mjs",
+        "restore": "coordination/integrate-abdominal-us-private-review-test-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-abdominal-us-private-current-20261025.mjs",
+        "restore": "coordination/check-abdominal-us-private-current-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-abdominal-us-private-historical-20261025.mjs",
+        "restore": "coordination/run-abdominal-us-private-historical-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-abdominal-us-private-compact-20261025.mjs",
+        "restore": "coordination/run-abdominal-us-private-compact-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-abdominal-us-current-delivery-20261025.mjs",
+        "restore": "coordination/check-abdominal-us-current-delivery-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-abdominal-us-current-role-20261025.mjs",
+        "restore": "coordination/integrate-abdominal-us-current-role-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-abdominal-us-website-source-20261025.mjs",
+        "restore": "coordination/seal-abdominal-us-website-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-abdominal-us-website-full-types-20261025.mjs",
+        "restore": "coordination/check-abdominal-us-website-full-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-abdominal-us-website-build-20261025.mjs",
+        "restore": "coordination/prepare-abdominal-us-website-build-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-abdominal-us-website-20261025.mjs",
+        "restore": "coordination/build-abdominal-us-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/serve-abdominal-us-built-worker-20261025.mjs",
+        "restore": "coordination/serve-abdominal-us-built-worker-20261025.mjs"
+      },
+      {
+        "path": "recipes/record-abdominal-us-website-verification-20261025.mjs",
+        "restore": "coordination/record-abdominal-us-website-verification-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-abdominal-us-studio-website-source-20261025.mjs",
+        "restore": "coordination/backup-abdominal-us-studio-website-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/StudioCourseEditor.tsx",
+      "bytes": 15668,
+      "sha256": "08a1c37ef92f170015231acc96609e3bb9582ec270b0c8c242607560c6ddaf2d"
+    },
+    {
+      "path": "website/tests/studio-course-details-content-role-proof.test.mjs",
+      "bytes": 3874,
+      "sha256": "e92bdefb9856eef0ff9af180ea2cdfb3fdd75a3d1412c249fb7115512462f13a"
+    },
+    {
+      "path": "website/tests/studio-course-details-content.test.mjs",
+      "bytes": 11857,
+      "sha256": "13003d7665d5a40da57bf7e60c5c820f941fa673445e29f9a03d5aed1778698a"
+    },
+    {
+      "path": "website/tests/studio-course-outline-link-names.test.mjs",
+      "bytes": 2997,
+      "sha256": "46ea1687374e0026dea19554f136ac28e7a4b587e463cc0863c8b8311bf1e790"
+    },
+    {
+      "path": "website/tests/studio-course-outline-order.test.mjs",
+      "bytes": 5819,
+      "sha256": "183c4512f02a47a59063fa8bdf8039ad59f43e4f221f9e4b656fb507a91d5253"
+    },
+    {
+      "path": "website/tests/studio-draft-dependency-source.mjs",
+      "bytes": 2389,
+      "sha256": "5c9ff210263e1a071a5a4930ff316bfc26457308d56c1fa2fc3304feb4376f47"
+    },
+    {
+      "path": "website/tests/current-private-review-binding.test.mjs",
+      "bytes": 8482,
+      "sha256": "0fd540b7a8443a0a6a794a24b13b3d4ad9330d9113e8341fce1921c7f325b57f"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 27354,
+      "sha256": "6e1ba842cb4d2fdf2370c12df9ccbb1a42785369d7e042db6ed3b67048e99275"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-abdominal-us-27b.mjs.raw",
+      "bytes": 24348,
+      "sha256": "d873c8ce430f9b11aab234e406dbd6cf98a8a47403bc8e1021fe80059a2b7c96"
+    },
+    {
+      "path": "recipes/prepare-abdominal-us-coverage-seams.mjs",
+      "bytes": 18137,
+      "sha256": "3a8c3e4b09a2d88b5f9e3ab24270eee43462685fe103f65220fd50b561d58eb4"
+    },
+    {
+      "path": "recipes/prepare-abdominal-us-delivery-successor.mjs",
+      "bytes": 16965,
+      "sha256": "9d514d2c15ebb06e2571be90ce528ae45a6908e1a600b7ff0f57606f82263343"
+    },
+    {
+      "path": "recipes/abdominal-us-delivery-successor-case.mjs.raw",
+      "bytes": 2701,
+      "sha256": "eb6da76da9b4b6e24ffb32b9361111632946d769cb1c018f2fd6aecfb8cd5f7d"
+    },
+    {
+      "path": "recipes/private-review-v2/verify-source-inverse.mjs",
+      "bytes": 2324,
+      "sha256": "0a2f8b0f14e46954e3a38be474f804e652944f2652e326daf886e642f92e0362"
+    },
+    {
+      "path": "recipes/private-review-v2/fixtures/current-private-review-binding.v1.mjs.raw",
+      "bytes": 6837,
+      "sha256": "9c2054a7d53b8d20bfa32ab55755fa7339232f251bcc763c145370af31d6d042"
+    },
+    {
+      "path": "recipes/run-private-review-historical.mjs",
+      "bytes": 17456,
+      "sha256": "769a5425941416e3c8cb11387b24c8fc42d1e0632829e7473310e702dfb00c93"
+    },
+    {
+      "path": "recipes/run-private-review-compact-predecessor.mjs",
+      "bytes": 14639,
+      "sha256": "22de094cd2dd718c0eacfb9f865bf16bba8107e917ccdb71a0ebb3b5c4fe2867"
+    },
+    {
+      "path": "recipes/whole-project-type-checker.mjs",
+      "bytes": 1630,
+      "sha256": "5a35b31202b7e4d3cc3c571184beb52ab4fa6e132c1836acb0de0385107b9ed9"
+    },
+    {
+      "path": "recipes/prepare-abdominal-us-website-20261025.mjs",
+      "bytes": 6529,
+      "sha256": "a5bc1f6e0fa919eaada150b15894cf87c54dc77cd8cd145b691c1de3117fa354"
+    },
+    {
+      "path": "recipes/import-abdominal-us-website-stock-small-20261025.mjs",
+      "bytes": 6801,
+      "sha256": "1ad000b0740aa4c949263bcbfe12a8fd2b3f3165e4e539443aac12c02e740f6a"
+    },
+    {
+      "path": "recipes/integrate-abdominal-us-website-studio-20261025.mjs",
+      "bytes": 2435,
+      "sha256": "707e2da17ae0182787c53ad2035edc9ce15b0f225bfd2e288741ff195e3a3f4a"
+    },
+    {
+      "path": "recipes/run-abdominal-us-studio-focused-20261025.mjs",
+      "bytes": 4666,
+      "sha256": "21df2a7529a3572c4cd9c61bc75eb0c170b70e5b913f473a1f8c190cda814692"
+    },
+    {
+      "path": "recipes/generate-abdominal-us-website-coverage-20261025.mjs",
+      "bytes": 2872,
+      "sha256": "788540022efa9aed936dc8db0c24d8b6f6c0b8251b53e78647575f44d1e7dfe0"
+    },
+    {
+      "path": "recipes/install-abdominal-us-website-coverage-20261025.mjs",
+      "bytes": 2768,
+      "sha256": "0887020061462a957f60c84a2f252796144dc11468e869067377d6074bf3603d"
+    },
+    {
+      "path": "recipes/build-abdominal-us-website-review-20261025.mjs",
+      "bytes": 6387,
+      "sha256": "b7a12664c830a0ba5af8b1aef28ae0f42960e79c5152c2f0825160fa4540f3b5"
+    },
+    {
+      "path": "recipes/refresh-abdominal-us-website-delivery-pin-20261025.mjs",
+      "bytes": 2775,
+      "sha256": "34b3670f316a6bad9c95f88a6556f87ded8a8ea16d9a8a586deb0df35f5ef600"
+    },
+    {
+      "path": "recipes/integrate-abdominal-us-private-review-test-20261025.mjs",
+      "bytes": 1998,
+      "sha256": "4e9cb0ff325a9d2c605c30e7cce527434c98a102857388e399f414b85911e9d9"
+    },
+    {
+      "path": "recipes/check-abdominal-us-private-current-20261025.mjs",
+      "bytes": 2466,
+      "sha256": "2521952ec21da8a9b3500b3463e3f9f27a3418566193f4a0d8b5e53b18668fc9"
+    },
+    {
+      "path": "recipes/run-abdominal-us-private-historical-20261025.mjs",
+      "bytes": 1792,
+      "sha256": "6969f8374c7d27a0a6331853b54df84f681679b376b28a660be0d6ea26c6235d"
+    },
+    {
+      "path": "recipes/run-abdominal-us-private-compact-20261025.mjs",
+      "bytes": 1785,
+      "sha256": "a47ca95d2909955a980cf0a5da03a0eccc6c89fbf06e6324ee0c892c5f64aae6"
+    },
+    {
+      "path": "recipes/check-abdominal-us-current-delivery-20261025.mjs",
+      "bytes": 2869,
+      "sha256": "0c1e975c952cf279a963cc1baf05d5d3d3b84611cc65a294882ff238c603adce"
+    },
+    {
+      "path": "recipes/integrate-abdominal-us-current-role-20261025.mjs",
+      "bytes": 3115,
+      "sha256": "76f084b3f0bca0b6e8fd568b0d0bcbcb19c3656ed71630c564b48599f44dc19c"
+    },
+    {
+      "path": "recipes/seal-abdominal-us-website-source-20261025.mjs",
+      "bytes": 5661,
+      "sha256": "ec61d240a445b5470b29478cb6d2a08917bd227efe4963b09cf1cadfef6f9a1c"
+    },
+    {
+      "path": "recipes/check-abdominal-us-website-full-types-20261025.mjs",
+      "bytes": 3539,
+      "sha256": "1e6d95e0c6a7eb5599943e7eb7c606e5a3e56de2ca700d1e851ef0c3ce7c0af9"
+    },
+    {
+      "path": "recipes/prepare-abdominal-us-website-build-20261025.mjs",
+      "bytes": 1863,
+      "sha256": "ec1314ea236c5e6c75c060f2506d76164ace6c076632ea9a5e9cd14a8042707d"
+    },
+    {
+      "path": "recipes/build-abdominal-us-website-20261025.mjs",
+      "bytes": 3329,
+      "sha256": "11460b7524b51cc78728fc7bba3bf76c4f11588f206faabc5486f12d35b2da86"
+    },
+    {
+      "path": "recipes/serve-abdominal-us-built-worker-20261025.mjs",
+      "bytes": 3666,
+      "sha256": "8014599d0cde6001c1a1f0b1f9f7202acf7c867e1839d8ce6b0f778bee3cf46c"
+    },
+    {
+      "path": "recipes/record-abdominal-us-website-verification-20261025.mjs",
+      "bytes": 6578,
+      "sha256": "5eb9097f293316357a0213871237c07b1416378ec1ecfcd87fd3f1686cfb420b"
+    },
+    {
+      "path": "recipes/backup-abdominal-us-studio-website-source-20261025.mjs",
+      "bytes": 7503,
+      "sha256": "8fc0f00aae6d22e8a93c7c87958fe97e46563d52f914518252f0944ff4b41c82"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental first-party Studio saved-order component/tests, source-bound delivery/Review tests and coordinate-free integration/recovery recipes only. Earlier source supplements and local baseline/data remain required; not a whole/private/runnable backup. No rawQA/screenshots/private configuration/closure/scans/masks/decisions/medical coordinates/generated coverage/renderer/Review/pins/inventories/models/dependencies/runtime or canonical/native ancestry uploaded.",
+  "proof": {
+    "sourceBytes": 264874,
+    "fullStrictTypeRoots": 2660,
+    "fullStrictTypeFiles": 6216,
+    "diagnostics": 0,
+    "stockProductionArtifacts": 1142,
+    "studioWholeCases": 137,
+    "currentDeliveryWholeCases": 45,
+    "currentReviewWholeCases": 4,
+    "historicalWholeCasesInAuthenticContexts": 19,
+    "originalMixedCompactFailureRetained": true,
+    "all44PredecessorCasesPreservedWithFullInverse": true,
+    "actualAnonymousFourDraftNotesAndReferencesVerified": true,
+    "sourceModelsAndLicencesUnchanged": true,
+    "privateDataUploaded": false,
+    "wholeSuitePassing": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "authenticatedStudioSaveAcceptance": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {pathToFileURL} from 'node:url';
+import {hash,json} from './seal-simple-website-successor.mjs';
+import {guarded} from './run-small-native-task-guarded-20261025.mjs';
+const stage='F:/VisibleMedicine/staging/20261025-abdominal-us-website',prep=json(stage+'/PREPARATION.json'),site=prep.website,dir=stage+'/checks/studio-focused-attempt-1';
+const names=['studio-course-outline-order.test.mjs','studio-course-editor.test.ts','studio-course-outline-link-names.test.mjs','studio-course-details-content.test.mjs','studio-course-details-content-role-proof.test.mjs','studio-course-details-focus.test.mjs','studio-course-popstate-focus.test.mjs','studio-course-history.test.mjs','studio-course-history-controller.test.mjs','studio-course-switch-details.test.mjs','studio-course-editor-keyboard.test.mjs','studio-course-options.test.mjs','studio-course-recovery-notice.test.mjs','studio-course-draft-discard.test.mjs','studio-draft-scope.test.mjs','studio-duplicate-context.test.mjs','studio-release-order.test.ts','studio-release-draft-binding.test.mjs','studio-course-details-form.test.mjs','studio-course-details-content-history.test.mjs','studio-release-workflow.test.mjs','studio-release-workflow-ui.test.ts'];
+const jobs=names.map(name=>({root:'tests/'+name,role:'current'}));jobs.push({root:'tests/studio-course-details-content.test.mjs',role:'historical'});
+function verify(){const state=json(stage+'/STOCK_STATE.json');assert.equal(state.phase,'lecture');assert.equal(hash(stage+'/STUDIO_SOURCE_INTEGRATED.json'),state.studioSource.sha256);const rows=new Map(prep.baseSourceRows.map(r=>[r.path,r]));rows.set(prep.importerInverse.path,{path:prep.importerInverse.path,sha256:prep.importerInverse.afterSha256});for(const r of state.mutable)rows.set(r.path,r);for(const r of rows.values())assert.equal(hash(site+'/'+r.path),r.sha256,r.path);for(const r of prep.runtimeRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);for(const r of json(prep.native.path).sourceRows)assert.equal(hash(prep.atlas+'/'+r.path),r.sha256,r.path);}
+if(process.argv[2]==='child'){
+ const {assertCompleteOriginal}=await import(pathToFileURL(site+'/tests/deepbrain-foot-roles.mjs'));const result=[];verify();
+ for(const [i,j]of jobs.entries()){
+  const stem=dir+'/'+String(i+1).padStart(2,'0')+'-'+j.root.split('/').at(-1)+'-'+j.role;
+  const run=spawnSync(process.execPath,['--max-old-space-size=512','--experimental-strip-types','--test','--test-concurrency=1','--test-reporter=tap',j.root],{cwd:site,windowsHide:true,shell:false,maxBuffer:32e6,encoding:'utf8',env:{...process.env,STUDIO_FOCUS_ROLE:j.role}});
+  fs.writeFileSync(stem+'.tap',run.stdout??'',{flag:'wx'});fs.writeFileSync(stem+'.stderr.log',run.stderr??'',{flag:'wx'});
+  const m=[...(run.stdout??'').matchAll(/^# tests (\d+)\r?$/gm)];let counts=null,error=null;try{assert.equal(m.length,1);assert(+m[0][1]>0);counts=assertCompleteOriginal({code:run.status,signal:run.signal,...(run.error?{error:String(run.error)}:{})},run.stdout,+m[0][1]);}catch(e){error=String(e);}
+  result.push({...j,rootSha256:hash(site+'/'+j.root),code:run.status,signal:run.signal,counts,error,passing:error===null,evidence:stem});console.log(JSON.stringify(result.at(-1)));
+ }
+ verify();fs.writeFileSync(dir+'/ROOT_RESULTS.json',JSON.stringify({at:new Date().toISOString(),roots:result,passing:result.every(r=>r.passing),wholeUnfilteredStandaloneRoots:true,actualSignedInUiOrDatabaseAcceptance:false},null,2)+'\n',{flag:'wx'});process.exitCode=result.every(r=>r.passing)?0:1;
+}else{
+ verify();assert(!fs.existsSync(dir));global.gc();const run=await guarded({site,dir,command:'--max-old-space-size=256 '+process.argv[1].replaceAll('\\','/')+' child',heap:512,aggregate:2048,minimum:4096,extraEnv:{VM_ATLAS_SOURCE_REPO:prep.atlas,ATLAS_SOURCE_REPO:prep.atlas,VM_WEBSITE_ROOT:site}});verify();const roots=fs.existsSync(dir+'/ROOT_RESULTS.json')?json(dir+'/ROOT_RESULTS.json'):null;const result={at:new Date().toISOString(),run,passing:run.passing&&roots?.passing===true,wholeRootRuns:roots?.roots.length??0,cases:roots?.roots.reduce((n,r)=>n+(r.counts?.tests??0),0)??0,failures:roots?.roots.filter(r=>!r.passing).map(r=>({root:r.root,role:r.role,error:r.error})),allCandidateNativeAndRuntimeSourceBytesUnchanged:true,ownerPreviewChanged:false,fullStockSuite:false,actualSignedInUiOrDatabaseAcceptance:false};fs.writeFileSync(dir+'/RESULT.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({result:dir+'/RESULT.json',sha256:hash(dir+'/RESULT.json'),...result}));process.exitCode=result.passing?0:1;
+}

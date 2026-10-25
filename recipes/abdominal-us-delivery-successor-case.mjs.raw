@@ -1,0 +1,38 @@
+
+test('current 27b abdominal ultrasound delivery preserves all 44 predecessor cases',()=>{
+ const admitted=validateCurrentAtlasDelivery();assert(currentAtlasDeliveryRoot());
+ assert.equal(admitted.source,'@SOURCE@');assert.equal(admitted.sourceTree,'@TREE@');
+ assert.equal(admitted.reviewSourceFiles,@REVIEW_COUNT@);
+ const review=JSON.parse(read('atlas-review/manifest.json'));
+ const binding=JSON.parse(read('atlas-review/integration-inputs.json'));
+ assert.equal(review.files.length,@REVIEW_COUNT@);assert.equal(binding.inputs.length,@INPUT_COUNT@);
+ for(const [path,fingerprint]of [
+  ['lib/abdominal-arterial-ultrasound.ts','@HASH_LIB@'],
+  ['content/abdominal-arterial-ultrasound.ts','@HASH_CONTENT@'],
+ ]){
+  const rows=review.files.filter(row=>row.path===path);assert.equal(rows.length,1,path);
+  assert.equal(rows[0].sourceSha256,fingerprint,path);assert.equal(rows[0].importedSha256,fingerprint,path);
+  assert.equal(sha(read('atlas-review/'+path)),fingerprint,path);
+  const inputs=binding.inputs.filter(row=>row.path==='atlas-review/'+path);
+  assert.equal(inputs.length,1,path);assert.equal(inputs[0].sha256,fingerprint,path);
+ }
+ const original=read('tests/fixtures/current-atlas-delivery-before-abdominal-us-27b.mjs.raw');
+ assert.equal(sha(original),'@ROOT_HASH@','Complete original 44-case source');
+ const current=read('tests/current-atlas-delivery.test.mjs').toString();
+ const marker="\ntest('current 27b abdominal ultrasound delivery preserves all 44 predecessor cases'";
+ assert.equal(current.split(marker).length,2,'One exact 27b successor case');
+ let inverse=current.slice(0,current.indexOf(marker));
+ const one=(from,to)=>{assert.equal(inverse.split(from).length,2,`Exact 27b seam: ${from}`);inverse=inverse.replace(from,to);};
+ one("assert.equal(CURRENT_ATLAS_REVISION,'@SOURCE@');",
+  "assert.equal(CURRENT_ATLAS_REVISION,'665c53a4d21667d14f12cf2e81a200d5da3df3ac');");
+ one("assert.equal(pin.sourceTree,'@TREE@');",
+  "assert.equal(pin.sourceTree,'dfbba5b89ba5c496fb83cbda410a4426a68b7409');");
+ for(const name of ["'head-neck'",'shoulder',"'lower-limb'","'female-pelvis'"]){
+  one(`${name}:'@SOURCE@'`,`${name}:'665c53a4d21667d14f12cf2e81a200d5da3df3ac'`);
+ }
+ one('assert.equal(sourceFiles,@REVIEW_COUNT@);assert.equal(inputs,@INPUT_COUNT@);assert(artifacts>100);',
+  'assert.equal(sourceFiles,1610);assert.equal(inputs,1814);assert(artifacts>100);');
+ one("const current=read('tests/fixtures/current-atlas-delivery-before-abdominal-us-27b.mjs.raw').toString();",
+  "const current=read('tests/current-atlas-delivery.test.mjs').toString();");
+ assert.equal(inverse,original.toString(),'Every complete 44-case source, historical pin and refusal remains byte-exact');
+});
