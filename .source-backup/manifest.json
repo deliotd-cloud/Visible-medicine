@@ -1,0 +1,214 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T16:36:19.574Z",
+  "sourceIdentity": {
+    "kind": "coordinate-free-first-party-test-repair-and-recovery-supplement",
+    "requiredLocalWebsiteSourceSha256": "1dc597765ecc6838a09fa2bfb152a7fda450f9e450ca46ae7f2fa2ae55b7f02f",
+    "requiredLocalBaselineSourceSha256": "d1ad04d547ab70a392f3e3ad9f49a026e319abf5cbc0fca1bdd34aa45652490f",
+    "requiredLocalNativeHead": "27b341001718b7d5bb4f45aad0c8d8784e287c3b",
+    "requiredPriorSupplement": {
+      "branch": "backup/abdominal-us-studio-website-source-20261025",
+      "head": "096c91c0ca8e0dd0ad553d0910de5a8b18d94da0",
+      "tree": "3078daf508e1165634acec880325e9c75abd3477"
+    },
+    "sixExactLocalTestPreimages": [
+      {
+        "path": "tests/head-ct-bone-decisions.test.ts",
+        "sha256": "9e2bbba4e3d41a51be4ab75bee9558994c8ae0a22ae63c4b4a403ba38ebfab02"
+      },
+      {
+        "path": "tests/head-mri-anatomy-checks.test.ts",
+        "sha256": "4595e84d1be64edfaf0035aff9a1e463db54af4e5ba1724a52f6ea102e3671d4"
+      },
+      {
+        "path": "tests/head-mri-independent-review-ui.test.ts",
+        "sha256": "fe94de89865a008b971a74611be60b73db2021e4252a149aec6fe066b56ccc31"
+      },
+      {
+        "path": "tests/head-mri-only-clinical.test.ts",
+        "sha256": "25b66d601c50b045936f9c10e1cfb2f58750af58aca18196ec07117c56889d45"
+      },
+      {
+        "path": "tests/head-mri-review-api.test.ts",
+        "sha256": "b51ca41eae93fb339a4271ff7215db154343b833f01050d1ca2b1b75be9c9557"
+      },
+      {
+        "path": "tests/head-paired-decisions.test.ts",
+        "sha256": "fcae301f591128d7be7c0cdee9606a7173dc35aa107c3164afcfb00bbc02bf37"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/tests/head-learning-page-imports.mjs",
+        "restore": "website/tests/head-learning-page-imports.mjs"
+      },
+      {
+        "path": "patches/HEAD_REVIEW_TESTS.patch",
+        "restore": "coordination/HEAD_REVIEW_TESTS.patch"
+      },
+      {
+        "path": "recipes/run-head-review-regression-baseline-20261025.mjs",
+        "restore": "coordination/run-head-review-regression-baseline-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-head-review-final-whole-20261025.mjs",
+        "restore": "coordination/check-head-review-final-whole-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-private-review-final-full-types-20261025.mjs",
+        "restore": "coordination/check-private-review-final-full-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-private-review-final-focused-types-20261025.mjs",
+        "restore": "coordination/check-private-review-final-focused-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-head-review-regression-verification-20261025.mjs",
+        "restore": "coordination/seal-head-review-regression-verification-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-head-review-final-acceptance-20261025.mjs",
+        "restore": "coordination/seal-head-review-final-acceptance-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-private-api-startup-probe-20261025.mjs",
+        "restore": "coordination/run-private-api-startup-probe-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-miniflare-configuration-probe-20261025.mjs",
+        "restore": "coordination/run-miniflare-configuration-probe-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-head-review-regression-source-20261025.mjs",
+        "restore": "coordination/backup-head-review-regression-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/whole-project-type-checker.mjs",
+        "restore": "coordination/whole-project-type-checker.mjs"
+      },
+      {
+        "path": "recipes/probe-private-api-startup.mjs",
+        "restore": "coordination/probe-private-api-startup.mjs"
+      },
+      {
+        "path": "recipes/probe-miniflare-config.mjs",
+        "restore": "coordination/probe-miniflare-config.mjs"
+      },
+      {
+        "path": "recipes/probe-miniflare-all-formats.mjs",
+        "restore": "coordination/probe-miniflare-all-formats.mjs"
+      }
+    ],
+    "patchRestore": "Use the exact six local baseline test preimages. In a new scratch directory, git -c core.autocrlf=false apply --unidiff-zero HEAD_REVIEW_TESTS.patch; copy the helper separately. Full six-file byte restoration was verified locally; baseline and other source/data remain required."
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/head-learning-page-imports.mjs",
+      "bytes": 8448,
+      "sha256": "fde7bc0a71f22762e15e9a3220d689b645523a1416df51b2f3f1859098e8d2f8"
+    },
+    {
+      "path": "patches/HEAD_REVIEW_TESTS.patch",
+      "bytes": 6402,
+      "sha256": "21add245ff1cfc0824ba2d8ebb7399d20addd5e6b1f2ad3f869225c8bcb48048"
+    },
+    {
+      "path": "recipes/run-head-review-regression-baseline-20261025.mjs",
+      "bytes": 5337,
+      "sha256": "ed1664fab8500683e7c6102350528f4d2e8d5b9da1653c1b695714db92c31d4c"
+    },
+    {
+      "path": "recipes/check-head-review-final-whole-20261025.mjs",
+      "bytes": 3880,
+      "sha256": "3c03aeddf80197e7874b6a23b24abc323737d9f9634e5a3ca0ae7c2a57b893db"
+    },
+    {
+      "path": "recipes/check-private-review-final-full-types-20261025.mjs",
+      "bytes": 3544,
+      "sha256": "cf4b8353179e99402d4de37c255938969f934ba2e8fd694c1ab46d8ef00a6c2a"
+    },
+    {
+      "path": "recipes/check-private-review-final-focused-types-20261025.mjs",
+      "bytes": 4226,
+      "sha256": "41de7f6e0cb255c77e1db1a765c3ed44d28a899d8129e0c0d68dc8d66cd19826"
+    },
+    {
+      "path": "recipes/seal-head-review-regression-verification-20261025.mjs",
+      "bytes": 8117,
+      "sha256": "6c6d0f5d30a402c319ea0c2604d76e8dd4b9da7016569d466a6f341a10c2c13c"
+    },
+    {
+      "path": "recipes/seal-head-review-final-acceptance-20261025.mjs",
+      "bytes": 1835,
+      "sha256": "c75c27705217d758acb511221a9e4fe635cbd15d7435e04b4784e77c98432c36"
+    },
+    {
+      "path": "recipes/run-private-api-startup-probe-20261025.mjs",
+      "bytes": 2259,
+      "sha256": "a51abc91c422d66b83b09db476dc471df6d2375eb01fe51502e6fbda36dbe0db"
+    },
+    {
+      "path": "recipes/run-miniflare-configuration-probe-20261025.mjs",
+      "bytes": 2234,
+      "sha256": "4be7fb09961f0d2b2be1db8c8cd61b6e6073434d28d651842743c8aca6c3d33e"
+    },
+    {
+      "path": "recipes/backup-head-review-regression-source-20261025.mjs",
+      "bytes": 6168,
+      "sha256": "8c9a95e2f6c476bd635ae8ee8c011c495fec5253c4b616c885a2f375d537ce32"
+    },
+    {
+      "path": "recipes/whole-project-type-checker.mjs",
+      "bytes": 1630,
+      "sha256": "5a35b31202b7e4d3cc3c571184beb52ab4fa6e132c1836acb0de0385107b9ed9"
+    },
+    {
+      "path": "recipes/probe-private-api-startup.mjs",
+      "bytes": 5968,
+      "sha256": "25a50d2b5a6db84eedea338eebf79a089bda8c98ffd540a302c2ae561054716e"
+    },
+    {
+      "path": "recipes/probe-miniflare-config.mjs",
+      "bytes": 5763,
+      "sha256": "f2861274cf2ff5567b28f1326cc4a7dfcc2bbb4735b94e8b18b2232befa7e676"
+    },
+    {
+      "path": "recipes/probe-miniflare-all-formats.mjs",
+      "bytes": 5792,
+      "sha256": "35e174ac874dbd9dd5c7f6c8fa00aaf321de6477e0159205f5e0c28f251bae06"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental first-party helper, coordinate-free six-test patch and mechanical verification/recovery recipes only. Not whole/private/runnable backup. Earlier source supplements and exact local baseline/data remain required. No full medical test fixtures, rawQA, source coordinates, private configuration/closure, generated Review/pins/coverage/renderer data, scans/masks/decisions/models/dependencies/runtime or canonical/native ancestry uploaded.",
+  "proof": {
+    "sourceBytes": 71603,
+    "currentWholeRoots": 6,
+    "currentWholeCases": 29,
+    "fail": 0,
+    "skip": 0,
+    "originalAssertionExpressionsRetained": 402,
+    "fullStrictTypeRoots": 2660,
+    "fullStrictTypeFiles": 6217,
+    "diagnostics": 0,
+    "cervicalCollectorAndActualHistoricalChildPassed": true,
+    "matchedModuleRootControlAndAllThreeApiRootsPassed": true,
+    "sixPatchFilesActuallyRestoredAndHashMatched": true,
+    "originalFailuresRetained": true,
+    "productSourceAndRuntimeByteExactToPriorBuiltCandidate": true,
+    "newProductionBuildExecuted": false,
+    "wholeSuitePassing": false,
+    "privateDataUploaded": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "realSignedInTargetAcceptance": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,70 @@
+diff --git a/tests/head-ct-bone-decisions.test.ts b/tests/head-ct-bone-decisions.test.ts
+index ff306ac..2c284a7 100644
+--- a/tests/head-ct-bone-decisions.test.ts
++++ b/tests/head-ct-bone-decisions.test.ts
+@@ -78 +78 @@ test('guarded internal service stores separate durable per-item decisions withou
+-  const mf=new Miniflare(convertV4MiniflareOptions({modules:[{type:'ESModule',path:resolve(process.env.TEMP??'.local','ct-bone-decision-fixture.mjs'),contents:bundled.outputFiles[0].text}],compatibilityDate:'2026-08-23',d1Databases:['DB'],log:new Log(LogLevel.NONE)}));
++  const mf=new Miniflare(convertV4MiniflareOptions({modules:[{type:'ESModule',path:resolve(process.env.TEMP??'.local','ct-bone-decision-fixture.mjs'),contents:bundled.outputFiles[0].text}],modulesRoot:resolve(process.env.TEMP??'.local'),compatibilityDate:'2026-08-23',d1Databases:['DB'],log:new Log(LogLevel.NONE)}));
+diff --git a/tests/head-mri-anatomy-checks.test.ts b/tests/head-mri-anatomy-checks.test.ts
+index f5c9eb1..3e49e5b 100644
+--- a/tests/head-mri-anatomy-checks.test.ts
++++ b/tests/head-mri-anatomy-checks.test.ts
+@@ -15,0 +16 @@ import {headReviewImageLinkModule} from './head-review-image-link-loader.ts';
++import {headLearningPageImports} from './head-learning-page-imports.mjs';
+@@ -243,2 +244,2 @@ test('actual authorized page exposes the four picker entries and separate review
+-    const calls:string[]=[],empty=new Proxy({}, {get:()=>async()=>null});
+-    const mod=compile('../app/workspace/atlas-review/head-learning/page.tsx',new Proxy({
++    const calls:string[]=[];
++    const mod=compile('../app/workspace/atlas-review/head-learning/page.tsx',headLearningPageImports({
+@@ -254 +255 @@ test('actual authorized page exposes the four picker entries and separate review
+-    } as Record<string,unknown>,{get:(target,name:string)=>target[name]??(name.startsWith('@/')?empty:undefined)}));
++    }));
+diff --git a/tests/head-mri-independent-review-ui.test.ts b/tests/head-mri-independent-review-ui.test.ts
+index e67b5e9..ae05c82 100644
+--- a/tests/head-mri-independent-review-ui.test.ts
++++ b/tests/head-mri-independent-review-ui.test.ts
+@@ -14,0 +15 @@ import * as questions from '../lib/head-mri-anatomy-checks.ts';
++import {headLearningPageImports} from './head-learning-page-imports.mjs';
+@@ -51,2 +52,2 @@ test('authorized page independently verifies each form and exposes exact picker
+-  const calls:string[]=[],nullModule=new Proxy({}, {get:()=>async()=>null});
+-  const imports=new Proxy({
++  const calls:string[]=[];
++  const imports=headLearningPageImports({
+@@ -56,2 +57,2 @@ test('authorized page independently verifies each form and exposes exact picker
+-   '@/lib/head-mri-only-clinical':{...clinical,verifiedMriOnlyClinicalRevision:async()=>clinicalValid?clinical.MRI_ONLY_CLINICAL_REVISION:null},
+-   '@/lib/head-mri-anatomy-checks':{...questions,verifiedHeadMriAnatomyCheckRevision:async()=>questionsValid?questions.HEAD_MRI_ANATOMY_CHECK_REVISION:null},
++   '@/lib/head-mri-only-clinical':{mriOnlyClinicalContent:clinical.mriOnlyClinicalContent,verifiedMriOnlyClinicalRevision:async()=>clinicalValid?clinical.MRI_ONLY_CLINICAL_REVISION:null},
++   '@/lib/head-mri-anatomy-checks':{headMriAnatomyCheckContent:questions.headMriAnatomyCheckContent,verifiedHeadMriAnatomyCheckRevision:async()=>questionsValid?questions.HEAD_MRI_ANATOMY_CHECK_REVISION:null},
+@@ -62 +63 @@ test('authorized page independently verifies each form and exposes exact picker
+-  } as Record<string,unknown>,{get:(target,id:string)=>target[id]??(id.startsWith('@/')?nullModule:undefined)});
++  });
+diff --git a/tests/head-mri-only-clinical.test.ts b/tests/head-mri-only-clinical.test.ts
+index 65bc72a..f0bdeb2 100644
+--- a/tests/head-mri-only-clinical.test.ts
++++ b/tests/head-mri-only-clinical.test.ts
+@@ -14,0 +15 @@ import * as clinical from '../lib/head-mri-only-clinical.ts';
++import {headLearningPageImports} from './head-learning-page-imports.mjs';
+@@ -197,3 +198 @@ test('actual page withholds new picker entries until authorization and independe
+-    const empty=new Proxy({}, {get:()=>async()=>null});
+-    const imports:Record<string,unknown>={
+-      'react/jsx-runtime':require('react/jsx-runtime'),
++    const imports=headLearningPageImports({
+@@ -212,2 +211,2 @@ test('actual page withholds new picker entries until authorization and independe
+-    };
+-    new Function('require','module','exports',code)((name:string)=>imports[name]??(name.startsWith('@/')?empty:require(name)),mod,mod.exports);
++    });
++    new Function('require','module','exports',code)((name:string)=>name==='react/jsx-runtime'?require(name):imports[name],mod,mod.exports);
+diff --git a/tests/head-mri-review-api.test.ts b/tests/head-mri-review-api.test.ts
+index 182c6ca..8650424 100644
+--- a/tests/head-mri-review-api.test.ts
++++ b/tests/head-mri-review-api.test.ts
+@@ -39 +39 @@ test('MRI-only drafts use private durable history without changing original-25 n
+-  const mf=new Miniflare(convertV4MiniflareOptions({modules:[{type:'ESModule',path:resolve(process.env.TEMP??'.local','head-mri-review-fixture.mjs'),contents:bundled.outputFiles[0].text}],compatibilityDate:'2026-08-23',d1Databases:['DB'],log:new Log(LogLevel.NONE)}));
++  const mf=new Miniflare(convertV4MiniflareOptions({modules:[{type:'ESModule',path:resolve(process.env.TEMP??'.local','head-mri-review-fixture.mjs'),contents:bundled.outputFiles[0].text}],modulesRoot:resolve(process.env.TEMP??'.local'),compatibilityDate:'2026-08-23',d1Databases:['DB'],log:new Log(LogLevel.NONE)}));
+diff --git a/tests/head-paired-decisions.test.ts b/tests/head-paired-decisions.test.ts
+index 7b46ad4..cdce142 100644
+--- a/tests/head-paired-decisions.test.ts
++++ b/tests/head-paired-decisions.test.ts
+@@ -82 +82 @@ test('guarded internal service stores separate durable per-item decisions withou
+-  const mf=new Miniflare(convertV4MiniflareOptions({modules:[{type:'ESModule',path:resolve(process.env.TEMP??'.local','paired-decision-fixture.mjs'),contents:bundled.outputFiles[0].text}],compatibilityDate:'2026-08-23',d1Databases:['DB'],log:new Log(LogLevel.NONE)}));
++  const mf=new Miniflare(convertV4MiniflareOptions({modules:[{type:'ESModule',path:resolve(process.env.TEMP??'.local','paired-decision-fixture.mjs'),contents:bundled.outputFiles[0].text}],modulesRoot:resolve(process.env.TEMP??'.local'),compatibilityDate:'2026-08-23',d1Databases:['DB'],log:new Log(LogLevel.NONE)}));
