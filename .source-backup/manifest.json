@@ -1,0 +1,220 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T12:04:25.004Z",
+  "sourceIdentity": {
+    "kind": "selected-original-dental-ct-content-mapper-test-and-exact-recovery-recipes-not-cumulative",
+    "requiredLocalNativeSourceHead": "44ffcc39b13d1fe85827c79a3e6a1a29be5b4a14",
+    "requiredLocalNativeSourceSha256": "4312a2e5c3ad5970c308a0811597129f538d398be287fc78ffc6c41b0adda77e",
+    "requiredSourceSupplement": {
+      "branch": "backup/teaching-display-region-source-20261025",
+      "head": "dfc8ba87bdfb395120b9390fa77babdc1bace68f",
+      "tree": "7678409d9f83cc81a25526954f019c79415b10c1",
+      "receiptSha256": "487b874ddd3ea79900832c71d57b2de331e9f873cc7fdb81b928e0ff5e0c8416"
+    },
+    "restorePaths": [
+      {
+        "path": "atlas/content/dental-ct.ts",
+        "restore": "atlas/content/dental-ct.ts"
+      },
+      {
+        "path": "atlas/lib/dental-ct.ts",
+        "restore": "atlas/lib/dental-ct.ts"
+      },
+      {
+        "path": "atlas/scripts/test-dental-ct-native.mjs",
+        "restore": "atlas/scripts/test-dental-ct-native.mjs"
+      },
+      {
+        "path": "recipes/apply-dental-ct-integration.mjs",
+        "restore": "coordination/apply-dental-ct-integration.mjs"
+      },
+      {
+        "path": "recipes/reconstruct-local-dental-ct-pins.mjs",
+        "restore": "coordination/reconstruct-local-dental-ct-pins.mjs"
+      },
+      {
+        "path": "recipes/prepare-dental-ct-native-20261025.mjs",
+        "restore": "coordination/prepare-dental-ct-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-dental-ct-final-native-20261025.mjs",
+        "restore": "coordination/check-dental-ct-final-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/compare-dental-ct-final-resolver-20261025.mjs",
+        "restore": "coordination/compare-dental-ct-final-resolver-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-dental-ct-full-types-v5-20261025.mjs",
+        "restore": "coordination/check-dental-ct-full-types-v5-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-native-build-balanced-guarded-20261025.mjs",
+        "restore": "coordination/run-native-build-balanced-guarded-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-dental-ct-native-v2-20261025.mjs",
+        "restore": "coordination/build-dental-ct-native-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-dental-ct-native-20261025.mjs",
+        "restore": "coordination/seal-dental-ct-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-dental-ct-source-20261025.mjs",
+        "restore": "coordination/backup-dental-ct-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-dental-ct-build-balanced-20261025.mjs",
+        "restore": "coordination/prepare-dental-ct-build-balanced-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-dental-ct-native-balanced-20261025.mjs",
+        "restore": "coordination/build-dental-ct-native-balanced-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-dental-ct-requirements-20261025.mjs",
+        "restore": "coordination/check-dental-ct-requirements-20261025.mjs"
+      },
+      {
+        "path": "recipes/export-dental-ct-runtimes-20261025.mjs",
+        "restore": "coordination/export-dental-ct-runtimes-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-dental-ct-runtime-source-20261025.mjs",
+        "restore": "coordination/backup-dental-ct-runtime-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/dental-ct.ts",
+      "bytes": 4123,
+      "sha256": "7ca8178cfa94fa8ebef658ef4e3b38489eb5d909b9e36c23d1fbca1d9b3afedc"
+    },
+    {
+      "path": "atlas/lib/dental-ct.ts",
+      "bytes": 2554,
+      "sha256": "f35e813f033b5556c9d2053164ac370f27da2388cb6f88e795980b297580fb6d"
+    },
+    {
+      "path": "atlas/scripts/test-dental-ct-native.mjs",
+      "bytes": 8502,
+      "sha256": "44597881f3bc9ca592da3b65cd5130e699b9d64bd25539ac07fb264a5aaa1710"
+    },
+    {
+      "path": "recipes/apply-dental-ct-integration.mjs",
+      "bytes": 2259,
+      "sha256": "35a114d1d6fcb1c19bc8a735d77d9870c3082c1224f090fbb052c50a1ef3b7ff"
+    },
+    {
+      "path": "recipes/reconstruct-local-dental-ct-pins.mjs",
+      "bytes": 2186,
+      "sha256": "f6f4a2afba0f827b79afa8fe3e7577ea9195789d25426f4935eca168e0490f3f"
+    },
+    {
+      "path": "recipes/prepare-dental-ct-native-20261025.mjs",
+      "bytes": 4906,
+      "sha256": "e575c6236dad1e819b29ace633afb816b8b0eebc4d961ecd1774f5affe26e9e3"
+    },
+    {
+      "path": "recipes/check-dental-ct-final-native-20261025.mjs",
+      "bytes": 1964,
+      "sha256": "d22f7852b15f9f910c3722840f6011fb67b9967514484d4b0d66d10a1083bdcc"
+    },
+    {
+      "path": "recipes/compare-dental-ct-final-resolver-20261025.mjs",
+      "bytes": 3740,
+      "sha256": "0c4ecc4b635c1ad7860328bfb22455d1d21f97b883a1cb25bf4174b77db84a05"
+    },
+    {
+      "path": "recipes/check-dental-ct-full-types-v5-20261025.mjs",
+      "bytes": 3835,
+      "sha256": "5246ae04cf1639dd6984a5c005e496d53a29bc0c70adffd48caff1b9538cdccb"
+    },
+    {
+      "path": "recipes/run-native-build-balanced-guarded-20261025.mjs",
+      "bytes": 4306,
+      "sha256": "502efcbb1d5cd629fe54c7094dc5ec3fd96adba019f67389f2c110ce54801755"
+    },
+    {
+      "path": "recipes/build-dental-ct-native-v2-20261025.mjs",
+      "bytes": 3186,
+      "sha256": "7b6c53a9d2395205fcc248ea0f23c4288fec4632a2be3a25c041130ce21a53ac"
+    },
+    {
+      "path": "recipes/seal-dental-ct-native-20261025.mjs",
+      "bytes": 4393,
+      "sha256": "43bdf01df17b294b39e4140195ba9024a67bc9d4ebfbae8a226067438111d57f"
+    },
+    {
+      "path": "recipes/backup-dental-ct-source-20261025.mjs",
+      "bytes": 5595,
+      "sha256": "24b30caad2c2473e96f36feea6cdba8635f71118e6a67e6089702f3869a302f8"
+    },
+    {
+      "path": "recipes/prepare-dental-ct-build-balanced-20261025.mjs",
+      "bytes": 1314,
+      "sha256": "072ad3146c5049f63e8fd9a25f1c50e814d84434b80c513a5a883668ac8aadb0"
+    },
+    {
+      "path": "recipes/build-dental-ct-native-balanced-20261025.mjs",
+      "bytes": 3192,
+      "sha256": "fe2ce272550f6e6b88e2ad87e93c36e6b93fc59267aef0ba9beb507d537d2356"
+    },
+    {
+      "path": "recipes/check-dental-ct-requirements-20261025.mjs",
+      "bytes": 1481,
+      "sha256": "36c90b46496f9f070dcd9d46f59293d9122ff5ffd2bf952a3140c2bf82fdb4f6"
+    },
+    {
+      "path": "recipes/export-dental-ct-runtimes-20261025.mjs",
+      "bytes": 6580,
+      "sha256": "1e1e0f422b278415aebf6b3a7420152ad6824b1da494901095080f23c9ad6936"
+    },
+    {
+      "path": "recipes/backup-dental-ct-runtime-source-20261025.mjs",
+      "bytes": 6450,
+      "sha256": "4c135e284d3bcaa80d313b733113bcef3870790fd0a5aae3ace6799905ff6136"
+    }
+  ],
+  "removed": [],
+  "scope": "Original four-group CT educational draft text for28existing tooth records, first-party mapper/test, exact integration and local pin reconstruction recipes plus bounded workflow recipes. References are links and original fact paraphrases only; no figures, datasets, article text or patient data. Prior source/data branches and local independently captured CT baseline required; not whole/private/runnable backup. Pin coordinates, model assets, generated caches/revisions/inventories, rawQA, private configuration/source closure, scans/masks, private decisions, dependencies/generated runtime and canonical/native ancestry are excluded. Source-draft readiness is not clinical approval; The full stock native build and four module exports pass; Website import remains pending.",
+  "proof": {
+    "focusedWholeRootCases": 8,
+    "focusedWholeRoots": 2,
+    "fail": 0,
+    "skip": 0,
+    "fullStrictTypeRoots": 1304,
+    "fullStrictTypeGraphFiles": 4673,
+    "fullStrictTypeDiagnostics": 0,
+    "actualWholeResolverPlacements": 9936,
+    "exactCtPendingToDraft": 28,
+    "unchangedOtherPlacements": 9908,
+    "sharedOriginalMethodGroups": 4,
+    "globalPending": 485,
+    "all215publicAssetBytesPreserved": true,
+    "clinicalReviewMaterialChangedForExactly28Entries": true,
+    "noMriApprovalInherited": true,
+    "dependencyFontModelTextureLicenceChanges": false,
+    "actualPrivateWebsiteStateCopied": false,
+    "importedIntoWebsite": false,
+    "fullNativeBuildPassed": true,
+    "fourStockRuntimeExportsVerified": true,
+    "unchangedPermissivePackagesPerModule": 22,
+    "licenceNoticeBytesUnchanged": true,
+    "sourceBytes": 70566,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
