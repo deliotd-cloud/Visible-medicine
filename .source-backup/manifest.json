@@ -1,0 +1,245 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T06:45:34.542Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-hra-and-query-proof-source-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "e35c9c4c8abfb2faf2898e4bd6bc6e5cc9fab09e76c65d5d8cfcad05ffbee8c6",
+    "requiredSourceSupplement": {
+      "branch": "backup/lecture-context-feature-role-source-20261025",
+      "head": "99d300c1fa9c293d6a69ab9cb0acbe83e17f24ca",
+      "tree": "97f047d312aa52fb09f218b8894b913f1b110d20",
+      "receiptSha256": "30bb21d8391a0da190be5e104390cdd86f24e60b77d3578e94d690badd01ba7b"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/atlas-hra-pelvic-topic-completion.test.ts",
+        "restore": "website/tests/atlas-hra-pelvic-topic-completion.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-hra-renal-topic-completion.test.ts",
+        "restore": "website/tests/atlas-hra-renal-topic-completion.test.ts"
+      },
+      {
+        "path": "website/tests/hra-context-roles.mjs",
+        "restore": "website/tests/hra-context-roles.mjs"
+      },
+      {
+        "path": "website/tests/hra-context-role-integrity.test.mjs",
+        "restore": "website/tests/hra-context-role-integrity.test.mjs"
+      },
+      {
+        "path": "website/tests/regional-query-source-role.mjs",
+        "restore": "website/tests/regional-query-source-role.mjs"
+      },
+      {
+        "path": "website/tests/regional-query-source-integrity.test.mjs",
+        "restore": "website/tests/regional-query-source-integrity.test.mjs"
+      },
+      {
+        "path": "website/tests/nonhead-frame-migration.test.mjs",
+        "restore": "website/tests/nonhead-frame-migration.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-learning-loader-preservation.test.mjs",
+        "restore": "website/tests/atlas-learning-loader-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/learning-loader-preservation-composition.test.mjs",
+        "restore": "website/tests/learning-loader-preservation-composition.test.mjs"
+      },
+      {
+        "path": "website/tests/extra-expansion-adoption-source-proof.mjs",
+        "restore": "website/tests/extra-expansion-adoption-source-proof.mjs"
+      },
+      {
+        "path": "website/tests/extra-expansion-adoption.test.mjs",
+        "restore": "website/tests/extra-expansion-adoption.test.mjs"
+      },
+      {
+        "path": "website/tests/release-epoch-composition-preservation.test.mjs",
+        "restore": "website/tests/release-epoch-composition-preservation.test.mjs"
+      },
+      {
+        "path": "recipes/prepare-hra-original-reader-worktrees-20261025.mjs",
+        "restore": "coordination/prepare-hra-original-reader-worktrees-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-check-hra-original-readers-20261025.mjs",
+        "restore": "coordination/prepare-check-hra-original-readers-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-hra-original-reader-worktrees-20261025.mjs",
+        "restore": "coordination/check-hra-original-reader-worktrees-20261025.mjs"
+      },
+      {
+        "path": "recipes/review-hra-role-source-20261025.mjs",
+        "restore": "coordination/review-hra-role-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-hra-role-shadow-check-20261025.mjs",
+        "restore": "coordination/prepare-hra-role-shadow-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-hra-role-shadow-20261025.mjs",
+        "restore": "coordination/check-hra-role-shadow-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-lecture-review-coherent-website-20261025.mjs",
+        "restore": "coordination/prepare-lecture-review-coherent-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-learning-query-composition-20261025.mjs",
+        "restore": "coordination/check-learning-query-composition-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-hra-query-role-source-20261025.mjs",
+        "restore": "coordination/backup-hra-query-role-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-hra-pelvic-topic-completion.test.ts",
+      "bytes": 19563,
+      "sha256": "e2f95b5d6cde03aecc0729845420be2a97f904e5cd9e5a6d387d0b183a9e95a4"
+    },
+    {
+      "path": "website/tests/atlas-hra-renal-topic-completion.test.ts",
+      "bytes": 19493,
+      "sha256": "58cae124e77c36a00a3bbe774405450f707c7952f6112d02c703f0b2a140a0fb"
+    },
+    {
+      "path": "website/tests/hra-context-roles.mjs",
+      "bytes": 14988,
+      "sha256": "d2d0d313d557de76c3f725892e492bc53dc9217837fa4a61a5a1f44fbd084e69"
+    },
+    {
+      "path": "website/tests/hra-context-role-integrity.test.mjs",
+      "bytes": 1458,
+      "sha256": "aefeda6bd90524fd1c0022ad38183e47939bd67a763ee0dbdc9e2b2534061287"
+    },
+    {
+      "path": "website/tests/regional-query-source-role.mjs",
+      "bytes": 5485,
+      "sha256": "581911bfe9bcfe1813bf19049e3b53498a82dacb1906ef143a2276efeca6c186"
+    },
+    {
+      "path": "website/tests/regional-query-source-integrity.test.mjs",
+      "bytes": 4411,
+      "sha256": "a3ecc04981f6f69324ca38875e6737eac189ed875ec430eafb7e752119faad6c"
+    },
+    {
+      "path": "website/tests/nonhead-frame-migration.test.mjs",
+      "bytes": 3500,
+      "sha256": "897bba20eb33fb81fb21ebc9d9a5cc6f1ab7b9843168397e349be909f7e329b7"
+    },
+    {
+      "path": "website/tests/atlas-learning-loader-preservation.test.mjs",
+      "bytes": 3201,
+      "sha256": "37ca9d2c50f3a4a9b90dedac032ac8c7b6fc0a32d40b116543cb9a6239d65988"
+    },
+    {
+      "path": "website/tests/learning-loader-preservation-composition.test.mjs",
+      "bytes": 3428,
+      "sha256": "971dc26bc27d6faab7d1a1ce00a5be7b570f62804313a76f6bee85d386102b77"
+    },
+    {
+      "path": "website/tests/extra-expansion-adoption-source-proof.mjs",
+      "bytes": 3759,
+      "sha256": "8696012ec67c85951f1799959cb5556a50838d002c025c8ee2196d532b2f4048"
+    },
+    {
+      "path": "website/tests/extra-expansion-adoption.test.mjs",
+      "bytes": 1888,
+      "sha256": "f934fe51dead6b63626a72d0bd00984ed98868b9e311134c0e2435afe48aa91a"
+    },
+    {
+      "path": "website/tests/release-epoch-composition-preservation.test.mjs",
+      "bytes": 19741,
+      "sha256": "55f6e6d1a38d66786421fa3f1a1289b1f4bca60e5561d81da8700722624bd4fb"
+    },
+    {
+      "path": "recipes/prepare-hra-original-reader-worktrees-20261025.mjs",
+      "bytes": 5804,
+      "sha256": "985767bf143651618c59dc255ecb8cbe08ce06ac68002ccf8838b37ceb49c53e"
+    },
+    {
+      "path": "recipes/prepare-check-hra-original-readers-20261025.mjs",
+      "bytes": 2052,
+      "sha256": "75733585346436cb3eea083255758594c2249b150efe2b88e388ff1cf2cf2cd2"
+    },
+    {
+      "path": "recipes/check-hra-original-reader-worktrees-20261025.mjs",
+      "bytes": 5650,
+      "sha256": "adc56f00df1e7df946328d9098939d5d1cb706583194160362243e0ca4828400"
+    },
+    {
+      "path": "recipes/review-hra-role-source-20261025.mjs",
+      "bytes": 4383,
+      "sha256": "2844706d46bb6e36fa88c6ee111a4d27a2abd8cd869e800ebee8875b5627d473"
+    },
+    {
+      "path": "recipes/prepare-hra-role-shadow-check-20261025.mjs",
+      "bytes": 2876,
+      "sha256": "9f94e39773f8d58535e15a77ed32cfd0e17a9965ae384ff413a6a4fd28e4ea90"
+    },
+    {
+      "path": "recipes/check-hra-role-shadow-20261025.mjs",
+      "bytes": 7549,
+      "sha256": "a4f378375849f77790ab14c134d9e18b2638415a5dc4820f4dd2dc31ae2cdf8d"
+    },
+    {
+      "path": "recipes/prepare-lecture-review-coherent-website-20261025.mjs",
+      "bytes": 7098,
+      "sha256": "043de726e2d0c204a25ecbbfcd37243a8f54b1aaa6f7b1792a9e2b30f08eae1a"
+    },
+    {
+      "path": "recipes/check-learning-query-composition-20261025.mjs",
+      "bytes": 5637,
+      "sha256": "d739eb3c966aefa4c207e728533fd71f636585e1053cf1d1ff5755747121cf70"
+    },
+    {
+      "path": "recipes/backup-hra-query-role-source-20261025.mjs",
+      "bytes": 5915,
+      "sha256": "c846c5eeab23ed05a766e1ae84f80b7bf5f7a2e6e687d5ceb3bdc82739cde061"
+    }
+  ],
+  "removed": [],
+  "scope": "Twelve first-party test/helper source paths and nine workflow recipes only. Public anatomical IDs and immutable source metadata are included; local config/closure/receipts, historical checkout bytes, generated anatomy or masks/scans/medical coordinates, private review decisions, rawQA, dependencies/models and canonical ancestry are excluded. Incremental source supplement only, not whole/private/runnable backup or clinical/release approval.",
+  "proof": {
+    "hraParentCases": 9,
+    "hraWholeRoots": 3,
+    "mandatoryUnchangedOriginalChildren": [
+      2,
+      2
+    ],
+    "genuineHistoricalContextsVerified": true,
+    "current362PopulationAndExact6DraftFdaContextsVerified": true,
+    "historical356AssertionsUnchanged": true,
+    "staleRefusalsBeforeStorage": [
+      129,
+      375
+    ],
+    "actualTransportParserNegativeMutations": true,
+    "queryCases": 21,
+    "queryWholeRoots": 7,
+    "immutableWholeSourceFixturesRetained": true,
+    "realCurrentQueryAcceptanceAndMixedMalformedRefusalVerified": true,
+    "combinedSourcePaths": 6824,
+    "selectedBytes": 147879,
+    "fullStockComplete": false,
+    "freshStrictTypesBuildBrowserPending": true,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
