@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+90explicit first-party Website source/test/finite raw code or authored-teaching fixture files plus14recipes. No images, actual scan/mask/medical annotations or their sample-specific coordinates, private case records, identifiers, complete private-source inventory or raw QA, compiled output, dependency packages or canonical Git ancestry. Exact aggregate inventory commitment replaces private metadata in the EUS test fixture. Incremental source supplement only; not cumulative, whole/private or runnable Website/Atlas recovery. Exact local parent/historical delivery baselines remain necessary. No preview installation, publication, clinical approval or spatial registration.

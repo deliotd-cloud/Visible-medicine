@@ -1,0 +1,241 @@
+{
+  "schema": "vm-head-teaching-current-pins/1",
+  "sourceCandidateSha256": "631a7021667cd9989ff1d564f0881068ef58201dd0b5a53e5be8e723aed777fa",
+  "rows": [
+    {
+      "path": "app/workspace/atlas-review/head-learning/page.tsx",
+      "sha256": "96b1cd72b50bb6003099f7f94eeefff3a2f634af9b0dd014c7c644142685723f",
+      "bytes": 17266
+    },
+    {
+      "path": "atlas-review/content/hippocampal-teaching.ts",
+      "sha256": "6ee598d0771a70ca570ce017222eb8a4894feb4c8b59343ebc70f4ced435af87",
+      "bytes": 4155
+    },
+    {
+      "path": "components/HeadAtlasTeachingReview.tsx",
+      "sha256": "0683d83e57912d034b39ae3052122597bcf965c693f4e72dc87b87b2da76c1d6",
+      "bytes": 13426
+    },
+    {
+      "path": "components/HeadReviewImageLink.tsx",
+      "sha256": "8b77fc35da93fb8a438ded3608acb9afa6b7c53243da44660d306a1c8c186631",
+      "bytes": 506
+    },
+    {
+      "path": "components/HeadTeachingReviewNavigator.tsx",
+      "sha256": "c68d37d8ea10608feac8d71883ef667dd6d74f17220e5256aaaf9187deb4364b",
+      "bytes": 1651
+    },
+    {
+      "path": "lib/head-anatomy-checks.ts",
+      "sha256": "aa6e70db065c807fb6ae8aa25a9f04a8dc6748bde6c807cd26dd8d11a9e841eb",
+      "bytes": 7674
+    },
+    {
+      "path": "lib/head-asset-checksum.ts",
+      "sha256": "608ca89d4fd6ce4b145eb2588172d284a2b341e3d088e154844983124f4207b3",
+      "bytes": 1089
+    },
+    {
+      "path": "lib/head-atlas-geometry.mjs",
+      "sha256": "d50b8e57e81d90d9155149968ea259321879e2652f6862622bd5e628eb1d211a",
+      "bytes": 9111
+    },
+    {
+      "path": "lib/head-atlas-import.ts",
+      "sha256": "70fa65adc382a02cfa3a53d4bf6baf267c6272bed9086297866a80adc87413b7",
+      "bytes": 16099
+    },
+    {
+      "path": "lib/head-atlas-learning.ts",
+      "sha256": "b49ac84c47f8a0d3215f1e50efa9847e26b5e7405a1fc647ee833a4335214471",
+      "bytes": 7821
+    },
+    {
+      "path": "lib/head-atlas-links.ts",
+      "sha256": "f60f84744f5346ee5e09c7414819148ef8d0b17ad157be19d805e0741177c149",
+      "bytes": 15427
+    },
+    {
+      "path": "lib/head-atlas-navigation.ts",
+      "sha256": "50f68259fbefdf80a0b93a6a45eeba4c4b243446751cfdcebc12b4204c9068da",
+      "bytes": 3342
+    },
+    {
+      "path": "lib/head-atlas-teaching.ts",
+      "sha256": "d95bd3140dbc0c3cfaaab9ac68086a57284f1b1dd077d9347370626217b79a79",
+      "bytes": 21476
+    },
+    {
+      "path": "lib/head-brainstem-clinical.ts",
+      "sha256": "f3fa21f3cb9fcb3cafb3226fba624c4499946f4db5893b54e678601692befa08",
+      "bytes": 6668
+    },
+    {
+      "path": "lib/head-cerebellar-clinical.ts",
+      "sha256": "88959b75455b6e14e318524a6e3b7f92870a94414279c0df7d465e1e70a73c2b",
+      "bytes": 8071
+    },
+    {
+      "path": "lib/head-cerebellar-learning.ts",
+      "sha256": "f726d8102b03bd3324545f66af326488a0c61bc034ca621fc4237eca26f4b99c",
+      "bytes": 2267
+    },
+    {
+      "path": "lib/head-cerebellar-teaching.ts",
+      "sha256": "9a3f47f4caa57f400f17c2c26f2088f2f030d51ae1da8a415200da43dc66d8b7",
+      "bytes": 6138
+    },
+    {
+      "path": "lib/head-ct-bone-comparison-review.ts",
+      "sha256": "cdd5448b66bbb304a3157022545d92d28815770202bdb92a9df053356ec4667c",
+      "bytes": 3906
+    },
+    {
+      "path": "lib/head-ct-bone-learning.ts",
+      "sha256": "de9752cd2ab5af4cd32ed535f843b0aa0034f4401f24530aad9d36822eab92ad",
+      "bytes": 2790
+    },
+    {
+      "path": "lib/head-ct-bone-teaching.ts",
+      "sha256": "139c88f2a3d95ca27d730ebb75d4f24cc60bb0ae9c5487a1029e400cd63f5cec",
+      "bytes": 7087
+    },
+    {
+      "path": "lib/head-ct-facial-clinical.ts",
+      "sha256": "1824d0f608bbc42db5528ea5f8a93407b33aeda047063af31b0736b31a069184",
+      "bytes": 7999
+    },
+    {
+      "path": "lib/head-ct-facial-comparison-review.ts",
+      "sha256": "e20166d3c4f3521d3ff381f7ae0c603e553ba50e4972a73ed0c6c2f2ebd2a6ca",
+      "bytes": 3948
+    },
+    {
+      "path": "lib/head-ct-facial-learning.ts",
+      "sha256": "23f8b874ae14d729c8c8ec380e7c9ee965ee622adbba8a51b220a27c98cf79a0",
+      "bytes": 3657
+    },
+    {
+      "path": "lib/head-ct-facial-teaching.ts",
+      "sha256": "4a2dcaa79d61cdd4a85770e447b8f90ecde53a31b4371518ba6af73accbf78f4",
+      "bytes": 9242
+    },
+    {
+      "path": "lib/head-deep-grey-clinical.ts",
+      "sha256": "38c8fe02cbbebbce4ee62dac636764b6451b9f57ee3559fb59029725387d5bd0",
+      "bytes": 9163
+    },
+    {
+      "path": "lib/head-hippocampal-clinical.ts",
+      "sha256": "0daf672c7ce9994095f914f31b68f1ada331b271ad3690a2dc924cf754e6b932",
+      "bytes": 6387
+    },
+    {
+      "path": "lib/head-image-only-comparison-review.ts",
+      "sha256": "8a69bb7b2ad1ec366f35d6af4962996f8a40cacb8b4d2d91136917edc7b746e4",
+      "bytes": 1532
+    },
+    {
+      "path": "lib/head-image-only-links.ts",
+      "sha256": "ee74f4c5077ba9f90eb3dcdfd6db7c4751d90ba03458f742b5cdf4d427924bdc",
+      "bytes": 4718
+    },
+    {
+      "path": "lib/head-insula-comparison-review.ts",
+      "sha256": "5031ba7f912fb8843363c9dadabb8d6879a5e0a74f516c02f354e211fdbe73cc",
+      "bytes": 3796
+    },
+    {
+      "path": "lib/head-insula-learning.ts",
+      "sha256": "8500b4c9cfe8d137649401d92bf09962cf6452d59d898581d38f9ef790071085",
+      "bytes": 2334
+    },
+    {
+      "path": "lib/head-insula-teaching.ts",
+      "sha256": "8e8f20b39e10dad052d52685e5144c14fdd90d6bee888394f52fdc6df8b9872e",
+      "bytes": 5082
+    },
+    {
+      "path": "lib/head-link-availability.ts",
+      "sha256": "1b457425324cf0e3d7b1a9e16b8aca4a28e6de908b659479840a3ad6e9ed74f2",
+      "bytes": 648
+    },
+    {
+      "path": "lib/head-load-progress.ts",
+      "sha256": "22629322ad0c62fd6912b780828aea5a4124d297cb110f7bda53a05e66bd4a1b",
+      "bytes": 6543
+    },
+    {
+      "path": "lib/head-lobar-clinical.ts",
+      "sha256": "f94e92d9f3a622719c39beba11731af2e43bd3c65674cff541bbbaad5335cecf",
+      "bytes": 8193
+    },
+    {
+      "path": "lib/head-mask-focus.ts",
+      "sha256": "7b21a555baa273c8069d4a91f35991b4b7c8094e10a80dc623c9f8325164f462",
+      "bytes": 1462
+    },
+    {
+      "path": "lib/head-mri-anatomy-checks.ts",
+      "sha256": "8a5bd18c54e5437ac25fe0293bcfe3eed77d64f6cdedc2e4ee5ce4c90a75b9f5",
+      "bytes": 6522
+    },
+    {
+      "path": "lib/head-mri-comparison-review.ts",
+      "sha256": "e213c788f25a4c1940a1ba1cb1c138f934b36b04e7f445083742b3895cb3a211",
+      "bytes": 4441
+    },
+    {
+      "path": "lib/head-mri-learning.ts",
+      "sha256": "cd36a4c1bcbdb4eca49aa72402c79d3866824893060123c66004df6421df9714",
+      "bytes": 2388
+    },
+    {
+      "path": "lib/head-mri-only-clinical.ts",
+      "sha256": "d7a261e4973882f5f29d13319b19256778835bb488abbe21e8d101e5826b5b9b",
+      "bytes": 7278
+    },
+    {
+      "path": "lib/head-mri-only-teaching.ts",
+      "sha256": "76d230c142f69f4ce1877145a4b7c79a75617066ab749a3a387709ed0a05942c",
+      "bytes": 7450
+    },
+    {
+      "path": "lib/head-mri-review-draft-contract.ts",
+      "sha256": "79cff730e612456ead32224ceb45db2c5fffcae7ca77a0b78183d0a3b2437b90",
+      "bytes": 7912
+    },
+    {
+      "path": "lib/head-orbital-comparison-review.ts",
+      "sha256": "ceea235ab41dd3ed1d2c85b383bcd96245e95818ba4c4581244be1413978bbab",
+      "bytes": 3567
+    },
+    {
+      "path": "lib/head-orbital-learning.ts",
+      "sha256": "a95b731689ea7121dbecb63b3ee510deabb09f11f6ca93dcf7e1062e405cb8fe",
+      "bytes": 2526
+    },
+    {
+      "path": "lib/head-orbital-teaching.ts",
+      "sha256": "6be7251a8ba426149a2498bfe453f619f02fc5d656fa83c68b1a73b8df14bd0b",
+      "bytes": 5680
+    },
+    {
+      "path": "lib/head-surface-validation.ts",
+      "sha256": "85597c4c6a59fb18c862eb404a3da21c3043306985f44f6d2985703b8c1022b6",
+      "bytes": 1333
+    },
+    {
+      "path": "lib/head-teaching-review-contract.ts",
+      "sha256": "a1e23fe3ab46dbbebfc7e961df01abe8643d529ff66f3968a5b486c3078bc2ef",
+      "bytes": 18400
+    },
+    {
+      "path": "lib/head-ventricular-clinical.ts",
+      "sha256": "27bcc3ea0dd5ce8c4a167e0cbd9ecb8ca76dd1286f550e5e26601d5f16e52151",
+      "bytes": 7800
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "vm-eus-original-fixture/2",
+  "entryPath": "tests/clinical-review-abdominal-eus.test.ts",
+  "sourceRows": [
+    {
+      "path": "tests/clinical-review-abdominal-eus.test.ts",
+      "fixture": "source/tests/clinical-review-abdominal-eus.test.ts.raw",
+      "bytes": 13867,
+      "sha256": "c2951cffd8922fd873c4a63ff347adf760b6b54df1c95cf0f8fb038042449366"
+    },
+    {
+      "path": "tests/atlas-emitted-teaching.ts",
+      "fixture": "source/tests/atlas-emitted-teaching.ts.raw",
+      "bytes": 3337,
+      "sha256": "407396ddf4b0e4398efabf691fcdec75e90c79caafea280234f3438645af8cf2"
+    },
+    {
+      "path": "tests/current-atlas-delivery.mjs",
+      "fixture": "source/tests/current-atlas-delivery.mjs.raw",
+      "bytes": 5092,
+      "sha256": "02dd815603c922dedbdc5a5fce270fbda736b81220e335d750dcbec1124c833e"
+    },
+    {
+      "path": "tests/atlas-source-repo.mjs",
+      "fixture": "source/tests/atlas-source-repo.mjs.raw",
+      "bytes": 1588,
+      "sha256": "45be52da6f2a93fdff2276235b357d6e491385af8a84ab8e0193905f6d49f356"
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "fixture": "source/tests/fixtures/current-atlas-delivery.json.raw",
+      "bytes": 2051,
+      "sha256": "a8d674c7d12c149f5e046f0a29b354699914c831fc4d9706e0049d401a18b10d"
+    },
+    {
+      "path": "atlas-review/content/abdominal-eus-orientation.ts",
+      "fixture": "source/atlas-review/content/abdominal-eus-orientation.ts.raw",
+      "bytes": 2559,
+      "sha256": "39ee4a18431a9dd36112ee95ba17a9ec47a135404372f690b646fb19e7937c37"
+    },
+    {
+      "path": "atlas-review/lib/abdominal-eus-orientation.ts",
+      "fixture": "source/atlas-review/lib/abdominal-eus-orientation.ts.raw",
+      "bytes": 2421,
+      "sha256": "ea38de69991d94f258cc71824b2856cc72b3f2dc2e7c79c53290825ecea93b13"
+    }
+  ],
+  "originalTestSha256": "c2951cffd8922fd873c4a63ff347adf760b6b54df1c95cf0f8fb038042449366",
+  "historicalAtlasHead": "6e810b188dde401f6c19a970928f316a479696df",
+  "historicalAtlasTree": "90afe5163dbd9386aa37c93d525fa4c70e8c1b9e",
+  "sourceCommitment": {
+    "schema": "vm-eus-historical-source-commitment/1",
+    "count": 6672,
+    "sha256": "d45ebbc5a71bd46b6cb9d760bd80078e83ab34deeb086c6fe48428ccef01ac83",
+    "canonicalization": "UTF-8 JSON.stringify of rows sorted by path code-unit order, object keys path,bytes,sha256, followed by LF",
+    "excludedRootEntries": [
+      ".git",
+      "node_modules",
+      ".next",
+      "dist",
+      ".wrangler"
+    ]
+  },
+  "packageVersions": {
+    "esbuild": "0.28.2",
+    "typescript": "5.9.3"
+  }
+}

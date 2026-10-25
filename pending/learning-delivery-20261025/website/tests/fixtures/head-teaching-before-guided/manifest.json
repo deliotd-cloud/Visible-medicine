@@ -1,0 +1,484 @@
+{
+  "schema": "vm-head-teaching-legacy-fixture/1",
+  "sourceReceiptSha256": "dc0532736094fcd7225e1229af3a41322aacc591789bf1179c44476b98b7077e",
+  "entryPath": "tests/head-atlas-teaching.test.ts",
+  "modulePaths": [
+    "atlas-review/content/hippocampal-teaching.ts",
+    "lib/head-anatomy-checks.ts",
+    "lib/head-asset-checksum.ts",
+    "lib/head-atlas-geometry.mjs",
+    "lib/head-atlas-import.ts",
+    "lib/head-atlas-learning.ts",
+    "lib/head-atlas-links.ts",
+    "lib/head-atlas-navigation.ts",
+    "lib/head-atlas-teaching.ts",
+    "lib/head-brainstem-clinical.ts",
+    "lib/head-cerebellar-clinical.ts",
+    "lib/head-cerebellar-learning.ts",
+    "lib/head-cerebellar-teaching.ts",
+    "lib/head-ct-bone-comparison-review.ts",
+    "lib/head-ct-bone-learning.ts",
+    "lib/head-ct-bone-teaching.ts",
+    "lib/head-ct-facial-clinical.ts",
+    "lib/head-ct-facial-comparison-review.ts",
+    "lib/head-ct-facial-learning.ts",
+    "lib/head-ct-facial-teaching.ts",
+    "lib/head-deep-grey-clinical.ts",
+    "lib/head-hippocampal-clinical.ts",
+    "lib/head-image-only-comparison-review.ts",
+    "lib/head-image-only-links.ts",
+    "lib/head-insula-comparison-review.ts",
+    "lib/head-insula-learning.ts",
+    "lib/head-insula-teaching.ts",
+    "lib/head-link-availability.ts",
+    "lib/head-load-progress.ts",
+    "lib/head-lobar-clinical.ts",
+    "lib/head-mask-focus.ts",
+    "lib/head-mri-anatomy-checks.ts",
+    "lib/head-mri-comparison-review.ts",
+    "lib/head-mri-learning.ts",
+    "lib/head-mri-only-clinical.ts",
+    "lib/head-mri-only-teaching.ts",
+    "lib/head-mri-review-draft-contract.ts",
+    "lib/head-orbital-comparison-review.ts",
+    "lib/head-orbital-learning.ts",
+    "lib/head-orbital-teaching.ts",
+    "lib/head-surface-validation.ts",
+    "lib/head-teaching-review-contract.ts",
+    "lib/head-ventricular-clinical.ts",
+    "tests/head-anatomy-check-loader.ts",
+    "tests/head-atlas-teaching.test.ts",
+    "tests/head-facial-hook-loader.ts",
+    "tests/head-review-image-link-loader.ts"
+  ],
+  "sourceReadPaths": [
+    "app/workspace/atlas-review/head-learning/page.tsx",
+    "app/workspace/atlas-review/source-comparisons/page.tsx",
+    "components/HeadAnatomyCheck.tsx",
+    "components/HeadAnatomyChecksReview.tsx",
+    "components/HeadAtlasGuidedLearning.tsx",
+    "components/HeadAtlasTeaching.tsx",
+    "components/HeadAtlasTeachingReview.tsx",
+    "components/HeadAtlasViewer.tsx",
+    "components/HeadCerebellarClinicalReview.tsx",
+    "components/HeadDeepGreyClinicalReview.tsx",
+    "components/HeadHippocampalClinicalReview.tsx",
+    "components/HeadLobarClinicalReview.tsx",
+    "components/HeadMriAnatomyChecksReview.tsx",
+    "components/HeadMriComparisonReview.tsx",
+    "components/HeadMriOnlyClinicalReview.tsx",
+    "components/HeadReviewImageLink.tsx",
+    "components/HeadTeachingReviewNavigator.tsx",
+    "components/useVerifiedFacialTeaching.ts"
+  ],
+  "sourceRows": [
+    {
+      "path": "app/workspace/atlas-review/head-learning/page.tsx",
+      "fixture": "source/app/workspace/atlas-review/head-learning/page.tsx.raw",
+      "bytes": 15741,
+      "sha256": "7da7521176d7867a1233e87d5ee4ba5dbcf6b4d44dd22383e9e996b0517a4913"
+    },
+    {
+      "path": "app/workspace/atlas-review/source-comparisons/page.tsx",
+      "fixture": "source/app/workspace/atlas-review/source-comparisons/page.tsx.raw",
+      "bytes": 1872,
+      "sha256": "4cb4532a66a697506082600175711005f8b52b8a04cbe456454f44d842c3eb1d"
+    },
+    {
+      "path": "atlas-review/content/hippocampal-teaching.ts",
+      "fixture": "source/atlas-review/content/hippocampal-teaching.ts.raw",
+      "bytes": 4155,
+      "sha256": "6ee598d0771a70ca570ce017222eb8a4894feb4c8b59343ebc70f4ced435af87"
+    },
+    {
+      "path": "components/HeadAnatomyCheck.tsx",
+      "fixture": "source/components/HeadAnatomyCheck.tsx.raw",
+      "bytes": 3140,
+      "sha256": "1c7142513f6813aec9fa872e3d5365d0a955a526080e5de41f38b2985263c16c"
+    },
+    {
+      "path": "components/HeadAnatomyChecksReview.tsx",
+      "fixture": "source/components/HeadAnatomyChecksReview.tsx.raw",
+      "bytes": 2405,
+      "sha256": "170d6eabaad1a4b5da856ca80fc049e814894e64bd3b0ff0e423087f2867d715"
+    },
+    {
+      "path": "components/HeadAtlasGuidedLearning.tsx",
+      "fixture": "source/components/HeadAtlasGuidedLearning.tsx.raw",
+      "bytes": 13677,
+      "sha256": "b5cd947f7bef048ffa8dcb0fb4b98b77ee2a54d83049822fed700b1f8be8ba95"
+    },
+    {
+      "path": "components/HeadAtlasTeaching.tsx",
+      "fixture": "source/components/HeadAtlasTeaching.tsx.raw",
+      "bytes": 4593,
+      "sha256": "dcbc50cc8aace6ddf0b9ff021ed924cdcbaa0cdf7d87b2e7c31be5a6ca734b7e"
+    },
+    {
+      "path": "components/HeadAtlasTeachingReview.tsx",
+      "fixture": "source/components/HeadAtlasTeachingReview.tsx.raw",
+      "bytes": 13387,
+      "sha256": "d5057f619b8d2f492a38fe3f6bd247a37a4042c61bb383f77f75464092ab44cf"
+    },
+    {
+      "path": "components/HeadAtlasViewer.tsx",
+      "fixture": "source/components/HeadAtlasViewer.tsx.raw",
+      "bytes": 115200,
+      "sha256": "6296ff18c86691f22cfa02294dae295395b9f8035768a3990a9af4fe16beeff1"
+    },
+    {
+      "path": "components/HeadCerebellarClinicalReview.tsx",
+      "fixture": "source/components/HeadCerebellarClinicalReview.tsx.raw",
+      "bytes": 3641,
+      "sha256": "436938101cddafcce4dcfe5d89d77941b8df03bd07d35ad176a97719d4c4d63f"
+    },
+    {
+      "path": "components/HeadDeepGreyClinicalReview.tsx",
+      "fixture": "source/components/HeadDeepGreyClinicalReview.tsx.raw",
+      "bytes": 3348,
+      "sha256": "acca71797f9dfc30ff9b616c06dca09c05e946e37b1bad5d6ca29f62038c06ba"
+    },
+    {
+      "path": "components/HeadHippocampalClinicalReview.tsx",
+      "fixture": "source/components/HeadHippocampalClinicalReview.tsx.raw",
+      "bytes": 3825,
+      "sha256": "7da4a502bb16742355e4c3f0d6847b933f9458bc1e35058cc3232bf20b3cd966"
+    },
+    {
+      "path": "components/HeadLobarClinicalReview.tsx",
+      "fixture": "source/components/HeadLobarClinicalReview.tsx.raw",
+      "bytes": 3356,
+      "sha256": "008a96268ab127da1a857b4537cf23575b02cfc8e9883458203cf874b3c94cac"
+    },
+    {
+      "path": "components/HeadMriAnatomyChecksReview.tsx",
+      "fixture": "source/components/HeadMriAnatomyChecksReview.tsx.raw",
+      "bytes": 3135,
+      "sha256": "6d887808d2eef47b67beba7765e02ded5cd83d15de39341a3a04b87803503c58"
+    },
+    {
+      "path": "components/HeadMriComparisonReview.tsx",
+      "fixture": "source/components/HeadMriComparisonReview.tsx.raw",
+      "bytes": 4806,
+      "sha256": "02a50aeb8450054c6d34799bb5aad54e9d474f07347c3d6e4a869b3c5425fdf6"
+    },
+    {
+      "path": "components/HeadMriOnlyClinicalReview.tsx",
+      "fixture": "source/components/HeadMriOnlyClinicalReview.tsx.raw",
+      "bytes": 3631,
+      "sha256": "cdcd9ac2174316fc63544b81695cac0469ce126ffa73825a2cfb418982b2f909"
+    },
+    {
+      "path": "components/HeadReviewImageLink.tsx",
+      "fixture": "source/components/HeadReviewImageLink.tsx.raw",
+      "bytes": 506,
+      "sha256": "8b77fc35da93fb8a438ded3608acb9afa6b7c53243da44660d306a1c8c186631"
+    },
+    {
+      "path": "components/HeadTeachingReviewNavigator.tsx",
+      "fixture": "source/components/HeadTeachingReviewNavigator.tsx.raw",
+      "bytes": 1659,
+      "sha256": "f5637bcb8e4385b86bcb5490ec10e6244baa6e38c051345ba5a95bd028d2b079"
+    },
+    {
+      "path": "components/useVerifiedFacialTeaching.ts",
+      "fixture": "source/components/useVerifiedFacialTeaching.ts.raw",
+      "bytes": 1333,
+      "sha256": "e50f522103e8d77757ef679f2b69f3a83f0427e007560eb1ae615cba79e3b518"
+    },
+    {
+      "path": "lib/head-anatomy-checks.ts",
+      "fixture": "source/lib/head-anatomy-checks.ts.raw",
+      "bytes": 7674,
+      "sha256": "aa6e70db065c807fb6ae8aa25a9f04a8dc6748bde6c807cd26dd8d11a9e841eb"
+    },
+    {
+      "path": "lib/head-asset-checksum.ts",
+      "fixture": "source/lib/head-asset-checksum.ts.raw",
+      "bytes": 1089,
+      "sha256": "608ca89d4fd6ce4b145eb2588172d284a2b341e3d088e154844983124f4207b3"
+    },
+    {
+      "path": "lib/head-atlas-geometry.mjs",
+      "fixture": "source/lib/head-atlas-geometry.mjs.raw",
+      "bytes": 9111,
+      "sha256": "d50b8e57e81d90d9155149968ea259321879e2652f6862622bd5e628eb1d211a"
+    },
+    {
+      "path": "lib/head-atlas-import.ts",
+      "fixture": "source/lib/head-atlas-import.ts.raw",
+      "bytes": 16099,
+      "sha256": "70fa65adc382a02cfa3a53d4bf6baf267c6272bed9086297866a80adc87413b7"
+    },
+    {
+      "path": "lib/head-atlas-learning.ts",
+      "fixture": "source/lib/head-atlas-learning.ts.raw",
+      "bytes": 7821,
+      "sha256": "b49ac84c47f8a0d3215f1e50efa9847e26b5e7405a1fc647ee833a4335214471"
+    },
+    {
+      "path": "lib/head-atlas-links.ts",
+      "fixture": "source/lib/head-atlas-links.ts.raw",
+      "bytes": 15427,
+      "sha256": "f60f84744f5346ee5e09c7414819148ef8d0b17ad157be19d805e0741177c149"
+    },
+    {
+      "path": "lib/head-atlas-navigation.ts",
+      "fixture": "source/lib/head-atlas-navigation.ts.raw",
+      "bytes": 3342,
+      "sha256": "50f68259fbefdf80a0b93a6a45eeba4c4b243446751cfdcebc12b4204c9068da"
+    },
+    {
+      "path": "lib/head-atlas-teaching.ts",
+      "fixture": "source/lib/head-atlas-teaching.ts.raw",
+      "bytes": 21476,
+      "sha256": "d95bd3140dbc0c3cfaaab9ac68086a57284f1b1dd077d9347370626217b79a79"
+    },
+    {
+      "path": "lib/head-brainstem-clinical.ts",
+      "fixture": "source/lib/head-brainstem-clinical.ts.raw",
+      "bytes": 6668,
+      "sha256": "f3fa21f3cb9fcb3cafb3226fba624c4499946f4db5893b54e678601692befa08"
+    },
+    {
+      "path": "lib/head-cerebellar-clinical.ts",
+      "fixture": "source/lib/head-cerebellar-clinical.ts.raw",
+      "bytes": 8071,
+      "sha256": "88959b75455b6e14e318524a6e3b7f92870a94414279c0df7d465e1e70a73c2b"
+    },
+    {
+      "path": "lib/head-cerebellar-learning.ts",
+      "fixture": "source/lib/head-cerebellar-learning.ts.raw",
+      "bytes": 2267,
+      "sha256": "f726d8102b03bd3324545f66af326488a0c61bc034ca621fc4237eca26f4b99c"
+    },
+    {
+      "path": "lib/head-cerebellar-teaching.ts",
+      "fixture": "source/lib/head-cerebellar-teaching.ts.raw",
+      "bytes": 6138,
+      "sha256": "9a3f47f4caa57f400f17c2c26f2088f2f030d51ae1da8a415200da43dc66d8b7"
+    },
+    {
+      "path": "lib/head-ct-bone-comparison-review.ts",
+      "fixture": "source/lib/head-ct-bone-comparison-review.ts.raw",
+      "bytes": 3906,
+      "sha256": "cdd5448b66bbb304a3157022545d92d28815770202bdb92a9df053356ec4667c"
+    },
+    {
+      "path": "lib/head-ct-bone-learning.ts",
+      "fixture": "source/lib/head-ct-bone-learning.ts.raw",
+      "bytes": 2790,
+      "sha256": "de9752cd2ab5af4cd32ed535f843b0aa0034f4401f24530aad9d36822eab92ad"
+    },
+    {
+      "path": "lib/head-ct-bone-teaching.ts",
+      "fixture": "source/lib/head-ct-bone-teaching.ts.raw",
+      "bytes": 7087,
+      "sha256": "139c88f2a3d95ca27d730ebb75d4f24cc60bb0ae9c5487a1029e400cd63f5cec"
+    },
+    {
+      "path": "lib/head-ct-facial-clinical.ts",
+      "fixture": "source/lib/head-ct-facial-clinical.ts.raw",
+      "bytes": 7999,
+      "sha256": "1824d0f608bbc42db5528ea5f8a93407b33aeda047063af31b0736b31a069184"
+    },
+    {
+      "path": "lib/head-ct-facial-comparison-review.ts",
+      "fixture": "source/lib/head-ct-facial-comparison-review.ts.raw",
+      "bytes": 3948,
+      "sha256": "e20166d3c4f3521d3ff381f7ae0c603e553ba50e4972a73ed0c6c2f2ebd2a6ca"
+    },
+    {
+      "path": "lib/head-ct-facial-learning.ts",
+      "fixture": "source/lib/head-ct-facial-learning.ts.raw",
+      "bytes": 3657,
+      "sha256": "23f8b874ae14d729c8c8ec380e7c9ee965ee622adbba8a51b220a27c98cf79a0"
+    },
+    {
+      "path": "lib/head-ct-facial-teaching.ts",
+      "fixture": "source/lib/head-ct-facial-teaching.ts.raw",
+      "bytes": 9242,
+      "sha256": "4a2dcaa79d61cdd4a85770e447b8f90ecde53a31b4371518ba6af73accbf78f4"
+    },
+    {
+      "path": "lib/head-deep-grey-clinical.ts",
+      "fixture": "source/lib/head-deep-grey-clinical.ts.raw",
+      "bytes": 9163,
+      "sha256": "38c8fe02cbbebbce4ee62dac636764b6451b9f57ee3559fb59029725387d5bd0"
+    },
+    {
+      "path": "lib/head-hippocampal-clinical.ts",
+      "fixture": "source/lib/head-hippocampal-clinical.ts.raw",
+      "bytes": 6387,
+      "sha256": "0daf672c7ce9994095f914f31b68f1ada331b271ad3690a2dc924cf754e6b932"
+    },
+    {
+      "path": "lib/head-image-only-comparison-review.ts",
+      "fixture": "source/lib/head-image-only-comparison-review.ts.raw",
+      "bytes": 1532,
+      "sha256": "8a69bb7b2ad1ec366f35d6af4962996f8a40cacb8b4d2d91136917edc7b746e4"
+    },
+    {
+      "path": "lib/head-image-only-links.ts",
+      "fixture": "source/lib/head-image-only-links.ts.raw",
+      "bytes": 4718,
+      "sha256": "ee74f4c5077ba9f90eb3dcdfd6db7c4751d90ba03458f742b5cdf4d427924bdc"
+    },
+    {
+      "path": "lib/head-insula-comparison-review.ts",
+      "fixture": "source/lib/head-insula-comparison-review.ts.raw",
+      "bytes": 3796,
+      "sha256": "5031ba7f912fb8843363c9dadabb8d6879a5e0a74f516c02f354e211fdbe73cc"
+    },
+    {
+      "path": "lib/head-insula-learning.ts",
+      "fixture": "source/lib/head-insula-learning.ts.raw",
+      "bytes": 2334,
+      "sha256": "8500b4c9cfe8d137649401d92bf09962cf6452d59d898581d38f9ef790071085"
+    },
+    {
+      "path": "lib/head-insula-teaching.ts",
+      "fixture": "source/lib/head-insula-teaching.ts.raw",
+      "bytes": 5082,
+      "sha256": "8e8f20b39e10dad052d52685e5144c14fdd90d6bee888394f52fdc6df8b9872e"
+    },
+    {
+      "path": "lib/head-link-availability.ts",
+      "fixture": "source/lib/head-link-availability.ts.raw",
+      "bytes": 648,
+      "sha256": "1b457425324cf0e3d7b1a9e16b8aca4a28e6de908b659479840a3ad6e9ed74f2"
+    },
+    {
+      "path": "lib/head-load-progress.ts",
+      "fixture": "source/lib/head-load-progress.ts.raw",
+      "bytes": 6543,
+      "sha256": "22629322ad0c62fd6912b780828aea5a4124d297cb110f7bda53a05e66bd4a1b"
+    },
+    {
+      "path": "lib/head-lobar-clinical.ts",
+      "fixture": "source/lib/head-lobar-clinical.ts.raw",
+      "bytes": 8193,
+      "sha256": "f94e92d9f3a622719c39beba11731af2e43bd3c65674cff541bbbaad5335cecf"
+    },
+    {
+      "path": "lib/head-mask-focus.ts",
+      "fixture": "source/lib/head-mask-focus.ts.raw",
+      "bytes": 1462,
+      "sha256": "7b21a555baa273c8069d4a91f35991b4b7c8094e10a80dc623c9f8325164f462"
+    },
+    {
+      "path": "lib/head-mri-anatomy-checks.ts",
+      "fixture": "source/lib/head-mri-anatomy-checks.ts.raw",
+      "bytes": 6522,
+      "sha256": "8a5bd18c54e5437ac25fe0293bcfe3eed77d64f6cdedc2e4ee5ce4c90a75b9f5"
+    },
+    {
+      "path": "lib/head-mri-comparison-review.ts",
+      "fixture": "source/lib/head-mri-comparison-review.ts.raw",
+      "bytes": 4441,
+      "sha256": "e213c788f25a4c1940a1ba1cb1c138f934b36b04e7f445083742b3895cb3a211"
+    },
+    {
+      "path": "lib/head-mri-learning.ts",
+      "fixture": "source/lib/head-mri-learning.ts.raw",
+      "bytes": 2388,
+      "sha256": "cd36a4c1bcbdb4eca49aa72402c79d3866824893060123c66004df6421df9714"
+    },
+    {
+      "path": "lib/head-mri-only-clinical.ts",
+      "fixture": "source/lib/head-mri-only-clinical.ts.raw",
+      "bytes": 7278,
+      "sha256": "d7a261e4973882f5f29d13319b19256778835bb488abbe21e8d101e5826b5b9b"
+    },
+    {
+      "path": "lib/head-mri-only-teaching.ts",
+      "fixture": "source/lib/head-mri-only-teaching.ts.raw",
+      "bytes": 7450,
+      "sha256": "76d230c142f69f4ce1877145a4b7c79a75617066ab749a3a387709ed0a05942c"
+    },
+    {
+      "path": "lib/head-mri-review-draft-contract.ts",
+      "fixture": "source/lib/head-mri-review-draft-contract.ts.raw",
+      "bytes": 7912,
+      "sha256": "79cff730e612456ead32224ceb45db2c5fffcae7ca77a0b78183d0a3b2437b90"
+    },
+    {
+      "path": "lib/head-orbital-comparison-review.ts",
+      "fixture": "source/lib/head-orbital-comparison-review.ts.raw",
+      "bytes": 3567,
+      "sha256": "ceea235ab41dd3ed1d2c85b383bcd96245e95818ba4c4581244be1413978bbab"
+    },
+    {
+      "path": "lib/head-orbital-learning.ts",
+      "fixture": "source/lib/head-orbital-learning.ts.raw",
+      "bytes": 2526,
+      "sha256": "a95b731689ea7121dbecb63b3ee510deabb09f11f6ca93dcf7e1062e405cb8fe"
+    },
+    {
+      "path": "lib/head-orbital-teaching.ts",
+      "fixture": "source/lib/head-orbital-teaching.ts.raw",
+      "bytes": 5680,
+      "sha256": "6be7251a8ba426149a2498bfe453f619f02fc5d656fa83c68b1a73b8df14bd0b"
+    },
+    {
+      "path": "lib/head-surface-validation.ts",
+      "fixture": "source/lib/head-surface-validation.ts.raw",
+      "bytes": 1333,
+      "sha256": "85597c4c6a59fb18c862eb404a3da21c3043306985f44f6d2985703b8c1022b6"
+    },
+    {
+      "path": "lib/head-teaching-review-contract.ts",
+      "fixture": "source/lib/head-teaching-review-contract.ts.raw",
+      "bytes": 18400,
+      "sha256": "a1e23fe3ab46dbbebfc7e961df01abe8643d529ff66f3968a5b486c3078bc2ef"
+    },
+    {
+      "path": "lib/head-ventricular-clinical.ts",
+      "fixture": "source/lib/head-ventricular-clinical.ts.raw",
+      "bytes": 7800,
+      "sha256": "27bcc3ea0dd5ce8c4a167e0cbd9ecb8ca76dd1286f550e5e26601d5f16e52151"
+    },
+    {
+      "path": "tests/head-anatomy-check-loader.ts",
+      "fixture": "source/tests/head-anatomy-check-loader.ts.raw",
+      "bytes": 775,
+      "sha256": "bc966bf90a7e15c1cddef1502c540b31d689dddd099a6c6cff924debccbc6f48"
+    },
+    {
+      "path": "tests/head-atlas-teaching.test.ts",
+      "fixture": "source/tests/head-atlas-teaching.test.ts.raw",
+      "bytes": 21521,
+      "sha256": "d1f433a4a303e4debf3c11174959146c881ffa555c1df523f4952c986a696ea7"
+    },
+    {
+      "path": "tests/head-facial-hook-loader.ts",
+      "fixture": "source/tests/head-facial-hook-loader.ts.raw",
+      "bytes": 1676,
+      "sha256": "92621d779a30a02de7fb485a38da704196e40552fd8d8eb0c46e08997567de3f"
+    },
+    {
+      "path": "tests/head-review-image-link-loader.ts",
+      "fixture": "source/tests/head-review-image-link-loader.ts.raw",
+      "bytes": 907,
+      "sha256": "8e6288980b888eed90b2f4ddb7aafa47932853d02c928512a3183e186d48d092"
+    }
+  ],
+  "thirdPartyVersions": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "typescript": "5.9.3",
+    "@noble/hashes": "2.4.0"
+  },
+  "externalSpecifiers": [
+    "@noble/hashes/sha2.js",
+    "node:assert/strict",
+    "node:crypto",
+    "node:fs",
+    "node:module",
+    "node:test",
+    "react",
+    "react-dom/server",
+    "typescript"
+  ],
+  "runtimeStatus": "static finite closure only; evaluated coverage remains unproved"
+}

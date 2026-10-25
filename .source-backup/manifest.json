@@ -1,0 +1,994 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T01:05:23.705Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-learning-callouts-and-preserved-test-roles-not-cumulative",
+    "websiteSourceSha256": "b78888cc95b293b85cbdee3a022bd4b115303e6ae887b93f9da1157b42244876",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalWebsiteBaseline": {
+      "path": "F:/VisibleMedicine/staging/20261025-ultrasound-polished-website-v2/SOURCE_CANDIDATE.json",
+      "sha256": "631a7021667cd9989ff1d564f0881068ef58201dd0b5a53e5be8e723aed777fa",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/ultrasound-local-source-20261025",
+      "head": "d5bffbe6bd8f47c80385250c4410000fd23ef411",
+      "tree": "3675631407818c966dd79d45b8d0f9c493c73bdd",
+      "receiptSha256": "9b400f452950fd71c05a91cac66c764c6ff3e98e5ccbb825e891cc564c77abb0"
+    },
+    "restorePaths": [
+      {
+        "path": "pending/learning-delivery-20261025/website/components/UltrasoundLocalAtlas.tsx",
+        "restore": "website/components/UltrasoundLocalAtlas.tsx"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/components/ultrasound-local-atlas.css",
+        "restore": "website/components/ultrasound-local-atlas.css"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/docs/ultrasound-local-teaching.md",
+        "restore": "website/docs/ultrasound-local-teaching.md"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/lib/ultrasound-study.ts",
+        "restore": "website/lib/ultrasound-study.ts"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/clinical-review-abdominal-eus.test.ts",
+        "restore": "website/tests/clinical-review-abdominal-eus.test.ts"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/head-atlas-teaching.test.ts",
+        "restore": "website/tests/head-atlas-teaching.test.ts"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/ultrasound-study.test.mjs",
+        "restore": "website/tests/ultrasound-study.test.mjs"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/manifest.json",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/manifest.json"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/app/workspace/atlas-review/head-learning/page.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/app/workspace/atlas-review/head-learning/page.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/app/workspace/atlas-review/source-comparisons/page.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/app/workspace/atlas-review/source-comparisons/page.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/atlas-review/content/hippocampal-teaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/atlas-review/content/hippocampal-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAnatomyCheck.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadAnatomyCheck.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAnatomyChecksReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadAnatomyChecksReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasGuidedLearning.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasGuidedLearning.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasTeaching.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasTeaching.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasTeachingReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasTeachingReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasViewer.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasViewer.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadCerebellarClinicalReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadCerebellarClinicalReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadDeepGreyClinicalReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadDeepGreyClinicalReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadHippocampalClinicalReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadHippocampalClinicalReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadLobarClinicalReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadLobarClinicalReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriAnatomyChecksReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriAnatomyChecksReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriComparisonReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriComparisonReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriOnlyClinicalReview.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriOnlyClinicalReview.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadReviewImageLink.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadReviewImageLink.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadTeachingReviewNavigator.tsx.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/HeadTeachingReviewNavigator.tsx.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/useVerifiedFacialTeaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/components/useVerifiedFacialTeaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-anatomy-checks.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-anatomy-checks.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-asset-checksum.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-asset-checksum.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-geometry.mjs.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-geometry.mjs.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-import.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-import.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-learning.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-learning.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-links.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-links.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-navigation.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-navigation.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-teaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-brainstem-clinical.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-brainstem-clinical.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-clinical.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-clinical.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-learning.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-learning.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-teaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-comparison-review.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-comparison-review.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-learning.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-learning.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-teaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-clinical.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-clinical.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-comparison-review.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-comparison-review.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-learning.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-learning.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-teaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-deep-grey-clinical.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-deep-grey-clinical.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-hippocampal-clinical.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-hippocampal-clinical.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-image-only-comparison-review.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-image-only-comparison-review.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-image-only-links.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-image-only-links.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-comparison-review.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-comparison-review.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-learning.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-learning.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-teaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-link-availability.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-link-availability.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-load-progress.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-load-progress.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-lobar-clinical.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-lobar-clinical.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mask-focus.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-mask-focus.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-anatomy-checks.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-anatomy-checks.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-comparison-review.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-comparison-review.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-learning.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-learning.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-only-clinical.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-only-clinical.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-only-teaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-only-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-review-draft-contract.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-review-draft-contract.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-comparison-review.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-comparison-review.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-learning.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-learning.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-teaching.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-surface-validation.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-surface-validation.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-teaching-review-contract.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-teaching-review-contract.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ventricular-clinical.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/lib/head-ventricular-clinical.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/tests/head-anatomy-check-loader.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/tests/head-anatomy-check-loader.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/tests/head-atlas-teaching.test.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/tests/head-atlas-teaching.test.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/tests/head-facial-hook-loader.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/tests/head-facial-hook-loader.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/tests/head-review-image-link-loader.ts.raw",
+        "restore": "website/tests/fixtures/head-teaching-before-guided/source/tests/head-review-image-link-loader.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-current-pins.json",
+        "restore": "website/tests/fixtures/head-teaching-current-pins.json"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/head-teaching-current-source.mjs",
+        "restore": "website/tests/head-teaching-current-source.mjs"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/head-teaching-current.test.ts",
+        "restore": "website/tests/head-teaching-current.test.ts"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/head-teaching-historical-source.mjs",
+        "restore": "website/tests/head-teaching-historical-source.mjs"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/head-teaching-historical-source.test.mjs",
+        "restore": "website/tests/head-teaching-historical-source.test.mjs"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/clinical-review-abdominal-eus-current.test.ts",
+        "restore": "website/tests/clinical-review-abdominal-eus-current.test.ts"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/eus-original-delivery.mjs",
+        "restore": "website/tests/eus-original-delivery.mjs"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/eus-source-commitment.mjs",
+        "restore": "website/tests/eus-source-commitment.mjs"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/manifest.json",
+        "restore": "website/tests/fixtures/eus-original-delivery/manifest.json"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/atlas-review/content/abdominal-eus-orientation.ts.raw",
+        "restore": "website/tests/fixtures/eus-original-delivery/source/atlas-review/content/abdominal-eus-orientation.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/atlas-review/lib/abdominal-eus-orientation.ts.raw",
+        "restore": "website/tests/fixtures/eus-original-delivery/source/atlas-review/lib/abdominal-eus-orientation.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/atlas-emitted-teaching.ts.raw",
+        "restore": "website/tests/fixtures/eus-original-delivery/source/tests/atlas-emitted-teaching.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/atlas-source-repo.mjs.raw",
+        "restore": "website/tests/fixtures/eus-original-delivery/source/tests/atlas-source-repo.mjs.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/clinical-review-abdominal-eus.test.ts.raw",
+        "restore": "website/tests/fixtures/eus-original-delivery/source/tests/clinical-review-abdominal-eus.test.ts.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/current-atlas-delivery.mjs.raw",
+        "restore": "website/tests/fixtures/eus-original-delivery/source/tests/current-atlas-delivery.mjs.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/fixtures/current-atlas-delivery.json.raw",
+        "restore": "website/tests/fixtures/eus-original-delivery/source/tests/fixtures/current-atlas-delivery.json.raw"
+      },
+      {
+        "path": "pending/learning-delivery-20261025/website/tests/eus-source-commitment.test.mjs",
+        "restore": "website/tests/eus-source-commitment.test.mjs"
+      },
+      {
+        "path": "recipes/source-only-backup-20261019.mjs",
+        "restore": "coordination/source-only-backup-20261019.mjs"
+      },
+      {
+        "path": "recipes/seal-simple-website-successor.mjs",
+        "restore": "coordination/seal-simple-website-successor.mjs"
+      },
+      {
+        "path": "recipes/prepare-learning-delivery-website-20261025.mjs",
+        "restore": "coordination/prepare-learning-delivery-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-head-teaching-portable-20261025.mjs",
+        "restore": "coordination/integrate-head-teaching-portable-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-eus-portable-20261025.mjs",
+        "restore": "coordination/integrate-eus-portable-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-eus-portable-20261025.mjs",
+        "restore": "coordination/run-eus-portable-20261025.mjs"
+      },
+      {
+        "path": "recipes/correct-eus-child-isolation-20261025.mjs",
+        "restore": "coordination/correct-eus-child-isolation-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-eus-portable-corrected-20261025.mjs",
+        "restore": "coordination/run-eus-portable-corrected-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-learning-delivery-20261025.mjs",
+        "restore": "coordination/seal-learning-delivery-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-learning-delivery-verifier-20261025.mjs",
+        "restore": "coordination/prepare-learning-delivery-verifier-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-learning-delivery-20261025.mjs",
+        "restore": "coordination/verify-learning-delivery-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-learning-delivery-preview-20261025.mjs",
+        "restore": "coordination/prepare-learning-delivery-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/preview-learning-delivery-20261025.mjs",
+        "restore": "coordination/preview-learning-delivery-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-learning-delivery-source-20261025.mjs",
+        "restore": "coordination/backup-learning-delivery-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "pending/learning-delivery-20261025/website/components/UltrasoundLocalAtlas.tsx",
+      "bytes": 23337,
+      "sha256": "b36cc6756706ff72a74226244bfdf694ebbb5c54f2d3def2f4f88e59d42a9958"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/components/ultrasound-local-atlas.css",
+      "bytes": 5118,
+      "sha256": "67a093e8f04603ccefeed89a6fdbdfcb3577e62f074b6b5f410fecfd6fddab27"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/docs/ultrasound-local-teaching.md",
+      "bytes": 5481,
+      "sha256": "786ca4fde8c44172482564e1c74aa6ac58a43199ae9c29ba3ac36fbb3358be74"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/lib/ultrasound-study.ts",
+      "bytes": 13105,
+      "sha256": "a87a584e2cf7ea05457dd0f1b86dd29ebd0ff1e4cd82e4feeb3995618970d86b"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/clinical-review-abdominal-eus.test.ts",
+      "bytes": 294,
+      "sha256": "4021ad89517d8016c4298362383cfd79a6ae7a106c084e81d547ae2bb0ece0f3"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/head-atlas-teaching.test.ts",
+      "bytes": 177,
+      "sha256": "758a9332f7a5197b655ceff87e5df63f2f7e7d8d10d39a05024d2fa22b2e2b85"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/ultrasound-study.test.mjs",
+      "bytes": 12748,
+      "sha256": "c3a7b27f1949b60933a09b96a445e64f9a53754a5bf30bed4126ccda744db40b"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/manifest.json",
+      "bytes": 18978,
+      "sha256": "abb8aefee9e270a23f3737fe0350c687fc4eca1185dc9539543a62fd176c4a2f"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/app/workspace/atlas-review/head-learning/page.tsx.raw",
+      "bytes": 15741,
+      "sha256": "7da7521176d7867a1233e87d5ee4ba5dbcf6b4d44dd22383e9e996b0517a4913"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/app/workspace/atlas-review/source-comparisons/page.tsx.raw",
+      "bytes": 1872,
+      "sha256": "4cb4532a66a697506082600175711005f8b52b8a04cbe456454f44d842c3eb1d"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/atlas-review/content/hippocampal-teaching.ts.raw",
+      "bytes": 4155,
+      "sha256": "6ee598d0771a70ca570ce017222eb8a4894feb4c8b59343ebc70f4ced435af87"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAnatomyCheck.tsx.raw",
+      "bytes": 3140,
+      "sha256": "1c7142513f6813aec9fa872e3d5365d0a955a526080e5de41f38b2985263c16c"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAnatomyChecksReview.tsx.raw",
+      "bytes": 2405,
+      "sha256": "170d6eabaad1a4b5da856ca80fc049e814894e64bd3b0ff0e423087f2867d715"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasGuidedLearning.tsx.raw",
+      "bytes": 13677,
+      "sha256": "b5cd947f7bef048ffa8dcb0fb4b98b77ee2a54d83049822fed700b1f8be8ba95"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasTeaching.tsx.raw",
+      "bytes": 4593,
+      "sha256": "dcbc50cc8aace6ddf0b9ff021ed924cdcbaa0cdf7d87b2e7c31be5a6ca734b7e"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasTeachingReview.tsx.raw",
+      "bytes": 13387,
+      "sha256": "d5057f619b8d2f492a38fe3f6bd247a37a4042c61bb383f77f75464092ab44cf"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadAtlasViewer.tsx.raw",
+      "bytes": 115200,
+      "sha256": "6296ff18c86691f22cfa02294dae295395b9f8035768a3990a9af4fe16beeff1"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadCerebellarClinicalReview.tsx.raw",
+      "bytes": 3641,
+      "sha256": "436938101cddafcce4dcfe5d89d77941b8df03bd07d35ad176a97719d4c4d63f"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadDeepGreyClinicalReview.tsx.raw",
+      "bytes": 3348,
+      "sha256": "acca71797f9dfc30ff9b616c06dca09c05e946e37b1bad5d6ca29f62038c06ba"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadHippocampalClinicalReview.tsx.raw",
+      "bytes": 3825,
+      "sha256": "7da4a502bb16742355e4c3f0d6847b933f9458bc1e35058cc3232bf20b3cd966"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadLobarClinicalReview.tsx.raw",
+      "bytes": 3356,
+      "sha256": "008a96268ab127da1a857b4537cf23575b02cfc8e9883458203cf874b3c94cac"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriAnatomyChecksReview.tsx.raw",
+      "bytes": 3135,
+      "sha256": "6d887808d2eef47b67beba7765e02ded5cd83d15de39341a3a04b87803503c58"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriComparisonReview.tsx.raw",
+      "bytes": 4806,
+      "sha256": "02a50aeb8450054c6d34799bb5aad54e9d474f07347c3d6e4a869b3c5425fdf6"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadMriOnlyClinicalReview.tsx.raw",
+      "bytes": 3631,
+      "sha256": "cdcd9ac2174316fc63544b81695cac0469ce126ffa73825a2cfb418982b2f909"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadReviewImageLink.tsx.raw",
+      "bytes": 506,
+      "sha256": "8b77fc35da93fb8a438ded3608acb9afa6b7c53243da44660d306a1c8c186631"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/HeadTeachingReviewNavigator.tsx.raw",
+      "bytes": 1659,
+      "sha256": "f5637bcb8e4385b86bcb5490ec10e6244baa6e38c051345ba5a95bd028d2b079"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/components/useVerifiedFacialTeaching.ts.raw",
+      "bytes": 1333,
+      "sha256": "e50f522103e8d77757ef679f2b69f3a83f0427e007560eb1ae615cba79e3b518"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-anatomy-checks.ts.raw",
+      "bytes": 7674,
+      "sha256": "aa6e70db065c807fb6ae8aa25a9f04a8dc6748bde6c807cd26dd8d11a9e841eb"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-asset-checksum.ts.raw",
+      "bytes": 1089,
+      "sha256": "608ca89d4fd6ce4b145eb2588172d284a2b341e3d088e154844983124f4207b3"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-geometry.mjs.raw",
+      "bytes": 9111,
+      "sha256": "d50b8e57e81d90d9155149968ea259321879e2652f6862622bd5e628eb1d211a"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-import.ts.raw",
+      "bytes": 16099,
+      "sha256": "70fa65adc382a02cfa3a53d4bf6baf267c6272bed9086297866a80adc87413b7"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-learning.ts.raw",
+      "bytes": 7821,
+      "sha256": "b49ac84c47f8a0d3215f1e50efa9847e26b5e7405a1fc647ee833a4335214471"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-links.ts.raw",
+      "bytes": 15427,
+      "sha256": "f60f84744f5346ee5e09c7414819148ef8d0b17ad157be19d805e0741177c149"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-navigation.ts.raw",
+      "bytes": 3342,
+      "sha256": "50f68259fbefdf80a0b93a6a45eeba4c4b243446751cfdcebc12b4204c9068da"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-atlas-teaching.ts.raw",
+      "bytes": 21476,
+      "sha256": "d95bd3140dbc0c3cfaaab9ac68086a57284f1b1dd077d9347370626217b79a79"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-brainstem-clinical.ts.raw",
+      "bytes": 6668,
+      "sha256": "f3fa21f3cb9fcb3cafb3226fba624c4499946f4db5893b54e678601692befa08"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-clinical.ts.raw",
+      "bytes": 8071,
+      "sha256": "88959b75455b6e14e318524a6e3b7f92870a94414279c0df7d465e1e70a73c2b"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-learning.ts.raw",
+      "bytes": 2267,
+      "sha256": "f726d8102b03bd3324545f66af326488a0c61bc034ca621fc4237eca26f4b99c"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-cerebellar-teaching.ts.raw",
+      "bytes": 6138,
+      "sha256": "9a3f47f4caa57f400f17c2c26f2088f2f030d51ae1da8a415200da43dc66d8b7"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-comparison-review.ts.raw",
+      "bytes": 3906,
+      "sha256": "cdd5448b66bbb304a3157022545d92d28815770202bdb92a9df053356ec4667c"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-learning.ts.raw",
+      "bytes": 2790,
+      "sha256": "de9752cd2ab5af4cd32ed535f843b0aa0034f4401f24530aad9d36822eab92ad"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-bone-teaching.ts.raw",
+      "bytes": 7087,
+      "sha256": "139c88f2a3d95ca27d730ebb75d4f24cc60bb0ae9c5487a1029e400cd63f5cec"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-clinical.ts.raw",
+      "bytes": 7999,
+      "sha256": "1824d0f608bbc42db5528ea5f8a93407b33aeda047063af31b0736b31a069184"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-comparison-review.ts.raw",
+      "bytes": 3948,
+      "sha256": "e20166d3c4f3521d3ff381f7ae0c603e553ba50e4972a73ed0c6c2f2ebd2a6ca"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-learning.ts.raw",
+      "bytes": 3657,
+      "sha256": "23f8b874ae14d729c8c8ec380e7c9ee965ee622adbba8a51b220a27c98cf79a0"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ct-facial-teaching.ts.raw",
+      "bytes": 9242,
+      "sha256": "4a2dcaa79d61cdd4a85770e447b8f90ecde53a31b4371518ba6af73accbf78f4"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-deep-grey-clinical.ts.raw",
+      "bytes": 9163,
+      "sha256": "38c8fe02cbbebbce4ee62dac636764b6451b9f57ee3559fb59029725387d5bd0"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-hippocampal-clinical.ts.raw",
+      "bytes": 6387,
+      "sha256": "0daf672c7ce9994095f914f31b68f1ada331b271ad3690a2dc924cf754e6b932"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-image-only-comparison-review.ts.raw",
+      "bytes": 1532,
+      "sha256": "8a69bb7b2ad1ec366f35d6af4962996f8a40cacb8b4d2d91136917edc7b746e4"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-image-only-links.ts.raw",
+      "bytes": 4718,
+      "sha256": "ee74f4c5077ba9f90eb3dcdfd6db7c4751d90ba03458f742b5cdf4d427924bdc"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-comparison-review.ts.raw",
+      "bytes": 3796,
+      "sha256": "5031ba7f912fb8843363c9dadabb8d6879a5e0a74f516c02f354e211fdbe73cc"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-learning.ts.raw",
+      "bytes": 2334,
+      "sha256": "8500b4c9cfe8d137649401d92bf09962cf6452d59d898581d38f9ef790071085"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-insula-teaching.ts.raw",
+      "bytes": 5082,
+      "sha256": "8e8f20b39e10dad052d52685e5144c14fdd90d6bee888394f52fdc6df8b9872e"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-link-availability.ts.raw",
+      "bytes": 648,
+      "sha256": "1b457425324cf0e3d7b1a9e16b8aca4a28e6de908b659479840a3ad6e9ed74f2"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-load-progress.ts.raw",
+      "bytes": 6543,
+      "sha256": "22629322ad0c62fd6912b780828aea5a4124d297cb110f7bda53a05e66bd4a1b"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-lobar-clinical.ts.raw",
+      "bytes": 8193,
+      "sha256": "f94e92d9f3a622719c39beba11731af2e43bd3c65674cff541bbbaad5335cecf"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mask-focus.ts.raw",
+      "bytes": 1462,
+      "sha256": "7b21a555baa273c8069d4a91f35991b4b7c8094e10a80dc623c9f8325164f462"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-anatomy-checks.ts.raw",
+      "bytes": 6522,
+      "sha256": "8a5bd18c54e5437ac25fe0293bcfe3eed77d64f6cdedc2e4ee5ce4c90a75b9f5"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-comparison-review.ts.raw",
+      "bytes": 4441,
+      "sha256": "e213c788f25a4c1940a1ba1cb1c138f934b36b04e7f445083742b3895cb3a211"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-learning.ts.raw",
+      "bytes": 2388,
+      "sha256": "cd36a4c1bcbdb4eca49aa72402c79d3866824893060123c66004df6421df9714"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-only-clinical.ts.raw",
+      "bytes": 7278,
+      "sha256": "d7a261e4973882f5f29d13319b19256778835bb488abbe21e8d101e5826b5b9b"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-only-teaching.ts.raw",
+      "bytes": 7450,
+      "sha256": "76d230c142f69f4ce1877145a4b7c79a75617066ab749a3a387709ed0a05942c"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-mri-review-draft-contract.ts.raw",
+      "bytes": 7912,
+      "sha256": "79cff730e612456ead32224ceb45db2c5fffcae7ca77a0b78183d0a3b2437b90"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-comparison-review.ts.raw",
+      "bytes": 3567,
+      "sha256": "ceea235ab41dd3ed1d2c85b383bcd96245e95818ba4c4581244be1413978bbab"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-learning.ts.raw",
+      "bytes": 2526,
+      "sha256": "a95b731689ea7121dbecb63b3ee510deabb09f11f6ca93dcf7e1062e405cb8fe"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-orbital-teaching.ts.raw",
+      "bytes": 5680,
+      "sha256": "6be7251a8ba426149a2498bfe453f619f02fc5d656fa83c68b1a73b8df14bd0b"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-surface-validation.ts.raw",
+      "bytes": 1333,
+      "sha256": "85597c4c6a59fb18c862eb404a3da21c3043306985f44f6d2985703b8c1022b6"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-teaching-review-contract.ts.raw",
+      "bytes": 18400,
+      "sha256": "a1e23fe3ab46dbbebfc7e961df01abe8643d529ff66f3968a5b486c3078bc2ef"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/lib/head-ventricular-clinical.ts.raw",
+      "bytes": 7800,
+      "sha256": "27bcc3ea0dd5ce8c4a167e0cbd9ecb8ca76dd1286f550e5e26601d5f16e52151"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/tests/head-anatomy-check-loader.ts.raw",
+      "bytes": 775,
+      "sha256": "bc966bf90a7e15c1cddef1502c540b31d689dddd099a6c6cff924debccbc6f48"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/tests/head-atlas-teaching.test.ts.raw",
+      "bytes": 21521,
+      "sha256": "d1f433a4a303e4debf3c11174959146c881ffa555c1df523f4952c986a696ea7"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/tests/head-facial-hook-loader.ts.raw",
+      "bytes": 1676,
+      "sha256": "92621d779a30a02de7fb485a38da704196e40552fd8d8eb0c46e08997567de3f"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-before-guided/source/tests/head-review-image-link-loader.ts.raw",
+      "bytes": 907,
+      "sha256": "8e6288980b888eed90b2f4ddb7aafa47932853d02c928512a3183e186d48d092"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/head-teaching-current-pins.json",
+      "bytes": 8204,
+      "sha256": "af217db9847a8d1cedd553dea27cce5dba9b8569978f8f3ec7ba1ae9f64799e3"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/head-teaching-current-source.mjs",
+      "bytes": 3184,
+      "sha256": "be5ff601027b3460d90247f54d21c1ae3cfeeb43746f1a19f7c4dd711aa700cb"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/head-teaching-current.test.ts",
+      "bytes": 2016,
+      "sha256": "c3a5bafd9c92b95b3f174d956029766f3a136373b8e9be5f5185259dda07039e"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/head-teaching-historical-source.mjs",
+      "bytes": 7447,
+      "sha256": "43409e65d22f1a9a83db6af09027b5bcc97f9ac24f9c36319eee7319fdb4d2ca"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/head-teaching-historical-source.test.mjs",
+      "bytes": 1751,
+      "sha256": "f3dc63e820ee1c3d351c5feb50407a5d7dbceae2c563cc8ef2d6b8615c5377eb"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/clinical-review-abdominal-eus-current.test.ts",
+      "bytes": 15581,
+      "sha256": "2e38e0e89a0b29ba7604ab2b590020b82d4fff93e8d24d4412f45013a1aebec5"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/eus-original-delivery.mjs",
+      "bytes": 6065,
+      "sha256": "09996e84e7ee4efa7ca0f29c9afd328d4e8809d30892cbcb025c0e5525c132aa"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/eus-source-commitment.mjs",
+      "bytes": 3453,
+      "sha256": "10620e51d047665b673579193d1fbe75f10dfa9f3336cf2cbf7d1e93d9a6f2be"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/manifest.json",
+      "bytes": 2582,
+      "sha256": "6642e1484b9b7d38d463441ce7ea433dbee7f10e59e9d1dbaece9f88fed649e9"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/atlas-review/content/abdominal-eus-orientation.ts.raw",
+      "bytes": 2559,
+      "sha256": "39ee4a18431a9dd36112ee95ba17a9ec47a135404372f690b646fb19e7937c37"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/atlas-review/lib/abdominal-eus-orientation.ts.raw",
+      "bytes": 2421,
+      "sha256": "ea38de69991d94f258cc71824b2856cc72b3f2dc2e7c79c53290825ecea93b13"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/atlas-emitted-teaching.ts.raw",
+      "bytes": 3337,
+      "sha256": "407396ddf4b0e4398efabf691fcdec75e90c79caafea280234f3438645af8cf2"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/atlas-source-repo.mjs.raw",
+      "bytes": 1588,
+      "sha256": "45be52da6f2a93fdff2276235b357d6e491385af8a84ab8e0193905f6d49f356"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/clinical-review-abdominal-eus.test.ts.raw",
+      "bytes": 13867,
+      "sha256": "c2951cffd8922fd873c4a63ff347adf760b6b54df1c95cf0f8fb038042449366"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/current-atlas-delivery.mjs.raw",
+      "bytes": 5092,
+      "sha256": "02dd815603c922dedbdc5a5fce270fbda736b81220e335d750dcbec1124c833e"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/fixtures/eus-original-delivery/source/tests/fixtures/current-atlas-delivery.json.raw",
+      "bytes": 2051,
+      "sha256": "a8d674c7d12c149f5e046f0a29b354699914c831fc4d9706e0049d401a18b10d"
+    },
+    {
+      "path": "pending/learning-delivery-20261025/website/tests/eus-source-commitment.test.mjs",
+      "bytes": 3680,
+      "sha256": "896f931b2adbef801cf8e40879a03bb3e1af017bf1781bcc951c865bc97909e4"
+    },
+    {
+      "path": "recipes/source-only-backup-20261019.mjs",
+      "bytes": 7700,
+      "sha256": "3f8ea65871f15558d46c1c2a36feb0dee95d2408207f9d2762976ae66ead5212"
+    },
+    {
+      "path": "recipes/seal-simple-website-successor.mjs",
+      "bytes": 5382,
+      "sha256": "8e15dcfed86a8c97ed6ed558b891908acfef767c05a80947361876ad82b2d0c7"
+    },
+    {
+      "path": "recipes/prepare-learning-delivery-website-20261025.mjs",
+      "bytes": 3235,
+      "sha256": "319e171d03af79b32e0ce8ec3307342ac67555ee42cbd77cc194258dcf908cd2"
+    },
+    {
+      "path": "recipes/integrate-head-teaching-portable-20261025.mjs",
+      "bytes": 6309,
+      "sha256": "d5781d2a0e6e8c6521474e138376f59ec8b3eddd748a5c6ecce1fb8cc6eebeca"
+    },
+    {
+      "path": "recipes/integrate-eus-portable-20261025.mjs",
+      "bytes": 2330,
+      "sha256": "fcee59e1cba99313f096dd7fe6f34e4a04ee0ed6382c52e89dd3962be25e1fff"
+    },
+    {
+      "path": "recipes/run-eus-portable-20261025.mjs",
+      "bytes": 4326,
+      "sha256": "a1ab896a4a7d56ace59ddb87ddf319fa2edc92d3111d708de167951b8dbb45aa"
+    },
+    {
+      "path": "recipes/correct-eus-child-isolation-20261025.mjs",
+      "bytes": 4513,
+      "sha256": "0a9090a0d8949dc2bc848b9e3f923138231877695d91045eb8f9fcdc5ba35af2"
+    },
+    {
+      "path": "recipes/run-eus-portable-corrected-20261025.mjs",
+      "bytes": 4245,
+      "sha256": "39a9540dba4876484261a1d74e1866491fba229c36dc1c11597583bd7c58d9a0"
+    },
+    {
+      "path": "recipes/seal-learning-delivery-20261025.mjs",
+      "bytes": 4147,
+      "sha256": "028a7582cee576e1e806bf10a8242b6f43ea33f813afc94b8494681b371b52bb"
+    },
+    {
+      "path": "recipes/prepare-learning-delivery-verifier-20261025.mjs",
+      "bytes": 1939,
+      "sha256": "1549f619d577fab7d01e48d5b79f8b33c1508a5ee954174d25f10aa486707264"
+    },
+    {
+      "path": "recipes/verify-learning-delivery-20261025.mjs",
+      "bytes": 12140,
+      "sha256": "acdfb966015cb875f8c9d218cd66532d88b256713be9804897e1d4175bb6401f"
+    },
+    {
+      "path": "recipes/prepare-learning-delivery-preview-20261025.mjs",
+      "bytes": 672,
+      "sha256": "c2367aea2ac5c77948d6babe324b7e231dd145f72b119ef31580869dae8bada8"
+    },
+    {
+      "path": "recipes/preview-learning-delivery-20261025.mjs",
+      "bytes": 3782,
+      "sha256": "f6dd33aee2f0e210d727781167d9b3a5862a2b68f30fe2d205a32e093f968932"
+    },
+    {
+      "path": "recipes/backup-learning-delivery-source-20261025.mjs",
+      "bytes": 7080,
+      "sha256": "81367283d270046462fb5bb56c1d10f7698502e0f343cee5b4a73a5943064a69"
+    }
+  ],
+  "removed": [],
+  "scope": "90explicit first-party Website source/test/finite raw code or authored-teaching fixture files plus14recipes. No images, actual scan/mask/medical annotations or their sample-specific coordinates, private case records, identifiers, complete private-source inventory or raw QA, compiled output, dependency packages or canonical Git ancestry. Exact aggregate inventory commitment replaces private metadata in the EUS test fixture. Incremental source supplement only; not cumulative, whole/private or runnable Website/Atlas recovery. Exact local parent/historical delivery baselines remain necessary. No preview installation, publication, clinical approval or spatial registration.",
+  "proof": {
+    "focusedReportedPass": 430,
+    "focusedRoots": 34,
+    "repeatedHistoricalCollectorsAreNotDistinctCases": true,
+    "originalHeadCases": 10,
+    "currentHeadComponentCases": 2,
+    "headIntegrityCases": 3,
+    "portableEusAndCommitmentCases": 8,
+    "ultrasoundCoreCases": 25,
+    "strictRoots": 9,
+    "strictTransitiveFiles": 628,
+    "strictDiagnostics": 0,
+    "stockProductionBuildPassed": true,
+    "buildFiles": 1133,
+    "sourcePathsChecked": 6762,
+    "privateHistoricalIndexNotUploaded": true,
+    "medicalSamplesOrImagesUploaded": false,
+    "rawQaUploaded": false,
+    "selectedBytes": 729172,
+    "clinicalApproval": false,
+    "spatialRegistration": false,
+    "ownerPreviewChanged": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
