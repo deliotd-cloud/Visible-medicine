@@ -1,0 +1,242 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T14:20:21.845Z",
+  "sourceIdentity": {
+    "kind": "four-original-source-bound-ultrasound-drafts-and-coordinate-free-integration-recovery-supplement",
+    "requiredLocalNativeHead": "27b341001718b7d5bb4f45aad0c8d8784e287c3b",
+    "requiredLocalNativeSourceSha256": "3ab3744296035502165d3b3b2439338306533a15dffdd72d4e6103aafdc6f75a",
+    "requiredPriorSupplement": {
+      "branch": "backup/contained-model-preflight-source-20261025",
+      "head": "eb7f304847ca68cf5ad350009b4c0370ed1d0d83",
+      "tree": "f53e5a3e25503a471cd94877498b42e50e4a8f85"
+    },
+    "restorePaths": [
+      {
+        "path": "atlas/content/abdominal-arterial-ultrasound.ts",
+        "restore": "atlas/content/abdominal-arterial-ultrasound.ts"
+      },
+      {
+        "path": "atlas/lib/abdominal-arterial-ultrasound.ts",
+        "restore": "atlas/lib/abdominal-arterial-ultrasound.ts"
+      },
+      {
+        "path": "atlas/scripts/test-abdominal-arterial-ultrasound-native.mjs",
+        "restore": "atlas/scripts/test-abdominal-arterial-ultrasound-native.mjs"
+      },
+      {
+        "path": "atlas/docs/ABDOMINAL_ARTERIAL_ULTRASOUND.md",
+        "restore": "atlas/docs/ABDOMINAL_ARTERIAL_ULTRASOUND.md"
+      },
+      {
+        "path": "atlas/package.json",
+        "restore": "atlas/package.json"
+      },
+      {
+        "path": "recipes/BODY_CONTENT_ARTR_US.patch",
+        "restore": "coordination/BODY_CONTENT_ARTR_US.patch"
+      },
+      {
+        "path": "recipes/inventory-preflight-teaching-priorities-20261025.mjs",
+        "restore": "coordination/inventory-preflight-teaching-priorities-20261025.mjs"
+      },
+      {
+        "path": "recipes/capture-abdominal-arterial-us-before-20261025.mjs",
+        "restore": "coordination/capture-abdominal-arterial-us-before-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-abdominal-arterial-us-native-20261025.mjs",
+        "restore": "coordination/prepare-abdominal-arterial-us-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/review-abdominal-arterial-us-proposal-20261025.mjs",
+        "restore": "coordination/review-abdominal-arterial-us-proposal-20261025.mjs"
+      },
+      {
+        "path": "recipes/install-abdominal-arterial-us-proposal-20261025.mjs",
+        "restore": "coordination/install-abdominal-arterial-us-proposal-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-abdominal-arterial-us-native-20261025.mjs",
+        "restore": "coordination/check-abdominal-arterial-us-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/compare-abdominal-arterial-us-resolver-20261025.mjs",
+        "restore": "coordination/compare-abdominal-arterial-us-resolver-20261025.mjs"
+      },
+      {
+        "path": "recipes/regenerate-abdominal-arterial-us-metadata-20261025.mjs",
+        "restore": "coordination/regenerate-abdominal-arterial-us-metadata-20261025.mjs"
+      },
+      {
+        "path": "recipes/resume-abdominal-arterial-us-metadata-20261025.mjs",
+        "restore": "coordination/resume-abdominal-arterial-us-metadata-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-abdominal-arterial-us-review-20261025.mjs",
+        "restore": "coordination/verify-abdominal-arterial-us-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-abdominal-arterial-us-full-types-20261025.mjs",
+        "restore": "coordination/check-abdominal-arterial-us-full-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-abdominal-arterial-us-native-20261025.mjs",
+        "restore": "coordination/seal-abdominal-arterial-us-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-abdominal-arterial-us-native-20261025.mjs",
+        "restore": "coordination/build-abdominal-arterial-us-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/record-abdominal-arterial-us-execution-20261025.mjs",
+        "restore": "coordination/record-abdominal-arterial-us-execution-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-abdominal-arterial-us-source-20261025.mjs",
+        "restore": "coordination/backup-abdominal-arterial-us-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/abdominal-arterial-ultrasound.ts",
+      "bytes": 3504,
+      "sha256": "9fa27a05a0ef2fd20c1183ce7d2caaa6f04e79afb3f9377b388761a3300ec468"
+    },
+    {
+      "path": "atlas/lib/abdominal-arterial-ultrasound.ts",
+      "bytes": 3468,
+      "sha256": "25fd97dbe91f8f24fc3fab61d829cca766a115eaf618085fc33f9cd33ea1fade"
+    },
+    {
+      "path": "atlas/scripts/test-abdominal-arterial-ultrasound-native.mjs",
+      "bytes": 5063,
+      "sha256": "3d557e49e48e4209ef5a624ec76e2708d02195f812c5dc67550d3af75716f7a8"
+    },
+    {
+      "path": "atlas/docs/ABDOMINAL_ARTERIAL_ULTRASOUND.md",
+      "bytes": 3848,
+      "sha256": "56f28711a8eab0145927ee320e221249ce9715d3af3fe5dece48549d91568373"
+    },
+    {
+      "path": "atlas/package.json",
+      "bytes": 89828,
+      "sha256": "db060b3ffe9675c060eb236edf50991508cd8a77cc650f19f6283cbd556e8e8b"
+    },
+    {
+      "path": "recipes/BODY_CONTENT_ARTR_US.patch",
+      "bytes": 473,
+      "sha256": "d5bf1d3793ce644079dc0220c727807c17851a87495bbb4a137a323b904f0b83"
+    },
+    {
+      "path": "recipes/inventory-preflight-teaching-priorities-20261025.mjs",
+      "bytes": 2107,
+      "sha256": "9a111ce969b228ec52b4cc9aac41a04a690d290d45315520e1f1392221db191d"
+    },
+    {
+      "path": "recipes/capture-abdominal-arterial-us-before-20261025.mjs",
+      "bytes": 2200,
+      "sha256": "0ca9930526290917c8cb5d3c5a95bc02955e83faccdd09a36d09b0200888a7c5"
+    },
+    {
+      "path": "recipes/prepare-abdominal-arterial-us-native-20261025.mjs",
+      "bytes": 3319,
+      "sha256": "e15c4aa6e4605ad7c53075bb8bd9307addaded9842c8a6190934a9000206bf0b"
+    },
+    {
+      "path": "recipes/review-abdominal-arterial-us-proposal-20261025.mjs",
+      "bytes": 3651,
+      "sha256": "bc6ddfd9b3b07951d1ec11e1b4aa640dd577e07aeb70a99786388f964a7eeea2"
+    },
+    {
+      "path": "recipes/install-abdominal-arterial-us-proposal-20261025.mjs",
+      "bytes": 3897,
+      "sha256": "7d5b2deea6edca1f14b58c010417b2ea2603564ce55053959d85f22e9b100c20"
+    },
+    {
+      "path": "recipes/check-abdominal-arterial-us-native-20261025.mjs",
+      "bytes": 1722,
+      "sha256": "cc2c1cf223fe3ce8c371cd776dc2959d8758fdc8be4620da682c40955f967d85"
+    },
+    {
+      "path": "recipes/compare-abdominal-arterial-us-resolver-20261025.mjs",
+      "bytes": 4065,
+      "sha256": "47e953112a62e0f55e2bd4fb08d9abf90dd3e17618b4d00fd9e1effccec27c64"
+    },
+    {
+      "path": "recipes/regenerate-abdominal-arterial-us-metadata-20261025.mjs",
+      "bytes": 4654,
+      "sha256": "ebd3b7570ce19bbf676334e7f23aff9b8fdad1028ce476ac23c47de770900650"
+    },
+    {
+      "path": "recipes/resume-abdominal-arterial-us-metadata-20261025.mjs",
+      "bytes": 5636,
+      "sha256": "f772ca92fb1d3928c96709660521ba95218a6778fdf65da10268e73814c5d0b9"
+    },
+    {
+      "path": "recipes/verify-abdominal-arterial-us-review-20261025.mjs",
+      "bytes": 4189,
+      "sha256": "2e34649106809a09c795073870a5c5c397d3b731180e3be0ebeaa980ffff3e59"
+    },
+    {
+      "path": "recipes/check-abdominal-arterial-us-full-types-20261025.mjs",
+      "bytes": 2662,
+      "sha256": "d2266210d8dfcef58bb2c7b274c3f26a30b8c4fd5b5a8ba879eff3f3d645f1bb"
+    },
+    {
+      "path": "recipes/seal-abdominal-arterial-us-native-20261025.mjs",
+      "bytes": 4728,
+      "sha256": "ed9e34484c72e05874b917c8cbceda7b41e1a5fde83da5d5595d74255db6652b"
+    },
+    {
+      "path": "recipes/build-abdominal-arterial-us-native-20261025.mjs",
+      "bytes": 3204,
+      "sha256": "498d66b119bc46f1e9937e84e63f6fb3b06e9e78add7e67b8d079ceb385c045a"
+    },
+    {
+      "path": "recipes/record-abdominal-arterial-us-execution-20261025.mjs",
+      "bytes": 1584,
+      "sha256": "015765b721f0748f2f08c852cfb577152c772d50a5fe462fb73168274f4f575a"
+    },
+    {
+      "path": "recipes/backup-abdominal-arterial-us-source-20261025.mjs",
+      "bytes": 6148,
+      "sha256": "5aa95d7a971f2d008ca816c6fb1d3eb58867d344a07bde71021e0bfcb87e7e0e"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party authored content, helper, tests, documentation, package and coordinate-free body-content edit patch/recovery recipes only. Earlier source supplements and local baseline/pins/data required; not whole/private/runnable backup. References are original factual synthesis and reading links only; no article images/prose/tables/data or noncommercial assets imported. No full app/body-content, generated data/coverage/review/renderer/pins, rawQA/private configuration/closure, scans/masks/coordinates/decisions/models/dependencies/runtime or canonical/native ancestry uploaded.",
+  "proof": {
+    "exactSourceBoundDrafts": 4,
+    "linearEusRoots": 2,
+    "intraoperativeUltrasoundRoots": 2,
+    "fullResolverPlacements": 9936,
+    "unchangedPlacements": 9932,
+    "pendingBefore": 485,
+    "pendingAfter": 481,
+    "remainingAbdominalUsPending": 12,
+    "materialPinsChanged": 4,
+    "materialPinsUnchanged": 1100,
+    "staleReviewPacketsRefused": 4,
+    "forgedReviewPacketsRefused": 12,
+    "fullStrictRoots": 1308,
+    "fullStrictFiles": 4677,
+    "diagnostics": 0,
+    "fullNativeBuildPassed": false,
+    "runtimeExportsAndWebsiteImportPending": true,
+    "all215PublicAssetBytesPreserved": true,
+    "sourceBytes": 159950,
+    "privateDataUploaded": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
