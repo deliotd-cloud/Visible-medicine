@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party teaching, helper, tests, documentation, package, coordinate-free app/notice patches and recovery recipes only. Requires exact local baseline/pins/generated data and earlier source supplements; not whole/private/runnable backup. Reading references provide factual synthesis, not article asset permissions. No complete body-content module, publisher text/figures/images/data, raw QA, private config, generated Review/pins/coverage/renderer/closures, scans, masks, identifiers, coordinates, decisions, models, dependencies, runtime or canonical/native Git ancestry included.

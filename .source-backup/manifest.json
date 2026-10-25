@@ -1,0 +1,298 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T21:34:02.526Z",
+  "sourceIdentity": {
+    "kind": "two-original-source-bound-nasal-imaging-notes-four-draft-placements-and-coordinate-free-integration-recovery",
+    "requiredLocalNativeHead": "7e2552a300df29faf346be146929ffc727880ec5",
+    "requiredLocalNativeSourceSha256": "bcae8ad4ebb5b628f84ef0a0de0093f787725a6099507d0eefbd7816810bf62f",
+    "requiredPriorSupplement": {
+      "branch": "backup/abdominal-arterial-us-source-20261025",
+      "head": "ec4e383a0e8741670adfa3822af60260510a56bd",
+      "tree": "35b6e11406b6fe09bdc331bb1783a2ccd6700724"
+    },
+    "restorePaths": [
+      {
+        "path": "atlas/content/nasal-bone-surface-imaging.ts",
+        "restore": "atlas/content/nasal-bone-surface-imaging.ts"
+      },
+      {
+        "path": "atlas/lib/nasal-bone-surface-imaging.ts",
+        "restore": "atlas/lib/nasal-bone-surface-imaging.ts"
+      },
+      {
+        "path": "atlas/scripts/test-nasal-bone-surface-imaging.mjs",
+        "restore": "atlas/scripts/test-nasal-bone-surface-imaging.mjs"
+      },
+      {
+        "path": "atlas/docs/NASAL_BONE_SURFACE_IMAGING.md",
+        "restore": "atlas/docs/NASAL_BONE_SURFACE_IMAGING.md"
+      },
+      {
+        "path": "atlas/package.json",
+        "restore": "atlas/package.json"
+      },
+      {
+        "path": "recipes/BODY_CONTENT_NASAL.patch",
+        "restore": "coordination/BODY_CONTENT_NASAL.patch"
+      },
+      {
+        "path": "recipes/NASAL_NOTICE.patch",
+        "restore": "coordination/NASAL_NOTICE.patch"
+      },
+      {
+        "path": "recipes/prepare-nasal-bone-native-20261025.mjs",
+        "restore": "coordination/prepare-nasal-bone-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/flatten-nasal-native-object-references-20261025.mjs",
+        "restore": "coordination/flatten-nasal-native-object-references-20261025.mjs"
+      },
+      {
+        "path": "recipes/install-nasal-bone-proposal-20261025.mjs",
+        "restore": "coordination/install-nasal-bone-proposal-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-nasal-bone-native-20261025.mjs",
+        "restore": "coordination/check-nasal-bone-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-native-state-20261025.mjs",
+        "restore": "coordination/prepare-nasal-native-state-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-nasal-regionals-tap-20261025.mjs",
+        "restore": "coordination/check-nasal-regionals-tap-20261025.mjs"
+      },
+      {
+        "path": "recipes/generate-nasal-metadata-v2-20261025.mjs",
+        "restore": "coordination/generate-nasal-metadata-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/repair-nasal-type-annotation-20261025.mjs",
+        "restore": "coordination/repair-nasal-type-annotation-20261025.mjs"
+      },
+      {
+        "path": "recipes/generate-nasal-metadata-v3-20261025.mjs",
+        "restore": "coordination/generate-nasal-metadata-v3-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-nasal-final-semantics-20261025.mjs",
+        "restore": "coordination/check-nasal-final-semantics-20261025.mjs"
+      },
+      {
+        "path": "recipes/nasal-review-bindings-program-20261025.mjs",
+        "restore": "coordination/nasal-review-bindings-program-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-nasal-bone-full-types-v2-20261025.mjs",
+        "restore": "coordination/check-nasal-bone-full-types-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-nasal-bone-native-20261025.mjs",
+        "restore": "coordination/seal-nasal-bone-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-build-20261025.mjs",
+        "restore": "coordination/prepare-nasal-build-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-nasal-bone-low-memory-20261025.mjs",
+        "restore": "coordination/build-nasal-bone-low-memory-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-build-retry-20261025.mjs",
+        "restore": "coordination/prepare-nasal-build-retry-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-nasal-bone-low-memory-v2-20261025.mjs",
+        "restore": "coordination/build-nasal-bone-low-memory-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-nasal-bone-source-20261025.mjs",
+        "restore": "coordination/backup-nasal-bone-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-runtime-exports-20261025.mjs",
+        "restore": "coordination/prepare-nasal-runtime-exports-20261025.mjs"
+      },
+      {
+        "path": "recipes/export-nasal-bone-runtimes-20261025.mjs",
+        "restore": "coordination/export-nasal-bone-runtimes-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/nasal-bone-surface-imaging.ts",
+      "bytes": 3082,
+      "sha256": "b8a9e1005426628017fd1f8ba04b31c145253159d7c15b10a4d80d671e497496"
+    },
+    {
+      "path": "atlas/lib/nasal-bone-surface-imaging.ts",
+      "bytes": 2647,
+      "sha256": "da4cf412f933c1771aafa08ddb8615dc8ae1523d2eb1c2b3cec3ff99b1b52e02"
+    },
+    {
+      "path": "atlas/scripts/test-nasal-bone-surface-imaging.mjs",
+      "bytes": 4283,
+      "sha256": "bcce1046b531a2ac022496b0862e0293e7a7cb075978312b0d1c9a5db0455204"
+    },
+    {
+      "path": "atlas/docs/NASAL_BONE_SURFACE_IMAGING.md",
+      "bytes": 2530,
+      "sha256": "ab8bd9a5bf6f0ba1186a6bf052f5b2902cae6e7392223ea93bad8984699b24e9"
+    },
+    {
+      "path": "atlas/package.json",
+      "bytes": 89919,
+      "sha256": "61e15176f56bce6d6f783eff71417b48bb64db2173cf7becef33eefc98e2a0ce"
+    },
+    {
+      "path": "recipes/BODY_CONTENT_NASAL.patch",
+      "bytes": 441,
+      "sha256": "3694222b3c033ec6e4ca83b1e577992bf4f5dc34ad2afa7ccbd50ff102d2f55d"
+    },
+    {
+      "path": "recipes/NASAL_NOTICE.patch",
+      "bytes": 1002,
+      "sha256": "ec228c6cf5c5152ccca619dd20970388512285a960440b0eb3cf176ffaed878b"
+    },
+    {
+      "path": "recipes/prepare-nasal-bone-native-20261025.mjs",
+      "bytes": 4564,
+      "sha256": "b5e67f2dcc67e6eaadab40a8f2364260d7682a65d0ccff1faf490ed8a8c8bbea"
+    },
+    {
+      "path": "recipes/flatten-nasal-native-object-references-20261025.mjs",
+      "bytes": 3767,
+      "sha256": "24f06768844400f8c6ddf661fd465ebf1489493fa1333d7301a7a9c0b78883be"
+    },
+    {
+      "path": "recipes/install-nasal-bone-proposal-20261025.mjs",
+      "bytes": 5452,
+      "sha256": "a01edfb24a2fc06bfb97b6fa7cc46bc4c34654e54a55233efd6eb7e5e0346616"
+    },
+    {
+      "path": "recipes/check-nasal-bone-native-20261025.mjs",
+      "bytes": 7198,
+      "sha256": "78d81d03b607c607b8e7950e177618a1db5b65cbce0cb97320cfe439c1ee9836"
+    },
+    {
+      "path": "recipes/prepare-nasal-native-state-20261025.mjs",
+      "bytes": 3738,
+      "sha256": "d7defe70049ef4c2be891ccae06eb056313445b07c6c7f2bd173437b112ce12b"
+    },
+    {
+      "path": "recipes/check-nasal-regionals-tap-20261025.mjs",
+      "bytes": 2703,
+      "sha256": "5063b748594fb417413f3e482ca993305b7648cd69b6ee8e7a1abbabea7bc05b"
+    },
+    {
+      "path": "recipes/generate-nasal-metadata-v2-20261025.mjs",
+      "bytes": 5386,
+      "sha256": "0d51fe0efd3759daa2b6120795023e6b61d31fab042cbd7b56a7033a64fa9753"
+    },
+    {
+      "path": "recipes/repair-nasal-type-annotation-20261025.mjs",
+      "bytes": 4096,
+      "sha256": "d9c259e20b5f2b662dac6c0e09078a3a1dbe9ae8469e359d720dfea792bbc99b"
+    },
+    {
+      "path": "recipes/generate-nasal-metadata-v3-20261025.mjs",
+      "bytes": 5437,
+      "sha256": "91dbd1c3155c73bc1137a0b76fa55d11f66f4b55a31f71df8533c60fd22ea82a"
+    },
+    {
+      "path": "recipes/check-nasal-final-semantics-20261025.mjs",
+      "bytes": 5098,
+      "sha256": "1f349e65f685cf826de2c2b72c3b8547eee1384785766853797a40e1ba4d7290"
+    },
+    {
+      "path": "recipes/nasal-review-bindings-program-20261025.mjs",
+      "bytes": 2606,
+      "sha256": "c7eecf046d9a3d7e1c2248ae7363fc5a3c808dbcef4f463f0e714b36cdb24b12"
+    },
+    {
+      "path": "recipes/check-nasal-bone-full-types-v2-20261025.mjs",
+      "bytes": 2603,
+      "sha256": "ecb0b9ca166109a0d3e383bc4b11520cf821d6e6d058934bdc72053b605bda25"
+    },
+    {
+      "path": "recipes/seal-nasal-bone-native-20261025.mjs",
+      "bytes": 6421,
+      "sha256": "a1a955c017a1de971582d9bee361f164842115fd1181f7496ca2b9d2b2860612"
+    },
+    {
+      "path": "recipes/prepare-nasal-build-20261025.mjs",
+      "bytes": 1652,
+      "sha256": "7a5b9decfcb9e1232da9bd14d0471791b770496dd63a88006198eff4cecfca25"
+    },
+    {
+      "path": "recipes/build-nasal-bone-low-memory-20261025.mjs",
+      "bytes": 3214,
+      "sha256": "c28b46787fb14d7068e45b88f1d27d6df843215f636eba1c5cc923e97eaddd52"
+    },
+    {
+      "path": "recipes/prepare-nasal-build-retry-20261025.mjs",
+      "bytes": 4307,
+      "sha256": "7a8e0a55a1a425bd6a6c0bdc7b07e8480f1901218526e23096dcd9e392c16088"
+    },
+    {
+      "path": "recipes/build-nasal-bone-low-memory-v2-20261025.mjs",
+      "bytes": 3272,
+      "sha256": "969e042e127d7b822d9a30a53a8ae0aee63f939f0c6954290d8c12f1561427d0"
+    },
+    {
+      "path": "recipes/backup-nasal-bone-source-20261025.mjs",
+      "bytes": 6556,
+      "sha256": "e345143173a317509e36f580401dd8712b0d87c8e5aa56c7c055ec4e3093407a"
+    },
+    {
+      "path": "recipes/prepare-nasal-runtime-exports-20261025.mjs",
+      "bytes": 2382,
+      "sha256": "326b53d6cfc7644301ff3843a6b3387e6dfb26123e50b1f1d80e7d2d149d2689"
+    },
+    {
+      "path": "recipes/export-nasal-bone-runtimes-20261025.mjs",
+      "bytes": 6614,
+      "sha256": "480d7f128c7dbddee0ba66bec14aa9c34df0953c6750ed691d93f2ccdae05dd6"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party teaching, helper, tests, documentation, package, coordinate-free app/notice patches and recovery recipes only. Requires exact local baseline/pins/generated data and earlier source supplements; not whole/private/runnable backup. Reading references provide factual synthesis, not article asset permissions. No complete body-content module, publisher text/figures/images/data, raw QA, private config, generated Review/pins/coverage/renderer/closures, scans, masks, identifiers, coordinates, decisions, models, dependencies, runtime or canonical/native Git ancestry included.",
+  "proof": {
+    "exactSources": 2,
+    "uniqueSharedNotes": 2,
+    "draftPlacements": 4,
+    "totalPlacements": 9936,
+    "unchangedPlacements": 9932,
+    "pendingBefore": 481,
+    "pendingAfter": 477,
+    "regionalWholeCases": 21,
+    "regionalSkips": 0,
+    "changedMaterialPins": 2,
+    "unchangedMaterialPins": 1102,
+    "staleReviewPacketsRefused": 2,
+    "forgedReviewPacketsRefused": 12,
+    "fullStrictRoots": 1310,
+    "fullStrictFiles": 4679,
+    "diagnostics": 0,
+    "fullNativeBuildPassed": true,
+    "productionArtifacts": 557,
+    "runtimeExportsAndWebsiteImportPending": true,
+    "all215PublicAssetBytesPreserved": true,
+    "sourceBytes": 190970,
+    "privateDataUploaded": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

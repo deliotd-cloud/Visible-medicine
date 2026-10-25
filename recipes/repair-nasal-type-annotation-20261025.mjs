@@ -1,0 +1,21 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261025-nasal-bone-imaging-native',file=stage+'/STATE.json',state=json(file),site=stage+'/atlas';
+assert.equal(state.phase,'metadata-generated');for(const r of [...state.sourceRows,...state.publicRows])assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const failed=stage+'/checks/types-full-attempt-1/RESULT.json';assert.equal(json(failed).passing,false);const raw=stage+'/FULL_TYPE_RESULT_native.json',types=json(raw);assert.equal(types.diagnosticCount,1);assert.equal(types.diagnostics[0].code,2345);assert(types.diagnostics[0].path.endsWith('/lib/nasal-bone-surface-imaging.ts'));
+fs.copyFileSync(file,stage+'/STATE_BEFORE_TYPE_ANNOTATION_FIX.json',fs.constants.COPYFILE_EXCL);fs.renameSync(raw,stage+'/checks/types-full-attempt-1/FULL_TYPE_RESULT_native.json');
+const p='lib/nasal-bone-surface-imaging.ts',old=fs.readFileSync(site+'/'+p,'utf8'),before=stage+'/before-type-fix/'+p;fs.mkdirSync(stage+'/before-type-fix/lib',{recursive:true});fs.writeFileSync(before,old,{flag:'wx'});
+const a='const signatures = new Map(expected.map(',b='const signatures = new Map<string, string>(expected.map(';assert.equal(old.split(a).length,2);const next=old.replace(a,b);assert.equal(next.replace(b,a),old);fs.writeFileSync(site+'/'+p,next);
+const updated={path:p,bytes:fs.statSync(site+'/'+p).size,sha256:hash(site+'/'+p)};state.sourceRows=state.sourceRows.map(r=>r.path===p?updated:r);state.mutable.push(updated);state.typeAnnotationFix={path:p,beforeSha256:hash(before),afterSha256:updated.sha256,exactTypeParameterInsertion:true,failedTypes:{path:failed,sha256:hash(failed)}};state.phase='type-annotation-fixed; metadata regeneration pending';fs.writeFileSync(file,JSON.stringify(state,null,2));
+let recipe=fs.readFileSync('generate-nasal-metadata-v2-20261025.mjs','utf8');
+function replace(a,b){assert(recipe.includes(a),a);recipe=recipe.replaceAll(a,b);}
+replace("'32f28d13372c7ba31a9dc07128187732c78b1084a481dd7eeeddea219c98a7c1'",JSON.stringify(hash(file)));
+replace('metadata-attempt-2','metadata-attempt-3');replace('run-metadata-v2','run-metadata-v3');replace('GENERATOR_PROCESSES_v2','GENERATOR_PROCESSES_v3');replace('STATE_BEFORE_METADATA.json','STATE_BEFORE_METADATA_AFTER_TYPE_FIX.json');
+replace("stage+'/before/generated/'+p","stage+'/before-type-fix/generated/'+p");
+fs.writeFileSync('generate-nasal-metadata-v3-20261025.mjs',recipe,{flag:'wx'});
+let typeRecipe=fs.readFileSync('check-nasal-bone-full-types-20261025.mjs','utf8').replaceAll('types-full-attempt-1','types-full-attempt-2');typeRecipe=typeRecipe.replace("assert(json(stage+'/checks/metadata-attempt-2/RESULT.json').passing)","assert(json(stage+'/checks/metadata-attempt-3/RESULT.json').passing)");typeRecipe=typeRecipe.replace("assert(!fs.existsSync(checker));fs.copyFileSync(original,checker,fs.constants.COPYFILE_EXCL);","assert(fs.existsSync(checker));");fs.writeFileSync('check-nasal-bone-full-types-v2-20261025.mjs',typeRecipe,{flag:'wx'});
+let review=fs.readFileSync('verify-nasal-bone-review-20261025.mjs','utf8').replaceAll('review-bindings-attempt-1','review-bindings-attempt-2').replace('metadata-attempt-2','metadata-attempt-3');review=review.replace('fs.copyFileSync(original,script,fs.constants.COPYFILE_EXCL);','assert(fs.existsSync(script));');fs.writeFileSync('verify-nasal-bone-review-v2-20261025.mjs',review,{flag:'wx'});
+for(const p of ['generate-nasal-metadata-v3-20261025.mjs','check-nasal-bone-full-types-v2-20261025.mjs','verify-nasal-bone-review-v2-20261025.mjs'])execFileSync(process.execPath,['--check',p],{windowsHide:true});
+const i=json('CURRENT_CHECKPOINT.json');i.activeExecutionSessions=[];i.activeWork.current.activeExecutionSessions=[];fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(i,null,2));
+console.log(JSON.stringify({sourceTypeParameterFixed:true,stateSha256:hash(file),retainedFailedFullTypeResult:failed,semanticAndMetadataRecheckRequired:true}));

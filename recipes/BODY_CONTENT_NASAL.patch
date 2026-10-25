@@ -1,0 +1,9 @@
+diff --git a/app/body-content.ts b/app/body-content.ts
+index 8f48d0ea..084e71ff 100644
+--- a/app/body-content.ts
++++ b/app/body-content.ts
+@@ -0,0 +1 @@
++import { nasalBoneSurfaceImagingLesson } from '../lib/nasal-bone-surface-imaging';
+@@ -435,0 +437,2 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
++  const nasalSurface = nasalBoneSurfaceImagingLesson(s, tab);
++  if (nasalSurface) return nasalSurface;
