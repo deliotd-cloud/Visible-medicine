@@ -1,0 +1,123 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T10:04:58.661Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-current-delivery-1809-test-and-workflow-source-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "c946c385c0100a3dd204188d35f8abf135118bea39a79f9a16da0de83a3065e5",
+    "requiredSourceSupplement": {
+      "branch": "backup/canonical-body-learning-source-20261025",
+      "head": "9aa50b1238ed70024fed9dfc5cac5157fa28f1ec",
+      "tree": "f8701ccd9c79fd90a3b8b14cf266c9a98478e450",
+      "receiptSha256": "803e51db34b174e32afb992e130f3bf4c735c643226b751e07904b8933a3db5b"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/current-atlas-delivery.test.mjs",
+        "restore": "website/tests/current-atlas-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/current-atlas-delivery-before-1809.mjs.raw",
+        "restore": "website/tests/fixtures/current-atlas-delivery-before-1809.mjs.raw"
+      },
+      {
+        "path": "recipes/prepare-current-delivery-1809-successor-20261025.mjs",
+        "restore": "coordination/prepare-current-delivery-1809-successor-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-current-delivery-1809-roles-20261025.mjs",
+        "restore": "coordination/check-current-delivery-1809-roles-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-current-delivery-1809-type-inputs-20261025.mjs",
+        "restore": "coordination/verify-current-delivery-1809-type-inputs-20261025.mjs"
+      },
+      {
+        "path": "recipes/inventory-shoulder-root-imaging-gaps-20261025.mjs",
+        "restore": "coordination/inventory-shoulder-root-imaging-gaps-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-native-requirement-inventory-20261025.mjs",
+        "restore": "coordination/check-native-requirement-inventory-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-current-delivery-1809-source-20261025.mjs",
+        "restore": "coordination/backup-current-delivery-1809-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 20802,
+      "sha256": "83b8cbcbe3eddd41cb10402716133259b98766e4be2fcf8545c5805a93d10192"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-1809.mjs.raw",
+      "bytes": 19274,
+      "sha256": "6206a2a13dff34b18ad4ff05d731e2c6fc3d9b62683c13e0b781cc8e68cd5276"
+    },
+    {
+      "path": "recipes/prepare-current-delivery-1809-successor-20261025.mjs",
+      "bytes": 2012,
+      "sha256": "90d644db65d939fe055eeee142c26563e7363cf1f773e4541814d29aef7d808a"
+    },
+    {
+      "path": "recipes/check-current-delivery-1809-roles-20261025.mjs",
+      "bytes": 4002,
+      "sha256": "eb78d917f53c4cbec3c1d633b6ce17219d5d56216f5d328b4c7ecad3e4bfdb9b"
+    },
+    {
+      "path": "recipes/verify-current-delivery-1809-type-inputs-20261025.mjs",
+      "bytes": 4174,
+      "sha256": "68c9cda6fc8615468720ff11a04f67c82bab1d9847af2ddc179b81a1052296b7"
+    },
+    {
+      "path": "recipes/inventory-shoulder-root-imaging-gaps-20261025.mjs",
+      "bytes": 1743,
+      "sha256": "e5d04257d3baffa535da137e7bbb48292b161f035b432317a33dc115eb112a79"
+    },
+    {
+      "path": "recipes/check-native-requirement-inventory-20261025.mjs",
+      "bytes": 2020,
+      "sha256": "fc37f5c16129bfc3b82c38c9fd7e0d8adc2aef7ab69224810150c5580948f2fa"
+    },
+    {
+      "path": "recipes/backup-current-delivery-1809-source-20261025.mjs",
+      "bytes": 5189,
+      "sha256": "5e9f06c2bd1ad5c06904fdee374d503aaea8ee07020970728ed1d9237e6a39f2"
+    }
+  ],
+  "removed": [],
+  "scope": "Two first-party current-delivery test/snapshot paths and six workflow recipes only. Prior branches required; not whole/private/runnable backup. No rawQA, references, anatomy data, private configuration/source inventories/closure, historical checkout, scans/masks/medical coordinates, private decisions, models/dependencies, generated runtime/Review assets, current delivery pin or canonical ancestry uploaded.",
+  "proof": {
+    "wholeUnchangedBaselineCases": 41,
+    "unchangedBaselinePass": 39,
+    "unchangedBaselineCurrentRoleFail": 2,
+    "wholeCurrentRootCases": 42,
+    "fail": 0,
+    "skip": 0,
+    "wholeOriginalSourceBytesPreserved": 19274,
+    "onlyCurrentRoleSeams": 7,
+    "allPreviousCasesAndRefusalsRetained": true,
+    "priorTypeGraphInputsUnchanged": 6209,
+    "priorTypeRootsUnchanged": 2654,
+    "freshCompilerRun": false,
+    "parentBuildRetainsOwnSourceHash": true,
+    "currentFreshBuildClaim": false,
+    "productionSourceChanged": false,
+    "fullStockPassingClaim": false,
+    "sourceBytes": 59216,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
