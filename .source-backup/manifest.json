@@ -1,0 +1,236 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T07:05:23.121Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-page-ssr-query-and-original-reader-workflow-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "e35c9c4c8abfb2faf2898e4bd6bc6e5cc9fab09e76c65d5d8cfcad05ffbee8c6",
+    "requiredSourceSupplement": {
+      "branch": "backup/hra-query-role-source-20261025",
+      "head": "ef7ef1cbf93862894914042118c972123cf14178",
+      "tree": "6153ef5429fba7ef21920528f700f40ef96a3ef1",
+      "receiptSha256": "8bcc9868539f1b53fba32209128689ecfd12ae3c4f0f5ede21a8b79e36c870ea"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/page-ssr-query-role.mjs",
+        "restore": "website/tests/page-ssr-query-role.mjs"
+      },
+      {
+        "path": "website/tests/page-ssr-query-role-integrity.test.mjs",
+        "restore": "website/tests/page-ssr-query-role-integrity.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-runtime-expansion-adoption-proof.test.mjs",
+        "restore": "website/tests/atlas-runtime-expansion-adoption-proof.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-runtime-pages.test.mjs",
+        "restore": "website/tests/atlas-runtime-pages.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-study-transport.test.ts",
+        "restore": "website/tests/atlas-study-transport.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-study-transport-migration.test.mjs",
+        "restore": "website/tests/atlas-study-transport-migration.test.mjs"
+      },
+      {
+        "path": "website/tests/live-learning-consumer-loader-preservation.test.mjs",
+        "restore": "website/tests/live-learning-consumer-loader-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/live-learning-consumer-access-preservation.test.mjs",
+        "restore": "website/tests/live-learning-consumer-access-preservation.test.mjs"
+      },
+      {
+        "path": "recipes/review-page-ssr-query-source-20261025.mjs",
+        "restore": "coordination/review-page-ssr-query-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/add-page-query-seam-negatives-20261025.mjs",
+        "restore": "coordination/add-page-query-seam-negatives-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-page-ssr-query-shadow-check-20261025.mjs",
+        "restore": "coordination/prepare-page-ssr-query-shadow-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-page-ssr-query-shadow-20261025.mjs",
+        "restore": "coordination/check-page-ssr-query-shadow-20261025.mjs"
+      },
+      {
+        "path": "recipes/inspect-blank-recovery-source-role-20261025.mjs",
+        "restore": "coordination/inspect-blank-recovery-source-role-20261025.mjs"
+      },
+      {
+        "path": "recipes/repair-blank-recovery-reader-role-20261025.mjs",
+        "restore": "coordination/repair-blank-recovery-reader-role-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-page-ssr-query-shadow-v2-check-20261025.mjs",
+        "restore": "coordination/prepare-page-ssr-query-shadow-v2-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-page-ssr-query-shadow-v2-20261025.mjs",
+        "restore": "coordination/check-page-ssr-query-shadow-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nested-respiratory-original-worktrees-20261025.mjs",
+        "restore": "coordination/prepare-nested-respiratory-original-worktrees-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-check-nested-respiratory-originals-20261025.mjs",
+        "restore": "coordination/prepare-check-nested-respiratory-originals-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-nested-respiratory-original-worktrees-20261025.mjs",
+        "restore": "coordination/check-nested-respiratory-original-worktrees-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-page-ssr-query-source-20261025.mjs",
+        "restore": "coordination/backup-page-ssr-query-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/page-ssr-query-role.mjs",
+      "bytes": 6568,
+      "sha256": "5373a64e5aaf71665c756f4006fe202c492c82cb550d4f7eb17b8529a9a3381d"
+    },
+    {
+      "path": "website/tests/page-ssr-query-role-integrity.test.mjs",
+      "bytes": 6565,
+      "sha256": "7ba0ab5a62bb1afd65081323c484eb2d619070317e6616d7dc2e79a5f490ea7f"
+    },
+    {
+      "path": "website/tests/atlas-runtime-expansion-adoption-proof.test.mjs",
+      "bytes": 5097,
+      "sha256": "0c3f48d9b59744822b971316024b6320e5f8261f13490a2597500bb19dc9f67e"
+    },
+    {
+      "path": "website/tests/atlas-runtime-pages.test.mjs",
+      "bytes": 2659,
+      "sha256": "0615c0c7cb41e86a32741a7a872fe832c5f8dc80050bbc8ae8d7b858d647825a"
+    },
+    {
+      "path": "website/tests/atlas-study-transport.test.ts",
+      "bytes": 13360,
+      "sha256": "ef776c163f294d089013e994d96a041377714d907619108fb51a6d01307d9065"
+    },
+    {
+      "path": "website/tests/atlas-study-transport-migration.test.mjs",
+      "bytes": 5624,
+      "sha256": "7d4f6dff0b3d784b9644128cc84cfdf8b0fc6d16997b9993d71522394d934e5e"
+    },
+    {
+      "path": "website/tests/live-learning-consumer-loader-preservation.test.mjs",
+      "bytes": 7412,
+      "sha256": "a8a5e766b27010c8c6d14932eb34134c641124c6c895d68919a313513f80c2ab"
+    },
+    {
+      "path": "website/tests/live-learning-consumer-access-preservation.test.mjs",
+      "bytes": 3489,
+      "sha256": "7f2ea0e659c838d2189e158db4cefc7e5287155cf77e79bd6282716c7a02592c"
+    },
+    {
+      "path": "recipes/review-page-ssr-query-source-20261025.mjs",
+      "bytes": 2548,
+      "sha256": "1089bb0b547ce30a7e235d10b6c154f4c895b7ed56981ee1b38b3d21d4c062da"
+    },
+    {
+      "path": "recipes/add-page-query-seam-negatives-20261025.mjs",
+      "bytes": 2615,
+      "sha256": "b2482e8677db1d0c22a2b7689abb798f42e8d16e68b9882df8f8b5719e2ce8bc"
+    },
+    {
+      "path": "recipes/prepare-page-ssr-query-shadow-check-20261025.mjs",
+      "bytes": 4156,
+      "sha256": "5457fd5f612cf49189b8cf4bf56f9c27ce87222ad941bdf255c6b62d14c9416a"
+    },
+    {
+      "path": "recipes/check-page-ssr-query-shadow-20261025.mjs",
+      "bytes": 6810,
+      "sha256": "2837268a8da2aa130d53a458891cf477404ef9158a1463136f6c644b3c5dda8a"
+    },
+    {
+      "path": "recipes/inspect-blank-recovery-source-role-20261025.mjs",
+      "bytes": 1570,
+      "sha256": "485552ac09d6af573ca2677174daccdb3c5ae1502b4a9cb6cf6a960390432c92"
+    },
+    {
+      "path": "recipes/repair-blank-recovery-reader-role-20261025.mjs",
+      "bytes": 5539,
+      "sha256": "8fa9bda161ddb5bfad2d5b189398a0bcb84d820da9e80e31c31fb1b5fbd3b29c"
+    },
+    {
+      "path": "recipes/prepare-page-ssr-query-shadow-v2-check-20261025.mjs",
+      "bytes": 1161,
+      "sha256": "685d04c8a68a6878a0f10461983f166bd45338209c24f2dcffc637160758fd24"
+    },
+    {
+      "path": "recipes/check-page-ssr-query-shadow-v2-20261025.mjs",
+      "bytes": 6858,
+      "sha256": "ce817ddb0bbb280c5a3a4510b88e3ff7dc62a6a31f54c8ea728dbbe74ec69478"
+    },
+    {
+      "path": "recipes/prepare-nested-respiratory-original-worktrees-20261025.mjs",
+      "bytes": 7019,
+      "sha256": "7a9a58a75d5902f3234c05e5504460bddc07241ebadaa1a780b5dd4f231c72d9"
+    },
+    {
+      "path": "recipes/prepare-check-nested-respiratory-originals-20261025.mjs",
+      "bytes": 2437,
+      "sha256": "1784e8a6a818a678e14b16758c94cda8a075bf82c88134a8163ff39eb1730ad0"
+    },
+    {
+      "path": "recipes/check-nested-respiratory-original-worktrees-20261025.mjs",
+      "bytes": 5967,
+      "sha256": "249de76066be8077ff33107c74126491dd2fa3b29f827695983f705a954d5ac3"
+    },
+    {
+      "path": "recipes/backup-page-ssr-query-source-20261025.mjs",
+      "bytes": 5885,
+      "sha256": "637bfe5d6f67c2d387b35653ae7fd3f79917e8e11b363d8f72c7f3bc7795ffd0"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight first-party test/helper sources and twelve workflow recipes. No historical checkout or generated anatomy bytes, private path configuration/closure/rawQA, medical data or coordinates, decisions, dependencies/models or canonical ancestry. Incremental source supplement only, prior supplements required, not whole/private/runnable backup. No source-exactness proof is browser or clinical acceptance.",
+  "proof": {
+    "reportedFocusedCases": 39,
+    "wholeRoots": 9,
+    "realCurrentRegionalStudyAndTourAcceptanceRefusal": true,
+    "exactWholeOriginalSourceAndNegativeProofsRetained": true,
+    "originalKeyboardConsumerUnchanged": true,
+    "wholeCurrentRecoveryRootCases": 7,
+    "initialObservedParentPass": 30,
+    "initialObservedParentFail": 1,
+    "initialActualCases": 31,
+    "initialExpectedCountSetupErrorRetained": true,
+    "omittedLaterKeyboardReaderFixedBeforeOriginalComparison": true,
+    "initialPackageRelativeModulePathIssueCorrectedBeforeRuntime": true,
+    "historicalWholeResultCounts": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "lastHistoricalResultIsOneTopLevelAssertionFileNotOneClinicalCase": true,
+    "sourceBytes": 103339,
+    "fullStockComplete": false,
+    "freshCombinedTypesBuildBrowserPending": true,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

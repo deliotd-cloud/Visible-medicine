@@ -1,0 +1,5 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {hash} from './seal-simple-website-successor.mjs';
+const out='check-page-ssr-query-shadow-v2-20261025.mjs';assert(!fs.existsSync(out));let source=fs.readFileSync('check-page-ssr-query-shadow-20261025.mjs','utf8');function replace(a,b){assert.equal(source.split(a).length,2,a);source=source.replace(a,b);}
+replace("stage='F:/VisibleMedicine/staging/20261025-page-ssr-query-shadow'","stage='F:/VisibleMedicine/staging/20261025-page-ssr-query-shadow-v2'");replace('65313104f874080c3c97f074669b2907f0f3f2548bdf98928bd9e8760291113b','5951b200c3392567638bacaaadb67dd1855f50d7b8c398979cefdf208399d6cf');replace("'structure-learning-ui.test.ts'].map(p=>'tests/'+p)","'structure-learning-ui.test.ts','head-model-blank-recovery.test.mjs'].map(p=>'tests/'+p)");replace('expectedParentCases:30','expectedParentCases:39');source=source.replaceAll('===30','===39');replace('Eight whole focused source/SSR/query roots','Nine whole focused source/SSR/query/recovery roots');fs.writeFileSync(out,source,{flag:'wx'});console.log(JSON.stringify({path:out,sha256:hash(out),expectedCases:39,wholeRoots:9}));

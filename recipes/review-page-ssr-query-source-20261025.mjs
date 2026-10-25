@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import assert from 'node:assert/strict';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const root='F:/VisibleMedicine/staging/20261025-page-ssr-query-role-proposal',manifest=root+'/PATCHSET.json',patch=json(manifest),before=root+'/MAIN_REVIEW_BEFORE';assert(!fs.existsSync(before));
+const row=patch.files.find(r=>r.path==='tests/atlas-study-transport.test.ts'),file=root+'/'+row.path,helper=root+'/tests/page-ssr-query-role.mjs';assert.equal(hash(file),row.afterSha256);const oldSha=row.afterSha256;
+const require=createRequire('F:/VisibleMedicine/staging/20261025-lecture-review-coherent-website/website/package.json');assert.throws(()=>require.resolve('../lib/head-atlas-learning.ts'),{code:'MODULE_NOT_FOUND'});const resolved=require.resolve('./lib/head-atlas-learning.ts');assert.equal(fs.realpathSync(resolved),fs.realpathSync('F:/VisibleMedicine/staging/20261025-lecture-review-coherent-website/website/lib/head-atlas-learning.ts'));
+fs.mkdirSync(before);for(const [from,name] of [[manifest,'PATCHSET.json'],[file,'atlas-study-transport.test.ts'],[helper,'page-ssr-query-role.mjs']])fs.copyFileSync(from,before+'/'+name,fs.constants.COPYFILE_EXCL);
+let source=fs.readFileSync(file,'utf8');const from="require('../lib/head-atlas-learning.ts').hasHeadLearningQuery",to="require('./lib/head-atlas-learning.ts').hasHeadLearningQuery";assert.equal(source.split(from).length-1,1);source=source.replace(from,to);fs.writeFileSync(file,source);row.afterSha256=hash(file);
+let role=fs.readFileSync(helper,'utf8');assert.equal(role.split(oldSha).length-1,1);role=role.replace(oldSha,row.afterSha256);fs.writeFileSync(helper,role);patch.files.find(r=>r.path==='tests/page-ssr-query-role.mjs').afterSha256=hash(helper);
+patch.mainReview={priorPatchsetSha256:hash(before+'/PATCHSET.json'),reason:'The real dependency map uses createRequire at Website package.json, so ./lib is the actual application source path. ../lib was verified MODULE_NOT_FOUND before any runtime claim. No stub export, assertions or original fixture changed. Only the new candidate hash in the exact inverse changes; every historical postimage hash is retained.',actualResolvedSource:'website/lib/head-atlas-learning.ts',runtimePending:true};fs.writeFileSync(manifest,JSON.stringify(patch,null,2)+'\n');console.log(JSON.stringify({patchset:manifest,sha256:hash(manifest),realModuleResolved:true,oldPathRefused:true,originalAssertionsAndFixtureBytesUnchanged:true}));

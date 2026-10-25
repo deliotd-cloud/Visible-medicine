@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {hash} from './seal-simple-website-successor.mjs';
+const output='check-page-ssr-query-shadow-20261025.mjs';assert(!fs.existsSync(output));let source=fs.readFileSync('check-deepbrain-foot-role-shadow-20261025.mjs','utf8');
+function replace(a,b){assert.equal(source.split(a).length-1,1,a);source=source.replace(a,b);}
+replace("stage='F:/VisibleMedicine/staging/20261025-deepbrain-foot-role-shadow'","stage='F:/VisibleMedicine/staging/20261025-page-ssr-query-shadow'");
+replace("parentFile='F:/VisibleMedicine/staging/20261025-viewer-notice-role-website/SOURCE_CANDIDATE.json'","parentFile='F:/VisibleMedicine/staging/20261025-lecture-review-coherent-website/SOURCE_CANDIDATE.json'");
+replace("proposal='F:/VisibleMedicine/staging/20261025-deepbrain-foot-role-proposal'","proposal='F:/VisibleMedicine/staging/20261025-page-ssr-query-role-proposal'");
+assert.equal(source.split('27a063972c0e96feda2e0185c29408797e9036c811675fc8f485c00aaf208c24').length-1,2);source=source.replaceAll('27a063972c0e96feda2e0185c29408797e9036c811675fc8f485c00aaf208c24','e35c9c4c8abfb2faf2898e4bd6bc6e5cc9fab09e76c65d5d8cfcad05ffbee8c6');
+replace('d6bdd7cfde9da405359d24fbf1387e8d06278e169dfba91e9ffe9a484981d0f1','65313104f874080c3c97f074669b2907f0f3f2548bdf98928bd9e8760291113b');
+replace("const copied=parent.sourceRows.filter(r=>['tests/','lib/','scripts/'].some(p=>r.path.startsWith(p))||['package.json','package-lock.json'].includes(r.path));","const copied=parent.sourceRows.filter(r=>!['public/','atlas-review/','docs/','LICENSES/'].some(p=>r.path.startsWith(p)));");
+const a=source.indexOf('const rows=new Map('),b=source.indexOf('const roots=',a);assert(a>0&&b>a);
+source=source.slice(0,a)+`const rows=new Map(copied.map(r=>[r.path,r]));for(const r of patch.files){const to=site+'/'+r.path;if(r.beforeSha256===null)assert(!fs.existsSync(to));else assert.equal(hash(to),r.beforeSha256);assert.equal(hash(proposal+'/'+r.path),r.afterSha256);fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(proposal+'/'+r.path,to);rows.set(r.path,{path:r.path,sha256:r.afterSha256});}for(const [p,sha] of Object.entries(patch.immutableFixtureHashes))assert.equal(hash(site+'/'+p),sha);
+`+source.slice(b);
+replace("['tests/atlas-deep-brain-practice.test.ts','tests/atlas-foot-notice-epoch.test.ts','tests/deepbrain-foot-role-integrity.test.mjs','tests/viewer-notice-current.test.mjs']","['page-ssr-query-role-integrity.test.mjs','atlas-runtime-expansion-adoption-proof.test.mjs','atlas-runtime-pages.test.mjs','atlas-study-transport.test.ts','atlas-study-transport-migration.test.mjs','live-learning-consumer-loader-preservation.test.mjs','live-learning-consumer-access-preservation.test.mjs','structure-learning-ui.test.ts'].map(p=>'tests/'+p)");
+replace("json('F:/VisibleMedicine/staging/20261025-viewer-notice-role-website/LOCAL_TEST_CONFIGURATION.json')","json('F:/VisibleMedicine/staging/20261025-lecture-review-coherent-website/LOCAL_TEST_CONFIGURATION.json')");
+replace("Object.assign(config,json(proposal+'/LOCAL_ONLY/CONFIGURATION.json'),{","Object.assign(config,{");
+replace('expectedParentCases:11,mandatoryOriginalChildCases:[1,2]','expectedParentCases:30');
+replace('Bounded actual source/semantic/reader proof with Node-only historical children; no full graph/typecheck/production build/browser claim','Eight whole focused source/SSR/query roots with real current validators and exact whole-source/negative proofs;256MiBNode/64MiBGo/singlethread, shared generated inputs read-only. No broad graph/build/browser/clinical claim.');
+const start=source.indexOf("const children=site+'/.local/deepbrain-foot-originals'"),end=source.indexOf('const complete=',start);assert(start>0&&end>start);source=source.slice(0,start)+source.slice(end);source=source.replaceAll('===11','===30');replace("&&originals;",";");replace('originalsCompleteAndPassing:originals,childResults,','');replace(',originalsCompleteAndPassing:originals,failures:',',failures:');
+fs.writeFileSync(output,source,{flag:'wx'});console.log(JSON.stringify({path:output,sha256:hash(output),expectedParentCases:30,wholeRoots:8}));

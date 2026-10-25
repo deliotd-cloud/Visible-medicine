@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {hash} from './seal-simple-website-successor.mjs';
+const root='F:/VisibleMedicine/staging/20261025-lecture-review-coherent-website/website/tests',dir='F:/VisibleMedicine/staging/20261025-blank-recovery-source-role-audit';if(!fs.existsSync(dir))fs.mkdirSync(dir);
+const raw=root+'/fixtures/live-learning-consumer-loader/head-model-blank-recovery.test.mjs.raw';assert.equal(hash(raw),'f7b3919788a4d9177f7265b1813ca4e351e7b2e8872b4ba124911e612bc62a55');let source=fs.readFileSync(root+'/head-model-blank-recovery.test.mjs','utf8');for(const seam of ["import {liveLearningConsumerModule} from './live-learning-consumer-loader-transition.mjs';\n","    './AtlasBodyLearning':liveLearningConsumerModule,\n"]){assert.equal(source.split(seam).length,2);source=source.replace(seam,'');}if(fs.existsSync(dir+'/original.mjs'))assert.equal(hash(dir+'/original.mjs'),hash(raw));else fs.copyFileSync(raw,dir+'/original.mjs',fs.constants.COPYFILE_EXCL);if(fs.existsSync(dir+'/without-consumer-loader.mjs'))assert.equal(fs.readFileSync(dir+'/without-consumer-loader.mjs','utf8'),source);else fs.writeFileSync(dir+'/without-consumer-loader.mjs',source,{flag:'wx'});
+const result=spawnSync('git',['-c','core.autocrlf=false','diff','--no-index','--',dir+'/original.mjs',dir+'/without-consumer-loader.mjs'],{windowsHide:true,encoding:'utf8',stdio:['ignore','pipe','pipe']});assert(!result.error&&!result.signal&&[0,1].includes(result.status));console.log(result.stdout);
