@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import {hash,json} from './seal-simple-website-successor.mjs';
+import {memoryGate} from './native-website-integration-stage-20261025.mjs';
+memoryGate(2048);
+const stage='F:/VisibleMedicine/staging/20261025-studio-access-website',site=stage+'/website',oldFile=stage+'/SOURCE_CANDIDATE.json',oldHash='3d4d0508da114bc095d889706da00dd7117b1cca03af3532c1171a4ef9c9ce74',proposal='F:/VisibleMedicine/staging/20261025-studio-access-test-boundaries-proposal';
+assert.equal(hash(oldFile),oldHash);const old=json(oldFile),index=json('CURRENT_CHECKPOINT.json');assert.deepEqual(index.activeWork.current.activeExecutionSessions,[]);
+assert.equal(json(stage+'/checks/combined-attempt-1/TERMINAL.json').counts.fail,4);assert.equal(json(stage+'/checks/types-full-attempt-1/RESULT.json').diagnosticCount,1);
+assert.equal(fs.realpathSync(stage+'/atlas'),fs.realpathSync(old.atlas));
+for(const row of old.sourceRows)assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+const report=json(proposal+'/REPORT.json'),rows=new Map(old.sourceRows.map(r=>[r.path,r]));assert.equal(report.files.length,6);
+const preimages=stage+'/boundary-preimages';assert(!fs.existsSync(preimages));fs.mkdirSync(preimages);
+const changed=[...old.changedPaths],added=[...old.addedPaths];
+for(const r of report.files){assert(r.path.startsWith('tests/')&&!r.path.includes('..'));assert.equal(hash(proposal+'/'+r.path),r.sha256);const target=site+'/'+r.path;if(r.preimageSha256){assert.equal(hash(target),r.preimageSha256,r.path);const before=preimages+'/'+r.path;fs.mkdirSync(path.dirname(before),{recursive:true});fs.copyFileSync(target,before,fs.constants.COPYFILE_EXCL);changed.push(r.path);}else{assert(!fs.existsSync(target));added.push(r.path);}fs.copyFileSync(proposal+'/'+r.path,target);rows.set(r.path,{path:r.path,bytes:r.bytes,sha256:r.sha256});}
+assert.equal(rows.size,6795);for(const r of rows.values())assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const file=stage+'/SOURCE_CANDIDATE_V2.json';fs.writeFileSync(file,JSON.stringify({...old,at:new Date().toISOString(),authoringPreimage:oldFile,authoringPreimageSha256:oldHash,sourceRows:[...rows.values()].sort((a,b)=>a.path.localeCompare(b.path)),sourcePaths:rows.size,changedPaths:changed,addedPaths:added,boundaryReport:proposal+'/REPORT.json',boundaryReportSha256:hash(proposal+'/REPORT.json'),originalAssertionsPreserved:true,actualClassConstructorInServiceSeams:true},null,2)+'\n',{flag:'wx'});
+const sourceHash=hash(file);
+let verifier=fs.readFileSync('verify-studio-access-20261025.mjs','utf8').replaceAll('SOURCE_CANDIDATE.json','SOURCE_CANDIDATE_V2.json').replaceAll(oldHash,sourceHash).replaceAll('-attempt-1','-attempt-2');
+fs.writeFileSync('verify-studio-access-v2-20261025.mjs',verifier,{flag:'wx'});
+let runner=fs.readFileSync('check-studio-access-website-20261025.mjs','utf8').replaceAll('SOURCE_CANDIDATE.json','SOURCE_CANDIDATE_V2.json').replaceAll(oldHash,sourceHash).replaceAll('combined-attempt-1','combined-attempt-2').replace('"tests/studio-rate-limit-route.test.mjs"]','"tests/studio-rate-limit-route.test.mjs","tests/authenticated-api-contract-preservation.test.mjs","tests/mutation-json-contract-preservation.test.mjs"]');
+assert(runner.includes('tests/mutation-json-contract-preservation.test.mjs'));fs.writeFileSync('check-studio-access-website-v2-20261025.mjs',runner,{flag:'wx'});
+index.activeWork.current.pendingStudioAccessFix={...index.activeWork.current.pendingStudioAccessFix,source:file,sourceSha256:sourceHash,sourcePaths:rows.size,phase:'actual-class test boundaries integrated; Atlas staging link repaired; fresh checks pending',originalFailedAttemptsRetained:true};fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(index,null,2)+'\n');
+console.log(JSON.stringify({source:file,sha256:sourceHash,paths:rows.size,changed:changed.length,added:added.length,roots:9}));

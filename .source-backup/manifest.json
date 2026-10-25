@@ -1,0 +1,201 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T03:36:19.261Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-studio-access-not-cumulative",
+    "websiteSourceSha256": "70de9af5459217c393f1f73be44aa93d3c967f88e8254ae15afdd759ffbec84e",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalParent": {
+      "path": "F:/VisibleMedicine/staging/20261025-ultrasound-panels-website/SOURCE_CANDIDATE_V2.json",
+      "sha256": "1efb21d5ab75469815d1169a0e8c15e7b0dd91908a74e11a6d79b5013e20a74d",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/panels-access-source-20261025",
+      "head": "df8ede487153d3c77c0c289fcd6b1cbf0c020d8b",
+      "tree": "d6269bbe504e3446671ed46d1fd8f9efe619a769",
+      "receiptSha256": "b7e893678653d612943310d4e31e2db2c5d01079ffc292836944521cf1c403be"
+    },
+    "restorePaths": [
+      {
+        "path": "website/app/api/studio/route.ts",
+        "restore": "website/app/api/studio/route.ts"
+      },
+      {
+        "path": "website/tests/authenticated-api-contract.test.mjs",
+        "restore": "website/tests/authenticated-api-contract.test.mjs"
+      },
+      {
+        "path": "website/tests/mutation-json-contract-preservation.test.mjs",
+        "restore": "website/tests/mutation-json-contract-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/mutation-json-contract.test.mjs",
+        "restore": "website/tests/mutation-json-contract.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-mutation-acknowledgement.test.mjs",
+        "restore": "website/tests/studio-mutation-acknowledgement.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-rate-limit-route.test.mjs",
+        "restore": "website/tests/studio-rate-limit-route.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-platform-access-errors.test.mjs",
+        "restore": "website/tests/studio-platform-access-errors.test.mjs"
+      },
+      {
+        "path": "website/tests/platform-access-error-class-loader.mjs",
+        "restore": "website/tests/platform-access-error-class-loader.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-access-website-20261025.mjs",
+        "restore": "coordination/prepare-studio-access-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-studio-access-proposal-20261025.mjs",
+        "restore": "coordination/check-studio-access-proposal-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-studio-access-website-20261025.mjs",
+        "restore": "coordination/check-studio-access-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-studio-access-website-v2-20261025.mjs",
+        "restore": "coordination/check-studio-access-website-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-studio-access-20261025.mjs",
+        "restore": "coordination/verify-studio-access-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-studio-access-v2-20261025.mjs",
+        "restore": "coordination/verify-studio-access-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-studio-access-boundaries-20261025.mjs",
+        "restore": "coordination/integrate-studio-access-boundaries-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-studio-access-source-20261025.mjs",
+        "restore": "coordination/backup-studio-access-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/api/studio/route.ts",
+      "bytes": 5134,
+      "sha256": "fd6d4779fe691e412a97184d8b9cde72ff5f303c2569b1a4b217d7ede90f50b6"
+    },
+    {
+      "path": "website/tests/authenticated-api-contract.test.mjs",
+      "bytes": 19684,
+      "sha256": "657ede01e62525beaa16d37dd9a5c3ce269d308236356875361385ac94dd638f"
+    },
+    {
+      "path": "website/tests/mutation-json-contract-preservation.test.mjs",
+      "bytes": 3583,
+      "sha256": "eb761d5dd6e14b2677bd723e1c1beeb378041cc145ba4097d6493b72b36c595b"
+    },
+    {
+      "path": "website/tests/mutation-json-contract.test.mjs",
+      "bytes": 13424,
+      "sha256": "2a009699391022c23f5272fe33f6cb3e95943533f184865ca6647a2117afb617"
+    },
+    {
+      "path": "website/tests/studio-mutation-acknowledgement.test.mjs",
+      "bytes": 9975,
+      "sha256": "d2976b2ada3fdfbd21acd89397eadd793ce091636e0f0d4d19918f0a082199c0"
+    },
+    {
+      "path": "website/tests/studio-rate-limit-route.test.mjs",
+      "bytes": 15464,
+      "sha256": "5076516029a2da04ddc84df909ee40f3a2c41178983210e610071203e1470516"
+    },
+    {
+      "path": "website/tests/studio-platform-access-errors.test.mjs",
+      "bytes": 8685,
+      "sha256": "caa4264da48ae9f68aeff131be40874c33f479af685ff7759abef0f31545abfa"
+    },
+    {
+      "path": "website/tests/platform-access-error-class-loader.mjs",
+      "bytes": 1530,
+      "sha256": "fb31a2863a7ab51918cc8ef32356453ba299241650a44045e83fa53e370085c6"
+    },
+    {
+      "path": "recipes/prepare-studio-access-website-20261025.mjs",
+      "bytes": 6268,
+      "sha256": "df11851cf19b95cc863329738bcd1d56d49ce15a5508318ad7765298b338c727"
+    },
+    {
+      "path": "recipes/check-studio-access-proposal-20261025.mjs",
+      "bytes": 4508,
+      "sha256": "5f9ecf651e35b3988958bd5025fba52381f1876fe337b0e05fd25b314a27203d"
+    },
+    {
+      "path": "recipes/check-studio-access-website-20261025.mjs",
+      "bytes": 1048,
+      "sha256": "e7bdfe66246f83248754a1456f4d14cdd33ad1601bca56c6f42b509cc3feb510"
+    },
+    {
+      "path": "recipes/check-studio-access-website-v2-20261025.mjs",
+      "bytes": 1161,
+      "sha256": "c45af1474478633949151fbc99e048e03b527697acbdc04b1e1831c9e15aa531"
+    },
+    {
+      "path": "recipes/verify-studio-access-20261025.mjs",
+      "bytes": 7911,
+      "sha256": "0e0ce529cce851084b719930e3451b0471d06e2f89ce3005fe7bbbfee93f3e28"
+    },
+    {
+      "path": "recipes/verify-studio-access-v2-20261025.mjs",
+      "bytes": 7914,
+      "sha256": "35a2c875d54469236245407b4b590794c5c396baf7fb1ff441f08c852e3d4b54"
+    },
+    {
+      "path": "recipes/integrate-studio-access-boundaries-20261025.mjs",
+      "bytes": 3939,
+      "sha256": "31e4571efce655676521fae1c34a271ca929a9ebe9b6bd9739d5946f17dd026c"
+    },
+    {
+      "path": "recipes/backup-studio-access-source-20261025.mjs",
+      "bytes": 5822,
+      "sha256": "5cdd75affdec6657437590e5caad0836049f0e84becec4c80cb3dc9a79221d30"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight first-party Studio/API test and application source files plus eight workflow recipes. No medical images, scans, masks, annotations or coordinates, private inventories or references, decisions, raw QA, dependencies, models or canonical Git ancestry. Incremental selected source supplement only, not cumulative, whole/private or runnable Website/Atlas backup. No clinical approval, patient-space registration, preview installation or public deployment.",
+  "proof": {
+    "focusedReportedPass": 110,
+    "wholeRoots": 9,
+    "fullStrictRoots": 2653,
+    "fullStrictFiles": 6204,
+    "fullStrictDiagnostics": 0,
+    "fullStrictSourceSha256": "70de9af5459217c393f1f73be44aa93d3c967f88e8254ae15afdd759ffbec84e",
+    "scopeExclusionsAdded": false,
+    "stockProductionBuildPassed": true,
+    "buildFiles": 1141,
+    "sourcePathsChecked": 6795,
+    "fullStockDiagnosticComplete": false,
+    "fullStockPassing": false,
+    "fullStockInterruptedByResourceGuard": true,
+    "actualClassLoadedInServiceSeams": true,
+    "grantSchemaAndAuthPoliciesUnchanged": true,
+    "medicalDataUploaded": false,
+    "rawQaUploaded": false,
+    "selectedBytes": 116050,
+    "clinicalApproval": false,
+    "ownerPreviewChanged": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

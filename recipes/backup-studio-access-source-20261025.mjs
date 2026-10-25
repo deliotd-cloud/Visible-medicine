@@ -1,0 +1,29 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {backup,read,json,sha,runGit} from './source-only-backup-20261019.mjs';
+import {memoryGate} from './native-website-integration-stage-20261025.mjs';
+memoryGate(2048);
+const stage='F:/VisibleMedicine/staging/20261025-studio-access-website',sourceFile=stage+'/SOURCE_CANDIDATE_V2.json',expected='70de9af5459217c393f1f73be44aa93d3c967f88e8254ae15afdd759ffbec84e',source=json(sourceFile);
+assert.equal(sha(read(sourceFile)),expected);
+const rows=new Map(source.sourceRows.map(r=>[r.path,r])),paths=[...source.changedPaths,...source.addedPaths];assert.equal(paths.length,8);assert.equal(new Set(paths).size,8);
+const selected=paths.map(p=>{const r=rows.get(p);assert(r);assert(/^(?:app\/api\/studio\/route.ts|tests\/[a-z-]+(?:\.test)?\.mjs)$/.test(p));return {path:'website/'+p,source:source.website+'/'+p,restore:'website/'+p,bytes:r.bytes,sha256:r.sha256};});
+const recipes=['prepare-studio-access-website-20261025.mjs','check-studio-access-proposal-20261025.mjs','check-studio-access-website-20261025.mjs','check-studio-access-website-v2-20261025.mjs','verify-studio-access-20261025.mjs','verify-studio-access-v2-20261025.mjs','integrate-studio-access-boundaries-20261025.mjs','backup-studio-access-source-20261025.mjs'];
+for(const p of recipes){const file=path.resolve(p),b=read(file);selected.push({path:'recipes/'+p,source:file,restore:'coordination/'+p,bytes:b.length,sha256:sha(b)});}
+assert.equal(selected.length,16);const bytes=selected.reduce((n,r)=>n+r.bytes,0);assert(bytes<1024*1024);
+const previousFile='F:/VisibleMedicine/recovery/checkpoints/20261025-panels-access-source/SOURCE_SUPPLEMENT.json',previous=json(previousFile);assert.equal(sha(read(previous.receipt)),previous.sha256);const previousReceipt=json(previous.receipt);
+const focused=json(stage+'/checks/combined-attempt-2/TERMINAL.json'),types=json(stage+'/checks/types-full-attempt-2/RESULT.json'),build=json(stage+'/checks/build-attempt-2/TERMINAL.json');
+function verify(){
+ assert.equal(sha(read(sourceFile)),expected);const index=json('CURRENT_CHECKPOINT.json');assert.deepEqual(index.activeWork.current.activeExecutionSessions,[]);assert.equal(index.activeWork.current.ownerPreviewPolicy.restartPermitted,false);assert.equal(index.goal.requirements,71);assert.equal(index.goal.optionalIdeas,8);
+ for(const p of ['combined','types-full','build'])assert(json(stage+'/checks/'+p+'-attempt-2/TERMINAL.json').passing);
+ for(const r of source.sourceRows)assert.equal(sha(read(source.website+'/'+r.path)),r.sha256,r.path);
+ for(const r of selected){const b=read(r.source);assert.equal(b.length,r.bytes);assert.equal(sha(b),r.sha256);assert(!b.includes(0));new TextDecoder('utf8',{fatal:true}).decode(b);}
+}
+verify();assert.equal(runGit(['ls-remote',previousReceipt.repository,'refs/heads/'+previous.branch]).toString().trim(),previous.head+'\trefs/heads/'+previous.branch);
+const dir='F:/VisibleMedicine/recovery/checkpoints/20261025-studio-access-source',root=dir+'-supplement';assert(!fs.existsSync(dir));fs.mkdirSync(dir,{recursive:true});const lookup=new Map(selected.map(r=>[r.path,r.source]));
+const result=backup({root,repo:'F:/VisibleMedicine/history/website-work/github-studio-access-source-20261025.git',branch:'backup/studio-access-source-20261025',parent:null,carryParent:false,files:selected.map(({path,bytes,sha256})=>({path,bytes,sha256})),bytesFor:p=>read(lookup.get(p)),verifySource:verify,
+ sourceIdentity:{kind:'selected-first-party-studio-access-not-cumulative',websiteSourceSha256:expected,nativeHead:source.atlasHead,reviewBindingSha256:source.reviewBindingSha256,requiredLocalParent:{path:source.parent,sha256:source.parentSha256,offDeviceAvailabilityNotClaimed:true},requiredSourceSupplement:{branch:previous.branch,head:previous.head,tree:previous.tree,receiptSha256:previous.sha256},restorePaths:selected.map(({path,restore})=>({path,restore}))},
+ scope:'Eight first-party Studio/API test and application source files plus eight workflow recipes. No medical images, scans, masks, annotations or coordinates, private inventories or references, decisions, raw QA, dependencies, models or canonical Git ancestry. Incremental selected source supplement only, not cumulative, whole/private or runnable Website/Atlas backup. No clinical approval, patient-space registration, preview installation or public deployment.',
+ proof:{focusedReportedPass:focused.counts.pass,wholeRoots:focused.roots,fullStrictRoots:types.roots.length,fullStrictFiles:types.sourceFiles.length,fullStrictDiagnostics:types.diagnosticCount,fullStrictSourceSha256:expected,scopeExclusionsAdded:false,stockProductionBuildPassed:true,buildFiles:build.buildResult.files,sourcePathsChecked:source.sourcePaths,fullStockDiagnosticComplete:false,fullStockPassing:false,fullStockInterruptedByResourceGuard:true,actualClassLoadedInServiceSeams:true,grantSchemaAndAuthPoliciesUnchanged:true,medicalDataUploaded:false,rawQaUploaded:false,selectedBytes:bytes,clinicalApproval:false,ownerPreviewChanged:false,installed:false}});
+const receipt=root+'/github-backup.json',pointer={at:new Date().toISOString(),receipt,sha256:sha(read(receipt)),head:result.head,tree:result.tree,branch:result.branch,sourcePaths:result.sourcePaths,restoredPaths:result.restoredPaths,selectedBytes:bytes,cumulative:false,wholePrivateOrRunnableBackup:false,medicalDataUploaded:false,requiredSourceSupplement:{branch:previous.branch,head:previous.head,tree:previous.tree}};
+fs.writeFileSync(dir+'/SOURCE_SUPPLEMENT.json',JSON.stringify(pointer,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({pointer:dir+'/SOURCE_SUPPLEMENT.json',sha256:sha(read(dir+'/SOURCE_SUPPLEMENT.json')),head:result.head,tree:result.tree,sourcePaths:result.sourcePaths,restoredPaths:result.restoredPaths,bytes}));

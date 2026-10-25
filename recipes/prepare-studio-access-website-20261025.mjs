@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+import {memoryGate} from './native-website-integration-stage-20261025.mjs';
+const memory=memoryGate(2048),parent='F:/VisibleMedicine/staging/20261025-ultrasound-panels-website',parentFile=parent+'/SOURCE_CANDIDATE_V2.json',parentHash='1efb21d5ab75469815d1169a0e8c15e7b0dd91908a74e11a6d79b5013e20a74d';
+const stage='F:/VisibleMedicine/staging/20261025-studio-access-website',site=stage+'/website',proposal='F:/VisibleMedicine/staging/20261025-studio-access-error-proposal';
+assert(!fs.existsSync(stage));assert.equal(hash(parentFile),parentHash);const old=json(parentFile);
+const index=json('CURRENT_CHECKPOINT.json');assert.deepEqual(index.activeWork.current.activeExecutionSessions,[]);assert.equal(index.activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+const terminal=json('F:/VisibleMedicine/staging/20261025-panels-stock-runtime-diagnostic/evidence/TERMINAL.json');assert.equal(terminal.complete,false);assert.equal(terminal.inputsStable,true);assert.equal(terminal.process.interrupted,true);
+assert(json(proposal+'/main-checks-attempt-1/TERMINAL.json').proposalPassing);
+for(const r of old.sourceRows)assert.equal(hash(old.website+'/'+r.path),r.sha256,r.path);
+assert(Number(execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command','(Get-PSDrive -Name F).Free'],{encoding:'utf8',windowsHide:true}).trim())>4*1024**3);
+fs.mkdirSync(site,{recursive:true});fs.cpSync(old.website+'/.git',site+'/.git',{recursive:true,errorOnExist:true,force:false,dereference:false});
+for(const r of old.sourceRows){const target=site+'/'+r.path;fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(old.website+'/'+r.path,target,fs.constants.COPYFILE_EXCL);assert.equal(hash(target),r.sha256);}
+fs.symlinkSync(fs.realpathSync(old.website+'/node_modules'),site+'/node_modules','junction');
+fs.symlinkSync(old.atlas,stage+'/atlas','junction');
+fs.mkdirSync(site+'/.next/types',{recursive:true});fs.copyFileSync(old.website+'/.next/types/routes.d.ts',site+'/.next/types/routes.d.ts',fs.constants.COPYFILE_EXCL);
+const fixtures=json('F:/VisibleMedicine/staging/20261025-native-integrated-website/PREPARATION.json').historicalFixtures;
+for(const r of fixtures){const target=stage+'/before/'+r.path;fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(parent+'/before/'+r.path,target,fs.constants.COPYFILE_EXCL);assert.equal(hash(target),r.sha256);}
+const report=json(proposal+'/REPORT.json'),rows=new Map(old.sourceRows.map(r=>[r.path,r]));
+assert.deepEqual(report.files.map(r=>r.path),['app/api/studio/route.ts','tests/studio-platform-access-errors.test.mjs']);
+for(const r of report.files){assert.equal(hash(proposal+'/'+r.path),r.sha256);const target=site+'/'+r.path;if(r.preimageSha256)assert.equal(hash(target),r.preimageSha256);else assert(!fs.existsSync(target));fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(proposal+'/'+r.path,target);rows.set(r.path,{path:r.path,bytes:r.bytes,sha256:r.sha256});}
+assert.equal(rows.size,6794);
+for(const r of rows.values())assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+for(const r of old.sourceRows)assert.equal(hash(old.website+'/'+r.path),r.sha256,r.path);
+const sourceFile=stage+'/SOURCE_CANDIDATE.json';
+const source={...old,at:new Date().toISOString(),website:site,parent:parentFile,parentSha256:parentHash,sourceRows:[...rows.values()].sort((a,b)=>a.path.localeCompare(b.path)),sourcePaths:rows.size,changedPaths:['app/api/studio/route.ts'],addedPaths:['tests/studio-platform-access-errors.test.mjs'],proposalReport:proposal+'/REPORT.json',proposalReportSha256:hash(proposal+'/REPORT.json'),strictTypesOrBuildForThisSource:false,privateStateCopied:false,installed:false};
+fs.writeFileSync(sourceFile,JSON.stringify(source,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify({at:new Date().toISOString(),memory,parent:parentFile,parentSha256:parentHash,source:sourceFile,sourceSha256:hash(sourceFile),historicalFixtures:fixtures,sourcePaths:rows.size,privateStateCopied:false,ownerPreviewChanged:false},null,2)+'\n',{flag:'wx'});
+const sourceHash=hash(sourceFile);
+let verifier=fs.readFileSync('verify-panels-combined-20261025.mjs','utf8').replaceAll('20261025-ultrasound-panels-website','20261025-studio-access-website').replaceAll('SOURCE_CANDIDATE_V2.json','SOURCE_CANDIDATE.json').replaceAll(parentHash,sourceHash).replaceAll('effective-entitlement-validation','studio-access-verification');
+assert(verifier.includes(sourceHash));fs.writeFileSync('verify-studio-access-20261025.mjs',verifier,{flag:'wx'});
+const roots=['tests/studio-platform-access-errors.test.mjs','tests/platform-access-state.test.mjs','tests/authenticated-api-contract.test.mjs','tests/mutation-json-contract.test.mjs','tests/studio-mutation-context-api.test.mjs','tests/studio-mutation-acknowledgement.test.mjs','tests/studio-rate-limit-route.test.mjs'];
+const runner="import {runBoundWebsiteTests} from './run-bound-website-check-20261025.mjs';\nconst r=await runBoundWebsiteTests({sourceFile:"+JSON.stringify(sourceFile)+",sourceSha256:"+JSON.stringify(sourceHash)+",evidenceDir:"+JSON.stringify(stage+'/checks/combined-attempt-1')+",roots:"+JSON.stringify(roots)+",heapMiB:384,memoryMiB:4096,environment:{STUDIO_ACCESS_PRODUCT_ROOT:undefined,STUDIO_ACCESS_ROUTE_ROOT:undefined,PLATFORM_ACCESS_PRODUCT_ROOT:undefined,PLATFORM_ACCESS_BASELINE_ROOT:undefined},proof:{actualStudioRouteAndTypedRefusal:true,existingMutationAndAuthenticationRootsIntact:true,syntheticBoundariesOnly:true}});process.exitCode=r.passing?0:1;\n";
+fs.writeFileSync('check-studio-access-website-20261025.mjs',runner,{flag:'wx'});
+index.activeWork.current.pendingStudioAccessFix={...index.activeWork.current.pendingStudioAccessFix,source:sourceFile,sourceSha256:sourceHash,sourcePaths:rows.size,integratedIntoSeparateCandidate:true,installed:false,verificationPending:true};
+fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(index,null,2)+'\n');
+console.log(JSON.stringify({source:sourceFile,sha256:sourceHash,sourcePaths:rows.size,roots:roots.length}));
