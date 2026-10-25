@@ -1,0 +1,145 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T20:49:51.608Z",
+  "sourceIdentity": {
+    "candidateReceiptSha256": "7cc6069153af7e9d439296549df2d21da343d9545327d4ab77ce9398b6e950e2",
+    "previousFilteredSupplementHead": "a854582cf7989598a55ffdd7ae21f1ce651c0756"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/atlas/guided-learning/compare/compare.css",
+      "restore": "website/app/atlas/guided-learning/compare/compare.css",
+      "bytes": 1775,
+      "sha256": "5c80c528e5dc14903d06bc4060c6e9f6fa378431bf001ac96d3a3dd7e28de1cd"
+    },
+    {
+      "path": "website/app/atlas/guided-learning/compare/page.tsx",
+      "restore": "website/app/atlas/guided-learning/compare/page.tsx",
+      "bytes": 2782,
+      "sha256": "d215ac59cc797d381c10b6088b1c59a3152837c8ec475148840c294da3a10f28"
+    },
+    {
+      "path": "website/components/HeadAtlasLearningLibrary.tsx",
+      "restore": "website/components/HeadAtlasLearningLibrary.tsx",
+      "bytes": 15750,
+      "sha256": "fd7c12c85a54736f53bb4023418921243ef695827c501bd2a59eeb335ff547c8"
+    },
+    {
+      "path": "website/lib/head-guided-comparison.ts",
+      "restore": "website/lib/head-guided-comparison.ts",
+      "bytes": 2445,
+      "sha256": "9d014c464e28a07f44facbb92103f444a45a5f4e8a37607f6adce5716acfebc4"
+    },
+    {
+      "path": "website/tests/guided-catalogue-compact.test.mjs",
+      "restore": "website/tests/guided-catalogue-compact.test.mjs",
+      "bytes": 12329,
+      "sha256": "ee2a5b578da92b21a62d395c34c747e0a0ea9601a59cc7b3ba9c2e940f356cdd"
+    },
+    {
+      "path": "website/tests/guided-catalogue-real-source.test.mjs",
+      "restore": "website/tests/guided-catalogue-real-source.test.mjs",
+      "bytes": 7926,
+      "sha256": "74b7c14bb0cbd6b78e6675d079b3fd9b646ce83950997d4b1de5cf15570b481b"
+    },
+    {
+      "path": "website/tests/head-guided-comparison-page.test.ts",
+      "restore": "website/tests/head-guided-comparison-page.test.ts",
+      "bytes": 2819,
+      "sha256": "b7802f68bed7981034cf2f4c8e18788baa56e20fd90686282002c338df9aa73b"
+    },
+    {
+      "path": "website/tests/head-guided-comparison.test.ts",
+      "restore": "website/tests/head-guided-comparison.test.ts",
+      "bytes": 5816,
+      "sha256": "51f45473f7143c79c0795090e6a46c2eb6ac720181f24b14f1d9d2512c5ebb59"
+    },
+    {
+      "path": "website/tests/head-learning-discovery-page.test.ts",
+      "restore": "website/tests/head-learning-discovery-page.test.ts",
+      "bytes": 17552,
+      "sha256": "9f2f89c5a590efe76959dacc2101bfd13012984c88f3350080805107a20fcb51"
+    },
+    {
+      "path": "website/tests/head-learning-library-steps.test.ts",
+      "restore": "website/tests/head-learning-library-steps.test.ts",
+      "bytes": 7159,
+      "sha256": "e4a51e9893a63863eaf887492fb80eaee1531cb0f3468ad3c01eac21ca738591"
+    },
+    {
+      "path": "website/tests/head-learning-library-view-filter.test.ts",
+      "restore": "website/tests/head-learning-library-view-filter.test.ts",
+      "bytes": 8307,
+      "sha256": "48558ba971cf810c3848e2b31ed04b4f3849009221110eef5c00a1d6b81ebdd9"
+    },
+    {
+      "path": "recipes/verify-guided-comparison-title-production-20261025.mjs",
+      "restore": "coordination/verify-guided-comparison-title-production-20261025.mjs",
+      "bytes": 4821,
+      "sha256": "17e7a81a1cd4687c25a7ed94b7818aaafd5d3f9c04ee8ab8d55d1e6bc8766c93"
+    },
+    {
+      "path": "recipes/serve-guided-comparison-title-built-worker-20261025.mjs",
+      "restore": "coordination/serve-guided-comparison-title-built-worker-20261025.mjs",
+      "bytes": 3885,
+      "sha256": "4289bcc4286752628ee3f35f13ea10cfc89a01c7e8d618a89e7f85a22ba26fe4"
+    },
+    {
+      "path": "recipes/stop-owned-guided-comparison-title-preview-20261025.mjs",
+      "restore": "coordination/stop-owned-guided-comparison-title-preview-20261025.mjs",
+      "bytes": 2587,
+      "sha256": "bf55b39a5f0dcc1478f4a697aaafe7c6d26d6386ee54b999c74d8dbc0d926f95"
+    },
+    {
+      "path": "recipes/record-guided-comparison-browser-20261025.mjs",
+      "restore": "coordination/record-guided-comparison-browser-20261025.mjs",
+      "bytes": 4996,
+      "sha256": "af1882147193fcecbacd6be1756a666a1a6e068e7ffd52d0021e0a9853315167"
+    },
+    {
+      "path": "recipes/seal-guided-comparison-20261025.mjs",
+      "restore": "coordination/seal-guided-comparison-20261025.mjs",
+      "bytes": 8058,
+      "sha256": "efd6ddfbc8f60335149ff180f4d36c95647a63e562c322f455c560dc4931df10"
+    },
+    {
+      "path": "recipes/backup-guided-comparison-source-20261025.mjs",
+      "restore": "coordination/backup-guided-comparison-source-20261025.mjs",
+      "bytes": 5185,
+      "sha256": "a0ce8e62f0bd363a63376812709dbe4521338be1624ff3982d24821c70cd0ac8"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental first-party Guided-learning comparison activity source only. Overlay the eleven website paths on the exact retained local predecessor. Selected checking recipes require earlier helpers and local evidence. Earlier filtered supplements and the local baseline remain required. Raw QA/browser/inspector evidence, private configuration/references/decisions, current generated medical/Review data or source receipts, scans/masks/identifiers, models/assets, dependencies, runtime and canonical/native Git ancestry are excluded. Not a complete private, runnable or whole-project backup.",
+  "proof": {
+    "wholeCurrentRoots": 9,
+    "wholeCurrentCases": 53,
+    "fullTypeRoots": 2666,
+    "fullTypeFiles": 6224,
+    "diagnostics": 0,
+    "actualStockProductionArtifacts": 1145,
+    "actualDesktopActivityAndCerebellarAvailability": true,
+    "actualCtNavigationViewerShellOnly": true,
+    "noScanOrImageGeometryAcceptance": true,
+    "actualKeyboardAndEssentialFallback": true,
+    "all1816ProtectedInputsUnchanged": true,
+    "exactLibraryThreeInsertionInverse": true,
+    "priorFailedContextAndReceiptCorrectionRetainedLocally": true,
+    "noNewMedicalFactsScoredQuestionsModelsAssetsDependenciesOrAccessRules": true,
+    "patientRegistration": false,
+    "clinicalApproval": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "publicDeployment": false,
+    "fullStockSuitePassing": false,
+    "original316FailuresAnd3SkipsUnadjusted": true,
+    "incrementalOnly": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

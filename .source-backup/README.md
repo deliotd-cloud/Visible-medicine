@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental first-party Guided-learning comparison activity source only. Overlay the eleven website paths on the exact retained local predecessor. Selected checking recipes require earlier helpers and local evidence. Earlier filtered supplements and the local baseline remain required. Raw QA/browser/inspector evidence, private configuration/references/decisions, current generated medical/Review data or source receipts, scans/masks/identifiers, models/assets, dependencies, runtime and canonical/native Git ancestry are excluded. Not a complete private, runnable or whole-project backup.
