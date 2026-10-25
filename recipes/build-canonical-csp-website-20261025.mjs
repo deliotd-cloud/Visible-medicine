@@ -1,0 +1,40 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {spawn,execFileSync} from 'node:child_process';import {finished} from 'node:stream/promises';
+import {hash,json} from './seal-simple-website-successor.mjs';import {memoryGate} from './native-website-integration-stage-20261025.mjs';
+const sourceFile='F:/VisibleMedicine/staging/20261025-canonical-csp-website/SOURCE_CANDIDATE.json',sourceSha256='b21223ba0c84a9cf6b56e9a1956a2c13fad03f66353197acde115bc1e0eb0c90';
+assert.equal(hash(sourceFile),sourceSha256);const source=json(sourceFile),site=source.website,dir=path.dirname(sourceFile)+'/checks/build-attempt-1';
+assert(!fs.existsSync(dir));assert(!fs.existsSync(site+'/dist'));
+const typesFile=path.dirname(sourceFile)+'/checks/types-full-attempt-1/TERMINAL.json',types=json(typesFile);
+assert(types.passing);assert.equal(types.sourceSha256,sourceSha256);assert.equal(types.typeResult.diagnostics,0);
+const focusedFile='F:/VisibleMedicine/staging/20261025-canonical-csp-website/checks/focused-attempt-1/RESULT.json';assert(json(focusedFile).passing&&json(focusedFile).counts.pass===4);
+const memory=memoryGate(6144);
+const live=execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',"@(Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Where-Object { $_.CommandLine -match 'scripts[/\\\\]run-website-tests[.]mjs|types-full-attempt-1[/\\\\]checker[.]mjs|build-attempt-1[/\\\\]checker[.]mjs' } | Select-Object ProcessId,CreationDate) | ConvertTo-Json -Compress"],{encoding:'utf8',windowsHide:true}).trim();assert(live===''||live==='[]','No active broad runner/type checker/build');
+function verify(){assert.equal(hash(sourceFile),sourceSha256);for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);for(const d of source.dependencies){assert.equal(hash(d.file),d.sha256);assert.equal(hash(d.entry),d.entrySha256);}assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);}
+verify();fs.mkdirSync(dir,{recursive:true});
+const save=(p,v)=>fs.writeFileSync(dir+'/'+p,JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(dir+'/checker.mjs',`import path from 'node:path';import {spawn} from 'node:child_process';
+const npm=path.join(path.dirname(process.execPath),'node_modules/npm/bin/npm-cli.js');
+const child=spawn(process.execPath,['--max-old-space-size=1536',npm,'run','build'],{cwd:process.cwd(),env:process.env,windowsHide:true,shell:false,stdio:'inherit'});
+const result=await new Promise(resolve=>{child.once('error',error=>resolve({error:String(error)}));child.once('close',(code,signal)=>resolve({code,signal}));});
+if(result.error||result.signal)console.error(JSON.stringify(result));process.exitCode=result.code===0&&!result.error&&!result.signal?0:1;
+`,{flag:'wx'});
+const base='F:/VisibleMedicine/staging/20261025-wave4-memory-repro-v2-proposal/supervise.ps1';assert.equal(hash(base),'1239eab31096552e7f78b508b58b873ea85d1bb3d8f3ee8ac4e4cfe7039bd2ee');
+let supervisor=fs.readFileSync(base,'utf8');function change(a,b){assert.equal(supervisor.split(a).length,2,a);supervisor=supervisor.replace(a,b);}
+change('2UL*1024UL*1024UL*1024UL','4UL*1024UL*1024UL*1024UL');change('jobMemoryMiB=2048','jobMemoryMiB=4096');change('$before.availableMiB -lt 4096','$before.availableMiB -lt 6144');change('require available >=4096 MiB','require available >=6144 MiB');
+change('scripts/run-website-tests.mjs --run','--max-old-space-size=1536 ../checks/build-attempt-1/checker.mjs');
+change("$_.CommandLine -match 'run-website-tests\\.mjs'","$_.CommandLine -match 'scripts[/\\\\]run-website-tests[.]mjs|types-full-attempt-1[/\\\\]checker[.]mjs|build-attempt-1[/\\\\]checker[.]mjs'");
+change('An existing stock runner is active; leave it alone and do not launch another','An existing broad runner/type checker/build is active; leave it alone and do not duplicate');
+change("command=@('node.exe','scripts/run-website-tests.mjs','--run')","command=@('node.exe','--max-old-space-size=1536','../checks/build-attempt-1/checker.mjs')");
+fs.writeFileSync(dir+'/supervise.ps1',supervisor,{flag:'wx'});
+const envBase=Object.fromEntries(Object.entries(process.env).filter(([k])=>/^(path|systemroot|windir|comspec|pathext|temp|tmp|os|processor_architecture|number_of_processors)$/i.test(k)));
+const env={...envBase,VM_ATLAS_SOURCE_REPO:source.atlas,ATLAS_SOURCE_REPO:source.atlas,NODE_OPTIONS:'--max-old-space-size=1536',GOMEMLIMIT:'64MiB',GOMAXPROCS:'1',RAYON_NUM_THREADS:'1',GIT_OPTIONAL_LOCKS:'0',GIT_NO_REPLACE_OBJECTS:'1',NO_COLOR:'1',WRANGLER_SEND_METRICS:'false',NEXT_TELEMETRY_DISABLED:'1'};
+save('CONFIGURATION.json',{node:process.execPath,site,evidence:dir,environment:env,maxMinutes:30});
+save('PREPARATION.json',{at:new Date().toISOString(),memory,source:sourceFile,sourceSha256,fullTypes:{path:typesFile,sha256:hash(typesFile)},focused:{path:focusedFile,sha256:hash(focusedFile)},checkerSha256:hash(dir+'/checker.mjs'),baseSupervisorSha256:hash(base),supervisorSha256:hash(dir+'/supervise.ps1'),actualUnchangedNpmRunBuildAndPrebuild:true,heapMiB:1536,aggregateNativeJobMiB:4096,minimumFreeMiB:6144,freeFloorMiB:2048,commitCeilingPercent:90,killOnCloseSuspendedAssignResumeUnchanged:true,installed:false,ownerPreviewChanged:false});
+const out=fs.createWriteStream(dir+'/supervisor.stdout.log',{flags:'wx'}),err=fs.createWriteStream(dir+'/supervisor.stderr.log',{flags:'wx'}),child=spawn('powershell.exe',['-NoProfile','-NonInteractive','-File',dir+'/supervise.ps1','-Configuration',dir+'/CONFIGURATION.json'],{env:envBase,windowsHide:true,shell:false,stdio:['ignore','pipe','pipe']});child.stdout.pipe(out);child.stderr.pipe(err);
+save('SUPERVISOR-HANDLE.json',{at:new Date().toISOString(),pid:child.pid,parentPid:process.pid});console.log(JSON.stringify({started:true,supervisorPid:child.pid,sourceSha256,evidence:dir}));
+const result=await new Promise(resolve=>{child.once('error',e=>resolve({error:String(e)}));child.once('close',(code,signal)=>resolve({code,signal}));});await Promise.all([finished(out),finished(err)]);verify();
+const terminal=fs.existsSync(dir+'/PROCESS-TERMINAL.json')?json(dir+'/PROCESS-TERMINAL.json'):null;
+const passing=result.code===0&&!result.error&&!result.signal&&terminal?.terminalObserved&&!terminal.interrupted&&terminal.exitCode===0;
+let artifacts=null;
+if(passing){const files=[];function walk(root,prefix=''){for(const e of fs.readdirSync(root,{withFileTypes:true})){assert(!e.isSymbolicLink());const p=prefix+e.name;if(e.isDirectory())walk(root+'/'+e.name,p+'/');else{assert(e.isFile());files.push({path:p,bytes:fs.statSync(root+'/'+e.name).size,sha256:hash(root+'/'+e.name)});}}}walk(site+'/dist');assert(files.length>1000);files.sort((a,b)=>a.path.localeCompare(b.path));save('BUILD_ARTIFACTS.json',{at:new Date().toISOString(),root:site+'/dist',sourceSha256,files,localOnly:true});artifacts={path:dir+'/BUILD_ARTIFACTS.json',sha256:hash(dir+'/BUILD_ARTIFACTS.json'),files:files.length};}
+save('TERMINAL.json',{at:new Date().toISOString(),supervisor:result,process:terminal,passing,source:sourceFile,sourceSha256,artifacts,sourceAndDependencyEntriesUnchanged:true,actualUnchangedNpmRunBuildAndPrebuild:true,wholeSuitePassing:false,clinicalApproval:false,installed:false,ownerPreviewChanged:false});console.log(JSON.stringify({terminal:dir+'/TERMINAL.json',passing,artifacts,process:terminal}));process.exitCode=passing?0:1;

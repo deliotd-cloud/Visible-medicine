@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';import {pathToFileURL} from 'node:url';import {createRequire} from 'node:module';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const sourceFile='F:/VisibleMedicine/staging/20261025-canonical-csp-website/SOURCE_CANDIDATE.json',sourceSha256='b21223ba0c84a9cf6b56e9a1956a2c13fad03f66353197acde115bc1e0eb0c90';
+assert.equal(hash(sourceFile),sourceSha256);const source=json(sourceFile),site=source.website,dir='F:/VisibleMedicine/staging/20261025-canonical-csp-website/checks/focused-attempt-1';assert(!fs.existsSync(dir));
+const {assertCompleteOriginal}=await import(pathToFileURL(site+'/tests/deepbrain-foot-roles.mjs'));
+const paths=['lib/content-security-policy.ts','tests/content-security-policy.test.ts','worker/index.ts'];
+const rows=paths.map(p=>source.sourceRows.find(r=>r.path===p));assert(rows.every(Boolean));
+function verify(){for(const r of rows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);}verify();fs.mkdirSync(dir,{recursive:true});
+const env=Object.fromEntries(Object.entries(process.env).filter(([k])=>/^(path|systemroot|windir|comspec|pathext|temp|tmp|os|processor_architecture|number_of_processors)$/i.test(k)));
+const args=['--max-old-space-size=128','--experimental-strip-types','--test','--test-concurrency=1','--test-reporter=tap','tests/content-security-policy.test.ts'];
+const result=spawnSync(process.execPath,args,{cwd:site,env,windowsHide:true,maxBuffer:1024*1024,encoding:'utf8'});
+fs.writeFileSync(dir+'/stdout.tap',result.stdout??'',{flag:'wx'});fs.writeFileSync(dir+'/stderr.log',result.stderr??'',{flag:'wx'});verify();
+const counts=assertCompleteOriginal({code:result.status,signal:result.signal,...(result.error?{error:String(result.error)}:{})},result.stdout,4);
+fs.writeFileSync(dir+'/RESULT.json',JSON.stringify({at:new Date().toISOString(),source:{path:sourceFile,sha256:sourceSha256},process:{code:result.status,signal:result.signal},counts,passing:true,wholeRoot:true,scope:'Actual current policy, four exact canonical aliases, previous indexed documents, queries, negative paths and unchanged Worker streaming/header call. Earlier whole old3case baseline is retained separately; old canonical-negative is intentionally superseded by direct redirect evidence.',sourceUnchanged:true,wholeSuiteOrClinicalAcceptance:false,ownerPreviewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({result:dir+'/RESULT.json',sha256:hash(dir+'/RESULT.json'),counts,passing:true,fullBuildBrowserStillPending:true}));

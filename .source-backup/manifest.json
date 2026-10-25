@@ -1,0 +1,187 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T08:53:26.672Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-canonical-atlas-csp-source-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "b21223ba0c84a9cf6b56e9a1956a2c13fad03f66353197acde115bc1e0eb0c90",
+    "requiredSourceSupplement": {
+      "branch": "backup/tour-neck-renal-source-20261025",
+      "head": "e30d1847afa3402032762280149eef1010a1bc2d",
+      "tree": "feb460021e816cfd1cfe9cec0bb5e4d4e986cb34",
+      "receiptSha256": "b92033d5280bb56265c8bee02150b6ab0f8432ac56f2602bfcc0bba87ac6f383"
+    },
+    "restorePaths": [
+      {
+        "path": "website/lib/content-security-policy.ts",
+        "restore": "website/lib/content-security-policy.ts"
+      },
+      {
+        "path": "website/tests/content-security-policy.test.ts",
+        "restore": "website/tests/content-security-policy.test.ts"
+      },
+      {
+        "path": "historical-code/lib/content-security-policy.ts.raw",
+        "restore": "historical-code/lib/content-security-policy.ts.raw"
+      },
+      {
+        "path": "historical-code/tests/content-security-policy.test.ts.raw",
+        "restore": "historical-code/tests/content-security-policy.test.ts.raw"
+      },
+      {
+        "path": "recipes/prepare-scoped-website-successor-20261025.mjs",
+        "restore": "coordination/prepare-scoped-website-successor-20261025.mjs"
+      },
+      {
+        "path": "recipes/capture-built-atlas-redirects-20261025.mjs",
+        "restore": "coordination/capture-built-atlas-redirects-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-original-atlas-csp-20261025.mjs",
+        "restore": "coordination/check-original-atlas-csp-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-canonical-csp-focused-20261025.mjs",
+        "restore": "coordination/check-canonical-csp-focused-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-canonical-csp-build-checks-20261025.mjs",
+        "restore": "coordination/prepare-canonical-csp-build-checks-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-canonical-csp-full-types-20261025.mjs",
+        "restore": "coordination/check-canonical-csp-full-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-canonical-csp-website-20261025.mjs",
+        "restore": "coordination/build-canonical-csp-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-canonical-csp-preview-20261025.mjs",
+        "restore": "coordination/prepare-canonical-csp-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/serve-canonical-csp-built-worker-20261025.mjs",
+        "restore": "coordination/serve-canonical-csp-built-worker-20261025.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-built-preview-20261025.ps1",
+        "restore": "coordination/stop-owned-built-preview-20261025.ps1"
+      },
+      {
+        "path": "recipes/backup-canonical-atlas-csp-source-20261025.mjs",
+        "restore": "coordination/backup-canonical-atlas-csp-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/content-security-policy.ts",
+      "bytes": 923,
+      "sha256": "36984f66b3ab5f530342cbc833d5b9e6e02c7c6aaa8bfa88a9d2101ad393bb12"
+    },
+    {
+      "path": "website/tests/content-security-policy.test.ts",
+      "bytes": 3164,
+      "sha256": "c83a19b6a4a1aa1c81aaeea6ef1af4cd2e7ebd2935a3cfa6b435e9ed0e100e12"
+    },
+    {
+      "path": "historical-code/lib/content-security-policy.ts.raw",
+      "bytes": 795,
+      "sha256": "4f60779d79b65493bfa002b910a088c0f97cd84d297d63e192b120768d7f59bf"
+    },
+    {
+      "path": "historical-code/tests/content-security-policy.test.ts.raw",
+      "bytes": 2007,
+      "sha256": "828c9ac3a37ce830beaa01d830c94f8b4a3a0ae04c31d3cdbbfc15f0764198e6"
+    },
+    {
+      "path": "recipes/prepare-scoped-website-successor-20261025.mjs",
+      "bytes": 5941,
+      "sha256": "c5bc80ff62b2920d5c5004c951d1e094ee8a5ef7d8e19542929b7b20f5819c46"
+    },
+    {
+      "path": "recipes/capture-built-atlas-redirects-20261025.mjs",
+      "bytes": 2349,
+      "sha256": "cf2448ec6e97955ce998a1b7bc20418a3787cb573eaccfdf5ea2aa858977fd10"
+    },
+    {
+      "path": "recipes/check-original-atlas-csp-20261025.mjs",
+      "bytes": 2656,
+      "sha256": "312f545d7e88591cb2d68f145ceeef9aaee43a28906fff51781adb84ae24313f"
+    },
+    {
+      "path": "recipes/check-canonical-csp-focused-20261025.mjs",
+      "bytes": 2591,
+      "sha256": "ccca81cdca3aa217b9585f042b7d73630eb67918e17a0deaa0fea9867c4ca1ba"
+    },
+    {
+      "path": "recipes/prepare-canonical-csp-build-checks-20261025.mjs",
+      "bytes": 1674,
+      "sha256": "0e27babad67df42d3c123f7da20bf6434be4fae0628c8d1e088a2d51fdee1868"
+    },
+    {
+      "path": "recipes/check-canonical-csp-full-types-20261025.mjs",
+      "bytes": 8119,
+      "sha256": "0aa13509aaa891758f839e48f29f28452c5a56b07cf1c34b42baed7333838531"
+    },
+    {
+      "path": "recipes/build-canonical-csp-website-20261025.mjs",
+      "bytes": 7422,
+      "sha256": "2f24e756555479462e12cacb285a977b1921c60ca46abca96d8e5d8d80226244"
+    },
+    {
+      "path": "recipes/prepare-canonical-csp-preview-20261025.mjs",
+      "bytes": 1159,
+      "sha256": "3f6a1a7202071738e55e8990c95b9ba693b08cf7b83a45d76e1142ebf5c762e8"
+    },
+    {
+      "path": "recipes/serve-canonical-csp-built-worker-20261025.mjs",
+      "bytes": 3388,
+      "sha256": "558061e7a34d1d6d29e76736c40e7bb8404558df09dc8f4986e6b9120164202c"
+    },
+    {
+      "path": "recipes/stop-owned-built-preview-20261025.ps1",
+      "bytes": 2944,
+      "sha256": "32eee4ce6dcc651cbcba6dd549cb42787f2b188e8962f78e182be7328eb63272"
+    },
+    {
+      "path": "recipes/backup-canonical-atlas-csp-source-20261025.mjs",
+      "bytes": 6967,
+      "sha256": "b7a6c78d68f3142780490f83197a12deb420aad8d25986ac85620e803ae7ac99"
+    }
+  ],
+  "removed": [],
+  "scope": "Two current first-party policy/test sources, two byte-exact old code snapshots and eleven workflow recipes. Four already-intended contained Atlas documents now retain their decoder policy at canonical slash URLs; default policy and model authorization unchanged. Prior source branches required, not whole/private/runnable backup. No rawQA, private configuration/source inventory/closure, historical anatomy/checkouts, scans/masks/medical coordinates, decisions, models/dependencies or canonical ancestry uploaded.",
+  "proof": {
+    "completeOldPolicyBaselineCases": 3,
+    "oldBaselineIsControlNotFixedCoverage": true,
+    "currentFocusedCases": 4,
+    "fullProjectTypes": true,
+    "typeRoots": 2654,
+    "typeFiles": 6209,
+    "diagnostics": 0,
+    "actualUnchangedProductionBuild": true,
+    "buildFiles": 1142,
+    "realBeforeAndAfterRedirectChains": 4,
+    "protectedAnonymousModelStatus": 401,
+    "sameAnonymousBrowserWasmCompileErrorDidNotRecur": true,
+    "actualNativeBundleBytesUnchanged": true,
+    "authenticatedModelCameraTourAcceptancePending": true,
+    "javascriptUnsafeEvalEnabled": false,
+    "accountPermissionsOrPrivateDataDeliveryChanged": false,
+    "fullStockPassingClaim": false,
+    "sourceBytes": 52099,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
