@@ -1,0 +1,106 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T14:40:56.787Z",
+  "sourceIdentity": {
+    "kind": "coordinate-free-build-and-module-export-recovery-recipes-only",
+    "requiredLocalNativeHead": "27b341001718b7d5bb4f45aad0c8d8784e287c3b",
+    "requiredLocalNativeSourceSha256": "3ab3744296035502165d3b3b2439338306533a15dffdd72d4e6103aafdc6f75a",
+    "requiredPriorSupplement": {
+      "branch": "backup/abdominal-arterial-us-source-20261025",
+      "head": "ec4e383a0e8741670adfa3822af60260510a56bd",
+      "tree": "35b6e11406b6fe09bdc331bb1783a2ccd6700724"
+    },
+    "restorePaths": [
+      {
+        "path": "recipes/prepare-abdominal-arterial-us-low-memory-build-20261025.mjs",
+        "restore": "coordination/prepare-abdominal-arterial-us-low-memory-build-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-abdominal-arterial-us-low-memory-20261025.mjs",
+        "restore": "coordination/build-abdominal-arterial-us-low-memory-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-abdominal-arterial-us-runtime-exports-20261025.mjs",
+        "restore": "coordination/prepare-abdominal-arterial-us-runtime-exports-20261025.mjs"
+      },
+      {
+        "path": "recipes/export-abdominal-arterial-us-runtimes-20261025.mjs",
+        "restore": "coordination/export-abdominal-arterial-us-runtimes-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-abdominal-arterial-us-export-tail-20261025.mjs",
+        "restore": "coordination/run-abdominal-arterial-us-export-tail-20261025.mjs"
+      },
+      {
+        "path": "recipes/record-abdominal-arterial-us-low-build-running-20261025.mjs",
+        "restore": "coordination/record-abdominal-arterial-us-low-build-running-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-abdominal-arterial-us-build-source-20261025.mjs",
+        "restore": "coordination/backup-abdominal-arterial-us-build-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/prepare-abdominal-arterial-us-low-memory-build-20261025.mjs",
+      "bytes": 1892,
+      "sha256": "17c59710b7436401329d25da636312db4cc8ffb5ed7ae75bb363cbf8b901b9ed"
+    },
+    {
+      "path": "recipes/build-abdominal-arterial-us-low-memory-20261025.mjs",
+      "bytes": 3217,
+      "sha256": "624e652a7d2f12115eb1d1e962f3270abefdb68b418e88ede0ae4c0bb95250ba"
+    },
+    {
+      "path": "recipes/prepare-abdominal-arterial-us-runtime-exports-20261025.mjs",
+      "bytes": 3571,
+      "sha256": "041a9f2bb1b1daab9b2daa479bdb8ec8901241f48597169ff04606e23b65d237"
+    },
+    {
+      "path": "recipes/export-abdominal-arterial-us-runtimes-20261025.mjs",
+      "bytes": 6648,
+      "sha256": "d57a960dcfc163e25ce0aa0b4111d3ddb8af820cb95b0cc21ff3d4fb6aaeb17b"
+    },
+    {
+      "path": "recipes/run-abdominal-arterial-us-export-tail-20261025.mjs",
+      "bytes": 940,
+      "sha256": "774b0c3ccd067a09b02a551361aebde5fdccaa30d04d0dbf716a694e4828e355"
+    },
+    {
+      "path": "recipes/record-abdominal-arterial-us-low-build-running-20261025.mjs",
+      "bytes": 984,
+      "sha256": "d8794f55657d2c8a1ccbaae538859ca109ea40c3ecf02203501341a3fa11d2cd"
+    },
+    {
+      "path": "recipes/backup-abdominal-arterial-us-build-source-20261025.mjs",
+      "bytes": 4352,
+      "sha256": "480d3d07917783487c8c610691b453a01d1dc4d0bd8d8f5f890432f7a753afb8"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental coordinate-free first-party build/export/recovery recipes only. Earlier source supplements and local source/baseline/pins/data remain required; not whole/private/runnable backup. No source anatomy/coordinates/generated metadata/rawQA/private configuration/closure/scans/masks/decisions/models/dependencies/runtime/native or canonical ancestry uploaded.",
+  "proof": {
+    "actualUnchangedStockNativeBuildPassed": true,
+    "nativeProductionArtifacts": 557,
+    "heapMiB": 1280,
+    "aggregateJobMiB": 3072,
+    "freeReserveAndRuntimeFloorMiB": 2048,
+    "fourStockModuleBuildsAndExportsPassed": true,
+    "unchangedPermissiveDependenciesPerModule": 22,
+    "all6400SourceAnd215PublicAssetBytesPreserved": true,
+    "websiteImported": false,
+    "sourceBytes": 21604,
+    "privateDataUploaded": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
