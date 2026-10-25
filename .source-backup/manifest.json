@@ -1,0 +1,263 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T00:43:18.555Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-ultrasound-workflow-text-and-recipes-not-cumulative",
+    "websiteSourceSha256": "631a7021667cd9989ff1d564f0881068ef58201dd0b5a53e5be8e723aed777fa",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalWebsiteBaseline": {
+      "path": "F:/VisibleMedicine/staging/20261025-ultrasound-local-website/SOURCE_CANDIDATE.json",
+      "sha256": "db06a6b990a137958ca4d856b3dad1ce2d6b8439b4116f8b39b753a26dfea34f",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "restorePaths": [
+      {
+        "path": "pending/ultrasound-local-20261025/website/app/atlas/ultrasound/page.tsx",
+        "restore": "website/app/atlas/ultrasound/page.tsx"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/lib/atlas-navigation.ts",
+        "restore": "website/lib/atlas-navigation.ts"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/tests/atlas-navigation.test.ts",
+        "restore": "website/tests/atlas-navigation.test.ts"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/lib/ultrasound-study.ts",
+        "restore": "website/lib/ultrasound-study.ts"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/lib/ultrasound-local-files.ts",
+        "restore": "website/lib/ultrasound-local-files.ts"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/components/UltrasoundLocalAtlas.tsx",
+        "restore": "website/components/UltrasoundLocalAtlas.tsx"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/components/ultrasound-local-atlas.css",
+        "restore": "website/components/ultrasound-local-atlas.css"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/tests/ultrasound-study.test.mjs",
+        "restore": "website/tests/ultrasound-study.test.mjs"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/tests/ultrasound-local-files.test.mjs",
+        "restore": "website/tests/ultrasound-local-files.test.mjs"
+      },
+      {
+        "path": "pending/ultrasound-local-20261025/website/docs/ultrasound-local-teaching.md",
+        "restore": "website/docs/ultrasound-local-teaching.md"
+      },
+      {
+        "path": "recipes/source-only-backup-20261019.mjs",
+        "restore": "coordination/source-only-backup-20261019.mjs"
+      },
+      {
+        "path": "recipes/seal-simple-website-successor.mjs",
+        "restore": "coordination/seal-simple-website-successor.mjs"
+      },
+      {
+        "path": "recipes/prepare-ultrasound-website-20261025.mjs",
+        "restore": "coordination/prepare-ultrasound-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-ultrasound-website-20261025.mjs",
+        "restore": "coordination/verify-ultrasound-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-ultrasound-polish-20261025.mjs",
+        "restore": "coordination/prepare-ultrasound-polish-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-ultrasound-polish-verification-20261025.mjs",
+        "restore": "coordination/prepare-ultrasound-polish-verification-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-ultrasound-polish-20261025.mjs",
+        "restore": "coordination/verify-ultrasound-polish-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-ultrasound-synthetic-qa-20261025.mjs",
+        "restore": "coordination/prepare-ultrasound-synthetic-qa-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-ultrasound-polish-browser-20261025.mjs",
+        "restore": "coordination/prepare-ultrasound-polish-browser-20261025.mjs"
+      },
+      {
+        "path": "recipes/preview-ultrasound-website-20261025.mjs",
+        "restore": "coordination/preview-ultrasound-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/preview-ultrasound-polish-20261025.mjs",
+        "restore": "coordination/preview-ultrasound-polish-20261025.mjs"
+      },
+      {
+        "path": "recipes/retry-ultrasound-polish-preview-20261025.mjs",
+        "restore": "coordination/retry-ultrasound-polish-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/preview-ultrasound-polish-tty-20261025.mjs",
+        "restore": "coordination/preview-ultrasound-polish-tty-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-ultrasound-source-20261025.mjs",
+        "restore": "coordination/backup-ultrasound-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "pending/ultrasound-local-20261025/website/app/atlas/ultrasound/page.tsx",
+      "bytes": 320,
+      "sha256": "cefbf9497f91cfcde8020eb3ba6419ef5d5a023b81e5db42095371aaf4dbf8f0"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/lib/atlas-navigation.ts",
+      "bytes": 7065,
+      "sha256": "b4380ea2daa8fe48b4ae31c59faf9843fef6809234567a2b7542389a5713bc6d"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/tests/atlas-navigation.test.ts",
+      "bytes": 14062,
+      "sha256": "3e99c4fad94762adf033f798b3de9d0081cfe0c8fc198b2b1c8c1837e8bd4075"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/lib/ultrasound-study.ts",
+      "bytes": 11881,
+      "sha256": "0bbc53a4b7fced11a409be26aa629bba3b162be05ebbace522275ef5b2941353"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/lib/ultrasound-local-files.ts",
+      "bytes": 6985,
+      "sha256": "a3a056750a62acce8360bf2fa5cdddb09aa14285beb7b91cb63412329c1f6217"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/components/UltrasoundLocalAtlas.tsx",
+      "bytes": 20904,
+      "sha256": "1e1dc2d0af59e371495d4ddf6a7bf7adc38bec22a59fba544310970d38388889"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/components/ultrasound-local-atlas.css",
+      "bytes": 4298,
+      "sha256": "4a2947b61e6f0dc306bc942d68d7dffcbcffa013f2538a7e527cd826a6011960"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/tests/ultrasound-study.test.mjs",
+      "bytes": 8767,
+      "sha256": "45d79b64e050d5d62cf7fa7a022aa614296200e24a2816553c95c23ece1e91c7"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/tests/ultrasound-local-files.test.mjs",
+      "bytes": 6136,
+      "sha256": "f72df635ee9fd21ccdfd2b1fff101a17f8baf9ca23d8689c430234c51a044a75"
+    },
+    {
+      "path": "pending/ultrasound-local-20261025/website/docs/ultrasound-local-teaching.md",
+      "bytes": 4666,
+      "sha256": "6b95264ff12173d9fe6c46c347f9db99769acfe20422b8603983fd633444b4a2"
+    },
+    {
+      "path": "recipes/source-only-backup-20261019.mjs",
+      "bytes": 7700,
+      "sha256": "3f8ea65871f15558d46c1c2a36feb0dee95d2408207f9d2762976ae66ead5212"
+    },
+    {
+      "path": "recipes/seal-simple-website-successor.mjs",
+      "bytes": 5382,
+      "sha256": "8e15dcfed86a8c97ed6ed558b891908acfef767c05a80947361876ad82b2d0c7"
+    },
+    {
+      "path": "recipes/prepare-ultrasound-website-20261025.mjs",
+      "bytes": 2431,
+      "sha256": "85b17cc699fbd38533791c2601ee6c7aaefc86aebe5b00c4306b253014838bd9"
+    },
+    {
+      "path": "recipes/verify-ultrasound-website-20261025.mjs",
+      "bytes": 11856,
+      "sha256": "5b64b7adcf1947b9867e9476b8438193eeb94a1284fbb9463e9a00e3c697746a"
+    },
+    {
+      "path": "recipes/prepare-ultrasound-polish-20261025.mjs",
+      "bytes": 3318,
+      "sha256": "2bd86804a95c8e38044149b10409833345216d03c86acce9f871dbe677f1c079"
+    },
+    {
+      "path": "recipes/prepare-ultrasound-polish-verification-20261025.mjs",
+      "bytes": 1114,
+      "sha256": "69cb3327069b45b89786a43dbe4ab7d7ab08b53a5af644a05d54094b9e7444a2"
+    },
+    {
+      "path": "recipes/verify-ultrasound-polish-20261025.mjs",
+      "bytes": 11700,
+      "sha256": "192f264298867501241a7aba4ff05d9c69bd28acfbb365f9b9840892621112fe"
+    },
+    {
+      "path": "recipes/prepare-ultrasound-synthetic-qa-20261025.mjs",
+      "bytes": 3449,
+      "sha256": "30739fccc8e647f1d12f0782dc1a2731836d83823f049d2ee7de877993e7fb4c"
+    },
+    {
+      "path": "recipes/prepare-ultrasound-polish-browser-20261025.mjs",
+      "bytes": 2024,
+      "sha256": "6c4fe612b68b164ed2f4a3cb6736fcd1c2b9c289b5e007a53492f9ccd6c7cd27"
+    },
+    {
+      "path": "recipes/preview-ultrasound-website-20261025.mjs",
+      "bytes": 3781,
+      "sha256": "a72f85b65ae977d131b0d3d4283436bd9095a30b6354b52ff819c43adc15d29e"
+    },
+    {
+      "path": "recipes/preview-ultrasound-polish-20261025.mjs",
+      "bytes": 3787,
+      "sha256": "181b352b24ac31dc92ae46d71c8721849497ec9ef69996dbf20d00092d158a2f"
+    },
+    {
+      "path": "recipes/retry-ultrasound-polish-preview-20261025.mjs",
+      "bytes": 770,
+      "sha256": "9cd898d7c87cef79a02a862ab3208b850f1c09f754c97199730bbb5a50e002d3"
+    },
+    {
+      "path": "recipes/preview-ultrasound-polish-tty-20261025.mjs",
+      "bytes": 3787,
+      "sha256": "6f426c6d249984454f2162c720776d915e421bb6190c89a0f0869ed1d8ac4c13"
+    },
+    {
+      "path": "recipes/backup-ultrasound-source-20261025.mjs",
+      "bytes": 6150,
+      "sha256": "c7cd56e43a29b20939ebee0b07e7dce96bce1dd916f9854f9fcc31742c20cfee"
+    }
+  ],
+  "removed": [],
+  "scope": "10explicit first-party Website source/test/documentation files plus14recipes. No patient or reference images, scans, masks, models, identifiers, private records, compiled output, dependency packages, raw QA screenshots or canonical Git ancestry. Incremental source supplement only; not cumulative, whole/private or runnable Website/Atlas recovery. Exact local parent baseline remains required. Draft annotations and source links are unreviewed; no publication, approval, spatial registration or preview installation.",
+  "proof": {
+    "focusedReportedPass": 399,
+    "repeatedHistoricalCollectorsAreNotDistinctCases": true,
+    "strictRoots": 9,
+    "strictTransitiveFiles": 627,
+    "strictDiagnostics": 0,
+    "stockProductionBuildPassed": true,
+    "buildFiles": 1131,
+    "sourcePathsChecked": 6679,
+    "browserSyntheticPickerKeyboardPanAndWheelPassed": true,
+    "referenceUnannotatedLocalOnly": true,
+    "rawQaUploaded": false,
+    "imagesUploaded": false,
+    "selectedBytes": 152333,
+    "clinicalApproval": false,
+    "spatialRegistration": false,
+    "ownerPreviewChanged": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
