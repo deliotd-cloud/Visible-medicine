@@ -1,0 +1,218 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T04:57:02.335Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-viewer-notice-role-source-not-cumulative",
+    "websiteSourceSha256": "27a063972c0e96feda2e0185c29408797e9036c811675fc8f485c00aaf208c24",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalParent": {
+      "path": "F:/VisibleMedicine/staging/20261025-cervical-role-website/SOURCE_CANDIDATE.json",
+      "sha256": "77d9a0e3ddbae2b32376e8c6205451d1deb8d2109378697d64e9ed59b6999270",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/cervical-role-source-20261025",
+      "head": "510b2d2d17b82a94e0a97581bd15f69f67f079f4",
+      "tree": "90e61360fa6c64dc559e6b0f431d2e25b6727bff",
+      "receiptSha256": "b89165d9710ea506a0e57948a5b19b6a69ee65efddd3a5842f2e947d3120cb68"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/atlas-current-history-wave4-contract.test.mjs",
+        "restore": "website/tests/atlas-current-history-wave4-contract.test.mjs"
+      },
+      {
+        "path": "website/tests/notice-history-preservation.test.mjs",
+        "restore": "website/tests/notice-history-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/wave4-notice-digest-guard.test.mjs",
+        "restore": "website/tests/wave4-notice-digest-guard.test.mjs"
+      },
+      {
+        "path": "website/tests/viewer-notice-current.test.mjs",
+        "restore": "website/tests/viewer-notice-current.test.mjs"
+      },
+      {
+        "path": "website/tests/viewer-notice-role-integrity.test.mjs",
+        "restore": "website/tests/viewer-notice-role-integrity.test.mjs"
+      },
+      {
+        "path": "website/tests/viewer-notice-roles.mjs",
+        "restore": "website/tests/viewer-notice-roles.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/viewer-notice-roles/manifest.json",
+        "restore": "website/tests/fixtures/viewer-notice-roles/manifest.json"
+      },
+      {
+        "path": "website/tests/fixtures/viewer-notice-roles/original-admission.mjs.raw",
+        "restore": "website/tests/fixtures/viewer-notice-roles/original-admission.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/viewer-notice-roles/original-guard3.mjs.raw",
+        "restore": "website/tests/fixtures/viewer-notice-roles/original-guard3.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/viewer-notice-roles/original-wave4.mjs.raw",
+        "restore": "website/tests/fixtures/viewer-notice-roles/original-wave4.mjs.raw"
+      },
+      {
+        "path": "recipes/prepare-viewer-notice-role-website-20261025.mjs",
+        "restore": "coordination/prepare-viewer-notice-role-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-viewer-notice-native-check-20261025.mjs",
+        "restore": "coordination/prepare-viewer-notice-native-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-viewer-notice-role-native-check-20261025.mjs",
+        "restore": "coordination/run-viewer-notice-role-native-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-viewer-notice-role-source-20261025.mjs",
+        "restore": "coordination/backup-viewer-notice-role-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-current-history-wave4-contract.test.mjs",
+      "bytes": 236,
+      "sha256": "391f59271aecb4671d07e0063cf3b6696d9414a3fee831d1c5ac7ac7494c0c02"
+    },
+    {
+      "path": "website/tests/notice-history-preservation.test.mjs",
+      "bytes": 254,
+      "sha256": "42a251ae4392e074e31b43c02d18679698f5eca97e32fcd434ce9e9a6228280e"
+    },
+    {
+      "path": "website/tests/wave4-notice-digest-guard.test.mjs",
+      "bytes": 249,
+      "sha256": "715986d811b6c7162473e173bf7a1357751e241823ffe53dd707c9006c8131b2"
+    },
+    {
+      "path": "website/tests/viewer-notice-current.test.mjs",
+      "bytes": 8390,
+      "sha256": "31eeda1490197c6e15244f0a92580d1ec257541d921032ce6c80f8d1fb647e53"
+    },
+    {
+      "path": "website/tests/viewer-notice-role-integrity.test.mjs",
+      "bytes": 7740,
+      "sha256": "97a74dd6b620d1c14dc431de189cc48f992e113df738e9c26c1f8aae47de43af"
+    },
+    {
+      "path": "website/tests/viewer-notice-roles.mjs",
+      "bytes": 20743,
+      "sha256": "2dee063d9d9896274447609a30701982cbea7ee5118dbe3e714fd35a0f87800a"
+    },
+    {
+      "path": "website/tests/fixtures/viewer-notice-roles/manifest.json",
+      "bytes": 5361,
+      "sha256": "e454df9d261970ad6e82f503cced5abfd244fde5e60446aca9f137bc8477478a"
+    },
+    {
+      "path": "website/tests/fixtures/viewer-notice-roles/original-admission.mjs.raw",
+      "bytes": 1941,
+      "sha256": "73bf416154b1f5ecb3d94e551d900582149aa102f25c1509d048ad5be2c47dff"
+    },
+    {
+      "path": "website/tests/fixtures/viewer-notice-roles/original-guard3.mjs.raw",
+      "bytes": 2256,
+      "sha256": "cf8505c4815bda3498c6bb8fd981a900026b8066be395851ea1ccaa4478edce4"
+    },
+    {
+      "path": "website/tests/fixtures/viewer-notice-roles/original-wave4.mjs.raw",
+      "bytes": 8417,
+      "sha256": "67d44d60387a833b16726fdb090d9f28e8231af3f557b90c0a70d496f14eea05"
+    },
+    {
+      "path": "recipes/prepare-viewer-notice-role-website-20261025.mjs",
+      "bytes": 6103,
+      "sha256": "68d47489a647c87feb2e19a3d57f70e30f704ab1f4ed6300dd03d2520de14757"
+    },
+    {
+      "path": "recipes/prepare-viewer-notice-native-check-20261025.mjs",
+      "bytes": 3885,
+      "sha256": "914644d8e16a24af9e074fe01696fee8b397ff6d4b5c022a2c6b4145e73cacb5"
+    },
+    {
+      "path": "recipes/run-viewer-notice-role-native-check-20261025.mjs",
+      "bytes": 8274,
+      "sha256": "ac465461367c6e8e29468c075f58b925a7b00c4663e9c7ac3726937cae3bd483"
+    },
+    {
+      "path": "recipes/backup-viewer-notice-role-source-20261025.mjs",
+      "bytes": 5817,
+      "sha256": "ea9e57135ce61a74ee73d7908639b479436f49271a8cdbebdd20d8692c386662"
+    }
+  ],
+  "removed": [],
+  "scope": "Ten first-party test/helper/code-fixture source paths plus four workflow recipes. No local input inventories/configuration, historical licence tail, scans/masks/images/medical annotations or coordinates, personal decisions, raw QA, dependencies/models or canonical Git ancestry. Incremental selected-source supplement only, not cumulative/whole/private/runnable backup. Ten reported parent cases plus separate genuine original4/1/3child cases, not18unique clinical scenarios. No commercial/clinical/registration/install/public-deployment clearance.",
+  "proof": {
+    "parentReportedPass": 10,
+    "parentWholeRoots": 5,
+    "mandatoryOriginalChildCounts": [
+      {
+        "role": "wave4",
+        "counts": {
+          "tests": 4,
+          "pass": 4,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      },
+      {
+        "role": "admission",
+        "counts": {
+          "tests": 1,
+          "pass": 1,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      },
+      {
+        "role": "guard",
+        "counts": {
+          "tests": 3,
+          "pass": 3,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      }
+    ],
+    "actualCurrentBuilderAnd24PackageInputsVerified": true,
+    "all22HistoricalNoticeSectionsByteExactAndOrdered": true,
+    "productBuilderAndNoticesUnchanged": true,
+    "sourcePathsChecked": 6814,
+    "strictGraphByteInputsPreserved": 6204,
+    "actualStrictAndProductionSourceSha256": "70de9af5459217c393f1f73be44aa93d3c967f88e8254ae15afdd759ffbec84e",
+    "freshStrictOrBuildForThisSource": false,
+    "reusedProductionArtifacts": 1141,
+    "nativeJobMemoryCeilingMiB": 2048,
+    "fullStockComplete": false,
+    "wholeSuitePassing": false,
+    "localInventoriesOrMedicalDataUploaded": false,
+    "selectedBytes": 79666,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

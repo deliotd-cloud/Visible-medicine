@@ -1,0 +1,199 @@
+{
+  "schema": "vm-viewer-notice-roles/1",
+  "sourceReceiptSha256": "8d329c4241b7d0fadee3890e24b69f5a9af366a4adad16a090d4bfe08fdc92f2",
+  "originals": {
+    "wave4": {
+      "bytes": 8417,
+      "sha256": "67d44d60387a833b16726fdb090d9f28e8231af3f557b90c0a70d496f14eea05"
+    },
+    "admission": {
+      "bytes": 1941,
+      "sha256": "73bf416154b1f5ecb3d94e551d900582149aa102f25c1509d048ad5be2c47dff"
+    },
+    "guard": {
+      "bytes": 2256,
+      "sha256": "cf8505c4815bda3498c6bb8fd981a900026b8066be395851ea1ccaa4478edce4"
+    }
+  },
+  "collectors": {
+    "wave4": "391f59271aecb4671d07e0063cf3b6696d9414a3fee831d1c5ac7ac7494c0c02",
+    "admission": "42a251ae4392e074e31b43c02d18679698f5eca97e32fcd434ce9e9a6228280e",
+    "guard": "715986d811b6c7162473e173bf7a1357751e241823ffe53dd707c9006c8131b2"
+  },
+  "caseCounts": {
+    "wave4": 4,
+    "admission": 1,
+    "guard": 3
+  },
+  "receipts": {
+    "wave4": "bbd4ca357b137db79340eea3f4a681310fe3cbcedb51137af904078487523d1c",
+    "admission": "8f29a0fca0a3c678236ad3fd7df5ef57fba23e0354d48f66fae45a6f370dfa3c",
+    "guard": "fef734825da049d23349b5eff39683a11f28749ddc30511511f1485600f705c5"
+  },
+  "prefix": {
+    "bytes": 5169,
+    "sha256": "ca157e31b434894550721835868a55ff6d7541c3edb1f6c9d545d5c493bcfcc6"
+  },
+  "historicalNative": {
+    "source": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+    "tree": "e9165d7122361f809a267af1414b337b69097fe2",
+    "pinSha256": "422a105495609f03a1e20660716406c737e1a14337843ed61d084bf95c7c7bed"
+  },
+  "current": {
+    "source": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "sourceTree": "6940282a3ae0462961b9b99a690c70f282ab8ce7",
+    "reviewIntegration": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "runtimeSources": {
+      "head-neck": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+      "shoulder": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+      "lower-limb": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+      "female-pelvis": "727ed5b451ae940a01e56272c8fbc703ea3b0095"
+    },
+    "viewerFiles": 54,
+    "viewerPackages": 24
+  },
+  "packages": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.7",
+      "license": "MIT"
+    },
+    {
+      "name": "@base-ui/react",
+      "version": "1.7.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@base-ui/utils",
+      "version": "0.3.2",
+      "license": "MIT"
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT"
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "license": "MIT"
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT"
+    },
+    {
+      "name": "@react-three/drei",
+      "version": "10.7.8",
+      "license": "MIT"
+    },
+    {
+      "name": "@react-three/fiber",
+      "version": "9.7.0",
+      "license": "MIT"
+    },
+    {
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT"
+    },
+    {
+      "name": "its-fine",
+      "version": "2.1.1",
+      "license": "MIT"
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.31.0",
+      "license": "ISC"
+    },
+    {
+      "name": "react",
+      "version": "19.2.8",
+      "license": "MIT"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.8",
+      "license": "MIT"
+    },
+    {
+      "name": "react-use-measure",
+      "version": "2.1.7",
+      "license": "MIT"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT"
+    },
+    {
+      "name": "suspend-react",
+      "version": "0.1.3",
+      "license": "MIT"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.6.0",
+      "license": "MIT"
+    },
+    {
+      "name": "three",
+      "version": "0.185.1",
+      "license": "MIT"
+    },
+    {
+      "name": "three-mesh-bvh",
+      "version": "0.8.3",
+      "license": "MIT"
+    },
+    {
+      "name": "three-stdlib",
+      "version": "2.36.1",
+      "license": "MIT"
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "license": "MIT"
+    },
+    {
+      "name": "zustand",
+      "version": "5.0.15",
+      "license": "MIT"
+    }
+  ],
+  "currentNoticeSha256": "d83659cc9cb48ef9439e69a0989bb0fece6043cb363d0bcba612479a719d1902",
+  "recipe": {
+    "builderSha256": "ff794e14a3c95e0404f114d364db370a9ef6059cf0dc90c34f004bf9d856cfc4",
+    "start": "const notices = [",
+    "end": "writeFileSync('public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt'",
+    "fragmentSha256": "6989478e9a781372a088072b7dde25a5b1ddad7cc8c9fa21e0c5828bbfa56711",
+    "outputExpression": "notices.join('\\n\\n')+'\\n'"
+  },
+  "oldTail": {
+    "bytes": 36402,
+    "sha256": "fb0acbfee8b40326657abb39fb24d4ff74b02d79f1e424d44a4630610a016c42"
+  },
+  "localEvidence": {
+    "sha256": "b3f27a2c38e38c99f9dac73e4ec6ce7e3f61b9d6d069182bb8e416783b46bd77",
+    "roleRows": {
+      "wave4": 44,
+      "admission": 3,
+      "guard": 2
+    },
+    "gitObjects": 26,
+    "currentRows": 55
+  }
+}

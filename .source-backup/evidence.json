@@ -1,0 +1,58 @@
+{
+  "parentReportedPass": 10,
+  "parentWholeRoots": 5,
+  "mandatoryOriginalChildCounts": [
+    {
+      "role": "wave4",
+      "counts": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "passing": true
+    },
+    {
+      "role": "admission",
+      "counts": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "passing": true
+    },
+    {
+      "role": "guard",
+      "counts": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "passing": true
+    }
+  ],
+  "actualCurrentBuilderAnd24PackageInputsVerified": true,
+  "all22HistoricalNoticeSectionsByteExactAndOrdered": true,
+  "productBuilderAndNoticesUnchanged": true,
+  "sourcePathsChecked": 6814,
+  "strictGraphByteInputsPreserved": 6204,
+  "actualStrictAndProductionSourceSha256": "70de9af5459217c393f1f73be44aa93d3c967f88e8254ae15afdd759ffbec84e",
+  "freshStrictOrBuildForThisSource": false,
+  "reusedProductionArtifacts": 1141,
+  "nativeJobMemoryCeilingMiB": 2048,
+  "fullStockComplete": false,
+  "wholeSuitePassing": false,
+  "localInventoriesOrMedicalDataUploaded": false,
+  "selectedBytes": 79666,
+  "ownerPreviewChanged": false,
+  "installed": false,
+  "clinicalApproval": false
+}
