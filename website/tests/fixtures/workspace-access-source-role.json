@@ -1,0 +1,32 @@
+{
+  "schema": "vm-workspace-access-source-role/1",
+  "path": "app/workspace/page.tsx",
+  "beforeSha256": "f2cb7a59721ac606632f6acebbedd6dd08e001b579c6fd75a764fe2f8ed56599",
+  "afterSha256": "fd72a74dd2221548d6419f97f1f35d1f929a4223593cc1efc652f8c6cdce3c9a",
+  "beforeBytes": 6193,
+  "afterBytes": 7597,
+  "baselineSourceCandidateV5Sha256": "24cdf7e2f5bb47142fb0c27a6730269d03539d425f75b1a1ba3536282d5ab482",
+  "normalRenderSuffixSha256": "2276330f7cf3bd36d9444bac612aae9ec242476ffc2ac83eadba8212695b3f4a",
+  "nativeInverseModuleSha256": "2d5e8cf76a02501d700be54867fd81068195815542d3aaf1304d7dd002da7efa",
+  "nativeInverseResultSha256": "5db80991307ffd7f8d3164e516bb68a08544b2d9a8e040fa5f6df747550d26e5",
+  "originalMetadataSha256": "ec0f0b5fad5afa11b56115025cd126ce670cd78a4e1d94ab18d59af4b65cc9c4",
+  "originalWorkspaceTextSha256": "3a742c5e0ef484852da0b42a24d21b0c61f796b6ffcf474accf46ccd6f22e4ba",
+  "edits": [
+    [
+      "import { getPlatformSnapshot } from \"../../db/platform\";\n",
+      "import { getPlatformSnapshot, PlatformAccessError, type PlatformSnapshot } from \"../../db/platform\";\n"
+    ],
+    [
+      "  const snapshot = await getPlatformSnapshot(auth);\n",
+      "  let snapshot: PlatformSnapshot | null;\n  try {\n    snapshot = await getPlatformSnapshot(auth);\n  } catch (error) {\n    if (!(error instanceof PlatformAccessError)) throw error;\n    snapshot = null;\n  }\n"
+    ],
+    [
+      "  const studioAvailable = snapshot.entitlement.studioAccess;\n",
+      "  const studioAvailable = snapshot?.entitlement.studioAccess === true;\n"
+    ],
+    [
+      "  const storageGb = Math.round(snapshot.entitlement.storageBytes / 1073741824);\n",
+      "  if (!snapshot) return (\n    <main className=\"inner-page workspace-page workspace-home\">\n      <header className=\"workspace-hero\"><div><p className=\"eyebrow\"><span /> Your workspace</p><h1>Workspace access is restricted</h1><p>{user.displayName}</p></div></header>\n      <section className=\"workspace-secondary\" aria-label=\"Institution access\">\n        <p role=\"status\">An active institution membership and workspace entitlement are required. Ask your institution administrator to check your access.</p>\n        <p>You can still open My Learning or browse the Atlas. Atlas, imaging cases and lectures keep their separate access requirements.</p>\n      </section>\n      <nav className=\"workspace-destinations\" aria-label=\"Available destinations\">\n        <Link href=\"/my-learning\"><strong>My Learning</strong><span>Continue learning available to your account.</span></Link>\n        <Link href=\"/atlas\"><strong>Browse the Atlas</strong><span>Choose an anatomy region manually.</span></Link>\n        {clinicalReviewAvailable && <Link href=\"/workspace/clinical-review-inbox\"><strong>Clinical Review</strong><span>Open independently authorized review work.</span></Link>}\n      </nav>\n    </main>\n  );\n  const storageGb = Math.round(snapshot.entitlement.storageBytes / 1073741824);\n"
+    ]
+  ]
+}

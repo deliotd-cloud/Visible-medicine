@@ -1,0 +1,6 @@
+// Child-only relocation of the original single 485-index read. No source/export substitution.
+import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';import {syncBuiltinESMExports} from 'node:module';
+const sha=b=>createHash('sha256').update(b).digest('hex'),site=process.env.VM_COVERAGE_HISTORICAL_SITE,prior=process.env.VM_COVERAGE_485_INDEX;assert(site&&prior);
+const source=fs.readFileSync(path.join(site,'tests/current-190-coverage.test.mjs'));assert.equal(sha(source),'83f74758a50eff36e3cfa320067e040ef4fc33bf70cb8f78f1a12e3ba186a9b4');const matches=[...source.toString().matchAll(/const oldIndexPath='([^']+)';/g)];assert.equal(matches.length,1);const originalPath=matches[0][1],original=fs.readFileSync;
+assert.equal(sha(original(prior)),'9020eac8ed2fee77ef04b63357eabd23471f99e3e966d5b2c427010ee3478579');
+fs.readFileSync=function(file,...args){if(file===originalPath){const bytes=original(prior);assert.equal(sha(bytes),'9020eac8ed2fee77ef04b63357eabd23471f99e3e966d5b2c427010ee3478579');return original(prior,...args);}return original(file,...args);};syncBuiltinESMExports();process.once('exit',()=>{fs.readFileSync=original;syncBuiltinESMExports();});

@@ -1,0 +1,37 @@
+{
+  "schema": "vm-coverage-historical-code/2",
+  "source": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+  "receiptSha256": "1b38f47acd68bd9765d442f356a3390bda69f305007887739e03b362b480a9a3",
+  "sourceRows": [
+    {
+      "path": "tests/current-190-coverage.test.mjs",
+      "bytes": 6612,
+      "sha256": "83f74758a50eff36e3cfa320067e040ef4fc33bf70cb8f78f1a12e3ba186a9b4"
+    },
+    {
+      "path": "scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "08df7a27772669c6041d7b7d42968e8c3c3df78ecae0727335e030905504d567"
+    },
+    {
+      "path": "scripts/build-anatomy-coverage-index.mjs",
+      "bytes": 6454,
+      "sha256": "d9166d2b6924cbfb6dfe2f688e1d53fc47ba3aa790be80604a18d4ff550d259a"
+    },
+    {
+      "path": "lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "262f885d631bdfdf7fc66deca1f0308f8a56d305bb384c8c362fc94a8bad9606"
+    },
+    {
+      "path": "tests/current-atlas-delivery.mjs",
+      "bytes": 5092,
+      "sha256": "52551fd5ec16154a78b94f78e0cdfbfee6a1bea629f70714f3dd5f93ccb81bb5"
+    },
+    {
+      "path": "tests/atlas-source-repo.mjs",
+      "bytes": 1588,
+      "sha256": "45be52da6f2a93fdff2276235b357d6e491385af8a84ab8e0193905f6d49f356"
+    }
+  ]
+}

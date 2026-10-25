@@ -1,0 +1,2 @@
+import test from 'node:test';import {runOriginalCoverage} from './coverage-delivery-roles.mjs';
+test('complete original four-case6d coverage theorem remains exact at its authentic delivery',()=>{runOriginalCoverage();});

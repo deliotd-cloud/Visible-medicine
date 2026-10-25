@@ -1,0 +1,403 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T02:42:31.371Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-panels-access-coverage-and-approved-brand-not-cumulative",
+    "websiteSourceSha256": "1efb21d5ab75469815d1169a0e8c15e7b0dd91908a74e11a6d79b5013e20a74d",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalParent": {
+      "path": "F:/VisibleMedicine/staging/20261025-effective-entitlement-website/SOURCE_CANDIDATE_V5.json",
+      "sha256": "24cdf7e2f5bb47142fb0c27a6730269d03539d425f75b1a1ba3536282d5ab482",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/effective-entitlement-source-20261025",
+      "head": "aff5376828b8d889fb522e90e1001826e4d40086",
+      "tree": "a66232bbac66025bfe2a823d1231b991de536e38",
+      "receiptSha256": "ce48c54e88f6f2c95f199c176dbe1a642bd5d476c654472a0f203797751c1a2f"
+    },
+    "approvedBrandSource": {
+      "canonicalHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+      "approvalCommit": "ff984ea1f714594f2d93aad332f25073156a8e13",
+      "files": 8
+    },
+    "restorePaths": [
+      {
+        "path": "website/lib/ultrasound-study.ts",
+        "restore": "website/lib/ultrasound-study.ts"
+      },
+      {
+        "path": "website/components/UltrasoundLocalAtlas.tsx",
+        "restore": "website/components/UltrasoundLocalAtlas.tsx"
+      },
+      {
+        "path": "website/docs/ultrasound-local-teaching.md",
+        "restore": "website/docs/ultrasound-local-teaching.md"
+      },
+      {
+        "path": "website/app/api/platform/embed-origins/route.ts",
+        "restore": "website/app/api/platform/embed-origins/route.ts"
+      },
+      {
+        "path": "website/app/workspace/page.tsx",
+        "restore": "website/app/workspace/page.tsx"
+      },
+      {
+        "path": "website/db/platform.ts",
+        "restore": "website/db/platform.ts"
+      },
+      {
+        "path": "website/tests/workspace-embed-disclosure.test.mjs",
+        "restore": "website/tests/workspace-embed-disclosure.test.mjs"
+      },
+      {
+        "path": "website/tests/current-190-coverage.test.mjs",
+        "restore": "website/tests/current-190-coverage.test.mjs"
+      },
+      {
+        "path": "website/tests/ultrasound-image-panels.test.mjs",
+        "restore": "website/tests/ultrasound-image-panels.test.mjs"
+      },
+      {
+        "path": "website/tests/platform-access-state.test.mjs",
+        "restore": "website/tests/platform-access-state.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/workspace-access-source-role.json",
+        "restore": "website/tests/fixtures/workspace-access-source-role.json"
+      },
+      {
+        "path": "website/tests/workspace-access-source-role.mjs",
+        "restore": "website/tests/workspace-access-source-role.mjs"
+      },
+      {
+        "path": "website/tests/workspace-access-source-role.test.mjs",
+        "restore": "website/tests/workspace-access-source-role.test.mjs"
+      },
+      {
+        "path": "website/tests/coverage-delivery-roles.mjs",
+        "restore": "website/tests/coverage-delivery-roles.mjs"
+      },
+      {
+        "path": "website/tests/coverage-historical-read.mjs",
+        "restore": "website/tests/coverage-historical-read.mjs"
+      },
+      {
+        "path": "website/tests/current-coverage-delivery.test.mjs",
+        "restore": "website/tests/current-coverage-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/coverage-6d-code/manifest.json",
+        "restore": "website/tests/fixtures/coverage-6d-code/manifest.json"
+      },
+      {
+        "path": "website/public/brand/icons/apple-touch-icon.png",
+        "restore": "website/public/brand/icons/apple-touch-icon.png"
+      },
+      {
+        "path": "website/public/brand/icons/favicon-16x16.png",
+        "restore": "website/public/brand/icons/favicon-16x16.png"
+      },
+      {
+        "path": "website/public/brand/icons/favicon-32x32.png",
+        "restore": "website/public/brand/icons/favicon-32x32.png"
+      },
+      {
+        "path": "website/public/brand/icons/favicon-48x48.png",
+        "restore": "website/public/brand/icons/favicon-48x48.png"
+      },
+      {
+        "path": "website/public/brand/icons/favicon.ico",
+        "restore": "website/public/brand/icons/favicon.ico"
+      },
+      {
+        "path": "website/public/brand/icons/pwa-icon-192x192.png",
+        "restore": "website/public/brand/icons/pwa-icon-192x192.png"
+      },
+      {
+        "path": "website/public/brand/icons/pwa-icon-512x512.png",
+        "restore": "website/public/brand/icons/pwa-icon-512x512.png"
+      },
+      {
+        "path": "website/public/brand/icons/pwa-maskable-icon-512x512.png",
+        "restore": "website/public/brand/icons/pwa-maskable-icon-512x512.png"
+      },
+      {
+        "path": "recipes/source-only-backup-20261019.mjs",
+        "restore": "coordination/source-only-backup-20261019.mjs"
+      },
+      {
+        "path": "recipes/seal-simple-website-successor.mjs",
+        "restore": "coordination/seal-simple-website-successor.mjs"
+      },
+      {
+        "path": "recipes/native-website-integration-stage-20261025.mjs",
+        "restore": "coordination/native-website-integration-stage-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-bound-website-check-20261025.mjs",
+        "restore": "coordination/run-bound-website-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-ultrasound-panels-website-20261025.mjs",
+        "restore": "coordination/prepare-ultrasound-panels-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-ultrasound-panels-20261025.mjs",
+        "restore": "coordination/seal-ultrasound-panels-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-ultrasound-panels-20261025.mjs",
+        "restore": "coordination/check-ultrasound-panels-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-panels-access-coverage-20261025.mjs",
+        "restore": "coordination/integrate-panels-access-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-panels-combined-verification-20261025.mjs",
+        "restore": "coordination/prepare-panels-combined-verification-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-panels-combined-20261025.mjs",
+        "restore": "coordination/verify-panels-combined-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-panels-combined-20261025.mjs",
+        "restore": "coordination/check-panels-combined-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-panels-access-and-coverage-20261025.mjs",
+        "restore": "coordination/check-panels-access-and-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-panels-access-source-20261025.mjs",
+        "restore": "coordination/backup-panels-access-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/ultrasound-study.ts",
+      "bytes": 14869,
+      "sha256": "baff6a831be3b9f96ac31f3aa4ce1633ce8d27bf8a420eb25fe39bdc3826dc30"
+    },
+    {
+      "path": "website/components/UltrasoundLocalAtlas.tsx",
+      "bytes": 25779,
+      "sha256": "66e977573e93377e92a25ab8fc89ac81fcdd34035fea18e4e14677a9bd95cdc2"
+    },
+    {
+      "path": "website/docs/ultrasound-local-teaching.md",
+      "bytes": 6177,
+      "sha256": "7c372f8035664da424ad4cb2b6f4f71989a5c7cf65ea41f545824aa91a2799a3"
+    },
+    {
+      "path": "website/app/api/platform/embed-origins/route.ts",
+      "bytes": 3438,
+      "sha256": "1d417be0270b5059f3685f8a9bba057af9c5cb4b11631512009e6266e8000f8b"
+    },
+    {
+      "path": "website/app/workspace/page.tsx",
+      "bytes": 7597,
+      "sha256": "fd72a74dd2221548d6419f97f1f35d1f929a4223593cc1efc652f8c6cdce3c9a"
+    },
+    {
+      "path": "website/db/platform.ts",
+      "bytes": 28589,
+      "sha256": "136cca6329498901d1d7c8fb77e2e64694ee04b29122892b1565cd5381a1de10"
+    },
+    {
+      "path": "website/tests/workspace-embed-disclosure.test.mjs",
+      "bytes": 7747,
+      "sha256": "1d609ac330a72b4a0fdbe64bc257a2b11e5af7577422932bed2570b5847e8185"
+    },
+    {
+      "path": "website/tests/current-190-coverage.test.mjs",
+      "bytes": 220,
+      "sha256": "76826d8987355f04586a62c95b36b8c79a39a1605fb74f3d5b3d20e9be6eb3fb"
+    },
+    {
+      "path": "website/tests/ultrasound-image-panels.test.mjs",
+      "bytes": 6356,
+      "sha256": "468d7fe3af92c531b5483a358e024af94d93a8ff46d7d425d52c3a626987c4eb"
+    },
+    {
+      "path": "website/tests/platform-access-state.test.mjs",
+      "bytes": 10972,
+      "sha256": "6dfa5bc19fbb4d24dde27ab22f331803a79a37cb027965348a25743ece78599c"
+    },
+    {
+      "path": "website/tests/fixtures/workspace-access-source-role.json",
+      "bytes": 3037,
+      "sha256": "54afb1c43e8010f5baa1e6a78c70f0e1e4a24e46aa2a9c0efdfb6c34788b3e90"
+    },
+    {
+      "path": "website/tests/workspace-access-source-role.mjs",
+      "bytes": 2734,
+      "sha256": "8ba3369111c35a05b4e5ea648b0d2cdf5e74a35e8e18c9d8f18184a2cac4e55e"
+    },
+    {
+      "path": "website/tests/workspace-access-source-role.test.mjs",
+      "bytes": 2543,
+      "sha256": "4316697b0bf878af4c6d7e4169342d1d4dd38108e8865fc7d8385c887920fc1e"
+    },
+    {
+      "path": "website/tests/coverage-delivery-roles.mjs",
+      "bytes": 5853,
+      "sha256": "b6ca17d978647a475bf7613ee463403609c852f5306f87e949a19251abbe6bf4"
+    },
+    {
+      "path": "website/tests/coverage-historical-read.mjs",
+      "bytes": 1241,
+      "sha256": "97342042ccf11a937168c3722c5f63358a47310dd0b3fc9a7552d38914980295"
+    },
+    {
+      "path": "website/tests/current-coverage-delivery.test.mjs",
+      "bytes": 4939,
+      "sha256": "1d1b918dddf4126584537b2eb75275b2b39e7469c1835f494910fc69e6386f07"
+    },
+    {
+      "path": "website/tests/fixtures/coverage-6d-code/manifest.json",
+      "bytes": 1219,
+      "sha256": "8301605b140dc78035f985a4dc86bde5606cac5b29ad8fd6babf54549d600a8f"
+    },
+    {
+      "path": "website/public/brand/icons/apple-touch-icon.png",
+      "bytes": 10964,
+      "sha256": "98a5b87d1d822d6a22d0593c8e5293daf49ab35a101e4bc0e01c1c8dcf0a6334"
+    },
+    {
+      "path": "website/public/brand/icons/favicon-16x16.png",
+      "bytes": 521,
+      "sha256": "8e367eca7d3d76b63db59b8675066cdc4869fa0632c927c6751ea5a3cca0b63f"
+    },
+    {
+      "path": "website/public/brand/icons/favicon-32x32.png",
+      "bytes": 1194,
+      "sha256": "d25e8ae901ce476ec6f15f8b4b55c3971ce18e0c80522b222ff467e84415874f"
+    },
+    {
+      "path": "website/public/brand/icons/favicon-48x48.png",
+      "bytes": 1940,
+      "sha256": "89eec9e0d7dd87a61ea42db138934da779a90c5e473e8be826ed35afa972ba8f"
+    },
+    {
+      "path": "website/public/brand/icons/favicon.ico",
+      "bytes": 35315,
+      "sha256": "b8b4b55fbf53119678b8b9a638379a6c27e3a8c95e51a6aa0d8b204d2ea09afc"
+    },
+    {
+      "path": "website/public/brand/icons/pwa-icon-192x192.png",
+      "bytes": 11785,
+      "sha256": "0238c15a50f6a1028028ab84a496a06ae82c8bb4cc5a8532c88c9dbc0d9f0dff"
+    },
+    {
+      "path": "website/public/brand/icons/pwa-icon-512x512.png",
+      "bytes": 55487,
+      "sha256": "3d085c29fe79795f2ec50809c821ae322e7a359c305b2c2d2785de218c3a0662"
+    },
+    {
+      "path": "website/public/brand/icons/pwa-maskable-icon-512x512.png",
+      "bytes": 38667,
+      "sha256": "87f6c614cbb00a1ec54ee43216003ea903f0df53cabe70624959da5a82a145be"
+    },
+    {
+      "path": "recipes/source-only-backup-20261019.mjs",
+      "bytes": 7700,
+      "sha256": "3f8ea65871f15558d46c1c2a36feb0dee95d2408207f9d2762976ae66ead5212"
+    },
+    {
+      "path": "recipes/seal-simple-website-successor.mjs",
+      "bytes": 5382,
+      "sha256": "8e15dcfed86a8c97ed6ed558b891908acfef767c05a80947361876ad82b2d0c7"
+    },
+    {
+      "path": "recipes/native-website-integration-stage-20261025.mjs",
+      "bytes": 3081,
+      "sha256": "6d090826c5c74de71e9f3da52622397ce18ea461a8587b3d3cd1de6516ee3186"
+    },
+    {
+      "path": "recipes/run-bound-website-check-20261025.mjs",
+      "bytes": 4395,
+      "sha256": "9aa58909fca0fd06493bd78dab25fb0fe1c2c75c8c3e8bc0a29b650e109ef7d7"
+    },
+    {
+      "path": "recipes/prepare-ultrasound-panels-website-20261025.mjs",
+      "bytes": 3053,
+      "sha256": "ee6e679c85b2df1c835c82fcbe010914fa483861f1cd899fd924703d2a15f3c0"
+    },
+    {
+      "path": "recipes/seal-ultrasound-panels-20261025.mjs",
+      "bytes": 2248,
+      "sha256": "759f4d51a4459a24e799c4526ec846dae8d4882048a780ef2546afe74e0c2141"
+    },
+    {
+      "path": "recipes/check-ultrasound-panels-20261025.mjs",
+      "bytes": 703,
+      "sha256": "ac81522db8bf4594e9b40a8a520698c6cebc33a9bbd211fc95f47312aec6cfd0"
+    },
+    {
+      "path": "recipes/integrate-panels-access-coverage-20261025.mjs",
+      "bytes": 6011,
+      "sha256": "48314e21ee97fa1925dda10a9e09b32d2faa781496d04a11af63648acf074237"
+    },
+    {
+      "path": "recipes/prepare-panels-combined-verification-20261025.mjs",
+      "bytes": 3441,
+      "sha256": "f0603cf900a664abf8335b1e4c26df889399ca297496305e33d0ac793f2c9aad"
+    },
+    {
+      "path": "recipes/verify-panels-combined-20261025.mjs",
+      "bytes": 7930,
+      "sha256": "abd356838d6496708eb8b961da73979fd1fdb34fdabe5ec94c7e3645884b3577"
+    },
+    {
+      "path": "recipes/check-panels-combined-20261025.mjs",
+      "bytes": 3736,
+      "sha256": "71eaf0ad0ef439a9bba9e244cc2e7ee2a4dbdc2903a62a2a72b5a6d2579f9dd3"
+    },
+    {
+      "path": "recipes/check-panels-access-and-coverage-20261025.mjs",
+      "bytes": 1490,
+      "sha256": "f6d163c5f87c7c496730527521200d5fa2faa9012dfdef48530ba6607d0ce2af"
+    },
+    {
+      "path": "recipes/backup-panels-access-source-20261025.mjs",
+      "bytes": 6622,
+      "sha256": "ccdd89041ba54de416b0240d967e844bd873dd449c0c98f4ecee0e96e012a3c3"
+    }
+  ],
+  "removed": [],
+  "scope": "17first-party application/test/document source files,8unchanged tracked approved Visible Medicine brand icons,13workflow recipes. No medical images, thyroid or renal reference files/annotations/coordinates, patient data, decisions, complete private inventories, raw QA, dependencies, geometry or canonical Git ancestry. Incremental selected source/brand supplement only; not cumulative, whole/private or runnable Website/Atlas backup. No clinical approval, patient-space registration, owner preview installation or public deployment.",
+  "proof": {
+    "focusedReportedPass": 678,
+    "wholeRoots": 63,
+    "historicalCollectorsRepeatCases": true,
+    "coverageOriginalFourChildCasesMandatory": true,
+    "fullStrictRoots": 2653,
+    "fullStrictFiles": 6204,
+    "fullStrictDiagnostics": 0,
+    "fullStrictSourceSha256": "1efb21d5ab75469815d1169a0e8c15e7b0dd91908a74e11a6d79b5013e20a74d",
+    "scopeExclusionsAdded": false,
+    "stockProductionBuildPassed": true,
+    "buildFiles": 1141,
+    "sourcePathsChecked": 6793,
+    "selectedBrandIcons": 8,
+    "medicalImagesOrAnnotationsUploaded": false,
+    "rawQaUploaded": false,
+    "actualAccountPermissionOrDatabaseWrites": false,
+    "selectedBytes": 344975,
+    "clinicalApproval": false,
+    "ownerPreviewChanged": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
