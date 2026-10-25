@@ -1,0 +1,152 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T07:26:25.639Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-nested-queue-and-respiratory-role-source-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "e35c9c4c8abfb2faf2898e4bd6bc6e5cc9fab09e76c65d5d8cfcad05ffbee8c6",
+    "requiredSourceSupplement": {
+      "branch": "backup/page-ssr-query-source-20261025",
+      "head": "034b6a424bc7e223d5d4818c5a117825d2be1159",
+      "tree": "c22d33f19e6d119c79b9dde4e12e677d5c80e67e",
+      "receiptSha256": "b91a961fdda4961c7e326d2bf1d20c1026abe87bd19c8c89fc29132a4b020e25"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/atlas-nested-answer-focus.test.ts",
+        "restore": "website/tests/atlas-nested-answer-focus.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-nested-review-queue.test.ts",
+        "restore": "website/tests/atlas-nested-review-queue.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-respiratory-core-depth-checks.mjs",
+        "restore": "website/tests/atlas-respiratory-core-depth-checks.mjs"
+      },
+      {
+        "path": "website/tests/atlas-teaching-original-roles.mjs",
+        "restore": "website/tests/atlas-teaching-original-roles.mjs"
+      },
+      {
+        "path": "website/tests/atlas-teaching-original-roles.test.mjs",
+        "restore": "website/tests/atlas-teaching-original-roles.test.mjs"
+      },
+      {
+        "path": "recipes/review-nested-entry-source-20261025.mjs",
+        "restore": "coordination/review-nested-entry-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nested-respiratory-shadow-check-20261025.mjs",
+        "restore": "coordination/prepare-nested-respiratory-shadow-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-nested-respiratory-role-shadow-20261025.mjs",
+        "restore": "coordination/check-nested-respiratory-role-shadow-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-respiratory-heap512-20261025.mjs",
+        "restore": "coordination/check-respiratory-heap512-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-nested-respiratory-role-source-20261025.mjs",
+        "restore": "coordination/backup-nested-respiratory-role-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-nested-answer-focus.test.ts",
+      "bytes": 3486,
+      "sha256": "f58e46123f92e8c38431ef5dff04b184f57c26ea7e3e283d2177bb78bedfe592"
+    },
+    {
+      "path": "website/tests/atlas-nested-review-queue.test.ts",
+      "bytes": 17248,
+      "sha256": "5625ef3c4040fe70d265525e86aec7dfa7cba62aa3244f998d58f47a1156e6a1"
+    },
+    {
+      "path": "website/tests/atlas-respiratory-core-depth-checks.mjs",
+      "bytes": 36353,
+      "sha256": "8e2b3501bd84934277b44c0c37d137dc9c9495d7618c1d6ffab1f9d300a8eb88"
+    },
+    {
+      "path": "website/tests/atlas-teaching-original-roles.mjs",
+      "bytes": 8562,
+      "sha256": "f123f9330bba00dc03460b6459e338b99f71b6e512aa14bcf9d9fe3ecaa2d964"
+    },
+    {
+      "path": "website/tests/atlas-teaching-original-roles.test.mjs",
+      "bytes": 326,
+      "sha256": "69567f3e77acb9a3c009ea4690354ee2a549ba815c32626a7b9e995475755d09"
+    },
+    {
+      "path": "recipes/review-nested-entry-source-20261025.mjs",
+      "bytes": 1976,
+      "sha256": "6dbc115037aefc21aef99aafbf4d051100dcd0dc57984202a2827721c48b9db1"
+    },
+    {
+      "path": "recipes/prepare-nested-respiratory-shadow-check-20261025.mjs",
+      "bytes": 3489,
+      "sha256": "d163e6d01eaaaa3ba1101e79cb8f8189d91165f9e33044a8dfb89de86a1be6c6"
+    },
+    {
+      "path": "recipes/check-nested-respiratory-role-shadow-20261025.mjs",
+      "bytes": 7581,
+      "sha256": "45e231a0b7b435373c8b4902fdc1a3485880bd7c16cd6bf797c503f9ab00a6f5"
+    },
+    {
+      "path": "recipes/check-respiratory-heap512-20261025.mjs",
+      "bytes": 7590,
+      "sha256": "009ecef664f3dfd52845e3823a7225e0896850011a066b6898771616b9252f18"
+    },
+    {
+      "path": "recipes/backup-nested-respiratory-role-source-20261025.mjs",
+      "bytes": 5749,
+      "sha256": "4289596bb0424b83d801cfdf645f5004a3579956d42773e1ecb86e024a16a106"
+    }
+  ],
+  "removed": [],
+  "scope": "Five first-party test/helper sources and five workflow recipes only. No raw logs, private configuration/closure, historical checkout or anatomy bytes, scans/masks/medical coordinates, review decisions, dependencies/models or canonical ancestry. Incremental supplement; prior sources required, not whole/private/runnable backup. Source/SSR checks are not actual browser or clinical approval.",
+  "proof": {
+    "initialParentCases": 10,
+    "initialPass": 9,
+    "initialFail": 1,
+    "initialComplete": false,
+    "initialHeap256OOM134Retained": true,
+    "respiratoryOnlyRetryCases": 1,
+    "respiratoryRetryPassing": true,
+    "retryHeapMiB": 512,
+    "nativeAggregateJobMiB": 1536,
+    "sampledAggregatePeakWorkingMiB": 1112,
+    "sampledPeakIsNotLifetimePeak": true,
+    "sameWholeSourceAndAssertions": true,
+    "allFourMandatoryWholeOriginalChildrenPassing": true,
+    "originalChildResultCounts": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "lastOriginalIsOneWholeAssertionScriptFileNotOneClinicalCase": true,
+    "queueFirstTwoCasesRemainIntact": true,
+    "hermeticOldQueuePhysicalWebsiteGraph": true,
+    "currentNestedHtmlEntryAndSourceReceiptBound": true,
+    "currentFamilySharedBytesAuthenticated": true,
+    "newProductSourceChanged": false,
+    "fullStockComplete": false,
+    "combinedCandidateTypesBuildBrowserPending": true,
+    "sourceBytes": 92360,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "privateDataUploaded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
