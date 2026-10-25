@@ -1,0 +1,121 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T19:40:58.933Z",
+  "sourceIdentity": {
+    "candidateReceiptSha256": "0794f90c818a9e8fb9f885750d0fe4b1c7d4277fd1cd6299c60acd36af2c91b3",
+    "previousFilteredSupplementHead": "d390d8c8a0120fc51e4426f91a1fd869bea5680a"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/platform-governance.ts",
+      "restore": "website/lib/platform-governance.ts",
+      "bytes": 45276,
+      "sha256": "d72d61cec8c24e2bf75d4c935401f97ecf4fe1251c5ece4f0fcfbec8a2a2756a"
+    },
+    {
+      "path": "website/tests/atlas-structure-search.test.mjs",
+      "restore": "website/tests/atlas-structure-search.test.mjs",
+      "bytes": 7990,
+      "sha256": "1561f3c99bb51ce6d23b14ec052b45de57a9690c23333622571cbb4a96c904a3"
+    },
+    {
+      "path": "website/tests/public-search-bootstrap-source.mjs",
+      "restore": "website/tests/public-search-bootstrap-source.mjs",
+      "bytes": 1166,
+      "sha256": "7bbeaf9de06161c50032315c5f7954a15b2a64f5265a060e4d4013d5e3da52b6"
+    },
+    {
+      "path": "website/tests/public-search-bootstrap.test.mjs",
+      "restore": "website/tests/public-search-bootstrap.test.mjs",
+      "bytes": 4933,
+      "sha256": "6ac970e20ab280b962996e447604449ed7f54eb0d7cfca0ccf1eb4887b99f441"
+    },
+    {
+      "path": "website/tests/unified-search-concepts.test.ts",
+      "restore": "website/tests/unified-search-concepts.test.ts",
+      "bytes": 8360,
+      "sha256": "aaed6ec0b96ff6a812f997027e243f1bb2e1f9d963897706522a99a362363159"
+    },
+    {
+      "path": "recipes/prepare-public-search-core-order-website-20261025.mjs",
+      "restore": "coordination/prepare-public-search-core-order-website-20261025.mjs",
+      "bytes": 5630,
+      "sha256": "dc359d8b80e7b1d7aba2401580af0b402ed9a074a366b07a7baa844e6ef32f07"
+    },
+    {
+      "path": "recipes/verify-public-search-core-order-production-20261025.mjs",
+      "restore": "coordination/verify-public-search-core-order-production-20261025.mjs",
+      "bytes": 4814,
+      "sha256": "77b5da70acdf1afcab91accb5b738d297dd76ae7404b97d62a35b7b026c13e83"
+    },
+    {
+      "path": "recipes/serve-public-search-core-order-built-worker-20261025.mjs",
+      "restore": "coordination/serve-public-search-core-order-built-worker-20261025.mjs",
+      "bytes": 3696,
+      "sha256": "a3ffdeabd20db2f9230d50b652f8ebc5e2b8e1af091295d2c24ac3f0e7ab4cb3"
+    },
+    {
+      "path": "recipes/inspect-public-search-core-first-20261025.mjs",
+      "restore": "coordination/inspect-public-search-core-first-20261025.mjs",
+      "bytes": 3506,
+      "sha256": "d4c8b167b45c01fa8fd15e32a1c3d701f7cfecf313de8dc038839e5938d0077c"
+    },
+    {
+      "path": "recipes/stop-owned-public-search-core-order-preview-20261025.mjs",
+      "restore": "coordination/stop-owned-public-search-core-order-preview-20261025.mjs",
+      "bytes": 2580,
+      "sha256": "1d27537bef9360bfedff85590a690aeec1c0b7c9c7f7e8d65e3309ac6879329e"
+    },
+    {
+      "path": "recipes/record-public-search-core-browser-20261025.mjs",
+      "restore": "coordination/record-public-search-core-browser-20261025.mjs",
+      "bytes": 3833,
+      "sha256": "20d7f9a8273a063e333c9d1d3d4f1f96bf9aa812cf0e82cd5ee44f0d53b814f9"
+    },
+    {
+      "path": "recipes/seal-public-search-core-order-20261025.mjs",
+      "restore": "coordination/seal-public-search-core-order-20261025.mjs",
+      "bytes": 5912,
+      "sha256": "71eeaa7f68f4b6dfdb9b96aaa26d61f5e4da763aa34a9f9f7d9dbcad25ac9316"
+    },
+    {
+      "path": "recipes/backup-public-search-core-order-source-20261025.mjs",
+      "restore": "coordination/backup-public-search-core-order-source-20261025.mjs",
+      "bytes": 5351,
+      "sha256": "867436afd4a7a8e1fa555ca2019521a6d2ebff2723c9e43220ed36fe725a3ab4"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental first-party public-search startup source recovery only:5production/test sources and8coordination recipes. Exact retained local baseline and prior supplements are required. Complete medical fixtures, rawQA/inspector/browser evidence, private references/configuration/decisions, generated medical/Review/current source records, scans/masks/identifiers, models/assets, dependencies, runtime and canonical/native Git ancestry are excluded. Not a complete private, runnable or whole-project/off-device backup.",
+  "proof": {
+    "wholeCurrentRoots": 7,
+    "wholeCurrentCases": 39,
+    "fullTypeRoots": 2662,
+    "fullTypeFiles": 6220,
+    "diagnostics": 0,
+    "actualStockProductionArtifacts": 1142,
+    "exactFullPlatformTwoSeamInverse": true,
+    "actualFirstColdResponseComplete": true,
+    "firstNonFrameworkExceptions": 0,
+    "anonymousUserProvisioningNotIntroduced": true,
+    "otherSqlAuthSchemaAccessSourcesUnchanged": true,
+    "all1816ProtectedInputsUnchanged": true,
+    "actualAnonymousPonsAndPublicCourseSearch": true,
+    "previousExplicitPartialFallbackRetained": true,
+    "otherGuestRouteAuditProspectiveOnly": true,
+    "wholeStockSuitePassing": false,
+    "original316FailuresAnd3SkipsUnadjusted": true,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "incrementalOnly": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
