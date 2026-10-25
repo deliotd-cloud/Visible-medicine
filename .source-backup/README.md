@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party source only: hook, helper, tests, package script, coordinate-free BodyScene edit patch and integration/build recipes. Earlier source supplements plus local baseline/data required; not full/private/runnable backup. No full BodyScene/anatomy source, coordinates, rawQA, private configuration/inventory/closure/generated coverage/review/renderer/pins, patient scans/masks/decisions, model assets/dependencies/runtime or canonical/native ancestry. Anonymous browser requests are kept local; no permissions or clinical/registration approval.

@@ -1,0 +1,16 @@
+diff --git a/app/body-scene.tsx b/app/body-scene.tsx
+index c96eff4e..ecc88d64 100644
+--- a/app/body-scene.tsx
++++ b/app/body-scene.tsx
+@@ -54,0 +55 @@ import { CsfMotion } from './csf-motion';
++import { useModelAccessPreflight } from './use-model-access-preflight';
+@@ -533,0 +535,6 @@ export function BodyScene(props: Props) {
++  const preflightScope = JSON.stringify([
++    props.catalog.version, props.catalog.sourceVersion, props.structures.map(s => s.id),
++  ]);
++  const permitModelMount = useModelAccessPreflight(
++    props.assetBase, bundles, preflightScope, props.retries, props.onFailure,
++  );
+@@ -610 +617 @@ export function BodyScene(props: Props) {
+-            {bundles.map((bundle) => (
++            {permitModelMount && bundles.map((bundle) => (

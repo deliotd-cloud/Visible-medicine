@@ -1,0 +1,258 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T13:51:32.764Z",
+  "sourceIdentity": {
+    "kind": "first-party-negative-only-preflight-and-coordinate-free-source-recovery-supplement",
+    "requiredLocalWebsiteSourceSha256": "886881a62de80e046022182f2b92f4f122b8c39092d33ed138fab4b49e7b8c4f",
+    "requiredLocalNativeHead": "665c53a4d21667d14f12cf2e81a200d5da3df3ac",
+    "requiredPriorSupplement": {
+      "branch": "backup/dental-ct-website-source-20261025",
+      "head": "91022d1e4da3b1d42d899971c8dc95916c1a934a",
+      "tree": "5ac23e395c773b4da26f50eecc818c471a4824aa"
+    },
+    "restorePaths": [
+      {
+        "path": "atlas/app/use-model-access-preflight.ts",
+        "restore": "atlas/app/use-model-access-preflight.ts"
+      },
+      {
+        "path": "atlas/lib/model-access-preflight.ts",
+        "restore": "atlas/lib/model-access-preflight.ts"
+      },
+      {
+        "path": "atlas/tests/model-access-preflight.mjs",
+        "restore": "atlas/tests/model-access-preflight.mjs"
+      },
+      {
+        "path": "atlas/package.json",
+        "restore": "atlas/package.json"
+      },
+      {
+        "path": "recipes/BODY_SCENE_PREFLIGHT.patch",
+        "restore": "coordination/BODY_SCENE_PREFLIGHT.patch"
+      },
+      {
+        "path": "website/tests/current-atlas-delivery.test.mjs",
+        "restore": "website/tests/current-atlas-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/current-atlas-delivery-before-model-preflight-665c.mjs.raw",
+        "restore": "website/tests/fixtures/current-atlas-delivery-before-model-preflight-665c.mjs.raw"
+      },
+      {
+        "path": "recipes/prepare-model-preflight-coverage-seams.mjs",
+        "restore": "coordination/prepare-model-preflight-coverage-seams.mjs"
+      },
+      {
+        "path": "recipes/prepare-model-preflight-delivery-role.mjs",
+        "restore": "coordination/prepare-model-preflight-delivery-role.mjs"
+      },
+      {
+        "path": "recipes/whole-project-type-checker.mjs",
+        "restore": "coordination/whole-project-type-checker.mjs"
+      },
+      {
+        "path": "recipes/prepare-model-preflight-website-20261025.mjs",
+        "restore": "coordination/prepare-model-preflight-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/import-model-preflight-website-stock-small-20261025.mjs",
+        "restore": "coordination/import-model-preflight-website-stock-small-20261025.mjs"
+      },
+      {
+        "path": "recipes/generate-model-preflight-website-coverage-20261025.mjs",
+        "restore": "coordination/generate-model-preflight-website-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/install-model-preflight-website-coverage-20261025.mjs",
+        "restore": "coordination/install-model-preflight-website-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-model-preflight-website-review-20261025.mjs",
+        "restore": "coordination/build-model-preflight-website-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/refresh-model-preflight-website-delivery-pin-20261025.mjs",
+        "restore": "coordination/refresh-model-preflight-website-delivery-pin-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-model-preflight-current-delivery-20261025.mjs",
+        "restore": "coordination/check-model-preflight-current-delivery-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-model-preflight-current-role-20261025.mjs",
+        "restore": "coordination/integrate-model-preflight-current-role-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-model-preflight-website-source-20261025.mjs",
+        "restore": "coordination/seal-model-preflight-website-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-model-preflight-website-full-types-20261025.mjs",
+        "restore": "coordination/check-model-preflight-website-full-types-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-model-preflight-website-20261025.mjs",
+        "restore": "coordination/build-model-preflight-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/serve-model-preflight-built-worker-20261025.mjs",
+        "restore": "coordination/serve-model-preflight-built-worker-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-model-preflight-source-20261025.mjs",
+        "restore": "coordination/backup-model-preflight-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/use-model-access-preflight.ts",
+      "bytes": 1955,
+      "sha256": "1cafe7227adde30b0b8d13708819883434a9c62c75de7912525ba9b119f6d763"
+    },
+    {
+      "path": "atlas/lib/model-access-preflight.ts",
+      "bytes": 2849,
+      "sha256": "b8d120e78a3272341ffe2f831ea70a862b8feb87d80f4087088981c7e40d942c"
+    },
+    {
+      "path": "atlas/tests/model-access-preflight.mjs",
+      "bytes": 4390,
+      "sha256": "dc62381d4ecb2f62edf91a22a932f45f137869febbcc08edd88a9b76cb233129"
+    },
+    {
+      "path": "atlas/package.json",
+      "bytes": 89724,
+      "sha256": "7f88b77ce99964030c0d56edd04dff6604e5736c55cad968a32ff1f8ae26cd04"
+    },
+    {
+      "path": "recipes/BODY_SCENE_PREFLIGHT.patch",
+      "bytes": 764,
+      "sha256": "fe47fde8bc277fada7141d572a7ee258c4e2cf9dc2ebe7fc06f32f0803d820ec"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 24348,
+      "sha256": "d873c8ce430f9b11aab234e406dbd6cf98a8a47403bc8e1021fe80059a2b7c96"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-model-preflight-665c.mjs.raw",
+      "bytes": 22566,
+      "sha256": "791926fad49169daca4f2f49f1afcd7af8bca4de35699e1ee2a20a46fb8b7988"
+    },
+    {
+      "path": "recipes/prepare-model-preflight-coverage-seams.mjs",
+      "bytes": 16184,
+      "sha256": "cd341455d3228600568354b5c09b1f7323aeab2a11864c283812e229c35add8a"
+    },
+    {
+      "path": "recipes/prepare-model-preflight-delivery-role.mjs",
+      "bytes": 8340,
+      "sha256": "8cf76a7ebf8c78b0dced7aa807bfd964a0fb2be5e6dda868326b09be9d83976e"
+    },
+    {
+      "path": "recipes/whole-project-type-checker.mjs",
+      "bytes": 1630,
+      "sha256": "5a35b31202b7e4d3cc3c571184beb52ab4fa6e132c1836acb0de0385107b9ed9"
+    },
+    {
+      "path": "recipes/prepare-model-preflight-website-20261025.mjs",
+      "bytes": 6537,
+      "sha256": "047d77334b5e9e7a90216b8fdb71760b8c463440c7483731c9178324cc193fb3"
+    },
+    {
+      "path": "recipes/import-model-preflight-website-stock-small-20261025.mjs",
+      "bytes": 6793,
+      "sha256": "0be3f867b2a2415d54868f3a3d5d304fc8973f769fe538b365d3ad000e0e8d1a"
+    },
+    {
+      "path": "recipes/generate-model-preflight-website-coverage-20261025.mjs",
+      "bytes": 2875,
+      "sha256": "80dafd1212e68f4590ae80e268763996032fa9710bd57d6a9a6234ea2396da0c"
+    },
+    {
+      "path": "recipes/install-model-preflight-website-coverage-20261025.mjs",
+      "bytes": 3406,
+      "sha256": "c78c62ae0f97d17fca7c43f7a9f39dd0b8d93cccb11a9a16b92f1c768170dcf3"
+    },
+    {
+      "path": "recipes/build-model-preflight-website-review-20261025.mjs",
+      "bytes": 6390,
+      "sha256": "38e82c8c10c754034e5e8f948f3eb91b6f81374eebe010301746b30be5b701cf"
+    },
+    {
+      "path": "recipes/refresh-model-preflight-website-delivery-pin-20261025.mjs",
+      "bytes": 2778,
+      "sha256": "989e449edc047ba00f46fd15d96ff78d190b505d7f4196759cf9a07a7f5cf872"
+    },
+    {
+      "path": "recipes/check-model-preflight-current-delivery-20261025.mjs",
+      "bytes": 2872,
+      "sha256": "f58df332309204f885cd5ef7cae5efebd13aae661a74c71424bbc63ade482e80"
+    },
+    {
+      "path": "recipes/integrate-model-preflight-current-role-20261025.mjs",
+      "bytes": 2954,
+      "sha256": "542daba73cda50fdeb62ce039481d13b4290c3eef4585cb9a02f0ec92a78dd9c"
+    },
+    {
+      "path": "recipes/seal-model-preflight-website-source-20261025.mjs",
+      "bytes": 4554,
+      "sha256": "11b607d6b6b3aa13336fd37c489997730dc0cffc5f91d1e659b7fee93d1c6cb8"
+    },
+    {
+      "path": "recipes/check-model-preflight-website-full-types-20261025.mjs",
+      "bytes": 2561,
+      "sha256": "895c38e93b618f005e58bb41d5fc85bc66fd9aa7abb3c9bf0cadb02cbe3f7f79"
+    },
+    {
+      "path": "recipes/build-model-preflight-website-20261025.mjs",
+      "bytes": 3334,
+      "sha256": "4abb9f501d095adf6fe3fe85a5fbfe2c500e18e00cec0ec85a65afbf5c512053"
+    },
+    {
+      "path": "recipes/serve-model-preflight-built-worker-20261025.mjs",
+      "bytes": 3675,
+      "sha256": "92ee78a77ddacdbe77a7434d1184aff4b949ea083d450630c9cd9a7b52b739b6"
+    },
+    {
+      "path": "recipes/backup-model-preflight-source-20261025.mjs",
+      "bytes": 7167,
+      "sha256": "59ee61b972d57e11350fd80f7e407b1e4517d8539f392b6a5d202bd9186cd1d0"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party source only: hook, helper, tests, package script, coordinate-free BodyScene edit patch and integration/build recipes. Earlier source supplements plus local baseline/data required; not full/private/runnable backup. No full BodyScene/anatomy source, coordinates, rawQA, private configuration/inventory/closure/generated coverage/review/renderer/pins, patient scans/masks/decisions, model assets/dependencies/runtime or canonical/native ancestry. Anonymous browser requests are kept local; no permissions or clinical/registration approval.",
+  "proof": {
+    "wholeCurrentDeliveryCases": 44,
+    "skip": 0,
+    "fail": 0,
+    "all43PriorCasesRetainedWithFullByteInverse": true,
+    "nativeFocusedWholeRootCases": 7,
+    "actualHookSyntheticLifecycleTransitions": 9,
+    "fullStrictTypeRoots": 2658,
+    "fullStrictTypeFiles": 6214,
+    "diagnostics": 0,
+    "productionArtifacts": 1142,
+    "reviewSourceFiles": 1610,
+    "protectedReviewInputs": 1814,
+    "viewerArtifacts": 54,
+    "viewerPackages": 24,
+    "actualBuiltAnonymousPreflightVerified": true,
+    "privateDataUploaded": false,
+    "sourceBytes": 228646,
+    "wholeSuitePassing": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
