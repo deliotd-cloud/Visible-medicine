@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental developer test and bound-input guard source recovery only. Zero-context code patches restore three test/helper sources from the exact retained local baseline; three new test/helper sources are included. The raw clinical-test preimage fixture is reconstructed locally and not uploaded. All complete medical fixtures, historical/current Review data and source-context records, private references/configuration/decisions, scans/masks/identifiers, models/assets, dependencies, runtime and native/canonical Git ancestry are excluded. Requires prior supplements and the exact local baseline; not a whole project, private-data, runnable or complete off-device backup.

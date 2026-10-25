@@ -1,0 +1,97 @@
+diff --git a/tests/neonatal-inbox-contexts.mjs b/tests/neonatal-inbox-contexts.mjs
+index d130d97..c7f28b1 100644
+--- a/tests/neonatal-inbox-contexts.mjs
++++ b/tests/neonatal-inbox-contexts.mjs
+@@ -36 +36 @@ const safePath=path=>{
+- assert(typeof path==='string'&&/^(?!\.)(?!.*(?:^|\/)\.\.?\/)[a-zA-Z0-9_./@+-]+$/.test(path)&&!path.includes('\\'),
++ assert(typeof path==='string'&&!path.startsWith('/')&&path.split('/').every(part=>part&&part!=='.'&&part!=='..')&&(path==='app/api/atlas-delivery/references/[...asset]/route.ts'||/^(?!\.)(?!.*(?:^|\/)\.\.?\/)[a-zA-Z0-9_./@+-]+$/.test(path))&&!path.includes('\\')&&path.trim()===path,
+diff --git a/tests/clinical-review-neonatal-cranial-us.test.ts b/tests/clinical-review-neonatal-cranial-us.test.ts
+index 21808d5..28eda3f 100644
+--- a/tests/clinical-review-neonatal-cranial-us.test.ts
++++ b/tests/clinical-review-neonatal-cranial-us.test.ts
+@@ -16,0 +17 @@ import {emittedTeachingSearch} from './atlas-emitted-teaching.ts';
++import {restorePreRegionalTourHeadEntry} from './restore-pre-tour-head-entry.mjs';
+@@ -75,0 +77,3 @@ const laterPlaybackTours=new Map([
++const laterReasoning=new Map([
++  ['vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere','ventricular-landmark-choroid-plexus'],
++]);
+@@ -127,0 +132 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++  assert.equal(laterReasoning.size,1);
+@@ -154 +159 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-    if(name==='head-neck')assert.equal(norm(source),currentHeadEntrypoint(norm(historicalSource)),
++    if(name==='head-neck')assert.equal(restorePreRegionalTourHeadEntry(norm(source)),currentHeadEntrypoint(norm(historicalSource)),
+@@ -276,0 +282 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++    const laterQuestion=laterReasoning.get(s.id);
+@@ -280,2 +286,8 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-    for(const key of Object.keys(packet).filter(key=>!['guidedTours','fingerprints','materialHash'].includes(key)))
+-      assert.deepEqual(livePacket[key],packet[key],`${s.id}: complete non-tour field ${key}`);
++    for(const key of Object.keys(packet).filter(key=>!['guidedTours','fingerprints','materialHash'].includes(key))){
++      if(key==='reasoning'&&laterQuestion){
++        assert.equal(packet.reasoning,null,`${s.id}: neonatal epoch precedes the current reasoning question`);
++        assert.equal(livePacket.reasoning?.key,laterQuestion,`${s.id}: exact current reasoning key`);
++        assert.equal(livePacket.reasoning?.readiness,'draft',`${s.id}: reasoning awaits review`);
++        assert.equal(livePacket.reasoning?.answerId,s.id,`${s.id}: exact current answer identity`);
++      }else assert.deepEqual(livePacket[key],packet[key],`${s.id}: complete non-tour field ${key}`);
++    }
+@@ -290,0 +303,3 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++    }else if(laterQuestion){
++      assert.notEqual(livePacket.fingerprints.teaching,packet.fingerprints.teaching,`${s.id}: current question changes teaching`);
++      assert.notEqual(livePacket.materialHash,packet.materialHash,`${s.id}: current question changes material`);
+@@ -292,0 +308,11 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++    if(laterQuestion){
++      for(const change of ['answerId','explanation','reference','source','readiness']){
++        const altered=wire(livePacket);
++        if(change==='answerId')altered.reasoning.answerId='vm:foreign-answer';
++        if(change==='explanation')altered.reasoning.explanation+=' forged';
++        if(change==='reference')altered.reasoning.references[0].url='javascript:alert(1)';
++        if(change==='source')altered.reasoning.choices[0].sources[0].sha256='0'.repeat(64);
++        if(change==='readiness')altered.reasoning.readiness='approved';
++        assert.equal(await liveApi.parseBodyReviewResponse(altered,s.id),null,`${s.id}: current reasoning ${change} refused`);
++      }
++    }
+@@ -317,0 +344 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
++    const laterCurrentTeaching=!!laterTour||!!laterQuestion;
+@@ -322 +349 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-      if(laterTour)assert.notEqual(liveContext[key],context[key],`${s.id}: playback changes ${key}`);
++      if(laterCurrentTeaching)assert.notEqual(liveContext[key],context[key],`${s.id}: playback or reasoning changes ${key}`);
+@@ -324,2 +351,2 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-    if(laterTour)assert.notEqual(liveContext.revisions.teaching,context.revisions.teaching,
+-      `${s.id}: playback changes teaching decision revision`);
++    if(laterCurrentTeaching)assert.notEqual(liveContext.revisions.teaching,context.revisions.teaching,
++      `${s.id}: playback or reasoning changes teaching decision revision`);
+@@ -354,2 +381,2 @@ test('ten exact infant cranial Ultrasound drafts bind to Review and the scoped l
+-    if(laterTour)assert.equal((await liveSave(decision)).status,409,
+-      `${s.id}: historical decision is stale after current playback`);
++    if(laterCurrentTeaching)assert.equal((await liveSave(decision)).status,409,
++      `${s.id}: historical decision is stale after current playback or reasoning`);
+diff --git a/tests/cranial-tour-current-epoch.test.mjs b/tests/cranial-tour-current-epoch.test.mjs
+index 1258630..49ba59f 100644
+--- a/tests/cranial-tour-current-epoch.test.mjs
++++ b/tests/cranial-tour-current-epoch.test.mjs
+@@ -0,0 +1,2 @@
++import {restorePreRegionalTourHeadEntry} from './restore-pre-tour-head-entry.mjs';
++import {restorePreNeonatalReasoningRole} from './restore-neonatal-reasoning-role.mjs';
+@@ -41 +43 @@ test('every original neonatal assertion survives the complete declared test-sour
+-  let source=norm(read('./clinical-review-neonatal-cranial-us.test.ts'));
++  let source=restorePreNeonatalReasoningRole(norm(read('./clinical-review-neonatal-cranial-us.test.ts')));
+@@ -42,0 +45,3 @@ test('every original neonatal assertion survives the complete declared test-sour
++    ["import {restorePreRegionalTourHeadEntry} from './restore-pre-tour-head-entry.mjs';\n",""],
++    ["restorePreRegionalTourHeadEntry(norm(source))","norm(source)"],
++
+@@ -63,0 +69,16 @@ test('every original neonatal assertion survives the complete declared test-sour
++
++test('current neonatal reasoning role recovers the complete staged preimage and refuses unknown edits',()=>{
++  const current=norm(read('./clinical-review-neonatal-cranial-us.test.ts'));
++  const preimage=norm(read('./fixtures/neonatal-reasoning-before/clinical-review-neonatal-cranial-us.test.ts.raw'));
++  assert.equal(sha(Buffer.from(preimage)),'7ef70ac4d6acfebf71f71c0acda604abf731b953d09162363166153b20482268');
++  assert.equal(restorePreNeonatalReasoningRole(current),preimage);
++  for(const altered of [current+'\n// unreviewed',current.replace('ventricular-landmark-choroid-plexus','foreign-reasoning-key'),preimage])
++    assert.throws(()=>restorePreNeonatalReasoningRole(altered));
++});
++
++test('the current head entrypoint recovers only its exact pre-tour role and rejects unknown bytes',()=>{
++  const root=currentAtlasDeliveryRoot(),source=norm(readFileSync(root+'/integration/head-neck/main.tsx'));
++  const old=norm(execFileSync('git',['show','39dbb747a44feb0f4bc83e757310c5e3d1b49580^:integration/head-neck/main.tsx'],{cwd:root,windowsHide:true}));
++  assert.equal(restorePreRegionalTourHeadEntry(source),old);
++  for(const changed of [source+'\n// unreviewed',source.replace('parseRegionalTourEntry','changedTourEntry'),old])assert.throws(()=>restorePreRegionalTourHeadEntry(changed));
++});

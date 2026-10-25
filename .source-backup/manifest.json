@@ -1,0 +1,119 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T18:53:36.908Z",
+  "sourceIdentity": {
+    "candidateReceiptSha256": "7f105c077fa9813868dc25efd849ebb7ac20934162cc8e9d8431f540ef2fd0e4",
+    "previousFilteredSupplementHead": "b88fa181f5aa4aa2d9e7a8d507b33a2d98e28bb1"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recovery/RECOVERY_SPEC.json",
+      "restore": "incremental-source/RECOVERY_SPEC.json",
+      "bytes": 2090,
+      "sha256": "f8682cb84ab75c5e655d3d41752ef3e100d76324659a5778ca23dec40e4fce81"
+    },
+    {
+      "path": "recovery/neonatal-review-tests.patch",
+      "restore": "incremental-source/neonatal-review-tests.patch",
+      "bytes": 7791,
+      "sha256": "4547f7c4a732074194ec0ad20ddec415a3e912f05aef3efe3f4b63cc6a4597e4"
+    },
+    {
+      "path": "recovery/restore-neonatal-review-tests.mjs",
+      "restore": "incremental-source/restore-neonatal-review-tests.mjs",
+      "bytes": 2844,
+      "sha256": "421d5d1dff416c8c990e14f72eee45abdd51911f2a089647c5f4f790c75c7ed9"
+    },
+    {
+      "path": "recovery/website/tests/neonatal-review-input-path.test.mjs",
+      "restore": "incremental-source/website/tests/neonatal-review-input-path.test.mjs",
+      "bytes": 5774,
+      "sha256": "2e510c70a4cd8a77dd746c852f12a257bb59ecfd908848dcb7d0cd76e3415681"
+    },
+    {
+      "path": "recovery/website/tests/restore-pre-tour-head-entry.mjs",
+      "restore": "incremental-source/website/tests/restore-pre-tour-head-entry.mjs",
+      "bytes": 1201,
+      "sha256": "0a7ef24c16f7ba20038c06ae8537d298e2461d0dd6321e15f0e32132312d3b05"
+    },
+    {
+      "path": "recovery/website/tests/restore-neonatal-reasoning-role.mjs",
+      "restore": "incremental-source/website/tests/restore-neonatal-reasoning-role.mjs",
+      "bytes": 4194,
+      "sha256": "59087a184177183d5189b0e1acf10fe6f5ec8512986e5875bd8c8abe1b6cbcf7"
+    },
+    {
+      "path": "recipes/prepare-neonatal-source-recovery-20261025.mjs",
+      "restore": "coordination/prepare-neonatal-source-recovery-20261025.mjs",
+      "bytes": 3629,
+      "sha256": "a9c59787bc18f5f9e6bceed8ed33ce814544fd89d9bef093f69e31a356a24aa8"
+    },
+    {
+      "path": "recipes/run-neonatal-larger-heap-20261025.mjs",
+      "restore": "coordination/run-neonatal-larger-heap-20261025.mjs",
+      "bytes": 4431,
+      "sha256": "30e0eb2d2d2a968562e1a81d83e89c5c432c6f76ec5529a8b3c4378224260e3f"
+    },
+    {
+      "path": "recipes/run-small-native-task-guarded-20261025.mjs",
+      "restore": "coordination/run-small-native-task-guarded-20261025.mjs",
+      "bytes": 4315,
+      "sha256": "18a940c027d1c11a3164709b8fd42da2c34a264185eae7dd29e01f80e251820d"
+    },
+    {
+      "path": "recipes/neonatal-focused-type-checker.mjs",
+      "restore": "coordination/neonatal-focused-type-checker.mjs",
+      "bytes": 1844,
+      "sha256": "cfb4d54b1568deeda3519aab0b0ef799deee2094bd79c8db75fab4a0a37d6611"
+    },
+    {
+      "path": "recipes/check-neonatal-final-types-20261025.mjs",
+      "restore": "coordination/check-neonatal-final-types-20261025.mjs",
+      "bytes": 2271,
+      "sha256": "b46b9d27c405ed0050b24c56da669709a6dba3735a5fac2cc14070063386fb83"
+    },
+    {
+      "path": "recipes/seal-neonatal-final-verification-20261025.mjs",
+      "restore": "coordination/seal-neonatal-final-verification-20261025.mjs",
+      "bytes": 7423,
+      "sha256": "7681c4c259954291a13ac61e33b1dbcf64505209006c83d2da106ba0dcdf710f"
+    },
+    {
+      "path": "recipes/backup-neonatal-review-source-20261025.mjs",
+      "restore": "coordination/backup-neonatal-review-source-20261025.mjs",
+      "bytes": 6031,
+      "sha256": "ee18e8628094d49b43ce5b8a56ccbea72902515d9c6307bcd0a606fc7cd6836c"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental developer test and bound-input guard source recovery only. Zero-context code patches restore three test/helper sources from the exact retained local baseline; three new test/helper sources are included. The raw clinical-test preimage fixture is reconstructed locally and not uploaded. All complete medical fixtures, historical/current Review data and source-context records, private references/configuration/decisions, scans/masks/identifiers, models/assets, dependencies, runtime and native/canonical Git ancestry are excluded. Requires prior supplements and the exact local baseline; not a whole project, private-data, runnable or complete off-device backup.",
+  "proof": {
+    "currentWholeRoots": 3,
+    "currentWholeCases": 16,
+    "historicalWholeRoots": 2,
+    "historicalWholeCases": 5,
+    "focusedTypeRoots": 7,
+    "focusedTypeFiles": 573,
+    "diagnostics": 0,
+    "allHistoricalClinicalAssertionsByteInverseVerified": true,
+    "originalNativeFrozenCountFailureRetained": true,
+    "currentQuestionTamperCategories": 5,
+    "currentInboxAndStaleNoStorageRefusals": true,
+    "strictRelativePathAndExactCatchAllRoute": true,
+    "productRuntimeUnchangedToVerifiedD1": true,
+    "all1816ProtectedInputsExact": true,
+    "actualNewBuildExecuted": false,
+    "wholeStockSuitePassing": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "privateDataUploaded": false,
+    "incrementalOnly": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "vm-neonatal-source-recovery-spec/1",
+  "baselineSourceSha256": "90d21dddfcdffbe42dd6265facb532655c73ff93d85c29acdfd1ded76bb8a509",
+  "candidateSourceSha256": "7f105c077fa9813868dc25efd849ebb7ac20934162cc8e9d8431f540ef2fd0e4",
+  "patchSha256": "4547f7c4a732074194ec0ad20ddec415a3e912f05aef3efe3f4b63cc6a4597e4",
+  "patched": [
+    {
+      "path": "tests/neonatal-inbox-contexts.mjs",
+      "beforeSha256": "fe4dc1d2eb068c9be29507f7b5341d4bf189c1e27a8c5c273e2938a2d9f2c6f1",
+      "afterSha256": "95a26c2dcb61bb16400e718e6b9a3a4e4e9a20d96a829a0111c6c05b373df3ad"
+    },
+    {
+      "path": "tests/clinical-review-neonatal-cranial-us.test.ts",
+      "beforeSha256": "ed23b3a23e83fffbdffecb0e67d31ffbc6e62999cac30adbbf81cbf49612b73f",
+      "afterSha256": "08d7d63455c49c1bab5ea6b8e4f3bf4091b6f7a51a7f5cb413f7ed1927aade54"
+    },
+    {
+      "path": "tests/cranial-tour-current-epoch.test.mjs",
+      "beforeSha256": "2373a303124766b905bb8c2f4dd06c8f68188c0271c8a69f33b6f1968d11b7f4",
+      "afterSha256": "3a7cb62c240ccb2b9b15d386f16fdaff6f56bb141c18346956c97eb687f2e64a"
+    }
+  ],
+  "whole": [
+    {
+      "path": "tests/neonatal-review-input-path.test.mjs",
+      "sha256": "2e510c70a4cd8a77dd746c852f12a257bb59ecfd908848dcb7d0cd76e3415681"
+    },
+    {
+      "path": "tests/restore-pre-tour-head-entry.mjs",
+      "sha256": "0a7ef24c16f7ba20038c06ae8537d298e2461d0dd6321e15f0e32132312d3b05"
+    },
+    {
+      "path": "tests/restore-neonatal-reasoning-role.mjs",
+      "sha256": "59087a184177183d5189b0e1acf10fe6f5ec8512986e5875bd8c8abe1b6cbcf7"
+    }
+  ],
+  "localFixture": {
+    "path": "tests/fixtures/neonatal-reasoning-before/clinical-review-neonatal-cranial-us.test.ts.raw",
+    "sha256": "7ef70ac4d6acfebf71f71c0acda604abf731b953d09162363166153b20482268"
+  },
+  "rawFixtureIncluded": false,
+  "scope": "Incremental test and test-input guard source only; exact retained local baseline and prior filtered supplements required. No complete medical fixtures, private references/configuration, generated Review/source context, models, runtime or Git ancestry included."
+}
