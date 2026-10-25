@@ -1,0 +1,113 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T06:01:29.561Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-original-reader-and-lifecycle-recipes-not-cumulative",
+    "requiredSourceSupplement": {
+      "branch": "backup/lecture-history-guard-source-20261025",
+      "head": "e3394a1da1b01debaebd6bcd49112d375ba072a7",
+      "tree": "567a68fa6c2eec3c921ee3fcf100fd8c067f1b1e",
+      "receiptSha256": "b250028fe1aae851f3dc58ce9def4d7d53da29ca65cf17f82cfaa89f17c44891"
+    },
+    "restorePaths": [
+      {
+        "path": "recipes/prepare-lecture-history-lifecycle-check-20261025.mjs",
+        "restore": "coordination/prepare-lecture-history-lifecycle-check-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-lecture-history-lifecycle-20261025.mjs",
+        "restore": "coordination/check-lecture-history-lifecycle-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-original-reader-worktrees-20261025.mjs",
+        "restore": "coordination/prepare-original-reader-worktrees-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-original-reader-worktrees-20261025.mjs",
+        "restore": "coordination/check-original-reader-worktrees-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-original-reader-workflow-source-20261025.mjs",
+        "restore": "coordination/backup-original-reader-workflow-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/prepare-lecture-history-lifecycle-check-20261025.mjs",
+      "bytes": 2172,
+      "sha256": "f304fda1c2fd5d2dc269af912356661281402bda8d689518f6e9cc3317b1af15"
+    },
+    {
+      "path": "recipes/check-lecture-history-lifecycle-20261025.mjs",
+      "bytes": 6856,
+      "sha256": "ab01ff75e5af57e92296406259d1f2ae74d1e9215043a12fbafedbdfbada9afb"
+    },
+    {
+      "path": "recipes/prepare-original-reader-worktrees-20261025.mjs",
+      "bytes": 4979,
+      "sha256": "1cd42743f41389027bb1efd4848dd10f865aa0753d055cd770837c66021728d5"
+    },
+    {
+      "path": "recipes/check-original-reader-worktrees-20261025.mjs",
+      "bytes": 5130,
+      "sha256": "1045c9ff6010cb51461e1a33548d71e8db7e55758b18d013a0094126ca0983ef"
+    },
+    {
+      "path": "recipes/backup-original-reader-workflow-source-20261025.mjs",
+      "bytes": 5080,
+      "sha256": "992727ac06e9d3567fa4e798ec61866e7f6caf70db79bb290e7231cebd5e26bc"
+    }
+  ],
+  "removed": [],
+  "scope": "Five first-party workflow scripts only. No historical checkout bytes, private inventories/configuration, scans/masks/images/medical annotations or coordinates, personal decisions, raw QA, dependencies/models or canonical Git ancestry uploaded. Source supplement only, not cumulative/whole/private/runnable backup. Historical whole roots pass only their stated old revisions; no current-output/full-suite/clinical/registration/install/public acceptance inferred.",
+  "proof": {
+    "additionalCandidateLectureCases": 27,
+    "originalCases": [
+      {
+        "role": "deep-brain",
+        "revision": "f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6",
+        "counts": {
+          "tests": 1,
+          "pass": 1,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      },
+      {
+        "role": "foot-notices",
+        "revision": "d661997c0854116e7e320415df9065d6582529e2",
+        "counts": {
+          "tests": 2,
+          "pass": 2,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "passing": true
+      }
+    ],
+    "unchangedCaseLabelsAndAssertions": true,
+    "actualHistoricalGitWorktreeHeadsAndTrees": true,
+    "footModelByteAssertionsExecuted": true,
+    "combinedCandidateTypesBuildAndBrowserPending": true,
+    "fullStockComplete": false,
+    "wholeSuitePassing": false,
+    "selectedBytes": 24217,
+    "privateDataUploaded": false,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

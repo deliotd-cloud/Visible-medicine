@@ -1,0 +1,42 @@
+{
+  "additionalCandidateLectureCases": 27,
+  "originalCases": [
+    {
+      "role": "deep-brain",
+      "revision": "f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6",
+      "counts": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "passing": true
+    },
+    {
+      "role": "foot-notices",
+      "revision": "d661997c0854116e7e320415df9065d6582529e2",
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "passing": true
+    }
+  ],
+  "unchangedCaseLabelsAndAssertions": true,
+  "actualHistoricalGitWorktreeHeadsAndTrees": true,
+  "footModelByteAssertionsExecuted": true,
+  "combinedCandidateTypesBuildAndBrowserPending": true,
+  "fullStockComplete": false,
+  "wholeSuitePassing": false,
+  "selectedBytes": 24217,
+  "privateDataUploaded": false,
+  "ownerPreviewChanged": false,
+  "installed": false,
+  "clinicalApproval": false
+}
