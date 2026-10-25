@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Two first-party complete delivery-test sources and18coordinate-free coverage/import/binding/strict-type/build/browser/recovery recipes only. Prior source/data branches and local source manifests required; not whole/private/runnable backup. No rawQA, inventory/closure/private configuration, generated default pins/coverage/review/renderer/source data, medical content/coordinates, private decisions, scans/masks/models/dependencies/runtime or canonical/native ancestry uploaded. Actual browser observation remains local and anonymous; no clinical, registration or authenticated acceptance claim.

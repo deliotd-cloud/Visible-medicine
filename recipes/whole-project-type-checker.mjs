@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import {createRequire} from 'node:module';import {createHash} from 'node:crypto';
+const site=process.cwd(),ts=createRequire(site+'/package.json')('typescript');
+const hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const config=site+'/tsconfig.json',loaded=ts.readConfigFile(config,ts.sys.readFile);assert(!loaded.error);
+const parsed=ts.parseJsonConfigFileContent(loaded.config,ts.sys,site);assert.equal(parsed.errors.length,0);assert(parsed.options.strict);assert(parsed.fileNames.length>2600);
+const overrides={noEmit:true,incremental:false,composite:false,tsBuildInfoFile:undefined};
+const program=ts.createProgram(parsed.fileNames,{...parsed.options,...overrides}),diagnostics=ts.getPreEmitDiagnostics(program);
+const result={at:new Date().toISOString(),roots:parsed.fileNames,fullProjectTypes:true,scopeExclusionsAdded:false,configSha256:hash(config),typescriptVersion:ts.version,configuredCompilerOptions:parsed.options,overrides,sourceFiles:program.getSourceFiles().map(f=>({path:f.fileName,sha256:hash(f.fileName)})),diagnosticCount:diagnostics.length,diagnostics:diagnostics.map(d=>({path:d.file?.fileName,start:d.start,code:d.code,message:ts.flattenDiagnosticMessageText(d.messageText,'\n')})),actualTransitiveGraph:true,substitutions:false};
+fs.writeFileSync(new URL('./TYPE_RESULT.json',import.meta.url),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({roots:result.roots.length,files:result.sourceFiles.length,diagnostics:result.diagnosticCount,full:true}));process.exitCode=diagnostics.length?1:0;

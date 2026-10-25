@@ -1,0 +1,234 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T12:41:48.729Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-current-delivery-tests-and-coordinate-free-integration-build-recovery-recipes-not-cumulative",
+    "requiredLocalWebsiteSourceSha256": "6d2f25ceedbaad4cddaa900e7b4487644b51ce38f8df4263f4370532a632e1b9",
+    "requiredLocalNativeHead": "44ffcc39b13d1fe85827c79a3e6a1a29be5b4a14",
+    "requiredSourceSupplement": {
+      "branch": "backup/dental-ct-runtime-source-20261025",
+      "head": "50cce01f4f06460e01b83b2470e74fe11df76c0a",
+      "tree": "01d940aff016a7cad134a3144bfa39244833f4c6",
+      "receiptSha256": "95e156f2765d97edc19379d3f7466bd080399ee2d4a3c6e440e15ade05f1d01e"
+    },
+    "restorePaths": [
+      {
+        "path": "website/tests/current-atlas-delivery.test.mjs",
+        "restore": "website/tests/current-atlas-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/current-atlas-delivery-before-dental-ct-44ff.mjs.raw",
+        "restore": "website/tests/fixtures/current-atlas-delivery-before-dental-ct-44ff.mjs.raw"
+      },
+      {
+        "path": "recipes/prepare-dental-ct-coverage-seams.mjs",
+        "restore": "coordination/prepare-dental-ct-coverage-seams.mjs"
+      },
+      {
+        "path": "recipes/whole-project-type-checker.mjs",
+        "restore": "coordination/whole-project-type-checker.mjs"
+      },
+      {
+        "path": "recipes/prepare-dental-ct-website-20261025.mjs",
+        "restore": "coordination/prepare-dental-ct-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/import-dental-ct-website-stock-small-20261025.mjs",
+        "restore": "coordination/import-dental-ct-website-stock-small-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-small-native-task-guarded-20261025.mjs",
+        "restore": "coordination/run-small-native-task-guarded-20261025.mjs"
+      },
+      {
+        "path": "recipes/generate-dental-ct-website-coverage-20261025.mjs",
+        "restore": "coordination/generate-dental-ct-website-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/install-dental-ct-website-coverage-20261025.mjs",
+        "restore": "coordination/install-dental-ct-website-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-dental-ct-website-review-20261025.mjs",
+        "restore": "coordination/build-dental-ct-website-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/refresh-dental-ct-website-delivery-pin-20261025.mjs",
+        "restore": "coordination/refresh-dental-ct-website-delivery-pin-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-dental-ct-current-delivery-20261025.mjs",
+        "restore": "coordination/check-dental-ct-current-delivery-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-dental-ct-current-role-20261025.mjs",
+        "restore": "coordination/integrate-dental-ct-current-role-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-dental-ct-website-source-20261025.mjs",
+        "restore": "coordination/seal-dental-ct-website-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-dental-ct-website-full-types-v2-20261025.mjs",
+        "restore": "coordination/check-dental-ct-website-full-types-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-dental-ct-website-20261025.mjs",
+        "restore": "coordination/build-dental-ct-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/serve-dental-ct-built-worker-20261025.mjs",
+        "restore": "coordination/serve-dental-ct-built-worker-20261025.mjs"
+      },
+      {
+        "path": "recipes/record-dental-ct-browser-result-20261025.mjs",
+        "restore": "coordination/record-dental-ct-browser-result-20261025.mjs"
+      },
+      {
+        "path": "recipes/checkpoint-dental-ct-website-verified-20261025.mjs",
+        "restore": "coordination/checkpoint-dental-ct-website-verified-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-dental-ct-website-source-20261025.mjs",
+        "restore": "coordination/backup-dental-ct-website-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 22566,
+      "sha256": "791926fad49169daca4f2f49f1afcd7af8bca4de35699e1ee2a20a46fb8b7988"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-dental-ct-44ff.mjs.raw",
+      "bytes": 20802,
+      "sha256": "83b8cbcbe3eddd41cb10402716133259b98766e4be2fcf8545c5805a93d10192"
+    },
+    {
+      "path": "recipes/prepare-dental-ct-coverage-seams.mjs",
+      "bytes": 16017,
+      "sha256": "e737cca2f7c806b57610d5441bf9da8fba6eeb60e99d27adb52d93a154deea73"
+    },
+    {
+      "path": "recipes/whole-project-type-checker.mjs",
+      "bytes": 1630,
+      "sha256": "5a35b31202b7e4d3cc3c571184beb52ab4fa6e132c1836acb0de0385107b9ed9"
+    },
+    {
+      "path": "recipes/prepare-dental-ct-website-20261025.mjs",
+      "bytes": 6505,
+      "sha256": "12e04a81b86afb01271a275a85c5285dfe0770fdb994d3a94d4ed8734965c5ef"
+    },
+    {
+      "path": "recipes/import-dental-ct-website-stock-small-20261025.mjs",
+      "bytes": 6785,
+      "sha256": "1697aa1ca9f0cbd75cd045f46352427880a7640d31e70179463134fba7d052ff"
+    },
+    {
+      "path": "recipes/run-small-native-task-guarded-20261025.mjs",
+      "bytes": 4315,
+      "sha256": "18a940c027d1c11a3164709b8fd42da2c34a264185eae7dd29e01f80e251820d"
+    },
+    {
+      "path": "recipes/generate-dental-ct-website-coverage-20261025.mjs",
+      "bytes": 2869,
+      "sha256": "07123c41cd1b869773d75627e74c530d4c75b7d094f96c8abe755defdc6bbab3"
+    },
+    {
+      "path": "recipes/install-dental-ct-website-coverage-20261025.mjs",
+      "bytes": 3382,
+      "sha256": "de91b2f533b62a2027eb3a53c2f4fe596d2d3364a9e42e764b09ec44e41f2422"
+    },
+    {
+      "path": "recipes/build-dental-ct-website-review-20261025.mjs",
+      "bytes": 6384,
+      "sha256": "1c876f66c1b3aa5056426bd5b8cd50cbe8f4fb146711d050734b6754dc129e99"
+    },
+    {
+      "path": "recipes/refresh-dental-ct-website-delivery-pin-20261025.mjs",
+      "bytes": 2772,
+      "sha256": "5ccd210be40d3b89b248104d17a586faa2b977518ed2d85c7ee27c5fdc142c47"
+    },
+    {
+      "path": "recipes/check-dental-ct-current-delivery-20261025.mjs",
+      "bytes": 2879,
+      "sha256": "ee70cf9a2d9a5c450f4b87fb3e1439a6b3b4bcd172bc35b207346b9a3ae8b4f3"
+    },
+    {
+      "path": "recipes/integrate-dental-ct-current-role-20261025.mjs",
+      "bytes": 3057,
+      "sha256": "136785ba6a7f48e74c574b55b9ccfd8e7903b57d3b706ff38e1ef1a94a5c046a"
+    },
+    {
+      "path": "recipes/seal-dental-ct-website-source-20261025.mjs",
+      "bytes": 4356,
+      "sha256": "a18285c22585772b331ec603340b59cfb2508f18f9d2ed8cabffd53a0ea48be9"
+    },
+    {
+      "path": "recipes/check-dental-ct-website-full-types-v2-20261025.mjs",
+      "bytes": 2493,
+      "sha256": "75526865b0f14337a8ceba83f0c65434a846131334514dea3cc37a450fdb0309"
+    },
+    {
+      "path": "recipes/build-dental-ct-website-20261025.mjs",
+      "bytes": 3328,
+      "sha256": "0f4c834172ea0a9a06e988a6ea119f7090ec3666e9c4fca4b44f722a2bf1ea1a"
+    },
+    {
+      "path": "recipes/serve-dental-ct-built-worker-20261025.mjs",
+      "bytes": 3657,
+      "sha256": "3b997274e1924e49ce5762ee2e93dfb6dd5ce63cf2e1e5ee2a6d134a80d3b78c"
+    },
+    {
+      "path": "recipes/record-dental-ct-browser-result-20261025.mjs",
+      "bytes": 2412,
+      "sha256": "8b7794babc0e22e27d0e83b157edebe78f07c2adb93dac77f452247db9d451c1"
+    },
+    {
+      "path": "recipes/checkpoint-dental-ct-website-verified-20261025.mjs",
+      "bytes": 18242,
+      "sha256": "548592be5159d6084ff0d0cbdca2c1775f50e6e28ae1dcac448dc4bff45b8e0f"
+    },
+    {
+      "path": "recipes/backup-dental-ct-website-source-20261025.mjs",
+      "bytes": 5959,
+      "sha256": "aa62bcb0bea5911f348b5e5676e8a14d56a61a4a28ddf86b25c84f6c33cbfffe"
+    }
+  ],
+  "removed": [],
+  "scope": "Two first-party complete delivery-test sources and18coordinate-free coverage/import/binding/strict-type/build/browser/recovery recipes only. Prior source/data branches and local source manifests required; not whole/private/runnable backup. No rawQA, inventory/closure/private configuration, generated default pins/coverage/review/renderer/source data, medical content/coordinates, private decisions, scans/masks/models/dependencies/runtime or canonical/native ancestry uploaded. Actual browser observation remains local and anonymous; no clinical, registration or authenticated acceptance claim.",
+  "proof": {
+    "wholeCurrentDeliveryCases": 43,
+    "fail": 0,
+    "skip": 0,
+    "all42PredecessorCasesRetainedWithFullByteInverse": true,
+    "actualBaseline42Cases40Pass2CurrentRoleFailures": true,
+    "fullStrictTypeRoots": 2656,
+    "fullStrictTypeFiles": 6212,
+    "diagnostics": 0,
+    "productionArtifacts": 1142,
+    "reviewSourceFiles": 1608,
+    "protectedReviewInputs": 1812,
+    "viewerArtifacts": 54,
+    "viewerPackages": 24,
+    "source6835andAllDependenciesUnchanged": true,
+    "actualAnonymousBuiltCtDraftVisible": true,
+    "modelsRemain401": true,
+    "allLicenceTextPreservedWithOnlyNativeSourceHeadingChanged": true,
+    "privateDataUploaded": false,
+    "sourceBytes": 140410,
+    "wholeSuitePassing": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
