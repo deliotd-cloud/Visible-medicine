@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party Website test, importer and exact coverage/delivery guard source, plus coordinate-free recovery recipes only. The verified local Website source and native baseline/pins/data plus prior source supplements are required; not whole/private/runnable recovery. No raw QA/browser observations/logs/screenshots, generated medical/Review/coverage data/pins/closures/registry, private configuration/decisions, scans, masks, identifiers, coordinates, models/assets, dependencies, runtime or canonical/native Git ancestry included. No acquired image or publisher asset is included.

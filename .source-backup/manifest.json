@@ -1,0 +1,305 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T22:09:51.109Z",
+  "sourceIdentity": {
+    "kind": "coherent-nasal-teaching-website-source-and-recovery-recipes",
+    "requiredLocalWebsiteSourceSha256": "dac446fa73f452af6b073409af5908e7c8d1b7ad5ec42c7269937b39b23803d7",
+    "requiredNativeHead": "7e2552a300df29faf346be146929ffc727880ec5",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261025-guided-comparison-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "7bf8a524da83c994e25ea7222e651c28e4137553b851aaa2935be7f9b936cae8",
+        "branch": "backup/guided-comparison-source-20261025",
+        "head": "f13680476b6dfa0066a709b5b20a157406d52042",
+        "tree": "2e0c1d37209af9407336b3be1e81a9f7993ed78e"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261025-nasal-bone-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "f4f90292d1d3eac3253a158b14ca4efe13eb1c4228b1de0b48819995c02d04dc",
+        "branch": "backup/nasal-bone-source-20261025",
+        "head": "f694ca7e06965fd58ed92c9dda0dd7adcd1b7947",
+        "tree": "cbae45412d9acd02bb2223e843c05e10f8d4901f"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/tests/clinical-review-nasal-bone-surface-imaging.test.ts",
+        "restore": "website/tests/clinical-review-nasal-bone-surface-imaging.test.ts"
+      },
+      {
+        "path": "website/scripts/import-clinical-review.mjs",
+        "restore": "website/scripts/import-clinical-review.mjs"
+      },
+      {
+        "path": "website/scripts/check-anatomy-coverage.mjs",
+        "restore": "website/scripts/check-anatomy-coverage.mjs"
+      },
+      {
+        "path": "website/lib/anatomy-coverage-view.ts",
+        "restore": "website/lib/anatomy-coverage-view.ts"
+      },
+      {
+        "path": "website/lib/atlas-delivery-policy.ts",
+        "restore": "website/lib/atlas-delivery-policy.ts"
+      },
+      {
+        "path": "recipes/prepare-nasal-website-recipe-20261025.mjs",
+        "restore": "coordination/prepare-nasal-website-recipe-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-bone-website-20261025.mjs",
+        "restore": "coordination/prepare-nasal-bone-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-website-stock-recipes-20261025.mjs",
+        "restore": "coordination/prepare-nasal-website-stock-recipes-20261025.mjs"
+      },
+      {
+        "path": "recipes/import-nasal-website-stock-20261025.mjs",
+        "restore": "coordination/import-nasal-website-stock-20261025.mjs"
+      },
+      {
+        "path": "recipes/generate-nasal-website-coverage-20261025.mjs",
+        "restore": "coordination/generate-nasal-website-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/install-nasal-website-coverage-20261025.mjs",
+        "restore": "coordination/install-nasal-website-coverage-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-nasal-website-review-20261025.mjs",
+        "restore": "coordination/build-nasal-website-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-nasal-review-notice-successor-20261025.mjs",
+        "restore": "coordination/verify-nasal-review-notice-successor-20261025.mjs"
+      },
+      {
+        "path": "recipes/refresh-nasal-website-delivery-pin-v2-20261025.mjs",
+        "restore": "coordination/refresh-nasal-website-delivery-pin-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-website-test-review-20261025.mjs",
+        "restore": "coordination/prepare-nasal-website-test-review-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-nasal-website-test-20261025.mjs",
+        "restore": "coordination/integrate-nasal-website-test-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-nasal-website-source-20261025.mjs",
+        "restore": "coordination/seal-nasal-website-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-website-production-checks-20261025.mjs",
+        "restore": "coordination/prepare-nasal-website-production-checks-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-nasal-website-production-20261025.mjs",
+        "restore": "coordination/verify-nasal-website-production-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-website-preview-20261025.mjs",
+        "restore": "coordination/prepare-nasal-website-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/serve-nasal-website-built-worker-20261025.mjs",
+        "restore": "coordination/serve-nasal-website-built-worker-20261025.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-nasal-website-preview-20261025.mjs",
+        "restore": "coordination/stop-owned-nasal-website-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/record-nasal-website-browser-20261025.mjs",
+        "restore": "coordination/record-nasal-website-browser-20261025.mjs"
+      },
+      {
+        "path": "recipes/record-nasal-website-verification-20261025.mjs",
+        "restore": "coordination/record-nasal-website-verification-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-nasal-website-source-20261025.mjs",
+        "restore": "coordination/backup-nasal-website-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-nasal-coverage-seams.mjs",
+        "restore": "coordination/prepare-nasal-coverage-seams.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-nasal-bone-surface-imaging.test.ts",
+      "bytes": 7864,
+      "sha256": "f549a6b815fc91c83a1faa04600cb69e694461fa47496ffa1c6bc37ba7599bc2"
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "107160a68bce65a7708b2cc98e69d8c6b243bc0dbbe74b3b4ae8b35abca823a7"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "f91dd4e94210ab8c8fcdb9a01a58446fdd6c000a12f436d88ea3e7c32f9da329"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "27a1d5a5bf839de1b59edc2d43de205736178366791c51429179eb4eb12c71c7"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "26924a0f49a578ab02cf666d9a65d92f12ed99bdea6d8e5a8c6287a4f1ba873f"
+    },
+    {
+      "path": "recipes/prepare-nasal-website-recipe-20261025.mjs",
+      "bytes": 2276,
+      "sha256": "0cc9e0ba85ac29390e3ab10b3be192f6451f20a27eedeb1134ec8caa011dd874"
+    },
+    {
+      "path": "recipes/prepare-nasal-bone-website-20261025.mjs",
+      "bytes": 6739,
+      "sha256": "e25328591fc641b43996c87aac5b7f0668f76be4ea039285de47cd81ad05ea4b"
+    },
+    {
+      "path": "recipes/prepare-nasal-website-stock-recipes-20261025.mjs",
+      "bytes": 2650,
+      "sha256": "a64c399434878aa9e1e5b4d3d2cd1cb5d493e56e9927e31e1f119e1e1fc13832"
+    },
+    {
+      "path": "recipes/import-nasal-website-stock-20261025.mjs",
+      "bytes": 6786,
+      "sha256": "0dbc90e7b5180badf057a6de871537d248059f50986d0836c8404c2a9e2955df"
+    },
+    {
+      "path": "recipes/generate-nasal-website-coverage-20261025.mjs",
+      "bytes": 2870,
+      "sha256": "ff621959615d49125e35db1447a7aaf5a225411f92b6baf1f929c76d0c97be71"
+    },
+    {
+      "path": "recipes/install-nasal-website-coverage-20261025.mjs",
+      "bytes": 775,
+      "sha256": "9d6aaf201610ba90b95e6d9f1bcc20a68d95263a93534cec69ac16a8b4200d20"
+    },
+    {
+      "path": "recipes/build-nasal-website-review-20261025.mjs",
+      "bytes": 6385,
+      "sha256": "0afdbf2e023c0392aca6dc2727a8693f56e9cfc6955e973119c41c825c88fa61"
+    },
+    {
+      "path": "recipes/verify-nasal-review-notice-successor-20261025.mjs",
+      "bytes": 7720,
+      "sha256": "cedf550ac021831cf08dc1d5733ffe14d49b1169f13f9d98553d916806981c2f"
+    },
+    {
+      "path": "recipes/refresh-nasal-website-delivery-pin-v2-20261025.mjs",
+      "bytes": 2785,
+      "sha256": "8a2a2fec0e94fd421cf605024043537e005fad4aedf2c5ddc370450bc04832da"
+    },
+    {
+      "path": "recipes/prepare-nasal-website-test-review-20261025.mjs",
+      "bytes": 2793,
+      "sha256": "bbcf29b9e493793c991897f7c6396e31a59f15aaf6c6f2a345664d4a40027438"
+    },
+    {
+      "path": "recipes/integrate-nasal-website-test-20261025.mjs",
+      "bytes": 1723,
+      "sha256": "1b5a6ae222549c48559bddc82d735ed4f2e7e621fea4c2e1c004c46e83408bb0"
+    },
+    {
+      "path": "recipes/seal-nasal-website-source-20261025.mjs",
+      "bytes": 6465,
+      "sha256": "7bf286fd90e514258c54de35a04cea89e4305fea7d025c09beb5cb34c3488a9a"
+    },
+    {
+      "path": "recipes/prepare-nasal-website-production-checks-20261025.mjs",
+      "bytes": 1702,
+      "sha256": "f61209baf0c7519700dc858b1ec5814799e4abedb01f2346f2d1fe3447e5f7d9"
+    },
+    {
+      "path": "recipes/verify-nasal-website-production-20261025.mjs",
+      "bytes": 4805,
+      "sha256": "fff73b6d5365872a9e31e222e05bcdf6aa48e2321f19fb803f12d472717c60e3"
+    },
+    {
+      "path": "recipes/prepare-nasal-website-preview-20261025.mjs",
+      "bytes": 2389,
+      "sha256": "3a53129c2f4fee83ce9ec4cba947c60305dc224691f3173a159b647da385dd6a"
+    },
+    {
+      "path": "recipes/serve-nasal-website-built-worker-20261025.mjs",
+      "bytes": 3873,
+      "sha256": "3b130914446c4d66b555c45ce19970b0b246663681d82b441ac87c4c1db0eac6"
+    },
+    {
+      "path": "recipes/stop-owned-nasal-website-preview-20261025.mjs",
+      "bytes": 2568,
+      "sha256": "3a855459a9ed00c0a8ac8d3b3119560d1ea93d8109558945e17c1736a9f1849e"
+    },
+    {
+      "path": "recipes/record-nasal-website-browser-20261025.mjs",
+      "bytes": 4846,
+      "sha256": "19922a42861fab8dcbc4a6892aaf4abe8a0616940a026741c90d7e81bb0a2dcf"
+    },
+    {
+      "path": "recipes/record-nasal-website-verification-20261025.mjs",
+      "bytes": 3304,
+      "sha256": "f29411e8c58b74738fbacad0ffa2dc10f002ab0be034ad6b07d9d4dbb9ba8778"
+    },
+    {
+      "path": "recipes/backup-nasal-website-source-20261025.mjs",
+      "bytes": 6111,
+      "sha256": "8ced44dc5cf0b5ca84389a81c3fe45d1084ef6056a71c719316c7d64c593abc3"
+    },
+    {
+      "path": "recipes/prepare-nasal-coverage-seams.mjs",
+      "bytes": 18268,
+      "sha256": "751e43ceea8ca35a8c8f321df5f8618ce485bdd540721ee72fcf3a673cc10c0e"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party Website test, importer and exact coverage/delivery guard source, plus coordinate-free recovery recipes only. The verified local Website source and native baseline/pins/data plus prior source supplements are required; not whole/private/runnable recovery. No raw QA/browser observations/logs/screenshots, generated medical/Review/coverage data/pins/closures/registry, private configuration/decisions, scans, masks, identifiers, coordinates, models/assets, dependencies, runtime or canonical/native Git ancestry included. No acquired image or publisher asset is included.",
+  "proof": {
+    "currentFocusedWholeRoots": 12,
+    "currentFocusedWholeCases": 59,
+    "skippedCases": 0,
+    "oldTestRootsUnchanged": true,
+    "sourcePaths": 6867,
+    "reviewSourceFiles": 1614,
+    "protectedReviewInputs": 1818,
+    "reviewViewerFiles": 54,
+    "reviewViewerPackages": 24,
+    "fullTypeRoots": 2669,
+    "fullTypeFiles": 6227,
+    "diagnostics": 0,
+    "stockProductionArtifacts": 1145,
+    "desktopWidths": [
+      1280,
+      1440
+    ],
+    "newDraftPlacements": 4,
+    "currentNativeAndWebsitePending": 477,
+    "allPriorLicenceTextPreservedWithExactHeadingAndOriginalNoteInsertion": true,
+    "modelHead401": 1,
+    "modelGets": 0,
+    "signedInGeometryReviewOrPaidAccessAcceptance": false,
+    "sourceBytes": 125734,
+    "privateDataUploaded": false,
+    "ownerPreviewChanged": false,
+    "installed": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "wholeStockSuitePassing": false,
+    "original316StockFailuresAnd3SkipsNotAdjusted": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
