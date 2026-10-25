@@ -1,0 +1,377 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-25T01:32:48.093Z",
+  "sourceIdentity": {
+    "kind": "selected-first-party-ultrasound-pan-and-adjacent-test-roles-not-cumulative",
+    "websiteSourceSha256": "3ce7a4d80506ceb739fd3bfc586ac6d37672a3009ac1c6a744725cbfc80e4dd3",
+    "nativeHead": "727ed5b451ae940a01e56272c8fbc703ea3b0095",
+    "reviewBindingSha256": "c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68",
+    "requiredLocalWebsiteBaseline": {
+      "path": "F:/VisibleMedicine/staging/20261025-learning-delivery-website/SOURCE_CANDIDATE.json",
+      "sha256": "b78888cc95b293b85cbdee3a022bd4b115303e6ae887b93f9da1157b42244876",
+      "offDeviceAvailabilityNotClaimed": true
+    },
+    "requiredSourceSupplement": {
+      "branch": "backup/learning-delivery-source-20261025",
+      "head": "b0a5bc5da337b352843dfdb64407511dcc0f12f3",
+      "tree": "bc47bd9c56b56e0a70dbc42d189bcc9a7147ef47",
+      "receiptSha256": "74fbc8f701df4eca4690054fec3410543bfc71e69c5e4198d32766eb2c2ef897"
+    },
+    "restorePaths": [
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/adjacent-clinical-source-roles.test.mjs",
+        "restore": "website/tests/adjacent-clinical-source-roles.test.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/adjacent-current-tour-source-roles.test.mjs",
+        "restore": "website/tests/adjacent-current-tour-source-roles.test.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/adjacent-shoulder-source-roles.test.mjs",
+        "restore": "website/tests/adjacent-shoulder-source-roles.test.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/components/UltrasoundLocalAtlas.tsx",
+        "restore": "website/components/UltrasoundLocalAtlas.tsx"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/release-diagnostic-context-inverse.mjs",
+        "restore": "website/tests/release-diagnostic-context-inverse.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/release-diagnostic-context-inverse.test.mjs",
+        "restore": "website/tests/release-diagnostic-context-inverse.test.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/adjacent-b79-tour-source-role.mjs",
+        "restore": "website/tests/adjacent-b79-tour-source-role.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/adjacent-role-context.mjs",
+        "restore": "website/tests/adjacent-role-context.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/adjacent-role-proposal-inverse.mjs",
+        "restore": "website/tests/adjacent-role-proposal-inverse.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/fixtures/adjacent-portable-before/adjacent-b79-tour-source-role.mjs.raw",
+        "restore": "website/tests/fixtures/adjacent-portable-before/adjacent-b79-tour-source-role.mjs.raw"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/fixtures/adjacent-portable-before/adjacent-clinical-source-roles.test.mjs.raw",
+        "restore": "website/tests/fixtures/adjacent-portable-before/adjacent-clinical-source-roles.test.mjs.raw"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/fixtures/adjacent-portable-before/adjacent-current-tour-source-roles.test.mjs.raw",
+        "restore": "website/tests/fixtures/adjacent-portable-before/adjacent-current-tour-source-roles.test.mjs.raw"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/fixtures/adjacent-portable-before/adjacent-shoulder-source-roles.test.mjs.raw",
+        "restore": "website/tests/fixtures/adjacent-portable-before/adjacent-shoulder-source-roles.test.mjs.raw"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/ultrasound-pan-interruption.test.mjs",
+        "restore": "website/tests/ultrasound-pan-interruption.test.mjs"
+      },
+      {
+        "path": "pending/pan-adjacent-20261025/website/tests/release-diagnostic-adjacent-current.test.mjs",
+        "restore": "website/tests/release-diagnostic-adjacent-current.test.mjs"
+      },
+      {
+        "path": "recipes/source-only-backup-20261019.mjs",
+        "restore": "coordination/source-only-backup-20261019.mjs"
+      },
+      {
+        "path": "recipes/seal-simple-website-successor.mjs",
+        "restore": "coordination/seal-simple-website-successor.mjs"
+      },
+      {
+        "path": "recipes/prepare-ultrasound-pan-interruption-20261025.mjs",
+        "restore": "coordination/prepare-ultrasound-pan-interruption-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-education-access-audit-20261025.mjs",
+        "restore": "coordination/run-education-access-audit-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-adjacent-b79-source-20261025.mjs",
+        "restore": "coordination/prepare-adjacent-b79-source-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-pan-adjacent-website-20261025.mjs",
+        "restore": "coordination/prepare-pan-adjacent-website-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-pan-adjacent-website-inner-20261025.mjs",
+        "restore": "coordination/prepare-pan-adjacent-website-inner-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-pan-adjacent-20261025.mjs",
+        "restore": "coordination/seal-pan-adjacent-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-pan-adjacent-verifier-20261025.mjs",
+        "restore": "coordination/prepare-pan-adjacent-verifier-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-pan-adjacent-20261025.mjs",
+        "restore": "coordination/verify-pan-adjacent-20261025.mjs"
+      },
+      {
+        "path": "recipes/correct-adjacent-diagnostic-composition-20261025.mjs",
+        "restore": "coordination/correct-adjacent-diagnostic-composition-20261025.mjs"
+      },
+      {
+        "path": "recipes/normalize-diagnostic-test-path-20261025.mjs",
+        "restore": "coordination/normalize-diagnostic-test-path-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-pan-adjacent-corrected-20261025.mjs",
+        "restore": "coordination/verify-pan-adjacent-corrected-20261025.mjs"
+      },
+      {
+        "path": "recipes/verify-pan-adjacent-corrected-v2-20261025.mjs",
+        "restore": "coordination/verify-pan-adjacent-corrected-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-pan-adjacent-preview-20261025.mjs",
+        "restore": "coordination/prepare-pan-adjacent-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-corrected-pan-preview-20261025.mjs",
+        "restore": "coordination/prepare-corrected-pan-preview-20261025.mjs"
+      },
+      {
+        "path": "recipes/preview-pan-adjacent-20261025.mjs",
+        "restore": "coordination/preview-pan-adjacent-20261025.mjs"
+      },
+      {
+        "path": "recipes/preview-pan-adjacent-corrected-20261025.mjs",
+        "restore": "coordination/preview-pan-adjacent-corrected-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-pan-adjacent-backup-20261025.mjs",
+        "restore": "coordination/prepare-pan-adjacent-backup-20261025.mjs"
+      },
+      {
+        "path": "recipes/backup-pan-adjacent-source-20261025.mjs",
+        "restore": "coordination/backup-pan-adjacent-source-20261025.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/adjacent-clinical-source-roles.test.mjs",
+      "bytes": 2957,
+      "sha256": "7836321166a9a461fe57199bd76bc9f62a13df834b6d748f45dbb8e07df083da"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/adjacent-current-tour-source-roles.test.mjs",
+      "bytes": 6109,
+      "sha256": "66cb2d654960cb270564da64478a21672ff84fddba89b6b56f6a56d2450eb99c"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/adjacent-shoulder-source-roles.test.mjs",
+      "bytes": 6399,
+      "sha256": "00a8f433689d35e859d1b9c52856f96b100fb0e136b5ae693ffb3a9e8ccbff4e"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/components/UltrasoundLocalAtlas.tsx",
+      "bytes": 24714,
+      "sha256": "1a365715c70e418c6e7bf91e2152e2ed728fbde76a467db9f702492e4bad3831"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/release-diagnostic-context-inverse.mjs",
+      "bytes": 2897,
+      "sha256": "f73b13e1742374dbe5f2ab7552f76f81f16051edfb9452a70c7f68ecebebe4e7"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/release-diagnostic-context-inverse.test.mjs",
+      "bytes": 6061,
+      "sha256": "65d63a3b7f24697cf6424154805ec37deff1896bf8280a649bcbcbad97a9500e"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/adjacent-b79-tour-source-role.mjs",
+      "bytes": 4103,
+      "sha256": "cad6309ff971fd83ff8b96c7220e30878543650cd5a448bfe1a69440436ccbbd"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/adjacent-role-context.mjs",
+      "bytes": 2265,
+      "sha256": "dd8c2ced985b4ae85d50a6f16bd4b3eb5015be25742a43ee956e2f3850e4b054"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/adjacent-role-proposal-inverse.mjs",
+      "bytes": 7156,
+      "sha256": "551ad8e01b37c4e97f16ee6868f346fe6fba63f6c87868f1586c407d753dce3a"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/fixtures/adjacent-portable-before/adjacent-b79-tour-source-role.mjs.raw",
+      "bytes": 3897,
+      "sha256": "56534358796baebd68291bda23afa5e19f01c47462f6c4ff14a132499d93db8f"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/fixtures/adjacent-portable-before/adjacent-clinical-source-roles.test.mjs.raw",
+      "bytes": 2902,
+      "sha256": "1378915ab875655be05a97cf507791b74793a36cdd56bf67100e4ae3f8c5e1a6"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/fixtures/adjacent-portable-before/adjacent-current-tour-source-roles.test.mjs.raw",
+      "bytes": 5617,
+      "sha256": "6182e1fa105c7755e2b56a1c6b1cec9e88b88ec97f83945ded1d09c6b9cd2135"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/fixtures/adjacent-portable-before/adjacent-shoulder-source-roles.test.mjs.raw",
+      "bytes": 5437,
+      "sha256": "b90d6c6f0b5f58150528ba874aac043a7e2150b173ae252940251c40e0d16c32"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/ultrasound-pan-interruption.test.mjs",
+      "bytes": 5485,
+      "sha256": "1b1b267b48c10cd92f41142407f47d002ffd6b8875ce71d27dc45ea09203dd01"
+    },
+    {
+      "path": "pending/pan-adjacent-20261025/website/tests/release-diagnostic-adjacent-current.test.mjs",
+      "bytes": 2120,
+      "sha256": "08eb6a8c578496403700997709f3050cd6b6f223ab9de42311a45abe33681488"
+    },
+    {
+      "path": "recipes/source-only-backup-20261019.mjs",
+      "bytes": 7700,
+      "sha256": "3f8ea65871f15558d46c1c2a36feb0dee95d2408207f9d2762976ae66ead5212"
+    },
+    {
+      "path": "recipes/seal-simple-website-successor.mjs",
+      "bytes": 5382,
+      "sha256": "8e15dcfed86a8c97ed6ed558b891908acfef767c05a80947361876ad82b2d0c7"
+    },
+    {
+      "path": "recipes/prepare-ultrasound-pan-interruption-20261025.mjs",
+      "bytes": 1407,
+      "sha256": "5707ffcc303ceda591fb105033878fb3687420235ff9b61aa74638ec6fc4a149"
+    },
+    {
+      "path": "recipes/run-education-access-audit-20261025.mjs",
+      "bytes": 4295,
+      "sha256": "c6b5ce2d83568c27991692266a767238210765b53bff0ce636b312681867ecba"
+    },
+    {
+      "path": "recipes/prepare-adjacent-b79-source-20261025.mjs",
+      "bytes": 2122,
+      "sha256": "c1b6376fe36938b5656960cc0dd00b3442399f0c79a1251ffc9ee28a7130adf2"
+    },
+    {
+      "path": "recipes/prepare-pan-adjacent-website-20261025.mjs",
+      "bytes": 978,
+      "sha256": "eebf5fff5ce626c7016e06a9cecf45059505afe2d7f92eaa65b1b026fbbbe7ff"
+    },
+    {
+      "path": "recipes/prepare-pan-adjacent-website-inner-20261025.mjs",
+      "bytes": 3229,
+      "sha256": "632cf63a2c51b010af66076018ead9b65aa53b49c70df378f9b9b36fd2362d55"
+    },
+    {
+      "path": "recipes/seal-pan-adjacent-20261025.mjs",
+      "bytes": 4561,
+      "sha256": "5ffe19254a5a1b98632102e94137889b56281a8496ef3bfeacda263223f8d0c7"
+    },
+    {
+      "path": "recipes/prepare-pan-adjacent-verifier-20261025.mjs",
+      "bytes": 2315,
+      "sha256": "eb03275d426f1e24748ffe8a6b308a02d3f4eba49193337cee60558912e4fdb1"
+    },
+    {
+      "path": "recipes/verify-pan-adjacent-20261025.mjs",
+      "bytes": 13440,
+      "sha256": "a4087101ebffd8eb24c37262d6bfc3411d5d4e8065841e75323ae94986f60081"
+    },
+    {
+      "path": "recipes/correct-adjacent-diagnostic-composition-20261025.mjs",
+      "bytes": 8322,
+      "sha256": "c5255f89760281f0b48f91c6fad2d122b8b71cbff4088e4f0721cf0d592833b2"
+    },
+    {
+      "path": "recipes/normalize-diagnostic-test-path-20261025.mjs",
+      "bytes": 2092,
+      "sha256": "c085dcfd3131ced5070418823ab5c11535783448327b71d0c4ff94d21a566dcb"
+    },
+    {
+      "path": "recipes/verify-pan-adjacent-corrected-20261025.mjs",
+      "bytes": 13552,
+      "sha256": "8a7d935b676451d0962b006d240c549b512826270059fd4661ebba8ed59e5851"
+    },
+    {
+      "path": "recipes/verify-pan-adjacent-corrected-v2-20261025.mjs",
+      "bytes": 13555,
+      "sha256": "27c94399de31639a70dda0556f70e3bb152ef5f9121c739b33b04acc47c03c31"
+    },
+    {
+      "path": "recipes/prepare-pan-adjacent-preview-20261025.mjs",
+      "bytes": 573,
+      "sha256": "c9e57fd1a339fd243561dbe2634882f0d9a0f102c07bbd1e7a0a327f60dc3731"
+    },
+    {
+      "path": "recipes/prepare-corrected-pan-preview-20261025.mjs",
+      "bytes": 546,
+      "sha256": "3089b01343edaf63d9aceb7fa8b8758a02eefeea715c0943836cd44088d67857"
+    },
+    {
+      "path": "recipes/preview-pan-adjacent-20261025.mjs",
+      "bytes": 3781,
+      "sha256": "710e85a544666ef7395568ceaaa6c60c34a62a8a5da6bcafd3f35e1884ab0ea1"
+    },
+    {
+      "path": "recipes/preview-pan-adjacent-corrected-20261025.mjs",
+      "bytes": 3790,
+      "sha256": "84f54116ab8259794e11ef491ddcac299307b7a6072b563668b8a3db1037a9aa"
+    },
+    {
+      "path": "recipes/prepare-pan-adjacent-backup-20261025.mjs",
+      "bytes": 3935,
+      "sha256": "3ee6a60af9919e0ba7c50a9c3f943514c60eb07d1d8760f203fc346f15a3fc4b"
+    },
+    {
+      "path": "recipes/backup-pan-adjacent-source-20261025.mjs",
+      "bytes": 7441,
+      "sha256": "aa59e0ad397bae5280f0f75f810982abc0f7e3d911aeec241594d79eb01c95f4"
+    }
+  ],
+  "removed": [],
+  "scope": "15explicit first-party component/test/helper/code-fixture source files plus20recipes. No images, actual scan/mask/medical annotations or their sample-specific coordinates, private case records, identifiers, complete private-source inventory or raw QA, compiled output, dependency packages or canonical Git ancestry. External historical metadata remains local; frozen source roles are bound explicitly. Incremental source supplement only; not cumulative, whole/private or runnable Website/Atlas recovery. Exact local parent/historical delivery baselines remain necessary. No preview installation, publication, clinical approval or spatial registration.",
+  "proof": {
+    "focusedReportedPass": 554,
+    "focusedRoots": 46,
+    "repeatedHistoricalCollectorsAreNotDistinctCases": true,
+    "originalHeadCases": 10,
+    "currentHeadComponentCases": 2,
+    "headIntegrityCases": 3,
+    "portableEusAndCommitmentCases": 8,
+    "ultrasoundCoreCases": 25,
+    "ultrasoundPanCases": 8,
+    "educationMediaCases": 100,
+    "adjacentRoleCases": 13,
+    "diagnosticCompositionCases": 3,
+    "strictRoots": 9,
+    "strictTransitiveFiles": 628,
+    "strictDiagnostics": 0,
+    "stockProductionBuildPassed": true,
+    "buildFiles": 1133,
+    "sourcePathsChecked": 6771,
+    "privateHistoricalIndexNotUploaded": true,
+    "medicalSamplesOrImagesUploaded": false,
+    "rawQaUploaded": false,
+    "selectedBytes": 191135,
+    "clinicalApproval": false,
+    "spatialRegistration": false,
+    "ownerPreviewChanged": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

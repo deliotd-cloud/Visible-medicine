@@ -1,0 +1,2 @@
+import fs from 'node:fs';
+let source=fs.readFileSync(new URL('./preview-pan-adjacent-20261025.mjs',import.meta.url),'utf8');source=source.replaceAll("stage+'/SOURCE_CANDIDATE.json'","stage+'/SOURCE_CORRECTED_V2.json'").replaceAll('5b764710e1978c85900edd1593fb25f1023c16c4d3e67c19f1bc4d36cbfbe4f3','3ce7a4d80506ceb739fd3bfc586ac6d37672a3009ac1c6a744725cbfc80e4dd3').replaceAll('all6770SourceRowsUnchanged','all6771SourceRowsUnchanged');fs.writeFileSync(new URL('./preview-pan-adjacent-corrected-20261025.mjs',import.meta.url),source,{flag:'wx'});

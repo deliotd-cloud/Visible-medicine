@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+15explicit first-party component/test/helper/code-fixture source files plus20recipes. No images, actual scan/mask/medical annotations or their sample-specific coordinates, private case records, identifiers, complete private-source inventory or raw QA, compiled output, dependency packages or canonical Git ancestry. External historical metadata remains local; frozen source roles are bound explicitly. Incremental source supplement only; not cumulative, whole/private or runnable Website/Atlas recovery. Exact local parent/historical delivery baselines remain necessary. No preview installation, publication, clinical approval or spatial registration.
