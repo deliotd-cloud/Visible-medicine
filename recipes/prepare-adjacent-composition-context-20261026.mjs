@@ -1,0 +1,30 @@
+// An isolated sibling for test-only composition; no product/preview installation.
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';import {pathToFileURL} from 'node:url';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const proposal='F:/VisibleMedicine/staging/20261026-adjacent-current-composition-fix-proposal',patch=json(proposal+'/PATCHSET.json');
+const originalFile='F:/VisibleMedicine/staging/20261025-current-delivery-two-epoch-context/SOURCE_CANDIDATE.json',originalSha='e216153ecef3705403c111a46d4cc5863355a8a1b9094086d301b7b2eefe71b9',original=json(originalFile);
+const parentFile='F:/VisibleMedicine/staging/20261025-compact-access-website/SOURCE_CANDIDATE.json',parentSha='78fb4e35a0c9a20347232edfd881f4aeb19ad280fe0d1c6523e699c3496876c1',parent=json(parentFile);
+const stage='F:/VisibleMedicine/staging/20261026-adjacent-composition-context',site=stage+'/website';assert(!fs.existsSync(stage));assert.equal(hash(originalFile),originalSha);assert.equal(hash(parentFile),parentSha);assert.equal(patch.frozenWebsiteReceiptSha256,originalSha);assert.equal(patch.siblingReceiptParentSha256,parentSha);
+const allowed=['tests/adjacent-current-role-inverse.mjs','tests/adjacent-current-tour-source-roles.test.mjs','tests/release-diagnostic-context-inverse.mjs','tests/adjacent-regional-query-composition.mjs'];assert.deepEqual(patch.sourceChanges.map(r=>r.path),allowed);
+for(const row of original.sourceRows)assert.equal(hash(original.website+'/'+row.path),row.sha256,row.path);
+for(const row of patch.sourceChanges){assert.equal(hash(proposal+'/candidate/'+row.path),row.candidateSha256);if(row.beforeSha256)assert.equal(hash(original.website+'/'+row.path),row.beforeSha256);else assert(!original.sourceRows.some(r=>r.path===row.path));assert(!json(original.website+'/atlas-review/integration-inputs.json').inputs.some(r=>r.path===row.path));}
+const git=(...args)=>execFileSync('git',args,{encoding:'utf8',windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1',GIT_OPTIONAL_LOCKS:'0'}}).trim();
+assert.equal(git('-C',original.atlas,'rev-parse','HEAD'),original.atlasHead);assert.equal(git('-C',original.atlas,'rev-parse','HEAD^{tree}'),original.atlasTree);assert.equal(git('-C',original.atlas,'status','--porcelain'),'');
+assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+fs.mkdirSync(stage);git('clone','--shared','--no-checkout','--','F:/VisibleMedicine/website',site);git('-C',site,'config','--local','core.autocrlf','false');git('-C',site,'read-tree','HEAD');
+for(const row of original.sourceRows){const to=path.resolve(site,row.path);assert(to.startsWith(path.resolve(site)+path.sep));fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(original.website+'/'+row.path,to,fs.constants.COPYFILE_EXCL);}
+for(const row of patch.sourceChanges)fs.copyFileSync(proposal+'/candidate/'+row.path,site+'/'+row.path);
+fs.symlinkSync(fs.realpathSync.native(original.website+'/node_modules'),site+'/node_modules','junction');fs.symlinkSync(original.atlas,stage+'/atlas','junction');
+const {restoreAdjacentRegionalQueryLayer:restore}=await import(pathToFileURL(site+'/tests/adjacent-regional-query-composition.mjs').href);
+for(const row of patch.sourceChanges.filter(r=>r.beforeSha256)){
+ const bytes=fs.readFileSync(site+'/'+row.path);assert.deepEqual(restore(row.path,bytes),fs.readFileSync(original.website+'/'+row.path));const changed=Buffer.from(bytes);changed[0]^=1;assert.throws(()=>restore(row.path,changed));assert.throws(()=>restore(row.path,Buffer.concat([bytes,Buffer.from('\n')])));
+}
+const later=fs.readFileSync(site+'/tests/release-epoch-composition-preservation.test.mjs');const earlier=restore('release-to-lower',later);assert.equal(hash(site+'/tests/release-epoch-composition-preservation.test.mjs'),patch.releaseConsumerLaterSha256);
+assert.equal((await import('node:crypto')).createHash('sha256').update(earlier).digest('hex'),patch.releaseConsumerEarlierSha256);
+const paths=[...original.sourceRows.map(r=>r.path),allowed.at(-1)].sort();assert.equal(paths.length,6871);const sourceRows=paths.map(p=>({path:p,bytes:fs.statSync(site+'/'+p).size,sha256:hash(site+'/'+p)}));
+for(const row of original.sourceRows){assert.equal(hash(original.website+'/'+row.path),row.sha256);if(!allowed.includes(row.path))assert.equal(hash(site+'/'+row.path),row.sha256);}
+for(const row of parent.sourceRows)if(!['tests/current-atlas-delivery.test.mjs',...allowed].includes(row.path))assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+const receipt={...original,at:new Date().toISOString(),website:site,parent:parentFile,parentSha256:parentSha,sourcePaths:sourceRows.length,sourceRows,derivation:{path:originalFile,sha256:originalSha},proposal:{path:proposal+'/PATCHSET.json',sha256:hash(proposal+'/PATCHSET.json')},changedPaths:[...original.changedPaths,...allowed.slice(0,3)],addedPaths:[...original.addedPaths,allowed.at(-1)],sourceContext:'Exact e216 sibling with one additional authenticated test-only composition layer; product source7e unchanged',primaryWebsiteCandidateReplaced:false,installed:false,normalPreviewUnchanged:true,clinicalApproval:false,patientSpaceRegistration:false};
+fs.writeFileSync(stage+'/SOURCE_CANDIDATE.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(stage+'/MAIN_ADMISSION.json',JSON.stringify({at:new Date().toISOString(),source:{path:stage+'/SOURCE_CANDIDATE.json',sha256:hash(stage+'/SOURCE_CANDIDATE.json')},sourceRows:sourceRows.length,changed:patch.sourceChanges,wholeThreeEditedSourceInverses:true,sixChangedOrAppendedRefusals:true,laterReleaseInputAndEarlierEndpointExact:true,allOtherE216BytesExact:true,allProductAndProtectedBytesEqual78fb:true,knownCurrent29ParentPreserved:true,wholeRootsNotYetRun:true,noNewBuildOrTypecheckClaim:true,ownerPreviewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({source:stage+'/SOURCE_CANDIDATE.json',sha256:hash(stage+'/SOURCE_CANDIDATE.json'),rows:sourceRows.length,admissionSha256:hash(stage+'/MAIN_ADMISSION.json')}));

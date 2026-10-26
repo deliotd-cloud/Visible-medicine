@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party test-only composition modules, exact runner and recovery recipes. Requires the existing authenticated local context configuration/finite closures, native historical objects, exact local Website/native baselines/private pins/data and earlier source supplements. No raw QA/logs/screenshots or receipt/configuration/closure JSON, generated Review/medical data/manifests/pins, private decisions/records, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Primary product and normal preview unchanged. Not a whole/private/runnable backup.

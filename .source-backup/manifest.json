@@ -1,0 +1,224 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T01:40:00.319Z",
+  "sourceIdentity": {
+    "kind": "authentic-source-epoch-test-composition-and-contained-runner-recovery",
+    "testOnlyContextSha256": "b94cfe0f5ba7183b4a2316d34cc08d3ab8847ecd8f68e97185184476d186727f",
+    "unchangedPrimaryWebsiteSourceSha256": "01264592ba332c3ad0f124c5ee9f1f517a231b4a927dda2a8f7e831da5f7c51d",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261025-current-delivery-epochs-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "db05a9d24fca40983e3f0049ca7c2e4361e9a9ddfca141dd3ad25faeccd15a30",
+        "branch": "backup/current-delivery-epochs-source-20261025",
+        "head": "5fe91c20b099511c4c109abf088237e995c135bc",
+        "tree": "7d28c0bef227e130338c15dd69d7a9b8fd3c60f3"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-title-tour-website-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "759e2d4872871b207151fe55e358c837a31e51c31bdda239c1e5434636937666",
+        "branch": "backup/title-tour-website-source-20261026",
+        "head": "b10850698239a71b90a08bd8c391144acf22cc90",
+        "tree": "c388925ae5dcc597d9780e1850f19171f5d35e42"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "test-context/tests/adjacent-current-role-inverse.mjs",
+        "restore": "test-context/tests/adjacent-current-role-inverse.mjs"
+      },
+      {
+        "path": "test-context/tests/adjacent-current-tour-source-roles.test.mjs",
+        "restore": "test-context/tests/adjacent-current-tour-source-roles.test.mjs"
+      },
+      {
+        "path": "test-context/tests/release-diagnostic-context-inverse.mjs",
+        "restore": "test-context/tests/release-diagnostic-context-inverse.mjs"
+      },
+      {
+        "path": "test-context/tests/adjacent-regional-query-composition.mjs",
+        "restore": "test-context/tests/adjacent-regional-query-composition.mjs"
+      },
+      {
+        "path": "recipes/source-epoch/nine-root-epoch-runner.mjs",
+        "restore": "coordination/source-epoch/nine-root-epoch-runner.mjs"
+      },
+      {
+        "path": "recipes/source-epoch/restore-composition-v2.mjs",
+        "restore": "coordination/source-epoch/restore-composition-v2.mjs"
+      },
+      {
+        "path": "recipes/prepare-nine-root-shoulder-context-20261026.mjs",
+        "restore": "coordination/prepare-nine-root-shoulder-context-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-admitted-nine-root-lanes-20261026.mjs",
+        "restore": "coordination/run-admitted-nine-root-lanes-20261026.mjs"
+      },
+      {
+        "path": "recipes/correct-nine-root-collector-count-20261026.mjs",
+        "restore": "coordination/correct-nine-root-collector-count-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-nine-root-v6-driver-20261026.mjs",
+        "restore": "coordination/prepare-nine-root-v6-driver-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-admitted-nine-root-v6-lanes-20261026.mjs",
+        "restore": "coordination/run-admitted-nine-root-v6-lanes-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-adjacent-composition-context-20261026.mjs",
+        "restore": "coordination/prepare-adjacent-composition-context-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-adjacent-composition-context-v2-20261026.mjs",
+        "restore": "coordination/prepare-adjacent-composition-context-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-nine-root-composition-runner-20261026.mjs",
+        "restore": "coordination/prepare-nine-root-composition-runner-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-adjacent-composition-whole-roots-20261026.mjs",
+        "restore": "coordination/run-adjacent-composition-whole-roots-20261026.mjs"
+      },
+      {
+        "path": "recipes/prove-composition-lower-limb-component-20261026.mjs",
+        "restore": "coordination/prove-composition-lower-limb-component-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-source-epoch-reliability-20261026.mjs",
+        "restore": "coordination/record-source-epoch-reliability-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-source-epoch-reliability-20261026.mjs",
+        "restore": "coordination/backup-source-epoch-reliability-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "test-context/tests/adjacent-current-role-inverse.mjs",
+      "bytes": 20364,
+      "sha256": "b14c426e904c6d8fcec4c44aa19ae3f520f425f7c1a6facbc481edc6e72a0ad2"
+    },
+    {
+      "path": "test-context/tests/adjacent-current-tour-source-roles.test.mjs",
+      "bytes": 6421,
+      "sha256": "19a9686ecb9cea52f8ae5eabc0312473e518a41a3339e9acdbe3f68ad4e640d6"
+    },
+    {
+      "path": "test-context/tests/release-diagnostic-context-inverse.mjs",
+      "bytes": 5355,
+      "sha256": "fb94fc338b4abe8bf175177ec13c8a6836190bf96b5f7b2b182d7a07b7e36500"
+    },
+    {
+      "path": "test-context/tests/adjacent-regional-query-composition.mjs",
+      "bytes": 3288,
+      "sha256": "9d1eb03fff04b5bc345371fae4fe4956341d9c667fb0c61af988b61af602e63d"
+    },
+    {
+      "path": "recipes/source-epoch/nine-root-epoch-runner.mjs",
+      "bytes": 21096,
+      "sha256": "fcb3b0e1cfa18375b9857ac5119c398e111868581c0a1a37e5de9db120051d4a"
+    },
+    {
+      "path": "recipes/source-epoch/restore-composition-v2.mjs",
+      "bytes": 1250,
+      "sha256": "bfdf5ef60b078a028983b72b164e81b16e8f0ddc21fb80b0112fda98b6bdb5c3"
+    },
+    {
+      "path": "recipes/prepare-nine-root-shoulder-context-20261026.mjs",
+      "bytes": 3364,
+      "sha256": "ff1f792a7d71a545e99f5101ebd92569ab4f6a6fc8ede45b3882fadaf41b2786"
+    },
+    {
+      "path": "recipes/run-admitted-nine-root-lanes-20261026.mjs",
+      "bytes": 4230,
+      "sha256": "65be83f4b63d82017c7832eb512ecbc62f56d401c462d59afd05241e1b1ad05c"
+    },
+    {
+      "path": "recipes/correct-nine-root-collector-count-20261026.mjs",
+      "bytes": 4388,
+      "sha256": "c0f83c89b2916a2f25179f3c4da2cafa8766f8293f8255f807a5d56fb9cf7003"
+    },
+    {
+      "path": "recipes/prepare-nine-root-v6-driver-20261026.mjs",
+      "bytes": 661,
+      "sha256": "75bf65aa9bb0b6393b564ccff9f48ef0e2ad1e352412045a68071cfc56c38557"
+    },
+    {
+      "path": "recipes/run-admitted-nine-root-v6-lanes-20261026.mjs",
+      "bytes": 4230,
+      "sha256": "1dbef4d69561d04f495be88b8051ffd9c821520a034c2f95487dd55389e3127e"
+    },
+    {
+      "path": "recipes/prepare-adjacent-composition-context-20261026.mjs",
+      "bytes": 6139,
+      "sha256": "57ef01cfbc054361b4fb7a9807c37ba23fce1aebb02beefbdf5dda8cf96dea49"
+    },
+    {
+      "path": "recipes/prepare-adjacent-composition-context-v2-20261026.mjs",
+      "bytes": 5892,
+      "sha256": "291996c002d19fbbffdec53d6d63c8fc8c7494b9f8b6bfa1764a35847924ab49"
+    },
+    {
+      "path": "recipes/prepare-nine-root-composition-runner-20261026.mjs",
+      "bytes": 5373,
+      "sha256": "b4a4727330ecdd5da1cef4f8dce0559359e065f2b577a46f0ca4a5a7af823e64"
+    },
+    {
+      "path": "recipes/run-adjacent-composition-whole-roots-20261026.mjs",
+      "bytes": 4338,
+      "sha256": "874653e522a7777a958bd7b18d4f1d4c364487eac5691fa9760ae21e42119e99"
+    },
+    {
+      "path": "recipes/prove-composition-lower-limb-component-20261026.mjs",
+      "bytes": 2750,
+      "sha256": "9ade3663cb192de5bc993dc4496857d6256d85a249d8ba2373213fb933cb836a"
+    },
+    {
+      "path": "recipes/record-source-epoch-reliability-20261026.mjs",
+      "bytes": 9342,
+      "sha256": "d995ba90c462e86ddb7da43f1c90d3c9c06dd1925d68de8e560895ee87637c77"
+    },
+    {
+      "path": "recipes/backup-source-epoch-reliability-20261026.mjs",
+      "bytes": 6354,
+      "sha256": "8cdee488db431f87d0bf590a0953c8b80d3c6f4d936fd6c302a977ba631e4b8c"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party test-only composition modules, exact runner and recovery recipes. Requires the existing authenticated local context configuration/finite closures, native historical objects, exact local Website/native baselines/private pins/data and earlier source supplements. No raw QA/logs/screenshots or receipt/configuration/closure JSON, generated Review/medical data/manifests/pins, private decisions/records, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Primary product and normal preview unchanged. Not a whole/private/runnable backup.",
+  "proof": {
+    "uniqueWholeSourceEpochRoots": 12,
+    "outerCasesPassed": 85,
+    "separateOriginalChildCasesPassed": 13,
+    "skips": 0,
+    "nineDeclaredRootsAdmittedAcrossExplicitContexts": true,
+    "allExpectedHistoricalSourcePinsRetained": true,
+    "sourceAndDependencyRowsRecheckedBeforeAndAfter": true,
+    "priorFailedAttemptsRetained": true,
+    "oldRunnerDoubleCountCorrectedWithoutRepeatingPassedCases": true,
+    "originalFourTourCasesAndThreeCompleteConsumersPass": true,
+    "allOwnedGuardedProcessesClosed": true,
+    "testOnlyChanges": true,
+    "sourceBytes": 114835,
+    "wholeStockSuitePassing": false,
+    "currentA01Coverage": false,
+    "original316StockFailuresAnd3SkipsUnadjusted": true,
+    "noFreshBuildOrTypecheckClaim": true,
+    "normalPreviewUnchanged": true,
+    "installed": false,
+    "privateDataUploaded": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
