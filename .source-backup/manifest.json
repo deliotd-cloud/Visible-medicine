@@ -1,0 +1,241 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T02:29:50.356Z",
+  "sourceIdentity": {
+    "kind": "current-mri-ui-studio-functional-test-source-and-vetted-loaders",
+    "testContextSha256": "326f85545131154ef9bf3b70e6fb5a08c5b8e9192ff3fde0e92466111e8aa00d",
+    "unchangedPrimaryWebsiteSha256": "1b19e2ebc781d3877d3f2982d1349292399cd2e787a64baa3ffebfb852c55678",
+    "nativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-guided-step-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "78e6afca212573e0cab75d188da0fa6e1851b7919b977695fb46ccb3874955d5",
+        "branch": "backup/guided-step-source-20261026",
+        "head": "987045d87d774ecca14d10e8cc2a3e8222844f4a",
+        "tree": "ba71f02e3337dbd619c2f519b07551c3756eb76e"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-source-epoch-reliability-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "5e15081ed02204291b4a6fc9603476408cf8ab2d25444c18ac9ac5479f009d7a",
+        "branch": "backup/source-epoch-reliability-20261026",
+        "head": "c67f50c72757124a13d22712151d5031ad521fa5",
+        "tree": "114c535e41ed4d294b4605794f6189d6a6003471"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "test-context/tests/clinical-review-ui-simplification.test.ts",
+        "restore": "test-context/tests/clinical-review-ui-simplification.test.ts"
+      },
+      {
+        "path": "test-context/tests/head-link-availability.test.ts",
+        "restore": "test-context/tests/head-link-availability.test.ts"
+      },
+      {
+        "path": "test-context/tests/fda-reference-current-delivery.test.mjs",
+        "restore": "test-context/tests/fda-reference-current-delivery.test.mjs"
+      },
+      {
+        "path": "test-context/tests/fda-reference-review-links.test.mjs",
+        "restore": "test-context/tests/fda-reference-review-links.test.mjs"
+      },
+      {
+        "path": "test-context/tests/review-component-test-build.ts",
+        "restore": "test-context/tests/review-component-test-build.ts"
+      },
+      {
+        "path": "test-context/tests/head-separate-component-loader.ts",
+        "restore": "test-context/tests/head-separate-component-loader.ts"
+      },
+      {
+        "path": "test-context/docs/CURRENT_FUNCTIONAL_DIAGNOSTICS.md",
+        "restore": "test-context/docs/CURRENT_FUNCTIONAL_DIAGNOSTICS.md"
+      },
+      {
+        "path": "recipes/prepare-current-functional-diagnostic-20261026.mjs",
+        "restore": "coordination/prepare-current-functional-diagnostic-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-current-functional-diagnostic-20261026.mjs",
+        "restore": "coordination/run-current-functional-diagnostic-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-current-fda-functional-test-20261026.mjs",
+        "restore": "coordination/prepare-current-fda-functional-test-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-current-functional-test-context-20261026.mjs",
+        "restore": "coordination/prepare-current-functional-test-context-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-current-functional-repaired-run-20261026.mjs",
+        "restore": "coordination/prepare-current-functional-repaired-run-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-current-functional-repaired-20261026.mjs",
+        "restore": "coordination/run-current-functional-repaired-20261026.mjs"
+      },
+      {
+        "path": "recipes/complete-review-ui-loader-20261026.mjs",
+        "restore": "coordination/complete-review-ui-loader-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-current-functional-final-run-20261026.mjs",
+        "restore": "coordination/prepare-current-functional-final-run-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-current-functional-final-20261026.mjs",
+        "restore": "coordination/run-current-functional-final-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-current-functional-types-20261026.mjs",
+        "restore": "coordination/verify-current-functional-types-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-current-functional-verification-20261026.mjs",
+        "restore": "coordination/record-current-functional-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-current-functional-source-20261026.mjs",
+        "restore": "coordination/backup-current-functional-source-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "test-context/tests/clinical-review-ui-simplification.test.ts",
+      "bytes": 6120,
+      "sha256": "6a4e3ed338c807f1e4584e0f5fb8ad3d33f4bbb0e830444dcdccca6adef0712c"
+    },
+    {
+      "path": "test-context/tests/head-link-availability.test.ts",
+      "bytes": 6713,
+      "sha256": "08a8476243b1d1618c17d6583edd2a685c93939ddbc65a77d2d5e54add4d3687"
+    },
+    {
+      "path": "test-context/tests/fda-reference-current-delivery.test.mjs",
+      "bytes": 7675,
+      "sha256": "73a4ae9a41f4816dae5ee4d8da7cbf14edd26bb757573a9bbd1e4eb924870ed2"
+    },
+    {
+      "path": "test-context/tests/fda-reference-review-links.test.mjs",
+      "bytes": 6997,
+      "sha256": "367aaacc1c169991eef6782b9643c424b39bae8c7a5a7a650f8d0e7c4b4d44c5"
+    },
+    {
+      "path": "test-context/tests/review-component-test-build.ts",
+      "bytes": 322,
+      "sha256": "07b0e9c0af7acc629bdc2fc7e564ab0a795fbd55e35b1f6cbf0ce5d85382ff11"
+    },
+    {
+      "path": "test-context/tests/head-separate-component-loader.ts",
+      "bytes": 1035,
+      "sha256": "24d8d1fbc88a85c79abed657699c10b38873c5847c949a3ed84e11d2d936412f"
+    },
+    {
+      "path": "test-context/docs/CURRENT_FUNCTIONAL_DIAGNOSTICS.md",
+      "bytes": 1132,
+      "sha256": "6f285daa01564e66b446253c42a622336cfa48b357d21b019255a297123b1f73"
+    },
+    {
+      "path": "recipes/prepare-current-functional-diagnostic-20261026.mjs",
+      "bytes": 4881,
+      "sha256": "73e840a289e1944c111715644807b7502c8e14cda6b7666202502e3e73a7f1d8"
+    },
+    {
+      "path": "recipes/run-current-functional-diagnostic-20261026.mjs",
+      "bytes": 4819,
+      "sha256": "e9064f4d615d7bd48c95190efe24add281508d9834209eddd48e52778555fb99"
+    },
+    {
+      "path": "recipes/prepare-current-fda-functional-test-20261026.mjs",
+      "bytes": 3724,
+      "sha256": "0e3f480d9832b26a8d40dad35a01838bf3ffd66c79672ebffbaae9758c64c4e6"
+    },
+    {
+      "path": "recipes/prepare-current-functional-test-context-20261026.mjs",
+      "bytes": 7708,
+      "sha256": "3eed82770ccf74f5c5eb735f8ac894052ff090003e00d577cf0b584336ab3e12"
+    },
+    {
+      "path": "recipes/prepare-current-functional-repaired-run-20261026.mjs",
+      "bytes": 2797,
+      "sha256": "0c7a69b10eb0e4232f6c58c21d59411d52c9fc52cb449007846e455d1295187b"
+    },
+    {
+      "path": "recipes/run-current-functional-repaired-20261026.mjs",
+      "bytes": 4828,
+      "sha256": "e58ba72db67ee81497af040e756dca62fabc618fda586cc0527186c91ee8d07e"
+    },
+    {
+      "path": "recipes/complete-review-ui-loader-20261026.mjs",
+      "bytes": 3755,
+      "sha256": "a1e60e57c8c38de35bf082918b7686522ffc7fdf3816e4c1334ec0ac22f165ca"
+    },
+    {
+      "path": "recipes/prepare-current-functional-final-run-20261026.mjs",
+      "bytes": 1847,
+      "sha256": "0579acbdc78cb0c63e1e34a5f59cc8929e5143dc594b6ea884583284f3f910ec"
+    },
+    {
+      "path": "recipes/run-current-functional-final-20261026.mjs",
+      "bytes": 4825,
+      "sha256": "e976c963d02cf094c7ac69e6ac2113f5d943bfb5917733e01eeb9c207fae060b"
+    },
+    {
+      "path": "recipes/verify-current-functional-types-20261026.mjs",
+      "bytes": 3648,
+      "sha256": "cf9f364594e66a0d3d7121f079814fb7e1866cf6442acf96d91d9fde03e70ccc"
+    },
+    {
+      "path": "recipes/record-current-functional-verification-20261026.mjs",
+      "bytes": 6785,
+      "sha256": "87c56e3ddfe7043c3d77a64a9dfdedde11c653a2e7666572a29b250b36d91703"
+    },
+    {
+      "path": "recipes/backup-current-functional-source-20261026.mjs",
+      "bytes": 6135,
+      "sha256": "d5af06beaab8ed4799d5815f2c8aa49fd158f9063548a44628274b0cdc2d112f"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party isolated test-context modules, unchanged original historical FDA root, existing test loaders, documentation and recovery recipes. Two loader repairs execute real current modules and retain original assertions. The new FDA counterpart is separate from the original d143 theorem. Exact local baseline/private pins/data, historical contexts/receipts and earlier source supplements remain required. No raw QA/TAP/failure or applicability inventory JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Product source/normal preview unchanged. Not a full/private/runnable backup.",
+  "proof": {
+    "currentWholeRoots": 23,
+    "currentCases": 289,
+    "currentSkips": 0,
+    "configuredTypeRoots": 2671,
+    "configuredTypeFiles": 6229,
+    "typeDiagnostics": 0,
+    "sourcePaths": 6877,
+    "unchangedPrimaryProductSourcePaths": 6875,
+    "allApplicationAnd1818ProtectedInputsByteExactToParent": true,
+    "originalFourReviewCasesAndThreeHeadLinkPurposesRetained": true,
+    "realCurrentDependencyGraphsUsed": true,
+    "originalFDATwoPurposeRootNotRepinned": true,
+    "newFDACurrentReadbackSixPacketsAndAllRefusals": true,
+    "initial286Cases283Pass3FailAndSecond285Pass1FailRetained": true,
+    "inventoryRoots": 1341,
+    "otherContextRoots": 13,
+    "previouslyProvedAuthenticEpochRoots": 9,
+    "priorFocusedCurrentRoots": 5,
+    "unclassifiedRoots": 1291,
+    "wholeStockSuitePassing": false,
+    "original316FailuresAnd3SkipsUnadjusted": true,
+    "noFreshProductionBuildClaim": true,
+    "signedInBrowserOrImageAcceptance": false,
+    "sourceBytes": 85746,
+    "privateDataUploaded": false,
+    "primaryProductNotReplaced": true,
+    "normalPreviewUnchanged": true,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
