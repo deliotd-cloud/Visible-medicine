@@ -1,0 +1,81 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T23:18:32.534Z",
+  "sourceIdentity": {
+    "kind": "workbook-draft-native-history-protection",
+    "sourceSha256": "de19377dc8e1a0c18180e3286f9dfae94209d338ead7f6cb1cd8b5575f0d73fa",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-review-test-efficiency-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "4143e02486667525ecdd15525fea3495410014d9e1e051e9ae33c2aafa9b10e6",
+        "head": "598ee2e7dfb384cf28d56ad7603e97fd4df19d5a",
+        "tree": "c81dcb3580a3fef8b26a449ea82e62e9d158e6b6",
+        "branch": "backup/review-test-efficiency-source-20261026"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/EducationRuntime.tsx",
+      "bytes": 385763,
+      "sha256": "aaa1918c9a275406484b8636e31de680a3769ced99d4918ebb5dc82d5d631192"
+    },
+    {
+      "path": "website/tests/workbook-draft-navigation.test.mjs",
+      "bytes": 11127,
+      "sha256": "15be1ad0fee0d04a6b4c9e7100f1b3ed4462d30c7afe9b7658e07cc487246e6c"
+    },
+    {
+      "path": "website/docs/WORKBOOK_DRAFT_HISTORY.md",
+      "bytes": 1049,
+      "sha256": "b03ff1e477697e4a4283355b4b695a3a49bd26d3f2d39675cabfe469cfc4722d"
+    },
+    {
+      "path": "originals/EducationRuntime.tsx.raw",
+      "bytes": 384951,
+      "sha256": "3d2a9f6409d03d18e19b352914233f3a9c3cb55ae286243006882c47b9b4ddf5"
+    },
+    {
+      "path": "recipes/integrate-workbook-history-20261026.mjs",
+      "bytes": 5006,
+      "sha256": "6e6a0cb39d943f139c9223f4d19762d1c26dfdffc9f81b006705605702ccd9d2"
+    },
+    {
+      "path": "recipes/verify-workbook-history-20261026.mjs",
+      "bytes": 4687,
+      "sha256": "72a50c777ced57ec894442515e5ce66fe6a405a7e6edd4915734d36055e63885"
+    },
+    {
+      "path": "recipes/prepare-workbook-history-browser-20261026.mjs",
+      "bytes": 5731,
+      "sha256": "1130e8714161eb282286665e1b7eadbdf3b3a918fd9f3c24caa282242330131c"
+    },
+    {
+      "path": "recipes/serve-workbook-history-browser-20261026.mjs",
+      "bytes": 3814,
+      "sha256": "0a619256d25e341ed1b2398a88e85918d05466732f7d1154f85b214aa4b0014b"
+    },
+    {
+      "path": "recipes/finish-workbook-history-20261026.mjs",
+      "bytes": 13553,
+      "sha256": "4c908ef895759e15398d5c7cc11f5c329e8a3e39133d64c6978d81afd4a6947a"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party component/test/documentation, original component and synthetic QA/integration recipes only. No scans, models, media, generated runtime, raw private proof, decisions, dependencies or canonical/native ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 26,
+    "fullConfiguredTypes": true,
+    "productionBuild": true,
+    "realReactSyntheticBrowser": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
