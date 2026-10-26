@@ -1,0 +1,132 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T22:07:37.451Z",
+  "sourceIdentity": {
+    "kind": "private-pptx-media-placement",
+    "sourceSha256": "8c69b7dc8cf220b55bd19f0e625b3dec69786cab4ee7fd3a40ca91ce51e01a17",
+    "nativeRevision": "643fd47491a41a0207f106806c17035cb938048b",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-surface-recovery-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "c5ed925174b59ee5364b811edf4142a1cf47e3ca99baab07be91ba2a7c83b3b4",
+        "head": "806997658658d6a09f713126ab45557c88dd1932",
+        "tree": "88c510e60aa9ad7779782e9203acf133fd505243",
+        "branch": "backup/surface-recovery-source-20261026"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/docs/LECTURE_PPTX_INTAKE.md",
+        "restore": "website/docs/LECTURE_PPTX_INTAKE.md"
+      },
+      {
+        "path": "website/scripts/lecture-pptx-intake.py",
+        "restore": "website/scripts/lecture-pptx-intake.py"
+      },
+      {
+        "path": "website/tests/lecture-pptx-intake.test.py",
+        "restore": "website/tests/lecture-pptx-intake.test.py"
+      },
+      {
+        "path": "website/tests/lecture-pptx-preview.test.mjs",
+        "restore": "website/tests/lecture-pptx-preview.test.mjs"
+      },
+      {
+        "path": "recipes/prepare-pptx-placement-20261026.mjs",
+        "restore": "coordination/prepare-pptx-placement-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-pptx-placement-20261026.mjs",
+        "restore": "coordination/verify-pptx-placement-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-pptx-placement-20261026.mjs",
+        "restore": "coordination/seal-pptx-placement-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-pptx-placement-20261026.mjs",
+        "restore": "coordination/backup-pptx-placement-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-pptx-placement-20261026.mjs",
+        "restore": "coordination/record-pptx-placement-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/docs/LECTURE_PPTX_INTAKE.md",
+      "bytes": 12613,
+      "sha256": "3288c77b4dffb9f9460a9e8a22d701bc4ad9891601421ce003a4753e7f435afb"
+    },
+    {
+      "path": "website/scripts/lecture-pptx-intake.py",
+      "bytes": 28218,
+      "sha256": "c30f4b1545ef1fb26d0a99a26e674d58da998d1be62726cdda0645c9e2e02615"
+    },
+    {
+      "path": "website/tests/lecture-pptx-intake.test.py",
+      "bytes": 25978,
+      "sha256": "d3cf7192c0d4d0278a7128415dedd2e7e0052e56ff04b69879043be797207150"
+    },
+    {
+      "path": "website/tests/lecture-pptx-preview.test.mjs",
+      "bytes": 20777,
+      "sha256": "adeff6aabd7ccab76d46efeb3139a9e695af7d446e6c43c96e1ce7f58e53acbd"
+    },
+    {
+      "path": "recipes/prepare-pptx-placement-20261026.mjs",
+      "bytes": 702,
+      "sha256": "cb26c4d1b9cbc505ed91fea37c0b1283129d478fe4e3c3b04f20fb1afecd8c2c"
+    },
+    {
+      "path": "recipes/verify-pptx-placement-20261026.mjs",
+      "bytes": 4021,
+      "sha256": "aa9a75f1bdec45ca46cbfdb1b4db7b17dc030c2dcfc7f0c01ff7506d7a0ef592"
+    },
+    {
+      "path": "recipes/seal-pptx-placement-20261026.mjs",
+      "bytes": 5155,
+      "sha256": "93d8b5fd9c31c03c419302d1ab6a286a47ecd2ea112806cbef4247a060a25a2c"
+    },
+    {
+      "path": "recipes/backup-pptx-placement-20261026.mjs",
+      "bytes": 3363,
+      "sha256": "70d4e17cd187ecf3d0ef02946a46016cb8307f7d86122fae5bc37e10d6d64053"
+    },
+    {
+      "path": "recipes/record-pptx-placement-20261026.mjs",
+      "bytes": 8485,
+      "sha256": "a2377cc000f140eb8231cc5174c0a69928dc3132a420505e93f471b3b3d7b570"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source, tests, documentation and coordination recipes only. No source decks, media, generated intake/review maps, raw test outputs, clinical records, scans, masks, identifiers, dependencies, runtime or canonical/native ancestry. Prior supplements and local source remain required; not a full/private/runnable backup.",
+  "proof": {
+    "nodeCases": {
+      "tests": 32,
+      "pass": 32,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "pythonCases": {
+      "total": 22,
+      "pass": 21,
+      "skipped": 1,
+      "reason": "Windows local symlink creation unavailable; original skip retained"
+    },
+    "applicationSourceUnchanged": true,
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,20 @@
+{
+  "nodeCases": {
+    "tests": 32,
+    "pass": 32,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "pythonCases": {
+    "total": 22,
+    "pass": 21,
+    "skipped": 1,
+    "reason": "Windows local symlink creation unavailable; original skip retained"
+  },
+  "applicationSourceUnchanged": true,
+  "wholeStockSuitePassing": false,
+  "normalPreviewChanged": false,
+  "clinicalApproval": false
+}
