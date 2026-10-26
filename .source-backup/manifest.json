@@ -1,0 +1,150 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T03:28:41.155Z",
+  "sourceIdentity": {
+    "kind": "inert-private-education-http-response-contract",
+    "websiteSourceSha256": "6628b2b4c7339523c29ab18608c774ac298e8a9a0b6d5d3772ab40c0de7cee0d",
+    "unchangedPrimaryWebsiteSha256": "a6e69d0701f4fda44dd9ac0f455f930d7319a74dc97a725e20243839cb731e1b",
+    "nativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-guided-return-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "5363f8feaa736c13233416de2844923de35e785edd8a46e069f4b336a71c3dc5",
+        "branch": "backup/guided-return-source-20261026",
+        "head": "14203d5de317e0cbad63874e6f73659dd0f18653",
+        "tree": "91a919999fabcb162225bec74ad5522ea54adadb"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/lib/education-media-response.ts",
+        "restore": "website/lib/education-media-response.ts"
+      },
+      {
+        "path": "website/tests/education-media-response.test.mjs",
+        "restore": "website/tests/education-media-response.test.mjs"
+      },
+      {
+        "path": "website/docs/EDUCATION_MEDIA_RESPONSE.md",
+        "restore": "website/docs/EDUCATION_MEDIA_RESPONSE.md"
+      },
+      {
+        "path": "recipes/prepare-education-response-website-20261026.mjs",
+        "restore": "coordination/prepare-education-response-website-20261026.mjs"
+      },
+      {
+        "path": "recipes/integrate-education-response-20261026.mjs",
+        "restore": "coordination/integrate-education-response-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-education-response-20261026.mjs",
+        "restore": "coordination/verify-education-response-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-current-eye-context-20261026.mjs",
+        "restore": "coordination/verify-current-eye-context-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-education-response-verification-20261026.mjs",
+        "restore": "coordination/record-education-response-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-education-response-source-20261026.mjs",
+        "restore": "coordination/backup-education-response-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-education-response-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-education-response-checkpoint-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/education-media-response.ts",
+      "bytes": 1792,
+      "sha256": "10d82098787e9b5d92ca631315aaa0e28b93ef2421bbad4c329350e04690344a"
+    },
+    {
+      "path": "website/tests/education-media-response.test.mjs",
+      "bytes": 9673,
+      "sha256": "6b2091abb0bc5fc73c666a98dabc45f04e1c5782a81378e93e07ffd777ae0d35"
+    },
+    {
+      "path": "website/docs/EDUCATION_MEDIA_RESPONSE.md",
+      "bytes": 1271,
+      "sha256": "baf5a1909de5570d1c2f016619c94cdded506c3e7515870e652be9059fc9fd6b"
+    },
+    {
+      "path": "recipes/prepare-education-response-website-20261026.mjs",
+      "bytes": 2102,
+      "sha256": "cdf7514ebee4dc23e93068cb2cb97893bf2dea6c4f1fc90c59cb55b81e4cb262"
+    },
+    {
+      "path": "recipes/integrate-education-response-20261026.mjs",
+      "bytes": 6371,
+      "sha256": "7ead4622a3ca2b1fb7571922ae1fb570e691811efa535de2555e2b33007d8ca2"
+    },
+    {
+      "path": "recipes/verify-education-response-20261026.mjs",
+      "bytes": 4824,
+      "sha256": "8b606e1f091dd3ea023e547a6865c9200eb8947cea39be75cf99f1b2b92a3385"
+    },
+    {
+      "path": "recipes/verify-current-eye-context-20261026.mjs",
+      "bytes": 4284,
+      "sha256": "75ff9ec67d5ac53df15c0e11980dc2855fd97b173742b1e2236fe0f7acb71721"
+    },
+    {
+      "path": "recipes/record-education-response-verification-20261026.mjs",
+      "bytes": 8298,
+      "sha256": "3fe732edf0df364d071c839ac93b83ec4aa22a97b6f65fa7fa3ae92f9bd16544"
+    },
+    {
+      "path": "recipes/backup-education-response-source-20261026.mjs",
+      "bytes": 5332,
+      "sha256": "4ff32d9dc848a627006fda524bcb518063b9d79116eb6ed624de5825943af5da"
+    },
+    {
+      "path": "recipes/finalize-education-response-checkpoint-20261026.mjs",
+      "bytes": 10045,
+      "sha256": "aa71fe6c175919afbf789729d0e6b2448a79a45195cc4bb80980d89a117a9e3e"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party server-only response module, synthetic tests/documentation and recovery recipes. Exact local baseline/private pins/data, source contexts/receipts and earlier source supplements remain required. No raw browser/QA/TAP, source/audit inventory JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. No route, bucket/schema selection, permission/readiness/clinical/deployment change. Source facts about eye context are locally verified; no new teaching or geometry is included. Not a full/private/runnable backup.",
+  "proof": {
+    "currentWholeRoots": 9,
+    "currentCases": 144,
+    "newResponseCases": 10,
+    "currentSkips": 0,
+    "configuredTypeRoots": 2672,
+    "configuredTypeFiles": 6230,
+    "typeDiagnostics": 0,
+    "newModuleIncludedInFullTypes": true,
+    "all6881ParentSourcePathsAnd1818ProtectedInputsExact": true,
+    "realObjectVerificationAndPostReadChecksUsed": true,
+    "privateHeadersAndGeneric400404503Responses": true,
+    "noResponseBeforeFinalVerificationAndBodyOwnershipBeforeConsumptionTested": true,
+    "readinessStillFalse": true,
+    "noRouteOrEnvironmentSchemaAuthPermissionChange": true,
+    "noFreshProductionBuildClaim": true,
+    "primaryWebsiteNotReplaced": true,
+    "eyeActualNativeSourceInputs": 61,
+    "correctedDisplayMriDraftRawPendingContextDistinguished": true,
+    "sourceBytes": 53992,
+    "wholeStockSuitePassing": false,
+    "original316FailuresAnd3SkipsUnadjusted": true,
+    "signedInImageOrClinicalAcceptance": false,
+    "privateDataUploaded": false,
+    "normalPreviewUnchanged": true,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

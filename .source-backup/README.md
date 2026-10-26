@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party server-only response module, synthetic tests/documentation and recovery recipes. Exact local baseline/private pins/data, source contexts/receipts and earlier source supplements remain required. No raw browser/QA/TAP, source/audit inventory JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. No route, bucket/schema selection, permission/readiness/clinical/deployment change. Source facts about eye context are locally verified; no new teaching or geometry is included. Not a full/private/runnable backup.
