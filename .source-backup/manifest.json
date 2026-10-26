@@ -1,0 +1,469 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T20:20:49.780Z",
+  "sourceIdentity": {
+    "kind": "private-local-reference-inspection-and-authentic-ui-history-source",
+    "sourceSha256": "f5606522b5c87ec40a8f75c76fa47aad6da672cb073542729595ca2c8203292f",
+    "nativeRevision": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-current-context-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "aa45d6164acebc4b7f2dd7961607431dc6a7e3de606a4d667559a7e8a87d37b7",
+        "branch": "backup/current-context-source-20261026",
+        "head": "f2955230bbad8abec2f1a2a13449cd2ffab6f306",
+        "tree": "19fc0822d27ac2419ac3c43d31b52de8fa635f66"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/tests/current-ui-delivery-transition.test.mjs",
+        "restore": "website/tests/current-ui-delivery-transition.test.mjs"
+      },
+      {
+        "path": "website/tests/head-pan-review-binding.test.mjs",
+        "restore": "website/tests/head-pan-review-binding.test.mjs"
+      },
+      {
+        "path": "website/tests/window-drag-review-binding.test.mjs",
+        "restore": "website/tests/window-drag-review-binding.test.mjs"
+      },
+      {
+        "path": "website/tests/historical-9e-ui-replay.mjs",
+        "restore": "website/tests/historical-9e-ui-replay.mjs"
+      },
+      {
+        "path": "website/tests/historical-9e-child-environment.test.mjs",
+        "restore": "website/tests/historical-9e-child-environment.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/historical-9e-ui-roots/current-ui-delivery-transition.test.mjs.raw",
+        "restore": "website/tests/fixtures/historical-9e-ui-roots/current-ui-delivery-transition.test.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/historical-9e-ui-roots/head-pan-review-binding.test.mjs.raw",
+        "restore": "website/tests/fixtures/historical-9e-ui-roots/head-pan-review-binding.test.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/historical-9e-ui-roots/window-drag-review-binding.test.mjs.raw",
+        "restore": "website/tests/fixtures/historical-9e-ui-roots/window-drag-review-binding.test.mjs.raw"
+      },
+      {
+        "path": "website/docs/CURRENT_UI_DELIVERY_HISTORICAL_ROLE.md",
+        "restore": "website/docs/CURRENT_UI_DELIVERY_HISTORICAL_ROLE.md"
+      },
+      {
+        "path": "website/lib/local-reference-review.ts",
+        "restore": "website/lib/local-reference-review.ts"
+      },
+      {
+        "path": "website/components/LocalReferencePacketInspector.tsx",
+        "restore": "website/components/LocalReferencePacketInspector.tsx"
+      },
+      {
+        "path": "website/components/local-reference-packet-inspector.css",
+        "restore": "website/components/local-reference-packet-inspector.css"
+      },
+      {
+        "path": "website/components/ClinicalReviewInbox.tsx",
+        "restore": "website/components/ClinicalReviewInbox.tsx"
+      },
+      {
+        "path": "website/app/workspace/clinical-review-inbox/local-reference/page.tsx",
+        "restore": "website/app/workspace/clinical-review-inbox/local-reference/page.tsx"
+      },
+      {
+        "path": "website/tests/local-reference-review.test.mjs",
+        "restore": "website/tests/local-reference-review.test.mjs"
+      },
+      {
+        "path": "website/tests/clinical-review-inbox-ui.test.mjs",
+        "restore": "website/tests/clinical-review-inbox-ui.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/local-reference-entry-before/clinical-review-inbox-ui.test.mjs.raw",
+        "restore": "website/tests/fixtures/local-reference-entry-before/clinical-review-inbox-ui.test.mjs.raw"
+      },
+      {
+        "path": "website/tests/local-reference-entry-transition.test.mjs",
+        "restore": "website/tests/local-reference-entry-transition.test.mjs"
+      },
+      {
+        "path": "website/docs/LOCAL_REFERENCE_INSPECTION.md",
+        "restore": "website/docs/LOCAL_REFERENCE_INSPECTION.md"
+      },
+      {
+        "path": "recipes/compact-current-index-20261026.mjs",
+        "restore": "coordination/compact-current-index-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-historical-ui-role-20261026.mjs",
+        "restore": "coordination/prepare-historical-ui-role-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-historical-ui-role-v2-20261026.mjs",
+        "restore": "coordination/prepare-historical-ui-role-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-historical-ui-role-20261026.mjs",
+        "restore": "coordination/record-historical-ui-role-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-local-reference-inbox-20261026.mjs",
+        "restore": "coordination/prepare-local-reference-inbox-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-local-reference-inbox-v2-20261026.mjs",
+        "restore": "coordination/prepare-local-reference-inbox-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-local-reference-inbox-v3-20261026.mjs",
+        "restore": "coordination/prepare-local-reference-inbox-v3-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-local-reference-entry-check-20261026.mjs",
+        "restore": "coordination/prepare-local-reference-entry-check-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-local-reference-inbox-20261026.mjs",
+        "restore": "coordination/verify-local-reference-inbox-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-local-reference-focus-types-20261026.mjs",
+        "restore": "coordination/check-local-reference-focus-types-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-local-reference-browser-20261026.mjs",
+        "restore": "coordination/prepare-local-reference-browser-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-local-reference-full-verifier-20261026.mjs",
+        "restore": "coordination/prepare-local-reference-full-verifier-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-local-reference-postbuild-types-20261026.mjs",
+        "restore": "coordination/verify-local-reference-postbuild-types-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-reference-built-runtime-20261026.mjs",
+        "restore": "coordination/prepare-reference-built-runtime-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-reference-final-runtime-20261026.mjs",
+        "restore": "coordination/check-reference-final-runtime-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-local-reference-verification-20261026.mjs",
+        "restore": "coordination/record-local-reference-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/update-reference-inspector-checklist-20261026.mjs",
+        "restore": "coordination/update-reference-inspector-checklist-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-reference-inspector-source-20261026.mjs",
+        "restore": "coordination/backup-reference-inspector-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-reference-inspector-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-reference-inspector-checkpoint-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-local-reference-full-run-20261026.mjs",
+        "restore": "coordination/verify-local-reference-full-run-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-local-reference-inbox-v3-run-20261026.mjs",
+        "restore": "coordination/verify-local-reference-inbox-v3-run-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-local-reference-focus-types-v3-run-20261026.mjs",
+        "restore": "coordination/check-local-reference-focus-types-v3-run-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-local-reference-browser-v3-run-20261026.mjs",
+        "restore": "coordination/prepare-local-reference-browser-v3-run-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-local-reference-entry-check-v3-run-20261026.mjs",
+        "restore": "coordination/prepare-local-reference-entry-check-v3-run-20261026.mjs"
+      },
+      {
+        "path": "recipes/serve-reference-final-built-worker-20261026.mjs",
+        "restore": "coordination/serve-reference-final-built-worker-20261026.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-reference-final-preview-20261026.mjs",
+        "restore": "coordination/stop-owned-reference-final-preview-20261026.mjs"
+      },
+      {
+        "path": "recipes/reference-entry-ssr.test.mjs",
+        "restore": "qa/reference-entry-ssr.test.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/current-ui-delivery-transition.test.mjs",
+      "bytes": 251,
+      "sha256": "100e7b13b6bd19c27cf920a3c23bda2da1b045774fda25e90ca6cc092e78e683"
+    },
+    {
+      "path": "website/tests/head-pan-review-binding.test.mjs",
+      "bytes": 246,
+      "sha256": "e6c5e1f6a558e9ba96a267def4293ab17fda378dc8a635c44f8ce77aa7a81d75"
+    },
+    {
+      "path": "website/tests/window-drag-review-binding.test.mjs",
+      "bytes": 250,
+      "sha256": "787ee550103e1412a16d40256c82541f573ae242256b9d0ec8cf0ee263d3001c"
+    },
+    {
+      "path": "website/tests/historical-9e-ui-replay.mjs",
+      "bytes": 10804,
+      "sha256": "ce94e48b84ccb87a58ddf8fb736ca3ade6acd8848fb08a3675dd254e475f3e38"
+    },
+    {
+      "path": "website/tests/historical-9e-child-environment.test.mjs",
+      "bytes": 1422,
+      "sha256": "b4c464fa98f793b33094f59ebddaecb39d9795166b77c9e602adc4a601facf80"
+    },
+    {
+      "path": "website/tests/fixtures/historical-9e-ui-roots/current-ui-delivery-transition.test.mjs.raw",
+      "bytes": 3843,
+      "sha256": "d7d18ae9b36cd593475998420137b7611695aba5a12053abe12fb0c18c27b696"
+    },
+    {
+      "path": "website/tests/fixtures/historical-9e-ui-roots/head-pan-review-binding.test.mjs.raw",
+      "bytes": 8961,
+      "sha256": "13997d80944480b4cc8c379dadfe8f1cc68fd9f02dee6a1aafb06b4bdc4c7181"
+    },
+    {
+      "path": "website/tests/fixtures/historical-9e-ui-roots/window-drag-review-binding.test.mjs.raw",
+      "bytes": 6791,
+      "sha256": "caebbf23fa4e365d0b5474794802dd16b83520322d3759be7b4da9d3f8e80155"
+    },
+    {
+      "path": "website/docs/CURRENT_UI_DELIVERY_HISTORICAL_ROLE.md",
+      "bytes": 3043,
+      "sha256": "a4f50d7715cfcdc39f1502ff70d9b7ae57e6fd941ba59439cf6e7cfa9309c1ac"
+    },
+    {
+      "path": "website/lib/local-reference-review.ts",
+      "bytes": 14841,
+      "sha256": "fb7a01ef4f9255ca3cf509c93c7d4c59064210d5aed6f9185c6a5e7b1d8f7165"
+    },
+    {
+      "path": "website/components/LocalReferencePacketInspector.tsx",
+      "bytes": 10479,
+      "sha256": "a5cb58df83dbad86cec6d7c934997a7650df54d4de8df7272ef7aed2714e87ef"
+    },
+    {
+      "path": "website/components/local-reference-packet-inspector.css",
+      "bytes": 4421,
+      "sha256": "4a43b64ce615ee3815991980bb192a2e99e359cb8d52c0230b3b6feadd0de26b"
+    },
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "bytes": 35895,
+      "sha256": "09bde9f703d43b4d798b96508ad730158e297a9b211985d7f4267f7baa3b81e3"
+    },
+    {
+      "path": "website/app/workspace/clinical-review-inbox/local-reference/page.tsx",
+      "bytes": 506,
+      "sha256": "a17c3aea3652a34c8a445753809bd2f4685e891b79fb04a6133246e898ee1f8f"
+    },
+    {
+      "path": "website/tests/local-reference-review.test.mjs",
+      "bytes": 9552,
+      "sha256": "63e2bfabf6381c9a5ead764585bc03b9781d42ef279ceecd6279f57748127ae4"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-ui.test.mjs",
+      "bytes": 19257,
+      "sha256": "69215611fceda38d119f8952863a8ff74089e3abc539a94d47f7d08e08a1d9b8"
+    },
+    {
+      "path": "website/tests/fixtures/local-reference-entry-before/clinical-review-inbox-ui.test.mjs.raw",
+      "bytes": 19140,
+      "sha256": "4d355a9fb73556331400dce32fd56e125b41371302ccf7c022b4f4496fd5574a"
+    },
+    {
+      "path": "website/tests/local-reference-entry-transition.test.mjs",
+      "bytes": 1247,
+      "sha256": "f46c4578a08486ee539dc51312988fe850667beeb2d5bb00c1a99c22c97ef3eb"
+    },
+    {
+      "path": "website/docs/LOCAL_REFERENCE_INSPECTION.md",
+      "bytes": 4028,
+      "sha256": "fa78e1565b0ef784df3fc5a734b289bb8b5e11108c92287701a8a3512d8ca43a"
+    },
+    {
+      "path": "recipes/compact-current-index-20261026.mjs",
+      "bytes": 4244,
+      "sha256": "2ca6b724bd7e12694bdfe4875a7335b0372d741c93e410475c118e5babb697ff"
+    },
+    {
+      "path": "recipes/prepare-historical-ui-role-20261026.mjs",
+      "bytes": 4033,
+      "sha256": "5f912cfb643860afacf7822ab3df69f769d0cdd62dfd88ab3bfcaa87b7d9256a"
+    },
+    {
+      "path": "recipes/prepare-historical-ui-role-v2-20261026.mjs",
+      "bytes": 5283,
+      "sha256": "4f91057d11f3ff64017b7e2f2167f3325a48f1fcfe8916428186c70ff8064029"
+    },
+    {
+      "path": "recipes/record-historical-ui-role-20261026.mjs",
+      "bytes": 4070,
+      "sha256": "cf0af0c4dd2112cebe30631caba8b73a098fd45c5303d984b5ccabdfc83dacdd"
+    },
+    {
+      "path": "recipes/prepare-local-reference-inbox-20261026.mjs",
+      "bytes": 7552,
+      "sha256": "cbcf8f2e32c2e3e26ce16e007749048fb417d6d0f5403a5a2ca10e460befbbfe"
+    },
+    {
+      "path": "recipes/prepare-local-reference-inbox-v2-20261026.mjs",
+      "bytes": 5727,
+      "sha256": "bc70cce9e89ebf27f6a80e2397c324ffbddb8bf0bfb7a4ce5a852e5d8549d993"
+    },
+    {
+      "path": "recipes/prepare-local-reference-inbox-v3-20261026.mjs",
+      "bytes": 3751,
+      "sha256": "c75e736a30da8d199afccb832858c1dbc778a7f0a9f9a49a61d4a49f3840a0b2"
+    },
+    {
+      "path": "recipes/prepare-local-reference-entry-check-20261026.mjs",
+      "bytes": 3927,
+      "sha256": "4fa142c0855bc71bb1abc68df8947f54f9b9e8c405c017f9b1d72dcfa31f398f"
+    },
+    {
+      "path": "recipes/verify-local-reference-inbox-20261026.mjs",
+      "bytes": 3707,
+      "sha256": "261c051a19f72daf9dd1db02f965560e33b647a118cda17c118455d062292ab6"
+    },
+    {
+      "path": "recipes/check-local-reference-focus-types-20261026.mjs",
+      "bytes": 3862,
+      "sha256": "47771731715a55bd7a8ff4cf3670541f1c5a431d5a3bfca89be9af76b82dba1e"
+    },
+    {
+      "path": "recipes/prepare-local-reference-browser-20261026.mjs",
+      "bytes": 8117,
+      "sha256": "231fcbbc3cd9b6485288adb1ed912420e90b73b8c30ba0dfba62dd153bc32b60"
+    },
+    {
+      "path": "recipes/prepare-local-reference-full-verifier-20261026.mjs",
+      "bytes": 1669,
+      "sha256": "2608eb7a11388f702401c3c881809297e99c4f77b0c3c1e073ecf84b27da3cdc"
+    },
+    {
+      "path": "recipes/verify-local-reference-postbuild-types-20261026.mjs",
+      "bytes": 4160,
+      "sha256": "e5dfb7047c0842fb134f43b59c98fe5b2f3a82d4dbd6410c1a735aa51928fb58"
+    },
+    {
+      "path": "recipes/prepare-reference-built-runtime-20261026.mjs",
+      "bytes": 2958,
+      "sha256": "a5e0450d3616fa1f91f3bdfb3c1ba2c6f2df91284788eeb7f2f40b184c992887"
+    },
+    {
+      "path": "recipes/check-reference-final-runtime-20261026.mjs",
+      "bytes": 2405,
+      "sha256": "8cec4c4aca7c1ef0c7472e16e8686501a5d8f99370cb45afba4da1afb73b2f17"
+    },
+    {
+      "path": "recipes/record-local-reference-verification-20261026.mjs",
+      "bytes": 9372,
+      "sha256": "6b0529887d6adb6cbcd91406fad0d8c71b13cf727011a1d4b0f79811aa9b03f0"
+    },
+    {
+      "path": "recipes/update-reference-inspector-checklist-20261026.mjs",
+      "bytes": 2645,
+      "sha256": "2ae12330a8239b57c76a01563a31a080925e7d71cb9aff224a8a9654986dfc09"
+    },
+    {
+      "path": "recipes/backup-reference-inspector-source-20261026.mjs",
+      "bytes": 6783,
+      "sha256": "0e04a2599c54615ff8061dfcb19cc8ea2312d969998cae2cf2b3112c8c278ad4"
+    },
+    {
+      "path": "recipes/finalize-reference-inspector-checkpoint-20261026.mjs",
+      "bytes": 12918,
+      "sha256": "392020a8a7f7f42d2b3818e9e6f8f7d38adbf5680e392fe879efc79cbc2226a7"
+    },
+    {
+      "path": "recipes/verify-local-reference-full-run-20261026.mjs",
+      "bytes": 7010,
+      "sha256": "4aaf0558d288375c5f845a060b27d9e92c70cbc8630f5850ee163d3785700a53"
+    },
+    {
+      "path": "recipes/verify-local-reference-inbox-v3-run-20261026.mjs",
+      "bytes": 3710,
+      "sha256": "ea670d306f116733fe0408e8b3db785bfd8cf7ce580567412bc65274d34e9271"
+    },
+    {
+      "path": "recipes/check-local-reference-focus-types-v3-run-20261026.mjs",
+      "bytes": 3865,
+      "sha256": "3ae65882dc70f5b5baae2c1627cf752e1cd7d1adfbf0062741886b551d6390a2"
+    },
+    {
+      "path": "recipes/prepare-local-reference-browser-v3-run-20261026.mjs",
+      "bytes": 8117,
+      "sha256": "2a35130c845cc37e26b4ebc3f8c84f261022d7554f38478543de23d8b97359f9"
+    },
+    {
+      "path": "recipes/prepare-local-reference-entry-check-v3-run-20261026.mjs",
+      "bytes": 3930,
+      "sha256": "84168ee3391e02356c511d065389e911b71f8667086d23fa5068fd3166ed2065"
+    },
+    {
+      "path": "recipes/serve-reference-final-built-worker-20261026.mjs",
+      "bytes": 3882,
+      "sha256": "67661e3abd2428234b0cd89776f7dc7f36e336b5707e03c67d31f103d1ccade3"
+    },
+    {
+      "path": "recipes/stop-owned-reference-final-preview-20261026.mjs",
+      "bytes": 2562,
+      "sha256": "64491856fa77b065e74fe383323e7d252a9c0517fe3646fc387d3d57800aae5f"
+    },
+    {
+      "path": "recipes/reference-entry-ssr.test.mjs",
+      "bytes": 2719,
+      "sha256": "8e606c5263927d53a3535131edc5a410fd4250b85536160e62e18de8e18e5ee6"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party Website components, parser, private page, tests, complete original first-party test history, documentation and reproduction/recovery recipes only. No real reference packet JSON/JPEG/article HTML, source receipt or actual checklist, raw QA/TAP/browser metadata, generated medical/Review data, scans/masks/identifiers/models/assets/fonts/dependencies/runtime/private state or canonical/native Git ancestry. Prior local baseline/history contexts and source supplements remain necessary. Not a full/private/runnable backup; no deployment or normal-preview cutover.",
+  "proof": {
+    "focusedNativeCases": 208,
+    "wholeRoots": 28,
+    "skips": 0,
+    "historicalOriginalCasesSeparately": 17,
+    "fullConfiguredTypeRoots": 2676,
+    "fullConfiguredTypeFiles": 6235,
+    "fullConfiguredTypeDiagnostics": 0,
+    "stockProductionArtifacts": 1150,
+    "allOriginalPrebuildHooks": true,
+    "actualSyntheticBrowserViewports": [
+      1280,
+      500
+    ],
+    "builtUnsignedPageGated": true,
+    "all1818ProtectedInputsUnchanged": true,
+    "noNewThirdPartyDependenciesFontsModelsImagesOrLicensingInputs": true,
+    "actualReferencePacketRegisteredOrBundled": false,
+    "wholeStockSuitePassing": false,
+    "signedInAcceptance": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

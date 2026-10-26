@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Selected first-party Website components, parser, private page, tests, complete original first-party test history, documentation and reproduction/recovery recipes only. No real reference packet JSON/JPEG/article HTML, source receipt or actual checklist, raw QA/TAP/browser metadata, generated medical/Review data, scans/masks/identifiers/models/assets/fonts/dependencies/runtime/private state or canonical/native Git ancestry. Prior local baseline/history contexts and source supplements remain necessary. Not a full/private/runnable backup; no deployment or normal-preview cutover.
