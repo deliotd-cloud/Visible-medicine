@@ -1,0 +1,149 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T23:58:28.864Z",
+  "sourceIdentity": {
+    "kind": "tongue-teaching-website-integration",
+    "sourceSha256": "e8a9c3a37a7d6671e2dfe4eb4a643efe4f0abe0824bda7e8630a8881de415a5a",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-workbook-history-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "1c2accae53dd0ab585f0a559e6973571adb36aabd87774a0bfabba7d70846e2a",
+        "branch": "backup/workbook-history-source-20261026",
+        "head": "b467bae3acf43bd26ad07c559f33837b86aec6ee",
+        "tree": "1c71d6ee8db6208f9e4f4c5ec4c92b7a3018d9fb"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-tongue-imaging-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "dd0d0cdee33a32d72728f174c7467592410ef4a60b7237d6855ff68b7f4862e1",
+        "branch": "backup/tongue-imaging-source-20261026",
+        "head": "efcb9ff393e79161543403e8641045f5d9bc6afc",
+        "tree": "0c5a3a09259b920a72a3900ff9ba55605a2b42da"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "1726a7fea5ca50e116a8169b36c929842bcfb881c43c88f7bbca0e434a5a02bf"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "6d1e906bf42fc83becf2f645ee30c6648d154fb4aa40f33017e02777a0e9b7a7"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "c69326524aec98394e71ceb16932a36259eeeddb47d130f9370aecca8118170a"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "299a85de7031c3a2c79d3bc7d2c768ce7dfa1487279b789b17d6d9db6e0be2a1"
+    },
+    {
+      "path": "recipes/prepare-tongue-runtime-exports-20261026.mjs",
+      "bytes": 2636,
+      "sha256": "0a93cd57d803571a150b02b7334e9c4d6a16180d1b4f8ceb1178d8e59e226306"
+    },
+    {
+      "path": "recipes/export-tongue-runtimes-20261026.mjs",
+      "bytes": 6561,
+      "sha256": "035fe04517196eafd8444b32ddd279c7f04b7ca2561f61f1f89c8291a5e2a967"
+    },
+    {
+      "path": "recipes/run-tongue-runtime-exports-20261026.mjs",
+      "bytes": 3237,
+      "sha256": "4f951d660e050d3191f1d0d71ab66f2ebc4a2eaed5186e163731baf837686f30"
+    },
+    {
+      "path": "recipes/prepare-tongue-website-recipes-20261026.mjs",
+      "bytes": 1605,
+      "sha256": "d6810e08e8dba4c8c15b25dbfc01fd0dc8934cdfa63b5aac3d1a73a0c1fb7d66"
+    },
+    {
+      "path": "recipes/prepare-tongue-website-20261026.mjs",
+      "bytes": 6716,
+      "sha256": "38a53a90c8195bd66fbd2c426d3d3c23739d0877c51e914e68401265f5113283"
+    },
+    {
+      "path": "recipes/prepare-tongue-website-stock-20261026.mjs",
+      "bytes": 7092,
+      "sha256": "5c51fe4ad14f9098c824e4d02ba5e532f8b9f7433fc43af3b27af5dbbf775369"
+    },
+    {
+      "path": "recipes/import-tongue-website-stock-20261026.mjs",
+      "bytes": 6805,
+      "sha256": "87581a8848b68e1c1cdec2cf7a1f938cb7952b0fe4a36fc2127ddfe73058bd46"
+    },
+    {
+      "path": "recipes/run-tongue-website-integration-20261026.mjs",
+      "bytes": 2123,
+      "sha256": "56c93e2ae1667b762c4fcdc4549efad5f34e23bc2f6149e35201b5df4fc8d6a5"
+    },
+    {
+      "path": "recipes/generate-tongue-website-coverage-20261026.mjs",
+      "bytes": 2866,
+      "sha256": "5fc05f238848bc38a88c9fad323faad04207d40da8f1684aced7cfab30f83c87"
+    },
+    {
+      "path": "recipes/run-tongue-coverage-seams-20261026.mjs",
+      "bytes": 2373,
+      "sha256": "2c59e8be3bb5f6b04e01d73552015289979e93d4304ff126e2502c8ac47ec0dd"
+    },
+    {
+      "path": "recipes/install-tongue-website-coverage-20261026.mjs",
+      "bytes": 2951,
+      "sha256": "e06f282861c6f41220e0d03ba10d2b7db828bcebdb2e3c13e4ee8054505d1584"
+    },
+    {
+      "path": "recipes/build-tongue-website-review-20261026.mjs",
+      "bytes": 6759,
+      "sha256": "3e5c41bb1096f92f048b3d3604e6d8a7e4ddd732e89616aaf837da55f0108393"
+    },
+    {
+      "path": "recipes/refresh-tongue-website-delivery-pin-20261026.mjs",
+      "bytes": 2769,
+      "sha256": "ac4d56e594db77b866f5a35567fdbe0007fa6bdd83192041e925dcb8052be07e"
+    },
+    {
+      "path": "recipes/seal-tongue-website-source-20261026.mjs",
+      "bytes": 6113,
+      "sha256": "d643eda03b414b4bbb40e0dced892b49fc39d2b53f5fe52e0d532b5e9f87db9e"
+    },
+    {
+      "path": "recipes/verify-tongue-website-content-20261026.mjs",
+      "bytes": 6998,
+      "sha256": "ab29470a22bee56be7fb92b01bbc83d57f41507347a980adf8fd05883efaf798"
+    },
+    {
+      "path": "recipes/run-tongue-website-verification-20261026.mjs",
+      "bytes": 5514,
+      "sha256": "fdbc377fac887ec512fc6633f582928530b73fd83bfea94c0d5050dfc5d5360f"
+    },
+    {
+      "path": "recipes/finish-tongue-website-20261026.mjs",
+      "bytes": 15682,
+      "sha256": "d69df48e572fead727f8c009fd1d7542a65c7460645a188f4ec46546aa5b9d04"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party website code and integration/test recipes only. No exact anatomy source pins, medical metadata, scans, masks, assets, generated runtime, raw private proof, decisions, dependencies or canonical/native Git ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "changedDraftPlacements": 10,
+    "focusedCases": 25,
+    "fullConfiguredTypes": true,
+    "productionBuild": true,
+    "oldTeachingDecisionsRefused": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
