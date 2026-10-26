@@ -1,0 +1,324 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T06:00:42.680Z",
+  "sourceIdentity": {
+    "kind": "discoverable-runtime-keyboard-help-and-current-mutation-proof",
+    "websiteSourceSha256": "d55ea71e9798aff91c8570dea671234e919688868b376032612eb8e189549d63",
+    "nativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-studio-outline-find-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "51b166b29344818cf38848d0f7eacb61cd3843a140fde156b92e73d830775212",
+        "branch": "backup/studio-outline-find-source-20261026",
+        "head": "dab04634a0d2a80b3e747564c002f9f6b1d49c1d",
+        "tree": "a508e6235608e96acf14e95c4401ada4cf76d6bc"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/components/AtlasRuntimeFrame.tsx",
+        "restore": "website/components/AtlasRuntimeFrame.tsx"
+      },
+      {
+        "path": "website/components/atlas-runtime-frame.css",
+        "restore": "website/components/atlas-runtime-frame.css"
+      },
+      {
+        "path": "website/tests/atlas-runtime-keyboard-help.test.mjs",
+        "restore": "website/tests/atlas-runtime-keyboard-help.test.mjs"
+      },
+      {
+        "path": "website/tests/structure-learning-ui.keyboard-help-current.test.ts",
+        "restore": "website/tests/structure-learning-ui.keyboard-help-current.test.ts"
+      },
+      {
+        "path": "website/tests/keyboard-help-current-delivery.mjs",
+        "restore": "website/tests/keyboard-help-current-delivery.mjs"
+      },
+      {
+        "path": "website/tests/prepare-keyboard-help-current-context.mjs",
+        "restore": "website/tests/prepare-keyboard-help-current-context.mjs"
+      },
+      {
+        "path": "website/docs/ATLAS_VIEWER_KEYBOARD_HELP.md",
+        "restore": "website/docs/ATLAS_VIEWER_KEYBOARD_HELP.md"
+      },
+      {
+        "path": "recipes/prepare-atlas-keyboard-help-20261026.mjs",
+        "restore": "coordination/prepare-atlas-keyboard-help-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-atlas-keyboard-help-generated-20261026.mjs",
+        "restore": "coordination/prepare-atlas-keyboard-help-generated-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-atlas-keyboard-help-review-20261026.mjs",
+        "restore": "coordination/build-atlas-keyboard-help-review-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-atlas-keyboard-help-20261026.mjs",
+        "restore": "coordination/seal-atlas-keyboard-help-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-atlas-keyboard-help-verification-20261026.mjs",
+        "restore": "coordination/prepare-atlas-keyboard-help-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-atlas-keyboard-help-20261026.mjs",
+        "restore": "coordination/verify-atlas-keyboard-help-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-atlas-keyboard-help-v2-20261026.mjs",
+        "restore": "coordination/prepare-atlas-keyboard-help-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-atlas-keyboard-help-v2-review-20261026.mjs",
+        "restore": "coordination/build-atlas-keyboard-help-v2-review-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-keyboard-help-v2-review-compact-20261026.mjs",
+        "restore": "coordination/build-keyboard-help-v2-review-compact-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-keyboard-help-v2-review-compact-generated-20261026.mjs",
+        "restore": "coordination/build-keyboard-help-v2-review-compact-generated-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-keyboard-help-layout-light-20261026.mjs",
+        "restore": "coordination/verify-keyboard-help-layout-light-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-atlas-keyboard-help-v2-20261026.mjs",
+        "restore": "coordination/seal-atlas-keyboard-help-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-atlas-keyboard-help-v2-20261026.mjs",
+        "restore": "coordination/verify-atlas-keyboard-help-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-keyboard-help-browser-20261026.mjs",
+        "restore": "coordination/prepare-keyboard-help-browser-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-keyboard-help-focused-types-20261026.mjs",
+        "restore": "coordination/check-keyboard-help-focused-types-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-keyboard-help-verification-20261026.mjs",
+        "restore": "coordination/record-keyboard-help-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/update-keyboard-help-checklist-20261026.mjs",
+        "restore": "coordination/update-keyboard-help-checklist-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-keyboard-help-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-keyboard-help-checkpoint-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-keyboard-help-source-20261026.mjs",
+        "restore": "coordination/backup-keyboard-help-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-current-studio-mutation-main-20261026.mjs",
+        "restore": "coordination/verify-current-studio-mutation-main-20261026.mjs"
+      },
+      {
+        "path": "recipes/synthetic-browser/build.mjs",
+        "restore": "synthetic-browser/build.mjs"
+      },
+      {
+        "path": "recipes/synthetic-browser/serve.mjs",
+        "restore": "synthetic-browser/serve.mjs"
+      },
+      {
+        "path": "recipes/synthetic-browser/index.html",
+        "restore": "synthetic-browser/index.html"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/AtlasRuntimeFrame.tsx",
+      "bytes": 8962,
+      "sha256": "35ecba7a2f3bb94bb86f2d4a2662d3460bbfb04e93a080c1c3bbe711078ed75e"
+    },
+    {
+      "path": "website/components/atlas-runtime-frame.css",
+      "bytes": 6222,
+      "sha256": "c4df9063e1d8577032fb4986ab0e8d114ad5e44824593b2e1f66f9fe42aef5bf"
+    },
+    {
+      "path": "website/tests/atlas-runtime-keyboard-help.test.mjs",
+      "bytes": 7944,
+      "sha256": "893e2e5b302ce766563a645f902a2fa72e3b2f97c9df5c2ed19f109988600f74"
+    },
+    {
+      "path": "website/tests/structure-learning-ui.keyboard-help-current.test.ts",
+      "bytes": 11310,
+      "sha256": "5558669f9df50b7e8d111d89149b9c2b6b501481eb05d9f94b48c9a5c9e84017"
+    },
+    {
+      "path": "website/tests/keyboard-help-current-delivery.mjs",
+      "bytes": 5106,
+      "sha256": "2e5feb6d25000d5d037d8cccd4187aa2446e70a6bd00d5bc92da4b76e597bca7"
+    },
+    {
+      "path": "website/tests/prepare-keyboard-help-current-context.mjs",
+      "bytes": 3806,
+      "sha256": "d8b3376a3600abb8db9e750b5254709db62ba92fa23e872ced502de1f42c1f31"
+    },
+    {
+      "path": "website/docs/ATLAS_VIEWER_KEYBOARD_HELP.md",
+      "bytes": 930,
+      "sha256": "3626669332df572eacacda3a26a77213b04a11377d8d9073c4f33b8513b032a7"
+    },
+    {
+      "path": "recipes/prepare-atlas-keyboard-help-20261026.mjs",
+      "bytes": 6600,
+      "sha256": "fa2ef0212b00b9a77a06606ad79a61d359dc673ab433cf8864e906a01d3a21c1"
+    },
+    {
+      "path": "recipes/prepare-atlas-keyboard-help-generated-20261026.mjs",
+      "bytes": 2363,
+      "sha256": "5b1358787c3415020aaf151d94af927832fce42a9664aae3189614710b9c00f1"
+    },
+    {
+      "path": "recipes/build-atlas-keyboard-help-review-20261026.mjs",
+      "bytes": 3247,
+      "sha256": "cb8f023082853425c145dc1e07745ce0f3e0fb7d0380537f3dedc992d35dd435"
+    },
+    {
+      "path": "recipes/seal-atlas-keyboard-help-20261026.mjs",
+      "bytes": 4596,
+      "sha256": "d15f0da17b7de167ea16d1f93f7bc0873d578fccef1c27b48ad0f1559f9cc814"
+    },
+    {
+      "path": "recipes/prepare-atlas-keyboard-help-verification-20261026.mjs",
+      "bytes": 1697,
+      "sha256": "164a64679d86bd46c8495632cc94913702a0f36ba88a1b1964ed543079048df4"
+    },
+    {
+      "path": "recipes/verify-atlas-keyboard-help-20261026.mjs",
+      "bytes": 6896,
+      "sha256": "12d24e4b5795e6a1c843bbfc1eb2f94f6b74316627a8596d20c5923c03d24cd4"
+    },
+    {
+      "path": "recipes/prepare-atlas-keyboard-help-v2-20261026.mjs",
+      "bytes": 8364,
+      "sha256": "8f3a4dc2884d01dc4e7298a63432f76e7190d176573dce5e78d1dd3ad0ace036"
+    },
+    {
+      "path": "recipes/build-atlas-keyboard-help-v2-review-20261026.mjs",
+      "bytes": 3250,
+      "sha256": "c61d9cd38f021b2193ac6a3d85e91890bc15c47d871e4c989bd05218b14e7322"
+    },
+    {
+      "path": "recipes/build-keyboard-help-v2-review-compact-20261026.mjs",
+      "bytes": 878,
+      "sha256": "eb0a1d054d618b7b9a1ac14c8521ab0b2d453b0654d1bbf73f89d54a70fc491f"
+    },
+    {
+      "path": "recipes/build-keyboard-help-v2-review-compact-generated-20261026.mjs",
+      "bytes": 3256,
+      "sha256": "7439f5d49d3c5f8ea969a05f129ed8ffdaf7286022c9dc02ca739ae98b3adfdf"
+    },
+    {
+      "path": "recipes/verify-keyboard-help-layout-light-20261026.mjs",
+      "bytes": 1427,
+      "sha256": "b01b3f6e98a862b70d8cf3696d114faacaacee48eb57c8a50c6d3fd2465d4a9d"
+    },
+    {
+      "path": "recipes/seal-atlas-keyboard-help-v2-20261026.mjs",
+      "bytes": 6630,
+      "sha256": "cac08a55971e460554e5c4e69d5949f9f28680a7dab99cace9ddabd4b32a56ba"
+    },
+    {
+      "path": "recipes/verify-atlas-keyboard-help-v2-20261026.mjs",
+      "bytes": 6924,
+      "sha256": "e3f168571533b6aa29f43ab3f01a1cf780d28d88f982a5c77551057953304cac"
+    },
+    {
+      "path": "recipes/prepare-keyboard-help-browser-20261026.mjs",
+      "bytes": 1589,
+      "sha256": "cfa9fe0da65afe030defe850357f56e596214f8a2c21da420bbac555758df5fd"
+    },
+    {
+      "path": "recipes/check-keyboard-help-focused-types-20261026.mjs",
+      "bytes": 3300,
+      "sha256": "fb44ff8e4a4e307da37178981cb08322e16d3b75607083acaf42c5c9dcedfb61"
+    },
+    {
+      "path": "recipes/record-keyboard-help-verification-20261026.mjs",
+      "bytes": 6791,
+      "sha256": "0dcb310340984e964ae31feb708d0618ecbb06ec78b07459928316c9d0e160f8"
+    },
+    {
+      "path": "recipes/update-keyboard-help-checklist-20261026.mjs",
+      "bytes": 3665,
+      "sha256": "86a7b10ba9d0f50f4ee0bbabb0a993501da21a84c52572327852531a5698091e"
+    },
+    {
+      "path": "recipes/finalize-keyboard-help-checkpoint-20261026.mjs",
+      "bytes": 9440,
+      "sha256": "e696029d40b58801551caf3c782cabbfe266a855d0f3e3a6917d0dd8b25161d1"
+    },
+    {
+      "path": "recipes/backup-keyboard-help-source-20261026.mjs",
+      "bytes": 5719,
+      "sha256": "2859b4b8610ddf8f19813bc452a50a06b3f6e86c4043f29996ff0d9781e12ea0"
+    },
+    {
+      "path": "recipes/verify-current-studio-mutation-main-20261026.mjs",
+      "bytes": 3766,
+      "sha256": "2e314e7e187a7fe6c8ecb283084e894da90ecdc733a33b15518cc5aa857b74b5"
+    },
+    {
+      "path": "recipes/synthetic-browser/build.mjs",
+      "bytes": 3820,
+      "sha256": "94c7622a41a95a4f9c1fa50c99e4493dade925bc2e6f3431a4d4ee3db62d4806"
+    },
+    {
+      "path": "recipes/synthetic-browser/serve.mjs",
+      "bytes": 1682,
+      "sha256": "8de45e5b881a3e0a8a9ab86390f72505abe034093ef73db3f8bd486a89a73bec"
+    },
+    {
+      "path": "recipes/synthetic-browser/index.html",
+      "bytes": 1393,
+      "sha256": "ac33b327d1ddbeea0c3ab584fe980780b17910410aaee08409dd9aaa9e041646"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party viewer component/CSS/tests/docs and recovery/synthetic harness recipes only. Exact local baseline, generated pin/binding and prior supplements remain required. No actual generated current-delivery fixture, actual checklist, raw QA/browser observations, generated Review/medical data, scans/masks/identifiers/coordinates/models/assets/dependencies/runtime/private state or canonical/native Git ancestry. Not a full/private/runnable backup; no deployment or preview installation.",
+  "proof": {
+    "wholeFocusedRoots": 7,
+    "cases": 51,
+    "skips": 0,
+    "strictTransitiveTypesFiles": 598,
+    "typeDiagnostics": 0,
+    "all6AmbientRoots": true,
+    "productionReviewViewerFiles": 54,
+    "changedProtectedPresentationInputs": 2,
+    "other1816Exact": true,
+    "syntheticBrowserWidths": [
+      1280,
+      1440,
+      500,
+      600
+    ],
+    "normalPreviewChanged": false,
+    "clinicalApproval": false,
+    "fullSuccessorWebsiteTypesAndStockBuildPending": true,
+    "mainMutationExtraWholeRoots": 4,
+    "mainMutationExtraCases": 30,
+    "mutationInputsExactInBoth194AndHelpd55": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,4 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+// Bound this small Vite viewer bundle to a smaller job. The full type/build
+// limits remain unchanged; the same 2GiB free reserve/90% commit guard applies.
+let code=fs.readFileSync('build-atlas-keyboard-help-v2-review-20261026.mjs','utf8');for(const[a,b]of[["review-viewer-build-attempt-1'","review-viewer-build-compact-attempt-1'"],["command:'--max-old-space-size=1024 scripts/build-clinical-review-viewer.mjs',heap:1024,aggregate:2048,minimum:4096","command:'--max-old-space-size=512 scripts/build-clinical-review-viewer.mjs',heap:512,aggregate:1024,minimum:3072"]]){assert.equal(code.split(a).length,2,a);code=code.replace(a,b);}fs.writeFileSync('build-keyboard-help-v2-review-compact-generated-20261026.mjs',code,{flag:'wx'});await import('./build-keyboard-help-v2-review-compact-generated-20261026.mjs');

@@ -1,0 +1,194 @@
+.atlas-3d-workspace-page .atlas-runtime-frame {
+  position: relative;
+  flex: 1;
+  min-height: 280px;
+  min-width: 0;
+}
+.atlas-runtime-frame:focus { outline: 3px solid #16c6b2; outline-offset: -3px; }
+.atlas-runtime-frame > iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.atlas-runtime-status,
+.atlas-runtime-help {
+  position: absolute;
+  z-index: 1;
+  max-width: min(440px, calc(100% - 24px));
+  padding: 9px 12px;
+  border: 1px solid #b8cbc6;
+  border-radius: 8px;
+  color: #16332d;
+  background: #f8f7f2f2;
+  font: 13px/1.4 system-ui, sans-serif;
+  box-shadow: 0 2px 12px #07121020;
+}
+.atlas-runtime-status { top: 12px; left: 12px; }
+.atlas-runtime-help { bottom: 12px; right: 12px; }
+.atlas-runtime-help summary { cursor: pointer; }
+.atlas-runtime-help summary:focus-visible { outline: 3px solid #16c6b2; outline-offset: 3px; }
+.atlas-runtime-help[open] { width: min(360px, calc(100% - 24px)); }
+.atlas-runtime-help p { margin: 8px 0; }
+.atlas-runtime-status-confirmed {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.atlas-runtime-actions { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 7px; align-items: center; }
+.atlas-runtime-actions button { border: 1px solid #36786e; border-radius: 5px; padding: 4px 8px; background: #fff; color: #17483f; cursor: pointer; font: inherit; }
+.atlas-runtime-actions a { color: #145f70; }
+.atlas-runtime-actions :is(button, a):focus-visible { outline: 3px solid #16c6b2; outline-offset: 3px; }
+@media (min-width: 1200px) {
+  .anatomy-site-frame .atlas-3d-workspace-page .atlas-runtime-frame { grid-column: 1; grid-row: 3; }
+}
+@media (max-height: 650px) {
+  .atlas-3d-workspace-page .atlas-runtime-frame { flex: none; height: 70dvh; min-height: 380px; }
+}
+
+/* Closed host actions sit within the 36px teaching header, not over the model. */
+.atlas-runtime-host-tools {
+  --atlas-host-actions-width: 192px;
+  position: absolute;
+  z-index: 4;
+  right: 12px;
+  bottom: calc(var(--atlas-learning-row, 36px) - 32px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  box-sizing: border-box;
+  width: var(--atlas-host-actions-width);
+  height: 32px;
+  max-width: calc(100% - 24px);
+  pointer-events: none;
+}
+.atlas-runtime-host-tools > * { pointer-events: auto; }
+.atlas-runtime-host-tools > .atlas-runtime-help {
+  position: static;
+  box-sizing: border-box;
+  max-width: none;
+  padding: 5px 8px;
+  white-space: nowrap;
+}
+.atlas-runtime-host-tools > .atlas-runtime-help[open] {
+  position: absolute;
+  right: 0;
+  bottom: 32px;
+  width: min(360px, calc(100vw - 24px));
+  max-height: calc(100dvh - var(--atlas-learning-row, 36px) - 24px);
+  overflow: auto;
+  white-space: normal;
+}
+.atlas-runtime-frame:has(> .atlas-runtime-host-tools) > .atlas-body-learning > summary {
+  box-sizing: border-box;
+  width: calc(100% - 212px);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* A source without teaching still gets an explicit 36px host action row. */
+.atlas-runtime-frame:not(:has(> .atlas-body-learning)) > iframe {
+  height: calc(100% - 36px);
+}
+.atlas-runtime-frame:not(:has(> .atlas-body-learning)) > .atlas-runtime-host-tools {
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  max-width: none;
+  padding-right: 12px;
+  border-top: 1px solid #aec8c2;
+  background: #f8fbf6;
+}
+.atlas-runtime-expand {
+  min-height: 32px;
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border: 1px solid #36786e;
+  border-radius: 6px;
+  background: #f8f7f2;
+  color: #17483f;
+  box-shadow: 0 2px 12px #07121020;
+  cursor: pointer;
+  font: 600 13px/1.4 system-ui, sans-serif;
+  white-space: nowrap;
+}
+.atlas-runtime-expand:disabled { cursor: wait; opacity: .7; }
+.atlas-runtime-expand:focus-visible { outline: 3px solid #16c6b2; outline-offset: 3px; }
+.atlas-runtime-expand-message {
+  position: absolute;
+  right: 0;
+  bottom: 42px;
+  box-sizing: border-box;
+  width: min(340px, calc(100vw - 24px));
+  max-height: min(180px, calc(100dvh - 60px));
+  overflow: auto;
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid #b8cbc6;
+  border-radius: 6px;
+  background: #f8f7f2;
+  color: #16332d;
+  font: 13px/1.4 system-ui, sans-serif;
+}
+
+/* Only the host enters fullscreen. The iframe and its mounted state survive. */
+.atlas-runtime-frame:fullscreen {
+  box-sizing: border-box;
+  width: 100dvw;
+  height: 100dvh;
+  min-width: 0;
+  min-height: 0;
+  max-height: none;
+  flex: none;
+  overflow: hidden;
+  background: #f8f7f2;
+}
+.atlas-runtime-frame:fullscreen > iframe {
+  height: calc(100% - var(--atlas-learning-row, 36px));
+  min-height: 0;
+}
+.atlas-runtime-frame:fullscreen:has(> .atlas-body-learning) {
+  --atlas-learning-row: 36px;
+  min-height: 0;
+}
+.atlas-runtime-frame:fullscreen:has(> .atlas-body-learning[open]) {
+  --atlas-learning-row: 96px;
+}
+.atlas-runtime-frame:fullscreen:has(> .atlas-body-learning[open] > .atlas-body-learning-source[open]) {
+  --atlas-learning-row: 168px;
+}
+@media (max-width: 760px) {
+  .atlas-runtime-frame:fullscreen:has(> .atlas-body-learning[open]) { --atlas-learning-row: 128px; }
+  .atlas-runtime-frame:fullscreen:has(> .atlas-body-learning[open] > .atlas-body-learning-source[open]) { --atlas-learning-row: 224px; }
+}
+
+/* The known runtime's expanded guide stays within its own model frame.
+   Other runtime defaults above remain byte-exact. */
+.atlas-3d-workspace-page .atlas-runtime-frame[data-keyboard-guide] { container-type: inline-size; }
+.atlas-runtime-frame[data-keyboard-guide] > .atlas-runtime-host-tools {
+  height: 100%;
+  bottom: 0;
+  align-items: flex-end;
+  padding-bottom: calc(var(--atlas-learning-row, 36px) - 32px);
+}
+.atlas-runtime-frame[data-keyboard-guide] .atlas-runtime-host-tools > .atlas-runtime-help[open] {
+  bottom: calc(var(--atlas-learning-row, 36px) + 4px);
+  width: min(440px, calc(100cqw - 24px));
+  max-width: calc(100cqw - 24px);
+  max-height: calc(100% - var(--atlas-learning-row, 36px) - 16px);
+  overflow: auto;
+}
+.atlas-runtime-keyboard-guide { overflow-wrap: anywhere; }
+.atlas-runtime-keyboard-guide p { white-space: normal; }

@@ -1,0 +1,47 @@
+// Seal a separate current-context pin only after the candidate Review binding has been rebuilt.
+// Usage: node prepare-keyboard-help-current-context.mjs <baseline-website> <candidate-website> <native-atlas-repo> <output-json>
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+
+const [baseline,candidate,native,output]=process.argv.slice(2).map(path=>resolve(path));
+assert(baseline&&candidate&&native&&output,'Baseline, candidate, native Atlas repo and output paths required');
+assert.notEqual(baseline,candidate);
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const read=(root,path)=>readFileSync(resolve(root,path));
+const json=(root,path)=>JSON.parse(read(root,path));
+const original=json(baseline,'tests/fixtures/current-atlas-delivery.json');
+assert.equal(original.schema,'vm-current-atlas-test-delivery-2');
+const git=(...args)=>execFileSync('git',args,{cwd:native,encoding:'utf8',windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).trim();
+assert.equal(git('rev-parse','--show-toplevel').toLowerCase().replaceAll('\\','/'),native.toLowerCase().replaceAll('\\','/'),'Exact native repository root');
+assert.equal(git('rev-parse','HEAD'),original.source,'Native source revision drift');
+assert.equal(git('rev-parse','HEAD^{tree}'),original.sourceTree,'Native source tree drift');
+assert.equal(git('status','--porcelain'),'','Native source worktree changed');
+const docs=Object.keys(original.documents);
+for(const path of docs)assert.equal(sha(read(baseline,path)),original.documents[path],`Baseline delivery drift: ${path}`);
+const changed=new Set(['atlas-review/manifest.json','atlas-review/integration-inputs.json','public/atlas-review-viewer/manifest.json']);
+const hashes=Object.fromEntries(docs.map(path=>[path,sha(read(candidate,path))]));
+for(const path of docs)assert.equal(hashes[path]===original.documents[path],!changed.has(path),`Unexpected delivery metadata seam: ${path}`);
+const oldInputs=json(baseline,'atlas-review/integration-inputs.json');
+const newInputs=json(candidate,'atlas-review/integration-inputs.json');
+assert.equal(newInputs.sourceCommit,original.source);
+assert.deepEqual(newInputs.inputs.map(x=>x.path),oldInputs.inputs.map(x=>x.path),'Integration input order/path drift');
+const expected=new Set(['components/AtlasRuntimeFrame.tsx','components/atlas-runtime-frame.css']);
+const changedInputs=newInputs.inputs.filter((x,i)=>x.sha256!==oldInputs.inputs[i].sha256).map(x=>x.path);
+assert.deepEqual(new Set(changedInputs),expected,'Only the two keyboard-help presentation inputs may change');
+assert.equal(changedInputs.length,expected.size,'Changed input count');
+for(const input of newInputs.inputs)assert.equal(sha(read(candidate,input.path)),input.sha256,`Live source differs from integration input: ${input.path}`);
+const review=json(candidate,'atlas-review/manifest.json');
+const viewer=json(candidate,'public/atlas-review-viewer/manifest.json');
+assert.equal(review.revision,original.source);
+assert.equal(review.files.length,original.reviewSourceFiles);
+assert.equal(viewer.sourceCommit,original.source);
+assert.equal(viewer.files.length,original.viewerFiles);
+assert.equal(viewer.packages.length,original.viewerPackages);
+assert.equal(review.websiteIntegrationSha256,newInputs.sha256);
+assert.equal(viewer.websiteIntegrationSha256,newInputs.sha256);
+const pin={...original,reviewIntegration:newInputs.sha256,documents:hashes};
+writeFileSync(output,JSON.stringify(pin,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({output,source:pin.source,sourceTree:pin.sourceTree,reviewIntegration:pin.reviewIntegration,changedDocuments:[...changed],changedInputs}));
