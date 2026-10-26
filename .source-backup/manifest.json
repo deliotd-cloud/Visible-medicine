@@ -1,0 +1,347 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T21:38:04.978Z",
+  "sourceIdentity": {
+    "kind": "shared-quick-check-committed-focus",
+    "sourceSha256": "96a22c10dbee0b319bc05feca46e2bf6400f97c6998c0c91830b6016b0fa3f15",
+    "nativeRevision": "643fd47491a41a0207f106806c17035cb938048b",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-atlas-issue-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "e9e4e834749f24978ab76eb44bf4211a8357c3594d2f01f255ec196319334dfc",
+        "head": "1644f7a622dbde32eb1034daa8fb5e17f44f6339",
+        "tree": "60d6509b588392c95f032cdde0d85d6818452877",
+        "branch": "backup/atlas-issue-source-20261026"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "atlas/app/structure-quick-check.tsx",
+        "restore": "atlas/app/structure-quick-check.tsx"
+      },
+      {
+        "path": "atlas/scripts/test-structure-quick-check.mjs",
+        "restore": "atlas/scripts/test-structure-quick-check.mjs"
+      },
+      {
+        "path": "website/scripts/import-clinical-review.mjs",
+        "restore": "website/scripts/import-clinical-review.mjs"
+      },
+      {
+        "path": "website/lib/atlas-delivery-policy.ts",
+        "restore": "website/lib/atlas-delivery-policy.ts"
+      },
+      {
+        "path": "website/scripts/check-anatomy-coverage.mjs",
+        "restore": "website/scripts/check-anatomy-coverage.mjs"
+      },
+      {
+        "path": "website/lib/anatomy-coverage-view.ts",
+        "restore": "website/lib/anatomy-coverage-view.ts"
+      },
+      {
+        "path": "recipes/prepare-quick-check-focus-20261026.mjs",
+        "restore": "coordination/prepare-quick-check-focus-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-quick-check-focus-browser-20261026.mjs",
+        "restore": "coordination/prepare-quick-check-focus-browser-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-quick-check-native-20261026.mjs",
+        "restore": "coordination/run-quick-check-native-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-quick-check-native-source-20261026.mjs",
+        "restore": "coordination/seal-quick-check-native-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-quick-check-postbuild-types-20261026.mjs",
+        "restore": "coordination/run-quick-check-postbuild-types-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-quick-check-runtime-exports-20261026.mjs",
+        "restore": "coordination/prepare-quick-check-runtime-exports-20261026.mjs"
+      },
+      {
+        "path": "recipes/export-quick-check-runtimes-20261026.mjs",
+        "restore": "coordination/export-quick-check-runtimes-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-quick-check-runtime-exports-20261026.mjs",
+        "restore": "coordination/run-quick-check-runtime-exports-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-quick-check-website-recipes-20261026.mjs",
+        "restore": "coordination/prepare-quick-check-website-recipes-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-quick-check-website-20261026.mjs",
+        "restore": "coordination/prepare-quick-check-website-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-quick-check-website-stock-20261026.mjs",
+        "restore": "coordination/prepare-quick-check-website-stock-20261026.mjs"
+      },
+      {
+        "path": "recipes/import-quick-check-website-stock-20261026.mjs",
+        "restore": "coordination/import-quick-check-website-stock-20261026.mjs"
+      },
+      {
+        "path": "recipes/generate-quick-check-website-coverage-20261026.mjs",
+        "restore": "coordination/generate-quick-check-website-coverage-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-quick-check-coverage-runners-20261026.mjs",
+        "restore": "coordination/prepare-quick-check-coverage-runners-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-quick-check-coverage-seams-20261026.mjs",
+        "restore": "coordination/run-quick-check-coverage-seams-20261026.mjs"
+      },
+      {
+        "path": "recipes/install-quick-check-website-coverage-20261026.mjs",
+        "restore": "coordination/install-quick-check-website-coverage-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-quick-check-website-integration-20261026.mjs",
+        "restore": "coordination/run-quick-check-website-integration-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-quick-check-website-review-20261026.mjs",
+        "restore": "coordination/build-quick-check-website-review-20261026.mjs"
+      },
+      {
+        "path": "recipes/refresh-quick-check-website-delivery-pin-20261026.mjs",
+        "restore": "coordination/refresh-quick-check-website-delivery-pin-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-quick-check-website-source-20261026.mjs",
+        "restore": "coordination/seal-quick-check-website-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-quick-check-website-verification-20261026.mjs",
+        "restore": "coordination/run-quick-check-website-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-quick-check-verification-20261026.mjs",
+        "restore": "coordination/seal-quick-check-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-quick-check-source-20261026.mjs",
+        "restore": "coordination/backup-quick-check-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-quick-check-progress-20261026.mjs",
+        "restore": "coordination/record-quick-check-progress-20261026.mjs"
+      },
+      {
+        "path": "recipes/retry-quick-check-review-20261026.mjs",
+        "restore": "coordination/retry-quick-check-review-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-quick-check-website-review-retry-20261026.mjs",
+        "restore": "coordination/build-quick-check-website-review-retry-20261026.mjs"
+      },
+      {
+        "path": "recipes/refresh-quick-check-website-delivery-pin-retry-20261026.mjs",
+        "restore": "coordination/refresh-quick-check-website-delivery-pin-retry-20261026.mjs"
+      },
+      {
+        "path": "recipes/quick-check-coverage-prepare-seams.mjs",
+        "restore": "staging/20261026-quick-check-coverage-proposal/prepare-seams.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/structure-quick-check.tsx",
+      "bytes": 4036,
+      "sha256": "ed5d2a9ba608f6cb9d53360c936ff676b0982febb57de27c187ebd89760d0355"
+    },
+    {
+      "path": "atlas/scripts/test-structure-quick-check.mjs",
+      "bytes": 6121,
+      "sha256": "551f363f6f1d745d6680d3ea3e13242fcd3e394b96b6af0ecd12fdc00da0fe51"
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "355f64e3a25d3997cb9bca9c5c07ae30e429fd375b35e0c5ef7fa9ae677af8a9"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "31b14cbdc06d629ef0778ecb8f689611feef49c8f158051b95adb9d92c6bb8b7"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "9e15907a39f87012ecaef31da16f92cff6bacc8db28dc72418f2926912f359e3"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "86f441d0cf7e4ad286d90e64838e9f62e9804a2736870cd2cb7eefc1512ecf68"
+    },
+    {
+      "path": "recipes/prepare-quick-check-focus-20261026.mjs",
+      "bytes": 6245,
+      "sha256": "cbd84df660ea2e72e3457f5a122474a09804aecf24e6908c8c2eb2c21f4bfaf1"
+    },
+    {
+      "path": "recipes/prepare-quick-check-focus-browser-20261026.mjs",
+      "bytes": 3982,
+      "sha256": "fa00e2e538f29dad2f5679299607df196e534bf2a825db2edb783e96c2233362"
+    },
+    {
+      "path": "recipes/run-quick-check-native-20261026.mjs",
+      "bytes": 3337,
+      "sha256": "5f17902e73d7c5b710f369c88dedbc11f671ef0f153b6686b2853238b2d581e3"
+    },
+    {
+      "path": "recipes/seal-quick-check-native-source-20261026.mjs",
+      "bytes": 4707,
+      "sha256": "ed3be31918c174edd4acc24b893e3dba4689c798e1c460c1f35aed5963128e89"
+    },
+    {
+      "path": "recipes/run-quick-check-postbuild-types-20261026.mjs",
+      "bytes": 1638,
+      "sha256": "c274160bd0bd82ebc0950af8875d98b5d8bc0658ed6754e40e06bf6979e220a7"
+    },
+    {
+      "path": "recipes/prepare-quick-check-runtime-exports-20261026.mjs",
+      "bytes": 4235,
+      "sha256": "b700eb2b9209ea31948f985ebb8fd5c16e2d597abbc6754cdcd092fd7d1c67aa"
+    },
+    {
+      "path": "recipes/export-quick-check-runtimes-20261026.mjs",
+      "bytes": 6576,
+      "sha256": "4c77f87a6735707d0f78700a6377cf152b2aaf4891761932a5855993457de531"
+    },
+    {
+      "path": "recipes/run-quick-check-runtime-exports-20261026.mjs",
+      "bytes": 3254,
+      "sha256": "425f73169c303fd2e78a309582348cc967b1175edd54a3231540b108a2e1837d"
+    },
+    {
+      "path": "recipes/prepare-quick-check-website-recipes-20261026.mjs",
+      "bytes": 1582,
+      "sha256": "f590d9af4c35162276c75baf1995be406ab941e951143d1fb140bcb4b2afdd47"
+    },
+    {
+      "path": "recipes/prepare-quick-check-website-20261026.mjs",
+      "bytes": 6726,
+      "sha256": "8aca1186457ac4ad3b7e16aa5eaac2470c522f8c48faf6f504da044471654801"
+    },
+    {
+      "path": "recipes/prepare-quick-check-website-stock-20261026.mjs",
+      "bytes": 2735,
+      "sha256": "0516d6030eb866e2bf61c56863406567d550c26f8f44af5d75388a4cbea52fd7"
+    },
+    {
+      "path": "recipes/import-quick-check-website-stock-20261026.mjs",
+      "bytes": 6716,
+      "sha256": "ae4e7b4ea49f653ad21b46f94b3cf6ed3fc724b4d6b1275fbe540b903686a58f"
+    },
+    {
+      "path": "recipes/generate-quick-check-website-coverage-20261026.mjs",
+      "bytes": 2871,
+      "sha256": "533134b602bdd51183b705905817efaad6acd5cc292efae7c57977a5fdd0bcdc"
+    },
+    {
+      "path": "recipes/prepare-quick-check-coverage-runners-20261026.mjs",
+      "bytes": 2033,
+      "sha256": "5bb44944de314645e1d41bacd3f8bf4eceff1bdf4e7136ea54a30d9cc50ffc19"
+    },
+    {
+      "path": "recipes/run-quick-check-coverage-seams-20261026.mjs",
+      "bytes": 2383,
+      "sha256": "6a0616e1cac690f3f24ed35e699efff726035e39fbe5a209a179747612c96ab4"
+    },
+    {
+      "path": "recipes/install-quick-check-website-coverage-20261026.mjs",
+      "bytes": 2961,
+      "sha256": "417a1dda9d7329f2ec0750c65201f5286713ce4420d17e7562c2ab73b01a6bc4"
+    },
+    {
+      "path": "recipes/run-quick-check-website-integration-20261026.mjs",
+      "bytes": 2158,
+      "sha256": "4c03fed05425a47d723ac54dca95d6f7504505a7622e79f130189aee40a3d890"
+    },
+    {
+      "path": "recipes/build-quick-check-website-review-20261026.mjs",
+      "bytes": 6609,
+      "sha256": "d654f63385bdb8ef3da8971107c54535d3d6373fa613b9bd034f61be6c0e1d14"
+    },
+    {
+      "path": "recipes/refresh-quick-check-website-delivery-pin-20261026.mjs",
+      "bytes": 2774,
+      "sha256": "8b855b454d4d82f3d841b1e1e741182becc27997e44f8101fc77ff507ac5d67d"
+    },
+    {
+      "path": "recipes/seal-quick-check-website-source-20261026.mjs",
+      "bytes": 5993,
+      "sha256": "6954e4dfec5bc3bbcd2c0d10aecd2c1fff965564eec0e683ca187958e2bbcb06"
+    },
+    {
+      "path": "recipes/run-quick-check-website-verification-20261026.mjs",
+      "bytes": 3548,
+      "sha256": "37c909f48447a3f8c95259a3c18cdbcbb03ce6456653eae3a4a6bcce9c038ba1"
+    },
+    {
+      "path": "recipes/seal-quick-check-verification-20261026.mjs",
+      "bytes": 6615,
+      "sha256": "0cb7043b6c4b297892cdbb522b4219e2d7d5fc13ef6fd5be7b132b1936a5a961"
+    },
+    {
+      "path": "recipes/backup-quick-check-source-20261026.mjs",
+      "bytes": 5261,
+      "sha256": "c6393e3e7acee0602416780df0dc9f1cbbf034adbfe0bbca8597d506d80da57f"
+    },
+    {
+      "path": "recipes/record-quick-check-progress-20261026.mjs",
+      "bytes": 9948,
+      "sha256": "2c747ef27b6e017facea4ece863d67d05b80555e653e0c798ff9e114bfb4b051"
+    },
+    {
+      "path": "recipes/retry-quick-check-review-20261026.mjs",
+      "bytes": 3263,
+      "sha256": "e46e8d23b808d04d1c5abae64a8c1959ee4a559676e8cd056d1e5205cd859953"
+    },
+    {
+      "path": "recipes/build-quick-check-website-review-retry-20261026.mjs",
+      "bytes": 6624,
+      "sha256": "fba1770663636c1f4d35c9aee1a7d4b4cc24ca8ce971dd20856660fa5704dbe9"
+    },
+    {
+      "path": "recipes/refresh-quick-check-website-delivery-pin-retry-20261026.mjs",
+      "bytes": 2774,
+      "sha256": "9fa215527c674ad8098b0ef88d8cb6b1ccd3a5b0a500024d0ee026323d51e854"
+    },
+    {
+      "path": "recipes/quick-check-coverage-prepare-seams.mjs",
+      "bytes": 21122,
+      "sha256": "90ed600b4257b6a8d5e704156f66c5849970e2c1b76749cad15df524afa5832a"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source, tests and reproduction recipes only. No generated medical/Review metadata, raw QA, source receipts, checklist, scans, masks, identifiers, models, assets, fonts, runtime, dependencies, private state or canonical/native Git ancestry. Prior supplements and local source required; not a whole/private/runnable backup.",
+  "proof": {
+    "websiteFocusedCases": 26,
+    "nativeTestScripts": 3,
+    "browserChecks": 10,
+    "fullConfiguredTypeFiles": 6237,
+    "stockBuildArtifacts": 1154,
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
