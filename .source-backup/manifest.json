@@ -1,0 +1,95 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T23:40:02.994Z",
+  "sourceIdentity": {
+    "kind": "tongue-ct-mri-original-teaching",
+    "sourceSha256": "a3d4688d49f2cce6eb16c0418d46c776c51d386e315a3933d1b69ad4a13e3e38",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-workbook-history-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "1c2accae53dd0ab585f0a559e6973571adb36aabd87774a0bfabba7d70846e2a",
+        "branch": "backup/workbook-history-source-20261026",
+        "head": "b467bae3acf43bd26ad07c559f33837b86aec6ee"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 84386,
+      "sha256": "910772eac9ca2b079018ce555a11c91182b17cb02546368291def0c7452612e9"
+    },
+    {
+      "path": "atlas/content/tongue-imaging.ts",
+      "bytes": 3339,
+      "sha256": "1a9b96bb282d521ba24aa56f481411e06bce499915bfdf8a4aa2e9d3b08897c0"
+    },
+    {
+      "path": "atlas/lib/tongue-imaging.ts",
+      "bytes": 1533,
+      "sha256": "37fde417526e8273960cfb5ec2052d2fd711b345f192883bad7d8f7a6e2d1eff"
+    },
+    {
+      "path": "atlas/scripts/test-tongue-imaging.mjs",
+      "bytes": 6885,
+      "sha256": "41bc4965c257d12f91e1f97dfc6be8dbebb9ecc65ce736f0e7c173f764a7b2fe"
+    },
+    {
+      "path": "atlas/scripts/test-tongue-imaging-transition.mjs",
+      "bytes": 2749,
+      "sha256": "713de8bacff35c624f7e3837af3e4d229fcbaf0ceb352a862c8f424833fd87cc"
+    },
+    {
+      "path": "atlas/docs/TONGUE_IMAGING.md",
+      "bytes": 2341,
+      "sha256": "da520be68e0d22297db24e9d435c4054a91f3948a3b8eda8b6ca22c2a993e88a"
+    },
+    {
+      "path": "recipes/capture-root-teaching-state-20261026.mjs",
+      "bytes": 1845,
+      "sha256": "0dc7a06938a8763d3a4085a36eea408b7b20dfb77b5758c23aa23d80116582e1"
+    },
+    {
+      "path": "recipes/reconcile-spine-hand-teaching-20261026.mjs",
+      "bytes": 4118,
+      "sha256": "2b29dd6f3982618ca1b6e8371f86d1d8e58b9d75a46108ef21d8c0fdf314433e"
+    },
+    {
+      "path": "recipes/prepare-tongue-imaging-native-20261026.mjs",
+      "bytes": 2377,
+      "sha256": "14925e0e1ffaae6d5bab4e44fd73fc16a8ace96f66469a9e7ab40f3e03fed613"
+    },
+    {
+      "path": "recipes/integrate-tongue-imaging-native-20261026.mjs",
+      "bytes": 3210,
+      "sha256": "f8d41bebaab8cb5a582ff775870c301f16e9228b896810acc9553e79e43c32dc"
+    },
+    {
+      "path": "recipes/run-tongue-native-checks-20261026.mjs",
+      "bytes": 3907,
+      "sha256": "5d641e15501514a7b22e9dfcb96756727821cf14c0ab6cd448c770c50f9cbe36"
+    },
+    {
+      "path": "recipes/finish-tongue-imaging-20261026.mjs",
+      "bytes": 15129,
+      "sha256": "ca9e34703f47a818b90ef5121796bb614a5e7c039106e586c66bd7f18393d238"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party code, original prose, tests and recipes only. Exact source pins, medical metadata, raw evidence, generated runtimes, source assets, scans, masks and native/canonical Git ancestry excluded. Not a complete private or runnable backup.",
+  "proof": {
+    "changedDraftPlacements": 10,
+    "preservedPlacements": 9926,
+    "fullConfiguredTypes": true,
+    "stockNativeBuild": true,
+    "websiteImported": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
