@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
+const file='serve-leg-nerve-source-screen-20261026.mjs',base='F:/VisibleMedicine/staging/20261026-leg-nerve-source-screen',native='F:/VisibleMedicine/staging/20261025-regional-title-native/atlas';let text=fs.readFileSync(file,'utf8');fs.copyFileSync(file,base+'/viewer-recipe-before-name-fix.mjs.raw',fs.constants.COPYFILE_EXCL);fs.copyFileSync(base+'/screen.js',base+'/screen-before-name-fix.js.raw',fs.constants.COPYFILE_EXCL);
+for(const[a,b]of[
+ ['meshes.push(o);const option=',"o.userData.sourceName=model.parser.json.meshes[model.parser.associations.get(o)?.meshes]?.name??o.name.replaceAll('_',' ');meshes.push(o);const option="],
+ ['option.textContent=o.name;','option.textContent=o.userData.sourceName;'],
+ ["m.name.startsWith('Limb orientation core')","m.userData.sourceName.startsWith('Limb orientation core')"],
+ ["label.textContent=m?m.name+","label.textContent=m?m.userData.sourceName+"],
+]){const count=text.split(a).length-1;assert.equal(count,a.includes('startsWith')?2:1,a);text=text.replaceAll(a,b);}
+fs.writeFileSync(file,text);const a=text.indexOf('const entry=`')+'const entry=`'.length,b=text.indexOf('`;\nconst require=',a);assert(a>12&&b>a);const entry=text.slice(a,b);assert(!entry.includes('${'));fs.writeFileSync(base+'/entry.mjs',entry,{flag:'wx'});await createRequire(native+'/package.json')('esbuild').build({stdin:{contents:entry,resolveDir:native,loader:'js'},bundle:true,platform:'browser',format:'esm',outfile:base+'/screen.js',minify:false,define:{'process.env.NODE_ENV':'"production"'}});console.log(JSON.stringify({rebundled:true,reason:'GLTFLoader sanitizes object names; use the original mesh association for labels and orientation-core display only.',originalModelUnchanged:true}));

@@ -1,0 +1,121 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T04:51:20.848Z",
+  "sourceIdentity": {
+    "kind": "unadmitted-source-technical-ingestion-recipes-only",
+    "assetSha256ForLocalReadback": "105d6806a75d8dc7ed60ad9e70d9b8e8202fd6d55e7cad7ff12fc4fd9aad26d8",
+    "restorePaths": [
+      {
+        "path": "ingestion/inspect-glb.mjs",
+        "restore": "leg-nerve-source-screen/technical/inspect-glb.mjs"
+      },
+      {
+        "path": "ingestion/inspect-glb.test.mjs",
+        "restore": "leg-nerve-source-screen/technical/inspect-glb.test.mjs"
+      },
+      {
+        "path": "ingestion/build-candidate-index.mjs",
+        "restore": "leg-nerve-acquisition/build-candidate-index.mjs"
+      },
+      {
+        "path": "recipes/serve-leg-nerve-source-screen-20261026.mjs",
+        "restore": "coordination/serve-leg-nerve-source-screen-20261026.mjs"
+      },
+      {
+        "path": "recipes/fix-leg-source-screen-labels-20261026.mjs",
+        "restore": "coordination/fix-leg-source-screen-labels-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-leg-nerve-main-technical-20261026.mjs",
+        "restore": "coordination/prepare-leg-nerve-main-technical-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-leg-nerve-source-screen-20261026.mjs",
+        "restore": "coordination/record-leg-nerve-source-screen-20261026.mjs"
+      },
+      {
+        "path": "recipes/update-leg-nerve-source-checklist-20261026.mjs",
+        "restore": "coordination/update-leg-nerve-source-checklist-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-leg-nerve-ingestion-recipes-20261026.mjs",
+        "restore": "coordination/backup-leg-nerve-ingestion-recipes-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-leg-nerve-source-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-leg-nerve-source-checkpoint-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "ingestion/inspect-glb.mjs",
+      "bytes": 15831,
+      "sha256": "c5d60cdd3f356caadb525ba326ed4ae81fa549f0ea7ec818c3972f889da3cb65"
+    },
+    {
+      "path": "ingestion/inspect-glb.test.mjs",
+      "bytes": 4114,
+      "sha256": "36e7e1a52d07f0b6ff516b195a3bbb676de527628627073b4491e160b406f4e1"
+    },
+    {
+      "path": "ingestion/build-candidate-index.mjs",
+      "bytes": 8156,
+      "sha256": "4232c1bf087fb9864d8149c5e73b0b2e844ad46c40278cf2c65ae45ae84a4652"
+    },
+    {
+      "path": "recipes/serve-leg-nerve-source-screen-20261026.mjs",
+      "bytes": 8601,
+      "sha256": "1db57a789033bbbb5f52e60b574f7de1bafdc7d8d601cfbbf4841b0cd2c04ef3"
+    },
+    {
+      "path": "recipes/fix-leg-source-screen-labels-20261026.mjs",
+      "bytes": 1831,
+      "sha256": "b186e9655395d5326b97623ed9b0fecace2294d797c9e823c81c2b922cbba1c5"
+    },
+    {
+      "path": "recipes/prepare-leg-nerve-main-technical-20261026.mjs",
+      "bytes": 2708,
+      "sha256": "87441241c807603de02d867337695b9780d5c3b1272b878ccf99aee1ce6727ed"
+    },
+    {
+      "path": "recipes/record-leg-nerve-source-screen-20261026.mjs",
+      "bytes": 5896,
+      "sha256": "66bcba0bee54dc7143e1d7d0156b978c8dcd7d107a514d3515df5d6de10fbcdb"
+    },
+    {
+      "path": "recipes/update-leg-nerve-source-checklist-20261026.mjs",
+      "bytes": 3446,
+      "sha256": "d7ed85352db25e5622e6653b732faaf1bfa9fe4852f7799355f607f37581554a"
+    },
+    {
+      "path": "recipes/backup-leg-nerve-ingestion-recipes-20261026.mjs",
+      "bytes": 3944,
+      "sha256": "ce0b2aac4267a4fc684bc1c0e5edb28014d51976af81da42943786d11993c543"
+    },
+    {
+      "path": "recipes/finalize-leg-nerve-source-checkpoint-20261026.mjs",
+      "bytes": 10492,
+      "sha256": "9e1322d297a72cf77759eed6b19bfcaa58dca847e09e80726d29e2edda08cdab"
+    }
+  ],
+  "removed": [],
+  "scope": "First-party acquisition-index/technical-validator tests and owned viewer/recovery recipes only. No original or derivative third-party model, textures, raw publisher HTML, candidate/index/report/coordinate JSON, raw browser QA, actual checklist/private state, generated Review/medical data/scans/masks/identifiers/assets/dependencies/runtime or native/canonical Git ancestry. Exact local originals/evidence remain required. Not a model, private or runnable full backup; no asset admission, clinical approval, registration, installation or deployment.",
+  "proof": {
+    "mainCases": 16,
+    "mainSkips": 0,
+    "technicalGeometryOnly": true,
+    "sourceModelLocalUnmodified": true,
+    "originalSourceOrDerivativesUploaded": false,
+    "all71AndEightIdeasPreserved": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
