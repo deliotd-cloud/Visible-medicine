@@ -1,0 +1,61 @@
+{
+  "schema": "vm-a01-role-exact-inverse/1",
+  "rows": [
+    {
+      "name": "atlas-arterial-current-delivery.test.mjs",
+      "sourceSha256": "cd5b7082922746ae5af6e781c4538db225c30a0776eb41646a39c5a8e61a5df6",
+      "semanticSha256": "d03351c7eb6a118f6f3bc1188bf471eb801d13d073ec21340d7c2c165e5b7312",
+      "changes": [
+        {
+          "before": "import {assertArterialRoleIdentity,assertCurrentArterialPrefix} from './arterial-delivery-roles.mjs';",
+          "after": "import {assertCurrentArterialPrefix} from './arterial-delivery-roles.mjs';\nimport {assertA01Binding,assertA01NegativeControls,assertFrozenOriginal,A01} from '../a01-delivery-binding.mjs';"
+        },
+        {
+          "before": "test('current 727 arterial delivery stays exact and refuses foreign family/source roles'",
+          "after": "test('current a01 arterial delivery stays exact and refuses foreign family/source roles'"
+        },
+        {
+          "before": "  assertArterialRoleIdentity('current',pin);",
+          "after": "  assertFrozenOriginal(resolve(root,'tests/atlas-arterial-current-delivery.test.mjs'),'cd5b7082922746ae5af6e781c4538db225c30a0776eb41646a39c5a8e61a5df6');\n  assertA01Binding(pin,validateCurrentAtlasDelivery);\n  assert.deepEqual(assertA01NegativeControls(pin,validateCurrentAtlasDelivery),['source','sourceTree','reviewIntegration','runtimeFamily','inputCount']);"
+        },
+        {
+          "before": "assert.equal(CURRENT_ATLAS_REVISION,'727ed5b451ae940a01e56272c8fbc703ea3b0095');",
+          "after": "assert.equal(CURRENT_ATLAS_REVISION,A01.source);"
+        },
+        {
+          "before": "assert.equal(pin.reviewIntegration,'c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68');",
+          "after": "assert.equal(pin.reviewIntegration,A01.reviewIntegration);"
+        }
+      ],
+      "candidate": "atlas-arterial-a01-current-delivery.test.mjs"
+    },
+    {
+      "name": "atlas-cervical-current-delivery.test.mjs",
+      "sourceSha256": "bc039e7935afb1b9350be102e660dd1a97a72b55eaf0beacccb1162ad7eb134e",
+      "semanticSha256": "5d943d5d39871bbc3b9761ac05873fd3f61200684cd85390a57eb43d97a4ff24",
+      "changes": [
+        {
+          "before": "import {assertCurrentCervicalSource} from './cervical-delivery-roles.mjs';",
+          "after": "import {assertA01Binding,assertA01NegativeControls,assertFrozenOriginal,A01} from '../a01-delivery-binding.mjs';"
+        },
+        {
+          "before": "  assertCurrentCervicalSource();",
+          "after": "  assertFrozenOriginal(resolve(root,'tests/atlas-cervical-current-delivery.test.mjs'),'bc039e7935afb1b9350be102e660dd1a97a72b55eaf0beacccb1162ad7eb134e');\n  const exactA01=validateCurrentAtlasDelivery();\n  assertA01Binding(exactA01,validateCurrentAtlasDelivery);\n  assert.deepEqual(assertA01NegativeControls(exactA01,validateCurrentAtlasDelivery),['source','sourceTree','reviewIntegration','runtimeFamily','inputCount']);"
+        },
+        {
+          "before": "assert.equal(revision, '727ed5b451ae940a01e56272c8fbc703ea3b0095', 'Exact current native source');",
+          "after": "assert.equal(revision, A01.source, 'Exact current native source');"
+        },
+        {
+          "before": "'c535c60256f6f09d348369e7c24cfa4e04663406c392c4b245465138dc2d7a68',",
+          "after": "A01.reviewIntegration,"
+        },
+        {
+          "before": "'Historical shoulder runtime cannot masquerade as current 727 delivery'",
+          "after": "'Historical shoulder runtime cannot masquerade as current a01 delivery'"
+        }
+      ],
+      "candidate": "atlas-cervical-a01-current-delivery.test.mjs"
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T20:50:04.638Z",
+  "sourceIdentity": {
+    "kind": "test-only-current-role-repair",
+    "sourceSha256": "9c3dee2e144e7f1778ea28ba0137b22ee083519026278fee247f2e16d05b8bd8",
+    "nativeRevision": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-reference-inspector-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "32d8bdf0ea08c26795377fc8528ddd87507cc38bd8be19a91159b1339f3a55cc",
+        "head": "e9cc24d304b1bcc84066c109ff0c2854f113526f",
+        "tree": "0460dcce18a600859ed8dd12181a72d22201b804",
+        "branch": "backup/reference-inspector-source-20261026"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/tests/atlas-body-learning-space.test.mjs",
+        "restore": "website/tests/atlas-body-learning-space.test.mjs"
+      },
+      {
+        "path": "website/tests/expansion-frame-adoption-inverse.mjs",
+        "restore": "website/tests/expansion-frame-adoption-inverse.mjs"
+      },
+      {
+        "path": "website/docs/REGRESSION_SOURCE_ROLES.md",
+        "restore": "website/docs/REGRESSION_SOURCE_ROLES.md"
+      },
+      {
+        "path": "website/tests/a01-delivery-binding.mjs",
+        "restore": "website/tests/a01-delivery-binding.mjs"
+      },
+      {
+        "path": "website/tests/atlas-a01-current-preservation.test.mjs",
+        "restore": "website/tests/atlas-a01-current-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-arterial-a01-current-delivery.test.mjs",
+        "restore": "website/tests/atlas-arterial-a01-current-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-cervical-a01-current-delivery.test.mjs",
+        "restore": "website/tests/atlas-cervical-a01-current-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/body-learning-contract-preservation.test.mjs",
+        "restore": "website/tests/body-learning-contract-preservation.test.mjs"
+      },
+      {
+        "path": "website/tests/canonical-navigation-source-inverse.mjs",
+        "restore": "website/tests/canonical-navigation-source-inverse.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/atlas-727-originals/atlas-arterial-current-delivery.test.mjs.raw",
+        "restore": "website/tests/fixtures/atlas-727-originals/atlas-arterial-current-delivery.test.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/atlas-727-originals/atlas-cervical-current-delivery.test.mjs.raw",
+        "restore": "website/tests/fixtures/atlas-727-originals/atlas-cervical-current-delivery.test.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/atlas-727-originals/ROLE_INVERSE.json",
+        "restore": "website/tests/fixtures/atlas-727-originals/ROLE_INVERSE.json"
+      },
+      {
+        "path": "website/tests/fixtures/atlas-body-learning-component.current-original.test.mjs.raw",
+        "restore": "website/tests/fixtures/atlas-body-learning-component.current-original.test.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/atlas-body-learning-installed.tsx.raw",
+        "restore": "website/tests/fixtures/atlas-body-learning-installed.tsx.raw"
+      },
+      {
+        "path": "website/tests/fixtures/atlas-body-learning-space.current-original.test.mjs.raw",
+        "restore": "website/tests/fixtures/atlas-body-learning-space.current-original.test.mjs.raw"
+      },
+      {
+        "path": "website/tests/keyboard-help-source-inverse.mjs",
+        "restore": "website/tests/keyboard-help-source-inverse.mjs"
+      },
+      {
+        "path": "recipes/run-source-role-matrix-20261026.mjs",
+        "restore": "coordination/run-source-role-matrix-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-role-matrix-resource-stop-20261026.mjs",
+        "restore": "coordination/record-role-matrix-resource-stop-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-role-matrix-remainder-20261026.mjs",
+        "restore": "coordination/prepare-role-matrix-remainder-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-source-role-matrix-remainder-20261026.mjs",
+        "restore": "coordination/run-source-role-matrix-remainder-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-body-contract-regression-checks-20261026.mjs",
+        "restore": "coordination/prepare-body-contract-regression-checks-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-body-contract-integration-20261026.mjs",
+        "restore": "coordination/prepare-body-contract-integration-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-body-and-current-role-tests-20261026.mjs",
+        "restore": "coordination/seal-body-and-current-role-tests-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-body-contract-whole-roots-20261026.mjs",
+        "restore": "coordination/verify-body-contract-whole-roots-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-body-contract-dependency-roots-20261026.mjs",
+        "restore": "coordination/verify-body-contract-dependency-roots-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-current-role-repair-20261026.mjs",
+        "restore": "coordination/record-current-role-repair-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-current-role-repair-20261026.mjs",
+        "restore": "coordination/backup-current-role-repair-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-current-role-repair-20261026.mjs",
+        "restore": "coordination/finalize-current-role-repair-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-body-learning-space.test.mjs",
+      "bytes": 4872,
+      "sha256": "edaf4b0082cbef299f2705c2c5651bb4e234d8d87715263239495efebc4913cf"
+    },
+    {
+      "path": "website/tests/expansion-frame-adoption-inverse.mjs",
+      "bytes": 3170,
+      "sha256": "fcd37dee93180433fe4c7b39e079fc80e68043fcfe85294cf6c97181353d9f00"
+    },
+    {
+      "path": "website/docs/REGRESSION_SOURCE_ROLES.md",
+      "bytes": 1790,
+      "sha256": "9098028b20584f1c6b9724c1170a590bd19505f9cf75ac14ad3c14c04dcdade6"
+    },
+    {
+      "path": "website/tests/a01-delivery-binding.mjs",
+      "bytes": 1925,
+      "sha256": "cc375b9e781b815fa748d706f641b4589cfdd7fec97d1cb9ec9951bf097f6960"
+    },
+    {
+      "path": "website/tests/atlas-a01-current-preservation.test.mjs",
+      "bytes": 2319,
+      "sha256": "ac376dadc42f24431b1a574f3e6bc388ad3ed8c57761cc1f2366160773e320b5"
+    },
+    {
+      "path": "website/tests/atlas-arterial-a01-current-delivery.test.mjs",
+      "bytes": 17920,
+      "sha256": "e19493fd0a7445efa0f00cd292fed53fb55131bcddb09e8f6dccda5177a3d9df"
+    },
+    {
+      "path": "website/tests/atlas-cervical-a01-current-delivery.test.mjs",
+      "bytes": 23355,
+      "sha256": "5fe782b276f564ff09d64fddadb564c24c831174362cade7ef62f7849c565bee"
+    },
+    {
+      "path": "website/tests/body-learning-contract-preservation.test.mjs",
+      "bytes": 3771,
+      "sha256": "4644fbfc4ff067c491a075c7a48e039b4259b058d1cffed64031d8ff440758bf"
+    },
+    {
+      "path": "website/tests/canonical-navigation-source-inverse.mjs",
+      "bytes": 1133,
+      "sha256": "1d9a438e745f6eadb45ef2efb36ebc481e449d206e6d8969c2f68f1007607099"
+    },
+    {
+      "path": "website/tests/fixtures/atlas-727-originals/atlas-arterial-current-delivery.test.mjs.raw",
+      "bytes": 17594,
+      "sha256": "cd5b7082922746ae5af6e781c4538db225c30a0776eb41646a39c5a8e61a5df6"
+    },
+    {
+      "path": "website/tests/fixtures/atlas-727-originals/atlas-cervical-current-delivery.test.mjs.raw",
+      "bytes": 23006,
+      "sha256": "bc039e7935afb1b9350be102e660dd1a97a72b55eaf0beacccb1162ad7eb134e"
+    },
+    {
+      "path": "website/tests/fixtures/atlas-727-originals/ROLE_INVERSE.json",
+      "bytes": 3684,
+      "sha256": "4a1fca2496868dcc011c4c3b2c16c9743a87d16d534f7a2768f663ab511e2a46"
+    },
+    {
+      "path": "website/tests/fixtures/atlas-body-learning-component.current-original.test.mjs.raw",
+      "bytes": 17085,
+      "sha256": "77047b19fb6aaa40b79f3395799a34a28c6cb5620dc7dc6cb0276cfe72315ca5"
+    },
+    {
+      "path": "website/tests/fixtures/atlas-body-learning-installed.tsx.raw",
+      "bytes": 6490,
+      "sha256": "8512c42af12098b2833a901245ac08406f081c3edacbfabe2d6bc5d73b544d42"
+    },
+    {
+      "path": "website/tests/fixtures/atlas-body-learning-space.current-original.test.mjs.raw",
+      "bytes": 4755,
+      "sha256": "eebac7324514d16b9b2902c389b58d787a5bb937224a5cf444db21a2afec7a0e"
+    },
+    {
+      "path": "website/tests/keyboard-help-source-inverse.mjs",
+      "bytes": 2804,
+      "sha256": "840d2e2e98baf239314e2353365d396cce6d401ec625b68e4b275e2dc40aa00f"
+    },
+    {
+      "path": "recipes/run-source-role-matrix-20261026.mjs",
+      "bytes": 8087,
+      "sha256": "3f185f09c45b3e26010363c13cf3735ef4c584b6accd2fc873e0548959340f7c"
+    },
+    {
+      "path": "recipes/record-role-matrix-resource-stop-20261026.mjs",
+      "bytes": 2574,
+      "sha256": "5c992b7cd51ab915df7fc1bfdc4fcbaefae2ef8f11b38b2c03aeb33436c2f493"
+    },
+    {
+      "path": "recipes/prepare-role-matrix-remainder-20261026.mjs",
+      "bytes": 1289,
+      "sha256": "9f9ba3994700fed3ef03e885ac99d278cc1e9e888345f6fa3092e6985053f10d"
+    },
+    {
+      "path": "recipes/run-source-role-matrix-remainder-20261026.mjs",
+      "bytes": 8141,
+      "sha256": "05d82878ed97cee00594109b088a07d9bdc7aa28e73fb91cb93cce545a1dae1d"
+    },
+    {
+      "path": "recipes/prepare-body-contract-regression-checks-20261026.mjs",
+      "bytes": 1527,
+      "sha256": "42bde4c5389902f2d98123c4fbd40aeaf19048c0ebcd6717fa05d6a51f4b3332"
+    },
+    {
+      "path": "recipes/prepare-body-contract-integration-20261026.mjs",
+      "bytes": 1697,
+      "sha256": "fed0152a626ce3eae1efc0896d75043b9af2efdc5f6a77756b40d50fb2f964e9"
+    },
+    {
+      "path": "recipes/seal-body-and-current-role-tests-20261026.mjs",
+      "bytes": 6824,
+      "sha256": "4d62df57989e1b4044c750387a5db45d83d227c4a274221b712dd8fd8c14cfce"
+    },
+    {
+      "path": "recipes/verify-body-contract-whole-roots-20261026.mjs",
+      "bytes": 3890,
+      "sha256": "9efbf3b7fdc7f4d79c1f6cf888ea0b188d7839e5d4b0779d4406095ae8fb0843"
+    },
+    {
+      "path": "recipes/verify-body-contract-dependency-roots-20261026.mjs",
+      "bytes": 3890,
+      "sha256": "138bfd540be31bf34c4aea6eb852ac0ee09cd52166afacefb4c3044ded0387b9"
+    },
+    {
+      "path": "recipes/record-current-role-repair-20261026.mjs",
+      "bytes": 6704,
+      "sha256": "fda03d7166d4c147a483ec0d0283aeb797eaa1eb0f2bf012442a186ea9bfb4fc"
+    },
+    {
+      "path": "recipes/backup-current-role-repair-20261026.mjs",
+      "bytes": 4558,
+      "sha256": "1671cb277d73ede41ec3ec7bc3fce9de96d4d12b27e59c6c86aec0aef02348b8"
+    },
+    {
+      "path": "recipes/finalize-current-role-repair-20261026.mjs",
+      "bytes": 8297,
+      "sha256": "144500d4398ce4fbe3a037184f6a02b0c90cf57ef6faf874df1b4751b5e9f231"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party regression tests, original test/component source fixtures, exact source-inverse recipe JSON, documentation and reproduction recipes. No source receipts, rawQA/TAP/browser metadata, actual checklist, generated medical/Review data, scans/masks/identifiers/models/assets/fonts/dependencies/runtime/private state or canonical/native Git ancestry. Prior supplements/local historical contexts required; not a whole/private/runnable backup.",
+  "proof": {
+    "focusedCurrentCases": 26,
+    "wholeCurrentRoots": 6,
+    "dependencyBefore": {
+      "tests": 5,
+      "pass": 2,
+      "fail": 3
+    },
+    "dependencyAfter": {
+      "tests": 5,
+      "pass": 3,
+      "fail": 2,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "dependentRegressions": 0,
+    "productBytesUnchanged": true,
+    "parentProductVerification": {
+      "path": "F:/VisibleMedicine/staging/20261026-local-reference-inbox-v3/VERIFICATION_SUMMARY.json",
+      "sha256": "65e68735a5a512fd259a2ca02586badad2ca774a3455fbac2da0f183d1921b42"
+    },
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

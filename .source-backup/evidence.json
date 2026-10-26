@@ -1,0 +1,27 @@
+{
+  "focusedCurrentCases": 26,
+  "wholeCurrentRoots": 6,
+  "dependencyBefore": {
+    "tests": 5,
+    "pass": 2,
+    "fail": 3
+  },
+  "dependencyAfter": {
+    "tests": 5,
+    "pass": 3,
+    "fail": 2,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "dependentRegressions": 0,
+  "productBytesUnchanged": true,
+  "parentProductVerification": {
+    "path": "F:/VisibleMedicine/staging/20261026-local-reference-inbox-v3/VERIFICATION_SUMMARY.json",
+    "sha256": "65e68735a5a512fd259a2ca02586badad2ca774a3455fbac2da0f183d1921b42"
+  },
+  "wholeStockSuitePassing": false,
+  "normalPreviewChanged": false,
+  "clinicalApproval": false,
+  "patientSpaceRegistration": false
+}
