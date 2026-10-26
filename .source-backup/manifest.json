@@ -1,0 +1,419 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T00:45:29.159Z",
+  "sourceIdentity": {
+    "kind": "coherent-native-tour-heading-import-current-source-tests-recovery",
+    "requiredLocalWebsiteSourceSha256": "01264592ba332c3ad0f124c5ee9f1f517a231b4a927dda2a8f7e831da5f7c51d",
+    "requiredNativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261025-compact-access-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "e39904ce100a2b8265e5ad25575e49aa1769b88f915455ebb97a0646d1a07198",
+        "branch": "backup/compact-access-source-20261025",
+        "head": "175925049e92d07e3a0a6fc0d8d9c68db64175e4",
+        "tree": "3cf3ddc99ac713312c131ead91277c7b8af6da9b"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-title-tour-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "4354d077ec3dc5e214dd370d666200bb54e5aa587fe3da4e004a85bb9bccbce3",
+        "branch": "backup/title-tour-source-20261026",
+        "head": "cd679e6b4890314cafec1be7e7f40b9e972e545f",
+        "tree": "bc0608e6ca34aba566cca832a7a8c311eb11decc"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/tests/current-atlas-title-tour-delivery.test.mjs",
+        "restore": "website/tests/current-atlas-title-tour-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/title-tour-functional-delivery.test.mjs",
+        "restore": "website/tests/title-tour-functional-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/regional-tour-title-tour-current.test.mjs",
+        "restore": "website/tests/regional-tour-title-tour-current.test.mjs"
+      },
+      {
+        "path": "website/scripts/import-clinical-review.mjs",
+        "restore": "website/scripts/import-clinical-review.mjs"
+      },
+      {
+        "path": "website/scripts/check-anatomy-coverage.mjs",
+        "restore": "website/scripts/check-anatomy-coverage.mjs"
+      },
+      {
+        "path": "website/lib/anatomy-coverage-view.ts",
+        "restore": "website/lib/anatomy-coverage-view.ts"
+      },
+      {
+        "path": "recipes/run-title-tour-runtime-exports-20261026.mjs",
+        "restore": "coordination/run-title-tour-runtime-exports-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-website-recipe-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-website-recipe-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-website-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-website-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-website-stock-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-website-stock-20261026.mjs"
+      },
+      {
+        "path": "recipes/import-title-tour-website-stock-20261026.mjs",
+        "restore": "coordination/import-title-tour-website-stock-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-title-tour-website-stock-metadata-20261026.mjs",
+        "restore": "coordination/run-title-tour-website-stock-metadata-20261026.mjs"
+      },
+      {
+        "path": "recipes/generate-title-tour-website-coverage-20261026.mjs",
+        "restore": "coordination/generate-title-tour-website-coverage-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-title-tour-coverage-seams-20261026.mjs",
+        "restore": "coordination/run-title-tour-coverage-seams-20261026.mjs"
+      },
+      {
+        "path": "recipes/install-title-tour-website-coverage-20261026.mjs",
+        "restore": "coordination/install-title-tour-website-coverage-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-title-tour-website-review-20261026.mjs",
+        "restore": "coordination/build-title-tour-website-review-20261026.mjs"
+      },
+      {
+        "path": "recipes/refresh-title-tour-website-delivery-pin-20261026.mjs",
+        "restore": "coordination/refresh-title-tour-website-delivery-pin-20261026.mjs"
+      },
+      {
+        "path": "recipes/review-title-tour-current-test-20261026.mjs",
+        "restore": "coordination/review-title-tour-current-test-20261026.mjs"
+      },
+      {
+        "path": "recipes/integrate-title-tour-website-tests-20261026.mjs",
+        "restore": "coordination/integrate-title-tour-website-tests-20261026.mjs"
+      },
+      {
+        "path": "recipes/integrate-title-tour-route-test-20261026.mjs",
+        "restore": "coordination/integrate-title-tour-route-test-20261026.mjs"
+      },
+      {
+        "path": "recipes/fix-title-tour-test-path-check-20261026.mjs",
+        "restore": "coordination/fix-title-tour-test-path-check-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-website-seal-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-website-seal-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-title-tour-website-source-20261026.mjs",
+        "restore": "coordination/seal-title-tour-website-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-website-seal-v2-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-website-seal-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-title-tour-website-source-v2-20261026.mjs",
+        "restore": "coordination/seal-title-tour-website-source-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-title-tour-website-source-v3-20261026.mjs",
+        "restore": "coordination/seal-title-tour-website-source-v3-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-title-tour-website-focused-20261026.mjs",
+        "restore": "coordination/verify-title-tour-website-focused-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-focused-v2-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-focused-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-title-tour-website-focused-v2-20261026.mjs",
+        "restore": "coordination/verify-title-tour-website-focused-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-website-production-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-website-production-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-title-tour-website-production-20261026.mjs",
+        "restore": "coordination/verify-title-tour-website-production-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-preview-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-preview-20261026.mjs"
+      },
+      {
+        "path": "recipes/serve-title-tour-built-worker-20261026.mjs",
+        "restore": "coordination/serve-title-tour-built-worker-20261026.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-title-tour-preview-20261026.mjs",
+        "restore": "coordination/stop-owned-title-tour-preview-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-title-tour-browser-20261026.mjs",
+        "restore": "coordination/record-title-tour-browser-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-title-tour-website-verification-20261026.mjs",
+        "restore": "coordination/record-title-tour-website-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-title-tour-website-source-20261026.mjs",
+        "restore": "coordination/backup-title-tour-website-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/title-tour-coverage/prepare-seams.mjs",
+        "restore": "staging/20261026-title-tour-coverage-proposal/prepare-seams.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/current-atlas-title-tour-delivery.test.mjs",
+      "bytes": 10204,
+      "sha256": "75d70f5a080c6e0ddfdee9f7990eae75aed6de2c582635540033e65f8e6433eb"
+    },
+    {
+      "path": "website/tests/title-tour-functional-delivery.test.mjs",
+      "bytes": 9370,
+      "sha256": "653afc387abda1c4661de3c7a7c9f56592263213254e31c6a5d47dc54e4c9be7"
+    },
+    {
+      "path": "website/tests/regional-tour-title-tour-current.test.mjs",
+      "bytes": 12280,
+      "sha256": "8a8612d9eaa3ee30cc766a8d21e6aa5f343cfd754d91a027e3beb64fb7384097"
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "8a9830439bd24cf16bf5c0bbe2dcacd533766703600d2c7cf37734d287f3f005"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "ee0fb674db646aef4ed9ceb503539536ef9ae82c8d3a0fc240438bcaf64fcbe6"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "210e054dc23f0c602597858d04a550e0650fbc9bf250c00f3629cc6e1e3c27d8"
+    },
+    {
+      "path": "recipes/run-title-tour-runtime-exports-20261026.mjs",
+      "bytes": 3301,
+      "sha256": "1a8a98539cc55030b4999f923808e0c3d5188b846bd55f29c59ed5f7f6e50197"
+    },
+    {
+      "path": "recipes/prepare-title-tour-website-recipe-20261026.mjs",
+      "bytes": 1658,
+      "sha256": "c029a7fafdc0327ee2c2ed66df1e81c2a205dfb079b54e93ee7f1389b080c1bc"
+    },
+    {
+      "path": "recipes/prepare-title-tour-website-20261026.mjs",
+      "bytes": 6726,
+      "sha256": "ff1c440160131a780bffd7bd463c794cd2f7991438466c4aa8fa2fcb50b310e1"
+    },
+    {
+      "path": "recipes/prepare-title-tour-website-stock-20261026.mjs",
+      "bytes": 2425,
+      "sha256": "04103fc49d770fc0377d3e58363ffd20721ec46cad62f585c9b096b247c6b26a"
+    },
+    {
+      "path": "recipes/import-title-tour-website-stock-20261026.mjs",
+      "bytes": 6714,
+      "sha256": "f7df60e06cdd499df0518dc1d5925b6566cae0586b9ea66d59a13e84d99b7527"
+    },
+    {
+      "path": "recipes/run-title-tour-website-stock-metadata-20261026.mjs",
+      "bytes": 2082,
+      "sha256": "3714da75f41bc7c2de77915216b8d1ea39a5fbdb00d198ae1a586fc847fe2c82"
+    },
+    {
+      "path": "recipes/generate-title-tour-website-coverage-20261026.mjs",
+      "bytes": 2870,
+      "sha256": "e3c6882d716af75d8b33b2ecf9c6fbc73e73cd64db7417cd096bbf6d9d187224"
+    },
+    {
+      "path": "recipes/run-title-tour-coverage-seams-20261026.mjs",
+      "bytes": 2381,
+      "sha256": "510265ba00e6c5d8f044d430be0cf4da6e1cb70182ec66463d92922c5d8647cb"
+    },
+    {
+      "path": "recipes/install-title-tour-website-coverage-20261026.mjs",
+      "bytes": 1118,
+      "sha256": "71c35726d3379df98a673e89e6fd38fdc30327af7e209ba7271152178a1e2684"
+    },
+    {
+      "path": "recipes/build-title-tour-website-review-20261026.mjs",
+      "bytes": 6383,
+      "sha256": "1e173b97733b0073362656bd5b23c0c7a4a4ae490eaf3e01c4c3ee0d4d90a473"
+    },
+    {
+      "path": "recipes/refresh-title-tour-website-delivery-pin-20261026.mjs",
+      "bytes": 2773,
+      "sha256": "134ce7818b6aad30da4ffd892602d4b007f4ba7ff320aad9998db5f8f81af59a"
+    },
+    {
+      "path": "recipes/review-title-tour-current-test-20261026.mjs",
+      "bytes": 3303,
+      "sha256": "ac00034345a9b89226699b4f353425ac1121356c94c7b6eb4d6a4ea4d15b6f88"
+    },
+    {
+      "path": "recipes/integrate-title-tour-website-tests-20261026.mjs",
+      "bytes": 3081,
+      "sha256": "195d08ba1df81f59493b7670bdfd42191d0d76b5308d23a78275b0715ae467dc"
+    },
+    {
+      "path": "recipes/integrate-title-tour-route-test-20261026.mjs",
+      "bytes": 5936,
+      "sha256": "c2171a5443c92bd1ed4a781755bb772834b07ce34f735213484d67a876f2b8c3"
+    },
+    {
+      "path": "recipes/fix-title-tour-test-path-check-20261026.mjs",
+      "bytes": 2855,
+      "sha256": "d886e5ed4561f30ab6b2e43eb3e33d88dbb22aad248cfe9568de5200919c0caa"
+    },
+    {
+      "path": "recipes/prepare-title-tour-website-seal-20261026.mjs",
+      "bytes": 1150,
+      "sha256": "e309c1594a0d778964e5c23c8b495d5645a474a1b1676ac183cdced24b1050a7"
+    },
+    {
+      "path": "recipes/seal-title-tour-website-source-20261026.mjs",
+      "bytes": 6335,
+      "sha256": "89a73d6ef5966bf58934de6e2b1e1ceb02b65723ba1fca12ea704ab28733cb85"
+    },
+    {
+      "path": "recipes/prepare-title-tour-website-seal-v2-20261026.mjs",
+      "bytes": 1179,
+      "sha256": "6efd30e2c19ded45741e3c9ab96ac96a081aae4731fed60f60f7198c47b376b3"
+    },
+    {
+      "path": "recipes/seal-title-tour-website-source-v2-20261026.mjs",
+      "bytes": 6547,
+      "sha256": "67c0590b3db1d1e1aefc56fb4fe96dd37bd5e526bb63138ec21d489c43015765"
+    },
+    {
+      "path": "recipes/seal-title-tour-website-source-v3-20261026.mjs",
+      "bytes": 6659,
+      "sha256": "b378299cef7112263a3837fee2359cef24c200ed43551f27cb826daa17ad1123"
+    },
+    {
+      "path": "recipes/verify-title-tour-website-focused-20261026.mjs",
+      "bytes": 2755,
+      "sha256": "ac307f9e007d627cc3e2f835678e8422d78047c8684fb3485bae88c61c2bc73d"
+    },
+    {
+      "path": "recipes/prepare-title-tour-focused-v2-20261026.mjs",
+      "bytes": 1079,
+      "sha256": "3ad2e628678c4f88356e770a752fd00def8f4c45975e9a6f3bdc749925f47916"
+    },
+    {
+      "path": "recipes/verify-title-tour-website-focused-v2-20261026.mjs",
+      "bytes": 2782,
+      "sha256": "048c298983b324b0911a6682514e2b9b525a8c1e23d528dd9d8e9e9fd6c59542"
+    },
+    {
+      "path": "recipes/prepare-title-tour-website-production-20261026.mjs",
+      "bytes": 1179,
+      "sha256": "d25718519352f6cd92ca1769f26099e2e5706269b969d741d0435174f0a77a76"
+    },
+    {
+      "path": "recipes/verify-title-tour-website-production-20261026.mjs",
+      "bytes": 4813,
+      "sha256": "cc48e3a56bfd9a0a369c11a1a54659939cb27bf849ae8fae07ac8ca727ad89e2"
+    },
+    {
+      "path": "recipes/prepare-title-tour-preview-20261026.mjs",
+      "bytes": 1939,
+      "sha256": "19619ae90f0b42e5a2ad4128c9a86f37a93fdff06845a03d3cecc50faed3f15e"
+    },
+    {
+      "path": "recipes/serve-title-tour-built-worker-20261026.mjs",
+      "bytes": 3868,
+      "sha256": "1a050c9b8e39e93b02cf97c8a4c30e19cbd5eba38d359368916b63880d11d5e9"
+    },
+    {
+      "path": "recipes/stop-owned-title-tour-preview-20261026.mjs",
+      "bytes": 2552,
+      "sha256": "609bb19087d824982ae4503101afcb6c2cb58b527f33a05b0a547f7e0fcb751e"
+    },
+    {
+      "path": "recipes/record-title-tour-browser-20261026.mjs",
+      "bytes": 4298,
+      "sha256": "5821d3997e4caf22a681ed9cb518faf9048d271634b745eb3d0fd272da06c5a1"
+    },
+    {
+      "path": "recipes/record-title-tour-website-verification-20261026.mjs",
+      "bytes": 4305,
+      "sha256": "a8f845c5bac7506577049acfad13835e015af064d5923987a6fc636bc168e239"
+    },
+    {
+      "path": "recipes/backup-title-tour-website-source-20261026.mjs",
+      "bytes": 7025,
+      "sha256": "26b35c6f05c5d545e0c4c3228be81c7ede780e3115e471f8cebac3271a75715c"
+    },
+    {
+      "path": "recipes/title-tour-coverage/prepare-seams.mjs",
+      "bytes": 20420,
+      "sha256": "6ae2c866a6c131d0a42529b7ba39a1eac0de6c75b699357df19f611895639fad"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party source and recovery recipes only. Three current test roots, committed import seam, source-only coverage checker/projection and pipeline recipes. Exact local Website/native baseline, private generated pins/catalogue data, immutable receipts and earlier supplements remain required. Coverage witnesses must be recreated from authenticated local78fb preimages. No raw QA/logs/screenshots, generated Review/medical data/manifests/pins/inventories, private configuration/decisions, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Not a full/private/runnable backup.",
+  "proof": {
+    "sourcePaths": 6872,
+    "currentWholeRoots": 3,
+    "currentWholeCases": 39,
+    "currentSkips": 0,
+    "actualNativeTourComparisons": 53,
+    "actualNativeEvidenceComparisons": 414,
+    "actualWebsitePlacements": 9936,
+    "titleOnlyChanges": 11,
+    "otherPlacementsAndClinicalFieldsExact": 9925,
+    "changedMaterialPins": 9,
+    "unchangedMaterialPins": 1095,
+    "strictTypeRoots": 2669,
+    "strictTypeFiles": 6227,
+    "diagnostics": 0,
+    "stockProductionArtifacts": 1145,
+    "allFourSourceMatchedExports": true,
+    "reviewSourceFiles": 1614,
+    "protectedInputs": 1818,
+    "viewerFiles": 54,
+    "viewerPackages": 24,
+    "desktopWidths": [
+      1280,
+      1440
+    ],
+    "elevenHeadingsActuallyShown": true,
+    "keyboardAndIndependentPanelScroll": true,
+    "modelHead401": 1,
+    "modelGlbGets": 0,
+    "noSignedInGeometryOrCameraAcceptance": true,
+    "sourceBytes": 183889,
+    "privateDataUploaded": false,
+    "normalPreviewUnchanged": true,
+    "installed": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "wholeStockSuitePassing": false,
+    "original316StockFailuresAnd3SkipsUnadjusted": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

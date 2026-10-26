@@ -1,0 +1,21 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import net from 'node:net';import {spawn} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';import {memoryGate} from './native-website-integration-stage-20261025.mjs';
+const sourceFile='F:/VisibleMedicine/staging/20261026-title-tour-website/SOURCE_CANDIDATE_V3.json',sourceSha256='01264592ba332c3ad0f124c5ee9f1f517a231b4a927dda2a8f7e831da5f7c51d';
+assert.equal(hash(sourceFile),sourceSha256);const source=json(sourceFile),site=source.website,buildFile='F:/VisibleMedicine/staging/20261026-title-tour-website/checks/build-attempt-1/RESULT.json',build=json(buildFile);assert(build.passing);assert.equal(build.source.sha256,sourceSha256);
+memoryGate(2048);const dir='F:/VisibleMedicine/staging/20261026-title-tour-preview';assert(!fs.existsSync(dir));
+for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+assert.equal(hash(build.artifacts.path),build.artifacts.sha256);for(const d of source.dependencies){assert.equal(hash(d.file),d.sha256);assert.equal(hash(d.entry),d.entrySha256);}
+for(const r of json(build.artifacts.path).files)assert.equal(hash(site+'/dist/'+r.path),r.sha256,r.path);
+for(const port of [3072,49372])await new Promise((resolve,reject)=>{const listener=net.createServer();listener.once('error',reject);listener.listen(port,'127.0.0.1',()=>listener.close(resolve));});
+for(const p of ['.env','.env.local','.env.production','.dev.vars','.dev.vars.local'])assert(!fs.existsSync(site+'/'+p),'No owner environment or credentials in isolated preview: '+p);assert.equal(json('CURRENT_CHECKPOINT.json').activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+const cli=site+'/node_modules/wrangler/bin/wrangler.js';assert(fs.existsSync(cli));const builtConfig=json(site+'/dist/server/wrangler.json');assert.equal(builtConfig.main,'index.js');assert.equal(builtConfig.no_bundle,true);assert(![...(builtConfig.r2_buckets??[]),...(builtConfig.d1_databases??[])].some(b=>b.remote));assert.equal(builtConfig.ai,undefined);
+fs.mkdirSync(dir);const out=fs.openSync(dir+'/stdout.log','wx'),err=fs.openSync(dir+'/stderr.log','wx');
+const env=Object.fromEntries(Object.entries(process.env).filter(([k])=>/^(path|systemroot|windir|comspec|pathext|temp|tmp|os|processor_architecture|number_of_processors)$/i.test(k)));
+Object.assign(env,{NODE_OPTIONS:'--max-old-space-size=768',GOMEMLIMIT:'64MiB',GOMAXPROCS:'1',RAYON_NUM_THREADS:'1',WRANGLER_SEND_METRICS:'false',NEXT_TELEMETRY_DISABLED:'1'});
+const args=['--max-old-space-size=768',cli,'dev','--config',site+'/dist/server/wrangler.json','--local','--no-bundle','--ip','127.0.0.1','--port','3072','--inspector-ip','127.0.0.1','--inspector-port','49372','--persist-to',dir+'/local-state','--live-reload=false','--show-interactive-dev-session=false','--types=false','--log-level','warn'];
+const child=spawn(process.execPath,args,{cwd:site,env,windowsHide:true,shell:false,stdio:['ignore',out,err]});
+await new Promise((resolve,reject)=>{child.once('spawn',resolve);child.once('error',reject);});
+const handle={at:new Date().toISOString(),role:'isolated-built-workers-website-preview',pid:child.pid,parentPid:process.pid,url:'http://127.0.0.1:3072',args,source:{path:sourceFile,sha256:sourceSha256},build:{path:buildFile,sha256:hash(buildFile)},privateStateCopied:false,currentOwnerPreviewChanged:false};
+fs.writeFileSync(dir+'/HANDLE.json',JSON.stringify(handle,null,2)+'\n',{flag:'wx'});fs.closeSync(out);fs.closeSync(err);
+console.log(JSON.stringify(handle));
+const terminal=await new Promise(resolve=>{child.once('error',e=>resolve({error:String(e)}));child.once('close',(code,signal)=>resolve({code,signal}));});fs.writeFileSync(dir+'/TERMINAL.json',JSON.stringify({at:new Date().toISOString(),...terminal},null,2)+'\n',{flag:'wx'});process.exitCode=terminal.code===0?0:1;

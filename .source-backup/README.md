@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party source and recovery recipes only. Three current test roots, committed import seam, source-only coverage checker/projection and pipeline recipes. Exact local Website/native baseline, private generated pins/catalogue data, immutable receipts and earlier supplements remain required. Coverage witnesses must be recreated from authenticated local78fb preimages. No raw QA/logs/screenshots, generated Review/medical data/manifests/pins/inventories, private configuration/decisions, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Not a full/private/runnable backup.
