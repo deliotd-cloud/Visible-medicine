@@ -1,0 +1,155 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T06:18:02.119Z",
+  "sourceIdentity": {
+    "kind": "saved-study-plan-committed-scan-lifecycle",
+    "websiteSourceSha256": "c48b507b9c870e0ee8ccb11760c1c1f0127d4550284388b3211a8e5b04262101",
+    "nativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-keyboard-help-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "a82c9b3941b1e5e13a991c7cdcdbd5b5f53a6ce7ff421cd8b45c301b44562831",
+        "branch": "backup/atlas-keyboard-help-source-20261026",
+        "head": "d825c17c98fd8889e51ca9330b10536ef7d06375",
+        "tree": "28c74215f5f0465635dea6c099464bc5a2d2d657"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/components/HeadAtlasSavedStudyPlan.tsx",
+        "restore": "website/components/HeadAtlasSavedStudyPlan.tsx"
+      },
+      {
+        "path": "website/tests/head-saved-study-plan-ui.test.ts",
+        "restore": "website/tests/head-saved-study-plan-ui.test.ts"
+      },
+      {
+        "path": "recipes/prepare-saved-plan-commit-20261026.mjs",
+        "restore": "coordination/prepare-saved-plan-commit-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-saved-plan-commit-verification-20261026.mjs",
+        "restore": "coordination/prepare-saved-plan-commit-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-saved-plan-commit-20261026.mjs",
+        "restore": "coordination/verify-saved-plan-commit-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-saved-plan-react-browser-20261026.mjs",
+        "restore": "coordination/prepare-saved-plan-react-browser-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-saved-plan-focused-types-20261026.mjs",
+        "restore": "coordination/check-saved-plan-focused-types-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-saved-plan-before-negative-20261026.mjs",
+        "restore": "coordination/check-saved-plan-before-negative-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-saved-plan-commit-verification-20261026.mjs",
+        "restore": "coordination/record-saved-plan-commit-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/update-saved-plan-checklist-20261026.mjs",
+        "restore": "coordination/update-saved-plan-checklist-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-saved-plan-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-saved-plan-checkpoint-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-saved-plan-commit-source-20261026.mjs",
+        "restore": "coordination/backup-saved-plan-commit-source-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasSavedStudyPlan.tsx",
+      "bytes": 7980,
+      "sha256": "20827c241cf25e691b284daa8bd3690e17d05ff6fd433a23accd3df19fb4421e"
+    },
+    {
+      "path": "website/tests/head-saved-study-plan-ui.test.ts",
+      "bytes": 17836,
+      "sha256": "692e6490ced3612eb66884ca168f30a66906cc4b23feed1928864725e8917606"
+    },
+    {
+      "path": "recipes/prepare-saved-plan-commit-20261026.mjs",
+      "bytes": 5173,
+      "sha256": "4a2b69ede4b95aefaf70cd4ed89dff61d87e7223f223f38bb9f80bc587b77ab8"
+    },
+    {
+      "path": "recipes/prepare-saved-plan-commit-verification-20261026.mjs",
+      "bytes": 1516,
+      "sha256": "512305ee36166d29f4995f1a73062a018d804354e552a2b524ec790218d9ac33"
+    },
+    {
+      "path": "recipes/verify-saved-plan-commit-20261026.mjs",
+      "bytes": 7004,
+      "sha256": "068608656619e650dae2ca9faec6e3dd15ca9cadd4b72a40c142b75da00a921d"
+    },
+    {
+      "path": "recipes/prepare-saved-plan-react-browser-20261026.mjs",
+      "bytes": 5144,
+      "sha256": "30ac4763e8ed242f2992bde4dfae6110a3047d550396b1038ccecd108d50dbb0"
+    },
+    {
+      "path": "recipes/check-saved-plan-focused-types-20261026.mjs",
+      "bytes": 3282,
+      "sha256": "4b21cc5712681a5432494485ca961b46930796ec9f16a85f23667de8b3d1934e"
+    },
+    {
+      "path": "recipes/check-saved-plan-before-negative-20261026.mjs",
+      "bytes": 2928,
+      "sha256": "3d7aa177d866ddf0e53948fd86b6922da753995825f8dfda5ac4bd1b831041cd"
+    },
+    {
+      "path": "recipes/record-saved-plan-commit-verification-20261026.mjs",
+      "bytes": 6759,
+      "sha256": "f7736855d83088ef47ebbd8074d1aa8d12138034e80a852ac99b20bbc2cd866f"
+    },
+    {
+      "path": "recipes/update-saved-plan-checklist-20261026.mjs",
+      "bytes": 3675,
+      "sha256": "cfbe5ae0dece2b3f28209b57781649654a860c8b89c40b4c6f0e8756d8e67e42"
+    },
+    {
+      "path": "recipes/finalize-saved-plan-checkpoint-20261026.mjs",
+      "bytes": 9007,
+      "sha256": "c811a20d8128c430d8a827252b54a47cbdd4bf7830504f444fc7d2410ae215bb"
+    },
+    {
+      "path": "recipes/backup-saved-plan-commit-source-20261026.mjs",
+      "bytes": 4709,
+      "sha256": "8cf7f90f953efaf2916de145cdc7616edfa5e6fa770bc0b162718508ed3368b6"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party saved-plan component/test and recovery/synthetic harness recipes only. Exact local baseline and prior supplements remain required. No actual checklist, raw QA/browser/input/output receipts, generated Review/medical data, scans/masks/identifiers/coordinates/models/assets/dependencies/runtime/private state or canonical/native Git ancestry. Not a full/private/runnable backup; no deployment or preview installation.",
+  "proof": {
+    "wholeFocusedRoots": 10,
+    "cases": 81,
+    "skips": 0,
+    "strictTransitiveFiles": 580,
+    "strictDiagnostics": 0,
+    "all6AmbientRoots": true,
+    "all13OriginalTestBlocksExact": true,
+    "originalComponentPasses13FailsOnly2NewRegressions": true,
+    "actualReactBeforeRestoreFailsAfterRestoreAndSavePass": true,
+    "syntheticNoImagesMasksAccounts": true,
+    "all1818ProtectedReviewInputsExact": true,
+    "fullSuccessorTypesAndStockWebsiteBuildPending": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
