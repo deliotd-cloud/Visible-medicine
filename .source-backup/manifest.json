@@ -1,0 +1,73 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T22:46:04.899Z",
+  "sourceIdentity": {
+    "kind": "review-catalog-verification-and-immutable-manifest-test-efficiency",
+    "sourceSha256": "aecb025f3d3dda4bd832df4f81a9706997a97f2bc0784cb7068ce45bfcc7eabc",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-review-count-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "98dbc2311840526cd7fc44873659f25d33330101e6786410d4723ad23d21abac",
+        "head": "f4cf11057b83a1cd4f4726fc97907c64347f0e00",
+        "tree": "cc93af75714b8d6c0f3d0097ab01603a0bcc8841",
+        "branch": "backup/review-count-source-20261026"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-integration.test.ts",
+      "bytes": 47633,
+      "sha256": "bb5ed1ae0561a5984871a11f5130105e8de49d137887ccdd02fbd12405cc4ee8"
+    },
+    {
+      "path": "website/tests/atlas-glottic-muscle-imaging.test.mjs",
+      "bytes": 12471,
+      "sha256": "a982dbd8f94f5cfdf3eef133a1a4f0b294e4c21853a5cf574619047b840c2be8"
+    },
+    {
+      "path": "recipes/integrate-review-count-20261026.mjs",
+      "bytes": 4449,
+      "sha256": "afd45bd1cf05022bc86ba03a9033d6dbb5d8881e86c8421d89e5492f007d9702"
+    },
+    {
+      "path": "recipes/verify-review-count-integration-20261026.mjs",
+      "bytes": 3957,
+      "sha256": "0b29b058aebe099da71e1949e5d5d3692a91a19923098f69efa1b4679b33d83c"
+    },
+    {
+      "path": "recipes/finish-review-test-efficiency-20261026.mjs",
+      "bytes": 14343,
+      "sha256": "060a39101ffc773593643733e737c23fa4c165cbef6a2c2c879db8ca5d1cc86f"
+    },
+    {
+      "path": "originals/atlas-glottic-muscle-imaging.test.mjs.raw",
+      "bytes": 12398,
+      "sha256": "57eb82f8a004db422302f1888888e7ad124fe9777694d0a044220fd738490a13"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party test source, original test and integration recipes only. No generated medical/Review data, raw logs, scans, masks, models, media, private decisions, dependencies or canonical/native ancestry. Prior supplements/local sources remain required; not a full/private/runnable backup.",
+  "proof": {
+    "focusedCases": {
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "fullConfiguredTypeDiagnostics": 0,
+    "productBytesUnchanged": true,
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
