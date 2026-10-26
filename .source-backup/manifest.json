@@ -1,0 +1,104 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T22:22:11.126Z",
+  "sourceIdentity": {
+    "kind": "verified-clinical-review-test-proposal-and-stock-campaign-recipes",
+    "applicationSource": {
+      "path": "F:/VisibleMedicine/staging/20261026-pptx-placement-website/SOURCE_CANDIDATE.json",
+      "sha256": "8c69b7dc8cf220b55bd19f0e625b3dec69786cab4ee7fd3a40ca91ce51e01a17"
+    },
+    "proposalSha256": "bb5ed1ae0561a5984871a11f5130105e8de49d137887ccdd02fbd12405cc4ee8",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-pptx-placement-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "63a524afc364ad2e3f18dbde6bcf457a21e1f9ac84b2141110316a530360c046",
+        "head": "cee281d8cf5dee9f3d6028ea4c547417e9f95cd3",
+        "tree": "dde01d78fbce9596ba5c6ed08509fc3529452352",
+        "branch": "backup/pptx-placement-source-20261026"
+      }
+    ],
+    "integrated": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "proposal/clinical-review-integration.test.ts",
+      "bytes": 47633,
+      "sha256": "bb5ed1ae0561a5984871a11f5130105e8de49d137887ccdd02fbd12405cc4ee8"
+    },
+    {
+      "path": "proposal/original.test.ts.raw",
+      "bytes": 46834,
+      "sha256": "fe8568a5feaa11650586cd3e6720c0c1062d37dd450061d9a55b2fc464f00884"
+    },
+    {
+      "path": "recipes/prepare-current-release-campaign-20261026.mjs",
+      "bytes": 2449,
+      "sha256": "f41b2263a829fbd96fa9724146f0b8b9bf72a6d17b0ff039af4ed3c0e70e6227"
+    },
+    {
+      "path": "recipes/guard-current-release-shard-20261026.mjs",
+      "bytes": 4360,
+      "sha256": "a877fc85b964e64571e2304d6998557c09fa5adbab0f2e84c7cb8e7f1b557d3c"
+    },
+    {
+      "path": "recipes/prepare-review-count-proposal-20261026.mjs",
+      "bytes": 3696,
+      "sha256": "a7ece3bbc8c17c1da8a6e8f9171d4c53e90f65592ba892ed95b6374aacd427fe"
+    },
+    {
+      "path": "recipes/run-review-count-proposal-20261026.mjs",
+      "bytes": 3702,
+      "sha256": "9999d1c36e4aae0b661d2c6c1db1d5d079d29dac6acbe5f93b3e2480223843f7"
+    },
+    {
+      "path": "recipes/backup-review-count-proposal-20261026.mjs",
+      "bytes": 3529,
+      "sha256": "3a9eacb14cc3c9689aeb775e4df628f78d314e7f2eead842e677fa40301638da"
+    },
+    {
+      "path": "recipes/record-review-count-proposal-20261026.mjs",
+      "bytes": 8701,
+      "sha256": "3bdd89ab66c55db2808083032b4fe650c6a7272f897ba29af7fac7cd77bd14c9"
+    },
+    {
+      "path": "recipes/release-campaign/bounded-stock-campaign.mjs",
+      "bytes": 21731,
+      "sha256": "97c4d613f83cb7e5c977795cf59c3e53b0be13f10c039c5e907d8201748eb461"
+    },
+    {
+      "path": "recipes/release-campaign/structured-test-reporter.mjs",
+      "bytes": 1512,
+      "sha256": "1cb5e3c17e8636ca52cc91084dedfdec78425c05ba0f78d1104dfdd239791067"
+    },
+    {
+      "path": "recipes/release-campaign/plan-refusals.test.mjs",
+      "bytes": 2417,
+      "sha256": "585602a0d026b83dbd9cda5f93dc4caa5d69d7f0a36df4e36cdaab0ce1e53159"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party test source and recipes only. No catalogue inventory, raw test logs, generated clinical/Review metadata, private decisions, scans, masks, models, media, dependencies or canonical/native ancestry. This is an independently verified unintegrated proposal, not a whole/private/runnable backup.",
+  "proof": {
+    "syntheticEndpointCases": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "sourceUnchanged": true,
+    "proposalIntegrated": false,
+    "wholeStockSuitePassing": false,
+    "realAccountAcceptance": false,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
