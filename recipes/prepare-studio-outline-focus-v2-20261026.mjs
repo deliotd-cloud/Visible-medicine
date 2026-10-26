@@ -1,0 +1,24 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';import {hash,json} from './seal-simple-website-successor.mjs';
+let prep=fs.readFileSync('prepare-studio-outline-find-20261026.mjs','utf8');
+for(const[a,b]of[
+ ['20261026-studio-outline-find\',site','20261026-studio-outline-find-v2\',site'],
+ ['20261026-education-media-response/SOURCE_CANDIDATE.json','20261026-studio-outline-find/SOURCE_CANDIDATE.json'],
+ ['6628b2b4c7339523c29ab18608c774ac298e8a9a0b6d5d3772ab40c0de7cee0d','c82ddf6c96f1fac773fb0fd941a3c487c5c2809ecf59766c34a22c34a27647e2'],
+]){assert.equal(prep.split(a).length,2,a);prep=prep.replace(a,b);}
+fs.writeFileSync('prepare-studio-outline-find-v2-generated-20261026.mjs',prep,{flag:'wx'});execFileSync(process.execPath,['prepare-studio-outline-find-v2-generated-20261026.mjs'],{stdio:'inherit',windowsHide:true});
+const stage='F:/VisibleMedicine/staging/20261026-studio-outline-find-v2',site=stage+'/website',parentFile='F:/VisibleMedicine/staging/20261026-studio-outline-find/SOURCE_CANDIDATE.json',parent=json(parentFile),changed=['components/StudioCourseEditor.tsx','tests/studio-course-outline-find.test.mjs','tests/studio-draft-dependency-source.mjs','tests/studio-course-details-content.test.mjs','tests/studio-course-details-content-role-proof.test.mjs'];
+fs.mkdirSync(stage+'/preimages');for(const p of changed)fs.copyFileSync(site+'/'+p,stage+'/preimages/'+p.replaceAll('/','--')+'.raw',fs.constants.COPYFILE_EXCL);
+let component=fs.readFileSync(site+'/'+changed[0],'utf8');const oldHash=hash(site+'/'+changed[0]);
+for(const[a,b]of[
+ ['  useEffect(() => {\n    setOutlineFind','  const outlineSearch = useRef<HTMLInputElement>(null);\n  useEffect(() => {\n    setOutlineFind'],
+ ['<input id="course-outline-title-search"','<input ref={outlineSearch} id="course-outline-title-search"'],
+ ['onClick={() => setOutlineFind({courseId: course.id, query: "", kind: "all"})}>Clear filters','onClick={() => {setOutlineFind({courseId: course.id, query: "", kind: "all"}); outlineSearch.current?.focus();}}>Clear filters'],
+]){assert.equal(component.split(a).length,2,a);component=component.replace(a,b);}fs.writeFileSync(site+'/'+changed[0],component);const newHash=hash(site+'/'+changed[0]);
+fs.appendFileSync(site+'/'+changed[1],`\n\ntest('clearing filters returns focus to the search rather than the disabled clear button', () => {\n const h=harness();let focused=0;\n h.find(node=>node.type==='input'&&node.props.type==='search').props.ref.current={focus(){focused++;}};\n h.search('brain');h.clear();assert.equal(focused,1);\n assert.equal(h.find(node=>node.type==='input'&&node.props.type==='search').props.value,'');\n});\n`);
+for(const p of changed.slice(2)){let t=fs.readFileSync(site+'/'+p,'utf8');assert.equal(t.split(oldHash).length,2);t=t.replace(oldHash,newHash);if(p.endsWith('role-proof.test.mjs')){const oldTest=parent.sourceRows.find(r=>r.path==='tests/studio-course-details-content.test.mjs').sha256;assert.equal(t.split(oldTest).length,2);t=t.replace(oldTest,hash(site+'/tests/studio-course-details-content.test.mjs'));const marker='|'+oldHash.slice(0,5)+'|';assert.equal(t.split(marker).length,2);t=t.replace(marker,'|'+newHash.slice(0,5)+'|');}fs.writeFileSync(site+'/'+p,t);}
+for(const r of parent.sourceRows)if(!changed.includes(r.path))assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const result={...parent,schema:'vm-studio-outline-find-focus-source/1',at:new Date().toISOString(),website:site,parent:parentFile,parentSha256:hash(parentFile),changedPaths:changed,addedPaths:[],sourceRows:parent.sourceRows.map(r=>({path:r.path,bytes:fs.statSync(site+'/'+r.path).size,sha256:hash(site+'/'+r.path)})),mainKeyboardFix:'Clear returns focus to the still-mounted title search; actual Chrome found disabled-button focus loss in exact c82 parent.',onlyApplicationChanges:['components/StudioCourseEditor.tsx'],priorCssAndAllInertMediaBytesUnchanged:true};
+fs.writeFileSync(stage+'/SOURCE_CANDIDATE.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});const sha=hash(stage+'/SOURCE_CANDIDATE.json');
+let verify=fs.readFileSync('verify-studio-outline-find-20261026.mjs','utf8');verify=verify.replace('20261026-studio-outline-find\',sourceFile','20261026-studio-outline-find-v2\',sourceFile').replace('c82ddf6c96f1fac773fb0fd941a3c487c5c2809ecf59766c34a22c34a27647e2',sha).replace("kind:'studio-outline-find-'+phase","kind:'studio-outline-find-v2-'+phase").replace('aggregate=phase===\'build\'?3072:3584;minimum=phase===\'build\'?5120:5632;','aggregate=3584;minimum=5632;').replace("'/checks/types-attempt-2/RESULT.json'","'/checks/types-attempt-1/RESULT.json'");
+fs.writeFileSync('verify-studio-outline-find-v2-20261026.mjs',verify,{flag:'wx'});
+console.log(JSON.stringify({source:stage+'/SOURCE_CANDIDATE.json',sha256:sha,paths:result.sourceRows.length,sourceComponent:newHash}));

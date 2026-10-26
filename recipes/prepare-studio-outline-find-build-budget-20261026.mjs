@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+const stage='F:/VisibleMedicine/staging/20261026-studio-outline-find',file='verify-studio-outline-find-20261026.mjs';
+assert(!fs.existsSync(stage+'/checks/build-attempt-1'));
+const index=JSON.parse(fs.readFileSync('CURRENT_CHECKPOINT.json','utf8'));
+const stale=index.activeWork.current.activeExecutionSessions;
+assert.equal(stale.length,1);assert.equal(stale[0].driverPid,85848);assert.equal(stale[0].kind,'studio-outline-find-build');
+const observed=execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',"@(Get-CimInstance Win32_Process -Filter 'ProcessId=85848' | Select-Object ProcessId) | ConvertTo-Json -Compress"],{encoding:'utf8',windowsHide:true}).trim();assert.equal(observed,'');
+fs.copyFileSync('CURRENT_CHECKPOINT.json',stage+'/checks/INDEX_BEFORE_ADMISSION_RECONCILIATION.json',fs.constants.COPYFILE_EXCL);
+index.activeWork.current.activeExecutionSessions=[];fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(index,null,2)+'\n');
+let t=fs.readFileSync(file,'utf8');const before='aggregate=3584;minimum=5632;';assert.equal(t.split(before).length,2);
+fs.writeFileSync(stage+'/checks/build-admission-1.json',JSON.stringify({at:new Date().toISOString(),admitted:false,availableMiB:5419,previousMinimumMiB:5632,noBuildProcessStarted:true,nextBudget:{heapMiB:1536,aggregateMiB:3072,minimumFreeMiB:5120,unchangedReserveMiB:2048},scope:'Build only; full types retain the successful 3072 heap/3584 job/5632 admission.'},null,2)+'\n',{flag:'wx'});
+t=t.replace(before,"aggregate=phase==='build'?3072:3584;minimum=phase==='build'?5120:5632;");fs.writeFileSync(file,t);
+const oldCopy="fs.copyFileSync('F:/VisibleMedicine/staging/20261026-title-tour-website/website-stock-build.mjs',checker,fs.constants.COPYFILE_EXCL);";
+assert.equal(t.split(oldCopy).length,2);t=t.replace(oldCopy,"if(!fs.existsSync(checker))"+oldCopy+"assert.equal(hash(checker),hash('F:/VisibleMedicine/staging/20261026-title-tour-website/website-stock-build.mjs'));");fs.writeFileSync(file,t);
+console.log(JSON.stringify({ready:true,buildHeapMiB:1536,buildJobMiB:3072,admissionMiB:5120,reserveMiB:2048,allBuildHooksUnchanged:true}));

@@ -1,0 +1,287 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T04:31:54.601Z",
+  "sourceIdentity": {
+    "kind": "studio-outline-search-and-keyboard-clear",
+    "websiteSourceSha256": "194dc14bf69a68edb959a1ce87d2685db17315514bf9bc823ab8686b1fa0b3db",
+    "nativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-education-response-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "544282a4ac7f37ba5804b63d942b5e3bc9ed97e889a05268ee7d906146627aa2",
+        "branch": "backup/education-response-source-20261026",
+        "head": "185b8fb5b34da8b3a7b198dc062e13edd1de9e54",
+        "tree": "f9c3c2f98eb9b6b58d49fccdd953f862a411ebb7"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/components/StudioCourseEditor.tsx",
+        "restore": "website/components/StudioCourseEditor.tsx"
+      },
+      {
+        "path": "website/tests/studio-course-outline-find.test.mjs",
+        "restore": "website/tests/studio-course-outline-find.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-draft-dependency-source.mjs",
+        "restore": "website/tests/studio-draft-dependency-source.mjs"
+      },
+      {
+        "path": "website/tests/studio-course-details-content.test.mjs",
+        "restore": "website/tests/studio-course-details-content.test.mjs"
+      },
+      {
+        "path": "website/tests/studio-course-details-content-role-proof.test.mjs",
+        "restore": "website/tests/studio-course-details-content-role-proof.test.mjs"
+      },
+      {
+        "path": "website/components/studio-workspace.css",
+        "restore": "website/components/studio-workspace.css"
+      },
+      {
+        "path": "website/docs/STUDIO_COURSE_OUTLINE_FIND.md",
+        "restore": "website/docs/STUDIO_COURSE_OUTLINE_FIND.md"
+      },
+      {
+        "path": "recipes/prepare-studio-outline-find-20261026.mjs",
+        "restore": "coordination/prepare-studio-outline-find-20261026.mjs"
+      },
+      {
+        "path": "recipes/integrate-studio-outline-find-20261026.mjs",
+        "restore": "coordination/integrate-studio-outline-find-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-outline-find-verification-20261026.mjs",
+        "restore": "coordination/prepare-studio-outline-find-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-studio-outline-find-20261026.mjs",
+        "restore": "coordination/verify-studio-outline-find-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-outline-find-type-retry-20261026.mjs",
+        "restore": "coordination/prepare-studio-outline-find-type-retry-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-outline-find-build-budget-20261026.mjs",
+        "restore": "coordination/prepare-studio-outline-find-build-budget-20261026.mjs"
+      },
+      {
+        "path": "recipes/serve-studio-outline-find-qa-20261026.mjs",
+        "restore": "coordination/serve-studio-outline-find-qa-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-outline-focus-v2-20261026.mjs",
+        "restore": "coordination/prepare-studio-outline-focus-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/fix-studio-outline-focus-fixture-20261026.mjs",
+        "restore": "coordination/fix-studio-outline-focus-fixture-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-studio-outline-find-v2-20261026.mjs",
+        "restore": "coordination/verify-studio-outline-find-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-outline-focus-checks-20261026.mjs",
+        "restore": "coordination/prepare-studio-outline-focus-checks-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-studio-outline-focus-types-20261026.mjs",
+        "restore": "coordination/check-studio-outline-focus-types-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-outline-focus-types-v2-20261026.mjs",
+        "restore": "coordination/prepare-studio-outline-focus-types-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-studio-outline-focus-types-v2-20261026.mjs",
+        "restore": "coordination/check-studio-outline-focus-types-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-studio-outline-focus-types-20261026.mjs",
+        "restore": "coordination/record-studio-outline-focus-types-20261026.mjs"
+      },
+      {
+        "path": "recipes/serve-studio-outline-focus-v2-qa-20261026.mjs",
+        "restore": "coordination/serve-studio-outline-focus-v2-qa-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-studio-outline-find-verification-20261026.mjs",
+        "restore": "coordination/record-studio-outline-find-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/update-studio-outline-find-checklist-20261026.mjs",
+        "restore": "coordination/update-studio-outline-find-checklist-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-studio-outline-find-source-20261026.mjs",
+        "restore": "coordination/backup-studio-outline-find-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-studio-outline-find-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-studio-outline-find-checkpoint-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/StudioCourseEditor.tsx",
+      "bytes": 18777,
+      "sha256": "e855c4b7ee8a7df4a31ebfb516b364046905e28f2feefe289847391ea3dce918"
+    },
+    {
+      "path": "website/tests/studio-course-outline-find.test.mjs",
+      "bytes": 9259,
+      "sha256": "3e80a2a80baf46a3b845974973a71da5fea02c1d1c1753ef25473181256b3463"
+    },
+    {
+      "path": "website/tests/studio-draft-dependency-source.mjs",
+      "bytes": 2389,
+      "sha256": "019cd59e24f659617c24b99c8a898f1a62bfcd3bfcbed82553bbb3b02f29f0c2"
+    },
+    {
+      "path": "website/tests/studio-course-details-content.test.mjs",
+      "bytes": 11857,
+      "sha256": "f3fce06b26bdbf1e7ed9d76a1f0728327039f2e4f7d78b67f84ddbbe11df5ec3"
+    },
+    {
+      "path": "website/tests/studio-course-details-content-role-proof.test.mjs",
+      "bytes": 3874,
+      "sha256": "e0c4145d9d231c51752c8f8b338bec4a35b61542494612880a440bf91d2ea261"
+    },
+    {
+      "path": "website/components/studio-workspace.css",
+      "bytes": 11251,
+      "sha256": "907b3c6bb4921fafe4f26df853079dd6707e2dbdca6cb6e795dac19caed144a0"
+    },
+    {
+      "path": "website/docs/STUDIO_COURSE_OUTLINE_FIND.md",
+      "bytes": 1184,
+      "sha256": "85cedd19dd109df1cac61913faabf70d059c364f684e0ed1465dd6e9a760df1f"
+    },
+    {
+      "path": "recipes/prepare-studio-outline-find-20261026.mjs",
+      "bytes": 2362,
+      "sha256": "2387a60284fada3526ae745cd71b91d297319a86049daecda1c50f7e5f745f3d"
+    },
+    {
+      "path": "recipes/integrate-studio-outline-find-20261026.mjs",
+      "bytes": 6563,
+      "sha256": "a2a82be39f9101279f4a61811d36670d070b2c9c7f71184c6749ca5ca7110605"
+    },
+    {
+      "path": "recipes/prepare-studio-outline-find-verification-20261026.mjs",
+      "bytes": 2504,
+      "sha256": "39db4533d5c166ea9d42ce4c87af2c061db0e3cb870c2f0c7a153571c528c5c4"
+    },
+    {
+      "path": "recipes/verify-studio-outline-find-20261026.mjs",
+      "bytes": 7135,
+      "sha256": "4d8abb8f61b7b1ad26b0d27a05be220a40d0cf3458b87c6074c5659a5c122a72"
+    },
+    {
+      "path": "recipes/prepare-studio-outline-find-type-retry-20261026.mjs",
+      "bytes": 1676,
+      "sha256": "3cb151855d57fc8d06450b50c8909cb3b0e370fbb4c26d65ca6fd188e1a52776"
+    },
+    {
+      "path": "recipes/prepare-studio-outline-find-build-budget-20261026.mjs",
+      "bytes": 2246,
+      "sha256": "305578c36a06958d99e4abeb391b5f51884abc9d326795d5cc60c82dcc598422"
+    },
+    {
+      "path": "recipes/serve-studio-outline-find-qa-20261026.mjs",
+      "bytes": 5848,
+      "sha256": "7aaafe4b39a9dcb22d7a32c9cd608945274f194d89558259af3dc346290cd637"
+    },
+    {
+      "path": "recipes/prepare-studio-outline-focus-v2-20261026.mjs",
+      "bytes": 4879,
+      "sha256": "6ab7ab7bacba69b569b15099afc0eb79acd9506e8f2afdf969a43644ee9fa5ba"
+    },
+    {
+      "path": "recipes/fix-studio-outline-focus-fixture-20261026.mjs",
+      "bytes": 2156,
+      "sha256": "6e475af69fdd93bf2f206784906d120278a24f68985fcf68994e3c46c0bd2c69"
+    },
+    {
+      "path": "recipes/verify-studio-outline-find-v2-20261026.mjs",
+      "bytes": 7102,
+      "sha256": "9b008391e7d6d961ba4d5e05a999477c98e2b8540ecf2a15fdebd886cac19fab"
+    },
+    {
+      "path": "recipes/prepare-studio-outline-focus-checks-20261026.mjs",
+      "bytes": 1876,
+      "sha256": "cd154befeb2fb99c1a3faf8a42df4886c2c1a6d390a5c2231c7e820397d6e9e8"
+    },
+    {
+      "path": "recipes/check-studio-outline-focus-types-20261026.mjs",
+      "bytes": 2386,
+      "sha256": "e09384154b29a0a4e83559663348083d436feecfa3b9418ca580b89b648497ec"
+    },
+    {
+      "path": "recipes/prepare-studio-outline-focus-types-v2-20261026.mjs",
+      "bytes": 1366,
+      "sha256": "de5b2df9b79baa42720295ccb2bfaf7816981d37d08d7533f3a6f1645f715ca7"
+    },
+    {
+      "path": "recipes/check-studio-outline-focus-types-v2-20261026.mjs",
+      "bytes": 2522,
+      "sha256": "7448c29510059369f2a1574134eac9b90c88fab69611f6bcc4db47aa99ff7199"
+    },
+    {
+      "path": "recipes/record-studio-outline-focus-types-20261026.mjs",
+      "bytes": 1887,
+      "sha256": "6ee4f51f5684a63bd1ff35b31f28b2bafff3d80a434ecbce2d620bc59f945c78"
+    },
+    {
+      "path": "recipes/serve-studio-outline-focus-v2-qa-20261026.mjs",
+      "bytes": 5854,
+      "sha256": "d9462cd1fe8a17ecc88a9c32df071dee1536cf61029e0ef6b065bde81a623588"
+    },
+    {
+      "path": "recipes/record-studio-outline-find-verification-20261026.mjs",
+      "bytes": 4180,
+      "sha256": "2abff27124d6053b90e020375075c7f4dbcb8bcdda9787d05346795a18222450"
+    },
+    {
+      "path": "recipes/update-studio-outline-find-checklist-20261026.mjs",
+      "bytes": 3410,
+      "sha256": "604aa0b15a422a0c5a90cf2f65598cf617a9e80fb1514372cf95439b15c08c9d"
+    },
+    {
+      "path": "recipes/backup-studio-outline-find-source-20261026.mjs",
+      "bytes": 5129,
+      "sha256": "6888138fa4696e308578bcea218120753020a6ef3e79d574732c65c4ed285827"
+    },
+    {
+      "path": "recipes/finalize-studio-outline-find-checkpoint-20261026.mjs",
+      "bytes": 7484,
+      "sha256": "271d7f6cfedc19d35124e3efb88aeb4ab49ea122bde5c7966e4ab77d2d70eaf0"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party course-editor/CSS/tests/docs and recovery recipes only. Exact local baseline/private generated pins/data and prior supplements remain required. No actual checklist, raw QA/browser observations, private configuration/state, generated Review/medical data, scans/masks/identifiers/coordinates/models/assets/dependencies/runtime or canonical/native Git ancestry. Not a full/private/runnable backup; no deployment or normal-preview installation.",
+  "proof": {
+    "wholeRoots": 31,
+    "cases": 268,
+    "skips": 0,
+    "focusedFinalTypesFiles": 589,
+    "focusedFinalDiagnostics": 0,
+    "fullConfiguredTypesForExactParentOnly": true,
+    "finalFullTypesAndProductionBuildPending": true,
+    "syntheticDesktopQaNotSignedInAcceptance": true,
+    "all1818ProtectedInputsStable": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261026-studio-outline-find-v2',sourceFile=stage+'/SOURCE_CANDIDATE.json',s=json(sourceFile),p='tests/studio-course-outline-find.test.mjs',file=s.website+'/'+p;
+assert.equal(hash(sourceFile),'b0a758744f75832bbb4e711ad17d4a11d9668c7bf4cce2e4f36c9e6dc4dc98f2');assert.equal(json(stage+'/checks/tests-attempt-1/RESULT.json').counts.fail,1);
+assert.equal(hash(file),s.sourceRows.find(r=>r.path===p).sha256);
+const before=stage+'/preimages/new-focus-test-before-stable-ref.mjs.raw';fs.copyFileSync(file,before,fs.constants.COPYFILE_EXCL);
+let t=fs.readFileSync(file,'utf8');const old='useRef: initial => ({current: initial}),',next='useRef: initial => {const at=cursor++; if (!(at in slots)) slots[at]={current:initial}; return slots[at];},';assert.equal(t.split(old).length,2);fs.writeFileSync(file,t.replace(old,next));
+s.previousAttemptSource={path:sourceFile,sha256:hash(sourceFile)};s.testFixtureCorrection={path:p,preimage:{path:before,sha256:hash(before)},reason:'The new focus regression revealed that its synthetic useRef host created a different ref on each render. Match actual React stable ref identity; keep every case and assertion unchanged.'};s.at=new Date().toISOString();s.sourceRows=s.sourceRows.map(r=>r.path===p?{path:p,bytes:fs.statSync(file).size,sha256:hash(file)}:r);
+const to=stage+'/SOURCE_CANDIDATE_V2.json';fs.writeFileSync(to,JSON.stringify(s,null,2)+'\n',{flag:'wx'});let v=fs.readFileSync('verify-studio-outline-find-v2-20261026.mjs','utf8');
+for(const[a,b]of[["sourceFile=stage+'/SOURCE_CANDIDATE.json'","sourceFile=stage+'/SOURCE_CANDIDATE_V2.json'"],['b0a758744f75832bbb4e711ad17d4a11d9668c7bf4cce2e4f36c9e6dc4dc98f2',hash(to)],["'/checks/tests-attempt-1/RESULT.json'","'/checks/tests-attempt-2/RESULT.json'"]]){assert.equal(v.split(a).length,2,a);v=v.replace(a,b);}fs.writeFileSync('verify-studio-outline-find-v2-20261026.mjs',v);
+console.log(JSON.stringify({source:to,sha256:hash(to),actualApplicationUnchanged:true,retainedAllCasesAndAssertions:true}));

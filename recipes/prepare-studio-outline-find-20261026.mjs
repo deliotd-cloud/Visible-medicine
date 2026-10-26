@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261026-studio-outline-find',site=stage+'/website';
+const parentFile='F:/VisibleMedicine/staging/20261026-education-media-response/SOURCE_CANDIDATE.json';
+const parentSha='6628b2b4c7339523c29ab18608c774ac298e8a9a0b6d5d3772ab40c0de7cee0d',parent=json(parentFile);
+assert.equal(hash(parentFile),parentSha);assert(!fs.existsSync(stage));
+assert.deepEqual(json('CURRENT_CHECKPOINT.json').activeWork.current.activeExecutionSessions,[]);
+for(const r of parent.sourceRows)assert.equal(hash(parent.website+'/'+r.path),r.sha256,r.path);
+const git=(...args)=>execFileSync('git',args,{encoding:'utf8',windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1',GIT_OPTIONAL_LOCKS:'0'}}).trim();
+assert.equal(git('-C','F:/VisibleMedicine/website','rev-parse','HEAD'),'b953ff3f5f1891599cb6e91cb91311d9d6006270');
+assert.equal(git('-C','F:/VisibleMedicine/atlas','rev-parse','HEAD'),'6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1');
+assert.equal(git('-C',parent.atlas,'rev-parse','HEAD'),parent.atlasHead);assert.equal(git('-C',parent.atlas,'status','--porcelain'),'');
+fs.mkdirSync(stage);git('clone','--shared','--no-checkout','--','F:/VisibleMedicine/website',site);
+git('-C',site,'config','--local','core.autocrlf','false');git('-C',site,'read-tree','HEAD');
+for(const r of parent.sourceRows){const to=path.resolve(site,r.path);assert(to.startsWith(path.resolve(site)+path.sep));fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(parent.website+'/'+r.path,to,fs.constants.COPYFILE_EXCL);}
+fs.symlinkSync(fs.realpathSync.native(parent.website+'/node_modules'),site+'/node_modules','junction');fs.symlinkSync(parent.atlas,stage+'/atlas','junction');
+fs.writeFileSync(stage+'/PREPARATION.json',JSON.stringify({at:new Date().toISOString(),parent:{path:parentFile,sha256:parentSha},website:site,atlas:parent.atlas,atlasHead:parent.atlasHead,sourcePaths:parent.sourceRows.length,allParentSourceBytesExact:true,proposalNotIntegrated:true,noPrivateStateCopied:true,ownerPreviewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({prepared:true,stage,parentSha,sourcePaths:parent.sourceRows.length}));

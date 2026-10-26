@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const p='verify-studio-outline-find-20261026.mjs';let t=fs.readFileSync(p,'utf8');
+const evidence='F:/VisibleMedicine/staging/20261026-studio-outline-find/checks/types-attempt-1';
+assert.equal(JSON.parse(fs.readFileSync(evidence+'/PROCESS-TERMINAL.json','utf8')).exitCode,134);
+assert.match(fs.readFileSync(evidence+'/runner.stderr.log','utf8'),/heap out of memory/);
+fs.copyFileSync(p,evidence+'/driver-before-retry.mjs',fs.constants.COPYFILE_EXCL);
+const replace=(a,b)=>{assert.equal(t.split(a).length,2,a);t=t.replace(a,b);};
+replace("dir=stage+'/checks/'+phase+'-attempt-1'","dir=stage+'/checks/'+phase+'-attempt-'+(process.argv[3]??'1')");
+replace("fs.copyFileSync('F:/VisibleMedicine/staging/20261026-title-tour-website/whole-project-type-checker.mjs',checker,fs.constants.COPYFILE_EXCL);","if(!fs.existsSync(checker))fs.copyFileSync('F:/VisibleMedicine/staging/20261026-title-tour-website/whole-project-type-checker.mjs',checker,fs.constants.COPYFILE_EXCL);assert.equal(hash(checker),hash('F:/VisibleMedicine/staging/20261026-title-tour-website/whole-project-type-checker.mjs'));");
+replace("command='--max-old-space-size=2048 '+checker;heap=2048;","command='--max-old-space-size=3072 '+checker;heap=3072;");
+replace('aggregate=3072;minimum=5120;','aggregate=3584;minimum=5632;');
+replace("assert(json(stage+'/checks/types-attempt-1/RESULT.json').passing);","assert(json(stage+'/checks/types-attempt-2/RESULT.json').passing);");
+fs.writeFileSync(p,t);console.log(JSON.stringify({ready:true,terminalFailedAttemptRetained:true,fullTypesHeapMiB:3072,aggregateMiB:3584,admissionMiB:5632,reserveMiB:2048}));

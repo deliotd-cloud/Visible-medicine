@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261026-studio-outline-find-v2';const sourceFile=stage+'/SOURCE_CANDIDATE_V2.json';assert.equal(hash(sourceFile),'194dc14bf69a68edb959a1ce87d2685db17315514bf9bc823ab8686b1fa0b3db');
+let server=fs.readFileSync('serve-studio-outline-find-qa-20261026.mjs','utf8');
+for(const[a,b]of[['20261026-studio-outline-find\',sourceFile','20261026-studio-outline-find-v2\',sourceFile'],["sourceFile=stage+'/SOURCE_CANDIDATE.json'","sourceFile=stage+'/SOURCE_CANDIDATE_V2.json'"],['c82ddf6c96f1fac773fb0fd941a3c487c5c2809ecf59766c34a22c34a27647e2','194dc14bf69a68edb959a1ce87d2685db17315514bf9bc823ab8686b1fa0b3db'],["'/checks/types-attempt-2/RESULT.json'","'/checks/tests-attempt-2/RESULT.json'"]]){assert.equal(server.split(a).length,2,a);server=server.replace(a,b);}
+fs.writeFileSync('serve-studio-outline-focus-v2-qa-20261026.mjs',server,{flag:'wx'});
+const checker=fs.readFileSync('F:/VisibleMedicine/staging/20261026-title-tour-website/whole-project-type-checker.mjs','utf8').replace('const program=ts.createProgram(parsed.fileNames,','const selectedRoots=[site+\'/components/StudioCourseEditor.tsx\',site+\'/next-env.d.ts\'];const program=ts.createProgram(selectedRoots,').replace('roots:parsed.fileNames,fullProjectTypes:true','roots:selectedRoots,fullProjectTypes:false').replace("'./TYPE_RESULT.json'","'./FOCUS_TYPE_RESULT.json'");
+assert(checker.includes('selectedRoots'));fs.copyFileSync(json(sourceFile).parent.replace('/SOURCE_CANDIDATE.json','')+'/website/next-env.d.ts',json(sourceFile).website+'/next-env.d.ts');
+fs.writeFileSync(stage+'/focus-type-checker.mjs',checker,{flag:'wx'});
+console.log(JSON.stringify({ready:true,focusedActualTransitiveGraph:true,wholeTypesNotClaimedForFocusSuccessor:true}));
