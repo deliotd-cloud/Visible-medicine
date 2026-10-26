@@ -1,0 +1,58 @@
+.atlas-issue-details {
+  color: #132c32;
+  font-size: .875rem;
+  max-width: 100%;
+  min-width: 0;
+}
+.atlas-issue-details > summary {
+  color: #087b6c;
+  cursor: pointer;
+  font-weight: 600;
+  width: fit-content;
+}
+.atlas-issue-details > summary:focus-visible,
+.atlas-issue-details button:focus-visible,
+.atlas-issue-details textarea:focus-visible {
+  outline: 2px solid #087b6c;
+  outline-offset: 2px;
+}
+.atlas-issue-details__body {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  padding: .6rem 0;
+  overflow-wrap: anywhere;
+}
+.atlas-issue-details__body p { margin: 0 0 .65rem; }
+.atlas-issue-details dl { margin: .65rem 0; }
+.atlas-issue-details dl > div {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 8rem) minmax(0, 1fr);
+  gap: .35rem;
+  padding: .15rem 0;
+}
+.atlas-issue-details dt { font-weight: 600; }
+.atlas-issue-details dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.atlas-issue-details button {
+  background: #087b6c;
+  border: 1px solid #087b6c;
+  border-radius: .35rem;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  padding: .4rem .7rem;
+}
+.atlas-issue-details label { display: block; margin: .65rem 0 .35rem; }
+.atlas-issue-details textarea {
+  box-sizing: border-box;
+  color: #132c32;
+  display: block;
+  font: inherit;
+  min-height: 9rem;
+  max-width: 100%;
+  resize: vertical;
+  width: 100%;
+}
+@media (max-width: 380px) {
+  .atlas-issue-details dl > div { display: block; }
+}

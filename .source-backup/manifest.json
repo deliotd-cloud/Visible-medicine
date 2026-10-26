@@ -1,0 +1,193 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T21:07:23.117Z",
+  "sourceIdentity": {
+    "kind": "atlas-contextual-problem-copy",
+    "sourceSha256": "8e1d1f37391b6511f23c4f566c57dffd84fd0b115605984a725f0173ca8e907d",
+    "nativeRevision": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-current-role-repair-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "430929e422e8ebfb4d376c13339a02d8ae4fc0e8183c9023910f836337ec5531",
+        "head": "2b3bade6bb180d39f7b8a8c48ae256d404334dfe",
+        "tree": "034a6f87a44b73d15a299c8d1baa9d83636fe519",
+        "branch": "backup/current-role-repair-source-20261026"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/components/AtlasBodyLearning.tsx",
+        "restore": "website/components/AtlasBodyLearning.tsx"
+      },
+      {
+        "path": "website/components/HeadAtlasViewer.tsx",
+        "restore": "website/components/HeadAtlasViewer.tsx"
+      },
+      {
+        "path": "website/scripts/bind-clinical-review.mjs",
+        "restore": "website/scripts/bind-clinical-review.mjs"
+      },
+      {
+        "path": "website/components/AtlasIssueDetails.tsx",
+        "restore": "website/components/AtlasIssueDetails.tsx"
+      },
+      {
+        "path": "website/components/atlas-issue-details.css",
+        "restore": "website/components/atlas-issue-details.css"
+      },
+      {
+        "path": "website/lib/atlas-issue-context.ts",
+        "restore": "website/lib/atlas-issue-context.ts"
+      },
+      {
+        "path": "website/tests/atlas-issue-context.test.mjs",
+        "restore": "website/tests/atlas-issue-context.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-issue-integration.test.mjs",
+        "restore": "website/tests/atlas-issue-integration.test.mjs"
+      },
+      {
+        "path": "website/docs/ATLAS_ISSUE_CONTEXT.md",
+        "restore": "website/docs/ATLAS_ISSUE_CONTEXT.md"
+      },
+      {
+        "path": "recipes/prepare-atlas-issue-copy-20261026.mjs",
+        "restore": "coordination/prepare-atlas-issue-copy-20261026.mjs"
+      },
+      {
+        "path": "recipes/integrate-atlas-issue-copy-20261026.mjs",
+        "restore": "coordination/integrate-atlas-issue-copy-20261026.mjs"
+      },
+      {
+        "path": "recipes/finish-atlas-issue-source-20261026.mjs",
+        "restore": "coordination/finish-atlas-issue-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-atlas-issue-milestone-20261026.mjs",
+        "restore": "coordination/run-atlas-issue-milestone-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-atlas-issue-browser-20261026.mjs",
+        "restore": "coordination/prepare-atlas-issue-browser-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-atlas-issue-checkpoint-20261026.mjs",
+        "restore": "coordination/seal-atlas-issue-checkpoint-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-atlas-issue-source-20261026.mjs",
+        "restore": "coordination/backup-atlas-issue-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-atlas-issue-progress-20261026.mjs",
+        "restore": "coordination/record-atlas-issue-progress-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/AtlasBodyLearning.tsx",
+      "bytes": 7194,
+      "sha256": "36ba41a0c702d4f14f9be9d9b999e258294807ac1b0cd21491ef80630fabd730"
+    },
+    {
+      "path": "website/components/HeadAtlasViewer.tsx",
+      "bytes": 116354,
+      "sha256": "83ea5be898b443471b2f205aa61d0d931a0fdd9198aa67f98973d3343c8e9b90"
+    },
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "bytes": 10000,
+      "sha256": "9a29d88b6a7dd54ba61b31693ec1f9b8e2372aa0fc2d6bf09c455044aaad73fd"
+    },
+    {
+      "path": "website/components/AtlasIssueDetails.tsx",
+      "bytes": 6490,
+      "sha256": "27417d1426e44fa250a98d08e83eadf54e5368724dc0b1609591421001694cab"
+    },
+    {
+      "path": "website/components/atlas-issue-details.css",
+      "bytes": 1441,
+      "sha256": "dece33c030363b264b8756c03d79e072418fefa640c7dc01a8c94b1b2204b9cd"
+    },
+    {
+      "path": "website/lib/atlas-issue-context.ts",
+      "bytes": 3630,
+      "sha256": "a6e42d112b75021a8c7c71862f26c826a16914dd08da991bb3ea407295b57c73"
+    },
+    {
+      "path": "website/tests/atlas-issue-context.test.mjs",
+      "bytes": 5236,
+      "sha256": "a346a12390571f8359963b80b9ffaa8b8eb570260037f7f7faad8c968f6e6b6b"
+    },
+    {
+      "path": "website/tests/atlas-issue-integration.test.mjs",
+      "bytes": 9736,
+      "sha256": "289cf62f9fd23109c9e1ad591a6a25368446cd96de1ce9eaefa497f7694e88e7"
+    },
+    {
+      "path": "website/docs/ATLAS_ISSUE_CONTEXT.md",
+      "bytes": 1686,
+      "sha256": "cc518fa3f9a95fca2a16038754b24af5cad99179fbc3dfab53a06955457b6aba"
+    },
+    {
+      "path": "recipes/prepare-atlas-issue-copy-20261026.mjs",
+      "bytes": 894,
+      "sha256": "841ba56f622e41a6a105742896241fb2fab735dda2273f46524ca007fc300b40"
+    },
+    {
+      "path": "recipes/integrate-atlas-issue-copy-20261026.mjs",
+      "bytes": 3362,
+      "sha256": "6a58d44d542fd0240618b80a8976a1de1a9f32695ad861f5db88cfd04cac05d6"
+    },
+    {
+      "path": "recipes/finish-atlas-issue-source-20261026.mjs",
+      "bytes": 6172,
+      "sha256": "ecd40a258542929e6a4486030756fdd93d417f750427b367dba333475d773fe4"
+    },
+    {
+      "path": "recipes/run-atlas-issue-milestone-20261026.mjs",
+      "bytes": 4852,
+      "sha256": "350fa0021e76574ed4887616e02688b0caa0acf6119634bac22329edafa62117"
+    },
+    {
+      "path": "recipes/prepare-atlas-issue-browser-20261026.mjs",
+      "bytes": 3950,
+      "sha256": "4f43954197e9ca55c2bcff97143d25b6fa63ea244bc78082e5f9539a4b692afd"
+    },
+    {
+      "path": "recipes/seal-atlas-issue-checkpoint-20261026.mjs",
+      "bytes": 7621,
+      "sha256": "cc287556ee5f0544955a2f1ae0e11711845d6a8e9ee6750fffa647dc9922107b"
+    },
+    {
+      "path": "recipes/backup-atlas-issue-source-20261026.mjs",
+      "bytes": 3875,
+      "sha256": "021197ba295ec16642588080ba21f18c52bc4d5cdac817d92618bb418660edaa"
+    },
+    {
+      "path": "recipes/record-atlas-issue-progress-20261026.mjs",
+      "bytes": 9115,
+      "sha256": "18fa8301ba7a3a8ec598fb2c2f727eb7ed498766f5115b333e71d22000099aa5"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source, tests, documentation and reproduction recipes only. No generated medical/Review metadata, raw QA, source receipts, checklist, scans, masks, identifiers, models, assets, fonts, runtime, dependencies, private state or canonical/native Git ancestry. Prior supplements and local source required; not a whole/private/runnable backup.",
+  "proof": {
+    "focusedCases": 26,
+    "browserChecks": 18,
+    "fullConfiguredTypeFiles": 6237,
+    "stockBuildArtifacts": 1154,
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
