@@ -1,0 +1,287 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T02:03:16.642Z",
+  "sourceIdentity": {
+    "kind": "strict-revision-bound-guided-comparison-step-navigation",
+    "websiteSourceSha256": "1b19e2ebc781d3877d3f2982d1349292399cd2e787a64baa3ffebfb852c55678",
+    "nativeSourceUnchanged": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-title-tour-website-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "759e2d4872871b207151fe55e358c837a31e51c31bdda239c1e5434636937666",
+        "branch": "backup/title-tour-website-source-20261026",
+        "head": "b10850698239a71b90a08bd8c391144acf22cc90",
+        "tree": "c388925ae5dcc597d9780e1850f19171f5d35e42"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-source-epoch-reliability-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "5e15081ed02204291b4a6fc9603476408cf8ab2d25444c18ac9ac5479f009d7a",
+        "branch": "backup/source-epoch-reliability-20261026",
+        "head": "c67f50c72757124a13d22712151d5031ad521fa5",
+        "tree": "114c535e41ed4d294b4605794f6189d6a6003471"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/app/atlas/guided-learning/compare/compare.css",
+        "restore": "website/app/atlas/guided-learning/compare/compare.css"
+      },
+      {
+        "path": "website/app/atlas/guided-learning/compare/page.tsx",
+        "restore": "website/app/atlas/guided-learning/compare/page.tsx"
+      },
+      {
+        "path": "website/tests/head-guided-comparison-page.test.ts",
+        "restore": "website/tests/head-guided-comparison-page.test.ts"
+      },
+      {
+        "path": "website/lib/head-guided-comparison-navigation.ts",
+        "restore": "website/lib/head-guided-comparison-navigation.ts"
+      },
+      {
+        "path": "website/tests/head-guided-comparison-navigation.test.ts",
+        "restore": "website/tests/head-guided-comparison-navigation.test.ts"
+      },
+      {
+        "path": "website/docs/GUIDED_COMPARISON_STEPS.md",
+        "restore": "website/docs/GUIDED_COMPARISON_STEPS.md"
+      },
+      {
+        "path": "recipes/prepare-guided-step-website-20261026.mjs",
+        "restore": "coordination/prepare-guided-step-website-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-guided-step-website-20261026.mjs",
+        "restore": "coordination/seal-guided-step-website-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-guided-step-focused-20261026.mjs",
+        "restore": "coordination/verify-guided-step-focused-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-guided-step-production-20261026.mjs",
+        "restore": "coordination/prepare-guided-step-production-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-guided-step-production-20261026.mjs",
+        "restore": "coordination/verify-guided-step-production-20261026.mjs"
+      },
+      {
+        "path": "recipes/fix-guided-step-test-type-20261026.mjs",
+        "restore": "coordination/fix-guided-step-test-type-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-guided-step-v2-verification-20261026.mjs",
+        "restore": "coordination/prepare-guided-step-v2-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-guided-step-focused-v2-20261026.mjs",
+        "restore": "coordination/verify-guided-step-focused-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-guided-step-production-v2-20261026.mjs",
+        "restore": "coordination/verify-guided-step-production-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-guided-step-preview-20261026.mjs",
+        "restore": "coordination/prepare-guided-step-preview-20261026.mjs"
+      },
+      {
+        "path": "recipes/serve-guided-step-v2-built-worker-20261026.mjs",
+        "restore": "coordination/serve-guided-step-v2-built-worker-20261026.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-guided-step-preview-20261026.mjs",
+        "restore": "coordination/stop-owned-guided-step-preview-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-guided-step-browser-targets-20261026.mjs",
+        "restore": "coordination/prepare-guided-step-browser-targets-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-guided-step-browser-20261026.mjs",
+        "restore": "coordination/record-guided-step-browser-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-guided-step-verification-20261026.mjs",
+        "restore": "coordination/record-guided-step-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/review-current-release-context-map-20261026.mjs",
+        "restore": "coordination/review-current-release-context-map-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-guided-step-source-20261026.mjs",
+        "restore": "coordination/backup-guided-step-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/release-context/build-inventory.mjs",
+        "restore": "coordination/release-context/build-inventory.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/atlas/guided-learning/compare/compare.css",
+      "bytes": 2468,
+      "sha256": "661a07262d840221d9ac99ffed1e265741647139f5738ea5d2156e2ca286d898"
+    },
+    {
+      "path": "website/app/atlas/guided-learning/compare/page.tsx",
+      "bytes": 3752,
+      "sha256": "ee40b8de866ab00f7e9a9cb25b580a8b0671c5e14fd77e555697070ebf552a9e"
+    },
+    {
+      "path": "website/tests/head-guided-comparison-page.test.ts",
+      "bytes": 4702,
+      "sha256": "66bbdf407360a730b5f3fae49462ae44ac372c6b0e530b6ba9bd3cb592e644a6"
+    },
+    {
+      "path": "website/lib/head-guided-comparison-navigation.ts",
+      "bytes": 1490,
+      "sha256": "7a4f0ae570301d051cd278eca828b8ac1df08d24ccddb6a72496b0315d2580f1"
+    },
+    {
+      "path": "website/tests/head-guided-comparison-navigation.test.ts",
+      "bytes": 3860,
+      "sha256": "eefbf8bb50ac61aabdf2dcbab8ae6551cf1e681a1ed13b7505dd6d1d437aa31c"
+    },
+    {
+      "path": "website/docs/GUIDED_COMPARISON_STEPS.md",
+      "bytes": 1126,
+      "sha256": "367964cfa772208c01ebf53107c727b08ff4361fd532b86a655b40952c6ed5e3"
+    },
+    {
+      "path": "recipes/prepare-guided-step-website-20261026.mjs",
+      "bytes": 3221,
+      "sha256": "35bf8b3d7f63c02027642c78085bfd7e537e091e95b27aa7375a98ea161a8a72"
+    },
+    {
+      "path": "recipes/seal-guided-step-website-20261026.mjs",
+      "bytes": 3749,
+      "sha256": "eb1d4fc7c52d232deb55873b035c2313be3bb8ea83f57a2704bd9c7e2b8c6ec0"
+    },
+    {
+      "path": "recipes/verify-guided-step-focused-20261026.mjs",
+      "bytes": 2785,
+      "sha256": "d754c837073e0a459222a84f0f2b7ce22cc6efa1a3889df1016023d5aa5907e6"
+    },
+    {
+      "path": "recipes/prepare-guided-step-production-20261026.mjs",
+      "bytes": 710,
+      "sha256": "7d90e292769efa8818044dbf81c0861ba880bd68f5c47f00bc214ea82d207986"
+    },
+    {
+      "path": "recipes/verify-guided-step-production-20261026.mjs",
+      "bytes": 4812,
+      "sha256": "4950baef7babe1617b2cbbfacafadfb4f228ec00d0d1eff9710afe1d9959e8a9"
+    },
+    {
+      "path": "recipes/fix-guided-step-test-type-20261026.mjs",
+      "bytes": 2504,
+      "sha256": "8b69b106958b6aa4a92a49f504313ab0c7eda25e09fb565e95041b475e52603b"
+    },
+    {
+      "path": "recipes/prepare-guided-step-v2-verification-20261026.mjs",
+      "bytes": 2083,
+      "sha256": "623a0217c9e888ad2a15d8b9b9057555cf69692df59746f30d51cf1629e24614"
+    },
+    {
+      "path": "recipes/verify-guided-step-focused-v2-20261026.mjs",
+      "bytes": 2788,
+      "sha256": "8b8f605dfb9ee5c19ea8b0339d943c2a5af7e42d994f843f345cfb0d393cb36d"
+    },
+    {
+      "path": "recipes/verify-guided-step-production-v2-20261026.mjs",
+      "bytes": 5261,
+      "sha256": "a97d5bfd468acc5a6a0afa31d5e691607ec43d0b3e621ef6d17d7cb12aab23bd"
+    },
+    {
+      "path": "recipes/prepare-guided-step-preview-20261026.mjs",
+      "bytes": 1330,
+      "sha256": "db646a41ae95f4f1040e2089d6244cfcf2eb0a11286271ded7997cbc89b4e134"
+    },
+    {
+      "path": "recipes/serve-guided-step-v2-built-worker-20261026.mjs",
+      "bytes": 3871,
+      "sha256": "946ba3cfa532897db7d8b1366e1ee89b3408780ad72ed016e56df93c6081cf44"
+    },
+    {
+      "path": "recipes/stop-owned-guided-step-preview-20261026.mjs",
+      "bytes": 2554,
+      "sha256": "32d9f0d05852749e1e1631f181ee08c19c6cdc67c2a5e56e3276e944a7c6b685"
+    },
+    {
+      "path": "recipes/prepare-guided-step-browser-targets-20261026.mjs",
+      "bytes": 1829,
+      "sha256": "87c1bf8a09129f13d0f8669f90b725fd1a97f3416c7e613931290b1f7d9b9b9f"
+    },
+    {
+      "path": "recipes/record-guided-step-browser-20261026.mjs",
+      "bytes": 4453,
+      "sha256": "b603177a909a3b52a01ab44996096d15fd43a599fc2ee4f2cbec525420669d80"
+    },
+    {
+      "path": "recipes/record-guided-step-verification-20261026.mjs",
+      "bytes": 5020,
+      "sha256": "4732ecadf8d044f1ed8945f73f06ca93c4a85c9fb6f03d7f32fc124fdd004b96"
+    },
+    {
+      "path": "recipes/review-current-release-context-map-20261026.mjs",
+      "bytes": 2935,
+      "sha256": "baea4c9e9f9c9974ee918a593d49667e1b43396851601f2622537cc6cbd28561"
+    },
+    {
+      "path": "recipes/backup-guided-step-source-20261026.mjs",
+      "bytes": 5845,
+      "sha256": "c219e33b92b418198d8c935116b9fc4c1f0844ce46fc881f99302db5a6e9ec8f"
+    },
+    {
+      "path": "recipes/release-context/build-inventory.mjs",
+      "bytes": 6206,
+      "sha256": "cde8039864d6351a6ef7a6bd4036c2aaeabb81cc7fb8c2bebd5cb88af611e311"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party comparison-step UI/resolver/tests/documentation, recovery recipes and source-only release inventory generator. Exact local baseline/private pins and generated data, immutable receipts and previous supplements remain required. No raw QA/network/screenshots/logs/results/inventory JSON, private configuration/decisions, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native ancestry. Not a full/private/runnable backup. Source inventory generator has no passing-suite authority.",
+  "proof": {
+    "sourcePaths": 6875,
+    "protectedInputsUnchanged": 1818,
+    "mappedActivities": 45,
+    "focusedCases": 23,
+    "focusedSkips": 0,
+    "strictTypeRoots": 2671,
+    "strictTypeFiles": 6229,
+    "diagnostics": 0,
+    "productionArtifacts": 1145,
+    "stockPrebuildHooksUnchanged": true,
+    "desktopWidths": [
+      1280,
+      1440
+    ],
+    "actualMouseNextKeyboardPreviousAndHistory": true,
+    "rootText200PercentSimulation": true,
+    "narrowViewportActually500Not390": true,
+    "stale404": true,
+    "noMedicalImageOrModelRequests": true,
+    "allOwnedPreviewProcessesClosed": true,
+    "firstTypeFailureRetained": true,
+    "typeOnlyRepairEmitsIdenticalWholeTestJavaScript": true,
+    "oldTwoPageTestPurposesPreserved": true,
+    "noNewDependenciesFontsModelsOrDatasets": true,
+    "sourceBytes": 79354,
+    "privateDataUploaded": false,
+    "normalPreviewUnchanged": true,
+    "installed": false,
+    "wholeStockSuitePassing": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

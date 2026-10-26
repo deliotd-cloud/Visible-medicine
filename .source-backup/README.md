@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party comparison-step UI/resolver/tests/documentation, recovery recipes and source-only release inventory generator. Exact local baseline/private pins and generated data, immutable receipts and previous supplements remain required. No raw QA/network/screenshots/logs/results/inventory JSON, private configuration/decisions, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native ancestry. Not a full/private/runnable backup. Source inventory generator has no passing-suite authority.

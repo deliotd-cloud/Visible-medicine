@@ -1,0 +1,25 @@
+.head-compare-page{min-height:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;padding:clamp(.75rem,2vw,1.5rem)}
+.head-compare-shell{max-width:1080px;margin:0 auto}
+.head-compare-page a{color:var(--green-2);text-underline-offset:.18em}
+.head-compare-page a:focus-visible,.head-compare-page summary:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.head-compare-page header{padding:1rem 0 .7rem;border-bottom:1px solid var(--line)}
+.head-compare-kicker{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.head-compare-page h1{font-size:clamp(1.7rem,3vw,2.2rem);line-height:1.15;margin:.4rem 0}
+.head-compare-page h2{font-size:1.3rem;margin:0 0 .7rem}
+.head-compare-page h3{margin:0 0 .4rem}
+.head-compare-page p,.head-compare-page li{line-height:1.6}
+.head-compare-page section{margin:1.2rem 0}
+.head-compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:1rem}
+.head-compare-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem;display:flex;flex-direction:column;align-items:flex-start}
+.head-compare-card p{margin:.2rem 0 .7rem;color:var(--muted)}
+.head-compare-card a{margin-top:auto;display:inline-flex;align-items:center;min-height:42px;background:var(--green);color:#fff;padding:.55rem 1rem;border-radius:6px;font-weight:650;text-decoration:none}
+.head-compare-page details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem;margin:1.2rem 0}
+.head-compare-page summary{cursor:pointer;font-weight:650}
+.head-compare-page code{overflow-wrap:anywhere}
+.head-compare-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1rem 0}
+.head-compare-steps>a,.head-compare-boundary{min-width:0;padding:.65rem .85rem;border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;justify-content:center;overflow-wrap:anywhere}
+.head-compare-steps>a{background:#fff;text-decoration:none;min-height:44px}
+.head-compare-steps>a:hover{background:var(--panel);border-color:var(--green-2)}
+.head-compare-steps>a span{font-size:.8rem}.head-compare-steps>a strong{font-size:.95rem}
+.head-compare-steps>:last-child{text-align:right}.head-compare-boundary{color:var(--muted);font-size:.85rem;background:var(--panel)}
+@media(max-width:600px){.head-compare-page{padding:1rem}.head-compare-card{padding:1rem}}
