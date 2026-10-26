@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental first-party verification/runtime/checklist-patch/recovery recipes only. Actual194dc14b application source is already selected/recovered by the required prior supplement. No raw QA/runtime/HTML/receipts/actual checklist/private state, third-party sources/models/coordinates, generated Review/medical data/scans/masks/identifiers/assets/dependencies/runtime or canonical/native ancestry. Exact local sources/evidence/private generated pins/data and prior supplements remain required; not a whole/private/runnable backup. No normal-preview installation or deployment.

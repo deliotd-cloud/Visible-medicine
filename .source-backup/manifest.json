@@ -1,0 +1,145 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T05:14:19.824Z",
+  "sourceIdentity": {
+    "kind": "final-exact-studio-types-stock-production-runtime-recipes",
+    "websiteSourceSha256": "194dc14bf69a68edb959a1ce87d2685db17315514bf9bc823ab8686b1fa0b3db",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-studio-outline-find-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "51b166b29344818cf38848d0f7eacb61cd3843a140fde156b92e73d830775212",
+        "head": "dab04634a0d2a80b3e747564c002f9f6b1d49c1d",
+        "tree": "a508e6235608e96acf14e95c4401ada4cf76d6bc",
+        "branch": "backup/studio-outline-find-source-20261026",
+        "actualApplicationSourceAlreadyRecovered": true
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "recipes/verify-studio-outline-find-v2-20261026.mjs",
+        "restore": "coordination/verify-studio-outline-find-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-final-admission-exit-20261026.mjs",
+        "restore": "coordination/prepare-studio-final-admission-exit-20261026.mjs"
+      },
+      {
+        "path": "recipes/advance-studio-final-build-20261026.mjs",
+        "restore": "coordination/advance-studio-final-build-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-studio-final-runtime-20261026.mjs",
+        "restore": "coordination/prepare-studio-final-runtime-20261026.mjs"
+      },
+      {
+        "path": "recipes/serve-studio-final-built-worker-20261026.mjs",
+        "restore": "coordination/serve-studio-final-built-worker-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-studio-final-runtime-20261026.mjs",
+        "restore": "coordination/check-studio-final-runtime-20261026.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-studio-final-preview-20261026.mjs",
+        "restore": "coordination/stop-owned-studio-final-preview-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-studio-final-verification-20261026.mjs",
+        "restore": "coordination/record-studio-final-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/update-studio-final-checklist-20261026.mjs",
+        "restore": "coordination/update-studio-final-checklist-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-studio-final-verification-recipes-20261026.mjs",
+        "restore": "coordination/backup-studio-final-verification-recipes-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-studio-final-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-studio-final-checkpoint-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/verify-studio-outline-find-v2-20261026.mjs",
+      "bytes": 8005,
+      "sha256": "b16db9208db083006f216150911eceb5183d38ce0c07922cff3531e2e8a220d7"
+    },
+    {
+      "path": "recipes/prepare-studio-final-admission-exit-20261026.mjs",
+      "bytes": 1489,
+      "sha256": "b596d151bf0c11f5dbb134dd3f27242064a9c55dfc3292b25781f56585eea3ed"
+    },
+    {
+      "path": "recipes/advance-studio-final-build-20261026.mjs",
+      "bytes": 1123,
+      "sha256": "4ce146972e825a1aeb835db4a0655da34109b06e95bb6728f306424722b87304"
+    },
+    {
+      "path": "recipes/prepare-studio-final-runtime-20261026.mjs",
+      "bytes": 1187,
+      "sha256": "fe6ba8aa29d7fc22ff594cbbd5990a29b6a624b39a6ad044a716d40a71ddaf4e"
+    },
+    {
+      "path": "recipes/serve-studio-final-built-worker-20261026.mjs",
+      "bytes": 3878,
+      "sha256": "93318733d5f16ef81ceceb8286cd9a903c294565714a207ce3153727a90800e9"
+    },
+    {
+      "path": "recipes/check-studio-final-runtime-20261026.mjs",
+      "bytes": 2275,
+      "sha256": "701c8aba65b7510a5feee1e5c52670757f4f51adce47ce7994088a5de05ae327"
+    },
+    {
+      "path": "recipes/stop-owned-studio-final-preview-20261026.mjs",
+      "bytes": 2556,
+      "sha256": "b0f15b1de11b2100ae91550e9571bfed54d13e7a79635c395538570427568b41"
+    },
+    {
+      "path": "recipes/record-studio-final-verification-20261026.mjs",
+      "bytes": 5513,
+      "sha256": "05599f50928fe3191b540534d0885c52f34722f07615fe972732e3568de5f9d2"
+    },
+    {
+      "path": "recipes/update-studio-final-checklist-20261026.mjs",
+      "bytes": 3609,
+      "sha256": "8eca9373d3ddc90bf470642c204bedc84505737422bbf6e0ed911c399c8514ea"
+    },
+    {
+      "path": "recipes/backup-studio-final-verification-recipes-20261026.mjs",
+      "bytes": 4442,
+      "sha256": "e55dd74c1bc05256f54b43a01378ea7de5a6e181e70b42a88814c5038158c11f"
+    },
+    {
+      "path": "recipes/finalize-studio-final-checkpoint-20261026.mjs",
+      "bytes": 11666,
+      "sha256": "a179da11523587200fcabef32eeede1f6383914f908230ceed33d7f06a134bc2"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental first-party verification/runtime/checklist-patch/recovery recipes only. Actual194dc14b application source is already selected/recovered by the required prior supplement. No raw QA/runtime/HTML/receipts/actual checklist/private state, third-party sources/models/coordinates, generated Review/medical data/scans/masks/identifiers/assets/dependencies/runtime or canonical/native ancestry. Exact local sources/evidence/private generated pins/data and prior supplements remain required; not a whole/private/runnable backup. No normal-preview installation or deployment.",
+  "proof": {
+    "cases": 268,
+    "wholeRoots": 31,
+    "skips": 0,
+    "configuredTypeRoots": 2672,
+    "configuredTypeFiles": 6230,
+    "typeDiagnostics": 0,
+    "stockProductionAndEveryPrebuildHook": true,
+    "buildArtifacts": 1145,
+    "anonymousRuntimeSmokeOnly": true,
+    "signedInAcceptance": false,
+    "memoryGatesUnchanged": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
