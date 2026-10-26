@@ -1,0 +1,120 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T19:08:43.222Z",
+  "sourceIdentity": {
+    "kind": "corrected-checkpoint-recipe-and-proposed-historical-test-role-adapter",
+    "proposalManifestSha256": "4fa6c6c4c2a70e7a4cf299b3d1f4d3b1c1ff9fbdf9e55666ed01d93e07f66cd4",
+    "proposalNotIntegrated": true,
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-current-context-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "aa45d6164acebc4b7f2dd7961607431dc6a7e3de606a4d667559a7e8a87d37b7",
+        "branch": "backup/current-context-source-20261026",
+        "head": "f2955230bbad8abec2f1a2a13449cd2ffab6f306",
+        "tree": "19fc0822d27ac2419ac3c43d31b52de8fa635f66"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "historical-ui-proposal/tests/current-ui-delivery-transition.test.mjs",
+        "restore": "proposal/tests/current-ui-delivery-transition.test.mjs"
+      },
+      {
+        "path": "historical-ui-proposal/tests/head-pan-review-binding.test.mjs",
+        "restore": "proposal/tests/head-pan-review-binding.test.mjs"
+      },
+      {
+        "path": "historical-ui-proposal/tests/window-drag-review-binding.test.mjs",
+        "restore": "proposal/tests/window-drag-review-binding.test.mjs"
+      },
+      {
+        "path": "historical-ui-proposal/tests/fixtures/historical-current-ui-9e14/current-ui-delivery-transition.test.mjs.raw",
+        "restore": "proposal/tests/fixtures/historical-current-ui-9e14/current-ui-delivery-transition.test.mjs.raw"
+      },
+      {
+        "path": "historical-ui-proposal/VERIFY_STATIC_INVERSES.mjs",
+        "restore": "proposal/VERIFY_STATIC_INVERSES.mjs"
+      },
+      {
+        "path": "historical-ui-proposal/INTEGRATION_NOTES.md",
+        "restore": "proposal/INTEGRATION_NOTES.md"
+      },
+      {
+        "path": "recipes/finalize-current-delivery-context-v2-20261026.mjs",
+        "restore": "coordination/finalize-current-delivery-context-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-current-delivery-context-v2-run-20261026.mjs",
+        "restore": "coordination/finalize-current-delivery-context-v2-run-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-current-context-followup-20261026.mjs",
+        "restore": "coordination/backup-current-context-followup-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "historical-ui-proposal/tests/current-ui-delivery-transition.test.mjs",
+      "bytes": 8046,
+      "sha256": "4088925dd8e10c3ccefc501f2718b22aefca08653369a5fd665c1eae22db0185"
+    },
+    {
+      "path": "historical-ui-proposal/tests/head-pan-review-binding.test.mjs",
+      "bytes": 9173,
+      "sha256": "78bfb7cdcef1e11048efc5deeb95c5ce1bb37bc546483a78db97f9e4be0f7701"
+    },
+    {
+      "path": "historical-ui-proposal/tests/window-drag-review-binding.test.mjs",
+      "bytes": 6999,
+      "sha256": "9ea34644acc4bdd0e725eacc2e9a1bd5abee61c80272f57df5d770dfed6bd398"
+    },
+    {
+      "path": "historical-ui-proposal/tests/fixtures/historical-current-ui-9e14/current-ui-delivery-transition.test.mjs.raw",
+      "bytes": 3843,
+      "sha256": "d7d18ae9b36cd593475998420137b7611695aba5a12053abe12fb0c18c27b696"
+    },
+    {
+      "path": "historical-ui-proposal/VERIFY_STATIC_INVERSES.mjs",
+      "bytes": 5944,
+      "sha256": "937b02e35ed254dc1bfcdbab2deaed83f76358e2f79a9a7ba92a72be57ec6d83"
+    },
+    {
+      "path": "historical-ui-proposal/INTEGRATION_NOTES.md",
+      "bytes": 3096,
+      "sha256": "18ef2777a8e63b13f527fa284d1433fab6a5b38ef04e64f6788241a03443384b"
+    },
+    {
+      "path": "recipes/finalize-current-delivery-context-v2-20261026.mjs",
+      "bytes": 1919,
+      "sha256": "26c2298bd443749baa3bb6ec9703d068cda484a08a880c88a808d09f24dc3652"
+    },
+    {
+      "path": "recipes/finalize-current-delivery-context-v2-run-20261026.mjs",
+      "bytes": 10471,
+      "sha256": "56764035c2b5c9941f0a994793e1e34c6b866b1ee309d24e5a2eadc992b194e5"
+    },
+    {
+      "path": "recipes/backup-current-context-followup-20261026.mjs",
+      "bytes": 4297,
+      "sha256": "23211c6f9155bbf296cb94e0217f08cf5d07f492138f0553446c86b2ea65f61c"
+    }
+  ],
+  "removed": [],
+  "scope": "First-party source only: checkpoint root-name correction, proposed historical regression adapter, complete original first-party test source, source inverse control and integration notes. No actual historical source-bound receipt, generated fixture/Review metadata, rawQA/test/browser/events/checklist, scans/masks/identifiers/models/assets/dependencies/runtime/private state or canonical/native Git ancestry. Prior local source contexts and supplements remain needed; not a full/private/runnable backup.",
+  "proof": {
+    "proposalOnly": true,
+    "historicalThreeCaseReplayNotRun": true,
+    "sourceInverseControlMainReplayed": true,
+    "normalPreviewChanged": false,
+    "applicationCandidateChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
