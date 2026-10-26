@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party application/teaching source, tests, documentation and recovery recipes. Three .raw files are immutable first-party code fixtures, not browser or patient observations. Exact local native baseline, private pins/data, dependencies and prior supplements remain required. No raw QA/logs/screenshots, generated Review or medical snapshots/pins/renderer, private configuration/decisions, scans/masks/patient identifiers or patient coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Not a whole/private/runnable backup.

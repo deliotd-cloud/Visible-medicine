@@ -1,0 +1,386 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T00:10:30.254Z",
+  "sourceIdentity": {
+    "kind": "fresh-batched-tour-resolution-eleven-heading-corrections-first-party-regressions",
+    "requiredLocalNativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredLocalNativeSourceSha256": "05215efe28eba7f4381fd87daf9212604a123fa1b2b0b810658232743573c1d6",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261025-nasal-bone-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "f4f90292d1d3eac3253a158b14ca4efe13eb1c4228b1de0b48819995c02d04dc",
+        "branch": "backup/nasal-bone-source-20261025",
+        "head": "f694ca7e06965fd58ed92c9dda0dd7adcd1b7947",
+        "tree": "cbae45412d9acd02bb2223e843c05e10f8d4901f"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "atlas/app/regional-guided-learning.tsx",
+        "restore": "atlas/app/regional-guided-learning.tsx"
+      },
+      {
+        "path": "atlas/content/abdominal-detail-connective-xray.ts",
+        "restore": "atlas/content/abdominal-detail-connective-xray.ts"
+      },
+      {
+        "path": "atlas/content/abdominal-detail-vascular-xray.ts",
+        "restore": "atlas/content/abdominal-detail-vascular-xray.ts"
+      },
+      {
+        "path": "atlas/content/abdominal-eus-orientation.ts",
+        "restore": "atlas/content/abdominal-eus-orientation.ts"
+      },
+      {
+        "path": "atlas/content/abdominal-fold-ultrasound.ts",
+        "restore": "atlas/content/abdominal-fold-ultrasound.ts"
+      },
+      {
+        "path": "atlas/docs/TOUR_RESOLUTION_AND_TITLES.md",
+        "restore": "atlas/docs/TOUR_RESOLUTION_AND_TITLES.md"
+      },
+      {
+        "path": "atlas/lib/regional-tours.ts",
+        "restore": "atlas/lib/regional-tours.ts"
+      },
+      {
+        "path": "atlas/scripts/fixtures/regional-tours-original.ts.raw",
+        "restore": "atlas/scripts/fixtures/regional-tours-original.ts.raw"
+      },
+      {
+        "path": "atlas/scripts/fixtures/test-whole-body-guided-learning-original.mjs.raw",
+        "restore": "atlas/scripts/fixtures/test-whole-body-guided-learning-original.mjs.raw"
+      },
+      {
+        "path": "atlas/scripts/fixtures/validate-body-decisions-original.mjs.raw",
+        "restore": "atlas/scripts/fixtures/validate-body-decisions-original.mjs.raw"
+      },
+      {
+        "path": "atlas/scripts/regional-tour-resolution-test-inverse.mjs",
+        "restore": "atlas/scripts/regional-tour-resolution-test-inverse.mjs"
+      },
+      {
+        "path": "atlas/scripts/test-tour-resolution-batch.mjs",
+        "restore": "atlas/scripts/test-tour-resolution-batch.mjs"
+      },
+      {
+        "path": "atlas/scripts/test-whole-body-guided-learning.mjs",
+        "restore": "atlas/scripts/test-whole-body-guided-learning.mjs"
+      },
+      {
+        "path": "atlas/scripts/validate-body-decisions.mjs",
+        "restore": "atlas/scripts/validate-body-decisions.mjs"
+      },
+      {
+        "path": "recipes/prepare-regional-title-native-20261025.mjs",
+        "restore": "coordination/prepare-regional-title-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/review-regional-title-proposal-20261025.mjs",
+        "restore": "coordination/review-regional-title-proposal-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-tour-resolution-native-20261025.mjs",
+        "restore": "coordination/integrate-tour-resolution-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/capture-regional-title-native-20261025.mjs",
+        "restore": "coordination/capture-regional-title-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/run-regional-title-native-phase-20261025.mjs",
+        "restore": "coordination/run-regional-title-native-phase-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-metadata-20261025.mjs",
+        "restore": "coordination/prepare-title-tour-metadata-20261025.mjs"
+      },
+      {
+        "path": "recipes/generate-title-tour-metadata-20261025.mjs",
+        "restore": "coordination/generate-title-tour-metadata-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-consumer-successor-20261025.mjs",
+        "restore": "coordination/prepare-title-tour-consumer-successor-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-title-tour-test-successor-20261025.mjs",
+        "restore": "coordination/integrate-title-tour-test-successor-20261025.mjs"
+      },
+      {
+        "path": "recipes/integrate-decision-checkbox-test-20261025.mjs",
+        "restore": "coordination/integrate-decision-checkbox-test-20261025.mjs"
+      },
+      {
+        "path": "recipes/finish-title-tour-consumers-20261025.mjs",
+        "restore": "coordination/finish-title-tour-consumers-20261025.mjs"
+      },
+      {
+        "path": "recipes/check-title-tour-full-types-v2-20261025.mjs",
+        "restore": "coordination/check-title-tour-full-types-v2-20261025.mjs"
+      },
+      {
+        "path": "recipes/seal-title-tour-native-20261025.mjs",
+        "restore": "coordination/seal-title-tour-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/build-title-tour-native-20261025.mjs",
+        "restore": "coordination/build-title-tour-native-20261025.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-build-retry-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-build-retry-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-title-tour-native-v2-20261026.mjs",
+        "restore": "coordination/build-title-tour-native-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-build-smallheap-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-build-smallheap-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-title-tour-native-smallheap-20261026.mjs",
+        "restore": "coordination/build-title-tour-native-smallheap-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-title-tour-build-balanced-20261026.mjs",
+        "restore": "coordination/prepare-title-tour-build-balanced-20261026.mjs"
+      },
+      {
+        "path": "recipes/build-title-tour-native-balanced-20261026.mjs",
+        "restore": "coordination/build-title-tour-native-balanced-20261026.mjs"
+      },
+      {
+        "path": "recipes/export-title-tour-runtimes-balanced-20261026.mjs",
+        "restore": "coordination/export-title-tour-runtimes-balanced-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-title-tour-source-20261026.mjs",
+        "restore": "coordination/backup-title-tour-source-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/regional-guided-learning.tsx",
+      "bytes": 18971,
+      "sha256": "d8f3c9858fceb4a0386b8104d2b93e4334fabe26d98c9559120fd2c661162122"
+    },
+    {
+      "path": "atlas/content/abdominal-detail-connective-xray.ts",
+      "bytes": 3614,
+      "sha256": "960dc6bbcbb78561e2f35f9952828b40db5445048f82e42e0b0936be3e69c3d9"
+    },
+    {
+      "path": "atlas/content/abdominal-detail-vascular-xray.ts",
+      "bytes": 10084,
+      "sha256": "b5afd93db20681100761d7f51cdee0fdc9eb78f6e74f5dabfbc0c1149d23ad0a"
+    },
+    {
+      "path": "atlas/content/abdominal-eus-orientation.ts",
+      "bytes": 3325,
+      "sha256": "3975301201e16d4c4bd841109c7df02fbbd5b1b24d41ed3953f5f8aacc796770"
+    },
+    {
+      "path": "atlas/content/abdominal-fold-ultrasound.ts",
+      "bytes": 2672,
+      "sha256": "973dfb99c8c8789d8437346d097502d69f096cc52fa6c109533b2a46624fbe66"
+    },
+    {
+      "path": "atlas/docs/TOUR_RESOLUTION_AND_TITLES.md",
+      "bytes": 1720,
+      "sha256": "cb3a5eb4785f7a366f62ba029fa73ce6b90b4f2c8318efd08e2b375b3cd82fbe"
+    },
+    {
+      "path": "atlas/lib/regional-tours.ts",
+      "bytes": 45634,
+      "sha256": "c41ed833cdfac7ca925023221298bcdd3c57e46030121c61db27437259c968d7"
+    },
+    {
+      "path": "atlas/scripts/fixtures/regional-tours-original.ts.raw",
+      "bytes": 45118,
+      "sha256": "b1a1bc9d9d80b84d4d98aed1aaa08aa4e9d7313e58bdd40f3b8a10ea0bab215d"
+    },
+    {
+      "path": "atlas/scripts/fixtures/test-whole-body-guided-learning-original.mjs.raw",
+      "bytes": 38482,
+      "sha256": "faec9235a9b0d8ea716eda7daafb912449a0c546cca8b8d636db115eb8248c7f"
+    },
+    {
+      "path": "atlas/scripts/fixtures/validate-body-decisions-original.mjs.raw",
+      "bytes": 14381,
+      "sha256": "9fac339bc627b9c3919242b6ac37f9077cce75ff0065969fecad4399654e55a6"
+    },
+    {
+      "path": "atlas/scripts/regional-tour-resolution-test-inverse.mjs",
+      "bytes": 4108,
+      "sha256": "b0e64c4ba24f37f6c5299044d8d934eb3d4742ceb3969edc549976044132ff13"
+    },
+    {
+      "path": "atlas/scripts/test-tour-resolution-batch.mjs",
+      "bytes": 6633,
+      "sha256": "665e24d4b638d8c814ebe6389c80c402b2c9382726cb5b5e3bf074540809319e"
+    },
+    {
+      "path": "atlas/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 38706,
+      "sha256": "75064c87a45fc5baf2b19cb97b99288596c923a3805dca731b58d9582d83104f"
+    },
+    {
+      "path": "atlas/scripts/validate-body-decisions.mjs",
+      "bytes": 15460,
+      "sha256": "c08d69d3ba97ab59888c1afc436db6dffb630f03d61bc5421192f12891ce0b9b"
+    },
+    {
+      "path": "recipes/prepare-regional-title-native-20261025.mjs",
+      "bytes": 4453,
+      "sha256": "6e1208d4f560257943c018e12d2451667d7f6d04c1d75e499872e3d81a77d2be"
+    },
+    {
+      "path": "recipes/review-regional-title-proposal-20261025.mjs",
+      "bytes": 2446,
+      "sha256": "0fc726ba2fc71db7f4f5e73fb027b14c39e1be9eb195b513f67227900e2a1402"
+    },
+    {
+      "path": "recipes/integrate-tour-resolution-native-20261025.mjs",
+      "bytes": 4976,
+      "sha256": "530420a014fad988e89541f9a64c2e234a6521882c3b50f72245bd70598ae6a2"
+    },
+    {
+      "path": "recipes/capture-regional-title-native-20261025.mjs",
+      "bytes": 5252,
+      "sha256": "8fe11f979579686437f19deac3ead591fe8e272e0c6fb16606f2e4de39967405"
+    },
+    {
+      "path": "recipes/run-regional-title-native-phase-20261025.mjs",
+      "bytes": 2187,
+      "sha256": "cee686e6f5c9dbdfc5ef38c217c360058d3dbd257cfe1365367593f286da20e6"
+    },
+    {
+      "path": "recipes/prepare-title-tour-metadata-20261025.mjs",
+      "bytes": 3744,
+      "sha256": "2cdca5473efed2194e8886b9a9b6bbf2ec4a2311a25f71961a92cd0df301a52b"
+    },
+    {
+      "path": "recipes/generate-title-tour-metadata-20261025.mjs",
+      "bytes": 4694,
+      "sha256": "5c9ba63aa58541a74f32c035f11a99c08525c01cbf4d605f5a4135659ed0dbb0"
+    },
+    {
+      "path": "recipes/prepare-title-tour-consumer-successor-20261025.mjs",
+      "bytes": 2257,
+      "sha256": "7d826942f5f5353ececa0daa04c6b3a60236d446225e60f7b0bf8c9463e772f3"
+    },
+    {
+      "path": "recipes/integrate-title-tour-test-successor-20261025.mjs",
+      "bytes": 3085,
+      "sha256": "fe81350e06d7c402b9564e4e017895ee7f6801d4f176cc1d245bf278fda740cb"
+    },
+    {
+      "path": "recipes/integrate-decision-checkbox-test-20261025.mjs",
+      "bytes": 3486,
+      "sha256": "81ea9b37db1c4bf081c103917e72cc89062ce478d77625546556e0ea7573ec59"
+    },
+    {
+      "path": "recipes/finish-title-tour-consumers-20261025.mjs",
+      "bytes": 4051,
+      "sha256": "ab4b2eb3d0c1bbdda42433eb43a5bc0d9033c3bff0ee76b0b8067c3bb4b6a27d"
+    },
+    {
+      "path": "recipes/check-title-tour-full-types-v2-20261025.mjs",
+      "bytes": 2841,
+      "sha256": "10c6d76ddd9aebba2afd083225597396bae87beccf64a5bab6897ff252866dc8"
+    },
+    {
+      "path": "recipes/seal-title-tour-native-20261025.mjs",
+      "bytes": 5090,
+      "sha256": "5c8a81d91217f3713301c5a873b2ac66a70ead5dbf715c99217200f4187e8f7f"
+    },
+    {
+      "path": "recipes/build-title-tour-native-20261025.mjs",
+      "bytes": 3265,
+      "sha256": "a44a40b83b49b36b45fbac348c6ae5383d34b2293b8f181feccfeae4694f9191"
+    },
+    {
+      "path": "recipes/prepare-title-tour-build-retry-20261026.mjs",
+      "bytes": 4488,
+      "sha256": "81e5dacec24e4afb57c8026946bf0893712b5699f53fc27eba17e3c7613a11c3"
+    },
+    {
+      "path": "recipes/build-title-tour-native-v2-20261026.mjs",
+      "bytes": 3268,
+      "sha256": "2473d801e981a9e5ca36db5d464866f68966c0e63708db74c06169f81c100f9f"
+    },
+    {
+      "path": "recipes/prepare-title-tour-build-smallheap-20261026.mjs",
+      "bytes": 2337,
+      "sha256": "45d4dd4546a51d4633b862e0533d484ca70400c5b274d1a6e37ed8c209e3758d"
+    },
+    {
+      "path": "recipes/build-title-tour-native-smallheap-20261026.mjs",
+      "bytes": 3361,
+      "sha256": "d864ff47d13ad3294298fcdb3736b2867e6d4a7d988e9cf1b1010a03e34062e1"
+    },
+    {
+      "path": "recipes/prepare-title-tour-build-balanced-20261026.mjs",
+      "bytes": 4102,
+      "sha256": "96e21290e339e74721b78578d029928c91e7f4e5907242d49fee7be87a35caca"
+    },
+    {
+      "path": "recipes/build-title-tour-native-balanced-20261026.mjs",
+      "bytes": 3359,
+      "sha256": "6ce1f8a1ac974d47ef862a14cd8770ff54bab414a65e2a465a14220816e4fe17"
+    },
+    {
+      "path": "recipes/export-title-tour-runtimes-balanced-20261026.mjs",
+      "bytes": 6595,
+      "sha256": "e2e3bbacb8d66012cfff58416e6ff5a0c8506399807153f73ea3278de3665e40"
+    },
+    {
+      "path": "recipes/backup-title-tour-source-20261026.mjs",
+      "bytes": 6031,
+      "sha256": "e4cd4155c452babbd3723852700b4c9ba64ac40986e75fa4c12a0146deb2da34"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party application/teaching source, tests, documentation and recovery recipes. Three .raw files are immutable first-party code fixtures, not browser or patient observations. Exact local native baseline, private pins/data, dependencies and prior supplements remain required. No raw QA/logs/screenshots, generated Review or medical snapshots/pins/renderer, private configuration/decisions, scans/masks/patient identifiers or patient coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Not a whole/private/runnable backup.",
+  "proof": {
+    "sourcePaths": 6410,
+    "authoredPaths": 14,
+    "registeredTours": 53,
+    "completeEvidenceComparisons": 414,
+    "allFrameResultsAndFreshMutationRefusalsPreserved": true,
+    "learnerSourceScansBefore": 54,
+    "learnerSourceScansAfter": 9,
+    "evidenceSourceScansBefore": 72,
+    "evidenceSourceScansAfter": 9,
+    "latencyOrFrameRateClaim": false,
+    "placements": 9936,
+    "titleOnlyChanges": 11,
+    "otherPlacementsExact": 9925,
+    "otherClinicalFieldsExact": true,
+    "changedMaterialPins": 9,
+    "unchangedMaterialPins": 1095,
+    "strictTypeRoots": 1310,
+    "strictTypeFiles": 4679,
+    "diagnostics": 0,
+    "fullNativeStockBuildPassed": true,
+    "productionArtifacts": 557,
+    "all215AssetsAndLicencesPackagesUnchanged": true,
+    "sourceBytes": 334276,
+    "privateDataUploaded": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false,
+    "wholeStockSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
