@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Selected first-party QA, timing instrumentation, cleanup, evidence-verification, scoped checklist patch and recovery recipes only. No product source change. Exact local baseline/current source and build receipts, raw local evidence and prior source supplements remain required. No raw trace/browser/QA/network/audit JSON or screenshots, actual checklist/history JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Not a full/private/runnable backup or deployment.

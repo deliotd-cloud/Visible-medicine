@@ -1,0 +1,134 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T04:06:58.051Z",
+  "sourceIdentity": {
+    "kind": "native-source-runtime-performance-and-scoped-checklist-recovery-recipes-only",
+    "nativeSourceSha256": "05215efe28eba7f4381fd87daf9212604a123fa1b2b0b810658232743573c1d6",
+    "nativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "primaryWebsiteAndVerifiedResponseSourceUnchanged": true,
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-education-response-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "544282a4ac7f37ba5804b63d942b5e3bc9ed97e889a05268ee7d906146627aa2",
+        "branch": "backup/education-response-source-20261026",
+        "head": "185b8fb5b34da8b3a7b198dc062e13edd1de9e54",
+        "tree": "f9c3c2f98eb9b6b58d49fccdd953f862a411ebb7"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "recipes/serve-native-performance-20261026.mjs",
+        "restore": "coordination/serve-native-performance-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-native-performance-cleanup-20261026.mjs",
+        "restore": "coordination/prepare-native-performance-cleanup-20261026.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-native-performance-20261026.mjs",
+        "restore": "coordination/stop-owned-native-performance-20261026.mjs"
+      },
+      {
+        "path": "recipes/native-performance-init-20261026.js",
+        "restore": "coordination/native-performance-init-20261026.js"
+      },
+      {
+        "path": "recipes/native-performance-frame-sampler-20261026.js",
+        "restore": "coordination/native-performance-frame-sampler-20261026.js"
+      },
+      {
+        "path": "recipes/record-native-performance-20261026.mjs",
+        "restore": "coordination/record-native-performance-20261026.mjs"
+      },
+      {
+        "path": "recipes/update-native-performance-checklist-20261026.mjs",
+        "restore": "coordination/update-native-performance-checklist-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-native-performance-recipes-20261026.mjs",
+        "restore": "coordination/backup-native-performance-recipes-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-native-performance-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-native-performance-checkpoint-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/serve-native-performance-20261026.mjs",
+      "bytes": 4360,
+      "sha256": "a45b0172f5308f61069c075a27c8ec2806735948740dd64884f811685476a60f"
+    },
+    {
+      "path": "recipes/prepare-native-performance-cleanup-20261026.mjs",
+      "bytes": 413,
+      "sha256": "a513feade50e6873405a9e5acaa5e17f4aa1b2ee42c98ca1f4834e2b438782b9"
+    },
+    {
+      "path": "recipes/stop-owned-native-performance-20261026.mjs",
+      "bytes": 2552,
+      "sha256": "dfefd3ca0902bf4e28b1beedbac156eb716dca79f9d6c043fcc73535c2437a99"
+    },
+    {
+      "path": "recipes/native-performance-init-20261026.js",
+      "bytes": 760,
+      "sha256": "0bb83b51c27fbf0264173b2b2b348b55c6a877b6d7e737e836c212b82cd9af23"
+    },
+    {
+      "path": "recipes/native-performance-frame-sampler-20261026.js",
+      "bytes": 1333,
+      "sha256": "23dad2dbd5fabadca8f9a926aae4e9ae06a5e0bc7e1cab3587e2a851dc10ae78"
+    },
+    {
+      "path": "recipes/record-native-performance-20261026.mjs",
+      "bytes": 13529,
+      "sha256": "a44327cb50cabc2a6b0e0f65575d5227fb0149fbac1edcb4462e1e23a017ae34"
+    },
+    {
+      "path": "recipes/update-native-performance-checklist-20261026.mjs",
+      "bytes": 4392,
+      "sha256": "3ef0abf14a71e51470e7175910001c28b71fc38f4da6cafd3edadb63ca1e23c1"
+    },
+    {
+      "path": "recipes/backup-native-performance-recipes-20261026.mjs",
+      "bytes": 4867,
+      "sha256": "f2eb4350ffc829cbc42d9f862b1e6bbe9b6b0b30755bfe2b730b17727166faf3"
+    },
+    {
+      "path": "recipes/finalize-native-performance-checkpoint-20261026.mjs",
+      "bytes": 9936,
+      "sha256": "3df6af96d5d6b33b8f28d694587419c439c46331284245c8f5869549beb6d7fc"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party QA, timing instrumentation, cleanup, evidence-verification, scoped checklist patch and recovery recipes only. No product source change. Exact local baseline/current source and build receipts, raw local evidence and prior source supplements remain required. No raw trace/browser/QA/network/audit JSON or screenshots, actual checklist/history JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Not a full/private/runnable backup or deployment.",
+  "proof": {
+    "actualSealedNativeSourceRuntimeMeasured": true,
+    "actualGraphicsContextAndVisibleAnatomy": true,
+    "desktopWidths": [
+      1280,
+      1440
+    ],
+    "wholeBodyBonesAndThoraxAvailableSystemsOnly": true,
+    "measuredScopeNotFullPerformanceAcceptance": true,
+    "all6410Source215AssetsAnd557ProductionFilesUnchanged": true,
+    "checklist234UX03OpenToPartialOnly": true,
+    "all71RequirementsEightIdeasAndAllAcceptancePreserved": true,
+    "allOther70ItemsUnchanged": true,
+    "sevenOwnedPreviewProcessesAndPage28Closed": true,
+    "sourceBytes": 42142,
+    "noNewDependencyFontAssetLicenseChanges": true,
+    "noNewBuildOrSuitePassingClaim": true,
+    "signedInWebsiteClinicalSpatialAcceptance": false,
+    "privateDataUploaded": false,
+    "normalPreviewUnchanged": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
