@@ -1,0 +1,44 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261026-assessment-availability';
+const sourceFile=stage+'/SOURCE_CANDIDATE_V2.json',sourceSha='67fc771c55eae54092be293d539e1f091289dd36af7997b6f5fb09520328a6f2';
+const source=json(sourceFile),parent=json(source.parent),pin=p=>({path:p,sha256:hash(p)});
+assert.equal(hash(sourceFile),sourceSha);
+const results={tests:stage+'/checks/tests-attempt-2/RESULT.json',types:stage+'/checks/types-attempt-1/RESULT.json',build:stage+'/checks/build-attempt-1/RESULT.json'};
+const t=json(results.tests),y=json(results.types),b=json(results.build);
+for(const r of [t,y,b]){assert(r.passing);assert.equal(r.source.sha256,sourceSha);assert.equal(r.run.process.exitCode,0);assert(r.run.process.terminalObserved&&!r.run.process.interrupted);}
+assert.deepEqual(t.counts,{tests:458,pass:458,fail:0,cancelled:0,skipped:0,todo:0});
+assert.deepEqual([y.typeResult.roots,y.typeResult.files,y.typeResult.diagnostics],[2671,6229,0]);
+assert(b.artifacts.files>1000);
+const plan=json(stage+'/VERIFICATION_PLAN_V2.json');assert.equal(plan.wholeRoots.length,37);
+for(const r of source.sourceRows)assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);
+for(const d of source.dependencies){assert.equal(hash(d.file),d.sha256);assert.equal(hash(d.entry),d.entrySha256);}
+assert.equal(hash(source.parent),source.parentSha256);
+const mutable=new Set(source.changedPaths);assert.equal(mutable.size,4);
+assert.deepEqual(mutable,new Set(['lib/education-media-readiness.ts','tests/education-media-readiness.test.mjs','tests/clinical-review-ui-simplification.test.ts','tests/head-link-availability.test.ts']));
+for(const r of parent.sourceRows){assert.equal(hash(parent.website+'/'+r.path),r.sha256);if(!mutable.has(r.path))assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);}
+const readiness=fs.readFileSync(source.website+'/lib/education-media-readiness.ts','utf8');
+assert(readiness.includes('mediaReady: false'));
+assert.equal(readiness.replace(source.copyOnlyApplicationChange.newCopy,source.copyOnlyApplicationChange.oldCopy),fs.readFileSync(parent.website+'/lib/education-media-readiness.ts','utf8'));
+const input=json(source.website+'/atlas-review/integration-inputs.json');assert.equal(input.inputs.length,1818);for(const r of input.inputs)assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);
+const originals=[['tests/atlas-delivery-access-sql.test.mjs','bbb370b38f5c8ad31ac69deef99fae39d3fe4715b6989b6cc7085fcb4d2b1277'],['tests/atlas-delivery-access-sql-source.mjs','40dde351a0558b4f0a746b1a380ac2a6281ee9c9dceff995dd8041e355b7511d'],['tests/fda-reference-review-links.test.mjs','367aaacc1c169991eef6782b9643c424b39bae8c7a5a7a650f8d0e7c4b4d44c5']];
+for(const[p,sha]of originals)assert.equal(hash(source.website+'/'+p),sha);
+const artifacts=json(b.artifacts.path);assert.equal(artifacts.source.sha256,sourceSha);
+const emittedCopy=artifacts.files.filter(r=>/\.(?:js|mjs|html)$/.test(r.path)&&fs.readFileSync(artifacts.root+'/'+r.path,'utf8').includes(source.copyOnlyApplicationChange.newCopy)).map(r=>r.path);assert(emittedCopy.length>0);
+const oldFile='F:/VisibleMedicine/staging/20261026-current-functional-diagnostic/ADJUDICATED_INVENTORY.json',old=json(oldFile),before=new Map(old.rows.map(r=>[r.root,r])),current=new Set(plan.wholeRoots);
+const roots=fs.readdirSync(source.website+'/tests').filter(n=>/\.test\.(mjs|ts)$/.test(n)).map(n=>'tests/'+n).sort();assert.equal(roots.length,1342);
+const rows=roots.map(root=>{const prior=before.get(root),r=source.sourceRows.find(r=>r.path===root);assert(r);if(prior&&!current.has(root))assert.equal(r.sha256,prior.sha256);return{root,sha256:r.sha256,bytes:r.bytes,state:current.has(root)?'verified-current-focused':prior?.state??'unclassified',currentResult:current.has(root)?pin(results.tests):null,priorContext:prior??null,earlierSnapshotFailureCases:prior?.earlierSnapshotFailureCases??0};});
+const counts=rows.reduce((o,r)=>(o[r.state]=(o[r.state]??0)+1,o),{});assert.equal(counts['verified-current-focused'],37);assert.equal(counts.unclassified,1283);assert.equal(counts['requires-other-context'],13);assert.equal(counts['previously-verified-authentic-epoch'],9);assert.equal(rows.reduce((n,r)=>n+r.earlierSnapshotFailureCases,0),316);
+fs.writeFileSync(stage+'/ADJUDICATED_INVENTORY.json',JSON.stringify({at:new Date().toISOString(),source:pin(sourceFile),previousInventory:pin(oldFile),physicalRoots:1342,counts,original316FailuresAnd3SkipsUnadjusted:true,wholeStockSuitePassing:false,rows},null,2)+'\n',{flag:'wx'});
+const auditRoot='F:/VisibleMedicine/staging/20261026-thorax-teaching-gap-proposal',audit=json(auditRoot+'/SOURCE_EVIDENCE.json');assert.equal(hash(audit.sourceCandidate),audit.sourceCandidateSha256);const native=json(audit.sourceCandidate),exportRow=native.sourceRows.find(r=>r.path==='content/exports/body.v2.json');assert.equal(hash(audit.exportPath),exportRow.sha256);const body=json(audit.exportPath);assert.equal(audit.placements.length,2);
+for(const p of audit.placements){const actual=body.find(r=>r.id===p.id);assert(actual);assert.deepEqual(actual.content.xray,p.xray);assert.equal(p.xray.readiness,'pending');assert.equal(actual.meshBindings.length,1);const mesh=actual.meshBindings[0];assert.equal(mesh.assetSha256,p.assetSha256);assert.equal(mesh.nodeName,p.nodeName);assert.deepEqual(mesh.sources,[{file:p.sourceFile,sha256:p.sourceFileSha256,fmaId:p.fma}]);}
+fs.writeFileSync(stage+'/THORAX_HELD_TEACHING.json',JSON.stringify({at:new Date().toISOString(),source:pin(audit.sourceCandidate),audit:pin(auditRoot+'/SOURCE_EVIDENCE.json'),report:pin(auditRoot+'/REPORT.md'),exactTwoSourceBindingsChecked:true,ids:audit.placements.map(r=>r.id),disposition:'Retain pending: bounded primary-source audit does not support a named-vein human projection/contrast-X-ray lesson. No teaching or visibility claim added.',clinicalApproval:false,thirdPartyAssetsCopied:false},null,2)+'\n',{flag:'wx'});
+const git=(repo,...a)=>execFileSync('git',['--no-replace-objects','-C',repo,...a],{encoding:'utf8',windowsHide:true,env:{...process.env,GIT_OPTIONAL_LOCKS:'0'}}).trim();
+assert.equal(git(source.atlas,'rev-parse','HEAD'),source.atlasHead);assert.equal(git(source.atlas,'status','--porcelain'),'');
+for(const [repo,head]of [['F:/VisibleMedicine/website','b953ff3f5f1891599cb6e91cb91311d9d6006270'],['F:/VisibleMedicine/atlas','6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1']])assert.equal(git(repo,'rev-parse','HEAD'),head);
+const ix=json('CURRENT_CHECKPOINT.json');assert.deepEqual(ix.activeWork.current.activeExecutionSessions,[]);assert.equal(ix.activeWork.current.ownerPreviewPolicy.restartPermitted,false);
+const report={schema:'vm-assessment-availability-verification/1',at:new Date().toISOString(),passing:true,source:pin(sourceFile),parent:pin(source.parent),sourcePaths:6880,nativeHead:source.atlasHead,onlyApplicationChange:source.copyOnlyApplicationChange,mediaReadinessAndAllStartAccessWriteGuardsUnchanged:true,tests:pin(results.tests),wholeCurrentRoots:37,currentCases:458,currentSkips:0,types:pin(results.types),typeRoots:2671,typeFiles:6229,diagnostics:0,build:pin(results.build),stockProductionAndAllPrebuildHooks:true,buildArtifacts:b.artifacts,emittedNoticeArtifacts:emittedCopy,protectedReviewInputs:1818,allOtherApplicationNativeGeneratedModelsMasksAccessAndLicencesExact:true,noNewAssetsFontsDependenciesOrDatasets:true,originalHistoricalRootsAndPins:originals.map(([p])=>pin(source.website+'/'+p)),separateCurrentSqlFullOriginalTwelveCases:true,currentSqlUsesActualAuthorizerAndPolicy:true,all37RootsWholeNoCaseFilters:true,foldedVerifiedTestContext:source.foldedVerifiedCurrentTestContext,retainedFailedRun:pin(stage+'/checks/tests-attempt-1/RESULT.json'),retainedOriginalCandidate:pin(stage+'/SOURCE_CANDIDATE.json'),firstV2PlanPreparationFailure:'Object rows were initially treated as strings; preparation refused before writing plan or running tests. Corrected explicit row extraction preserves each source hash.',inventory:pin(stage+'/ADJUDICATED_INVENTORY.json'),inventoryCounts:counts,stockRoots:1342,original316FailuresAnd3SkipsUnadjusted:true,wholeStockSuitePassing:false,thoraxTeachingHold:pin(stage+'/THORAX_HELD_TEACHING.json'),allOwnedGuardedRunsTerminal:true,syntheticAndSourceBehaviorOnly:true,realSignedInImagePaidAccessOrClinicalAcceptance:false,actualProtectedMediaDeliveryImplemented:false,normalPreviewChanged:false,installed:false,clinicalApproval:false,patientSpaceRegistration:false};
+fs.writeFileSync(stage+'/VERIFICATION_SUMMARY.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({path:stage+'/VERIFICATION_SUMMARY.json',sha256:hash(stage+'/VERIFICATION_SUMMARY.json'),cases:458,wholeRoots:37,types:[2671,6229,0],buildArtifacts:b.artifacts.files,counts,passing:true}));

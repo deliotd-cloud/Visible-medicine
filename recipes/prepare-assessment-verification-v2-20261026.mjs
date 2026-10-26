@@ -1,0 +1,27 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {hash,json} from './seal-simple-website-successor.mjs';
+const stage='F:/VisibleMedicine/staging/20261026-assessment-availability';
+const source=stage+'/SOURCE_CANDIDATE_V2.json';
+assert.equal(hash(source),'67fc771c55eae54092be293d539e1f091289dd36af7997b6f5fb09520328a6f2');
+const sourceData=json(source);
+const previousPlan='F:/VisibleMedicine/staging/20261026-current-functional-diagnostic/PLAN_FINAL.json';
+const guidedResult='F:/VisibleMedicine/staging/20261026-guided-step-website/checks/focused-whole-roots-attempt-2/RESULT.json';
+const media=['education-media-access.test.mjs','education-media-access-server.test.mjs','education-media-delivery.test.mjs','education-media-server-composition.test.mjs','education-media-readiness.test.mjs','education-media-object-reader.test.mjs','education-media-records.test.mjs','education-media-dependencies.test.mjs','atlas-delivery-access-sql-current.test.mjs'].map(n=>'tests/'+n);
+const functional=json(previousPlan).wholeRoots.map(r=>{assert.equal(hash(sourceData.website+'/'+r.root),r.sha256);return r.root;});
+const guided=json(guidedResult).roots;
+assert.equal(functional.length,23);assert.equal(guided.length,5);
+const roots=[...media,...functional,...guided];assert.equal(roots.length,37);assert.equal(new Set(roots).size,37);
+const rows=roots.map(p=>{const r=sourceData.sourceRows.find(r=>r.path===p);assert(r,p);assert.equal(hash(sourceData.website+'/'+p),r.sha256);return r;});
+const planFile=stage+'/VERIFICATION_PLAN_V2.json';
+fs.writeFileSync(planFile,JSON.stringify({at:new Date().toISOString(),source:{path:source,sha256:hash(source)},priorPlan:{path:previousPlan,sha256:hash(previousPlan)},priorGuided:{path:guidedResult,sha256:hash(guidedResult)},wholeRoots:roots,sourceRows:rows,expectedCases:458,wholeStockSuitePassing:false,installed:false},null,2)+'\n',{flag:'wx'});
+let code=fs.readFileSync('verify-assessment-availability-20261026.mjs','utf8');
+function replace(a,b){assert.equal(code.split(a).length,2,a);code=code.replace(a,b);}
+replace("sourceFile=stage+'/SOURCE_CANDIDATE.json',sourceSha='fdb62431a69c6dddbbd14ef8fb358e66f73ef0156e157e49f53856caa08adb83'","sourceFile=stage+'/SOURCE_CANDIDATE_V2.json',sourceSha='67fc771c55eae54092be293d539e1f091289dd36af7997b6f5fb09520328a6f2'");
+replace("dir=stage+'/checks/'+phase+'-attempt-1'","dir=stage+'/checks/'+phase+'-attempt-'+(phase==='tests'?2:1)");
+replace("const roots=['education-media-access.test.mjs','education-media-access-server.test.mjs','education-media-delivery.test.mjs','education-media-server-composition.test.mjs','education-media-readiness.test.mjs','education-media-object-reader.test.mjs','education-media-records.test.mjs','education-media-dependencies.test.mjs','atlas-delivery-access-sql-current.test.mjs'].map(n=>'tests/'+n);",`const planFile=stage+'/VERIFICATION_PLAN_V2.json';assert.equal(hash(planFile),'${hash(planFile)}');const plan=json(planFile);const roots=plan.wholeRoots;assert.equal(roots.length,37);for(const r of plan.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256);`);
+replace("assert(json(stage+'/checks/tests-attempt-1/RESULT.json').passing)","assert(json(stage+'/checks/tests-attempt-2/RESULT.json').passing)");
+replace("counts.tests>40&&counts.tests===counts.pass","counts.tests===458&&counts.tests===counts.pass");
+replace("wholeMediaRoots:phase==='tests'?8:null","wholeRoots:phase==='tests'?37:null,wholeMediaRoots:phase==='tests'?8:null");
+fs.writeFileSync('verify-assessment-availability-v2-20261026.mjs',code,{flag:'wx'});
+console.log(JSON.stringify({plan:{path:planFile,sha256:hash(planFile)},roots:37,driverSha256:hash('verify-assessment-availability-v2-20261026.mjs')}));

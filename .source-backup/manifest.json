@@ -1,0 +1,239 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T02:56:11.343Z",
+  "sourceIdentity": {
+    "kind": "assessment-availability-notice-current-sql-and-folded-current-test-source",
+    "websiteSourceSha256": "67fc771c55eae54092be293d539e1f091289dd36af7997b6f5fb09520328a6f2",
+    "nativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-current-functional-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "37fe2ec99f67068dd3f7e4f3fbfd902617a6f00a60d1af4faa54d109aee2d9c6",
+        "branch": "backup/current-functional-source-20261026",
+        "head": "c9ed007b27048eab86d3eaf124b0dda670aa4d2f",
+        "tree": "219f09be75aedea6c897cc649aa9e2fea879d4d6"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-guided-step-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "78e6afca212573e0cab75d188da0fa6e1851b7919b977695fb46ccb3874955d5",
+        "branch": "backup/guided-step-source-20261026",
+        "head": "987045d87d774ecca14d10e8cc2a3e8222844f4a",
+        "tree": "ba71f02e3337dbd619c2f519b07551c3756eb76e"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/lib/education-media-readiness.ts",
+        "restore": "website/lib/education-media-readiness.ts"
+      },
+      {
+        "path": "website/tests/education-media-readiness.test.mjs",
+        "restore": "website/tests/education-media-readiness.test.mjs"
+      },
+      {
+        "path": "website/tests/clinical-review-ui-simplification.test.ts",
+        "restore": "website/tests/clinical-review-ui-simplification.test.ts"
+      },
+      {
+        "path": "website/tests/head-link-availability.test.ts",
+        "restore": "website/tests/head-link-availability.test.ts"
+      },
+      {
+        "path": "website/tests/atlas-delivery-access-sql-current.test.mjs",
+        "restore": "website/tests/atlas-delivery-access-sql-current.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-delivery-access-sql-current-source.mjs",
+        "restore": "website/tests/atlas-delivery-access-sql-current-source.mjs"
+      },
+      {
+        "path": "website/docs/ASSESSMENT_IMAGE_AVAILABILITY.md",
+        "restore": "website/docs/ASSESSMENT_IMAGE_AVAILABILITY.md"
+      },
+      {
+        "path": "website/tests/fda-reference-current-delivery.test.mjs",
+        "restore": "website/tests/fda-reference-current-delivery.test.mjs"
+      },
+      {
+        "path": "website/docs/CURRENT_FUNCTIONAL_DIAGNOSTICS.md",
+        "restore": "website/docs/CURRENT_FUNCTIONAL_DIAGNOSTICS.md"
+      },
+      {
+        "path": "website/tests/atlas-delivery-access-sql.test.mjs",
+        "restore": "website/tests/atlas-delivery-access-sql.test.mjs"
+      },
+      {
+        "path": "website/tests/atlas-delivery-access-sql-source.mjs",
+        "restore": "website/tests/atlas-delivery-access-sql-source.mjs"
+      },
+      {
+        "path": "website/tests/fda-reference-review-links.test.mjs",
+        "restore": "website/tests/fda-reference-review-links.test.mjs"
+      },
+      {
+        "path": "recipes/prepare-assessment-availability-20261026.mjs",
+        "restore": "coordination/prepare-assessment-availability-20261026.mjs"
+      },
+      {
+        "path": "recipes/compose-assessment-current-checks-20261026.mjs",
+        "restore": "coordination/compose-assessment-current-checks-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-assessment-verification-v2-20261026.mjs",
+        "restore": "coordination/prepare-assessment-verification-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-assessment-availability-20261026.mjs",
+        "restore": "coordination/verify-assessment-availability-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-assessment-availability-v2-20261026.mjs",
+        "restore": "coordination/verify-assessment-availability-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-assessment-availability-verification-20261026.mjs",
+        "restore": "coordination/record-assessment-availability-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-assessment-availability-source-20261026.mjs",
+        "restore": "coordination/backup-assessment-availability-source-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/education-media-readiness.ts",
+      "bytes": 1322,
+      "sha256": "2d256ae89d7efe587a45a70d4f5c1d819bef7c3348dddb3d321f0ff2e5e82049"
+    },
+    {
+      "path": "website/tests/education-media-readiness.test.mjs",
+      "bytes": 12510,
+      "sha256": "6760175cc88e8a8da334a2a999949fd0760c1c0c4818a89006bf5664813026be"
+    },
+    {
+      "path": "website/tests/clinical-review-ui-simplification.test.ts",
+      "bytes": 6120,
+      "sha256": "6a4e3ed338c807f1e4584e0f5fb8ad3d33f4bbb0e830444dcdccca6adef0712c"
+    },
+    {
+      "path": "website/tests/head-link-availability.test.ts",
+      "bytes": 6713,
+      "sha256": "08a8476243b1d1618c17d6583edd2a685c93939ddbc65a77d2d5e54add4d3687"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-current.test.mjs",
+      "bytes": 7272,
+      "sha256": "9e1cbf8840a893d1f6dd4e21abe6dc3a6fce94521fbfd69cadf84c107aa1a691"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-current-source.mjs",
+      "bytes": 7356,
+      "sha256": "0ffd17f5903948edb583ac32fe20a0f401d14e9c9b1007c21e94703d08249de4"
+    },
+    {
+      "path": "website/docs/ASSESSMENT_IMAGE_AVAILABILITY.md",
+      "bytes": 932,
+      "sha256": "eecebd8e0c678a1034db4a2612d30f881f54f19a9bcf74f3c3c25d436b8e026c"
+    },
+    {
+      "path": "website/tests/fda-reference-current-delivery.test.mjs",
+      "bytes": 7675,
+      "sha256": "73a4ae9a41f4816dae5ee4d8da7cbf14edd26bb757573a9bbd1e4eb924870ed2"
+    },
+    {
+      "path": "website/docs/CURRENT_FUNCTIONAL_DIAGNOSTICS.md",
+      "bytes": 1132,
+      "sha256": "6f285daa01564e66b446253c42a622336cfa48b357d21b019255a297123b1f73"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql.test.mjs",
+      "bytes": 7264,
+      "sha256": "bbb370b38f5c8ad31ac69deef99fae39d3fe4715b6989b6cc7085fcb4d2b1277"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-source.mjs",
+      "bytes": 7140,
+      "sha256": "40dde351a0558b4f0a746b1a380ac2a6281ee9c9dceff995dd8041e355b7511d"
+    },
+    {
+      "path": "website/tests/fda-reference-review-links.test.mjs",
+      "bytes": 6997,
+      "sha256": "367aaacc1c169991eef6782b9643c424b39bae8c7a5a7a650f8d0e7c4b4d44c5"
+    },
+    {
+      "path": "recipes/prepare-assessment-availability-20261026.mjs",
+      "bytes": 6938,
+      "sha256": "76d3d6baf69416a17e945845cb8c511605c93a076e30ccaa4e80f6a43cfa12bd"
+    },
+    {
+      "path": "recipes/compose-assessment-current-checks-20261026.mjs",
+      "bytes": 3481,
+      "sha256": "b64d1d6f56a64cc8a20b1acb5a1a7396446fc546a7adad9e4d38c4615a7e7503"
+    },
+    {
+      "path": "recipes/prepare-assessment-verification-v2-20261026.mjs",
+      "bytes": 3719,
+      "sha256": "bf8f3aaf3935915c362520eaaec82591dd4f426ffb6b29a52604084401700ca7"
+    },
+    {
+      "path": "recipes/verify-assessment-availability-20261026.mjs",
+      "bytes": 7420,
+      "sha256": "b19cf91744249df26238153625218cb0406fdc9ebc1450b999dfd0f1c4daa713"
+    },
+    {
+      "path": "recipes/verify-assessment-availability-v2-20261026.mjs",
+      "bytes": 7400,
+      "sha256": "0fd842ca306d9df38a3bf2a451f72ee3a1d427ff720c1895552519c0eedc1aa6"
+    },
+    {
+      "path": "recipes/record-assessment-availability-verification-20261026.mjs",
+      "bytes": 8932,
+      "sha256": "3f23d8b6611ce76479341e87c6c5f857c920be90e2b38bbc353fb9d7454944df"
+    },
+    {
+      "path": "recipes/backup-assessment-availability-source-20261026.mjs",
+      "bytes": 5531,
+      "sha256": "9c0db4dedbfcfc14a79a8eefdf8b7b540502b8677944bcb24bebaf0fdb581122"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party Website readiness notice, tests/current counterparts and documentation, unchanged original historical FDA/SQL theorems, and recovery recipes. Exact local baseline/private pins/data, source contexts/receipts and earlier source supplements remain required. No raw QA/TAP/failure or applicability inventory JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. No new protected-media delivery, clinical approval, deployment or normal-preview installation. Not a full/private/runnable backup.",
+  "proof": {
+    "currentWholeRoots": 37,
+    "currentCases": 458,
+    "currentSkips": 0,
+    "configuredTypeRoots": 2671,
+    "configuredTypeFiles": 6229,
+    "typeDiagnostics": 0,
+    "stockProductionAndEveryPrebuildHook": true,
+    "buildArtifacts": 1145,
+    "sourcePaths": 6880,
+    "protectedReviewInputs": 1818,
+    "onlyApplicationChangeIsHumanReadableReadinessNotice": true,
+    "readinessAndAllStartAccessWriteGuardsUnchanged": true,
+    "separateCurrentSqlFullTwelveCases": true,
+    "originalHistoricalSourcePinsUnchanged": true,
+    "foldedActualCurrentReviewAndFdaTestRepairs": true,
+    "first133Pass13RegexFailuresRetained": true,
+    "inventoryRoots": 1342,
+    "otherContextRoots": 13,
+    "previouslyProvedAuthenticEpochRoots": 9,
+    "unclassifiedRoots": 1283,
+    "wholeStockSuitePassing": false,
+    "original316FailuresAnd3SkipsUnadjusted": true,
+    "signedInBrowserImageAcceptance": false,
+    "sourceBytes": 115854,
+    "privateDataUploaded": false,
+    "normalPreviewUnchanged": true,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

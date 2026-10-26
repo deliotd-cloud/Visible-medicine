@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party Website readiness notice, tests/current counterparts and documentation, unchanged original historical FDA/SQL theorems, and recovery recipes. Exact local baseline/private pins/data, source contexts/receipts and earlier source supplements remain required. No raw QA/TAP/failure or applicability inventory JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. No new protected-media delivery, clinical approval, deployment or normal-preview installation. Not a full/private/runnable backup.
