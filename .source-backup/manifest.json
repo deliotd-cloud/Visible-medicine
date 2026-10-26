@@ -1,0 +1,222 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T19:02:52.076Z",
+  "sourceIdentity": {
+    "kind": "current-test-context-transition-and-bounded-test-recipes",
+    "sourceSha256": "9da49fa0b687608c86fdee92459eb3693b39426789fbe6e86595f1ff18a03e43",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-saved-plan-commit-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "9c22f63f42fb42e161066435b7d590499e4c6c3b9430476f44151771a17f4d7a",
+        "branch": "backup/saved-plan-commit-source-20261026",
+        "head": "8f5ae88916d72748a6692fe0e631461b788185b3",
+        "tree": "b3e6cc6d440e9ad7da08184ff59b3802e801f083"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/tests/current-atlas-delivery.test.mjs",
+        "restore": "website/tests/current-atlas-delivery.test.mjs"
+      },
+      {
+        "path": "website/tests/current-atlas-delivery-help-transition.test.mjs",
+        "restore": "website/tests/current-atlas-delivery-help-transition.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/current-delivery-before-help-d55/current-atlas-delivery.mjs.raw",
+        "restore": "website/tests/fixtures/current-delivery-before-help-d55/current-atlas-delivery.mjs.raw"
+      },
+      {
+        "path": "website/tests/fixtures/current-delivery-before-help-d55/current-atlas-delivery.test.mjs.raw",
+        "restore": "website/tests/fixtures/current-delivery-before-help-d55/current-atlas-delivery.test.mjs.raw"
+      },
+      {
+        "path": "website/docs/CURRENT_ATLAS_TEST_DELIVERY_HELP_TRANSITION.md",
+        "restore": "website/docs/CURRENT_ATLAS_TEST_DELIVERY_HELP_TRANSITION.md"
+      },
+      {
+        "path": "recipes/clone-pinned-website-stage-20261026.mjs",
+        "restore": "coordination/clone-pinned-website-stage-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-current-delivery-advance-20261026.mjs",
+        "restore": "coordination/prepare-current-delivery-advance-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-pinned-whole-roots-20261026.mjs",
+        "restore": "coordination/verify-pinned-whole-roots-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-c48-stock-diagnostic-20261026.mjs",
+        "restore": "coordination/run-c48-stock-diagnostic-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-bounded-campaign-controls-20261026.mjs",
+        "restore": "coordination/check-bounded-campaign-controls-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-bounded-campaign-controls-v2-20261026.mjs",
+        "restore": "coordination/check-bounded-campaign-controls-v2-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-bounded-campaign-controls-20261026.mjs",
+        "restore": "coordination/record-bounded-campaign-controls-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-bounded-stock-campaign-20261026.mjs",
+        "restore": "coordination/prepare-bounded-stock-campaign-20261026.mjs"
+      },
+      {
+        "path": "recipes/guard-bounded-stock-shard-20261026.mjs",
+        "restore": "coordination/guard-bounded-stock-shard-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-current-delivery-context-20261026.mjs",
+        "restore": "coordination/record-current-delivery-context-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-current-delivery-context-20261026.mjs",
+        "restore": "coordination/backup-current-delivery-context-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-current-delivery-context-20261026.mjs",
+        "restore": "coordination/finalize-current-delivery-context-20261026.mjs"
+      },
+      {
+        "path": "recipes/proposal/bounded-stock-campaign.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261026-bounded-stock-campaign-proposal/bounded-stock-campaign.mjs"
+      },
+      {
+        "path": "recipes/proposal/structured-test-reporter.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261026-bounded-stock-campaign-proposal/structured-test-reporter.mjs"
+      },
+      {
+        "path": "recipes/proposal/plan-refusals.test.mjs",
+        "restore": "F:/VisibleMedicine/staging/20261026-bounded-stock-campaign-proposal/plan-refusals.test.mjs"
+      }
+    ],
+    "fixtureReconstruction": "Actual current/frozen generated pins and Review metadata remain local; prepare-current-delivery-advance requires the pinned verified Help delivery and prior local source. Whole first-party test/validator history is included."
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 27400,
+      "sha256": "7a814c4b0d2ef77feda6c12f7fa6f73eb007cc351a8bbec7cf22b8e480c791d6"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery-help-transition.test.mjs",
+      "bytes": 6980,
+      "sha256": "eb306c49103e818e72c5390ac0c7cfac898dd8a370fb7c5edd059780bdb7aef3"
+    },
+    {
+      "path": "website/tests/fixtures/current-delivery-before-help-d55/current-atlas-delivery.mjs.raw",
+      "bytes": 5092,
+      "sha256": "02dd815603c922dedbdc5a5fce270fbda736b81220e335d750dcbec1124c833e"
+    },
+    {
+      "path": "website/tests/fixtures/current-delivery-before-help-d55/current-atlas-delivery.test.mjs.raw",
+      "bytes": 27354,
+      "sha256": "6e1ba842cb4d2fdf2370c12df9ccbb1a42785369d7e042db6ed3b67048e99275"
+    },
+    {
+      "path": "website/docs/CURRENT_ATLAS_TEST_DELIVERY_HELP_TRANSITION.md",
+      "bytes": 1780,
+      "sha256": "ef3eb99ded5a9cdacdabf2c4672a8460b87ca1a33fbf33343f393d416e1bf875"
+    },
+    {
+      "path": "recipes/clone-pinned-website-stage-20261026.mjs",
+      "bytes": 2194,
+      "sha256": "f4685cdb3989b0643d13f977e5c3c109d5f71455edddc83725a1140213820aee"
+    },
+    {
+      "path": "recipes/prepare-current-delivery-advance-20261026.mjs",
+      "bytes": 5580,
+      "sha256": "7c0746e1f05ece42a07b63d3f4b8aa965df711e3d37e764048fd58a144061a71"
+    },
+    {
+      "path": "recipes/verify-pinned-whole-roots-20261026.mjs",
+      "bytes": 3864,
+      "sha256": "a20b693a4bcb6c099b1531db77672ca3cf1cafcf1640945fc65d050dc91f6819"
+    },
+    {
+      "path": "recipes/run-c48-stock-diagnostic-20261026.mjs",
+      "bytes": 4084,
+      "sha256": "74f315d3e03ba00790fa8dc16a1cdee51c8a582546cbdfe52f525a8241045dad"
+    },
+    {
+      "path": "recipes/check-bounded-campaign-controls-20261026.mjs",
+      "bytes": 4317,
+      "sha256": "82d459e306b54e7a90840cdf53daee47896499663e194631a1f447907fd3b4c1"
+    },
+    {
+      "path": "recipes/check-bounded-campaign-controls-v2-20261026.mjs",
+      "bytes": 2124,
+      "sha256": "ca76682cb3e6bb75b3a5ff18d7073cbe99bebc89eabf01f8c7792048fc813231"
+    },
+    {
+      "path": "recipes/record-bounded-campaign-controls-20261026.mjs",
+      "bytes": 3772,
+      "sha256": "1eaeebb862e2c77f004a2e935d1f8dcb9505371318320fbb3d175549c99169cc"
+    },
+    {
+      "path": "recipes/prepare-bounded-stock-campaign-20261026.mjs",
+      "bytes": 2919,
+      "sha256": "025fd4dd478f5fb55f3f8b8d6089dad92017d489f4e82a5089dc275dfd85b902"
+    },
+    {
+      "path": "recipes/guard-bounded-stock-shard-20261026.mjs",
+      "bytes": 4370,
+      "sha256": "b9d3e083a26fc62430a4b7e8f42baa54b845a54b0bb2f10c310263933d4e313f"
+    },
+    {
+      "path": "recipes/record-current-delivery-context-20261026.mjs",
+      "bytes": 5330,
+      "sha256": "fda77ff0bb7ea25d51f1d0d6e496769f65b2c80c008a9c2a6eedc011270fa3d8"
+    },
+    {
+      "path": "recipes/backup-current-delivery-context-20261026.mjs",
+      "bytes": 5199,
+      "sha256": "fb3398ebaab29c7a1632d0e6dd60d6040738123afdc154082e794fcdb7d65f20"
+    },
+    {
+      "path": "recipes/finalize-current-delivery-context-20261026.mjs",
+      "bytes": 10473,
+      "sha256": "4238b6e611cf7f82a188754eca1424da63a342b91cefa2ff1c41fdb4a2a75fbc"
+    },
+    {
+      "path": "recipes/proposal/bounded-stock-campaign.mjs",
+      "bytes": 21701,
+      "sha256": "16cbdb05db40e407c5790eccf265d564787b85ac1735207ff1b16fa4866c162c"
+    },
+    {
+      "path": "recipes/proposal/structured-test-reporter.mjs",
+      "bytes": 1512,
+      "sha256": "1cb5e3c17e8636ca52cc91084dedfdec78425c05ba0f78d1104dfdd239791067"
+    },
+    {
+      "path": "recipes/proposal/plan-refusals.test.mjs",
+      "bytes": 2417,
+      "sha256": "585602a0d026b83dbd9cda5f93dc4caa5d69d7f0a36df4e36cdaab0ce1e53159"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party test source, original first-party validator/test history, documentation and verification recipes only. Excludes actual generated fixture pins/Review metadata, raw test/browser/event/QA records, actual checklist and source receipts, scans/masks/identifiers/models/images/article HTML/assets/dependencies/runtime/private state and canonical/native Git ancestry. Prior supplements and local baseline remain necessary; not a full/private/runnable backup.",
+  "proof": {
+    "focusedCases": 82,
+    "wholeRoots": 7,
+    "skips": 0,
+    "productionApplicationAndAll1818ProtectedInputsByteExactToC48": true,
+    "wholeStockSuitePassing": false,
+    "fullSuccessorTypesAndWebsiteBuildPending": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
