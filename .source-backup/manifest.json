@@ -1,0 +1,150 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T06:39:24.076Z",
+  "sourceIdentity": {
+    "kind": "published-ultrasound-offline-review-and-bounded-verifier-recipes",
+    "sourcePacketRevisionSha256": "bf02fea3067454638eaa788de1f1db04ec6b96764fe5c7d64ec10b12bbcbded9",
+    "websiteUnchangedSha256": "c48b507b9c870e0ee8ccb11760c1c1f0127d4550284388b3211a8e5b04262101",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-saved-plan-commit-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "9c22f63f42fb42e161066435b7d590499e4c6c3b9430476f44151771a17f4d7a",
+        "branch": "backup/saved-plan-commit-source-20261026",
+        "head": "8f5ae88916d72748a6692fe0e631461b788185b3",
+        "tree": "b3e6cc6d440e9ad7da08184ff59b3802e801f083"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "recipes/bounded-source-hash-20261026.mjs",
+        "restore": "coordination/bounded-source-hash-20261026.mjs"
+      },
+      {
+        "path": "recipes/check-source-hash-allocation-20261026.mjs",
+        "restore": "coordination/check-source-hash-allocation-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-saved-plan-commit-streamed-20261026.mjs",
+        "restore": "coordination/verify-saved-plan-commit-streamed-20261026.mjs"
+      },
+      {
+        "path": "recipes/plexus-ultrasound-review-packet-20261026.mjs",
+        "restore": "coordination/plexus-ultrasound-review-packet-20261026.mjs"
+      },
+      {
+        "path": "recipes/test-plexus-ultrasound-review-packet-20261026.mjs",
+        "restore": "coordination/test-plexus-ultrasound-review-packet-20261026.mjs"
+      },
+      {
+        "path": "recipes/serve-plexus-ultrasound-review-20261026.mjs",
+        "restore": "coordination/serve-plexus-ultrasound-review-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-plexus-ultrasound-verification-20261026.mjs",
+        "restore": "coordination/record-plexus-ultrasound-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/append-checklist-evidence-20261026.mjs",
+        "restore": "coordination/append-checklist-evidence-20261026.mjs"
+      },
+      {
+        "path": "recipes/update-plexus-ultrasound-checklist-20261026.mjs",
+        "restore": "coordination/update-plexus-ultrasound-checklist-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-plexus-ultrasound-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-plexus-ultrasound-checkpoint-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-plexus-ultrasound-recipes-20261026.mjs",
+        "restore": "coordination/backup-plexus-ultrasound-recipes-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/bounded-source-hash-20261026.mjs",
+      "bytes": 615,
+      "sha256": "19ef9a8f92aeebfcf2f9e68ef7d3f68ae6f7a120696529e39dff0fbb25ac6f96"
+    },
+    {
+      "path": "recipes/check-source-hash-allocation-20261026.mjs",
+      "bytes": 3043,
+      "sha256": "95cbfa3bdea2b3270bf7f5ce0a6f8c7eae4ab1c3770649ba0803d3f4f9ad094f"
+    },
+    {
+      "path": "recipes/verify-saved-plan-commit-streamed-20261026.mjs",
+      "bytes": 7003,
+      "sha256": "63ad4aa4a3b62660720ad2bbb718463ef015fb4153a10fda523407187f35f586"
+    },
+    {
+      "path": "recipes/plexus-ultrasound-review-packet-20261026.mjs",
+      "bytes": 11910,
+      "sha256": "354260d9615e7cac56470a65b44840d89e0ed556d8236c0daa02c8eca6e3f7bc"
+    },
+    {
+      "path": "recipes/test-plexus-ultrasound-review-packet-20261026.mjs",
+      "bytes": 3369,
+      "sha256": "6caa0de62db6d633afbd4f4d8f3a8f21774882ebd21937434bea220d515f6820"
+    },
+    {
+      "path": "recipes/serve-plexus-ultrasound-review-20261026.mjs",
+      "bytes": 1175,
+      "sha256": "5e1bc5052b0aae6f9c97330a35a6f2ac4f0cc223308f3f67a4d952cf718533aa"
+    },
+    {
+      "path": "recipes/record-plexus-ultrasound-verification-20261026.mjs",
+      "bytes": 5531,
+      "sha256": "163f11790a19b9d8ef45b4222f2dca0ca3843a2c710d7ae380bb3fc539fd5aec"
+    },
+    {
+      "path": "recipes/append-checklist-evidence-20261026.mjs",
+      "bytes": 2910,
+      "sha256": "8e26bc15652d7b89cd363b30537c7d1c87a23cbf6bd727ac8c3a808c3e1c55c9"
+    },
+    {
+      "path": "recipes/update-plexus-ultrasound-checklist-20261026.mjs",
+      "bytes": 1162,
+      "sha256": "b0f70e0cda27812b525c0304266a2303da23db49f79351bb9189ec4bf4d6c397"
+    },
+    {
+      "path": "recipes/finalize-plexus-ultrasound-checkpoint-20261026.mjs",
+      "bytes": 9686,
+      "sha256": "6e3d9e1993aec0e53b0b5640e397fe30da1df35af99b3d6db25c51ed0e46c264"
+    },
+    {
+      "path": "recipes/backup-plexus-ultrasound-recipes-20261026.mjs",
+      "bytes": 4397,
+      "sha256": "001d22ebeb3f81cdc5dc0a56503816df37544dea0a9b3924a18b910b905ac96b"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party validation/review/checkpoint/source-only-recovery recipes only. Original public medical JPEGs, article HTML, actual intake/review/checklist/QA files and their source assets remain local and are not uploaded. No generated Review/medical data, scans/masks/identifiers/coordinates/models/dependencies/runtime/private state or canonical/native Git ancestry. Exact local baseline and prior supplements remain required. Not a full/private/runnable backup; no deployment or preview installation.",
+  "proof": {
+    "sourceFiguresLocallyAcquired": 5,
+    "sourceImageBytesUploaded": 0,
+    "validatorCases": 7,
+    "skips": 0,
+    "actualOfflineBrowserWidths": [
+      1280,
+      500
+    ],
+    "figure6SchematicProvenanceHeld": true,
+    "clinicalApproval": false,
+    "privacyClearance": false,
+    "publicationClearance": false,
+    "learnerOrReviewInboxImported": false,
+    "normalPreviewChanged": false,
+    "websiteSourceUnchanged": true,
+    "all6892SourceHashesEqualForMemoryControl": true,
+    "originalMemoryAndBuildGatesUnchanged": true,
+    "fullSuccessorTypesAndWebsiteBuildPending": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
