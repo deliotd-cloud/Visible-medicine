@@ -1,0 +1,166 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T21:58:05.196Z",
+  "sourceIdentity": {
+    "kind": "head-surface-recovery-focus",
+    "sourceSha256": "157d5492ff5e9ce0d16da0666e5c9fc3bef172f857aec62eeff12da57c6459ac",
+    "nativeRevision": "643fd47491a41a0207f106806c17035cb938048b",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-quick-check-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "7357b680f113be49b7ccca7332613cbb171462ca6ede51480188d2e63612738d",
+        "head": "9bb35e24926052d1dfefbb849e73cd6100703776",
+        "tree": "2c88edcc10c63703e865709fb4e1ee5dfbf24037",
+        "branch": "backup/quick-check-source-20261026"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/components/HeadAtlasSurface.tsx",
+        "restore": "website/components/HeadAtlasSurface.tsx"
+      },
+      {
+        "path": "website/tests/head-surface-context-recovery.test.ts",
+        "restore": "website/tests/head-surface-context-recovery.test.ts"
+      },
+      {
+        "path": "recipes/prepare-surface-focus-regression-20261026.mjs",
+        "restore": "coordination/prepare-surface-focus-regression-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-surface-recovery-website-20261026.mjs",
+        "restore": "coordination/prepare-surface-recovery-website-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-surface-recovery-checks-20261026.mjs",
+        "restore": "coordination/prepare-surface-recovery-checks-20261026.mjs"
+      },
+      {
+        "path": "recipes/run-surface-recovery-checks-20261026.mjs",
+        "restore": "coordination/run-surface-recovery-checks-20261026.mjs"
+      },
+      {
+        "path": "recipes/refresh-surface-recovery-pin-20261026.mjs",
+        "restore": "coordination/refresh-surface-recovery-pin-20261026.mjs"
+      },
+      {
+        "path": "recipes/seal-surface-recovery-20261026.mjs",
+        "restore": "coordination/seal-surface-recovery-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-surface-recovery-source-20261026.mjs",
+        "restore": "coordination/backup-surface-recovery-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-surface-recovery-progress-20261026.mjs",
+        "restore": "coordination/record-surface-recovery-progress-20261026.mjs"
+      },
+      {
+        "path": "recipes/surface-recovery-qa/fixture.tsx",
+        "restore": "staging/20261026-head-surface-recovery-qa/fixture.tsx"
+      },
+      {
+        "path": "recipes/surface-recovery-qa/build.mjs",
+        "restore": "staging/20261026-head-surface-recovery-qa/build.mjs"
+      },
+      {
+        "path": "recipes/surface-recovery-qa/serve.mjs",
+        "restore": "staging/20261026-head-surface-recovery-qa/serve.mjs"
+      },
+      {
+        "path": "recipes/surface-recovery-qa/exercise-desktop.js",
+        "restore": "staging/20261026-head-surface-recovery-qa/exercise-desktop.js"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasSurface.tsx",
+      "bytes": 9179,
+      "sha256": "a9370da9457a7264ab369be0e3b2bf7d63492cde00a4b7b1ee04aa276cfc4403"
+    },
+    {
+      "path": "website/tests/head-surface-context-recovery.test.ts",
+      "bytes": 27309,
+      "sha256": "3931aa8d6275019db7082e8d40cb8dc1f1fdc3cc6bf669c75d96580eeb73af5e"
+    },
+    {
+      "path": "recipes/prepare-surface-focus-regression-20261026.mjs",
+      "bytes": 2508,
+      "sha256": "e6d02d4b587c800d86b6d7529938a33cf4270694d04c4fc3feefdf63eb3426f3"
+    },
+    {
+      "path": "recipes/prepare-surface-recovery-website-20261026.mjs",
+      "bytes": 3063,
+      "sha256": "5279bbe6d93f5045f00111097247a6f31324d8d696147c10fabed2e43c079025"
+    },
+    {
+      "path": "recipes/prepare-surface-recovery-checks-20261026.mjs",
+      "bytes": 1004,
+      "sha256": "9fd184b8266cae614ccdd1dc1c9d196daff231604411cf3ffad8fe0874c4c051"
+    },
+    {
+      "path": "recipes/run-surface-recovery-checks-20261026.mjs",
+      "bytes": 4900,
+      "sha256": "6b90b103aa6a57e4306905cbad0d70b4beeb9c3d14e5e505dc2371b8320a0afd"
+    },
+    {
+      "path": "recipes/refresh-surface-recovery-pin-20261026.mjs",
+      "bytes": 2173,
+      "sha256": "afa1c737115c5e10f79671c8ba52eb9aa80231fed901cf23a6f10b92d1d36e33"
+    },
+    {
+      "path": "recipes/seal-surface-recovery-20261026.mjs",
+      "bytes": 9097,
+      "sha256": "52a0acc5461de9d01fb2396901fff6d6ffbb9522c8c7da4351be4c288b937d3e"
+    },
+    {
+      "path": "recipes/backup-surface-recovery-source-20261026.mjs",
+      "bytes": 4008,
+      "sha256": "4ba1c3378dea7b9ce1220f72f1fa5e6f65cbc66c1d52bca2558ebb2c7590e4a2"
+    },
+    {
+      "path": "recipes/record-surface-recovery-progress-20261026.mjs",
+      "bytes": 9069,
+      "sha256": "45fc7e587bea9dbf8a7801d1131271936baea72576d86ab63ce11693c87cb1d4"
+    },
+    {
+      "path": "recipes/surface-recovery-qa/fixture.tsx",
+      "bytes": 2771,
+      "sha256": "943e6a5e4d062bd92f6941d2a1986f3bf622e06a70855b6d9eb1e8f2577ec5b2"
+    },
+    {
+      "path": "recipes/surface-recovery-qa/build.mjs",
+      "bytes": 3759,
+      "sha256": "07b1799dacd045d1cdd9ae5e8c62717ad4f03e0bf0e55efa255fa24d25b6acfd"
+    },
+    {
+      "path": "recipes/surface-recovery-qa/serve.mjs",
+      "bytes": 1050,
+      "sha256": "13d932aac028d409c1e89b2fcf1772599ed26c71c0e29030c8eef13793acf2ef"
+    },
+    {
+      "path": "recipes/surface-recovery-qa/exercise-desktop.js",
+      "bytes": 4593,
+      "sha256": "8c10f87f1512299b7f43ad330609b2b90269f47b1941bb0bed708ab3ef14d8fb"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source, tests and synthetic nonmedical reproduction recipes only. No generated medical/Review metadata, raw QA, source receipts, checklist, scans, masks, identifiers, models, assets, runtime, dependencies, private state or canonical/native Git ancestry. Prior supplements and local source required; not a whole/private/runnable backup.",
+  "proof": {
+    "focusedCases": 28,
+    "desktopBrowserChecks": 9,
+    "fullConfiguredTypeFiles": 6237,
+    "stockBuildArtifacts": 1154,
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
