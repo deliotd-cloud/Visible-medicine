@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Incremental selected first-party comparison page, focused tests/documentation and recovery recipes. Exact local baseline/private pins/data, source contexts/receipts and earlier source supplements remain required. No raw browser/QA/TAP/failure or applicability inventory JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Contextual return does not restore the original filter, pagination or scroll state. No deployment or normal-preview installation. Not a full/private/runnable backup.

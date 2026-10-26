@@ -1,0 +1,165 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-26T03:10:09.088Z",
+  "sourceIdentity": {
+    "kind": "guided-comparison-contextual-catalogue-return",
+    "websiteSourceSha256": "a6e69d0701f4fda44dd9ac0f455f930d7319a74dc97a725e20243839cb731e1b",
+    "nativeHead": "a01ea4a00740dee0905204a33893761b8ae1ff1e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-assessment-availability-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "3dd35d767c8e5ce2e108a5fcaceb000648879155152484e193235eb53e76c7ef",
+        "branch": "backup/assessment-availability-source-20261026",
+        "head": "84c6abb63edc1340ae464298c187436558f49fd6",
+        "tree": "9dc3607541962ad0312ecc9f8d5963ce9e8aaa1f"
+      }
+    ],
+    "restorePaths": [
+      {
+        "path": "website/app/atlas/guided-learning/compare/page.tsx",
+        "restore": "website/app/atlas/guided-learning/compare/page.tsx"
+      },
+      {
+        "path": "website/tests/head-guided-comparison-page.test.ts",
+        "restore": "website/tests/head-guided-comparison-page.test.ts"
+      },
+      {
+        "path": "website/tests/guided-catalogue-real-source.test.mjs",
+        "restore": "website/tests/guided-catalogue-real-source.test.mjs"
+      },
+      {
+        "path": "website/docs/GUIDED_COMPARISON_RETURN.md",
+        "restore": "website/docs/GUIDED_COMPARISON_RETURN.md"
+      },
+      {
+        "path": "recipes/prepare-guided-return-website-20261026.mjs",
+        "restore": "coordination/prepare-guided-return-website-20261026.mjs"
+      },
+      {
+        "path": "recipes/verify-guided-return-website-20261026.mjs",
+        "restore": "coordination/verify-guided-return-website-20261026.mjs"
+      },
+      {
+        "path": "recipes/prepare-guided-return-preview-20261026.mjs",
+        "restore": "coordination/prepare-guided-return-preview-20261026.mjs"
+      },
+      {
+        "path": "recipes/serve-guided-return-built-worker-20261026.mjs",
+        "restore": "coordination/serve-guided-return-built-worker-20261026.mjs"
+      },
+      {
+        "path": "recipes/stop-owned-guided-return-preview-20261026.mjs",
+        "restore": "coordination/stop-owned-guided-return-preview-20261026.mjs"
+      },
+      {
+        "path": "recipes/record-guided-return-verification-20261026.mjs",
+        "restore": "coordination/record-guided-return-verification-20261026.mjs"
+      },
+      {
+        "path": "recipes/backup-guided-return-source-20261026.mjs",
+        "restore": "coordination/backup-guided-return-source-20261026.mjs"
+      },
+      {
+        "path": "recipes/finalize-guided-return-checkpoint-20261026.mjs",
+        "restore": "coordination/finalize-guided-return-checkpoint-20261026.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/atlas/guided-learning/compare/page.tsx",
+      "bytes": 3870,
+      "sha256": "9441b0458c0fca6d23be243e421c4efe44f70bb91e5210501421de40429bb2c4"
+    },
+    {
+      "path": "website/tests/head-guided-comparison-page.test.ts",
+      "bytes": 6283,
+      "sha256": "ae8abb6f347d540aabfae79de01baa4bd1d321ce7578ea529c8d781d7d71b3e7"
+    },
+    {
+      "path": "website/tests/guided-catalogue-real-source.test.mjs",
+      "bytes": 8567,
+      "sha256": "17f2feb5a37318999f0b20700ca8693c64002311d7276d001e57f2b489dcceee"
+    },
+    {
+      "path": "website/docs/GUIDED_COMPARISON_RETURN.md",
+      "bytes": 819,
+      "sha256": "50e6b2af03cdb477b11d3c02e75bed1a3a52d3cdc0f73e4a84a7474d6f2d3f12"
+    },
+    {
+      "path": "recipes/prepare-guided-return-website-20261026.mjs",
+      "bytes": 8319,
+      "sha256": "e0738a456ba59f3930110b96dc97dd986b0aafcc62357379b49dd0f5f7e2cb1d"
+    },
+    {
+      "path": "recipes/verify-guided-return-website-20261026.mjs",
+      "bytes": 5615,
+      "sha256": "a760ec8accb48251be08b46264391cd0d3852782100dcbf53bb6e15b57e896d6"
+    },
+    {
+      "path": "recipes/prepare-guided-return-preview-20261026.mjs",
+      "bytes": 1023,
+      "sha256": "25e6ca68b0dec3d26c1c2952323744dcd8dec195a01703a9f45596cda8960c15"
+    },
+    {
+      "path": "recipes/serve-guided-return-built-worker-20261026.mjs",
+      "bytes": 3874,
+      "sha256": "32229ac6e77ef0b6697b5ac844c0a8c75b5df0d67080e83a5fcb1421f0cabd4a"
+    },
+    {
+      "path": "recipes/stop-owned-guided-return-preview-20261026.mjs",
+      "bytes": 2558,
+      "sha256": "5ecff8d18e74a5a26fc7526ebf900ba51561b21b0b0c32b42a1fcba689f4c376"
+    },
+    {
+      "path": "recipes/record-guided-return-verification-20261026.mjs",
+      "bytes": 8393,
+      "sha256": "1e3914ed037e772a5c296779dc719ba844db468e9fa4900eec0a2ca128786d7c"
+    },
+    {
+      "path": "recipes/backup-guided-return-source-20261026.mjs",
+      "bytes": 5145,
+      "sha256": "d148def6932aa85b5ea772e535c31eb8e434d4dd7a3ec003c83ad6218e0dc84f"
+    },
+    {
+      "path": "recipes/finalize-guided-return-checkpoint-20261026.mjs",
+      "bytes": 8656,
+      "sha256": "7fb912d0fe01bdfa4900e8ba030f72eea1e75cf0cdc39887818232e3f2953100"
+    }
+  ],
+  "removed": [],
+  "scope": "Incremental selected first-party comparison page, focused tests/documentation and recovery recipes. Exact local baseline/private pins/data, source contexts/receipts and earlier source supplements remain required. No raw browser/QA/TAP/failure or applicability inventory JSON, private configuration/decisions/contacts, generated Review/medical data/manifests/pins, scans/masks/patient identifiers or coordinates, models/assets/dependencies/runtime or canonical/native Git ancestry. Contextual return does not restore the original filter, pagination or scroll state. No deployment or normal-preview installation. Not a full/private/runnable backup.",
+  "proof": {
+    "currentWholeRoots": 5,
+    "currentCases": 25,
+    "currentSkips": 0,
+    "all45MappedActivityReturnsAnd13FirstPageTourMatches": true,
+    "configuredTypeRoots": 2671,
+    "configuredTypeFiles": 6229,
+    "typeDiagnostics": 0,
+    "stockProductionAndEveryPrebuildHook": true,
+    "buildArtifacts": 1145,
+    "sourcePaths": 6881,
+    "protectedReviewInputs": 1818,
+    "wholeOriginalPageInverseAndExistingTestPurposesRetained": true,
+    "comparisonResolverAndTargetsUnchanged": true,
+    "desktop1280MouseKeyboardBackAndFocusVerified": true,
+    "stale404": true,
+    "ownedBrowserPageAndSevenProcessesClosed": true,
+    "sourceBytes": 63122,
+    "wholeStockSuitePassing": false,
+    "original316FailuresAnd3SkipsUnadjusted": true,
+    "signedInImageOrClinicalAcceptance": false,
+    "privateDataUploaded": false,
+    "normalPreviewUnchanged": true,
+    "clinicalApproval": false,
+    "patientSpaceRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
