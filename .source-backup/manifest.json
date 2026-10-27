@@ -1,0 +1,58 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T06:16:54.926Z",
+  "sourceIdentity": {
+    "kind": "studio-postcreate-durable-recovery",
+    "sourceSha256": "84be07949714b50574d608b34bef7105e09cada41ed23a4f5e12d4f61fa3bc34"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/StudioForms.tsx",
+      "bytes": 98599,
+      "sha256": "bf482760c5fed2e25039f456e35783ad4123faea00285840cca243da98641773"
+    },
+    {
+      "path": "website/tests/studio-draft-dependency-source.mjs",
+      "bytes": 2584,
+      "sha256": "576ff4d8d9ab42a24d1bc8744000b2053a1353ca9c3921f34f6d18dba405e715"
+    },
+    {
+      "path": "website/lib/studio-release-predecessor.ts",
+      "bytes": 4506,
+      "sha256": "81ad1864b985c49392f625ff744b01bfacc93cb8052736a73c6560e83cc9418c"
+    },
+    {
+      "path": "website/tests/studio-release-predecessor.test.mjs",
+      "bytes": 5948,
+      "sha256": "34d4b05e5a0ed9eed61d99d87cefe8b93627ef432858ade992a79896c5c5930d"
+    },
+    {
+      "path": "website/tests/studio-release-predecessor-action-fixture.mjs",
+      "bytes": 9598,
+      "sha256": "37b1d078dfc2b8b2838ff92d841f3874de4ee30fe73f73f6658a15c28ad3d6cc"
+    },
+    {
+      "path": "website/tests/studio-release-predecessor-action.test.mjs",
+      "bytes": 7698,
+      "sha256": "0d7730578c6b365d33f9b86adb17867e39df1d387f415818d60c9a9f6b6a41d9"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party component/helper/test source only; no scans, masks, private references, generated modules, decisions, dependencies or canonical ancestry. Supplemental code recovery, not complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 220,
+    "fullConfiguredTypes": true,
+    "stockProductionBuild": true,
+    "syntheticBrowserRecovery": true,
+    "tabOnlyPredecessorUnfinished": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
