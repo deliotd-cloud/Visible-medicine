@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json}from './bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-learning-section-resilience',sf=stage+'/SOURCE_CANDIDATE.json',s=json(sf),p=json(s.parent);assert.equal(hash(s.parent),s.parentSha256);
+for(const r of s.sourceRows)assert.equal(hash(s.website+'/'+r.path),r.sha256,r.path);
+for(const r of p.sourceRows){assert.equal(hash(p.website+'/'+r.path),r.sha256,r.path);if(!s.changedPaths.includes(r.path))assert.equal(hash(s.website+'/'+r.path),r.sha256,r.path);}
+const read=(root,n)=>fs.readFileSync(root+'/'+n,'utf8').replaceAll('\r\n','\n');
+for(const n of ['tests/atlas-learning-resources.test.mjs','tests/my-learning-study-now-ui.test.mjs']){
+ let after=read(s.website,n);for(const seam of ["import {optionalLearningRead} from '../lib/optional-learning-read.ts';\n","\n  '../../lib/optional-learning-read':{optionalLearningRead},\n  './learning-availability.css':{},"]){assert.equal(after.split(seam).length,2);after=after.replace(seam,'');}assert.equal(after,read(p.website,n),'Existing assertions unchanged');
+}
+const binding=json(s.website+'/atlas-review/integration-inputs.json');assert.equal(binding.sha256,s.reviewBindingSha256);assert.equal(binding.inputs.length,1835);for(const r of binding.inputs)assert.equal(hash(s.website+'/'+r.path),r.sha256,r.path);
+for(const n of ['db/progress.ts','db/bootstrap.ts','lib/platform-governance.ts','lib/education-platform.ts','lib/saved-learning-navigation.ts','lib/learning-draft-navigation.ts','components/LearnerPortfolio.tsx','app/chatgpt-auth.ts','package.json','package-lock.json'])assert.equal(hash(s.website+'/'+n),hash(p.website+'/'+n),n);
+fs.writeFileSync(stage+'/CONTENT_QA.json',JSON.stringify({at:new Date().toISOString(),passing:true,source:{path:sf,sha256:hash(sf)},allOtherParentSourceExact:true,all1835ReviewInputsExact:true,authDatabaseServicesAccessPoliciesAndDraftGuardsUnchanged:true,allPriorTestAssertionsRetained:true,clinicalApproval:false,normalPreviewChanged:false},null,2)+'\n',{flag:'wx'});console.log('Only learner-home availability and exact optional loader changed; existing data/access/draft boundaries retained.');

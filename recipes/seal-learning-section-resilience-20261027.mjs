@@ -1,0 +1,10 @@
+import fs from'node:fs';import path from'node:path';import assert from'node:assert/strict';import{hash,json}from'./bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-learning-section-resilience',prep=json(stage+'/PREPARATION.json'),p=json(prep.parent.path),site=prep.website;assert.equal(hash(prep.parent.path),prep.parent.sha256);
+const changed=['app/my-learning/page.tsx','tests/atlas-learning-resources.test.mjs','tests/my-learning-study-now-ui.test.mjs'];
+const added=['app/my-learning/learning-availability.css','lib/optional-learning-read.ts','tests/optional-learning-read.test.mjs','tests/my-learning-availability.test.mjs','docs/MY_LEARNING_AVAILABILITY.md'];
+for(const r of p.sourceRows){assert.equal(hash(p.website+'/'+r.path),r.sha256,r.path);if(!changed.includes(r.path))assert.equal(hash(site+'/'+r.path),r.sha256,r.path);}
+const ambient=[];for(const n of ['.next/types/routes.d.ts','next-env.d.ts']){const from=p.website+'/'+n,to=site+'/'+n;fs.mkdirSync(path.dirname(to),{recursive:true});if(!fs.existsSync(to))fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);assert.equal(hash(to),hash(from));ambient.push({path:n,sha256:hash(to)});}
+const paths=[...p.sourceRows.map(r=>r.path),...added].sort();assert.equal(new Set(paths).size,paths.length);
+const source={schema:'vm-learning-section-resilience-source/1',at:new Date().toISOString(),website:site,atlas:p.atlas,atlasHead:p.atlasHead,atlasTree:p.atlasTree,parent:prep.parent.path,parentSha256:prep.parent.sha256,sourcePaths:paths.length,sourceRows:paths.map(path=>({path,bytes:fs.statSync(site+'/'+path).size,sha256:hash(site+'/'+path)})),changedPaths:changed,addedPaths:added,removedPaths:[],dependencies:p.dependencies,ambientTypeInputs:ambient,reviewBindingSha256:p.reviewBindingSha256,protectedReviewInputs:1835,testOnly:false,protectedReviewInputsExact:true,installed:false,normalPreviewChanged:false};
+fs.writeFileSync(stage+'/SOURCE_CANDIDATE.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({source:stage+'/SOURCE_CANDIDATE.json',sha256:hash(stage+'/SOURCE_CANDIDATE.json'),paths:paths.length}));

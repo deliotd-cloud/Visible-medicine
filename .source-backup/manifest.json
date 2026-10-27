@@ -1,0 +1,111 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T19:08:10.638Z",
+  "sourceIdentity": {
+    "kind": "learning-section-resilience",
+    "sourceSha256": "68b5649851091c289fe9dd9a01f7353aee6944f8f707c6f2c1337ad43a4c3c34",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-workbook-pagination-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "5a8eafaf41fe381817632f671c59301a8e4cedd3a21593a9bdcab299a4966ec4"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/my-learning/page.tsx",
+      "bytes": 8826,
+      "sha256": "efc2d48d3ff370829275c7b595c5bd50ff0fde1de0ba7b9c3847b2dcad759d39"
+    },
+    {
+      "path": "website/tests/atlas-learning-resources.test.mjs",
+      "bytes": 6534,
+      "sha256": "00fa0db7ae7d8d8f7b93488747ec9a45db0adc7a87097538e25cb3d5342fc584"
+    },
+    {
+      "path": "website/tests/my-learning-study-now-ui.test.mjs",
+      "bytes": 4431,
+      "sha256": "e7c6a265a8da709549e5b39ea2a72e6045043c62c5739beb5c4518a0a1e1ae9b"
+    },
+    {
+      "path": "website/app/my-learning/learning-availability.css",
+      "bytes": 966,
+      "sha256": "088e3a6c4b845a2872b07ce935d5bc1d1bd8af67307da7e5e7538eb8e76ec538"
+    },
+    {
+      "path": "website/lib/optional-learning-read.ts",
+      "bytes": 1067,
+      "sha256": "8d817ba16bdb63dd7a98411a89e36d83fe3fb9c71f74c19f1c9afa6ecb773443"
+    },
+    {
+      "path": "website/tests/optional-learning-read.test.mjs",
+      "bytes": 3451,
+      "sha256": "43a9fc19a160d4722d6e68308772b6f5fc7938c7e0c1b00446b168d1c7d240f0"
+    },
+    {
+      "path": "website/tests/my-learning-availability.test.mjs",
+      "bytes": 7641,
+      "sha256": "14c8f7ce7b77c8bd34c5ace1cf8e48d7378593dd01077dccea0ce3519dd43a6b"
+    },
+    {
+      "path": "website/docs/MY_LEARNING_AVAILABILITY.md",
+      "bytes": 1757,
+      "sha256": "48adb73938fa493855b6251254809b5e81cbea8929e6d68a6ea3c2ac659eed02"
+    },
+    {
+      "path": "recipes/seal-learning-section-resilience-20261027.mjs",
+      "bytes": 2148,
+      "sha256": "d1536780079f4d31e39e08c4da649567b27a7932ee22c211fddabc9698596e5e"
+    },
+    {
+      "path": "recipes/verify-learning-section-resilience-20261027.mjs",
+      "bytes": 2213,
+      "sha256": "1162f42194132432d82cccbe665fd3d1da3d94228b8aeb3f5877d020f05cca5b"
+    },
+    {
+      "path": "recipes/run-learning-section-resilience-20261027.mjs",
+      "bytes": 6665,
+      "sha256": "dc5623e825dcb27ac2c884edf4bb74b6444a25bde44866f6eb8034b91fe2e4c5"
+    },
+    {
+      "path": "recipes/build-learning-section-resilience-browser-20261027.mjs",
+      "bytes": 5677,
+      "sha256": "189fcc184166623f8c540d20653db4e20fb8a3dfef545b1b39ccf0b2241c645f"
+    },
+    {
+      "path": "recipes/run-learning-section-resilience-browser-build-20261027.mjs",
+      "bytes": 2278,
+      "sha256": "a6d94a8e398e04b68b46437f7bd1d329a55e33d90196149f882e31dd97129dea"
+    },
+    {
+      "path": "recipes/serve-learning-section-resilience-browser-20261027.mjs",
+      "bytes": 2638,
+      "sha256": "3054956f5be1982913927b759ef810e28783c0caadba4d0aee1ae5966511ec19"
+    },
+    {
+      "path": "recipes/check-learning-section-resilience-browser-20261027.js",
+      "bytes": 6178,
+      "sha256": "ccf4f77e99265ee176e98bf41eb61f7169f55fd308c9ddf96e59cde346c2610f"
+    },
+    {
+      "path": "recipes/finish-learning-section-resilience-20261027.mjs",
+      "bytes": 13375,
+      "sha256": "c2ef7f1e86c84f36872b80def40d7f88c45aed7a2c3228a0ee14a54b957174db"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source/tests and verification recipes only. No scans, masks, clinical data, private metadata, generated models/runtimes, review decisions or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 58,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "browserAssertions": 37,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

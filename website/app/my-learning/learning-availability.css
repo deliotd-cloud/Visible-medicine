@@ -1,0 +1,8 @@
+.learning-availability-notice { margin: 0 0 20px; padding: 16px 20px; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 8px; background: var(--panel); }
+.learning-availability-notice p { margin: 6px 0 10px; line-height: 1.5; }
+.learning-availability-notice a, .learning-availability-section a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+.learning-availability-notice a:focus-visible, .learning-availability-section a:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+.learning-availability-notice small { display: block; margin-top: 8px; color: var(--muted); }
+.learning-availability-section { padding: 18px 20px; margin: 16px 0; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); line-height: 1.5; }
+.learning-availability-section h2, .learning-availability-section h3 { margin: 0 0 8px; }
+.learning-availability-section p { margin: 8px 0; }
