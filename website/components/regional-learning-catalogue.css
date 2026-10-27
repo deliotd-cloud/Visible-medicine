@@ -1,0 +1,38 @@
+.regional-learning-catalogue { color:#173039; line-height:1.45; }
+.regional-learning-catalogue h2 { margin:.2rem 0 .55rem; font-size:1.35rem; }
+.regional-learning-catalogue-intro,.regional-learning-catalogue-caution { max-width:90ch; margin:.5rem 0; }
+.regional-learning-catalogue-caution { color:#50656b; font-size:.88rem; }
+.regional-learning-catalogue-filters { display:grid; grid-template-columns:minmax(250px,2fr) minmax(180px,1fr) auto; align-items:end; gap:.75rem; margin:1.1rem 0 .6rem; }
+.regional-learning-catalogue-filters label { display:flex; flex-direction:column; gap:.3rem; min-width:0; font-size:.85rem; font-weight:650; }
+.regional-learning-catalogue :is(input,select) { width:100%; min-height:42px; padding:.5rem .6rem; border:1px solid #8da7a4; border-radius:6px; background:#fff; color:inherit; }
+.regional-learning-catalogue button { min-height:42px; padding:.45rem .75rem; border:1px solid #147766; border-radius:6px; background:#fff; color:#075e53; font-weight:650; cursor:pointer; }
+.regional-learning-catalogue button:disabled { border-color:#bccbc9; color:#6b7c7e; cursor:default; }
+.regional-learning-catalogue :is(a,button,input,select,summary,.regional-learning-catalogue-results):focus-visible { outline:3px solid #087b6c; outline-offset:3px; }
+.regional-learning-catalogue-results { margin:.6rem 0; font-weight:650; }
+.regional-learning-catalogue-match { margin:.3rem 0; color:#416169; font-size:.8rem; }
+.regional-learning-catalogue-unavailable { margin:.45rem 0; color:#6c4d19; font-size:.85rem; }
+.regional-learning-catalogue-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; margin:.8rem 0; padding:0; list-style:none; }
+.regional-learning-catalogue-list > li { min-width:0; padding:.85rem 1rem; border:1px solid #d0dfdc; border-radius:8px; background:#fff; overflow-wrap:anywhere; }
+.regional-learning-catalogue-rowhead { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:.25rem .8rem; }
+.regional-learning-catalogue-rowhead h3 { margin:0; font-size:1rem; }
+.regional-learning-catalogue-rowhead span { color:#52686c; font-size:.8rem; white-space:nowrap; }
+.regional-learning-catalogue-description { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; margin:.45rem 0; font-size:.88rem; }
+.regional-learning-catalogue-entry { display:flex; align-items:baseline; flex-wrap:wrap; gap:.25rem .75rem; margin:.5rem 0; font-size:.85rem; }
+.regional-learning-catalogue-entry a { color:#07695b; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+.regional-learning-catalogue-entry span { color:#52686c; }
+.regional-learning-catalogue details { margin-top:.35rem; font-size:.82rem; }
+.regional-learning-catalogue summary { width:fit-content; cursor:pointer; color:#416169; }
+.regional-learning-catalogue details ol { margin:.35rem 0; padding-left:1.4rem; }
+.regional-learning-catalogue details li { margin:.2rem 0; }
+.regional-learning-catalogue details p { margin:.35rem 0; }
+.regional-learning-catalogue code { overflow-wrap:anywhere; }
+.regional-learning-catalogue-empty { padding:.7rem .85rem; border:1px solid #d0dfdc; border-radius:7px; background:#fff; }
+.regional-learning-catalogue-pages { display:flex; justify-content:center; align-items:center; gap:.8rem; margin:1rem 0; font-size:.85rem; }
+.regional-learning-catalogue-source { margin-top:.85rem; }
+@media(max-width:800px) { .regional-learning-catalogue-filters { grid-template-columns:1fr; } .regional-learning-catalogue-list { grid-template-columns:1fr; } }
+
+.regional-learning-catalogue-about { margin:.25rem 0 .7rem; }
+.regional-learning-catalogue-about[open] { padding:.65rem .8rem; border:1px solid #d0dfdc; border-radius:7px; background:#f5f8f6; }
+.regional-learning-catalogue-about > summary { font-size:.85rem; }
+.regional-learning-catalogue-instructions { max-width:90ch; }
+.regional-learning-catalogue-full-description { color:#173039; }

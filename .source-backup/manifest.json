@@ -1,0 +1,80 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T02:17:19.481Z",
+  "sourceIdentity": {
+    "kind": "compact-regional-guided-learning-catalogue",
+    "sourceSha256": "ea52718b7e80daa664507f971cb4f182f866815cd6e971e848b6e597906d3c46",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-coccygeus-website-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "0578c29e7a565c101ca9aeddf29bad6a56a1e1c3ae3ff7f23eef7fd94e4fffaf",
+        "branch": "backup/coccygeus-website-source-20261027",
+        "head": "b7429c5389a29fac01c1f50047159a16e2f5f43d",
+        "tree": "17fd532dd99915ceeaf6fb09c856794cc70809cb"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/RegionalLearningCatalogue.tsx",
+      "bytes": 10296,
+      "sha256": "9cf9fc90dc60f5fd3f8a8f5ae43c70d694d9a243ab4b1f97a3620216b0db7194"
+    },
+    {
+      "path": "website/components/regional-learning-catalogue.css",
+      "bytes": 3964,
+      "sha256": "9121805494f5e237e1003c4b8778e7f95ccb1e8bd11ce174a77aad1183e76ddc"
+    },
+    {
+      "path": "recipes/prepare-regional-catalogue-compact-20261027.mjs",
+      "bytes": 4687,
+      "sha256": "34e59a66d31234c1fed1508877bf8417237573bd114894ff2fc22a1190df80d6"
+    },
+    {
+      "path": "recipes/build-regional-catalogue-browser-20261027.mjs",
+      "bytes": 3512,
+      "sha256": "6801b491af8c1ae13c2d6d0d8ba30f07a08d67c35d16e18878bb4d8eda6774e7"
+    },
+    {
+      "path": "recipes/serve-regional-catalogue-browser-20261027.mjs",
+      "bytes": 2570,
+      "sha256": "282f0e41860f39ad1227fa2a56ef2a0c601bb538b912103d451d0a30cf549371"
+    },
+    {
+      "path": "recipes/record-regional-catalogue-browser-20261027.mjs",
+      "bytes": 3050,
+      "sha256": "5fa6bef5a27080feabe5f7c31fab9b5f61f97bed3c1fe4cd7f959d2e654fabea"
+    },
+    {
+      "path": "recipes/prepare-regional-catalogue-verification-20261027.mjs",
+      "bytes": 879,
+      "sha256": "d06a912f57a4e039587dc66f347aae38a48564c50b174ee65eeb1c002ca5e017"
+    },
+    {
+      "path": "recipes/run-regional-catalogue-verification-20261027.mjs",
+      "bytes": 5363,
+      "sha256": "51818b0dc807526e84155a911755c2cc15797a6d04ec8057a75757fde858f264"
+    },
+    {
+      "path": "recipes/finish-regional-catalogue-compact-20261027.mjs",
+      "bytes": 13397,
+      "sha256": "b28bc7836f37b057c2059cf70f83e05dfa57d3c69b319d161f14db59288a6541"
+    }
+  ],
+  "removed": [],
+  "scope": "First-party UI code and recipes only. No catalogues, scans, masks, datasets, generated runtime, private raw evidence, decisions, dependencies or native Git ancestry. Not a complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 19,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "desktopDOMAndKeyboardChecked": true,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
