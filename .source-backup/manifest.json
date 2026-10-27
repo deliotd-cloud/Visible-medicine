@@ -1,0 +1,86 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T13:29:22.061Z",
+  "sourceIdentity": {
+    "kind": "written-study-without-graphics",
+    "sourceSha256": "17fcdb3d8c4577e8f4c6e310dac72a863d55e162433e0732eedad9d16796d0d9",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-body-review-focus-native-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "a23002906f698d52b67c674146ead433721127eddfccbcb67188c8c05553d786",
+        "branch": "backup/body-review-focus-native-20261027",
+        "head": "5bf9436d5be1f860a380539e61546cf89f21c6db"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/anatomy-scene.tsx",
+      "bytes": 19603,
+      "sha256": "dd49944c4343b5d91c18127528ac2ac7d889e4e80a55c051840babc63b88282c"
+    },
+    {
+      "path": "atlas/app/body-explorer.tsx",
+      "bytes": 132352,
+      "sha256": "a325f8c45729077e2ad1983d65aa66584470891ac4f6b572e30dd2036fb385fb"
+    },
+    {
+      "path": "atlas/app/body-scene.tsx",
+      "bytes": 26987,
+      "sha256": "ca9f3d229685861a7e876db21ba3cfc51c9a5b193a6f6fe1b5b717ef74546f92"
+    },
+    {
+      "path": "atlas/app/scene-recovery.css",
+      "bytes": 1725,
+      "sha256": "6f8ee5a0abf4ae97411ceb05a912efe948ad91d0709d3cbfc65dd28e1a97ed01"
+    },
+    {
+      "path": "atlas/app/scene-recovery.tsx",
+      "bytes": 7209,
+      "sha256": "121b9ec5964c6e2da5a6db061d5e772da2496eed9bae2326c1549be9d2911796"
+    },
+    {
+      "path": "atlas/app/shoulder-explorer.tsx",
+      "bytes": 64868,
+      "sha256": "481e875e771185cc93a9f7d30e101b09d7a6012d3abedfc6efe185d6570daab2"
+    },
+    {
+      "path": "atlas/app/scene-study-fallback.tsx",
+      "bytes": 5751,
+      "sha256": "0c6ce97b4f1d2018a61ce6a2a633736863ebbc2d171da7d69827199a4a3a38c2"
+    },
+    {
+      "path": "atlas/scripts/review-revision-evidence.mjs",
+      "bytes": 4413,
+      "sha256": "ea10a5ca1ecb88942f873a10e4c550b7e4a15fba345b2b56e8c36b1f22cd52bd"
+    },
+    {
+      "path": "atlas/scripts/test-practice-result-navigation.mjs",
+      "bytes": 9674,
+      "sha256": "60d2e7d9022f5994757d5c9087970425c33ab8009e167c44dddfa002307f6485"
+    },
+    {
+      "path": "atlas/scripts/test-scene-study-fallback.mjs",
+      "bytes": 7728,
+      "sha256": "8d1945195fb1ae8a08576fc1016cf1eabf9127649f1bceae72177a267ced4147"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party UI, test and review-generator source only. No patient data, geometry, private references, review records, generated runtime or canonical Git ancestry. Not a complete private/runnable backup.",
+  "proof": {
+    "focusedRoots": 5,
+    "browserAssertions": 29,
+    "fullTypes": true,
+    "stockNativeBuild": true,
+    "knownHistoricalPackageSnapshotFailure": true,
+    "websiteImported": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

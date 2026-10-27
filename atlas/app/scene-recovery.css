@@ -1,0 +1,83 @@
+.vm-scene-recovery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.vm-scene-recovery-viewport {
+  width: 100%;
+  height: 100%;
+}
+.vm-scene-recovery:not([data-health='ready']) .vm-scene-recovery-viewport {
+  visibility: hidden;
+  pointer-events: none;
+}
+.vm-scene-recovery:focus-visible {
+  outline: 3px solid var(--vm-teal);
+  outline-offset: -3px;
+}
+.vm-scene-recovery-notice {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.vm-scene-recovery-notice .vm-scene-recovery-detail {
+  max-width: 32rem;
+  margin: 0;
+}
+.vm-scene-recovery-notice small {
+  max-width: 32rem;
+  font-size: 0.875rem;
+}
+.vm-scene-study-fallback {
+  display: grid;
+  gap: 0.4rem;
+  width: min(100%, 32rem);
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  text-align: left;
+}
+.vm-scene-study-fallback > span {
+  font-size: 0.875rem;
+}
+.vm-scene-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.5rem;
+}
+.vm-scene-study-actions > button {
+  max-width: 100%;
+  white-space: normal;
+}
+.vm-scene-study-select {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+.vm-scene-study-select select {
+  min-height: 2.5rem;
+  max-width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  background: var(--card);
+  color: var(--card-foreground);
+}
+@media (max-height: 550px) {
+  .vm-scene-recovery-notice {
+    justify-content: flex-start;
+  }
+}
