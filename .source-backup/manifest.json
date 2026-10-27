@@ -1,0 +1,42 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T05:18:56.629Z",
+  "sourceIdentity": {
+    "kind": "practice-focus-repair",
+    "sourceSha256": "47adf34292b26cb6062c3222f5f016306c208333291906b9ef5f8e0be75bb575"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasPractice.tsx",
+      "bytes": 23873,
+      "sha256": "e66dde2464807785a924e8bab15619301e755190b7dea3ff4ac5b4a69834652d"
+    },
+    {
+      "path": "website/tests/head-practice-async-focus.test.ts",
+      "bytes": 9014,
+      "sha256": "32db306150c9d6464c184f965ad6144d82338087c8d9e9287a104e545eea3a85"
+    },
+    {
+      "path": "website/tests/head-practice-lifecycle.test.ts",
+      "bytes": 44269,
+      "sha256": "46f96fa1a4f99f3accb82a3864a0b26eb620d8a5685013bbe5f119a43f9277de"
+    }
+  ],
+  "removed": [],
+  "scope": "Three first-party component/test source files only. No scans, masks, source medical metadata, private references, generated modules, decisions, dependencies or canonical Git ancestry. Supplemental code recovery; not complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 72,
+    "fullConfiguredTypes": true,
+    "stockProductionBuild": true,
+    "syntheticBrowserFocus": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
