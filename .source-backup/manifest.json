@@ -1,0 +1,38 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T07:33:00.805Z",
+  "sourceIdentity": {
+    "kind": "head-navigation-test-repair",
+    "sha256": "ad25b300eb1a5783e2df1b07138ab5693f45e4bc71fac9227742cb1d580a9b6d"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/head-learning-handoff.test.ts",
+      "bytes": 10467,
+      "sha256": "673c5e52f64a9e6b8b21468a12ab01e99eb5584ee5de2477fcaecf43aeaeb8f8"
+    },
+    {
+      "path": "website/tests/head-link-menu-current.test.mjs",
+      "bytes": 4263,
+      "sha256": "95c0c02b9b6f500a0ce401631a0c8ccc801d97e99b1786f0f36ef4dc99f96630"
+    }
+  ],
+  "removed": [],
+  "scope": "Two first-party test source files only, no scans, private references, masks, decisions, dependencies, generated modules or canonical ancestry. Supplement, not complete project backup.",
+  "proof": {
+    "cases": 316,
+    "wholeRoots": 23,
+    "historicalCases": 4,
+    "fullConfiguredTypes": true,
+    "productionUnchanged": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
