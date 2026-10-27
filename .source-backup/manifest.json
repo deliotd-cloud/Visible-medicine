@@ -1,0 +1,101 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T19:30:31.889Z",
+  "sourceIdentity": {
+    "kind": "anonymous-keyboard-spatial-practice",
+    "sourceSha256": "0b88d1a7dfd69c5c96d137e103fe95900c7c11c9d445a3b1e289eb842b7fec16",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-tour-step-entry-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "927a8bad00269a540fbc9216053b24ad3670941a07c03af4542e25a77e1a0685"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-explorer.tsx",
+      "bytes": 135349,
+      "sha256": "08a003d767db78b697ab9fff6db7e004201cfa5d2b7ff8ee213223a94e95b573"
+    },
+    {
+      "path": "atlas/app/body-scene.tsx",
+      "bytes": 27172,
+      "sha256": "9c5e81be3633f6573eff528a926f180c16903f8e4424f7ca8b7b2c7e7f4382fc"
+    },
+    {
+      "path": "atlas/app/practice-keyboard-picker.tsx",
+      "bytes": 2213,
+      "sha256": "93cdf0e6a12a51f416d938b4e00db071595135a1be5609e35324591699ee1494"
+    },
+    {
+      "path": "atlas/scripts/test-practice-keyboard-picker.mjs",
+      "bytes": 5741,
+      "sha256": "65409287b1cb2cae89be4e8ab58f9612bcb5871b845ccf51ca619013d79d0782"
+    },
+    {
+      "path": "atlas/scripts/test-body-practice-keyboard.mjs",
+      "bytes": 6377,
+      "sha256": "aa22274fcfa865c53b063d7fe3b91695b2f5e607972770ee7656221e96487717"
+    },
+    {
+      "path": "atlas/scripts/test-camera-keyboard.mjs",
+      "bytes": 18306,
+      "sha256": "03bfed48bb785ee967412b8d0b4eae88faf0705c7495f94735214de4f931626a"
+    },
+    {
+      "path": "atlas/scripts/test-camera-keyboard-zoom.mjs",
+      "bytes": 11732,
+      "sha256": "e42858260452cb18d11fe0828296a275664c4d1e9fd953c0b07dfdbfe2f5ad81"
+    },
+    {
+      "path": "atlas/scripts/test-practice-action-bar.mjs",
+      "bytes": 8287,
+      "sha256": "cdc61cec2987c5cf6be7f1ff1c8e42cac945b8d9f66554ec848ba288aa56117f"
+    },
+    {
+      "path": "atlas/docs/FIND_PRACTICE_KEYBOARD.md",
+      "bytes": 1182,
+      "sha256": "b8532d15af806bace41a51ac531e5cc02a0e4f372c4bd2177354f36c79213088"
+    },
+    {
+      "path": "recipes/prepare-find-keyboard-native-stage-20261027.mjs",
+      "bytes": 2090,
+      "sha256": "574ccf674b40c3aa30ddb46c6eabe07e2854f818cd802e821da1598494d88167"
+    },
+    {
+      "path": "recipes/run-find-keyboard-native-20261027.mjs",
+      "bytes": 5190,
+      "sha256": "8d2cc45c2aa60209d5f6a5333b63ca29ed9ce9fce20477d7310c0c825a5363eb"
+    },
+    {
+      "path": "recipes/finish-find-keyboard-native-20261027.mjs",
+      "bytes": 13267,
+      "sha256": "6deaeceb2925a2f250ba2e9bab51675af57827457670f998bb239585da7d1cdf"
+    },
+    {
+      "path": "recipes/serve-find-keyboard-native-20261027.mjs",
+      "bytes": 3347,
+      "sha256": "43f02009b2bb099d83e3d844888d24a69b5db78219d019600d059b9776304c92"
+    },
+    {
+      "path": "recipes/run-find-keyboard-browser-20261027.mjs",
+      "bytes": 1436,
+      "sha256": "087152c3359ca124b726a4b55b912d5837d7b87fb0044ad4740a4e4e4bc11c98"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party native source/tests and recipes only. No scans, masks, anatomy geometry, private references, review decisions, generated runtimes or canonical Git ancestry. Not a complete private/runnable backup.",
+  "proof": {
+    "nativeFocusedTests": 44,
+    "fullNativeTypes": true,
+    "stockNativeBuild": true,
+    "browserChecks": 14,
+    "websiteImportPending": true,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
