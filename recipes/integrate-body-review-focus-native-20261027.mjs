@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-body-review-focus-native',prep=json(stage+'/PREPARATION.json'),parent=json(prep.parent.path),proposal='F:/VisibleMedicine/staging/20261027-body-review-focus-proposal';
+const expected=new Map(parent.sourceRows.map(r=>[r.path,r.sha256]));
+const paths=[['app/review/body/review-dashboard.tsx','80dc5c9117af8b6a8ac96e4e9dd7aea01c0497467cf8bde5db763fd6e85b74a2'],['scripts/test-body-review-leave-dialog.mjs','a13f8776de8b02945f3e823d9d5db6deb1b352d5f11244a13f76a21a2a0861bb']];
+for(const [p,h]of paths){assert.equal(hash(proposal+'/'+p),h);assert.equal(hash(prep.atlas+'/'+p),expected.get(p));}
+const proof='F:/VisibleMedicine/staging/20261027-body-review-focus-browser/BROWSER_RESULT.json',browser=json(proof);assert(browser.passing&&browser.keyboard.passing);assert.equal(browser.dashboardSha256,paths[0][1]);assert.equal(hash(browser.build.path),browser.build.sha256);
+for(const[p]of paths)fs.copyFileSync(proposal+'/'+p,prep.atlas+'/'+p);
+fs.writeFileSync(stage+'/INTEGRATION.json',JSON.stringify({at:new Date().toISOString(),parent:prep.parent,paths:paths.map(([path,sha256])=>({path,sha256,beforeSha256:expected.get(path)})),browser:{path:proof,sha256:hash(proof)},normalPreviewChanged:false,clinicalRecordsChanged:false},null,2)+'\n',{flag:'wx'});
+const index=json('CURRENT_CHECKPOINT.json');assert.deepEqual(index.activeWork.current.activeExecutionSessions,[]);index.activeWork.current.pendingBodyReviewFocus={stage,preparation:{path:stage+'/PREPARATION.json',sha256:hash(stage+'/PREPARATION.json')},integration:{path:stage+'/INTEGRATION.json',sha256:hash(stage+'/INTEGRATION.json')},phase:'browser-verified proposal integrated; native regression/types/build pending',installed:false,normalPreviewChanged:false};
+fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(index,null,2)+'\n');console.log(JSON.stringify({changedPaths:paths.map(x=>x[0]),browserChecks:browser.assertionCount+1,verificationPending:true}));

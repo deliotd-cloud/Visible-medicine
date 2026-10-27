@@ -1,0 +1,100 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T11:13:16.587Z",
+  "sourceIdentity": {
+    "kind": "body-review-navigation-focus",
+    "sourceSha256": "64c6c02225fa3135b8786f6067a1c905a52e83b90e7128eb69d9c35bbfad86d9",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-pharyngeal-mri-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "fdb939ac81a2e79646145265080288366a518be7eaec812505da07435635d15e",
+        "branch": "backup/pharyngeal-mri-source-20261027",
+        "head": "ecfb51d93296089cc17a76caca34e33ed5bcb17c"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/review/body/review-dashboard.tsx",
+      "bytes": 34012,
+      "sha256": "80dc5c9117af8b6a8ac96e4e9dd7aea01c0497467cf8bde5db763fd6e85b74a2"
+    },
+    {
+      "path": "atlas/scripts/test-body-review-leave-dialog.mjs",
+      "bytes": 24144,
+      "sha256": "a13f8776de8b02945f3e823d9d5db6deb1b352d5f11244a13f76a21a2a0861bb"
+    },
+    {
+      "path": "atlas/scripts/test-body-review-navigation.mjs",
+      "bytes": 19617,
+      "sha256": "f94fa3782e870e0613df738ecaabd8bd73931dc683eab22ce2fdb87a7d555790"
+    },
+    {
+      "path": "atlas/scripts/test-body-review-sticky-navigation.mjs",
+      "bytes": 6061,
+      "sha256": "966b0dc457eb72184f7390d782cf3a17027ac08dc6d7ecbd5cedf24716c99d0e"
+    },
+    {
+      "path": "atlas/scripts/test-body-review-url-navigation.mjs",
+      "bytes": 10289,
+      "sha256": "a6dad91a37c3fa19732ed6911d7d83ab9928d89a87677106782811069b666286"
+    },
+    {
+      "path": "recipes/prepare-body-review-focus-native-20261027.mjs",
+      "bytes": 596,
+      "sha256": "bef47b62dd8b6771edafe59d8756ca23058e6f789e0c9bfdc4ce109c1b91797a"
+    },
+    {
+      "path": "recipes/prepare-body-review-focus-native-stage-20261027.mjs",
+      "bytes": 2094,
+      "sha256": "1ee50198637d056d0b32df37f52be4c9bd895d5142644af476c9bffb4fa22beb"
+    },
+    {
+      "path": "recipes/integrate-body-review-focus-native-20261027.mjs",
+      "bytes": 2098,
+      "sha256": "eb73b68036a8ebb90a9a8dcbff57644f8c92ea370f28d475ffe71d49096b14c7"
+    },
+    {
+      "path": "recipes/integrate-body-review-focus-harnesses-20261027.mjs",
+      "bytes": 1703,
+      "sha256": "b2b573dc09d0e47feb0a4c4dd9411ff8963e9a3cc6545fbc9853e8c06d8b8ad7"
+    },
+    {
+      "path": "recipes/run-body-review-focus-native-20261027.mjs",
+      "bytes": 3863,
+      "sha256": "1ec6aaa0c4db103930266edadcec57f89fc3870a72bb3865629f61d23b1b07d6"
+    },
+    {
+      "path": "recipes/build-body-review-focus-browser-20261027.mjs",
+      "bytes": 6220,
+      "sha256": "dff0b9c3c0fd4a4dd80be6b097de22ee8fa1ca6d3311531598e5cadb73d0ed32"
+    },
+    {
+      "path": "recipes/serve-body-review-focus-browser-20261027.mjs",
+      "bytes": 2829,
+      "sha256": "da1327468f90a6743ad9a5e000256e561cbe5f05e6216302382516b6f0acfc9a"
+    },
+    {
+      "path": "recipes/finish-body-review-focus-native-20261027.mjs",
+      "bytes": 12858,
+      "sha256": "604e03349c8efe672537f6fba4f8df186689d21d407479339f50c409b91cdaec"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party UI/test/recipe source only. No patient data, model assets, private references, review records, generated runtimes or native Git ancestry. Not a complete private/runnable backup.",
+  "proof": {
+    "focusedTests": 40,
+    "browserAssertions": 20,
+    "fullTypes": true,
+    "stockNativeBuild": true,
+    "websiteImported": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
