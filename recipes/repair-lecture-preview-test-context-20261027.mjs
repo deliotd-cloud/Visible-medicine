@@ -1,0 +1,9 @@
+import fs from'node:fs';import assert from'node:assert/strict';import{hash,json}from'./bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-lecture-preview-follow',sf=stage+'/SOURCE_CANDIDATE.json',source=json(sf),file=source.website+'/tests/lecture-preview-selection.test.mjs';
+assert.equal(hash(sf),'f34836736e1dde111d861dddd5b779c3f9579be811f2a3697624e590a752d80c');assert.deepEqual(json('CURRENT_CHECKPOINT.json').activeWork.current.activeExecutionSessions,[]);
+fs.copyFileSync(sf,stage+'/SOURCE_BEFORE_TEST_CONTEXT.json',fs.constants.COPYFILE_EXCL);fs.copyFileSync(file,stage+'/TEST_BEFORE_CONTEXT.mjs',fs.constants.COPYFILE_EXCL);
+let text=fs.readFileSync(file,'utf8');for(const[a,b]of [["actorId:'author'","actorId:'edu:author'"],["actorId:'other'","actorId:'edu:other'"]]){assert.equal(text.split(a).length,2,a);text=text.replace(a,b);}
+const marker='const api=bundled.exports;';assert.equal(text.split(marker).length,2);text=text.replace(marker,marker+"\nassert(api.mutation.parseStudioMutationContext({actorId:'edu:author',organizationId:'org'}), 'Synthetic editor starts with a valid Studio context');");
+fs.writeFileSync(file,text);const row=source.sourceRows.find(r=>r.path==='tests/lecture-preview-selection.test.mjs');const old=row.sha256;row.sha256=hash(file);row.bytes=fs.statSync(file).size;
+source.at=new Date().toISOString();source.verificationRepair={previousSource:{path:stage+'/SOURCE_BEFORE_TEST_CONTEXT.json',sha256:hash(stage+'/SOURCE_BEFORE_TEST_CONTEXT.json')},path:row.path,beforeSha256:old,afterSha256:row.sha256,reason:'Synthetic test author IDs lacked the required edu: prefix, so real context protection correctly blocked navigation. Use valid synthetic context; preserve all behavior assertions and product guards.'};
+fs.writeFileSync(sf,JSON.stringify(source,null,2)+'\n');console.log(JSON.stringify({source:sf,sha256:hash(sf),testOnly:true}));

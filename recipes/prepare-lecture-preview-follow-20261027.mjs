@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import{hash,json}from'./bounded-source-hash-20261026.mjs';
+const root='F:/VisibleMedicine/staging/20261027-lecture-preview-follow-proposal',pf=root+'/PATCHSET.json';
+assert.equal(hash(pf),'a6aab27ce91ed4018ea0382b73741be0889d7ba144d3aac302c049092ed975e8');
+const patch=json(pf);fs.copyFileSync(pf,root+'/PATCHSET_WORKER.json',fs.constants.COPYFILE_EXCL);
+const file=root+'/tests/lecture-preview-selection.test.mjs';let text=fs.readFileSync(file,'utf8');
+const before="process.env.VM_WEBSITE_ROOT??resolve(proposal,'../20261027-review-link-clarity/website')";assert.equal(text.split(before).length,2);text=text.replace(before,'process.env.VM_WEBSITE_ROOT??proposal');fs.writeFileSync(file,text);
+const entry=patch.installableFiles.find(r=>r.path==='tests/lecture-preview-selection.test.mjs');assert(entry);entry.afterSha256=hash(file);
+patch.mainAdjustment='Default new test module dependencies to its own website root; no dependency on a staging sibling.';
+fs.writeFileSync(pf,JSON.stringify(patch,null,2)+'\n');
+const parent='F:/VisibleMedicine/staging/20261027-review-link-clarity/SOURCE_CANDIDATE.json';assert.equal(hash(parent),'ee885532423a41cb3c4b2bdd8ff2e4cc677f39712803437b2e4030e2c3540b99');
+fs.writeFileSync(root+'/CONFIG.json',JSON.stringify({schema:'vm-scoped-source-successor/1',stage:'F:/VisibleMedicine/staging/20261027-lecture-preview-follow',parent:{path:parent,sha256:hash(parent)},patchset:{path:pf,sha256:hash(pf)},allowedPaths:['components/LectureEditor.tsx','components/LecturePlayer.tsx','tests/lecture-preview-selection.test.mjs'],reason:'Author-selected slide stays in sync through live lecture Preview, editor and player outlines, and return to Content. Published navigation and saves stay separate.'},null,2)+'\n',{flag:'wx'});
+const b='F:/VisibleMedicine/staging/20261027-lecture-preview-follow-browser/before';fs.writeFileSync(b+'/OBSERVED.json',JSON.stringify({at:new Date().toISOString(),build:{path:b+'/BUILD.json',sha256:hash(b+'/BUILD.json')},pageId:136,viewport:{width:1280,height:900},scope:'Actual React Editor and Player, synthetic 20-slide draft, independent mutation components inert, network blocked.',observed:{edited:'Saved slide 18',previewed:'Saved slide 1',clickedOutline:'Saved slide 12',outlineClosedPreview:true,requests:[],errors:[]},gapReproduced:true,ownedPageClosed:true,serverTerminal:{path:b+'/TERMINAL.json',sha256:hash(b+'/TERMINAL.json')},normalPreviewChanged:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({config:root+'/CONFIG.json',patchsetSha256:hash(pf)}));

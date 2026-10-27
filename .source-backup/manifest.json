@@ -1,0 +1,80 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T21:17:42.864Z",
+  "sourceIdentity": {
+    "kind": "studio-lecture-preview-selected-slide",
+    "sourceSha256": "15e30b969a5438463f05b285ab859746eda8f2428e24378b3113481261ee5ed0",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-review-link-clarity-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "fc33ad51f75d7c2d2e876bac97591b3ddecf96026c20e5b91589588786f964fc"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/LectureEditor.tsx",
+      "bytes": 44836,
+      "sha256": "c3203b7b21d15697816ded6a7a57833c210e0d2da6a2e376e97f48e733073f08"
+    },
+    {
+      "path": "website/components/LecturePlayer.tsx",
+      "bytes": 14281,
+      "sha256": "2121699e88c60e93a6d956a623f2a6e7a8706b5492107de08a6529713e4b3c5e"
+    },
+    {
+      "path": "website/tests/lecture-preview-selection.test.mjs",
+      "bytes": 9977,
+      "sha256": "e4e3519f4114b71942dc654be4750273f94f084cc790247b8f0b7bf1801178c3"
+    },
+    {
+      "path": "recipes/prepare-lecture-preview-follow-20261027.mjs",
+      "bytes": 2600,
+      "sha256": "878f814c53305e527cc707e353ce699ef2be9f80e7352f63eb8c5b3cc74ebc20"
+    },
+    {
+      "path": "recipes/run-lecture-preview-follow-checks-20261027.mjs",
+      "bytes": 6163,
+      "sha256": "385758bea05bbcddf8d8bacb0222bbe0b1a0647f5dd8c61650c1f7a2686705ef"
+    },
+    {
+      "path": "recipes/build-lecture-preview-follow-browser-20261027.mjs",
+      "bytes": 4486,
+      "sha256": "a14a10f47f3a9c55ab8cd2a10d456bdca6b383b1a80495c66697f7df829514e2"
+    },
+    {
+      "path": "recipes/serve-lecture-preview-follow-browser-20261027.mjs",
+      "bytes": 2575,
+      "sha256": "4a90e0742b19c0f71df436bd708c8e6f5da628d81ee7dead719a71b5be979f69"
+    },
+    {
+      "path": "recipes/repair-lecture-preview-test-context-20261027.mjs",
+      "bytes": 1911,
+      "sha256": "2f1811d6f0c1ebc37cb67497387de839b02ae833ca33d4bdd5f1d2fc9cd7b476"
+    },
+    {
+      "path": "recipes/repair-lecture-preview-test-props-20261027.mjs",
+      "bytes": 1661,
+      "sha256": "b37a49833834232f12f5807cbe793aa8fd497101c6bc290f516f2f1aad07f8f8"
+    },
+    {
+      "path": "recipes/finish-lecture-preview-follow-20261027.mjs",
+      "bytes": 13288,
+      "sha256": "9ddb98a3d87d8ff3d1644894345280d98c4b0c9edb96422bf536531f087fc687"
+    }
+  ],
+  "removed": [],
+  "scope": "Ten selected first-party source/test and orchestration recipe files. No scans, assets, real lecture data, private decisions or raw repository ancestry; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 107,
+    "browserChecks": 30,
+    "fullTypesRerun": false,
+    "productionBuildRerun": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
