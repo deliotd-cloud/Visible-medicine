@@ -1,0 +1,163 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T13:46:49.243Z",
+  "sourceIdentity": {
+    "kind": "scene-study-website-integration",
+    "sourceSha256": "0684ada9cc9fcd6cf00840433d6b42ee7ec95dc0d962069b8ff8b29426251a50",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-lecture-slide-focus/SOURCE_RECOVERY.json",
+        "sha256": "ac42480faca247fc2a89812dc8c150173223d06e201e1ebf89e3e985250974a7",
+        "receipt": {
+          "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-lecture-slide-focus-source/github-backup.json",
+          "sha256": "6a53258ae25bf3e3817f96c59fd05ccf63d1c37793f44afa6f7f61b3e65d2b98"
+        },
+        "branch": "backup/lecture-slide-focus-20261027",
+        "head": "0928bd3f7991cdc9a86259affbc809ebd6f0504e",
+        "tree": "1be279f319d117327fd0c6c24a42263d55797d02"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-scene-study-native-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "692dd023d8367c1a0556f46fa6c07b2342a504a6f765ce54ee1f8726d495d3df",
+        "receipt": {
+          "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-scene-study-native-source-supplement/github-backup.json",
+          "sha256": "581a4ce38846dedfcffd8d3e06f9dac7f09d6a9cf8ac7f8b1717a94bb8f9a729"
+        },
+        "branch": "backup/scene-study-native-20261027",
+        "head": "907b9d70776358f980fd8c08a354e82d5fa8a2cd",
+        "tree": "278da20575469f2541b59ed5f6c561b1e1f5d34f"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "6a80be154d9f6289fd5702438c45cf39753cc610299332396d4a5a6f442bbb58"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "51bdd4e1786762b5bdfd318e12f6cf4a04936525d080679f54a24bb1adfbe311"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "a3104207d9b98312671155d614285fa0c79d289be52c4f7d6713fd621dde63d8"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "fe5c173a1dcbfc75a4f105857b4d7c2d5b1f04ba559d106735e3ebae7bd32762"
+    },
+    {
+      "path": "recipes/prepare-scene-study-integration-20261027.mjs",
+      "bytes": 2615,
+      "sha256": "7b7d2ccd0e9d726b7f3f99c25cb86857c63d74fb9bb4b7f9cf28427096e7088b"
+    },
+    {
+      "path": "recipes/export-scene-study-runtimes-20261027.mjs",
+      "bytes": 6577,
+      "sha256": "917f2bcceb16b01ba6d91c93c2549daf79e0a5020f3337fb47437f5f2c1b236f"
+    },
+    {
+      "path": "recipes/run-scene-study-runtime-exports-20261027.mjs",
+      "bytes": 3246,
+      "sha256": "0435132228820235492ddc2a4fe67a3589263e161b925c200f6215d0d8eb4718"
+    },
+    {
+      "path": "recipes/prepare-scene-study-website-recipes-20261027.mjs",
+      "bytes": 4802,
+      "sha256": "ee5507ad38c33b8fee61a41a09d60c429dba3cede698e93845f5692b53c494ea"
+    },
+    {
+      "path": "recipes/prepare-scene-study-website-20261027.mjs",
+      "bytes": 6723,
+      "sha256": "8d1f5c034efec842d3078a111d344c40c7ae9ed0c928176a19a53e92d38b9c80"
+    },
+    {
+      "path": "recipes/import-scene-study-website-stock-20261027.mjs",
+      "bytes": 6760,
+      "sha256": "20208f315f20ee8a73ef2d34d0b18e29092f0aaddf0889e1641d327307febdd7"
+    },
+    {
+      "path": "recipes/run-scene-study-website-integration-20261027.mjs",
+      "bytes": 2158,
+      "sha256": "4d1940010adb12965a4dbb98667cbc6268c0336d2da55547e3539cc03ebe9092"
+    },
+    {
+      "path": "recipes/generate-scene-study-website-coverage-20261027.mjs",
+      "bytes": 2871,
+      "sha256": "83d5be6aa2133126d9f983a2357fe29bc78d2e7d4e69712b971a16355d14905f"
+    },
+    {
+      "path": "recipes/run-scene-study-coverage-seams-20261027.mjs",
+      "bytes": 2384,
+      "sha256": "4fdb3fc212e03d46e564d30d687bd0fe2558d0d4ffa246fbb9e13b1f4da11bc1"
+    },
+    {
+      "path": "recipes/install-scene-study-website-coverage-20261027.mjs",
+      "bytes": 2961,
+      "sha256": "d97cb1bf70efda6c41f178193d960a9fdef40ca87fb2c37527a2a934e04c92ac"
+    },
+    {
+      "path": "recipes/build-scene-study-website-review-20261027.mjs",
+      "bytes": 6677,
+      "sha256": "859ca8db7b459e48b3593ab8a0d6b7871ab212c8a4e720abdbbe6d08ed900f19"
+    },
+    {
+      "path": "recipes/refresh-scene-study-website-delivery-pin-20261027.mjs",
+      "bytes": 2774,
+      "sha256": "680e4670bebcd505b17f02677b848bb0d9f6b35734c9b6aff0bc8f5f29449a46"
+    },
+    {
+      "path": "recipes/seal-scene-study-website-source-20261027.mjs",
+      "bytes": 6038,
+      "sha256": "278c21a3536d089b52fe32be356af88d1d2ecc7e7b62de160628b4f409c5921c"
+    },
+    {
+      "path": "recipes/verify-scene-study-website-content-20261027.mjs",
+      "bytes": 4548,
+      "sha256": "47c5ff515ee3994c206e6051965b079366896fcb9a768c1437376883bb1150b1"
+    },
+    {
+      "path": "recipes/run-scene-study-website-verification-20261027.mjs",
+      "bytes": 5529,
+      "sha256": "12afe79f1657f7dba0d29e976a4889567a1bb6343938281ba0cc44a1477a80a1"
+    },
+    {
+      "path": "recipes/prepare-scene-study-website-finish-20261027.mjs",
+      "bytes": 2044,
+      "sha256": "a032f55548550629c6dfb2d263185431e21085265cd521dc9104eb335951d8c6"
+    },
+    {
+      "path": "recipes/finish-scene-study-website-20261027.mjs",
+      "bytes": 9747,
+      "sha256": "893291ae35bbe8dffa0cd5793fd069769520df62eef971c6484d83f587f44d98"
+    },
+    {
+      "path": "recipes/record-scene-study-website-20261027.mjs",
+      "bytes": 6128,
+      "sha256": "94f9783b7e28b7187f91265ae03062e6211ba284d9daea33d3efd6cb17e0f95a"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party website code and integration/test recipes only. No exact anatomy source pins, medical metadata, scans, masks, assets, generated runtime, raw private proof, decisions, dependencies or canonical/native Git ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "writtenStudyFallback": true,
+    "browserAssertions": 29,
+    "focusedCases": 25,
+    "fullConfiguredTypes": true,
+    "productionBuild": true,
+    "sourceRevisionBindingPreserved": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
