@@ -1,0 +1,110 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T02:33:17.580Z",
+  "sourceIdentity": {
+    "kind": "clinical-inbox-deferred-return",
+    "sourceSha256": "fbc8b1cf903fa4e0dc967f4ae66135ed4f5512660113688dc82d82f786fe4a27",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-regional-catalogue-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "5aca0b3d02cfdc94b4225d03b3965563b8f1fd361a3c4a2be75c53f9fb5dc288",
+        "branch": "backup/regional-catalogue-source-20261027",
+        "head": "102339ba08ca347f63447c6f7a4ae196338b05fc",
+        "tree": "f1480311dc7f5eaf23fa3538b1c1dd5d87d08290"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "bytes": 36816,
+      "sha256": "a20677113be61ffb8036c222f297b322ee5e2b4e00c1fe91b9f1308c9a7c267f"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-deferred-return.test.mjs",
+      "bytes": 13941,
+      "sha256": "9b7782033872f921138cc4b1a429a8950a559c6b22035ebe91262a14a7caead5"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-return-pager-focus.test.mjs",
+      "bytes": 11342,
+      "sha256": "7b3c89d7525bc47711b975ecd405f275cbd5090c3b11c9be5191a4ca82391bac"
+    },
+    {
+      "path": "website/tests/inbox-deferred-return-source-role.mjs",
+      "bytes": 1356,
+      "sha256": "7a34cdc809e2dd587eae1cd7e3d6311093c6e1d87ad1b49c170617ab95a1336c"
+    },
+    {
+      "path": "website/tests/fixtures/inbox-deferred-return-transition.json",
+      "bytes": 2633,
+      "sha256": "2ef618f543603f953ba15e3b225ff4db37b93ddff34b7975d8cbd745f8be6b74"
+    },
+    {
+      "path": "website/tests/review-pager-inbox-history.mjs",
+      "bytes": 1656,
+      "sha256": "7af925f78fcc4d5e06ba77aa2edcade9b96848c4ceef498998b5c98526f15f99"
+    },
+    {
+      "path": "recipes/implement-inbox-deferred-return-20261027.mjs",
+      "bytes": 3462,
+      "sha256": "fa84d4c73b9b66efc62c062695ed0a0bb48bce8e7c72317905b8b59438d2451f"
+    },
+    {
+      "path": "recipes/prepare-inbox-deferred-proof-20261027.mjs",
+      "bytes": 2643,
+      "sha256": "0f5762d3eaabcce613e5caaa5cc785c4aaf9093fef51decae1ff19707b265abc"
+    },
+    {
+      "path": "recipes/seal-inbox-deferred-source-20261027.mjs",
+      "bytes": 2947,
+      "sha256": "7dd19b41e6f7ee9f5cc74a17a38a05ebff1290b9be8e97693db3adf915f49f6a"
+    },
+    {
+      "path": "recipes/repair-inbox-deferred-test-roles-20261027.mjs",
+      "bytes": 4000,
+      "sha256": "fb813da88d5790479042baddecc3637155a72e2e2139a118e563b5977827a81d"
+    },
+    {
+      "path": "recipes/run-inbox-deferred-verification-20261027.mjs",
+      "bytes": 5838,
+      "sha256": "f394db6c5c538302de098c37e3f6579e27cf60eb1ba9796d9a189e21f67f06a6"
+    },
+    {
+      "path": "recipes/run-inbox-deferred-v2-verification-20261027.mjs",
+      "bytes": 5841,
+      "sha256": "b6c7727fc2705760ea59af3e48d69d5780490cfa742d06c8d34f799b0216c57f"
+    },
+    {
+      "path": "recipes/build-inbox-deferred-browser-20261027.mjs",
+      "bytes": 4226,
+      "sha256": "e096ca7e82265cb20626a1d32b2cb93b72d288ee5c3b6ef239c5cdddcaab5329"
+    },
+    {
+      "path": "recipes/serve-inbox-deferred-browser-20261027.mjs",
+      "bytes": 2693,
+      "sha256": "3074b87b48ddcb085058d345593050b7541c070f46dc4b2f8a6d6c59bd5fe498"
+    },
+    {
+      "path": "recipes/finish-inbox-deferred-return-20261027.mjs",
+      "bytes": 14242,
+      "sha256": "69c4609e78a053aaa4148f4e8fc2501fc22c31f4c6e30b026c27e4f8174cc19f"
+    }
+  ],
+  "removed": [],
+  "scope": "First-party UI code, synthetic tests, source-transition excerpts and recipes only. No scans, masks, datasets, generated runtime, private raw evidence, owner decisions, dependencies or native Git ancestry. Not a complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 76,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "syntheticBrowserBeforeAfter": true,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

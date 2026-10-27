@@ -1,0 +1,34 @@
+{
+  "beforeSha256": "09bde9f703d43b4d798b96508ad730158e297a9b211985d7f4267f7baa3b81e3",
+  "afterSha256": "a20677113be61ffb8036c222f297b322ee5e2b4e00c1fe91b9f1308c9a7c267f",
+  "operations": [
+    {
+      "from": "  const generation = useRef(0);",
+      "to": "  const generation = useRef(0);\n  const pendingReturnScan = useRef<number | null>(null);"
+    },
+    {
+      "from": "  const run = (restart: boolean, automatic = false) => {\n    generation.current++;",
+      "to": "  const run = (restart: boolean, automatic = false) => {\n    pendingReturnScan.current = null;\n    generation.current++;"
+    },
+    {
+      "from": "              } else publish(snapshot);\n            }\n            return;",
+      "to": "              } else publish(snapshot);\n            }\n            // A return while pages were loading must not cancel that scan, but\n            // its earlier pages may predate a decision made in another tab.\n            // Consume one generation-bound request only after valid completion.\n            if (pendingReturnScan.current === id) {\n              pendingReturnScan.current = null;\n              if (mounted.current && current.current.phase === 'complete' && viewActive() &&\n                  (typeof document === 'undefined' || document.visibilityState !== 'hidden')) loadOnMount.current(true, true);\n            }\n            return;"
+    },
+    {
+      "from": "      } catch (error) {\n        if (id !== generation.current || abort.signal.aborted) return;\n        controller.current = null;",
+      "to": "      } catch (error) {\n        if (id !== generation.current || abort.signal.aborted) return;\n        pendingReturnScan.current = null;\n        controller.current = null;"
+    },
+    {
+      "from": "      if (mounted.current && current.current.phase === 'complete' && !controller.current && viewActive()) loadOnMount.current(true, true);",
+      "to": "      if (!mounted.current || !viewActive()) return;\n      if (current.current.phase === 'complete' && !controller.current) loadOnMount.current(true, true);\n      else if (current.current.phase === 'loading' && controller.current) pendingReturnScan.current = generation.current;"
+    },
+    {
+      "from": "return () => { active = false; mounted.current = false; window.removeEventListener",
+      "to": "return () => { active = false; mounted.current = false; pendingReturnScan.current = null; window.removeEventListener"
+    },
+    {
+      "from": "  const pause = () => {\n    generation.current++;",
+      "to": "  const pause = () => {\n    pendingReturnScan.current = null;\n    generation.current++;"
+    }
+  ]
+}
