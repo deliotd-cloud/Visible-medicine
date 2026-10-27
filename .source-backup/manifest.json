@@ -1,0 +1,82 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T21:35:15.128Z",
+  "sourceIdentity": {
+    "kind": "oral-recall-drafts",
+    "sourceSha256": "ebe7c8272ccf51fdc9c698761513b9fb5bfae7c3184255d2ecfd90f27badb785",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-lecture-preview-follow-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "787d79efcde9b92294f20bb981def77ba5720e1dd1c8b1f48fbc6fdae9172ed9"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 84925,
+      "sha256": "bfd8928ed5dffe4b61a99cbf103a10d90065212c6d102692fc1f0a2801a79899"
+    },
+    {
+      "path": "atlas/content/oral-recall-quiz-pins.json",
+      "bytes": 66141,
+      "sha256": "20b63f5c19272aef43fd83f696641b2380003cc5f01236a707587c6d9c775e9e"
+    },
+    {
+      "path": "atlas/content/oral-recall-quiz.ts",
+      "bytes": 2016,
+      "sha256": "380eb919a5eebe04ab5c4950c5c1c89018f94b6072168488716e230666479f45"
+    },
+    {
+      "path": "atlas/lib/oral-recall-quiz.ts",
+      "bytes": 1534,
+      "sha256": "88d790778e41b3ad9556b5ba99802c9b4f3ed7a5a145e84d8816fa28b830026f"
+    },
+    {
+      "path": "atlas/docs/ORAL_RECALL_QUIZ.md",
+      "bytes": 1790,
+      "sha256": "ec0adabecb5708933c84a6617082eeeba549ae0caf73f72bf9e1aad9f6c0a046"
+    },
+    {
+      "path": "atlas/scripts/test-oral-recall-quiz.mjs",
+      "bytes": 11875,
+      "sha256": "defb425118c89d92a12e0435a2b9296b248b65c743cd5a8d101f3493f3870fcc"
+    },
+    {
+      "path": "recipes/prepare-oral-recall-native-20261027.mjs",
+      "bytes": 2274,
+      "sha256": "6c51f1c230afa22cc50786eb1bf4ea150d7b0dcca6e2c2a3e30ee73425b93a7e"
+    },
+    {
+      "path": "recipes/pin-oral-recall-native-20261027.mjs",
+      "bytes": 2798,
+      "sha256": "d20318386cf60918fc2db20a43581de0d9d9a7720810af92394b2c3c04fae629"
+    },
+    {
+      "path": "recipes/run-oral-recall-checks-20261027.mjs",
+      "bytes": 2437,
+      "sha256": "be2e1a8fbeb0ab07dd9b86bde57f0109586a79dbc01a421733accc78c92cd19b"
+    },
+    {
+      "path": "recipes/finish-oral-recall-20261027.mjs",
+      "bytes": 12511,
+      "sha256": "a7c82f7d8a1403fe58947d121fbecf14cbd6c00fb1a38654a82d8c90be387d34"
+    }
+  ],
+  "removed": [],
+  "scope": "Ten selected first-party source, test, source-identity pins and recipes. No scans, model payloads, private decisions or raw ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "uniqueQuestions": 6,
+    "placements": 30,
+    "preservedLessons": 9906,
+    "sourceRefusals": 360,
+    "componentQuestions": 6,
+    "fullTypesAndBuildPending": true,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

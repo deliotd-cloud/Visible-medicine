@@ -1,0 +1,1422 @@
+import { nasalBoneSurfaceImagingLesson } from '../lib/nasal-bone-surface-imaging';
+import { abdominalArterialUltrasoundLesson } from '../lib/abdominal-arterial-ultrasound';
+import { bodyPancreaticVenousUsLesson } from '../lib/body-pancreatic-venous-us';
+import {bodyOrbitalCtLesson} from '../lib/body-orbital-ct';
+import {dentalMriLesson} from '../lib/dental-mri';
+import {dentalCtLesson} from '../lib/dental-ct';
+import {craniofacialCalcificationCtLesson} from '../lib/craniofacial-calcification-ct';
+import {footArterialProjectionXrayLesson} from '../lib/foot-arterial-projection-xray';
+import {footVenousArchXrayLesson} from '../lib/foot-venous-arch-xray';
+import { intracranialArterialUsLesson } from '../lib/intracranial-arterial-us';
+import { connectiveProjectionXrayLesson } from '../lib/connective-projection-xray';
+import { cervicalProjectionXrayLesson } from '../lib/cervical-projection-xray';
+import { spinalMuscleXrayLesson } from '../lib/spinal-muscle-xray';
+import { handVesselXrayLesson } from '../lib/hand-vessel-xray';
+import { lowerLimbConnectiveXrayLesson } from '../lib/lower-limb-connective-xray';
+import { pectoralBranchUltrasoundLesson } from '../lib/pectoral-branch-ultrasound';
+import { ileocolicArteryUltrasoundLesson } from '../lib/ileocolic-artery-ultrasound';
+import { colicArteryUltrasoundLesson } from '../lib/colic-artery-ultrasound';
+import { neckLandmarkXrayLesson } from '../lib/neck-landmark-xray';
+import { arterialEvidenceLimitLesson } from '../lib/arterial-evidence-limits';
+import { dorsalHandUltrasoundLesson } from '../lib/dorsal-hand-ultrasound';
+import { digitalVeinUltrasoundLesson } from '../lib/digital-vein-ultrasound';
+import { laryngealInletImagingLesson } from '../lib/laryngeal-inlet-imaging';
+import { orbitalSupportQuizLesson } from '../lib/orbital-support-quiz';
+import { ocularSupportQuizLesson } from '../lib/ocular-support-quiz';
+import { nasalCartilageQuizLesson } from '../lib/nasal-cartilage-quiz';
+import { nasalCartilageMriLesson } from '../lib/nasal-cartilage-mri';
+import { commissuralLandmarkQuizLesson } from '../lib/commissural-landmark-quiz';
+import { footVariantQuizLesson } from '../lib/foot-variant-quiz';
+import { abdominalEusOrientationLesson } from '../lib/abdominal-eus-orientation';
+import { thoracicEusOrientationLesson } from '../lib/thoracic-eus-orientation';
+import { coronaryArterialXrayLesson } from '../lib/coronary-arterial-xray';
+import { iliacArterialXrayLesson } from '../lib/iliac-arterial-xray';
+import { femoralArterialXrayLesson } from '../lib/femoral-arterial-xray';
+import { femoralVenousXrayLesson } from '../lib/femoral-venous-xray';
+import { legVenousXrayLesson } from '../lib/leg-venous-xray';
+import { legArterialXrayLesson } from '../lib/leg-arterial-xray';
+import { genicularUltrasoundLesson } from '../lib/genicular-ultrasound';
+import { abdominalArterialXrayLesson } from '../lib/abdominal-arterial-xray';
+import { hepaticArterialXrayLesson } from '../lib/hepatic-arterial-xray';
+import { visceralArterialXrayLesson } from '../lib/visceral-arterial-xray';
+import { portalVenousXrayLesson } from '../lib/portal-venous-xray';
+import { gastricVenousXrayLesson } from '../lib/gastric-venous-xray';
+import { abdominalDetailXrayLesson } from '../lib/abdominal-detail-xray';
+import { hepaticVenousXrayLesson } from '../lib/hepatic-venous-xray';
+import { colicArterialXrayLesson } from '../lib/colic-arterial-xray';
+import { pancreaticArterialXrayLesson } from '../lib/pancreatic-arterial-xray';
+import { thoracicWallArterialXrayLesson } from '../lib/thoracic-wall-arterial-xray';
+import { thoracicMediastinalArterialXrayLesson } from '../lib/thoracic-mediastinal-arterial-xray';
+import { thoracicVenousXrayLesson } from '../lib/thoracic-venous-xray';
+import { cardiacVenousUltrasoundLesson } from '../lib/cardiac-venous-ultrasound';
+import { thoracicDetailUltrasoundLesson } from '../lib/thoracic-detail-ultrasound';
+import { iliacVenousXrayLesson } from '../lib/iliac-venous-xray';
+import { intracranialArterialXrayLesson } from '../lib/intracranial-arterial-xray';
+import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
+import { centralCanalXrayLesson } from '../lib/central-canal-xray';
+import { footVenousArchImagingLesson } from '../lib/foot-venous-arch-imaging';
+import { abdominalFoldUltrasoundLesson } from '../lib/abdominal-fold-ultrasound';
+import { spinalDiscUltrasoundLesson } from '../lib/spinal-disc-ultrasound';
+import { girdleBoneUltrasoundLesson } from '../lib/girdle-bone-ultrasound';
+import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
+import { mesentericVesselTeachingLesson } from '../lib/mesenteric-vessel-teaching';
+import { pancreaticVesselTeachingLesson } from '../lib/pancreatic-vessel-teaching';
+import { pharyngealMuscleTeachingLesson } from '../lib/pharyngeal-muscle-teaching';
+import { pharyngealConstrictorImagingLesson } from '../lib/pharyngeal-constrictor-imaging';
+import { pharyngealMriLesson } from '../lib/pharyngeal-mri';
+import { salpingopharyngeusMriLesson } from '../lib/salpingopharyngeus-mri';
+import { vocalTissueTeachingLesson } from '../lib/vocal-tissue-teaching';
+import { thoracicSystemicTeachingLesson } from '../lib/thoracic-systemic-teaching';
+import { shoulderGirdleArterialUltrasoundLesson } from '../lib/shoulder-girdle-arterial-ultrasound';
+import { elbowArterialUltrasoundLesson } from '../lib/elbow-arterial-ultrasound';
+import { elbowArterialUsFollowupLesson } from '../lib/elbow-arterial-us-followup';
+import { forearmVascularXrayLesson } from '../lib/forearm-vascular-xray';
+import { forearmBranchXrayLesson } from '../lib/forearm-branch-xray';
+import { armArterialXrayLesson } from '../lib/arm-arterial-xray';
+import { shoulderMuscleXrayLesson } from '../lib/shoulder-muscle-xray';
+import { girdleMuscleXrayLesson } from '../lib/girdle-muscle-xray';
+import { axillaryBranchXrayLesson } from '../lib/axillary-branch-xray';
+import { shoulderVesselXrayLesson } from '../lib/shoulder-vessel-xray';
+import { medianCubitalXrayLesson } from '../lib/median-cubital-xray';
+import { medianAntebrachialXrayLesson } from '../lib/median-antebrachial-xray';
+import { neonatalCranialUltrasoundLesson } from '../lib/neonatal-cranial-ultrasound';
+import { tentoriumImagingLesson } from '../lib/tentorium-imaging';
+import { footSesamoidLesson } from '../lib/foot-sesamoid-teaching';
+import { cerebellarMcaImagingLesson } from '../lib/cerebellar-mca-imaging';
+import { orbitalNerveMriLesson } from '../lib/orbital-nerve-mri';
+import { orbitalApexCtLesson } from '../lib/orbital-apex-ct';
+import { orbitalRingCtLesson } from '../lib/orbital-ring-ct';
+import { orbitalSensoryMriLesson } from '../lib/orbital-sensory-mri';
+import { mediastinalXrayLesson } from '../lib/mediastinal-xray';
+import { hilarVesselXrayLesson } from '../lib/hilar-vessel-xray';
+import { thoracicInletXrayLesson } from '../lib/thoracic-inlet-xray';
+import { laminaPathologyLesson } from '../lib/lamina-pathology';
+import { epigastricVeinPathologyLesson } from '../lib/epigastric-vein-pathology';
+import { mainBronchusXrayLesson } from '../lib/main-bronchus-xray';
+import { biliaryDuctXrayLesson } from '../lib/biliary-duct-xray';
+import { internalIliacUltrasoundLesson } from '../lib/internal-iliac-ultrasound';
+import { rootCuffXrayLesson } from '../lib/root-cuff-xray';
+import { orbitalSupportMriLesson } from '../lib/orbital-support-mri';
+import { thoracoacromialUltrasoundLesson } from '../lib/thoracoacromial-ultrasound';
+import { hipAbductorXrayLesson } from '../lib/hip-abductor-xray';
+import { psoasXrayLesson } from '../lib/psoas-xray';
+import { thighAvulsionXrayLesson } from '../lib/thigh-avulsion-xray';
+import { hipMuscleXrayLesson } from '../lib/hip-muscle-xray';
+import { adductorLongusXrayLesson } from '../lib/adductor-longus-xray';
+import { pelvicTributaryXrayLesson } from '../lib/pelvic-tributary-xray';
+import { handArterialXrayLesson } from '../lib/hand-arterial-xray';
+import { handBoneXrayLesson } from '../lib/hand-bone-xray';
+import { interosseousMembraneProjectionLesson } from '../lib/interosseous-membrane-projection';
+import { halluxXrayLesson } from '../lib/hallux-xray';
+import { properDigitalTeachingLesson } from '../lib/proper-digital-teaching';
+import { spinalDiscFunctionLesson } from '../lib/spinal-disc-function';
+import { spinalDiscQuizLesson } from '../lib/spinal-disc-quiz';
+import { laryngealMuscleImagingLesson } from '../lib/laryngeal-muscle-imaging';
+import { glotticMuscleImagingLesson } from '../lib/glottic-muscle-imaging';
+import { handVenousImagingLesson } from '../lib/hand-venous-imaging';
+import { genicularMriLesson } from '../lib/genicular-mri';
+import { elbowArterialMriLesson } from '../lib/elbow-arterial-mri';
+import { shoulderArterialImagingLesson } from '../lib/shoulder-arterial-imaging';
+import { plantarArterialMriLesson } from '../lib/plantar-arterial-mri';
+import { spinalBoneUltrasoundLesson } from '../lib/spinal-bone-ultrasound';
+import { hyoidEpiglottisUltrasoundLesson } from '../lib/hyoid-epiglottis-ultrasound';
+import { cranialBoneXrayLesson } from '../lib/cranial-bone-xray';
+import { facialBoneXrayLesson } from '../lib/facial-bone-xray';
+import { suprascapularVesselUltrasoundLesson } from '../lib/suprascapular-vessel-ultrasound';
+import { deepBrainCoreLesson } from '../lib/deep-brain-core-teaching';
+import { footSurfaceImagingLesson } from '../lib/foot-surface-imaging';
+import { handBoneUltrasoundLesson } from '../lib/hand-bone-ultrasound';
+import { toeBoneUltrasoundLesson } from '../lib/toe-bone-ultrasound';
+import { footUltrasoundFollowupLesson } from '../lib/foot-ultrasound-followup';
+import { deepPlantarUltrasoundLesson } from '../lib/deep-plantar-ultrasound';
+import { superficialMedialPlantarUltrasoundLesson } from '../lib/superficial-medial-plantar-ultrasound';
+import { foreheadNerveUltrasoundLesson } from '../lib/forehead-nerve-ultrasound';
+import { lacrimalDrainageUltrasoundLesson } from '../lib/lacrimal-drainage-ultrasound';
+import { abdominalRadialEusLesson } from '../lib/abdominal-radial-eus';
+import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
+import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
+import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
+import { coronaryArterialUsLesson } from '../lib/coronary-arterial-us';
+import { lacrimalDrainageImagingLesson } from '../lib/lacrimal-drainage-imaging';
+import { tongueImagingLesson } from '../lib/tongue-imaging';
+import { laryngealImagingLesson } from '../lib/laryngeal-imaging';
+import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
+import { thoracicBranchImagingLesson } from '../lib/thoracic-branch-imaging';
+import { abdominalBranchImagingLesson } from '../lib/abdominal-branch-imaging';
+import { colicArterialMriLesson } from '../lib/colic-arterial-mri';
+import { abdominalVascularMriLesson } from '../lib/abdominal-vascular-mri';
+import { thoracicSmallVesselMriLesson } from '../lib/thoracic-small-vessel-mri';
+import { shoulderGirdleImagingLesson } from '../lib/shoulder-girdle-imaging';
+import { thoracoabdominalOrientationLesson } from '../lib/thoracoabdominal-orientation';
+import {
+  structures as shoulderStructures,
+  type ContentTab,
+  type ContentSection,
+} from './anatomy-data';
+import type { BodyStructure } from './body-types';
+import { neuroGroupFor } from '../lib/neuroanatomy';
+import { axialGroupFor } from '../lib/axial-anatomy';
+import { headDetailGroupFor } from '../lib/head-detail';
+import { intestinalJunction } from '../lib/intestinal-junction';
+import { mesentericGroupFor } from '../lib/mesenteric-anatomy';
+import { pancreaticGroupFor } from '../lib/pancreatic-anatomy';
+import { thoracicGroupFor } from '../lib/thoracic-anatomy';
+import { handVascularGroupFor } from '../lib/hand-vascular-anatomy';
+import { handVenousGroupFor } from '../lib/hand-venous-anatomy';
+import { footVascularGroupFor } from '../lib/foot-vascular-anatomy';
+import { ocularGroupFor } from '../lib/ocular-anatomy';
+import { laryngealGroupFor } from '../lib/laryngeal-anatomy';
+import { forearmVascularGroupFor } from '../lib/forearm-vascular-anatomy';
+import { draftLesson, type ContentLesson } from '../lib/content-types';
+import { shoulderArmLesson } from '../lib/shoulder-arm-curriculum';
+import { forearmMuscleLesson } from '../lib/forearm-curriculum';
+import { handMuscleLesson } from '../lib/hand-curriculum';
+import { thighMuscleLesson } from '../lib/thigh-curriculum';
+import { legMuscleLesson } from '../lib/leg-curriculum';
+import { footMuscleLesson } from '../lib/foot-curriculum';
+import { pelvicMuscleLesson } from '../lib/pelvic-curriculum';
+import { orbitalMuscleLesson } from '../lib/orbital-curriculum';
+import { swallowingMuscleLesson } from '../lib/swallowing-curriculum';
+import { neckMuscleLesson } from '../lib/neck-curriculum';
+import { deepNeckMuscleLesson } from '../lib/deep-neck-curriculum';
+import { trunkMuscleLesson } from '../lib/trunk-curriculum';
+import { orbitalNerveLesson } from '../lib/orbital-nerve-curriculum';
+import { centralNeuroLesson } from '../lib/central-neuro-curriculum';
+import { organLesson } from '../lib/organ-curriculum';
+import { pelvicReproductiveCoreLesson } from '../lib/pelvic-reproductive-core';
+import { respiratoryCoreDepthLesson } from '../lib/respiratory-core-depth';
+import { coreOrganFunctionLesson } from '../lib/core-organ-function';
+import { majorOrganFunctionLesson } from '../lib/major-organ-function';
+import { connectiveLesson } from '../lib/connective-curriculum';
+import { spinalBoneLesson } from '../lib/spinal-bone-curriculum';
+import { thoracicBoneLesson } from '../lib/thoracic-bone-curriculum';
+import { cranialBoneLesson } from '../lib/cranial-bone-curriculum';
+import { limbBoneLesson } from '../lib/limb-bone-curriculum';
+import { acralBoneLesson } from '../lib/acral-bone-curriculum';
+import { thoracicVesselLesson } from '../lib/thoracic-vessel-curriculum';
+import { abdominalVesselLesson } from '../lib/abdominal-vessel-curriculum';
+import { pelvicVesselLesson } from '../lib/pelvic-vessel-curriculum';
+import { upperLimbVesselLesson } from '../lib/upper-limb-vessel-curriculum';
+import { regionalVesselLesson } from '../lib/regional-vessel-curriculum';
+import { neuralAnatomyLesson } from '../lib/neural-anatomy-curriculum';
+import { organAnatomyLesson } from '../lib/organ-anatomy-curriculum';
+import { connectiveAnatomyLesson } from '../lib/connective-anatomy-curriculum';
+import { shoulderClinicalLesson } from '../lib/shoulder-clinical-curriculum';
+import { scapularArmClinicalLesson } from '../lib/scapular-arm-clinical-curriculum';
+import { forearmClinicalLesson } from '../lib/forearm-clinical-curriculum';
+import { handClinicalLesson } from '../lib/hand-clinical-curriculum';
+import { thighClinicalLesson } from '../lib/thigh-clinical-curriculum';
+import { legClinicalLesson } from '../lib/leg-clinical-curriculum';
+import { footClinicalLesson } from '../lib/foot-clinical-curriculum';
+import { trunkClinicalLesson } from '../lib/trunk-clinical-curriculum';
+import { headClinicalLesson } from '../lib/head-clinical-curriculum';
+import { neckClinicalLesson } from '../lib/neck-clinical-curriculum';
+import { limbBoneClinicalLesson } from '../lib/limb-bone-clinical-curriculum';
+import { axialBoneClinicalLesson } from '../lib/axial-bone-clinical-curriculum';
+import { cranialBoneClinicalLesson } from '../lib/cranial-bone-clinical-curriculum';
+import { acralBoneClinicalLesson } from '../lib/acral-bone-clinical-curriculum';
+import { orbitalNeuralClinicalLesson } from '../lib/orbital-neural-clinical-curriculum';
+import { centralNeuralClinicalLesson } from '../lib/central-neural-clinical-curriculum';
+import { thoracicOrganClinicalLesson } from '../lib/thoracic-organ-clinical-curriculum';
+import { abdominalOrganClinicalLesson } from '../lib/abdominal-organ-clinical-curriculum';
+import { pelvicOrganClinicalLesson } from '../lib/pelvic-organ-clinical-curriculum';
+import { headOrganClinicalLesson } from '../lib/head-organ-clinical-curriculum';
+import { dentalClinicalLesson } from '../lib/dental-clinical-curriculum';
+import { limbConnectiveClinicalLesson } from '../lib/limb-connective-clinical-curriculum';
+import { axialConnectiveClinicalLesson } from '../lib/axial-connective-clinical-curriculum';
+import { regionalConnectiveClinicalLesson } from '../lib/regional-connective-clinical-curriculum';
+import { thoracicVesselClinicalLesson } from '../lib/thoracic-vessel-clinical-curriculum';
+import { abdominalVesselClinicalLesson } from '../lib/abdominal-vessel-clinical-curriculum';
+import { pelvicVesselClinicalLesson } from '../lib/pelvic-vessel-clinical-curriculum';
+import { headNeckVesselClinicalLesson } from '../lib/head-neck-vessel-clinical-curriculum';
+import { shoulderArmVesselClinicalLesson } from '../lib/shoulder-arm-vessel-clinical-curriculum';
+import { forearmVesselClinicalLesson } from '../lib/forearm-vessel-clinical-curriculum';
+import { handVesselClinicalLesson } from '../lib/hand-vessel-clinical-curriculum';
+import { lowerLimbVesselClinicalLesson } from '../lib/lower-limb-vessel-clinical-curriculum';
+import { achillesImagingLesson } from '../lib/achilles-imaging';
+import { achillesCtLesson } from '../lib/achilles-ct';
+import { footVascularQuizLesson } from '../lib/foot-vascular-quiz';
+import { thoracicQuizLesson } from '../lib/thoracic-quiz';
+import { pulmonaryVenousTeachingLesson } from '../lib/pulmonary-venous-teaching';
+import { cervicalQuizLesson } from '../lib/cervical-quiz';
+import { cranialBoneQuizLesson } from '../lib/cranial-bone-quiz';
+import { lumbarSacralQuizLesson } from '../lib/lumbar-sacral-quiz';
+import { carpalBoneQuizLesson } from '../lib/carpal-bone-quiz';
+import { tarsalBoneQuizLesson } from '../lib/tarsal-bone-quiz';
+import { thoracicBoneQuizLesson } from '../lib/thoracic-bone-quiz';
+import { wristUltrasoundLesson } from '../lib/wrist-ultrasound';
+import { abdominalOrganQuizLesson } from '../lib/abdominal-organ-quiz';
+import { thoracoabdominalOrganQuizLesson } from '../lib/thoracoabdominal-organ-quiz';
+import { pelvicOrganQuizLesson } from '../lib/pelvic-organ-quiz';
+import { tonguePalateQuizLesson } from '../lib/tongue-palate-quiz';
+import { pelvicDuctQuizLesson } from '../lib/pelvic-duct-quiz';
+import { hepatobiliaryQuizLesson } from '../lib/hepatobiliary-quiz';
+import { chestWallQuizLesson } from '../lib/chest-wall-quiz';
+import { lowerLimbConnectiveQuizLesson } from '../lib/lower-limb-connective-quiz';
+import { thighMuscleQuizLesson } from '../lib/thigh-muscle-quiz';
+import { legMuscleQuizLesson } from '../lib/leg-muscle-quiz';
+import { forefootMuscleQuizLesson } from '../lib/forefoot-muscle-quiz';
+import { handMuscleQuizLesson } from '../lib/hand-muscle-quiz';
+import { forearmMuscleQuizLesson } from '../lib/forearm-muscle-quiz';
+import { shoulderArmMuscleQuizLesson } from '../lib/shoulder-arm-muscle-quiz';
+import { majorLimbBoneQuizLesson } from '../lib/major-limb-bone-quiz';
+import { footBoneQuizLesson } from '../lib/foot-bone-quiz';
+import { handBoneQuizLesson } from '../lib/hand-bone-quiz';
+import { spineMuscleQuizLesson } from '../lib/spine-muscle-quiz';
+import { thoracicVesselQuizLesson } from '../lib/thoracic-vessel-quiz';
+import { lowerLimbVesselQuizLesson } from '../lib/lower-limb-vessel-quiz';
+import { forearmVesselQuizLesson } from '../lib/forearm-vessel-quiz';
+import { spinalBoneQuizLesson } from '../lib/spinal-bone-quiz';
+import { abdominalVesselQuizLesson } from '../lib/abdominal-vessel-quiz';
+import { salivaryStylohyoidQuizLesson } from '../lib/salivary-stylohyoid-quiz';
+import { thighDeepMuscleQuizLesson } from '../lib/thigh-deep-muscle-quiz';
+import { orbitalMuscleQuizLesson } from '../lib/orbital-muscle-quiz';
+import { neckMuscleQuizLesson } from '../lib/neck-muscle-quiz';
+import { suprahyoidMuscleQuizLesson } from '../lib/suprahyoid-muscle-quiz';
+import { thoracoacromialQuizLesson } from '../lib/thoracoacromial-quiz';
+import { shoulderGirdleArteryQuizLesson } from '../lib/shoulder-girdle-artery-quiz';
+import { neuroOrganQuizLesson } from '../lib/neuro-organ-quiz';
+import { oralRecallQuizLesson } from '../lib/oral-recall-quiz';
+import { scapularMuscleQuizLesson } from '../lib/scapular-muscle-quiz';
+import { upperLimbCompletionQuizLesson } from '../lib/upper-limb-completion-quiz';
+import { regionalMuscleCompletionQuizLesson } from '../lib/regional-muscle-completion-quiz';
+import { laryngealMuscleQuizLesson } from '../lib/laryngeal-muscle-quiz';
+import { lacrimalQuizLesson } from '../lib/lacrimal-quiz';
+import { laryngealFrameworkQuizLesson } from '../lib/laryngeal-framework-quiz';
+import { plantarMuscleQuizLesson } from '../lib/plantar-muscle-quiz';
+import { suprascapularArterialCtLesson } from '../lib/suprascapular-arterial-ct';
+import { limbConnectiveCtLesson } from '../lib/limb-connective-ct';
+import { foregutVesselQuizLesson } from '../lib/foregut-vessel-quiz';
+import { trunkMuscleQuizLesson } from '../lib/trunk-muscle-quiz';
+import { spinalMuscleQuizLesson } from '../lib/spinal-muscle-quiz';
+import { orbitalNerveQuizLesson } from '../lib/orbital-nerve-quiz';
+import { shoulderArmArteryQuizLesson } from '../lib/shoulder-arm-artery-quiz';
+import { abdominalConnectiveQuizLesson } from '../lib/abdominal-connective-quiz';
+import { iliacVesselQuizLesson } from '../lib/iliac-vessel-quiz';
+import { craniofacialBoneQuizLesson } from '../lib/craniofacial-bone-quiz';
+import { headNeckVesselQuizLesson } from '../lib/head-neck-vessel-quiz';
+import { trunkCoreQuizLesson } from '../lib/trunk-core-quiz';
+import { deepBrainQuizLesson } from '../lib/deep-brain-quiz';
+import { cerebralArterialQuizLesson } from '../lib/cerebral-arterial-quiz';
+import { handArterialQuizLesson } from '../lib/hand-arterial-quiz';
+import { handVenousQuizLesson } from '../lib/hand-venous-quiz';
+import { brainConnectionsQuizLesson } from '../lib/brain-connections-quiz';
+import { shoulderArterialCtLesson } from '../lib/shoulder-arterial-ct';
+import { handArterialCtLesson } from '../lib/hand-arterial-ct';
+import { handArterialUltrasoundLesson } from '../lib/hand-arterial-ultrasound';
+import { circleWillisImagingLesson } from '../lib/circle-willis-imaging';
+import { kneeImagingLesson } from '../lib/knee-imaging';
+import { bodyXrayLesson } from '../lib/xray-teaching';
+import { spineImagingLesson } from '../lib/spine-imaging';
+import { hipImagingLesson } from '../lib/hip-imaging';
+import { wristImagingLesson } from '../lib/wrist-imaging';
+import { brachialVeinLesson } from '../lib/brachial-veins';
+import { tentoriumLesson } from '../lib/tentorium';
+import { deepLegVeinLesson } from '../lib/deep-leg-veins';
+import { deepVenousClinicalLesson } from '../lib/deep-venous-clinical';
+import { portalHepaticClinicalLesson } from '../lib/portal-hepatic-clinical';
+import { portalVeinLesson } from '../lib/portal-veins';
+import { hepaticVeinLesson } from '../lib/hepatic-veins';
+import { longusColliLesson } from '../lib/longus-colli';
+import { cubitalVeinLesson } from '../lib/cubital-veins';
+import { genicularArteryLesson } from '../lib/genicular-arteries';
+import { genicularClinicalLesson } from '../lib/genicular-clinical';
+import { picaClinicalLesson } from '../lib/pica-clinical';
+import { scaMcaClinicalLesson } from '../lib/sca-mca-clinical';
+import { upperVenousClinicalLesson } from '../lib/upper-venous-clinical';
+import { regionalVascularClinicalLesson } from '../lib/regional-vascular-clinical';
+import { neckTeachingLesson } from '../lib/neck-teaching';
+import { thyroidImagingLesson } from '../lib/thyroid-imaging';
+import { cranialBoundaryClinicalLesson } from '../lib/cranial-boundary-clinical';
+import { costalCartilageImagingLesson } from '../lib/costal-cartilage-imaging';
+import { corpusImagingLesson } from '../lib/corpus-imaging';
+import { corpusSpongiosumXrayLesson } from '../lib/corpus-spongiosum-xray-v2';
+import { majorBoneImagingLesson } from '../lib/major-bone-imaging';
+import { connectiveImagingLesson } from '../lib/connective-imaging';
+import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
+import { shortCiliaryLesson } from '../lib/short-ciliary';
+import { shortCiliaryQuizLesson } from '../lib/short-ciliary-quiz';
+import { shortCiliaryPathologyLesson } from '../lib/short-ciliary-pathology';
+import { anteriorCardiacVeinLesson } from '../lib/anterior-cardiac-vein';
+import { anteriorCardiacPathologyLesson } from '../lib/anterior-cardiac-pathology';
+import { subscapularArteryLesson } from '../lib/subscapular-arteries';
+import { elbowArteryLesson } from '../lib/elbow-arteries';
+import { elbowClinicalLesson } from '../lib/elbow-clinical';
+import { elbowArterialCtLesson } from '../lib/elbow-arterial-ct';
+import { circumflexFemoralLesson } from '../lib/circumflex-femoral';
+import { cranialArteryLesson } from '../lib/cranial-arteries';
+import { deferentDuctLesson } from '../lib/deferent-ducts';
+import { corpusSpongiosumLesson } from '../lib/corpus-spongiosum';
+import { inferiorEpigastricLesson } from '../lib/inferior-epigastric-vessels';
+import { pelvicVeinLesson } from '../lib/pelvic-veins';
+import { limbicLandmarkLesson } from '../lib/limbic-landmarks';
+import { tarsalImagingLesson } from '../lib/tarsal-imaging';
+import { upperVesselImagingLesson } from '../lib/upper-vessel-imaging';
+import { lowerArterialImagingLesson } from '../lib/lower-arterial-imaging';
+import { plantarArterialCtLesson } from '../lib/plantar-arterial-ct';
+import { lowerVenousImagingLesson } from '../lib/lower-venous-imaging';
+import { forearmVenousImagingLesson } from '../lib/forearm-venous-imaging';
+import { forearmVenousCrossSectionalLesson } from '../lib/forearm-venous-cross-sectional';
+import { laryngealSupportImagingLesson } from '../lib/laryngeal-support-imaging';
+import { cubitalVenousUltrasoundLesson } from '../lib/cubital-venous-ultrasound';
+import { iliacVenousImagingLesson } from '../lib/iliac-venous-imaging';
+import { forearmArterialImagingLesson } from '../lib/forearm-arterial-imaging';
+import { palmarArterialImagingLesson } from '../lib/palmar-arterial-imaging';
+import { metatarsalSurfaceImagingLesson } from '../lib/metatarsal-surface-imaging';
+import { lesserToeXrayLesson } from '../lib/lesser-toe-xray';
+import { distalPalmarMriLesson } from '../lib/distal-palmar-mri';
+import { shoulderArterialMriLesson } from '../lib/shoulder-arterial-mri';
+import { iliacArterialImagingLesson } from '../lib/iliac-arterial-imaging';
+import { tractPlantarImagingLesson } from '../lib/tract-plantar-imaging';
+import { abdominalConnectiveImagingLesson } from '../lib/abdominal-connective-imaging';
+import { transverseMesocolonMriLesson } from '../lib/transverse-mesocolon-mri';
+import { smallIntestinalMesenteryMriLesson } from '../lib/small-intestinal-mesentery-mri';
+import { genicularImagingLesson } from '../lib/genicular-imaging';
+import { regionalBranchImagingLesson } from '../lib/regional-branch-imaging';
+import { limbBoneImagingLesson } from '../lib/limb-bone-imaging';
+import { thoracicBoneImagingLesson } from '../lib/thoracic-bone-imaging';
+import { abdominalOrganImagingLesson } from '../lib/abdominal-organ-imaging';
+import { pelvicOrganImagingLesson } from '../lib/pelvic-organ-imaging';
+import { craniofacialOrganImagingLesson } from '../lib/craniofacial-organ-imaging';
+import { rectalDeferentImagingLesson } from '../lib/rectal-deferent-imaging';
+import { deferentClinicalLesson } from '../lib/deferent-clinical';
+import { thighMuscleImagingLesson } from '../lib/thigh-muscle-imaging';
+import { legMuscleImagingLesson } from '../lib/leg-muscle-imaging';
+import { footMuscleImagingLesson } from '../lib/foot-muscle-imaging';
+import { forearmMuscleImagingLesson } from '../lib/forearm-muscle-imaging';
+import { handMuscleImagingLesson } from '../lib/hand-muscle-imaging';
+import { centralNeuralImagingLesson } from '../lib/central-neural-imaging';
+import { headNeckVesselImagingLesson } from '../lib/head-neck-vessel-imaging';
+import { chestWallMuscleImagingLesson } from '../lib/chest-wall-muscle-imaging';
+import { shoulderArmMuscleImagingLesson } from '../lib/shoulder-arm-muscle-imaging';
+import { spinePelvicMuscleImagingLesson } from '../lib/spine-pelvic-muscle-imaging';
+import { cranialBoneImagingLesson } from '../lib/cranial-bone-imaging';
+import { acralBoneImagingLesson } from '../lib/acral-bone-imaging';
+import { orbitalNeckMuscleImagingLesson } from '../lib/orbital-neck-muscle-imaging';
+import { thoracoabdominalOrganImagingLesson } from '../lib/thoracoabdominal-organ-imaging';
+
+// Original short educational notes, not imported textbook prose. Review pending.
+const functions: Record<string, string> = {
+  FMA7088:
+    'The heart generates the pressure that drives pulmonary and systemic blood flow.',
+  FMA7309:
+    'The right lung supports exchange of oxygen and carbon dioxide between air and blood.',
+  FMA7310:
+    'The left lung supports exchange of oxygen and carbon dioxide between air and blood.',
+  FMA7197:
+    'The liver processes absorbed nutrients, produces bile and participates in metabolism and synthesis of plasma proteins.',
+  FMA7198:
+    'The pancreas contributes digestive secretions and releases hormones involved in glucose regulation.',
+  FMA7148:
+    'The stomach stores and mixes a meal and begins chemical digestion before gastric contents enter the duodenum.',
+  FMA7200:
+    'The small intestine is a major site of digestion and nutrient absorption.',
+  FMA7201:
+    'The large intestine absorbs water and electrolytes and conveys residual material towards elimination.',
+  FMA7202: 'The gallbladder stores and concentrates bile between meals.',
+  FMA7204:
+    'The kidney filters blood and adjusts water, electrolyte and acid–base balance through urine formation.',
+  FMA7205:
+    'The kidney filters blood and adjusts water, electrolyte and acid–base balance through urine formation.',
+  FMA15900: 'The urinary bladder stores urine before coordinated emptying.',
+  FMA7131:
+    'The esophagus conveys swallowed material from the pharynx to the stomach.',
+  FMA7394: 'The trachea conducts air between the larynx and the main bronchi.',
+  FMA7196: 'The spleen filters blood and contributes to immune surveillance.',
+  FMA15629:
+    'The adrenal gland releases hormones involved in stress responses and regulation of metabolism and fluid balance.',
+  FMA15630:
+    'The adrenal gland releases hormones involved in stress responses and regulation of metabolism and fluid balance.',
+  FMA50801:
+    'The brain integrates sensory information and supports movement, cognition and regulation of bodily functions.',
+};
+/** Display API: omit editorial metadata, retaining the ContentSection shape. */
+export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
+  const { readiness: _readiness, ...section } = bodyLesson(s, tab);
+  return section;
+}
+
+/** Readiness belongs to the authoring branch, never inferred from its title. */
+export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const nasalSurface = nasalBoneSurfaceImagingLesson(s, tab);
+  if (nasalSurface) return nasalSurface;
+  const abdominalArterialUs = abdominalArterialUltrasoundLesson(s, tab);
+  if (abdominalArterialUs) return abdominalArterialUs;
+  const pancreaticVenousUs = bodyPancreaticVenousUsLesson(s, tab);
+  if (pancreaticVenousUs) return pancreaticVenousUs;
+  const orbitalCtOrientation = bodyOrbitalCtLesson(s, tab);
+  if (orbitalCtOrientation) return orbitalCtOrientation;
+  const dentalMri=dentalMriLesson(s,tab);
+  if(dentalMri)return dentalMri;
+  const dentalCt=dentalCtLesson(s,tab);
+  if(dentalCt)return dentalCt;
+  const craniofacialCalcificationCt=craniofacialCalcificationCtLesson(s,tab);
+  if(craniofacialCalcificationCt)return craniofacialCalcificationCt;
+  const arterialEvidenceLimit=arterialEvidenceLimitLesson(s,tab);
+  if(arterialEvidenceLimit)return arterialEvidenceLimit;
+  const neckLandmarkXray = neckLandmarkXrayLesson(s, tab);
+  if (neckLandmarkXray) return neckLandmarkXray;
+  const footArterialProjectionXray=footArterialProjectionXrayLesson(s,tab);
+  if(footArterialProjectionXray)return footArterialProjectionXray;
+  const footVenousArchXray=footVenousArchXrayLesson(s,tab);
+  if(footVenousArchXray)return footVenousArchXray;
+
+  const intracranialArterialUs = intracranialArterialUsLesson(s, tab);
+  if (intracranialArterialUs) return intracranialArterialUs;
+  const cervicalProjectionXray = cervicalProjectionXrayLesson(s, tab);
+  if (cervicalProjectionXray) return cervicalProjectionXray;
+  const spinalMuscleXray = spinalMuscleXrayLesson(s, tab);
+  if (spinalMuscleXray) return spinalMuscleXray;
+  const handVesselXray = handVesselXrayLesson(s, tab);
+  if (handVesselXray) return handVesselXray;
+  const connectiveProjectionXray = connectiveProjectionXrayLesson(s, tab);
+  if (connectiveProjectionXray) return connectiveProjectionXray;
+  const nasalMri = nasalCartilageMriLesson(s, tab);
+  if (nasalMri) return nasalMri;
+  const lowerLimbConnectiveXray = lowerLimbConnectiveXrayLesson(s, tab);
+  if (lowerLimbConnectiveXray) return lowerLimbConnectiveXray;
+  const nasalQuiz = nasalCartilageQuizLesson(s, tab);
+  if (nasalQuiz) return nasalQuiz;
+  const commissuralQuiz = commissuralLandmarkQuizLesson(s, tab);
+  if (commissuralQuiz) return commissuralQuiz;
+  const pectoralUltrasound = pectoralBranchUltrasoundLesson(s, tab);
+  if (pectoralUltrasound) return pectoralUltrasound;
+  const ileocolicUltrasound = ileocolicArteryUltrasoundLesson(s, tab);
+  if (ileocolicUltrasound) return ileocolicUltrasound;
+  const colicUltrasound = colicArteryUltrasoundLesson(s, tab);
+  if (colicUltrasound) return colicUltrasound;
+  const orbitalSupportQuiz = orbitalSupportQuizLesson(s, tab);
+  if (orbitalSupportQuiz) return orbitalSupportQuiz;
+  const ocularSupportQuiz = ocularSupportQuizLesson(s, tab);
+  if (ocularSupportQuiz) return ocularSupportQuiz;
+  const forearmVascularXray = forearmVascularXrayLesson(s, tab);
+  if (forearmVascularXray) return forearmVascularXray;
+  const forearmBranchXray = forearmBranchXrayLesson(s, tab);
+  if (forearmBranchXray) return forearmBranchXray;
+  const armArterialXray = armArterialXrayLesson(s, tab);
+  if (armArterialXray) return armArterialXray;
+  const shoulderMuscleXray = shoulderMuscleXrayLesson(s, tab);
+  if (shoulderMuscleXray) return shoulderMuscleXray;
+  const girdleMuscleXray = girdleMuscleXrayLesson(s, tab);
+  if (girdleMuscleXray) return girdleMuscleXray;
+  const axillaryBranchXray = axillaryBranchXrayLesson(s, tab);
+  if (axillaryBranchXray) return axillaryBranchXray;
+  const shoulderVesselXray = shoulderVesselXrayLesson(s, tab);
+  if (shoulderVesselXray) return shoulderVesselXray;
+  const medianCubitalXray = medianCubitalXrayLesson(s, tab);
+  if (medianCubitalXray) return medianCubitalXray;
+  const medianAntebrachialXray = medianAntebrachialXrayLesson(s, tab);
+  if (medianAntebrachialXray) return medianAntebrachialXray;
+  const neonatalCranialUltrasound = neonatalCranialUltrasoundLesson(s, tab);
+  if (neonatalCranialUltrasound) return neonatalCranialUltrasound;
+  const elbowArterialUsFollowup = elbowArterialUsFollowupLesson(s, tab);
+  if (elbowArterialUsFollowup) return elbowArterialUsFollowup;
+  const elbowArterialUltrasound = elbowArterialUltrasoundLesson(s, tab);
+  if (elbowArterialUltrasound) return elbowArterialUltrasound;
+  const pharyngealImaging = pharyngealConstrictorImagingLesson(s, tab);
+  if (pharyngealImaging) return pharyngealImaging;
+  const pharyngealMri = pharyngealMriLesson(s, tab);
+  if (pharyngealMri) return pharyngealMri;
+  const salpingopharyngeusMri = salpingopharyngeusMriLesson(s, tab);
+  if (salpingopharyngeusMri) return salpingopharyngeusMri;
+  const thoracicSystemic = thoracicSystemicTeachingLesson(s, tab);
+  if (thoracicSystemic) return thoracicSystemic;
+  const vocalTissue = vocalTissueTeachingLesson(s, tab);
+  if (vocalTissue) return vocalTissue;
+  const pharyngealMuscle = pharyngealMuscleTeachingLesson(s, tab);
+  if (pharyngealMuscle) return pharyngealMuscle;
+  const pancreaticVessel = pancreaticVesselTeachingLesson(s, tab);
+  if (pancreaticVessel) return pancreaticVessel;
+  const mesentericVessel = mesentericVesselTeachingLesson(s, tab);
+  if (mesentericVessel) return mesentericVessel;
+  const girdleBoneUltrasound = girdleBoneUltrasoundLesson(s, tab);
+  if (girdleBoneUltrasound) return girdleBoneUltrasound;
+  const shoulderGirdleArterialUltrasound = shoulderGirdleArterialUltrasoundLesson(s, tab);
+  if (shoulderGirdleArterialUltrasound) return shoulderGirdleArterialUltrasound;
+  const deepPlantarUltrasound = deepPlantarUltrasoundLesson(s, tab);
+  if (deepPlantarUltrasound) return deepPlantarUltrasound;
+  const superficialMedialPlantarUltrasound = superficialMedialPlantarUltrasoundLesson(s, tab);
+  if (superficialMedialPlantarUltrasound) return superficialMedialPlantarUltrasound;
+  const foreheadNerveUltrasound = foreheadNerveUltrasoundLesson(s, tab);
+  if (foreheadNerveUltrasound) return foreheadNerveUltrasound;
+  const lacrimalDrainageUltrasound = lacrimalDrainageUltrasoundLesson(s, tab);
+  if (lacrimalDrainageUltrasound) return lacrimalDrainageUltrasound;
+  const abdominalRadialEus = abdominalRadialEusLesson(s, tab);
+  if (abdominalRadialEus) return abdominalRadialEus;
+  const footUltrasoundFollowup = footUltrasoundFollowupLesson(s, tab);
+  if (footUltrasoundFollowup) return footUltrasoundFollowup;
+  const toeBoneUltrasound = toeBoneUltrasoundLesson(s, tab);
+  if (toeBoneUltrasound) return toeBoneUltrasound;
+  const handBoneUltrasound = handBoneUltrasoundLesson(s, tab);
+  if (handBoneUltrasound) return handBoneUltrasound;
+  const footSurfaceImaging = footSurfaceImagingLesson(s, tab);
+  if (footSurfaceImaging) return footSurfaceImaging;
+  const handUltrasound = handArterialUltrasoundLesson(s, tab);
+  if (handUltrasound) return handUltrasound;
+  const handCt = handArterialCtLesson(s, tab);
+  if (handCt) return handCt;
+  const tentoriumImaging = tentoriumImagingLesson(s, tab);
+  if (tentoriumImaging) return tentoriumImaging;
+  const cerebellarMcaImaging = cerebellarMcaImagingLesson(s, tab);
+  if (cerebellarMcaImaging) return cerebellarMcaImaging;
+  const footSesamoid = footSesamoidLesson(s, tab);
+  if (footSesamoid) return footSesamoid;
+  const abdominalOrganQuiz = abdominalOrganQuizLesson(s, tab);
+  const spinalDiscQuiz = spinalDiscQuizLesson(s, tab);
+  if (spinalDiscQuiz) return spinalDiscQuiz;
+  const thoracoabdominalOrganQuiz = thoracoabdominalOrganQuizLesson(s, tab);
+  if (thoracoabdominalOrganQuiz) return thoracoabdominalOrganQuiz;
+  const brainConnectionsQuiz = brainConnectionsQuizLesson(s, tab);
+  if (brainConnectionsQuiz) return brainConnectionsQuiz;
+  const pelvicOrganQuiz = pelvicOrganQuizLesson(s, tab);
+  if (pelvicOrganQuiz) return pelvicOrganQuiz;
+  const tonguePalateQuiz = tonguePalateQuizLesson(s, tab);
+  if (tonguePalateQuiz) return tonguePalateQuiz;
+  const pelvicDuctQuiz = pelvicDuctQuizLesson(s, tab);
+  if (pelvicDuctQuiz) return pelvicDuctQuiz;
+  const hepatobiliaryQuiz = hepatobiliaryQuizLesson(s, tab);
+  if (hepatobiliaryQuiz) return hepatobiliaryQuiz;
+  const chestWallQuiz = chestWallQuizLesson(s, tab);
+  if (chestWallQuiz) return chestWallQuiz;
+  const lowerLimbConnectiveQuiz = lowerLimbConnectiveQuizLesson(s, tab);
+  if (lowerLimbConnectiveQuiz) return lowerLimbConnectiveQuiz;
+  const thighMuscleQuiz = thighMuscleQuizLesson(s, tab);
+  if (thighMuscleQuiz) return thighMuscleQuiz;
+  const legMuscleQuiz = legMuscleQuizLesson(s, tab);
+  if (legMuscleQuiz) return legMuscleQuiz;
+  const forefootMuscleQuiz = forefootMuscleQuizLesson(s, tab);
+  if (forefootMuscleQuiz) return forefootMuscleQuiz;
+  const handMuscleQuiz = handMuscleQuizLesson(s, tab);
+  if (handMuscleQuiz) return handMuscleQuiz;
+  const forearmMuscleQuiz = forearmMuscleQuizLesson(s, tab);
+  if (forearmMuscleQuiz) return forearmMuscleQuiz;
+  const shoulderArmMuscleQuiz = shoulderArmMuscleQuizLesson(s, tab);
+  if (shoulderArmMuscleQuiz) return shoulderArmMuscleQuiz;
+  const majorLimbBoneQuiz = majorLimbBoneQuizLesson(s, tab);
+  if (majorLimbBoneQuiz) return majorLimbBoneQuiz;
+  const footBoneQuiz = footBoneQuizLesson(s, tab);
+  if (footBoneQuiz) return footBoneQuiz;
+  const handBoneQuiz = handBoneQuizLesson(s, tab);
+  if (handBoneQuiz) return handBoneQuiz;
+  const spineMuscleQuiz = spineMuscleQuizLesson(s, tab);
+  if (spineMuscleQuiz) return spineMuscleQuiz;
+  const thoracicVesselQuiz = thoracicVesselQuizLesson(s, tab);
+  if (thoracicVesselQuiz) return thoracicVesselQuiz;
+  const lowerLimbVesselQuiz = lowerLimbVesselQuizLesson(s, tab);
+  if (lowerLimbVesselQuiz) return lowerLimbVesselQuiz;
+  const forearmVesselQuiz = forearmVesselQuizLesson(s, tab);
+  if (forearmVesselQuiz) return forearmVesselQuiz;
+  const spinalBoneQuiz = spinalBoneQuizLesson(s, tab);
+  if (spinalBoneQuiz) return spinalBoneQuiz;
+  const abdominalVesselQuiz = abdominalVesselQuizLesson(s, tab);
+  if (abdominalVesselQuiz) return abdominalVesselQuiz;
+  const salivaryStylohyoidQuiz = salivaryStylohyoidQuizLesson(s, tab);
+  if (salivaryStylohyoidQuiz) return salivaryStylohyoidQuiz;
+  const thighDeepMuscleQuiz = thighDeepMuscleQuizLesson(s, tab);
+  if (thighDeepMuscleQuiz) return thighDeepMuscleQuiz;
+  const orbitalMuscleQuiz = orbitalMuscleQuizLesson(s, tab);
+  if (orbitalMuscleQuiz) return orbitalMuscleQuiz;
+  const neckMuscleQuiz = neckMuscleQuizLesson(s, tab);
+  if (neckMuscleQuiz) return neckMuscleQuiz;
+  const suprahyoidMuscleQuiz = suprahyoidMuscleQuizLesson(s, tab);
+  if (suprahyoidMuscleQuiz) return suprahyoidMuscleQuiz;
+  const thoracoacromialQuiz = thoracoacromialQuizLesson(s, tab);
+  if (thoracoacromialQuiz) return thoracoacromialQuiz;
+  const shoulderGirdleArteryQuiz = shoulderGirdleArteryQuizLesson(s, tab);
+  if (shoulderGirdleArteryQuiz) return shoulderGirdleArteryQuiz;
+  const neuroOrganQuiz = neuroOrganQuizLesson(s, tab);
+  if (neuroOrganQuiz) return neuroOrganQuiz;
+  const oralRecallQuiz = oralRecallQuizLesson(s, tab);
+  if (oralRecallQuiz) return oralRecallQuiz;
+  const scapularMuscleQuiz = scapularMuscleQuizLesson(s, tab);
+  if (scapularMuscleQuiz) return scapularMuscleQuiz;
+  const upperLimbCompletionQuiz = upperLimbCompletionQuizLesson(s, tab);
+  if (upperLimbCompletionQuiz) return upperLimbCompletionQuiz;
+  const regionalMuscleCompletionQuiz = regionalMuscleCompletionQuizLesson(s, tab);
+  if (regionalMuscleCompletionQuiz) return regionalMuscleCompletionQuiz;
+  const laryngealMuscleQuiz = laryngealMuscleQuizLesson(s, tab);
+  if (laryngealMuscleQuiz) return laryngealMuscleQuiz;
+  const lacrimalQuiz = lacrimalQuizLesson(s, tab);
+  if (lacrimalQuiz) return lacrimalQuiz;
+  const laryngealFrameworkQuiz = laryngealFrameworkQuizLesson(s, tab);
+  if (laryngealFrameworkQuiz) return laryngealFrameworkQuiz;
+  const plantarMuscleQuiz = plantarMuscleQuizLesson(s, tab);
+  const footVariantQuiz = footVariantQuizLesson(s, tab);
+  if (footVariantQuiz) return footVariantQuiz;
+  if (plantarMuscleQuiz) return plantarMuscleQuiz;
+  const suprascapularArterialCt = suprascapularArterialCtLesson(s, tab);
+  if (suprascapularArterialCt) return suprascapularArterialCt;
+  const limbConnectiveCt = limbConnectiveCtLesson(s, tab);
+  if (limbConnectiveCt) return limbConnectiveCt;
+  const foregutVesselQuiz = foregutVesselQuizLesson(s, tab);
+  if (foregutVesselQuiz) return foregutVesselQuiz;
+  const trunkMuscleQuiz = trunkMuscleQuizLesson(s, tab);
+  if (trunkMuscleQuiz) return trunkMuscleQuiz;
+  const spinalMuscleQuiz = spinalMuscleQuizLesson(s, tab);
+  if (spinalMuscleQuiz) return spinalMuscleQuiz;
+  const orbitalNerveQuiz = orbitalNerveQuizLesson(s, tab);
+  if (orbitalNerveQuiz) return orbitalNerveQuiz;
+  const shoulderArmArteryQuiz = shoulderArmArteryQuizLesson(s, tab);
+  if (shoulderArmArteryQuiz) return shoulderArmArteryQuiz;
+  const abdominalConnectiveQuiz = abdominalConnectiveQuizLesson(s, tab);
+  if (abdominalConnectiveQuiz) return abdominalConnectiveQuiz;
+  const iliacVesselQuiz = iliacVesselQuizLesson(s, tab);
+  if (iliacVesselQuiz) return iliacVesselQuiz;
+  const craniofacialBoneQuiz = craniofacialBoneQuizLesson(s, tab);
+  if (craniofacialBoneQuiz) return craniofacialBoneQuiz;
+  const headNeckVesselQuiz = headNeckVesselQuizLesson(s, tab);
+  if (headNeckVesselQuiz) return headNeckVesselQuiz;
+  const trunkCoreQuiz = trunkCoreQuizLesson(s, tab);
+  if (trunkCoreQuiz) return trunkCoreQuiz;
+  const deepBrainQuiz = deepBrainQuizLesson(s, tab);
+  if (deepBrainQuiz) return deepBrainQuiz;
+  const cerebralArterialQuiz = cerebralArterialQuizLesson(s, tab);
+  if (cerebralArterialQuiz) return cerebralArterialQuiz;
+  const handArterialQuiz = handArterialQuizLesson(s, tab);
+  if (handArterialQuiz) return handArterialQuiz;
+  const handVenousQuiz = handVenousQuizLesson(s, tab);
+  if (handVenousQuiz) return handVenousQuiz;
+  if (abdominalOrganQuiz) return abdominalOrganQuiz;
+  const shoulderCt = shoulderArterialCtLesson(s, tab);
+  if (shoulderCt) return shoulderCt;
+  const cervicalQuiz = cervicalQuizLesson(s, tab);
+  if (cervicalQuiz) return cervicalQuiz;
+  const cranialBoneQuiz = cranialBoneQuizLesson(s, tab);
+  if (cranialBoneQuiz) return cranialBoneQuiz;
+  const lumbarSacralQuiz = lumbarSacralQuizLesson(s, tab);
+  if (lumbarSacralQuiz) return lumbarSacralQuiz;
+  const carpalBoneQuiz = carpalBoneQuizLesson(s, tab);
+  if (carpalBoneQuiz) return carpalBoneQuiz;
+  const tarsalBoneQuiz = tarsalBoneQuizLesson(s, tab);
+  if (tarsalBoneQuiz) return tarsalBoneQuiz;
+  const thoracicBoneQuiz = thoracicBoneQuizLesson(s, tab);
+  if (thoracicBoneQuiz) return thoracicBoneQuiz;
+  const wristUltrasound = wristUltrasoundLesson(s, tab);
+  if (wristUltrasound) return wristUltrasound;
+  const pulmonaryVenousTeaching = pulmonaryVenousTeachingLesson(s, tab);
+  if (pulmonaryVenousTeaching) return pulmonaryVenousTeaching;
+  const thoracicQuiz = thoracicQuizLesson(s, tab);
+  if (thoracicQuiz) return thoracicQuiz;
+  const circleWillisImaging = circleWillisImagingLesson(s, tab);
+  if (circleWillisImaging) return circleWillisImaging;
+  const footVascularQuiz = footVascularQuizLesson(s, tab);
+  if (footVascularQuiz) return footVascularQuiz;
+  const coronaryArterialUs = coronaryArterialUsLesson(s, tab);
+  if (coronaryArterialUs) return coronaryArterialUs;
+  const commonInterosseousUs = commonInterosseousUsLesson(s, tab);
+  if (commonInterosseousUs) return commonInterosseousUs;
+  const plantarArterialUs = plantarArterialUsLesson(s, tab);
+  if (plantarArterialUs) return plantarArterialUs;
+  const lateralCricoarytenoidUs = lateralCricoarytenoidUsLesson(s, tab);
+  if (lateralCricoarytenoidUs) return lateralCricoarytenoidUs;
+  const centralCanalImaging = centralCanalImagingLesson(s, tab);
+  if (centralCanalImaging) return centralCanalImaging;
+  const centralCanalXray = centralCanalXrayLesson(s, tab);
+  if (centralCanalXray) return centralCanalXray;
+  const footVenousArchImaging = footVenousArchImagingLesson(s, tab);
+  if (footVenousArchImaging) return footVenousArchImaging;
+  const abdominalEusOrientation = abdominalEusOrientationLesson(s, tab);
+  if (abdominalEusOrientation) return abdominalEusOrientation;
+  const thoracicEusOrientation = thoracicEusOrientationLesson(s, tab);
+  if (thoracicEusOrientation) return thoracicEusOrientation;
+  const coronaryArterialXray = coronaryArterialXrayLesson(s, tab);
+  if (coronaryArterialXray) return coronaryArterialXray;
+  const iliacArterialXray = iliacArterialXrayLesson(s, tab);
+  if (iliacArterialXray) return iliacArterialXray;
+  const femoralArterialXray = femoralArterialXrayLesson(s, tab);
+  if (femoralArterialXray) return femoralArterialXray;
+  const femoralVenousXray = femoralVenousXrayLesson(s, tab);
+  if (femoralVenousXray) return femoralVenousXray;
+  const legVenousXray = legVenousXrayLesson(s, tab);
+  if (legVenousXray) return legVenousXray;
+  const legArterialXray = legArterialXrayLesson(s, tab);
+  if (legArterialXray) return legArterialXray;
+  const genicularUltrasound = genicularUltrasoundLesson(s, tab);
+  if (genicularUltrasound) return genicularUltrasound;
+  const abdominalArterialXray = abdominalArterialXrayLesson(s, tab);
+  if (abdominalArterialXray) return abdominalArterialXray;
+  const hepaticArterialXray = hepaticArterialXrayLesson(s, tab);
+  if (hepaticArterialXray) return hepaticArterialXray;
+  const visceralArterialXray = visceralArterialXrayLesson(s, tab);
+  if (visceralArterialXray) return visceralArterialXray;
+  const portalVenousXray = portalVenousXrayLesson(s, tab);
+  if (portalVenousXray) return portalVenousXray;
+  const gastricVenousXray = gastricVenousXrayLesson(s, tab);
+  if (gastricVenousXray) return gastricVenousXray;
+  const abdominalDetailXray = abdominalDetailXrayLesson(s, tab);
+  if (abdominalDetailXray) return abdominalDetailXray;
+  const hepaticVenousXray = hepaticVenousXrayLesson(s, tab);
+  if (hepaticVenousXray) return hepaticVenousXray;
+  const colicArterialXray = colicArterialXrayLesson(s, tab);
+  if (colicArterialXray) return colicArterialXray;
+  const pancreaticArterialXray = pancreaticArterialXrayLesson(s, tab);
+  if (pancreaticArterialXray) return pancreaticArterialXray;
+  const thoracicWallArterialXray = thoracicWallArterialXrayLesson(s, tab);
+  if (thoracicWallArterialXray) return thoracicWallArterialXray;
+  const thoracicMediastinalArterialXray = thoracicMediastinalArterialXrayLesson(s, tab);
+  if (thoracicMediastinalArterialXray) return thoracicMediastinalArterialXray;
+  const thoracicVenousXray = thoracicVenousXrayLesson(s, tab);
+  if (thoracicVenousXray) return thoracicVenousXray;
+  const cardiacVenousUltrasound = cardiacVenousUltrasoundLesson(s, tab);
+  if (cardiacVenousUltrasound) return cardiacVenousUltrasound;
+  const thoracicDetailUltrasound = thoracicDetailUltrasoundLesson(s, tab);
+  if (thoracicDetailUltrasound) return thoracicDetailUltrasound;
+  const iliacVenousXray = iliacVenousXrayLesson(s, tab);
+  if (iliacVenousXray) return iliacVenousXray;
+  const intracranialArterialXray = intracranialArterialXrayLesson(s, tab);
+  if (intracranialArterialXray) return intracranialArterialXray;
+  const abdominalFoldUltrasound = abdominalFoldUltrasoundLesson(s, tab);
+  if (abdominalFoldUltrasound) return abdominalFoldUltrasound;
+  const spinalDiscUltrasound = spinalDiscUltrasoundLesson(s, tab);
+  if (spinalDiscUltrasound) return spinalDiscUltrasound;
+  const orbitalCt = orbitalApexCtLesson(s, tab);
+  if (orbitalCt) return orbitalCt;
+  const orbitalRingCt = orbitalRingCtLesson(s, tab);
+  if (orbitalRingCt) return orbitalRingCt;
+  const orbitalMri = orbitalNerveMriLesson(s, tab);
+  if (orbitalMri) return orbitalMri;
+  const orbitalSensoryMri = orbitalSensoryMriLesson(s, tab);
+  if (orbitalSensoryMri) return orbitalSensoryMri;
+  const laryngealMuscle = laryngealMuscleImagingLesson(s, tab);
+  if (laryngealMuscle) return laryngealMuscle;
+  const glotticMuscle = glotticMuscleImagingLesson(s, tab);
+  if (glotticMuscle) return glotticMuscle;
+  const handVenousImaging = handVenousImagingLesson(s, tab);
+  if (handVenousImaging) return handVenousImaging;
+  const genicularMri = genicularMriLesson(s, tab);
+  if (genicularMri) return genicularMri;
+  const elbowArterialMri = elbowArterialMriLesson(s, tab);
+  if (elbowArterialMri) return elbowArterialMri;
+  const shoulderArterialImaging = shoulderArterialImagingLesson(s, tab);
+  if (shoulderArterialImaging) return shoulderArterialImaging;
+  const plantarArterialMri = plantarArterialMriLesson(s, tab);
+  if (plantarArterialMri) return plantarArterialMri;
+  const spinalBoneUltrasound = spinalBoneUltrasoundLesson(s, tab);
+  if (spinalBoneUltrasound) return spinalBoneUltrasound;
+  const hyoidEpiglottisUltrasound = hyoidEpiglottisUltrasoundLesson(s, tab);
+  if (hyoidEpiglottisUltrasound) return hyoidEpiglottisUltrasound;
+  const cranialBoneXray = cranialBoneXrayLesson(s, tab);
+  if (cranialBoneXray) return cranialBoneXray;
+  const facialBoneXray = facialBoneXrayLesson(s, tab);
+  if (facialBoneXray) return facialBoneXray;
+  const suprascapularVesselUltrasound = suprascapularVesselUltrasoundLesson(s, tab);
+  if (suprascapularVesselUltrasound) return suprascapularVesselUltrasound;
+  const deepBrainCore = deepBrainCoreLesson(s, tab);
+  if (deepBrainCore) return deepBrainCore;
+  const spinalDisc = spinalDiscFunctionLesson(s, tab);
+  if (spinalDisc) return spinalDisc;
+  const properDigital = properDigitalTeachingLesson(s, tab);
+  if (properDigital) return properDigital;
+  const mainBronchusXray = mainBronchusXrayLesson(s, tab);
+  if (mainBronchusXray) return mainBronchusXray;
+  const biliaryDuctXray = biliaryDuctXrayLesson(s, tab);
+  if (biliaryDuctXray) return biliaryDuctXray;
+  const internalIliacUltrasound = internalIliacUltrasoundLesson(s, tab);
+  if (internalIliacUltrasound) return internalIliacUltrasound;
+  const rootCuffXray = rootCuffXrayLesson(s, tab);
+  if (rootCuffXray) return rootCuffXray;
+  const orbitalSupportMri = orbitalSupportMriLesson(s, tab);
+  if (orbitalSupportMri) return orbitalSupportMri;
+  const thoracoacromialUltrasound = thoracoacromialUltrasoundLesson(s, tab);
+  if (thoracoacromialUltrasound) return thoracoacromialUltrasound;
+  const dorsalHandUltrasound = dorsalHandUltrasoundLesson(s, tab);
+  if (dorsalHandUltrasound) return dorsalHandUltrasound;
+  const digitalVeinUltrasound = digitalVeinUltrasoundLesson(s, tab);
+  if (digitalVeinUltrasound) return digitalVeinUltrasound;
+  const laryngealInletImaging = laryngealInletImagingLesson(s, tab);
+  if (laryngealInletImaging) return laryngealInletImaging;
+  const tongueImaging = tongueImagingLesson(s, tab);
+  if (tongueImaging) return tongueImaging;
+  const laryngealImaging = laryngealImagingLesson(s, tab);
+  if (laryngealImaging) return laryngealImaging;
+  const anteriorCardiacPathology = anteriorCardiacPathologyLesson(s, tab);
+  if (anteriorCardiacPathology) return anteriorCardiacPathology;
+  const thoracicSmallVesselMri = thoracicSmallVesselMriLesson(s, tab);
+  if (thoracicSmallVesselMri) return thoracicSmallVesselMri;
+  const anteriorCardiacVein = anteriorCardiacVeinLesson(s, tab);
+  if (anteriorCardiacVein) return anteriorCardiacVein;
+  const shortCiliaryPathology = shortCiliaryPathologyLesson(s, tab);
+  if (shortCiliaryPathology) return shortCiliaryPathology;
+  const shortCiliaryQuiz = shortCiliaryQuizLesson(s, tab);
+  if (shortCiliaryQuiz) return shortCiliaryQuiz;
+  const shortCiliary = shortCiliaryLesson(s, tab);
+  if (shortCiliary) return shortCiliary;
+  const neckTeaching = neckTeachingLesson(s, tab);
+  const majorBoneImaging = majorBoneImagingLesson(s, tab);
+  const connectiveImaging = connectiveImagingLesson(s, tab);
+  if (connectiveImaging) return connectiveImaging;
+  if (majorBoneImaging) return majorBoneImaging;
+  const corpusImaging = corpusImagingLesson(s, tab);
+  if (corpusImaging) return corpusImaging;
+  const corpusSpongiosumXray = corpusSpongiosumXrayLesson(s, tab);
+  if (corpusSpongiosumXray) return corpusSpongiosumXray;
+  const costalCartilage = costalCartilageImagingLesson(s, tab);
+  if (costalCartilage) return costalCartilage;
+  const laminaPathology = laminaPathologyLesson(s, tab);
+  if (laminaPathology) return laminaPathology;
+  const epigastricVeinPathology = epigastricVeinPathologyLesson(s, tab);
+  if (epigastricVeinPathology) return epigastricVeinPathology;
+  const cranialBoundary = cranialBoundaryClinicalLesson(s, tab);
+  if (cranialBoundary) return cranialBoundary;
+  const thyroidImaging = thyroidImagingLesson(s, tab);
+  if (thyroidImaging) return thyroidImaging;
+  if (neckTeaching) return neckTeaching;
+  const thoracoabdominalOrientation = thoracoabdominalOrientationLesson(s, tab);
+  if (thoracoabdominalOrientation) return thoracoabdominalOrientation;
+  const shoulderGirdleImaging = shoulderGirdleImagingLesson(s, tab);
+  if (shoulderGirdleImaging) return shoulderGirdleImaging;
+  const abdominalVascularMri = abdominalVascularMriLesson(s, tab);
+  if (abdominalVascularMri) return abdominalVascularMri;
+  const colicArterialMri = colicArterialMriLesson(s, tab);
+  if (colicArterialMri) return colicArterialMri;
+  const abdominalBranchImaging = abdominalBranchImagingLesson(s, tab);
+  if (abdominalBranchImaging) return abdominalBranchImaging;
+  const thoracicBranchImaging = thoracicBranchImagingLesson(s, tab);
+  if (thoracicBranchImaging) return thoracicBranchImaging;
+  const centralVesselImaging = centralVesselImagingLesson(s, tab);
+  if (centralVesselImaging) return centralVesselImaging;
+  const mediastinalXray = mediastinalXrayLesson(s, tab);
+  if (mediastinalXray) return mediastinalXray;
+  const hilarVesselXray = hilarVesselXrayLesson(s, tab);
+  if (hilarVesselXray) return hilarVesselXray;
+  const thoracicInletXray = thoracicInletXrayLesson(s, tab);
+  if (thoracicInletXray) return thoracicInletXray;
+  const thoracoabdominalOrganImaging = thoracoabdominalOrganImagingLesson(s, tab);
+  if (thoracoabdominalOrganImaging) return thoracoabdominalOrganImaging;
+  const orbitalNeckMuscleImaging = orbitalNeckMuscleImagingLesson(s, tab);
+  if (orbitalNeckMuscleImaging) return orbitalNeckMuscleImaging;
+  const handBoneXray = handBoneXrayLesson(s, tab);
+  if (handBoneXray) return handBoneXray;
+  const interosseousMembraneProjection = interosseousMembraneProjectionLesson(s, tab);
+  if (interosseousMembraneProjection) return interosseousMembraneProjection;
+  const halluxXray = halluxXrayLesson(s, tab);
+  if (halluxXray) return halluxXray;
+  const acralBoneImaging = acralBoneImagingLesson(s, tab);
+  if (acralBoneImaging) return acralBoneImaging;
+  const cranialBoneImaging = cranialBoneImagingLesson(s, tab);
+  if (cranialBoneImaging) return cranialBoneImaging;
+  const spinePelvicImaging = spinePelvicMuscleImagingLesson(s, tab);
+  if (spinePelvicImaging) return spinePelvicImaging;
+  const shoulderArmImaging = shoulderArmMuscleImagingLesson(s, tab);
+  if (shoulderArmImaging) return shoulderArmImaging;
+  const chestWallImaging = chestWallMuscleImagingLesson(s, tab);
+  if (chestWallImaging) return chestWallImaging;
+  const elbowClinical = elbowClinicalLesson(s, tab);
+  if (elbowClinical) return elbowClinical;
+  const elbowCt = elbowArterialCtLesson(s, tab);
+  if (elbowCt) return elbowCt;
+  const elbow = elbowArteryLesson(s, tab);
+  if (elbow) return elbow;
+  const picaClinical = picaClinicalLesson(s, tab);
+  if (picaClinical) return picaClinical;
+  const scaMcaClinical = scaMcaClinicalLesson(s, tab);
+  if (scaMcaClinical) return scaMcaClinical;
+  const upperVenousClinical = upperVenousClinicalLesson(s, tab);
+  if (upperVenousClinical) return upperVenousClinical;
+  const regionalVascularClinical = regionalVascularClinicalLesson(s, tab);
+  if (regionalVascularClinical) return regionalVascularClinical;
+  const cranial = cranialArteryLesson(s, tab);
+  if (cranial) return cranial;
+  const regionalBranchImaging = regionalBranchImagingLesson(s, tab);
+  if (regionalBranchImaging) return regionalBranchImaging;
+  const circumflex = circumflexFemoralLesson(s, tab);
+  if (circumflex) return circumflex;
+  const subscapular = subscapularArteryLesson(s, tab);
+  if (subscapular) return subscapular;
+  const lowerArterialImaging = lowerArterialImagingLesson(s, tab);
+  if (lowerArterialImaging) return lowerArterialImaging;
+  const plantarArterialCt = plantarArterialCtLesson(s, tab);
+  if (plantarArterialCt) return plantarArterialCt;
+  const lowerVenousImaging = lowerVenousImagingLesson(s, tab);
+  if (lowerVenousImaging) return lowerVenousImaging;
+  const forearmVenousCrossSectional = forearmVenousCrossSectionalLesson(s, tab);
+  if (forearmVenousCrossSectional) return forearmVenousCrossSectional;
+  const laryngealSupportImaging = laryngealSupportImagingLesson(s, tab);
+  if (laryngealSupportImaging) return laryngealSupportImaging;
+  const forearmVenousImaging = forearmVenousImagingLesson(s, tab);
+  if (forearmVenousImaging) return forearmVenousImaging;
+  const cubitalVenousUltrasound = cubitalVenousUltrasoundLesson(s, tab);
+  if (cubitalVenousUltrasound) return cubitalVenousUltrasound;
+  const iliacVenousImaging = iliacVenousImagingLesson(s, tab);
+  if (iliacVenousImaging) return iliacVenousImaging;
+  const forearmArterialImaging = forearmArterialImagingLesson(s, tab);
+  if (forearmArterialImaging) return forearmArterialImaging;
+  const palmarArterialImaging = palmarArterialImagingLesson(s, tab);
+  if (palmarArterialImaging) return palmarArterialImaging;
+  const metatarsalSurfaceImaging = metatarsalSurfaceImagingLesson(s, tab);
+  if (metatarsalSurfaceImaging) return metatarsalSurfaceImaging;
+  const lesserToeXray = lesserToeXrayLesson(s, tab);
+  if (lesserToeXray) return lesserToeXray;
+  const distalPalmarMri = distalPalmarMriLesson(s, tab);
+  if (distalPalmarMri) return distalPalmarMri;
+  const shoulderArterialMri = shoulderArterialMriLesson(s, tab);
+  if (shoulderArterialMri) return shoulderArterialMri;
+  const iliacArterialImaging = iliacArterialImagingLesson(s, tab);
+  if (iliacArterialImaging) return iliacArterialImaging;
+  const tractPlantarImaging = tractPlantarImagingLesson(s, tab);
+  const abdominalConnectiveImaging = abdominalConnectiveImagingLesson(s, tab);
+  if (abdominalConnectiveImaging) return abdominalConnectiveImaging;
+  const transverseMesocolonMri = transverseMesocolonMriLesson(s, tab);
+  if (transverseMesocolonMri) return transverseMesocolonMri;
+  const smallIntestinalMesenteryMri = smallIntestinalMesenteryMriLesson(s, tab);
+  if (smallIntestinalMesenteryMri) return smallIntestinalMesenteryMri;
+  if (tractPlantarImaging) return tractPlantarImaging;
+  const headNeckVesselImaging = headNeckVesselImagingLesson(s, tab);
+  if (headNeckVesselImaging) return headNeckVesselImaging;
+  const centralNeuralImaging = centralNeuralImagingLesson(s, tab);
+  if (centralNeuralImaging) return centralNeuralImaging;
+  const limbic = limbicLandmarkLesson(s, tab);
+  if (limbic) return limbic;
+  const pelvicTributaryXray = pelvicTributaryXrayLesson(s, tab);
+  if (pelvicTributaryXray) return pelvicTributaryXray;
+  const pelvicVein = pelvicVeinLesson(s, tab);
+  if (pelvicVein) return pelvicVein;
+  const epigastric = inferiorEpigastricLesson(s, tab);
+  if (epigastric) return epigastric;
+  const upperVesselImaging = upperVesselImagingLesson(s, tab);
+  if (upperVesselImaging) return upperVesselImaging;
+  const thyroid = inferiorThyroidLesson(s, tab);
+  const deferentClinical = deferentClinicalLesson(s, tab);
+  if (deferentClinical) return deferentClinical;
+  const rectalDeferentImaging = rectalDeferentImagingLesson(s, tab);
+  if (rectalDeferentImaging) return rectalDeferentImaging;
+  const deferent = deferentDuctLesson(s, tab);
+  const spongiosum = corpusSpongiosumLesson(s, tab);
+  if (spongiosum) return spongiosum;
+  if (deferent) return deferent;
+  if (thyroid) return thyroid;
+  const genicularClinical = genicularClinicalLesson(s, tab);
+  const genicularImaging = genicularImagingLesson(s, tab);
+  if (genicularImaging) return genicularImaging;
+  if (genicularClinical) return genicularClinical;
+  const genicular = genicularArteryLesson(s, tab);
+  if (genicular) return genicular;
+  const cubitalVein = cubitalVeinLesson(s, tab);
+  if (cubitalVein) return cubitalVein;
+  const deepLegVein = deepLegVeinLesson(s, tab);
+  if (deepLegVein) return deepLegVein;
+  const deepVenousClinical = deepVenousClinicalLesson(s, tab);
+  if (deepVenousClinical) return deepVenousClinical;
+  const longusColli = longusColliLesson(s, tab);
+  if (longusColli) return longusColli;
+  const hepaticVein = hepaticVeinLesson(s, tab);
+  if (hepaticVein) return hepaticVein;
+  const portalVein = portalVeinLesson(s, tab);
+  if (portalVein) return portalVein;
+  const portalHepaticClinical = portalHepaticClinicalLesson(s, tab);
+  if (portalHepaticClinical) return portalHepaticClinical;
+  const tarsalImaging = tarsalImagingLesson(s, tab);
+  if (tarsalImaging) return tarsalImaging;
+  const limbBoneImaging = limbBoneImagingLesson(s, tab);
+  if (limbBoneImaging) return limbBoneImaging;
+  const thoracicBoneImaging = thoracicBoneImagingLesson(s, tab);
+  if (thoracicBoneImaging) return thoracicBoneImaging;
+  const abdominalOrganImaging = abdominalOrganImagingLesson(s, tab);
+  if (abdominalOrganImaging) return abdominalOrganImaging;
+  const pelvicOrganImaging = pelvicOrganImagingLesson(s, tab);
+  const craniofacialOrganImaging = craniofacialOrganImagingLesson(s, tab);
+  if (craniofacialOrganImaging) return craniofacialOrganImaging;
+  const lacrimalDrainageImaging = lacrimalDrainageImagingLesson(s, tab);
+  if (lacrimalDrainageImaging) return lacrimalDrainageImaging;
+  if (pelvicOrganImaging) return pelvicOrganImaging;
+  const thighMuscleImaging = thighMuscleImagingLesson(s, tab);
+  if (thighMuscleImaging) return thighMuscleImaging;
+  const legMuscleImaging = legMuscleImagingLesson(s, tab);
+  if (legMuscleImaging) return legMuscleImaging;
+  const footMuscleImaging = footMuscleImagingLesson(s, tab);
+  if (footMuscleImaging) return footMuscleImaging;
+  const forearmMuscleImaging = forearmMuscleImagingLesson(s, tab);
+  if (forearmMuscleImaging) return forearmMuscleImaging;
+  const handMuscleImaging = handMuscleImagingLesson(s, tab);
+  if (handMuscleImaging) return handMuscleImaging;
+  const tentorium = tentoriumLesson(s, tab);
+  if (tentorium) return tentorium;
+  const brachialVein = brachialVeinLesson(s, tab);
+  if (brachialVein) return brachialVein;
+  const wristImaging = wristImagingLesson(s, tab);
+  if (wristImaging) return wristImaging;
+  const hipImaging = hipImagingLesson(s, tab);
+  if (hipImaging) return hipImaging;
+  const hipAbductorXray = hipAbductorXrayLesson(s, tab);
+  if (hipAbductorXray) return hipAbductorXray;
+  const psoasXray = psoasXrayLesson(s, tab);
+  if (psoasXray) return psoasXray;
+  const thighAvulsionXray = thighAvulsionXrayLesson(s, tab);
+  if (thighAvulsionXray) return thighAvulsionXray;
+  const hipMuscleXray = hipMuscleXrayLesson(s, tab);
+  if (hipMuscleXray) return hipMuscleXray;
+  const adductorLongusXray = adductorLongusXrayLesson(s, tab);
+  if (adductorLongusXray) return adductorLongusXray;
+  const handArterialXray = handArterialXrayLesson(s, tab);
+  if (handArterialXray) return handArterialXray;
+  const spineImaging = spineImagingLesson(s, tab);
+  if (spineImaging) return spineImaging;
+  const xray = bodyXrayLesson(s, tab);
+  if (xray) return xray;
+  const existing = shoulderStructures.find((item) =>
+    item.sourceFmaIds?.includes(s.fmaId),
+  );
+  if (existing) return draftLesson(existing.sections[tab]);
+  const kneeImaging = kneeImagingLesson(s, tab);
+  if (kneeImaging) return kneeImaging;
+  const achillesCt = achillesCtLesson(s, tab);
+  if (achillesCt) return achillesCt;
+  const achillesImaging = achillesImagingLesson(s, tab);
+  if (achillesImaging) return achillesImaging;
+  const shoulderArm = shoulderArmLesson(s, tab);
+  if (shoulderArm) return shoulderArm;
+  const forearmMuscle = forearmMuscleLesson(s, tab);
+  if (forearmMuscle) return forearmMuscle;
+  const handMuscle = handMuscleLesson(s, tab);
+  if (handMuscle) return handMuscle;
+  const thighMuscle = thighMuscleLesson(s, tab);
+  if (thighMuscle) return thighMuscle;
+  const legMuscle = legMuscleLesson(s, tab);
+  if (legMuscle) return legMuscle;
+  const footMuscle = footMuscleLesson(s, tab);
+  if (footMuscle) return footMuscle;
+  const pelvicMuscle = pelvicMuscleLesson(s, tab);
+  if (pelvicMuscle) return pelvicMuscle;
+  const orbitalMuscle = orbitalMuscleLesson(s, tab);
+  if (orbitalMuscle) return orbitalMuscle;
+  const swallowingMuscle = swallowingMuscleLesson(s, tab);
+  if (swallowingMuscle) return swallowingMuscle;
+  const neckMuscle = neckMuscleLesson(s, tab);
+  if (neckMuscle) return neckMuscle;
+  const deepNeckMuscle = deepNeckMuscleLesson(s, tab);
+  if (deepNeckMuscle) return deepNeckMuscle;
+  const trunkMuscle = trunkMuscleLesson(s, tab);
+  if (trunkMuscle) return trunkMuscle;
+  const orbitalNerve = orbitalNerveLesson(s, tab);
+  if (orbitalNerve) return orbitalNerve;
+  const centralNeuro = centralNeuroLesson(s, tab);
+  if (centralNeuro) return centralNeuro;
+  const respiratoryCoreDepth = respiratoryCoreDepthLesson(s, tab);
+  if (respiratoryCoreDepth) return respiratoryCoreDepth;
+  const coreOrganFunction = coreOrganFunctionLesson(s, tab);
+  if (coreOrganFunction) return coreOrganFunction;
+  const majorOrganFunction = majorOrganFunctionLesson(s, tab);
+  if (majorOrganFunction) return majorOrganFunction;
+  const pelvicReproductiveCore = pelvicReproductiveCoreLesson(s, tab);
+  if (pelvicReproductiveCore) return pelvicReproductiveCore;
+  const organ = organLesson(s, tab);
+  if (organ) return organ;
+  const connective = connectiveLesson(s, tab);
+  if (connective) return connective;
+  const spinalBone = spinalBoneLesson(s, tab);
+  if (spinalBone) return spinalBone;
+  const thoracicBone = thoracicBoneLesson(s, tab);
+  if (thoracicBone) return thoracicBone;
+  const cranialBone = cranialBoneLesson(s, tab);
+  if (cranialBone) return cranialBone;
+  const limbBone = limbBoneLesson(s, tab);
+  if (limbBone) return limbBone;
+  const acralBone = acralBoneLesson(s, tab);
+  if (acralBone) return acralBone;
+  const thoracicVessel = thoracicVesselLesson(s, tab);
+  if (thoracicVessel) return thoracicVessel;
+  const abdominalVessel = abdominalVesselLesson(s, tab);
+  if (abdominalVessel) return abdominalVessel;
+  const pelvicVessel = pelvicVesselLesson(s, tab);
+  if (pelvicVessel) return pelvicVessel;
+  const upperLimbVessel = upperLimbVesselLesson(s, tab);
+  if (upperLimbVessel) return upperLimbVessel;
+  const regionalVessel = regionalVesselLesson(s, tab);
+  if (regionalVessel) return regionalVessel;
+  const neuralAnatomy = neuralAnatomyLesson(s, tab);
+  if (neuralAnatomy) return neuralAnatomy;
+  const organAnatomy = organAnatomyLesson(s, tab);
+  if (organAnatomy) return organAnatomy;
+  const connectiveAnatomy = connectiveAnatomyLesson(s, tab);
+  if (connectiveAnatomy) return connectiveAnatomy;
+  const shoulderClinical = shoulderClinicalLesson(s, tab);
+  if (shoulderClinical) return shoulderClinical;
+  const scapularArmClinical = scapularArmClinicalLesson(s, tab);
+  if (scapularArmClinical) return scapularArmClinical;
+  const forearmClinical = forearmClinicalLesson(s, tab);
+  if (forearmClinical) return forearmClinical;
+  const handClinical = handClinicalLesson(s, tab);
+  if (handClinical) return handClinical;
+  const thighClinical = thighClinicalLesson(s, tab);
+  if (thighClinical) return thighClinical;
+  const legClinical = legClinicalLesson(s, tab);
+  if (legClinical) return legClinical;
+  const footClinical = footClinicalLesson(s, tab);
+  if (footClinical) return footClinical;
+  const trunkClinical = trunkClinicalLesson(s, tab);
+  if (trunkClinical) return trunkClinical;
+  const headClinical = headClinicalLesson(s, tab);
+  if (headClinical) return headClinical;
+  const neckClinical = neckClinicalLesson(s, tab);
+  if (neckClinical) return neckClinical;
+  const limbBoneClinical = limbBoneClinicalLesson(s, tab);
+  if (limbBoneClinical) return limbBoneClinical;
+  const axialBoneClinical = axialBoneClinicalLesson(s, tab);
+  if (axialBoneClinical) return axialBoneClinical;
+  const cranialBoneClinical = cranialBoneClinicalLesson(s, tab);
+  if (cranialBoneClinical) return cranialBoneClinical;
+  const acralBoneClinical = acralBoneClinicalLesson(s, tab);
+  if (acralBoneClinical) return acralBoneClinical;
+  const orbitalNeuralClinical = orbitalNeuralClinicalLesson(s, tab);
+  if (orbitalNeuralClinical) return orbitalNeuralClinical;
+  const centralNeuralClinical = centralNeuralClinicalLesson(s, tab);
+  if (centralNeuralClinical) return centralNeuralClinical;
+  const thoracicOrganClinical = thoracicOrganClinicalLesson(s, tab);
+  if (thoracicOrganClinical) return thoracicOrganClinical;
+  const abdominalOrganClinical = abdominalOrganClinicalLesson(s, tab);
+  if (abdominalOrganClinical) return abdominalOrganClinical;
+  const pelvicOrganClinical = pelvicOrganClinicalLesson(s, tab);
+  if (pelvicOrganClinical) return pelvicOrganClinical;
+  const headOrganClinical = headOrganClinicalLesson(s, tab);
+  if (headOrganClinical) return headOrganClinical;
+  const dentalClinical = dentalClinicalLesson(s, tab);
+  if (dentalClinical) return dentalClinical;
+  const limbConnectiveClinical = limbConnectiveClinicalLesson(s, tab);
+  if (limbConnectiveClinical) return limbConnectiveClinical;
+  const axialConnectiveClinical = axialConnectiveClinicalLesson(s, tab);
+  if (axialConnectiveClinical) return axialConnectiveClinical;
+  const regionalConnectiveClinical = regionalConnectiveClinicalLesson(s, tab);
+  if (regionalConnectiveClinical) return regionalConnectiveClinical;
+  const thoracicVesselClinical = thoracicVesselClinicalLesson(s, tab);
+  if (thoracicVesselClinical) return thoracicVesselClinical;
+  const abdominalVesselClinical = abdominalVesselClinicalLesson(s, tab);
+  if (abdominalVesselClinical) return abdominalVesselClinical;
+  const pelvicVesselClinical = pelvicVesselClinicalLesson(s, tab);
+  if (pelvicVesselClinical) return pelvicVesselClinical;
+  const headNeckVesselClinical = headNeckVesselClinicalLesson(s, tab);
+  if (headNeckVesselClinical) return headNeckVesselClinical;
+  const shoulderArmVesselClinical = shoulderArmVesselClinicalLesson(s, tab);
+  if (shoulderArmVesselClinical) return shoulderArmVesselClinical;
+  const forearmVesselClinical = forearmVesselClinicalLesson(s, tab);
+  if (forearmVesselClinical) return forearmVesselClinical;
+  const handVesselClinical = handVesselClinicalLesson(s, tab);
+  if (handVesselClinical) return handVesselClinical;
+  const lowerLimbVesselClinical = lowerLimbVesselClinicalLesson(s, tab);
+  if (lowerLimbVesselClinical) return lowerLimbVesselClinical;
+  const laryngealMuscleTeaching = laryngealMuscleTeachingLesson(s, tab);
+  if (laryngealMuscleTeaching) return laryngealMuscleTeaching;
+  const axial =
+    axialGroupFor(s.fmaId) ??
+    headDetailGroupFor(s.fmaId) ??
+    mesentericGroupFor(s.fmaId) ??
+    pancreaticGroupFor(s.fmaId) ??
+    thoracicGroupFor(s.fmaId) ??
+    handVascularGroupFor(s.fmaId) ??
+    handVenousGroupFor(s.fmaId) ??
+    footVascularGroupFor(s.fmaId) ??
+    ocularGroupFor(s.fmaId) ??
+    laryngealGroupFor(s.fmaId) ??
+    forearmVascularGroupFor(s.fmaId) ??
+    (intestinalJunction.fmaIds.includes(s.fmaId)
+      ? intestinalJunction
+      : undefined);
+  if (axial && (tab === 'anatomy' || tab === 'function'))
+    return {
+      readiness: 'draft',
+      title: `${axial.name} · draft`,
+      body: tab === 'anatomy' ? axial.anatomy : axial.function,
+      bullets:
+        tab === 'anatomy'
+          ? [
+              `Source identity: ${s.fmaId} · ${s.sources.length} source component${s.sources.length === 1 ? '' : 's'}`,
+              axial.caution,
+              'Use Study windows & focuses to preview and open its local study view.',
+            ]
+          : [axial.caution],
+      note: s.coverageNote ?? 'Anatomical and teaching review pending.',
+      citations: axial.references,
+    };
+  const neuro = neuroGroupFor(s.fmaId);
+  if (neuro && (tab === 'anatomy' || tab === 'function'))
+    return {
+      readiness: tab === 'function' && !neuro.function ? 'pending' : 'draft',
+      title: `${neuro.name} · draft`,
+      body:
+        tab === 'anatomy'
+          ? neuro.anatomy
+          : (neuro.function ??
+            'A structure-specific function lesson is awaiting specialist authorship and review.'),
+      bullets:
+        tab === 'anatomy'
+          ? [
+              `Source identity: ${s.fmaId} · ${s.sources.length} source component${s.sources.length === 1 ? '' : 's'}`,
+              'Open Head & neck → Deep-brain overview or a focused compartment view to remove the overlying brain and skull.',
+              'Study colours distinguish structures. They do not encode MRI signal, histological staining or tissue activation.',
+            ]
+          : undefined,
+      note: s.coverageNote ?? 'Anatomical and teaching review pending.',
+      citations:
+        tab === 'anatomy'
+          ? [
+              ...neuro.references,
+              'https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html',
+            ]
+          : neuro.references,
+    };
+  if (tab === 'anatomy')
+    return {
+      readiness: 'identity-only',
+      title: s.provenance?.recovered
+        ? 'Recovered anatomy · review pending'
+        : 'Anatomical identity',
+      body: `${s.name} is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.`,
+      bullets: [
+        `Source anatomical identifier: ${s.fmaId}`,
+        s.sources.length === 1
+          ? 'One source surface'
+          : `${s.sources.length} source components grouped as one structure`,
+        'Source-derived mesh, not an AI-invented anatomical surface.',
+        'Independent anatomical review: not yet completed.',
+      ],
+      note:
+        s.coverageNote ??
+        'Detailed boundaries and regional classification still require independent anatomical review.',
+      citations: [
+        'https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html',
+        'https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html',
+      ],
+    };
+  if (tab === 'function' && /set of lumbricals/.test(s.sourceName))
+    return {
+      readiness: 'draft',
+      title: 'Lumbrical group · draft',
+      body: 'The hand lumbricals contribute to flexion at the metacarpophalangeal joints and extension at the interphalangeal joints through the extensor apparatus.',
+      note: 'This source represents a group. Do not assign a single nerve supply to all four muscles; individual attachments and innervation need separate reviewed records.',
+      citations: ['https://anatomy.elpaso.ttuhsc.edu/schemes/hand_tables.html'],
+    };
+  if (
+    tab === 'function' &&
+    /set of (palmar|dorsal) interossei/.test(s.sourceName)
+  )
+    return {
+      readiness: 'draft',
+      title: 'Interosseous group · draft',
+      body: /dorsal/.test(s.sourceName)
+        ? 'The dorsal hand interossei spread the fingers relative to the middle-finger axis. They also help bend the knuckles and straighten the interphalangeal joints.'
+        : 'The palmar hand interossei draw the fingers towards the middle-finger axis. They also help bend the knuckles and straighten the interphalangeal joints.',
+      bullets: [
+        'Motor supply: deep branch of the ulnar nerve.',
+        'These source groups are not individually numbered or attachment-validated.',
+      ],
+      note: 'Draft educational text; independent review pending.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html',
+      ],
+    };
+  if (tab === 'function' && /intervertebral disk/.test(s.sourceName))
+    return {
+      readiness: 'draft',
+      title: 'Whole intervertebral disc · draft',
+      body: 'Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.',
+      note: '22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/joints_back.html',
+      ],
+    };
+  if (tab === 'function' && /calcaneal tendon/.test(s.sourceName))
+    return {
+      readiness: 'draft',
+      title: 'Achilles tendon · draft',
+      body: 'The calcaneal tendon transmits force from gastrocnemius and soleus to the heel bone, supporting plantar flexion at the ankle.',
+      note: 'The source surface does not separately show subtendons, paratenon or a validated insertion footprint.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html',
+      ],
+    };
+  if (tab === 'function' && ['FMA50881', 'FMA50882'].includes(s.fmaId))
+    return {
+      readiness: 'draft',
+      title: 'Trochlear nerve (CN IV) · draft',
+      body: 'The trochlear nerve supplies the superior oblique muscle of the eye. It emerges from the dorsal brainstem and reaches the orbit through the superior orbital fissure.',
+      note: 'The displayed source segment is not a validated reconstruction of the entire nerve course.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html',
+      ],
+    };
+  if (tab === 'function' && /long plantar ligament/.test(s.sourceName))
+    return {
+      readiness: 'draft',
+      title: 'Long plantar ligament · draft',
+      body: 'The long plantar ligament supports the plantar aspect of the lateral foot and contributes to longitudinal-arch stability.',
+      note: 'Source surface and draft teaching note require independent anatomical review.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/joints_lowerlimb.html',
+      ],
+    };
+  if (tab === 'function' && s.system === 'vessels')
+    return {
+      readiness: 'identity-only',
+      title: 'Vascular segment · review pending',
+      body: 'This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.',
+      note: 'Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation.',
+    };
+  if (tab === 'function' && ['FMA53549', 'FMA53550'].includes(s.fmaId))
+    return {
+      readiness: 'draft',
+      title: 'Ciliary ganglion · draft',
+      body: 'This orbital ganglion relays parasympathetic signals to the sphincter pupillae and ciliary muscle through short ciliary nerves.',
+      note: 'The small ganglion surface is selectable, but connecting roots and short ciliary nerve routes have not been reconstructed. Source identity and position require specialist review.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html',
+      ],
+    };
+  if (tab === 'function' && /main bronchus/.test(s.sourceName))
+    return {
+      readiness: 'draft',
+      title: 'Central airway · draft',
+      body: 'The main bronchi conduct air from the trachea towards the lungs and their branching airways.',
+      note: 'These source-labelled surfaces have not been boundary-validated. Do not infer clinical bronchial length, lumen or segment numbering from this representation.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html',
+      ],
+    };
+  if (tab === 'function' && ['FMA14539', 'FMA14668'].includes(s.fmaId))
+    return {
+      readiness: 'draft',
+      title: 'Biliary drainage · draft',
+      body:
+        s.fmaId === 'FMA14539'
+          ? 'The cystic duct provides the route into and out of the gallbladder. It joins the common hepatic duct to form the common bile duct.'
+          : 'The common hepatic duct carries bile from the right and left hepatic ducts towards its junction with the cystic duct.',
+      note: 'Only selected source-labelled duct surfaces are shown. The complete tree, junction boundaries and luminal continuity have not been validated.',
+      citations: ['https://anatomy.ttuhscep.edu/schemes/liver_tables.html'],
+    };
+  if (tab === 'function')
+    return functions[s.fmaId]
+      ? {
+          readiness: 'draft',
+          title: 'Function',
+          body: functions[s.fmaId],
+          note: 'Draft teaching note · clinical/editorial review pending.',
+          ...(s.fmaId === 'FMA50801' ? {citations: ['https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system']} : {}),
+        }
+      : {
+          readiness: 'pending',
+          title: 'Function content pending',
+          body: 'A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now.',
+        };
+  if (['ct', 'mri', 'ultrasound'].includes(tab))
+    return {
+      readiness: 'pending',
+      title: `${tab === 'ultrasound' ? 'Ultrasound' : tab.toUpperCase()} content pending`,
+      body: 'No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.',
+      note: 'Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates.',
+    };
+  if (tab === 'pathology')
+    return {
+      readiness: 'pending',
+      title: 'Pathology content pending',
+      body: 'This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure.',
+    };
+  if (tab === 'clinical')
+    return {
+      readiness: 'pending',
+      title: 'Clinical content pending',
+      body: 'Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care.',
+    };
+  return {
+    readiness: 'generated-identification',
+    title: 'Identification practice',
+    body: `Find ${s.name.toLowerCase()} on the model.`,
+  };
+}
