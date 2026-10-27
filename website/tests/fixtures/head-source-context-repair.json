@@ -1,0 +1,56 @@
+{
+  "schema": "vm-head-context-exact-inverse/2",
+  "parentReceipt": "F:/VisibleMedicine/staging/20261027-head-navigation-proof/SOURCE_CANDIDATE.json",
+  "parentSha256": "ad25b300eb1a5783e2df1b07138ab5693f45e4bc71fac9227742cb1d580a9b6d",
+  "rows": [
+    {
+      "path": "tests/historical-head-pilot-read.mjs",
+      "beforeSha256": "155580d27d857afca4622fd286c4ef9419ea3883b5a2484095a3eb076b074443",
+      "afterSha256": "00e203e79fcde075d48014b533b46307b58c35e12f1d5d158df706d10204f80d",
+      "delta": "@@ -5,2 +5,2 @@ import {readFile as fsReadFile} from 'node:fs/promises';\n-import {readFileSync} from 'node:fs';\n-import {relative, sep} from 'node:path';\n+import {lstatSync,readFileSync,realpathSync} from 'node:fs';\n+import {join,relative,sep,isAbsolute} from 'node:path';\n@@ -35,0 +36,6 @@ assert.equal(manifest.files.length,216);\n+// Require an explicit archived export; never fall back to the moving current runtime.\n+const originalRoot=process.env.VM_HEAD_PILOT_9FBA_ROOT;\n+assert(typeof originalRoot==='string'&&originalRoot.trim()&&isAbsolute(originalRoot),'Explicit historical export root required');\n+assert(lstatSync(originalRoot).isDirectory()&&!lstatSync(originalRoot).isSymbolicLink(),'Original export root is a directory');\n+const originalReal=realpathSync.native(originalRoot);\n+assert.equal(sha(readFileSync(join(originalRoot,'manifest.json'))),epoch.manifestSha256,'Original export manifest digest');\n@@ -135,0 +142,21 @@ function assertSafeHistoricName(name){\n+// The two optional readers allow isolated refusal checks. Production always\n+// uses the fixed original root and the default filesystem readers.\n+export async function readHistoricalUnchangedFile(name,readManifest=readFileSync,readAsset=fsReadFile){\n+  assertSafeHistoricName(name);\n+  const expected=allowed.get(name);\n+  assert(expected&&!frozen.has(name)&&!support.has(name),'Only an unchanged declared source may use the original export');\n+  const actualManifest=readManifest(join(originalRoot,'manifest.json'));\n+  assert(Buffer.isBuffer(actualManifest),'Original manifest is missing or not bytes');\n+  assert.equal(actualManifest.length,manifestBytes.length,'Original manifest size changed');\n+  assert.equal(sha(actualManifest),epoch.manifestSha256,'Original manifest changed');\n+  const path=join(originalRoot,name),stat=lstatSync(path);\n+  assert(stat.isFile()&&!stat.isSymbolicLink(),`Original historical asset is not a regular file: ${name}`);\n+  const rel=relative(originalReal,realpathSync.native(path));\n+  assert(rel&&rel!=='..'&&!rel.startsWith(`..${sep}`)&&!rel.startsWith('/'),`Original historical asset escapes export: ${name}`);\n+  const bytes=await readAsset(path);\n+  assert(Buffer.isBuffer(bytes),`Original historical asset is missing or not bytes: ${name}`);\n+  assert.equal(bytes.length,expected.bytes,`Original historical asset size changed: ${name}`);\n+  assert.equal(sha(bytes),expected.sha256,`Original historical asset changed: ${name}`);\n+  return bytes;\n+}\n+\n@@ -162 +189 @@ export async function readHeadPilotFile(url,encoding){\n-  const bytes=frozen.get(name)??support.get(name)??await fsReadFile(url);\n+  const bytes=frozen.get(name)??support.get(name)??await readHistoricalUnchangedFile(name);\n",
+      "deltaSha256": "f650dbb51ce9197af9d0d2cff5564131f116eb5c8ac49c03ff06de91f804e374"
+    },
+    {
+      "path": "tests/head-neck-pilot.test.ts",
+      "beforeSha256": "5cb326883f1081550cb9940f4a603b2b9258e57ef41cee068ab3d33d786fc7d9",
+      "afterSha256": "ba20957e2441f5a6d4f6f0589c7f8c9c1fdb0a7e0124857d3b717339c419e946",
+      "delta": "@@ -1,0 +2 @@ import test from 'node:test';\n+import {historicalHead6dRuntime} from './head-source-context-roles.mjs';\n@@ -191,0 +193 @@ test('current6d7 head-neck scene remains separately source-bound and non-clinica\n+  const runtime=historicalHead6dRuntime;\n",
+      "deltaSha256": "7ab03cb84e9e819735a60543a9b192cf73f0ff99fd0e208e6d69c23e33448394"
+    },
+    {
+      "path": "tests/head-neck-pilot-current.test.mjs",
+      "beforeSha256": "2891a842e5c4723820ca61cfc51aea533a861809a40c4db8492808584462283d",
+      "afterSha256": "b9986f08009042b6e12266cb0de311172a3c5521d607eb9423f01bc5666bf3b4",
+      "delta": "@@ -1,0 +2 @@ import test from 'node:test';\n+import {historicalHead6dRuntime,readHistoricalHead6dFile,listHistoricalHead6dDirectory,validateHistoricalHead6d} from './head-source-context-roles.mjs';\n@@ -163,0 +165 @@ test('current6d7 head-neck delivery independently keeps the complete source, reg\n+  const runtime=historicalHead6dRuntime,readFile=readHistoricalHead6dFile,readdir=listHistoricalHead6dDirectory,validateCurrentAtlasDelivery=validateHistoricalHead6d;\n",
+      "deltaSha256": "23b8ed603b82135d5c88681ae3c94fea58a9065574dd2bf1445ae0f9c1704ddb"
+    },
+    {
+      "path": "tests/head-pan-source-transition.test.ts",
+      "beforeSha256": "8a3164ff927cb93cdd3582bd872c1e2827f08d8071284e0449d851c640e31619",
+      "afterSha256": "8536bc1bd2d4be112d3e376909f58156feafb24e6bb84f3c7e9f50cc8e8a6c59",
+      "delta": "@@ -1,0 +2 @@ import test from 'node:test';import assert from 'node:assert/strict';\n+import {readHistoricalPanViewer} from './head-source-context-roles.mjs';\n@@ -30 +31 @@ test('only NativeSlice changes; its whole-function inverse recovers the complete\n- const before=normal(prior('HeadAtlasViewer.tsx')),after=normal(read('components/HeadAtlasViewer.tsx'));\n+ const before=normal(prior('HeadAtlasViewer.tsx')),after=normal(readHistoricalPanViewer());\n",
+      "deltaSha256": "bb398463c046bf4680bbf06ca99207deb413aea5fd06b9360f199dd473217481"
+    },
+    {
+      "path": "tests/head-feature-source-roles.mjs",
+      "beforeSha256": "aed28dd2f241cbb970f22debcedd11224bc004e0bf543b82e3eacc279d65332d",
+      "afterSha256": "538f58ec33617340461f58a28cd43a8c10f1a80d8618c250431c7f9a35bd8708",
+      "delta": "@@ -76 +76,3 @@ const admitted=sourceRole('F:/VisibleMedicine/staging/20261027-coccygeus-website\n-export function assertSealedCurrentHeadFeatureDelivery({readActual=path=>readFileSync(new URL('../'+path,import.meta.url))}={}){\n+// Legacy export name: this proves the sealed a9 import epoch, not the moving current website.\n+export const readHistoricalCoccygeusSource=admitted.read;\n+export function assertSealedCurrentHeadFeatureDelivery({readActual=admitted.read}={}){\n",
+      "deltaSha256": "ac6fabcc8ea82942d29e53e8f00be9b5dbabcfe172a3a0554ff37ebb44335851"
+    },
+    {
+      "path": "tests/head-neck-pilot-history-preservation.test.mjs",
+      "beforeSha256": "9798269f4b3f982d4d16d80437a09a0abb0c0c11015d94dfb57a2c1b708ece69",
+      "afterSha256": "4be1aaa1a4b091c44a03943a35b0a2f6e2ccaa69d937a6bfff47819ad60cf204",
+      "delta": "@@ -4,0 +5 @@ import test from 'node:test';\n+import {restoreHeadContextSource} from './head-source-context-preservation.mjs';\n@@ -75,0 +77 @@ function verify(entry,post){\n+ post=restoreHeadContextSource(post,name);\n",
+      "deltaSha256": "249a470661346126896d23c79fc009c8dc3f320991bc415ac80165bf4b3b358b"
+    },
+    {
+      "path": "tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "beforeSha256": "e6d3875ea07c68aac014c77124c01c985f37d651e54b8e6fac54b79cc2ce5d49",
+      "afterSha256": "cfeba0e0f3ba445559ba61aa499226345d569465624ee8b3ebf462c47731f281",
+      "delta": "@@ -2,0 +3 @@ import test from 'node:test';\n+import {restoreHeadContextSource} from './head-source-context-preservation.mjs';\n@@ -7 +8 @@ const sha=b=>createHash('sha256').update(b).digest('hex');\n-const read=p=>readFileSync(new URL(p,import.meta.url));\n+const read=p=>{const bytes=readFileSync(new URL(p,import.meta.url));return ['head-neck-pilot-current.test.mjs','head-neck-pilot.test.ts'].includes(p)?restoreHeadContextSource(bytes,p):bytes;};\n",
+      "deltaSha256": "c7d2ba7d694be377422a20758cd238bbb3ba1af6521ee62981b3f7ff5a07329c"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T08:19:57.172Z",
+  "sourceIdentity": {
+    "kind": "head-source-context-repairs",
+    "sha256": "5961ab51ddf98f141d44d6722fb7c7b2e6e9128d4783144fa473f659d9d11aa4"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/historical-head-pilot-read.mjs",
+      "bytes": 12150,
+      "sha256": "00e203e79fcde075d48014b533b46307b58c35e12f1d5d158df706d10204f80d"
+    },
+    {
+      "path": "website/tests/head-neck-pilot.test.ts",
+      "bytes": 23622,
+      "sha256": "ba20957e2441f5a6d4f6f0589c7f8c9c1fdb0a7e0124857d3b717339c419e946"
+    },
+    {
+      "path": "website/tests/head-neck-pilot-current.test.mjs",
+      "bytes": 15725,
+      "sha256": "b9986f08009042b6e12266cb0de311172a3c5521d607eb9423f01bc5666bf3b4"
+    },
+    {
+      "path": "website/tests/head-pan-source-transition.test.ts",
+      "bytes": 5588,
+      "sha256": "8536bc1bd2d4be112d3e376909f58156feafb24e6bb84f3c7e9f50cc8e8a6c59"
+    },
+    {
+      "path": "website/tests/head-feature-source-roles.mjs",
+      "bytes": 6866,
+      "sha256": "538f58ec33617340461f58a28cd43a8c10f1a80d8618c250431c7f9a35bd8708"
+    },
+    {
+      "path": "website/tests/head-neck-pilot-history-preservation.test.mjs",
+      "bytes": 5218,
+      "sha256": "4be1aaa1a4b091c44a03943a35b0a2f6e2ccaa69d937a6bfff47819ad60cf204"
+    },
+    {
+      "path": "website/tests/head-pilot-delivery-role-preservation-20261021.test.mjs",
+      "bytes": 15239,
+      "sha256": "cfeba0e0f3ba445559ba61aa499226345d569465624ee8b3ebf462c47731f281"
+    },
+    {
+      "path": "website/tests/historical-head-pilot-read-repair.test.mjs",
+      "bytes": 2510,
+      "sha256": "6d2469eb2b59f9c3a8dd566245e38408dbf1a5cef3366adaf45814d762914da2"
+    },
+    {
+      "path": "website/tests/head-source-context-roles.mjs",
+      "bytes": 3239,
+      "sha256": "16ac2e6f98f9da909ed5a82cf94c01617cfdb215d0cb6019aeda803a37e89701"
+    },
+    {
+      "path": "website/tests/head-current-runtime.test.mjs",
+      "bytes": 7687,
+      "sha256": "6ab23a9955fe88e697543de1f590b4959f238fc4b62d28857f88a8674bd2990c"
+    },
+    {
+      "path": "website/tests/fixtures/head-source-context-repair.json",
+      "bytes": 7846,
+      "sha256": "7c52aaef3330fb2379c0aad495ae4e1ddef51267cfd70bc6dec14990a100441f"
+    },
+    {
+      "path": "website/tests/head-source-context-preservation.mjs",
+      "bytes": 2604,
+      "sha256": "d237914b150e67233a7f8da970ae689833a2199f5f9f6bf52cbea3d687c6d710"
+    },
+    {
+      "path": "website/tests/head-context-source-inverse.test.mjs",
+      "bytes": 1956,
+      "sha256": "8b86f9bc5e050a74b4e3b021c6a673bb11c3060d8adb6f0df17fc34a90b900a9"
+    }
+  ],
+  "removed": [],
+  "scope": "Thirteen first-party test source/metadata files only. No scans, private records, model payloads, generated runtime, dependencies or canonical ancestry. Supplement, not complete project backup.",
+  "proof": {
+    "cases": 256,
+    "wholeRoots": 46,
+    "fullConfiguredTypes": true,
+    "productionUnchanged": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
