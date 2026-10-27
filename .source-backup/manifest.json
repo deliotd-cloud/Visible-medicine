@@ -1,0 +1,65 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T10:22:05.619Z",
+  "sourceIdentity": {
+    "kind": "compact-ct-mri-layout-control",
+    "sha256": "dfcec576a7f076f1785f3e7fd51c9810a4d7d0ec39f27b07efa35c467325465c"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasViewer.tsx",
+      "bytes": 118081,
+      "sha256": "83ee35ac059f7ee0ccce16fbf69db60f6551844ac80e4454717785f256ffc987"
+    },
+    {
+      "path": "website/components/head-atlas.css",
+      "bytes": 25881,
+      "sha256": "9ffed53981367245843f429337fbad018bf50906d59a774772d468fe67c07956"
+    },
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "bytes": 10040,
+      "sha256": "9b39c5c61ee3a96f3999712a729f514e06b5e9c5eaccf91b0f10eb15a0fc43f0"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "dcd1db50bab70b7893ca42a02c3ba861bdf5228b0a5d7cd56ba5ecaddb5f207c"
+    },
+    {
+      "path": "website/components/HeadImageLayoutControl.tsx",
+      "bytes": 1306,
+      "sha256": "b05b57c48170efa434a3ab97009461e401c3e5727d7848d0ce241f1a27ebb38a"
+    },
+    {
+      "path": "website/tests/head-image-layout-control.test.mjs",
+      "bytes": 8337,
+      "sha256": "5e3541afb3ee895b02bae5bc1bde8665912b960661dce28a9a9a6c269c27127b"
+    }
+  ],
+  "removed": [],
+  "scope": "Six first-party code, style, binding recipe and test/fixture text files only. No scans, private records, geometry, generated Review/runtime, dependencies or canonical ancestry. Supplement, not a complete project backup.",
+  "proof": {
+    "focusedCases": 56,
+    "wholeRoots": 6,
+    "browserAssertions": 28,
+    "keyboard": true,
+    "desktopWidths": [
+      1280,
+      1440
+    ],
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false,
+    "reviewDisplayRevisionChanged": true,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
