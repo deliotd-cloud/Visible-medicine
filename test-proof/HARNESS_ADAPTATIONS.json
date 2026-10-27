@@ -1,0 +1,65 @@
+{
+  "at": "2026-10-27T22:57:18.057Z",
+  "parent": {
+    "path": "F:/VisibleMedicine/staging/20261027-head-history-flow/SOURCE_CANDIDATE_V4.json",
+    "sha256": "2722abc385dc4090c23a0e79546e0b21e0bf46eb567c5e4de842c32dc593e493"
+  },
+  "records": [
+    {
+      "path": "tests/head-study-set-ui.test.ts",
+      "beforeSha256": "af9fe266a343e0de9f1ed1f4e42b6003db1c37d192ecce9a2f3e376cc372d1ec",
+      "afterSha256": "dd40cee90b4dd6c006b70717536df55edaea86180a4a16be96eb284a28454490",
+      "edits": [
+        [
+          "const module={exports:{} as Record<string,unknown>};let mode:'locate'|'label'|'recall'='locate';",
+          "const module={exports:{} as Record<string,unknown>};const slots:unknown[]=[];let cursor=0;"
+        ],
+        [
+          "{useState:()=>[mode,(value:typeof mode)=>{mode=value;}]}",
+          "{useEffect:()=>{},useState:(initial:unknown)=>{const slot=cursor++;if(!(slot in slots))slots[slot]=typeof initial==='function'?initial():initial;return [slots[slot],(value:unknown)=>{slots[slot]=typeof value==='function'?value(slots[slot]):value;}];}}"
+        ],
+        [
+          "function render(){return Component(",
+          "function render(){cursor=0;return Component("
+        ]
+      ],
+      "allOriginalAssertionsUnchanged": true
+    },
+    {
+      "path": "tests/head-study-set-order-ui.test.ts",
+      "beforeSha256": "bc9ee0b9a1d712580efe81b8028c8fb99b2fa54b522b01088d4631226900b8d3",
+      "afterSha256": "fd4517c50e51aa02ec549e468a9e905e27ee68d13d88aa99357f331c0184e96e",
+      "edits": [
+        [
+          "{useState:()=>['locate',()=>{}]}",
+          "{useEffect:()=>{},useState:(initial:unknown)=>[typeof initial==='function'?initial():initial,()=>{}]}"
+        ]
+      ],
+      "allOriginalAssertionsUnchanged": true
+    },
+    {
+      "path": "tests/head-study-comparison-ui.test.ts",
+      "beforeSha256": "ec94febc9952a409432f9cff1f9161829419cf01763bad4cb1fdda137712582d",
+      "afterSha256": "e5d4081c80d39a1a29c56d1740dd208c1721b8663d64bb633d5415e626f8828e",
+      "edits": [
+        [
+          "{...React,useState:()=>['locate',()=>{}]}",
+          "{...React,useEffect:()=>{},useState:(initial:unknown)=>[typeof initial==='function'?initial():initial,()=>{}]}"
+        ]
+      ],
+      "allOriginalAssertionsUnchanged": true
+    },
+    {
+      "path": "tests/head-study-comparison-limits.test.mjs",
+      "beforeSha256": "8b9b537a52cd2098afbcf3bbf40c60de0bf49d390998eb38e9ee31691a19485a",
+      "afterSha256": "ca3aee7f9e10de118586661f2bea3182b5c9685cec2c9c92d3b52e928a59d7cd",
+      "edits": [
+        [
+          "{...React,useState:()=>['locate',()=>{}]}",
+          "{...React,useEffect:()=>{},useState:initial=>[typeof initial==='function'?initial():initial,()=>{}]}"
+        ]
+      ],
+      "allOriginalAssertionsUnchanged": true
+    }
+  ]
+}

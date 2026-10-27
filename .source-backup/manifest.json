@@ -1,0 +1,118 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T23:08:29.326Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261027-study-set-navigation/SOURCE_CANDIDATE_V2.json",
+      "sha256": "4cbeb5f3e235d9eafcedf2af1e3c9dc7b7ae1dad7f495292240649ca263730d2"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-head-history-flow-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "6f6ba9f859c87fcad60a5156f0a0af770a1ed5c45b408c87e524bbd70aa26044"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasStudySet.tsx",
+      "bytes": 9164,
+      "sha256": "eb63e6360ae65f5c9d69aeaa63d997488d8c490d65c82b471b6c43341b799bdf"
+    },
+    {
+      "path": "website/tests/head-study-set-ui.test.ts",
+      "bytes": 12501,
+      "sha256": "dd40cee90b4dd6c006b70717536df55edaea86180a4a16be96eb284a28454490"
+    },
+    {
+      "path": "website/tests/head-study-set-order-ui.test.ts",
+      "bytes": 7490,
+      "sha256": "fd4517c50e51aa02ec549e468a9e905e27ee68d13d88aa99357f331c0184e96e"
+    },
+    {
+      "path": "website/tests/head-study-comparison-ui.test.ts",
+      "bytes": 4366,
+      "sha256": "e5d4081c80d39a1a29c56d1740dd208c1721b8663d64bb633d5415e626f8828e"
+    },
+    {
+      "path": "website/tests/head-study-comparison-limits.test.mjs",
+      "bytes": 5373,
+      "sha256": "ca3aee7f9e10de118586661f2bea3182b5c9685cec2c9c92d3b52e928a59d7cd"
+    },
+    {
+      "path": "website/tests/head-study-set-display-epoch.test.mjs",
+      "bytes": 6914,
+      "sha256": "b2705a9dde80aa2686485565fe4f094627d408fe8da1510110b1f6a24b915876"
+    },
+    {
+      "path": "website/tests/head-study-set-navigation.test.ts",
+      "bytes": 8744,
+      "sha256": "4f0627ca10a562e7200c8492bdb0194755e2fd64a1889eaf7d5312c8c27398ae"
+    },
+    {
+      "path": "recipes/prepare-study-set-navigation-20261027.mjs",
+      "bytes": 718,
+      "sha256": "222e6ab78feb14e64b448028ce9767f3cfa91826d9bdb17633f589172b2770f4"
+    },
+    {
+      "path": "recipes/adapt-study-set-harnesses-20261027.mjs",
+      "bytes": 2573,
+      "sha256": "3b3962cd67e9c38759ff79964fd59206bd6f794c77652006198d0a531c9f66c1"
+    },
+    {
+      "path": "recipes/seal-study-set-navigation-20261027.mjs",
+      "bytes": 2482,
+      "sha256": "e641a4a60817183a3d3d8f0ed111dff87d800f7cc78357458704f26f84159c81"
+    },
+    {
+      "path": "recipes/run-study-set-navigation-20261027.mjs",
+      "bytes": 4906,
+      "sha256": "2419fac95a67edb119b4d6494477fe2be0f29419ea23dbe7e963fda43be8b8a7"
+    },
+    {
+      "path": "recipes/build-study-set-navigation-browser-20261027.mjs",
+      "bytes": 4019,
+      "sha256": "3d1bc0a2989a160a7cbafaa2196fcf1241c6944bcc917b602d0170d237609616"
+    },
+    {
+      "path": "recipes/run-study-set-browser-build-20261027.mjs",
+      "bytes": 1629,
+      "sha256": "d24aeb793207fe042251082efab6df63e8b08579b981e18e13d48549c3e710e5"
+    },
+    {
+      "path": "recipes/serve-study-set-navigation-browser-20261027.mjs",
+      "bytes": 2853,
+      "sha256": "983e31cc9629ab0068f28229d11671832398e253b7753bcd3d762743230443c3"
+    },
+    {
+      "path": "recipes/finish-study-set-navigation-20261027.mjs",
+      "bytes": 13458,
+      "sha256": "b4827c5ba3e6d43930d840653eb37ac0ff993207ad015b5dd4b14f1e6eea16a9"
+    },
+    {
+      "path": "test-proof/HARNESS_ADAPTATIONS.json",
+      "bytes": 2806,
+      "sha256": "1d2b2d56907aeb93754f195a9ad22300b16195d6bea3f29b147c847d1b41522d"
+    },
+    {
+      "path": "test-proof/HISTORICAL_CONTEXT_FIX.json",
+      "bytes": 5021,
+      "sha256": "89ab15ef5d74fec978c5183d54543a36ff5a7efb7d963f00fa657fa8c821024b"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party study-set component, synthetic tests, exact test-context seams and recipes only. No scans, models, generated runtimes, clinical decisions or raw Git ancestry. Requires linked prior source supplements; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 253,
+    "fullConfiguredTypes": true,
+    "fullProductionBuild": true,
+    "syntheticBrowserChecks": 15,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

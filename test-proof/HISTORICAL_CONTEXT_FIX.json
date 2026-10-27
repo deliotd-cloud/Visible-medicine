@@ -1,0 +1,67 @@
+{
+  "schema": "vm-head-study-set-historical-context-fix-1",
+  "target": "tests/head-study-set-display-epoch.test.mjs",
+  "beforeSha256": "4a6b266a15981fe6f54da574ba191c5656ed1610a8eea9c8c6c5ca8a3e9f36d3",
+  "afterSha256": "b2705a9dde80aa2686485565fe4f094627d408fe8da1510110b1f6a24b915876",
+  "inverseSeams": [
+    {
+      "before": "import assert from 'node:assert/strict';import test from 'node:test';import {readFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {fileURLToPath} from 'node:url';\nimport {assertHeadStudySetCurrentDisplay} from './head-study-set-current-display.mjs';import {assertCurrentTourSource} from './adjacent-current-tour-source-role.mjs';import {readHistoricalSource} from './head-study-set-historical-source.mjs';\nimport {headStudyWebsiteRoot,readHeadStudySource} from './head-study-website-historical-source.mjs';\n",
+      "after": "import assert from 'node:assert/strict';import test from 'node:test';import {readFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';import {resolve} from 'node:path';import {fileURLToPath,pathToFileURL} from 'node:url';\nimport {assertHeadStudySetCurrentDisplay} from './head-study-set-current-display.mjs';import {readHistoricalSource} from './head-study-set-historical-source.mjs';\nimport {headStudyWebsiteRoot,headStudyReceiptPath,readHeadStudySource,validateHeadStudyReceiptBytes} from './head-study-website-historical-source.mjs';\n"
+    },
+    {
+      "before": " assertCurrentTourSource();\n",
+      "after": " // Execute the original b79 admission against its sealed Website and native\n // source in a separate process. Current delivery has advanced beyond b79.\n const receipt=validateHeadStudyReceiptBytes(readFileSync(headStudyReceiptPath));\n const role='tests/adjacent-current-tour-source-role.mjs';\n for(const path of [role,'tests/current-atlas-delivery.mjs','tests/fixtures/current-atlas-delivery.json',\n  'tests/native-slice-current-display.mjs','tests/head-study-set-current-display.mjs',\n  'tests/tour-playback-source-role.mjs','tests/guided-review-completeness.mjs','tests/atlas-source-repo.mjs'])readHeadStudySource(path);\n assert.equal(receipt.atlas,'F:/VisibleMedicine/staging/20261024-cervical-vascular-draft/atlas');\n const moduleUrl=pathToFileURL(resolve(headStudyWebsiteRoot,role)).href;\n const child=`import {assertCurrentTourSource} from ${JSON.stringify(moduleUrl)};assertCurrentTourSource({atlasRoot:${JSON.stringify(receipt.atlas)},sourceCommit:'b79e110d2d28f18993263926ba35aa7a3f478b20'});`;\n const env=Object.fromEntries(['PATH','Path','SystemRoot','WINDIR','TEMP','TMP'].filter(key=>process.env[key]).map(key=>[key,process.env[key]]));\n execFileSync(process.execPath,['--input-type=module','-e',child],{env:{...env,GIT_NO_REPLACE_OBJECTS:'1'},windowsHide:true,maxBuffer:16e6});\n"
+    }
+  ],
+  "historicalReceipt": {
+    "path": "F:\\VisibleMedicine\\staging\\20261024-head-study-set-website\\SOURCE_BOUND.json",
+    "sha256": "37ea31d0ab36e57311e11dcdb9c01a93770220cbf8c40d439fa35b08aff9c968",
+    "website": "F:/VisibleMedicine/staging/20261024-head-study-set-website/website",
+    "atlas": "F:/VisibleMedicine/staging/20261024-cervical-vascular-draft/atlas",
+    "atlasHead": "b79e110d2d28f18993263926ba35aa7a3f478b20",
+    "atlasTree": "0dd97cc55ef9aff3493b91752309d1d661c0b0c8"
+  },
+  "validatedOperands": [
+    {
+      "path": "tests/adjacent-current-tour-source-role.mjs",
+      "sha256": "f655fa9b4b1199264eab534b68639dcf4198853add4c6279db3c090210041cb9",
+      "bytes": 4388
+    },
+    {
+      "path": "tests/current-atlas-delivery.mjs",
+      "sha256": "02dd815603c922dedbdc5a5fce270fbda736b81220e335d750dcbec1124c833e",
+      "bytes": 5092
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "sha256": "b1c63fae40fba94266866b6392e7bc50c520fcfcb1e56d65ca2c24e914bf295e",
+      "bytes": 2051
+    },
+    {
+      "path": "tests/native-slice-current-display.mjs",
+      "sha256": "6e0108275d67204120bb1259ab278780471263d232e6ef2ba733486ca9e45e1b",
+      "bytes": 3154
+    },
+    {
+      "path": "tests/head-study-set-current-display.mjs",
+      "sha256": "31b6444f24147cec44ecc4711dfa7b89c0b22e395170eae6b9c7c402885c3576",
+      "bytes": 3166
+    },
+    {
+      "path": "tests/tour-playback-source-role.mjs",
+      "sha256": "6811145340655e9cd80c066dc65a8fc8c116906979d978a3c70d5c7017b03546",
+      "bytes": 9521
+    },
+    {
+      "path": "tests/guided-review-completeness.mjs",
+      "sha256": "6b25cda5e7598f26845741fba9c371fcc73669332451979cd8d281e8a5cd6f40",
+      "bytes": 2075
+    },
+    {
+      "path": "tests/atlas-source-repo.mjs",
+      "sha256": "45be52da6f2a93fdff2276235b357d6e491385af8a84ab8e0193905f6d49f356",
+      "bytes": 1588
+    }
+  ],
+  "check": "Replace the two exact after seams once and require beforeSha256; the historical module executes in an isolated Node process against the pinned b79 native root."
+}
