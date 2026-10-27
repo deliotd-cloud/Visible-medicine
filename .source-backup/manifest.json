@@ -1,0 +1,65 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T11:52:17.268Z",
+  "sourceIdentity": {
+    "kind": "transactional-head-package-replacement",
+    "sha256": "fda221bf270b13998eab0c270b2259eddc903eb5f1fc732491acc049a09c1825"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasViewer.tsx",
+      "bytes": 124381,
+      "sha256": "692d89c7c540c84ce342bea549d619f3c38781e26c8c9add0ba19ce4d57b4dde"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "08ee9bd74c7be58a03e57cc1b08ed489bb98998f7ac107529bca4446dc6cd0de"
+    },
+    {
+      "path": "website/tests/head-package-replacement.test.mjs",
+      "bytes": 11170,
+      "sha256": "933d89b27505ed7c1cb41b3a8ef945232d592ee3d387b0106f3233da280fba53"
+    },
+    {
+      "path": "website/tests/head-practice-exit-replacement.test.mjs",
+      "bytes": 14517,
+      "sha256": "08c0f6bc5b298a57b220e56ab31452a6cc6ee1a20940522ca4a025631af862ec"
+    },
+    {
+      "path": "website/tests/head-view-history-client-replacement.test.mjs",
+      "bytes": 24629,
+      "sha256": "bdcc7479f21b152d8e32a7b0360788d5c86a9c6064aa0226d8191cf68d042be7"
+    },
+    {
+      "path": "website/tests/head-atlas-import-replacement.test.ts",
+      "bytes": 9330,
+      "sha256": "5ba6647f5f1df156f1dcaddc5281b62632ca6db49d110f68bd5991936770330f"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery-replacement.test.mjs",
+      "bytes": 27400,
+      "sha256": "ad5a1db42623b9a35d023c5b867a85a6cc776c8cf4982c1d2664628161bf900e"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven first-party component/test/fixture text files only. No scans, private records, geometry, generated runtime, dependencies or canonical ancestry. Supplement, not a complete project backup.",
+  "proof": {
+    "focusedCases": 91,
+    "wholeRoots": 6,
+    "browserAssertions": 31,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false,
+    "reviewDisplayRevisionChanged": true,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
