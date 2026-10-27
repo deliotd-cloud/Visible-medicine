@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const write=(p,s)=>{if(fs.existsSync(p)){assert.equal(fs.readFileSync(p,'utf8'),s);return;}fs.writeFileSync(p,s,{flag:'wx'});};
+let prepare=fs.readFileSync('prepare-scoped-website-successor-20261025.mjs','utf8');
+const from="const local=json(parentStage+'/LOCAL_TEST_CONFIGURATION.json');Object.assign(local.environment,";
+assert(prepare.includes(from));
+prepare=prepare.replace(from,"const local=fs.existsSync(parentStage+'/LOCAL_TEST_CONFIGURATION.json')?json(parentStage+'/LOCAL_TEST_CONFIGURATION.json'):{environment:{}};Object.assign(local.environment,");
+write('prepare-related-tour-compare-20261027.mjs',prepare);
+let run=fs.readFileSync('run-learning-section-resilience-20261027.mjs','utf8').replaceAll('\r\n','\n').replaceAll('learning-section-resilience','related-tour-compare');
+const start=run.indexOf('const roots=['),end=run.indexOf(';\nlet command',start);assert(start>0&&end>start);
+run=run.slice(0,start)+"const roots=['tests/head-related-learning.test.ts','tests/related-lecture-entrypoints.test.ts','tests/head-guided-comparison.test.ts','tests/head-guided-comparison-navigation.test.ts','tests/head-guided-comparison-page.test.ts'];"+run.slice(end+1);
+write('run-related-tour-compare-20261027.mjs',run);
+console.log('Prepared bounded successor and sequential verification recipes.');

@@ -1,0 +1,86 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T20:05:39.171Z",
+  "sourceIdentity": {
+    "kind": "related-tour-compare",
+    "sourceSha256": "f80b70b58d5a22ae18c6ae832305755ec650029f13462847359a6d06de3ce808",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-find-keyboard-website-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "7fe8cfcf9ddba04385cd803b2f7734d42ba8135bf444ed259cab9c465fef980c"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasRelatedLearning.tsx",
+      "bytes": 2354,
+      "sha256": "7f1bb5ff7d64dea9ee4dbe38c04c0ca1a4c631a96d5e165be9aa2d2b2277b72b"
+    },
+    {
+      "path": "website/tests/head-related-learning.test.ts",
+      "bytes": 8886,
+      "sha256": "ab4312fdad1218ccd3280fcb9fc297962cc95f16553bf444973be1a16faf5b54"
+    },
+    {
+      "path": "website/tests/related-lecture-entrypoints.test.ts",
+      "bytes": 7199,
+      "sha256": "3d033946b1c8a271a36cda1b28608a716fa4bf3ca5572b584323198a81a1c551"
+    },
+    {
+      "path": "recipes/prepare-related-tour-compare-tools-20261027.mjs",
+      "bytes": 1371,
+      "sha256": "b3e9818500d1c502aac5910b66e2f012ff9ace13443d6f6756738bfaad34373e"
+    },
+    {
+      "path": "recipes/prepare-related-tour-compare-20261027.mjs",
+      "bytes": 6018,
+      "sha256": "72dc56831ce80a9e605711453af60809a722a87ce883c8e4ca2062a2e005591e"
+    },
+    {
+      "path": "recipes/verify-related-tour-compare-20261027.mjs",
+      "bytes": 1947,
+      "sha256": "bac702f08e8fce5ef8011e65174f0b1ee999f6bb0fb80bf3d0453f49ac034537"
+    },
+    {
+      "path": "recipes/run-related-tour-compare-20261027.mjs",
+      "bytes": 6439,
+      "sha256": "75f7795b27cec84c3e285d6924fcd84be7fdfeb145098dfe3e03c33021e43cf2"
+    },
+    {
+      "path": "recipes/build-related-tour-compare-browser-20261027.mjs",
+      "bytes": 4175,
+      "sha256": "6b3a6bc1ac2544a57fa5434161eb32fc2f4833426ad73d2aad501533c3e3b168"
+    },
+    {
+      "path": "recipes/run-related-tour-compare-browser-build-20261027.mjs",
+      "bytes": 2250,
+      "sha256": "c383e4a2dbe00515b4af96c704a82f1e3c40d3e4fa9eaee2d0fea3a51afed7e4"
+    },
+    {
+      "path": "recipes/serve-related-tour-compare-browser-20261027.mjs",
+      "bytes": 2697,
+      "sha256": "ec8a3f0186eab893a46ec51ffe6380c0272289c082ba62575fba517a9a304923"
+    },
+    {
+      "path": "recipes/finish-related-tour-compare-20261027.mjs",
+      "bytes": 12659,
+      "sha256": "d5e8d73f7b1d64afed850c68e3b93c420d4ae513610ae6a26b666383abf92e91"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source/tests and verification recipes only. No scans, masks, clinical data, private metadata, generated models/runtimes, review decisions or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 24,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "browserAssertions": 18,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
