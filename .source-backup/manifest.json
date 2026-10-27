@@ -1,0 +1,105 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T00:42:17.237Z",
+  "sourceIdentity": {
+    "kind": "head-history-test-roles-and-separate-unintegrated-focus-proposal",
+    "sourceSha256": "2a3b5ba89bc38dac05177fdf49fd2061383a8a0e1023dcc22664e855bd7365e3",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-head-selection-history-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "8791eb0adfca4269f183249b9736c3dc821e339d8fee86b1f0fc7c70eb5816a4",
+        "branch": "backup/head-selection-history-source-20261027",
+        "head": "500f5bd005ca991d2ad5a1fda6c267be4c775ec9",
+        "tree": "1c71f5f870de9de8e442846f11de46a2f4a9ce50"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/head-feature-source-roles.mjs",
+      "bytes": 6734,
+      "sha256": "0def922961dd51dc02d8adf6cb28bfc58e20b2baa5ffef02592af2076e02ee11"
+    },
+    {
+      "path": "website/tests/head-native-history-current-transition.test.mjs",
+      "bytes": 9781,
+      "sha256": "36ead855df72dc55141020ce6f4e488188a83dfddbd82e563e195c6abc4dd890"
+    },
+    {
+      "path": "unintegrated-proposals/guided-focus/components/HeadAtlasGuidedLearning.tsx",
+      "bytes": 14553,
+      "sha256": "0410c76155b6899e7985bf53fa33ce621be6bb2a3f65ff357d2ed503bb9fa834"
+    },
+    {
+      "path": "unintegrated-proposals/guided-focus/lib/head-atlas-focus.ts",
+      "bytes": 2152,
+      "sha256": "8eff87ea1abb3bb16d70709ea8d3a6304720100102175dad7c8f8eee2af0b3a7"
+    },
+    {
+      "path": "unintegrated-proposals/guided-focus/tests/head-atlas-focus.test.ts",
+      "bytes": 6894,
+      "sha256": "ba1d5302d1f01c206d144292136ea788956224e6d39333eb67892d6b7feee294"
+    },
+    {
+      "path": "recipes/integrate-head-history-roles-20261027.mjs",
+      "bytes": 2885,
+      "sha256": "47e0f718b648c7f7e45a8b3d5019bd56613802bec9ce83bc9bcbc3c990971b82"
+    },
+    {
+      "path": "recipes/prepare-head-history-roles-verification-20261027.mjs",
+      "bytes": 979,
+      "sha256": "a707853340dadcf0da636c066e2b95b810a864fa1cfd403d710b590bb53d7c80"
+    },
+    {
+      "path": "recipes/run-head-history-roles-verification-20261027.mjs",
+      "bytes": 5356,
+      "sha256": "2c5cbe46ac8e33263956817d7740c1bba82d094985aac9d0ed018bac5c211c53"
+    },
+    {
+      "path": "recipes/finish-head-history-roles-20261027.mjs",
+      "bytes": 12665,
+      "sha256": "1480211842b741a6d3fc9c4b00469ef742d545eba42f113c052bdd9b13c3e6be"
+    },
+    {
+      "path": "recipes/prepare-guided-focus-browser-20261027.mjs",
+      "bytes": 1718,
+      "sha256": "05e0df98e6a5a7c0685fc00e761b3a5a30706847287eebb8fb5fb07772151b7e"
+    },
+    {
+      "path": "recipes/build-guided-focus-browser-20261027.mjs",
+      "bytes": 6857,
+      "sha256": "6733ed8b63b1c32cab1e35fbc828d5b51e55db848283cb8f04249f165092c3b3"
+    },
+    {
+      "path": "recipes/serve-guided-focus-browser-20261027.mjs",
+      "bytes": 2813,
+      "sha256": "1c06547c5126f15576e55cb42a4df7440c00abd5ae34c953211075b4bdcdbc21"
+    },
+    {
+      "path": "recipes/probe-guided-focus-browser-20261027.js",
+      "bytes": 814,
+      "sha256": "b0d5e787aba5133c185b17d056d3cf6916ffb49018f35e881f1c32e2883846c0"
+    },
+    {
+      "path": "recipes/seal-guided-focus-browser-proposal-20261027.mjs",
+      "bytes": 2015,
+      "sha256": "d7dfb1e3d159a7d422a79511424e1baf064f9874c8040c09b95d313c6445b3f2"
+    }
+  ],
+  "removed": [],
+  "scope": "First-party tests, recipes and a separately labelled unintegrated guided-focus code proposal only. No private scans/masks/source assets/medical metadata, raw browser evidence, decisions, generated modules or canonical/native Git ancestry. Not a complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 14,
+    "fullConfiguredTypes": true,
+    "productionInputsUnchanged": true,
+    "pendingFocusProposalBrowserOnly": true,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
