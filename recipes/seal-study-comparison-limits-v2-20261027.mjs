@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-study-comparison-limits',oldFile=stage+'/SOURCE_CANDIDATE.json',old=json(oldFile),parent=json(old.parent),site=old.website;
+assert.equal(hash(oldFile),'907d6860cb9b4fdec37f46e70674957ad7b82c2cd4735162e39e4ea5e91f7419');
+for(const r of parent.sourceRows)if(r.path!=='components/HeadAtlasStudySet.tsx')assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const s={...old,schema:'vm-study-comparison-limits-source/2',at:new Date().toISOString(),sourceRows:old.sourceRows.map(r=>({path:r.path,bytes:fs.statSync(site+'/'+r.path).size,sha256:hash(site+'/'+r.path)})),changedPaths:['components/HeadAtlasStudySet.tsx'],learnerStylesConfinedToNewDisclosure:true,sharedReviewStylesheetUnchanged:true,earlierRejectedCandidate:{source:{path:oldFile,sha256:hash(oldFile)},contentResult:{path:stage+'/checks/content-1/RESULT.json',sha256:hash(stage+'/checks/content-1/RESULT.json')},reason:'Shared stylesheet belongs to protected Review inputs. Restore it exactly and confine new presentation to the learner disclosure; no Review rebind or approval invalidation is needed.'}};
+fs.writeFileSync(stage+'/SOURCE_CANDIDATE_V2.json',JSON.stringify(s,null,2)+'\n',{flag:'wx'});
+let qa=fs.readFileSync('verify-study-comparison-limits-20261027.mjs','utf8').replaceAll('SOURCE_CANDIDATE.json','SOURCE_CANDIDATE_V2.json').replace('cssOnlyScopedAddition:true','sharedReviewStylesheetUnchanged:true,learnerStylesConfinedToNewDisclosure:true');
+fs.writeFileSync('verify-study-comparison-limits-v2-20261027.mjs',qa,{flag:'wx'});
+const runner=fs.readFileSync('run-study-comparison-limits-20261027.mjs','utf8').replaceAll('SOURCE_CANDIDATE.json','SOURCE_CANDIDATE_V2.json').replaceAll('verify-study-comparison-limits-20261027.mjs','verify-study-comparison-limits-v2-20261027.mjs');
+fs.writeFileSync('run-study-comparison-limits-v2-20261027.mjs',runner,{flag:'wx'});console.log(JSON.stringify({source:stage+'/SOURCE_CANDIDATE_V2.json',sha256:hash(stage+'/SOURCE_CANDIDATE_V2.json')}));

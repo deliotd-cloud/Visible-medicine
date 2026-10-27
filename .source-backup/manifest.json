@@ -1,0 +1,116 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T17:35:20.409Z",
+  "sourceIdentity": {
+    "kind": "study-comparison-limits",
+    "sourceSha256": "b9d6481026aba4ce669f519c8ee76d0d3b12f523465cd2dd959db9c6929a95ed",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-review-filter-scroll-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "84c722ffa773c1c44214669e7846eae253edbc4c5746464a52e7a31b57253a0c"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasStudySet.tsx",
+      "bytes": 6706,
+      "sha256": "4ad1e21ad27cd902baa182983d02630bf9ef0e40c7016f4f19882bd1e43fea8e"
+    },
+    {
+      "path": "website/tests/head-study-comparison-limits.test.mjs",
+      "bytes": 5314,
+      "sha256": "8b9b537a52cd2098afbcf3bbf40c60de0bf49d390998eb38e9ee31691a19485a"
+    },
+    {
+      "path": "recipes/prepare-study-comparison-limits-20261027.mjs",
+      "bytes": 422,
+      "sha256": "60e6d918620292a2b0975961aa960febb9e0088f1e2a804b4bcf76964f8413fc"
+    },
+    {
+      "path": "recipes/seal-study-comparison-limits-20261027.mjs",
+      "bytes": 3085,
+      "sha256": "ce823287d7919a247a1bc61c86f046bbf3df0964eac799e996ea74b38d85f2db"
+    },
+    {
+      "path": "recipes/verify-study-comparison-limits-20261027.mjs",
+      "bytes": 1980,
+      "sha256": "51839d9e2ebf8597ea92e8f5c367188059653eda9adabf318e5b6353972cc7c0"
+    },
+    {
+      "path": "recipes/run-study-comparison-limits-20261027.mjs",
+      "bytes": 6720,
+      "sha256": "71fb626f197b2ba543b2410b998cae5be15557bedaf8cacd9f0ff483d2ebac5f"
+    },
+    {
+      "path": "recipes/seal-study-comparison-limits-v2-20261027.mjs",
+      "bytes": 2131,
+      "sha256": "ef53d8b3faa42f2b6a9ef511bfb42bedd57baee2f49d001337bc51b6c1a45612"
+    },
+    {
+      "path": "recipes/verify-study-comparison-limits-v2-20261027.mjs",
+      "bytes": 2035,
+      "sha256": "c4df804a4f674914957f5ce7c746e6a8eda967761d915efe4aca70b3fc774d2d"
+    },
+    {
+      "path": "recipes/run-study-comparison-limits-v2-20261027.mjs",
+      "bytes": 6726,
+      "sha256": "759bca9bda1bb652a4510d44495b909850ffa2c5be8ffde0d9f1354b988b8966"
+    },
+    {
+      "path": "recipes/run-current-loader-recheck-20261027.mjs",
+      "bytes": 2732,
+      "sha256": "61ae0853205f00a353894fa1b50ed4deb549ca62bbcd18e44d7b7564b527f0ba"
+    },
+    {
+      "path": "recipes/run-study-limits-current-loader-recheck-20261027.mjs",
+      "bytes": 2745,
+      "sha256": "c059c0539a8384b7b6eee0875bda6ba95e31a95825432bbdf104913963a6d6ca"
+    },
+    {
+      "path": "recipes/build-study-limits-browser-20261027.mjs",
+      "bytes": 4610,
+      "sha256": "e5caab4324437cfd7a0f0b76a907024b0fe4b9dc3ee330fb56ff25608da994ce"
+    },
+    {
+      "path": "recipes/prepare-study-limits-browser-tools-20261027.mjs",
+      "bytes": 616,
+      "sha256": "51b331045ec0f02b60baf62c89d392abeadb8a45dffc73f1059a6b9caa896278"
+    },
+    {
+      "path": "recipes/run-study-limits-browser-20261027.mjs",
+      "bytes": 1838,
+      "sha256": "e8ddb9850333e0e7476384a99c2011622163fc6d4c0163ecf17bb648975549ca"
+    },
+    {
+      "path": "recipes/serve-study-limits-browser-20261027.mjs",
+      "bytes": 2668,
+      "sha256": "ff7c729babdc042183b8ec3eb211b6f9d7bedb0023eaa2744501f177080f1769"
+    },
+    {
+      "path": "recipes/prepare-study-limits-finish-20261027.mjs",
+      "bytes": 8145,
+      "sha256": "e5ad2c467f5fd7c769b4dacb242b4bb31ff625f59edc5ed9fd643ab246764a2e"
+    },
+    {
+      "path": "recipes/finish-study-comparison-limits-20261027.mjs",
+      "bytes": 15353,
+      "sha256": "a581450852aed1571ac5a61115aa3d24785cc33524d9669f4c8591fd920b82eb"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source/tests and verification recipes only. No scans, masks, clinical data, private metadata, generated models/runtimes, review decisions or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 88,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "browserAssertions": 32,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
