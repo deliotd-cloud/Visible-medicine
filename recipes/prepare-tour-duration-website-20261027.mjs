@@ -1,0 +1,2 @@
+import fs from 'node:fs';import {clonePinnedWebsite} from './clone-pinned-website-stage-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-tour-duration-website',r=clonePinnedWebsite({stage,parentFile:'F:/VisibleMedicine/staging/20261027-tour-step-integrated-website/SOURCE_CANDIDATE.json',parentSha256:'434f6c2530fd5eae4a73afd775194848410471df22ce9bb97c80f8763dd9468a'});console.log(JSON.stringify({stage,rows:r.parent.sourceRows.length}));

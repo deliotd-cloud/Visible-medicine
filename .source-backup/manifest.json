@@ -1,0 +1,106 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T15:09:24.926Z",
+  "sourceIdentity": {
+    "kind": "regional-tour-duration",
+    "sourceSha256": "95601a4673b73ccd06508f3e91e1ccaa87e28b7c5efb10913b674312d8b11694",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-tour-step-website-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "0e59a3843887f52396da1912ba076a3f171c1f0cca132638809bf812e0bc0200"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/RegionalLearningCatalogue.tsx",
+      "bytes": 12238,
+      "sha256": "4dbc302dc2ab5c4d0c86279a1114eedf2b34685802e9537772dc70de2d974e8a"
+    },
+    {
+      "path": "website/lib/regional-learning-catalogue.ts",
+      "bytes": 4272,
+      "sha256": "84aef27d93e941ef938a0a63bb3bc3eebe7b4ee689ad179968d465bde282272d"
+    },
+    {
+      "path": "website/lib/regional-learning-discovery.ts",
+      "bytes": 538,
+      "sha256": "9a087a124af5f553e379e3c8723bf9bac02e4d3b153210e1e0b036bf05c2cfe3"
+    },
+    {
+      "path": "website/tests/regional-tour-duration.test.mjs",
+      "bytes": 4433,
+      "sha256": "25eb9353cab1d55d9e8b9db88d21638e66fb2501c1fe7f92f4cdc2e1f6ffb852"
+    },
+    {
+      "path": "recipes/prepare-tour-duration-website-20261027.mjs",
+      "bytes": 456,
+      "sha256": "4d0123d8a236cde615c398138afa7635b3e3399cc845dbae7d29f94c20560c02"
+    },
+    {
+      "path": "recipes/seal-tour-duration-website-20261027.mjs",
+      "bytes": 3194,
+      "sha256": "6cb5e35967139d4e0f5bfd4897aacdaa92b31b0543fba9a6e33cc8c471467ac7"
+    },
+    {
+      "path": "recipes/verify-tour-duration-content-20261027.mjs",
+      "bytes": 1284,
+      "sha256": "a2e81946e8a20db44b2e67a22727d060fac3e108dda42061b40703aefbafe813"
+    },
+    {
+      "path": "recipes/run-tour-duration-verification-20261027.mjs",
+      "bytes": 6786,
+      "sha256": "33fe54de7d76ddd8db52a48c89be3a8c6f7c32fe05a2c7acdd776c9e63d9c109"
+    },
+    {
+      "path": "recipes/repair-tour-duration-test-20261027.mjs",
+      "bytes": 1785,
+      "sha256": "1ff5c5477db175ce30a60580f0acfada1da6fb998b16493dd56d74faf4685d50"
+    },
+    {
+      "path": "recipes/build-tour-duration-browser-20261027.mjs",
+      "bytes": 3137,
+      "sha256": "290f21d75edab60367a6efc86ab1e9eb88e88cd9641761887976f0cd077429ec"
+    },
+    {
+      "path": "recipes/run-tour-duration-browser-20261027.mjs",
+      "bytes": 1473,
+      "sha256": "3df0e748485b2e334e2da42a29ddf85ea2e3516a1a8527d2090855c10bc7e299"
+    },
+    {
+      "path": "recipes/serve-tour-duration-browser-20261027.mjs",
+      "bytes": 2631,
+      "sha256": "99a4b8700141faaf963b39a57e255af393b4c98c8d73609279f4ee483172bc34"
+    },
+    {
+      "path": "recipes/seal-tour-duration-browser-20261027.mjs",
+      "bytes": 1512,
+      "sha256": "b4d45b9b834de3504af8d9463ff1f29fa8206e3bff28952747bd9216276005fc"
+    },
+    {
+      "path": "recipes/finish-tour-duration-website-20261027.mjs",
+      "bytes": 7808,
+      "sha256": "12ae919e0874a4442d54d41aa01989f4dc0f76921271385017b8819c74b2fdfd"
+    },
+    {
+      "path": "recipes/record-tour-duration-website-20261027.mjs",
+      "bytes": 6628,
+      "sha256": "87e910612e9fcc8a79b4b56b3811dd39c2b9d138e209d2f31cfa7d257f42a02e"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source and verification recipes only. No anatomy datasets, scans, masks, private metadata, generated runtime, review decisions or dependency folders. Not a complete private or runnable backup.",
+  "proof": {
+    "nativePacingDurationProjection": true,
+    "focusedCases": 50,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
