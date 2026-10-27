@@ -1,0 +1,86 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T00:57:53.160Z",
+  "sourceIdentity": {
+    "kind": "integrated-guided-focus",
+    "sourceSha256": "dd2cfb3c72b04bf254b582dfcbd2a00d499be80bc660d6d0eb8d29ef02981048",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-head-history-roles-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "3943a140a4669c07b41af27f0bb5beced56ad0b25a297e55ddd4b5a0bfcbaac3",
+        "branch": "backup/head-history-roles-source-20261027",
+        "head": "f7251afd5bf4f7d4c6b406ddbc623f018dad92d0",
+        "tree": "565c61fa7f296e232be97e2ec3b414de75907bd9"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasGuidedLearning.tsx",
+      "bytes": 14553,
+      "sha256": "0410c76155b6899e7985bf53fa33ce621be6bb2a3f65ff357d2ed503bb9fa834"
+    },
+    {
+      "path": "website/lib/head-atlas-focus.ts",
+      "bytes": 2152,
+      "sha256": "8eff87ea1abb3bb16d70709ea8d3a6304720100102175dad7c8f8eee2af0b3a7"
+    },
+    {
+      "path": "website/tests/head-atlas-focus.test.ts",
+      "bytes": 6894,
+      "sha256": "ba1d5302d1f01c206d144292136ea788956224e6d39333eb67892d6b7feee294"
+    },
+    {
+      "path": "website/tests/head-guided-steps.test.ts",
+      "bytes": 39604,
+      "sha256": "eb4e5bfeb86a2a8966beea7f1f4fd6b37efd162fde2d78c2d734d821f1423872"
+    },
+    {
+      "path": "website/tests/head-feature-source-roles.mjs",
+      "bytes": 6754,
+      "sha256": "e2a85ca9fa0a6b33d13b1d2407787bcd13750ee5df60f9dc3c576e98334c7445"
+    },
+    {
+      "path": "recipes/integrate-guided-focus-20261027.mjs",
+      "bytes": 9973,
+      "sha256": "7218fc55c85c2d12bc512a6e0351bea4a561ea6817f780d76cefa651f2f99656"
+    },
+    {
+      "path": "recipes/integrate-guided-focus-test-pin-20261027.mjs",
+      "bytes": 2892,
+      "sha256": "0a0389a991929cfe787200918d79192a9c27a7a68c13521211b532bd94d8843d"
+    },
+    {
+      "path": "recipes/prepare-guided-focus-verification-20261027.mjs",
+      "bytes": 1235,
+      "sha256": "7016a9306133d929ac831e0dd5823371f91903a20421f84c7d288f8967d7a72b"
+    },
+    {
+      "path": "recipes/run-guided-focus-verification-20261027.mjs",
+      "bytes": 5786,
+      "sha256": "d9ea4659d2ff852dca9617d1462d5bb534b3d7d84b94499513a2ab2d9fdce11d"
+    },
+    {
+      "path": "recipes/finish-guided-focus-20261027.mjs",
+      "bytes": 15162,
+      "sha256": "41d736bed8702e2adfe3956c3fe9a7ad55232423ef14c55a471b3c8faf1b3e2e"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party app code, tests and recipes only. No scans/masks/private medical metadata, source assets, generated modules, raw evidence, decisions, dependencies or canonical/native Git ancestry. Not complete private/runnable recovery.",
+  "proof": {
+    "focusedCases": 331,
+    "fullConfiguredTypes": true,
+    "stockProductionBuild": true,
+    "syntheticBrowserFocus": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
