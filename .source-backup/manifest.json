@@ -1,0 +1,63 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T06:30:59.798Z",
+  "sourceIdentity": {
+    "kind": "studio-session-predecessor-recovery",
+    "sourceSha256": "60bc4b4d8eb6339b136c821f46b1b9424252066485a72db1bc887fcd5d426008"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/StudioForms.tsx",
+      "bytes": 105631,
+      "sha256": "9f051715815031499a37a89c95c24139a0fdc82f8d34263c128e69a971ecd543"
+    },
+    {
+      "path": "website/tests/studio-draft-dependency-source.mjs",
+      "bytes": 2584,
+      "sha256": "bb4dd1253c00d81b13eb32bea51129d9962f4f57150cc0adf6ef4d6234d1c276"
+    },
+    {
+      "path": "website/tests/studio-course-draft-discard.test.mjs",
+      "bytes": 17366,
+      "sha256": "dfc36dd8ea182ba92acaff548b3d89ee1feebbf342829a1f744b57a7b2e0f66f"
+    },
+    {
+      "path": "website/tests/studio-draft-scope.test.mjs",
+      "bytes": 17396,
+      "sha256": "c4a1d318449ee3ff102a0e2ff1f20c6d784a6318a1d59ab9c2487ae7ee12601e"
+    },
+    {
+      "path": "website/tests/studio-release-session-predecessor.test.mjs",
+      "bytes": 4020,
+      "sha256": "6654c00f86900c86b4fb7473402d8ea45085841737fae0089cc277b3e5c49b8a"
+    },
+    {
+      "path": "website/tests/studio-release-session-action-fixture.mjs",
+      "bytes": 11347,
+      "sha256": "d64b50a78373f444a23f57845a5344331ba25d1ed7e2aedeaf4a78283dae089c"
+    },
+    {
+      "path": "website/tests/studio-release-session-action.test.mjs",
+      "bytes": 7034,
+      "sha256": "dd5394c6df807da4f1c8882430283db151696ef3d582c8f5d53bf389ddb029bc"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party component/helper/test source only; no scans, masks, private references, generated modules, decisions, dependencies or canonical ancestry. Supplemental code recovery, not complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 241,
+    "fullConfiguredTypes": true,
+    "stockProductionBuild": true,
+    "syntheticBrowserRecovery": true,
+    "explicitSessionPredecessorRecovery": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
