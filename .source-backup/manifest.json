@@ -1,0 +1,60 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T21:00:36.887Z",
+  "sourceIdentity": {
+    "kind": "review-link-accessible-names",
+    "sourceSha256": "ee885532423a41cb3c4b2bdd8ff2e4cc677f39712803437b2e4030e2c3540b99",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-cardiac-imaging-website-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "538a66e189114cd4815f8396f19433a51c336d715c8042a299e85d71217908e0"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "bytes": 38862,
+      "sha256": "b28e939e99c7436580ce575e76b1eb31dfdb1d12c62d01e2146f4495df8efa2e"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-ui.test.mjs",
+      "bytes": 19458,
+      "sha256": "56a95f73d309e107d1693547a16c65dec13c043aee6fb426c664396f0a7110f8"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-link-context.test.mjs",
+      "bytes": 10154,
+      "sha256": "496da1fd64e66ed0fc734b220474a2c70342afa7a1e15df7eb36ec2b1ab7b6bd"
+    },
+    {
+      "path": "recipes/prepare-review-link-clarity-20261027.mjs",
+      "bytes": 4264,
+      "sha256": "645a101bfcc9875bc7cb59620fbff55e35ab610ade7b823fe26774317936cb05"
+    },
+    {
+      "path": "recipes/verify-review-link-clarity-20261027.mjs",
+      "bytes": 3198,
+      "sha256": "b5e303f81bfbeabfaa86e561bf0051bd72260a47f0c09a2c6833a6e510cbe58f"
+    },
+    {
+      "path": "recipes/finish-review-link-clarity-20261027.mjs",
+      "bytes": 7637,
+      "sha256": "cf1bec214b78becdf71c6e06efdad01db51e7574c736d335bd503c2a200bebaa"
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected first-party source and recipe files only. No scans, assets, private decisions or raw repository history; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 18,
+    "fullTypesRerun": false,
+    "productionBuildRerun": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
