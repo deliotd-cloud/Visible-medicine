@@ -1,0 +1,193 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T20:52:44.251Z",
+  "sourceIdentity": {
+    "kind": "cardiac-imaging-website-integration",
+    "sourceSha256": "70809a044ed888f2dbf666a47293688c07821e0e7b38d5ffd43fc38982592274",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-cardiac-and-lecture-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "92e3d898938333857954b2a8cc3985105f25c7448591862eb70075a2c8c92a19"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "b5925dfc2a81ecfce8f7bbb3d5e20affd88db51050ecd8931c2cfcfe42a2a120"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "6728b2092635c440d113c6d91a70be329a5cfa50575071c4f877389320c019f8"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "d3a1b0a389471271402c4e5c44a9d8481bbf0d695db4d11889f3636761d6649f"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "44b82c65d8fa44c7e108a26fdb1cb7b7c51ce9f1e10f1fd2a2ba0e95445d6cca"
+    },
+    {
+      "path": "recipes/build-cardiac-imaging-website-review-20261027.mjs",
+      "bytes": 6628,
+      "sha256": "c6da21de30a1a0f4ed8cbbed73f51b6246d37eab3e92e6f7b740e34eaa4e4379"
+    },
+    {
+      "path": "recipes/compact-cardiac-integration-index-20261027.mjs",
+      "bytes": 1141,
+      "sha256": "fca799eb8259ddf9adcf10e8f869b4357e2a2f2ec87c71ebcd6b5a55ae45e323"
+    },
+    {
+      "path": "recipes/export-cardiac-imaging-runtimes-20261027.mjs",
+      "bytes": 7154,
+      "sha256": "997f1047024286e92514160fe9b81dea464111f1faab300600b933c8f2684ad6"
+    },
+    {
+      "path": "recipes/finish-cardiac-and-lecture-20261027.mjs",
+      "bytes": 19444,
+      "sha256": "662d8974fc7bf95dfed47e1135746ec35418aa88348cd4897b32890451b72c41"
+    },
+    {
+      "path": "recipes/finish-cardiac-imaging-website-20261027.mjs",
+      "bytes": 17244,
+      "sha256": "c18659e0e6a61db1bb1b21d9302041f7bc47c20ab925ab0a0357efcbe009c5b7"
+    },
+    {
+      "path": "recipes/flatten-cardiac-imaging-alternates-20261027.mjs",
+      "bytes": 2645,
+      "sha256": "447098cb924199846e30cb05cb2f2a9435e2c12260864de8e0146e4b82eea0e1"
+    },
+    {
+      "path": "recipes/generate-cardiac-imaging-website-coverage-20261027.mjs",
+      "bytes": 2875,
+      "sha256": "0c0c1d728cc29726e60d0169b4b721c8caafa6d62c1102251650c1e3f802b263"
+    },
+    {
+      "path": "recipes/import-cardiac-imaging-website-stock-20261027.mjs",
+      "bytes": 6734,
+      "sha256": "04dd76485a37eed151bcb60237c42838955762139ea1bcdd56cd4342bca662b7"
+    },
+    {
+      "path": "recipes/install-cardiac-imaging-website-coverage-v2-20261027.mjs",
+      "bytes": 2972,
+      "sha256": "0a9b678364872aebc977c8e311cd342cfb2e7dc9e9315148daef7e2a5b77c1a7"
+    },
+    {
+      "path": "recipes/install-cardiac-imaging-website-coverage-v4-20261027.mjs",
+      "bytes": 2972,
+      "sha256": "4bd6cb9264402cb3682e8cc3449acb27d71fb48d7fbad1bf42c6f82b8d3f3fd8"
+    },
+    {
+      "path": "recipes/prepare-cardiac-imaging-coverage-20261027.mjs",
+      "bytes": 10141,
+      "sha256": "bf061830c10b2e956ced3bd67dc3d37289b3bc72137f70e0de427ddb74910737"
+    },
+    {
+      "path": "recipes/prepare-cardiac-imaging-coverage-v3-20261027.mjs",
+      "bytes": 10244,
+      "sha256": "5013132529b95d082555716d9cfe1fe60157e733259fb432165e0ae3d4db5295"
+    },
+    {
+      "path": "recipes/prepare-cardiac-imaging-exports-20261027.mjs",
+      "bytes": 2299,
+      "sha256": "b8ee4967e13e5af4bc9091c34477319c08c92afaa4cffa1de629355a7f1e995e"
+    },
+    {
+      "path": "recipes/prepare-cardiac-imaging-native-20261027.mjs",
+      "bytes": 2092,
+      "sha256": "c490dff371efb2725099ad3e5d76a267ce1804432c06ca2703dd40c098bfe38c"
+    },
+    {
+      "path": "recipes/prepare-cardiac-imaging-verification-20261027.mjs",
+      "bytes": 1077,
+      "sha256": "27d78e86c2d93fb554a4a4dde271acdd35c5c5737a5fd1e248fff7e4710f52ed"
+    },
+    {
+      "path": "recipes/prepare-cardiac-imaging-website-20261027.mjs",
+      "bytes": 6746,
+      "sha256": "e6b8cd136575c1cbaa429b60db49bed565ed90d5c056852cc44bfa13aa43fb71"
+    },
+    {
+      "path": "recipes/refresh-cardiac-imaging-website-delivery-pin-20261027.mjs",
+      "bytes": 2778,
+      "sha256": "9de62e3af2914dad3a04b5fd32b4614db41db59bfacd381c7e0da71f2bb4dd9e"
+    },
+    {
+      "path": "recipes/repair-cardiac-coverage-materializer-20261027.mjs",
+      "bytes": 908,
+      "sha256": "55fa01bf5efed271972e891b8af0f2e67ded9c6f49c2888c61920ae7d3d269c1"
+    },
+    {
+      "path": "recipes/repair-cardiac-imaging-coverage-input-20261027.mjs",
+      "bytes": 1948,
+      "sha256": "9f201a6d195b9a76923d79efb65e9d75676c8ae584d964a2670a561565a6c799"
+    },
+    {
+      "path": "recipes/resume-cardiac-imaging-website-integration-20261027.mjs",
+      "bytes": 2396,
+      "sha256": "4de8f52ab325259468d4c93dcf2a7ab54c8d87bc00544424f7392475d112c9de"
+    },
+    {
+      "path": "recipes/run-cardiac-imaging-coverage-seams-v2-20261027.mjs",
+      "bytes": 2442,
+      "sha256": "eb5ddca7de6944d97a0bf9ee570cdef44f3f0b8f10c3d7590b62136cd42df773"
+    },
+    {
+      "path": "recipes/run-cardiac-imaging-coverage-seams-v4-20261027.mjs",
+      "bytes": 2505,
+      "sha256": "063e1a4335aa72359288f981a2199b4d372e27cdc8d09925d602fe3bbc37c131"
+    },
+    {
+      "path": "recipes/run-cardiac-imaging-native-20261027.mjs",
+      "bytes": 4995,
+      "sha256": "8266865e0e03673e942686400bcdc5d92145647043b4c533bb98b0dfaf3125fe"
+    },
+    {
+      "path": "recipes/run-cardiac-imaging-runtime-exports-20261027.mjs",
+      "bytes": 3266,
+      "sha256": "47bf3af74eed47643c60ca88599658df8479a88dcc79be74687147d87606ced4"
+    },
+    {
+      "path": "recipes/run-cardiac-imaging-website-integration-20261027.mjs",
+      "bytes": 2188,
+      "sha256": "f3dc081ec45e4b47ae2cc8cb8918ce6824a0161c2a7a98d20273499537e191e0"
+    },
+    {
+      "path": "recipes/run-cardiac-imaging-website-verification-20261027.mjs",
+      "bytes": 6642,
+      "sha256": "6e2e841fd3cee757503f4482d39e4db3ba222f755e8be54444ebf4d8a7799963"
+    },
+    {
+      "path": "recipes/seal-cardiac-imaging-website-source-20261027.mjs",
+      "bytes": 5999,
+      "sha256": "3960a054143cca3aa2f2db11812e8b833eed43a0d6030019acb7f474a8fe5d9e"
+    },
+    {
+      "path": "recipes/verify-cardiac-imaging-website-content-20261027.mjs",
+      "bytes": 5332,
+      "sha256": "67a6aa6c0477387625a9c0b62bf6e94141ac6c5b8288e2bd92e4247f61e8aab0"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party authored source bindings and current cardiac orchestration recipes only. No scans, patient assets, geometry, generated runtime, private decision/object data or raw repository ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "draftSections": 6,
+    "focusedCases": 42,
+    "fullTypes": true,
+    "stockBuild": true,
+    "reviewInputs": 1836,
+    "browserRerun": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

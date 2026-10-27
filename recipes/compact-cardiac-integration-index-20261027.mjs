@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './bounded-source-hash-20261026.mjs';
+const f='CURRENT_CHECKPOINT.json',i=json(f),c=i.activeWork.current;assert.deepEqual(c.activeExecutionSessions,[]);
+const dir='F:/VisibleMedicine/recovery/checkpoints/20261027-cardiac-integration-index';fs.mkdirSync(dir);fs.copyFileSync(f,dir+'/CURRENT_INDEX_BEFORE.json',fs.constants.COPYFILE_EXCL);const archive={path:dir+'/CURRENT_INDEX_BEFORE.json',sha256:hash(dir+'/CURRENT_INDEX_BEFORE.json')};
+for(const key of ['pendingSavedStudyPlan','pendingContextRunner']){const old=c[key];assert(old);c[key]={state:old.state??old.status,historicalRecord:{...archive,jsonPath:'activeWork.current.'+key},installed:false,allPriorProofAndFailuresRetained:true};}
+i.historyArchive={...archive,allHistoryRetained:true,format:'Full former index at original JSON paths; chain retained.'};i.activeWork.updated=new Date().toISOString();const text=JSON.stringify(i,null,2)+'\n';assert(Buffer.byteLength(text)<64000);fs.writeFileSync(f,text);console.log(JSON.stringify({bytes:Buffer.byteLength(text),archive,goalUnchanged:true}));
