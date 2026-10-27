@@ -1,0 +1,137 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T05:46:15.358Z",
+  "sourceIdentity": {
+    "kind": "studio-release-draft-recovery-cue",
+    "sourceSha256": "845f1f0ebbce30e8c1ff42c7d045502b023940ad564298dec311c1a0d9b9ac52"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/StudioForms.tsx",
+      "bytes": 92274,
+      "sha256": "1dede5d288fae3e5e380a4a4ebc7eb14e4d32b38e43168abf500b3f21ad47a4f"
+    },
+    {
+      "path": "website/components/StudioCourseEditor.tsx",
+      "bytes": 21876,
+      "sha256": "62a6c880bdc7d4ec35393d8dbc580022176b17f5e7a1dc913da39b325c6dc6a0"
+    },
+    {
+      "path": "website/tests/studio-course-details-content-role-proof.test.mjs",
+      "bytes": 4435,
+      "sha256": "23185d7da55a6d6067a2e8ab74db8c9858af83d7fd3ae0d61cf14f46c76fa145"
+    },
+    {
+      "path": "website/tests/studio-course-details-content.test.mjs",
+      "bytes": 12265,
+      "sha256": "ccb38f67558b07127ef0689b465a7cbbac08c469a1cb08dbf6511eea587d7480"
+    },
+    {
+      "path": "website/tests/studio-course-details-focus.test.mjs",
+      "bytes": 8458,
+      "sha256": "09c609a04bac6ebeac6d3bd34461c5049f97ead52b74da08c887c982ae734d2c"
+    },
+    {
+      "path": "website/tests/studio-course-draft-discard.test.mjs",
+      "bytes": 17309,
+      "sha256": "16d5dba733f6f1a7aa86ca35e5752c54cb78dd0c34dbd05f7d5b67dce8221f89"
+    },
+    {
+      "path": "website/tests/studio-course-editor-keyboard.test.mjs",
+      "bytes": 15738,
+      "sha256": "6e6f036e061a247c8d4817d3335c39b56e1c5eb1fbad218e22816f21e7eb49a5"
+    },
+    {
+      "path": "website/tests/studio-course-history.test.mjs",
+      "bytes": 9804,
+      "sha256": "da4ea5ad81697d16680f889477e675c68da5694a74d88ba0c587842be3800db1"
+    },
+    {
+      "path": "website/tests/studio-course-options.test.mjs",
+      "bytes": 4455,
+      "sha256": "cbbc2df4fde0060aafe2f986d8d1552c84474af54f341e8a7bd49044d7faf407"
+    },
+    {
+      "path": "website/tests/studio-course-outline-find.test.mjs",
+      "bytes": 9831,
+      "sha256": "dc7af55e7f4a0b655ccb495d16e534b752f759881425b4e16ed6f4d5dbe6ead2"
+    },
+    {
+      "path": "website/tests/studio-course-outline-link-names.test.mjs",
+      "bytes": 3764,
+      "sha256": "3db7a501f2792a34133749443b246cfca4b971e1092840a298cffac2067cf245"
+    },
+    {
+      "path": "website/tests/studio-course-outline-order.test.mjs",
+      "bytes": 6701,
+      "sha256": "63897c398580d9246358cf6b7a79f2446b92ba78ad66347d4b5dbff4dcd111b0"
+    },
+    {
+      "path": "website/tests/studio-course-popstate-focus.test.mjs",
+      "bytes": 5085,
+      "sha256": "dc9a55ed0426777c4bd155d8bc2b467f08ad57567d5a04984571942b0255f78f"
+    },
+    {
+      "path": "website/tests/studio-course-recovery-notice.test.mjs",
+      "bytes": 6688,
+      "sha256": "810253ae6448063834a9eca1e1337e53a11ada6252b05d3c5618cb54425f23e3"
+    },
+    {
+      "path": "website/tests/studio-course-switch-details.test.mjs",
+      "bytes": 5959,
+      "sha256": "b6146617df8f92a7e60ccd08f4864df4b73b89266eae9e27648c2e0bc526ce28"
+    },
+    {
+      "path": "website/tests/studio-draft-dependency-source.mjs",
+      "bytes": 2389,
+      "sha256": "dd0b7447f072b55ce05ee2898ce9c8b89592d89a5ccd5c594286a4512b84fab2"
+    },
+    {
+      "path": "website/tests/studio-course-details-form.test.mjs",
+      "bytes": 20839,
+      "sha256": "de65f553f67b6434cb91584782020dde6eb8d9c848a39cffa24f4d00cb7f7e45"
+    },
+    {
+      "path": "website/tests/studio-history-controller-migration.test.mjs",
+      "bytes": 6218,
+      "sha256": "f787ad5c7b111c8c9d6c2474ab3857cfaf9407dea98adc48967190f63a8dbc38"
+    },
+    {
+      "path": "website/tests/studio-history-proof-current.test.mjs",
+      "bytes": 4264,
+      "sha256": "6cb4d96b66ad64a35c19adea29ddff17ec2721a17ef3ba78e55021e3d23188f0"
+    },
+    {
+      "path": "website/tests/image-tools-bound-delivery.test.mjs",
+      "bytes": 8702,
+      "sha256": "794daf897d549e4548b3ee7b2751f389d559e9ed63cfe29529d72e4ac40db62a"
+    },
+    {
+      "path": "website/tests/studio-release-draft-cue.test.mjs",
+      "bytes": 11548,
+      "sha256": "ac031c67471585ca383386ff3960f622dd4fff08786197cced71370e3a25ab21"
+    },
+    {
+      "path": "website/tests/studio-release-cue-details-form-inverse.mjs",
+      "bytes": 2529,
+      "sha256": "59c51856f429afa6edf7c20dcfc94b181183c06bcfad9021afaadf6a8bc30d72"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party component/test source only; no scans, masks, private references, generated modules, decisions, dependencies or canonical ancestry. Supplemental code recovery, not complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 193,
+    "fullConfiguredTypes": true,
+    "stockProductionBuild": true,
+    "syntheticBrowserRecovery": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
