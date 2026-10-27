@@ -1,0 +1,8 @@
+import fs from'node:fs';import assert from'node:assert/strict';import{hash}from'./bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-head-history-flow',site=stage+'/website',origin='F:/VisibleMedicine/staging/20261025-wave4-digest-guard-website/before/tests';
+const originals={'head-slice-keyboard.test.ts':'3e3994b1bb5f82cf0480e18e199a4acbd7e6b72fc97aff1a7df8d6a2d3804820','head-mask-picking-ui.test.ts':'635e74753f3467f8b85b4d1f431955e8fb921e8d5a5c377af0023e95ffc48022','head-slice-zoom.test.ts':'1459b99870881d5d568b259cfb02ff84813102194c586a4bb6d9f2abd79482c1','head-pan-source-transition.test.ts':'80670c3b9adaf2c3178a64ddcc97eec5682c0abe813e7da73f7a93d3d8cdfcc8'};
+const target=site+'/tests/fixtures/native-slice-legacy-before';fs.mkdirSync(target);
+for(const[name,sha]of Object.entries(originals)){assert.equal(hash(origin+'/'+name),sha);fs.copyFileSync(origin+'/'+name,target+'/'+name+'.raw',fs.constants.COPYFILE_EXCL);assert.equal(hash(target+'/'+name+'.raw'),sha);}
+const file=site+'/tests/native-slice-legacy-adapters.test.mjs',before=hash(file),old=fs.readFileSync(file,'utf8'),a='../../before/tests/${name}',b='./fixtures/native-slice-legacy-before/${name}.raw';assert.equal(old.split(a).length,2);fs.writeFileSync(file,old.replace(a,b));
+fs.writeFileSync(stage+'/LEGACY_FIXTURE_RECOVERY.json',JSON.stringify({at:new Date().toISOString(),origin,originals,test:{path:'tests/native-slice-legacy-adapters.test.mjs',before,after:hash(file),onlyChangedSeam:{before:a,after:b}},scope:'Four first-party test preimages moved into source-owned fixture paths; original pinned hashes and all assertions unchanged.'},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({recoveredTestPreimages:4,existingHashChecksUnchanged:true}));

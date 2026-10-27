@@ -1,0 +1,112 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T22:48:27.657Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261027-head-history-flow/SOURCE_CANDIDATE_V4.json",
+      "sha256": "2722abc385dc4090c23a0e79546e0b21e0bf46eb567c5e4de842c32dc593e493"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-oral-recall-website-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "fc5437dd0151dec8cb2d0a870f69e557f11232ace14c8b524b1b415028984461"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/head-image-history.test.ts",
+      "bytes": 203456,
+      "sha256": "d2eeacfcc351b7d5fb4f8bb16884441336dca6af0fad9fa987ec065d1ad7b083"
+    },
+    {
+      "path": "website/tests/head-viewport-harness-inverse.mjs",
+      "bytes": 2490,
+      "sha256": "ae3a6af8da66f1d1287405d3b5e7afbb391d99311c16b1e2b42838035006a52f"
+    },
+    {
+      "path": "website/tests/native-slice-legacy-adapters.test.mjs",
+      "bytes": 4706,
+      "sha256": "2ae3779f86e1628d0ffdfe3867d57a94f1c3d40d392a4582c3b2cb74261aaa92"
+    },
+    {
+      "path": "website/tests/head-history-flow-inverse-hunks.json",
+      "bytes": 22388,
+      "sha256": "d7aadaf3df7c2e699234a0477a02f43ef60835e00a43bd65be5e534aa9dcc68c"
+    },
+    {
+      "path": "website/tests/head-history-flow-inverse.mjs",
+      "bytes": 1453,
+      "sha256": "08cd3ed925278c61ce0bfd3d4a5af554a83b8468e2ffa31ec7c18215d94aad7a"
+    },
+    {
+      "path": "website/tests/head-history-flow-preservation.test.mjs",
+      "bytes": 1417,
+      "sha256": "a45afb1b16b6377381ea11a8d32af8a71d1a56a247f4e11b6b3f3b62424d7991"
+    },
+    {
+      "path": "website/tests/fixtures/native-slice-legacy-before/head-slice-keyboard.test.ts.raw",
+      "bytes": 18928,
+      "sha256": "3e3994b1bb5f82cf0480e18e199a4acbd7e6b72fc97aff1a7df8d6a2d3804820"
+    },
+    {
+      "path": "website/tests/fixtures/native-slice-legacy-before/head-mask-picking-ui.test.ts.raw",
+      "bytes": 10893,
+      "sha256": "635e74753f3467f8b85b4d1f431955e8fb921e8d5a5c377af0023e95ffc48022"
+    },
+    {
+      "path": "website/tests/fixtures/native-slice-legacy-before/head-slice-zoom.test.ts.raw",
+      "bytes": 9963,
+      "sha256": "1459b99870881d5d568b259cfb02ff84813102194c586a4bb6d9f2abd79482c1"
+    },
+    {
+      "path": "website/tests/fixtures/native-slice-legacy-before/head-pan-source-transition.test.ts.raw",
+      "bytes": 3394,
+      "sha256": "80670c3b9adaf2c3178a64ddcc97eec5682c0abe813e7da73f7a93d3d8cdfcc8"
+    },
+    {
+      "path": "recipes/prepare-head-history-flow-20261027.mjs",
+      "bytes": 720,
+      "sha256": "b67a7bd893ea1d4cfa7c6ef50f7b2f840db31cb438f39e7dc47c0867c9e10a24"
+    },
+    {
+      "path": "recipes/prepare-head-history-legacy-fixtures-20261027.mjs",
+      "bytes": 1769,
+      "sha256": "1a57d0163ce0840dd372c3879c761d50887c6503b2cc8bbbbda9baeaa81c37fb"
+    },
+    {
+      "path": "recipes/repair-head-history-legacy-context-20261027.mjs",
+      "bytes": 1246,
+      "sha256": "b4cb38a70fa69f60ae0292fa7114939cd79bde3011ed27fd84e13c366fa793e3"
+    },
+    {
+      "path": "recipes/seal-head-history-flow-20261027.mjs",
+      "bytes": 5071,
+      "sha256": "c446a0a990865e315348dd06ab381e6f2b8da86b4525a3fadad4025d14f07c0c"
+    },
+    {
+      "path": "recipes/run-head-history-flow-20261027.mjs",
+      "bytes": 4374,
+      "sha256": "e266bc1d7777e8273e060e5590c3963f317464eae3583c6513d36d777051a2b4"
+    },
+    {
+      "path": "recipes/finish-head-history-flow-20261027.mjs",
+      "bytes": 11598,
+      "sha256": "a0e153eb732b17baa8872c2d8132a3bae7c9876239f3989f375e814844712bed"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party synthetic tests, exact inverse seams and recipes only. No scans, geometry, generated runtimes, clinical decisions or raw Git ancestry. Requires linked prior source backups; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 308,
+    "fullConfiguredTypes": true,
+    "allProductInputsUnchanged": true,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
