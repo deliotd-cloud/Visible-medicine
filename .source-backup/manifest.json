@@ -1,0 +1,95 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T10:34:13.079Z",
+  "sourceIdentity": {
+    "kind": "pharyngeal-mri-original-teaching",
+    "sourceSha256": "34f73bcfcb3954ee0ea3aee6964db43981f5514c9ed4f14ac1c5b566a80c0353",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-forehead-nerve-us-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "7000e5cce05be43d79061f96889169d4dbb75d5137fdff79e946162d8d9c39c7",
+        "branch": "backup/forehead-nerve-us-source-20261027",
+        "head": "99aa7010547b358cc9fef44724b8c18771b68b19"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 84761,
+      "sha256": "b5ddf5e7f66fd2508421a8a1d509b20d76722f806d747dade4ac8efa7384e2a6"
+    },
+    {
+      "path": "atlas/content/pharyngeal-mri.ts",
+      "bytes": 4540,
+      "sha256": "b617ba4a9c3a4c853017b77cbdcdcd7ad1f56f563365ec6d86f7de54e54280cf"
+    },
+    {
+      "path": "atlas/lib/pharyngeal-mri.ts",
+      "bytes": 1602,
+      "sha256": "0d80f5a1c1b03dc6163a518dabb3b2f195c41a9d7e914478e3ba311cb933bdda"
+    },
+    {
+      "path": "atlas/scripts/test-pharyngeal-mri.mjs",
+      "bytes": 7873,
+      "sha256": "917bad198f322f5f8d639691f20f34d750c1e12708e6f194b6423cab54516411"
+    },
+    {
+      "path": "atlas/scripts/test-pharyngeal-mri-review.mjs",
+      "bytes": 3602,
+      "sha256": "1f1230f9aef669c248110d7ea746e4170c9ceb8af2db329ee688723952a41841"
+    },
+    {
+      "path": "atlas/docs/PHARYNGEAL_MRI_TEACHING.md",
+      "bytes": 2223,
+      "sha256": "2fa6c65b1269d13b6730890a1a941cd59f1be7e7343a2c38b032a6bc97ce9b9c"
+    },
+    {
+      "path": "recipes/prepare-pharyngeal-mri-native-20261027.mjs",
+      "bytes": 2091,
+      "sha256": "4c6fc86b032478ad0472cc327d905f80922668a5f95adf1054aed45dde1e49cf"
+    },
+    {
+      "path": "recipes/flatten-pharyngeal-native-alternates-20261027.mjs",
+      "bytes": 2644,
+      "sha256": "f80c72e0db6a1df2a15c1a784fe4966fb5e2fd09e0ce9f962babf31c8e047ce5"
+    },
+    {
+      "path": "recipes/integrate-pharyngeal-mri-20261027.mjs",
+      "bytes": 2529,
+      "sha256": "e2fab128d70727c94cc6671c68d00830afe161657e3f6b47a28a4bdaca6c07ea"
+    },
+    {
+      "path": "recipes/prepare-pharyngeal-finish-20261027.mjs",
+      "bytes": 6746,
+      "sha256": "16dca7f5e06f6d24b3fe8efa75482c65c62ad2a18fdb549dc66e2f30eeeefab0"
+    },
+    {
+      "path": "recipes/run-pharyngeal-native-checks-20261027.mjs",
+      "bytes": 3905,
+      "sha256": "549926829a1bc43c3d3c112ceef1ef3646c154c35bb068ce8f0eab91314904c8"
+    },
+    {
+      "path": "recipes/finish-pharyngeal-mri-20261027.mjs",
+      "bytes": 13429,
+      "sha256": "10a578878a8eebec1e39ff2878a7af2bcc3d7745f701e4d676ed8e2bca5bd18b"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party code, original prose, tests and recipes only. Exact source pins, medical metadata, raw proof, generated runtimes, source assets, scans, masks and native/canonical Git ancestry excluded. Not a complete private or runnable backup.",
+  "proof": {
+    "changedDraftPlacements": 9,
+    "preservedPlacements": 9927,
+    "fullConfiguredTypes": true,
+    "stockNativeBuild": true,
+    "websiteImported": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
