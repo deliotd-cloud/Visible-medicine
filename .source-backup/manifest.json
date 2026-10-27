@@ -1,0 +1,117 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T07:19:03.994Z",
+  "sourceIdentity": {
+    "kind": "head-epoch-composition-tests",
+    "sha256": "e5b51f6ee704be19342c9fa743a16e43e68a258a7ab90ff19c96073ecff5d71e"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/colic-adapter-inverse.test.mjs",
+      "bytes": 12041,
+      "sha256": "c095add73bece35427ed6356d60ce317b7635052a4eaf5706a3731b5613ae928"
+    },
+    {
+      "path": "website/tests/head-feature-roles-preservation.mjs",
+      "bytes": 8413,
+      "sha256": "3e67fab5af4ea1fcb62b28189844167059bbebc5e98489d4b4c5b2f440773c69"
+    },
+    {
+      "path": "website/tests/head-feature-roles-preservation.test.mjs",
+      "bytes": 3157,
+      "sha256": "f190c0a8285fcf7de91955ec651219cb5a1a5fb67e1043469beb3cbd8a2bb596"
+    },
+    {
+      "path": "website/tests/head-history-role-preservation.test.mjs",
+      "bytes": 7327,
+      "sha256": "64b166532af9993bc5d49f899a3259f605533741d8b473712c7ba9a86aaad26d"
+    },
+    {
+      "path": "website/tests/head-layout-history-adapter.mjs",
+      "bytes": 9857,
+      "sha256": "9a443c34c6b4a23711a946a527824112feeaa0af44ca9adc9ddc2f93bc1edce2"
+    },
+    {
+      "path": "website/tests/head-layout-history-adapter.test.mjs",
+      "bytes": 4910,
+      "sha256": "47878d58f9cca832a1dc4ec7990f9c4e155796e7471746e5cbf77bfe6a0094c3"
+    },
+    {
+      "path": "website/tests/head-practice-confirm-harness-inverse.mjs",
+      "bytes": 3389,
+      "sha256": "57d7023f1647e2e2155e854b04cbdad9f9acb07faf52d09f98fd9a42241d372a"
+    },
+    {
+      "path": "website/tests/head-practice-exit-inverse.mjs",
+      "bytes": 1900,
+      "sha256": "36720af886756b2d714562d10f8633406be77795140b5e25a13b66f9d0d0d37f"
+    },
+    {
+      "path": "website/tests/head-toolbar-compact.test.mjs",
+      "bytes": 11174,
+      "sha256": "5c73f28ef0de5bcf14833e34c2181db446d1c1d5b8e7ae8825edc04dad6f7ab2"
+    },
+    {
+      "path": "website/tests/colic-final-projections.mjs",
+      "bytes": 5174,
+      "sha256": "87f5a59c21ff9b358c606b3c70c418697024ff5b08c7817ae88f44ebf6bfa994"
+    },
+    {
+      "path": "website/tests/colic-final-projections.test.mjs",
+      "bytes": 783,
+      "sha256": "271cd26024f5c987dbaa886b7ba4705e7997855f6808967b06a5fd5c1a0da758"
+    },
+    {
+      "path": "website/tests/head-disclosure-a28-current.test.mjs",
+      "bytes": 4185,
+      "sha256": "b5705c2a30f74b1699bf1f78719220921191a47dc1b6b66f466c7da989cdab90"
+    },
+    {
+      "path": "website/tests/head-disclosure-later-harness-inverse.mjs",
+      "bytes": 8363,
+      "sha256": "0d93b381f9aba65f5d1966364a7079342b0c38424b3a74054fa966a3678b62f9"
+    },
+    {
+      "path": "website/tests/head-disclosure-later-harness-inverse.test.mjs",
+      "bytes": 1050,
+      "sha256": "f58e98112d8c3f024cea645083a355592979dc29da45495037b20a2eba34ace9"
+    },
+    {
+      "path": "website/tests/head-epoch-projections.mjs",
+      "bytes": 5995,
+      "sha256": "fffed91ce363f32d67f57eec86319ccaaaf0d2311e4ceb42e49f403d626f23ae"
+    },
+    {
+      "path": "website/tests/head-epoch-projections.test.mjs",
+      "bytes": 1229,
+      "sha256": "4e361d9abc78e0cddcc6b670848b775dde8128ad3fca4ea9c1461e7ba5ea1dbe"
+    },
+    {
+      "path": "website/tests/head-practice-exit-later-viewer.mjs",
+      "bytes": 3930,
+      "sha256": "feda2dc0c691bff280d882282b11905af92b712d070d305c4afd7dd02f1cf140"
+    },
+    {
+      "path": "website/tests/head-practice-exit-later-viewer.test.mjs",
+      "bytes": 758,
+      "sha256": "195c494f2e7269522740aada3d788efd9bbd824bb0669f2d6c43d7dfa89b829f"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party test sources only. No scans, masks, decisions, private references, generated modules, dependencies or canonical ancestry. A source supplement, not complete project/private-data recovery.",
+  "proof": {
+    "cases": 343,
+    "wholeRoots": 36,
+    "fullConfiguredTypes": true,
+    "productionUnchanged": true,
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
