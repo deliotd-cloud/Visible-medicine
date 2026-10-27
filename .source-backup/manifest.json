@@ -1,0 +1,180 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T19:49:21.342Z",
+  "sourceIdentity": {
+    "kind": "keyboard-find-website-integration",
+    "sourceSha256": "f357e768bd3972df11c277dabd066b3afc6717559327565edeacc9a555b6d4b6",
+    "requiredWebsite": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-learning-section-resilience-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "e7459bae710de7076cc1803079d224c486d2d221974a45df58cda1ad745344fb"
+    },
+    "requiredNative": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-find-keyboard-native-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "14d46efb849e14b97541eccc427b91743154ee807d02cc193ad29d327d800247"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "b296508fa58e95676940f97ea1fc48f215fae45b0634e6062396e97a4d67dc45"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "0ee942c7edb7a6e36e6dd8ef9548db4b6ac007acf953deb7391199ea3adf91b2"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "5e4f27fc05689acad971f052d3c67ea277d2163e48b963635fdf853aa789bf35"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "1f1105f692805a558c89d77fe665c352dcb4b5c6ecf5cd963fb618adf95a624a"
+    },
+    {
+      "path": "recipes/prepare-find-keyboard-exports-20261027.mjs",
+      "bytes": 1949,
+      "sha256": "6e72b07790ed97f32547a9db8b9b5d54423cb8324c010268b65fb1384115d148"
+    },
+    {
+      "path": "recipes/export-find-keyboard-runtimes-20261027.mjs",
+      "bytes": 7146,
+      "sha256": "9bfc739c0dc5a56b5ebadad6cc39a7324d8d9574dae6b21e531ca7b6b3ad539b"
+    },
+    {
+      "path": "recipes/run-find-keyboard-runtime-exports-20261027.mjs",
+      "bytes": 3256,
+      "sha256": "242b71b7e96fb35a70eec35dced5388639f0876ca1490335920e7c107e836766"
+    },
+    {
+      "path": "recipes/prepare-find-keyboard-integration-recipes-20261027.mjs",
+      "bytes": 1825,
+      "sha256": "fefb98cb94f6fab3d35853b93541c097171bcfa1ce5d428d5cf7d2cc802c1d2c"
+    },
+    {
+      "path": "recipes/prepare-find-keyboard-website-20261027.mjs",
+      "bytes": 6739,
+      "sha256": "6a070d73926deb176f549dcd79098461ff31f0ecea05ccfb0b5bbcb173d97c44"
+    },
+    {
+      "path": "recipes/prepare-find-keyboard-stock-recipes-20261027.mjs",
+      "bytes": 5062,
+      "sha256": "7c570c247d5e912895c7b2b62aa86876c471ac0e651e06bc3258a3c59398b318"
+    },
+    {
+      "path": "recipes/import-find-keyboard-website-stock-20261027.mjs",
+      "bytes": 6766,
+      "sha256": "5a54b66eba579e04252ba6c3499b027c9cc4fcb34ff94718e06535f0555419f2"
+    },
+    {
+      "path": "recipes/generate-find-keyboard-website-coverage-20261027.mjs",
+      "bytes": 2873,
+      "sha256": "df3696748d0b48d9a8488f4968240b4d6573d1d2c36397736a11f5109b7f6d2f"
+    },
+    {
+      "path": "recipes/run-find-keyboard-coverage-seams-20261027.mjs",
+      "bytes": 2388,
+      "sha256": "98008d12113ab0d3d7b142f822282f69a8411df76b3530171d9b2d1f383d55cc"
+    },
+    {
+      "path": "recipes/install-find-keyboard-website-coverage-20261027.mjs",
+      "bytes": 2965,
+      "sha256": "06e0a510c3a18f681ae88f0893c99a514b2178b290968b0d59f02bc599d29bc6"
+    },
+    {
+      "path": "recipes/build-find-keyboard-website-review-20261027.mjs",
+      "bytes": 6683,
+      "sha256": "8da1cdec2a89b9c4fd51b3c0f8b4c1d8f46192cdc82ff4835c716a8fd9720110"
+    },
+    {
+      "path": "recipes/refresh-find-keyboard-website-delivery-pin-20261027.mjs",
+      "bytes": 2776,
+      "sha256": "b3b5ffd27d3915160bc9555c562c2cfedb89a830d8b0e733662929c8dc5624aa"
+    },
+    {
+      "path": "recipes/run-find-keyboard-website-integration-20261027.mjs",
+      "bytes": 2170,
+      "sha256": "872d3de4cd5e30a423a534817f4e9f63b6c45ae3dc2edbc430c97290c7f5972d"
+    },
+    {
+      "path": "recipes/seal-find-keyboard-website-source-20261027.mjs",
+      "bytes": 6048,
+      "sha256": "796d1f653d2c9bb6fbdf9961c8876ffa93c9b28c31d961a33391bfbe109e368a"
+    },
+    {
+      "path": "recipes/run-find-keyboard-stock-import-20261027.mjs",
+      "bytes": 1724,
+      "sha256": "a338527d05161d78ce4debbe47d688d45652f772cedc08cbb5724dbe18fff399"
+    },
+    {
+      "path": "recipes/prepare-find-keyboard-verification-20261027.mjs",
+      "bytes": 702,
+      "sha256": "786f635f6b41c99e7a942cd3ee52293f44c0337de30762f1baef9612f4018eb5"
+    },
+    {
+      "path": "recipes/verify-find-keyboard-website-content-20261027.mjs",
+      "bytes": 4936,
+      "sha256": "2959cca2a206b9d829c376bb7d643d47cdb1848dc9bdbad95b38fad496cc4847"
+    },
+    {
+      "path": "recipes/run-find-keyboard-website-verification-20261027.mjs",
+      "bytes": 6800,
+      "sha256": "13109581e898915ac93769d0258d117a28e07c02e36e8c53d3c045fbdb94c242"
+    },
+    {
+      "path": "recipes/serve-find-keyboard-website-browser-20261027.mjs",
+      "bytes": 4007,
+      "sha256": "e09750d1c28adf8c74a28ec7eefe5c96f70f82f11480c2c54865b1c50fcf0ef0"
+    },
+    {
+      "path": "recipes/finish-find-keyboard-website-20261027.mjs",
+      "bytes": 14938,
+      "sha256": "845b9d035b83849c02fd5b602854ada5615b09d2a22e4fd29aab0fada2948409"
+    },
+    {
+      "path": "recipes/repair-find-keyboard-coverage-recipe-20261027.mjs",
+      "bytes": 2372,
+      "sha256": "8b3400811104476d05d5617d88ab3058b0b99d2fb164c8be3a707040bf1c02e6"
+    },
+    {
+      "path": "recipes/run-find-keyboard-coverage-seams-v2-20261027.mjs",
+      "bytes": 2391,
+      "sha256": "7ecd923c42dca2e8538f3d5740a46fd4b717d183c117bd5a62db715ba88886c6"
+    },
+    {
+      "path": "recipes/install-find-keyboard-website-coverage-v2-20261027.mjs",
+      "bytes": 2965,
+      "sha256": "d1b323992442e469233b5a356054240076083463a4e23160883d8f1f2af3aa48"
+    },
+    {
+      "path": "recipes/resume-find-keyboard-website-integration-20261027.mjs",
+      "bytes": 2345,
+      "sha256": "b9852ccec32d86b3abdbf206ddd335c9a87da3497ecdb6404125384400850195"
+    },
+    {
+      "path": "recipes/run-find-keyboard-website-checks-20261027.mjs",
+      "bytes": 1587,
+      "sha256": "514cd603061a128551c07c5085450fe30c021ed5314b38ab6756e123007a4e5e"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source binding code and reproducible integration recipes only. No scans, private records, geometry, generated runtimes or canonical Git ancestry; not a complete runnable or private-data backup.",
+  "proof": {
+    "cases": 56,
+    "browserAssertions": 20,
+    "fullTypes": true,
+    "stockBuild": true,
+    "reviewInputs": 1836,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
