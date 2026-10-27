@@ -1,0 +1,146 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T17:18:00.310Z",
+  "sourceIdentity": {
+    "kind": "review-filter-scroll",
+    "sourceSha256": "022079381d39ab61ec12109285479b344fe779d7f450307b20f5e5b792c2a8ab",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-course-preview-focus-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "825dc07938961ccce699d285ea52ce3e5519d80ec2d4ded95c150fe23447de5e"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "bytes": 38354,
+      "sha256": "7b124e30dfbecde6d5771ae33f5cca68b469e581198bd6028e94eaba60672999"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-workbench.test.mjs",
+      "bytes": 12206,
+      "sha256": "726b97a328b39b740f4a936a1796637aac6085cf0ef36e3773a5ae4c0bff6f76"
+    },
+    {
+      "path": "website/tests/inbox-deferred-return-source-role.mjs",
+      "bytes": 1516,
+      "sha256": "e6aa77487f27cadb4073068fb899b34076c79bec3fb0c1bc2fb0ee778fadb1cf"
+    },
+    {
+      "path": "website/tests/review-pager-inbox-history.mjs",
+      "bytes": 1768,
+      "sha256": "8dfbfa771929ea179db4ab462734b38db293a9e2395e9a4096ff0acc65892a07"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-short-desktop.test.mjs",
+      "bytes": 2617,
+      "sha256": "d61fa28b1b48d7909d08d52bf60f39d28c7f8c049846ab86f15f0cb0fa215c27"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-return-pager-focus.test.mjs",
+      "bytes": 11359,
+      "sha256": "83fc2a469b78966f0fc62b64ad311c611bb8591d643ffe080def08479231f933"
+    },
+    {
+      "path": "website/tests/review-filter-scroll-source-role.mjs",
+      "bytes": 1234,
+      "sha256": "a4b1fb5f3de91621e826fe814e3ede28d10b362e170f2a64e12f7fd046df39b9"
+    },
+    {
+      "path": "website/tests/fixtures/review-filter-scroll-transition.json",
+      "bytes": 20239,
+      "sha256": "a3c07a505cc6c4c64853568dac717b24e86f6652a4d9f1c067e3c6c3e77bf9bc"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-filter-history.test.mjs",
+      "bytes": 1304,
+      "sha256": "cc2405f0ef8051861e325dde198fc0aab58f29498704eb129b58bbf88332096c"
+    },
+    {
+      "path": "recipes/prepare-review-filter-history-20261027.py",
+      "bytes": 6328,
+      "sha256": "d468578a4ef3ac5b71cb8cbaf4244098c3cdb31e5bd83f96be85b891d3f22675"
+    },
+    {
+      "path": "recipes/seal-review-filter-history-v2-20261027.mjs",
+      "bytes": 4114,
+      "sha256": "13dd35db6a512bbefadb6a8dc95470aa48db364789a49c203df1fdd45f740906"
+    },
+    {
+      "path": "recipes/verify-review-filter-scroll-v2-20261027.mjs",
+      "bytes": 2218,
+      "sha256": "91f3cc63c1bc9cf74efc610c6b2bf8bf21c8742f40aa7db028175d848493ed4a"
+    },
+    {
+      "path": "recipes/run-review-filter-scroll-v2-20261027.mjs",
+      "bytes": 7277,
+      "sha256": "422f4c89e198271ddfd8d4f20db2899f6527bea5576c23457ee1ebfe56fecedc"
+    },
+    {
+      "path": "recipes/prepare-review-filter-scroll-20261027.mjs",
+      "bytes": 413,
+      "sha256": "f39053577a72af648430f2b5d22deb28cf141af4663c304f2641e59023b8d98d"
+    },
+    {
+      "path": "recipes/seal-review-filter-scroll-20261027.mjs",
+      "bytes": 2852,
+      "sha256": "3feb5980b065666111f0c01996ffdb9bba86c240971b50ba1dcd860ceb81e53e"
+    },
+    {
+      "path": "recipes/verify-review-filter-scroll-20261027.mjs",
+      "bytes": 2155,
+      "sha256": "7bc99674d6bcd818df52f220fa9987454b51647768c0623c6483a89da5a25cb1"
+    },
+    {
+      "path": "recipes/run-review-filter-scroll-20261027.mjs",
+      "bytes": 7202,
+      "sha256": "f2bb84385afb3959531c26187465a7ce4363cae72655873cfe9f7e6b4cc75476"
+    },
+    {
+      "path": "recipes/build-review-filter-browser-20261027.mjs",
+      "bytes": 3944,
+      "sha256": "20fd1b7d7a00c2ec3dd9bb319664af05e38330fa8f28c5a6f2cceff7897f1fc3"
+    },
+    {
+      "path": "recipes/prepare-review-filter-browser-runner-20261027.mjs",
+      "bytes": 623,
+      "sha256": "859d1a63451ee7355024fc7b7c01c85ee65afa16980db67b6a6461745088bd48"
+    },
+    {
+      "path": "recipes/run-review-filter-browser-20261027.mjs",
+      "bytes": 1837,
+      "sha256": "23f464bce50c40e3233455eb80037c8d3c2717bf6956a54240bf7368d2cbfd13"
+    },
+    {
+      "path": "recipes/serve-review-filter-browser-20261027.mjs",
+      "bytes": 2667,
+      "sha256": "88e6a8252bfea989fed8a5078c58db7c0c8b9a01c2e119a6b0e6aa9b0b520900"
+    },
+    {
+      "path": "recipes/prepare-review-filter-finish-20261027.mjs",
+      "bytes": 5346,
+      "sha256": "5f51d56751a3b5ea71d966b144e8b0804bfb17bc8be551b6d9f17cea2c02e032"
+    },
+    {
+      "path": "recipes/finish-review-filter-scroll-20261027.mjs",
+      "bytes": 12988,
+      "sha256": "5543c712f453498ad00c1e1a790db7d8f057824be5005260b0d601f915defe44"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source/tests and verification recipes only. No scans, masks, clinical data, private metadata, generated models/runtimes, review decisions or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 112,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "browserAssertions": 40,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
