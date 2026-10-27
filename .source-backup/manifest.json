@@ -1,0 +1,157 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T22:12:51.972Z",
+  "sourceIdentity": {
+    "kind": "ct-mri-per-plane-framing",
+    "sourceSha256": "9641cddacce5ba037eb87023b6873ad9d64a10542b490bfafbf0f318b1a939cc",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-oral-recall-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "9b7f167b883c723adfe9459b12f09a5123f27d21afca2c6b0609c9915756c452"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/head-disclosure-later-harness-inverse.mjs",
+      "bytes": 8635,
+      "sha256": "91d1b6da43bb4c654b7250118fcfbe233a0ccae909e4d514da7eb0ead8595d86"
+    },
+    {
+      "path": "website/tests/head-pan-source-transition.test.ts",
+      "bytes": 5795,
+      "sha256": "9a153ee66e23be26760009d873b3a6c50425e28df0561102699b8744e1653a6d"
+    },
+    {
+      "path": "website/tests/native-slice-legacy-adapters.test.mjs",
+      "bytes": 4456,
+      "sha256": "49c4b50050ee6111d8f2623f87dd8320cdbd1e9a40083ffaec18ea79d0ee6a23"
+    },
+    {
+      "path": "website/components/HeadAtlasViewer.tsx",
+      "bytes": 124780,
+      "sha256": "4233e1fb1e3dcd961a4f5d8de19fa3bb4a21fdc200fafa7129eb6b7a6dd52d2c"
+    },
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "bytes": 10102,
+      "sha256": "13e794bca419bae893750261c197e14aa70e235675311833fd31fe7c120a157d"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "0b18ccf136b5996d3a7efe347c63172836faf36fd2e8bd1b862044ec82028570"
+    },
+    {
+      "path": "website/tests/head-pan-interruption.test.ts",
+      "bytes": 13951,
+      "sha256": "32c50c15b1233070b12fc58f7889714bfa6dd174d8cc12d804ffd1cf960dc387"
+    },
+    {
+      "path": "website/tests/head-slice-zoom.test.ts",
+      "bytes": 10610,
+      "sha256": "9c88a322722831410a2f9a995765676ad46838a449efaf0aafe75d0572811120"
+    },
+    {
+      "path": "website/tests/head-pane-expansion-labels.test.mjs",
+      "bytes": 4393,
+      "sha256": "6b0e78e0d7a33fcad47f8610ebc7187ce124a6f9d1cd4e8214bdcffdf3691aeb"
+    },
+    {
+      "path": "website/tests/native-slice-commit.test.mjs",
+      "bytes": 16457,
+      "sha256": "b43a47748c207b8df3b695bc72ac667cd67aafb1fdc8a67f2a1361dd5d020acd"
+    },
+    {
+      "path": "website/tests/head-slice-keyboard.test.ts",
+      "bytes": 19819,
+      "sha256": "a15209adac07a346dd2f8ae6436c4bd6bfec990ef34402a619c2fe0fcf9cd591"
+    },
+    {
+      "path": "website/tests/head-mask-picking-ui.test.ts",
+      "bytes": 11728,
+      "sha256": "d609bdd4dd663de8d4128c379c3087756540829d78fabb576afd4e26beada2f3"
+    },
+    {
+      "path": "website/tests/head-image-history.test.ts",
+      "bytes": 193636,
+      "sha256": "33f1aa202a5463e0899e58e6a10b552cd2cb44c5e91341bfe7988497fd62a2dc"
+    },
+    {
+      "path": "website/tests/head-viewport-harness-inverse.mjs",
+      "bytes": 2327,
+      "sha256": "df30ffefd56198df700669f8398ba7db06c7169c4774d9e30304730694c5a1a7"
+    },
+    {
+      "path": "website/tests/head-viewport-inverse-hunks.json",
+      "bytes": 19006,
+      "sha256": "2b43ec279251dd0a8cc6dac7d90ad9892d528bcd4c28e9bee4ad5c9aaac29b9e"
+    },
+    {
+      "path": "website/tests/head-viewport-harness-inverse.test.mjs",
+      "bytes": 1820,
+      "sha256": "28bbded20798cf938c104110f61e919301ca34885d50b9e208d1b4d2925a6f4d"
+    },
+    {
+      "path": "website/lib/head-viewport-memory.ts",
+      "bytes": 1049,
+      "sha256": "31e73078022e143ae16d2c82ac2ed5b6f27686b386581879543a1297ab0f732e"
+    },
+    {
+      "path": "website/tests/head-viewport-retention.test.mjs",
+      "bytes": 3737,
+      "sha256": "33e6bd9a9c9ddb6e4331643d747dce869f6ef4fb351bb497a346ce35b5b29425"
+    },
+    {
+      "path": "recipes/prepare-head-viewport-retention-20261027.mjs",
+      "bytes": 893,
+      "sha256": "4125db96c0819c0747836092b6efbabe8b260af6c41b907dec9367f387a288d1"
+    },
+    {
+      "path": "recipes/bind-head-viewport-retention-20261027.mjs",
+      "bytes": 5837,
+      "sha256": "aa7367dd6281047f7396cfe9e1fbb850362836bf8b70cb92e962cc95e6e77924"
+    },
+    {
+      "path": "recipes/seal-head-viewport-retention-v6-20261027.mjs",
+      "bytes": 3920,
+      "sha256": "e8d84f6b438c12bfa52030c85f558b1d0d89b2137be7f583f943bdd1d8062389"
+    },
+    {
+      "path": "recipes/run-head-viewport-retention-v6-checks-20261027.mjs",
+      "bytes": 6029,
+      "sha256": "78168b20578659f6d98c3511b412e3603d09f9d974f77763f3c16a14079f7085"
+    },
+    {
+      "path": "recipes/build-head-viewport-retention-browser-20261027.mjs",
+      "bytes": 6744,
+      "sha256": "d9508e99aa2183bee299d90158cbc85e04ad3ad9734ea771de5b3dc3f19d45e8"
+    },
+    {
+      "path": "recipes/serve-head-viewport-retention-browser-20261027.mjs",
+      "bytes": 2857,
+      "sha256": "ecb424c7479c8445ea522890714593eaf48e1672b8bf4d69b952049bc6b26e26"
+    },
+    {
+      "path": "recipes/finish-head-viewport-retention-20261027.mjs",
+      "bytes": 14649,
+      "sha256": "6404aedaed35d0706d47fd33d76898ba50334393ca516c4b872691e9b175f683"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source, tests, public source identity pins and recovery recipes. No scans, masks, geometry, generated runtimes, decisions, private data or raw repository ancestry. Supplement only; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 98,
+    "browserChecks": 22,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "baselineHistoryFailures": 28,
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
