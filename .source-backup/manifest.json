@@ -1,0 +1,163 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T11:22:47.374Z",
+  "sourceIdentity": {
+    "kind": "body-review-focus-website-integration",
+    "sourceSha256": "a2d1dbceffbd89dc96f78dd0eedc6e6081ee533ddf896dafd35dfe05f6b209a3",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-pharyngeal-website-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "ef46f028b18a9f003fe1d8c81a1a3d19bcc69faeecf913ac9c7610ffe0f6e034",
+        "receipt": {
+          "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-pharyngeal-website-source-supplement/github-backup.json",
+          "sha256": "91bb5503bac67526fe12c69d138173e92d45bcbd2ee055fed4e16dd118ae5c8f"
+        },
+        "branch": "backup/pharyngeal-website-source-20261027",
+        "head": "bea4a338ef44e502321e42e5a3f06ac6fbcb8931",
+        "tree": "5f928333cabc9f12f6c5f352ec4dedd6afd4d4c1"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-body-review-focus-native-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "a23002906f698d52b67c674146ead433721127eddfccbcb67188c8c05553d786",
+        "receipt": {
+          "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-body-review-focus-native-source-supplement/github-backup.json",
+          "sha256": "ca1d21cbb6a4ec2d6ad0540dd7d2c5b26221010d9e0b0cba7ed735cc43c0e8b9"
+        },
+        "branch": "backup/body-review-focus-native-20261027",
+        "head": "5bf9436d5be1f860a380539e61546cf89f21c6db",
+        "tree": "a07a918d7f784e2ebba4800528fc731b78399027"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "c5b1f08d23f424ac0772e66102e4d1fc314a2a071ecaeec86c0e06fa3cf986d5"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "f5de986eeeb532801fe72f391ba0ff0c13714eed9ea946f5704569cd7a8f2a21"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "9ffd3ccbee8def8794eb9179f6e69ea0f7a970d17fa4a4a15b5f2bc382a0ca8f"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "55c091e210a2fdbe04a77c6e42c88ea4dfffb18dc188bd7694af1464104c4183"
+    },
+    {
+      "path": "recipes/prepare-body-review-focus-integration-20261027.mjs",
+      "bytes": 2790,
+      "sha256": "3be8eddce8f22c11004c4abf875039339ff15aeb686802f884701a01f803eb84"
+    },
+    {
+      "path": "recipes/export-body-review-focus-runtimes-20261027.mjs",
+      "bytes": 6595,
+      "sha256": "f5922b374f098d789a8e00c7f1af1349fd651d858bd74603959d55bbe5a0f2a8"
+    },
+    {
+      "path": "recipes/run-body-review-focus-runtime-exports-20261027.mjs",
+      "bytes": 3274,
+      "sha256": "8569147e6acae2d42b5e88672623325095762917c7f4a0947c45529a1a1809f1"
+    },
+    {
+      "path": "recipes/prepare-body-review-focus-website-recipes-20261027.mjs",
+      "bytes": 5971,
+      "sha256": "76a4ce1613f0b3ab423498bd71aeb747fff08e40a1dcebfca10b43183b623a25"
+    },
+    {
+      "path": "recipes/prepare-body-review-focus-website-20261027.mjs",
+      "bytes": 6750,
+      "sha256": "dc82e2b018d213fe1f7ce4a2c19a0c91ad602b94bdcbc8ea120cd4d2d1c1403e"
+    },
+    {
+      "path": "recipes/import-body-review-focus-website-stock-20261027.mjs",
+      "bytes": 6742,
+      "sha256": "a5de5c7ac1d5b79f421516bd12d9a692d5a8de5e9ae2256692707ddfa3afecbd"
+    },
+    {
+      "path": "recipes/run-body-review-focus-website-integration-20261027.mjs",
+      "bytes": 2200,
+      "sha256": "f1ed57182b4cb966d153f44e8531c59a6e253780c7cdf5b54df621572a0aeaf4"
+    },
+    {
+      "path": "recipes/generate-body-review-focus-website-coverage-20261027.mjs",
+      "bytes": 2877,
+      "sha256": "60e40a33a537d280b400811a121a02363e4da894e28613ec01ad7e7413c5444e"
+    },
+    {
+      "path": "recipes/run-body-review-focus-coverage-seams-20261027.mjs",
+      "bytes": 2396,
+      "sha256": "2d01c91ad05b66534a23028ba1ea7dfffbfd28e71d1e9116a2824858e90bc21a"
+    },
+    {
+      "path": "recipes/install-body-review-focus-website-coverage-20261027.mjs",
+      "bytes": 2973,
+      "sha256": "418a507642ea34935639e7a958f0043d5d109d1a46114e5822881cd426652801"
+    },
+    {
+      "path": "recipes/build-body-review-focus-website-review-20261027.mjs",
+      "bytes": 6630,
+      "sha256": "c36cfdb14dba3a50a88e3aff2827956b9b92dc5da6fe31e4d7106c2c27d29978"
+    },
+    {
+      "path": "recipes/refresh-body-review-focus-website-delivery-pin-20261027.mjs",
+      "bytes": 2780,
+      "sha256": "cd2f7ced0d4e1e9e15d399eeabfa12ae11c82adfd3262e21c322fbfc8e86bc8a"
+    },
+    {
+      "path": "recipes/seal-body-review-focus-website-source-20261027.mjs",
+      "bytes": 6011,
+      "sha256": "edddbff63c4474b445f9c80c1c34f469876eb0391d9fa26710dc495bd1c77123"
+    },
+    {
+      "path": "recipes/prepare-body-review-focus-website-verification-20261027.mjs",
+      "bytes": 735,
+      "sha256": "b0285aa86d57f70eb0925246d40ef84e0bfe59bee5f6bf97a21662485b1f80a4"
+    },
+    {
+      "path": "recipes/verify-body-review-focus-website-content-20261027.mjs",
+      "bytes": 3787,
+      "sha256": "612820caea0f51565dad30907935491f7bc6422cb7971f25989afb5608692d5f"
+    },
+    {
+      "path": "recipes/run-body-review-focus-website-verification-20261027.mjs",
+      "bytes": 5547,
+      "sha256": "de88541814e0c055cb53825865dd2038e32e8bfbf37080c51e46b9493d5eda6a"
+    },
+    {
+      "path": "recipes/finish-body-review-focus-website-20261027.mjs",
+      "bytes": 9832,
+      "sha256": "348a9b4b5b6d3d05c5d17e8cd235b39a9d8c8039c2d99b229d88d5a84b062636"
+    },
+    {
+      "path": "recipes/record-body-review-focus-website-20261027.mjs",
+      "bytes": 6362,
+      "sha256": "7f2e2e50758333da8ae246f999092065414159745388629a609cead64af9b29b"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party website code and integration/test recipes only. No exact anatomy source pins, medical metadata, scans, masks, assets, generated runtime, raw private proof, decisions, dependencies or canonical/native Git ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "changedReviewComponents": 1,
+    "browserAssertions": 20,
+    "focusedCases": 25,
+    "fullConfiguredTypes": true,
+    "productionBuild": true,
+    "sourceRevisionBindingPreserved": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
