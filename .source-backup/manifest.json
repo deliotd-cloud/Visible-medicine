@@ -1,0 +1,103 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T23:32:04.787Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261027-review-area-navigation/SOURCE_CANDIDATE.json",
+      "sha256": "4bdc07b85136ed2117c2ef6f0ed124150e5081c5c7a8097c370305a155a4f53a"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-study-set-navigation-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "b4c7eb6b537fc76f6f16d6fa169f11a183d7414c505535d956d009d3127e403c"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewAreas.tsx",
+      "bytes": 2301,
+      "sha256": "0e22aa353d74f9e2d4a48a6501b4fba2889edad30679c0b026e732b666247eb3"
+    },
+    {
+      "path": "website/components/clinical-review-areas.css",
+      "bytes": 2115,
+      "sha256": "e764fd64b5a48d746686113183fc48921787cae9ffeea3d289132643405e1e3e"
+    },
+    {
+      "path": "website/tests/clinical-review-discovery.test.ts",
+      "bytes": 6013,
+      "sha256": "136d21b077f61573cf4a248e70345dfae206a52eccff1f6de72c1d5ed6f6cb08"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "7749b77da646718eefdd083f980223f2f7f9ca987de55d9001e6df42501751fd"
+    },
+    {
+      "path": "website/tests/clinical-review-area-navigation.test.ts",
+      "bytes": 2784,
+      "sha256": "2e868cf3ecb4595fe4742d3dacb3511133e3762a13ac781f7e99f49e8109dfff"
+    },
+    {
+      "path": "recipes/prepare-review-area-navigation-20261027.mjs",
+      "bytes": 721,
+      "sha256": "079f32b477bc5789e0c271c8a2d00b745d363c1bfc72e406016890a7750160cf"
+    },
+    {
+      "path": "recipes/build-review-area-navigation-20261027.mjs",
+      "bytes": 3509,
+      "sha256": "8120a0c7440d8f71e4253ef03099988d5dc667b1383f0c833ce3ea47eae7232a"
+    },
+    {
+      "path": "recipes/seal-review-area-navigation-20261027.mjs",
+      "bytes": 5933,
+      "sha256": "4575f77fbbe209fdb223450af4f32136d80c6e7a2cb63b2f59487d95858edf7f"
+    },
+    {
+      "path": "recipes/run-review-area-light-20261027.mjs",
+      "bytes": 2682,
+      "sha256": "f4c68b27d8a5efc42ddf9a3e7704cdb470f47b40c9e1f2cb75de79570297c716"
+    },
+    {
+      "path": "recipes/run-review-area-verification-20261027.mjs",
+      "bytes": 4607,
+      "sha256": "fe8092ca2a4dff876e462535adeb8b471e5e7f991dade0a3bedbd0c76f7cf940"
+    },
+    {
+      "path": "recipes/build-review-area-browser-20261027.mjs",
+      "bytes": 2480,
+      "sha256": "201c585ea00b8d7131b0742b81e16d52e09700849800514785a7ebb34129b455"
+    },
+    {
+      "path": "recipes/serve-review-area-browser-20261027.mjs",
+      "bytes": 2859,
+      "sha256": "7c148f6d222f8e52ed2cf896ee4a733227513ff5b802f4c9a440e7ef7b6c4baf"
+    },
+    {
+      "path": "recipes/finish-review-area-navigation-20261027.mjs",
+      "bytes": 13832,
+      "sha256": "1b9bbfd09f7c0ad092233ff7b785ac16c5e79fa47bf0918eb5f686c641e38229"
+    },
+    {
+      "path": "test-proof/DISCOVERY_TEST_INVERSE.json",
+      "bytes": 1472,
+      "sha256": "d23f129acd211d8ea28c90b137eab3d6da46d5d66b4fc6d15ae8268ff1c3034e"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party navigation, CSS, synthetic tests, revision pin and recovery recipes. No scans, model geometry, generated runtime, clinical decisions, private state or raw Git ancestry. Requires linked prior supplements; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 16,
+    "fullConfiguredTypes": true,
+    "productionAndReviewBuilds": true,
+    "syntheticBrowserChecks": 13,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

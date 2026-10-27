@@ -1,0 +1,40 @@
+{
+  "path": "tests/clinical-review-discovery.test.ts",
+  "beforeSha256": "459c978cc8dfc0797fc559310e9b5e43ffdb36f6c935669e3457481be91daee4",
+  "afterSha256": "136d21b077f61573cf4a248e70345dfae206a52eccff1f6de72c1d5ed6f6cb08",
+  "hunks": [
+    {
+      "oldStart": 26,
+      "newStart": 26,
+      "removed": [
+        "  for(const current of ['structures','source-comparisons'] as const){"
+      ],
+      "added": [
+        "  for(const current of ['structures','head-learning','source-comparisons'] as const){"
+      ]
+    },
+    {
+      "oldStart": 29,
+      "newStart": 29,
+      "removed": [
+        "    assert.equal(links.length,2,'only the other two areas should be links');",
+        "    const expected=Object.entries(destinations).filter(([area])=>area!==current).map(([,href])=>href).sort();"
+      ],
+      "added": [
+        "    assert.equal(links.length,3,'the inbox and the other two areas should be links');",
+        "    const expected=['/workspace/clinical-review-inbox',...Object.entries(destinations).filter(([area])=>area!==current).map(([,href])=>href)].sort();"
+      ]
+    },
+    {
+      "oldStart": 32,
+      "newStart": 32,
+      "removed": [
+        "    assert.deepEqual(actual,expected,'area links must use only the three fixed destinations');"
+      ],
+      "added": [
+        "    assert.deepEqual(actual,expected,'navigation must use only the inbox and fixed review destinations');"
+      ]
+    }
+  ],
+  "oldAssertionsRecoverable": true
+}
