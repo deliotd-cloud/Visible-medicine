@@ -1,0 +1,75 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T18:41:01.329Z",
+  "sourceIdentity": {
+    "kind": "tour-regression-test-repairs",
+    "sourceSha256": "b85db01e6278468fdee8550eb45c60129c8cc46125bc7f0f3527f7a2a76f5477",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-related-joint-studies-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "a7f841c9535ec678fe2a9f2293452595a73b0b403a3429ffe2e5796fc2d1112e"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 17023,
+      "sha256": "0b8fcd91e3e7f308b458764ee29a281804d827f0640aedb356151b18369764f7"
+    },
+    {
+      "path": "website/tests/regional-tour-title-navigation-current.test.mjs",
+      "bytes": 10907,
+      "sha256": "3ee427abaea9799f1932ddd6ca74af7fd89369e6b5a3f3c649407fbfed1c8d14"
+    },
+    {
+      "path": "website/tests/regional-tour-title-tour-current.test.mjs",
+      "bytes": 5285,
+      "sha256": "2d55c2367842b885d7fbfbcd9361061e978a6ccc8b01745b4a91f4e6880d2fc1"
+    },
+    {
+      "path": "website/tests/regional-duration-source-inverse.mjs",
+      "bytes": 1248,
+      "sha256": "46b223d2f2be96211b690d5d19d5019f8ed38408793438f1ac8aa3c544085cdc"
+    },
+    {
+      "path": "website/tests/regional-duration-source-inverse.test.mjs",
+      "bytes": 1191,
+      "sha256": "cb97ab459c0882d962c6a8c84f88bd8b7799affaa97ababdf2a74a990a489937"
+    },
+    {
+      "path": "recipes/seal-tour-regression-repairs-20261027.mjs",
+      "bytes": 3048,
+      "sha256": "21bbc244637a1605d60eb21800f51ed7867c178526acdd2af2b5af49c2f66da3"
+    },
+    {
+      "path": "recipes/verify-tour-regression-repairs-20261027.mjs",
+      "bytes": 4602,
+      "sha256": "5852e92529b88da1ef42ad5d4d1aa314dfd4d601fcbc0b568a248d148458fdd7"
+    },
+    {
+      "path": "recipes/run-tour-regression-repairs-20261027.mjs",
+      "bytes": 6707,
+      "sha256": "68686b4b6910219f2703579856b42c569368f35cb9b5e2c9162f89e5bdd81e53"
+    },
+    {
+      "path": "recipes/finish-tour-regression-repairs-20261027.mjs",
+      "bytes": 12330,
+      "sha256": "44abe7e50393a7969ab27deab3ee26a4f8fd94a919e54b2f677e6e625294f837"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party tests and verification recipes only. No scans, masks, clinical data, private metadata, generated models/runtimes, review decisions or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 36,
+    "historicalChildCases": 7,
+    "productUnchanged": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
