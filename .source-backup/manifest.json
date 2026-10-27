@@ -1,0 +1,39 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T12:48:41.459Z",
+  "sourceIdentity": {
+    "kind": "lecture-slide-keyboard-focus",
+    "sha256": "737e84d77c68ec05e9b06ece4176822f601cbbfbba63b1f1f8ebe71937dd1bba"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/LectureEditor.tsx",
+      "bytes": 44104,
+      "sha256": "760606e2357a1d105e89e1000c9c0c6b300f6bb17227afef3569439767a085c3"
+    },
+    {
+      "path": "website/tests/lecture-slide-focus.test.ts",
+      "bytes": 7077,
+      "sha256": "3aaecb7919bcc7c2cd5f9fd26ed9d3445bf950acf78ef7de383c08aef18ad241"
+    }
+  ],
+  "removed": [],
+  "scope": "Two first-party text files only: lecture editor and focused test. No private records, scans, geometry, generated runtime, dependencies or canonical ancestry. Supplement, not a full project backup.",
+  "proof": {
+    "focusedCases": 57,
+    "wholeRoots": 6,
+    "browserAssertions": 26,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
