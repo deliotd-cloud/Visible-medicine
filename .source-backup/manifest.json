@@ -1,0 +1,175 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T17:53:01.747Z",
+  "sourceIdentity": {
+    "kind": "test-contract-repairs",
+    "sourceSha256": "50f6e44fd84e71c10181863d90d9abd17a90bc532da5d53bd2bbbdfeeb61f2b9",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-study-comparison-limits-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "e7029b9317cece8765233aeef291d5d6704da3ec0f333c1daf436c1cbcf1b117"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/reference-catalogue-delivery-role.mjs",
+      "bytes": 2530,
+      "sha256": "cdf5e2db74be735dd6e083ef5472919c5e4200f156bb206f6023e42be18889fc"
+    },
+    {
+      "path": "website/tests/posterior-fossa-coverage.test.mjs",
+      "bytes": 12447,
+      "sha256": "ecd66f20df9a49265b0440c0a8e4ba9d3f749b3a7a83ca510e145567a1458c2a"
+    },
+    {
+      "path": "website/tests/neonatal-review-input-path.test.mjs",
+      "bytes": 6550,
+      "sha256": "f0a78f7bbef2804a1f1320df7a12e441638a4ee038fe9e325c9ec6ae6a849de6"
+    },
+    {
+      "path": "website/tests/reference-catalogue-historical-delivery.mjs",
+      "bytes": 2430,
+      "sha256": "b0fd3f6118a33c54959be67447448c733d56a4bbe158a7756b75cb13be5f33d2"
+    },
+    {
+      "path": "website/tests/reference-catalogue-historical-delivery.test.mjs",
+      "bytes": 4675,
+      "sha256": "67d9722cdcd5f25d5c9c8b8a873e416cb53d2588d20f4103a172a4e2c8814702"
+    },
+    {
+      "path": "website/tests/coverage-path-historical-view.ts",
+      "bytes": 5290,
+      "sha256": "d5263a59256009aa7a8670cf6eb3f4c1c9a3d67ddbbacabaceec4f6467624fe7"
+    },
+    {
+      "path": "website/tests/fixtures/coverage-path-historical-1816-inputs.json.raw",
+      "bytes": 285491,
+      "sha256": "f21a4e1766b1156f0a2d1872a626581b978deb67426915b387aeae63d5733d65"
+    },
+    {
+      "path": "website/tests/fixtures/coverage-path-historical-2381-index.json.raw",
+      "bytes": 154911,
+      "sha256": "729a4b7ee299194f84dc5c1f81afd94a3c69405e2c939fb07d3795b6accac5bb"
+    },
+    {
+      "path": "website/tests/fixtures/coverage-path-historical-2381-manifest.json.raw",
+      "bytes": 379857,
+      "sha256": "2b0ae5a7d2a401f8e00126bf4e8907c6ddcc6a0ed571e04f49ca6d0a3e543803"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/female-pelvis-manifest.json.raw",
+      "bytes": 6208,
+      "sha256": "125edab490e1805458d7d8c3f512979cb107b3cfbb5fbeede1679a820f0336fa"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/female-pelvis-source-inputs.json.raw",
+      "bytes": 16681,
+      "sha256": "53875c684230dbed03afca435662428ebc92e3a1f1a8e2679f42f02ecc72d11a"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/lower-limb-manifest.json.raw",
+      "bytes": 3436,
+      "sha256": "1c7b13b5045fb9095a01fb61f94c4a9cbaad6303f59873e72d324515f80fcd4f"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/lower-limb-source-inputs.json.raw",
+      "bytes": 15191,
+      "sha256": "346f0c0cf80d0df1ef9acbce8d6e4fb6e4f3888ca67ac2dbbb10dc435100e997"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/PROVENANCE.json",
+      "bytes": 1941,
+      "sha256": "60892e1ee551274438e3240746b0043634e68b9b357d452b6bf6e5d91eb3648c"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/role-before.mjs.raw",
+      "bytes": 2649,
+      "sha256": "28eb2698ed60fed3cfdba857c71a0a0451a5b0fc13f0d0feb6a5b1df1201628a"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/shoulder-manifest.json.raw",
+      "bytes": 4795,
+      "sha256": "85230df1327b2913bf35cd7071d1a488f47ad7f0885b8640f25ba688895b5bca"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/shoulder-source-inputs.json.raw",
+      "bytes": 154396,
+      "sha256": "70bc33c2ee27fdad088cce874c3f93980715241fdc901947547b089ec8fa37ce"
+    },
+    {
+      "path": "website/tests/fixtures/reference-catalogue-epoch/validator.mjs.raw",
+      "bytes": 5092,
+      "sha256": "52551fd5ec16154a78b94f78e0cdfbfee6a1bea629f70714f3dd5f93ccb81bb5"
+    },
+    {
+      "path": "recipes/prepare-current-contract-repairs-20261027.mjs",
+      "bytes": 413,
+      "sha256": "c6b5056b522b3d511da987371f4c40f9fd338f20d1ee6558941980e6ba360dd8"
+    },
+    {
+      "path": "recipes/prepare-reference-epoch-fixtures-20261027.mjs",
+      "bytes": 1924,
+      "sha256": "fe72e562a7a823628a3322e9fb902b9cfa6aeff39e5818499b94470a2df57ba9"
+    },
+    {
+      "path": "recipes/seal-current-contract-repairs-20261027.mjs",
+      "bytes": 4332,
+      "sha256": "0f57378a053b15878c05ee08dd92fc51d30d32ff9b0cff7738b35b4f168d0720"
+    },
+    {
+      "path": "recipes/verify-current-contract-repairs-20261027.mjs",
+      "bytes": 1584,
+      "sha256": "7f09549f86daec89df7a69fb8c258d122e1027b792a3fdc7428e1fe15084042e"
+    },
+    {
+      "path": "recipes/verify-current-contract-repairs-v2-20261027.mjs",
+      "bytes": 1590,
+      "sha256": "a6db11df63432fee17f123e6c76c9b733dd9a84db050fa28f50ebd80f246864c"
+    },
+    {
+      "path": "recipes/run-current-contract-repairs-20261027.mjs",
+      "bytes": 6509,
+      "sha256": "af596b552d0ffa668375a3cc50f2232f708847763553befb4a474dd11bc6b25c"
+    },
+    {
+      "path": "recipes/run-current-contract-repairs-v2-20261027.mjs",
+      "bytes": 6530,
+      "sha256": "1b8dd25385786dd6ec1797158ef860e10dbb757d37a6b1411be0253d2ba422ba"
+    },
+    {
+      "path": "recipes/run-reference-contract-repair-20261027.mjs",
+      "bytes": 3222,
+      "sha256": "369a13184420aacb76658ed33fd4f3cfc8604baaf1478e0a7ce2d5c5c2f95cd0"
+    },
+    {
+      "path": "recipes/run-current-mri-regression-probe-20261027.mjs",
+      "bytes": 2790,
+      "sha256": "e3508c81628253d0d63f7d5a7721f003f2846481a8b823463acc68e10a984955"
+    },
+    {
+      "path": "recipes/run-current-teaching-inventory-20261027.mjs",
+      "bytes": 2194,
+      "sha256": "280cbb2edbed12fe60edcbe786ca775a12b852027013ed37ead5fd44b8900889"
+    },
+    {
+      "path": "recipes/finish-current-contract-repairs-20261027.mjs",
+      "bytes": 13075,
+      "sha256": "c92c4821b5fd99cd62b29b6edd1fb74d8bb8b934d718a94dac805b8ff787a5ad"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party tests, source metadata fixtures and verification recipes only. No patient scans, masks, model binaries, private references, records or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 36,
+    "allProductInputsUnchanged": true,
+    "fullConfiguredTypes": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,50 @@
+{
+  "historicalOnly": true,
+  "receipt": {
+    "path": "F:/VisibleMedicine/staging/20261022-release-diagnostic-successor/SOURCE.json",
+    "sha256": "65d2838d513a79ecbf5f9a7eb085354c34b6ebfe0d584c445922eda8e2574522"
+  },
+  "validator": {
+    "path": "F:/VisibleMedicine/staging/20261023-ae84-metadata-closure/website/tests/current-atlas-delivery.mjs",
+    "sha256": "52551fd5ec16154a78b94f78e0cdfbfee6a1bea629f70714f3dd5f93ccb81bb5"
+  },
+  "rows": [
+    {
+      "path": "public/atlas-runtime/shoulder/manifest.json",
+      "name": "shoulder-manifest.json.raw",
+      "sha256": "85230df1327b2913bf35cd7071d1a488f47ad7f0885b8640f25ba688895b5bca",
+      "bytes": 4795
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/source-inputs.json",
+      "name": "shoulder-source-inputs.json.raw",
+      "sha256": "70bc33c2ee27fdad088cce874c3f93980715241fdc901947547b089ec8fa37ce",
+      "bytes": 154396
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/manifest.json",
+      "name": "lower-limb-manifest.json.raw",
+      "sha256": "1c7b13b5045fb9095a01fb61f94c4a9cbaad6303f59873e72d324515f80fcd4f",
+      "bytes": 3436
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/source-inputs.json",
+      "name": "lower-limb-source-inputs.json.raw",
+      "sha256": "346f0c0cf80d0df1ef9acbce8d6e4fb6e4f3888ca67ac2dbbb10dc435100e997",
+      "bytes": 15191
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/manifest.json",
+      "name": "female-pelvis-manifest.json.raw",
+      "sha256": "125edab490e1805458d7d8c3f512979cb107b3cfbb5fbeede1679a820f0336fa",
+      "bytes": 6208
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/source-inputs.json",
+      "name": "female-pelvis-source-inputs.json.raw",
+      "sha256": "53875c684230dbed03afca435662428ebc92e3a1f1a8e2679f42f02ecc72d11a",
+      "bytes": 16681
+    }
+  ],
+  "originalRoleSha256": "28eb2698ed60fed3cfdba857c71a0a0451a5b0fc13f0d0feb6a5b1df1201628a"
+}

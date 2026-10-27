@@ -1,0 +1,21 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {hash,json} from './bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-current-contract-repairs',prep=json(stage+'/PREPARATION.json'),p=json(prep.parent.path),site=prep.website;
+assert.equal(hash(prep.parent.path),prep.parent.sha256);
+const changed=['tests/reference-catalogue-delivery-role.mjs','tests/posterior-fossa-coverage.test.mjs','tests/neonatal-review-input-path.test.mjs'];
+const added=['tests/reference-catalogue-historical-delivery.mjs','tests/reference-catalogue-historical-delivery.test.mjs','tests/coverage-path-historical-view.ts',...fs.readdirSync(site+'/tests/fixtures').filter(n=>n.startsWith('coverage-path-')).map(n=>'tests/fixtures/'+n),...fs.readdirSync(site+'/tests/fixtures/reference-catalogue-epoch').map(n=>'tests/fixtures/reference-catalogue-epoch/'+n)];
+const originals=[
+ ['tests/coverage-path-historical-view.ts','F:/VisibleMedicine/staging/20261022-atlas-teaching-website-composition/coverage-preimage/lib/anatomy-coverage-view.ts'],
+ ['tests/fixtures/coverage-path-historical-2381-index.json.raw','F:/VisibleMedicine/staging/20261022-atlas-teaching-website-composition/coverage-preimage/docs/anatomy-coverage/index.json'],
+ ['tests/fixtures/coverage-path-historical-2381-manifest.json.raw','F:/VisibleMedicine/staging/20261022-arterial-current-role-followup/website/atlas-review/manifest.json'],
+ ['tests/fixtures/coverage-path-historical-1816-inputs.json.raw','F:/VisibleMedicine/staging/20261025-checklist-workflow-website/website/atlas-review/integration-inputs.json'],
+];
+for(const [target,origin]of originals)assert.equal(hash(site+'/'+target),hash(origin),target);
+for(const r of p.sourceRows){assert.equal(hash(p.website+'/'+r.path),r.sha256,r.path);if(!changed.includes(r.path))assert.equal(hash(site+'/'+r.path),r.sha256,r.path);}
+const ambient=[];for(const name of ['.next/types/routes.d.ts','next-env.d.ts']){const from=p.website+'/'+name,to=site+'/'+name;fs.mkdirSync(path.dirname(to),{recursive:true});if(!fs.existsSync(to))fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);assert.equal(hash(to),hash(from));ambient.push({path:name,sha256:hash(to),copiedFrom:from});}
+const paths=[...p.sourceRows.map(r=>r.path),...added].sort();assert.equal(new Set(paths).size,paths.length);assert([...changed,...added].every(p=>p.startsWith('tests/')));
+const s={schema:'vm-current-contract-repairs-source/1',at:new Date().toISOString(),website:site,atlas:p.atlas,atlasHead:p.atlasHead,atlasTree:p.atlasTree,parent:prep.parent.path,parentSha256:prep.parent.sha256,sourcePaths:paths.length,sourceRows:paths.map(path=>({path,bytes:fs.statSync(site+'/'+path).size,sha256:hash(site+'/'+path)})),changedPaths:changed,addedPaths:added,removedPaths:[],dependencies:p.dependencies,ambientTypeInputs:ambient,reviewBindingSha256:p.reviewBindingSha256,testOnly:true,allProductAndGeneratedInputsExact:true,originalFixtureSources:originals.map(([target,origin])=>({target,origin,sha256:hash(origin)})),installed:false,normalPreviewChanged:false};
+fs.writeFileSync(stage+'/SOURCE_CANDIDATE.json',JSON.stringify(s,null,2)+'\n',{flag:'wx'});
+let runner=fs.readFileSync('run-study-comparison-limits-v2-20261027.mjs','utf8').replaceAll('20261027-study-comparison-limits','20261027-current-contract-repairs').replaceAll('SOURCE_CANDIDATE_V2.json','SOURCE_CANDIDATE.json').replaceAll('verify-study-comparison-limits-v2-20261027.mjs','verify-current-contract-repairs-20261027.mjs').replaceAll("kind:'study-comparison-limits-","kind:'current-contract-repairs-");
+const roots=['tests/posterior-fossa-coverage.test.mjs','tests/neonatal-review-input-path.test.mjs','tests/reference-catalogue-historical-delivery.test.mjs','tests/regional-reference-review-index.test.ts','tests/disk-catalogue-test-loader.test.mjs','tests/anatomy-coverage-view.test.ts'];
+const start=runner.indexOf('const roots=['),end=runner.indexOf('\nlet command',start);assert(start>0&&end>start);runner=runner.slice(0,start)+'const roots='+JSON.stringify(roots)+';'+runner.slice(end);fs.writeFileSync('run-current-contract-repairs-20261027.mjs',runner,{flag:'wx'});
+console.log(JSON.stringify({source:stage+'/SOURCE_CANDIDATE.json',sha256:hash(stage+'/SOURCE_CANDIDATE.json'),paths:paths.length,added:added.length}));

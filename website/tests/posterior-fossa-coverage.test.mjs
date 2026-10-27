@@ -1,0 +1,130 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {coverageRevision,verifyCoverageSources,checkCoverage} from '../scripts/check-anatomy-coverage.mjs';
+import {projectCoverageView,COVERAGE_SNAPSHOT_REVISION} from '../lib/anatomy-coverage-view.ts';
+import {projectCoverageView as historicalProjectCoverageView,COVERAGE_SOURCE_REVISION as historicalCoverageRevision,COVERAGE_SNAPSHOT_REVISION as historicalSnapshotRevision} from './coverage-path-historical-view.ts';
+import {currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+
+const historicalIndexBytes=readFileSync(new URL('./fixtures/coverage-path-historical-2381-index.json.raw',import.meta.url));
+const historicalManifestBytes=readFileSync(new URL('./fixtures/coverage-path-historical-2381-manifest.json.raw',import.meta.url));
+const snapshot=JSON.parse(historicalIndexBytes);
+const manifest=JSON.parse(historicalManifestBytes);
+const currentSnapshot=JSON.parse(readFileSync(new URL('../docs/anatomy-coverage/index.json',import.meta.url)));
+const currentManifest=JSON.parse(readFileSync(new URL('../atlas-review/manifest.json',import.meta.url)));
+const sourcePath='content/posterior-fossa-ultrasound.ts';
+const sourceSha='fdf5e8cf8ca9a8babc9053b5007633aab61b3c98f351f7536369d01e530d957a';
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+
+test('historical coverage inputs and validator are exact archived source bytes',()=>{
+ assert.equal(sha(historicalIndexBytes),'729a4b7ee299194f84dc5c1f81afd94a3c69405e2c939fb07d3795b6accac5bb');
+ assert.equal(sha(historicalManifestBytes),'2b0ae5a7d2a401f8e00126bf4e8907c6ddcc6a0ed571e04f49ca6d0a3e543803');
+ assert.equal(sha(readFileSync(new URL('./coverage-path-historical-view.ts',import.meta.url))),'d5263a59256009aa7a8670cf6eb3f4c1c9a3d67ddbbacabaceec4f6467624fe7');
+ assert.equal(historicalSnapshotRevision,sha(JSON.stringify(snapshot)));
+});
+
+test('new posterior-fossa draft is an exact source dependency without changed selection counts or approval',()=>{
+ assert.equal(historicalCoverageRevision,'2381efe43b75f8a7fb768a069eecd7268c508dac');
+ assert.equal(snapshot.sourceRevision,historicalCoverageRevision);
+ assert.equal(Object.keys(snapshot.evidence.sourceInputs).length,168);
+ assert.equal(snapshot.evidence.sourceInputs[sourcePath],sourceSha);
+ assert.deepEqual({root:snapshot.scopedCounts.root.rootRepresentations,nested:snapshot.scopedCounts.nested.nestedSelections,
+  views:snapshot.scopedCounts.independent.independentViews,selections:snapshot.scopedCounts.independent.independentFrameQualifiedSelectionIds},
+ {root:1104,nested:108,views:9,selections:267});
+ assert.equal(snapshot.assessment.clinicalApprovalAsserted,false);
+ assert.equal(snapshot.assessment.anatomicalCompletenessProven,false);
+ assert.equal(snapshot.assessment.patientRegistrationAsserted,false);
+});
+
+test('stale source and changed posterior-fossa content fail source verification',()=>{
+ const sourceBytes=Buffer.from('source-bound teaching');
+ const index={sourceRevision:coverageRevision,evidence:{sourceInputs:{[sourcePath]:sha(sourceBytes)}}};
+ const ports={head:()=>coverageRevision,status:()=>'',readSource:()=>sourceBytes,committedSource:()=>sourceBytes};
+ assert.equal(verifyCoverageSources(index,ports),index);
+ assert.throws(()=>verifyCoverageSources(index,{...ports,head:()=> '3e66d2a7cb1807f792929cbe292a4cfc81e4e79e'}),/stale/);
+ assert.throws(()=>verifyCoverageSources(index,{...ports,readSource:()=>Buffer.from('changed draft')}),/working source mismatch/);
+ assert.throws(()=>verifyCoverageSources(index,{...ports,committedSource:()=>Buffer.from('changed draft')}),/committed source mismatch/);
+});
+
+test('the imported draft and package bind to this snapshot; changed content or import side is unavailable',async()=>{
+ assert.equal(sha(JSON.stringify(snapshot)),historicalSnapshotRevision);
+ const view=await historicalProjectCoverageView(snapshot,manifest);
+ assert(view);
+ assert.equal(view.sourceRevision,historicalCoverageRevision);
+ assert.equal(manifest.revision,historicalCoverageRevision);
+ assert.equal(snapshot.evidence.sourceInputs['package.json'],'f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6');
+ const imported=manifest.files.find(f=>f.path===sourcePath);
+ assert(imported);
+ assert.equal(imported.sourceSha256,sourceSha);
+ const old=structuredClone(manifest);old.revision='3e66d2a7cb1807f792929cbe292a4cfc81e4e79e';
+ assert.equal(await historicalProjectCoverageView(snapshot,old),null);
+ const content=structuredClone(manifest);content.files.find(f=>f.path===sourcePath).sourceSha256='0'.repeat(64);
+ assert.equal(await historicalProjectCoverageView(snapshot,content),null);
+ const side=structuredClone(manifest);side.files.find(f=>f.path===sourcePath).importedSha256='0'.repeat(64);
+ assert.equal(await historicalProjectCoverageView(snapshot,side),null);
+ const pkg=structuredClone(snapshot);pkg.evidence.sourceInputs['package.json']='0'.repeat(64);
+ assert.equal(await historicalProjectCoverageView(pkg,manifest),null);
+});
+
+test('the complete prior posterior-fossa contract retains its exact historical source and package seams',()=>{
+ const original=readFileSync(new URL('./fixtures/posterior-fossa-coverage-before190-20261021.mjs.raw',import.meta.url));
+ assert.equal(sha(original),'cf6646f82345a08a843fd621b5ef3ce612c1a685f92bffe99235f4c84d315ad8');
+ const current=readFileSync(new URL('./posterior-fossa-coverage.test.mjs',import.meta.url),'utf8');
+ const marker="\ntest('the complete prior posterior-fossa contract retains its exact historical source and package seams'";
+ const at=current.indexOf(marker);assert(at>0&&current.lastIndexOf(marker)===at);
+ const edits=[
+  ["import {coverageRevision,verifyCoverageSources} from '../scripts/check-anatomy-coverage.mjs';","import {coverageRevision,verifyCoverageSources,checkCoverage} from '../scripts/check-anatomy-coverage.mjs';"],
+  ["import {projectCoverageView,COVERAGE_SNAPSHOT_REVISION} from '../lib/anatomy-coverage-view.ts';","import {projectCoverageView,COVERAGE_SNAPSHOT_REVISION} from '../lib/anatomy-coverage-view.ts';\nimport {currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';"],
+  ["assert.equal(coverageRevision,'7b3e678ae4b8059aadb84459048ebd05f7abe7b9');","assert.equal(coverageRevision,'2381efe43b75f8a7fb768a069eecd7268c508dac');"],
+  ["assert.equal(snapshot.evidence.sourceInputs['package.json'],'5594ae675dae99abe6fa1ac6f1a74af740d802adccd5afa0fc5da1908b6cb5ba');","assert.equal(snapshot.evidence.sourceInputs['package.json'],'f06fbc874ff751d1ef2fdf5b0cae85a906660e7ff5177c351c2962917449fbc6');"],
+ ];
+ const roleEdits=[
+  ["import {projectCoverageView,COVERAGE_SNAPSHOT_REVISION} from '../lib/anatomy-coverage-view.ts';", "import {projectCoverageView,COVERAGE_SNAPSHOT_REVISION} from '../lib/anatomy-coverage-view.ts';\nimport {projectCoverageView as historicalProjectCoverageView,COVERAGE_SOURCE_REVISION as historicalCoverageRevision,COVERAGE_SNAPSHOT_REVISION as historicalSnapshotRevision} from './coverage-path-historical-view.ts';"],
+  ["const snapshot=JSON.parse(readFileSync(new URL('../docs/anatomy-coverage/index.json',import.meta.url)));\nconst manifest=JSON.parse(readFileSync(new URL('../atlas-review/manifest.json',import.meta.url)));", "const historicalIndexBytes=readFileSync(new URL('./fixtures/coverage-path-historical-2381-index.json.raw',import.meta.url));\nconst historicalManifestBytes=readFileSync(new URL('./fixtures/coverage-path-historical-2381-manifest.json.raw',import.meta.url));\nconst snapshot=JSON.parse(historicalIndexBytes);\nconst manifest=JSON.parse(historicalManifestBytes);\nconst currentSnapshot=JSON.parse(readFileSync(new URL('../docs/anatomy-coverage/index.json',import.meta.url)));\nconst currentManifest=JSON.parse(readFileSync(new URL('../atlas-review/manifest.json',import.meta.url)));"],
+  ["const sha=bytes=>createHash('sha256').update(bytes).digest('hex');", "const sha=bytes=>createHash('sha256').update(bytes).digest('hex');\n\ntest('historical coverage inputs and validator are exact archived source bytes',()=>{\n assert.equal(sha(historicalIndexBytes),'729a4b7ee299194f84dc5c1f81afd94a3c69405e2c939fb07d3795b6accac5bb');\n assert.equal(sha(historicalManifestBytes),'2b0ae5a7d2a401f8e00126bf4e8907c6ddcc6a0ed571e04f49ca6d0a3e543803');\n assert.equal(sha(readFileSync(new URL('./coverage-path-historical-view.ts',import.meta.url))),'d5263a59256009aa7a8670cf6eb3f4c1c9a3d67ddbbacabaceec4f6467624fe7');\n assert.equal(historicalSnapshotRevision,sha(JSON.stringify(snapshot)));\n});"],
+  ["assert.equal(coverageRevision,'2381efe43b75f8a7fb768a069eecd7268c508dac');", "assert.equal(historicalCoverageRevision,'2381efe43b75f8a7fb768a069eecd7268c508dac');"],
+  ["assert.equal(snapshot.sourceRevision,coverageRevision);", "assert.equal(snapshot.sourceRevision,historicalCoverageRevision);"],
+  ["assert.equal(sha(JSON.stringify(snapshot)),COVERAGE_SNAPSHOT_REVISION);", "assert.equal(sha(JSON.stringify(snapshot)),historicalSnapshotRevision);"],
+  ["const view=await projectCoverageView(snapshot,manifest);", "const view=await historicalProjectCoverageView(snapshot,manifest);"],
+  ["assert.equal(view.sourceRevision,coverageRevision);", "assert.equal(view.sourceRevision,historicalCoverageRevision);"],
+  ["assert.equal(manifest.revision,coverageRevision);", "assert.equal(manifest.revision,historicalCoverageRevision);"],
+  ["await projectCoverageView(snapshot,old)", "await historicalProjectCoverageView(snapshot,old)"],
+  ["await projectCoverageView(snapshot,content)", "await historicalProjectCoverageView(snapshot,content)"],
+  ["await projectCoverageView(snapshot,side)", "await historicalProjectCoverageView(snapshot,side)"],
+  ["await projectCoverageView(pkg,manifest)", "await historicalProjectCoverageView(pkg,manifest)"],
+ ];
+ const once=(text,from,to)=>{assert.equal(text.split(from).length,2);return text.replace(from,to);};
+ let forward=original.toString();for(const[from,to]of edits)forward=once(forward,from,to);
+ for(const[from,to]of roleEdits)forward=once(forward,from,to);
+ assert.equal(current.slice(0,at),forward,'All original count, privacy, import-side and mutation assertions stay exact');
+ let inverse=forward;for(const[from,to]of roleEdits.toReversed())inverse=once(inverse,to,from);
+ for(const[from,to]of edits.toReversed())inverse=once(inverse,to,from);
+ assert.equal(inverse,original.toString());
+ const changed=forward.replace("const pkg=structuredClone(snapshot)","const pkg=structuredClone(manifest)");
+ assert.notEqual(changed,forward);assert.throws(()=>assert.equal(changed,forward));
+});
+
+test('current coverage verifies actual committed and working Atlas inputs, not the separate Website package',()=>{
+ const sourceRoot=currentAtlasDeliveryRoot();
+ assert.deepEqual(checkCoverage({sourceRoot}),currentSnapshot);
+ assert.equal(sha(JSON.stringify(currentSnapshot)),COVERAGE_SNAPSHOT_REVISION);
+ assert.equal(currentSnapshot.sourceRevision,coverageRevision);
+ assert.equal(currentManifest.revision,coverageRevision);
+ assert.equal(sha(readFileSync(sourceRoot+'/package.json')),currentSnapshot.evidence.sourceInputs['package.json']);
+});
+
+test('current and historical coverage reject altered revision, package, and imported source identities',async()=>{
+ assert(await projectCoverageView(currentSnapshot,currentManifest));
+ assert(await historicalProjectCoverageView(snapshot,manifest));
+ const currentRevision=structuredClone(currentSnapshot);currentRevision.sourceRevision='2381efe43b75f8a7fb768a069eecd7268c508dac';
+ assert.equal(await projectCoverageView(currentRevision,currentManifest),null);
+ const currentPackage=structuredClone(currentSnapshot);currentPackage.evidence.sourceInputs['package.json']='0'.repeat(64);
+ assert.equal(await projectCoverageView(currentPackage,currentManifest),null);
+ const currentSource=structuredClone(currentManifest);currentSource.files.find(f=>f.path===sourcePath).sourceSha256='0'.repeat(64);
+ assert.equal(await projectCoverageView(currentSnapshot,currentSource),null);
+ const historicalRevision=structuredClone(snapshot);historicalRevision.sourceRevision=coverageRevision;
+ assert.equal(await historicalProjectCoverageView(historicalRevision,manifest),null);
+ const historicalPackage=structuredClone(snapshot);historicalPackage.evidence.sourceInputs['package.json']='0'.repeat(64);
+ assert.equal(await historicalProjectCoverageView(historicalPackage,manifest),null);
+});
