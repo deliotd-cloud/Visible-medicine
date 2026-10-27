@@ -1,0 +1,171 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T18:23:25.424Z",
+  "sourceIdentity": {
+    "kind": "related-joint-studies",
+    "sourceSha256": "4beff707455f82bd272f60784fb20317a6c1e744bbd8342a26d5e6fc95e639ea",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-current-contract-repairs-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "f261589dc0c6d644fc23b328419b28264bfb6ca05c6a66100dfb3cde53d71739"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/atlas/3d/page.tsx",
+      "bytes": 5209,
+      "sha256": "90f7227b3341725adab3006d061c8549949a825a3384b2c01eb46da0fba28da2"
+    },
+    {
+      "path": "website/tests/atlas-navigation.test.ts",
+      "bytes": 14047,
+      "sha256": "21b157f6eec93bfc9746eafa696a1c1359bdd0108deba586ef919c2c54b36e08"
+    },
+    {
+      "path": "website/tests/atlas-nonhead-comparison-ui.test.mjs",
+      "bytes": 8282,
+      "sha256": "ab342f2fada090f8af81a1b3b427200a1685725be43c287da6af7491ac394d83"
+    },
+    {
+      "path": "website/tests/atlas-study-transport.test.ts",
+      "bytes": 13358,
+      "sha256": "dcc3d14e6b250f14ab428ec6e8f786b0d9b17d6b95588c0feb90c16c0ca69bb1"
+    },
+    {
+      "path": "website/tests/lower-limb-module-page.test.ts",
+      "bytes": 7399,
+      "sha256": "a81ceeea204a4996a40cb5b43b2d7b4274191320be29303172d11bba79c24b6c"
+    },
+    {
+      "path": "website/tests/page-ssr-query-role.mjs",
+      "bytes": 6935,
+      "sha256": "891aebc8955808369afeaf61ebff164ea1ef71a6535e87078c52d473e2fa1139"
+    },
+    {
+      "path": "website/tests/regional-query-source-role.mjs",
+      "bytes": 5621,
+      "sha256": "f4552b36a7b5b12de99006a8f62e702e5788059012be2d7b6ac5eeca4fa91cd5"
+    },
+    {
+      "path": "website/tests/regional-tour-entry-delivery.test.mjs",
+      "bytes": 16587,
+      "sha256": "317c0d01a0c6fc7d1bba888f6fbfc044ee6431ed5b8379ed3b2c5dacd602e447"
+    },
+    {
+      "path": "website/tests/regional-tour-step-delivery.test.mjs",
+      "bytes": 8679,
+      "sha256": "103fa1a85e2427b05763e0807bc2edf39fb2378bd2f45aa62e7a9fe6a1125506"
+    },
+    {
+      "path": "website/tests/regional-tour-title-navigation-current.test.mjs",
+      "bytes": 9540,
+      "sha256": "8861fef568368862939e512e0ca6835256d3264e182904371ffab411ea014c0d"
+    },
+    {
+      "path": "website/tests/regional-tour-title-tour-current.test.mjs",
+      "bytes": 12278,
+      "sha256": "4ed1368ef7cf7ec05190846bc106ce3a555c579106bf3d712df281eecc3da30b"
+    },
+    {
+      "path": "website/tests/structure-learning-ui.keyboard-help-current.test.ts",
+      "bytes": 11300,
+      "sha256": "91bd3e69a0e5cfbf25bb49d921f21e90c133fde6196b677930e2ab329c4a1a6b"
+    },
+    {
+      "path": "website/tests/structure-learning-ui.test.ts",
+      "bytes": 11300,
+      "sha256": "91bd3e69a0e5cfbf25bb49d921f21e90c133fde6196b677930e2ab329c4a1a6b"
+    },
+    {
+      "path": "website/lib/atlas-related-joint-studies.ts",
+      "bytes": 1820,
+      "sha256": "c93c9ba464ee88447a4b7aa4cfa1a9cc8eac8f3618a8074ea43e50a59c034c98"
+    },
+    {
+      "path": "website/components/AtlasRegionalNavigation.tsx",
+      "bytes": 1210,
+      "sha256": "3d5213672dd55efb23e3072dbf96d873aa518c2ce352a7e9ca84059240b594f4"
+    },
+    {
+      "path": "website/components/atlas-regional-navigation.module.css",
+      "bytes": 1060,
+      "sha256": "4a20d2877223cb9282201f743cdd144b828ed56bdf7fdd504bd3ac2c106ec6ea"
+    },
+    {
+      "path": "website/tests/atlas-related-joint-studies.test.mjs",
+      "bytes": 7289,
+      "sha256": "45c947ce4b5f89182c969820db91b9f56d3761bb784e34fa004c742fabfc8c59"
+    },
+    {
+      "path": "website/tests/joint-navigation-legacy-adapter.mjs",
+      "bytes": 2512,
+      "sha256": "2cf4760a63cf948631730b885ef836d91dd929a6af1763b93ed593569a19abab"
+    },
+    {
+      "path": "recipes/seal-related-joint-studies-20261027.mjs",
+      "bytes": 4091,
+      "sha256": "5fe096982dd6eb9504ed2ad10542e9ce3d881e4f1ab494ba41b3e8a719a5e397"
+    },
+    {
+      "path": "recipes/verify-related-joint-studies-20261027.mjs",
+      "bytes": 3629,
+      "sha256": "dbf32f07e4f68661bd688be08d1c7fb9263af79b426413bb5bb644d078bc7cc2"
+    },
+    {
+      "path": "recipes/run-related-joint-studies-20261027.mjs",
+      "bytes": 6847,
+      "sha256": "6982dd252f862192f5bf10b80a8a70de24f9178e430bd7fe0f2b9afec8101190"
+    },
+    {
+      "path": "recipes/build-related-joint-browser-20261027.mjs",
+      "bytes": 4059,
+      "sha256": "302ce3ba00a1596c7c2cebc8dcc6447a5758fa600dc7f18a7729c71e1747887c"
+    },
+    {
+      "path": "recipes/run-related-joint-browser-build-20261027.mjs",
+      "bytes": 2222,
+      "sha256": "8d28e392ef82ccb75adbbed344a157c2b4de638480b09fee23748b97380e51fb"
+    },
+    {
+      "path": "recipes/serve-related-joint-browser-20261027.mjs",
+      "bytes": 2719,
+      "sha256": "bf50142f05339724335d97cf3f7b8aa5fcdd5313033ee02533340f419608fdc0"
+    },
+    {
+      "path": "recipes/record-related-joint-browser-20261027.mjs",
+      "bytes": 2726,
+      "sha256": "c8367786b4212baedabb836d8da94e1db8647b30af94e7a893a414eb2245a92b"
+    },
+    {
+      "path": "recipes/finish-related-joint-studies-20261027.mjs",
+      "bytes": 13365,
+      "sha256": "28c3482bd8fa7538feb3e412f230c5feec10a370d4c91c0eb3c8bd5bcdcb94c5"
+    },
+    {
+      "path": "recipes/triage-related-joint-baseline-20261027.mjs",
+      "bytes": 2707,
+      "sha256": "98e7e5e1f4a4198295610e94ff729060cf5fe902ee2e9a10bddf71725155b6c7"
+    },
+    {
+      "path": "recipes/run-related-joint-baseline-triage-20261027.mjs",
+      "bytes": 2227,
+      "sha256": "a7dc9cf0b4383f9297f90b26e50519896beaf8a8bb8dea9948ce5695e13012ef"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source/tests and verification recipes only. No scans, masks, clinical data, private metadata, generated models/runtimes, review decisions or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 67,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "browserAssertions": 33,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

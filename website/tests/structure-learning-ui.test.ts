@@ -1,0 +1,133 @@
+import {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import ts from 'typescript';
+import {LearningResourceStatus,LearningStatusKey,type LearningResourceState} from '../components/LearningResourceStatus.ts';
+import {headReferenceLearningAvailable} from '../lib/head-learning-resource-availability.ts';
+import {headAtlasConceptOptions,HEAD_LINK_REVISION} from '../lib/head-atlas-links.ts';
+import {liveLearningConsumerModule} from './live-learning-consumer-loader-transition.mjs';
+import {atlasRuntimeExpansionModule} from './atlas-runtime-expansion-loader.mjs';
+
+const require=createRequire(import.meta.url);
+const source=readFileSync(new URL('../components/HeadAtlasComparisonNavigation.tsx',import.meta.url),'utf8');
+const code=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+const module={exports:{} as {HeadAtlasComparisonNavigation:React.ComponentType<{conceptId:string;liveState:'ready'|'practice'|'guided'|'unavailable'|'connecting';teaching?:React.ReactNode}>}};
+new Function('require','module','exports',code)((id:string)=>{
+  if(id==='next/navigation')return{useRouter:()=>({push:()=>assert.fail('Render must not navigate')})};
+  if(id==='../lib/head-atlas-links')return require('../lib/head-atlas-links.ts');
+  if(id==='../lib/lecture-related-links')return require('../lib/lecture-related-links.ts');
+  if(id==='./HeadAtlasLearningPicker')return {HeadAtlasLearningPicker:()=>null};
+  if(id==='./LearningResourceStatus.ts')return {LearningResourceStatus,LearningStatusKey};
+  return require(id);
+},module,module.exports);
+
+test('status badges have explicit text; the collapsed key distinguishes review from availability/access',()=>{
+  for(const state of ['draft','reviewed','unavailable','locked'] as const){
+    const html=renderToStaticMarkup(React.createElement(LearningResourceStatus,{status:state}));
+    assert(html.includes(`data-state="${state}"`));assert(html.includes(state[0].toUpperCase()+state.slice(1)));
+    assert.doesNotMatch(html,/<a|<button|role="alert"/);
+  }
+  for(const state of ['approved','__proto__','constructor',''] as unknown as LearningResourceState[])
+    assert.match(renderToStaticMarkup(React.createElement(LearningResourceStatus,{status:state})),/data-state="unavailable"/);
+  const key=renderToStaticMarkup(React.createElement(LearningStatusKey));
+  assert.match(key,/<details class="learning-status-key">/);assert.doesNotMatch(key,/<details open/);
+  assert.match(key,/exact content revision/);assert.match(key,/subscription access are separate/);
+  assert.match(key,/unchecked access is not labelled Locked/);
+});
+
+test('reference teaching availability matches retained resources, not the existence of a scan link',()=>{
+  const expectedGaps=new Set(['bone-left-zygomatic','bone-right-zygomatic','bone-mandible']);
+  const options=headAtlasConceptOptions();assert.equal(options.length,42);
+  for(const {conceptId} of options){
+    assert.equal(headReferenceLearningAvailable(conceptId,HEAD_LINK_REVISION),!expectedGaps.has(conceptId),conceptId);
+    for(const revision of ['','0'.repeat(64),HEAD_LINK_REVISION+'0'])assert.equal(headReferenceLearningAvailable(conceptId,revision),false);
+  }
+  for(const id of ['unknown','Pons','brainstem-pons-extra','javascript:alert(1)'])assert.equal(headReferenceLearningAvailable(id,HEAD_LINK_REVISION),false);
+});
+
+test('one compact learning area carries only ready teaching; practice, guided and failed states cannot reveal it',()=>{
+  const teaching=React.createElement('p',null,'Synthetic selected teaching and check');
+  for(const state of ['ready','connecting','practice','guided','unavailable'] as const){
+    const html=renderToStaticMarkup(React.createElement(module.exports.HeadAtlasComparisonNavigation,{conceptId:'brainstem-pons',liveState:state,teaching}));
+    if(state==='ready'){
+      assert.match(html,/Learn this structure/);assert.match(html,/Synthetic selected teaching and check/);
+      assert.match(html,/<details class="head-learning-material">/);assert.doesNotMatch(html,/<details open/);
+      assert.match(html,/Access is checked when opened/);
+      assert.doesNotMatch(html,/data-state="reviewed"[^>]*>Reviewed<\/span><\/div>/,'No actual content is labelled clinically reviewed');
+    }else assert.doesNotMatch(html,/Synthetic selected teaching|head-learning-material|Related lectures|What do the labels mean/);
+  }
+  const gap=renderToStaticMarkup(React.createElement(module.exports.HeadAtlasComparisonNavigation,{conceptId:'bone-mandible',liveState:'ready'}));
+  assert.match(gap,/No exact MRI comparison mapped/);assert.match(gap,/No linked reference teaching note/);
+  assert.doesNotMatch(gap,/head-learning-material/);
+});
+
+test('native learning is grouped once, keeps the real mask practice and teaching handlers, and remains outside active practice',()=>{
+  const viewer=readFileSync(new URL('../components/HeadAtlasViewer.tsx',import.meta.url),'utf8');
+  const start=viewer.indexOf('<section className="head-structure-learning"'),end=viewer.indexOf('</section>}',start),card=viewer.slice(start,end);
+  assert(start>0&&end>start);assert.match(card,/Learn this structure/);
+  assert.match(card,/onClick=\{practiseSelectedStructure\}/);assert.match(card,/disabled=\{!selectedPracticeEntry\}/);
+  for(const name of ['HeadAtlasTeaching','HeadAtlasRelatedLearning'])assert.equal((viewer.match(new RegExp('<'+name+'\\b','g'))??[]).length,1);
+  assert.match(card,/revision=\{HEAD_MANIFEST_SHA256\}/);assert.match(card,/No exact linked 3D\/CT\/MRI learning resource/);
+  assert.match(viewer,/rightPanel==='practice'\|\|quizActive\?<HeadAtlasPractice/);
+});
+
+test('whole-body page uses the same revision-bound live host and names its actual model, without inventing non-head scan mappings',async()=>{
+  const pageSource=readFileSync(new URL('../app/atlas/3d/page.tsx',import.meta.url),'utf8');
+  const compiled=ts.transpileModule(pageSource,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;
+  const stateSource=readFileSync(new URL('../components/atlas-runtime-state.ts',import.meta.url),'utf8');
+  const stateCode=ts.transpileModule(stateSource,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const state={exports:{} as {createAtlasDocumentAttempt:Function}};
+  new Function('module','exports',stateCode)(state,state.exports);
+  const frameSource=readFileSync(new URL('../components/AtlasRuntimeFrame.tsx',import.meta.url),'utf8');
+  const frameCode=ts.transpileModule(frameSource,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const frame={exports:{} as {AtlasRuntimeFrame:React.ComponentType<any>}};
+  new Function('require','module','exports',frameCode)((id:string)=>{
+    if(id==='react')return React;
+    if(id==='react/jsx-runtime')return require('react/jsx-runtime');
+    if(id==='./atlas-runtime-state')return state.exports;
+    if(id==='./atlas-runtime-expansion')return atlasRuntimeExpansionModule;
+    if(id==='./atlas-runtime-frame.css')return {};
+    if(id==='./AtlasBodyLearning')return liveLearningConsumerModule;
+    assert.fail(`Unexpected frame dependency: ${id}`);
+  },frame,frame.exports);
+  assert.equal(typeof frame.exports.AtlasRuntimeFrame,'function');
+  const linked=function HeadAtlasLinkedModel(props:{src:string;sourceRevision:string;title:string;coverage:React.ReactNode}){return React.createElement('section',{'data-source':props.sourceRevision,'data-src':props.src,'aria-label':props.title},props.coverage);};
+  const tourEntrySource=readFileSync(new URL('../lib/regional-tour-entry-navigation.ts',import.meta.url),'utf8');
+  const tourEntryCode=ts.transpileModule(tourEntrySource,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const tourEntry={exports:{} as {regionalTourEntrySuffix:Function}};
+  new Function('require','module','exports',tourEntryCode)((id:string)=>id==='./atlas-navigation'?require('../lib/atlas-navigation.ts'):assert.fail(`Unexpected tour-entry dependency: ${id}`),tourEntry,tourEntry.exports);
+  const exports={exports:{} as {default:(props:{searchParams:Promise<Record<string,string>>})=>Promise<React.ReactNode>}};
+  new Function('require','module','exports',compiled)((id:string)=>{
+    if(id==='next/link')return {__esModule:true,default:({children,...props}:{children:React.ReactNode})=>React.createElement('a',props,children)};
+    if(id==='next/navigation')return {notFound:()=>{throw Error('notFound');},redirect:()=>{throw Error('redirect');}};
+    if(id==='../../../components/AtlasRuntimeFrame')return frame.exports;
+    if(id==='../../../components/HeadAtlasLinkedModel')return{HeadAtlasLinkedModel:linked};
+    if(id==='../../../components/AtlasRegionalNavigation')return{AtlasRegionalNavigation:()=>null};
+    if(id==='../../../lib/atlas-navigation')return require('../lib/atlas-navigation.ts');
+    if(id==='../../../lib/atlas-study-transport')return require('../lib/atlas-study-transport.ts');
+    if(id==='../../../lib/atlas-reference-revision')return require('../lib/atlas-reference-revision.ts');
+    if(id==='../../../lib/regional-tour-entry-navigation')return tourEntry.exports;
+    if(id==='../../../lib/head-atlas-learning')return require('../lib/head-atlas-learning.ts');
+    if(id==='../../../public/atlas-runtime/head-neck/manifest.json')return require('../public/atlas-runtime/head-neck/manifest.json');
+    if(id.endsWith('.css'))return{};
+    return require(id);
+  },exports,exports.exports);
+  const html=renderToStaticMarkup(await exports.exports.default({searchParams:Promise.resolve({})}));
+  const headHtml=renderToStaticMarkup(await exports.exports.default({searchParams:Promise.resolve({region:'head-neck',study:'1'})}));
+  const previous=JSON.parse(readFileSync(new URL('./fixtures/atlas-model-inventory-408759d5.json',import.meta.url),'utf8'));
+  assert.equal(previous.sources.find((row:{module:string})=>row.module==='head-neck').sourceCommit,'408759d57644b05402e98a937e7cf6338b5509cf');
+  assert(headHtml.includes('data-source="'+CURRENT_ATLAS_REVISION+'"'));
+  assert.match(html,/Whole body 3D anatomy: explore, dissect and practise/);
+  const iframe=html.match(/<iframe\b[^>]*>/)?.[0];assert(iframe,'real AtlasRuntimeFrame renders one viewer');
+  assert.match(iframe,/src="\/atlas-runtime\/head-neck\/index\.html\?region=whole-body"/);
+  assert.match(iframe,/referrerPolicy="same-origin"/);assert.match(iframe,/allowFullScreen=""/);
+  assert.match(html,/Atlas loading and 3D model display are not confirmed|Opening the 3D Atlas/);
+  assert.match(headHtml,/other structures have no exact acquired-image mapping here/);
+  assert.doesNotMatch(html,/data-source=|head-comparison-module-page/);
+  assert.doesNotMatch(html,/do not transfer your current 3D selection/);
+  await assert.rejects(exports.exports.default({searchParams:Promise.resolve({region:'javascript:alert(1)'})}),/notFound/);
+});

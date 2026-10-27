@@ -1,0 +1,13 @@
+import fs from'node:fs';import path from'node:path';import assert from'node:assert/strict';import{spawnSync}from'node:child_process';import{hash,json}from'./bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-related-joint-studies',dir=stage+'/baseline-triage',sf=stage+'/SOURCE_CANDIDATE.json',s=json(sf),pf=s.parent;assert(!fs.existsSync(dir));fs.mkdirSync(dir);
+const roots=['tests/regional-tour-entry-delivery.test.mjs','tests/regional-tour-title-navigation-current.test.mjs','tests/regional-tour-title-tour-current.test.mjs'];const results=[];
+for(const [name,file]of [['parent',pf],['candidate',sf]]){
+ const source=json(file);for(const r of source.sourceRows)assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);
+ const out=fs.openSync(dir+'/'+name+'.stdout.log','wx'),err=fs.openSync(dir+'/'+name+'.stderr.log','wx');
+ const run=spawnSync(process.execPath,['--max-old-space-size=1024','--experimental-strip-types','--test','--test-reporter=tap','--test-concurrency=1',...roots],{cwd:source.website,env:{...process.env,VM_CURRENT_SOURCE_RECEIPT:file,VM_CURRENT_SOURCE_SHA256:hash(file)},windowsHide:true,stdio:['ignore',out,err]});fs.closeSync(out);fs.closeSync(err);assert(!run.error&&!run.signal);
+ const log=fs.readFileSync(dir+'/'+name+'.stdout.log','utf8'),failed=[...log.matchAll(/^not ok \d+ (.+)$/gm)].map(m=>m[1]),counts=Object.fromEntries(['tests','pass','fail','cancelled','skipped','todo'].map(k=>[k,Number([...log.matchAll(new RegExp('^# '+k+' (\\d+)','gm'))].at(-1)?.[1]??-1)]));
+ results.push({name,source:{path:file,sha256:hash(file)},code:run.status,failed,counts,stdout:{path:dir+'/'+name+'.stdout.log',sha256:hash(dir+'/'+name+'.stdout.log')},stderr:{path:dir+'/'+name+'.stderr.log',sha256:hash(dir+'/'+name+'.stderr.log')}});
+}
+assert.deepEqual(results[0].failed,results[1].failed);assert.deepEqual(results[0].counts,results[1].counts);assert.equal(results[0].code,results[1].code);assert.equal(results[1].counts.fail,4);assert.equal(results[1].counts.skipped+results[1].counts.cancelled+results[1].counts.todo,0);
+const p=json(pf);for(const file of ['lib/regional-learning-catalogue.ts','components/RegionalLearningLibrary.tsx'])if(fs.existsSync(s.website+'/'+file))assert.equal(hash(s.website+'/'+file),hash(p.website+'/'+file));
+fs.writeFileSync(dir+'/RESULT.json',JSON.stringify({at:new Date().toISOString(),passingForBaselineComparison:true,roots,results,sameFourPreexistingFailures:true,noAssertionsSuppressed:true,failuresResolved:false,wholeStockSuitePassing:false,normalPreviewChanged:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({roots:roots.length,counts:results[1].counts,sameFailureNames:results[1].failed}));
