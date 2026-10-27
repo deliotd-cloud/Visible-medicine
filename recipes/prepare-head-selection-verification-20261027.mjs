@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+let text=fs.readFileSync('run-tongue-website-verification-20261026.mjs','utf8');
+const replace=(from,to)=>{assert.equal(text.split(from).length,2,from);text=text.replace(from,to)};
+replace("20261026-tongue-website'","20261027-head-selection-history-website'");
+const from=text.slice(text.indexOf("const roots="),text.indexOf('let command,heap'));
+replace(from,"const roots=['tests/head-unmapped-selection-history.test.ts','tests/head-view-history.test.ts','tests/head-view-history-controller.test.mjs','tests/head-view-history-client.test.mjs','tests/head-image-history.test.ts','tests/head-atlas-navigation.test.ts','tests/head-practice-navigation-policy.test.ts','tests/head-practice-navigation-integration.test.mjs','tests/head-practice-navigation-identity.test.ts','tests/head-active-identity-history.test.mjs','tests/head-native-history-current-transition.test.mjs'];\n");
+replace("assert(['content','tests','types','build'].includes(phase))","assert(['tests','types','build'].includes(phase))");
+replace(" requirePassing('content');\n",'');
+replace("kind:'tongue-website-'+phase","kind:'head-selection-history-'+phase");
+fs.writeFileSync('run-head-selection-verification-20261027.mjs',text,{flag:'wx'});

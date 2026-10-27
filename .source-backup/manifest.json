@@ -1,0 +1,111 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T00:26:23.270Z",
+  "sourceIdentity": {
+    "kind": "head-selection-history",
+    "sourceSha256": "1198d399a794d58480a97dbcc1bf695bf35628928fd98429131c593448216f1f",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261026-tongue-website-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "c9f608e28ae0f63b13de3db5743c6a6d56b46fbaf674d4c0218f1be7e3c48b47",
+        "branch": "backup/tongue-website-source-20261026",
+        "head": "e3344d3a3e6a6df84c70c2a48554315888d8a631",
+        "tree": "d6d1aa9a7960c9f4a4e0ef6c83a128d5e4350593"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasViewer.tsx",
+      "bytes": 118359,
+      "sha256": "af896cf7b68b7fc7a6bfaf2b2e67c219901570d0b363fa728467db0b2bf50e10"
+    },
+    {
+      "path": "website/lib/head-view-history.ts",
+      "bytes": 10409,
+      "sha256": "97f800b8afad657d2e7ae96d82082cff67bf3b4a48793e46b3a7cd18f851b23e"
+    },
+    {
+      "path": "website/tests/head-unmapped-selection-history.test.ts",
+      "bytes": 8545,
+      "sha256": "10bc50428c6c87ef498a915a64bdb0bd694862ea03a8ed6df8bcb91eb44e3606"
+    },
+    {
+      "path": "website/docs/HEAD_SELECTION_HISTORY.md",
+      "bytes": 995,
+      "sha256": "8ba739107514a4993a7315a75a44b4f71a1b0bc96c801b2b115ef8beb1eff925"
+    },
+    {
+      "path": "website/tests/head-image-history.test.ts",
+      "bytes": 190680,
+      "sha256": "dc85fe360925026a65eb63a9dcff31c949fb4733da0a465fd00b1e45ca178fe1"
+    },
+    {
+      "path": "website/tests/head-view-history-client.test.mjs",
+      "bytes": 24401,
+      "sha256": "1fd6c5e5b6077253f65669688743a550d7e6c3022f501ad37f1dc8cc962a8e9e"
+    },
+    {
+      "path": "recipes/integrate-head-selection-history-20261027.mjs",
+      "bytes": 9848,
+      "sha256": "ebb468209b3cbba7f120f216584eef9d91dffa5c27c1d1d723e4a5e60086ddfb"
+    },
+    {
+      "path": "recipes/integrate-head-history-harness-20261027.mjs",
+      "bytes": 3249,
+      "sha256": "849863da1a67c918d85ba00b28247789241685822d3df51d1e74eae8e19b95da"
+    },
+    {
+      "path": "recipes/prepare-head-selection-verification-20261027.mjs",
+      "bytes": 1276,
+      "sha256": "0d73796638e055201bad5c80fe0d4e85b67d4ca0fbfa02e7bfd46949de659830"
+    },
+    {
+      "path": "recipes/run-head-selection-verification-20261027.mjs",
+      "bytes": 5831,
+      "sha256": "02967c7db2f65912b793a33a0f8351b71bc51925322183611a0b7b095aaf7d25"
+    },
+    {
+      "path": "recipes/finish-head-selection-history-20261027.mjs",
+      "bytes": 15654,
+      "sha256": "78b381532d921c4bdc0794b6de202e4ee32eb9fa187095aeabc44f3864d096b4"
+    },
+    {
+      "path": "recipes/build-head-selection-history-browser-20261027.mjs",
+      "bytes": 6730,
+      "sha256": "d18021ef6171d6fa9bd80c10ffbac309db31e6019012a453548e8ac7a860ab41"
+    },
+    {
+      "path": "recipes/serve-head-selection-history-browser-20261027.mjs",
+      "bytes": 2823,
+      "sha256": "db4f1198696fd61cc90affed1ddf37f4eecf7d6b9302f960ae4ad28838a7303b"
+    },
+    {
+      "path": "recipes/probe-head-selection-history-browser-20261027.js",
+      "bytes": 2574,
+      "sha256": "88c8716f896405f917b24e895ff566f0decc9006f2b5f3c1b1b3baea577932ad"
+    },
+    {
+      "path": "recipes/probe-head-selection-limit-browser-20261027.js",
+      "bytes": 1313,
+      "sha256": "8687d78dfd42150b70bdd76c5bea08bc0da46adbe53ff7be8262a0edeaa5ced3"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party application code, synthetic tests, prose and recipes only. No scans, masks, private source metadata or raw evidence, assets, generated modules, decisions, dependencies or native/canonical Git ancestry. Not complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 242,
+    "fullConfiguredTypes": true,
+    "productionBuild": true,
+    "syntheticCTandMRINativeHistory": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
