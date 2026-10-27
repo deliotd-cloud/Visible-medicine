@@ -1,0 +1,86 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T16:53:36.073Z",
+  "sourceIdentity": {
+    "kind": "course-preview-focus",
+    "sourceSha256": "fd9d2fd623220d3093cc3aa91430ba6e04df0777485bf9f6e87a7ff5b48dae06",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-saved-step-comparison-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "0dbe401f6dfc0aeaa8e1d9a05c7808e4edeff37227ad6cd45ca0062142f54480"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/StudioCourseEditor.tsx",
+      "bytes": 22824,
+      "sha256": "cdf472d2c49afe652825f7645df7f012722fc807e811194e4ec407a0e110052d"
+    },
+    {
+      "path": "website/tests/studio-course-preview-focus.test.mjs",
+      "bytes": 5380,
+      "sha256": "fd896a4a9af457c07658094fd0b20eea3eaf328725b6210a73e5662cff7ac256"
+    },
+    {
+      "path": "recipes/prepare-course-preview-focus-20261027.mjs",
+      "bytes": 417,
+      "sha256": "790e6eac3a3fd3150ec8db5c7c471987c411dab25ddd1574c23fe5f3ce5972d9"
+    },
+    {
+      "path": "recipes/seal-course-preview-focus-20261027.mjs",
+      "bytes": 2814,
+      "sha256": "ac80c2240cf0ead974f27292e11e39b89959e8e77beaa6791a4103c6b0064148"
+    },
+    {
+      "path": "recipes/verify-course-preview-focus-20261027.mjs",
+      "bytes": 2205,
+      "sha256": "f96dcab03377d9a43c1d7a9d354c4a94126387763abf9fd4207d901f9c29543d"
+    },
+    {
+      "path": "recipes/run-course-preview-focus-20261027.mjs",
+      "bytes": 7361,
+      "sha256": "3c060587564c6cbb00e1eac4abd9a4eb5eaa0ae7b1233fd64a4bc8270629a565"
+    },
+    {
+      "path": "recipes/build-course-preview-browser-20261027.mjs",
+      "bytes": 4991,
+      "sha256": "8f44bb196994cfad2f49b75213c32cb55bfbae29f2c09a13d524ff308d6c2adf"
+    },
+    {
+      "path": "recipes/prepare-course-preview-browser-runner-20261027.mjs",
+      "bytes": 445,
+      "sha256": "fadea6a3371f7564f726df7d507d1007008a829bc76d2495a6435bb0f06f9627"
+    },
+    {
+      "path": "recipes/run-course-preview-browser-20261027.mjs",
+      "bytes": 1474,
+      "sha256": "34e732c3bcda5726068bd8ab80f6a7c3f59557ef3856748f8a168fd6faae428b"
+    },
+    {
+      "path": "recipes/serve-course-preview-browser-20261027.mjs",
+      "bytes": 2626,
+      "sha256": "82d107e2beb701fcd3bdfc049fb64b7775b8a2476da693a0f64bec3d2ef2f303"
+    },
+    {
+      "path": "recipes/finish-course-preview-focus-20261027.mjs",
+      "bytes": 14145,
+      "sha256": "f7570dd2d994bb80d1313658a9e980e2da68ecf39eb45915fcd1f7d878c78c8d"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source/tests and verification recipes only. No scans, masks, clinical data, private metadata, generated models/runtimes, review decisions or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 181,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "browserAssertions": 25,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
