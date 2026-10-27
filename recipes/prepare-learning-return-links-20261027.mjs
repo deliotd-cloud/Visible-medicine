@@ -1,0 +1,2 @@
+import{clonePinnedWebsite}from'./clone-pinned-website-stage-20261026.mjs';
+const r=clonePinnedWebsite({stage:'F:/VisibleMedicine/staging/20261027-learning-return-links',parentFile:'F:/VisibleMedicine/staging/20261027-learning-resource-choices/SOURCE_CANDIDATE.json',parentSha256:'8294d0eb95a0737dca4e2da2a6680aefb328fb74b0f77a2bfd0d25081d0a61b4'});console.log(JSON.stringify({stage:r.site,paths:r.parent.sourceRows.length}));
