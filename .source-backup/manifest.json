@@ -1,0 +1,157 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T10:50:20.724Z",
+  "sourceIdentity": {
+    "kind": "pharyngeal-mri-website-integration",
+    "sourceSha256": "548532d6eb0bfe13543588c0d851154e91982e0d9a45b79d5b6eeec6f8fd503e",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-head-layout-picker/SOURCE_RECOVERY.json",
+        "sha256": "f6a4c053ae93a364e4dfa1c7466a03c66430e08d1e7a1e7286f1d02c3c205d4e",
+        "receipt": {
+          "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-head-layout-picker-source/github-backup.json",
+          "sha256": "c3d69d1e6465349f1b3aa82993fcfc0b45ef97d1e36c4f4a20c3dd55a1816191"
+        },
+        "branch": "backup/head-layout-picker-20261027",
+        "head": "3585232ee1424948d8a5356aa777e191d3109308",
+        "tree": "822e5254fee4861a0a8b12fb663bc99d80a40ea3"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-pharyngeal-mri-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "fdb939ac81a2e79646145265080288366a518be7eaec812505da07435635d15e",
+        "receipt": {
+          "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-pharyngeal-mri-source-supplement/github-backup.json",
+          "sha256": "7af5d14185857de33ae2c417652f5e842799165d8623c0afd767e133b5f544d0"
+        },
+        "branch": "backup/pharyngeal-mri-source-20261027",
+        "head": "ecfb51d93296089cc17a76caca34e33ed5bcb17c",
+        "tree": "336b4d7a10f6ee3a3de848f918955454c28f6b8e"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "c755efff7242016e4feb5808bf8573ddb0b7430b420b2fbf6b163ce9ee67931f"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "9661273a8cd3615e7041c2c72ea2c9f6c019a830b0bb17c60fd738c28cacea52"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "b8585e333fe1698b25be0ec2b74f70df515a6d3f6303c5520ee64b59ecc97168"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "c2995c46de8af2f94d71e050f51448cf70601c5b0d39af26e12af0d1d336c1ca"
+    },
+    {
+      "path": "recipes/prepare-pharyngeal-runtime-exports-20261027.mjs",
+      "bytes": 2380,
+      "sha256": "7a0a8063661d7f0ca7a9896b1238c2d28f57055807f632c0f771fd7fc4d54761"
+    },
+    {
+      "path": "recipes/export-pharyngeal-runtimes-20261027.mjs",
+      "bytes": 6566,
+      "sha256": "e6af05e15627b555ed6da7ab70f53dd5b478c671c5b83fbf54b428ca11a6fb4d"
+    },
+    {
+      "path": "recipes/run-pharyngeal-runtime-exports-20261027.mjs",
+      "bytes": 3245,
+      "sha256": "21e1f07662e283aca02c9b7c9bb61cc18da0f1f1be7af785b35fe28a7a92fc4c"
+    },
+    {
+      "path": "recipes/prepare-pharyngeal-website-recipes-20261027.mjs",
+      "bytes": 5411,
+      "sha256": "154bbdf465413160caf8cdf80602ef13a8c0ca1189cffce6af934b7850f49c29"
+    },
+    {
+      "path": "recipes/prepare-pharyngeal-website-20261027.mjs",
+      "bytes": 6733,
+      "sha256": "e518113c45d60048fc82d04002ea9bdce7b4b06a407e31c36d6449393e66db5f"
+    },
+    {
+      "path": "recipes/import-pharyngeal-website-stock-20261027.mjs",
+      "bytes": 6817,
+      "sha256": "7c3466e5aaed54200f4525b0f984992ba7b6459a243687e601df66486833d615"
+    },
+    {
+      "path": "recipes/run-pharyngeal-website-integration-20261027.mjs",
+      "bytes": 2155,
+      "sha256": "b50182d0bc7009f7b0e693fa1bf264d6c69b94baaa80eaa3789c44ed849c341f"
+    },
+    {
+      "path": "recipes/generate-pharyngeal-website-coverage-20261027.mjs",
+      "bytes": 2874,
+      "sha256": "d091ae113b7bc5c91690d4ff896b893a708ace3ee3f3beeb9306cfed6f6f8696"
+    },
+    {
+      "path": "recipes/run-pharyngeal-coverage-seams-20261027.mjs",
+      "bytes": 2385,
+      "sha256": "39dd17fdc776d56a2034b7f4bf6d43616c546c960d1768fc275a1481b25a7889"
+    },
+    {
+      "path": "recipes/install-pharyngeal-website-coverage-20261027.mjs",
+      "bytes": 2963,
+      "sha256": "bae4641a7e40826394c4fd1b92073c6b7b9989a0a6354f98493e94b3485af2cd"
+    },
+    {
+      "path": "recipes/build-pharyngeal-website-review-20261027.mjs",
+      "bytes": 6767,
+      "sha256": "043db7fc78d8180329f46917c48a58a18e593b3a8a61980759ffca7e2a45a73b"
+    },
+    {
+      "path": "recipes/refresh-pharyngeal-website-delivery-pin-20261027.mjs",
+      "bytes": 2777,
+      "sha256": "d6bd0f202c4e429ebf071528f5d6ffef20d4135cef940a2fee6a14afe19c9d7a"
+    },
+    {
+      "path": "recipes/seal-pharyngeal-website-source-20261027.mjs",
+      "bytes": 6129,
+      "sha256": "65e197d80b5c09278b941d8e7be4dc9c861dfde52a205a324f2b167c9badd0d8"
+    },
+    {
+      "path": "recipes/prepare-pharyngeal-website-verification-20261027.mjs",
+      "bytes": 1268,
+      "sha256": "dce6ad6a382155f8f323ec90278e852c8f3ed19bbe7d03f3982d838dc133ac3d"
+    },
+    {
+      "path": "recipes/verify-pharyngeal-website-content-20261027.mjs",
+      "bytes": 10624,
+      "sha256": "1042d48aa8982aabf74e8c6b86fd26a8d6efccc41bbee5e05fd6be452bb1d162"
+    },
+    {
+      "path": "recipes/run-pharyngeal-website-verification-20261027.mjs",
+      "bytes": 5530,
+      "sha256": "95cd9ed705ac8cdeec0c284280158363598a57879dd62a18dab0618dffb8e542"
+    },
+    {
+      "path": "recipes/finish-pharyngeal-website-20261027.mjs",
+      "bytes": 9666,
+      "sha256": "5c0d3f1c97926402c148a716003b03eb28e205b9fee0fae191f2d146cd234951"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party website code and integration/test recipes only. No exact anatomy source pins, medical metadata, scans, masks, assets, generated runtime, raw private proof, decisions, dependencies or canonical/native Git ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "changedDraftPlacements": 9,
+    "focusedCases": 25,
+    "fullConfiguredTypes": true,
+    "productionBuild": true,
+    "oldTeachingDecisionsRefused": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
