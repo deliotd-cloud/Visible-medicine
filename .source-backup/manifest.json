@@ -1,0 +1,52 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T09:29:27.045Z",
+  "sourceIdentity": {
+    "kind": "current-harness-integration",
+    "sha256": "99dd0d562fd09761de5ce046447873cb8f1775ae1671dbc2fcda3a454d883da2"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/lecture-tour-journey.test.ts",
+      "bytes": 11335,
+      "sha256": "ac8a48e6928e0920af95716df89fd4ba3ba412ec7e497de530290c48bd68ead5"
+    },
+    {
+      "path": "website/tests/lower-limb-module-page.test.ts",
+      "bytes": 7223,
+      "sha256": "a12c448d320817a8aec561b846eba77d7ca5d7521fc5c223878025d9807e4eb7"
+    },
+    {
+      "path": "website/tests/search-kind-page.test.ts",
+      "bytes": 4198,
+      "sha256": "ff1e97a1c421d30b6d3947d780ded727d31aa8cccf683e540b74d1903a058e14"
+    },
+    {
+      "path": "website/tests/structure-learning-ui.keyboard-help-current.test.ts",
+      "bytes": 11302,
+      "sha256": "117fa2fa55024682e2029a457eacbc5495a5d5f20fca45aa8efe2914f54c4d50"
+    },
+    {
+      "path": "website/tests/studio-release-note-recovery-fixture.mjs",
+      "bytes": 8630,
+      "sha256": "0d75ed2ce9bc81a63f267c6f49c3837c89a146ad1c37bcefffacda29896b97c6"
+    }
+  ],
+  "removed": [],
+  "scope": "Five first-party test source files only. No scans, private records, model payloads, generated runtime, dependencies or canonical ancestry. Supplement, not complete project backup.",
+  "proof": {
+    "cases": 79,
+    "wholeRoots": 10,
+    "fullConfiguredTypes": true,
+    "productionUnchanged": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
