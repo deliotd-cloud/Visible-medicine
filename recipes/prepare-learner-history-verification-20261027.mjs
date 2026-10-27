@@ -1,0 +1,17 @@
+import fs from'node:fs';import assert from'node:assert/strict';
+const site='F:/VisibleMedicine/staging/20261027-learner-history/website';
+const component=site+'/components/LearnerPortfolio.tsx';let ui=fs.readFileSync(component,'utf8');
+for(const section of ['notes','reviews']){const a=`disabled={busy || !portfolio.${section}NextCursor}`,b=`aria-disabled={busy || !portfolio.${section}NextCursor}`;assert.equal(ui.split(a).length,2);ui=ui.replace(a,b);}fs.writeFileSync(component,ui);
+const css=site+'/components/learner-portfolio-navigation.css';fs.writeFileSync(css,fs.readFileSync(css,'utf8').replace('.portfolio-load-more:disabled','.portfolio-load-more[aria-disabled="true"]'));
+const test=site+'/tests/learner-portfolio-pagination-ui.test.mjs';let body=fs.readFileSync(test,'utf8');assert(body.includes('.props.disabled'));body=body.replaceAll('.props.disabled',".props['aria-disabled']");fs.writeFileSync(test,body);
+function make(from,to,edits=[]){let text=fs.readFileSync(from,'utf8');for(const[a,b]of edits){assert(text.includes(a),a);text=text.replaceAll(a,b);}fs.writeFileSync(to,text,{flag:'wx'});}
+const common=[['20261027-learning-return-links','20261027-learner-history'],['learning-return','learner-history']];
+make('seal-learning-return-links-20261027.mjs','seal-learner-history-20261027.mjs',[...common,
+ ["const changed=['components/LearnerPortfolio.tsx','components/learner-portfolio-navigation.css','lib/atlas-learning-resources.ts','tests/atlas-learning-resources.test.mjs'].sort(),added=['tests/learner-portfolio-return-links.test.mjs'];", "const changed=['components/LearnerPortfolio.tsx','components/learner-portfolio-navigation.css','lib/platform-governance.ts','app/api/learner/portfolio/route.ts','app/my-learning/page.tsx','tests/learner-portfolio-draft-safety.test.mjs','tests/learner-portfolio-return-links.test.mjs','tests/runtime-mutation-envelope.test.mjs'].sort(),added=['lib/learner-portfolio-pagination.ts','tests/learner-portfolio-pagination.test.mjs','tests/learner-portfolio-pagination-ui.test.mjs','tests/learner-portfolio-pagination-runtime.test.mjs','tests/learner-portfolio-pagination-loader.mjs'];"],
+ ['8294d0eb95a0737dca4e2da2a6680aefb328fb74b0f77a2bfd0d25081d0a61b4','629161f3990ac01c9a86c90ed16cfb259a7ae8584193e716acdfb92488711d26'],
+ ['atlas-learning-resources now imports actual shared route helpers; original retained in original-tests','Portfolio component and route tests load actual pagination helpers; unchanged original assertions retained via exact inverse in TEST_LOADER_WIRING.json']]);
+make('run-learning-return-verification-20261027.mjs','run-learner-history-verification-20261027.mjs',[...common,["const roots=['tests/learner-portfolio-return-links.test.mjs'","const roots=['tests/learner-portfolio-pagination.test.mjs','tests/learner-portfolio-pagination-ui.test.mjs','tests/learner-portfolio-pagination-runtime.test.mjs','tests/runtime-mutation-envelope.test.mjs','tests/learner-portfolio-return-links.test.mjs'"]]);
+make('run-learning-return-browser-20261027.mjs','run-learner-history-browser-20261027.mjs',common);
+make('serve-learning-return-browser-20261027.mjs','serve-learner-history-browser-20261027.mjs',common);
+make('seal-learning-return-browser-20261027.mjs','seal-learner-history-browser-20261027.mjs',common.slice(0,1));
+console.log(JSON.stringify({prepared:true,focus:'Focusable aria-disabled pagination controls retain focus while click handler serializes/refuses inactive requests'}));

@@ -1,0 +1,171 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T16:16:19.476Z",
+  "sourceIdentity": {
+    "kind": "learner-history-prebuild",
+    "sourceSha256": "68d252eb43e0b62890fc051ecb7eedd3ca4a1d48bdda29f476ec22a36baf261f",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-learning-return-links-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "6fa60ebc7eee5b9a0b80d86f1b0da4d5d1f6d1c0a60efb17caeb24246800a943"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/api/learner/portfolio/route.ts",
+      "bytes": 2960,
+      "sha256": "ac155e86281b65ab7f11acbe998d4de19a27e25ed9adbda6c0bba497808e39c9"
+    },
+    {
+      "path": "website/app/my-learning/page.tsx",
+      "bytes": 6910,
+      "sha256": "55fc630fa8465dba3572225ff81f1a692dec18d42babeb342f53d9f2bace8056"
+    },
+    {
+      "path": "website/components/LearnerPortfolio.tsx",
+      "bytes": 14749,
+      "sha256": "128ccc43aba2225edb8dd789f2453f0148ba832b57f89bd6955e5185e0788e98"
+    },
+    {
+      "path": "website/components/learner-portfolio-navigation.css",
+      "bytes": 1167,
+      "sha256": "1c25b41bd74691b0a55298835e4516915d05a3aae0d96922369850c396f76397"
+    },
+    {
+      "path": "website/lib/platform-governance.ts",
+      "bytes": 47451,
+      "sha256": "2c5660023ecc2859bb6003014090ed2a06cf1e0b56653f1c48057882d2c7f3f2"
+    },
+    {
+      "path": "website/tests/atlas-learning-resources.test.mjs",
+      "bytes": 6263,
+      "sha256": "8a1b346c0e7a0015f505f4d0ddfcb84c1d9333de9a9e1897a77bcaac98154e10"
+    },
+    {
+      "path": "website/tests/learner-portfolio-draft-safety.test.mjs",
+      "bytes": 11634,
+      "sha256": "28326bfb3d211e4ade060049c6a5c7877ccf89cd30e3c65baaf7ccafa43d843e"
+    },
+    {
+      "path": "website/tests/learner-portfolio-navigation.test.mjs",
+      "bytes": 2091,
+      "sha256": "b334966be4a2466e24906f8a55df4e26594cf50701b1ef9c779aced3d51162f2"
+    },
+    {
+      "path": "website/tests/learner-portfolio-return-links.test.mjs",
+      "bytes": 5845,
+      "sha256": "497fd99f778e3f80fcc1e56492b9e325774cd3420564a6c170bf63ff9ec55682"
+    },
+    {
+      "path": "website/tests/learning-form-draft-safety.test.mjs",
+      "bytes": 15859,
+      "sha256": "7afbcc1ba6cb51cd3553690efe5889357bcfde0675212116b7b42777318dcf00"
+    },
+    {
+      "path": "website/tests/runtime-mutation-envelope.test.mjs",
+      "bytes": 14961,
+      "sha256": "f8f855d672b1232b25b14f2153e20633b49f6be5e394fae4336c037745dd6d3e"
+    },
+    {
+      "path": "website/lib/learner-portfolio-pagination.ts",
+      "bytes": 2458,
+      "sha256": "36de3f2ebe36f56481fdeeae2535c0f184bc5f65bcb70ea917ffc4c073170a9f"
+    },
+    {
+      "path": "website/tests/learner-portfolio-pagination.test.mjs",
+      "bytes": 3089,
+      "sha256": "317fceca6793306594ad70f9c1ae1810017facead914f26f2dbb3ce489cd5ef6"
+    },
+    {
+      "path": "website/tests/learner-portfolio-pagination-ui.test.mjs",
+      "bytes": 7010,
+      "sha256": "325e35e2823e0068513fc14c1b078daf9edfc2eb3f56d72791e20ad9409900fe"
+    },
+    {
+      "path": "website/tests/learner-portfolio-pagination-runtime.test.mjs",
+      "bytes": 7475,
+      "sha256": "412ea8c20054d3bfba6c136943fa705fb998927ec278e3f5467a2e872a2a67bf"
+    },
+    {
+      "path": "website/tests/learner-portfolio-pagination-loader.mjs",
+      "bytes": 583,
+      "sha256": "696e3f0dacf4ac8b011df049b2ac5b9e2e087015297c5fdcaad9d5ffee58ab13"
+    },
+    {
+      "path": "recipes/prepare-learner-history-20261027.mjs",
+      "bytes": 419,
+      "sha256": "aa9862729be1b26b02f3ee3b24a4131d1ac46260e6029af0af7ef40d35b9dcd6"
+    },
+    {
+      "path": "recipes/wire-learner-history-tests-20261027.mjs",
+      "bytes": 2952,
+      "sha256": "854881bdca31916c1866fd0d1dd18800d8a7a0150c469d355f41f67f76a93c0f"
+    },
+    {
+      "path": "recipes/prepare-learner-history-verification-20261027.mjs",
+      "bytes": 3470,
+      "sha256": "ea7fdd74955cedd658865977201d01e6e320c2be64d607c6cae16cce4c45faa4"
+    },
+    {
+      "path": "recipes/complete-learner-history-test-wiring-20261027.mjs",
+      "bytes": 3194,
+      "sha256": "f34d5835770575ab2ddd330109de4252117b65a0ac7cb1083ef0b68b291bc1d5"
+    },
+    {
+      "path": "recipes/seal-learner-history-v2-20261027.mjs",
+      "bytes": 3907,
+      "sha256": "6b278f4bb83fe2efed45c36d75f6f1d43fb04a9af5d33b6fefd2d14375f003da"
+    },
+    {
+      "path": "recipes/verify-learner-history-v2-content-20261027.mjs",
+      "bytes": 1987,
+      "sha256": "e5c901586bf1f4f6f6347d8293431d0e3dc6d6509c4a7c0792ac76faefac4ffa"
+    },
+    {
+      "path": "recipes/run-learner-history-v2-verification-20261027.mjs",
+      "bytes": 6822,
+      "sha256": "537d2aa042692f5e2d1b44e4843bdcfa2bc3f181e61a17813e266aaeb63bc9c0"
+    },
+    {
+      "path": "recipes/build-learner-history-browser-20261027.mjs",
+      "bytes": 4654,
+      "sha256": "56b598d989ad001c8dc8ff4d88635b369ad841659b214bd6ad0cb697ac4eb212"
+    },
+    {
+      "path": "recipes/run-learner-history-browser-20261027.mjs",
+      "bytes": 1471,
+      "sha256": "6609495692cf5a8714a7a68dcbe74e95fb2a827ec633796c9c7fbb24fb0a8398"
+    },
+    {
+      "path": "recipes/serve-learner-history-browser-20261027.mjs",
+      "bytes": 2622,
+      "sha256": "20d4f1312284ceb6add9e4354be48ee3fb8b2da9982c25db2dca107fe264b83d"
+    },
+    {
+      "path": "recipes/seal-learner-history-v2-browser-20261027.mjs",
+      "bytes": 1537,
+      "sha256": "f21a3cdb28492b4e4c821ef7a3bd6439bb8d91d656d7b24332a0bb091fc8f3ea"
+    },
+    {
+      "path": "recipes/checkpoint-learner-history-prebuild-20261027.mjs",
+      "bytes": 10616,
+      "sha256": "1dcbb96c8662f46221f665aecbf4779f8d1a696a480f6c5d7f42fb03e79c7900"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party application source/tests and verification recipes only. No scans, masks, clinical content, private metadata, generated models/runtimes, review decisions or dependency folders. Not a complete private/runnable backup. Production build still pending.",
+  "proof": {
+    "focusedCases": 99,
+    "fullConfiguredTypes": true,
+    "browserAssertions": 27,
+    "productionBuildPassed": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
