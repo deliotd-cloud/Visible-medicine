@@ -1,0 +1,101 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T15:23:20.738Z",
+  "sourceIdentity": {
+    "kind": "learning-resource-choices",
+    "sourceSha256": "8294d0eb95a0737dca4e2da2a6680aefb328fb74b0f77a2bfd0d25081d0a61b4",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-tour-duration-website-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "08111a871702ce868fdf61af0d673fac3958730f5f34fc86eac356fa41761dc2"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/my-learning/page.tsx",
+      "bytes": 6869,
+      "sha256": "6a4b430518c5be6579e3bc2af764cc94f74b3678fc9b4ce6dd0ff2fe5ccd4261"
+    },
+    {
+      "path": "website/tests/my-learning-study-now-ui.test.mjs",
+      "bytes": 4194,
+      "sha256": "e5b4bf6e376a08e1138d0225e7286228f100362a8d0e8a157067e5da9bd2858e"
+    },
+    {
+      "path": "website/lib/atlas-learning-resources.ts",
+      "bytes": 2805,
+      "sha256": "2464f14c5a768f910a927bd4729ece6d0154290c615f502a64c0b0d2cc3f2b0f"
+    },
+    {
+      "path": "website/tests/atlas-learning-resources.test.mjs",
+      "bytes": 6033,
+      "sha256": "a9ea00c55602780fd933be745c200755f1369f0058770bb6e9962cf469c5ee40"
+    },
+    {
+      "path": "recipes/prepare-learning-resource-choices-20261027.mjs",
+      "bytes": 426,
+      "sha256": "1a7a3f63f5b02da799a5298826e9e564b957488f1bd6f5a49b60cb5ed4f6b646"
+    },
+    {
+      "path": "recipes/seal-learning-resources-20261027.mjs",
+      "bytes": 3327,
+      "sha256": "0704cd819ab595f6fdeaf1146871423ca776d08840ec3e1593d96d5ee7c92040"
+    },
+    {
+      "path": "recipes/verify-learning-resources-content-20261027.mjs",
+      "bytes": 1283,
+      "sha256": "587630bd57d5e851f6ab8155b52aaaa314de993704f6ce85664b7968c749d9b7"
+    },
+    {
+      "path": "recipes/run-learning-resources-verification-20261027.mjs",
+      "bytes": 6577,
+      "sha256": "cee65924f5139c96c129db431033b4f0c70422c5be0634b57ad6e54718adf98f"
+    },
+    {
+      "path": "recipes/build-learning-resource-browser-20261027.mjs",
+      "bytes": 3276,
+      "sha256": "520d9123e9cd1b08218e5cd9f964bc1d4ced4bba7f152480a4f741f7ef4f2cc2"
+    },
+    {
+      "path": "recipes/run-learning-resource-browser-20261027.mjs",
+      "bytes": 1485,
+      "sha256": "a011adbc9dc9d438e1c684f6e0634293c49c45d975fe856bcacf988cfd3f28ab"
+    },
+    {
+      "path": "recipes/serve-learning-resource-browser-20261027.mjs",
+      "bytes": 2634,
+      "sha256": "9525245f9aeb07bc7cfe47ff3f1f9ff83c940a69313c6e422fbef3142b6b20c1"
+    },
+    {
+      "path": "recipes/seal-learning-resource-browser-20261027.mjs",
+      "bytes": 1547,
+      "sha256": "f5362c08121b79b3cf004319fefe1af53ba2492e6999aeceade32e569b0b6f68"
+    },
+    {
+      "path": "recipes/finish-learning-resource-choices-20261027.mjs",
+      "bytes": 7646,
+      "sha256": "845d97ad080110bdf46c438264753db4e6f46c3d7aa9c40b1412fc9b193297e2"
+    },
+    {
+      "path": "recipes/record-learning-resource-choices-20261027.mjs",
+      "bytes": 6357,
+      "sha256": "a5cef43ca56de8a3df46fb2e2232f3549d27e0837e824db4c76e329d4e52327f"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source and verification recipes only. No anatomy datasets, scans, masks, private metadata, generated runtime, review decisions or dependency folders. Not a complete private or runnable backup.",
+  "proof": {
+    "availableAtlasNoteAndRevisionChoices": true,
+    "focusedCases": 65,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
