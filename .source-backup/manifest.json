@@ -1,0 +1,150 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T22:35:37.926Z",
+  "sourceIdentity": {
+    "kind": "oral-recall-stock-website-integration",
+    "sourceSha256": "4b4183a54dfb01bb027fe1e683c04a57b721256763f819858934b71dbfe6e83a",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-head-viewport-retention-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "44dd054c056d44d7f655c65e363e9159c5f01950dc5cafcffa6d0f2056fc6f92"
+    },
+    "oralQuestionSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-oral-recall-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "9b7f167b883c723adfe9459b12f09a5123f27d21afca2c6b0609c9915756c452"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "bf8e13c7530c98910d41c2e698bfe3e9a97fb4dd29d174d3aa02d7ce74df7cc5"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "f16810e24a41395d8e72e070ac4b8e027b075e7e78a1d58150cb1acbe165a06f"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "fd771a76245adbc2ac8b4b147a63899676a3485e2b02e2946452c2b510d9c7f3"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "2471e31b7763d5da0bb4a8177fe6cf44d36b3758095aeb87fd9ff49812e5ca75"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "272ef833bb55a84a00d362d04f51af275c7c132e9aec2b3999b0d000c7ab4658"
+    },
+    {
+      "path": "recipes/run-oral-recall-full-native-20261027.mjs",
+      "bytes": 3369,
+      "sha256": "67178617e392e580229562538d664a9fc671645f2a628020828e4f8797a8ab36"
+    },
+    {
+      "path": "recipes/verify-oral-recall-native-build-20261027.mjs",
+      "bytes": 3201,
+      "sha256": "685e8fd6cdedb5eff7ba07fceafb81ebb9191538dc39569338b6fe2d30c7a840"
+    },
+    {
+      "path": "recipes/export-oral-recall-runtimes-20261027.mjs",
+      "bytes": 7165,
+      "sha256": "6656497df4b86a337815738893dc40b9c41cf491cea503781586c902d8c928eb"
+    },
+    {
+      "path": "recipes/run-oral-recall-runtime-exports-20261027.mjs",
+      "bytes": 3278,
+      "sha256": "6920b7e8139938f37f8a3925349ae259cfd94b3bc75fd225417f41a416ce4d26"
+    },
+    {
+      "path": "recipes/prepare-oral-recall-website-20261027.mjs",
+      "bytes": 6829,
+      "sha256": "c966b1e9ec878fcc61442d4fdffa8b530f8dd957d09f154f07618b0991ec09d6"
+    },
+    {
+      "path": "recipes/import-oral-recall-website-stock-20261027.mjs",
+      "bytes": 7029,
+      "sha256": "147f437efe942ac32e5326e3cabefe4b5169f3053491066f29c809e0653d2bc0"
+    },
+    {
+      "path": "recipes/generate-oral-recall-website-coverage-20261027.mjs",
+      "bytes": 2876,
+      "sha256": "e54dcde1f9ba92b8246bf899e17a2c6170f14d07e1acefc321426f3261ebce92"
+    },
+    {
+      "path": "recipes/prepare-oral-recall-coverage-20261027.mjs",
+      "bytes": 2736,
+      "sha256": "15a700485f17f93b0ed0c70aeb71f155eaa3156d56041252d9ed2f6ea14fc0d3"
+    },
+    {
+      "path": "recipes/prepare-oral-recall-coverage-seams-20261027.mjs",
+      "bytes": 22214,
+      "sha256": "c0290dc3666bf99fc9b4bb44f8e300190accf8f35d93169b6e8ab4f2bdd391bb"
+    },
+    {
+      "path": "recipes/run-oral-recall-coverage-seams-20261027.mjs",
+      "bytes": 2518,
+      "sha256": "c20f48defb2ceb002a77b1af5bf759e23dfbd8a37601fbfcaa5cea2325465cdc"
+    },
+    {
+      "path": "recipes/install-oral-recall-website-coverage-v4-20261027.mjs",
+      "bytes": 2968,
+      "sha256": "21281dd32f91e051529ab05388a96c51a6d9ec59b544971b8539f0ff071c2e34"
+    },
+    {
+      "path": "recipes/build-oral-recall-website-review-20261027.mjs",
+      "bytes": 6759,
+      "sha256": "1767b0a161921de5e28929d722991eb9ab4f6d6d177430fa6df9c5e180a08517"
+    },
+    {
+      "path": "recipes/refresh-oral-recall-website-delivery-pin-20261027.mjs",
+      "bytes": 2778,
+      "sha256": "167f11c42828785fbf3f929b777b833e2b67853b0e9846d209d78481d7a1ba0a"
+    },
+    {
+      "path": "recipes/run-oral-recall-website-integration-20261027.mjs",
+      "bytes": 2872,
+      "sha256": "2754dd52afa4ba33c240c3219d403ae3f6d0d05c40dcad173279fc96d6da9c25"
+    },
+    {
+      "path": "recipes/seal-oral-recall-website-source-20261027.mjs",
+      "bytes": 6206,
+      "sha256": "7f66396843e17893c142116d15967b159e172c563005e4dc09341ff2f4e0e9fb"
+    },
+    {
+      "path": "recipes/verify-oral-recall-website-content-20261027.mjs",
+      "bytes": 5884,
+      "sha256": "2300b42118c13508f1bf1e8fe4401099ffd2695651c1ac5a05940058fe817a0d"
+    },
+    {
+      "path": "recipes/run-oral-recall-website-verification-20261027.mjs",
+      "bytes": 6630,
+      "sha256": "1f1b7be8f00449294cee2c0d4844467f1e07795861a6dc822ec61cf112d66b84"
+    },
+    {
+      "path": "recipes/finish-oral-recall-website-20261027.mjs",
+      "bytes": 14069,
+      "sha256": "4c3b07be9045cb4bcdbb601653c3d22ca4c783e660ad52113fc8e80a8ed59437"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party binding/policy-digest/test-pin sources and recovery recipes. Oral question source is preserved in its linked supplement. No scans, geometry, generated runtimes, decisions, private data or raw repository ancestry; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 43,
+    "fullNativeAndWebsiteTypesAndBuilds": true,
+    "questions": 6,
+    "placements": 30,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
