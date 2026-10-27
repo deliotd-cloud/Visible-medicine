@@ -1,0 +1,12 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from './bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-coccygeus-tour-native',site=stage+'/atlas',parent=json(json(stage+'/PREPARATION.json').parent.path).atlas;
+const rel='scripts/regional-tour-resolution-test-inverse.mjs';
+const original=fs.readFileSync(parent+'/'+rel,'utf8'),current=fs.readFileSync(site+'/'+rel,'utf8');
+const start=current.indexOf('  // Admit the one reviewed additive tour before evaluating the unchanged');
+const end=current.indexOf("  assert.equal(digest(currentRegistry),proposedRegistrySha,'The reviewed registry input must be exact');",start);
+assert(start>=0&&end>start);assert.equal(current.slice(0,start)+current.slice(end),original);
+const unchanged=['scripts/test-whole-body-guided-learning.mjs','scripts/test-regional-tour-player.mjs','scripts/test-regional-tour-review.mjs','scripts/test-tour-camera.mjs'];
+for(const file of unchanged)assert.equal(hash(site+'/'+file),hash(parent+'/'+file));
+fs.writeFileSync(stage+'/HISTORICAL_TEST_ADMISSION.json',JSON.stringify({at:new Date().toISOString(),helper:rel,originalSha256:hash(parent+'/'+rel),currentSha256:hash(site+'/'+rel),onlyExactNewRegistryInvertedToPreviousC41:true,originalHelperRecoveredByteExactly:true,allOriginalAssertionsPreserved:unchanged.map(p=>({path:p,sha256:hash(site+'/'+p)})),initialFailure:{path:stage+'/checks/tests-1/RESULT.json',sha256:hash(stage+'/checks/tests-1/RESULT.json')},currentTourTestIndependent:'scripts/test-coccygeus-tour-transition.mjs'},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({historicalAssertionsUnchanged:4,helperExactInverse:true}));

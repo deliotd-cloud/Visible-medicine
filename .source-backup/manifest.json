@@ -1,0 +1,110 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T01:34:49.385Z",
+  "sourceIdentity": {
+    "kind": "coccygeus-original-guided-tour",
+    "sourceSha256": "e3d72e9052a335242a8ef2de79de0fd804cafd2a16adc4d20d44b6bd48f74937",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-guided-focus-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "be048f0dd64861fdf4b87e91490bb1552512f3c1811785b20962e56e38cb025d",
+        "branch": "backup/guided-focus-source-20261027",
+        "head": "41e694bd44409a10f5ac060260b4c897aa777f7a"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/lib/regional-tours.ts",
+      "bytes": 45926,
+      "sha256": "74f9ed8dee3c1d0328fcf97e892211078bdac4dd06f91f3b01631facd4eb4c69"
+    },
+    {
+      "path": "atlas/lib/coccygeus-tour.ts",
+      "bytes": 5316,
+      "sha256": "77444ad8789f8767db015214887e72dff5df10743d58961190c4c8a6f5030771"
+    },
+    {
+      "path": "atlas/scripts/pin-coccygeus-tour.mjs",
+      "bytes": 3550,
+      "sha256": "49880dfbff86fcc06d3ed4476f595730d67ed2690beba3132ebc3b3c6bcfce23"
+    },
+    {
+      "path": "atlas/scripts/test-coccygeus-tour.mjs",
+      "bytes": 5126,
+      "sha256": "cf877d3c430a7cfcabdd98ac0d73567217742b1201e9f3ef27996c80566cfca7"
+    },
+    {
+      "path": "atlas/scripts/test-coccygeus-tour-transition.mjs",
+      "bytes": 3170,
+      "sha256": "e58083675eb44de13fa613d015636f51b1136a993cdac7e2edc45dfb3b27dd6a"
+    },
+    {
+      "path": "atlas/docs/COCCYGEUS_TOUR.md",
+      "bytes": 3513,
+      "sha256": "ff5d872c3ac71d7c71ec0501fcba05d5587a6603e9918f3eb8fd2dc5a1d9e875"
+    },
+    {
+      "path": "atlas/scripts/regional-tour-resolution-test-inverse.mjs",
+      "bytes": 4978,
+      "sha256": "e863f8402fa5dda045aca0c0d9af65237712bfcd6ab6522920ddc76a769459b8"
+    },
+    {
+      "path": "recipes/prepare-coccygeus-tour-20261027.mjs",
+      "bytes": 2355,
+      "sha256": "f1814eacae0fa0c2ca7ca0c9d4b2c0eb42bf5bb65709839827325cffdd1d42f9"
+    },
+    {
+      "path": "recipes/integrate-coccygeus-tour-20261027.mjs",
+      "bytes": 1699,
+      "sha256": "1d609a4207f439a1f15852b8524d85e6bb6e4222677a44eadd4ac88b2cd89afc"
+    },
+    {
+      "path": "recipes/run-coccygeus-tour-checks-20261027.mjs",
+      "bytes": 4307,
+      "sha256": "2d37e1682b6d9657a84192d55efa1f739d96436c9d0399f13991d5f9e230e910"
+    },
+    {
+      "path": "recipes/finish-coccygeus-tour-20261027.mjs",
+      "bytes": 14021,
+      "sha256": "6110c14f066ea001b5523f32ddf6b4dc019c95e8621f2ad8427bc6b6d81cfb3d"
+    },
+    {
+      "path": "recipes/serve-coccygeus-tour-review-20261027.mjs",
+      "bytes": 4126,
+      "sha256": "a42234403a6ad8c642145efec46ea51069c5b2e475b75b20d8bdfba79dd2397a"
+    },
+    {
+      "path": "recipes/record-coccygeus-browser-20261027.mjs",
+      "bytes": 3754,
+      "sha256": "b61da77b5110fd56c10db9871efd2db09c5ea1c1f4986292a9579d0824411ccb"
+    },
+    {
+      "path": "recipes/record-coccygeus-test-inverse-20261027.mjs",
+      "bytes": 1696,
+      "sha256": "43ee2949e43cdce8633eb3ef5557ced73a7f48d69357a80e899ac10a11f24019"
+    },
+    {
+      "path": "recipes/record-coccygeus-memory-rejection-20261027.mjs",
+      "bytes": 1247,
+      "sha256": "40eecc430b2f26a14d3ccc4b2468edf907c69034c22c5cc296bcc1dbc460f6ec"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source, original prose, tests and recipes only. Exact source pins, medical metadata, raw evidence, generated runtimes, assets, scans, masks and native/canonical Git ancestry excluded. Not a complete private or runnable backup.",
+  "proof": {
+    "newDraftTours": 1,
+    "newStops": 4,
+    "fullConfiguredTypes": true,
+    "stockNativeBuild": true,
+    "websiteImported": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
