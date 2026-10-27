@@ -1,0 +1,95 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T02:55:06.732Z",
+  "sourceIdentity": {
+    "kind": "forehead-nerve-ultrasound-original-teaching",
+    "sourceSha256": "ce861516a2c68803726f9b1222fdf8d403a714960fea67ca8f2fe0e5d66b871a",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-inbox-deferred-return-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "04bcd850c016d6d0c18ddccb9c78b25761be7aba5bf69d4414aa1f57535d6fe9",
+        "branch": "backup/inbox-deferred-return-source-20261027",
+        "head": "ad95cd1ad7954245afd5c22fada77c2f104f3b94"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 84604,
+      "sha256": "92459a40dea1adcd138beeb2078090eb0406617850431eac5cb6a60c869b3b54"
+    },
+    {
+      "path": "atlas/content/forehead-nerve-ultrasound.ts",
+      "bytes": 2344,
+      "sha256": "d23d65fd4709e7e2e9067d19c28d7bd997a3f6e1d9a7dbbc239c1540adc7c286"
+    },
+    {
+      "path": "atlas/lib/forehead-nerve-ultrasound.ts",
+      "bytes": 1969,
+      "sha256": "fc99f3ab74efb5a5326b87674db83acea5f53676ab1293e82c7ca068494670cc"
+    },
+    {
+      "path": "atlas/scripts/test-forehead-nerve-ultrasound.mjs",
+      "bytes": 7650,
+      "sha256": "fea5874b6e67410f1dd69f6e371b2efbb83125c6eee75ee0fa8f600688608d8a"
+    },
+    {
+      "path": "atlas/scripts/test-forehead-nerve-review.mjs",
+      "bytes": 3551,
+      "sha256": "5baca07a12bc94691b821968ae8d4ac1d1755e2bcb0e3445329b674057974954"
+    },
+    {
+      "path": "atlas/docs/FOREHEAD_NERVE_ULTRASOUND.md",
+      "bytes": 1714,
+      "sha256": "11b1c1752f18b76772d0749df64b51e17112fb3659f327411c653cbaca5d95a7"
+    },
+    {
+      "path": "recipes/prepare-forehead-nerve-us-native-20261027.mjs",
+      "bytes": 2093,
+      "sha256": "263e519665abb553d4fd97366326242e37c1dcf5a36b60d79f8f732b6f093761"
+    },
+    {
+      "path": "recipes/flatten-owned-native-alternates-20261027.mjs",
+      "bytes": 2647,
+      "sha256": "3b9dca17665f2e9d55bfb83f3f4aecd4376e01b51dc03277f8bd1929816999bb"
+    },
+    {
+      "path": "recipes/integrate-forehead-nerve-us-20261027.mjs",
+      "bytes": 6736,
+      "sha256": "52460df09941dc43759ba07759919439774527c392c62d0bfd279210209362c6"
+    },
+    {
+      "path": "recipes/prepare-forehead-verification-20261027.mjs",
+      "bytes": 631,
+      "sha256": "652da50d93cf29ca4a304db89c64bdcde5f532a6cf07285a8666ffe1e5bcc1b1"
+    },
+    {
+      "path": "recipes/run-forehead-native-checks-20261027.mjs",
+      "bytes": 3922,
+      "sha256": "c80535078bec4171cf2590260083c5cd366c431bc0d8e7ee0b84345e8e9a946d"
+    },
+    {
+      "path": "recipes/finish-forehead-nerve-us-20261027.mjs",
+      "bytes": 14105,
+      "sha256": "bb59ac7b0dacb7f9552bb232d466a84b1f78ea1cb7e76a7f49263c363f467112"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party code, original prose, tests and recipes only. Exact source pins, medical metadata, raw proof, generated runtimes, source assets, scans, masks and native/canonical Git ancestry excluded. Not a complete private or runnable backup.",
+  "proof": {
+    "changedDraftPlacements": 4,
+    "preservedPlacements": 9932,
+    "fullConfiguredTypes": true,
+    "stockNativeBuild": true,
+    "websiteImported": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
