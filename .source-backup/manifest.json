@@ -1,0 +1,149 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T03:11:27.758Z",
+  "sourceIdentity": {
+    "kind": "forehead-ultrasound-website-integration",
+    "sourceSha256": "127bb7af2517bc5a71c8291cbd37f6c5d20956f973d89de9d007fbfbe1775ec6",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-inbox-deferred-return-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "04bcd850c016d6d0c18ddccb9c78b25761be7aba5bf69d4414aa1f57535d6fe9",
+        "branch": "backup/inbox-deferred-return-source-20261027",
+        "head": "ad95cd1ad7954245afd5c22fada77c2f104f3b94",
+        "tree": "5ec7d82287b7bdd6d8dd9c1e365baa14401ad51d"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-forehead-nerve-us-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "7000e5cce05be43d79061f96889169d4dbb75d5137fdff79e946162d8d9c39c7",
+        "branch": "backup/forehead-nerve-us-source-20261027",
+        "head": "99aa7010547b358cc9fef44724b8c18771b68b19",
+        "tree": "a7e2c0e9f120b58352fe9192cf0ba641641e4c12"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "c1fe8368694d23c81594304e8528dbbb8acb8e492faab4e3bc972d012ed00f96"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "0aab958726e8b5560872fd0aa1b82d360ec038428d14bb229813dea0987a09db"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "f3093cc6cbdc3fbc0c9e0ca017e463fa47dd74633e9026a204e6ea820bd2013f"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "001288a093d93536002b4704d2a5c5eab23c125e46083fa674520570c8da9a31"
+    },
+    {
+      "path": "recipes/prepare-forehead-runtime-exports-20261027.mjs",
+      "bytes": 2512,
+      "sha256": "e83a50948e3abbadacc3760470762b8e4d50f61afa812c7dba8fe4d5c0dc9d98"
+    },
+    {
+      "path": "recipes/export-forehead-runtimes-20261027.mjs",
+      "bytes": 6576,
+      "sha256": "754d5c48dab1c6cfd83dd574afa19c666a3155831320bdaa2e312d6291272154"
+    },
+    {
+      "path": "recipes/run-forehead-runtime-exports-20261027.mjs",
+      "bytes": 3264,
+      "sha256": "e064e9d24922f8bb9356abf7c9ee2fd3679295f81c5fd03c7c465e7ed25ad6b0"
+    },
+    {
+      "path": "recipes/prepare-forehead-website-recipes-20261027.mjs",
+      "bytes": 6426,
+      "sha256": "16ae4a10ae260d2cfe08267c9e2e39369536c2e2be48cb422cfd1f49f549aecb"
+    },
+    {
+      "path": "recipes/prepare-forehead-website-20261027.mjs",
+      "bytes": 6734,
+      "sha256": "a768a4c41a48803da9d5c6ce15b8544ad86e96d0c70c927eb499d07bf55cfff7"
+    },
+    {
+      "path": "recipes/import-forehead-website-stock-20261027.mjs",
+      "bytes": 6851,
+      "sha256": "09490d3b201e7af6a7bc3b012b394b95d3c86b6867c9eb317aacdd2bdfdc7316"
+    },
+    {
+      "path": "recipes/run-forehead-website-integration-20261027.mjs",
+      "bytes": 2146,
+      "sha256": "cd3a660fae6b7f19f14db5044545f18cede391fe93da9b57cc9a91557e2e9bfb"
+    },
+    {
+      "path": "recipes/generate-forehead-website-coverage-20261027.mjs",
+      "bytes": 2877,
+      "sha256": "16d557d69172896d5388ca2c52c583e1946e3ccf886e46613b2a2a72a279cfc5"
+    },
+    {
+      "path": "recipes/run-forehead-coverage-seams-20261027.mjs",
+      "bytes": 2386,
+      "sha256": "6094d6578da8362087ef70ed31989ac13bf918fb18e29630ab547896c76ed402"
+    },
+    {
+      "path": "recipes/install-forehead-website-coverage-20261027.mjs",
+      "bytes": 2964,
+      "sha256": "764f5b1c6219a7602a86a9815a123f91be9f4a39fac55cd73772285dea36aef8"
+    },
+    {
+      "path": "recipes/build-forehead-website-review-20261027.mjs",
+      "bytes": 6803,
+      "sha256": "faadac6eeb814ebd79f86062a4d065d408508b56672d233b6bb1f4adee098e7c"
+    },
+    {
+      "path": "recipes/refresh-forehead-website-delivery-pin-20261027.mjs",
+      "bytes": 2780,
+      "sha256": "c1e1cfe948ed703bbc667b67b5f8a68c3eb4e6791a274b7f51758211c3811930"
+    },
+    {
+      "path": "recipes/seal-forehead-website-source-20261027.mjs",
+      "bytes": 6164,
+      "sha256": "1af43f6587045e71c188b2c7a18fbe32da1b033361427a17a2f7c8cc4d53227c"
+    },
+    {
+      "path": "recipes/prepare-forehead-website-verification-20261027.mjs",
+      "bytes": 1229,
+      "sha256": "a2f1960f7ba1fb231801c083c60a3477e6bb43b3169bb903cf984f748a08f11c"
+    },
+    {
+      "path": "recipes/verify-forehead-website-content-20261027.mjs",
+      "bytes": 9996,
+      "sha256": "baf8fb8ae62694b0a459ba5138c5f892fef054c282a815ac17e93ac194b35ef4"
+    },
+    {
+      "path": "recipes/run-forehead-website-verification-20261027.mjs",
+      "bytes": 5529,
+      "sha256": "364599afb41d2a17e6cc2acdf49a227758eb577ef6907c2ffd9a06f56905dd93"
+    },
+    {
+      "path": "recipes/finish-forehead-website-20261027.mjs",
+      "bytes": 15321,
+      "sha256": "4170ec9add9eb5ae1d91a8716abf29ceac6322fdb3f932150563ac5be21ec5d1"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party website code and integration/test recipes only. No exact anatomy source pins, medical metadata, scans, masks, assets, generated runtime, raw private proof, decisions, dependencies or canonical/native Git ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "changedDraftPlacements": 4,
+    "focusedCases": 25,
+    "fullConfiguredTypes": true,
+    "productionBuild": true,
+    "oldTeachingDecisionsRefused": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
