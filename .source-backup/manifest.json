@@ -1,0 +1,91 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T18:53:58.668Z",
+  "sourceIdentity": {
+    "kind": "workbook-pagination",
+    "sourceSha256": "624e403fe79cfcb86f7fc9754eed4fea4aee44df07d37c280df31d8f05edcb0e",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-tour-regression-repairs-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "8989049b44ea34c5053e351b365caca58501fe19d7d8b12a75215cd38047441c"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/StudioWorkbookTable.tsx",
+      "bytes": 6912,
+      "sha256": "1a56f0b8c0c3766c706f57ae094b7cb4c7228e5111277253a6653f7ac6a8c7e0"
+    },
+    {
+      "path": "website/components/studio-workspace.css",
+      "bytes": 11885,
+      "sha256": "bd2af85392c6a1e6ae44fbe8f735fc218a85c1a8d5ee14e32d4b47da91f43cce"
+    },
+    {
+      "path": "website/tests/studio-workbook-table-semantics.test.mjs",
+      "bytes": 10121,
+      "sha256": "2bc07b6ec5dc532069a830370abd5fa9aadfbfff0512914dc1a4becfd9368d99"
+    },
+    {
+      "path": "website/tests/studio-workbook-pagination.test.mjs",
+      "bytes": 9125,
+      "sha256": "6cba67be301d47a115ccec8f8304fd9db643e64e161e84899c9e55a32e6343b4"
+    },
+    {
+      "path": "recipes/seal-workbook-pagination-20261027.mjs",
+      "bytes": 1992,
+      "sha256": "3c30467c17ffb2d9bb5407c4f6974c89edf8e438d99932d38fea20cc95bce611"
+    },
+    {
+      "path": "recipes/verify-workbook-pagination-20261027.mjs",
+      "bytes": 2049,
+      "sha256": "3ddfe3323c0d42182f48cd1c097af8dd4830cd012b111efa6de1f294eb187a2e"
+    },
+    {
+      "path": "recipes/run-workbook-pagination-20261027.mjs",
+      "bytes": 6460,
+      "sha256": "b56fb5b619d454b65ea03d6fe7fa0bd20188ac3c6625c8fee1b4f2160409e304"
+    },
+    {
+      "path": "recipes/build-workbook-pagination-browser-20261027.mjs",
+      "bytes": 3859,
+      "sha256": "b526444d88869809de7ce45f65f753119c9c1e86a5d55c20269e528448bfcf66"
+    },
+    {
+      "path": "recipes/run-workbook-pagination-browser-build-20261027.mjs",
+      "bytes": 2246,
+      "sha256": "f03f5ea794ffb7b594b4bec7358acd9fba1c78f887127f767e758caa54edbad9"
+    },
+    {
+      "path": "recipes/serve-workbook-pagination-browser-20261027.mjs",
+      "bytes": 2622,
+      "sha256": "05b88b4b8b4294e6422b17b4507cf3071c46c0d639f081dd9fff78ed2cd524cd"
+    },
+    {
+      "path": "recipes/check-workbook-pagination-browser-20261027.js",
+      "bytes": 5530,
+      "sha256": "80fac9195b24201c0a956d399fc6165101d4568cb630cf389de76a530db0519f"
+    },
+    {
+      "path": "recipes/finish-workbook-pagination-20261027.mjs",
+      "bytes": 13050,
+      "sha256": "6e0ba50a9cd77f409d50f760a29f734ea906e69c3ce861bd1119233763214de0"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party source/tests and verification recipes only. No scans, masks, clinical data, private metadata, generated models/runtimes, review decisions or dependencies. Not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 21,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "browserAssertions": 33,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

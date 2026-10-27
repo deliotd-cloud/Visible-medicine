@@ -1,0 +1,33 @@
+async () => {
+  const checks=[],check=(name,pass)=>{checks.push({name,pass:!!pass});if(!pass)throw Error(name);};
+  const settle=()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+  const rows=()=>[...document.querySelectorAll('.studio-workbook-row')];
+  const titles=()=>rows().map(r=>r.querySelector('[role="rowheader"] b').textContent);
+  const expected=(first,last)=>Array.from({length:last-first+1},(_,i)=>'Workbook '+String(first+i).padStart(2,'0'));
+  const button=text=>[...document.querySelectorAll('button')].find(b=>b.textContent.trim()===text);
+  const status=()=>document.querySelector('[role="status"]');
+  const input=()=>document.querySelector('input[type="search"]');
+  const setInput=async value=>{input().focus();Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(input(),value);input().dispatchEvent(new Event('input',{bubbles:true}));await settle();};
+  const select=async(index,value)=>{const node=document.querySelectorAll('select')[index];node.focus();node.value=value;node.dispatchEvent(new Event('change',{bubbles:true}));await settle();};
+  await settle();check('first page has exactly twelve ordered records',JSON.stringify(titles())===JSON.stringify(expected(1,12)));
+  check('single polite status with complete total and range',document.querySelectorAll('[role="status"]').length===1&&/29 of 29.*1–12.*Page 1 of 3/.test(status().textContent));
+  check('previous initially disabled',button('Previous').disabled);
+  check('pager appears before the table',!!(document.querySelector('[aria-label="Workbook pages"]').compareDocumentPosition(document.querySelector('[role="table"]'))&Node.DOCUMENT_POSITION_FOLLOWING));
+  check('desktop has no horizontal overflow',document.documentElement.scrollWidth<=innerWidth);
+  button('Next').focus();button('Next').click();await settle();check('second page has next twelve records',JSON.stringify(titles())===JSON.stringify(expected(13,24)));check('pager moves focus to committed result status',document.activeElement===status());
+  button('Next').focus();button('Next').click();await settle();check('last page contains remaining five records',JSON.stringify(titles())===JSON.stringify(expected(25,29)));check('last page disables Next',button('Next').disabled);check('last page count is exact',/25–29.*Page 3 of 3/.test(status().textContent));
+  check('encoded Details and builder destinations are retained',rows()[0].querySelectorAll('a')[0].getAttribute('href')==='/studio/workbooks/synthetic%2F25%20%3F'&&rows()[0].querySelectorAll('a')[1].getAttribute('href')==='/studio/workbooks/synthetic%2F25%20%3F/builder');
+  check('published row remains Open',rows()[0].querySelectorAll('a')[1].getAttribute('aria-label')==='Open Workbook 25');
+  button('Previous').click();await settle();document.querySelector('#outside').focus();button('Next').click();await settle();check('pager does not steal unrelated focus',document.activeElement.id==='outside');
+  await setInput('Special ultrasound');check('search finds an off-page course across entire library',JSON.stringify(titles())===JSON.stringify(['Workbook 29']));check('search focus retained',document.activeElement===input());check('single result removes pager',!document.querySelector('[aria-label="Workbook pages"]'));
+  await setInput('');check('clearing search starts first page',JSON.stringify(titles())===JSON.stringify(expected(1,12)));
+  button('Next').click();await settle();await select(0,'published');check('status filter searches whole collection and resets page',rows().length===10&&titles()[0]==='Workbook 01'&&titles()[9]==='Workbook 28');
+  await select(1,'assessment');check('mode and status combine across entire collection',JSON.stringify(titles())===JSON.stringify([4,10,16,22,28].map(n=>'Workbook '+String(n).padStart(2,'0'))));
+  button('Clear').click();await settle();check('clear restores first page',JSON.stringify(titles())===JSON.stringify(expected(1,12)));
+  await setInput('no synthetic result');check('filtered empty state is truthful',rows().length===0&&/0 of 29/.test(status().textContent)&&!!button('Show all workbooks'));button('Show all workbooks').focus();button('Show all workbooks').click();await settle();check('empty-state recovery restores records and search focus',rows().length===12&&document.activeElement===input());
+  button('Next').click();await settle();document.querySelector('#outside').focus();window.qa.replace(13);await settle();check('new snapshot resets to first page',JSON.stringify(titles())===JSON.stringify(expected(1,12))&&/Page 1 of 2/.test(status().textContent));check('snapshot change does not steal focus',document.activeElement.id==='outside');
+  button('Next').focus();button('Next').click();window.qa.replace(29);await settle();check('superseded pager action cannot focus stale result',JSON.stringify(titles())===JSON.stringify(expected(1,12))&&document.activeElement!==status());
+  window.qa.replace(0);await settle();check('true empty hides table and pager',!document.querySelector('[role="table"]')&&!document.querySelector('[aria-label="Workbook pages"]')&&document.body.textContent.includes('No workbooks yet.'));
+  window.qa.replace(29);await settle();check('actual React has no errors',window.qa.errors.length===0);
+  window.qa.checks.push(...checks);return{passing:true,checks,assertions:checks.length,width:innerWidth,height:innerHeight,errors:window.qa.errors,scope:'Actual React component/styles with synthetic workbook data and Next Link adapter; no account or backend acceptance.'};
+}
