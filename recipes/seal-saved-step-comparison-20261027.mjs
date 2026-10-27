@@ -1,0 +1,16 @@
+import fs from'node:fs';import path from'node:path';import assert from'node:assert/strict';import{hash,json}from'./bounded-source-hash-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-saved-step-comparison',prep=json(stage+'/PREPARATION.json'),parent=json(prep.parent.path),site=prep.website;
+const testFile=site+'/tests/head-learning-bookmark-ui.test.ts';
+let tests=fs.readFileSync(testFile,'utf8');assert(tests.includes('assert.match(renderToStaticMarkup(anchor as any),/3D (new tab)/);'));tests=tests.replace('assert.match(renderToStaticMarkup(anchor as any),/3D (new tab)/);',"assert(renderToStaticMarkup(anchor as any).includes('3D (new tab)'));");fs.writeFileSync(testFile,tests);
+assert(tests.startsWith(fs.readFileSync(parent.website+'/tests/head-learning-bookmark-ui.test.ts','utf8')));
+const changed=['components/HeadLearningBookmark.tsx','tests/head-learning-bookmark-ui.test.ts'];
+assert.equal(hash(prep.parent.path),prep.parent.sha256);
+for(const r of parent.sourceRows){assert.equal(hash(parent.website+'/'+r.path),r.sha256,r.path);if(!changed.includes(r.path))assert.equal(hash(site+'/'+r.path),r.sha256,r.path);}
+const inputs=json(site+'/atlas-review/integration-inputs.json');assert.equal(inputs.sha256,parent.reviewBindingSha256);for(const r of inputs.inputs)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const ambient=[];for(const p of ['.next/types/routes.d.ts','next-env.d.ts']){const target=site+'/'+p,origin=parent.website+'/'+p;fs.mkdirSync(path.dirname(target),{recursive:true});if(!fs.existsSync(target))fs.copyFileSync(origin,target,fs.constants.COPYFILE_EXCL);assert.equal(hash(target),hash(origin));ambient.push({path:p,sha256:hash(target),copiedFrom:origin});}
+const source={...parent,schema:'vm-saved-step-comparison-source/1',at:new Date().toISOString(),website:site,parent:prep.parent.path,parentSha256:prep.parent.sha256,sourceRows:parent.sourceRows.map(r=>({path:r.path,bytes:fs.statSync(site+'/'+r.path).size,sha256:hash(site+'/'+r.path)})),changedPaths:changed,addedPaths:[],removedPaths:[],ambientTypeInputs:ambient,allExistingTestAssertionsPreserved:true,declaredTestLoaderWiring:undefined,sourceSealPrecedesVerification:true,installed:false,normalPreviewChanged:false};
+fs.writeFileSync(stage+'/SOURCE_CANDIDATE.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});
+let runner=fs.readFileSync('run-learner-history-v2-verification-20261027.mjs','utf8').replaceAll('20261027-learner-history','20261027-saved-step-comparison').replaceAll('SOURCE_CANDIDATE_V2.json','SOURCE_CANDIDATE.json').replaceAll('ACCEPTED_V2.json','ACCEPTED.json').replaceAll('CONTENT_QA_V2.json','CONTENT_QA.json').replaceAll('verify-learner-history-v2-content-20261027.mjs','verify-saved-step-comparison-20261027.mjs').replaceAll("kind:'learner-history-","kind:'saved-step-comparison-");
+runner=runner.replace("const roots=[","const roots=['tests/head-learning-bookmark-ui.test.ts','tests/head-learning-bookmark.test.ts','tests/head-atlas-learning.test.ts','tests/head-learning-handoff.test.ts','tests/head-learning-navigation.test.ts',");
+fs.writeFileSync('run-saved-step-comparison-20261027.mjs',runner,{flag:'wx'});
+console.log(JSON.stringify({source:stage+'/SOURCE_CANDIDATE.json',sha256:hash(stage+'/SOURCE_CANDIDATE.json'),paths:source.sourceRows.length}));
