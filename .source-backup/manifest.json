@@ -1,0 +1,138 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T14:15:17.069Z",
+  "sourceIdentity": {
+    "kind": "source-bound-guided-step-entry",
+    "sourceSha256": "10ddf4f58a23f6eea111c09fb5ed4c132c96a46af1a4d5b6bdc72ae0caf797a4",
+    "websiteProposalSha256": "ee690e83da8c3a42a8da1a8439b36a60a3f398393308c0224ca4864b8c6fccb7",
+    "requiredPriorSourceSupplements": [
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-scene-study-native-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "692dd023d8367c1a0556f46fa6c07b2342a504a6f765ce54ee1f8726d495d3df",
+        "branch": "backup/scene-study-native-20261027",
+        "head": "907b9d70776358f980fd8c08a354e82d5fa8a2cd"
+      },
+      {
+        "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-scene-study-website-source/SOURCE_SUPPLEMENT.json",
+        "sha256": "415b095e8481718576116585cb452e6844249d15f9b0ffd11a350324773324eb",
+        "branch": "backup/scene-study-website-source-20261027",
+        "head": "23f92f7b75f29a67c66e660fcc3bd9f9097a54f0"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-explorer.tsx",
+      "bytes": 132656,
+      "sha256": "b730c264318d47551839589bfc2e31bd4356ba5e44b269c62304a6ae508d0b1a"
+    },
+    {
+      "path": "atlas/app/regional-guided-learning.tsx",
+      "bytes": 19629,
+      "sha256": "00eb238b30923b94e386a7d12c7ff2adf978e621ec2570dc2fa2376784a9cf7a"
+    },
+    {
+      "path": "atlas/app/whole-body-guided-learning.tsx",
+      "bytes": 8442,
+      "sha256": "fd601c56236e9a8de6a00d0b5fc6453de00bfd9a8ea25332efa294756525d858"
+    },
+    {
+      "path": "atlas/lib/regional-tour-entry.ts",
+      "bytes": 4226,
+      "sha256": "8ad70c75b78fdc52c8498682644f24dc24a887fe89837728e096933d2a90c628"
+    },
+    {
+      "path": "atlas/scripts/test-initial-regional-tour-picker.mjs",
+      "bytes": 7233,
+      "sha256": "f454e643ea9b59f5a7b41679f074e22496cfc691c241a21a2b5dfbade9c300ea"
+    },
+    {
+      "path": "atlas/scripts/test-regional-tour-host.mjs",
+      "bytes": 10306,
+      "sha256": "99bfb8f38cf4a9820c02b7d88d1e2cf5656db80a5833dae5b5735cc17806fa7a"
+    },
+    {
+      "path": "atlas/scripts/test-regional-tour-player.mjs",
+      "bytes": 142056,
+      "sha256": "6693753381792e9756db5de6e39cfd5abb17e2ee7d5333afce77173ba74313f0"
+    },
+    {
+      "path": "atlas/scripts/test-tour-step-picker.mjs",
+      "bytes": 3903,
+      "sha256": "45e1ca9bdf5d714dbca263a7aa621fb7cc787de2fef71cb2215db24ff3fde9fd"
+    },
+    {
+      "path": "atlas/scripts/test-regional-tour-step-entry.mjs",
+      "bytes": 4605,
+      "sha256": "a171ff63be8dbf2f61c27802389a8219ef725412b94d9b2e0d3fa28b7ee0fd06"
+    },
+    {
+      "path": "website/components/RegionalLearningCatalogue.tsx",
+      "bytes": 11723,
+      "sha256": "03424fd2fad47c89169cf7e1b3f6699e20b571248014cdd29a119d1bc5e669ab"
+    },
+    {
+      "path": "website/components/regional-learning-catalogue.css",
+      "bytes": 4655,
+      "sha256": "6da5b6423b02b031ac619238cc34b9a48d8c15459014adbc1cda034528e8b990"
+    },
+    {
+      "path": "website/lib/regional-tour-entry-navigation.ts",
+      "bytes": 3217,
+      "sha256": "48c02273aa545c8f8c367b714166f276e364c218b20b2138a051dbc257d09140"
+    },
+    {
+      "path": "website/tests/regional-learning-discovery-ui.test.mjs",
+      "bytes": 9891,
+      "sha256": "daf735a490b37a1ec5e069d860f259bf94f70732cf5e902d7d6c8a3b6876e7f5"
+    },
+    {
+      "path": "website/tests/regional-tour-step-navigation.test.mjs",
+      "bytes": 5360,
+      "sha256": "456fc3f9ae47b0b0e7da3af7fcb2918f940b75b80cb2faa4af8fd13de6a36c6d"
+    },
+    {
+      "path": "recovery/prepare-tour-step-entry-20261027.mjs",
+      "bytes": 1053,
+      "sha256": "c7c8107fccba5d0257f2a0ec6abf5d6aef1288301b72390731995a608255e95d"
+    },
+    {
+      "path": "recovery/prepare-tour-step-native-stage-20261027.mjs",
+      "bytes": 2086,
+      "sha256": "3114ab51f4d653fd072c9efef5a5bc660f65050d035e81d9a8047db11e8aa436"
+    },
+    {
+      "path": "recovery/run-tour-step-native-20261027.mjs",
+      "bytes": 4489,
+      "sha256": "5c01639c835884eddb09845db0c4a11bc855f628087e80c7a938119b47fc3605"
+    },
+    {
+      "path": "recovery/check-tour-step-website-20261027.mjs",
+      "bytes": 2862,
+      "sha256": "88f9dde2627d27860eb99e97d7ac57ae35688e9f061025fad8f6b7c1dbe0194f"
+    },
+    {
+      "path": "recovery/finish-tour-step-entry-20261027.mjs",
+      "bytes": 15401,
+      "sha256": "0e2dcebd6c3a8e90057a1063f5a4c3624c18a2dec71c758333dad75f1626e348"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party native/website code, tests and recovery recipes only. No patient data, geometry, private references, review records, generated runtime or canonical Git ancestry. Not a complete private/runnable backup.",
+  "proof": {
+    "nativeFocusedTests": 103,
+    "websiteNavigationTests": 19,
+    "fullNativeTypes": true,
+    "stockNativeBuild": true,
+    "browserAcceptance": false,
+    "websiteImportPending": true,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
