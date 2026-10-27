@@ -1,0 +1,38 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T10:03:03.128Z",
+  "sourceIdentity": {
+    "kind": "ultrasound-loading-cancel",
+    "sha256": "480bed6cd9554014883cf979a432aa6c9b691e496dbc0dea14a69f043156b2df"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/UltrasoundLocalAtlas.tsx",
+      "bytes": 26545,
+      "sha256": "51e865c5a1f364d82fa1ba95e6b891ccbf2ed60ada2727e87c79150869094a26"
+    },
+    {
+      "path": "website/tests/ultrasound-loading-cancellation.test.mjs",
+      "bytes": 8760,
+      "sha256": "3c884b542a46ff5c8790941fccda315d7b7296618ca12920fb002fc9f9d0a5cd"
+    }
+  ],
+  "removed": [],
+  "scope": "Two first-party code/test files only. No scans, private records, geometry, generated runtime, dependencies or canonical ancestry. Supplement, not a complete project backup.",
+  "proof": {
+    "focusedCases": 49,
+    "wholeRoots": 5,
+    "browserAssertions": 14,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
