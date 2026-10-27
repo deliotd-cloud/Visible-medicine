@@ -1,0 +1,48 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T09:45:33.908Z",
+  "sourceIdentity": {
+    "kind": "mri-tour-current-checks",
+    "sha256": "08a74060e7784b3b1846deef94b1c906011e66031fdfd0e9fe303fe6e75fc47a"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/public-copy-review.test.ts",
+      "bytes": 6622,
+      "sha256": "a45263b1a68bb6ebc0f502dad9f450440c51ac5545aa3d161b82e70cb3b099df"
+    },
+    {
+      "path": "website/tests/regional-mri-inline-inspection.test.ts",
+      "bytes": 23574,
+      "sha256": "0f5927d03f8222ae426736fc4eb19f4c24215658589174eadf351c5e1e2d7fca"
+    },
+    {
+      "path": "website/tests/regional-tour-title-navigation-current.test.mjs",
+      "bytes": 9542,
+      "sha256": "cdafa2ce762bf18d16d789f0de8f0dd6424569e7cdd84ddfc14943e97999086f"
+    },
+    {
+      "path": "website/tests/regional-reference-review-index-current.test.ts",
+      "bytes": 11321,
+      "sha256": "71ab9a7444d75bde8f9dd672519b65eef3d6f39b0ea7efe854cfe6029193647f"
+    }
+  ],
+  "removed": [],
+  "scope": "Four first-party test files only. No scans, private records, model payloads, generated runtime, dependencies or canonical ancestry. Supplement, not complete project backup.",
+  "proof": {
+    "currentCases": 60,
+    "currentWholeRoots": 7,
+    "historicalTourCases": 7,
+    "fullConfiguredTypes": true,
+    "productionUnchanged": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
