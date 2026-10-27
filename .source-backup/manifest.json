@@ -1,0 +1,53 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T06:53:59.258Z",
+  "sourceIdentity": {
+    "kind": "head-release-test-repairs",
+    "sha256": "bd6d2004d744d23fe252d3b9d15d46f760c7f4d418f374c3d84f13df4ab425b7"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/head-binding-role-preservation-20261021.test.mjs",
+      "bytes": 17229,
+      "sha256": "59ee65eb5271456223810f8c3d7a03365629a9640b574a23ede41aee5dc14e7a"
+    },
+    {
+      "path": "website/tests/head-client-current-transition.test.mjs",
+      "bytes": 11168,
+      "sha256": "47271cc9b61e7286fbde4d2ce7c7edd9278b35e4a4a791b5ad983f93edaf05cf"
+    },
+    {
+      "path": "website/tests/head-comparison-active-identity-current.test.ts",
+      "bytes": 9228,
+      "sha256": "4ef831fabae48a7609f2f5cb7e498074809acaeeb12707e498e8d4aeb457bd36"
+    },
+    {
+      "path": "website/tests/head-comparison-exit.test.ts",
+      "bytes": 19796,
+      "sha256": "75c1567568e2a75b4403779685594d5cbbb7b9b71e6ceceb1d5e792fd99e9527"
+    },
+    {
+      "path": "website/tests/native-focus-review-binding.test.mjs",
+      "bytes": 3923,
+      "sha256": "d6042dadd01613b1b479534a2d730611c6bab81ec2cef128de2402adb5b7c924"
+    }
+  ],
+  "removed": [],
+  "scope": "Five first-party test source files only. No scans, masks, private references, generated modules, decisions, dependencies or canonical ancestry. Supplement, not complete project or private-data backup.",
+  "proof": {
+    "cases": 360,
+    "wholeRoots": 28,
+    "fullConfiguredTypes": true,
+    "productionUnchanged": true,
+    "stockBuildReused": true,
+    "wholeStockSuitePassing": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
