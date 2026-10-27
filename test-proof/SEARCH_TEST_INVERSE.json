@@ -1,0 +1,10 @@
+{
+  "path": "tests/studio-course-search.test.mjs",
+  "beforeSha256": "9e89c7541fed2f8c0c33c87ffff9b8784f73a17a009e2728d360074e90eff107",
+  "afterSha256": "3ad112bc54ac89e504e992c11b308b05d2e8d593330c006676868f1a45528cf3",
+  "removeInsertions": [
+    "import {getStudioCourseDirectory} from '../lib/studio-course-directory.ts';\n",
+    "    '@/lib/studio-course-directory': {getStudioCourseDirectory},\n"
+  ],
+  "allOriginalAssertionsUnchanged": true
+}

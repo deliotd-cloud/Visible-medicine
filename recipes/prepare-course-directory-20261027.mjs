@@ -1,0 +1,3 @@
+import fs from'node:fs';import{clonePinnedWebsite}from'./clone-pinned-website-stage-20261026.mjs';
+const stage='F:/VisibleMedicine/staging/20261027-course-directory';const{site,parent}=clonePinnedWebsite({stage,parentFile:'F:/VisibleMedicine/staging/20261027-review-area-navigation/SOURCE_CANDIDATE.json',parentSha256:'4bdc07b85136ed2117c2ef6f0ed124150e5081c5c7a8097c370305a155a4f53a'});
+if(fs.existsSync(parent.website+'/.next/types/routes.d.ts')){fs.mkdirSync(site+'/.next/types',{recursive:true});fs.copyFileSync(parent.website+'/.next/types/routes.d.ts',site+'/.next/types/routes.d.ts',fs.constants.COPYFILE_EXCL);}console.log(JSON.stringify({site,sourceRows:parent.sourceRows.length,previewUnchanged:true}));

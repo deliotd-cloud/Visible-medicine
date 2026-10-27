@@ -1,0 +1,84 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T23:44:23.089Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261027-course-directory/SOURCE_CANDIDATE_V3.json",
+      "sha256": "4764d6b96003443c3a81302aa4a50f2fbf5576832281e8472bd68b218eee44db"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-review-area-navigation-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "8c8a8fd2478486d41518c7b208536ebc7d3ede952f400d671ca60d170c856da6"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/studio/courses/page.tsx",
+      "bytes": 3770,
+      "sha256": "f34d2133d17e796cc41156ed4af2fa7a1004eeb298ab8b31b5c8c325dae51be0"
+    },
+    {
+      "path": "website/tests/studio-course-search.test.mjs",
+      "bytes": 7917,
+      "sha256": "3ad112bc54ac89e504e992c11b308b05d2e8d593330c006676868f1a45528cf3"
+    },
+    {
+      "path": "website/lib/studio-course-directory.ts",
+      "bytes": 1943,
+      "sha256": "ee530a8bd34f769c9d02a61d126b76257e05e3018cd8a70f564004ffa7e47810"
+    },
+    {
+      "path": "website/tests/studio-course-directory.test.mjs",
+      "bytes": 6223,
+      "sha256": "e08832f8c61c6134be6947da3ef11e4b8e54a5ed6d52865312cc63522176bffc"
+    },
+    {
+      "path": "recipes/prepare-course-directory-20261027.mjs",
+      "bytes": 714,
+      "sha256": "e3fc3f293b0943eb183760639fa65ca102a173c92c435fb358da9f7b41fde9e5"
+    },
+    {
+      "path": "recipes/seal-course-directory-v3-20261027.mjs",
+      "bytes": 2396,
+      "sha256": "9be81a750c69e4a33fecceb72f9b20779d30d734ff60703caed88b3e57cb124c"
+    },
+    {
+      "path": "recipes/run-course-directory-verification-v3-20261027.mjs",
+      "bytes": 4605,
+      "sha256": "2a8546ee3f1478d9ff75ab39da78e3456a63c65908578d15cacebc44637328b1"
+    },
+    {
+      "path": "recipes/serve-course-directory-v3-20261027.mjs",
+      "bytes": 6023,
+      "sha256": "644f1b5a6117eb2f9a0038daf0d633c5f452444b168583eed2d247b76f28524d"
+    },
+    {
+      "path": "recipes/finish-course-directory-20261027.mjs",
+      "bytes": 10666,
+      "sha256": "d49a5b275f2126343b9663029f904777ec4c6325417a8018adcb06ce9a3c7edb"
+    },
+    {
+      "path": "test-proof/SEARCH_TEST_INVERSE.json",
+      "bytes": 452,
+      "sha256": "84194996d8f5c5292b9c8d0c649240df249fd14a0f10e823d1e9f3d1bd72c528"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party course directory, pure pagination helper, synthetic tests, inverse and recovery recipes. No scans, generated runtime, model assets, clinical records, account state or raw Git ancestry. Requires prior supplements; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 23,
+    "syntheticBrowserChecks": 12,
+    "fullConfiguredTypes": false,
+    "productionBuild": false,
+    "pending": "Original memory admission guard",
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
