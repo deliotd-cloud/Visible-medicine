@@ -1,0 +1,39 @@
+.atlas-guided-hub { max-width:1100px; }
+.atlas-guided-hub .atlas-hub-heading > a { display:inline-flex; min-height:36px; align-items:center; }
+.atlas-guided-search { margin:18px 0 0; }
+.atlas-guided-search-row { display:flex; flex-wrap:wrap; gap:8px; align-items:flex-end; }
+.atlas-guided-search-row label { display:flex; flex:1 1 260px; flex-direction:column; gap:5px; max-width:520px; color:var(--green); font-size:.875rem; font-weight:600; }
+.atlas-guided-search-row .atlas-guided-region-select { flex:0 1 210px; }
+.atlas-guided-search-row :is(input,select) { width:100%; min-height:40px; padding:8px 11px; border:1px solid #9bbcaf; border-radius:7px; background:#fff; color:var(--green); font:inherit; font-weight:400; }
+.atlas-guided-search-row :is(button,a) { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:7px 14px; border:1px solid #9bbcaf; border-radius:7px; background:#fff; color:var(--green); cursor:pointer; font:inherit; text-decoration:none; }
+.atlas-guided-views { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 0; }
+.atlas-guided-views button { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:7px 16px; border:1px solid #9bbcaf; border-radius:7px; color:var(--green); background:#fff; font:inherit; font-weight:600; cursor:pointer; }
+.atlas-guided-views button:hover { background:#e5f3ed; }
+.atlas-guided-views button[aria-current="page"] { background:var(--green); border-color:var(--green); color:#fff; }
+.atlas-guided-search :is(input,select,button,a):focus-visible { outline:2px solid #16c6b2; outline-offset:3px; }
+.atlas-guided-regions { margin:0 0 24px; padding:12px 16px; border:1px solid #b8cec6; border-radius:10px; background:#f4f9f6; }
+.atlas-guided-regions > summary { width:fit-content; max-width:100%; min-height:36px; padding:6px 0; cursor:pointer; color:var(--green); font-weight:600; }
+.atlas-guided-regions p { max-width:78ch; line-height:1.6; }
+.atlas-guided-regions ul { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); list-style:none; padding:0; gap:6px 12px; }
+.atlas-guided-regions li { min-width:0; }
+.atlas-guided-regions a { display:flex; justify-content:space-between; align-items:center; min-height:40px; padding:8px 12px; border:1px solid #b8cec6; border-radius:6px; background:#fff; overflow-wrap:anywhere; text-decoration:none; }
+.atlas-guided-regions a:hover { background:#d9efea; }
+.atlas-guided-head-library > section > h2 { margin-top:0; }
+.atlas-guided-no-imaging { margin:0 0 24px; padding:18px 20px; border:1px solid #b8cec6; border-radius:10px; background:#f4f9f6; color:var(--green); }
+.atlas-guided-no-imaging h2 { margin:0 0 8px; font-size:1.125rem; }
+.atlas-guided-no-imaging p { max-width:75ch; line-height:1.6; }
+.atlas-guided-no-imaging a { color:var(--green); text-underline-offset:2px; }
+.head-linked-library-pager { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; }
+.head-linked-library-pager span { display:inline-flex; align-items:center; padding-inline:4px; }
+.head-linked-library-pager :is(button,a,span[aria-disabled]) { display:inline-flex; align-items:center; min-height:40px; max-width:100%; padding:7px 12px; border:1px solid #7a9e93; border-radius:6px; background:#fff; color:var(--green); font:inherit; text-decoration:none; overflow-wrap:anywhere; }
+.head-linked-library-pager :is(button,a) { cursor:pointer; }
+.head-linked-library-pager :is(button:disabled,span[aria-disabled]) { opacity:.55; cursor:default; }
+.head-linked-library-pager :is(button,a):focus-visible,.head-linked-library-results:focus-visible { outline:2px solid #16c6b2; outline-offset:3px; }
+.atlas-guided-head-library > section > section { margin-block:24px; padding-block-start:16px; border-top:1px solid #d5dfdc; }
+.atlas-guided-access { max-width:80ch; margin-top:24px; color:#3e5c55; font-size:.875rem; line-height:1.6; }
+.atlas-guided-hub :is(a,summary):focus-visible { outline:2px solid #16c6b2; outline-offset:3px; }
+@media(max-width:700px) { .atlas-guided-regions ul { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:540px) { .atlas-guided-search-row label,.atlas-guided-search-row .atlas-guided-region-select { flex:1 1 100%; max-width:none; } }
+@media(max-width:400px) { .atlas-guided-regions ul { grid-template-columns:minmax(0,1fr); } }
+
+#linked-tour-results { scroll-margin-block-start: 96px; }

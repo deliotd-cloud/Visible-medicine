@@ -1,0 +1,70 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T12:31:00.334Z",
+  "sourceIdentity": {
+    "kind": "compact-guided-pages",
+    "sha256": "b092d70e5cc446f76edef225f666cf613b1ab8aebebb172c1197d9bf5ab70ddd"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/head-learning-discovery.ts",
+      "bytes": 1965,
+      "sha256": "ab1e7852748160aa2622e5418af9048e116a918071166b7d573f545e3744d8be"
+    },
+    {
+      "path": "website/app/atlas/guided-learning/page.tsx",
+      "bytes": 6029,
+      "sha256": "f3ec247581d1082a0f8796a897414bb1eefd55df6276cb9b78ef41064a041d7b"
+    },
+    {
+      "path": "website/components/HeadAtlasLearningLibrary.tsx",
+      "bytes": 16680,
+      "sha256": "d7bebb5e8a4059f8b514779a37046bcab10a2b3ef90c3fe2ed7bcd74ecb31ba4"
+    },
+    {
+      "path": "website/components/RegionalLearningCatalogue.tsx",
+      "bytes": 11207,
+      "sha256": "a575464b1a3b72aff5b6051aa33cf7663354ccc357b0cf83c3f7fceeb0e71e68"
+    },
+    {
+      "path": "website/app/atlas/guided-learning/guided-learning.css",
+      "bytes": 4389,
+      "sha256": "0a7758a666c82ecc972cdb8181bbc686b04f74a1619731f693ac9a1b03b87401"
+    },
+    {
+      "path": "website/components/regional-learning-catalogue.css",
+      "bytes": 4384,
+      "sha256": "37b7639f3c695ac6d58841c6047ba1120dac441f4831496189447a7f1de0e628"
+    },
+    {
+      "path": "website/tests/guided-catalogue-pagination.test.mjs",
+      "bytes": 9895,
+      "sha256": "c1d6a91dd62170af950d606ab2538e031ac672004046eccac206756177e25735"
+    },
+    {
+      "path": "website/tests/guided-learning-view-pagination.test.mjs",
+      "bytes": 15459,
+      "sha256": "2b6bb7bf974768fd583885b6aa17d7da6ed9ab35cc9f666874b5d3231bb5058c"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight first-party catalogue/page/parser/style/test text files only. No scans, private records, geometry, generated runtime, dependencies or canonical ancestry. Supplement, not a complete project backup.",
+  "proof": {
+    "focusedCases": 46,
+    "wholeRoots": 7,
+    "browserAssertions": 29,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "normalPreviewChanged": false,
+    "wholeStockSuitePassing": false,
+    "reviewDisplayRevisionChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
