@@ -1,0 +1,38 @@
+{
+  "before": [
+    {
+      "path": "tests/atlas-delivery-access-sql-current.test.mjs",
+      "sha256": "9e1cbf8840a893d1f6dd4e21abe6dc3a6fce94521fbfd69cadf84c107aa1a691"
+    },
+    {
+      "path": "tests/atlas-delivery-access-sql-current-source.mjs",
+      "sha256": "0ffd17f5903948edb583ac32fe20a0f401d14e9c9b1007c21e94703d08249de4"
+    }
+  ],
+  "fixtures": [
+    "tests/fixtures/sql-policy-history/current-before-test.mjs.raw",
+    "tests/fixtures/sql-policy-history/current-before-source.mjs.raw"
+  ],
+  "seams": [
+    [
+      [
+        "import test from 'node:test';",
+        "import test from 'node:test';\nimport {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';\nconst currentDelivery=validateCurrentAtlasDelivery();"
+      ],
+      [
+        "assert.equal(actualPolicy.manifestRevision,'4a4ef95334a504a5dfee79fd5ed2eba5b71493f8f3e9f8a79cafea18d86fd2c2');",
+        "assert.equal(actualPolicy.manifestRevision,currentDelivery.documents['lib/atlas-model-inventory.json']);"
+      ]
+    ],
+    [
+      [
+        "assert(process.env.VM_ATLAS_ACCESS_SQL_ROOT,'VM_ATLAS_ACCESS_SQL_ROOT is required');\nconst root=path.resolve(process.env.VM_ATLAS_ACCESS_SQL_ROOT);",
+        "const root=path.resolve(fileURLToPath(new URL('../',import.meta.url)));\nif(process.env.VM_ATLAS_ACCESS_SQL_ROOT!==undefined)assert.equal(path.resolve(process.env.VM_ATLAS_ACCESS_SQL_ROOT),root,'Current SQL source must be this Website');"
+      ],
+      [
+        "878e69c025022f55db4b2d5d35e472db1ac29d671048431aa9c55dc3a44464a0",
+        "0aab958726e8b5560872fd0aa1b82d360ec038428d14bb229813dea0987a09db"
+      ]
+    ]
+  ]
+}

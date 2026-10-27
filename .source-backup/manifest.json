@@ -1,0 +1,93 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T03:48:49.364Z",
+  "sourceIdentity": {
+    "kind": "UI-and-synthetic-access-test-repairs",
+    "sourceSha256": "b3cd631dc7ca544baca519d50e2a02f8c8e4ecb9b1f5feb33029c64e859ec107",
+    "requiredPriorSourceSupplement": {
+      "branch": "backup/forehead-website-source-20261027",
+      "head": "22695a347d8d45e4ed355a22dcadc312a688c7c6",
+      "tree": "5fe38f0dc47210aa26e9af0f942a342dc7687dec"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/canonical-navigation-source-inverse.mjs",
+      "bytes": 1213,
+      "sha256": "7144a0c896f56dd00501a93d84e3511c22f616130dbaaf8d79d21f30991b206b"
+    },
+    {
+      "path": "website/tests/body-learning-contract-preservation.test.mjs",
+      "bytes": 3986,
+      "sha256": "4945284a2e002bfc5262332d98c1b937554e325818eef89923e8cc9c9b38c236"
+    },
+    {
+      "path": "website/tests/body-learning-issue-source-inverse.mjs",
+      "bytes": 1509,
+      "sha256": "13d87943069ac9f1756bdfada7bd1c302c14f01b2c8f34a188e9284d0b9c81f4"
+    },
+    {
+      "path": "website/tests/body-learning-issue-preservation.test.mjs",
+      "bytes": 2930,
+      "sha256": "791fe912627eedb5048734cb53a07bff86b2670a93e496c0c052e04c21b8252e"
+    },
+    {
+      "path": "website/tests/fixtures/body-learning-contract-before-issue.test.mjs.raw",
+      "bytes": 3771,
+      "sha256": "4644fbfc4ff067c491a075c7a48e039b4259b058d1cffed64031d8ff440758bf"
+    },
+    {
+      "path": "website/tests/fixtures/canonical-navigation-before-issue.mjs.raw",
+      "bytes": 1133,
+      "sha256": "1d9a438e745f6eadb45ef2efb36ebc481e449d206e6d8969c2f68f1007607099"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-current.test.mjs",
+      "bytes": 7394,
+      "sha256": "3a6848bc1a500077251fdd29f31e90be37c0baa0fecbf5f1eea3c14d0f16714e"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-current-source.mjs",
+      "bytes": 7445,
+      "sha256": "8239d8d290c39da5497dbfd87ec577102b9293d2470f53800496d8b88e5b859f"
+    },
+    {
+      "path": "website/tests/fixtures/sql-policy-history/current-before-test.mjs.raw",
+      "bytes": 7272,
+      "sha256": "9e1cbf8840a893d1f6dd4e21abe6dc3a6fce94521fbfd69cadf84c107aa1a691"
+    },
+    {
+      "path": "website/tests/fixtures/sql-policy-history/current-before-source.mjs.raw",
+      "bytes": 7356,
+      "sha256": "0ffd17f5903948edb583ac32fe20a0f401d14e9c9b1007c21e94703d08249de4"
+    },
+    {
+      "path": "website/tests/fixtures/sql-policy-history/current-binding-seams.json",
+      "bytes": 1625,
+      "sha256": "8835b8254b2559236edf47d94fd9f152843c888a251993be83b91e48031de4e2"
+    },
+    {
+      "path": "website/tests/sql-current-source-binding.test.mjs",
+      "bytes": 1471,
+      "sha256": "e3338789f178d40871cfe82a2073c4704e032cc60dac3870553f73dab92c9df2"
+    }
+  ],
+  "removed": [],
+  "scope": "Twelve selected first-party UI and synthetic SQL test sources. Other historical source/model test bridges, private proof, anatomy pins, datasets, images, masks, decisions, credentials, dependencies and native/canonical Git ancestry are excluded. Full changed test recovery is local on F:. This is not a complete private or runnable project backup.",
+  "proof": {
+    "learningSpaceCases": 24,
+    "deepBrainAndSqlOuterCases": 19,
+    "configuredTypeRoots": 2684,
+    "fullConfiguredTypeDiagnostics": 0,
+    "wholeSuitePassing": false,
+    "productionChanged": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
