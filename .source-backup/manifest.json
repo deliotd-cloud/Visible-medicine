@@ -1,0 +1,99 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-27T20:36:20.135Z",
+  "sourceIdentity": {
+    "kind": "cardiac-imaging-drafts-and-lecture-save-proof",
+    "nativeSource": "d253c0c46dc1b5dd8fd1d0323ac2ddccf4c17ebd5476e4eb43d896e19491eb6f",
+    "websiteSource": "13c5aeeca8085f70340a6891b0728f51abc993951949519492aae0e1b698a661",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-disclosure-proof-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "8f79b77045efaef69b7c8c4a0f0442466a36b394abd1dbf47a12baa2db61b53b"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/cardiac-teaching.ts",
+      "bytes": 9450,
+      "sha256": "d3f7ce733d2bd5d844ecfa84cd4142c98581f284a209c050a2c1ecf4ca35c1e0"
+    },
+    {
+      "path": "atlas/scripts/test-cardiac-imaging-recognition.mjs",
+      "bytes": 4382,
+      "sha256": "c723bbca5e82b1e9156ce90fd45c3fc1e5f9a9c705d31ceb76e164d063300090"
+    },
+    {
+      "path": "atlas/scripts/test-cardiac-imaging-review.mjs",
+      "bytes": 5133,
+      "sha256": "06a1f29d5364abb820cecda35033d48f7ed189d2f5e28710cfeaaa413e9242a8"
+    },
+    {
+      "path": "atlas/docs/CARDIAC_IMAGING_RECOGNITION.md",
+      "bytes": 2324,
+      "sha256": "5d1e001f6f93fb44808d06767c78326622759fa0c59688f865e744b68b1e1404"
+    },
+    {
+      "path": "website/tests/lecture-body-preservation.mjs",
+      "bytes": 2642,
+      "sha256": "7a76570562671802521f9f5c71476976c1c70c3d56114e5ba67da741bc560cde"
+    },
+    {
+      "path": "website/tests/lecture-body-preservation.test.mjs",
+      "bytes": 2494,
+      "sha256": "5f93fc2ba881a656e5b1d0deec9dbf17b7f1d28071e981313660aba9704fea07"
+    },
+    {
+      "path": "website/tests/lecture-save-preservation.test.mjs",
+      "bytes": 4808,
+      "sha256": "a138214dcb3e4924b8e1242b6727910e10966460b43669a3da7ae8adc74101a4"
+    },
+    {
+      "path": "recipes/prepare-cardiac-imaging-native-20261027.mjs",
+      "bytes": 2092,
+      "sha256": "c490dff371efb2725099ad3e5d76a267ce1804432c06ca2703dd40c098bfe38c"
+    },
+    {
+      "path": "recipes/flatten-cardiac-imaging-alternates-20261027.mjs",
+      "bytes": 2645,
+      "sha256": "447098cb924199846e30cb05cb2f2a9435e2c12260864de8e0146e4b82eea0e1"
+    },
+    {
+      "path": "recipes/run-cardiac-imaging-native-20261027.mjs",
+      "bytes": 4995,
+      "sha256": "8266865e0e03673e942686400bcdc5d92145647043b4c533bb98b0dfaf3125fe"
+    },
+    {
+      "path": "recipes/prepare-lecture-save-proof-20261027.mjs",
+      "bytes": 1169,
+      "sha256": "76b4f0106bead34c633136b093d4a59f5d984c7f1d3418ba45364ad451a734e2"
+    },
+    {
+      "path": "recipes/verify-lecture-save-proof-20261027.mjs",
+      "bytes": 2676,
+      "sha256": "171f65be0094260ed2177a2e044ac4fa8fe458cb7898a71492a37760e9b3c4c7"
+    },
+    {
+      "path": "recipes/finish-cardiac-and-lecture-20261027.mjs",
+      "bytes": 19444,
+      "sha256": "662d8974fc7bf95dfed47e1135746ec35418aa88348cd4897b32890451b72c41"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party code, original teaching prose, tests and recipes only. No scans, models, masks, generated runtimes, private decision/object data, source pins or raw repository ancestry. This is not a complete private or runnable backup.",
+  "proof": {
+    "cardiacDraftSections": 6,
+    "changedTeachingReviewContexts": 4,
+    "staleReviewRefusals": 4,
+    "nativeTypesAndBuild": true,
+    "lectureTestCases": 17,
+    "websiteCardiacImportPending": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

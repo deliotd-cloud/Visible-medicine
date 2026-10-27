@@ -1,0 +1,5 @@
+import fs from 'node:fs';import {hash} from './bounded-source-hash-20261026.mjs';import {spawnSync} from 'node:child_process';
+const proposal='F:/VisibleMedicine/staging/20261027-lecture-save-proof-portable-proposal';
+const config={schema:'vm-scoped-source-successor/1',stage:'F:/VisibleMedicine/staging/20261027-lecture-save-proof-website',parent:{path:'F:/VisibleMedicine/staging/20261027-disclosure-proof-repair-v2/SOURCE_CANDIDATE.json',sha256:'5a1514f57dc8ac9f4b557a65af7f670f5746e4f308e86ea711f61e6263755bd0'},patchset:{path:proposal+'/PATCHSET.json',sha256:hash(proposal+'/PATCHSET.json')},allowedPaths:['tests/lecture-body-preservation.mjs','tests/lecture-body-preservation.test.mjs','tests/lecture-save-preservation.test.mjs'],reason:'Portable exact intermediate editor proof restores historical save-preservation checks while retaining current editor behavior checks; no product changes.'};
+const f=proposal+'/INTEGRATION_CONFIGURATION.json';fs.writeFileSync(f,JSON.stringify(config,null,2)+'\n',{flag:'wx'});
+const r=spawnSync(process.execPath,['prepare-related-tour-compare-20261027.mjs',f],{stdio:'inherit',windowsHide:true});process.exitCode=r.status??1;

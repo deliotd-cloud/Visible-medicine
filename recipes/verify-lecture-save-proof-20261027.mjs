@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {hash,json} from './bounded-source-hash-20261026.mjs';import {guarded} from './run-small-native-task-guarded-20261025.mjs';import {memoryGate} from './native-website-integration-stage-20261025.mjs';
+const sf='F:/VisibleMedicine/staging/20261027-lecture-save-proof-website/SOURCE_CANDIDATE.json',s=json(sf),base='F:/VisibleMedicine/staging/20261027-lecture-save-proof-verification',dir=base+'/checks';
+assert.equal(hash(sf),'13c5aeeca8085f70340a6891b0728f51abc993951949519492aae0e1b698a661');assert(!fs.existsSync(base));memoryGate(4096);fs.mkdirSync(base);
+const roots=['tests/lecture-body-preservation.test.mjs','tests/lecture-save-preservation.test.mjs','tests/lecture-context-editor.test.mjs'];
+function verify(){for(const r of s.sourceRows)assert.equal(hash(s.website+'/'+r.path),r.sha256,r.path);}
+verify();const i=json('CURRENT_CHECKPOINT.json');assert.deepEqual(i.activeWork.current.activeExecutionSessions,[]);i.activeWork.current.activeExecutionSessions=[{kind:'lecture-save-proof-recheck',driverPid:process.pid,evidence:dir,sourceSha256:hash(sf)}];fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(i,null,2)+'\n');
+const retire=()=>{const j=json('CURRENT_CHECKPOINT.json');j.activeWork.current.activeExecutionSessions=j.activeWork.current.activeExecutionSessions.filter(r=>r.driverPid!==process.pid);fs.writeFileSync('CURRENT_CHECKPOINT.json',JSON.stringify(j,null,2)+'\n');};process.once('exit',()=>{if(!fs.existsSync(dir+'/SUPERVISOR-HANDLE.json'))retire();});
+try{
+ const run=await guarded({site:s.website,dir,command:'--max-old-space-size=1024 --experimental-strip-types --test --test-reporter=tap --test-concurrency=1 '+roots.join(' '),heap:1024,aggregate:2048,minimum:4096,extraEnv:{VM_WEBSITE_ROOT:s.website,VM_ATLAS_SOURCE_REPO:s.atlas,ATLAS_SOURCE_REPO:s.atlas,VM_CURRENT_SOURCE_RECEIPT:sf,VM_CURRENT_SOURCE_SHA256:hash(sf)}});
+ verify();const log=fs.readFileSync(dir+'/runner.stdout.log','utf8'),counts=Object.fromEntries(['tests','pass','fail','cancelled','skipped','todo'].map(k=>[k,Number([...log.matchAll(new RegExp('^# '+k+' (\\d+)','gm'))].at(-1)?.[1]??-1)]));
+ const passing=run.passing&&counts.tests>0&&counts.tests===counts.pass&&counts.fail+counts.cancelled+counts.skipped+counts.todo===0;
+ fs.writeFileSync(base+'/RESULT.json',JSON.stringify({at:new Date().toISOString(),source:{path:sf,sha256:hash(sf)},passing,roots,run,counts,allSourceUnchanged:true,normalPreviewChanged:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({result:base+'/RESULT.json',sha256:hash(base+'/RESULT.json'),counts,passing}));if(!passing)process.exitCode=1;
+}finally{retire();}
