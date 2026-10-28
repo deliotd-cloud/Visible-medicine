@@ -1,0 +1,243 @@
+{
+  "schema": "vm-long-bone-imaging-pins/1",
+  "baselineHead": "6d37f7c80479b8d7b5c3185d4d73b115d3d08388",
+  "sourceReceiptSha256": "e4f19b5f08ac7ed046bcc9bcf5e026cdb4cbc33334fac4ec78c4c9f9f63d12a8",
+  "entries": [
+    {
+      "group": "femur",
+      "identity": {
+        "anchor": [
+          0.9478089809417725,
+          -2.004189968109131,
+          0.308991014957428
+        ],
+        "bounds": {
+          "max": [
+            1.502369999885559,
+            0.34239014983177185,
+            0.622759997844696
+          ],
+          "min": [
+            0.3196620047092438,
+            -4.319439888000488,
+            -0.005177993793040514
+          ]
+        },
+        "bundle": "thigh-skeleton",
+        "category": "bone",
+        "center": [
+          0.9110160022974014,
+          -1.9885248690843582,
+          0.30879100202582777
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA24475",
+        "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+        "laterality": "left",
+        "name": "Left femur",
+        "nodeName": "FMA24475",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "sourceName": "left femur",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3259",
+            "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "femur",
+      "identity": {
+        "anchor": [
+          -0.9391549825668335,
+          -2.0242297649383545,
+          0.31437796354293823
+        ],
+        "bounds": {
+          "max": [
+            -0.31894299387931824,
+            0.342520147562027,
+            0.6219199895858765
+          ],
+          "min": [
+            -1.5013400316238403,
+            -4.31850004196167,
+            -0.004697990603744984
+          ]
+        },
+        "bundle": "thigh-skeleton",
+        "category": "bone",
+        "center": [
+          -0.9101415127515793,
+          -1.9879899471998215,
+          0.30861099949106574
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA24474",
+        "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+        "laterality": "right",
+        "name": "Right femur",
+        "nodeName": "FMA24474",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "sourceName": "right femur",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3365",
+            "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "tibia",
+      "identity": {
+        "anchor": [
+          0.7442640066146851,
+          -6.160630226135254,
+          0.2990489900112152
+        ],
+        "bounds": {
+          "max": [
+            1.0945500135421753,
+            -4.261380195617676,
+            0.6451500058174133
+          ],
+          "min": [
+            0.3503419756889343,
+            -8.060953140258789,
+            0.019821014255285263
+          ]
+        },
+        "bundle": "leg-skeleton",
+        "category": "bone",
+        "center": [
+          0.7224459946155548,
+          -6.161166667938232,
+          0.3324855100363493
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA24478",
+        "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+        "laterality": "left",
+        "name": "Left tibia",
+        "nodeName": "FMA24478",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "sourceName": "left tibia",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3282",
+            "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "tibia",
+      "identity": {
+        "anchor": [
+          -0.6983820199966431,
+          -6.1077399253845215,
+          0.3267289698123932
+        ],
+        "bounds": {
+          "max": [
+            -0.3521600067615509,
+            -4.260799884796143,
+            0.6483500003814697
+          ],
+          "min": [
+            -1.0935299396514893,
+            -8.060371398925781,
+            0.02072898857295513
+          ]
+        },
+        "bundle": "leg-skeleton",
+        "category": "bone",
+        "center": [
+          -0.7228449732065201,
+          -6.160585641860962,
+          0.33453949447721243
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA24477",
+        "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+        "laterality": "right",
+        "name": "Right tibia",
+        "nodeName": "FMA24477",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "sourceName": "right tibia",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3387",
+            "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    }
+  ]
+}

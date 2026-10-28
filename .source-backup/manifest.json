@@ -1,0 +1,59 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T23:39:37.678Z",
+  "sourceIdentity": {
+    "kind": "whole-bone-imaging-teaching-source-delta",
+    "nativeSourceSha256": "0253fe38f9ba9d53df9112d52bd946463e79e1b6a2835d2e28eed0091decc5b0",
+    "nativeHead": "222a0e7c550179242a5f2d428eade62947f22d09",
+    "parentNativeHead": "6d37f7c80479b8d7b5c3185d4d73b115d3d08388"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 85244,
+      "sha256": "a9df1c6d04de797f93215b83677881710787939368245403bb6ed4dcbadbca4f"
+    },
+    {
+      "path": "atlas/content/long-bone-imaging.ts",
+      "bytes": 5492,
+      "sha256": "c0de238676f7a6948cec9bdf1b54bc4b18d888822f3ad48532ca1852784f41d2"
+    },
+    {
+      "path": "atlas/content/long-bone-imaging-pins.json",
+      "bytes": 6521,
+      "sha256": "61826f4592374e7c8edb88260ec9d059c84b52a3d081bc19b5f8a3db7257b8ff"
+    },
+    {
+      "path": "atlas/lib/long-bone-imaging.ts",
+      "bytes": 2014,
+      "sha256": "70ea6d92d5090723a747c5a07442637389c2674f35efc01fa53e9a10bf86233d"
+    },
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 367746,
+      "sha256": "6c7ce03f4e438f82eaf06a68318c282c209493634daba13219eb2c214309be66"
+    }
+  ],
+  "removed": [],
+  "scope": "Five authored source/licensing files for eight source-bound femur/tibia CT/MRI teaching drafts. Source-only recovery supplement; not the full application. No scans, models, generated geometry/assets, dependencies, environment files, private cases, runtime state or raw canonical ancestry.",
+  "proof": {
+    "nativeBuildPassed": true,
+    "changedDraftLessons": 8,
+    "unchangedLessonPlacements": 9928,
+    "changedReviewMaterialIds": 4,
+    "unchangedReviewMaterialPins": 1100,
+    "fullNativeTypesPassed": true,
+    "fullContentContractPassed": true,
+    "clinicalApproval": false,
+    "websiteImportComplete": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
