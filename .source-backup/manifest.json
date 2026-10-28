@@ -1,0 +1,108 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T00:23:32.948Z",
+  "sourceIdentity": {
+    "kind": "quadriceps-tour-draft",
+    "sourceSha256": "642b0ac8e9cf0b99a56cf571110bafc2c3c0ccd521d9e86321082c687fa2ef3d",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261027-course-directory-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "3679e984e25084dacfa428ec77af9b8ddaf04dbb73a068179958ec5e112a8eee"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/lib/regional-tours.ts",
+      "bytes": 46227,
+      "sha256": "3b46596734c29891b803db7f0448eff4a8cc803d615fd197f77591efe95cfd5c"
+    },
+    {
+      "path": "atlas/lib/quadriceps-tour.ts",
+      "bytes": 6014,
+      "sha256": "3294a9cfbad50f47121cdfddeecda0fe0e62ef29e9e5e306f9493de4e6f5b12b"
+    },
+    {
+      "path": "atlas/content/quadriceps-tour-pins.json",
+      "bytes": 11165,
+      "sha256": "f0240a7c61450e65d59ccc628f5d83eeb3e1106fdd4f84ce6093846cd25075a4"
+    },
+    {
+      "path": "atlas/docs/QUADRICEPS_TOUR.md",
+      "bytes": 2547,
+      "sha256": "54be3b0107f85d12e2c026f9bdca20358c24a53b1dbd4af6aae924b67fd55102"
+    },
+    {
+      "path": "atlas/scripts/pin-quadriceps-tour.mjs",
+      "bytes": 3182,
+      "sha256": "2602a98e04b3b004d2b8e30fab768f012e6c4ccca9b083f243f94102069e6f17"
+    },
+    {
+      "path": "atlas/scripts/test-quadriceps-tour.mjs",
+      "bytes": 8533,
+      "sha256": "a8c27db4407a2bb7eb73aff29451f676addfb6d0e964de92a4c597853f9961d7"
+    },
+    {
+      "path": "atlas/scripts/regional-tour-resolution-test-inverse.mjs",
+      "bytes": 6761,
+      "sha256": "85248163221baa8d9c0b2a6f2409bf6aa6d410a164cacc63e919146a2368083e"
+    },
+    {
+      "path": "atlas/scripts/test-whole-body-guided-learning.mjs",
+      "bytes": 39405,
+      "sha256": "0e62a749d3c4746ad4d7e650aeaf560cf7eb77e4d47a2da7defd51e3be31fbfd"
+    },
+    {
+      "path": "recipes/prepare-quadriceps-tour-20261027.mjs",
+      "bytes": 2217,
+      "sha256": "5bd577fff8af07a7cf85d903da09362aeb1144b3d976191fe54ee0830fcd6f12"
+    },
+    {
+      "path": "recipes/run-quadriceps-checks-20261027.mjs",
+      "bytes": 3125,
+      "sha256": "71ef198e629733d3427974e37767f7f61792c51522a0b066b108ca2ab6955a0d"
+    },
+    {
+      "path": "recipes/seal-quadriceps-tour-20261028.mjs",
+      "bytes": 6080,
+      "sha256": "da33244d98d03320177b69a1e62be0f2f6daf1e82e0bc300366ae0590f19495d"
+    },
+    {
+      "path": "recipes/run-quadriceps-full-native-20261028.mjs",
+      "bytes": 3402,
+      "sha256": "0bbc13033ea966993b76898dddc8611ee4c7661d132a8357b8efed52d471a145"
+    },
+    {
+      "path": "recipes/verify-quadriceps-native-build-20261028.mjs",
+      "bytes": 3166,
+      "sha256": "31e6aff89b368d9e17205ae267e92f4685f99b9f9e29967eb018df118b9f4a8b"
+    },
+    {
+      "path": "recipes/checkpoint-quadriceps-tour-20261028.mjs",
+      "bytes": 8197,
+      "sha256": "3d0ccc036027180737c1e35536e0ed9ec8f1b72859819df78923b179144fb1d4"
+    },
+    {
+      "path": "recipes/repair-whole-body-fixture-20261028.mjs",
+      "bytes": 1512,
+      "sha256": "0f653a6dfb6130fee76c24bb17c63ef1c70b8ed9ee28733c04eec39fe6d17a32"
+    }
+  ],
+  "removed": [],
+  "scope": "Fifteen selected first-party source, source-identity pins, tests and recipes. No scans, model payloads, private review decisions or raw ancestry. Not a complete private or runnable backup.",
+  "proof": {
+    "stops": 6,
+    "participants": 7,
+    "unchangedLessons": 9936,
+    "unchangedOtherPackets": 1097,
+    "fullConfiguredTypes": true,
+    "stockNativeBuild": true,
+    "websiteImportPending": true,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

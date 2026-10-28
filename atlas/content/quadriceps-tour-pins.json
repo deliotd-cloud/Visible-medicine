@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "baseline": "dc0f5d9648b73e4baf25f468e52963b1d503df68",
+  "tourRevision": "right-quadriceps-20261027-r1",
+  "catalogVersion": 2,
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "scopeRegions": [
+    "thigh",
+    "pelvis",
+    "leg"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-rectus-femoris",
+      "fmaId": "FMA38928",
+      "name": "Right rectus femoris",
+      "sourceName": "right rectus femoris",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "bundle": "thigh-muscles-dissection",
+      "nodeName": "FMA38928",
+      "bounds": {
+        "min": [
+          -1.544490098953247,
+          -4.852920055389404,
+          0.338998019695282
+        ],
+        "max": [
+          -0.6291450262069702,
+          0.7110400199890137,
+          1.0246599912643433
+        ]
+      },
+      "center": [
+        -1.0868175625801086,
+        -2.0709400177001953,
+        0.6818290054798126
+      ],
+      "anchor": [
+        -1.115399956703186,
+        -2.1236798763275146,
+        0.8208400011062622
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1433",
+          "sha256": "a5f75907d784dd2a44d7efa96cb31009aba2afe43465336b105561751b19f8ef"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-lateralis",
+      "fmaId": "FMA38930",
+      "name": "Right vastus lateralis",
+      "sourceName": "right vastus lateralis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "bundle": "thigh-muscles-dissection",
+      "nodeName": "FMA38930",
+      "bounds": {
+        "min": [
+          -1.5963200330734253,
+          -4.820680141448975,
+          0.07503200322389603
+        ],
+        "max": [
+          -0.840565025806427,
+          -0.11833007633686066,
+          0.870509922504425
+        ]
+      },
+      "center": [
+        -1.2184425294399261,
+        -2.4695051088929176,
+        0.47277096286416054
+      ],
+      "anchor": [
+        -1.2206599712371826,
+        -2.4920599460601807,
+        0.47119903564453125
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1442",
+          "sha256": "f67be78d7d0ddc6e78c0683ce4bd5be7492e4137f8661bc54039cbf535a88880"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-medialis",
+      "fmaId": "FMA38932",
+      "name": "Right vastus medialis",
+      "sourceName": "right vastus medialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "bundle": "thigh-muscles-dissection",
+      "nodeName": "FMA38932",
+      "bounds": {
+        "min": [
+          -1.0560100078582764,
+          -4.594520092010498,
+          0.39132004976272583
+        ],
+        "max": [
+          -0.34939202666282654,
+          -0.6182098388671875,
+          0.9690099954605103
+        ]
+      },
+      "center": [
+        -0.7027010172605515,
+        -2.6063649654388428,
+        0.680165022611618
+      ],
+      "anchor": [
+        -0.6425489783287048,
+        -2.593629837036133,
+        0.5662999749183655
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1443",
+          "sha256": "5bdb79f52849241e20ff2280332f20efd38f1b4bda1fb1337e10a5c3e466002b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-intermedius",
+      "fmaId": "FMA38934",
+      "name": "Right vastus intermedius",
+      "sourceName": "right vastus intermedius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "bundle": "thigh-muscles-dissection",
+      "nodeName": "FMA38934",
+      "bounds": {
+        "min": [
+          -1.3309500217437744,
+          -4.575150012969971,
+          0.26260802149772644
+        ],
+        "max": [
+          -0.7620710134506226,
+          -0.30255982279777527,
+          0.8513900637626648
+        ]
+      },
+      "center": [
+        -1.0465105175971985,
+        -2.438854917883873,
+        0.5569990426301956
+      ],
+      "anchor": [
+        -1.0738500356674194,
+        -2.4644298553466797,
+        0.532480001449585
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1441",
+          "sha256": "c609da3e64f0fc6c295b66b575503e61cacc8bfd9a5e5ec9b79e4eb476da5bab"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-patella",
+      "fmaId": "FMA24486",
+      "name": "Right patella",
+      "sourceName": "right patella",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24486",
+      "bounds": {
+        "min": [
+          -1.0228800773620605,
+          -4.3851399421691895,
+          0.5099199414253235
+        ],
+        "max": [
+          -0.6062080264091492,
+          -3.9920401573181152,
+          0.7272699475288391
+        ]
+      },
+      "center": [
+        -0.8145440518856049,
+        -4.188590049743652,
+        0.6185949444770813
+      ],
+      "anchor": [
+        -0.8611350059509277,
+        -4.189239978790283,
+        0.5913699865341187
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3381",
+          "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "fmaId": "FMA24477",
+      "name": "Right tibia",
+      "sourceName": "right tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24477",
+      "bounds": {
+        "min": [
+          -1.0935299396514893,
+          -8.060371398925781,
+          0.02072898857295513
+        ],
+        "max": [
+          -0.3521600067615509,
+          -4.260799884796143,
+          0.6483500003814697
+        ]
+      },
+      "center": [
+        -0.7228449732065201,
+        -6.160585641860962,
+        0.33453949447721243
+      ],
+      "anchor": [
+        -0.6983820199966431,
+        -6.1077399253845215,
+        0.3267289698123932
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3387",
+          "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "fmaId": "FMA24474",
+      "name": "Right femur",
+      "sourceName": "right femur",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-skeleton",
+      "nodeName": "FMA24474",
+      "bounds": {
+        "min": [
+          -1.5013400316238403,
+          -4.31850004196167,
+          -0.004697990603744984
+        ],
+        "max": [
+          -0.31894299387931824,
+          0.342520147562027,
+          0.6219199895858765
+        ]
+      },
+      "center": [
+        -0.9101415127515793,
+        -1.9879899471998215,
+        0.30861099949106574
+      ],
+      "anchor": [
+        -0.9391549825668335,
+        -2.0242297649383545,
+        0.31437796354293823
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3365",
+          "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "thigh-skeleton",
+      "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "structures": 2
+    },
+    {
+      "id": "leg-skeleton",
+      "url": "/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "bytes": 118776,
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "structures": 6
+    },
+    {
+      "id": "thigh-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/thigh-muscles-dissection.glb",
+      "bytes": 1022092,
+      "sha256": "f39c954742853c7e583570779b70a9f3ef844d9061055b083adb9912732c235c",
+      "structures": 12
+    }
+  ]
+}
