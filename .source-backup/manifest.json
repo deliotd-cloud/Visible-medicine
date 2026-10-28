@@ -1,0 +1,165 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T00:48:03.690Z",
+  "sourceIdentity": {
+    "kind": "quadriceps-stock-website-integration",
+    "sourceSha256": "2651b0561dd99a1e9e3be394c316cd63d1f2549b0ec976f5bc409a44822137cd",
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-quadriceps-tour-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "841885a0660b40a2b97aa0d093cf33ae2e8788a3607f9fbfc08f805a3614d220"
+    },
+    "quadricepsTourSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-quadriceps-tour-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "841885a0660b40a2b97aa0d093cf33ae2e8788a3607f9fbfc08f805a3614d220"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "4350e6b3990a132501c0e2a4b140de19c178caf4416ca62a51b0ab7493c084fa"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "d1da9f26e209e17def2af1b5c7f1463b5ccb2d72a81222a4699c2ad6b92b8836"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "910c2af5d05c9046123272b1977c1edcdb69eafce8bd84080f4ea43d43c15ca3"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "6be81a130508dc893728d39c18a6d3b47ed18c5ab4974e41f51ca47c8ed07966"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "0719262f53c1e98a5b3c79bb07ab81eb70b1470825fb3bfa20d862f0b503057e"
+    },
+    {
+      "path": "recipes/run-quadriceps-full-native-20261028.mjs",
+      "bytes": 3402,
+      "sha256": "0bbc13033ea966993b76898dddc8611ee4c7661d132a8357b8efed52d471a145"
+    },
+    {
+      "path": "recipes/verify-quadriceps-native-build-20261028.mjs",
+      "bytes": 3166,
+      "sha256": "31e6aff89b368d9e17205ae267e92f4685f99b9f9e29967eb018df118b9f4a8b"
+    },
+    {
+      "path": "recipes/export-quadriceps-runtimes-20261028.mjs",
+      "bytes": 7160,
+      "sha256": "7abe1da1a3bee76dc6aa59c3cef07f9020b1098f165fc1c51c2c021c4b52b5eb"
+    },
+    {
+      "path": "recipes/run-quadriceps-runtime-exports-20261028.mjs",
+      "bytes": 3281,
+      "sha256": "4c22e66e5d2e349a8313d7fd272c508f1298c39ede0abac438d6c27c283051c4"
+    },
+    {
+      "path": "recipes/prepare-quadriceps-website-20261028.mjs",
+      "bytes": 6816,
+      "sha256": "3c532b0e03788009f3b941902b707fa54e64468ff048ba7f05a4bbe90066a9bf"
+    },
+    {
+      "path": "recipes/import-quadriceps-website-stock-20261028.mjs",
+      "bytes": 6995,
+      "sha256": "f3f6cca2d0d3f1de891f91b9fe1824aaebbbab802c28f41078631da207714022"
+    },
+    {
+      "path": "recipes/generate-quadriceps-website-coverage-20261028.mjs",
+      "bytes": 2875,
+      "sha256": "9d6f57b6f5538625ebf68ffac3450deb6155cda797289bdaa6313115eb073d56"
+    },
+    {
+      "path": "recipes/prepare-quadriceps-coverage-20261028.mjs",
+      "bytes": 2802,
+      "sha256": "8d620ca171022854d5b38c53f52ae2bbf7534901dc1d1ea117701010b6f2abdd"
+    },
+    {
+      "path": "recipes/prepare-quadriceps-coverage-seams-20261028.mjs",
+      "bytes": 22189,
+      "sha256": "1face61adceb6bb9235ae7bd23370c65749d33ac784ccfa3b711aa0b3d4248a9"
+    },
+    {
+      "path": "recipes/run-quadriceps-coverage-seams-20261028.mjs",
+      "bytes": 2580,
+      "sha256": "667a622e05c6aea84138896c05b55b067ee5154fb478c08467ae0466ae6d332b"
+    },
+    {
+      "path": "recipes/install-quadriceps-website-coverage-v4-20261028.mjs",
+      "bytes": 3030,
+      "sha256": "6c7d224042f127918ea7ff8bee93ec73066e689bae592e522ba2ad2a9c3883fb"
+    },
+    {
+      "path": "recipes/build-quadriceps-website-review-20261028.mjs",
+      "bytes": 6713,
+      "sha256": "8f28c884f1606617ecf6f3420d0278e89bc4316d8acfcbefdc5ee42b483ebb81"
+    },
+    {
+      "path": "recipes/refresh-quadriceps-website-delivery-pin-20261028.mjs",
+      "bytes": 2777,
+      "sha256": "f7f0ab14a65ac134cdb2ab695435e78460c9d540c9fe27ff6af84843f99673f9"
+    },
+    {
+      "path": "recipes/run-quadriceps-website-integration-20261028.mjs",
+      "bytes": 2864,
+      "sha256": "d2a41a8643363fd5ab4236ad12069a42890cbbbbd9175b84703b718afe287ec7"
+    },
+    {
+      "path": "recipes/seal-quadriceps-website-source-20261028.mjs",
+      "bytes": 6156,
+      "sha256": "da4c0f21a7d4837f5e4fdb72f61379d713f766a5f227cf8fb0f738de19e9db7d"
+    },
+    {
+      "path": "recipes/verify-quadriceps-website-content-20261028.mjs",
+      "bytes": 7981,
+      "sha256": "447c6669a4ecae3173c421824753c63bee08091673ecac83cb41ddbef4868207"
+    },
+    {
+      "path": "recipes/run-quadriceps-website-verification-20261028.mjs",
+      "bytes": 6627,
+      "sha256": "1e314ebfcabb6edd62e2ce4ab29cd81f47f115925433517baf2eef7e50947f33"
+    },
+    {
+      "path": "recipes/finish-quadriceps-website-20261028.mjs",
+      "bytes": 14665,
+      "sha256": "cbe609573487e86d64f264557214b5e2a57f5d92935e8128d150662278ab4e42"
+    },
+    {
+      "path": "recipes/serve-quadriceps-runtime-qa-20261028.mjs",
+      "bytes": 3867,
+      "sha256": "8bb342227ca44c22c4000411b7a20c4886dacde4234c84e22f0efdf30dd1d0a7"
+    },
+    {
+      "path": "recipes/run-quadriceps-stock-import-20261028.mjs",
+      "bytes": 808,
+      "sha256": "6c951ac93f650290111da5c449f37821c484330fe26a1d905410d64c2df2d9cb"
+    },
+    {
+      "path": "recipes/record-quadriceps-runtime-browser-20261028.mjs",
+      "bytes": 4415,
+      "sha256": "de586c075b3dabd25887b34a3ce0e0c398ca012062c97fc1e24ed0287f1121bc"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party binding/policy-digest/test-pin sources and recovery recipes. Tour source is preserved in its linked supplement. No scans, geometry, generated runtimes, decisions, private data or raw repository ancestry; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 43,
+    "fullNativeAndWebsiteTypesAndBuilds": true,
+    "stops": 6,
+    "participants": 7,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
