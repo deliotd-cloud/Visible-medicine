@@ -1,0 +1,67 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T06:59:55.615Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-current-role-repair/SOURCE_CANDIDATE.json",
+      "sha256": "734c4b1c72ec4daf9d0ccd32e8ec9f991f3310996871fa9ef5e56b2de73a86d8"
+    },
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-structure-learning-copy-focused-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "64c1f07e9fccabe99e0dcd91c18b13dfee96d676d1cf82e3734ec5ebb915c5d8"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/neck-renal-original-context.mjs",
+      "bytes": 12161,
+      "sha256": "4533dd0071a4b86b8178092b40096b24e84205c6735a3aa038f4be9f2b979416"
+    },
+    {
+      "path": "tests/neck-renal-current-role.test.mjs",
+      "bytes": 15480,
+      "sha256": "ef1cfc8485b179d7ead74fbbb293d5a3808481f1aba9899f91a9bc86666eb08f"
+    },
+    {
+      "path": "recipes/20261028-prepare-current-role-repair.mjs",
+      "bytes": 4470,
+      "sha256": "bc851efd364a807eb3b3322c9c1d13215c5840545b57c3d47adf9118614212a1"
+    },
+    {
+      "path": "recipes/20261028-check-current-role-repair-v2.mjs",
+      "bytes": 4232,
+      "sha256": "9361567438640805d074a8664d8717d908a8d095bdd429327b131d50964ff08b"
+    },
+    {
+      "path": "recipes/20261028-validate-teaching-count.mjs",
+      "bytes": 2750,
+      "sha256": "a6b1c72442f0a92d2bed767e6e72efe45a322e9000eee11a9887ce7cfbe5efd0"
+    },
+    {
+      "path": "recipes/20261028-save-current-role-repair.mjs",
+      "bytes": 10995,
+      "sha256": "0c326e4bb2ed561bceb45163d952387e1738b8d5c10111465b5aa39863aad985"
+    },
+    {
+      "path": "recipes/verify-current-guard.mjs",
+      "bytes": 10074,
+      "sha256": "dcd622b0e7b6b75996906e52124f1d25be6afa80150d7f0735db5d5a2200e3d1"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party test-context code and verification recipes only. Excludes private data, local environment fixtures, generated assets/models, scans and repository ancestry. Earlier supplements needed; not a complete private/runnable backup.",
+  "proof": {
+    "currentFocusedCases": 11,
+    "guardCases": 11,
+    "historicalAssertionsPreserved": true,
+    "productChanged": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
