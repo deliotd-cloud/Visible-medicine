@@ -1,0 +1,147 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T22:01:50.597Z",
+  "sourceIdentity": {
+    "kind": "selected-regression-repair-and-nasal-ct-teaching",
+    "websiteSourceSha256": "0a561e67bbc2c2942e043dd06d637c7d046a21b2eedb917d5c5a8bfed67f0469",
+    "nativeParent": "44516d0ab85be6c6d6a3accec42b1e7372a0886b",
+    "restorePaths": [
+      {
+        "path": "website/tests/atlas-regional-spread.test.ts",
+        "restore": "website/tests/atlas-regional-spread.test.ts"
+      },
+      {
+        "path": "website/tests/binder-history-controls.mjs",
+        "restore": "website/tests/binder-history-controls.mjs"
+      },
+      {
+        "path": "website/tests/live-learning-runtime-harness-transition.mjs",
+        "restore": "website/tests/live-learning-runtime-harness-transition.mjs"
+      },
+      {
+        "path": "website/tests/atlas-runtime-expansion-binding.test.mjs",
+        "restore": "website/tests/atlas-runtime-expansion-binding.test.mjs"
+      },
+      {
+        "path": "website/tests/fixtures/binder-history-20261024/current-bind-clinical-review.mjs.raw",
+        "restore": "website/tests/fixtures/binder-history-20261024/current-bind-clinical-review.mjs.raw"
+      },
+      {
+        "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+        "restore": "atlas/LICENSES/THIRD_PARTY_NOTICES.md"
+      },
+      {
+        "path": "atlas/app/body-content.ts",
+        "restore": "atlas/app/body-content.ts"
+      },
+      {
+        "path": "atlas/content/nasal-cartilage-ct.ts",
+        "restore": "atlas/content/nasal-cartilage-ct.ts"
+      },
+      {
+        "path": "atlas/lib/nasal-cartilage-ct.ts",
+        "restore": "atlas/lib/nasal-cartilage-ct.ts"
+      },
+      {
+        "path": "atlas/scripts/review-website-history.mjs",
+        "restore": "atlas/scripts/review-website-history.mjs"
+      },
+      {
+        "path": "atlas/scripts/xray-history.mjs",
+        "restore": "atlas/scripts/xray-history.mjs"
+      },
+      {
+        "path": "atlas/scripts/test-shoulder-tour-review.mjs",
+        "restore": "atlas/scripts/test-shoulder-tour-review.mjs"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-regional-spread.test.ts",
+      "bytes": 50450,
+      "sha256": "051d8d5a0e95b73d41196853a25652857ffe1c2d973afe290ddba4873e0f9bb0"
+    },
+    {
+      "path": "website/tests/binder-history-controls.mjs",
+      "bytes": 8229,
+      "sha256": "7300d3a577e9f26601152658f4d2df924e82f8e6bbc8ba8c3ecf06290cf643c9"
+    },
+    {
+      "path": "website/tests/live-learning-runtime-harness-transition.mjs",
+      "bytes": 2388,
+      "sha256": "f25b93086d328efa7f3737f4b95becadeb3f78f4a788258e8a09b8f463a97539"
+    },
+    {
+      "path": "website/tests/atlas-runtime-expansion-binding.test.mjs",
+      "bytes": 14259,
+      "sha256": "677c3de6998d62abde30e5a72935bf5742ad67d9140ef2af0dd21e8b69ebd7df"
+    },
+    {
+      "path": "website/tests/fixtures/binder-history-20261024/current-bind-clinical-review.mjs.raw",
+      "bytes": 9860,
+      "sha256": "79f43a5e9bbf18fce99594e684eb00ebd1701791766f3503f34816ee83550a5c"
+    },
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 367173,
+      "sha256": "8f71ec1e32f884d9cc07c38a8aca242b593f02e8bec0dad02105942abb4e216c"
+    },
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 85074,
+      "sha256": "14afcac4a0671244032c24fe207beccdc9fd33a41c580ac8dc1772bca5cbdb08"
+    },
+    {
+      "path": "atlas/content/nasal-cartilage-ct.ts",
+      "bytes": 3282,
+      "sha256": "156fbb79f2bae4508cc094e6240caf72c03aeb2b6f2ec7b4711a041eaf36e009"
+    },
+    {
+      "path": "atlas/lib/nasal-cartilage-ct.ts",
+      "bytes": 1959,
+      "sha256": "35d8fb757c9bcb9dff2819dcbef706193b1f8869ac5a637d2227fa0b3421c2de"
+    },
+    {
+      "path": "atlas/scripts/review-website-history.mjs",
+      "bytes": 3730,
+      "sha256": "38d9dd4add460577b5a3fc6466ad49190951283f1673b1c5b161284cba1e4c95"
+    },
+    {
+      "path": "atlas/scripts/xray-history.mjs",
+      "bytes": 4261,
+      "sha256": "cef24b62114cc32e89d512a181be5fd7c86578507ea894fed6cb878f23bd034a"
+    },
+    {
+      "path": "atlas/scripts/test-shoulder-tour-review.mjs",
+      "bytes": 4958,
+      "sha256": "24be9b716c61467c47268a9afd8ecfea687f54f44c565a52bb1a48533a6ab1e5"
+    }
+  ],
+  "removed": [],
+  "scope": "Twelve selected first-party teaching/test source files and required third-party notices. Restore onto their matching prior website/Atlas source; this is not a complete, private-data or runnable backup. Excludes scans, masks, medical assets, generated Review data, source receipts, raw test logs, private references, dependencies and canonical Git ancestry. No deployment or clinical approval.",
+  "proof": {
+    "focusedWebsiteCounts": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "wholeStockSuitePassing": false,
+    "nativeCtDrafts": 5,
+    "unchangedTeachingPlacements": 9931,
+    "changedReviewMaterialPins": 5,
+    "geometryChanged": false,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
