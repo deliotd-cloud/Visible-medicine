@@ -1,0 +1,82 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T04:17:11.632Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-saved-course-availability/SOURCE_CANDIDATE_V3.json",
+      "sha256": "55918106616a8f4a63b01b73ffdc5e4ac6312d15b46b808f4ed3df5f79d46682"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-release-context-repairs-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "2f2cd20e83d5a142f57282984b67e30db3bc542a0637822910d9e759fa3e4689"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/my-learning/page.tsx",
+      "bytes": 9135,
+      "sha256": "f8943822de4a2377b2074b085683311f20b68336d593d533a721e2635f9203c1"
+    },
+    {
+      "path": "website/tests/my-learning-study-now-ui.test.mjs",
+      "bytes": 6134,
+      "sha256": "5a1117f997e31cc1dda5b45564b612cb7aabc89f0bcc4edb95e6440eef63e29b"
+    },
+    {
+      "path": "website/tests/fixtures/saved-course-availability-before-20261028/page.tsx.raw",
+      "bytes": 8826,
+      "sha256": "efc2d48d3ff370829275c7b595c5bd50ff0fde1de0ba7b9c3847b2dcad759d39"
+    },
+    {
+      "path": "website/tests/fixtures/saved-course-availability-before-20261028/my-learning-study-now-ui.test.mjs.raw",
+      "bytes": 4431,
+      "sha256": "e7c6a265a8da709549e5b39ea2a72e6045043c62c5739beb5c4518a0a1e1ae9b"
+    },
+    {
+      "path": "recipes/saved-course-availability-prepare.mjs",
+      "bytes": 4794,
+      "sha256": "e2cebe4d1da64648f625f4d56a9b91d8654262db5b273b31abd8d66806a995a7"
+    },
+    {
+      "path": "recipes/saved-course-availability-clarify-receipt.mjs",
+      "bytes": 1285,
+      "sha256": "bc74e91bd1e87f2355bcd8ba4df28a99003f7f6d5938720745b160e616f1686d"
+    },
+    {
+      "path": "recipes/saved-course-availability-fix-selector.mjs",
+      "bytes": 2051,
+      "sha256": "4a47843958e68e61c071adefcb7a83a4387abeab8552912bdcc6df2dd569081b"
+    },
+    {
+      "path": "recipes/saved-course-availability-check.mjs",
+      "bytes": 5744,
+      "sha256": "8325554877efcbecf87d3cbe1a01e860fc75fa7a08def7481094abe297945e2f"
+    },
+    {
+      "path": "recipes/saved-course-availability-check-v2.mjs",
+      "bytes": 5747,
+      "sha256": "ae0f10aca6fe7a87c55488c5cf0d3ba2110741d6bb55faa26e0385eed2db82da"
+    },
+    {
+      "path": "recipes/saved-course-availability-finish.mjs",
+      "bytes": 13489,
+      "sha256": "2c451ab5a13f27c600335259cfad9c5b957dc65991e28f165481b89ff2aeb187"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party course availability UI, synthetic tests, exact preimages and recipes only. No scans, models, runtimes, private data or full Git ancestry. Requires prior supplements; not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 62,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "protectedReviewInputsChanged": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
