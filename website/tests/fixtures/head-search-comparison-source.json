@@ -1,0 +1,15 @@
+{
+  "path": "components/HeadAtlasLearningLibrary.tsx",
+  "before": "d7bebb5e8a4059f8b514779a37046bcab10a2b3ef90c3fe2ed7bcd74ecb31ba4",
+  "after": "a89b35f41ada3cfee0eee4f788ba230e0a6d83d4e7a100fd153a698175b21ede",
+  "seams": [
+    [
+      "      {visible.map(match=><div className=",
+      "      {visible.map(match=>{\n        const comparison=match.links&&hasSelectedView(match.links,modality)?headGuidedComparisonForStep(sequence.id,match.id):null;\n        return <div className="
+    ],
+    [
+      "        </nav>:<span>Exact comparison unavailable in the selected view</span>}\n      </div>)}",
+      "          {comparison&&<a href={comparison.activityHref} aria-label={`Compare views for ${match.label} at step ${match.index+1}`}>Compare views</a>}\n        </nav>:<span>Exact comparison unavailable in the selected view</span>}\n      </div>;})}"
+    ]
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T01:40:49.656Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-head-search-comparison/SOURCE_CANDIDATE_V2.json",
+      "sha256": "1ca6a96c8fb27f46e6f62ea25b8c5293079d9b1dea1a0d1039e17e3d3d3e11b0"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-regional-scope-discovery-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "7c8df8dff86b336909be2f1ec80f110eca837bc5bbe44dfe93de525fdbcaf055"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasLearningLibrary.tsx",
+      "bytes": 16980,
+      "sha256": "a89b35f41ada3cfee0eee4f788ba230e0a6d83d4e7a100fd153a698175b21ede"
+    },
+    {
+      "path": "website/tests/guided-catalogue-compact.test.mjs",
+      "bytes": 12559,
+      "sha256": "5bbbed9edd8d1ffbac4724e602d256bc63e83a363e5f32421b70898c9cb8beaf"
+    },
+    {
+      "path": "website/tests/head-learning-search-context.test.ts",
+      "bytes": 7608,
+      "sha256": "e26ac76d0c9b7676e8703a63077fd4b9276822a8a62d92982e468b13eca9d5e9"
+    },
+    {
+      "path": "website/tests/head-learning-library-discovery.test.ts",
+      "bytes": 14790,
+      "sha256": "6e845e8b05b9e5e7080c1923948c8348f1a7e4137173ab50472d8588b9c17e1f"
+    },
+    {
+      "path": "website/tests/fixtures/head-search-comparison-source.json",
+      "bytes": 869,
+      "sha256": "4f54e6bb3634b0e3b84f8bd7efa9b6ceba8e6fb5d6560123a3abd6a59e827455"
+    },
+    {
+      "path": "website/tests/head-search-comparison-predecessor.mjs",
+      "bytes": 1237,
+      "sha256": "8c580c9a937d96073bc11b04266f3dd4b49073a6f794e3a097106c3ae2c82d63"
+    },
+    {
+      "path": "website/tests/fixtures/head-search-comparison-paging-predecessor.json",
+      "bytes": 3557,
+      "sha256": "b6630a08f6bec2535beaac570a561c1e5cacb4453afcbdb44e7678ce15ae91cb"
+    },
+    {
+      "path": "website/tests/head-search-comparison.test.mjs",
+      "bytes": 10360,
+      "sha256": "501014796ac8e9cbe1808ca74901542fe7996f289022420b40f3d1baa4a91d81"
+    },
+    {
+      "path": "recipes/head-search-comparison-prepare.mjs",
+      "bytes": 4217,
+      "sha256": "9017e858b76ba628fcd90cc148a50304e919c63d77f91ce4666754cfd5e17628"
+    },
+    {
+      "path": "recipes/head-search-comparison-prepare-verification.mjs",
+      "bytes": 1729,
+      "sha256": "0f349aa8af017ff19e8148ca6f401a0b26b650617443ca61840852172d70f1d8"
+    },
+    {
+      "path": "recipes/head-search-comparison-adjust-context-test.mjs",
+      "bytes": 1766,
+      "sha256": "65d48c9265509d9b47108ef7d1f757dfa6e5c3ce1b7a6158cc25f07326f5a149"
+    },
+    {
+      "path": "recipes/head-search-comparison-repair-tests.mjs",
+      "bytes": 5968,
+      "sha256": "8d94207c9a27d96127916f787cb8a54d5b93c318f5c0d82186ceab03087d7e2b"
+    },
+    {
+      "path": "recipes/head-search-comparison-run-v1.mjs",
+      "bytes": 7155,
+      "sha256": "2058897a794efa3e49d066697e58bcfbf536e95b4c7cf5665f333c904bc178ee"
+    },
+    {
+      "path": "recipes/head-search-comparison-run.mjs",
+      "bytes": 7158,
+      "sha256": "193e9f08585f78d851b14b6f5002f2ab8020560938b4ca734430bc39854df04e"
+    },
+    {
+      "path": "recipes/head-search-comparison-prepare-finish.mjs",
+      "bytes": 7538,
+      "sha256": "a6d58b240b6b803dd33d6bf13aec6cd5f4b128c6db241695ec1009bca1a6ba9e"
+    },
+    {
+      "path": "recipes/head-search-comparison-finish.mjs",
+      "bytes": 13766,
+      "sha256": "a8ca4545a94c861ebbd1944ca65cf9ec9bb65641cb2d61a58409843e09cc4fda"
+    },
+    {
+      "path": "recipes/head-search-comparison-state.mjs",
+      "bytes": 2278,
+      "sha256": "b4a04d3c1d31a59375550b658e439324ee4f6eae61b7bff8c272cc6071255f9a"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party discovery source, regression tests and recovery recipes only. No scans, models, generated runtimes, personal decisions, private records or full Git ancestry. Requires prior supplements; not a complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 64,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "protectedReviewInputsChanged": false,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

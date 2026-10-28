@@ -1,0 +1,26 @@
+{
+  "before": "fd7c12c85a54736f53bb4023418921243ef695827c501bd2a59eeb335ff547c8",
+  "after": "d7bebb5e8a4059f8b514779a37046bcab10a2b3ef90c3fe2ed7bcd74ecb31ba4",
+  "seams": [
+    [
+      "export function HeadAtlasLearningLibrary({initialView='all',initialQuery='',compact=false,fixedView=false,fixedQuery=false}:{initialView?:TourModality;initialQuery?:string;compact?:boolean;fixedView?:boolean;fixedQuery?:boolean}={}){\n",
+      "export function HeadAtlasLearningLibrary({initialView='all',initialQuery='',compact=false,fixedView=false,fixedQuery=false,initialPage=1,catalogueSearch}:{initialView?:TourModality;initialQuery?:string;compact?:boolean;fixedView?:boolean;fixedQuery?:boolean;initialPage?:number;catalogueSearch?:string}={}){\n"
+    ],
+    [
+      "  const currentPage=Math.min(page,pageCount-1);\n",
+      "  const safeInitialPage=Number.isSafeInteger(initialPage)&&initialPage>0?initialPage:1;\n  const currentPage=Math.min(catalogueSearch===undefined?page:safeInitialPage-1,pageCount-1);\n  const pageHref=(next:number)=>{const params=new URLSearchParams(catalogueSearch);if(next===1)params.delete('headPage');else params.set('headPage',String(next));return `/atlas/guided-learning?${params}#linked-tour-results`;};\n"
+    ],
+    [
+      "    <p ref={compact?commitStatus:undefined} tabIndex={compact?-1:undefined} role=\"status\" className=\"head-linked-library-results\">{count?(compact?`Showing linked tours ${start+1}–${Math.min(start+6,count)} of ${count}`:`${count} linked ${count===1?'tour':'tours'} available`):'No linked tours match. Clear filters to see all available sequences.'}</p>\n",
+      "    <p id={catalogueSearch!==undefined?'linked-tour-results':undefined} ref={compact?commitStatus:undefined} tabIndex={compact?-1:undefined} role=\"status\" className=\"head-linked-library-results\">{count?(compact?`Showing linked tours ${start+1}–${Math.min(start+6,count)} of ${count}`:`${count} linked ${count===1?'tour':'tours'} available`):'No linked tours match. Clear filters to see all available sequences.'}</p>\n"
+    ],
+    [
+      "      <button type=\"button\" disabled={currentPage===0} onClick={event=>changePage(currentPage-1,event.currentTarget)} aria-label={`Previous linked tours${currentPage>0?`, starting with ${ordered[start-6].label}`:''}`}>← Previous</button>\n",
+      "      {catalogueSearch===undefined?<button type=\"button\" disabled={currentPage===0} onClick={event=>changePage(currentPage-1,event.currentTarget)} aria-label={`Previous linked tours${currentPage>0?`, starting with ${ordered[start-6].label}`:''}`}>← Previous</button>:currentPage>0?<a href={pageHref(currentPage)} aria-label={`Previous linked tours, page ${currentPage} of ${pageCount}`}>← Previous</a>:<span aria-disabled=\"true\">← Previous</span>}\n"
+    ],
+    [
+      "      <button type=\"button\" disabled={currentPage===pageCount-1} onClick={event=>changePage(currentPage+1,event.currentTarget)} aria-label={`Next linked tours${currentPage<pageCount-1?`, starting with ${ordered[start+6].label}`:''}`}>Next →</button>\n",
+      "      {catalogueSearch===undefined?<button type=\"button\" disabled={currentPage===pageCount-1} onClick={event=>changePage(currentPage+1,event.currentTarget)} aria-label={`Next linked tours${currentPage<pageCount-1?`, starting with ${ordered[start+6].label}`:''}`}>Next →</button>:currentPage<pageCount-1?<a href={pageHref(currentPage+2)} aria-label={`Next linked tours, page ${currentPage+2} of ${pageCount}`}>Next →</a>:<span aria-disabled=\"true\">Next →</span>}\n"
+    ]
+  ]
+}
