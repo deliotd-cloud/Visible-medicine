@@ -1,0 +1,71 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T05:57:21.921Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-structure-learning-copy/SOURCE_CANDIDATE.json",
+      "sha256": "c995840d6340a4f422aa8e41969aebdaedd8cff9153a6dd8d4bb437bf54d566a"
+    },
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-body-structure-guides-focused-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "bb551301a8c2b7b695e006269b30651567c941f7aa61d309510930d9ba162fb6"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/learn/related-structure/page.tsx",
+      "bytes": 5824,
+      "sha256": "b3c2cc2b0e6e7e1d998b7b0ad02ab267ab83451f978c7d70cbdcafb7fd47b0e4"
+    },
+    {
+      "path": "app/learn/related-anatomy/page.tsx",
+      "bytes": 8323,
+      "sha256": "c9d5dae093f4ab4ea67be43479b12809a4077e4714c2c3ce1c18f3fd5c0b69a4"
+    },
+    {
+      "path": "tests/body-structure-guides.test.mjs",
+      "bytes": 10054,
+      "sha256": "63a09b9973ad07a60f41a124794ef4488ae40ea497b625867c201d9e375e3d4d"
+    },
+    {
+      "path": "tests/related-lectures.test.ts",
+      "bytes": 32985,
+      "sha256": "1c637cf3d6a372059e5c495c56dbb9616062f003f5e4f68e1c3356840a8cb50e"
+    },
+    {
+      "path": "recipes/20261028-prepare-learning-copy.mjs",
+      "bytes": 7155,
+      "sha256": "3a9c5248855d0e9c0f0791d88dc2fa0aafa36f2dc04d9e29fd33e39b640b505c"
+    },
+    {
+      "path": "recipes/20261028-verify-learning-copy.mjs",
+      "bytes": 3689,
+      "sha256": "b624befd1b350674cc4927bb4c5eb929b9c8fcd18a7b2893b79a0f42c2bf4ea3"
+    },
+    {
+      "path": "recipes/20261028-save-learning-copy.mjs",
+      "bytes": 8531,
+      "sha256": "cf230864df8576229f13c1a438730fa14184df45695d4f35c686fc702e818d84"
+    },
+    {
+      "path": "recipes/clone-readonly-while-campaign.mjs",
+      "bytes": 3788,
+      "sha256": "0135e247513696c5d79900ed3de58e61304e7dc8b074e373490496d1f93390b4"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party Structure learning page wording, existing assertion updates and recipes only. No scans, models, generated assets, private state or full repository ancestry. Prior source supplements required; not a complete private or runnable backup.",
+  "proof": {
+    "syntaxAndNonTextAstComparison": true,
+    "focusedTestsRun": false,
+    "fullTypesAndBuild": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
