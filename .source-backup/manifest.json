@@ -1,0 +1,55 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T22:49:09.027Z",
+  "sourceIdentity": {
+    "kind": "studio-preview-navigation-source-delta",
+    "websiteSourceSha256": "c126dd108143ffd1ed8953f702cda9ce92fe84fcabdf01226d92661f82af33d2",
+    "baseWebsiteSourceSha256": "4bf33a5fe339ceef4e6cf9919c5c30ed4d6c2d8e469d81f13909d46d837dd618"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/StudioCourseEditor.tsx",
+      "bytes": 23881,
+      "sha256": "c15f97f92aa4357b444868fd36079175eefb755b213fe33fc46ac3a5f817161f"
+    },
+    {
+      "path": "website/tests/studio-course-preview-focus.test.mjs",
+      "bytes": 9624,
+      "sha256": "f8a1408f48060a3748807e34c8bbf6667d99c839022383b1238834792a296441"
+    },
+    {
+      "path": "website/tests/studio-course-editor-keyboard.test.mjs",
+      "bytes": 16857,
+      "sha256": "4a4f45c171a19d27a7727d4d85f90ab20abcc9412913eb761a1092806a7b8c0f"
+    }
+  ],
+  "removed": [],
+  "scope": "Three authored website and synthetic-test source files for pre-release Studio item preview links. Source-only recovery supplement, not the full application. No scans, models, generated assets, dependencies, environment files, private data, runtime state or raw canonical Git ancestry.",
+  "proof": {
+    "focusedCases": {
+      "tests": 56,
+      "pass": 56,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "fullWebsiteTypes": {
+      "roots": 2712,
+      "files": 6281,
+      "diagnostics": 0
+    },
+    "sourceReview": "No actionable finding within scoped implementation review.",
+    "productionBuildForThisDelta": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
