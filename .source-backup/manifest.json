@@ -1,0 +1,210 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T03:52:33.600Z",
+  "sourceIdentity": {
+    "sourceSha256": "758432a0d2836fc574bf19c61a11b28da64f606bab25586008e52dabff7c3c81",
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-head-search-comparison-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "a28a0377226a1629f923ad368ee94240256aa41dcd0b463a92b98474cddde15f"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/arterial-a01-history-transport.mjs",
+      "bytes": 6637,
+      "sha256": "41922f544c99a5298328e0a1c070d5c88078548946cde825c988fb99fadc823b"
+    },
+    {
+      "path": "website/tests/arterial-delivery-role-integrity.test.mjs",
+      "bytes": 5397,
+      "sha256": "61bbf6806ad5512c32e81ae6a4f5aa565b0e5dba91bfeb07ef1ea688ee3ca8ae"
+    },
+    {
+      "path": "website/tests/arterial-delivery-roles.mjs",
+      "bytes": 19315,
+      "sha256": "f6536330b642611b95b007a4991a7ce39dcf4c8bf7af83f96b0c65b8a6668339"
+    },
+    {
+      "path": "website/tests/arterial-history-preservation.test.mjs",
+      "bytes": 8831,
+      "sha256": "e6221f1b49ba353e3694e6e8d61628749118d1aec88eb089137e8a317c365dda"
+    },
+    {
+      "path": "website/tests/atlas-a01-current-preservation.test.mjs",
+      "bytes": 5900,
+      "sha256": "4e168fed1811c5f5ed57df8282897bb5191765c933c96997768956bd4f9285e5"
+    },
+    {
+      "path": "website/tests/atlas-arterial-a01-current-delivery.test.mjs",
+      "bytes": 16344,
+      "sha256": "ed852936914dd8e7b5503a85dc07e40552e902d300866ffc32a95a759620561e"
+    },
+    {
+      "path": "website/tests/atlas-cervical-a01-current-delivery.test.mjs",
+      "bytes": 272,
+      "sha256": "0793c9519c30153064e27caaf5aeb22931650dc8ef4c88bdf4427633278e2fe8"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-current-source.mjs",
+      "bytes": 8667,
+      "sha256": "8e512bad0aa88ef714e05769adceecd1c4ffe2a84d96d74c7c32265cf2f6a18e"
+    },
+    {
+      "path": "website/tests/cervical-a01-history-transport.mjs",
+      "bytes": 6148,
+      "sha256": "814a4cc17c2358dd4383993b6fb9253d71d9fae7f8e62a301d77c46e1a02c1b1"
+    },
+    {
+      "path": "website/tests/cervical-delivery-role-integrity.test.mjs",
+      "bytes": 5831,
+      "sha256": "378daa7610e2430bc304a83ab25fd2c564a711dce37b6cdd9cd286b666fb1808"
+    },
+    {
+      "path": "website/tests/cervical-delivery-roles.mjs",
+      "bytes": 13950,
+      "sha256": "0379181491045b6896806638df11bd4df68a59c657777081f73d9a4ae13faa64"
+    },
+    {
+      "path": "website/tests/current-private-review-binding.test.mjs",
+      "bytes": 11200,
+      "sha256": "c63672164f2c711a459ec8213a61f1bfa214668e9f88c7fad0b2b41b49ffcdfa"
+    },
+    {
+      "path": "website/tests/fixtures/atlas-delivery-access-sql-current-source-before-20261028.mjs.raw",
+      "bytes": 7445,
+      "sha256": "8239d8d290c39da5497dbfd87ec577102b9293d2470f53800496d8b88e5b859f"
+    },
+    {
+      "path": "website/tests/fixtures/current-private-review-binding-before-20261028.test.mjs.raw",
+      "bytes": 8482,
+      "sha256": "0fd540b7a8443a0a6a794a24b13b3d4ad9330d9113e8341fce1921c7f325b57f"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/arterial-delivery-role-integrity.test.mjs.raw",
+      "bytes": 5009,
+      "sha256": "afb44c4237a3de7d24b7b7db0fa3593f89b3d860b2877847ee948d1b6b6892c4"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/arterial-delivery-roles.mjs.raw",
+      "bytes": 14247,
+      "sha256": "f98f5f571e73adebceb22c8db1e8d2e9990266577790d6fb0e9aeddcc713263c"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/atlas-a01-current-preservation.test.mjs.raw",
+      "bytes": 2319,
+      "sha256": "ac376dadc42f24431b1a574f3e6bc388ad3ed8c57761cc1f2366160773e320b5"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/atlas-arterial-a01-current-delivery.test.mjs.raw",
+      "bytes": 17920,
+      "sha256": "e19493fd0a7445efa0f00cd292fed53fb55131bcddb09e8f6dccda5177a3d9df"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/atlas-cervical-a01-current-delivery.test.mjs.raw",
+      "bytes": 23355,
+      "sha256": "5fe782b276f564ff09d64fddadb564c24c831174362cade7ef62f7849c565bee"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/atlas-delivery-access-sql-current-source.mjs.raw",
+      "bytes": 7445,
+      "sha256": "8239d8d290c39da5497dbfd87ec577102b9293d2470f53800496d8b88e5b859f"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/cervical-delivery-role-integrity.test.mjs.raw",
+      "bytes": 3807,
+      "sha256": "8507cb91f9f2506b8bacf6039c9398dda3d8fdf8b14ccfce36606dc1ee394f11"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/cervical-delivery-roles.mjs.raw",
+      "bytes": 12754,
+      "sha256": "a6510d9707ae9c37be33f459913e62f24680044a877dfb2a10cad870c1237112"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/current-private-review-binding.test.mjs.raw",
+      "bytes": 8482,
+      "sha256": "0fd540b7a8443a0a6a794a24b13b3d4ad9330d9113e8341fce1921c7f325b57f"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-before-20261028/viewer-notice-roles.mjs.raw",
+      "bytes": 20743,
+      "sha256": "2dee063d9d9896274447609a30701982cbea7ee5118dbe3e714fd35a0f87800a"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-followup-before-20261028/arterial-delivery-roles.mjs.raw",
+      "bytes": 17445,
+      "sha256": "4a00e7174f4f78a3dde0b98b29ce1c3dba5ff3dfbd778d9c03523291da5f137d"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-followup-before-20261028/arterial-history-preservation.test.mjs.raw",
+      "bytes": 8572,
+      "sha256": "145f1ad320601b00e5cbed4d8d02c06d83d020e460d4601d28e8d1d0b3d4cd8b"
+    },
+    {
+      "path": "website/tests/fixtures/release-context-followup-before-20261028/cervical-delivery-role-integrity.test.mjs.raw",
+      "bytes": 4277,
+      "sha256": "01ed4a2762e645320d1694d4b41f2e650b6cf1e24c79d1a8f34c402cd52484db"
+    },
+    {
+      "path": "website/tests/fixtures/viewer-notice-roles/viewer-notice-roles-before-20261028.mjs.raw",
+      "bytes": 20743,
+      "sha256": "2dee063d9d9896274447609a30701982cbea7ee5118dbe3e714fd35a0f87800a"
+    },
+    {
+      "path": "website/tests/viewer-notice-roles.mjs",
+      "bytes": 25229,
+      "sha256": "325127137341ba1bb94621067815c7b921a18b8a92e078b29a6c036fa59e1d53"
+    },
+    {
+      "path": "recipes/release-context-repairs/types.mjs",
+      "bytes": 3963,
+      "sha256": "e4b844d837be594451e2dfb295a98e2103b66f8b465e636c10ed224919dc7eb8"
+    },
+    {
+      "path": "recipes/release-context-repairs/check-v5.mjs",
+      "bytes": 6004,
+      "sha256": "7c4129a1d071a5396dfa50a47df6ca950c1c9dff2c11715b85f61e312230d8f1"
+    },
+    {
+      "path": "recipes/release-context-repairs/verify-v3.mjs",
+      "bytes": 3035,
+      "sha256": "2aacfbb5d3b957b7a380eb8f89ce5f04ecaa032dd3a4548489fd718e4a685e26"
+    },
+    {
+      "path": "recipes/release-context-repairs/close-history-inverse.mjs",
+      "bytes": 4571,
+      "sha256": "b013ba4df90cc2e2f9ffef606a370307347b952f2e30e0c047ab093d6efcd025"
+    },
+    {
+      "path": "recipes/release-context-repairs/apply-followup.mjs",
+      "bytes": 4008,
+      "sha256": "b7180e9ee1cea6fda8b8eb8925509b2a2777202250f9569b2c8596a302a90904"
+    },
+    {
+      "path": "recipes/release-context-repairs/campaign.mjs",
+      "bytes": 8935,
+      "sha256": "4d412173a64c9dea73027dab6c3d4585cf6cd577f3f6a852e23844f48894e3ab"
+    },
+    {
+      "path": "recipes/release-context-repairs/finish.mjs",
+      "bytes": 13792,
+      "sha256": "e9d42b4ac003545e202f2eecf2063d503f7a693bb8603cd887e8d31384af818d"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party test/helper source and recovery recipes only. Local notice-input inventories, complete receipts/logs, scans, models, clinical decisions, private records and Git ancestry excluded. Requires previous supplements and local evidence; not a complete or runnable project backup.",
+  "proof": {
+    "focusedCases": 52,
+    "fullConfiguredTypes": true,
+    "productChanged": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

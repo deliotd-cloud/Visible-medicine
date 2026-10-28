@@ -1,0 +1,58 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import test from 'node:test';
+import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {assertCervicalRoleIdentity,assertCompleteCervicalChild,
+  authenticateCervicalCollector} from './cervical-delivery-roles.mjs';
+
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const base=new URL('./fixtures/cervical-delivery-roles/',import.meta.url);
+const metadata=JSON.parse(readFileSync(new URL('manifest.json',base),'utf8'));
+const original=readFileSync(new URL('original-one.mjs.raw',base));
+const collector=readFileSync(new URL('./atlas-cervical-projection-xray.test.mjs',import.meta.url));
+
+test('only exact whole cervical source and collector payload enter the historical inverse',()=>{
+ assert.equal(sha(original),metadata.original.sha256);
+ assert.equal(sha(collector),metadata.collectorSha256);
+ assert.deepEqual(authenticateCervicalCollector(original),original);
+ assert.deepEqual(authenticateCervicalCollector(collector),original);
+ for(const altered of [Buffer.concat([collector,Buffer.from('\n')]),
+   Buffer.from(collector.toString('utf8').replace('await runOriginalCervicalRole();','await runOriginalCervicalRole(1);')),
+   Buffer.from(collector.toString('utf8').replace('whole original cervical proof','weakened cervical proof')),
+   Buffer.concat([original,Buffer.from('\n')])]){
+  assert(!altered.equals(collector)&&!altered.equals(original),'Effective source mutation');
+  assert.throws(()=>authenticateCervicalCollector(altered),'Changed source refuses');
+ }
+});
+
+test('current and historical delivery identities refuse crossed family and Review roles',()=>{
+ const current=validateCurrentAtlasDelivery();
+ const historical=JSON.parse(readFileSync(metadata.historicalPaths.website+'/tests/fixtures/current-atlas-delivery.json','utf8'));
+ assertCervicalRoleIdentity(current,metadata.identities.current);
+ assertCervicalRoleIdentity(historical,metadata.identities.historical);
+ assert.throws(()=>assertCervicalRoleIdentity(historical,metadata.identities.current));
+ assert.throws(()=>assertCervicalRoleIdentity(current,metadata.identities.historical));
+ const mixed=structuredClone(current);mixed.runtimeSources.shoulder=metadata.identities.historical.runtimeSources.shoulder;
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:mixed}),'Historical family cannot enter current graph');
+ const changed=structuredClone(current);changed.reviewIntegration='0'.repeat(64);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:changed}),'Forged Review cannot enter current graph');
+});
+
+test('historical child transport refuses incomplete or contradictory TAP',()=>{
+ const result={code:0,signal:null};
+ const good=['TAP version 13','ok 1 - complete original','1..1','# tests 1','# pass 1','# fail 0',
+  '# cancelled 0','# skipped 0','# todo 0',''];
+ assert.deepEqual(assertCompleteCervicalChild(result,good.join('\n')),
+  {tests:1,pass:1,fail:0,cancelled:0,skipped:0,todo:0});
+ const changed=(from,to)=>good.join('\n').replace(from,to);
+ for(const tap of [changed('ok 1','not ok 1'),changed('ok 1','ok 1 # SKIP'),
+  changed('ok 1','ok 1 # TODO'),changed('ok 1','ok 2'),changed('1..1','1..2'),
+  changed('# tests 1','# tests 2'),changed('# pass 1','# pass 0'),
+  good.join('\n').replace('1..1\n',''),good.join('\n')+'not ok 2 - contradiction\n',
+  good.join('\n')+'# pass 1\n','Bail out!\n'+good.join('\n')])
+  assert.throws(()=>assertCompleteCervicalChild(result,tap),'False or incomplete child TAP refuses');
+ for(const failure of [{code:1,signal:null},{code:0,signal:'SIGTERM'},
+  {code:0,signal:null,error:'start failed'}])
+  assert.throws(()=>assertCompleteCervicalChild(failure,good.join('\n')),'Child transport failure refuses');
+});

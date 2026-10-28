@@ -1,0 +1,33 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const stage='F:/VisibleMedicine/staging/20261028-release-context-repairs',site=stage+'/website',base=stage+'/SOURCE_CANDIDATE.json',dest=stage+'/SOURCE_CANDIDATE_V2.json';
+const proposal='F:/VisibleMedicine/staging/20261028-arterial-followup-proposal',mf=proposal+'/MANIFEST.json';
+assert.equal(hash(base),'81ec70b095053791bfe8f788360dbf684283218c3f8c38154259ceced58046e7');
+assert.equal(hash(mf),'8cdf4b25f37a7fccf67beb491193ab35efe8b12bb1f2aeaee77e3328a5d96f49');
+const i=json('CURRENT_CHECKPOINT.json');assert.deepEqual(i.activeWork.current.activeExecutionSessions,[]);
+const p=json(base),m=json(mf);assert.equal(m.candidateReceiptSha256,hash(base));assert.equal(m.files.length,2);
+for(const row of p.sourceRows)assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+const changes=[];
+for(const row of m.files){
+ assert(['tests/arterial-history-preservation.test.mjs','tests/cervical-delivery-role-integrity.test.mjs'].includes(row.candidatePath));
+ assert.equal(hash(site+'/'+row.candidatePath),row.candidateSha256);assert.equal(hash(proposal+'/'+row.proposal),row.proposalSha256);
+ assert.equal(hash(proposal+'/'+row.wholePreimage),row.candidateSha256);
+ const raw='tests/fixtures/release-context-followup-before-20261028/'+path.basename(row.candidatePath)+'.raw';
+ fs.mkdirSync(path.dirname(site+'/'+raw),{recursive:true});fs.copyFileSync(site+'/'+row.candidatePath,site+'/'+raw,fs.constants.COPYFILE_EXCL);
+ fs.copyFileSync(proposal+'/'+row.proposal,site+'/'+row.candidatePath);
+ changes.push({path:row.candidatePath,before:row.candidateSha256,after:row.proposalSha256,wholePreimage:raw});
+}
+for(const row of p.sourceRows)if(!changes.some(c=>c.path===row.path))assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+for(const row of json(site+'/atlas-review/integration-inputs.json').inputs)assert.equal(hash(site+'/'+row.path),row.sha256);
+const sourceRows=[...p.sourceRows.map(r=>r.path),...changes.map(r=>r.wholePreimage)].sort().map(file=>({path:file,bytes:fs.statSync(site+'/'+file).size,sha256:hash(site+'/'+file)}));
+const next={...p,schema:'vm-release-context-repairs-source/2',at:new Date().toISOString(),parent:base,parentSha256:hash(base),sourceRows,sourcePaths:sourceRows.length,followup:{proposal:{path:mf,sha256:hash(mf)},changes,productChanged:false},installed:false};
+fs.writeFileSync(dest,JSON.stringify(next,null,2)+'\n',{flag:'wx'});
+const accepted=stage+'/ACCEPTED.json';fs.copyFileSync(accepted,stage+'/ACCEPTED_V1.json',fs.constants.COPYFILE_EXCL);fs.writeFileSync(accepted,'{}\n');
+const recipes='F:/VisibleMedicine/staging/20261028-release-repair-recipes';let runner=fs.readFileSync(recipes+'/check-v2.mjs','utf8');
+assert.equal(runner.split('/SOURCE_CANDIDATE.json').length,2);runner=runner.replace('/SOURCE_CANDIDATE.json','/SOURCE_CANDIDATE_V2.json').replace(hash(base),hash(dest));
+fs.writeFileSync(recipes+'/check-v3.mjs',runner,{flag:'wx'});
+const record={at:next.at,source:{path:dest,sha256:hash(dest)},priorSource:{path:base,sha256:hash(base)},proposal:{path:mf,sha256:hash(mf)},changes,allOtherSourceRowsExact:true,protectedReviewInputsExact:true,productChanged:false,wholeSuitePassing:false};
+fs.writeFileSync(stage+'/FOLLOWUP_APPLIED.json',JSON.stringify(record,null,2)+'\n',{flag:'wx'});
+i.activeWork.current.pendingReleaseContextRepairs.source=record.source;i.activeWork.current.pendingReleaseContextRepairs.followup={path:stage+'/FOLLOWUP_APPLIED.json',sha256:hash(stage+'/FOLLOWUP_APPLIED.json')};i.activeWork.current.pendingReleaseContextRepairs.state='Two additional historical test-role fixes applied; focused/type verification pending.';saveIndex(i);
+console.log(JSON.stringify(record));
