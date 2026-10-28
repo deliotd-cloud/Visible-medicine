@@ -1,0 +1,88 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T05:26:54.492Z",
+  "sourceIdentity": {
+    "bodyGuideSource": {
+      "path": "F:/VisibleMedicine/staging/20261028-body-structure-guides/SOURCE_CANDIDATE_V2.json",
+      "sha256": "6e1c678b34ea5ee172ff641b1f51fc473fa238a953c134d72ccd01fe381c31a8"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "synthetic-qa/synthetic-shutdown-v2.mjs",
+      "bytes": 2020,
+      "sha256": "f2e4178a22c4a7fb0fba74ac83e3d6af8d34d4e5837dd1244365088418320f72"
+    },
+    {
+      "path": "synthetic-qa/fixture-server-v2.mjs",
+      "bytes": 1617,
+      "sha256": "621de8f23ee594aba15535bc91193aa546d989c9063a8626859fad4e73b44f62"
+    },
+    {
+      "path": "synthetic-qa/test-shutdown-v2.mjs",
+      "bytes": 3450,
+      "sha256": "39385c6f80b83e6cfb4efe83f799dfcb6787e65751d5ef1138c5a84f54065aac"
+    },
+    {
+      "path": "synthetic-qa/serve-head-selection-history-browser-20261028.mjs",
+      "bytes": 2764,
+      "sha256": "376a73c25f66edec8943ab33533b57e78a7cf6d2ea932d1ed50a9989a1ed1ca3"
+    },
+    {
+      "path": "synthetic-qa/serve-guided-focus-browser-20261028.mjs",
+      "bytes": 2754,
+      "sha256": "41759f837d1743525b3e4c9308d724598f1149be3cfeb8925e9f077be81fda01"
+    },
+    {
+      "path": "synthetic-qa/README.md",
+      "bytes": 915,
+      "sha256": "cd2a738690b0d588539ab62d5f3c722747defa40267c7031f788fb29485ca210"
+    },
+    {
+      "path": "release-checks/admission-wait.mjs",
+      "bytes": 2241,
+      "sha256": "5cd450662cc6ef00a1077bbab525700a5f1c3d01194a382e6450b36e75ac0751"
+    },
+    {
+      "path": "release-checks/admission-wait.test.mjs",
+      "bytes": 1309,
+      "sha256": "bf4e203fc6935b631e1b6efdfad33772c72dc04900ee4fed3d2b90cdf47ec969"
+    },
+    {
+      "path": "release-checks/campaign-v3.mjs",
+      "bytes": 9567,
+      "sha256": "5c713daf8f74a3558887d6dd3b01f90c8a5e55fdec50320a1effd91c00b7e2d6"
+    },
+    {
+      "path": "release-checks/prepare-campaign-v3.mjs",
+      "bytes": 1463,
+      "sha256": "424a7c42e3ef5c733a7f97d45e1bc04b9587a15977bbbab1d509ee54c7b39ee1"
+    },
+    {
+      "path": "guide-types/changed-types-checker-v2.mjs",
+      "bytes": 2075,
+      "sha256": "db11ba939ee1704a84ad2a9931856b7b091b0467eaf118fddbf7973bdcdada17"
+    },
+    {
+      "path": "guide-types/check-changed-types-v2.mjs",
+      "bytes": 2484,
+      "sha256": "6e8d4b6468ff98554ea7f6a73adb128c78de09f332b2961414fc7e8af294b8cf"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party QA helper and verification recipes only. No product assets, scans, generated runtime, private state or full repository ancestry. Local helper evidence and prior source supplements are required; this is not a complete runnable website backup.",
+  "proof": {
+    "scopedTypeFiles": 810,
+    "scopedTypeDiagnostics": 0,
+    "fullProjectTypes": false,
+    "productionBuild": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

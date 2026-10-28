@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {createRequire} from 'node:module';
+import {hash} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const site=process.cwd().replaceAll('\\','/'),ts=createRequire(site+'/package.json')('typescript');
+const config=site+'/tsconfig.json',loaded=ts.readConfigFile(config,ts.sys.readFile);assert(!loaded.error);
+const parsed=ts.parseJsonConfigFileContent(loaded.config,ts.sys,site);assert.equal(parsed.errors.length,0);assert(parsed.options.strict);
+const changed=['lib/body-structure-guides.ts','app/learn/related-structure/page.tsx'].map(path=>site+'/'+path);
+for(const path of changed)assert(parsed.fileNames.includes(path));
+const ambient=parsed.fileNames.filter(path=>path.endsWith('.d.ts'));
+const roots=[...new Set([...changed,...ambient])],overrides={noEmit:true,incremental:false,composite:false,tsBuildInfoFile:undefined};
+const program=ts.createProgram(roots,{...parsed.options,...overrides}),diagnostics=ts.getPreEmitDiagnostics(program);
+const result={at:new Date().toISOString(),scope:'Changed guide helper/page and their actual transitive imports plus all configured project declaration roots. Not a full configured-project check or production build.',fullProjectTypes:false,configuredRootCount:parsed.fileNames.length,roots,configSha256:hash(config),typescriptVersion:ts.version,configuredCompilerOptions:parsed.options,overrides,sourceFiles:program.getSourceFiles().map(file=>({path:file.fileName,sha256:hash(file.fileName)})),diagnosticCount:diagnostics.length,diagnostics:diagnostics.map(d=>({path:d.file?.fileName,start:d.start,code:d.code,message:ts.flattenDiagnosticMessageText(d.messageText,'\n')})),substitutions:false};
+fs.writeFileSync(process.env.VM_SCOPED_TYPES_RESULT,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({roots:roots.length,files:result.sourceFiles.length,diagnostics:diagnostics.length,fullProjectTypes:false}));process.exitCode=diagnostics.length?1:0;
