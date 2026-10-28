@@ -1,0 +1,83 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T00:57:26.211Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-tour-delivery-website/SOURCE_CANDIDATE_V2.json",
+      "sha256": "f81c4fd2c2907f573804530905d01a5aedd87c1c7b9ca07d9315fbaf82a5d61b"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-quadriceps-website-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "b116b23a23349826a7744075d1e5ef7b8dea64aae94db8fe39482a228d2ba08c"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/title-tour-functional-delivery.test.mjs",
+      "bytes": 17376,
+      "sha256": "09691a96583193c77190aa42d7e459b0feec21ad83514dbf375c57187457d9b0"
+    },
+    {
+      "path": "website/tests/tour-reading-current-delivery.test.mjs",
+      "bytes": 27983,
+      "sha256": "4608054e2f0431f1ddd37a25efac345df8f8d376324093388b4bbdc736b44abd"
+    },
+    {
+      "path": "website/tests/fixtures/tour-delivery-preservation/title.json",
+      "bytes": 8780,
+      "sha256": "925250eb2675bdf872143632874d4752d9b321d741d6025f23fc5e8386b303ac"
+    },
+    {
+      "path": "website/tests/fixtures/tour-delivery-preservation/reader.json",
+      "bytes": 13853,
+      "sha256": "a58b0a9ba947c0ee35fa1e06c265726242c7eb04440472efb9e39c9ca0bde726"
+    },
+    {
+      "path": "website/tests/tour-delivery-preservation.test.mjs",
+      "bytes": 1471,
+      "sha256": "fe16ad41898188b13ec88c19c1ab9497bf0334a244e7b3513535eb0861aa2873"
+    },
+    {
+      "path": "recipes/run-tour-delivery-baseline-20261028.mjs",
+      "bytes": 2576,
+      "sha256": "7e4875479e9cffaec33418a741f7b3b233ab8db8ac8f1446fd902ec49ba49fde"
+    },
+    {
+      "path": "recipes/integrate-tour-delivery-regression-20261028.mjs",
+      "bytes": 5779,
+      "sha256": "9b6546af9832f732903b77f9c84ac3cb1434fa1ae6cb0e1df8fa4ae37ec3896d"
+    },
+    {
+      "path": "recipes/repair-tour-delivery-manifest-schema-20261028.mjs",
+      "bytes": 3218,
+      "sha256": "6cae9cd776f5f1a85d4011f22bd5537328f7eb09e308e206b634e9ef20ace6fc"
+    },
+    {
+      "path": "recipes/run-tour-delivery-regression-20261028.mjs",
+      "bytes": 3075,
+      "sha256": "870de3fdb8fbea443ca504b1353577fd0f869b39c9e283fed0ea8e3e567b3ae5"
+    },
+    {
+      "path": "recipes/finish-tour-delivery-regression-20261028.mjs",
+      "bytes": 11993,
+      "sha256": "ec5b3ecd06387dc3760f5bdee5be1bc2749e898a9e3edce96703ef6d38052031"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party test source, exact inverse records and recovery recipes only. No scans, geometry, generated runtimes, decisions, private records or raw Git ancestry; requires prior supplements and is not a complete private or runnable backup.",
+  "proof": {
+    "focusedCases": 17,
+    "oldFailuresResolved": 4,
+    "allOriginalAssertionsRecovered": true,
+    "productionInputsUnchanged": true,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
