@@ -1,0 +1,51 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T06:26:58.751Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-structure-learning-copy-final/SOURCE_CANDIDATE.json",
+      "sha256": "8a3b202eead0253d4d019673f3278b86e8ee8b52122dc695e41c7bd6b1f1284b"
+    },
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-structure-learning-copy-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "112683f5d2196f6c2647aeb919b6b8fbf4390e569610903db680f20e89db96a6"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/learn/related-anatomy/page.tsx",
+      "bytes": 8397,
+      "sha256": "0fa00550a2a884f0f0ca8aaa4d5fa44bae52feb397769abacd6ffdeb590f4fe1"
+    },
+    {
+      "path": "recipes/prepare-learning-copy-final.mjs",
+      "bytes": 5430,
+      "sha256": "2b968306be3ef23d07d706cba5c5d93071b7e3111416cdf06ef9bcaf527ee1ea"
+    },
+    {
+      "path": "recipes/check-learning-copy-final.mjs",
+      "bytes": 4952,
+      "sha256": "b3545af05a46f2b105164fec5955d4320f49561bb0b57ce8f891058974a08e27"
+    },
+    {
+      "path": "recipes/save-learning-copy-final.mjs",
+      "bytes": 10894,
+      "sha256": "5eb9ac9818b2a5f2fdca71cf224bf731968c9faaa0324f978ce9948944c5ab6e"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party page text and recipes only. No scans, models, private state, environment fixtures or full repository ancestry. Requires earlier supplements; not a complete private/runnable backup.",
+  "proof": {
+    "focusedTests": 26,
+    "allOriginalAssertionsRetained": true,
+    "fullTypesAndBuild": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
