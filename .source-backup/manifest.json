@@ -1,0 +1,73 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T01:20:02.888Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-regional-scope-discovery/SOURCE_CANDIDATE.json",
+      "sha256": "c795572081397c2d5ea5f62b038c87426bc97d16001c97eacaae56953e92d6c4"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-tour-delivery-regression-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "1c96dd8cbb8a91d3cea09b44488f0a3e89a22332f32a8958e130d51fd7c7ddbd"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/regional-learning-discovery.ts",
+      "bytes": 974,
+      "sha256": "c112c4e3af478124cf765ab90a7558112312f657937e62f3d4a1813a8d59336d"
+    },
+    {
+      "path": "website/lib/regional-learning-catalogue.ts",
+      "bytes": 4711,
+      "sha256": "8dbc29f38348e1446d807518d0093253a2b4087ff887b8c8f03d807ed7549f60"
+    },
+    {
+      "path": "website/components/RegionalLearningCatalogue.tsx",
+      "bytes": 12617,
+      "sha256": "ee4c57c34c9ace28ff846fbbef3500b7e8055c7e25136cb198fdd664a4b5424a"
+    },
+    {
+      "path": "website/tests/regional-scope-discovery.test.mjs",
+      "bytes": 11820,
+      "sha256": "81af9e7fe738324c62b88d53d4c6b68ff0c44cc0973a7ab899eb8af78276f153"
+    },
+    {
+      "path": "recipes/regional-scope-prepare.mjs",
+      "bytes": 4467,
+      "sha256": "cdcfc250f4dda87d2fb6de0699bbd38fe9bb6aa12e83d3b56fd3cf4537cd35b0"
+    },
+    {
+      "path": "recipes/regional-scope-run.mjs",
+      "bytes": 6781,
+      "sha256": "3ccb1b7bac91533fda572dfb10ffa46ac0f89f9e97109450fbc0f777da3f099c"
+    },
+    {
+      "path": "recipes/regional-scope-finish.mjs",
+      "bytes": 12107,
+      "sha256": "05313f0d1868d99571770665b82daaf02af9d7cfa1c2bb7f81d86adbbd0b13e2"
+    },
+    {
+      "path": "recipes/regional-scope-state.mjs",
+      "bytes": 2270,
+      "sha256": "c043055ef24b48fd0294e8e2803716562256a1df03dde347d19aaefe18c437e1"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party discovery source, regression tests and recovery recipes only. No scans, models, generated runtimes, personal decisions, private records or full Git ancestry. Requires prior supplements; not a complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 31,
+    "fullConfiguredTypes": true,
+    "stockBuild": true,
+    "protectedReviewInputsChanged": false,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
