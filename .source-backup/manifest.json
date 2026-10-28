@@ -1,0 +1,82 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T04:42:16.531Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-body-structure-guides/SOURCE_CANDIDATE_V2.json",
+      "sha256": "6e1c678b34ea5ee172ff641b1f51fc473fa238a953c134d72ccd01fe381c31a8"
+    },
+    "requiredPriorSourceSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-saved-course-availability-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "998972d23396e2be4ba6d9e824243c06dda978da803594e5892ac0111d9bfcdf"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/learn/related-structure/page.tsx",
+      "bytes": 6005,
+      "sha256": "34d709bd329127ab0952f7a587e26703d7dd0791ae7682771bfb660c9f5a1c62"
+    },
+    {
+      "path": "website/lib/body-structure-guides.ts",
+      "bytes": 1478,
+      "sha256": "522d917c654300bd4bfb4a6976bb8c33f5c2a2868bb38043e14568a200c8c20b"
+    },
+    {
+      "path": "website/tests/fixtures/body-structure-guides-before-20261028/page.tsx.raw",
+      "bytes": 5210,
+      "sha256": "58fac35d3ba45742a3e0220931b5b533c4aa859649d865d78670fb055f6ed940"
+    },
+    {
+      "path": "website/tests/body-structure-guides.test.mjs",
+      "bytes": 10069,
+      "sha256": "16f5f339a850848bd14122dc8b591d95406df7c5b02b193132b3a1e986358cc3"
+    },
+    {
+      "path": "provenance/body-structure-guides-test-before-repair.mjs.raw",
+      "bytes": 9947,
+      "sha256": "d603af720654620dfe97cb017376aacf4e1637d9d7a13ddb3d873c1571bb118f"
+    },
+    {
+      "path": "recipes/body-structure-guides-prepare.mjs",
+      "bytes": 3517,
+      "sha256": "a7fe150ce1144237a82b10debe9fb36a5deb33c41b9463a08e8697da8b145344"
+    },
+    {
+      "path": "recipes/body-structure-guides-check.mjs",
+      "bytes": 5160,
+      "sha256": "3bb246edd40af56ac2d4ed5c54dac9dd773311dcad84e8f3c68ff53bcb4ce0c5"
+    },
+    {
+      "path": "recipes/body-structure-guides-check-v2.mjs",
+      "bytes": 5163,
+      "sha256": "bd834018a938a8ddf023770857bb319e7fe434d42da0c01b084d3674d9db5230"
+    },
+    {
+      "path": "recipes/body-structure-guides-repair-tests.mjs",
+      "bytes": 2705,
+      "sha256": "65eb01b99d978efb5b2a5bcbcc685cf493950fd345607b7ef2689f2367a476cd"
+    },
+    {
+      "path": "recipes/body-structure-guides-save-focused.mjs",
+      "bytes": 12308,
+      "sha256": "0f1c6f89576b0da6e5dba6d14135dbce7b6a19561302f30a4af4e1787f124b91"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party guide discovery/page source, synthetic tests, preimages and recipes only. Full types/build pending; no scans, models, generated runtimes, private state or full Git ancestry. Requires earlier supplements, not a complete runnable or private backup.",
+  "proof": {
+    "focusedCases": 33,
+    "fullConfiguredTypes": false,
+    "stockProductionBuild": false,
+    "protectedReviewInputsChanged": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
