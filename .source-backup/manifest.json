@@ -1,0 +1,106 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T20:55:37.783Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/staging/20261028-head-viewer-expansion-final/SOURCE_CANDIDATE.json",
+      "sha256": "527cce6f0dff3282d8d77f6aeb9cefa110552268b40a9587092ddfd27c3bed19"
+    },
+    "requiredPriorSupplement": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261028-current-role-repair-verified-source/SOURCE_SUPPLEMENT.json",
+      "sha256": "119c8ed84a1f553dae26f8d1ae7af9ce958774d54dbe96415d1b463989f3b05e"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/atlas/head-neck-3d/head-learning.css",
+      "bytes": 19437,
+      "sha256": "cb2a52345e8b88978c0b94685775488468321b1f2a2d551c904c913ed813a591"
+    },
+    {
+      "path": "components/HeadAtlasLinkedModel.tsx",
+      "bytes": 9323,
+      "sha256": "2a4b364a84869ba77eb81bfc58874b377362f761b4644d40a7294c840d3529a2"
+    },
+    {
+      "path": "tests/atlas-study-transport.test.ts",
+      "bytes": 13422,
+      "sha256": "a4dbbd94ddce18e9ee18614a62de5ea61150a85dbc64b97a7af533a08e99517f"
+    },
+    {
+      "path": "tests/head-access-wrapper-inverse.mjs",
+      "bytes": 3413,
+      "sha256": "ad5fe093b2399061d95dff9b6f206f7d6069e80634b175774649cbaa540a1ae7"
+    },
+    {
+      "path": "tests/head-linked-expansion-adoption.json",
+      "bytes": 9905,
+      "sha256": "7aca0b3e70440b91b89aa9a84d836031b87cb59b4126d786555ab0e6b81c35e7"
+    },
+    {
+      "path": "tests/head-linked-expansion-adoption.mjs",
+      "bytes": 1080,
+      "sha256": "e4af88e32e4f39f7251db301b7e7f8a497934d0b599437cf91abd4b96e730d7b"
+    },
+    {
+      "path": "tests/head-linked-expansion.test.mjs",
+      "bytes": 17061,
+      "sha256": "8a32d452d11b4cfff63cc1cfa36cca257c620562beca51d1a56d32df08f297ac"
+    },
+    {
+      "path": "tests/head-live-model.test.ts",
+      "bytes": 14378,
+      "sha256": "31670c89bb28a4e187735484de141a414381f8b51cb918702246883476c734c7"
+    },
+    {
+      "path": "tests/head-model-blank-recovery.test.mjs",
+      "bytes": 15839,
+      "sha256": "1701c90cc9cd80bade335406c4c9799aebbf31506c86444ff3f5bd97ba81f4da"
+    },
+    {
+      "path": "tests/live-learning-consumer-access-later-inverse.mjs",
+      "bytes": 3590,
+      "sha256": "491f8e24f39a281b1a16d34c36856e9626983935dcd5eac3e13af484a688b6ff"
+    },
+    {
+      "path": "tests/page-ssr-query-role.mjs",
+      "bytes": 7164,
+      "sha256": "ab7de47c5a5cdf722d42327c69b3aaef990c3635a6320ac154b910e7113b6dc4"
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "0a8226a96a8a490572c92750800c3a6aff3129f2711b3c75b92ab6d459e1ea5c"
+    },
+    {
+      "path": "recipes/20261028-head-expansion-work.mjs",
+      "bytes": 14517,
+      "sha256": "82258aa746ab7618ceb854eced935d434877c04cb1957a792563d1b4061660ae"
+    },
+    {
+      "path": "recipes/20261028-repair-head-expansion-tests.mjs",
+      "bytes": 4324,
+      "sha256": "34b79099b243708f118442c7028bf88865ea9270624d977f766c7b8b106b3f24"
+    },
+    {
+      "path": "recipes/20261028-save-head-expansion.mjs",
+      "bytes": 9663,
+      "sha256": "b0d7d672c2ac4defb0da2815599de5088a6115390208914908432452c8de48d2"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected first-party head viewer source/tests and recipes. No scans, models, generated assets, private application state or repository ancestry. Earlier source supplements required; not a complete private/runnable backup.",
+  "proof": {
+    "focusedCases": 55,
+    "scopedTypeDiagnostics": 0,
+    "fullBuild": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

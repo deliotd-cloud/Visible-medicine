@@ -1,0 +1,110 @@
+{
+  "tests/head-live-model.test.ts": {
+    "priorSha256": "d94226df01904a99edf5fcab248fff0c39c5ce1227b7748bfd95b5a582a79554",
+    "currentSha256": "31670c89bb28a4e187735484de141a414381f8b51cb918702246883476c734c7",
+    "seams": [
+      {
+        "current": "import {readFileSync} from 'node:fs';\nimport {atlasRuntimeExpansionModule} from './atlas-runtime-expansion-loader.mjs';\n",
+        "prior": "import {readFileSync} from 'node:fs';\n"
+      },
+      {
+        "current": "'./HeadAtlasComparisonNavigation':{HeadAtlasComparisonNavigation:comparison},'./atlas-runtime-expansion':atlasRuntimeExpansionModule,",
+        "prior": "'./HeadAtlasComparisonNavigation':{HeadAtlasComparisonNavigation:comparison},"
+      }
+    ]
+  },
+  "tests/head-model-blank-recovery.test.mjs": {
+    "priorSha256": "97aeb82bb617839f263574821be683c03d337427e9827563e96f6ba601a3384f",
+    "currentSha256": "1701c90cc9cd80bade335406c4c9799aebbf31506c86444ff3f5bd97ba81f4da",
+    "seams": [
+      {
+        "current": "import {readFileSync} from 'node:fs';\nimport {atlasRuntimeExpansionModule} from './atlas-runtime-expansion-loader.mjs';\n",
+        "prior": "import {readFileSync} from 'node:fs';\n"
+      },
+      {
+        "current": "    './HeadAtlasComparisonNavigation':{HeadAtlasComparisonNavigation:nav},\n    './atlas-runtime-expansion':atlasRuntimeExpansionModule,\n",
+        "prior": "    './HeadAtlasComparisonNavigation':{HeadAtlasComparisonNavigation:nav},\n"
+      }
+    ]
+  },
+  "tests/atlas-study-transport.test.ts": {
+    "priorSha256": "dcc3d14e6b250f14ab428ec6e8f786b0d9b17d6b95588c0feb90c16c0ca69bb1",
+    "currentSha256": "a4dbbd94ddce18e9ee18614a62de5ea61150a85dbc64b97a7af533a08e99517f",
+    "seams": [
+      {
+        "current": "    './HeadAtlasComparisonNavigation':{HeadAtlasComparisonNavigation:'test-comparison-navigation'},\n      './atlas-runtime-expansion': atlasRuntimeExpansionModule,\n",
+        "prior": "    './HeadAtlasComparisonNavigation':{HeadAtlasComparisonNavigation:'test-comparison-navigation'},\n"
+      }
+    ]
+  },
+  "tests/head-access-wrapper-inverse.mjs": {
+    "priorSha256": "791a0329dd4589749b72f087d042b314d2d314b41edc72fbb05879e860226fb1",
+    "currentSha256": "ad5fe093b2399061d95dff9b6f206f7d6069e80634b175774649cbaa540a1ae7",
+    "seams": [
+      {
+        "current": "import assert from 'node:assert/strict';\nimport {projectHeadExpansionRole} from './head-linked-expansion-adoption.mjs';\n",
+        "prior": "import assert from 'node:assert/strict';\n"
+      },
+      {
+        "current": "export function restorePreHeadAccessWrapper(source,name){\n  if(name==='HeadAtlasLinkedModel')source=projectHeadExpansionRole('components/HeadAtlasLinkedModel.tsx',source);\n",
+        "prior": "export function restorePreHeadAccessWrapper(source,name){\n"
+      }
+    ]
+  },
+  "tests/live-learning-consumer-access-later-inverse.mjs": {
+    "priorSha256": "3217386afe3cb49c9efe5d46e4f103585f33ebcf962eaa9833fbc4e8e7702a4e",
+    "currentSha256": "491f8e24f39a281b1a16d34c36856e9626983935dcd5eac3e13af484a688b6ff",
+    "seams": [
+      {
+        "current": "import {createHash} from 'node:crypto';\nimport {projectHeadExpansionRole} from './head-linked-expansion-adoption.mjs';\n",
+        "prior": "import {createHash} from 'node:crypto';\n"
+      },
+      {
+        "current": "export function restoreConsumerAccessLaterRole(name,text){\n  if(name==='head-live-model.test.ts')text=projectHeadExpansionRole('tests/'+name,text);\n",
+        "prior": "export function restoreConsumerAccessLaterRole(name,text){\n"
+      }
+    ]
+  },
+  "tests/page-ssr-query-role.mjs": {
+    "priorSha256": "891aebc8955808369afeaf61ebff164ea1ef71a6535e87078c52d473e2fa1139",
+    "currentSha256": "ab7de47c5a5cdf722d42327c69b3aaef990c3635a6320ac154b910e7113b6dc4",
+    "seams": [
+      {
+        "current": "import {createHash} from 'node:crypto';\nimport {projectHeadExpansionRole} from './head-linked-expansion-adoption.mjs';\n",
+        "prior": "import {createHash} from 'node:crypto';\n"
+      },
+      {
+        "current": "export const restoreStudyTransportQueryHarness=source=>restoreLines('transportHarness',projectHeadExpansionRole('tests/atlas-study-transport.test.ts',source));",
+        "prior": "export const restoreStudyTransportQueryHarness=source=>restoreLines('transportHarness',source);"
+      },
+      {
+        "current": "export function restoreBlankRecoveryKeyboard(source){\n  source=projectHeadExpansionRole('tests/head-model-blank-recovery.test.mjs',source);\n",
+        "prior": "export function restoreBlankRecoveryKeyboard(source){\n"
+      }
+    ]
+  },
+  "components/HeadAtlasLinkedModel.tsx": {
+    "priorSha256": "23c430e03ee9a48980873fd3b49f1f9d6808c140dd49e3489b34c7f2886a2837",
+    "currentSha256": "2a4b364a84869ba77eb81bfc58874b377362f761b4644d40a7294c840d3529a2",
+    "seams": [
+      {
+        "prior": "\n",
+        "current": "import {createAtlasRuntimeExpansion,type AtlasExpansionState} from './atlas-runtime-expansion';\n\n/** Expand the existing page host; the iframe and both learning channels stay mounted. */\nfunction HeadAtlasExpansionTools({frame,src,sourceRevision,attempt}:{frame:{current:HTMLIFrameElement|null};src:string;sourceRevision:string;attempt:number}){\n  const tools=useRef<HTMLDivElement>(null),button=useRef<HTMLButtonElement>(null);\n  const expansion=useRef<ReturnType<typeof createAtlasRuntimeExpansion>|null>(null);\n  const [state,setState]=useState<AtlasExpansionState>({active:false,pending:false,message:null});\n  useLayoutEffect(()=>{\n    const owner=tools.current?.closest<HTMLElement>('main.head-comparison-module-page');\n    const element=frame.current;\n    if(!owner||!element)return;\n    const doc=owner.ownerDocument;\n    let wasOwned=doc.fullscreenElement===owner;\n    const controller=createAtlasRuntimeExpansion({owner,doc,frame:element,change:next=>{\n      if(wasOwned&&!next.active&&!doc.fullscreenElement){\n        queueMicrotask(()=>{\n          if(expansion.current===controller&&!doc.fullscreenElement&&doc.activeElement===doc.body&&button.current?.isConnected){\n            button.current.focus({preventScroll:true});\n          }\n        });\n      }\n      wasOwned=next.active;\n      setState(next);\n    }});\n    expansion.current=controller;\n    const refresh=()=>{if(frame.current===element)controller.refreshFrame(element);};\n    element.addEventListener('load',refresh);\n    return()=>{\n      if(expansion.current===controller)expansion.current=null;\n      element.removeEventListener('load',refresh);\n      controller.retire();\n    };\n  },[frame,src,sourceRevision,attempt]);\n  return <div ref={tools} className=\"head-linked-viewer-tools\">\n    <button ref={button} type=\"button\" aria-pressed={state.active} disabled={state.pending}\n      onClick={()=>state.active?expansion.current?.exit():expansion.current?.request()}>\n      {state.active?'Restore viewer':'Expand viewer'}\n    </button>\n    {state.message&&<p role=\"status\" aria-live=\"polite\">{state.message}</p>}\n  </div>;\n}\n\n"
+      },
+      {
+        "prior": "",
+        "current": "    <HeadAtlasExpansionTools frame={frame} src={src} sourceRevision={sourceRevision} attempt={frameAttempt}/>\n"
+      }
+    ]
+  },
+  "app/atlas/head-neck-3d/head-learning.css": {
+    "priorSha256": "3b512f4d13a5c73cf99e5e78ac347ed0f729f0e5118db1a742adc6ef8a5e5117",
+    "currentSha256": "cb2a52345e8b88978c0b94685775488468321b1f2a2d551c904c913ed813a591",
+    "seams": [
+      {
+        "prior": "",
+        "current": "\n/* Same-tab head viewer: existing direct children retain their own DOM owners. */\n.head-comparison-module-page > .head-linked-viewer-tools {\n  display: flex;\n  flex: none;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 6px 12px;\n  min-width: 0;\n  padding: 3px 16px;\n  border-top: 1px solid #d5dfdc;\n  background: #f8f7f2;\n}\n.head-linked-viewer-tools > button {\n  min-height: 32px;\n  flex: none;\n  padding: 4px 9px;\n  border: 1px solid #6f9990;\n  border-radius: 6px;\n  background: #fff;\n  color: var(--green, #17483f);\n  font: 600 13px/1.4 system-ui, sans-serif;\n  cursor: pointer;\n}\n.head-linked-viewer-tools > button:disabled { cursor: wait; opacity: .7; }\n.head-linked-viewer-tools > button:focus-visible { outline: 3px solid #16c6b2; outline-offset: 3px; }\n.head-linked-viewer-tools > p { flex: 1 1 240px; margin: 0; font-size: 13px; overflow-wrap: anywhere; }\n@media (min-width: 1200px) {\n  .anatomy-site-frame .shoulder-module-page.atlas-3d-workspace-page.head-comparison-module-page:has(> .head-linked-viewer-tools) {\n    grid-template-rows: auto auto auto minmax(0, 1fr) auto auto auto;\n  }\n  .anatomy-site-frame .head-comparison-module-page:has(> .head-linked-viewer-tools) > .atlas-body-learning-flow { grid-column: 1; grid-row: 5; }\n  .anatomy-site-frame .head-comparison-module-page > .head-linked-viewer-tools { grid-column: 1; grid-row: 6; }\n  .anatomy-site-frame .head-comparison-module-page:has(> .head-linked-viewer-tools) > .shoulder-module-notes { grid-column: 1; grid-row: 7; }\n}\n/* Fullscreen's top-layer host escapes the surrounding site navigation. Keep\n   every action reachable in short/narrow viewports without overlaying the frame. */\n.anatomy-site-frame .shoulder-module-page.head-comparison-module-page:fullscreen {\n  display: flex;\n  flex-direction: column;\n  box-sizing: border-box;\n  width: 100dvw;\n  height: 100dvh;\n  min-width: 0;\n  min-height: 0;\n  max-height: none;\n  overflow: auto;\n  background: #f8f7f2;\n}\n.head-comparison-module-page:fullscreen > :not(.shoulder-module-frame) { flex-shrink: 0; }\n.anatomy-site-frame .head-comparison-module-page:fullscreen > .shoulder-module-frame {\n  flex: 1 0 280px;\n  width: 100%;\n  height: auto;\n  min-height: 280px;\n}\n.head-comparison-module-page:fullscreen > .atlas-body-learning-flow { margin: 0; max-height: 35dvh; overflow: auto; }\n"
+      }
+    ]
+  }
+}
