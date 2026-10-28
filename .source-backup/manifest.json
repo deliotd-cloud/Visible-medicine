@@ -1,0 +1,49 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-28T05:39:54.776Z",
+  "sourceIdentity": {
+    "exactWebsiteSource": {
+      "path": "F:/VisibleMedicine/staging/20261028-release-context-repairs/SOURCE_CANDIDATE_V3.json",
+      "sha256": "758432a0d2836fc574bf19c61a11b28da64f606bab25586008e52dabff7c3c81"
+    },
+    "profile": {
+      "path": "F:/VisibleMedicine/staging/20261028-release-repair-recipes/LOW_MEMORY_SERIES_POLICY.json",
+      "sha256": "552f2a58a07ab16169670ef07b49351fd111af7cd5d89ad75cb44bb77f1363ed"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/campaign-low-memory-pilot.mjs",
+      "bytes": 9983,
+      "sha256": "24d3d0a228149f25506ad7092de52c1d08696fd55987fbc03e9e9a777a67b060"
+    },
+    {
+      "path": "recipes/campaign-low-memory-series.mjs",
+      "bytes": 10020,
+      "sha256": "62455f3b927cf967dd858ccd35d5b3622caacb40b192b736301db30165c2134c"
+    },
+    {
+      "path": "recipes/prepare-low-memory-pilot.mjs",
+      "bytes": 2399,
+      "sha256": "4ad07b6407c4fbebbb74c4ad1cd57967fb46b45be59d7e098f044d036c4ab7d0"
+    },
+    {
+      "path": "recipes/prepare-low-memory-series.mjs",
+      "bytes": 2191,
+      "sha256": "247033adfdca49f498eb9ea85c557cf28841050f138c29f45752d76b172ad959"
+    }
+  ],
+  "removed": [],
+  "scope": "Four first-party verification recipes only. Unchanged test roots/assertions/source checks with stricter heap/job ceiling; no application assets/scans/private state/full ancestry. Not a runnable website backup.",
+  "proof": {
+    "pilotCases": 10,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
