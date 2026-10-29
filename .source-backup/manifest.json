@@ -1,0 +1,57 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T07:55:19.443Z",
+  "sourceIdentity": {
+    "kind": "review-queue-resume-ui",
+    "sourceSha256": "a7b57241029126a0fdd4ce35ce57dbd6619a1341db461fdcbb693ab4ee1add95",
+    "parentSourceSha256": "ca4e095757061815e583e9bc926562415bb4e5be33d9951656d80668d7a8ea17",
+    "nativeHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "bytes": 39615,
+      "sha256": "fa16337737f0b053c84e6baf1b08a23c5d7aaa652c359f6871fdf74f6530d778"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-deferred-return.test.mjs",
+      "bytes": 18054,
+      "sha256": "8c400c15d910bec2f8722e7c2956cad0ff4940c77c0fc17824dab84b091ffdee"
+    },
+    {
+      "path": "website/tests/fixtures/inbox-filter-scroll-7b124e30.tsx.raw",
+      "bytes": 38354,
+      "sha256": "7b124e30dfbecde6d5771ae33f5cca68b469e581198bd6028e94eaba60672999"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-filter-history.test.mjs",
+      "bytes": 1510,
+      "sha256": "2470df558e022210956d16d207afe424ec883639e1bc37dca70ef5562ef75c67"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-return-pager-focus.test.mjs",
+      "bytes": 11421,
+      "sha256": "0e36ad2ddf597ccfcb3c5953eb7d648ddd408044bf26b42ea742fe36ef0abe62"
+    }
+  ],
+  "removed": [],
+  "scope": "Five selected website source files for Review queue resume consistency and regression tests. No scans, models, private review decisions, runtime assets or canonical Git ancestry. Staged only; not a full project backup.",
+  "proof": {
+    "focusedTests": 55,
+    "targetedTypeFiles": 569,
+    "syntheticBrowserChecks": 26,
+    "baselineBugReproduced": true,
+    "protectedReviewUnchanged": true,
+    "runtimeSourcesUnchanged": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
