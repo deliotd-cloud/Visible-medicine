@@ -1,0 +1,53 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T08:53:14.037Z",
+  "sourceIdentity": {
+    "kind": "head-tour-speed-overlay",
+    "parentSourceSha256": "2660610690d4eeb86e03049fa2916608e7c6b489f14c4da5eaea240f82248b9b",
+    "nativeHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadTourPlayback.tsx",
+      "sha256": "8dbc698904f56c0c04c2539c287888a28ceb0fd010dd9a9f7964b207da8639d0",
+      "beforeSha256": "20777219656e9d51aaaca559bb9fa946bff7012602cd92daf57f119958412588",
+      "bytes": 4944
+    },
+    {
+      "path": "website/lib/head-tour-speed-preference.ts",
+      "sha256": "66a0b9ce293168bb82a2972e34913d7badd38a0cb8c76f0a82e7feaf7c340350",
+      "beforeSha256": null,
+      "bytes": 1004
+    },
+    {
+      "path": "website/tests/head-tour-speed-preference.test.ts",
+      "sha256": "85bea1a7f5cb4de27824e701f09eeb6d52d29dd81803c0964ee8cfc392a4d675",
+      "beforeSha256": null,
+      "bytes": 2184
+    },
+    {
+      "path": "website/tests/head-tour-playback-ui.test.ts",
+      "sha256": "4001d82522b577eb6a3fef488c56b4f74d15dc2be3d5474e5e0c9c55cd7594cf",
+      "beforeSha256": "974e7f15682a49eecb33900445b2db5c605cbabc8a7bb882f7053adfbca1a44b",
+      "bytes": 11269
+    }
+  ],
+  "removed": [],
+  "scope": "Four selected website source files: explicit head-tour speed preference and tests. Isolated overlay only, integration/stock Review rebuild pending. No scans, assets, private reviews or canonical Git ancestry. Not a full project backup.",
+  "proof": {
+    "focusedTests": 33,
+    "targetedTypeFiles": 572,
+    "browserChecks": 22,
+    "freshDocumentPersistence": true,
+    "websiteIntegrated": false,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
