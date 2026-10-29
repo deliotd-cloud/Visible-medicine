@@ -1,0 +1,47 @@
+{
+  "schema": "vm-head-learning-presentation-delta/1",
+  "before": "8d3ef094075e523c440b54fde08b16f5bd88712caeaef877c166a9a6f76ba853",
+  "after": "c9a6ae44485b76060bbf8635f9a6cadc7199db1504c529fd4307ee79d99d0fad",
+  "chunks": [
+    {
+      "offset": 11849,
+      "before": "    <p>Start at step 1 in the existing 3D Atlas, CT or MRI, or expand View steps to open a particular structure. Only mapped modalities are offered. Configured local previews load CT/MRI automatically; otherwise choose the approved atlas folder. Comparisons are between separate, unregistered subjects. These draft links do not track progress or imply completion or clinical approval.</p>",
+      "after": "    <p className=\"head-linked-library-intro\">Choose a tour in the existing 3D Atlas, CT or MRI. Open <strong>View steps</strong> to jump to a structure.</p>\n    <p className=\"head-linked-library-scope\">Draft comparisons are between separate, unregistered subjects.</p>\n    <details className=\"head-linked-library-about\" onKeyDown={event=>{\n      if(event.key!=='Escape'||!event.currentTarget.open)return;\n      event.preventDefault();event.stopPropagation();event.currentTarget.open=false;\n      event.currentTarget.querySelector('summary')?.focus();\n    }}>\n      <summary>About these tours</summary>\n      <p>Only mapped modalities are offered. Configured local previews load CT/MRI automatically; otherwise choose the approved atlas folder. These draft links do not track progress or imply completion or clinical approval.</p>\n      <div className=\"head-linked-library-revisions\">\n        <section aria-label=\"Sequence review revision\"><h3>Sequence review revision</h3><p>Draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_LEARNING_REVISION}</code>. This identifies the ordered steps, exact source bindings and teaching revision; it is not an approval.</p></section>\n        <section aria-label=\"MRI-only sequence review revision\"><h3>MRI-only sequence review revision</h3><p>Separate draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_MRI_LEARNING_REVISION}</code>. No decision from the five CT/MRI sequences or teaching form applies.</p></section>\n        <section aria-label=\"Insula sequence review revision\"><h3>Insula sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_INSULA_LEARNING_REVISION}</code>. Earlier teaching or sequence decisions do not approve these steps.</p></section>\n        <section aria-label=\"Globe sequence review revision\"><h3>Globe sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_ORBITAL_LEARNING_REVISION}</code>. Earlier comparison, teaching or tour decisions do not approve these steps.</p></section>\n        <section aria-label=\"CT-only sequence review revision\"><h3>CT-only sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_BONE_LEARNING_REVISION}</code>. Existing bone-comparison decisions do not approve these tours.</p></section>\n        <section aria-label=\"Cerebellar sequence review revision\"><h3>Cerebellar sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CEREBELLAR_LEARNING_REVISION}</code>. Comparison and teaching decisions do not approve this sequence.</p></section>\n        <section aria-label=\"Facial sequence scope and review revision\"><h3>Facial sequence scope and review revision</h3><p>Zygomatic masks cover limited regions; the regional mandible mask does not establish whole-bone coverage. Compare generic 3D bones separately. No MRI target, fracture assessment or patient-space registration is provided.</p><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_FACIAL_LEARNING_REVISION}</code>. Existing comparison decisions do not approve these steps.</p></section>\n      </div>\n    </details>"
+    },
+    {
+      "offset": 14891,
+      "before": "<details><summary>Sequence review revision</summary><p>Draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_LEARNING_REVISION}</code>. This identifies the ordered steps, exact source bindings and teaching revision; it is not an approval.</p></details>",
+      "after": ""
+    },
+    {
+      "offset": 15558,
+      "before": "<details><summary>MRI-only sequence review revision</summary><p>Separate draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_MRI_LEARNING_REVISION}</code>. No decision from the five CT/MRI sequences or teaching form applies.</p></details>",
+      "after": ""
+    },
+    {
+      "offset": 16186,
+      "before": "<details><summary>Insula sequence review revision</summary><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_INSULA_LEARNING_REVISION}</code>. Earlier teaching or sequence decisions do not approve these steps.</p></details>",
+      "after": ""
+    },
+    {
+      "offset": 16873,
+      "before": "<details><summary>Globe sequence review revision</summary><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_ORBITAL_LEARNING_REVISION}</code>. Earlier comparison, teaching or tour decisions do not approve these steps.</p></details>",
+      "after": ""
+    },
+    {
+      "offset": 17600,
+      "before": "<details><summary>CT-only sequence review revision</summary><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_BONE_LEARNING_REVISION}</code>. Existing bone-comparison decisions do not approve these tours.</p></details>",
+      "after": ""
+    },
+    {
+      "offset": 18257,
+      "before": "<details><summary>Cerebellar sequence review revision</summary><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CEREBELLAR_LEARNING_REVISION}</code>. Comparison and teaching decisions do not approve this sequence.</p></details>",
+      "after": ""
+    },
+    {
+      "offset": 18719,
+      "before": "<details><summary>Facial sequence scope and review revision</summary><p>Zygomatic masks cover limited regions; the regional mandible mask does not establish whole-bone coverage. Compare generic 3D bones separately. No MRI target, fracture assessment or patient-space registration is provided.</p><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_FACIAL_LEARNING_REVISION}</code>. Existing comparison decisions do not approve these steps.</p></details>",
+      "after": ""
+    }
+  ]
+}

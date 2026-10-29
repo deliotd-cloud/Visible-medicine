@@ -1,0 +1,179 @@
+'use client';
+import {useRef,useState} from 'react';
+import {HeadLearningBookmark} from './HeadLearningBookmark';
+import {headGuidedComparisonForStep} from '../lib/head-guided-comparison.ts';
+import type {HeadLearningReturnStep} from '../lib/head-learning-return.ts';
+import {headImageConceptById as headConceptById} from '../lib/head-image-only-links.ts';
+import {headCerebellarLearningSequences,HEAD_CEREBELLAR_LEARNING_REVISION} from '../lib/head-cerebellar-learning.ts';
+import {headLearningLinks,headLearningSequences,HEAD_LEARNING_REVISION} from '../lib/head-atlas-learning';
+import {headLinksCurrent,HEAD_LINK_REVISION_NOTICE} from '../lib/head-link-availability.ts';
+import {headMriLearningSequences,HEAD_MRI_LEARNING_REVISION} from '../lib/head-mri-learning';
+import {headInsulaLearningSequences,HEAD_INSULA_LEARNING_REVISION} from '../lib/head-insula-learning';
+import {headOrbitalLearningSequences,HEAD_ORBITAL_LEARNING_REVISION} from '../lib/head-orbital-learning';
+import {headCtBoneLearningSequences,HEAD_CT_BONE_LEARNING_REVISION} from '../lib/head-ct-bone-learning';
+import {headCtFacialLearningSequences,HEAD_CT_FACIAL_LEARNING_REVISION} from '../lib/head-ct-facial-learning.ts';
+
+type TourModality='all'|'3D'|'CT'|'MRI';
+type TourLinks=NonNullable<ReturnType<typeof headLearningLinks>>;
+function hasSelectedView(links:TourLinks,modality:TourModality){
+  return modality==='all'?!!(links.atlasHref||links.ctHref||links.mriHref):
+    modality==='3D'?!!links.atlasHref:modality==='CT'?!!links.ctHref:!!links.mriHref;
+}
+
+function TourList({sequences,terms=[],modality='all',returnPosition,focusReturnStep}:{sequences:Array<{id:string;label:string;concepts:string[]}>;terms?:string[];modality?:TourModality;returnPosition?:HeadLearningReturnStep;focusReturnStep?:(element:HTMLLIElement|null)=>void}){
+  return <ol>{sequences.flatMap(sequence=>{
+    const first=sequence.concepts[0];
+    const links=first?headLearningLinks({sequenceId:sequence.id,conceptId:first}):null;
+    if(!links)return [];
+    const candidates=terms.length?sequence.concepts.flatMap((id,index)=>{
+      const concept=headConceptById(id);
+      if(!concept)return [];
+      const matchedTerms=terms.filter(term=>concept.label.toLocaleLowerCase().includes(term));
+      return [{id,index,label:concept.label,links:headLearningLinks({sequenceId:sequence.id,conceptId:id}),matchedTerms}];
+    }):[];
+    const matches=candidates.filter(item=>item.matchedTerms.length===terms.length);
+    const context=terms.length>0&&matches.length===0;
+    const visible=context?candidates.filter(item=>item.matchedTerms.length>0):matches;
+    return [<li key={sequence.id}>
+      <span><strong>{sequence.label}</strong>{' · '}{sequence.concepts.length} steps</span>
+      <nav aria-label={`Start ${sequence.label}`}>
+        {(modality==='all'||modality==='3D')&&links.atlasHref&&<a href={links.atlasHref} aria-label={`Start ${sequence.label} in the 3D Atlas`}>3D</a>}
+        {(modality==='all'||modality==='CT')&&links.ctHref&&<a href={links.ctHref} aria-label={`Start ${sequence.label} in CT`}>CT</a>}
+        {(modality==='all'||modality==='MRI')&&links.mriHref&&<a href={links.mriHref} aria-label={`Start ${sequence.label} in MRI`}>MRI</a>}
+      </nav>
+      {context&&<p className="head-linked-search-context-note">{visible.length?'Search terms span the tour title or different steps; no single step label matches every term. Each step below contributes a term.':'Tour title matches this search; no single step label matches every term.'}</p>}
+      {visible.map(match=>{
+        const comparison=match.links&&hasSelectedView(match.links,modality)?headGuidedComparisonForStep(sequence.id,match.id):null;
+        return <div className={context?'head-linked-matching-step head-linked-contributing-step':'head-linked-matching-step'} key={match.id}>
+        <span>{context?'Search context · step':'Matching step'} {match.index+1}: {match.label}{context&&` · contributes: ${match.matchedTerms.join(', ')}`}</span>
+        {match.links&&hasSelectedView(match.links,modality)?<nav aria-label={`${context?'Open contributing':'Open matching'} step ${match.index+1}: ${match.label}`}>
+          {(modality==='all'||modality==='3D')&&match.links.atlasHref&&<a href={match.links.atlasHref} aria-label={`Open ${context?'contributing':'matching'} step ${match.index+1}: ${match.label} in the 3D Atlas`}>3D</a>}
+          {(modality==='all'||modality==='CT')&&match.links.ctHref&&<a href={match.links.ctHref} aria-label={`Open ${context?'contributing':'matching'} step ${match.index+1}: ${match.label} in CT`}>CT</a>}
+          {(modality==='all'||modality==='MRI')&&match.links.mriHref&&<a href={match.links.mriHref} aria-label={`Open ${context?'contributing':'matching'} step ${match.index+1}: ${match.label} in MRI`}>MRI</a>}
+          {comparison&&<a href={comparison.activityHref} aria-label={`Compare views for ${match.label} at step ${match.index+1}`}>Compare views</a>}
+        </nav>:<span>Exact comparison unavailable in the selected view</span>}
+      </div>;})}
+      <details className="head-linked-step-preview" open={returnPosition?.sequenceId===sequence.id?true:undefined} onKeyDown={event=>{
+        if(event.key!=='Escape'||!event.currentTarget.open)return;
+        event.preventDefault();event.stopPropagation();event.currentTarget.open=false;
+        event.currentTarget.querySelector('summary')?.focus();
+      }}>
+        <summary>View steps · {sequence.label}</summary>
+        <p>Open any step in a mapped view. Earlier steps remain available; jumping records no progress or completion.</p>
+        <ol>{sequence.concepts.map((id,index)=>{
+          const concept=headConceptById(id),stepLinks=headLearningLinks({sequenceId:sequence.id,conceptId:id});
+          const label=concept?.label??`Step ${index+1}`;
+          const comparison=headGuidedComparisonForStep(sequence.id,id);
+          const returning=returnPosition?.sequenceId===sequence.id&&returnPosition.conceptId===id&&returnPosition.index===index;
+          return <li key={id} id={returning?`linked-step-${sequence.id}-${id}`:undefined} tabIndex={returning?-1:undefined} aria-current={returning?'step':undefined} ref={returning?focusReturnStep:undefined}>
+            {returning&&<strong className="head-linked-return-point">Return point · Step {index+1}</strong>}
+            <span>{label}</span>
+            {concept&&stepLinks&&hasSelectedView(stepLinks,modality)?<nav aria-label={`${sequence.label} step ${index+1}: ${label}`}>
+              {(modality==='all'||modality==='3D')&&stepLinks.atlasHref&&<a href={stepLinks.atlasHref} aria-label={`Open ${label} at step ${index+1} in the 3D Atlas`}>3D</a>}
+              {(modality==='all'||modality==='CT')&&stepLinks.ctHref&&<a href={stepLinks.ctHref} aria-label={`Open ${label} at step ${index+1} in CT`}>CT</a>}
+              {(modality==='all'||modality==='MRI')&&stepLinks.mriHref&&<a href={stepLinks.mriHref} aria-label={`Open ${label} at step ${index+1} in MRI`}>MRI</a>}
+            </nav>:<span>Exact comparison unavailable in the selected view</span>}
+            {concept&&stepLinks&&hasSelectedView(stepLinks,modality)&&comparison&&<a href={comparison.activityHref} aria-label={`Compare views for ${label} at step ${index+1}`}>Compare views</a>}
+          </li>;
+        })}</ol>
+      </details>
+    </li>];
+  })}</ol>;
+}
+
+export function HeadAtlasLearningLibrary({initialView='all',initialQuery='',compact=false,fixedView=false,fixedQuery=false,initialPage=1,catalogueSearch,returnPosition:requestedReturn}:{initialView?:TourModality;initialQuery?:string;compact?:boolean;fixedView?:boolean;fixedQuery?:boolean;initialPage?:number;catalogueSearch?:string;returnPosition?:HeadLearningReturnStep}={}){
+  const [query,setQuery]=useState(initialQuery),[modality,setModality]=useState<TourModality>(initialView),[page,setPage]=useState(0);
+  const searchRef=useRef<HTMLInputElement>(null);
+  const focusedReturnRef=useRef<string|null>(null);
+  const statusRef=useRef<{element:HTMLParagraphElement|null;pending:{page:number;origin:HTMLButtonElement}|null}>({element:null,pending:null});
+  if(!headLinksCurrent()){statusRef.current.pending=null;return <section aria-label="CT and MRI linked tours"><p role="status">{HEAD_LINK_REVISION_NOTICE}</p></section>;}
+  const comparison=requestedReturn?headGuidedComparisonForStep(requestedReturn.sequenceId,requestedReturn.conceptId):null;
+  const returnPosition=comparison&&requestedReturn&&comparison.sourceRevision===requestedReturn.sourceRevision&&comparison.position.index===requestedReturn.index&&query===comparison.sequence.label&&modality==='all'?requestedReturn:undefined;
+  const focusReturnStep=(element:HTMLLIElement|null)=>{
+    if(!element||focusedReturnRef.current===element.id||window.location.hash!==`#${element.id}`)return;
+    focusedReturnRef.current=element.id;
+    if(document.activeElement===document.body||document.activeElement===document.documentElement){
+      element.focus({preventScroll:true});
+      // Finish after route scroll restoration, without moving a user who has already moved on.
+      requestAnimationFrame(()=>{if(element.isConnected&&document.activeElement===element&&window.location.hash===`#${element.id}`)element.scrollIntoView({block:'center',behavior:'instant'});});
+    }
+  };
+  const terms=query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+  const filtered=!!query||modality!=='all';
+  const canClear=(!fixedQuery&&!!query)||(!fixedView&&modality!=='all');
+  const [base,mri,insula,orbital,bone,cerebellar,facial]=[headLearningSequences,headMriLearningSequences,headInsulaLearningSequences,headOrbitalLearningSequences,headCtBoneLearningSequences,headCerebellarLearningSequences,headCtFacialLearningSequences].map(sequences=>sequences.filter(sequence=>{
+    const links=headLearningLinks({sequenceId:sequence.id,conceptId:sequence.concepts[0]});
+    if(!links||(modality==='3D'&&!links.atlasHref)||(modality==='CT'&&!links.ctHref)||(modality==='MRI'&&!links.mriHref))return false;
+    const text=[sequence.label,...sequence.concepts.map(id=>headConceptById(id)?.label??'')].join(' ').toLocaleLowerCase();
+    return terms.every(term=>text.includes(term));
+  }));
+  const count=base.length+mri.length+insula.length+orbital.length+bone.length+cerebellar.length+facial.length;
+  const groups=[base,mri,insula,orbital,bone,cerebellar,facial];
+  const ordered=groups.flat();
+  const pageCount=Math.max(1,Math.ceil(count/6));
+  const safeInitialPage=Number.isSafeInteger(initialPage)&&initialPage>0?initialPage:1;
+  const currentPage=Math.min(catalogueSearch===undefined?page:safeInitialPage-1,pageCount-1);
+  const pageHref=(next:number)=>{const params=new URLSearchParams(catalogueSearch);if(next===1)params.delete('headPage');else params.set('headPage',String(next));return `/atlas/guided-learning?${params}#linked-tour-results`;};
+  const start=currentPage*6;
+  let offset=0;
+  const [shownBase,shownMri,shownInsula,shownOrbital,shownBone,shownCerebellar,shownFacial]=groups.map(group=>{
+    const shown=compact?group.slice(Math.max(0,start-offset),Math.max(0,start+6-offset)):group;
+    offset+=group.length;
+    return shown;
+  });
+  const changePage=(next:number,origin:HTMLButtonElement)=>{
+    if(next<0||next>=pageCount)return;
+    statusRef.current.pending={page:next,origin};
+    setPage(next);
+  };
+  const commitStatus=(element:HTMLParagraphElement|null)=>{
+    statusRef.current.element=element;
+    const pending=statusRef.current.pending;
+    if(!element||!pending||pending.page!==currentPage)return;
+    statusRef.current.pending=null;
+    const active=document.activeElement;
+    if(active===pending.origin||(active===document.body&&pending.origin.disabled))element.focus({preventScroll:true});
+  };
+  return <section aria-label="CT and MRI linked tours">
+    <h2>CT/MRI-linked tours · Draft</h2>
+    <HeadLearningBookmark/>
+    <p className="head-linked-library-intro">Choose a tour in the existing 3D Atlas, CT or MRI. Open <strong>View steps</strong> to jump to a structure.</p>
+    <p className="head-linked-library-scope">Draft comparisons are between separate, unregistered subjects.</p>
+    <details className="head-linked-library-about" onKeyDown={event=>{
+      if(event.key!=='Escape'||!event.currentTarget.open)return;
+      event.preventDefault();event.stopPropagation();event.currentTarget.open=false;
+      event.currentTarget.querySelector('summary')?.focus();
+    }}>
+      <summary>About these tours</summary>
+      <p>Only mapped modalities are offered. Configured local previews load CT/MRI automatically; otherwise choose the approved atlas folder. These draft links do not track progress or imply completion or clinical approval.</p>
+      <div className="head-linked-library-revisions">
+        <section aria-label="Sequence review revision"><h3>Sequence review revision</h3><p>Draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_LEARNING_REVISION}</code>. This identifies the ordered steps, exact source bindings and teaching revision; it is not an approval.</p></section>
+        <section aria-label="MRI-only sequence review revision"><h3>MRI-only sequence review revision</h3><p>Separate draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_MRI_LEARNING_REVISION}</code>. No decision from the five CT/MRI sequences or teaching form applies.</p></section>
+        <section aria-label="Insula sequence review revision"><h3>Insula sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_INSULA_LEARNING_REVISION}</code>. Earlier teaching or sequence decisions do not approve these steps.</p></section>
+        <section aria-label="Globe sequence review revision"><h3>Globe sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_ORBITAL_LEARNING_REVISION}</code>. Earlier comparison, teaching or tour decisions do not approve these steps.</p></section>
+        <section aria-label="CT-only sequence review revision"><h3>CT-only sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_BONE_LEARNING_REVISION}</code>. Existing bone-comparison decisions do not approve these tours.</p></section>
+        <section aria-label="Cerebellar sequence review revision"><h3>Cerebellar sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CEREBELLAR_LEARNING_REVISION}</code>. Comparison and teaching decisions do not approve this sequence.</p></section>
+        <section aria-label="Facial sequence scope and review revision"><h3>Facial sequence scope and review revision</h3><p>Zygomatic masks cover limited regions; the regional mandible mask does not establish whole-bone coverage. Compare generic 3D bones separately. No MRI target, fracture assessment or patient-space registration is provided.</p><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_FACIAL_LEARNING_REVISION}</code>. Existing comparison decisions do not approve these steps.</p></section>
+      </div>
+    </details>
+    <div className="head-linked-library-filters">
+      {!fixedQuery&&<label>Search linked tours<input ref={searchRef} type="search" value={query} onChange={event=>{statusRef.current.pending=null;setQuery(event.target.value);setPage(0);}} placeholder="Tour or structure, e.g. pons" autoComplete="off"/></label>}
+      {!fixedView&&<label>Available view<select value={modality} onChange={event=>{const value=event.target.value;if(value==='all'||value==='3D'||value==='CT'||value==='MRI'){statusRef.current.pending=null;setModality(value);setPage(0);}}}><option value="all">All linked tours</option><option value="3D">3D Atlas</option><option value="CT">Available on CT</option><option value="MRI">Available on MRI</option></select></label>}
+      {canClear&&<button type="button" onClick={()=>{statusRef.current.pending=null;if(!fixedQuery)setQuery('');if(!fixedView)setModality('all');setPage(0);searchRef.current?.focus();}}>Clear tour filters</button>}
+    </div>
+    <p id={catalogueSearch!==undefined?'linked-tour-results':undefined} ref={compact?commitStatus:undefined} tabIndex={compact?-1:undefined} role="status" className="head-linked-library-results">{count?(compact?`Showing linked tours ${start+1}–${Math.min(start+6,count)} of ${count}`:`${count} linked ${count===1?'tour':'tours'} available`):'No linked tours match. Clear filters to see all available sequences.'}</p>
+    {compact&&count>0&&<nav className="head-linked-library-pager" aria-label="Linked head tour pages">
+      {catalogueSearch===undefined?<button type="button" disabled={currentPage===0} onClick={event=>changePage(currentPage-1,event.currentTarget)} aria-label={`Previous linked tours${currentPage>0?`, starting with ${ordered[start-6].label}`:''}`}>← Previous</button>:currentPage>0?<a href={pageHref(currentPage)} aria-label={`Previous linked tours, page ${currentPage} of ${pageCount}`}>← Previous</a>:<span aria-disabled="true">← Previous</span>}
+      <span>Page {currentPage+1} of {pageCount}</span>
+      {catalogueSearch===undefined?<button type="button" disabled={currentPage===pageCount-1} onClick={event=>changePage(currentPage+1,event.currentTarget)} aria-label={`Next linked tours${currentPage<pageCount-1?`, starting with ${ordered[start+6].label}`:''}`}>Next →</button>:currentPage<pageCount-1?<a href={pageHref(currentPage+2)} aria-label={`Next linked tours, page ${currentPage+2} of ${pageCount}`}>Next →</a>:<span aria-disabled="true">Next →</span>}
+    </nav>}
+    {((!compact&&!filtered)||shownBase.length>0)&&<><TourList sequences={shownBase} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/>
+    </>}
+    {((!compact&&!filtered)||shownMri.length>0)&&<section aria-label="MRI-only linked tours"><h3>MRI-only comparisons · Draft</h3><p>No exact CT target is mapped for these sequences. The callosal mask is partial; step order does not imply a continuous pathway.</p><TourList sequences={shownMri} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}
+    {((!compact&&!filtered)||shownInsula.length>0)&&<section aria-label="Insula linked tours"><h3>Insular coverage · Draft</h3><p>Compare both sides without treating regional CT and partial MRI masks as complete boundaries.</p><TourList sequences={shownInsula} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}
+    {((!compact&&!filtered)||shownOrbital.length>0)&&<section aria-label="Globe linked tours"><h3>Globe coverage · Draft</h3><p>Compare left and right globes across CT, partial MRI masks and the existing 3D eyeballs. Eye layers and the optic nerve are not matched by these links.</p><TourList sequences={shownOrbital} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}
+    {((!compact&&!filtered)||shownBone.length>0)&&<section aria-label="CT-only bone linked tours"><h3>CT-only bone coverage · Draft</h3><p>These six saved CT masks cover partial regions, not complete bones. Compare the existing generic 3D bones separately. No exact MRI targets or fracture assessment are provided.</p><TourList sequences={shownBone} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}
+    {((!compact&&!filtered)||shownCerebellar.length>0)&&<section aria-label="Cerebellar CT and MRI tours"><h3>Cerebellar orientation · Draft</h3><p>Native CT/MRI examples only: no exact 3D counterpart is mapped. The MRI vermis has partial coverage.</p><TourList sequences={shownCerebellar} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}
+    {((!compact&&!filtered)||shownFacial.length>0)&&<><TourList sequences={shownFacial} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></>}
+  </section>;
+}

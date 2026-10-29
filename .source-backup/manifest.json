@@ -1,0 +1,59 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T04:04:24.420Z",
+  "sourceIdentity": {
+    "kind": "linked-tour-presentation-delta",
+    "websiteSourceSha256": "36ec1fff94ad73d621192a8053a2d311ac83a626f05514c823e3cc1b65b51387",
+    "unchangedAtlasHead": "a7e73b1dbab5bbf4ed0693fc13120bf986930dce"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasLearningLibrary.tsx",
+      "bytes": 20092,
+      "sha256": "c9a6ae44485b76060bbf8635f9a6cadc7199db1504c529fd4307ee79d99d0fad"
+    },
+    {
+      "path": "website/app/atlas/guided-learning/guided-learning.css",
+      "bytes": 5998,
+      "sha256": "335194aedf7ebd1d3e8d90e7968ded4cb47d6110f1e02a1deece80a2b9f88588"
+    },
+    {
+      "path": "website/tests/head-learning-return-predecessor.mjs",
+      "bytes": 1195,
+      "sha256": "2d6736566890de0659507cde23763c2f490ac05d8174bee60cdedcaca85f967b"
+    },
+    {
+      "path": "website/tests/head-learning-return-preservation.test.mjs",
+      "bytes": 1443,
+      "sha256": "99410466a89c4aa4fda15ba013f57eecdb43b08924af15f420dff23b294de2da"
+    },
+    {
+      "path": "website/tests/head-learning-presentation-predecessor.mjs",
+      "bytes": 1194,
+      "sha256": "d59430b54f28f37aa504e4f9a898b12a6268732077bc99ac315bbbfd5f5fe2d5"
+    },
+    {
+      "path": "website/tests/fixtures/head-learning-presentation-source.json",
+      "bytes": 6565,
+      "sha256": "8014686955ccef9370fc9f563d98ab9b054cb3ea9e565adc37c208bbb3071734"
+    }
+  ],
+  "removed": [],
+  "scope": "Six authored learner UI, scoped catalogue style and source-preservation test/fixture files. No clinical content, source images, geometry, patient data, decision records, dependency binaries, environment or canonical ancestry uploaded. Scoped source supplement only.",
+  "proof": {
+    "focusedTests": 98,
+    "buildPassed": true,
+    "fullTypesPassed": true,
+    "clinicalApproval": false,
+    "installed": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
