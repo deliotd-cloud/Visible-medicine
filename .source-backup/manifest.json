@@ -1,0 +1,61 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T12:49:07.945Z",
+  "sourceIdentity": {
+    "parentReceiptSha256": "a8df01e3e7a03a0d6fae4eea50526385ca52cc865a6f6f6968f2ba5b023cbacd",
+    "proposalCheckpointSha256": "1ad4572d6087a369d9007d5bbf4053b620fb6a9f2ee1da6ad72e7173e932b8b9",
+    "integrated": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/build-clinical-review-viewer.mjs",
+      "sha256": "95b95fad2fa21cad7984d27d22a657d2a6d0764790b6fd1edec3635fb982feeb",
+      "bytes": 2438
+    },
+    {
+      "path": "scripts/review-license-notices.mjs",
+      "sha256": "fecce224aed0c538181b9c179f368e4d170dffacf237f9e006288c18e05e3378",
+      "bytes": 3017
+    },
+    {
+      "path": "scripts/bind-clinical-review.mjs",
+      "sha256": "20e8d7ba515cef968b39ac2eb2a8d6e0529a241ccb2e5b172165a15a12a3b34f",
+      "bytes": 10175
+    },
+    {
+      "path": "tests/review-license-notices.test.mjs",
+      "sha256": "bf0380cdb71f9b51039e0ef12c9a1e896afa1dd520538c0174a9c95e1136e5ca",
+      "bytes": 5665
+    },
+    {
+      "path": "tests/fixtures/review-license-notices.before.mjs.raw",
+      "sha256": "ff794e14a3c95e0404f114d364db370a9ef6059cf0dc90c34f004bf9d856cfc4",
+      "bytes": 3919
+    },
+    {
+      "path": "tests/review-license-generator.test.mjs",
+      "sha256": "8e7993972fa5fe5568af40ed837c790c3da9ae04b6d5baa9b7483c38fc89dee8",
+      "bytes": 8324
+    }
+  ],
+  "removed": [],
+  "scope": "Six first-party licensing generator/binding/test source files only, including the earlier first-party generator used as a regression fixture. This is an unintegrated proposal, not a full project backup or installed release. No scans, images, medical coordinates, anatomy assets, private decisions, local environment, QA output or canonical Git ancestry uploaded.",
+  "proof": {
+    "focusedChecks": 14,
+    "originalBugReproduced": true,
+    "syntheticBundler": true,
+    "stockReviewRebuildRequired": true,
+    "integrated": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "exhaustiveRightsClearance": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
