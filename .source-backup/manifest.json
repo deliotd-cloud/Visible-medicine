@@ -1,0 +1,50 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T04:46:33.894Z",
+  "sourceIdentity": {
+    "kind": "workspace-keyboard-focus-delta",
+    "websiteSourceSha256": "387f496c5e744baa4f350927e69ef762dde073b27c29cc5462df1dabe06de3c1",
+    "unchangedAtlasHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/SiteHeader.tsx",
+      "bytes": 15400,
+      "sha256": "5a296bfdc51eb3680d478b7003a6c8cd582b6bacb7cdb4dc5dba6a0bab8ea48f"
+    },
+    {
+      "path": "website/tests/header-session.test.ts",
+      "bytes": 23967,
+      "sha256": "832fa74d710d5e98cae474624c860d0e5f6262dab591575a5930e733b8a83ae9"
+    },
+    {
+      "path": "website/tests/desktop-search-entry.test.mjs",
+      "bytes": 5605,
+      "sha256": "fe3f1dcfbc5afa0e7296dea8d2631596f6ed62c696ece37274267081538f5b79"
+    },
+    {
+      "path": "website/tests/fixtures/desktop-search-entry-original.css",
+      "bytes": 171538,
+      "sha256": "67dbecc0822dd7c5b08633192ec9dbae32e16d097e8cf87bb7aaaceb4bc45c32"
+    }
+  ],
+  "removed": [],
+  "scope": "Four authored header, regression-test and original stylesheet test-fixture files. No private data, clinical decisions, scan derivatives, dependency binaries, environment or canonical ancestry. Source-only recovery supplement.",
+  "proof": {
+    "focusedTests": 32,
+    "targetedTypesPassed": true,
+    "fullProjectTypes": false,
+    "currentFullWebsiteBuild": false,
+    "syntheticDesktopKeyboardChecks": true,
+    "normalPreviewChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
