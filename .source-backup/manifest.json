@@ -1,0 +1,44 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T06:33:16.685Z",
+  "sourceIdentity": {
+    "kind": "verified-region-history-and-sql-helper-proposals",
+    "parentSourceSha256": "de8fc153b47eec835bb1b966628478bfbac256f74d0df380df094a0fd19546a5"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/AtlasRegionNavigation.tsx",
+      "bytes": 4542,
+      "sha256": "3e36ee3a92f8ca6755d95f3ab470369f21525149787cf144cb68f9a1fd396a27"
+    },
+    {
+      "path": "website/tests/atlas-region-picker.test.ts",
+      "bytes": 25381,
+      "sha256": "902b734f6e2381e83bbfb64d9ae68f5f2c9bd63d048e63ebf1fb01d539753862"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-current-source.mjs",
+      "bytes": 9058,
+      "sha256": "68d7ae6b48b3c46290d39d3f57791022770e7c430d18caae1419fc6d19c3f7ff"
+    }
+  ],
+  "removed": [],
+  "scope": "Three authored website proposal files, not yet integrated: Atlas region history selection and regression, plus current SQL test source helper. No permissions or product access-policy change. No scans, models, private data, generated assets, dependencies, environment or canonical ancestry. Scoped source recovery supplement only.",
+  "proof": {
+    "regionTestsPassed": 11,
+    "syntheticReactBrowserAssertions": 36,
+    "sqlCasesPassed": 12,
+    "websiteIntegrated": false,
+    "fullWebsiteBuildPassed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "ownerPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
