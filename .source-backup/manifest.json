@@ -1,0 +1,75 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T07:24:09.127Z",
+  "sourceIdentity": {
+    "kind": "linked-controls-ui",
+    "sourceSha256": "ca4e095757061815e583e9bc926562415bb4e5be33d9951656d80668d7a8ea17",
+    "parentSourceSha256": "de8fc153b47eec835bb1b966628478bfbac256f74d0df380df094a0fd19546a5",
+    "nativeHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/AtlasRegionNavigation.tsx",
+      "bytes": 4542,
+      "sha256": "3e36ee3a92f8ca6755d95f3ab470369f21525149787cf144cb68f9a1fd396a27"
+    },
+    {
+      "path": "website/tests/atlas-region-picker.test.ts",
+      "bytes": 25381,
+      "sha256": "902b734f6e2381e83bbfb64d9ae68f5f2c9bd63d048e63ebf1fb01d539753862"
+    },
+    {
+      "path": "website/components/HeadSlicePlayback.tsx",
+      "bytes": 7049,
+      "sha256": "40dceb319ca345c1c1deef97b6ca9e1609719588cf9b18076d4aa00afb37f47f"
+    },
+    {
+      "path": "website/tests/head-slice-playback.test.ts",
+      "bytes": 21539,
+      "sha256": "6c682cba2f6a6298b2f1c7f2b380678c2ceeb0cf0826c558ec6c28b35aaf65cf"
+    },
+    {
+      "path": "website/tests/head-slice-replay.test.ts",
+      "bytes": 9926,
+      "sha256": "0ac072b2d385e14062d38980879adfcfe7a2df0a63bd93ac849c3adb150771d6"
+    },
+    {
+      "path": "website/tests/atlas-delivery-access-sql-current-source.mjs",
+      "bytes": 9058,
+      "sha256": "68d7ae6b48b3c46290d39d3f57791022770e7c430d18caae1419fc6d19c3f7ff"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 27472,
+      "sha256": "5794b702b79ec5e7e3cb62195cde47e536018ef21692626cbd685bbbea9989d3"
+    },
+    {
+      "path": "website/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2780,
+      "sha256": "f1fccb02cef4b391b876d3a38f530f5c493eadc98bca99bf1412a3ef6a32a139"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "1d22388e59e37632c67062b6bd95d124ba15401821f2def4431ade42fd2c812c"
+    }
+  ],
+  "removed": [],
+  "scope": "Nine selected website source files: region picker, slice player, associated tests and current delivery pin. No scans, models, private records, runtime assets or canonical Git ancestry. Staged only; not a full project backup.",
+  "proof": {
+    "focusedTests": 364,
+    "targetedTypes": true,
+    "stockReviewBuild": true,
+    "nativeSourceUnchanged": true,
+    "normalPreviewChanged": false,
+    "clinicalApproval": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
