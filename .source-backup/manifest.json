@@ -1,0 +1,68 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T14:50:02.758Z",
+  "sourceIdentity": {
+    "parentReceiptSha256": "ae82c1f96dfe55b6a776b85467c6c7740b06821e43dc5ae9c43d42f5c065c10f",
+    "proposalCheckpointSha256": "5760c78f2c6bfb701036095669bcfd3848557827b8bc0e74aedca7d00a2f7971",
+    "integrated": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "lib/lecture-slide-preview.ts",
+      "sha256": "0eab5eb672ee38a409bac980e81708f1dd853bef93e695888fe4f32106e06dc0",
+      "bytes": 10371
+    },
+    {
+      "path": "scripts/lecture-pptx-preview.mjs",
+      "sha256": "678db85deb7c1f1a51d146b224b5e97085671de1ad633f4efc5e16e183b16b13",
+      "bytes": 17942
+    },
+    {
+      "path": "components/StudioSlidePreview.tsx",
+      "sha256": "719fb271fee76e5ee479ac0d24d76694940c59a09bd4deeed648d64f372e0fd6",
+      "bytes": 12819
+    },
+    {
+      "path": "tests/lecture-slide-preview.test.ts",
+      "sha256": "ac80b8681967ebe41f998bd41d63cf2d50f444bd5603ce8c62cdcbbd4146b7c6",
+      "bytes": 7787
+    },
+    {
+      "path": "tests/lecture-pptx-preview.test.mjs",
+      "sha256": "c3a6438f3f970a256fa6fd5f70a14dba0a3585a78384507c8a463005c58ccc3a",
+      "bytes": 23480
+    },
+    {
+      "path": "tests/studio-slide-preview.test.ts",
+      "sha256": "340e7dea76bfe7b9e72fe4f396edf80e3db15d52e63c83da001f5b7d7bd2ffc6",
+      "bytes": 18185
+    },
+    {
+      "path": "tests/studio-slide-preview-find.test.mjs",
+      "sha256": "fc89377e63fbcf6feefb68d0d8d236d8d0748a5cd1021522f248cec587f0286f",
+      "bytes": 18549
+    }
+  ],
+  "removed": [],
+  "scope": "Seven first-party slide-preview parser, producer, UI and synthetic-test source files only. Search includes original slide text without inventing titles or indexing notes. No real lecture files, extracted private text, private metadata, media, scans, anatomy datasets, clinical decisions, environment files, QA outputs or canonical Git ancestry included. This is a verified source-only proposal backup, not a full-project backup or installed release.",
+  "proof": {
+    "focusedChecks": 49,
+    "completeAffectedRoots": 4,
+    "focusedTypeDiagnostics": 0,
+    "optionalFieldBounded": true,
+    "legacyPackagesAccepted": true,
+    "sourceTitlesPreserved": true,
+    "notesExcludedFromSearch": true,
+    "integrated": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
