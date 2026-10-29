@@ -1,0 +1,74 @@
+{
+  "sourceMeshes": 24,
+  "sourceVersion": "BodyParts3D v3",
+  "verification": [
+    {
+      "at": "2026-10-29T21:16:59.646Z",
+      "structures": 12,
+      "vertices": 13498,
+      "triangles": 16092,
+      "allSourceTrianglesRetained": true,
+      "originalCoordinatesPreserved": true,
+      "numberedMuscleLabelsAssigned": false,
+      "registered": false,
+      "clinicalApproval": false,
+      "normalWebsiteChanged": false,
+      "groupDefectsFlagged": true,
+      "versionComparison": {
+        "bones": 10,
+        "centroidDeltaRange": [
+          {
+            "min": -16.142699999999998,
+            "max": 17.507000000000005
+          },
+          {
+            "min": -12.295000000000002,
+            "max": -2.1996500000000054
+          },
+          {
+            "min": -66.45478499999999,
+            "max": -66.25601950000001
+          }
+        ],
+        "meaning": "Raw v4 minus v3 bounding-box centres only; not a registration or registration-error metric"
+      },
+      "modelSha256": "e86bd6ed1a30385ee64d530b110878712d516707a07c09895a57e721673ee080"
+    },
+    {
+      "at": "2026-10-29T21:17:00.063Z",
+      "structures": 12,
+      "vertices": 46611,
+      "triangles": 69234,
+      "allSourceTrianglesRetained": true,
+      "originalCoordinatesPreserved": true,
+      "numberedMuscleLabelsAssigned": false,
+      "registered": false,
+      "clinicalApproval": false,
+      "normalWebsiteChanged": false,
+      "groupDefectsFlagged": true,
+      "versionComparison": {
+        "bones": 10,
+        "centroidDeltaRange": [
+          {
+            "min": -16.141499999999994,
+            "max": 17.475250000000003
+          },
+          {
+            "min": -12.277999999999992,
+            "max": -2.20505
+          },
+          {
+            "min": -66.48166499999999,
+            "max": -66.25601950000001
+          }
+        ],
+        "meaning": "Raw v4 minus v3 bounding-box centres only; not a registration or registration-error metric"
+      },
+      "modelSha256": "c6f414119bba9be4bb381ba20bd018224e21af6f852853ac8292a736b69cb560"
+    }
+  ],
+  "browserChecks": 68,
+  "parserFixtureTests": 6,
+  "clinicalApproval": false,
+  "registration": false
+}

@@ -1,0 +1,182 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T21:19:57.923Z",
+  "sourceIdentity": {
+    "atlasHead": "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "models": [
+      "e86bd6ed1a30385ee64d530b110878712d516707a07c09895a57e721673ee080",
+      "c6f414119bba9be4bb381ba20bd018224e21af6f852853ac8292a736b69cb560"
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/acquire.mjs",
+      "bytes": 6673,
+      "sha256": "8074e2ecb437721f1a2802c0365a658d8fe9578941f3b847b970d1e4d916c3ca"
+    },
+    {
+      "path": "recipes/acquire-v4-context.mjs",
+      "bytes": 1655,
+      "sha256": "2b1e572eecc4fefc9dc0031b3f908ce275b6f0f62b0b00d724eb2970443ecacd"
+    },
+    {
+      "path": "recipes/obj-audit.mjs",
+      "bytes": 5698,
+      "sha256": "e531d2fe2c3f235de164d316f67eb8546bdac8f44bcf82985d0a2200dddcfaa2"
+    },
+    {
+      "path": "recipes/obj-audit.test.mjs",
+      "bytes": 4445,
+      "sha256": "136f926933ebc5976be14ab9857b7c3aac247e37890f365de3db2de9997882ff"
+    },
+    {
+      "path": "recipes/prepare.mjs",
+      "bytes": 6434,
+      "sha256": "9a96ffdc1ebd5b4a876258e588bceb28f5a9cbaced640e8f8876dcf1b40411bf"
+    },
+    {
+      "path": "recipes/verify.mjs",
+      "bytes": 3434,
+      "sha256": "05b59f120cfde825f9e7dc0fa777f5418acf636168329b80fcfe0a2768ae4f73"
+    },
+    {
+      "path": "recipes/browser-qa.js",
+      "bytes": 2780,
+      "sha256": "67dfc5efce8782e95f86e379a1f343adc647c173010423fd38b2551b6b694351"
+    },
+    {
+      "path": "recipes/server.mjs",
+      "bytes": 1754,
+      "sha256": "5a8c93af51f70bdd8035563b3a72edcfe64eced9f8afa791e0a47764e507b155"
+    },
+    {
+      "path": "review/index.html",
+      "bytes": 3350,
+      "sha256": "b3d2c3d5a3be4a08f4d6f0096b89641c1c8babfe217412ff90532efccba61237"
+    },
+    {
+      "path": "review/viewer.js",
+      "bytes": 6139,
+      "sha256": "7d4e9c8e23f925ccc7042156361a270b50044f4ac0ee701ef81a1bcb4074cbac"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3781,
+      "sha256": "b46e84c0dd74ebf1c6f9fbc5fb1af5b89eabbcc1b49eb37369cebfb620c7210a"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 3012,
+      "sha256": "299563724d770444394d42c5044251ac3f6b8e97f5900b7ec3f2bdac10e12dd2"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 3012,
+      "sha256": "299563724d770444394d42c5044251ac3f6b8e97f5900b7ec3f2bdac10e12dd2"
+    },
+    {
+      "path": "LICENSES/THREE-MIT.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "atlas-source/scripts/bodyparts-archive.mjs",
+      "bytes": 4307,
+      "sha256": "1f68013592819aaf3da34f0d340b123d9d7e688f7b048d859f1001e84b9a79fb"
+    },
+    {
+      "path": "atlas-source/scripts/source-topology.mjs",
+      "bytes": 8957,
+      "sha256": "fe68b381c4a5ae23ac858e9d790e531270699c02a29629255373e00c9150f4fe"
+    },
+    {
+      "path": "atlas-source/scripts/vessel-shape-math.mjs",
+      "bytes": 4154,
+      "sha256": "a8f7d58164a50be8245ed060886ee0ce0581da96c5f689afd10d20449b185374"
+    }
+  ],
+  "removed": [],
+  "scope": "Seventeen selected recipes, review UI and licence/documentation text files only; no original meshes, generated anatomical data, screenshots, scans, private references, stored decisions or raw repository ancestry. Local unadmitted candidate; not a complete project backup.",
+  "proof": {
+    "sourceMeshes": 24,
+    "sourceVersion": "BodyParts3D v3",
+    "verification": [
+      {
+        "at": "2026-10-29T21:16:59.646Z",
+        "structures": 12,
+        "vertices": 13498,
+        "triangles": 16092,
+        "allSourceTrianglesRetained": true,
+        "originalCoordinatesPreserved": true,
+        "numberedMuscleLabelsAssigned": false,
+        "registered": false,
+        "clinicalApproval": false,
+        "normalWebsiteChanged": false,
+        "groupDefectsFlagged": true,
+        "versionComparison": {
+          "bones": 10,
+          "centroidDeltaRange": [
+            {
+              "min": -16.142699999999998,
+              "max": 17.507000000000005
+            },
+            {
+              "min": -12.295000000000002,
+              "max": -2.1996500000000054
+            },
+            {
+              "min": -66.45478499999999,
+              "max": -66.25601950000001
+            }
+          ],
+          "meaning": "Raw v4 minus v3 bounding-box centres only; not a registration or registration-error metric"
+        },
+        "modelSha256": "e86bd6ed1a30385ee64d530b110878712d516707a07c09895a57e721673ee080"
+      },
+      {
+        "at": "2026-10-29T21:17:00.063Z",
+        "structures": 12,
+        "vertices": 46611,
+        "triangles": 69234,
+        "allSourceTrianglesRetained": true,
+        "originalCoordinatesPreserved": true,
+        "numberedMuscleLabelsAssigned": false,
+        "registered": false,
+        "clinicalApproval": false,
+        "normalWebsiteChanged": false,
+        "groupDefectsFlagged": true,
+        "versionComparison": {
+          "bones": 10,
+          "centroidDeltaRange": [
+            {
+              "min": -16.141499999999994,
+              "max": 17.475250000000003
+            },
+            {
+              "min": -12.277999999999992,
+              "max": -2.20505
+            },
+            {
+              "min": -66.48166499999999,
+              "max": -66.25601950000001
+            }
+          ],
+          "meaning": "Raw v4 minus v3 bounding-box centres only; not a registration or registration-error metric"
+        },
+        "modelSha256": "c6f414119bba9be4bb381ba20bd018224e21af6f852853ac8292a736b69cb560"
+      }
+    ],
+    "browserChecks": 68,
+    "parserFixtureTests": 6,
+    "clinicalApproval": false,
+    "registration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
