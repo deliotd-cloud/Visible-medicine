@@ -1,0 +1,52 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T01:52:27.807Z",
+  "sourceIdentity": {
+    "kind": "forearm-fibula-authored-source-delta",
+    "nativeSourceSha256": "34f31b0733611d58f086dd17f39a87c282f1a516439db0b4c58f7dd233d8d7fe",
+    "nativeHead": "4d29390eaa4e3eb8f656c88b22eb93bc2dd308b9",
+    "parentNativeHead": "b78a694303492b5be7e6d198eed6d89b84926304"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/long-bone-imaging.ts",
+      "bytes": 18309,
+      "sha256": "c80016d1316e9ec8fd2570136ff0b0191634eed328fc6c28619fc4a14c69b237"
+    },
+    {
+      "path": "atlas/content/long-bone-imaging-pins.json",
+      "bytes": 18920,
+      "sha256": "740a3a68a58f7ce64b50a5d8e6ce7b05e262a6f7f7771ad3e955b90d1cf43c46"
+    },
+    {
+      "path": "atlas/lib/long-bone-imaging.ts",
+      "bytes": 2017,
+      "sha256": "0721bc3bd95cc005cd270869ef55925fb2d90fa8d4014bcb794959f3937280f3"
+    },
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 368961,
+      "sha256": "d6e11bf77a88e2ac5043e08f2c8e324eb1ab3a66b506a8ff65588562854899f4"
+    }
+  ],
+  "removed": [],
+  "scope": "Four authored source files: original radius/ulna/fibula CT and MRI draft teaching, existing commercial-compatible source identities, exact source binding and factual reference notices. No scan, geometry, patient data, generated asset, dependency, environment, private decision or canonical ancestry uploaded. Scoped recovery supplement, not the full project or dataset.",
+  "proof": {
+    "nativeBuildPassed": true,
+    "fullNativeTypesPassed": true,
+    "all9936LessonsCompared": true,
+    "changedLessons": 12,
+    "unchangedLessons": 9924,
+    "clinicalApproval": false,
+    "websiteImportComplete": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

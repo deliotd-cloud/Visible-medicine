@@ -1,0 +1,722 @@
+{
+  "schema": "vm-long-bone-imaging-pins/1",
+  "baselineHead": "6d37f7c80479b8d7b5c3185d4d73b115d3d08388",
+  "sourceReceiptSha256": "e4f19b5f08ac7ed046bcc9bcf5e026cdb4cbc33334fac4ec78c4c9f9f63d12a8",
+  "entries": [
+    {
+      "group": "femur",
+      "identity": {
+        "anchor": [
+          0.9478089809417725,
+          -2.004189968109131,
+          0.308991014957428
+        ],
+        "bounds": {
+          "max": [
+            1.502369999885559,
+            0.34239014983177185,
+            0.622759997844696
+          ],
+          "min": [
+            0.3196620047092438,
+            -4.319439888000488,
+            -0.005177993793040514
+          ]
+        },
+        "bundle": "thigh-skeleton",
+        "category": "bone",
+        "center": [
+          0.9110160022974014,
+          -1.9885248690843582,
+          0.30879100202582777
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA24475",
+        "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+        "laterality": "left",
+        "name": "Left femur",
+        "nodeName": "FMA24475",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "sourceName": "left femur",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3259",
+            "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "femur",
+      "identity": {
+        "anchor": [
+          -0.9391549825668335,
+          -2.0242297649383545,
+          0.31437796354293823
+        ],
+        "bounds": {
+          "max": [
+            -0.31894299387931824,
+            0.342520147562027,
+            0.6219199895858765
+          ],
+          "min": [
+            -1.5013400316238403,
+            -4.31850004196167,
+            -0.004697990603744984
+          ]
+        },
+        "bundle": "thigh-skeleton",
+        "category": "bone",
+        "center": [
+          -0.9101415127515793,
+          -1.9879899471998215,
+          0.30861099949106574
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA24474",
+        "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+        "laterality": "right",
+        "name": "Right femur",
+        "nodeName": "FMA24474",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "sourceName": "right femur",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3365",
+            "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "tibia",
+      "identity": {
+        "anchor": [
+          0.7442640066146851,
+          -6.160630226135254,
+          0.2990489900112152
+        ],
+        "bounds": {
+          "max": [
+            1.0945500135421753,
+            -4.261380195617676,
+            0.6451500058174133
+          ],
+          "min": [
+            0.3503419756889343,
+            -8.060953140258789,
+            0.019821014255285263
+          ]
+        },
+        "bundle": "leg-skeleton",
+        "category": "bone",
+        "center": [
+          0.7224459946155548,
+          -6.161166667938232,
+          0.3324855100363493
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA24478",
+        "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+        "laterality": "left",
+        "name": "Left tibia",
+        "nodeName": "FMA24478",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "sourceName": "left tibia",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3282",
+            "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "tibia",
+      "identity": {
+        "anchor": [
+          -0.6983820199966431,
+          -6.1077399253845215,
+          0.3267289698123932
+        ],
+        "bounds": {
+          "max": [
+            -0.3521600067615509,
+            -4.260799884796143,
+            0.6483500003814697
+          ],
+          "min": [
+            -1.0935299396514893,
+            -8.060371398925781,
+            0.02072898857295513
+          ]
+        },
+        "bundle": "leg-skeleton",
+        "category": "bone",
+        "center": [
+          -0.7228449732065201,
+          -6.160585641860962,
+          0.33453949447721243
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA24477",
+        "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+        "laterality": "right",
+        "name": "Right tibia",
+        "nodeName": "FMA24477",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "sourceName": "right tibia",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3387",
+            "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "humerus",
+      "identity": {
+        "anchor": [
+          -1.901360034942627,
+          3.8536999225616455,
+          0.2592269778251648
+        ],
+        "bounds": {
+          "max": [
+            -1.4009000062942505,
+            5.365400314331055,
+            0.5021899938583374
+          ],
+          "min": [
+            -2.40841007232666,
+            2.291999578475952,
+            0.010391006246209145
+          ]
+        },
+        "bundle": "shoulder-arm-skeleton",
+        "category": "bone",
+        "center": [
+          -1.9046550393104553,
+          3.8286999464035034,
+          0.2562905000522733
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA23130",
+        "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+        "laterality": "right",
+        "name": "Right humerus",
+        "nodeName": "FMA23130",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "sourceName": "right humerus",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3368",
+            "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "humerus",
+      "identity": {
+        "anchor": [
+          1.8882200717926025,
+          3.8617005348205566,
+          0.25274598598480225
+        ],
+        "bounds": {
+          "max": [
+            2.407599925994873,
+            5.365200042724609,
+            0.5022899508476257
+          ],
+          "min": [
+            1.400730013847351,
+            2.292099714279175,
+            0.010559005662798882
+          ]
+        },
+        "bundle": "shoulder-arm-skeleton",
+        "category": "bone",
+        "center": [
+          1.904164969921112,
+          3.828649878501892,
+          0.2564244782552123
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA23131",
+        "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+        "laterality": "left",
+        "name": "Left humerus",
+        "nodeName": "FMA23131",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "sourceName": "left humerus",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3262",
+            "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      }
+    },
+    {
+      "group": "fibula",
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+        "fmaId": "FMA24481",
+        "name": "Left fibula",
+        "sourceName": "left fibula",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24481",
+        "bounds": {
+          "min": [
+            0.8452900052070618,
+            -8.251906394958496,
+            -0.014659996144473553
+          ],
+          "max": [
+            1.2010799646377563,
+            -4.408689975738525,
+            0.28119003772735596
+          ]
+        },
+        "center": [
+          1.023184984922409,
+          -6.330298185348511,
+          0.1332650207914412
+        ],
+        "anchor": [
+          1.0649499893188477,
+          -6.316400051116943,
+          0.12487499415874481
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3260",
+            "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "radius",
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+        "fmaId": "FMA23465",
+        "name": "Left radius",
+        "sourceName": "left radius",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-skeleton",
+        "nodeName": "FMA23465",
+        "bounds": {
+          "min": [
+            2.198359966278076,
+            0.0616302490234375,
+            0.11469299346208572
+          ],
+          "max": [
+            2.7914299964904785,
+            2.350100040435791,
+            0.7725200057029724
+          ]
+        },
+        "center": [
+          2.4948949813842773,
+          1.2058651447296143,
+          0.44360649958252907
+        ],
+        "anchor": [
+          2.561270236968994,
+          1.1699999570846558,
+          0.4131059944629669
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3277",
+            "sha256": "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "ulna",
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+        "fmaId": "FMA23468",
+        "name": "Left ulna",
+        "sourceName": "left ulna",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-skeleton",
+        "nodeName": "FMA23468",
+        "bounds": {
+          "min": [
+            1.9689199924468994,
+            0.050159912556409836,
+            -0.05447700619697571
+          ],
+          "max": [
+            2.4711999893188477,
+            2.5246996879577637,
+            0.7327899932861328
+          ]
+        },
+        "center": [
+          2.2200599908828735,
+          1.2874298002570868,
+          0.33915649354457855
+        ],
+        "anchor": [
+          2.191890001296997,
+          1.2612799406051636,
+          0.3485729992389679
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3286",
+            "sha256": "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "radius",
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+        "fmaId": "FMA23464",
+        "name": "Right radius",
+        "sourceName": "right radius",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-skeleton",
+        "nodeName": "FMA23464",
+        "bounds": {
+          "min": [
+            -2.7953500747680664,
+            0.05835022032260895,
+            0.11102600395679474
+          ],
+          "max": [
+            -2.1983299255371094,
+            2.3505005836486816,
+            0.7690799832344055
+          ]
+        },
+        "center": [
+          -2.496840000152588,
+          1.2044254019856453,
+          0.44005299359560013
+        ],
+        "anchor": [
+          -2.5462300777435303,
+          1.1810302734375,
+          0.42398497462272644
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3349",
+            "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "fibula",
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+        "fmaId": "FMA24480",
+        "name": "Right fibula",
+        "sourceName": "right fibula",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24480",
+        "bounds": {
+          "min": [
+            -1.2016500234603882,
+            -8.252799034118652,
+            -0.015125999227166176
+          ],
+          "max": [
+            -0.8434450030326843,
+            -4.4085001945495605,
+            0.28168800473213196
+          ]
+        },
+        "center": [
+          -1.0225475132465363,
+          -6.3306496143341064,
+          0.1332810027524829
+        ],
+        "anchor": [
+          -1.0324500799179077,
+          -6.344590187072754,
+          0.16410896182060242
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3366",
+            "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "ulna",
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+        "fmaId": "FMA23467",
+        "name": "Right ulna",
+        "sourceName": "right ulna",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-skeleton",
+        "nodeName": "FMA23467",
+        "bounds": {
+          "min": [
+            -2.471790075302124,
+            0.05172973498702049,
+            -0.052008017897605896
+          ],
+          "max": [
+            -1.968809962272644,
+            2.5244994163513184,
+            0.7349400520324707
+          ]
+        },
+        "center": [
+          -2.220300018787384,
+          1.2881145756691694,
+          0.3414660170674324
+        ],
+        "anchor": [
+          -2.2308499813079834,
+          1.2578003406524658,
+          0.39101600646972656
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3391",
+            "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    }
+  ],
+  "additions": [
+    {
+      "group": "humerus",
+      "baselineHead": "c11731cbd8ae0535daa58271b0eac1e3bef98e9d",
+      "sourceReceiptSha256": "8db9511be8c7e3b34400fe1c47af1162d1cd139934bd3d0643c682c86e5bd886"
+    },
+    {
+      "group": "radius-ulna-fibula",
+      "baselineHead": "b78a694303492b5be7e6d198eed6d89b84926304",
+      "sourceReceiptSha256": "f2da26a343c09f1deb043844b2f84341f8526098dc9afcd5ae524e731f603e13",
+      "proposalSha256": "7abc04cfd2990c3d11c8d177d46177da9e7133532998dc2e4b70e1f42dd9a0e3"
+    }
+  ]
+}
