@@ -1,0 +1,83 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T20:56:05.107Z",
+  "sourceIdentity": {
+    "website": "G:/VisibleMedicine-temp/staging/20261029-combined-website/website",
+    "sourceCommit": "9cef8900417bf592d3130f6ff92bf3e748cb55fc",
+    "reviewHash": "e797853ed87cb3d4dc39a1addafa55aa7962394bc1e961a14c83ca0b54f9f510"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/HeadAtlasConceptTeaching.tsx",
+      "bytes": 2898,
+      "sha256": "1b3d603c7c058ec27d0f38ed6d74a3217dd2d85117fea36109266e025e01eda3"
+    },
+    {
+      "path": "components/HeadAtlasReferenceTeaching.tsx",
+      "bytes": 8736,
+      "sha256": "a1a37f232a36f3d09c2275774e9ae0f22841af1a73c484bb41ed9b4d2f901520"
+    },
+    {
+      "path": "components/HeadAtlasTeaching.tsx",
+      "bytes": 4758,
+      "sha256": "f3ef8a1664b3e3fe103d1f35dc140c08387a16ee708cf1616e35c18d2825fd29"
+    },
+    {
+      "path": "scripts/bind-clinical-review.mjs",
+      "bytes": 10175,
+      "sha256": "20e8d7ba515cef968b39ac2eb2a8d6e0529a241ccb2e5b172165a15a12a3b34f"
+    },
+    {
+      "path": "qa/verify-website-review-binding.mjs",
+      "bytes": 3320,
+      "sha256": "c14c96e5b6c295becbc56c5e5ddcbee7b55dc15f7c8484a5c25dd0b9185d2030"
+    }
+  ],
+  "removed": [],
+  "scope": "Five website implementation/verifier text sources only. Generated review manifests are retained only in local F recovery. No clinical decisions, scans, patient identifiers, geometry assets or raw Git ancestry included. Not a whole-project backup.",
+  "proof": {
+    "at": "2026-10-29T20:55:03.772Z",
+    "sourceCommit": "9cef8900417bf592d3130f6ff92bf3e748cb55fc",
+    "integrationHash": "e797853ed87cb3d4dc39a1addafa55aa7962394bc1e961a14c83ca0b54f9f510",
+    "inputFiles": 1852,
+    "importedFiles": 1640,
+    "changedInputPaths": [
+      "components/HeadAtlasConceptTeaching.tsx",
+      "components/HeadAtlasReferenceTeaching.tsx",
+      "components/HeadAtlasTeaching.tsx"
+    ],
+    "sourceIdentitiesPreserved": true,
+    "shoulderTracksVerified": 18,
+    "bodyRenderer": "23240aef8b0f217fc981f2ada356e47aaa57771424a00370f77f4f7461b65440",
+    "privateDecisionsReadOrWritten": false,
+    "viewerBuildCurrent": false,
+    "fullReviewVerificationPassed": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "generatedPaths": [
+      {
+        "path": "atlas-review/content/body-renderer-revision.json",
+        "sha256": "24a49137be0f835441488cce30d6529b08a1aa25b4e4dcc1aa04548c63ad7159"
+      },
+      {
+        "path": "atlas-review/content/review-revisions.json",
+        "sha256": "af8968c3873a4974dca647aa2ef431268a0368c8fd11830aa34758e1385bdd6d"
+      },
+      {
+        "path": "atlas-review/manifest.json",
+        "sha256": "b3d5eca55df3cf250228bfb912c60b71e77ca5ef915f9e729a13385fb90ac7e7"
+      },
+      {
+        "path": "atlas-review/integration-inputs.json",
+        "sha256": "a637ce13c5bb0f6806a1ade3fbe2955026fd93987b4ef8ef9fbb6557aaaabedb"
+      }
+    ]
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

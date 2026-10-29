@@ -1,0 +1,42 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const root='G:/VisibleMedicine-temp/staging/20261029-website-review-binding';
+const website='G:/VisibleMedicine-temp/staging/20261029-combined-website/website';
+const json=p=>JSON.parse(fs.readFileSync(p));
+const sha=value=>createHash('sha256').update(value).digest('hex');
+const hash=p=>sha(fs.readFileSync(p));
+const before=json(root+'/before/atlas-review/integration-inputs.json');
+const inputs=json(website+'/atlas-review/integration-inputs.json');
+const source=json(website+'/atlas-review/manifest.json');
+const priorSource=json(root+'/before/atlas-review/manifest.json');
+assert.equal(json(root+'/EXIT.json').exitCode,0);
+assert.equal(inputs.inputs.length,1852);
+assert.equal(inputs.sourceCommit,before.sourceCommit);
+assert.equal(source.revision,priorSource.revision);
+assert.deepEqual(inputs.inputs.map(r=>r.path),before.inputs.map(r=>r.path));
+const changed=inputs.inputs.filter((r,i)=>r.sha256!==before.inputs[i].sha256).map(r=>r.path);
+assert.deepEqual(changed,['components/HeadAtlasConceptTeaching.tsx','components/HeadAtlasReferenceTeaching.tsx','components/HeadAtlasTeaching.tsx']);
+for(const r of inputs.inputs)assert.equal(hash(website+'/'+r.path),r.sha256,r.path);
+for(const r of source.files)assert.equal(hash(website+'/atlas-review/'+r.path),r.importedSha256,r.path);
+assert.equal(sha(JSON.stringify(inputs.inputs)),inputs.sha256);
+assert.equal(source.websiteIntegrationSha256,inputs.sha256);
+const body=json(website+'/atlas-review/content/body-renderer-revision.json');
+const priorBody=json(root+'/before/atlas-review/content/body-renderer-revision.json');
+assert.equal(body.sourceRendererSha256,priorBody.sourceRendererSha256);
+assert.equal(body.sha256,sha(JSON.stringify({source:body.sourceRendererSha256,website:inputs.sha256})));
+assert.equal(body.websiteIntegrationSha256,inputs.sha256);
+const shoulder=json(website+'/atlas-review/content/review-revisions.json');
+const priorShoulder=json(root+'/before/atlas-review/content/review-revisions.json');
+assert.deepEqual(shoulder.sourceRevisions,priorShoulder.sourceRevisions);
+let tracks=0;
+for(const [id,sourceTracks]of Object.entries(shoulder.sourceRevisions))for(const track of ['geometry','teaching']){
+ assert.equal(shoulder.revisions[id][track],sourceTracks[track]===null?null:sha(JSON.stringify({source:sourceTracks[track],website:inputs.sha256})));
+ tracks++;
+}
+// Stored decisions are intentionally outside the filesystem inputs; this tool never opens them.
+const viewer=json(website+'/public/atlas-review-viewer/manifest.json');
+assert.notEqual(viewer.websiteIntegrationSha256,inputs.sha256);
+const result={at:new Date().toISOString(),sourceCommit:source.revision,integrationHash:inputs.sha256,inputFiles:inputs.inputs.length,importedFiles:source.files.length,changedInputPaths:changed,sourceIdentitiesPreserved:true,shoulderTracksVerified:tracks,bodyRenderer:body.sha256,privateDecisionsReadOrWritten:false,viewerBuildCurrent:false,fullReviewVerificationPassed:false,installed:false,ownerPreviewChanged:false,generatedPaths:json(root+'/BEFORE.json').map(r=>({path:r.path,sha256:hash(website+'/'+r.path)}))};
+fs.writeFileSync(root+'/RESULT.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result));
