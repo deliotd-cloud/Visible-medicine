@@ -56,114 +56,53 @@ async function guarded({site,dir,command,heap=384,aggregate=1024,minimum=3072,ex
  return {supervisor:result,process:terminal,passing:result.code===0&&!result.error&&!result.signal&&terminal?.terminalObserved&&!terminal.interrupted&&terminal.exitCode===0};
 }
 
-const exactSite='G:/VisibleMedicine-temp/staging/20261029-combined-native-successor/atlas';
-const evidenceRoot='G:/VisibleMedicine-temp/staging/20261029-native-successor-generation';
-const allowedCommands=Object.freeze([
- 'scripts/regional-teaching-snapshots.mjs',
- 'scripts/regional-teaching-snapshots.mjs --check',
- 'scripts/generate-body-review-display-pins.mjs',
- 'scripts/generate-body-review-display-pins.mjs --check',
- 'scripts/review-revisions.mjs',
- 'scripts/review-revisions.mjs --check',
- 'scripts/body-renderer-revisions.mjs',
- 'scripts/body-renderer-revisions.mjs --check',
- 'scripts/generate-nested-review-bindings.mjs',
- 'scripts/generate-nested-review-bindings.mjs --check',
-]);
-function validateRequest({site,command,attempt}) {
- assert.equal(site,exactSite,'Only the isolated teaching candidate is admitted');
- assert(allowedCommands.includes(command),'Only exact stock generator tuples are admitted');
- assert.match(attempt,/^[a-z][a-z0-9-]{1,63}$/);
- assert.equal(fs.realpathSync.native(site).replaceAll('\\','/').toLowerCase(),site.toLowerCase(),'Candidate must not escape through a junction');
- return {site,command,dir:evidenceRoot+'/'+attempt};
-}
-async function guardedGenerator(request) {
- const verified=validateRequest(request);
- const lock=evidenceRoot+'/GENERATOR.lock';
- const fd=fs.openSync(lock,'wx');
- try {
-  fs.writeSync(fd,JSON.stringify({pid:process.pid,at:new Date().toISOString(),...verified}));fs.fsyncSync(fd);
-  verifySource();for(const d of pinnedDependencies)assert.equal(hash(d.path),d.sha256,d.path);
-  return await guarded({...verified,heap:384,aggregate:1024,minimum:3072,maxMinutes:10,
-   extraEnv:{TEMP:evidenceRoot+'/temp',TMP:evidenceRoot+'/temp'}});
- } finally {fs.closeSync(fd);fs.unlinkSync(lock);}
-}
 
 import path from 'node:path';
 import {createRequire} from 'node:module';
-const stage='G:/VisibleMedicine-temp/staging/20261029-combined-native-successor';
-const site=stage+'/atlas',root='G:/VisibleMedicine-temp/staging/20261029-native-successor-generation';
+const stage='G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-native',site=stage+'/atlas';
+const root='G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-generation';
 const save=(p,v)=>fs.writeFileSync(root+'/'+p,JSON.stringify(v,null,2)+'\n',{flag:'wx'});
-assert.equal(hash(stage+'/PREPARATION.json'),'f1ae317be0b5b862225f47eb1907cdc0378f4a6891e4c779ff0b38b13e1f15ee','Exact independently verified successor preparation');
-assert.equal(hash(root+'/parse-supervisor.ps1'),'d17c4bea3a7a44315d166aa6c2c79971a56bb2999a81381f78b5f52dda14f0c7','Exact parser source');
+assert.equal(hash('G:/VisibleMedicine-temp/staging/20261029-native-successor-generation/parse-supervisor.ps1'),'d17c4bea3a7a44315d166aa6c2c79971a56bb2999a81381f78b5f52dda14f0c7');
+assert.equal(hash(stage+'/PREPARATION.json'),'4d95d5118e72c3dac24afaf6eab142a3699b5322bd88f6a2f5698d265da3b2f5');
 const source=json(stage+'/PREPARATION.json');assert.equal(hash(source.parent.path),source.parent.sha256);
 const parent=json(source.parent.path),expected=new Map(parent.sourceRows.map(r=>[r.path,r.sha256]));
-for(const r of source.changes)expected.set(r.path,r.sha256);
-assert.equal(expected.size,6484);
-assert.equal(new Set(source.sourceRows.map(r=>r.path)).size,6484);
-assert.deepEqual([...expected].sort(([a],[b])=>a.localeCompare(b)),source.sourceRows.map(r=>[r.path,r.sha256]).sort(([a],[b])=>a.localeCompare(b)),'Complete successor manifest accounting');
-assert.equal(expected.get("scripts/regional-teaching-snapshots.mjs"),"38c74f4dc3d1ef6e95030c34d00b046b15ace38e928d7e42d8a7772920cae316");
+for(const r of source.changes){assert.equal(expected.get(r.path)??null,r.beforeSha256);expected.set(r.path,r.sha256);}
+assert.equal(expected.size,6490);assert.deepEqual([...expected].sort(([a],[b])=>a.localeCompare(b)),source.sourceRows.map(r=>[r.path,r.sha256]).sort(([a],[b])=>a.localeCompare(b)));
 const commands=[
- ['regional-write','scripts/regional-teaching-snapshots.mjs'],
- ['regional-check','scripts/regional-teaching-snapshots.mjs --check'],
- ['display-write-v6','scripts/generate-body-review-display-pins.mjs'],
- ['display-check-v6','scripts/generate-body-review-display-pins.mjs --check'],
- ['reviews-write','scripts/review-revisions.mjs'],
- ['reviews-check','scripts/review-revisions.mjs --check'],
- ['renderer-write','scripts/body-renderer-revisions.mjs'],
- ['renderer-check','scripts/body-renderer-revisions.mjs --check'],
- ['nested-write','scripts/generate-nested-review-bindings.mjs'],
- ['nested-check','scripts/generate-nested-review-bindings.mjs --check'],
+ ['regional-write','scripts/regional-teaching-snapshots.mjs'],['regional-check','scripts/regional-teaching-snapshots.mjs --check'],
+ ['display-write','scripts/generate-body-review-display-pins.mjs'],['display-check','scripts/generate-body-review-display-pins.mjs --check'],
+ ['reviews-write','scripts/review-revisions.mjs'],['reviews-check','scripts/review-revisions.mjs --check'],
+ ['renderer-write','scripts/body-renderer-revisions.mjs'],['renderer-check','scripts/body-renderer-revisions.mjs --check'],
+ ['nested-write','scripts/generate-nested-review-bindings.mjs'],['nested-check','scripts/generate-nested-review-bindings.mjs --check'],
 ];
 const permitted=new Set([...expected.keys()].filter(p=>p.startsWith('content/regional-teaching/')&&p.endsWith('.json')));
 for(const p of ['lib/regional-teaching-imports.ts','content/body-review-display-pins.json','content/review-revisions.json','content/body-renderer-revision.json','content/nested-review-bindings.json'])permitted.add(p);
+const pinnedResumeReceipts=Object.freeze([]);
 const prior=[];
-// Main may add literal hashes only after observing and checkpointing completed
-// steps. A receipt's own `passing` flag is never authority to resume it.
-const pinnedResumeReceipts=Object.freeze([{"attempt":"regional-write","sha256":"e498f144bd9b286a32eefe2e712aa1ec024deb3278e95b4f0e831c5ac9e53879"},{"attempt":"regional-check","sha256":"54829150465e26932ae5fbe126418d18a523342c1da5d0bb7859b32feb13c8ff"}]);
-assert.equal(hash("F:/VisibleMedicine/recovery/checkpoints/20261029-native-regional-generated/checkpoint.json"),"4150f7ad9b70d240b378fdb58a3326edc17d781a6a599c8d8e7bc990d654c08b","Main-verified completed generation checkpoint");
-assert.equal(hash(root+"/display-write/RESULT.json"),"2b0e51e9ff9928b166c0b29d8e0fc29d733162cfceda9ee5caa004bf4f8c716e","Original failed attempt preserved");
 for(const [attempt,command]of commands){
  const f=root+'/'+attempt+'/RESULT.json';if(!fs.existsSync(f))break;
- const pin=pinnedResumeReceipts.find(row=>row.attempt===attempt);
- assert(pin&&/^[a-f0-9]{64}$/.test(pin.sha256),'Existing step needs an independently verified resume pin: '+attempt);
- assert.equal(hash(f),pin.sha256,'Pinned resume receipt changed');
- const r=json(f);assert(r.passing&&r.command===command&&r.supervisor?.code===0&&r.process?.terminalObserved&&r.process.exitCode===0&&!r.process.interrupted,'Completed exact stock command required');
- assert(Array.isArray(r.generated));const seen=new Set();
- for(const row of r.generated){assert(row&&permitted.has(row.path)&&expected.has(row.path)&&!seen.has(row.path),'Resume may change only known generated outputs');seen.add(row.path);assert.equal(row.beforeSha256,expected.get(row.path),'Resume source chain mismatch');assert(/^[a-f0-9]{64}$/.test(row.sha256)&&Number.isSafeInteger(row.bytes)&&row.bytes>=0);expected.set(row.path,row.sha256);}
- prior.push(attempt);
+ const pin=pinnedResumeReceipts.find(r=>r.attempt===attempt);assert(pin&&/^[a-f0-9]{64}$/.test(pin.sha256),'Existing step requires an independently verified resume pin: '+attempt);assert.equal(hash(f),pin.sha256);
+ const r=json(f);assert(r.passing&&r.command===command&&r.supervisor?.code===0&&r.process?.terminalObserved&&r.process.exitCode===0&&!r.process.interrupted);
+ const seen=new Set();for(const row of r.generated){assert(permitted.has(row.path)&&expected.has(row.path)&&!seen.has(row.path));seen.add(row.path);assert.equal(expected.get(row.path),row.beforeSha256);assert(/^[a-f0-9]{64}$/.test(row.sha256));expected.set(row.path,row.sha256);}prior.push(attempt);
 }
-// No arbitrary commands, scopes, shell tokens, or unchecked caller environments.
-for(const c of allowedCommands)validateRequest({site,command:c,attempt:'scope-check'});
-for(const command of ['scripts/build-clinical-review-viewer.mjs','scripts/run-website-tests.mjs --run','scripts/export-content.mjs','scripts/pin-nested-teaching.mjs','scripts/regional-teaching-snapshots.mjs; whoami'])assert.throws(()=>validateRequest({site,command,attempt:'bad-request'}));
-assert.throws(()=>validateRequest({site:'F:/VisibleMedicine/atlas',command:allowedCommands[0],attempt:'bad-request'}));
-assert.throws(()=>validateRequest({site,command:allowedCommands[0],attempt:'../../escape'}));
-function verifySource(){for(const [p,sha]of expected){const file=site+'/'+p;assert.equal(fs.realpathSync.native(file).toLowerCase(),path.resolve(file).toLowerCase(),'Source cannot be a junction/symlink escape: '+p);assert.equal(hash(file),sha,p);}const untracked=execFileSync('git',['-C',site,'ls-files','--others','--exclude-standard'],{encoding:'utf8',windowsHide:true}).trim().split(/\r?\n/).filter(Boolean);assert(untracked.every(p=>expected.has(p)),'Unexpected untracked source before generation');}
-verifySource();
+function validateRequest({site:requested,command,attempt}){assert.equal(requested,site);assert(commands.some(row=>row[1]===command));assert.match(attempt,/^[a-z][a-z0-9-]{1,63}$/);assert.equal(fs.realpathSync.native(site).replaceAll('\\','/').toLowerCase(),site.toLowerCase());return{site,command,dir:root+'/'+attempt};}
+for(const[,command]of commands)validateRequest({site,command,attempt:'scope-check'});
+for(const command of ['scripts/build-clinical-review-viewer.mjs','scripts/run-website-tests.mjs --run','scripts/regional-teaching-snapshots.mjs; whoami'])assert.throws(()=>validateRequest({site,command,attempt:'bad-command'}));
+assert.throws(()=>validateRequest({site:'F:/VisibleMedicine/atlas',command:commands[0][1],attempt:'bad-site'}));assert.throws(()=>validateRequest({site,command:commands[0][1],attempt:'../../escape'}));
+function verifySource(){for(const[p,h]of expected){const file=site+'/'+p;assert.equal(fs.realpathSync.native(file).toLowerCase(),path.resolve(file).toLowerCase(),'Source escape: '+p);assert.equal(hash(file),h,p);}const extra=execFileSync('git',['-C',site,'ls-files','--others','--exclude-standard'],{encoding:'utf8',windowsHide:true}).trim().split(/\r?\n/).filter(Boolean);assert(extra.every(p=>expected.has(p)),'Unexpected source');}
 const req=createRequire(site+'/package.json');
-assert.equal(hash('G:/VisibleMedicine-temp/staging/20261029-small-generator-profile/ADMISSION-1793290403527.json'),'cbda14f0489c2c66474f1d8b47b7171aab52130ca68749fe78219773cf650f56','Exact independent dependency receipt');
+assert.equal(hash('G:/VisibleMedicine-temp/staging/20261029-small-generator-profile/ADMISSION-1793290403527.json'),'cbda14f0489c2c66474f1d8b47b7171aab52130ca68749fe78219773cf650f56');
 const pinnedDependencies=json('G:/VisibleMedicine-temp/staging/20261029-small-generator-profile/ADMISSION-1793290403527.json').dependencyFiles;
-const deps=[process.execPath,req.resolve('esbuild/package.json'),req.resolve('esbuild'),req.resolve('@esbuild/win32-x64/esbuild.exe'),req.resolve('typescript/package.json'),req.resolve('typescript')].map(p=>({path:fs.realpathSync.native(p),sha256:hash(p)}));
-assert.deepEqual(deps,pinnedDependencies,'Executable dependency identity changed since the separately recorded admission');
-const tsconfig=json(site+'/tsconfig.json');assert(!tsconfig.extends,'Unreviewed parent tsconfig');
-const identity={at:new Date().toISOString(),site,parent:source.parent,sourceFiles:expected.size,authored:source.changes,dependencyFiles:deps,node:process.version,tsconfigSha256:hash(site+'/tsconfig.json'),profileSha256:hash(root+'/launch-contained-v6.mjs'),fullBuildGuardSha256:hash('G:/VisibleMedicine-temp/guard-g-v1.mjs'),nativeJobMiB:1024,heapMiB:384,minimumMiB:3072,freeFloorMiB:2048,checks:9,fullBuildPassed:false,installed:false};
-assert.equal(identity.fullBuildGuardSha256,'f008679d73d32101e93fa5272d954282975c85725054de24065769b60818db82');
-save('ADMISSION-'+Date.now()+'.json',identity);
+const deps=[process.execPath,req.resolve('esbuild/package.json'),req.resolve('esbuild'),req.resolve('@esbuild/win32-x64/esbuild.exe'),req.resolve('typescript/package.json'),req.resolve('typescript')].map(p=>({path:fs.realpathSync.native(p),sha256:hash(p)}));assert.deepEqual(deps,pinnedDependencies);
+assert(!json(site+'/tsconfig.json').extends);verifySource();
+save('ADMISSION-'+Date.now()+'.json',{at:new Date().toISOString(),site,sourcePreparation:{path:stage+'/PREPARATION.json',sha256:hash(stage+'/PREPARATION.json')},sourceFiles:expected.size,dependencyFiles:deps,profileSha256:hash(process.argv[1]),nativeJobMiB:1024,heapMiB:384,minimumMiB:3072,freeFloorMiB:2048,prior,fullBuildPassed:false,installed:false});
 console.log(JSON.stringify({verifiedSourceFiles:expected.size,dependencyFiles:deps.length,resumeAfter:prior}));
 if(process.argv[2]==='--verify-only'){console.log(JSON.stringify({verified:true,generationStarted:false}));process.exit(0);}
+async function run(request){const verified=validateRequest(request),lock=root+'/GENERATOR.lock',fd=fs.openSync(lock,'wx');try{fs.writeSync(fd,JSON.stringify({pid:process.pid,at:new Date().toISOString(),...verified}));fs.fsyncSync(fd);verifySource();for(const d of deps)assert.equal(hash(d.path),d.sha256);return await guarded({...verified,heap:384,aggregate:1024,minimum:3072,maxMinutes:10,extraEnv:{TEMP:root+'/temp',TMP:root+'/temp'}});}finally{fs.closeSync(fd);fs.unlinkSync(lock);}}
 for(const[attempt,command]of commands){
  if(prior.includes(attempt))continue;
- for(const d of deps)assert.equal(hash(d.path),d.sha256);
- verifySource();
- let r;
- try{r=await guardedGenerator({site,attempt,command});}catch(e){save('REFUSAL-'+Date.now()+'.json',{at:new Date().toISOString(),attempt,command,message:e.message,memory:e.memory??null,minimum:e.minimum??null,admissionRefused:e.admissionRefused===true});console.log(JSON.stringify({stopped:true,attempt,message:e.message,memory:e.memory??null}));process.exitCode=75;break;}
- const changes=[];
- for(const[p,sha]of expected){const current=hash(site+'/'+p);if(current!==sha){assert(permitted.has(p),'Unexpected stock generator write: '+p);changes.push({path:p,beforeSha256:sha,sha256:current,bytes:fs.statSync(site+'/'+p).size});}}
- const untracked=execFileSync('git',['-C',site,'ls-files','--others','--exclude-standard'],{encoding:'utf8',windowsHide:true}).trim().split(/\r?\n/).filter(Boolean);
- assert(untracked.every(p=>expected.has(p)),'Unexpected generated source path');
- const result={...r,at:new Date().toISOString(),command,generated:changes,fullBuildPassed:false,installed:false};
- save(attempt+'/RESULT.json',result);
- console.log(JSON.stringify({attempt,passing:r.passing,changedFiles:changes.length,exit:r.process?.exitCode}));
- if(!r.passing){process.exitCode=1;break;}
- for(const row of changes)expected.set(row.path,row.sha256);
+ let r;try{r=await run({site,attempt,command});}catch(e){save('REFUSAL-'+Date.now()+'.json',{at:new Date().toISOString(),attempt,command,message:e.message,memory:e.memory??null,minimum:e.minimum??null});console.log(JSON.stringify({stopped:true,attempt,message:e.message,memory:e.memory??null}));process.exitCode=75;break;}
+ const changes=[];for(const[p,h]of expected){const current=hash(site+'/'+p);if(current!==h){assert(permitted.has(p),'Unexpected generator write: '+p);changes.push({path:p,beforeSha256:h,sha256:current,bytes:fs.statSync(site+'/'+p).size});}}
+ const extra=execFileSync('git',['-C',site,'ls-files','--others','--exclude-standard'],{encoding:'utf8',windowsHide:true}).trim().split(/\r?\n/).filter(Boolean);assert(extra.every(p=>expected.has(p)));
+ save(attempt+'/RESULT.json',{...r,at:new Date().toISOString(),command,generated:changes,fullBuildPassed:false,installed:false});console.log(JSON.stringify({attempt,passing:r.passing,changedFiles:changes.length,exit:r.process?.exitCode}));if(!r.passing){process.exitCode=1;break;}for(const row of changes)expected.set(row.path,row.sha256);
 }
