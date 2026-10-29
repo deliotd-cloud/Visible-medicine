@@ -1,0 +1,31 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {execFileSync,spawnSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {createHash} from 'node:crypto';
+const root='G:/VisibleMedicine-temp/staging/20261029-regression-repairs',site=root+'/website';
+const parentFile='G:/VisibleMedicine-temp/staging/20261029-review-delivery-repair/SOURCE_CANDIDATE.json',parentHash='0daa99a5ed9098c7edef48f11bdf4634ab2097ecb5664bc594f44a6fab465b40';
+assert.equal(hash(parentFile),parentHash);const parent=json(parentFile),sha=b=>createHash('sha256').update(b).digest('hex');
+const write=(p,b)=>{fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,typeof b==='string'||Buffer.isBuffer(b)?b:JSON.stringify(b,null,2)+'\n',{flag:'wx'});};
+assert(!fs.existsSync(site));fs.mkdirSync(site);
+for(const row of parent.sourceRows){assert.equal(hash(parent.website+'/'+row.path),row.sha256,row.path);fs.mkdirSync(path.dirname(site+'/'+row.path),{recursive:true});fs.copyFileSync(parent.website+'/'+row.path,site+'/'+row.path,fs.constants.COPYFILE_EXCL);}
+fs.symlinkSync(fs.realpathSync(parent.website+'/node_modules'),site+'/node_modules','junction');
+const git=(...args)=>execFileSync('git',['--no-replace-objects','-C',site,...args],{encoding:'utf8',windowsHide:true,maxBuffer:8*1024*1024}).trim();
+git('init','--quiet');const objects=execFileSync('git',['-C',parent.website,'rev-parse','--path-format=absolute','--git-path','objects'],{encoding:'utf8',windowsHide:true}).trim();write(site+'/.git/objects/info/alternates',objects.replaceAll('\\','/')+'\n');git('update-ref','HEAD',parent.websiteHead);git('read-tree','HEAD');
+const changed=['tests/studio-course-details-form.test.mjs','tests/studio-workbook-empty-state.test.mjs','tests/head-epoch-projections.mjs'];
+for(const p of changed.slice(0,2)){write(root+'/before/'+p,fs.readFileSync(site+'/'+p));fs.copyFileSync('G:/VisibleMedicine-temp/staging/20261029-studio-partition1-repair/'+p,site+'/'+p);}
+const oldReceipt='F:/VisibleMedicine/staging/20261027-head-epoch-composition/SOURCE_CANDIDATE.json';assert.equal(hash(oldReceipt),'757931264590f28193ef56d66f6f6cb5a02d64cd1cb2bb64ec322e7a6d86e14b');
+const old=json(oldReceipt).website+'/tests/current-atlas-delivery.test.mjs',now=parent.website+'/tests/current-atlas-delivery.test.mjs';
+assert.equal(hash(old),'7a814c4b0d2ef77feda6c12f7fa6f73eb007cc351a8bbec7cf22b8e480c791d6');assert.equal(hash(now),'95f246d6f65f5b6afb06b8e4a9c6eb47a00313e03aadf22bba271822eaea3fdd');
+const diff=spawnSync('git',['-c','core.autocrlf=false','diff','--no-index','--unified=0','--',old,now],{encoding:'utf8',windowsHide:true,maxBuffer:1024*1024});assert.equal(diff.status,1);const at=diff.stdout.indexOf('@@ ');assert(at>=0);const patch=diff.stdout.slice(at),hunks=[...patch.matchAll(/^@@ /gm)].length;assert(hunks>0);write(root+'/delivery-transition.patch',patch);
+const helperPath='tests/head-epoch-projections.mjs',helper=fs.readFileSync(site+'/'+helperPath,'utf8');write(root+'/before/'+helperPath,helper);
+const seam=" assert(Buffer.isBuffer(actualBytes)&&actualBytes.equals(current.bytes),'Exact current input, not a changed copy');";assert.equal(helper.split(seam).length,2);
+const replacement=` // The current delivery has advanced; authenticate and reverse its complete\n // declared transition before applying the unchanged historical projection.\n if(name==='delivery'&&Buffer.isBuffer(actualBytes)&&!actualBytes.equals(current.bytes)){\n  const successor=sealed(['F:/VisibleMedicine/recovery/checkpoints/20261029-review-delivery-repair/SOURCE_CANDIDATE.json','${parentHash}'],role.path,'${hash(now)}');\n  assert(actualBytes.equals(successor.bytes),'Exact successor input, not a changed copy');\n  exactProjection(current,successor,${hunks},'${sha(patch)}');\n }else{\n${seam}\n }`;
+fs.writeFileSync(site+'/'+helperPath,helper.replace(seam,replacement));
+const added=['tests/head-delivery-successor-projection.test.mjs'];
+write(site+'/'+added[0],`import assert from 'node:assert/strict';\nimport test from 'node:test';\nimport {readFileSync} from 'node:fs';\nimport {createHash} from 'node:crypto';\nimport {projectHeadEpoch} from './head-epoch-projections.mjs';\nconst sha=b=>createHash('sha256').update(b).digest('hex');\nconst current=readFileSync(new URL('./current-atlas-delivery.test.mjs',import.meta.url));\nconst prior=readFileSync('F:/VisibleMedicine/staging/20261027-head-epoch-composition/website/tests/current-atlas-delivery.test.mjs');\ntest('authenticated Review successor preserves the complete earlier delivery projection',()=>{\n assert.equal(sha(current),'${hash(now)}');assert.equal(sha(prior),'${hash(old)}');\n const projected=projectHeadEpoch('delivery',current);\n assert.deepEqual(projected,projectHeadEpoch('delivery',prior));\n assert.equal(sha(projected),'6a4d43e4a5ca4a6c88b77c63cbb7269eac95d1a4eb678c3622e4b40b1fb911eb');\n});\ntest('successor projection refuses altered bytes, removed assertions, wrong roles and its old output',()=>{\n const removed=Buffer.from(current.toString().replace('assert.throws','void'));assert.notDeepEqual(removed,current);\n for(const bytes of [Buffer.concat([current,Buffer.from('foreign')]),removed,projectHeadEpoch('delivery',current)])assert.throws(()=>projectHeadEpoch('delivery',bytes));\n for(const role of ['native','coverage','unknown'])assert.throws(()=>projectHeadEpoch(role,current));\n});\n`);
+for(const row of parent.sourceRows){assert.equal(hash(parent.website+'/'+row.path),row.sha256,'Parent preserved: '+row.path);if(!changed.includes(row.path))assert.equal(hash(site+'/'+row.path),row.sha256,'Undeclared edit: '+row.path);}
+const authored=[...changed,...added].map(p=>({path:p,bytes:fs.statSync(site+'/'+p).size,sha256:hash(site+'/'+p),beforeSha256:parent.sourceRows.find(r=>r.path===p)?.sha256??null}));
+write(root+'/PREPARED.json',{at:new Date().toISOString(),parent:{path:parentFile,sha256:parentHash},site,authored,patch:{hunks,sha256:sha(patch)},productCodeUnchanged:true,originalHistoricalProjectionUnchanged:true,installed:false});
+console.log(JSON.stringify({site,authored:authored.length,projectionHunks:hunks}));

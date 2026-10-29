@@ -1,0 +1,17 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {prepareHistoricalEnvironment} from 'file:///F:/VisibleMedicine/staging/20261030-head-tour-speed-release/historical-environment.mjs';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261029-regression-repairs',prep=json(root+'/PREPARED.json'),parent=json(prep.parent.path),site=prep.site;
+const write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n',{flag:'wx'}),ref=p=>({path:p,sha256:hash(p)});
+assert.equal(hash(prep.parent.path),prep.parent.sha256);
+const rows=new Map(parent.sourceRows.map(r=>[r.path,{...r}]));for(const r of prep.authored){assert.equal(rows.get(r.path)?.sha256??null,r.beforeSha256);rows.set(r.path,{path:r.path,bytes:r.bytes,sha256:r.sha256});}
+function verify(){for(const r of rows.values())assert.equal(hash(site+'/'+r.path),r.sha256,r.path);for(const r of parent.sourceRows)assert.equal(hash(parent.website+'/'+r.path),r.sha256,'Parent preserved: '+r.path);for(const r of parent.dependencies){assert.equal(hash(r.file),r.sha256);assert.equal(hash(r.entry),r.entrySha256);}}
+verify();const source={...parent,schema:'vm-regression-repairs-source/1',at:new Date().toISOString(),website:site,parent:prep.parent,sourceRows:[...rows.values()],sourcePaths:[...rows.keys()],changedPaths:prep.authored.filter(r=>r.beforeSha256).map(r=>r.path),addedPaths:prep.authored.filter(r=>!r.beforeSha256).map(r=>r.path),removedPaths:[],wholeSuitePassing:false,installed:false,normalPreviewChanged:false};
+if(fs.existsSync(root+'/SOURCE_CANDIDATE.json')){const saved=json(root+'/SOURCE_CANDIDATE.json');assert.deepEqual({...saved,at:source.at},source,'Only retry the identical sealed source after a non-admitted attempt');}else write(root+'/SOURCE_CANDIDATE.json',source);
+const environment=prepareHistoricalEnvironment(root+'/SOURCE_CANDIDATE.json',hash(root+'/SOURCE_CANDIDATE.json'));
+if(fs.existsSync(root+'/HISTORICAL_ENVIRONMENT.json'))assert.deepEqual(json(root+'/HISTORICAL_ENVIRONMENT.json').environment,environment.environment,'Unchanged authenticated environment');else write(root+'/HISTORICAL_ENVIRONMENT.json',environment);fs.mkdirSync(root+'/temp',{recursive:true});
+const roots=['studio-course-details-form.test.mjs','studio-workbook-empty-state.test.mjs','head-epoch-projections.test.mjs','head-delivery-successor-projection.test.mjs','colic-adapter-inverse.test.mjs','current-review-rebinding.test.mjs'];
+const command='--max-old-space-size=512 --experimental-strip-types --test --test-concurrency=1 '+roots.map(x=>'tests/'+x).join(' ');
+const run=await guarded({site,dir:root+'/focused',command,heap:512,aggregate:2048,minimum:4096,extraEnv:{...environment.environment,TEMP:root+'/temp',TMP:root+'/temp'}});
+verify();const result={at:new Date().toISOString(),source:ref(root+'/SOURCE_CANDIDATE.json'),roots,command,run,passing:run.passing,sourceExactAfter:true,wholeSuitePassing:false,installed:false,normalPreviewChanged:false};write(root+'/VERIFIED.json',result);console.log(JSON.stringify({passing:result.passing,roots:roots.length,source:result.source}));process.exitCode=result.passing?0:1;

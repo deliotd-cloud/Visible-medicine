@@ -1,0 +1,99 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T22:16:12.959Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-regression-repairs-v2/SOURCE_CANDIDATE.json",
+      "sha256": "bc17094561969f493d637a3c8bc64a55a260c9e9ee38f9635277aecc2a47d539"
+    },
+    "parent": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-review-delivery-repair/SOURCE_CANDIDATE.json",
+      "sha256": "0daa99a5ed9098c7edef48f11bdf4634ab2097ecb5664bc594f44a6fab465b40"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/studio-course-details-form.test.mjs",
+      "bytes": 21675,
+      "sha256": "5d208bb4b53326ce70cb1895b000cfd33935da521a6ab9b3d9feb09d3ef60add"
+    },
+    {
+      "path": "tests/studio-workbook-empty-state.test.mjs",
+      "bytes": 5370,
+      "sha256": "a48f48d2189c5f102fc468addc01b422d459f9f58a819c78823e1932915f04b1"
+    },
+    {
+      "path": "tests/head-epoch-projections.mjs",
+      "bytes": 8153,
+      "sha256": "c0288ab9d28447c16d8cd4048919b424f8dcd8b7686d8c8c2f2ef40dbfb936fe"
+    },
+    {
+      "path": "tests/head-delivery-successor-projection.test.mjs",
+      "bytes": 2908,
+      "sha256": "b05fb5e4f5b3914487831ac23be04c8003a4c1f4a4ebf4253bbfc453fba0c21c"
+    },
+    {
+      "path": "tests/colic-later-source-inverse.mjs",
+      "bytes": 4308,
+      "sha256": "91e21bd363ddc3da9ade1b8214e060436a9a1cdc7efd08c1726f7820834a615b"
+    },
+    {
+      "path": "recipes/prepare-initial.mjs",
+      "bytes": 6285,
+      "sha256": "c8406eca04da44456c9a90278840ab9929f8fbc1b41d6accc3f85d088533dc90"
+    },
+    {
+      "path": "recipes/verify-initial.mjs",
+      "bytes": 3420,
+      "sha256": "298053648d2a70841305f36fad21d4e0076c4afccc221713ea948b6e9a2a2d75"
+    },
+    {
+      "path": "recipes/prepare-pilot.mjs",
+      "bytes": 6175,
+      "sha256": "350911ab6b5a40a4e04806bc9a2fee2060bf7f92d6a3540424db6635b57b82f3"
+    },
+    {
+      "path": "recipes/verify.mjs",
+      "bytes": 3423,
+      "sha256": "553173409b297ab2590725dc8c609905358a8e81e9326075b618e6297d5b88e0"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 13511,
+      "sha256": "62d523d7e60992db06ad7611b0efc9dd23e3d2e0cccca59af471830cedeff9fd"
+    },
+    {
+      "path": "recipes/teaching-panel-entry.tsx",
+      "bytes": 2128,
+      "sha256": "7eb1353bc05fa0642d8fa20b834d01e97a1b03dd4460b7a35cf0108522a5ce5b"
+    },
+    {
+      "path": "recipes/teaching-panel-build.mjs",
+      "bytes": 1246,
+      "sha256": "0737894b67a3d2c78a03218d64ea65132b05ff93135f36f28843fdc00f5b6c74"
+    },
+    {
+      "path": "recipes/teaching-panel-server.mjs",
+      "bytes": 1590,
+      "sha256": "c4058a08f081f1ee71fadd6f5f420f62ade0c73922bb8338c0dfce0a95a5d730"
+    }
+  ],
+  "removed": [],
+  "scope": "Five test/helper source changes and eight local verification/browser recipes. No scans, masks, models, stored decisions, private data or raw repository ancestry.",
+  "proof": {
+    "focusedRoots": 6,
+    "tests": 23,
+    "pass": 23,
+    "skip": 0,
+    "productCodeUnchanged": true,
+    "wholeSuitePassing": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
