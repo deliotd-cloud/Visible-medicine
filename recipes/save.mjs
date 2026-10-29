@@ -1,0 +1,70 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {backup} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/source-only-backup-20261019.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+import {validateChecklist,renderChecklist} from 'file:///F:/VisibleMedicine/website/scripts/refresh-completion-checklist.mjs';
+
+const root='G:/VisibleMedicine-temp/staging/20261029-foot-selection-followup';
+const browser='G:/VisibleMedicine-temp/staging/20261029-foot-selection-browser';
+const priorBrowser='G:/VisibleMedicine-temp/staging/20261029-foot-review-browser-v3';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261029-foot-selection-browser-verified';
+const read=p=>fs.readFileSync(p),ref=p=>({path:p,sha256:hash(p)});
+const write=(p,v)=>{fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,typeof v==='string'||Buffer.isBuffer(v)?v:JSON.stringify(v,null,2)+'\n',{flag:'wx'});};
+assert(!fs.existsSync(cp),'Checkpoint must be new');
+const source=json(root+'/SOURCE_CANDIDATE.json'),prep=json(root+'/PREPARED.json'),result=json(root+'/VERIFIED.json');
+const manifest=json(source.website+'/lib/foot-comparison-manifest.json'),browserResult=json(browser+'/PROCESS_RESULT.json');
+const observations=json(browser+'/OBSERVATIONS.json');
+const original=json('F:/VisibleMedicine/recovery/checkpoints/20261029-regression-foot-review-verified/checkpoint.json');
+function verify(){
+  for(const run of [result.run,browserResult])assert(run.passing&&run.process.terminalObserved&&run.process.exitCode===0&&!run.process.interrupted);
+  assert.equal(hash(result.source.path),result.source.sha256);assert.equal(result.source.sha256,observations.sourceSha256);
+  assert.equal(manifest.revision,observations.revision);assert.equal(json(browser+'/BUILD.json').sourceSha256,result.source.sha256);
+  for(const r of source.sourceRows)assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);
+  for(const r of manifest.files)assert.equal(hash(prep.privateAssetRoot+'/'+r.name),r.sha256,r.name);
+  for(const [name,pin] of [['model-99.json','e86bd6ed1a30385ee64d530b110878712d516707a07c09895a57e721673ee080'],['model-95.json','c6f414119bba9be4bb381ba20bd018224e21af6f852853ac8292a736b69cb560']])assert.equal(hash(prep.privateAssetRoot+'/'+name),pin);
+  for(const [p,expected]of [['F:/VisibleMedicine/website','b953ff3f5f1891599cb6e91cb91311d9d6006270'],['F:/VisibleMedicine/atlas','6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1']])assert.equal(execFileSync('git',['-C',p,'rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).trim(),expected);
+}
+verify();
+const tap=read(root+'/focused/child.tap').toString();for(const [k,v]of Object.entries({tests:25,pass:25,fail:0,cancelled:0,skipped:0,todo:0}))assert.match(tap,new RegExp('^# '+k+' '+v+'$','m'));
+const requestRows=read(browser+'/requests.jsonl').toString().trim().split('\n').map(x=>JSON.parse(x));
+for(const r of requestRows.filter(r=>r.path.startsWith('/api/atlas-review/'))){assert.equal(r.status,200,r.path);assert.equal(r.sha256,manifest.files.find(f=>r.path.endsWith('/'+f.name))?.sha256,r.path);}
+for(const name of ['model-99.json','model-95.json'])assert(requestRows.some(r=>r.path.endsWith('/'+name)&&r.status===200));
+const owned=[root+'/focused',browser+'/guard'].flatMap(dir=>[json(dir+'/SUPERVISOR-HANDLE.json').pid,json(dir+'/STARTED.json').runnerPid]);
+const live=JSON.parse(execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',`@(Get-CimInstance Win32_Process -Filter '${owned.map(id=>'ProcessId='+id).join(' OR ')}' | Select-Object ProcessId,CreationDate) | ConvertTo-Json -Compress`],{encoding:'utf8',windowsHide:true}).trim()||'[]');assert(Array.isArray(live)&&live.length===0);
+write(cp+'/INDEX_BEFORE.json',read('CURRENT_CHECKPOINT.json'));
+for(const p of ['PREPARED.json','SOURCE_CANDIDATE.json','HISTORICAL_ENVIRONMENT.json','TEST_SCOPE.json','VERIFIED.json'])write(cp+'/current/'+p,read(root+'/'+p));
+for(const p of ['CONFIGURATION.json','PREPARATION.json','SUPERVISOR-HANDLE.json','STARTED.json','PROCESS-TERMINAL.json','child.tap','runner.stdout.log','runner.stderr.log','memory.jsonl'])write(cp+'/focused/'+p,read(root+'/focused/'+p));
+for(const p of ['OBSERVATIONS.json','BUILD.json','SERVER.json','STOPPED.json','PROCESS_RESULT.json','requests.jsonl'])write(cp+'/browser/'+p,read(browser+'/'+p));
+for(const p of ['CONFIGURATION.json','PREPARATION.json','SUPERVISOR-HANDLE.json','STARTED.json','PROCESS-TERMINAL.json','runner.stdout.log','runner.stderr.log','memory.jsonl'])write(cp+'/browser/guard/'+p,read(browser+'/guard/'+p));
+for(const p of ['OBSERVATIONS.json','BUILD.json','STOPPED.json','PROCESS_RESULT.json','requests.jsonl'])write(cp+'/before-browser/'+p,read(priorBrowser+'/'+p));
+for(const r of manifest.files)write(cp+'/private-foot/'+r.name,read(prep.privateAssetRoot+'/'+r.name));
+write(cp+'/private-foot/assets.ts',read(source.website+'/.local/foot-review/assets.ts'));write(cp+'/private-foot/HASHES.json',read(prep.privateAssetRoot+'/HASHES.json'));
+for(const r of prep.authored)write(cp+'/before/'+r.path,read(root+'/before/'+r.path));
+const files=new Map(prep.authored.filter(r=>!r.privateAsset).map(r=>[r.path,source.website+'/'+r.path]));
+for(const [name,p]of [['prepare.mjs',root+'/prepare.mjs'],['verify.mjs',root+'/verify.mjs'],['browser-server.mjs',browser+'/server.mjs'],['browser-launch.mjs',browser+'/launch.mjs'],['save.mjs',fileURLToPath(import.meta.url)]])files.set('recipes/'+name,p);
+assert([...files.keys()].every(p=>!p.startsWith('.local/')&&!p.startsWith('public/')&&!p.includes('private-assets')));
+const rows=[...files].map(([p,f])=>({path:p,bytes:read(f).length,sha256:hash(f)}));for(const r of rows)write(cp+'/source/'+r.path,read(files.get(r.path)));
+backup({root:cp+'/source-only-backup',repo:root+'/source-only.git',branch:'backup/foot-selection-browser-20261029',files:rows,bytesFor:p=>read(files.get(p)),sourceIdentity:result.source,scope:'Two selected preparer/manifest source files and five local verification/recovery recipes only. Excludes all specimen/model payloads, private generated asset module, scan/mask data, stored decisions and raw repository ancestry.',proof:{focusedRoots:5,focusedTests:25,browser:'Actual protected route in fabricated reviewer fixture; compact/right and detail/left reveal/clear checks observed',wholeSuitePassing:false,installed:false},verifySource:()=>{verify();for(const r of rows)assert.equal(hash(files.get(r.path)),r.sha256);}});
+const checkpoint={schema:'vm-foot-selection-browser-verified/1',at:new Date().toISOString(),stage:root,source:ref(cp+'/current/SOURCE_CANDIDATE.json'),sourceFiles:source.sourceRows.length,parentCheckpoint:ref('F:/VisibleMedicine/recovery/checkpoints/20261029-regression-foot-review-verified/checkpoint.json'),authoredSourceFiles:2,privateGeneratedFiles:1,focused:{roots:5,tests:25,pass:25,fail:0,skipped:0},browser:{observations:ref(cp+'/browser/OBSERVATIONS.json'),requests:ref(cp+'/browser/requests.jsonl'),builtInputs:ref(cp+'/browser/BUILD.json'),passingWithinStatedScope:true,completeWebsiteAcceptance:false},provenanceRevision:manifest.revision,privateAssets:manifest.files.length,geometryBytesUnchanged:true,clinicalApproval:false,registered:false,sourceBackup:ref(cp+'/source-only-backup/github-backup.json'),privateRecovery:ref(cp+'/private-foot/HASHES.json'),fullBuild:false,wholeSuitePassing:false,installed:false,normalPreviewChanged:false,ownedProcessesTerminal:true};
+write(cp+'/checkpoint.json',checkpoint);const cpref=ref(cp+'/checkpoint.json');
+const cf='F:/VisibleMedicine/website/docs/completion-checklist.json',mf='F:/VisibleMedicine/website/docs/completion-checklist.md',old=json(cf),next=structuredClone(old);assert.equal(old.revision,391);next.revision=392;next.updatedAt='2026-10-29';next.roots.footselection=cp;
+const rel=next.items.find(r=>r.id==='REL-01');rel.evidence.push('footselection:checkpoint.json');rel.completionNote+=' Private foot source review browser check reproduced and fixed hidden-bone selection. On successor source,25focused checks pass; actual protected-route browser fixture confirms reveal/clear behavior for compact/right and detail/left plus keyboard selection, preserved muscle selection and side reset. Full website acceptance/build and installation remain pending; geometry/approval unchanged.';
+next.changeLog.unshift({revision:392,date:'2026-10-29',change:'Foot source-review selection now reveals hidden bones and clears hidden selections; verified in isolated browser and25focused checks. Ignored private asset output default. Owner review unchanged.'});validateChecklist(next);assert.equal(next.items.length,71);assert.equal(next.items.filter(r=>r.scope==='optional').length,8);for(const item of old.items){const n=next.items.find(r=>r.id===item.id);assert.equal(n.status,item.status);if(item.id!=='REL-01')assert.deepEqual(n,item);}
+write(cp+'/checklist.before.json',read(cf));write(cp+'/checklist.before.md',read(mf));fs.writeFileSync(cf,JSON.stringify(next,null,2)+'\n');fs.writeFileSync(mf,renderChecklist(next));write(cp+'/CHECKLIST.json',{revision:392,statusesUnchanged:true,requirements:71,optionalIdeas:8,source:ref(cf),markdown:ref(mf)});
+const index=json('CURRENT_CHECKPOINT.json'),before=structuredClone(index),c=index.activeWork.current;
+c.activeExecutionSessions=[];c.latestCoordination=cpref;c.latestChecklistUpdate=ref(cp+'/CHECKLIST.json');c.lastUpdated=checkpoint.at;index.activeWork.updated=checkpoint.at;
+c.pendingCombinedWebsite={checkpoint:cpref,stage:root,website:source.website,source:checkpoint.source,sourceSealed:true,installed:false,focusedTests:25,completeRoots:5,wholeSuitePassing:false,previousComposition:{path:cp+'/INDEX_BEFORE.json',sha256:hash(cp+'/INDEX_BEFORE.json'),jsonPath:'activeWork.current.pendingCombinedWebsite'},note:'Foot reveal/clear selection passes isolated protected-route browser QA and25focused checks. Full website build/acceptance and whole-suite remain incomplete.'};
+c.pendingFootInterossei={...c.pendingFootInterossei,privateReviewCandidate:{checkpoint:cpref,stage:root,revision:manifest.revision,assets:40,focusedChecksPassed:true,isolatedBrowserPassed:true,fullWebsiteAcceptance:false,fullBuild:false,installed:false}};
+c.latestSourceBackup=checkpoint.sourceBackup;c.next='Continue native production build when memory permits, coherent staged integration and remaining full regression. Owner review preview stays unchanged. Foot selection candidate has isolated browser evidence; no clinical or full-site acceptance.';index.next=c.next;c.beforeFurtherWork='Owned focused tests and isolated browser fixture terminal;25checks pass and scoped browser regression completed. No normal-preview installation authorized.';
+for(const key of ['goal','safety','ownerWithdrawnHistoryPolicy'])assert.deepEqual(index[key],before[key]);for(const key of ['currentInstalled','ownerPreviewPolicy','pendingNativeTeachingCandidate','pendingRegressionRepair'])assert.deepEqual(c[key],before.activeWork.current[key]);saveIndex(index);
+const heading='## Current: Foot source-review selection verified — 29 October 2026\n\n';
+const summary='Selecting a hidden metatarsal now reveals it; hiding it clears the label. Isolated browser checks and25focused checks pass. Geometry and owner review remain unchanged.\n\n';
+const link=`Checkpoint: ${cp}/checkpoint.json (${cpref.sha256}).\n\n`;
+const map='WORKSPACE_MAP.md',master='F:/VisibleMedicine/website/docs/master-plan.md';write(cp+'/WORKSPACE_MAP.before.md',read(map));write(cp+'/master-plan.before.md',read(master));
+const mapText=Buffer.from(heading+summary+link+'Website F:/VisibleMedicine/website; Atlas F:/VisibleMedicine/atlas. Candidate G:/VisibleMedicine-temp/staging/20261029-foot-selection-followup/website. Checklist392 preserves71requirements/eightideas. Full production build, coherent integration and full regression remain pending. No preview installation or clinical approval.\n');const allocated=read(map).length;assert(mapText.length<=allocated);const fd=fs.openSync(map,'r+');try{assert.equal(fs.writeSync(fd,Buffer.concat([mapText,Buffer.alloc(allocated-mapText.length,32)])),allocated);fs.fsyncSync(fd);}finally{fs.closeSync(fd);}
+fs.writeFileSync(master,heading+summary+link+'Browser evidence covers the actual protected asset route with a fabricated local reviewer: compact/right and detail/left, keyboard reveal, hide/clear, preserved visible muscle selection and side reset. It does not constitute full website-shell or clinical acceptance. All40private assets and original geometry remain local; only two product source files and five verification/recovery recipes were backed up. Normal review stayed open and unchanged; temporary QA closed.\n\n'+read(master).toString());
+write(cp+'/INDEX_AFTER.json',read('CURRENT_CHECKPOINT.json'));verify();write(cp+'/SAVED.json',{checkpoint:cpref,goalPreserved:true,previewChanged:false,ownedJobsTerminal:true});console.log(JSON.stringify({checkpoint:cpref,checklistRevision:392,sourceBackup:checkpoint.sourceBackup,sourceOnlyFiles:rows.length}));
