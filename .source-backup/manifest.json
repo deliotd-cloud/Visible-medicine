@@ -1,0 +1,52 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T08:18:04.492Z",
+  "sourceIdentity": {
+    "kind": "guided-caption-live-overlay",
+    "parentSourceSha256": "a7b57241029126a0fdd4ce35ce57dbd6619a1341db461fdcbb693ab4ee1add95",
+    "nativeHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasGuidedModel.tsx",
+      "bytes": 14219,
+      "sha256": "7e0679112cf194cb55be49416cd03fb0879c2913db2e155419b979be303545a2",
+      "beforeSha256": "c10c75828276cf858fae4397d04cb16ca7962e1221d9ce0e2abe778d1fa9cf39"
+    },
+    {
+      "path": "website/components/HeadAtlasReferenceTeaching.tsx",
+      "bytes": 8567,
+      "sha256": "b1f72d7086015ad24efb74f0256cea94958afe3d8e99a3165db30270ed52eeef",
+      "beforeSha256": "a61555e408c325cf19b0cb97d995d6cd6637738343b77811168d9670e3fd5a94"
+    },
+    {
+      "path": "website/tests/head-guided-caption-live.test.ts",
+      "bytes": 9634,
+      "sha256": "4dd98558c9f22be4b8a9c375402ab1199b72ebf88255c6c90a88af2b491b4d7e",
+      "beforeSha256": null
+    },
+    {
+      "path": "website/tests/head-guided-model.test.ts",
+      "bytes": 21614,
+      "sha256": "678e9085b1c61bba2bce8b98b48af01792b639c6cac36ce3df5a54af7a31dad0",
+      "beforeSha256": "891cdbf2b508ecafd259d4bf860b62ee2e2f326ea4e8b7ac3700a6305a10e854"
+    }
+  ],
+  "removed": [],
+  "scope": "Four selected website source files for confirmed guided-tour note announcements and regression tests. Isolated overlay only; stock Review rebind/integration remains pending. No scans, private review data, model/runtime assets or canonical Git ancestry.",
+  "proof": {
+    "actualReactSyntheticBrowserChecks": 18,
+    "targetedTypeFiles": 799,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false,
+    "websiteIntegrated": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
