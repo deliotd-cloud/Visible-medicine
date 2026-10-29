@@ -1,0 +1,62 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T03:10:17.481Z",
+  "sourceIdentity": {
+    "kind": "kidney-authored-source-delta",
+    "nativeSourceSha256": "dd97dd73aa7d9b231d30e4af95a934b2d9387a7bc6af6d18d8f50c2089ea3992",
+    "nativeHead": "a7e73b1dbab5bbf4ed0693fc13120bf986930dce",
+    "parentNativeHead": "4d29390eaa4e3eb8f656c88b22eb93bc2dd308b9"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 369524,
+      "sha256": "184308593f2f59fc7f80cd64ef1fefa31d32ba7614c9b429df8ce66f6feabcbd"
+    },
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 85425,
+      "sha256": "34982b212cb8468271599bd0110d9db75d3c1d6eb560249802d7342212e188a7"
+    },
+    {
+      "path": "atlas/content/kidney-orientation-pins.json",
+      "bytes": 3261,
+      "sha256": "0d3f1f36ba8db24d9e0b245fa9b685df8d2e2d49e6223c159ff39515c18ed6c2"
+    },
+    {
+      "path": "atlas/content/kidney-orientation.ts",
+      "bytes": 10671,
+      "sha256": "727daf1bb6459886bd1d684d777b8b4e09398a24bf6b13bd9d81c70bd212a4ec"
+    },
+    {
+      "path": "atlas/lib/kidney-orientation.ts",
+      "bytes": 2367,
+      "sha256": "23368b9f07427cdd5b01281a517847cce94b8aa2048bd36e1c4b1121692a3921"
+    },
+    {
+      "path": "atlas/scripts/test-regional-teaching.mjs",
+      "bytes": 14773,
+      "sha256": "79a099c0611b3da44914cf228389305515e39415a39a635881b21148a74eff87"
+    }
+  ],
+  "removed": [],
+  "scope": "Six authored source files: original kidney anatomy, CT, MRI and quiz drafts; existing commercial-compatible source identities, exact source binding, dispatch, factual reference notices and supplemental-question regression coverage. No scan, geometry, patient data, generated asset, dependency, environment, private decision or canonical ancestry uploaded. Scoped recovery supplement, not the full project or dataset.",
+  "proof": {
+    "nativeBuildPassed": true,
+    "fullNativeTypesPassed": true,
+    "all9936LessonsCompared": true,
+    "changedLessons": 8,
+    "unchangedLessons": 9928,
+    "clinicalApproval": false,
+    "websiteImportComplete": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
