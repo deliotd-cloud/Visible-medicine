@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Seven authored source/test files only: editorial teaching audit and four scored epigastric quiz drafts, including exact prior-source regression fixture. Partial unpublished source recovery, not a whole Atlas backup. No patient data, snapshot reports, dependencies, models or canonical Git ancestry.
+13 authored files only: existing four scored epigastric quiz drafts/editorial audit plus 14 elbow and 10 knee source-bound graded quiz placements, exact prior-source fixtures and focused tests. Partial unpublished source recovery. No scan, model, patient data, generated teaching snapshot, dependency, or raw canonical Git ancestry.
