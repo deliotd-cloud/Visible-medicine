@@ -1,0 +1,12 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import{hash,json}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import{guarded}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261029-combined-campaign',sourceFile=root+'/SOURCE_CANDIDATE.json',environmentFile=root+'/HISTORICAL_ENVIRONMENT.json';
+const part=Number(process.argv[2]);assert(Number.isInteger(part)&&part>=1&&part<=8);
+const sourceSha='a834ec94f7e592d4a20066370949f54a5db844790cf7d1cfbd452d54b8e951b2';assert.equal(hash(sourceFile),sourceSha);assert.equal(hash(environmentFile),'2329ceb5ae678d7022512cee3b6443e8f1590e8a1d469ad53ebcd288a3a75a93');
+const source=json(sourceFile),env=json(environmentFile),site=source.website;assert.equal(env.source.sha256,sourceSha);
+const verify=()=>{assert.equal(hash(sourceFile),sourceSha);for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);for(const r of source.dependencies){assert.equal(hash(r.file),r.sha256);assert.equal(hash(r.entry),r.entrySha256);}};verify();
+const runs=site+'/.local/website-test-runs';const before=new Set(fs.existsSync(runs)?fs.readdirSync(runs):[]);fs.mkdirSync(root+'/temp',{recursive:true});
+const run=await guarded({site,dir:root+'/partition-'+part,command:'--max-old-space-size=512 scripts/run-website-tests.mjs --run --partition '+part+'/8',heap:512,aggregate:2048,minimum:4096,extraEnv:{...env.environment,TEMP:root+'/temp',TMP:root+'/temp'}});
+verify();const added=fs.existsSync(runs)?fs.readdirSync(runs).filter(p=>!before.has(p)):[];assert(added.length<=1);const output=added.length?runs+'/'+added[0]:null;const receipt=output&&fs.existsSync(output+'/receipt.json')?json(output+'/receipt.json'):null;
+const result={at:new Date().toISOString(),source:{path:sourceFile,sha256:sourceSha},partition:{index:part,count:8},run,output,receipt:receipt?{path:output+'/receipt.json',sha256:hash(output+'/receipt.json')}:null,counts:receipt?.counts??null,partitionPassing:run.passing&&receipt?.partitionPassingClaim===true,partitionUnskippedPassing:run.passing&&receipt?.partitionUnskippedPassingClaim===true,sourceExactAfter:true,wholeSuitePassing:false,normalPreviewChanged:false};fs.writeFileSync(root+'/PARTITION-'+part+'.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));process.exitCode=result.partitionPassing?0:1;

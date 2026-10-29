@@ -1,0 +1,83 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T21:53:47.071Z",
+  "sourceIdentity": {
+    "parent": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-combined-campaign/SOURCE_CANDIDATE.json",
+      "sha256": "a834ec94f7e592d4a20066370949f54a5db844790cf7d1cfbd452d54b8e951b2"
+    },
+    "current": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-review-delivery-repair/SOURCE_CANDIDATE.json",
+      "sha256": "0daa99a5ed9098c7edef48f11bdf4634ab2097ecb5664bc594f44a6fab465b40"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "ffce8ad93f602b3b4cfe3d963410d496aa5706ab22615a6757d87b1c09405e30"
+    },
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "bytes": 27751,
+      "sha256": "95f246d6f65f5b6afb06b8e4a9c6eb47a00313e03aadf22bba271822eaea3fdd"
+    },
+    {
+      "path": "tests/current-delivery-predecessor-inverse.mjs",
+      "bytes": 1968,
+      "sha256": "26e45b777fecbf3efdff70a65ec38c4934c1be5d6067a8fa197849c1ebe608af"
+    },
+    {
+      "path": "tests/fixtures/review-rebinding-before-e797.json",
+      "bytes": 2051,
+      "sha256": "7b14a7455de0b87e781192d5b1072c9c17c42ab5611c96247a0e7e677b416ac8"
+    },
+    {
+      "path": "tests/current-review-rebinding.test.mjs",
+      "bytes": 1897,
+      "sha256": "0a890a68ca33daa9e09152b6e9842af91549adc281dee463f90f8e42b5a0ba8c"
+    },
+    {
+      "path": "recipes/prepare.mjs",
+      "bytes": 7765,
+      "sha256": "ece2fcbf802327c57171d94d452f5f542e0341c59ff6613564056b2ef3aff906"
+    },
+    {
+      "path": "recipes/verify.mjs",
+      "bytes": 3628,
+      "sha256": "5a3fa58668c9329a357207bcae3dacc239b55b82697609aaac4d4d5c493ee55c"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 11413,
+      "sha256": "764734d01e894f31de5af46fb9b22f1cb436804ef36bbd3d4f1c39398e5e4af8"
+    },
+    {
+      "path": "recipes/seal-parent.mjs",
+      "bytes": 5532,
+      "sha256": "9a8d8c95c54362d633e8c7ab068762ccf027d0920a0b1d9aa22f1db09dd76241"
+    },
+    {
+      "path": "recipes/launch-parent-partition.mjs",
+      "bytes": 2571,
+      "sha256": "53edb32674f56cf74b982f07c41475d12450a953317a7aa97203b2df7c87cb61"
+    }
+  ],
+  "removed": [],
+  "scope": "Five test/fixture changes and five local verification recipes only. No production authorization changes, private state, scans, model assets, binary derivatives or raw repository ancestry uploaded.",
+  "proof": {
+    "completeRoots": 5,
+    "tests": 66,
+    "pass": 66,
+    "reviewIntegrity": true,
+    "wholeSuite": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
