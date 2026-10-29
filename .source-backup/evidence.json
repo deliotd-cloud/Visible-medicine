@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "name": "repair-batch-2",
+      "counts": {
+        "tests": 85,
+        "pass": 85,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "resultSha256": "58d31e254bbe43a03b950661f6a15ccb060462829742fbbb2b7b7a859ef740ab",
+      "tapSha256": "de8504340c1a63bcff130ca481f147c38d560b7a26e8b3c6dc1c1eb612c917ba"
+    },
+    {
+      "name": "historical-context-1",
+      "counts": {
+        "tests": 15,
+        "pass": 15,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "resultSha256": "8b6509e1019cd5c9b13e33c78326e04f4b3ae11fd7b832ca1b9a09610a3befd7",
+      "tapSha256": "8ac5a8bab67b6c20eae731cbecc226f3ab1fac6f6482f89728e52c7255c48a9e"
+    }
+  ],
+  "authoredFiles": 10,
+  "excludedLocalEvidenceFiles": 6,
+  "wholeSuitePassing": false,
+  "productionOrReviewInputsChanged": false,
+  "installed": false
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T10:55:46.970Z",
+  "sourceIdentity": {
+    "receiptSha256": "a8df01e3e7a03a0d6fae4eea50526385ca52cc865a6f6f6968f2ba5b023cbacd",
+    "parentReceiptSha256": "9bcb022985ae614b187e928e28a6bd007a038bc7b4af78effbcb3564df76fa45",
+    "atlasHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/head-guided-caption-inverse.mjs",
+      "sha256": "34c59185d1dda28da159099589f233f88ee4f160916fc1dd582be5befe3ab0c6",
+      "bytes": 2788
+    },
+    {
+      "path": "tests/atlas-body-learning-component.test.mjs",
+      "sha256": "edad2769b2afdd3316d1470c8c72a5321e861638f93bae12ba2e51a7ff4e3bb6",
+      "bytes": 17225
+    },
+    {
+      "path": "tests/head-guided-caption-inverse.test.mjs",
+      "sha256": "f71c46d75b12085bf0ad3140a223b9cc6280205a98d57f9198f99ca7f8211731",
+      "bytes": 1541
+    },
+    {
+      "path": "tests/head-review-compact-epoch.mjs",
+      "sha256": "fff48700342194b7906755839670f793a989cef9133a27206574371d53532d59",
+      "bytes": 9242
+    },
+    {
+      "path": "tests/head-review-compact-preservation.test.mjs",
+      "sha256": "d2ba20516d2de0c5c79fcbc1ea66e5c062538ef530b27174f43441be5eb8251b",
+      "bytes": 3855
+    },
+    {
+      "path": "tests/head-review-sections-preservation.test.mjs",
+      "sha256": "1c92dfee7b017b7e8f54a9b58f94486b697cf01d3dc342bd9877c1766544de39",
+      "bytes": 2343
+    },
+    {
+      "path": "tests/current-private-review-binding.test.mjs",
+      "sha256": "84a6b361515c94d472523a8f21127fa1cb8c8ece02badb949accd2141a1b481b",
+      "bytes": 11411
+    },
+    {
+      "path": "tests/viewer-notice-roles.mjs",
+      "sha256": "ea5db9c1443aca6d7cc6cb45729b066beaf687d85250bf7a2531ac78777fee41",
+      "bytes": 31484
+    },
+    {
+      "path": "tests/current-atlas-delivery-replacement.test.mjs",
+      "sha256": "69d8d2193c4b59d4899dcb0b5ad38ba3e312dc5a4fbe3ec9a7baba8f25e30cb3",
+      "bytes": 1717
+    },
+    {
+      "path": "tests/current-delivery-predecessor-inverse.mjs",
+      "sha256": "bd37c6e3a0fa1e46cacd6169aac2bf7081e376afc1c68c394aa7e59d1d502762",
+      "bytes": 1669
+    }
+  ],
+  "removed": [],
+  "scope": "Ten first-party test/helper source files only. Incremental source supplement, not a whole-project or runnable backup. Six local fixture/evidence files remain in the separately verified local checkpoint. No scan, mask, medical coordinates, model geometry, private decisions, local environment/closure, raw QA, dependency files or canonical Git ancestry included.",
+  "proof": {
+    "checks": [
+      {
+        "name": "repair-batch-2",
+        "counts": {
+          "tests": 85,
+          "pass": 85,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "resultSha256": "58d31e254bbe43a03b950661f6a15ccb060462829742fbbb2b7b7a859ef740ab",
+        "tapSha256": "de8504340c1a63bcff130ca481f147c38d560b7a26e8b3c6dc1c1eb612c917ba"
+      },
+      {
+        "name": "historical-context-1",
+        "counts": {
+          "tests": 15,
+          "pass": 15,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "resultSha256": "8b6509e1019cd5c9b13e33c78326e04f4b3ae11fd7b832ca1b9a09610a3befd7",
+        "tapSha256": "8ac5a8bab67b6c20eae731cbecc226f3ab1fac6f6482f89728e52c7255c48a9e"
+      }
+    ],
+    "authoredFiles": 10,
+    "excludedLocalEvidenceFiles": 6,
+    "wholeSuitePassing": false,
+    "productionOrReviewInputsChanged": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
