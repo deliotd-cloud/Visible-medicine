@@ -1,0 +1,937 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from 'next/navigation';
+import { Button } from "@/components/ui/button";
+import { ReviewSignInLink } from '@/components/review-sign-in-link';
+import { nestedReviewChanges } from '@/lib/review-change-summary';
+import { ReviewChangeNotice } from '../review-change-notice';
+import { ReviewModelPreview } from '../review-model-preview';
+import { reviewConfirmation, reviewIsConfirmed } from '../review-confirmation';
+import { mayAutosaveDraft, rememberReviewer, reviewContext, withRememberedReviewer } from '../review-working-state';
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
+import { specimenTopicLabels } from "@/lib/specimen-links";
+import { nestedReviewQueue, nestedReviewQuery, nestedReviewNavigationTrack } from '@/lib/nested-review-queue';
+import type {
+  NestedReviewMaterial,
+  nestedReviewRows,
+} from "@/lib/nested-review-material";
+import {
+  nestedReviewTracks,
+  nestedDecisionLabel,
+  nestedApprovalProblems,
+  parseSavedNestedReview,
+  type NestedReviewTrack,
+  type NestedReviewDraft,
+} from "@/lib/nested-review";
+import {
+  parseNestedHistory,
+  nestedDraftFromSaved,
+} from "@/lib/nested-review-client";
+
+function download(value: unknown, filename: string) {
+  const url = URL.createObjectURL(
+    new Blob([JSON.stringify(value, null, 2)], { type: "application/json" }),
+  );
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+const titles = {
+  geometry: "3D anatomy",
+  teaching: "Teaching & self-check",
+  imaging: "Acquired imaging",
+};
+const responseError = (data: unknown, fallback: string) =>
+  data &&
+  typeof data === "object" &&
+  "error" in data &&
+  typeof data.error === "string"
+    ? data.error
+    : fallback;
+export function NestedReviewWorkspace({
+  rows,
+  packet,
+  invalid,
+  initialQuery = '',
+  initialTrack = 'geometry',
+}: {
+  rows: typeof nestedReviewRows;
+  packet: NestedReviewMaterial | null;
+  invalid: boolean;
+  initialQuery?: string;
+  initialTrack?: 'geometry' | 'teaching';
+}) {
+  const router = useRouter();
+  const [query, setQuery] = useState(nestedReviewQuery(initialQuery)),
+    [key, setKey] = useState(packet?.context.nestedKey ?? rows[0].key);
+  const [dirty, setDirty] = useState(false),
+    [track, setTrack] = useState<NestedReviewTrack>(nestedReviewNavigationTrack(initialTrack));
+  const approvedLeaveRef = useRef(false);
+  const approvalScope = JSON.stringify([
+    packet?.context.nestedKey, packet?.context.structureId,
+    packet?.context.materialHash, packet?.context.sourceHash,
+    key, track, query,
+  ]);
+  const previousApprovalScope = useRef(approvalScope);
+  if (previousApprovalScope.current !== approvalScope) {
+    approvedLeaveRef.current = false;
+    previousApprovalScope.current = approvalScope;
+  }
+  useEffect(() => {
+    if (!dirty) return;
+    const unload = (e: BeforeUnloadEvent) => {
+      if (approvedLeaveRef.current) return;
+      e.preventDefault();
+      e.returnValue = "";
+    };
+    const click = (e: MouseEvent) => {
+      const anchor = (e.target as Element).closest?.("a");
+      if (
+        anchor &&
+        anchor.target !== "_blank" &&
+        !anchor.hasAttribute("download") &&
+        !window.confirm(
+          "Leave and discard unsaved review edits? Save or export first if needed.",
+        )
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+    window.addEventListener("beforeunload", unload);
+    document.addEventListener("click", click, true);
+    return () => {
+      window.removeEventListener("beforeunload", unload);
+      document.removeEventListener("click", click, true);
+    };
+  }, [dirty]);
+  useEffect(() => {
+    if (!dirty) approvedLeaveRef.current = false;
+  }, [dirty]);
+  const group = rows.find((r) => r.key === key)!;
+  const queue = nestedReviewQueue(rows, key, query, packet?.context ?? null, track);
+  const filtered = queue.entries;
+  const nextHref = queue.next?.href ?? null;
+  const latestApproval = useRef({ scope: approvalScope, nextHref });
+  latestApproval.current = { scope: approvalScope, nextHref };
+  return (
+    <div className="body-review-grid nested-review">
+      <aside className="body-review-queue">
+        <label htmlFor="review-nested">Parent and study</label>
+        <Select
+          value={key}
+          onValueChange={(v) => {
+            if (v && rows.some((r) => r.key === v)) setKey(v);
+          }}
+        >
+          <SelectTrigger id="review-nested">
+            <SelectValue>{group.name}</SelectValue>
+          </SelectTrigger>
+          <SelectContent>
+            {rows.map((r) => (
+              <SelectItem key={r.key} value={r.key}>
+                {r.name}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <label htmlFor="nested-review-search">Find a structure</label>
+        <Input
+          id="nested-review-search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Name, side or exact ID"
+          maxLength={160}
+        />
+        <nav className="nested-review-queue-navigation" aria-label="Structures in the filtered review queue">
+          {queue.previous ? (
+            <Button size="sm" variant="outline" nativeButton={false}
+              render={<a href={queue.previous.href} aria-label={`Previous structure: ${queue.previous.name}`} />}>
+              Previous
+            </Button>
+          ) : <Button size="sm" variant="outline" disabled>Previous</Button>}
+          {queue.next ? (
+            <Button size="sm" variant="outline" nativeButton={false}
+              render={<a href={queue.next.href} aria-label={`Next structure: ${queue.next.name}`} />}>
+              Next
+            </Button>
+          ) : <Button size="sm" variant="outline" disabled>Next</Button>}
+        </nav>
+        <p role="status">
+          {queue.index >= 0 ? `Structure ${queue.index + 1} of ${filtered.length} in the filtered queue`
+            : packet ? 'Selected structure is outside this filtered queue'
+            : `${filtered.length} selections`}
+        </p>
+        {!!query && <Button size="sm" variant="ghost" onClick={() => setQuery('')}>Clear search</Button>}
+        {!filtered.length && <p>No matching structures. Clear or change your search.</p>}
+        <ul>
+          {filtered.map((s) => (
+            <li key={s.id}>
+              <a
+                className="nested-review-choice"
+                aria-current={packet?.context.structureId === s.id && packet.context.nestedKey === key ? "page" : undefined}
+                href={s.href}
+              >
+                {s.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <small>
+          Each parent, dissection study and child has a separate review scope. Whole-organ and independent-specimen approvals are never inherited.
+        </small>
+      </aside>
+      <section className="body-review-paper">
+        {!packet ? (
+          <p role={invalid ? "alert" : undefined}>
+            {invalid
+              ? "This link is outside the available nested review scope. Choose a valid selection."
+              : "Choose a nested selection to inspect its worksheet and private review history."}
+          </p>
+        ) : (
+          <>
+            <div className="body-review-selected">
+              <ReviewModelPreview
+                key={`${packet.context.nestedKey}:${packet.context.structureId}:${packet.context.materialHash}`}
+                href={packet.atlasLink}
+                name={packet.context.structureName}
+                revision={packet.context.materialHash}
+              />
+              <div className="body-review-worksheet">
+            <h2>{packet.context.structureName}</h2>
+            <p>{packet.source.parent.name} · {packet.source.studyTitle}</p><p>{packet.source.limitations}</p>
+            <p>
+              {packet.atlasLink ? <a href={packet.atlasLink} target="_blank" rel="noopener noreferrer">Open this exact dissection in a separate tab</a> : 'The exact source link is unavailable.'}{' '}
+              · Opens the exact parent, study and child. Opening it alone does not complete a review.
+            </p>
+            <code className="nested-review-id">
+              {packet.context.structureId}
+            </code>
+            <details>
+              <summary>Source identity &amp; worksheet</summary>
+              <p>{packet.source.credit}</p>
+              <p>Frame: {packet.context.sourceFrame}</p>
+              <p>
+                {packet.source.structure.name} ·{" "}
+                {packet.source.structure.laterality}
+              </p>
+              <p>
+                Review scope: this exact selection, surrounding source geometry
+                and available draft copy. No patient registration, other
+                nested, paid lecture or interactive exam approval.
+              </p>
+              {packet.source.orientationContext && <section aria-label="Coronary vein landmark source evidence">
+                <h3>Optional cardiac-vein landmarks · Unapproved</h3>
+                <p>Nonselectable orientation context in the same source frame. The heart aggregate is excluded.</p>
+                <ul>{packet.source.orientationContext.structures.map(s=><li key={s.id}>
+                  {s.name} · {s.fmaId} · {s.sources.length} source {s.sources.length===1?'file':'files'}
+                  <p>Ordered source IDs: {s.sources.map(file=>file.file).join(', ')} · Bundle: {s.bundle}</p>
+                </li>)}</ul>
+                <p>Export the unsigned worksheet below for each complete source record, file hash, bundle hash and frame.</p>
+              </section>}
+              <p>
+                Material fingerprint: <code>{packet.context.materialHash}</code>
+              </p>
+              <Button
+                variant="outline"
+                onClick={() =>
+                  download(
+                    {
+                      kind: "unsigned-nested-worksheet",
+                      approval: false,
+                      packet,
+                    },
+                    "nested-worksheet.json",
+                  )
+                }
+              >
+                Export unsigned worksheet
+              </Button>
+            </details>
+            <details>
+              <summary>
+                Teaching to review · {packet.context.teachingTabs.length}{" "}
+                available items
+              </summary>
+              {packet.teaching.topics.map((t) => (
+                <section key={t.tab}>
+                  <h3>{specimenTopicLabels[t.tab]}</h3>
+                  <p>{t.readiness === "pending" ? "Pending — no authored topic to approve." : t.body}</p>{t.note && <p>{t.note}</p>}{t.bullets.length > 0 && <ul>{t.bullets.map(b=><li key={b}>{b}</li>)}</ul>}
+                  {t.references.map((url) => (
+                    <p key={url}>
+                      <a href={url} target="_blank" rel="noreferrer">
+                        {packet.teaching.referenceTitles[url] ??
+                          "Source reference"}
+                      </a>
+                    </p>
+                  ))}
+                </section>
+              ))}
+              {packet.teaching.orientationContext && <section aria-label="Coronary vein landmark teaching evidence">
+                <h3>Optional cardiac-vein context · Draft</h3>
+                {Object.entries(packet.teaching.orientationContext).map(([key,text])=><p key={key}>{text}</p>)}
+              </section>}
+              {packet.teaching.guidedLearning && <section aria-label="Nested guided-learning evidence">
+                <h3>{packet.teaching.guidedLearning.title} · Draft</h3>
+                <p>Manual sweep {packet.teaching.guidedLearning.transitionMs / 1000}s · Full tour sweep {packet.teaching.guidedLearning.continuousPlayback.transitionMs / 1000}s · other visible components faded · no separation · reduced-motion and hidden-page pause supported</p>
+                <p>Full tour advances automatically with caption reading time and holds at the final stop. Step durations: {packet.teaching.guidedLearning.continuousPlayback.stepDurationsMs.map(ms=>`${ms/1000}s`).join(', ')}.</p>
+                <p>{packet.teaching.guidedLearning.limitation}</p>
+                <ol>{packet.teaching.guidedLearning.steps.map(step => <li key={step.id}>
+                  <h4>{step.title}</h4><p>{step.caption}</p>
+                  <p>Preset: {step.preset} · Camera: {step.view} · Selected: {step.selectedId}</p>
+                  <ul>{step.ids.map(id => <li key={id}>{id}</li>)}</ul>
+                  {step.references.map(url => <p key={url}><a href={url} target="_blank" rel="noreferrer">{packet.teaching.referenceTitles[url] ?? 'Source reference'}</a></p>)}
+                </li>)}</ol>
+              </section>}
+              {packet.teaching.csfMotion && <section aria-label="Schematic CSF-motion evidence">
+                <h3>{packet.teaching.csfMotion.title} · Draft</h3>
+                <p>{packet.teaching.csfMotion.markerCount} non-selectable markers · {packet.teaching.csfMotion.periodSeconds}s arbitrary display cycle · source axis {packet.teaching.csfMotion.axis.join(', ')}</p>
+                <p>Exact ventricular source bundle: <code>{packet.teaching.csfMotion.sourceBundleHash}</code>. Marker coordinates are bound by the renderer revision. Start/Pause, reduced-motion, readiness, cut/explode and hidden-page gates require display review.</p>
+                <p>{packet.teaching.csfMotion.limitation}</p>
+                {packet.teaching.csfMotion.references.map(reference=><p key={reference.url}><a href={reference.url} target="_blank" rel="noreferrer">{reference.title}</a></p>)}
+              </section>}
+              {packet.teaching.lesson?.extended && (
+                <>
+                  <h3>Model-specific caution</h3>
+                  <p>{packet.teaching.lesson.extended.modelLimit}</p>
+                  <h3>Self-check</h3>
+                  <p>{packet.teaching.lesson.extended.selfCheck.question}</p>
+                  <p>{packet.teaching.lesson.extended.selfCheck.answer}</p>
+                  {packet.teaching.lesson.extended.selfCheck.references.map(
+                    (url) => (
+                      <p key={url}>
+                        <a href={url} target="_blank" rel="noreferrer">
+                          {packet.teaching.referenceTitles[url] ??
+                            "Source reference"}
+                        </a>
+                      </p>
+                    ),
+                  )}
+                </>
+              )}
+            </details>
+            <label htmlFor="nested-review-track">Review track</label>
+            <Select
+              value={track}
+              onValueChange={(v) => {
+                if (
+                  v &&
+                  nestedReviewTracks.includes(v as NestedReviewTrack) &&
+                  (!dirty ||
+                    window.confirm(
+                      "Discard unsaved edits for this track? Save or export first if needed.",
+                    ))
+                ) {
+                  setDirty(false);
+                  setTrack(v as NestedReviewTrack);
+                }
+              }}
+            >
+              <SelectTrigger id="nested-review-track">
+                <SelectValue>{titles[track]}</SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                {nestedReviewTracks.filter(t => t !== "imaging").map((t) => (
+                  <SelectItem key={t} value={t}>
+                    {titles[t]}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <p>Acquired imaging review is unavailable. Teaching approval does not validate scan registration.</p>
+            <NestedDecisionEditor
+              key={track}
+              packet={packet}
+              track={track}
+              onDirty={setDirty}
+              onEdited={() => { approvedLeaveRef.current = false; }}
+              onApprovedNext={nextHref ? () => {
+                if (latestApproval.current.scope !== approvalScope ||
+                    latestApproval.current.nextHref !== nextHref) return;
+                approvedLeaveRef.current = true;
+                try { router.push(nextHref); }
+                catch { approvedLeaveRef.current = false; }
+              } : undefined}
+            />
+              </div>
+            </div>
+          </>
+        )}
+      </section>
+    </div>
+  );
+}
+export function NestedDecisionEditor({
+  packet,
+  track,
+  onDirty,
+  onEdited,
+  onApprovedNext,
+}: {
+  packet: NestedReviewMaterial;
+  track: NestedReviewTrack;
+  onDirty: (v: boolean) => void;
+  onEdited?: () => void;
+  onApprovedNext?: () => void;
+}) {
+  const c = packet.context;
+  const [draft, setDraft] = useState(() =>
+    nestedDraftFromSaved(undefined, c, track),
+  );
+  const [page, setPage] = useState<ReturnType<
+    typeof parseNestedHistory
+  > | null>(null);
+  const [history, setHistory] = useState<ReturnType<
+    typeof parseNestedHistory
+  > | null>(null);
+  const [busy, setBusy] = useState(false),
+    [dirty, setDirty] = useState(false),
+    [reconcile, setReconcile] = useState(false);
+  const [needsRefresh, setNeedsRefresh] = useState(false);
+  const [autoBlocked, setAutoBlocked] = useState(false);
+  const [error, setError] = useState(""),
+    [message, setMessage] = useState("");
+  const pendingRead = useRef<AbortController | null>(null);
+  const autoTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const autoLatest = useRef({ fingerprint: '', scope: '', eligible: false, mounted: true });
+  const reviewerContextRef = useRef<string | null>(null);
+  function beginRead() {
+    pendingRead.current?.abort();
+    const controller = new AbortController();
+    pendingRead.current = controller;
+    return controller;
+  }
+  useEffect(() => {
+    onDirty(dirty || busy);
+  }, [dirty, busy, onDirty]);
+  async function read(before?: number, signal?: AbortSignal) {
+    const q = new URLSearchParams({
+      nestedKey: c.nestedKey,
+      structureId: c.structureId,
+      track,
+    });
+    if (before) q.set("before", String(before));
+    const res = await fetch(`/api/nested-review?${q}`, {
+      cache: "no-store",
+      signal,
+    });
+    const data = await res.json();
+    if (!res.ok)
+      throw Error(responseError(data, "Unable to load private history."));
+    const parsed = parseNestedHistory(data, c, track, before);
+    reviewerContextRef.current = reviewContext(res);
+    rememberReviewer(reviewerContextRef.current, parsed.history);
+    return parsed;
+  }
+  useEffect(() => {
+    const controller = beginRead();
+    read(undefined, controller.signal)
+      .then((p) => {
+        if (!controller.signal.aborted) {
+          setPage(p);
+          setHistory(p);
+          const loaded = nestedDraftFromSaved(p.history[0], c, track);
+          setDraft(p.history[0] ? loaded : withRememberedReviewer(reviewerContextRef.current, loaded));
+        }
+      })
+      .catch((e) => {
+        if (!controller.signal.aborted) setError(e.message);
+      });
+    return () => pendingRead.current?.abort();
+  }, []);
+  function edit(patch: Partial<NestedReviewDraft>) {
+    if (busy) return;
+    onEdited?.();
+    setDraft((d) => ({ ...d, attested: false, ...patch }));
+    setDirty(true);
+    setMessage("");
+  }
+  async function refresh() {
+    if (busy) return;
+    const controller = beginRead();
+    setBusy(true);
+    setError("");
+    try {
+      const p = await read(undefined, controller.signal);
+      if (controller.signal.aborted) return;
+      setPage(p);
+      setHistory(p);
+      setNeedsRefresh(false);
+      if (dirty) {
+        setReconcile(true);
+        setMessage(
+          "Your edits are retained. Compare saved history, then explicitly load the saved draft. Export your edits first if needed.",
+        );
+      } else {
+        const loaded = nestedDraftFromSaved(p.history[0], c, track);
+        setDraft(p.history[0] ? loaded : withRememberedReviewer(reviewerContextRef.current, loaded));
+        setReconcile(false);
+      }
+    } catch (e) {
+      if (!controller.signal.aborted) setError((e as Error).message);
+    } finally {
+      if (!controller.signal.aborted) setBusy(false);
+    }
+  }
+  async function save(automatic = false) {
+    if (autoTimer.current) clearTimeout(autoTimer.current);
+    autoTimer.current = null;
+    if (!page || busy || reconcile) return;
+    if (automatic && !mayAutosaveDraft({
+      loaded: !!history, dirty, busy,
+      blocked: autoBlocked || needsRefresh || !!error,
+      current: !!c.revisions[track] && !!c.materialHash,
+      status: draft.status, attested: draft.attested,
+    })) return;
+    setBusy(true);
+    setError("");
+    setMessage("");
+    let uncertain = true;
+    try {
+      const res = await fetch("/api/nested-review", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          catalogScope: c.catalogScope,
+          nestedKey: c.nestedKey,
+          sourceFrame: c.sourceFrame,
+          structureId: c.structureId,
+          track,
+          expectedVersion: page.history[0]?.version ?? 0,
+          materialHash: c.materialHash,
+          revisionHash: c.revisions[track],
+          checklistVersion: c.checklistVersion,
+          draft,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        uncertain = ![400, 401, 403, 413, 415, 422].includes(res.status);
+        throw Error(responseError(data, "Save not confirmed."));
+      }
+      const r = parseSavedNestedReview(
+        data && typeof data === "object" && "review" in data
+          ? data.review
+          : undefined,
+      );
+      if (
+        r.nestedKey !== c.nestedKey ||
+        r.structureId !== c.structureId ||
+        r.sourceFrame !== c.sourceFrame ||
+        r.track !== track ||
+        r.version !== (page.history[0]?.version ?? 0) + 1 ||
+        r.material.materialHash !== c.materialHash ||
+        r.revisionHash !== c.revisions[track]
+      )
+        throw Error("Unexpected save response. Refresh before retrying.");
+      const p = {
+        history: [r, ...page.history].slice(0, 20),
+        nextBefore: null as number | null,
+      };
+      p.nextBefore = p.history.length === 20 ? p.history.at(-1)!.version : null;
+      setPage(p);
+      setHistory(p);
+      setDraft(nestedDraftFromSaved(r, c, track));
+      setDirty(false);
+      rememberReviewer(reviewerContextRef.current, [r]);
+      setMessage(
+        "Review saved privately for this exact revision. Previous records remain in history.",
+      );
+      if (!automatic && r.status === 'approved') onApprovedNext?.();
+    } catch (e) {
+      setAutoBlocked(true);
+      setError((e as Error).message);
+      if (uncertain) {
+        setReconcile(true);
+        setNeedsRefresh(true);
+      }
+    } finally {
+      setBusy(false);
+    }
+  }
+  const autoFingerprint = JSON.stringify([
+    c.nestedKey, c.structureId, c.sourceFrame, c.materialHash,
+    c.revisions[track], c.checklistVersion, track,
+    page?.history[0]?.version ?? 0, draft,
+  ]);
+  const autoScope = JSON.stringify([c.nestedKey, c.structureId, c.sourceFrame, c.materialHash, track]);
+  const autoEligible = !!page && mayAutosaveDraft({
+    loaded: !!history, dirty, busy,
+    blocked: autoBlocked || reconcile || needsRefresh || !!error,
+    current: !!c.revisions[track] && !!c.materialHash,
+    status: draft.status, attested: draft.attested,
+  });
+  autoLatest.current = { fingerprint: autoFingerprint, scope: autoScope,
+    eligible: autoEligible, mounted: autoLatest.current.mounted };
+  useEffect(() => {
+    autoLatest.current.mounted = true;
+    return () => {
+      autoLatest.current.mounted = false;
+      if (autoTimer.current) clearTimeout(autoTimer.current);
+    };
+  }, []);
+  useEffect(() => {
+    if (!autoEligible) return;
+    const fingerprint = autoFingerprint, scope = autoScope;
+    autoTimer.current = setTimeout(() => {
+      if (autoLatest.current.mounted && autoLatest.current.eligible &&
+          autoLatest.current.fingerprint === fingerprint &&
+          autoLatest.current.scope === scope) void save(true);
+    }, 2500);
+    return () => {
+      if (autoTimer.current) clearTimeout(autoTimer.current);
+      autoTimer.current = null;
+    };
+  }, [autoFingerprint, autoScope, autoEligible]);
+  const problems = nestedApprovalProblems(draft, c, track);
+  return (
+    <div className="nested-decision">
+      <p aria-live="polite">
+        {page
+          ? nestedDecisionLabel(page.history[0], c)
+          : "Private history not loaded"}
+      </p>
+      {page && <ReviewChangeNotice change={nestedReviewChanges(page.history[0], c, track)} />}
+      {error && <p role="alert">{error}</p>}
+      {!page && error && <p><ReviewSignInLink target={{ scope: 'nested',
+        parent: packet.source.parent.id, study: packet.source.study,
+        structure: c.structureId, source: c.sourceHash }} /></p>}
+      {message && <p role="status">{message}</p>}
+      <div className="nested-review-actions">
+        <Button variant="outline" disabled={busy} onClick={refresh}>
+          Refresh saved history
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() =>
+            download(
+              {
+                kind: "unsaved-nested-review-draft",
+                approval: false,
+                context: c,
+                track,
+                draft,
+              },
+              "nested-review-draft.json",
+            )
+          }
+        >
+          Export my edits
+        </Button>
+      </div>
+      {reconcile && (
+        <p>
+          <Button
+            variant="outline"
+            disabled={busy || !page || needsRefresh}
+            onClick={() => {
+              if (
+                window.confirm(
+                  "Replace your unsaved edits with the latest loaded saved draft? Export first if needed.",
+                )
+              ) {
+                setDraft(nestedDraftFromSaved(page?.history[0], c, track));
+                setDirty(false);
+                setReconcile(false);
+                setMessage(
+                  "Saved draft loaded. Review it before saving again.",
+                );
+              }
+            }}
+          >
+            Load saved draft after comparing
+          </Button>
+        </p>
+      )}
+      <fieldset disabled={busy || !page}>
+        <legend>{titles[track]} checklist</legend>
+        <details>
+          <summary>Review all {c.checklists[track].length} criteria</summary>
+          <ul>
+            {c.checklists[track].map((item) => <li key={item.id}>{item.label}</li>)}
+          </ul>
+        </details>
+        {(["reviewer", "qualification", "scope", "notes"] as const).map((k) => (
+          <label className="nested-field" key={k}>
+            {
+              {
+                reviewer: "Your name",
+                qualification: "Professional role / qualification",
+                scope: "Exact scope reviewed",
+                notes: "Notes (do not enter patient information)",
+              }[k]
+            }
+            <textarea
+              value={draft[k]}
+              maxLength={
+                { reviewer: 150, qualification: 200, scope: 2000, notes: 6000 }[
+                  k
+                ]
+              }
+              rows={k === "notes" ? 3 : 2}
+              onChange={(e) => edit({ [k]: e.target.value })}
+            />
+          </label>
+        ))}
+        <h3>Supporting evidence</h3>
+        {draft.evidence.map((e, index) => (
+          <div key={index} className="nested-evidence">
+            {(["title", "url", "note"] as const).map((k) => (
+              <label key={k}>
+                {k === "url"
+                  ? "HTTPS reference URL"
+                  : k === "title"
+                    ? "Reference title"
+                    : "What this supports"}
+                <Input
+                  value={e[k]}
+                  maxLength={{ title: 180, url: 2048, note: 1000 }[k]}
+                  onChange={(event) =>
+                    edit({
+                      evidence: draft.evidence.map((v, n) =>
+                        n === index ? { ...v, [k]: event.target.value } : v,
+                      ),
+                    })
+                  }
+                />
+              </label>
+            ))}
+            <Button
+              variant="outline"
+              onClick={() =>
+                edit({ evidence: draft.evidence.filter((_, n) => n !== index) })
+              }
+            >
+              Remove reference
+            </Button>
+          </div>
+        ))}
+        <Button
+          variant="outline"
+          disabled={draft.evidence.length >= 12}
+          onClick={() =>
+            edit({
+              evidence: [...draft.evidence, { title: "", url: "", note: "" }],
+            })
+          }
+        >
+          Add evidence
+        </Button>
+        <details>
+          <summary>Corrections &amp; issues ({draft.issues.length})</summary>
+          {draft.issues.map((issue, index) => {
+            const update = (patch: Partial<typeof issue>) =>
+              edit({
+                issues: draft.issues.map((v, n) =>
+                  n === index ? { ...v, ...patch } : v,
+                ),
+              });
+            return (
+              <div className="nested-evidence" key={issue.id}>
+                <label>
+                  Correction
+                  <Input
+                    value={issue.title}
+                    maxLength={500}
+                    onChange={(e) => update({ title: e.target.value })}
+                  />
+                </label>
+                <label>
+                  Severity
+                  <Select
+                    value={issue.severity}
+                    onValueChange={(v) =>
+                      update({ severity: v as typeof issue.severity })
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {["blocker", "major", "minor"].map((v) => (
+                        <SelectItem key={v} value={v}>
+                          {v}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </label>
+                <label className="nested-check">
+                  <input
+                    type="checkbox"
+                    checked={issue.resolved}
+                    onChange={(e) => update({ resolved: e.target.checked })}
+                  />
+                  Resolved
+                </label>
+                <label>
+                  Resolution explanation
+                  <Input
+                    value={issue.resolution}
+                    maxLength={1500}
+                    onChange={(e) => update({ resolution: e.target.value })}
+                  />
+                </label>
+              </div>
+            );
+          })}
+          <Button
+            variant="outline"
+            disabled={draft.issues.length >= 20}
+            onClick={() =>
+              edit({
+                issues: [
+                  ...draft.issues,
+                  {
+                    id: crypto.randomUUID(),
+                    title: "",
+                    severity: "major",
+                    resolved: false,
+                    resolution: "",
+                  },
+                ],
+              })
+            }
+          >
+            Add correction
+          </Button>
+          <p>
+            Saved issues are retained, not deleted; resolve them with an
+            explanation.
+          </p>
+        </details>
+        <label className="nested-field">
+          Decision
+          <Select
+            value={draft.status}
+            onValueChange={(v) =>
+              edit({ status: v as NestedReviewDraft["status"] })
+            }
+          >
+            <SelectTrigger>
+              <SelectValue>{{draft:'In progress','changes-required':'Changes required',approved:'Record approval'}[draft.status]}</SelectValue>
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="draft">In progress</SelectItem>
+              <SelectItem value="changes-required">Changes required</SelectItem>
+              <SelectItem
+                value="approved"
+                disabled={!!c.blockers[track].length || !c.revisions[track]}
+              >
+                Approve this track
+              </SelectItem>
+            </SelectContent>
+          </Select>
+        </label>
+        <label className="nested-check">
+          <input
+            type="checkbox"
+            checked={reviewIsConfirmed(draft.checks, draft.attested, c.checklists[track])}
+            onChange={(e) =>
+              edit(reviewConfirmation(draft.checks, c.checklists[track], e.target.checked))
+            }
+          />
+          I have reviewed all {c.checklists[track].length} criteria for this track.
+          I personally reviewed this exact parent, study, child and revision within the
+          scope stated above.
+        </label>
+        {!!problems.length && (
+          <details
+            open={draft.status === "approved" || !!c.blockers[track].length}
+          >
+            <summary>Before approval ({problems.length})</summary>
+            <ul>
+              {problems.map((p, i) => (
+                <li key={i}>{p}</li>
+              ))}
+            </ul>
+          </details>
+        )}
+        <Button
+          onClick={() => { void save(); }}
+          disabled={
+            !dirty ||
+            reconcile ||
+            (draft.status === "approved" && !!problems.length)
+          }
+        >
+          {draft.status === "approved"
+            ? onApprovedNext ? "Approve & next" : "Approve this track"
+            : draft.status === "changes-required"
+              ? "Changes needed · save"
+              : "Save private draft"}
+        </Button>
+      </fieldset>
+      <details>
+        <summary>Saved version history</summary>
+        {history?.history.map((r) => (
+          <details key={r.version}>
+            <summary>
+              Version {r.version} · {r.status} · {r.savedAt}
+            </summary>
+            <p>
+              {r.reviewer} · {r.qualification}
+            </p>
+            <p>{r.scope}</p>
+            <p>{r.notes}</p>
+            <Button
+              variant="outline"
+              onClick={() => download(r, `nested-review-v${r.version}.json`)}
+            >
+              Export this saved record
+            </Button>
+            <pre>
+              {JSON.stringify(
+                {
+                  checks: r.checks,
+                  evidence: r.evidence,
+                  issues: r.issues,
+                  revision: r.revisionHash,
+                },
+                null,
+                2,
+              )}
+            </pre>
+          </details>
+        ))}
+        {!!history?.nextBefore && (
+          <Button
+            variant="outline"
+            disabled={busy}
+            onClick={async () => {
+              if (busy) return;
+              const controller = beginRead();
+              setBusy(true);
+              try {
+                const previous = await read(history.nextBefore!, controller.signal);
+                if (!controller.signal.aborted) setHistory(previous);
+              } catch (e) {
+                if (!controller.signal.aborted) setError((e as Error).message);
+              } finally {
+                if (!controller.signal.aborted) setBusy(false);
+              }
+            }}
+          >
+            Older records
+          </Button>
+        )}
+      </details>
+      <p>
+        <small>
+          Records belong to the signed-in account. Entered qualifications are
+          self-declared, not credential verification. This does not release or
+          certify the entire atlas.
+        </small>
+      </p>
+    </div>
+  );
+}

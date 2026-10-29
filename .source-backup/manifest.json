@@ -1,0 +1,70 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T01:10:29.190Z",
+  "sourceIdentity": {
+    "kind": "review-humerus-authored-source-delta",
+    "nativeSourceSha256": "f2da26a343c09f1deb043844b2f84341f8526098dc9afcd5ae524e731f603e13",
+    "nativeHead": "b78a694303492b5be7e6d198eed6d89b84926304",
+    "parentNativeHead": "c11731cbd8ae0535daa58271b0eac1e3bef98e9d"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 368370,
+      "sha256": "e68984c0cdc42883694a51bc0d41281813e56267af2114662bb004e950459639"
+    },
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 85244,
+      "sha256": "9623892baa20add8badd007e8f6e8588588d052a8b8dcb6089f4aa3f31aa4230"
+    },
+    {
+      "path": "atlas/app/review/nested/workspace.tsx",
+      "bytes": 36116,
+      "sha256": "c66b65268f752da2b87e89a5ef6f5412a0a2a6d9748b863f6f4fca361d135212"
+    },
+    {
+      "path": "atlas/app/review/specimens/workspace.tsx",
+      "bytes": 35169,
+      "sha256": "d7a12e53a65cfaa33c541419b983a9c64f9958ac8fd0ba2624b55a57e4713ac1"
+    },
+    {
+      "path": "atlas/content/long-bone-imaging-pins.json",
+      "bytes": 9597,
+      "sha256": "852ed43487e33ee0898beaaa6bf5bf73d780eab0b70632cc8cae8b873b02a6b6"
+    },
+    {
+      "path": "atlas/content/long-bone-imaging.ts",
+      "bytes": 8478,
+      "sha256": "ca9bc940260f4ff8c635c3857dc604081892fa70c866998c13d38580af14c297"
+    },
+    {
+      "path": "atlas/lib/long-bone-imaging.ts",
+      "bytes": 2013,
+      "sha256": "f9444dd6c41ae5e15f0b7dcf072ffa1ec125e32d06be23502eaee4fef6f5b8ad"
+    },
+    {
+      "path": "atlas/scripts/validate-nested-review.mjs",
+      "bytes": 20100,
+      "sha256": "70f8b6cc5b1a545cc0c0932cc1447f3d68d985750589890fc2302bb4f222658f"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight authored source files: review UI, original humerus teaching, source identities, factual reference notices and nested SSR validator. No scans, geometry, generated assets, dependencies, environment files, runtime state, private decisions or raw canonical ancestry. This is a scoped supplement, not a full-project backup.",
+  "proof": {
+    "nativeBuildPassed": true,
+    "fullNativeTypesPassed": true,
+    "all9936LessonsCompared": true,
+    "clinicalApproval": false,
+    "websiteImportComplete": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
