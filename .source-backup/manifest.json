@@ -1,0 +1,40 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T04:22:46.720Z",
+  "sourceIdentity": {
+    "kind": "spleen-authored-source-delta",
+    "nativeSourceSha256": "6dd4610496e9419c7e27af8e019953ae27cbab433afd03ba83a12974e0ee62be",
+    "nativeHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc",
+    "parentNativeHead": "a7e73b1dbab5bbf4ed0693fc13120bf986930dce"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 370154,
+      "sha256": "249a803a19f5c043c05f0c453515254a4f03f415c0aaaf73a32a6738c9886879"
+    },
+    {
+      "path": "atlas/content/abdominal-organ-imaging.ts",
+      "bytes": 15060,
+      "sha256": "cd9a2c2d5262ec814c6f6a867a04fe52b3be635d1ef0b478b2523317250093a3"
+    }
+  ],
+  "removed": [],
+  "scope": "Two authored files: spleen CT and ultrasound original factual synthesis and reference notices. No scans, models, private data, generated assets, dependencies, environment or canonical repository ancestry. Scoped source recovery supplement.",
+  "proof": {
+    "nativeBuildPassed": true,
+    "fullNativeTypesPassed": true,
+    "changedLessons": 2,
+    "unchangedLessons": 9934,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
