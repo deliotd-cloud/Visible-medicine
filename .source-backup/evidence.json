@@ -1,0 +1,32 @@
+{
+  "actualReactDOM": true,
+  "syntheticOnly": true,
+  "component": "90e06effdd02d0552a1e6303e34e1bb8599e1392f956baa974980bb450bd2559",
+  "viewports": [
+    [
+      1280,
+      720
+    ],
+    [
+      1440,
+      900
+    ],
+    [
+      1280,
+      600
+    ]
+  ],
+  "checks": [
+    "accent-insensitive FMA search",
+    "focus and scroll retention",
+    "filter reset",
+    "pagination focus and URL",
+    "router history state preservation",
+    "manual refresh page reconciliation",
+    "503 partial rows and resume",
+    "401 invalidation clears rows and actions",
+    "desktop side panels and inner queue scroll without horizontal overflow"
+  ],
+  "installed": false,
+  "clinicalApproval": false
+}

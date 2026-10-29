@@ -1,0 +1,128 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T20:08:22.709Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "pinnedComponent": {
+      "path": "G:\\VisibleMedicine-temp\\staging\\20261029-combined-website\\website\\components\\ClinicalReviewInbox.tsx",
+      "sha256": "90e06effdd02d0552a1e6303e34e1bb8599e1392f956baa974980bb450bd2559"
+    },
+    "build": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-review-inbox-browser-verified/BUILD_RESULT.json",
+      "sha256": "5821846e0eecb1aa0971ed7c9b938958255f672fc7f68c1f4b1f5c21b6bab59f"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tools/validation/review-inbox-browser/build.mjs",
+      "bytes": 2166,
+      "sha256": "542f6c969515d1d25ff7f06d1eb043f09fe3e96d631b480e793c2765f5bd9cf0"
+    },
+    {
+      "path": "tools/validation/review-inbox-browser/entry.tsx",
+      "bytes": 349,
+      "sha256": "f3b6676d2c474a6a9b404bb3dd2ce6aaed99d1b1ae4b09c50672c4fc90dad520"
+    },
+    {
+      "path": "tools/validation/review-inbox-browser/server.mjs",
+      "bytes": 8451,
+      "sha256": "93dda57568b692595549489a54b5932537034a475db4bbede3f39f698cf9f6c8"
+    },
+    {
+      "path": "tools/validation/review-inbox-browser/interaction-check.js",
+      "bytes": 2382,
+      "sha256": "09e3755d8edbf46292224ad52092dcf3ffaa0b0d2e39f837f416cf94df312afb"
+    },
+    {
+      "path": "tools/validation/review-inbox-browser/recovery-check.js",
+      "bytes": 2067,
+      "sha256": "481663cdcd11791b0f0a6de425ff36c21fa01b851f69161b784ff6c95ad5048f"
+    },
+    {
+      "path": "tools/validation/review-inbox-browser/save-verified.mjs",
+      "bytes": 15118,
+      "sha256": "8bd968e37aa9318170ec802ddc1cf3c3ed783d259ba9a94485f7520de8b535a9"
+    },
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "bytes": 39735,
+      "sha256": "90e06effdd02d0552a1e6303e34e1bb8599e1392f956baa974980bb450bd2559"
+    },
+    {
+      "path": "website/components/clinical-review-inbox.css",
+      "bytes": 8860,
+      "sha256": "d806de511f262abf919a7e0cf05a0a0ce7a131ba70851510c97af0aa182131a5"
+    },
+    {
+      "path": "website/lib/clinical-review-fetch.ts",
+      "bytes": 921,
+      "sha256": "61f43dc7fdb4d8ac4b6ab2dc69d2901ee23f02e2e87801a2978719ccc8a8952c"
+    },
+    {
+      "path": "website/lib/clinical-review-inbox-contract.ts",
+      "bytes": 4664,
+      "sha256": "5f29aa6bf3630d28bf9ae6e3478703d08c9a39e5e7015f69e22b53f936aa35d6"
+    },
+    {
+      "path": "website/lib/clinical-review-search.ts",
+      "bytes": 1379,
+      "sha256": "4891002b3a881176618cbb67dddba4df69ba0fb3fbdd63ed0a3ecbf04f49ffad"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/launch-contained-v3.mjs",
+      "bytes": 15881,
+      "sha256": "65bc2524ac9801a387e481649e0ac64d592d43d399f00761945eef2f1f29acf1"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/parse-supervisor.ps1",
+      "bytes": 590,
+      "sha256": "3e1717c54838840fc3de85f3e82e4bd13531c5b7bf624ead3a4955b4a30ff643"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/create-background-runner.mjs",
+      "bytes": 1440,
+      "sha256": "b51c09818576b273cbad7e5183ae70fcb999c98f38d53fd3e4e8014190bf190d"
+    }
+  ],
+  "removed": [],
+  "scope": "Fourteen selected website and validation source files only. Synthetic browser harness and generator terminal-observation helper; no patient data, real review records, geometry, generated runtime, raw canonical ancestry or dependency bundles. Partial source recovery only.",
+  "proof": {
+    "actualReactDOM": true,
+    "syntheticOnly": true,
+    "component": "90e06effdd02d0552a1e6303e34e1bb8599e1392f956baa974980bb450bd2559",
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1280,
+        600
+      ]
+    ],
+    "checks": [
+      "accent-insensitive FMA search",
+      "focus and scroll retention",
+      "filter reset",
+      "pagination focus and URL",
+      "router history state preservation",
+      "manual refresh page reconciliation",
+      "503 partial rows and resume",
+      "401 invalidation clears rows and actions",
+      "desktop side panels and inner queue scroll without horizontal overflow"
+    ],
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
