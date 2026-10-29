@@ -1,0 +1,56 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T08:30:27.572Z",
+  "sourceIdentity": {
+    "kind": "guided-caption-website-integration",
+    "sourceSha256": "2660610690d4eeb86e03049fa2916608e7c6b489f14c4da5eaea240f82248b9b",
+    "parentSourceSha256": "a7b57241029126a0fdd4ce35ce57dbd6619a1341db461fdcbb693ab4ee1add95",
+    "nativeHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasGuidedModel.tsx",
+      "bytes": 14219,
+      "sha256": "7e0679112cf194cb55be49416cd03fb0879c2913db2e155419b979be303545a2"
+    },
+    {
+      "path": "website/components/HeadAtlasReferenceTeaching.tsx",
+      "bytes": 8567,
+      "sha256": "b1f72d7086015ad24efb74f0256cea94958afe3d8e99a3165db30270ed52eeef"
+    },
+    {
+      "path": "website/tests/head-guided-caption-live.test.ts",
+      "bytes": 9634,
+      "sha256": "4dd98558c9f22be4b8a9c375402ab1199b72ebf88255c6c90a88af2b491b4d7e"
+    },
+    {
+      "path": "website/tests/head-guided-model.test.ts",
+      "bytes": 21614,
+      "sha256": "678e9085b1c61bba2bce8b98b48af01792b639c6cac36ce3df5a54af7a31dad0"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "0db1d72becf3acd0f898a42d946922afdb23dd8aac2eb4ed6d7d3d5863301c67"
+    }
+  ],
+  "removed": [],
+  "scope": "Five selected website source files: guided-note components, regression tests and updated delivery fixture after stock Review rebind/build. No scans, models, private decisions, runtime assets or canonical Git ancestry. Not a full project backup; staged only.",
+  "proof": {
+    "focusedTests": 144,
+    "targetedTypeFiles": 799,
+    "stockReviewBuild": true,
+    "priorSyntheticBrowserChecks": 18,
+    "exactComponentBrowserSources": true,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
