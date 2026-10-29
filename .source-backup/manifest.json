@@ -1,0 +1,72 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T09:11:23.006Z",
+  "sourceIdentity": {
+    "kind": "head-tour-speed-website-integration",
+    "sourceSha256": "9bcb022985ae614b187e928e28a6bd007a038bc7b4af78effbcb3564df76fa45",
+    "parentSourceSha256": "2660610690d4eeb86e03049fa2916608e7c6b489f14c4da5eaea240f82248b9b",
+    "nativeHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadTourPlayback.tsx",
+      "bytes": 4944,
+      "sha256": "8dbc698904f56c0c04c2539c287888a28ceb0fd010dd9a9f7964b207da8639d0"
+    },
+    {
+      "path": "website/lib/head-tour-speed-preference.ts",
+      "bytes": 1004,
+      "sha256": "66a0b9ce293168bb82a2972e34913d7badd38a0cb8c76f0a82e7feaf7c340350"
+    },
+    {
+      "path": "website/tests/head-tour-speed-preference.test.ts",
+      "bytes": 2184,
+      "sha256": "85bea1a7f5cb4de27824e701f09eeb6d52d29dd81803c0964ee8cfc392a4d675"
+    },
+    {
+      "path": "website/tests/head-tour-playback-ui.test.ts",
+      "bytes": 11269,
+      "sha256": "4001d82522b577eb6a3fef488c56b4f74d15dc2be3d5474e5e0c9c55cd7594cf"
+    },
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "bytes": 10138,
+      "sha256": "6db11d7be6cb9da47d8369b1a8b58d5d3d121551eafc45d55ed35d7902d639ef"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 27751,
+      "sha256": "101be6f4288eff0f4c351207260095c32e86cfe02f38c1df218c420c0c5241ee"
+    },
+    {
+      "path": "website/tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2780,
+      "sha256": "89e4730eb4750e2cc5b170f83b25a865b02bd7d8efa4f704844b2f5a8c9a65b3"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "7b14a7455de0b87e781192d5b1072c9c17c42ab5611c96247a0e7e677b416ac8"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight selected source files: remembered head-tour speed, helper, tests, explicit Review binding input and current delivery fixture. No model/runtime assets, private decisions, scans or canonical Git ancestry. Staged only, not a full project backup.",
+  "proof": {
+    "focusedTests": 161,
+    "targetedTypeFiles": 572,
+    "stockReviewBuild": true,
+    "syntheticBrowserChecks": 22,
+    "freshDocumentRestore": true,
+    "exactBrowserSourceBytes": true,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
