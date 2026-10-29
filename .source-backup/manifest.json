@@ -1,0 +1,32 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T16:57:58.523Z",
+  "sourceIdentity": {
+    "parent": "4259fd81a7da96945dcd288cb8652dce3421af34",
+    "beforeSha256": "0e0bff5509fa428bc5c5d03ae090ec9c2fbf863d9022cb78274c13fe00971e81",
+    "scope": "One Atlas generator source file"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/regional-teaching-snapshots.mjs",
+      "sha256": "38c74f4dc3d1ef6e95030c34d00b046b15ace38e928d7e42d8a7772920cae316",
+      "bytes": 5584
+    }
+  ],
+  "removed": [],
+  "scope": "Standalone generator source only. No anatomy datasets, scans, masks, private clinical information, dependency trees or canonical Git ancestry.",
+  "proof": {
+    "checks": 4,
+    "scope": "isolated VM harness with synthetic catalog, bundled API, esbuild, and filesystem; no real generation",
+    "realGenerationPassed": false,
+    "fullBuildPassed": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
