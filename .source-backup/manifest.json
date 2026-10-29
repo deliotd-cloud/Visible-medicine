@@ -1,12 +1,18 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-29T18:20:01.618Z",
+  "at": "2026-10-29T19:14:11.718Z",
   "sourceIdentity": {
-    "nativeParent": "4259fd81a7da96945dcd288cb8652dce3421af34",
-    "preparationSha256": "f1ae317be0b5b862225f47eb1907cdc0378f4a6891e4c779ff0b38b13e1f15ee"
+    "preparation": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-combined-native-successor/PREPARATION.json",
+      "sha256": "f1ae317be0b5b862225f47eb1907cdc0378f4a6891e4c779ff0b38b13e1f15ee"
+    },
+    "postGeneration": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-native-generation-verified/SOURCE_AFTER_GENERATION.json",
+      "sha256": "acebaab2382fec27f5af122496be6b13372e7dca6d58c5e96a5f581765297a75"
+    }
   },
-  "parent": "edca442d24a2bb62fe90c73c77e0e73964f88a32",
-  "gitParent": "edca442d24a2bb62fe90c73c77e0e73964f88a32",
+  "parent": "642a97bbe1a5fcd66adaf5ad55f257075b616673",
+  "gitParent": "642a97bbe1a5fcd66adaf5ad55f257075b616673",
   "files": [
     {
       "path": "content/appendicular-artery-ultrasound-pin.json",
@@ -147,25 +153,44 @@
       "path": "scripts/fixtures/cubital-veins.before.ts.txt",
       "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6",
       "bytes": 3399
+    },
+    {
+      "path": "tools/validation/native-generation/launch-contained-v6.mjs",
+      "sha256": "88fd89239cf02d5cb3f3f1efa84eb861eda865df6d66e9797bbdfd850705ced4",
+      "bytes": 18311
+    },
+    {
+      "path": "tools/validation/native-generation/prepare-v6.mjs",
+      "sha256": "52ea84b91ce81fdc769989c5e42534fb9ffa759e93c8ed050e6ff35f090152c0",
+      "bytes": 6447
+    },
+    {
+      "path": "tools/validation/native-generation/launch-contained-v7.mjs",
+      "sha256": "dab283b7e20b7f8411f02dea1afa8ab1136a071955f9bcd5bd8b56632dceb4ee",
+      "bytes": 19161
+    },
+    {
+      "path": "tools/validation/native-generation/prepare-v7.mjs",
+      "sha256": "7cb2ff76591babec68e2edeb68ea8a72a1b1076ca64a992fb0101559703f631a",
+      "bytes": 4582
+    },
+    {
+      "path": "tools/validation/native-generation/save-verified.mjs",
+      "sha256": "e833f8bf8b64c908bae79c6739c50cca9dc6eeb96037686f64757942bb50f3b2",
+      "bytes": 16312
     }
   ],
-  "removed": [
-    "scripts/fixtures/inferior-epigastric-vessels.before.ts",
-    "scripts/fixtures/elbow-arteries.before.ts",
-    "scripts/fixtures/genicular-arteries.before.ts",
-    "scripts/fixtures/cranial-arteries.before.ts",
-    "scripts/fixtures/inferior-thyroid-arteries.before.ts",
-    "scripts/fixtures/subscapular-arteries.before.ts",
-    "scripts/fixtures/cubital-veins.before.ts"
-  ],
-  "scope": "28 exact authored source/test files for the composed native teaching successor. Includes existing pallidal MRI and appendicular US proposals, graded quiz drafts across41source selections, editorial audit, generator cleanup and plain-text regression fixtures. Partial unpublished source-only recovery. No anatomy geometry, scans, patient data, runtime output, full source snapshot or raw canonical Git ancestry.",
+  "removed": [],
+  "scope": "28 previously backed-up authored Atlas files plus five bounded generation/recovery tools. Partial source-only recovery. Generated teaching/review files remain in the local F-drive checkpoint. No scans, private records, geometry, generated runtime, approvals or deployment.",
   "proof": {
-    "focusedQuizTests": 15,
-    "fixtureInputsExcluded": 7,
-    "publicGeometryUnchanged": true,
-    "stockGeneration": false,
-    "installed": false,
-    "clinicalApproval": false
+    "stockStepsPassed": 10,
+    "bodyWorksheets": 1104,
+    "nestedGroups": 20,
+    "nestedSelections": 108,
+    "changedTopics": 44,
+    "unchangedLessons": 9892,
+    "fullBuild": false,
+    "installed": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
