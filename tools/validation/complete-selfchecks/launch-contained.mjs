@@ -43,7 +43,7 @@ async function guarded({site,dir,command,heap=384,aggregate=1024,minimum=3072,ex
  if(minimum!==4096){assert.equal(minimum,3072);change('$before.availableMiB -lt 4096','$before.availableMiB -lt '+minimum);change('require available >=4096 MiB','require available >='+minimum+' MiB');}
  assert(minimum>=aggregate+2048,'Admit the complete maximum job plus the unchanged2GiB free reserve');
  fs.writeFileSync(dir+'/supervise.ps1',supervisor,{flag:'wx'});
- const parsed=execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-File','G:/VisibleMedicine-temp/staging/20261029-native-successor-generation/parse-supervisor.ps1','-Path',dir+'/supervise.ps1'],{encoding:'utf8',windowsHide:true});save('SUPERVISOR_SYNTAX.json',JSON.parse(parsed));
+ const parsed=execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-File','G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-generation-v2/parse-supervisor.ps1','-Path',dir+'/supervise.ps1'],{encoding:'utf8',windowsHide:true});save('SUPERVISOR_SYNTAX.json',JSON.parse(parsed));
  const envBase=Object.fromEntries(Object.entries(process.env).filter(([k])=>/^(path|systemroot|windir|comspec|pathext|temp|tmp|os|processor_architecture|number_of_processors)$/i.test(k)));
  const environment={...envBase,NODE_OPTIONS:'--max-old-space-size='+heap,GOMEMLIMIT:'64MiB',GOMAXPROCS:'1',RAYON_NUM_THREADS:'1',GIT_OPTIONAL_LOCKS:'0',GIT_NO_REPLACE_OBJECTS:'1',NO_COLOR:'1',WRANGLER_SEND_METRICS:'false',NEXT_TELEMETRY_DISABLED:'1',...extraEnv};
  save('CONFIGURATION.json',{node:process.execPath,site,evidence:dir,environment,maxMinutes});
@@ -59,15 +59,15 @@ async function guarded({site,dir,command,heap=384,aggregate=1024,minimum=3072,ex
 
 import path from 'node:path';
 import {createRequire} from 'node:module';
-const stage='G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-native',site=stage+'/atlas';
-const root='G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-generation';
+const stage='G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native',site=stage+'/atlas';
+const root='G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-generation-v2';
 const save=(p,v)=>fs.writeFileSync(root+'/'+p,JSON.stringify(v,null,2)+'\n',{flag:'wx'});
-assert.equal(hash('G:/VisibleMedicine-temp/staging/20261029-native-successor-generation/parse-supervisor.ps1'),'d17c4bea3a7a44315d166aa6c2c79971a56bb2999a81381f78b5f52dda14f0c7');
-assert.equal(hash(stage+'/PREPARATION.json'),'4d95d5118e72c3dac24afaf6eab142a3699b5322bd88f6a2f5698d265da3b2f5');
+assert.equal(hash('G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-generation-v2/parse-supervisor.ps1'),'3e1717c54838840fc3de85f3e82e4bd13531c5b7bf624ead3a4955b4a30ff643');
+assert.equal(hash(stage+'/PREPARATION.json'),'a40692560132b21e2de821f44de3b939631d03f39d60d8b28ddbaa58f5c83e2b');
 const source=json(stage+'/PREPARATION.json');assert.equal(hash(source.parent.path),source.parent.sha256);
 const parent=json(source.parent.path),expected=new Map(parent.sourceRows.map(r=>[r.path,r.sha256]));
 for(const r of source.changes){assert.equal(expected.get(r.path)??null,r.beforeSha256);expected.set(r.path,r.sha256);}
-assert.equal(expected.size,6490);assert.deepEqual([...expected].sort(([a],[b])=>a.localeCompare(b)),source.sourceRows.map(r=>[r.path,r.sha256]).sort(([a],[b])=>a.localeCompare(b)));
+assert.equal(expected.size,6498);assert.deepEqual([...expected].sort(([a],[b])=>a.localeCompare(b)),source.sourceRows.map(r=>[r.path,r.sha256]).sort(([a],[b])=>a.localeCompare(b)));
 const commands=[
  ['regional-write','scripts/regional-teaching-snapshots.mjs'],['regional-check','scripts/regional-teaching-snapshots.mjs --check'],
  ['display-write','scripts/generate-body-review-display-pins.mjs'],['display-check','scripts/generate-body-review-display-pins.mjs --check'],

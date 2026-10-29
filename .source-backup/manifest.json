@@ -1,18 +1,22 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-29T19:24:24.680Z",
+  "at": "2026-10-29T19:43:25.315Z",
   "sourceIdentity": {
     "preparation": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native/PREPARATION.json",
+      "sha256": "a40692560132b21e2de821f44de3b939631d03f39d60d8b28ddbaa58f5c83e2b"
+    },
+    "parent": {
       "path": "G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-native/PREPARATION.json",
       "sha256": "4d95d5118e72c3dac24afaf6eab142a3699b5322bd88f6a2f5698d265da3b2f5"
     },
-    "parent": {
+    "comparisonParent": {
       "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-native-generation-verified/SOURCE_AFTER_GENERATION.json",
       "sha256": "acebaab2382fec27f5af122496be6b13372e7dca6d58c5e96a5f581765297a75"
     }
   },
-  "parent": "757135abeb8b5019a907df0260a125523db6a46b",
-  "gitParent": "757135abeb8b5019a907df0260a125523db6a46b",
+  "parent": "6ee06e2328735d961d64511f1924d8bab4488ef5",
+  "gitParent": "6ee06e2328735d961d64511f1924d8bab4488ef5",
   "files": [
     {
       "path": "content/appendicular-artery-ultrasound-pin.json",
@@ -200,46 +204,137 @@
       "sha256": "551f363f6f1d745d6680d3ea3e13242fcd3e394b96b6af0ecd12fdc00da0fe51"
     },
     {
-      "path": "tools/validation/integrated-quiz/prepare.mjs",
-      "bytes": 6184,
-      "sha256": "ad0b2cb4f806a7c00d62568d7f5044f12f36d53f1cfd7eeeff86f43cd54917e7"
+      "path": "lib/pelvic-veins.ts",
+      "bytes": 10193,
+      "sha256": "e84164a2a5ba81be021eb636af19249259cf9bd6201afb0fee9c142bf7ec149c"
     },
     {
-      "path": "tools/validation/integrated-quiz/create-runner.mjs",
-      "bytes": 8219,
-      "sha256": "dd454409006c04e5037f992f9d40dd5ae5b9e98cafe5ae3973baff48884d87f7"
+      "path": "lib/corpus-spongiosum.ts",
+      "bytes": 3653,
+      "sha256": "111abd8651f074fe74f65f834d488e1c1be4b7f945c3a9c3caeb572ca1475b74"
     },
     {
-      "path": "tools/validation/integrated-quiz/check-delta.mjs",
-      "bytes": 10326,
-      "sha256": "8310bbfdeac25beb05a5da460691712627ad00aa6d992e31b1d8250224799d38"
+      "path": "lib/circumflex-femoral.ts",
+      "bytes": 3172,
+      "sha256": "48122f73aca65d28f2fecceef5879970fc9aaf37213c5865650d8fe241a42a85"
     },
     {
-      "path": "tools/validation/integrated-quiz/save-ready.mjs",
-      "bytes": 14400,
-      "sha256": "b180383e14d41831e5fc1e829341dccb918dfe09aa0b7e69fee2f0e0eade9f27"
+      "path": "lib/anterior-cardiac-vein.ts",
+      "bytes": 4568,
+      "sha256": "b6f4cecf6cd5fc1f13a3288f2939ca2487e0e37baa5bd2ae98fba55d0edc6281"
     },
     {
-      "path": "tools/validation/integrated-quiz/launch-contained.mjs",
-      "bytes": 15276,
-      "sha256": "f04c3f21060696432dd21ed22b3ae11d7e79f25893ea35fc1eebbbe82978a1ed"
+      "path": "lib/foot-sesamoid-teaching.ts",
+      "bytes": 1614,
+      "sha256": "862b891adfa797e0ed0690101aaf63f46e27ee62c06d2140a8dcaad47ea630a6"
+    },
+    {
+      "path": "content/foot-sesamoid-teaching.ts",
+      "bytes": 4370,
+      "sha256": "e3b547b5c0dea840058e0bdece7c8c0a1d70e6637cfaa7e99cd04b855234da2c"
+    },
+    {
+      "path": "scripts/test-pelvic-vein-quiz.mjs",
+      "bytes": 6648,
+      "sha256": "f3032362f055a4f884cfad43c327c9ab0ffab3203b3a02a5bf4ae6fd6249b329"
+    },
+    {
+      "path": "scripts/test-remaining-selfchecks.mjs",
+      "bytes": 7855,
+      "sha256": "a0548b095f2da0c93c9f666cd221828235b65cdd0ba3bfaa1fd5075bd54ae7f9"
+    },
+    {
+      "path": "scripts/fixtures/pelvic-veins.before.ts.txt",
+      "bytes": 6590,
+      "sha256": "c7bfabbe5d9f05f61c1dd729c3378bdf32b3055452342da33b2a54d9b480fa33"
+    },
+    {
+      "path": "scripts/fixtures/corpus-spongiosum.before.ts.txt",
+      "bytes": 3442,
+      "sha256": "e8160f2ae0be2de646b4cebba199b67ea8e96f98f2809c877c70022c27da4972"
+    },
+    {
+      "path": "scripts/fixtures/circumflex-femoral.before.ts.txt",
+      "bytes": 2703,
+      "sha256": "71313635f2ae5a4fa5f7726adf6f6e92fb48a4ae2e43fd7a721860c062a7ccf4"
+    },
+    {
+      "path": "scripts/fixtures/anterior-cardiac-vein.before.ts.txt",
+      "bytes": 4355,
+      "sha256": "65e542313743aa1b81e0bd6b131dd3bd9492830043631504ee59e4ff7cd5ff49"
+    },
+    {
+      "path": "scripts/fixtures/foot-sesamoid-teaching.before.ts.txt",
+      "bytes": 1336,
+      "sha256": "3fff1e3731ad28496af251623c2719a9ac49317a899a8b3e6c6d1df552b99bef"
+    },
+    {
+      "path": "scripts/fixtures/foot-sesamoid-content.before.ts.txt",
+      "bytes": 3973,
+      "sha256": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/prepare.mjs",
+      "bytes": 6268,
+      "sha256": "3205105e70c135c3e3ca6d6e036edb8083ff0a3e94fc5fcd46cb881eb57aae81"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/create-runner.mjs",
+      "bytes": 1514,
+      "sha256": "9d09ea5b819260a928ee4816f93e557e8933a02cee178960945f3be19b2cad0e"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/create-runner-v2.mjs",
+      "bytes": 2246,
+      "sha256": "5c1b8ab66aae10570c5db6763203134cdb270797bc8faf4d173507c09a149b47"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/check-delta.mjs",
+      "bytes": 13647,
+      "sha256": "435cf67c1a0ec964a97526dfa812e19024769fc82612508103f2ddb12a488c45"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/save-ready.mjs",
+      "bytes": 17329,
+      "sha256": "d2614e890440e8d9ac6d31e98432ceb32617c1b30e3933e9fd76b593293a565b"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/launch-contained.mjs",
+      "bytes": 15299,
+      "sha256": "c543f2d9fc6b3244e322d462a353d118f7675b3eaaf361c6adae596631af746b"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/parse-supervisor.ps1",
+      "bytes": 590,
+      "sha256": "3e1717c54838840fc3de85f3e82e4bd13531c5b7bf624ead3a4955b4a30ff643"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/verify-batch.mjs",
+      "bytes": 7099,
+      "sha256": "f44e2ade353ad4ff0695311d4195cfb68a9a15e287cc0e6bcb0170df071b38c9"
+    },
+    {
+      "path": "tools/validation/complete-selfchecks/SOURCE_NOTES.json",
+      "bytes": 3969,
+      "sha256": "24f4e88c7a6081ee226e10a0c00ab9d592c60bf6166e363fb1a0a9e0d46316b5"
     }
   ],
   "removed": [
-    "tools/validation/native-generation/launch-contained-v6.mjs",
-    "tools/validation/native-generation/prepare-v6.mjs",
-    "tools/validation/native-generation/launch-contained-v7.mjs",
-    "tools/validation/native-generation/prepare-v7.mjs",
-    "tools/validation/native-generation/save-verified.mjs"
+    "tools/validation/integrated-quiz/prepare.mjs",
+    "tools/validation/integrated-quiz/create-runner.mjs",
+    "tools/validation/integrated-quiz/check-delta.mjs",
+    "tools/validation/integrated-quiz/save-ready.mjs",
+    "tools/validation/integrated-quiz/launch-contained.mjs"
   ],
-  "scope": "37 composed authored Atlas sources/tests and five generation/comparison/recovery tools. Partial source-only backup; no scans, private records, geometry, generated runtime or approval. Previous generated parent and other saved proposals remain separately recoverable.",
+  "scope": "51 composed authored Atlas sources/tests plus nine validation/recovery/reference files. Partial source-only backup; no scans, private identifiers, geometry, generated runtime or approval. Prior backup history preserves earlier tools. Current website and owner review remain unchanged.",
   "proof": {
-    "sourceFilesVerified": 6490,
-    "limbicChecks": 4,
-    "choiceOrderCases": 37,
-    "componentGradingAndFocus": true,
-    "expectedNewQuizPlacements": 4,
-    "otherLessonsPreserved": 9932,
+    "newQuizPlacements": 16,
+    "focusedTests": 8,
+    "unchangedNonQuizLessons": 128,
+    "sourceMutationsRejected": 64,
+    "sourceFilesVerified": 6498,
+    "expectedDeltaFromGeneratedParent": 20,
+    "otherLessons": 9916,
     "generated": false,
     "fullBuild": false,
     "installed": false

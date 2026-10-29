@@ -1,0 +1,17 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const sha=b=>createHash('sha256').update(b).digest('hex');
+const prior='G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-generation';
+const root='G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-generation-v2';
+const parserPath='G:/VisibleMedicine-temp/staging/20261029-native-successor-generation/parse-supervisor.ps1';
+let runner=fs.readFileSync(prior+'/launch-contained.mjs','utf8');assert.equal(sha(Buffer.from(runner)),'1e0d3ee4d8805db2f40e8eff49a548632e5934c02a725f7dfa9f0d3d08e3d424');
+let parser=fs.readFileSync(parserPath,'utf8');assert.equal(sha(Buffer.from(parser)),'d17c4bea3a7a44315d166aa6c2c79971a56bb2999a81381f78b5f52dda14f0c7');
+assert.deepEqual(fs.readdirSync(prior+'/regional-write'),['supervise.ps1'],'Prior attempt must have failed before process preparation/launch');
+const oldScope='G:\\VisibleMedicine-temp\\staging\\20261029-native-successor-generation\\';
+assert.equal(parser.split(oldScope).length,2);parser=parser.replace(oldScope,root.replaceAll('/','\\')+'\\');
+assert(!fs.existsSync(root));fs.mkdirSync(root+'/temp',{recursive:true});fs.writeFileSync(root+'/parse-supervisor.ps1',parser,{flag:'wx'});
+assert.equal(runner.split("const root='"+prior+"';").length,2);runner=runner.replace("const root='"+prior+"';","const root='"+root+"';");
+assert.equal(runner.split(parserPath).length,3);runner=runner.replaceAll(parserPath,root+'/parse-supervisor.ps1');
+assert.equal(runner.split('d17c4bea3a7a44315d166aa6c2c79971a56bb2999a81381f78b5f52dda14f0c7').length,2);runner=runner.replace('d17c4bea3a7a44315d166aa6c2c79971a56bb2999a81381f78b5f52dda14f0c7',sha(Buffer.from(parser)));
+fs.writeFileSync(root+'/launch-contained.mjs',runner,{flag:'wx'});
+fs.writeFileSync(root+'/PRIOR_ATTEMPT.json',JSON.stringify({prior,stoppedBeforeProcessLaunch:true,onlyFile:'regional-write/supervise.ps1',fix:'Parser allowlist now targets only this new immutable staging folder. Original path rejection and files preserved.',limitsUnchanged:true},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({runner:root+'/launch-contained.mjs',sha256:sha(Buffer.from(runner)),parserSha256:sha(Buffer.from(parser))}));
