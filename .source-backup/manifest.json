@@ -1,0 +1,42 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T15:49:39.661Z",
+  "sourceIdentity": {
+    "purpose": "Private PPTX revision comparison utility",
+    "integratedIntoCandidate": true,
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/lecture-pptx-version-review.mjs",
+      "bytes": 11551,
+      "sha256": "1d01793a7b7abd22782479b52f076e98ebd8e9dacf0f6c740bed94b6f9d08ded"
+    },
+    {
+      "path": "tests/lecture-pptx-version-review.test.mjs",
+      "bytes": 6908,
+      "sha256": "29b0a90499e57a7d88ed58117f04746b63c3d715fbae04f2ce24f4a9bc0779a7"
+    },
+    {
+      "path": "docs/private-lecture-version-review.md",
+      "bytes": 2332,
+      "sha256": "0caf70c015e22e392c0ced54719ec16f69b6073893e038d04f51b82261cdf0c1"
+    }
+  ],
+  "removed": [],
+  "scope": "Exactly three authored utility/test/documentation files. No real decks, intake records, source paths, presenter notes, generated private reports, patient data or raw canonical history.",
+  "proof": {
+    "focusedTests": 15,
+    "failed": 0,
+    "privateReplayCompleted": true,
+    "privateReportsExcluded": true,
+    "noClinicalApproval": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
