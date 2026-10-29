@@ -1,0 +1,132 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T05:23:57.504Z",
+  "sourceIdentity": {
+    "kind": "head-review-section-navigation",
+    "websiteSourceSha256": "d673e00573725781013a196f2caf040ea36110a06d56f4d879f219582e32a885",
+    "unchangedAtlasHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadTeachingReviewNavigator.tsx",
+      "bytes": 3106,
+      "sha256": "95ed5db80d5747d8c92ea6c657cbbadb967002ffb6f38aef703ee28cb4d7d319"
+    },
+    {
+      "path": "website/components/HeadAtlasTeachingReview.tsx",
+      "bytes": 13457,
+      "sha256": "0dfaecd6ba67a3df983de5bf28e9d58d90d1d969144f20b4132a9a127c7c7c5f"
+    },
+    {
+      "path": "website/tests/head-review-compact-navigation.test.ts",
+      "bytes": 9718,
+      "sha256": "1519167d384a6ab197f0e55850a9692fbbc8652d65529e9ac958a0fb310a8465"
+    },
+    {
+      "path": "website/tests/head-review-sections-navigation.test.ts",
+      "bytes": 4664,
+      "sha256": "64ba9883766ec16e9a7c42cd935624518c519bd452d9c31403d8535b975f26cf"
+    },
+    {
+      "path": "website/tests/head-anatomy-check-integration.test.ts",
+      "bytes": 4472,
+      "sha256": "c46864daeccb36a9a8fff7662eace093369945aea51da55aedcc8f66e08edc54"
+    },
+    {
+      "path": "website/tests/head-brainstem-clinical.test.ts",
+      "bytes": 5720,
+      "sha256": "a809a261ae578ccfac48f556baae0b188ffb7ed796a96fd3188abe6981548d06"
+    },
+    {
+      "path": "website/tests/head-ct-bone-review.test.ts",
+      "bytes": 6087,
+      "sha256": "a95f7a2814435b042a84a39786c87a0cafcbf751b7bf7dc35730823331b45f7d"
+    },
+    {
+      "path": "website/tests/head-guided-review-render.test.mjs",
+      "bytes": 5401,
+      "sha256": "6284cd2b71b3d6f6362fc8524d315349abfcfd0af82edcfffd8b89c0300183e7"
+    },
+    {
+      "path": "website/tests/head-mri-anatomy-checks.test.ts",
+      "bytes": 20490,
+      "sha256": "2090806d680bae2a87f7a7ee4684ae529382e3a0ebee204d6ba5a779f6bbbb4c"
+    },
+    {
+      "path": "website/tests/head-teaching-review-navigation.test.ts",
+      "bytes": 13704,
+      "sha256": "d641d0955f010028067e5f40ed8db4b378dae9a2e99928e884bb1e02ec625c42"
+    },
+    {
+      "path": "website/tests/head-ventricular-clinical.test.ts",
+      "bytes": 8094,
+      "sha256": "7efbfad3201b52a518f68eb256ca2d2cbbda8f14202954e20af35e86e86933bb"
+    },
+    {
+      "path": "website/tests/head-guided-review-navigation.test.mjs",
+      "bytes": 2898,
+      "sha256": "fd846e3bc0928b5880ade7af83c73bb754695cd5ee741f29d9fa42a2fa81bc2c"
+    },
+    {
+      "path": "website/tests/head-review-compact-preservation.test.mjs",
+      "bytes": 7101,
+      "sha256": "37c21563899d971ad46aa21689e1dacc4192af2936c5abf9248f7e0c62a5c450"
+    },
+    {
+      "path": "website/tests/head-review-sections-history-inverse.mjs",
+      "bytes": 2968,
+      "sha256": "6de0ee24944855c2622c3ece59c25cfb4d64a8de4dfd806fa8d62c81260f6d53"
+    },
+    {
+      "path": "website/tests/head-review-sections-preservation.test.mjs",
+      "bytes": 2343,
+      "sha256": "2be82e2cb970634b36146a5acfc489343a53aeb94698d0c88b851501de8fb333"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "f756070d7824fdb5c03b1338f245c74c937ae9b3006425442f4906b779a9a044"
+    },
+    {
+      "path": "website/tests/fixtures/head-review-sections-before/HeadTeachingReviewNavigator.tsx.raw",
+      "bytes": 1651,
+      "sha256": "c68d37d8ea10608feac8d71883ef667dd6d74f17220e5256aaaf9187deb4364b"
+    },
+    {
+      "path": "website/tests/fixtures/head-review-sections-before/HeadAtlasTeachingReview.tsx.raw",
+      "bytes": 13426,
+      "sha256": "0683d83e57912d034b39ae3052122597bcf965c693f4e72dc87b87b2da76c1d6"
+    },
+    {
+      "path": "website/tests/fixtures/head-review-sections-before/head-teaching-review-navigation.test.ts.raw",
+      "bytes": 13542,
+      "sha256": "ca82efbcbbeca857d56b82ec1c1ca7b5db9060fbcee48be490e81987034d3e4d"
+    },
+    {
+      "path": "website/tests/fixtures/head-review-sections-before/current-atlas-delivery.json.raw",
+      "bytes": 2051,
+      "sha256": "602783bbfedbe0039dd6f765c2b74ccb2e47202c3d3e1336b2af4fa10912b171"
+    }
+  ],
+  "removed": [],
+  "scope": "Twenty authored head Review component/test/fixture files. No generated viewer, private data, clinical decisions, scan derivatives, dependency binaries, environment or canonical ancestry. Source-only recovery supplement.",
+  "proof": {
+    "focusedTests": 106,
+    "targetedTypesPassed": true,
+    "stockReviewPassed": true,
+    "fullProjectTypes": false,
+    "currentFullWebsiteBuild": false,
+    "syntheticDesktopBrowserChecks": true,
+    "normalPreviewChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "knownBaselineHistoricalFailures": 5
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
