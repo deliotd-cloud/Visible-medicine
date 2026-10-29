@@ -1,12 +1,27 @@
 {
-  "newQuizPlacements": 16,
-  "focusedTests": 8,
-  "unchangedNonQuizLessons": 128,
-  "sourceMutationsRejected": 64,
-  "sourceFilesVerified": 6498,
-  "expectedDeltaFromGeneratedParent": 20,
-  "otherLessons": 9916,
-  "generated": false,
-  "fullBuild": false,
-  "installed": false
+  "at": "2026-10-29T20:24:41.502Z",
+  "sourceFilesVerified": 6500,
+  "authoredFiles": 53,
+  "executableDependenciesVerified": 6,
+  "expectedChangedTopics": 21,
+  "quizChanges": 20,
+  "xrayChanges": 1,
+  "expectedUnchangedLessons": 9915,
+  "allOtherParentSourceExact": true,
+  "parserPositiveAndNegativeChecksPassed": true,
+  "staleGeneratedOutputRejected": true,
+  "generationState": "not-started",
+  "resourceObservation": {
+    "AvailableMBytes": 2070,
+    "PercentCommittedBytesInUse": 49
+  },
+  "minimumGenerationAvailableMiB": 3072,
+  "jobMiB": 1024,
+  "heapMiB": 384,
+  "freeReserveMiB": 2048,
+  "fullTypesPassed": false,
+  "fullBuildPassed": false,
+  "installed": false,
+  "ownerPreviewChanged": false,
+  "clinicalApproval": false
 }

@@ -8,8 +8,8 @@ import { verifyTeachingDelta, verifyDisplayPinDelta } from '../20261029-native-t
 
 // Read-only generated-output comparison. Never uses the candidate's generated rows as expectations.
 assert(process.argv.length === 2 || (process.argv.length === 3 && process.argv[2] === '--check'));
-const root = 'G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-recipes';
-const stage = 'G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native';
+const root = 'G:/VisibleMedicine-temp/staging/20261029-mandible-combined-recipes';
+const stage = 'G:/VisibleMedicine-temp/staging/20261029-mandible-combined-native';
 const parentPath = 'F:/VisibleMedicine/recovery/checkpoints/20261029-native-generation-verified/SOURCE_AFTER_GENERATION.json';
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const inputs = new Map();
@@ -23,20 +23,27 @@ function read(file, expected) {
 read(root + '/check-delta.mjs');
 read('G:/VisibleMedicine-temp/staging/20261029-native-teaching-delta/delta-core.mjs',
   '91cee06110daab7f9cc21d8e18e9e8a7bc0b50c1b360ecc4bc2f7cf66cec0423');
-const prep = JSON.parse(read(stage + '/PREPARATION.json', 'a40692560132b21e2de821f44de3b939631d03f39d60d8b28ddbaa58f5c83e2b'));
-assert.equal(prep.schema, 'vm-complete-selfchecks-native/1');
+const prep = JSON.parse(read(stage + '/PREPARATION.json', '5e9a87958998c7b6f386d7d1c789e0c0ed9a3a70b8de135b4fc1f1c1e4b71fcf'));
+assert.equal(prep.schema, 'vm-mandible-combined-native/1');
 assert.equal(prep.atlas, stage + '/atlas');
-assert.equal(prep.parent.path, 'G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-native/PREPARATION.json');
+assert.equal(prep.parent.path, 'G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native/PREPARATION.json');
+assert.equal(prep.parent.sha256, 'a40692560132b21e2de821f44de3b939631d03f39d60d8b28ddbaa58f5c83e2b');
 assert.equal(prep.comparisonParent.path, parentPath);
 assert.equal(prep.comparisonParent.sha256, 'acebaab2382fec27f5af122496be6b13372e7dca6d58c5e96a5f581765297a75');
-assert.equal(prep.changes.length, 14);
-assert.equal(prep.sourceRows.length, 6498);
+assert.equal(prep.changes.length, 3);
+assert.equal(prep.sourceRows.length, 6500);
 const immediateParent = JSON.parse(read(prep.parent.path, prep.parent.sha256));
-assert.equal(immediateParent.atlas, 'G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-native/atlas');
-assert.equal(immediateParent.sourceRows.length, 6490);
-assert.equal(immediateParent.parent.path, parentPath);
-assert.equal(immediateParent.parent.sha256, prep.comparisonParent.sha256);
-assert.equal(immediateParent.changes.length, 9);
+assert.equal(immediateParent.schema, 'vm-complete-selfchecks-native/1');
+assert.equal(immediateParent.atlas, 'G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native/atlas');
+assert.equal(immediateParent.sourceRows.length, 6498);
+assert.equal(immediateParent.changes.length, 14);
+const quizParent = JSON.parse(read(immediateParent.parent.path, immediateParent.parent.sha256));
+assert.equal(immediateParent.parent.path, 'G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-native/PREPARATION.json');
+assert.equal(quizParent.atlas, 'G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-native/atlas');
+assert.equal(quizParent.sourceRows.length, 6490);
+assert.equal(quizParent.changes.length, 9);
+assert.equal(quizParent.parent.path, parentPath);
+assert.equal(quizParent.parent.sha256, prep.comparisonParent.sha256);
 const parent = JSON.parse(read(parentPath, prep.comparisonParent.sha256));
 assert.equal(parent.atlas, 'G:/VisibleMedicine-temp/staging/20261029-combined-native-successor/atlas');
 assert.equal(parent.parentHead, prep.parentHead);
@@ -44,12 +51,25 @@ const parentRows = new Map(parent.sourceRows.map(row => [row.path, row.sha256]))
 const sourceRows = new Map(prep.sourceRows.map(row => [row.path, row.sha256]));
 assert.equal(parentRows.size, parent.sourceRows.length);
 assert.equal(sourceRows.size, prep.sourceRows.length);
+assert.equal(parent.sourceRows.length, 6484);
 const immediateRows = new Map(immediateParent.sourceRows.map(row => [row.path, row.sha256]));
 assert.equal(immediateRows.size, immediateParent.sourceRows.length);
-assert.equal(prep.changes.length, [...sourceRows].filter(([file,digest]) => immediateRows.get(file) !== digest).length);
+const quizRows = new Map(quizParent.sourceRows.map(row=>[row.path,row.sha256]));
+assert.equal(quizRows.size, quizParent.sourceRows.length);
+function assertSourceDelta(candidate, candidateRows, previousRows, count) {
+  assert.equal(candidate.changes.length, count);
+  const delta = [...candidateRows].filter(([file,digest]) => previousRows.get(file) !== digest);
+  assert.equal(delta.length, count);
+  assert.deepEqual(candidate.changes.map(row=>row.path).sort(),delta.map(([file])=>file).sort(),
+    'Preparation changes must be the entire source delta');
+  for(const change of candidate.changes)assert.equal(candidateRows.get(change.path),change.sha256);
+  for(const file of previousRows.keys())assert(candidateRows.has(file),'Source removed from chain: '+file);
+}
+assertSourceDelta(quizParent, quizRows, parentRows, 9);
+assertSourceDelta(immediateParent, immediateRows, quizRows, 14);
+assertSourceDelta(prep, sourceRows, immediateRows, 3);
 assert.deepEqual(prep.changes.map(row=>row.path).sort(),
-  [...sourceRows].filter(([file,digest]) => immediateRows.get(file) !== digest).map(([file])=>file).sort(),
-  'Preparation changes must be the entire immediate-parent source delta');
+  ['content/mandible-xray.ts','lib/mandible-xray.ts','app/body-content.ts'].sort());
 const atlas = prep.atlas;
 for (const change of prep.changes) {
   assert.equal(sourceRows.get(change.path), change.sha256);
@@ -104,14 +124,24 @@ const quizHelpers = [
   assert.equal(typeof fn, 'function', 'Missing bound quiz helper: ' + file);
   return { file, fn };
 });
+const mandibleXrayLesson = load('lib/mandible-xray.ts').mandibleXrayLesson;
+assert.equal(typeof mandibleXrayLesson, 'function', 'Missing source-bound mandible X-ray helper');
 for (const relative of ['lib/body-source-additions.ts', 'lib/content-types.ts', 'lib/regional-teaching-snapshot.ts',
   'public/models/bodyparts3d/limbic-landmarks/catalog.json', 'content/limbic-landmark-study.ts',
   'public/models/bodyparts3d/pelvic-veins/catalog.json',
   'public/models/bodyparts3d/corpus-spongiosum/catalog.json',
   'public/models/bodyparts3d/circumflex-femoral/catalog.json',
   'public/models/bodyparts3d/anterior-cardiac-vein/catalog.json',
-  'content/foot-sesamoid-teaching-pins.json'])
+  'content/foot-sesamoid-teaching-pins.json', 'content/cranial-bone-imaging-pins.json'])
   assert.equal(sourceRows.get(relative), parentRows.get(relative), 'Baseline decoder/catalog changed: ' + relative);
+const mandiblePin = load('content/cranial-bone-imaging-pins.json').default.entries
+  .find(entry=>entry.identity.id==='vm:anatomy:body:head-neck:midline:bone:mandible');
+assert(mandiblePin, 'Pinned mandible source identity missing');
+assert.equal(mandiblePin.identity.fmaId, 'FMA52748');
+assert.equal(mandiblePin.identity.sources.length, 1);
+assert.equal(mandiblePin.identity.sources[0].file, 'FJ3289');
+assert.equal(mandiblePin.identity.sources[0].sha256, 'c38102c34660e2b767a7b95a341380bf4a52c754c6235fcd322be5c7b8cb1745');
+const mandibleIdentity = sourceCanonical(mandiblePin.identity);
 const snapshotPaths = [...parentRows.keys()].filter(p => p.startsWith('content/regional-teaching/') && p.endsWith('.json')).sort();
 assert.equal(snapshotPaths.length, 11);
 assert.deepEqual(fs.readdirSync(atlas + '/content/regional-teaching').sort(), snapshotPaths.map(p => path.posix.basename(p)));
@@ -137,7 +167,7 @@ for (const relative of snapshotPaths) {
         if (authored.length) {
           lesson = structuredClone(authored[0].lesson);
           assert.notDeepEqual(lesson, old, 'Expected bound quiz must actually change');
-          assert.equal(lesson.readiness, old.readiness, 'No readiness promotion');
+          assert.equal(lesson.readiness, old.readiness, 'No quiz readiness promotion');
           assert.equal(lesson.bullets.length, 4, 'Four answer choices required');
           assert.equal(new Set(lesson.bullets).size, 4, 'Answer choices must be distinct');
           assert(lesson.bullets.every(value=>typeof value==='string'&&value.trim()), 'Empty answer choice');
@@ -146,6 +176,18 @@ for (const relative of snapshotPaths) {
           assert(Array.isArray(lesson.citations)&&lesson.citations.length>0, 'Citations required');
           changes.push({ region: before.region, structureId: structure.id, identitySha256: sha(entry.identity),
             topic, helper: authored[0].file });
+        }
+      } else if (topic === 'xray') {
+        const authored = mandibleXrayLesson(structure, topic);
+        if (authored !== undefined) {
+          assert.equal(entry.identity, mandibleIdentity, 'Mandible helper matched another source');
+          lesson = structuredClone(authored);
+          assert.notDeepEqual(lesson, old, 'Expected mandible X-ray topic must actually change');
+          assert.equal(old.readiness, 'pending', 'Mandible X-ray baseline readiness changed');
+          assert.equal(lesson.readiness, 'draft', 'Mandible X-ray must remain a draft');
+          assert(Array.isArray(lesson.citations)&&lesson.citations.length===3, 'Three source citations required');
+          changes.push({ region: before.region, structureId: structure.id, identitySha256: sha(entry.identity),
+            topic, helper: 'lib/mandible-xray.ts' });
         }
       }
       expectedRows.push({ region: before.region, identity: entry.identity, topic, lesson });
@@ -175,8 +217,10 @@ for (const relative of snapshotPaths) {
 }
 assert.equal(selectionCount, 1104);
 assert.equal(lessonCount, 9936);
-assert.equal(changes.length, 20);
-assert.equal(new Set(changes.map(row => row.structureId)).size, 20);
+assert.equal(changes.length, 21);
+assert.equal(new Set(changes.map(row => row.structureId)).size, 21);
+assert.equal(changes.filter(row=>row.topic==='quiz').length, 20);
+assert.equal(changes.filter(row=>row.topic==='xray'&&row.identitySha256===sha(mandibleIdentity)).length, 1);
 const helperCounts = Object.fromEntries(quizHelpers.map(({file})=>[file,changes.filter(row=>row.helper===file).length]));
 assert.deepEqual(helperCounts, {
   'lib/limbic-landmarks.ts':4, 'lib/pelvic-veins.ts':10, 'lib/corpus-spongiosum.ts':1,
@@ -193,7 +237,7 @@ try {
 } catch (error) { pinFailure = String(error.message).slice(0, 400); }
 for (const [file, digest] of inputs) assert.equal(sha(fs.readFileSync(file)), digest, 'Input changed before report: ' + file);
 const result = {
-  schema: 'vm-complete-selfchecks-delta-check/1', at: new Date().toISOString(), candidate: atlas,
+  schema: 'vm-mandible-combined-delta-check/1', at: new Date().toISOString(), candidate: atlas,
   sourcePreparation: { path: stage + '/PREPARATION.json', sha256: inputs.get(stage + '/PREPARATION.json') },
   parent: { path: parentPath, sha256: inputs.get(parentPath) },
   selections: selectionCount, lessons: lessonCount, expectedChangedTopics: changes,
@@ -201,8 +245,8 @@ const result = {
   regions, generatedLessonsMatch: regions.every(row => row.actualMatches), pinDeltaMatches, pinFailure,
   sourceInputs: [...inputs].map(([path, sha256]) => ({ path, sha256 })),
   limits: [
-    'Expectations derive from exact post-generation parent snapshots and six source-bound quiz helpers; this does not run the full resolver.',
-    'Display pin comparison checks metadata, identity/order, and exactly twenty changed hashes. Exact new quiz pin values require the separate stock preimage check.',
+    'Expectations derive from exact post-generation parent snapshots, six source-bound quiz helpers and the pinned mandible X-ray helper; this does not run the full resolver.',
+    'Display pin comparison checks metadata, identity/order, and exactly twenty-one changed hashes. Exact new lesson pin values require the separate stock preimage check.',
     'No full build, installation, radiologist sign-off, or patient-space registration is established.',
   ], candidateFilesWritten: false, fullBuildPassed: false, installed: false, clinicalApproval: false,
 };
@@ -211,4 +255,4 @@ fs.writeFileSync(output, JSON.stringify(result, null, 2) + '\n', { flag: 'wx' })
 console.log(JSON.stringify({ output, sourceInputs: inputs.size, expectedChangedTopics: changes.length,
   expectedUnchangedLessons: result.expectedUnchangedLessons, generatedLessonsMatch: result.generatedLessonsMatch, pinDeltaMatches }));
 if (process.argv[2] === '--check') assert(result.generatedLessonsMatch && pinDeltaMatches,
-  'Regeneration is absent, stale, or outside the expected twenty-quiz delta');
+  'Regeneration is absent, stale, or outside the expected twenty-quiz and one-X-ray delta');

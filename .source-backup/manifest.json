@@ -1,343 +1,362 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-29T19:43:25.315Z",
+  "at": "2026-10-29T20:24:44.831Z",
   "sourceIdentity": {
     "preparation": {
-      "path": "G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native/PREPARATION.json",
-      "sha256": "a40692560132b21e2de821f44de3b939631d03f39d60d8b28ddbaa58f5c83e2b"
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-mandible-combined-ready/PREPARATION.json",
+      "sha256": "5e9a87958998c7b6f386d7d1c789e0c0ed9a3a70b8de135b4fc1f1c1e4b71fcf"
     },
     "parent": {
-      "path": "G:/VisibleMedicine-temp/staging/20261029-integrated-quiz-native/PREPARATION.json",
-      "sha256": "4d95d5118e72c3dac24afaf6eab142a3699b5322bd88f6a2f5698d265da3b2f5"
+      "path": "G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native/PREPARATION.json",
+      "sha256": "a40692560132b21e2de821f44de3b939631d03f39d60d8b28ddbaa58f5c83e2b"
     },
     "comparisonParent": {
       "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-native-generation-verified/SOURCE_AFTER_GENERATION.json",
       "sha256": "acebaab2382fec27f5af122496be6b13372e7dca6d58c5e96a5f581765297a75"
     }
   },
-  "parent": "6ee06e2328735d961d64511f1924d8bab4488ef5",
-  "gitParent": "6ee06e2328735d961d64511f1924d8bab4488ef5",
+  "parent": "1c5cd35720cee3a735f5883ea9ac522cc918e650",
+  "gitParent": "1c5cd35720cee3a735f5883ea9ac522cc918e650",
   "files": [
     {
-      "path": "content/appendicular-artery-ultrasound-pin.json",
-      "bytes": 1684,
-      "sha256": "8dfc7f734edb8b5cde6c80b8b33b2f2e903abd9a1248cf7b4cbadf7ece9a77c8"
-    },
-    {
-      "path": "lib/appendicular-artery-ultrasound.ts",
-      "bytes": 2446,
-      "sha256": "28d85b1da77e925ec631dd470fec5d90fb75404fa7b454be78a99e00b7da7336"
-    },
-    {
       "path": "app/body-content.ts",
-      "bytes": 85848,
-      "sha256": "e48f244652dd52f050ad76b05c7993a26d7482bd210eb536ac858c2334a0ca3e"
-    },
-    {
-      "path": "content/central-neural-imaging.ts",
-      "bytes": 15531,
-      "sha256": "0365b5bc0e8ea0c75cbb30db69220ac81bb99b8779f807c1db75168937683630"
-    },
-    {
-      "path": "scripts/regional-teaching-snapshots.mjs",
-      "bytes": 5584,
-      "sha256": "38c74f4dc3d1ef6e95030c34d00b046b15ace38e928d7e42d8a7772920cae316"
-    },
-    {
-      "path": "scripts/teaching-quality-report.mjs",
-      "bytes": 6455,
-      "sha256": "fbdeda8e674a0445cf35ca84d62bd6b56516dc307f44b380481621dbfa16e8dc"
-    },
-    {
-      "path": "scripts/test-teaching-quality-report.mjs",
-      "bytes": 5657,
-      "sha256": "e8303989f55ccc51f5afc88d9565b1b0dc7c00ec61bd123c163c68efce246d98"
-    },
-    {
-      "path": "scripts/audit-teaching-quality.mjs",
-      "bytes": 5162,
-      "sha256": "fb14e050b36b237aa429d212fb8c5faea78128e5e185585b2a54b4636d6e65b1"
-    },
-    {
-      "path": "scripts/test-teaching-quality-cli.mjs",
-      "bytes": 3057,
-      "sha256": "9850622e4374ad23f3bce774b7b9201a4044f214e78854476458d48fccd7dd03"
-    },
-    {
-      "path": "lib/inferior-epigastric-vessels.ts",
-      "bytes": 5341,
-      "sha256": "93cbc537a0542251e71f0e9415a204ac31accf0a9212e8aa51f03c29c54f0aeb"
-    },
-    {
-      "path": "scripts/test-inferior-epigastric-quiz.mjs",
-      "bytes": 4525,
-      "sha256": "bfd3e86bd7d228ad897c87a1f974039a3a23310066f587eb5ee8fa5aa6a16a75"
-    },
-    {
-      "path": "scripts/fixtures/inferior-epigastric-vessels.before.ts.txt",
-      "bytes": 4815,
-      "sha256": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997"
-    },
-    {
-      "path": "lib/elbow-arteries.ts",
-      "bytes": 3455,
-      "sha256": "ecd6c21d4a6e21261698f9cf3a20e68614a5dc23d509049a56c4fc91abbe4e3a"
-    },
-    {
-      "path": "scripts/test-elbow-quiz.mjs",
-      "bytes": 4394,
-      "sha256": "d4ff3fa98b09a93a9cec4a8bd217bb664d221ac4a5f94ab7f29161fc59644c33"
-    },
-    {
-      "path": "scripts/fixtures/elbow-arteries.before.ts.txt",
-      "bytes": 3291,
-      "sha256": "6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c"
-    },
-    {
-      "path": "lib/genicular-arteries.ts",
-      "bytes": 3955,
-      "sha256": "afad1128a4ae83366550cef9becbdfd66bc2f25d166d13484b8dfe8f060796c6"
-    },
-    {
-      "path": "scripts/test-genicular-quiz.mjs",
-      "bytes": 3648,
-      "sha256": "b92a7addcd94cdff4d8b23c36a8711d0897f811c8f2c275bfceb19792a531391"
-    },
-    {
-      "path": "scripts/fixtures/genicular-arteries.before.ts.txt",
-      "bytes": 3657,
-      "sha256": "c9c38677221dc5076d3aa0f55f4ec08b53e307234cc78426b765c93cf4c39322"
-    },
-    {
-      "path": "lib/cranial-arteries.ts",
-      "bytes": 2899,
-      "sha256": "e4d69b0da23d5036c2c3b18263f71fcc220872917d1bc8c8357160620c961854"
-    },
-    {
-      "path": "scripts/fixtures/cranial-arteries.before.ts.txt",
-      "bytes": 2533,
-      "sha256": "503181d76e2a323134da111234bd3842c85026ecf8cae460138271b7279f3804"
-    },
-    {
-      "path": "lib/inferior-thyroid-arteries.ts",
-      "bytes": 2832,
-      "sha256": "09d5e210ad5db4db4718dfea0299dcdbccc21c720f822ee54a4b4fa6541ba739"
-    },
-    {
-      "path": "scripts/fixtures/inferior-thyroid-arteries.before.ts.txt",
-      "bytes": 2647,
-      "sha256": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0"
-    },
-    {
-      "path": "lib/subscapular-arteries.ts",
-      "bytes": 2926,
-      "sha256": "b1ba6873816fbe26b5f30174a0961b29f433e21ed97c7ba4d56fb73fbd9347e7"
-    },
-    {
-      "path": "scripts/fixtures/subscapular-arteries.before.ts.txt",
-      "bytes": 2613,
-      "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db"
-    },
-    {
-      "path": "scripts/test-cranial-shoulder-quiz.mjs",
-      "bytes": 5294,
-      "sha256": "6c3a9e04244bdcad7fa9b2794046d563b536ab1d4446e6765b167c4f3285306f"
-    },
-    {
-      "path": "lib/cubital-veins.ts",
-      "bytes": 4062,
-      "sha256": "af5daa234cc53fa3827084853399b08a02bc5122b151b0787e5ad01b70b0bb00"
-    },
-    {
-      "path": "scripts/test-cubital-quiz.mjs",
-      "bytes": 3475,
-      "sha256": "d70851ac044c47406713661211b2be1e425ed2944cbe7336f49f8d9a28839717"
-    },
-    {
-      "path": "scripts/fixtures/cubital-veins.before.ts.txt",
-      "bytes": 3399,
-      "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
-    },
-    {
-      "path": "lib/limbic-landmarks.ts",
-      "bytes": 5764,
-      "sha256": "a501a60e4d8c3b758503f41a9ddb0745865955242f9906881e89e6ed10f2f738"
-    },
-    {
-      "path": "scripts/test-limbic-quiz.mjs",
-      "bytes": 5160,
-      "sha256": "a1f697421ea71a4f9da2bd3b569595dda1f14242ca4c3c55153a3bb3fb597b08"
-    },
-    {
-      "path": "scripts/fixtures/limbic-landmarks.before.ts.txt",
-      "bytes": 4766,
-      "sha256": "d31ea68bd362db13907de78743f138c8f7cae518895303cefc03370a821c650f"
+      "sha256": "b1caa890e8c341256f17f86f22f8646e447d8e78620c7d0b2ee193fc16bf2c95",
+      "bytes": 85999
     },
     {
       "path": "app/structure-quick-check.tsx",
-      "bytes": 4192,
-      "sha256": "5e88b3ae3f2a50322285bdab316a51fc335da03cee94bc87e5292c45352f8e62"
+      "sha256": "5e88b3ae3f2a50322285bdab316a51fc335da03cee94bc87e5292c45352f8e62",
+      "bytes": 4192
     },
     {
-      "path": "lib/quick-check-choice-order.ts",
-      "bytes": 1080,
-      "sha256": "d87f6b8b27183575708705524a7f6471c1e8a0cf19a883031ae608b49a270471"
+      "path": "content/appendicular-artery-ultrasound-pin.json",
+      "sha256": "8dfc7f734edb8b5cde6c80b8b33b2f2e903abd9a1248cf7b4cbadf7ece9a77c8",
+      "bytes": 1684
     },
     {
-      "path": "scripts/test-quick-check-choice-order.mjs",
-      "bytes": 2953,
-      "sha256": "5d7dd4f3e2ed3868b8a670d7379a07da2a07b89da60f3f0f11a5ea5f42caa6fa"
-    },
-    {
-      "path": "scripts/test-structure-quick-check.mjs",
-      "bytes": 8044,
-      "sha256": "445bee008c2fa24e2d22b2f02b9a50892f3cbf5b23f3e6d422ed5ddfb9405f55"
-    },
-    {
-      "path": "scripts/fixtures/structure-quick-check.before.tsx.txt",
-      "bytes": 4036,
-      "sha256": "ed5d2a9ba608f6cb9d53360c936ff676b0982febb57de27c187ebd89760d0355"
-    },
-    {
-      "path": "scripts/fixtures/test-structure-quick-check.before.mjs.txt",
-      "bytes": 6121,
-      "sha256": "551f363f6f1d745d6680d3ea3e13242fcd3e394b96b6af0ecd12fdc00da0fe51"
-    },
-    {
-      "path": "lib/pelvic-veins.ts",
-      "bytes": 10193,
-      "sha256": "e84164a2a5ba81be021eb636af19249259cf9bd6201afb0fee9c142bf7ec149c"
-    },
-    {
-      "path": "lib/corpus-spongiosum.ts",
-      "bytes": 3653,
-      "sha256": "111abd8651f074fe74f65f834d488e1c1be4b7f945c3a9c3caeb572ca1475b74"
-    },
-    {
-      "path": "lib/circumflex-femoral.ts",
-      "bytes": 3172,
-      "sha256": "48122f73aca65d28f2fecceef5879970fc9aaf37213c5865650d8fe241a42a85"
-    },
-    {
-      "path": "lib/anterior-cardiac-vein.ts",
-      "bytes": 4568,
-      "sha256": "b6f4cecf6cd5fc1f13a3288f2939ca2487e0e37baa5bd2ae98fba55d0edc6281"
-    },
-    {
-      "path": "lib/foot-sesamoid-teaching.ts",
-      "bytes": 1614,
-      "sha256": "862b891adfa797e0ed0690101aaf63f46e27ee62c06d2140a8dcaad47ea630a6"
+      "path": "content/central-neural-imaging.ts",
+      "sha256": "0365b5bc0e8ea0c75cbb30db69220ac81bb99b8779f807c1db75168937683630",
+      "bytes": 15531
     },
     {
       "path": "content/foot-sesamoid-teaching.ts",
-      "bytes": 4370,
-      "sha256": "e3b547b5c0dea840058e0bdece7c8c0a1d70e6637cfaa7e99cd04b855234da2c"
+      "sha256": "e3b547b5c0dea840058e0bdece7c8c0a1d70e6637cfaa7e99cd04b855234da2c",
+      "bytes": 4370
     },
     {
-      "path": "scripts/test-pelvic-vein-quiz.mjs",
-      "bytes": 6648,
-      "sha256": "f3032362f055a4f884cfad43c327c9ab0ffab3203b3a02a5bf4ae6fd6249b329"
+      "path": "content/mandible-xray.ts",
+      "sha256": "1295def436bbbc2076aae72be437166f3a91c6243a3e15c863de3cbe8583fb4b",
+      "bytes": 1847
     },
     {
-      "path": "scripts/test-remaining-selfchecks.mjs",
-      "bytes": 7855,
-      "sha256": "a0548b095f2da0c93c9f666cd221828235b65cdd0ba3bfaa1fd5075bd54ae7f9"
+      "path": "lib/anterior-cardiac-vein.ts",
+      "sha256": "b6f4cecf6cd5fc1f13a3288f2939ca2487e0e37baa5bd2ae98fba55d0edc6281",
+      "bytes": 4568
     },
     {
-      "path": "scripts/fixtures/pelvic-veins.before.ts.txt",
-      "bytes": 6590,
-      "sha256": "c7bfabbe5d9f05f61c1dd729c3378bdf32b3055452342da33b2a54d9b480fa33"
+      "path": "lib/appendicular-artery-ultrasound.ts",
+      "sha256": "28d85b1da77e925ec631dd470fec5d90fb75404fa7b454be78a99e00b7da7336",
+      "bytes": 2446
     },
     {
-      "path": "scripts/fixtures/corpus-spongiosum.before.ts.txt",
-      "bytes": 3442,
-      "sha256": "e8160f2ae0be2de646b4cebba199b67ea8e96f98f2809c877c70022c27da4972"
+      "path": "lib/circumflex-femoral.ts",
+      "sha256": "48122f73aca65d28f2fecceef5879970fc9aaf37213c5865650d8fe241a42a85",
+      "bytes": 3172
     },
     {
-      "path": "scripts/fixtures/circumflex-femoral.before.ts.txt",
-      "bytes": 2703,
-      "sha256": "71313635f2ae5a4fa5f7726adf6f6e92fb48a4ae2e43fd7a721860c062a7ccf4"
+      "path": "lib/corpus-spongiosum.ts",
+      "sha256": "111abd8651f074fe74f65f834d488e1c1be4b7f945c3a9c3caeb572ca1475b74",
+      "bytes": 3653
+    },
+    {
+      "path": "lib/cranial-arteries.ts",
+      "sha256": "e4d69b0da23d5036c2c3b18263f71fcc220872917d1bc8c8357160620c961854",
+      "bytes": 2899
+    },
+    {
+      "path": "lib/cubital-veins.ts",
+      "sha256": "af5daa234cc53fa3827084853399b08a02bc5122b151b0787e5ad01b70b0bb00",
+      "bytes": 4062
+    },
+    {
+      "path": "lib/elbow-arteries.ts",
+      "sha256": "ecd6c21d4a6e21261698f9cf3a20e68614a5dc23d509049a56c4fc91abbe4e3a",
+      "bytes": 3455
+    },
+    {
+      "path": "lib/foot-sesamoid-teaching.ts",
+      "sha256": "862b891adfa797e0ed0690101aaf63f46e27ee62c06d2140a8dcaad47ea630a6",
+      "bytes": 1614
+    },
+    {
+      "path": "lib/genicular-arteries.ts",
+      "sha256": "afad1128a4ae83366550cef9becbdfd66bc2f25d166d13484b8dfe8f060796c6",
+      "bytes": 3955
+    },
+    {
+      "path": "lib/inferior-epigastric-vessels.ts",
+      "sha256": "93cbc537a0542251e71f0e9415a204ac31accf0a9212e8aa51f03c29c54f0aeb",
+      "bytes": 5341
+    },
+    {
+      "path": "lib/inferior-thyroid-arteries.ts",
+      "sha256": "09d5e210ad5db4db4718dfea0299dcdbccc21c720f822ee54a4b4fa6541ba739",
+      "bytes": 2832
+    },
+    {
+      "path": "lib/limbic-landmarks.ts",
+      "sha256": "a501a60e4d8c3b758503f41a9ddb0745865955242f9906881e89e6ed10f2f738",
+      "bytes": 5764
+    },
+    {
+      "path": "lib/mandible-xray.ts",
+      "sha256": "db18c2422262dac4ece67fbbe4adfda2c8567f085b6d900ac1a816dd6b24392c",
+      "bytes": 1420
+    },
+    {
+      "path": "lib/pelvic-veins.ts",
+      "sha256": "e84164a2a5ba81be021eb636af19249259cf9bd6201afb0fee9c142bf7ec149c",
+      "bytes": 10193
+    },
+    {
+      "path": "lib/quick-check-choice-order.ts",
+      "sha256": "d87f6b8b27183575708705524a7f6471c1e8a0cf19a883031ae608b49a270471",
+      "bytes": 1080
+    },
+    {
+      "path": "lib/subscapular-arteries.ts",
+      "sha256": "b1ba6873816fbe26b5f30174a0961b29f433e21ed97c7ba4d56fb73fbd9347e7",
+      "bytes": 2926
+    },
+    {
+      "path": "scripts/audit-teaching-quality.mjs",
+      "sha256": "fb14e050b36b237aa429d212fb8c5faea78128e5e185585b2a54b4636d6e65b1",
+      "bytes": 5162
     },
     {
       "path": "scripts/fixtures/anterior-cardiac-vein.before.ts.txt",
-      "bytes": 4355,
-      "sha256": "65e542313743aa1b81e0bd6b131dd3bd9492830043631504ee59e4ff7cd5ff49"
+      "sha256": "65e542313743aa1b81e0bd6b131dd3bd9492830043631504ee59e4ff7cd5ff49",
+      "bytes": 4355
     },
     {
-      "path": "scripts/fixtures/foot-sesamoid-teaching.before.ts.txt",
-      "bytes": 1336,
-      "sha256": "3fff1e3731ad28496af251623c2719a9ac49317a899a8b3e6c6d1df552b99bef"
+      "path": "scripts/fixtures/circumflex-femoral.before.ts.txt",
+      "sha256": "71313635f2ae5a4fa5f7726adf6f6e92fb48a4ae2e43fd7a721860c062a7ccf4",
+      "bytes": 2703
+    },
+    {
+      "path": "scripts/fixtures/corpus-spongiosum.before.ts.txt",
+      "sha256": "e8160f2ae0be2de646b4cebba199b67ea8e96f98f2809c877c70022c27da4972",
+      "bytes": 3442
+    },
+    {
+      "path": "scripts/fixtures/cranial-arteries.before.ts.txt",
+      "sha256": "503181d76e2a323134da111234bd3842c85026ecf8cae460138271b7279f3804",
+      "bytes": 2533
+    },
+    {
+      "path": "scripts/fixtures/cubital-veins.before.ts.txt",
+      "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6",
+      "bytes": 3399
+    },
+    {
+      "path": "scripts/fixtures/elbow-arteries.before.ts.txt",
+      "sha256": "6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c",
+      "bytes": 3291
     },
     {
       "path": "scripts/fixtures/foot-sesamoid-content.before.ts.txt",
-      "bytes": 3973,
-      "sha256": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a"
+      "sha256": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a",
+      "bytes": 3973
     },
     {
-      "path": "tools/validation/complete-selfchecks/prepare.mjs",
-      "bytes": 6268,
-      "sha256": "3205105e70c135c3e3ca6d6e036edb8083ff0a3e94fc5fcd46cb881eb57aae81"
+      "path": "scripts/fixtures/foot-sesamoid-teaching.before.ts.txt",
+      "sha256": "3fff1e3731ad28496af251623c2719a9ac49317a899a8b3e6c6d1df552b99bef",
+      "bytes": 1336
     },
     {
-      "path": "tools/validation/complete-selfchecks/create-runner.mjs",
-      "bytes": 1514,
-      "sha256": "9d09ea5b819260a928ee4816f93e557e8933a02cee178960945f3be19b2cad0e"
+      "path": "scripts/fixtures/genicular-arteries.before.ts.txt",
+      "sha256": "c9c38677221dc5076d3aa0f55f4ec08b53e307234cc78426b765c93cf4c39322",
+      "bytes": 3657
     },
     {
-      "path": "tools/validation/complete-selfchecks/create-runner-v2.mjs",
-      "bytes": 2246,
-      "sha256": "5c1b8ab66aae10570c5db6763203134cdb270797bc8faf4d173507c09a149b47"
+      "path": "scripts/fixtures/inferior-epigastric-vessels.before.ts.txt",
+      "sha256": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997",
+      "bytes": 4815
     },
     {
-      "path": "tools/validation/complete-selfchecks/check-delta.mjs",
-      "bytes": 13647,
-      "sha256": "435cf67c1a0ec964a97526dfa812e19024769fc82612508103f2ddb12a488c45"
+      "path": "scripts/fixtures/inferior-thyroid-arteries.before.ts.txt",
+      "sha256": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0",
+      "bytes": 2647
     },
     {
-      "path": "tools/validation/complete-selfchecks/save-ready.mjs",
-      "bytes": 17329,
-      "sha256": "d2614e890440e8d9ac6d31e98432ceb32617c1b30e3933e9fd76b593293a565b"
+      "path": "scripts/fixtures/limbic-landmarks.before.ts.txt",
+      "sha256": "d31ea68bd362db13907de78743f138c8f7cae518895303cefc03370a821c650f",
+      "bytes": 4766
     },
     {
-      "path": "tools/validation/complete-selfchecks/launch-contained.mjs",
-      "bytes": 15299,
-      "sha256": "c543f2d9fc6b3244e322d462a353d118f7675b3eaaf361c6adae596631af746b"
+      "path": "scripts/fixtures/pelvic-veins.before.ts.txt",
+      "sha256": "c7bfabbe5d9f05f61c1dd729c3378bdf32b3055452342da33b2a54d9b480fa33",
+      "bytes": 6590
     },
     {
-      "path": "tools/validation/complete-selfchecks/parse-supervisor.ps1",
-      "bytes": 590,
-      "sha256": "3e1717c54838840fc3de85f3e82e4bd13531c5b7bf624ead3a4955b4a30ff643"
+      "path": "scripts/fixtures/structure-quick-check.before.tsx.txt",
+      "sha256": "ed5d2a9ba608f6cb9d53360c936ff676b0982febb57de27c187ebd89760d0355",
+      "bytes": 4036
     },
     {
-      "path": "tools/validation/complete-selfchecks/verify-batch.mjs",
-      "bytes": 7099,
-      "sha256": "f44e2ade353ad4ff0695311d4195cfb68a9a15e287cc0e6bcb0170df071b38c9"
+      "path": "scripts/fixtures/subscapular-arteries.before.ts.txt",
+      "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db",
+      "bytes": 2613
     },
     {
-      "path": "tools/validation/complete-selfchecks/SOURCE_NOTES.json",
-      "bytes": 3969,
-      "sha256": "24f4e88c7a6081ee226e10a0c00ab9d592c60bf6166e363fb1a0a9e0d46316b5"
+      "path": "scripts/fixtures/test-structure-quick-check.before.mjs.txt",
+      "sha256": "551f363f6f1d745d6680d3ea3e13242fcd3e394b96b6af0ecd12fdc00da0fe51",
+      "bytes": 6121
+    },
+    {
+      "path": "scripts/regional-teaching-snapshots.mjs",
+      "sha256": "38c74f4dc3d1ef6e95030c34d00b046b15ace38e928d7e42d8a7772920cae316",
+      "bytes": 5584
+    },
+    {
+      "path": "scripts/teaching-quality-report.mjs",
+      "sha256": "fbdeda8e674a0445cf35ca84d62bd6b56516dc307f44b380481621dbfa16e8dc",
+      "bytes": 6455
+    },
+    {
+      "path": "scripts/test-cranial-shoulder-quiz.mjs",
+      "sha256": "6c3a9e04244bdcad7fa9b2794046d563b536ab1d4446e6765b167c4f3285306f",
+      "bytes": 5294
+    },
+    {
+      "path": "scripts/test-cubital-quiz.mjs",
+      "sha256": "d70851ac044c47406713661211b2be1e425ed2944cbe7336f49f8d9a28839717",
+      "bytes": 3475
+    },
+    {
+      "path": "scripts/test-elbow-quiz.mjs",
+      "sha256": "d4ff3fa98b09a93a9cec4a8bd217bb664d221ac4a5f94ab7f29161fc59644c33",
+      "bytes": 4394
+    },
+    {
+      "path": "scripts/test-genicular-quiz.mjs",
+      "sha256": "b92a7addcd94cdff4d8b23c36a8711d0897f811c8f2c275bfceb19792a531391",
+      "bytes": 3648
+    },
+    {
+      "path": "scripts/test-inferior-epigastric-quiz.mjs",
+      "sha256": "bfd3e86bd7d228ad897c87a1f974039a3a23310066f587eb5ee8fa5aa6a16a75",
+      "bytes": 4525
+    },
+    {
+      "path": "scripts/test-limbic-quiz.mjs",
+      "sha256": "a1f697421ea71a4f9da2bd3b569595dda1f14242ca4c3c55153a3bb3fb597b08",
+      "bytes": 5160
+    },
+    {
+      "path": "scripts/test-pelvic-vein-quiz.mjs",
+      "sha256": "f3032362f055a4f884cfad43c327c9ab0ffab3203b3a02a5bf4ae6fd6249b329",
+      "bytes": 6648
+    },
+    {
+      "path": "scripts/test-quick-check-choice-order.mjs",
+      "sha256": "5d7dd4f3e2ed3868b8a670d7379a07da2a07b89da60f3f0f11a5ea5f42caa6fa",
+      "bytes": 2953
+    },
+    {
+      "path": "scripts/test-remaining-selfchecks.mjs",
+      "sha256": "a0548b095f2da0c93c9f666cd221828235b65cdd0ba3bfaa1fd5075bd54ae7f9",
+      "bytes": 7855
+    },
+    {
+      "path": "scripts/test-structure-quick-check.mjs",
+      "sha256": "445bee008c2fa24e2d22b2f02b9a50892f3cbf5b23f3e6d422ed5ddfb9405f55",
+      "bytes": 8044
+    },
+    {
+      "path": "scripts/test-teaching-quality-cli.mjs",
+      "sha256": "9850622e4374ad23f3bce774b7b9201a4044f214e78854476458d48fccd7dd03",
+      "bytes": 3057
+    },
+    {
+      "path": "scripts/test-teaching-quality-report.mjs",
+      "sha256": "e8303989f55ccc51f5afc88d9565b1b0dc7c00ec61bd123c163c68efce246d98",
+      "bytes": 5657
+    },
+    {
+      "path": "tools/validation/mandible-combined/prepare.mjs",
+      "sha256": "113e396232fe915a3c3c043d4044c27485558f7dabb67c5da98b706e936fb64d",
+      "bytes": 4480
+    },
+    {
+      "path": "tools/validation/mandible-combined/create-runner.mjs",
+      "sha256": "2b76e9c4959bf37c5e608b2f9ad3998953ba064351720dacafc7e6a272bdcf3d",
+      "bytes": 3695
+    },
+    {
+      "path": "tools/validation/mandible-combined/check-delta.mjs",
+      "sha256": "f0ea6de4f6ed3e294761c482f5bffa5eb048ed6c3851dc31885e6dcafaa51807",
+      "bytes": 16902
+    },
+    {
+      "path": "tools/validation/mandible-combined/save.mjs",
+      "sha256": "8d263ea587bfa00b7baac194dbba7914d1b5f00553a2c756c80d4d2b2995341e",
+      "bytes": 14612
+    },
+    {
+      "path": "tools/validation/mandible-combined/launch-contained.mjs",
+      "sha256": "2f871dcce24489808db98d92e51507b5b1ff18e98e8c7fcc1342bdc263974fb5",
+      "bytes": 15928
+    },
+    {
+      "path": "tools/validation/mandible-combined/parse-supervisor.ps1",
+      "sha256": "d4461f174b8b0388087eb06185f634016d61c27d24ffeb4a20c9abeaf3d23e8f",
+      "bytes": 585
+    },
+    {
+      "path": "tools/validation/mandible-combined/SOURCE_NOTES.md",
+      "sha256": "d762ac0e6c3a3866a971c647415ea4f715de5780fedecb90a3d0ab86faf953c5",
+      "bytes": 2380
     }
   ],
   "removed": [
-    "tools/validation/integrated-quiz/prepare.mjs",
-    "tools/validation/integrated-quiz/create-runner.mjs",
-    "tools/validation/integrated-quiz/check-delta.mjs",
-    "tools/validation/integrated-quiz/save-ready.mjs",
-    "tools/validation/integrated-quiz/launch-contained.mjs"
+    "tools/validation/complete-selfchecks/prepare.mjs",
+    "tools/validation/complete-selfchecks/create-runner.mjs",
+    "tools/validation/complete-selfchecks/create-runner-v2.mjs",
+    "tools/validation/complete-selfchecks/check-delta.mjs",
+    "tools/validation/complete-selfchecks/save-ready.mjs",
+    "tools/validation/complete-selfchecks/launch-contained.mjs",
+    "tools/validation/complete-selfchecks/parse-supervisor.ps1",
+    "tools/validation/complete-selfchecks/verify-batch.mjs",
+    "tools/validation/complete-selfchecks/SOURCE_NOTES.json"
   ],
-  "scope": "51 composed authored Atlas sources/tests plus nine validation/recovery/reference files. Partial source-only backup; no scans, private identifiers, geometry, generated runtime or approval. Prior backup history preserves earlier tools. Current website and owner review remain unchanged.",
+  "scope": "53 composed authored Atlas sources/tests and seven validation/reference/recovery files. Partial source backup, preserving prior filtered backup ancestry. No scans, private identifiers, geometry, generated runtime or dependency bundles. Source verified; generation/build/installation and clinical approval are not claimed.",
   "proof": {
-    "newQuizPlacements": 16,
-    "focusedTests": 8,
-    "unchangedNonQuizLessons": 128,
-    "sourceMutationsRejected": 64,
-    "sourceFilesVerified": 6498,
-    "expectedDeltaFromGeneratedParent": 20,
-    "otherLessons": 9916,
-    "generated": false,
-    "fullBuild": false,
-    "installed": false
+    "at": "2026-10-29T20:24:41.502Z",
+    "sourceFilesVerified": 6500,
+    "authoredFiles": 53,
+    "executableDependenciesVerified": 6,
+    "expectedChangedTopics": 21,
+    "quizChanges": 20,
+    "xrayChanges": 1,
+    "expectedUnchangedLessons": 9915,
+    "allOtherParentSourceExact": true,
+    "parserPositiveAndNegativeChecksPassed": true,
+    "staleGeneratedOutputRejected": true,
+    "generationState": "not-started",
+    "resourceObservation": {
+      "AvailableMBytes": 2070,
+      "PercentCommittedBytesInUse": 49
+    },
+    "minimumGenerationAvailableMiB": 3072,
+    "jobMiB": 1024,
+    "heapMiB": 384,
+    "freeReserveMiB": 2048,
+    "fullTypesPassed": false,
+    "fullBuildPassed": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
