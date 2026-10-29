@@ -1,0 +1,79 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T20:18:42.054Z",
+  "sourceIdentity": {
+    "parent": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native/PREPARATION.json",
+      "sha256": "a40692560132b21e2de821f44de3b939631d03f39d60d8b28ddbaa58f5c83e2b"
+    },
+    "preparation": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-mandible-xray-draft/PREPARATION.json",
+      "sha256": "0477dac697b16ab74ef5edf53cf188f23f996a3297024236d4df7200f0991e91"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/mandible-xray.ts",
+      "sha256": "1295def436bbbc2076aae72be437166f3a91c6243a3e15c863de3cbe8583fb4b",
+      "bytes": 1847
+    },
+    {
+      "path": "lib/mandible-xray.ts",
+      "sha256": "db18c2422262dac4ece67fbbe4adfda2c8567f085b6d900ac1a816dd6b24392c",
+      "bytes": 1420
+    },
+    {
+      "path": "app/body-content.ts",
+      "sha256": "b1caa890e8c341256f17f86f22f8646e447d8e78620c7d0b2ee193fc16bf2c95",
+      "bytes": 85999
+    },
+    {
+      "path": "tools/validation/mandible-xray/prepare.mjs",
+      "sha256": "dcc1ce48a3dd0998f7a31122c836a74a4eb6d0cc876a797d97d6e56fde0d8056",
+      "bytes": 1976
+    },
+    {
+      "path": "tools/validation/mandible-xray/verify.mjs",
+      "sha256": "7d119be40fb17ad57abdcd576b2f62b109f46dd0cbcf06872467245c323bd69a",
+      "bytes": 5364
+    },
+    {
+      "path": "tools/validation/mandible-xray/verify-resolver.mjs",
+      "sha256": "a3c85ca5a65cf4b80eae72cd203f91e03b478fa97ec963a3b8e601cd44957759",
+      "bytes": 3812
+    },
+    {
+      "path": "tools/validation/mandible-xray/save.mjs",
+      "sha256": "e85a297835eed35e6dcccb3e826f2cdf5f92dcd11a52310d1f4149c6edf6815d",
+      "bytes": 11224
+    },
+    {
+      "path": "tools/validation/mandible-xray/SOURCE_NOTES.md",
+      "sha256": "d762ac0e6c3a3866a971c647415ea4f715de5780fedecb90a3d0ab86faf953c5",
+      "bytes": 2380
+    }
+  ],
+  "removed": [],
+  "scope": "Three selected Atlas production-source files and five validation/reference/recovery files. Original draft wording and reading links only; no images, patient records, scans, meshes, dependencies, generated runtime or canonical ancestry. Partial source-only recovery; normal website unchanged.",
+  "proof": {
+    "expectedTopicChanges": 1,
+    "sourceStructures": 1104,
+    "otherNonQuizTopicsUnchanged": 8831,
+    "identityMutationsRejected": 69,
+    "otherPinnedStructuresRejected": 22,
+    "quizTopicsExcludedFromSnapshotComparison": 1104,
+    "fullResolverCompared": true,
+    "generated": false,
+    "fullTypes": false,
+    "fullBuild": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

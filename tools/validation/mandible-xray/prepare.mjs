@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const root='G:/VisibleMedicine-temp/staging/20261029-mandible-xray-proposal',base='G:/VisibleMedicine-temp/staging/20261029-complete-selfchecks-native';
+const hash=b=>createHash('sha256').update(b).digest('hex');const raw=fs.readFileSync(base+'/PREPARATION.json');assert.equal(hash(raw),'a40692560132b21e2de821f44de3b939631d03f39d60d8b28ddbaa58f5c83e2b');const prep=JSON.parse(raw),p='app/body-content.ts';
+let source=fs.readFileSync(base+'/atlas/'+p);assert.equal(hash(source),prep.sourceRows.find(r=>r.path===p).sha256);const before=hash(source);source=source.toString();
+const importAt="import { facialBoneXrayLesson } from '../lib/facial-bone-xray';",routeAt='  const facialBoneXray = facialBoneXrayLesson(s, tab);';
+for(const anchor of [importAt,routeAt])assert.equal(source.split(anchor).length,2);
+source=source.replace(importAt,importAt+"\nimport { mandibleXrayLesson } from '../lib/mandible-xray';").replace(routeAt,'  const mandibleXray = mandibleXrayLesson(s, tab);\n  if (mandibleXray) return mandibleXray;\n'+routeAt);
+fs.mkdirSync(root+'/app',{recursive:true});fs.writeFileSync(root+'/'+p,source,{flag:'wx'});
+const files=['content/mandible-xray.ts','lib/mandible-xray.ts',p].map(p=>({path:p,sha256:hash(fs.readFileSync(root+'/'+p)),bytes:fs.statSync(root+'/'+p).size}));
+const result={schema:'vm-mandible-xray-proposal/1',at:new Date().toISOString(),baseline:{path:base+'/PREPARATION.json',sha256:hash(raw)},baselineBodyContentSha256:before,files,expectedChangedLessons:[{structureId:'vm:anatomy:body:head-neck:midline:bone:mandible',tab:'xray',from:'pending',to:'draft'}],combinedGeneratorCandidateChanged:false,generated:false,installed:false};
+fs.writeFileSync(root+'/PREPARATION.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({files:files.length,changedTopics:1,baselineUnchanged:true}));
