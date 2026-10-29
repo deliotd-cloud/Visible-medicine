@@ -1,0 +1,12 @@
+.browser-atlas-resume{margin:1.25rem 0;padding:1.2rem;border:1px solid var(--line,#d4e1df);border-radius:1rem;background:var(--panel,#edf5f3);color:var(--ink,#132c32)}
+.browser-atlas-resume h2,.browser-atlas-resume h3{margin:.2rem 0 .55rem}
+.browser-atlas-resume h2{font-size:1.45rem}.browser-atlas-resume h3{font-size:1.08rem}
+.browser-atlas-resume p{margin:.45rem 0;line-height:1.5}
+.browser-atlas-resume-note,.browser-atlas-resume-boundary{font-size:.88rem;color:var(--muted,#51666b)}
+.browser-atlas-resume-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:.85rem;margin-top:.8rem}
+.browser-atlas-resume-grid>div{padding:.85rem;border:1px solid var(--line,#d4e1df);border-radius:.65rem;background:#fff}
+.browser-atlas-resume nav{display:flex;flex-wrap:wrap;gap:.4rem .9rem;margin:.6rem 0}
+.browser-atlas-resume a{color:var(--teal,#087b6c);text-decoration:underline;text-underline-offset:2px}
+.browser-atlas-resume a:focus-visible{outline:2px solid var(--teal,#087b6c);outline-offset:3px}
+.browser-atlas-resume button{font:inherit;color:inherit;border:1px solid var(--line,#d4e1df);border-radius:.35rem;padding:.3rem .6rem;background:white;cursor:pointer}
+.browser-atlas-resume button:focus-visible{outline:2px solid var(--teal,#087b6c);outline-offset:3px}

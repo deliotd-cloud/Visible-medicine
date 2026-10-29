@@ -1,0 +1,75 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T05:04:42.365Z",
+  "sourceIdentity": {
+    "kind": "my-learning-browser-atlas-resume",
+    "websiteSourceSha256": "1bf800a1b499e05e56b04a4a473c9b389513ae4bb360aed91de9b4057f14138b",
+    "unchangedAtlasHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/my-learning/page.tsx",
+      "bytes": 9281,
+      "sha256": "39080e93b4b96b29b4ad37fa2efefd6d4901739c0ff82aa24a2244e07b7192b2"
+    },
+    {
+      "path": "website/components/BrowserAtlasResume.tsx",
+      "bytes": 5328,
+      "sha256": "7733473aec44c7fb814c0d7c45f2c5d87117fefedaf8f8d68435fc3871535fca"
+    },
+    {
+      "path": "website/components/browser-atlas-resume.css",
+      "bytes": 1298,
+      "sha256": "0021f4cba15d1992e05f54d607f077fcf5b1cde44b953942137a3a2e8395c771"
+    },
+    {
+      "path": "website/lib/browser-atlas-resume.ts",
+      "bytes": 1291,
+      "sha256": "b67d4b047c142b26b1441529e3902f188a86e660b2ebc8b0784813df35894815"
+    },
+    {
+      "path": "website/tests/browser-atlas-resume.test.ts",
+      "bytes": 2486,
+      "sha256": "4f3c7f1185d5e30684baef54f5d262cb2e1f6e71278bec8587a6b43227ed218c"
+    },
+    {
+      "path": "website/tests/browser-atlas-resume-ui.test.ts",
+      "bytes": 7065,
+      "sha256": "31c0221f854302ebe5397db1831667b6717ba242bd0d74d8cd0beab7803c2691"
+    },
+    {
+      "path": "website/tests/my-learning-availability.test.mjs",
+      "bytes": 8422,
+      "sha256": "c995758aa7307b3f6a34f7a96159b128fbfdf3db322a24eb951d2d057d2ac0ff"
+    },
+    {
+      "path": "website/tests/my-learning-study-now-ui.test.mjs",
+      "bytes": 6319,
+      "sha256": "411f583689e4fd39c31f86c6dd8a93c83ccb2f0f75accec1bd5d68204df42818"
+    },
+    {
+      "path": "website/tests/atlas-learning-resources.test.mjs",
+      "bytes": 6719,
+      "sha256": "9305f3646e0eb265d11b5def8b2b322055838c61aec0869d71f0fe313b8f25c1"
+    }
+  ],
+  "removed": [],
+  "scope": "Nine authored My Learning page, browser-only Atlas resume UI/resolver/style and focused test files. No private data, clinical decisions, scan derivatives, dependency binaries, environment or canonical ancestry. Source-only recovery supplement.",
+  "proof": {
+    "focusedTests": 76,
+    "targetedTypesPassed": true,
+    "fullProjectTypes": false,
+    "currentFullWebsiteBuild": false,
+    "syntheticDesktopBrowserChecks": true,
+    "normalPreviewChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
