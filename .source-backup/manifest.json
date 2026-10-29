@@ -1,0 +1,57 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T06:29:32.935Z",
+  "sourceIdentity": {
+    "kind": "stylohyoid-mri-authored-source-delta",
+    "nativeSourceSha256": "56c762f3e4a1c3bb0137fdb53208bc7038edd9149415975048163e71e73ba7fa",
+    "nativeHead": "4259fd81a7da96945dcd288cb8652dce3421af34",
+    "parentNativeHead": "9cef8900417bf592d3130f6ff92bf3e748cb55fc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 370852,
+      "sha256": "a579524e27346d034b190b3432efd63a0a27757de2f97611bd93ab1faf535f43"
+    },
+    {
+      "path": "atlas/app/body-content.ts",
+      "bytes": 85618,
+      "sha256": "3bd9de075aa665fbf3033f191fd81c0e8d6680f430cde8acaa98f76b4848c5fc"
+    },
+    {
+      "path": "atlas/content/stylohyoid-mri-context.ts",
+      "bytes": 730,
+      "sha256": "8eeb9a82bdcf52172131421d70639811aaba4361054dcc6b68c0e7a0accccca6"
+    },
+    {
+      "path": "atlas/lib/stylohyoid-mri-context.ts",
+      "bytes": 1277,
+      "sha256": "4aabd72e9a6c78e1d542d117ee454219d5abf8cd4c9f85f34720a5bb9afb048c"
+    },
+    {
+      "path": "atlas/scripts/test-stylohyoid-mri-context.mjs",
+      "bytes": 2403,
+      "sha256": "a4acf2dae585660914ecf0fbe78115ff7a0873c29fc325eccd80114d3070f562"
+    }
+  ],
+  "removed": [],
+  "scope": "Five authored files: two evidence-limited stylohyoid MRI lessons, exact-source resolver, original factual citation notices, dispatcher and regression. Both lessons remain pending. No scans, models, private data, generated assets, dependencies, environment or canonical ancestry. Scoped source recovery supplement only.",
+  "proof": {
+    "fullNativeTypesPassed": true,
+    "changedLessons": 2,
+    "unchangedLessons": 9934,
+    "ctTeachingUnchanged": true,
+    "nativeBuildPassed": false,
+    "websiteIntegrated": false,
+    "clinicalApproval": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
