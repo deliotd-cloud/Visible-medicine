@@ -1,0 +1,48 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T16:00:43.736Z",
+  "sourceIdentity": {
+    "parentCommit": "4259fd81a7da96945dcd288cb8652dce3421af34",
+    "parentSourceSha256": "56c762f3e4a1c3bb0137fdb53208bc7038edd9149415975048163e71e73ba7fa",
+    "generated": false,
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/appendicular-artery-ultrasound-pin.json",
+      "bytes": 1684,
+      "sha256": "8dfc7f734edb8b5cde6c80b8b33b2f2e903abd9a1248cf7b4cbadf7ece9a77c8"
+    },
+    {
+      "path": "lib/appendicular-artery-ultrasound.ts",
+      "bytes": 2446,
+      "sha256": "28d85b1da77e925ec631dd470fec5d90fb75404fa7b454be78a99e00b7da7336"
+    },
+    {
+      "path": "app/body-content.ts",
+      "bytes": 85848,
+      "sha256": "e48f244652dd52f050ad76b05c7993a26d7482bd210eb536ac858c2334a0ca3e"
+    },
+    {
+      "path": "content/central-neural-imaging.ts",
+      "bytes": 15531,
+      "sha256": "0365b5bc0e8ea0c75cbb30db69220ac81bb99b8779f807c1db75168937683630"
+    }
+  ],
+  "removed": [],
+  "scope": "Four authored Atlas teaching source files only. Existing source-backed changes combined for subsequent normal generation; no geometry, scans, private metadata, approval records, raw ancestry or generated review pins.",
+  "proof": {
+    "sourceCompositionVerified": true,
+    "otherParentFilesUnchanged": true,
+    "normalGenerationPending": true,
+    "fullBuildPassed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
