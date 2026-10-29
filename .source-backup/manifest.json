@@ -1,0 +1,43 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T13:32:00.750Z",
+  "sourceIdentity": {
+    "parentReceiptSha256": "56c762f3e4a1c3bb0137fdb53208bc7038edd9149415975048163e71e73ba7fa",
+    "proposalCheckpointSha256": "7596bee7c7d01abd7f1545ff1a3d0b71e5b83dffb3658734d65aae56a1b5ca4a",
+    "integrated": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/central-neural-imaging.ts",
+      "sha256": "0365b5bc0e8ea0c75cbb30db69220ac81bb99b8779f807c1db75168937683630",
+      "bytes": 15531
+    },
+    {
+      "path": "SOURCE_NOTES.json",
+      "sha256": "34c1fa1b585a23eb9541c6b6f4a9ccf83b37bf26f5768e6a993bd04f1a47d260",
+      "bytes": 1805
+    }
+  ],
+  "removed": [],
+  "scope": "Two first-party teaching source/provenance files only. One shared draft note improves two existing MRI entries; not clinical approval, installed content or a whole project backup. No article figures, images, datasets, anatomy mesh files, source coordinates, private decisions, local environment, test-generated review pins or canonical ancestry uploaded.",
+  "proof": {
+    "sharedAuthoredNote": 1,
+    "displayedPlacements": 2,
+    "changedLessons": 2,
+    "unchangedLessons": 9934,
+    "identityRefusals": 16,
+    "tamperRefusals": 6,
+    "serverRevisionRefusals": 6,
+    "isolatedContractPassing": true,
+    "nativeBuild": false,
+    "websiteImported": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

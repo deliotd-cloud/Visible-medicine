@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-29T13:24:44.108Z",
+  "kind": "Draft quality improvement, not a newly filled pending row",
+  "primarySource": {
+    "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2022.894606/full",
+    "title": "Anatomically curated segmentation of human subcortical structures in high resolution magnetic resonance imaging: An open science approach",
+    "authors": "Rushmore et al.",
+    "year": 2022,
+    "doi": "10.3389/fnana.2022.894606",
+    "sections": [
+      "Methods: Datasets (0.7mm isotropic T1w HCP images)",
+      "Methods: The globus pallidus (NN ID231)"
+    ],
+    "support": "Coronal pallidal location, axial posterior-end cross-check, and inconsistent internal/external segment separation in high-resolution T1w research images.",
+    "reuse": "Original short paraphrase and citation only. No figures, scan data, segmentation files, tables or verbatim passages copied."
+  },
+  "scope": {
+    "ids": [
+      "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+      "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus"
+    ],
+    "topic": "mri",
+    "sharedAuthoredNote": 1,
+    "displayedPlacements": 2,
+    "readiness": "draft",
+    "sourceIdentitiesChanged": false,
+    "geometryChanged": false,
+    "patientRegistration": false,
+    "clinicalApproval": false
+  },
+  "prose": "On coronal MRI, locate the pallidum between the putamen laterally and the internal capsule medially, then follow its posterior taper. Cross-check the posterior endpoint on axial images when it is unclear on coronal views. The cited manual-segmentation study used 0.7 mm isotropic T1-weighted research scans; internal and external pallidal segments were not consistently distinguishable even in that setting. Routine sequences may provide less detail."
+}
