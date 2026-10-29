@@ -1,0 +1,65 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T11:49:06.727Z",
+  "sourceIdentity": {
+    "parentReceiptSha256": "a8df01e3e7a03a0d6fae4eea50526385ca52cc865a6f6f6968f2ba5b023cbacd",
+    "proposalCheckpointSha256": "8d8884e4caa3c2c475cb7f0f26115102d92ec32988d7f303fae2b644e241eadd",
+    "integrated": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/atlas-hand-venous-imaging-checks.mjs",
+      "sha256": "57fb43899e34ad091b2bf4f5b1f812009fe85db4b08f94ec21971ad5a7cf88a5",
+      "bytes": 12551
+    },
+    {
+      "path": "tests/atlas-hand-venous-manifest-hoist.test.mjs",
+      "sha256": "5c321325c97a0aea2039c70161af4046f7cb809bc8989cd3fef42b9c7e970f43",
+      "bytes": 5093
+    },
+    {
+      "path": "scripts/run-website-tests.mjs",
+      "sha256": "a21056ff27adca9b1dffb34e6308e0ea36a71943ae024eea1856c5f7f38cb278",
+      "bytes": 21020
+    },
+    {
+      "path": "scripts/aggregate-website-test-partitions.mjs",
+      "sha256": "cc6ac9aa0c60717cf2c37b0be0ba35761803c602c882c54c6ad3cd554e35b3e6",
+      "bytes": 11437
+    },
+    {
+      "path": "tests/website-test-partitions.test.mjs",
+      "sha256": "7f2e5db718b5a0f59dfc367f712d81f0d1447dfedae9c78a6c291584d18cf414",
+      "bytes": 8168
+    },
+    {
+      "path": "tests/website-test-history-preflight.test.mjs",
+      "sha256": "fa8308bca5116d24a362ec39036e249cddbb1274f89270e87d27f4393bf3153a",
+      "bytes": 8505
+    },
+    {
+      "path": "tests/website-test-partition-history.mjs",
+      "sha256": "41d9a89c125e38963fad5e0df5019f08bcc219bf1957e619f242696fc1a71781",
+      "bytes": 14372
+    }
+  ],
+  "removed": [],
+  "scope": "Seven first-party test/runner helper source files only, as an unintegrated verified proposal. Four historical source/manifest fixtures remain in scoped local recovery. This is not a whole-project or runnable backup. No scans, masks, images, medical coordinates, geometry, private decisions, local environment, raw QA output or canonical ancestry uploaded.",
+  "proof": {
+    "runnerCompatibilityTests": 55,
+    "wholeCaseBenchmarkRuns": 4,
+    "meanReduction": 0.22558675130002626,
+    "negativeMutationChecksPreserved": true,
+    "integrated": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
