@@ -1,12 +1,12 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-29T17:54:15.658Z",
+  "at": "2026-10-29T18:04:56.420Z",
   "sourceIdentity": {
     "nativeParent": "4259fd81a7da96945dcd288cb8652dce3421af34",
-    "proposalSnapshotRevision": "c56dfe7bec1b64ab4aff36cf40a2333dc8311bf7f8d90e3a92fbcfdfca06663d"
+    "proposalSnapshotRevision": "f2390b16afe2b9f6b2e4e4f8bc6f399ba1ac452dc347eecb271fa0e173e3d6a6"
   },
-  "parent": "355a00fcde654a51129d8094161f5aea3f51213d",
-  "gitParent": "355a00fcde654a51129d8094161f5aea3f51213d",
+  "parent": "c32fc71f1d6714651383aa164459f452dcb65ea6",
+  "gitParent": "c32fc71f1d6714651383aa164459f452dcb65ea6",
   "files": [
     {
       "path": "scripts/teaching-quality-report.mjs",
@@ -72,15 +72,65 @@
       "path": "scripts/fixtures/genicular-arteries.before.ts",
       "bytes": 3657,
       "sha256": "c9c38677221dc5076d3aa0f55f4ec08b53e307234cc78426b765c93cf4c39322"
+    },
+    {
+      "path": "lib/cranial-arteries.ts",
+      "bytes": 2899,
+      "sha256": "e4d69b0da23d5036c2c3b18263f71fcc220872917d1bc8c8357160620c961854"
+    },
+    {
+      "path": "scripts/fixtures/cranial-arteries.before.ts",
+      "bytes": 2533,
+      "sha256": "503181d76e2a323134da111234bd3842c85026ecf8cae460138271b7279f3804"
+    },
+    {
+      "path": "lib/inferior-thyroid-arteries.ts",
+      "bytes": 2832,
+      "sha256": "09d5e210ad5db4db4718dfea0299dcdbccc21c720f822ee54a4b4fa6541ba739"
+    },
+    {
+      "path": "scripts/fixtures/inferior-thyroid-arteries.before.ts",
+      "bytes": 2647,
+      "sha256": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0"
+    },
+    {
+      "path": "lib/subscapular-arteries.ts",
+      "bytes": 2926,
+      "sha256": "b1ba6873816fbe26b5f30174a0961b29f433e21ed97c7ba4d56fb73fbd9347e7"
+    },
+    {
+      "path": "scripts/fixtures/subscapular-arteries.before.ts",
+      "bytes": 2613,
+      "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db"
+    },
+    {
+      "path": "scripts/test-cranial-shoulder-quiz.mjs",
+      "bytes": 5290,
+      "sha256": "1a92cd35ce37bfb8768a06bc7ea0c75025658016dec02e418512a8c9e29b8504"
+    },
+    {
+      "path": "lib/cubital-veins.ts",
+      "bytes": 4062,
+      "sha256": "af5daa234cc53fa3827084853399b08a02bc5122b151b0787e5ad01b70b0bb00"
+    },
+    {
+      "path": "scripts/test-cubital-quiz.mjs",
+      "bytes": 3471,
+      "sha256": "23d66234f361aa12c458fbbf8c1df2faf19c73c6b85b7eb32c9ed432f7fbb850"
+    },
+    {
+      "path": "scripts/fixtures/cubital-veins.before.ts",
+      "bytes": 3399,
+      "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
     }
   ],
   "removed": [],
-  "scope": "13 authored files only: existing four scored epigastric quiz drafts/editorial audit plus 14 elbow and 10 knee source-bound graded quiz placements, exact prior-source fixtures and focused tests. Partial unpublished source recovery. No scan, model, patient data, generated teaching snapshot, dependency, or raw canonical Git ancestry.",
+  "scope": "23 authored source/test files: editorial audit plus scored quiz drafts across 41 source placements. Partial unpublished source recovery only; no snapshots, scans, geometry, patient data, dependencies or canonical ancestry",
   "proof": {
-    "combinedQuizTests": 9,
-    "quizPlacements": 28,
-    "newPlacements": 24,
-    "snapshotBaselineMatched": 28,
+    "combinedQuizTests": 15,
+    "quizPlacements": 41,
+    "newPlacements": 13,
+    "snapshotBaselineMatched": 41,
     "sourceGuardsPreserved": true,
     "clinicalApproval": false,
     "installed": false,
