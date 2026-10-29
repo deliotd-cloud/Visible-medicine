@@ -1,0 +1,75 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T23:26:29.257Z",
+  "sourceIdentity": {
+    "path": "G:/VisibleMedicine-temp/staging/20261029-lecture-regression-repair/SOURCE_CANDIDATE.json",
+    "sha256": "fe890a6882d27348c20baddc36563a196476b3ff2ad33f80ccb9cd7dd79b253d"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/live-learning-consumer-access-later-inverse.mjs",
+      "bytes": 3750,
+      "sha256": "b8d24bfdd25fd6ec543ceee7eb6885c09ce3529b5cd23da17e251c96bbc19735"
+    },
+    {
+      "path": "tests/head-guided-notice-test-role.mjs",
+      "bytes": 1908,
+      "sha256": "528728dc1bcc3a7493013180c6c7265527d88b37eddf58a747d06fca0dca677e"
+    },
+    {
+      "path": "tests/head-guided-notice-preservation.test.mjs",
+      "bytes": 2928,
+      "sha256": "1e9ae339c1dbefb7c7a6849c374eed601d680f8bc831c5bcaba3fa1e3e4ab643"
+    },
+    {
+      "path": "tests/fixtures/head-guided-notice-before/head-guided-model.test.ts.raw",
+      "bytes": 21335,
+      "sha256": "891cdbf2b508ecafd259d4bf860b62ee2e2f326ea4e8b7ac3700a6305a10e854"
+    },
+    {
+      "path": "tests/fixtures/head-guided-notice-before/live-learning-consumer-access-later-inverse.mjs.raw",
+      "bytes": 3590,
+      "sha256": "491f8e24f39a281b1a16d34c36856e9626983935dcd5eac3e13af484a688b6ff"
+    },
+    {
+      "path": "recipes/diagnostic-run.mjs",
+      "bytes": 3024,
+      "sha256": "8c3e65314e251b5bbb10af3b1b11d7ea07c425b8db4b5b0217a397f16c3e58e5"
+    },
+    {
+      "path": "recipes/prepare.mjs",
+      "bytes": 2193,
+      "sha256": "17c97b07aa485dc9319fcbb0c1ce5de5c9ba853f941737c127f23f8f03601c27"
+    },
+    {
+      "path": "recipes/verify.mjs",
+      "bytes": 4043,
+      "sha256": "5e2c8b8035fa20f125204319fde2a6b6b96057b2d13d32d0ae3c3a99ece671c5"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 11734,
+      "sha256": "9a7d5915d9df2f28c34b0094877e8c933e5dfad8d56d2fb3401cb299d5b4334f"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected test helper, exact historical test-source fixtures, mutation tests and verification/recovery recipes only. No application payloads, scans, masks, private models, clinical decisions or raw repository ancestry.",
+  "proof": {
+    "roots": 23,
+    "tests": 125,
+    "pass": 125,
+    "fail": 0,
+    "skipped": 0,
+    "productFilesChanged": 0,
+    "allOriginal20RootsRetained": true,
+    "wholeSuitePassing": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

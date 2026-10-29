@@ -1,0 +1,21 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {prepareHistoricalEnvironment} from 'file:///F:/VisibleMedicine/staging/20261030-head-tour-speed-release/historical-environment.mjs';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261029-lecture-regression-repair',cloned=json(root+'/CLONED.json'),site=cloned.site,parent=json(cloned.parent.path);
+const write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n',{flag:'wx'}),ref=p=>({path:p,sha256:hash(p)});
+assert.equal(hash(cloned.parent.path),cloned.parent.sha256);
+const paths=['tests/live-learning-consumer-access-later-inverse.mjs','tests/head-guided-notice-test-role.mjs','tests/head-guided-notice-preservation.test.mjs','tests/fixtures/head-guided-notice-before/head-guided-model.test.ts.raw','tests/fixtures/head-guided-notice-before/live-learning-consumer-access-later-inverse.mjs.raw'];
+const authored=paths.map(path=>({path,bytes:fs.statSync(site+'/'+path).size,sha256:hash(site+'/'+path),beforeSha256:parent.sourceRows.find(r=>r.path===path)?.sha256??null}));
+const rows=new Map(parent.sourceRows.map(r=>[r.path,{...r}]));for(const r of authored)rows.set(r.path,{path:r.path,bytes:r.bytes,sha256:r.sha256});
+function verify(){for(const r of rows.values())assert.equal(hash(site+'/'+r.path),r.sha256,r.path);for(const r of parent.sourceRows)assert.equal(hash(parent.website+'/'+r.path),r.sha256,'Preserved parent: '+r.path);for(const r of parent.dependencies){assert.equal(hash(r.file),r.sha256);assert.equal(hash(r.entry),r.entrySha256);}}
+verify();
+write(root+'/PREPARED.json',{...cloned,authored,productFilesChanged:0,originalTestsChanged:0,privateAssetRoot:'G:/VisibleMedicine-temp/staging/20261029-foot-selection-followup/website/.local/foot-review'});
+write(root+'/SOURCE_CANDIDATE.json',{...parent,schema:'vm-lecture-access-projection-source/1',at:new Date().toISOString(),website:site,parent:cloned.parent,sourceRows:[...rows.values()],sourcePaths:[...rows.keys()],changedPaths:authored.filter(r=>r.beforeSha256).map(r=>r.path),addedPaths:authored.filter(r=>!r.beforeSha256).map(r=>r.path),removedPaths:[],wholeSuitePassing:false,installed:false});
+const originalPath='G:/VisibleMedicine-temp/staging/20261029-lecture-regression/TEST_SCOPE.json',original=json(originalPath);assert.equal(original.roots.length,20);
+const addedRoots=['tests/head-guided-model.test.ts','tests/head-live-model.test.ts','tests/head-guided-notice-preservation.test.mjs'];const roots=[...new Set([...original.roots,...addedRoots])];assert.equal(roots.length,23);
+write(root+'/TEST_SCOPE.json',{at:new Date().toISOString(),original:ref(originalPath),originalRoots:original.roots,addedRoots,roots,allOriginal20RootsRetained:true,wholeSuitePassing:false});
+const environment=prepareHistoricalEnvironment(root+'/SOURCE_CANDIDATE.json',hash(root+'/SOURCE_CANDIDATE.json'));write(root+'/HISTORICAL_ENVIRONMENT.json',environment);fs.mkdirSync(root+'/temp',{recursive:true});
+const command='--max-old-space-size=512 --experimental-strip-types --test --test-concurrency=1 --test-reporter=spec --test-reporter-destination=stdout --test-reporter=tap --test-reporter-destination='+root+'/batch/child.tap '+roots.join(' ');
+const run=await guarded({site,dir:root+'/batch',command,heap:512,aggregate:2048,minimum:4096,extraEnv:{...environment.environment,TEMP:root+'/temp',TMP:root+'/temp'}});
+verify();const result={at:new Date().toISOString(),source:ref(root+'/SOURCE_CANDIDATE.json'),scope:ref(root+'/TEST_SCOPE.json'),roots:roots.length,run,passing:run.passing,sourceExactAfter:true,wholeSuitePassing:false,installed:false,normalPreviewChanged:false};write(root+'/RESULT.json',result);console.log(JSON.stringify(result));process.exitCode=result.passing?0:1;
