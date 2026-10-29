@@ -1,0 +1,89 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T20:49:12.024Z",
+  "sourceIdentity": {
+    "website": "G:/VisibleMedicine-temp/staging/20261029-combined-website/website",
+    "parent": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-combined-website/PREPARATION.json",
+      "sha256": "9183771e6ee06581b449cc555eefcc4e14b03484544b65784cec7e64ec1b8b23"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/CourseCatalogue.tsx",
+      "bytes": 6721,
+      "sha256": "c26265751bd5fa4669d663efd75a8a8750f12a26146a52aab4f575f2068598e7"
+    },
+    {
+      "path": "app/courses/page.tsx",
+      "bytes": 2642,
+      "sha256": "5715f0d5aa8a4d872f74d8115d0a5a031b68d395b1355f9a93f2fe3889fc2bfd"
+    },
+    {
+      "path": "lib/course-catalogue-filters.ts",
+      "bytes": 2619,
+      "sha256": "a633af4b61f6b754456ede2e57e207d0143380e287f1064a7d92ddca17d28061"
+    },
+    {
+      "path": "tests/course-catalogue-filters.test.ts",
+      "bytes": 5176,
+      "sha256": "140d89043aaeab03f8ccd0480329d7c8882ca0c609acabfda7a38ed80209a43b"
+    },
+    {
+      "path": "qa/course-catalogue/entry.tsx",
+      "bytes": 1381,
+      "sha256": "73d37a215ebe322d5c276dd7b3e8eb3af4c80cb575934f00705d7fd0df6d4df3"
+    },
+    {
+      "path": "qa/course-catalogue/build.mjs",
+      "bytes": 1634,
+      "sha256": "2f18737261caf70b28b471f46b2ef891cafaf7a42e542e28940f7f43d4a9ae32"
+    },
+    {
+      "path": "qa/course-catalogue/server.mjs",
+      "bytes": 1741,
+      "sha256": "097df10c55245a167db6813dd713bc4b847f2d19a84e4be3dd123fecc16ebf1b"
+    }
+  ],
+  "removed": [],
+  "scope": "Four course catalogue application/test files and three synthetic browser harness sources only. No real courses, accounts, patient data, secrets, assets, generated modules or raw canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "at": "2026-10-29T20:49:11.324Z",
+    "focusedTests": 4,
+    "passed": true,
+    "browserInputCount": 14,
+    "browserInputHashesVerified": true,
+    "browserChecks": [
+      "deep link filters",
+      "CT/MRI and X-ray punctuation search",
+      "combined filters",
+      "empty-result focus handoff",
+      "clear preserves unrelated query/hash",
+      "no typing history entries",
+      "Back from a course",
+      "reload",
+      "same-document Back/Forward",
+      "focus retained",
+      "router history state preserved",
+      "invalid/repeated values default safely"
+    ],
+    "actualPageSSRVerified": true,
+    "actualComponentBrowserVerified": true,
+    "syntheticAccountFixtures": true,
+    "nativeAnchorNavigation": true,
+    "fullNextRouterVerified": false,
+    "fullSignedInAcceptance": false,
+    "fullTypesPassed": false,
+    "fullBuildPassed": false,
+    "installed": false,
+    "ownerPreviewChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

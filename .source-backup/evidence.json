@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-29T20:49:11.324Z",
+  "focusedTests": 4,
+  "passed": true,
+  "browserInputCount": 14,
+  "browserInputHashesVerified": true,
+  "browserChecks": [
+    "deep link filters",
+    "CT/MRI and X-ray punctuation search",
+    "combined filters",
+    "empty-result focus handoff",
+    "clear preserves unrelated query/hash",
+    "no typing history entries",
+    "Back from a course",
+    "reload",
+    "same-document Back/Forward",
+    "focus retained",
+    "router history state preserved",
+    "invalid/repeated values default safely"
+  ],
+  "actualPageSSRVerified": true,
+  "actualComponentBrowserVerified": true,
+  "syntheticAccountFixtures": true,
+  "nativeAnchorNavigation": true,
+  "fullNextRouterVerified": false,
+  "fullSignedInAcceptance": false,
+  "fullTypesPassed": false,
+  "fullBuildPassed": false,
+  "installed": false,
+  "ownerPreviewChanged": false,
+  "clinicalApproval": false
+}
