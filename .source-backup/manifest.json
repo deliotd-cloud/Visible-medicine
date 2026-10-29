@@ -1,0 +1,64 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T21:41:51.265Z",
+  "sourceIdentity": {
+    "native": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-mandible-generation-verified/SOURCE_AFTER_GENERATION.json",
+      "sha256": "22ad4273725894d769eaa7d76fd21ca2507a9e91b61f1bf393c38e853939fff1"
+    },
+    "websiteReport": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-combined-website-full-types/types-full-attempt-1/FULL_TYPE_RESULT.json",
+      "sha256": "e48ecb023b83a23995f81912d704db24079ecee680db87fc9cd3e8003f7312ff"
+    },
+    "reviewBinding": "e797853ed87cb3d4dc39a1addafa55aa7962394bc1e961a14c83ca0b54f9f510"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/native-types-launch.mjs",
+      "bytes": 4044,
+      "sha256": "1d2892593b03be28bde97d0284b6579ba41ad9029faae2fba988071378f5ad52"
+    },
+    {
+      "path": "recipes/native-types-checker.mjs",
+      "bytes": 1614,
+      "sha256": "66afb0715d047c2670515ba96ce8835ce4a0f6570870ecaeb2a6fb5df7ec5938"
+    },
+    {
+      "path": "recipes/website-types-launch.mjs",
+      "bytes": 2975,
+      "sha256": "862bc5cba26af86137ed804d1efe8cd2413705beff4784a80dc2cad071d40a8f"
+    },
+    {
+      "path": "recipes/website-types-checker.mjs",
+      "bytes": 1991,
+      "sha256": "fbd5b3f6d18fc493c64711bb7e4bb69cd957cff67e525fc64fe58fcff2a6385a"
+    },
+    {
+      "path": "recipes/review-viewer-launch.mjs",
+      "bytes": 3382,
+      "sha256": "e846094c09b73d31a114114a31328f07e22da9584625c8b84e3f0012f360e8ad"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 11331,
+      "sha256": "930a895a905e89f92a43e6545f2e207ccc5d079765d75199cc9ea0158a49d29a"
+    }
+  ],
+  "removed": [],
+  "scope": "Six verification/checkpoint recipes only. No model data, scans, patient derivatives, private decisions or raw Git ancestry. Full compiler reports and viewer build stay in local F recovery.",
+  "proof": {
+    "nativeTypes": true,
+    "websiteTypes": true,
+    "reviewViewerBuild": true,
+    "fullProductionBuild": false,
+    "wholeSuite": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
