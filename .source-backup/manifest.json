@@ -1,0 +1,36 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T00:27:00.667Z",
+  "sourceIdentity": {
+    "kind": "specimen-inline-review-source-delta",
+    "nativeSourceSha256": "8db9511be8c7e3b34400fe1c47af1162d1cd139934bd3d0643c682c86e5bd886",
+    "nativeHead": "c11731cbd8ae0535daa58271b0eac1e3bef98e9d",
+    "parentNativeHead": "222a0e7c550179242a5f2d428eade62947f22d09"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/review/specimens/workspace.tsx",
+      "bytes": 33744,
+      "sha256": "0b29c42ab51d9e1185223ee5e3629630cfc4ffb999987fd0dac28bd310c2a979"
+    }
+  ],
+  "removed": [],
+  "scope": "One authored review component placing the exact specimen model beside its worksheet. Source-only recovery supplement; not the full application. No scans, models, generated geometry/assets, dependencies, environment files, private cases, runtime state or raw canonical ancestry.",
+  "proof": {
+    "nativeBuildPassed": true,
+    "geometryTeachingAndReviewMaterialsUnchanged": true,
+    "fullNativeTypesPassed": true,
+    "stockSpecimenReviewChecksPassed": true,
+    "clinicalApproval": false,
+    "websiteImportComplete": false,
+    "normalPreviewChanged": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
