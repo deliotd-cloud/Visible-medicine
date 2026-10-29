@@ -1,0 +1,65 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T17:41:54.972Z",
+  "sourceIdentity": {
+    "nativeParent": "4259fd81a7da96945dcd288cb8652dce3421af34",
+    "snapshotRevision": "e24e47357f5726db46d58fc91d64dd5b06caefe01549ee767a9a07fb35721e96"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/teaching-quality-report.mjs",
+      "bytes": 6455,
+      "sha256": "fbdeda8e674a0445cf35ca84d62bd6b56516dc307f44b380481621dbfa16e8dc"
+    },
+    {
+      "path": "scripts/test-teaching-quality-report.mjs",
+      "bytes": 5657,
+      "sha256": "e8303989f55ccc51f5afc88d9565b1b0dc7c00ec61bd123c163c68efce246d98"
+    },
+    {
+      "path": "scripts/audit-teaching-quality.mjs",
+      "bytes": 5162,
+      "sha256": "fb14e050b36b237aa429d212fb8c5faea78128e5e185585b2a54b4636d6e65b1"
+    },
+    {
+      "path": "scripts/test-teaching-quality-cli.mjs",
+      "bytes": 3057,
+      "sha256": "9850622e4374ad23f3bce774b7b9201a4044f214e78854476458d48fccd7dd03"
+    },
+    {
+      "path": "lib/inferior-epigastric-vessels.ts",
+      "bytes": 5341,
+      "sha256": "93cbc537a0542251e71f0e9415a204ac31accf0a9212e8aa51f03c29c54f0aeb"
+    },
+    {
+      "path": "scripts/test-inferior-epigastric-quiz.mjs",
+      "bytes": 4521,
+      "sha256": "fcad7b4262b5b89144dbd2dba6ffa201140e9341f33081a904564e43839a0542"
+    },
+    {
+      "path": "scripts/fixtures/inferior-epigastric-vessels.before.ts",
+      "bytes": 4815,
+      "sha256": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven authored source/test files only: editorial teaching audit and four scored epigastric quiz drafts, including exact prior-source regression fixture. Partial unpublished source recovery, not a whole Atlas backup. No patient data, snapshot reports, dependencies, models or canonical Git ancestry.",
+  "proof": {
+    "tests": 13,
+    "failed": 0,
+    "skipped": 0,
+    "quizDrafts": 4,
+    "sourceIdentityGuardPreserved": true,
+    "otherTabOutputsPreserved": true,
+    "productionGeneration": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
