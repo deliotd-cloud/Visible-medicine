@@ -1,0 +1,77 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T13:03:07.509Z",
+  "sourceIdentity": {
+    "parentReceiptSha256": "a8df01e3e7a03a0d6fae4eea50526385ca52cc865a6f6f6968f2ba5b023cbacd",
+    "proposalCheckpointSha256": "1f0cf622d66b093a6e4b3b217e1d6d181cc0cef53000d79b75e05c91939dbae5",
+    "integrated": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/build-clinical-review-viewer.mjs",
+      "sha256": "95b95fad2fa21cad7984d27d22a657d2a6d0764790b6fd1edec3635fb982feeb",
+      "bytes": 2438
+    },
+    {
+      "path": "scripts/review-license-notices.mjs",
+      "sha256": "0b3fb8f94523d8e34c9ccb54bc7e72d080b959dc1e2e73cf79e02de1d5837624",
+      "bytes": 3369
+    },
+    {
+      "path": "scripts/bind-clinical-review.mjs",
+      "sha256": "20e8d7ba515cef968b39ac2eb2a8d6e0529a241ccb2e5b172165a15a12a3b34f",
+      "bytes": 10175
+    },
+    {
+      "path": "tests/review-license-notices.test.mjs",
+      "sha256": "bf0380cdb71f9b51039e0ef12c9a1e896afa1dd520538c0174a9c95e1136e5ca",
+      "bytes": 5665
+    },
+    {
+      "path": "tests/fixtures/review-license-notices.before.mjs.raw",
+      "sha256": "ff794e14a3c95e0404f114d364db370a9ef6059cf0dc90c34f004bf9d856cfc4",
+      "bytes": 3919
+    },
+    {
+      "path": "tests/review-license-generator.test.mjs",
+      "sha256": "8e7993972fa5fe5568af40ed837c790c3da9ae04b6d5baa9b7483c38fc89dee8",
+      "bytes": 8324
+    },
+    {
+      "path": "scripts/build-clinical-review-candidate.mjs",
+      "sha256": "04fd68ace1cec02b20ff429a1e5b3761436879d15512206ffa5e3d77742cd0ef",
+      "bytes": 10404
+    },
+    {
+      "path": "tests/frozen-review-license-versions.test.mjs",
+      "sha256": "7dc1a4d83415eb60d8356c3e26adefda4e68f3fbc88203769af7fe42e8d1e1b0",
+      "bytes": 5601
+    },
+    {
+      "path": "tests/fixtures/build-clinical-review-candidate.before.mjs.raw",
+      "sha256": "5f4f8e719ee06e30a528d6ddea3e37c0dd0492415059caa539d2ccb6f5bd7cf5",
+      "bytes": 10959
+    }
+  ],
+  "removed": [],
+  "scope": "Nine first-party normal/frozen review licensing generator, binding and test source files only; two fixtures are authenticated earlier first-party generator source. Unintegrated verified proposal, not an installed release or whole project backup. No scans, images, medical coordinates, anatomy assets, private decisions, local environment, QA output or canonical Git ancestry uploaded.",
+  "proof": {
+    "focusedChecks": 17,
+    "originalBugsReproduced": true,
+    "syntheticBundler": true,
+    "actualFrozenSegments": true,
+    "stockReviewRebuildRequired": true,
+    "integrated": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "exhaustiveRightsClearance": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
