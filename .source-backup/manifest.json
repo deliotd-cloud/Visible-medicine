@@ -1,0 +1,58 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T02:41:17.853Z",
+  "sourceIdentity": {
+    "kind": "guided-tour-return-source-delta",
+    "websiteSourceSha256": "637f6da6f30ebc4e4dbf0ce20a95385406251f89cac7c8e0d5c65589cb18f121",
+    "nativeHead": "4d29390eaa4e3eb8f656c88b22eb93bc2dd308b9"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/head-learning-return.ts",
+      "bytes": 1500,
+      "sha256": "481fd8c84a41f3a68fca7645c1fc4286b43343273daaa88929de905faae55ace"
+    },
+    {
+      "path": "website/lib/head-guided-comparison.ts",
+      "bytes": 2867,
+      "sha256": "172f575e1ba2bd42bc5125d512005016ba0f5047f563d62ac5176cf7e26c9459"
+    },
+    {
+      "path": "website/app/atlas/guided-learning/page.tsx",
+      "bytes": 6165,
+      "sha256": "e456036943197e320e4c84d5632d2606480f2d426b02fadaf9aa4d5efaf60b43"
+    },
+    {
+      "path": "website/app/atlas/guided-learning/compare/page.tsx",
+      "bytes": 3786,
+      "sha256": "6f64f686c302541c094ed8fae248e2d09948b6d50b174e62d881ae12f0f2fb3c"
+    },
+    {
+      "path": "website/app/atlas/guided-learning/guided-learning.css",
+      "bytes": 4782,
+      "sha256": "e6546137225c8bb37f567ecfe9fc7a0a829a053dbce54c51e68a4b127910cfac"
+    },
+    {
+      "path": "website/components/HeadAtlasLearningLibrary.tsx",
+      "bytes": 19252,
+      "sha256": "8d3ef094075e523c440b54fde08b16f5bd88712caeaef877c166a9a6f76ba853"
+    }
+  ],
+  "removed": [],
+  "scope": "Six authored website source files for revision-bound guided comparison return navigation. No scans, geometry, identifiers, private decisions, credentials, generated assets or raw canonical ancestry uploaded. Scoped source supplement only.",
+  "proof": {
+    "focusedTests": 98,
+    "productionBuildPassed": true,
+    "fullWebsiteTypesPassed": true,
+    "normalPreviewChanged": false,
+    "wholeProjectBackup": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
