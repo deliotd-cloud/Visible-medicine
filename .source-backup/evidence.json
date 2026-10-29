@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "exitCode": 0,
+    "passed": 58,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "baselineNewTests": {
+    "passed": 1,
+    "failed": 3
+  },
+  "typesPassed": false,
+  "typeFailure": "128MiB heap resource failure",
+  "fullBuildPassed": false,
+  "installed": false
+}

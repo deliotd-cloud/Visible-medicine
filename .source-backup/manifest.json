@@ -1,0 +1,71 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T17:13:18.638Z",
+  "sourceIdentity": {
+    "baseComponent": "cef9c3ed842dddd458cc801bf4b12e2f63694de238e29b90eac98dc369470bf2",
+    "scope": "Seven current component/test files; no historical fixtures changed"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/ClinicalReviewInbox.tsx",
+      "sha256": "90e06effdd02d0552a1e6303e34e1bb8599e1392f956baa974980bb450bd2559",
+      "bytes": 39735
+    },
+    {
+      "path": "tests/clinical-review-inbox-auto-return.test.mjs",
+      "sha256": "0cb95d9553043be7dd2c02d49672039c89386ea0804727fa63b2c8d9008a0d30",
+      "bytes": 12425
+    },
+    {
+      "path": "tests/clinical-review-inbox-deferred-return.test.mjs",
+      "sha256": "fe9ce59b5c18130d2b3c896f4196fb6221a9f02fe406df7d04f65b7006efb4c7",
+      "bytes": 18392
+    },
+    {
+      "path": "tests/clinical-review-inbox-failure-focus.test.mjs",
+      "sha256": "63c854bacc2a90f1fc599c17311cec8dcdae27dd210fa82bea0af1960282a39a",
+      "bytes": 13125
+    },
+    {
+      "path": "tests/clinical-review-inbox-return-pager-focus.test.mjs",
+      "sha256": "f8382bb28bfcc082a5a2431288b3cfb0c3f4478b7568f1071a5374ee36b5c5d0",
+      "bytes": 11758
+    },
+    {
+      "path": "tests/clinical-review-inbox-return-context.test.mjs",
+      "sha256": "52d577dc602f2112eefc14067e521bfd129ef61a639005296e5a6502fdde1ad7",
+      "bytes": 11842
+    },
+    {
+      "path": "tests/clinical-review-inbox-page-reconcile.test.mjs",
+      "sha256": "2e0ace4fcb682a4b416053e4cc10f585dd80e1c940e5727a563395ba7be2c138",
+      "bytes": 9252
+    }
+  ],
+  "removed": [],
+  "scope": "Selected clinical review UI source/tests only; no scans, masks, private review decisions, dependencies or canonical Git ancestry.",
+  "proof": {
+    "tests": {
+      "exitCode": 0,
+      "passed": 58,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "baselineNewTests": {
+      "passed": 1,
+      "failed": 3
+    },
+    "typesPassed": false,
+    "typeFailure": "128MiB heap resource failure",
+    "fullBuildPassed": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
