@@ -8,7 +8,7 @@ import {runInNewContext} from 'node:vm';
 import test from 'node:test';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const atlas=resolve(process.env.VM_ATLAS_SOURCE_ROOT??root);
-const baseline=join(root,'scripts/fixtures/genicular-arteries.before.ts');
+const baseline=join(root,'scripts/fixtures/genicular-arteries.before.ts.txt');
 assert.equal(createHash('sha256').update(fs.readFileSync(baseline)).digest('hex'),'c9c38677221dc5076d3aa0f55f4ec08b53e307234cc78426b765c93cf4c39322');
 const ts=createRequire(join(atlas,'package.json'))('typescript');
 function evaluate(file,require){const module={exports:{}};const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;runInNewContext(code,{module,exports:module.exports,require});return module.exports;}

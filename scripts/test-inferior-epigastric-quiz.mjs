@@ -9,7 +9,7 @@ import test from 'node:test';
 
 const proposalRoot = fileURLToPath(new URL('../', import.meta.url));
 const atlasRoot = resolve(process.env.VM_ATLAS_SOURCE_ROOT ?? proposalRoot);
-const beforePath = process.env.VM_EPIGASTRIC_BEFORE_PATH ?? join(proposalRoot, 'scripts/fixtures/inferior-epigastric-vessels.before.ts');
+const beforePath = process.env.VM_EPIGASTRIC_BEFORE_PATH ?? join(proposalRoot, 'scripts/fixtures/inferior-epigastric-vessels.before.ts.txt');
 assert.equal(createHash('sha256').update(readFileSync(beforePath)).digest('hex'),
   'cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997', 'Exact saved baseline source');
 const sourceRequire = createRequire(join(atlasRoot, 'package.json'));

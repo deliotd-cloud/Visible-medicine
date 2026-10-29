@@ -1,0 +1,58 @@
+{
+  "sourceCommit": "4259fd81a7da96945dcd288cb8652dce3421af34",
+  "identity": {
+    "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+    "fmaId": "FMA14818",
+    "name": "Appendicular artery",
+    "sourceName": "appendicular artery",
+    "system": "vessels",
+    "category": "vessel",
+    "laterality": "unspecified",
+    "region": "abdomen",
+    "regions": [
+      "abdomen"
+    ],
+    "bundle": "abdomen-vessels-mesenteric",
+    "nodeName": "FMA14818",
+    "bounds": {
+      "min": [
+        -0.5570880174636841,
+        0.7271197438240051,
+        0.38387396931648254
+      ],
+      "max": [
+        -0.2348489910364151,
+        1.398610234260559,
+        0.7455199956893921
+      ]
+    },
+    "center": [
+      -0.3959685042500496,
+      1.062864989042282,
+      0.5646969825029373
+    ],
+    "anchor": [
+      -0.5143510103225708,
+      1.0382500886917114,
+      0.6276699900627136
+    ],
+    "sourceTree": "isa",
+    "sources": [
+      {
+        "file": "FJ3410",
+        "sha256": "f13009791207502aa815d5c57825048f701f7b82ed563ccd2d0369c7d1c78bdf"
+      }
+    ],
+    "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": true
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  }
+}

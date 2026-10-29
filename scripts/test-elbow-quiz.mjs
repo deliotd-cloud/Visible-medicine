@@ -11,7 +11,7 @@ const proposalRoot = fileURLToPath(new URL('../', import.meta.url));
 const atlasRoot = resolve(process.env.VM_ATLAS_SOURCE_ROOT ?? proposalRoot);
 const sourceRequire = createRequire(join(atlasRoot, 'package.json'));
 const ts = sourceRequire('typescript');
-const beforePath = join(proposalRoot, 'scripts/fixtures/elbow-arteries.before.ts');
+const beforePath = join(proposalRoot, 'scripts/fixtures/elbow-arteries.before.ts.txt');
 const baselineHash = '6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c';
 assert.equal(createHash('sha256').update(readFileSync(beforePath)).digest('hex'), baselineHash, 'exact saved source baseline');
 const compile = path => ts.transpileModule(readFileSync(path, 'utf8'), {

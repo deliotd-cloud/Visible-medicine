@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';import {createRequire} from 'node:module';import {join,resolve} from 'node:path';import {fileURLToPath} from 'node:url';import {runInNewContext} from 'node:vm';import test from 'node:test';
-const root=fileURLToPath(new URL('../',import.meta.url)),atlas=resolve(process.env.VM_ATLAS_SOURCE_ROOT??root),baseline=join(root,'scripts/fixtures/cubital-veins.before.ts');
+const root=fileURLToPath(new URL('../',import.meta.url)),atlas=resolve(process.env.VM_ATLAS_SOURCE_ROOT??root),baseline=join(root,'scripts/fixtures/cubital-veins.before.ts.txt');
 assert.equal(createHash('sha256').update(fs.readFileSync(baseline)).digest('hex'),'1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6');
 const ts=createRequire(join(atlas,'package.json'))('typescript');
 function evaluate(file,require){const module={exports:{}};runInNewContext(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,{module,exports:module.exports,require});return module.exports;}

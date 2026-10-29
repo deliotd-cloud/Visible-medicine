@@ -37,7 +37,7 @@ const modules = [
     answer: () => 'Circumflex scapular and thoracodorsal arteries' },
 ];
 for (const entry of modules) {
-  const beforePath = join(proposalRoot, `scripts/fixtures/${entry.name}.before.ts`);
+  const beforePath = join(proposalRoot, `scripts/fixtures/${entry.name}.before.ts.txt`);
   assert.equal(createHash('sha256').update(readFileSync(beforePath)).digest('hex'), entry.baselineHash, `${entry.name} exact baseline`);
   entry.catalog = JSON.parse(readFileSync(join(atlasRoot, `public/models/bodyparts3d/${entry.name}/catalog.json`), 'utf8'));
   const dependency = name => {
