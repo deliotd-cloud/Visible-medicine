@@ -1,0 +1,89 @@
+{
+  "schema": "vm-compact-history-closure/1",
+  "sourceSnapshotSha256": "3da619c2dad3cf02655b49a08bb1a131603cdd0389a82e083b61e22871a49af7",
+  "sourceRows": 5479,
+  "originalTest": "tests/head-review-compact-preservation.test.mjs",
+  "originalTestSha256": "7257e974b953d81a4858642fddba053d56f0aa6168a765b9be620a5ce009cdf1",
+  "files": [
+    {
+      "path": "components/HeadAtlasTeachingReview.tsx",
+      "bytes": 13387,
+      "sha256": "d5057f619b8d2f492a38fe3f6bd247a37a4042c61bb383f77f75464092ab44cf"
+    },
+    {
+      "path": "components/HeadCtFacialTeachingReview.tsx",
+      "bytes": 5114,
+      "sha256": "fe0a6c31ee3f6e83c8b28ec6ac765310127344b8870f2d72afea0f13a75862c0"
+    },
+    {
+      "path": "components/HeadTeachingReviewNavigator.tsx",
+      "bytes": 1659,
+      "sha256": "f5637bcb8e4385b86bcb5490ec10e6244baa6e38c051345ba5a95bd028d2b079"
+    },
+    {
+      "path": "tests/head-teaching-review-navigation.test.ts",
+      "bytes": 13555,
+      "sha256": "7921fc8b67d39f35dcaecd14ca7244654f567ecf622f1934162b064b26b1ee31"
+    },
+    {
+      "path": "scripts/bind-clinical-review.mjs",
+      "bytes": 7974,
+      "sha256": "375f8d0f9ccdad7c8e7e731c9dbd1147fc4b0067b2c75fc574327edf325063c6"
+    },
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "bytes": 17978,
+      "sha256": "8695689615b454aea30feb3095645b00503b1ecf0e3bcc392a7c76da2747e751"
+    },
+    {
+      "path": "tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2010,
+      "sha256": "aa78cc90a446a70f436ff161e7f2e506d257f7463442e63c9a470a0348d6aa9a"
+    },
+    {
+      "path": "tests/head-review-compact-preservation.test.mjs",
+      "bytes": 5301,
+      "sha256": "7257e974b953d81a4858642fddba053d56f0aa6168a765b9be620a5ce009cdf1"
+    },
+    {
+      "path": "atlas-review/integration-inputs.json",
+      "bytes": 269263,
+      "sha256": "01432a5743392a32f79b9ace1b5ac64b49bd8f711cbae63c2443ea98e1c50641"
+    },
+    {
+      "path": "tests/fixtures/head-review-compact/bind-clinical-review.mjs.raw",
+      "bytes": 7929,
+      "sha256": "072053ecdc9b882c873ddadb92b36e156f77e190977b33e68a8ba544d6a3548f"
+    },
+    {
+      "path": "tests/fixtures/head-review-compact/current-atlas-delivery.test.mjs.raw",
+      "bytes": 17978,
+      "sha256": "07e7fd5ede613f7c81d242580f54f75bf8dcaf6a7edccccd45b761fb63659357"
+    },
+    {
+      "path": "tests/fixtures/head-review-compact/head-teaching-review-navigation.test.ts.raw",
+      "bytes": 13104,
+      "sha256": "d948a5fcca72731026b5c6b6781b3bc2e380cfcaace278125c2b80327b95d425"
+    },
+    {
+      "path": "tests/fixtures/head-review-compact/HeadAtlasTeachingReview.tsx.raw",
+      "bytes": 13387,
+      "sha256": "50b0cec76bf51624521006e4e46d366f6f40f7bdd7752547ac35963d607f087a"
+    },
+    {
+      "path": "tests/fixtures/head-review-compact/HeadCtFacialTeachingReview.tsx.raw",
+      "bytes": 5064,
+      "sha256": "82d2b3d249128a16f39440dfed705eb5341003d5b0d93473c534039007cc51b7"
+    },
+    {
+      "path": "tests/fixtures/head-review-compact/HeadTeachingReviewNavigator.tsx.raw",
+      "bytes": 1341,
+      "sha256": "5ba595293bc39f08c86df45dda2f9e4d460ca27db9ee3a7bde336c3f1217a6ed"
+    },
+    {
+      "path": "tests/fixtures/head-review-compact/review-navigation-delivery-preservation.test.mjs.raw",
+      "bytes": 1997,
+      "sha256": "a6635789e100ef4bfd70df0cd5e2c6dd4d08b72017518b7d5f5f58a615008295"
+    }
+  ]
+}

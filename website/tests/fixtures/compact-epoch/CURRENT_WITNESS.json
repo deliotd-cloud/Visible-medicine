@@ -1,0 +1,62 @@
+{
+  "schema": "vm-compact-current-witness/1",
+  "sourceReceiptSha256": "d673e00573725781013a196f2caf040ea36110a06d56f4d879f219582e32a885",
+  "source": "9cef8900417bf592d3130f6ff92bf3e748cb55fc",
+  "files": [
+    {
+      "path": "components/HeadAtlasTeachingReview.tsx",
+      "bytes": 13457,
+      "sha256": "0dfaecd6ba67a3df983de5bf28e9d58d90d1d969144f20b4132a9a127c7c7c5f"
+    },
+    {
+      "path": "components/HeadCtFacialTeachingReview.tsx",
+      "bytes": 5114,
+      "sha256": "fe0a6c31ee3f6e83c8b28ec6ac765310127344b8870f2d72afea0f13a75862c0"
+    },
+    {
+      "path": "components/HeadTeachingReviewNavigator.tsx",
+      "bytes": 3106,
+      "sha256": "95ed5db80d5747d8c92ea6c657cbbadb967002ffb6f38aef703ee28cb4d7d319"
+    },
+    {
+      "path": "tests/head-review-sections-history-inverse.mjs",
+      "bytes": 2968,
+      "sha256": "6de0ee24944855c2622c3ece59c25cfb4d64a8de4dfd806fa8d62c81260f6d53"
+    },
+    {
+      "path": "scripts/bind-clinical-review.mjs",
+      "bytes": 10102,
+      "sha256": "13e794bca419bae893750261c197e14aa70e235675311833fd31fe7c120a157d"
+    },
+    {
+      "path": "atlas-review/integration-inputs.json",
+      "bytes": 290736,
+      "sha256": "8d6aa09df445a57dd6c0c6a0d0719dddb4864c20370454a7638c86e93a66c9b6"
+    },
+    {
+      "path": "lib/head-surface-validation.ts",
+      "bytes": 1333,
+      "sha256": "85597c4c6a59fb18c862eb404a3da21c3043306985f44f6d2985703b8c1022b6"
+    },
+    {
+      "path": "tests/current-atlas-delivery.mjs",
+      "bytes": 5092,
+      "sha256": "02dd815603c922dedbdc5a5fce270fbda736b81220e335d750dcbec1124c833e"
+    },
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "bytes": 27400,
+      "sha256": "7a814c4b0d2ef77feda6c12f7fa6f73eb007cc351a8bbec7cf22b8e480c791d6"
+    },
+    {
+      "path": "tests/review-navigation-delivery-preservation.test.mjs",
+      "bytes": 2732,
+      "sha256": "14e5824f2a60c96b4832d7a17416378500fe01d46ac8c7262985ecfa36301119"
+    },
+    {
+      "path": "tests/head-teaching-review-navigation.test.ts",
+      "bytes": 13704,
+      "sha256": "d641d0955f010028067e5f40ed8db4b378dae9a2e99928e884bb1e02ec625c42"
+    }
+  ]
+}
