@@ -1,0 +1,44 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T06:53:08.564Z",
+  "sourceIdentity": {
+    "kind": "slice-playback-commit-proposal",
+    "proposalSha256": "f0bbddbffd0b2bbe34e5353767b1dad1a1ddd351088e08450a84de3401ecefbd",
+    "parentSourceSha256": "de8fc153b47eec835bb1b966628478bfbac256f74d0df380df094a0fd19546a5"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadSlicePlayback.tsx",
+      "bytes": 7049,
+      "sha256": "40dceb319ca345c1c1deef97b6ca9e1609719588cf9b18076d4aa00afb37f47f"
+    },
+    {
+      "path": "website/tests/head-slice-playback.test.ts",
+      "bytes": 21539,
+      "sha256": "6c682cba2f6a6298b2f1c7f2b380678c2ceeb0cf0826c558ec6c28b35aaf65cf"
+    },
+    {
+      "path": "website/tests/head-slice-replay.test.ts",
+      "bytes": 9926,
+      "sha256": "0ac072b2d385e14062d38980879adfcfe7a2df0a63bd93ac849c3adb150771d6"
+    }
+  ],
+  "removed": [],
+  "scope": "Three authored proposal files: native slice-player commit lifecycle and two associated test files. No scan data, models, private records, generated assets or canonical ancestry. Not installed or a full project backup.",
+  "proof": {
+    "componentTests": 31,
+    "actualReactSyntheticBrowserChecks": 10,
+    "targetedTypesPassed": true,
+    "websiteIntegrated": false,
+    "fullWebsiteTypesPassed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
