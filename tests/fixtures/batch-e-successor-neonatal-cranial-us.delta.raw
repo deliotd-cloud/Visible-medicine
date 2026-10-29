@@ -1,0 +1,127 @@
+--- frozen/clinical-review-neonatal-cranial-us.test.ts
++++ current/clinical-review-neonatal-cranial-us.test.ts
+@@ -12 +12 @@
+-import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+@@ -13,0 +14,4 @@
++import {assertCurrentCranialTourEpoch,assertCurrentCranialTourCatalog} from './cranial-tour-current-epoch.mjs';
++import {readNeonatalInboxContexts} from './neonatal-inbox-contexts.mjs';
++import {emittedTeachingSearch} from './atlas-emitted-teaching.ts';
++import {restorePreRegionalTourHeadEntry} from './restore-pre-tour-head-entry.mjs';
+@@ -34,0 +39 @@
++const runtimeSources=validateCurrentAtlasDelivery().runtimeSources;
+@@ -40,0 +46,12 @@
++const currentHeadEntrypoint=(historical:string)=>{
++  const once=(source:string,before:string,after:string)=>{
++    assert.equal(source.split(before).length,2,'Exactly one current head learning-channel seam');
++    return source.replace(before,after);
++  };
++  let source=once(historical,"import {BodySelectionChannel} from '../../app/body-selection-channel';",
++    "import {BodySelectionChannel} from '../../app/body-selection-channel';\nimport {AtlasLearningSelectionChannel} from '../../app/atlas-learning-selection-channel';");
++  source=once(source,": <HeadSelectionChannel revision={region==='head-neck'?__VM_HEAD_SOURCE_REVISION__:''}><BodySelectionChannel",
++    ": <AtlasLearningSelectionChannel revision={__VM_HEAD_SOURCE_REVISION__} region={region}><HeadSelectionChannel revision={region==='head-neck'?__VM_HEAD_SOURCE_REVISION__:''}><BodySelectionChannel");
++  return once(source,'assetBase="/atlas-runtime/head-neck"/></BodySelectionChannel></HeadSelectionChannel>',
++    'assetBase="/atlas-runtime/head-neck"/></BodySelectionChannel></HeadSelectionChannel></AtlasLearningSelectionChannel>');
++};
+@@ -59,0 +77,3 @@
++const laterReasoning=new Map([
++  ['vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere','ventricular-landmark-choroid-plexus'],
++]);
+@@ -73,0 +94 @@
++    "export {hamstringTours} from './atlas-review/lib/hamstring-tours';",
+@@ -104 +125 @@
+-  assert.equal(git(['rev-parse',revision+':lib/regional-tours.ts']).toString().trim(),currentTourBlob);
++  assert.equal(git(['rev-parse',revision+':lib/regional-tours.ts']).toString().trim(),assertCurrentCranialTourEpoch());
+@@ -110,0 +132 @@
++  assert.equal(laterReasoning.size,1);
+@@ -119 +141 @@
+-  for(const {name,manifest} of learners){assert.equal(manifest.sourceCommit,revision,name);
++  for(const {name,manifest} of learners){assert.equal(manifest.sourceCommit,runtimeSources[name],name);
+@@ -135,3 +157,7 @@
+-    const source=committed(revision,path);
+-    assert.deepEqual(source,committed(historicalRevision,path),`${name}: immutable channel entrypoint`);
+-    assert.equal(learnerInputs.get(name)!.find(f=>f.path===path)?.sha256,sha(source),`${name}: entrypoint`);
++    const source=committed(revision,path),historicalSource=committed(historicalRevision,path);
++    const runtimeSource=committed(runtimeSources[name],path);
++    if(name==='head-neck')assert.equal(restorePreRegionalTourHeadEntry(norm(source)),currentHeadEntrypoint(norm(historicalSource)),
++      'Current head entrypoint adds only the exact learning-selection channel');
++    else assert.deepEqual(source,historicalSource,`${name}: immutable channel entrypoint`);
++    assert.deepEqual(runtimeSource,source,`${name}: current source agrees with independent runtime family`);
++    assert.equal(learnerInputs.get(name)!.find(f=>f.path===path)?.sha256,sha(runtimeSource),`${name}: entrypoint`);
+@@ -141 +167 @@
+-    assert.equal(norm(source),bodyChannelEntrypoint(precedingEntrypoint,name),`${name}: exact additional root-body channel only`);
++    assert.equal(norm(historicalSource),bodyChannelEntrypoint(precedingEntrypoint,name),`${name}: exact additional root-body channel only`);
+@@ -150 +176 @@
+-      sha(source),`${name}: ${path} input`);
++      sha(committed(runtimeSources[name],path)),`${name}: ${path} input`);
+@@ -157 +183 @@
+-    assert.equal(learnerInputs.get(name)!.find(f=>f.path===path)?.sha256,sha(source),`${name}: independent catalog input`);
++    assert.equal(learnerInputs.get(name)!.find(f=>f.path===path)?.sha256,sha(committed(runtimeSources[name],path)),`${name}: independent catalog input`);
+@@ -167 +192,0 @@
+-  assert.equal(liveApi.regionalTours.length,51);assert.equal(liveApi.regionalTours.reduce((n:number,tour:{steps:unknown[]})=>n+tour.steps.length,0),309);
+@@ -175,0 +201 @@
++  assertCurrentCranialTourCatalog(firstDelivery.regionalTours,liveApi.regionalTours,liveApi.hamstringTours);
+@@ -209,4 +235,5 @@
+-  const learnerJs=learners.filter(item=>item.name==='head-neck'||item.name==='shoulder').map(({name,base,manifest})=>({name,
+-    text:manifest.files.filter((f:File)=>f.path.endsWith('.js')).map((f:File)=>{
+-      const bytes=readFileSync(base+f.path);assert.equal(sha(bytes),f.sha256,`${name}: ${f.path}`);
+-      return bytes.toString();}).join('\n')}));
++  const learnerJs=learners.filter(item=>item.name==='head-neck'||item.name==='shoulder').map(({name,base,manifest})=>{
++    for(const f of manifest.files.filter((f:File)=>f.path.endsWith('.js')))
++      assert.equal(sha(readFileSync(base+f.path)),f.sha256,`${name}: ${f.path}`);
++    return {name,text:emittedTeachingSearch(base,manifest.files)};
++  });
+@@ -254,0 +282 @@
++    const laterQuestion=laterReasoning.get(s.id);
+@@ -258,2 +286,8 @@
+-    for(const key of Object.keys(packet).filter(key=>!['guidedTours','fingerprints','materialHash'].includes(key)))
+-      assert.deepEqual(livePacket[key],packet[key],`${s.id}: complete non-tour field ${key}`);
++    for(const key of Object.keys(packet).filter(key=>!['guidedTours','fingerprints','materialHash'].includes(key))){
++      if(key==='reasoning'&&laterQuestion){
++        assert.equal(packet.reasoning,null,`${s.id}: neonatal epoch precedes the current reasoning question`);
++        assert.equal(livePacket.reasoning?.key,laterQuestion,`${s.id}: exact current reasoning key`);
++        assert.equal(livePacket.reasoning?.readiness,'draft',`${s.id}: reasoning awaits review`);
++        assert.equal(livePacket.reasoning?.answerId,s.id,`${s.id}: exact current answer identity`);
++      }else assert.deepEqual(livePacket[key],packet[key],`${s.id}: complete non-tour field ${key}`);
++    }
+@@ -268,0 +303,3 @@
++    }else if(laterQuestion){
++      assert.notEqual(livePacket.fingerprints.teaching,packet.fingerprints.teaching,`${s.id}: current question changes teaching`);
++      assert.notEqual(livePacket.materialHash,packet.materialHash,`${s.id}: current question changes material`);
+@@ -270,0 +308,11 @@
++    if(laterQuestion){
++      for(const change of ['answerId','explanation','reference','source','readiness']){
++        const altered=wire(livePacket);
++        if(change==='answerId')altered.reasoning.answerId='vm:foreign-answer';
++        if(change==='explanation')altered.reasoning.explanation+=' forged';
++        if(change==='reference')altered.reasoning.references[0].url='javascript:alert(1)';
++        if(change==='source')altered.reasoning.choices[0].sources[0].sha256='0'.repeat(64);
++        if(change==='readiness')altered.reasoning.readiness='approved';
++        assert.equal(await liveApi.parseBodyReviewResponse(altered,s.id),null,`${s.id}: current reasoning ${change} refused`);
++      }
++    }
+@@ -295,0 +344 @@
++    const laterCurrentTeaching=!!laterTour||!!laterQuestion;
+@@ -300 +349 @@
+-      if(laterTour)assert.notEqual(liveContext[key],context[key],`${s.id}: playback changes ${key}`);
++      if(laterCurrentTeaching)assert.notEqual(liveContext[key],context[key],`${s.id}: playback or reasoning changes ${key}`);
+@@ -302,2 +351,2 @@
+-    if(laterTour)assert.notEqual(liveContext.revisions.teaching,context.revisions.teaching,
+-      `${s.id}: playback changes teaching decision revision`);
++    if(laterCurrentTeaching)assert.notEqual(liveContext.revisions.teaching,context.revisions.teaching,
++      `${s.id}: playback or reasoning changes teaching decision revision`);
+@@ -332,2 +381,2 @@
+-    if(laterTour)assert.equal((await liveSave(decision)).status,409,
+-      `${s.id}: historical decision is stale after current playback`);
++    if(laterCurrentTeaching)assert.equal((await liveSave(decision)).status,409,
++      `${s.id}: historical decision is stale after current playback or reasoning`);
+@@ -354 +403,2 @@
+-  const {getClinicalReviewInbox,clinicalReviewEntries}=await inbox(),api=await imported();
++  const {currentContexts,priorContexts}=readNeonatalInboxContexts();
++  const {getClinicalReviewInbox,clinicalReviewEntries}=await inbox();
+@@ -373,2 +422,0 @@
+-  const prior=await import(pathToFileURL(atlas+'/scripts/exact-source-history-api.mjs').href);
+-  const before=await prior.exactSourceHistoryApi(parent,'review-security');
+@@ -379 +427 @@
+-    const previous=await before.bodyReviewContext(entry.id),now=await api.bodyReviewContext(entry.id);
++    const previous=priorContexts[entry.id],now=currentContexts[entry.id];

@@ -1,0 +1,10 @@
+--- frozen/clinical-review-orbital-apex-ct.test.ts
++++ current/clinical-review-orbital-apex-ct.test.ts
+@@ -3 +3 @@
+-import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+@@ -51,0 +52 @@
++const runtimeSources=validateCurrentAtlasDelivery().runtimeSources;
+@@ -109 +110 @@
+-    assert.equal(built.sourceCommit,revision,name);
++    assert.equal(built.sourceCommit,runtimeSources[name],name);

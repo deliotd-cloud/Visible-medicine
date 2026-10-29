@@ -1,0 +1,233 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T22:56:46.087Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-foot-review-verified/SOURCE_CANDIDATE.json",
+      "sha256": "947db7d18e22ca6e38a0f04a45bd52192704093f2c1a3069b042df6d844df698"
+    },
+    "regressionSource": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-partition1-completed/SOURCE_CANDIDATE.json",
+      "sha256": "129332919c67f6267cbc356b606e7ed7d10616b83f01fc6ac428fb3734057222"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/clinical-review-mesenteric-vessel-teaching.test.ts",
+      "bytes": 9963,
+      "sha256": "ca19f0b95491e20932d23910c8a7e9e4745da147a5371fa1f000d7f1f9412ffc"
+    },
+    {
+      "path": "tests/clinical-review-short-ciliary-quiz.test.ts",
+      "bytes": 21138,
+      "sha256": "e6155591f12fe5eba4eb079ff91b99f865d41790dd353c0df46439a60d30e6e6"
+    },
+    {
+      "path": "tests/clinical-review-thoracic-venous-xray.test.ts",
+      "bytes": 16847,
+      "sha256": "d7a6c13e6d8d0982a7e02f00d825f55194ee21d269baa7948de5b53cf47fc77f"
+    },
+    {
+      "path": "tests/head-link-menu-current.test.mjs",
+      "bytes": 5036,
+      "sha256": "8d624e69a2987bce6ebd767a956d5273a86b95c3536b85e2850bba0c6012d4a0"
+    },
+    {
+      "path": "tests/salpingopharyngeus-integration-register.test.mjs",
+      "bytes": 1602,
+      "sha256": "997f461b2b3ad80be84d2f9473f385ce76011663e3cb7a90ac34a73030d5f8f6"
+    },
+    {
+      "path": "tests/clinical-epoch-batch-e-preservation.test.mjs",
+      "bytes": 7321,
+      "sha256": "343f63a0b8bae0aa9f8414bb0638011c4ce2d9e52a50a4ad1d689d9c517c2019"
+    },
+    {
+      "path": "tests/fixtures/batch-e-successor-neonatal-cranial-us.delta.raw",
+      "bytes": 9103,
+      "sha256": "b9822fb42a8ed9b8442efdfb3eb8ffd6a6d72548838c7a1d171a2a78a8478e89"
+    },
+    {
+      "path": "tests/fixtures/batch-e-successor-nested-duct-xray.delta.raw",
+      "bytes": 562,
+      "sha256": "df6e27547abd92181acc74831308c708975ae0b8195e808530f3bf4a3956ccc7"
+    },
+    {
+      "path": "tests/fixtures/batch-e-successor-orbital-apex-ct.delta.raw",
+      "bytes": 553,
+      "sha256": "54cf74ba4e09db022386d98c544c0fa7c2796dc6ed0238408df0ce939031d10b"
+    },
+    {
+      "path": "tests/fixtures/batch-e-successor-orbital-ring-ct.delta.raw",
+      "bytes": 756,
+      "sha256": "724c735f3106a9fc4fc4e5df5a3e4d055b3f1a1a8232069181541206eaa3320e"
+    },
+    {
+      "path": "tests/fixtures/review-successor-source-transitions.json",
+      "bytes": 103037,
+      "sha256": "4c277313483349dac2bc1f334b7de9f7481cf1a33aecfe94500b22a886901f4c"
+    },
+    {
+      "path": "tests/lacrimal-current-transition.test.mjs",
+      "bytes": 14643,
+      "sha256": "34d538160b18b203aa0649aef0799a5a6112c1c07554c9c99e885eca89c2fdb7"
+    },
+    {
+      "path": "tests/release-diagnostic-context-inverse.mjs",
+      "bytes": 4454,
+      "sha256": "c4a291e0a2b3cf8b7bcbc5fb629e018da430fa176c23c69c81715461e5a35687"
+    },
+    {
+      "path": "tests/review-filter-scroll-source-role.mjs",
+      "bytes": 1370,
+      "sha256": "5682e5800c332f2523d30699a9e9d6b09a793fe77109ab3c8209dcc933c8e832"
+    },
+    {
+      "path": "tests/review-successor-source-role.mjs",
+      "bytes": 1783,
+      "sha256": "a3c75a42da40ce73c7359758f11b863637c4b5768c2dfe62116af299c2d2b5f8"
+    },
+    {
+      "path": "tests/review-successor-source-role.test.mjs",
+      "bytes": 1340,
+      "sha256": "260d5ed0b633448186f5f280bd55a6bc744b027d0f8f3145fcd02594979ccc95"
+    },
+    {
+      "path": "tests/renal-tour-epoch-admission.mjs",
+      "bytes": 17980,
+      "sha256": "a73e91be5157e8a7437a90ffba6c728dc033c800d980888432bb79f9e98e4f8c"
+    },
+    {
+      "path": "tests/renal-tour-latest-successor.test.mjs",
+      "bytes": 2343,
+      "sha256": "14162839d8787a2ebc6c14e9fd7747d0e53018791c0008fc351cacbd89afc2fd"
+    },
+    {
+      "path": "app/workspace/atlas-review/source-comparisons/foot/page.tsx",
+      "bytes": 1387,
+      "sha256": "bd9e958bd731c19e963a146e1b15952fd1a29986bb00d72e7bc5702109d4f18f"
+    },
+    {
+      "path": "app/api/atlas-review/source-comparisons/foot/[asset]/route.ts",
+      "bytes": 505,
+      "sha256": "c61fc5e11dd814d1b7db88ea1a005a6a03ec1727ee4c0fe0053a48b3bc7d0bbb"
+    },
+    {
+      "path": "lib/foot-comparison-delivery.ts",
+      "bytes": 4585,
+      "sha256": "62d8a38b2796936aaf8612218696eadcdebdac91cf931cacddd4d7b0eeceaa68"
+    },
+    {
+      "path": "lib/foot-comparison-manifest.json",
+      "bytes": 20232,
+      "sha256": "7d32f70ac4c8d9621dc641e96dc1875300159f30e1f6ee2ce3e3c43b2b01e1ab"
+    },
+    {
+      "path": "scripts/prepare-foot-comparison-local.mjs",
+      "bytes": 9956,
+      "sha256": "719d216506ebe6d8c3f254e89c54d1ff2bb90dcc19f854f29e45ec1559469492"
+    },
+    {
+      "path": "tests/foot-comparison.test.ts",
+      "bytes": 9021,
+      "sha256": "2b499263a8921d9d2b0feab94add71afd13367cde37331b15e8e15ce01dc4f26"
+    },
+    {
+      "path": "tests/foot-comparison-stream-bounds.test.ts",
+      "bytes": 2347,
+      "sha256": "e151addaa5915abed8a4401f4119794402250439dfad87640afe6efc42402e20"
+    },
+    {
+      "path": "app/workspace/atlas-review/source-comparisons/page.tsx",
+      "bytes": 2214,
+      "sha256": "437ecc3e3e706bcb70ee9eda0a5165eea9348b4e0bf2e863beda840e1d9be37f"
+    },
+    {
+      "path": "lib/clinical-review-extra-inbox.ts",
+      "bytes": 21833,
+      "sha256": "297486dfd569acc2b768b074b9e7270d67b869206fc568448b29ec6450ea27ac"
+    },
+    {
+      "path": "lib/clinical-review-inbox-contract.ts",
+      "bytes": 4669,
+      "sha256": "3a25a2de31d24be58cd2903f13aeff325eaf0850c05d7da0edeb25af2df1159b"
+    },
+    {
+      "path": "tests/renal-tour-epoch-admission.test.mjs",
+      "bytes": 15337,
+      "sha256": "24323fa2b2981903d5b498c41d189f823c178a49d31a1d287660041da8614bc5"
+    },
+    {
+      "path": "tests/clinical-review-extra-inbox.test.ts",
+      "bytes": 24501,
+      "sha256": "0d2658239f3a80d57865cc3efaf1951fe99711ddfc18c8399d89d66a7e8688f9"
+    },
+    {
+      "path": "tests/clinical-review-inbox.test.ts",
+      "bytes": 13675,
+      "sha256": "ac18c756bbbdf35297ca8616064dbfe121c3b4af052dd8170906a88def6b2d20"
+    },
+    {
+      "path": "recipes/partition-prepare.mjs",
+      "bytes": 3121,
+      "sha256": "26ee665609738dd4e8bf69561e5c490d761b5f83fa79c3ba9a7593f29cae32d4"
+    },
+    {
+      "path": "recipes/partition-verify.mjs",
+      "bytes": 3991,
+      "sha256": "aa740709640f14e7930bea9c03c99019d710c6d7e69e0ab765ca760be3dfc0fd"
+    },
+    {
+      "path": "recipes/partition-final-prepare.mjs",
+      "bytes": 3037,
+      "sha256": "a2912a567213367070be7738de4efc41ccb92241bcfedf86445bad34f42c9bf7"
+    },
+    {
+      "path": "recipes/partition-final-verify.mjs",
+      "bytes": 3994,
+      "sha256": "78fe72a93aa2945c46751df9e643719dd9e4b7b4083680083a46053f03262874"
+    },
+    {
+      "path": "recipes/foot-prepare.mjs",
+      "bytes": 5245,
+      "sha256": "df39bd0fea0720c8914684770627670384f09b19155495962872a47ff850930c"
+    },
+    {
+      "path": "recipes/foot-verify.mjs",
+      "bytes": 4210,
+      "sha256": "1f49af377fbc7d55d13547a56d589155db5d38cdfafa5f6c6dc7afd1357f1407"
+    },
+    {
+      "path": "recipes/foot-final-prepare.mjs",
+      "bytes": 3947,
+      "sha256": "61e6ffd216efa0bb9e878cf8e8f4500dd122efc47abe9ccc81dada9911dae65d"
+    },
+    {
+      "path": "recipes/foot-final-verify.mjs",
+      "bytes": 4212,
+      "sha256": "e4757a69f632f97392a634e038418cda075f0c2a28483430de67677b29a7d693"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 13114,
+      "sha256": "f55d430cd787415811caee30eab84a6a5c44ea7e7dc76ea6b1918b5660fb026a"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected authored application/test/helper/manifest source and verification recipes only. Excludes all private asset modules, models, original specimens, scans, masks, stored decisions and raw repository ancestry.",
+  "proof": {
+    "regressionRoots": 49,
+    "regressionTests": 262,
+    "focusedRoots": 5,
+    "focusedTests": 25,
+    "wholeSuitePassing": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,13 @@
+--- frozen/clinical-review-orbital-ring-ct.test.ts
++++ current/clinical-review-orbital-ring-ct.test.ts
+@@ -11 +11 @@
+-import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+@@ -30,0 +31 @@
++const runtimeSources=validateCurrentAtlasDelivery().runtimeSources;
+@@ -72 +73 @@
+-  assert.equal(learner.manifest.sourceCommit,revision,learner.name);
++  assert.equal(learner.manifest.sourceCommit,runtimeSources[learner.name],learner.name);
+@@ -88 +89 @@
+-   assert.equal(input?.sha256,digest,`${name}: ${path}`);
++   assert.equal(input?.sha256,sha(git(runtimeSources[name],path)),`${name}: ${path}`);

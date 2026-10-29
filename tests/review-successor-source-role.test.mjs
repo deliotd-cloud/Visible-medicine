@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';import test from 'node:test';import {readFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {restoreExactReviewSource,beforeReviewSuccessorSource} from './review-successor-source-role.mjs';
+const sha=b=>createHash('sha256').update(b).digest('hex'),rows=JSON.parse(readFileSync(new URL('./fixtures/review-successor-source-transitions.json',import.meta.url))).records;
+for(const row of rows){test('complete historical reconstruction and refusal: '+row.path,()=>{
+ const current=readFileSync(new URL('../'+row.path,import.meta.url)),prior=beforeReviewSuccessorSource(row.path,current);assert.equal(sha(prior),row.beforeSha256);assert.equal(sha(current),row.afterSha256);
+ assert.deepEqual(beforeReviewSuccessorSource(row.path,prior),prior);
+ assert.equal(beforeReviewSuccessorSource(row.path,current.toString()),prior.toString());
+ assert.throws(()=>beforeReviewSuccessorSource('unknown',current));
+ assert.throws(()=>beforeReviewSuccessorSource(row.path,Buffer.concat([current,Buffer.from('foreign')])));
+ assert.throws(()=>restoreExactReviewSource({...row,removed:row.removed+'foreign'},current));
+ assert.throws(()=>restoreExactReviewSource({...row,inserted:row.inserted+'foreign'},current));
+ assert.throws(()=>restoreExactReviewSource({...row,start:row.start+1},current));
+});}

@@ -1,0 +1,10 @@
+--- frozen/clinical-review-nested-duct-xray.test.ts
++++ current/clinical-review-nested-duct-xray.test.ts
+@@ -10 +10 @@
+-import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
++import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+@@ -114,0 +115 @@
++ const runtimeSources=validateCurrentAtlasDelivery().runtimeSources;
+@@ -116 +117 @@
+-  assert.equal(manifest.sourceCommit,revision,name);
++  assert.equal(manifest.sourceCommit,runtimeSources[name],name);

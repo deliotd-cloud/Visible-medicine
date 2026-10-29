@@ -1,0 +1,21 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {prepareHistoricalEnvironment} from 'file:///F:/VisibleMedicine/staging/20261030-head-tour-speed-release/historical-environment.mjs';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261029-foot-review-verified',prep=json(root+'/PREPARED.json'),parent=json(prep.parent.path),site=prep.site;
+const write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n',{flag:'wx'}),ref=p=>({path:p,sha256:hash(p)});
+assert.equal(hash(prep.parent.path),prep.parent.sha256);
+const rows=new Map(parent.sourceRows.map(r=>[r.path,{...r}]));for(const r of prep.authored){assert.equal(rows.get(r.path)?.sha256??null,r.beforeSha256);rows.set(r.path,{path:r.path,bytes:r.bytes,sha256:r.sha256});}
+function verify(){for(const r of rows.values())assert.equal(hash(site+'/'+r.path),r.sha256,r.path);for(const r of parent.sourceRows)assert.equal(hash(parent.website+'/'+r.path),r.sha256,'Parent preserved: '+r.path);for(const r of parent.dependencies){assert.equal(hash(r.file),r.sha256);assert.equal(hash(r.entry),r.entrySha256);}for(const r of json(site+'/lib/foot-comparison-manifest.json').files){assert.equal(hash(prep.privateAssetRoot+'/'+r.name),r.sha256,r.name);}}
+verify();const source={...parent,schema:'vm-foot-private-review-source/1',at:new Date().toISOString(),website:site,parent:prep.parent,sourceRows:[...rows.values()],sourcePaths:[...rows.keys()],changedPaths:prep.authored.filter(r=>r.beforeSha256).map(r=>r.path),addedPaths:prep.authored.filter(r=>!r.beforeSha256).map(r=>r.path),removedPaths:[],privateAssetsIncludedForLocalTestOnly:true,wholeSuitePassing:false,installed:false};
+if(fs.existsSync(root+'/SOURCE_CANDIDATE.json'))assert.deepEqual({...json(root+'/SOURCE_CANDIDATE.json'),at:source.at},source);else write(root+'/SOURCE_CANDIDATE.json',source);
+const environment=prepareHistoricalEnvironment(root+'/SOURCE_CANDIDATE.json',hash(root+'/SOURCE_CANDIDATE.json'));
+if(fs.existsSync(root+'/HISTORICAL_ENVIRONMENT.json'))assert.deepEqual(json(root+'/HISTORICAL_ENVIRONMENT.json').environment,environment.environment);else write(root+'/HISTORICAL_ENVIRONMENT.json',environment);
+const roots=['tests/foot-comparison.test.ts','tests/foot-comparison-stream-bounds.test.ts','tests/renal-tour-epoch-admission.test.mjs','tests/clinical-review-extra-inbox.test.ts','tests/clinical-review-inbox.test.ts'];
+if(!fs.existsSync(root+'/TEST_SCOPE.json'))write(root+'/TEST_SCOPE.json',{roots,description:'Actual protected foot asset GET/HEAD and revocation, pinned provenance and decompression bounds, read-only inbox status and link contract, preserved renal source epochs.',wholeSuitePassing:false});
+if(process.argv.includes('--prepare-only')){console.log(JSON.stringify({prepared:true,source:ref(root+'/SOURCE_CANDIDATE.json'),roots:roots.length}));process.exit(0);}
+assert.equal(json('G:/VisibleMedicine-temp/staging/20261029-foot-review-integration/focused/PROCESS-TERMINAL.json').terminalObserved,true,'Previous heavy lane must finish first');
+fs.mkdirSync(root+'/temp',{recursive:true});
+const command='--max-old-space-size=512 --experimental-strip-types --test --test-concurrency=1 --test-reporter=spec --test-reporter-destination=stdout --test-reporter=tap --test-reporter-destination='+root+'/focused/child.tap '+roots.join(' ');
+const run=await guarded({site,dir:root+'/focused',command,heap:512,aggregate:2048,minimum:4096,extraEnv:{...environment.environment,TEMP:root+'/temp',TMP:root+'/temp',VM_FOOT_PRIVATE_ASSET_ROOT:prep.privateAssetRoot}});
+verify();const result={at:new Date().toISOString(),source:ref(root+'/SOURCE_CANDIDATE.json'),scope:ref(root+'/TEST_SCOPE.json'),roots:roots.length,run,passing:run.passing,sourceExactAfter:true,wholeSuitePassing:false,installed:false,normalPreviewChanged:false};write(root+'/VERIFIED.json',result);console.log(JSON.stringify(result));process.exitCode=result.passing?0:1;
