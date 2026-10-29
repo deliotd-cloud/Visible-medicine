@@ -1,171 +1,66 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-29T18:20:01.618Z",
+  "at": "2026-10-29T18:37:00.441Z",
   "sourceIdentity": {
-    "nativeParent": "4259fd81a7da96945dcd288cb8652dce3421af34",
     "preparationSha256": "f1ae317be0b5b862225f47eb1907cdc0378f4a6891e4c779ff0b38b13e1f15ee"
   },
-  "parent": "edca442d24a2bb62fe90c73c77e0e73964f88a32",
-  "gitParent": "edca442d24a2bb62fe90c73c77e0e73964f88a32",
+  "parent": "642a97bbe1a5fcd66adaf5ad55f257075b616673",
+  "gitParent": "642a97bbe1a5fcd66adaf5ad55f257075b616673",
   "files": [
     {
-      "path": "content/appendicular-artery-ultrasound-pin.json",
-      "sha256": "8dfc7f734edb8b5cde6c80b8b33b2f2e903abd9a1248cf7b4cbadf7ece9a77c8",
-      "bytes": 1684
+      "path": "tools/validation/native-teaching-delta/delta-core.mjs",
+      "sha256": "91cee06110daab7f9cc21d8e18e9e8a7bc0b50c1b360ecc4bc2f7cf66cec0423",
+      "bytes": 4619
     },
     {
-      "path": "lib/appendicular-artery-ultrasound.ts",
-      "sha256": "28d85b1da77e925ec631dd470fec5d90fb75404fa7b454be78a99e00b7da7336",
-      "bytes": 2446
+      "path": "tools/validation/native-teaching-delta/delta-core.test.mjs",
+      "sha256": "ec0820ffd818f21d312f42dae818aac7711f6a5388f9a1e53c7e2919dd3b3404",
+      "bytes": 3999
     },
     {
-      "path": "app/body-content.ts",
-      "sha256": "e48f244652dd52f050ad76b05c7993a26d7482bd210eb536ac858c2334a0ca3e",
-      "bytes": 85848
-    },
-    {
-      "path": "content/central-neural-imaging.ts",
-      "sha256": "0365b5bc0e8ea0c75cbb30db69220ac81bb99b8779f807c1db75168937683630",
-      "bytes": 15531
-    },
-    {
-      "path": "scripts/regional-teaching-snapshots.mjs",
-      "sha256": "38c74f4dc3d1ef6e95030c34d00b046b15ace38e928d7e42d8a7772920cae316",
-      "bytes": 5584
-    },
-    {
-      "path": "scripts/teaching-quality-report.mjs",
-      "sha256": "fbdeda8e674a0445cf35ca84d62bd6b56516dc307f44b380481621dbfa16e8dc",
-      "bytes": 6455
-    },
-    {
-      "path": "scripts/test-teaching-quality-report.mjs",
-      "sha256": "e8303989f55ccc51f5afc88d9565b1b0dc7c00ec61bd123c163c68efce246d98",
-      "bytes": 5657
-    },
-    {
-      "path": "scripts/audit-teaching-quality.mjs",
-      "sha256": "fb14e050b36b237aa429d212fb8c5faea78128e5e185585b2a54b4636d6e65b1",
-      "bytes": 5162
-    },
-    {
-      "path": "scripts/test-teaching-quality-cli.mjs",
-      "sha256": "9850622e4374ad23f3bce774b7b9201a4044f214e78854476458d48fccd7dd03",
-      "bytes": 3057
-    },
-    {
-      "path": "lib/inferior-epigastric-vessels.ts",
-      "sha256": "93cbc537a0542251e71f0e9415a204ac31accf0a9212e8aa51f03c29c54f0aeb",
-      "bytes": 5341
-    },
-    {
-      "path": "scripts/test-inferior-epigastric-quiz.mjs",
-      "sha256": "bfd3e86bd7d228ad897c87a1f974039a3a23310066f587eb5ee8fa5aa6a16a75",
-      "bytes": 4525
-    },
-    {
-      "path": "scripts/fixtures/inferior-epigastric-vessels.before.ts.txt",
-      "sha256": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997",
-      "bytes": 4815
-    },
-    {
-      "path": "lib/elbow-arteries.ts",
-      "sha256": "ecd6c21d4a6e21261698f9cf3a20e68614a5dc23d509049a56c4fc91abbe4e3a",
-      "bytes": 3455
-    },
-    {
-      "path": "scripts/test-elbow-quiz.mjs",
-      "sha256": "d4ff3fa98b09a93a9cec4a8bd217bb664d221ac4a5f94ab7f29161fc59644c33",
-      "bytes": 4394
-    },
-    {
-      "path": "scripts/fixtures/elbow-arteries.before.ts.txt",
-      "sha256": "6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c",
-      "bytes": 3291
-    },
-    {
-      "path": "lib/genicular-arteries.ts",
-      "sha256": "afad1128a4ae83366550cef9becbdfd66bc2f25d166d13484b8dfe8f060796c6",
-      "bytes": 3955
-    },
-    {
-      "path": "scripts/test-genicular-quiz.mjs",
-      "sha256": "b92a7addcd94cdff4d8b23c36a8711d0897f811c8f2c275bfceb19792a531391",
-      "bytes": 3648
-    },
-    {
-      "path": "scripts/fixtures/genicular-arteries.before.ts.txt",
-      "sha256": "c9c38677221dc5076d3aa0f55f4ec08b53e307234cc78426b765c93cf4c39322",
-      "bytes": 3657
-    },
-    {
-      "path": "lib/cranial-arteries.ts",
-      "sha256": "e4d69b0da23d5036c2c3b18263f71fcc220872917d1bc8c8357160620c961854",
-      "bytes": 2899
-    },
-    {
-      "path": "scripts/fixtures/cranial-arteries.before.ts.txt",
-      "sha256": "503181d76e2a323134da111234bd3842c85026ecf8cae460138271b7279f3804",
-      "bytes": 2533
-    },
-    {
-      "path": "lib/inferior-thyroid-arteries.ts",
-      "sha256": "09d5e210ad5db4db4718dfea0299dcdbccc21c720f822ee54a4b4fa6541ba739",
-      "bytes": 2832
-    },
-    {
-      "path": "scripts/fixtures/inferior-thyroid-arteries.before.ts.txt",
-      "sha256": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0",
-      "bytes": 2647
-    },
-    {
-      "path": "lib/subscapular-arteries.ts",
-      "sha256": "b1ba6873816fbe26b5f30174a0961b29f433e21ed97c7ba4d56fb73fbd9347e7",
-      "bytes": 2926
-    },
-    {
-      "path": "scripts/fixtures/subscapular-arteries.before.ts.txt",
-      "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db",
-      "bytes": 2613
-    },
-    {
-      "path": "scripts/test-cranial-shoulder-quiz.mjs",
-      "sha256": "6c3a9e04244bdcad7fa9b2794046d563b536ab1d4446e6765b167c4f3285306f",
-      "bytes": 5294
-    },
-    {
-      "path": "lib/cubital-veins.ts",
-      "sha256": "af5daa234cc53fa3827084853399b08a02bc5122b151b0787e5ad01b70b0bb00",
-      "bytes": 4062
-    },
-    {
-      "path": "scripts/test-cubital-quiz.mjs",
-      "sha256": "d70851ac044c47406713661211b2be1e425ed2944cbe7336f49f8d9a28839717",
-      "bytes": 3475
-    },
-    {
-      "path": "scripts/fixtures/cubital-veins.before.ts.txt",
-      "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6",
-      "bytes": 3399
+      "path": "tools/validation/native-teaching-delta/check-successor.mjs",
+      "sha256": "9f041a671e979bfa23196abc6016eea2004d2437250dd8725575ab6d91099708",
+      "bytes": 11184
     }
   ],
   "removed": [
-    "scripts/fixtures/inferior-epigastric-vessels.before.ts",
-    "scripts/fixtures/elbow-arteries.before.ts",
-    "scripts/fixtures/genicular-arteries.before.ts",
-    "scripts/fixtures/cranial-arteries.before.ts",
-    "scripts/fixtures/inferior-thyroid-arteries.before.ts",
-    "scripts/fixtures/subscapular-arteries.before.ts",
-    "scripts/fixtures/cubital-veins.before.ts"
+    "content/appendicular-artery-ultrasound-pin.json",
+    "lib/appendicular-artery-ultrasound.ts",
+    "app/body-content.ts",
+    "content/central-neural-imaging.ts",
+    "scripts/regional-teaching-snapshots.mjs",
+    "scripts/teaching-quality-report.mjs",
+    "scripts/test-teaching-quality-report.mjs",
+    "scripts/audit-teaching-quality.mjs",
+    "scripts/test-teaching-quality-cli.mjs",
+    "lib/inferior-epigastric-vessels.ts",
+    "scripts/test-inferior-epigastric-quiz.mjs",
+    "scripts/fixtures/inferior-epigastric-vessels.before.ts.txt",
+    "lib/elbow-arteries.ts",
+    "scripts/test-elbow-quiz.mjs",
+    "scripts/fixtures/elbow-arteries.before.ts.txt",
+    "lib/genicular-arteries.ts",
+    "scripts/test-genicular-quiz.mjs",
+    "scripts/fixtures/genicular-arteries.before.ts.txt",
+    "lib/cranial-arteries.ts",
+    "scripts/fixtures/cranial-arteries.before.ts.txt",
+    "lib/inferior-thyroid-arteries.ts",
+    "scripts/fixtures/inferior-thyroid-arteries.before.ts.txt",
+    "lib/subscapular-arteries.ts",
+    "scripts/fixtures/subscapular-arteries.before.ts.txt",
+    "scripts/test-cranial-shoulder-quiz.mjs",
+    "lib/cubital-veins.ts",
+    "scripts/test-cubital-quiz.mjs",
+    "scripts/fixtures/cubital-veins.before.ts.txt"
   ],
-  "scope": "28 exact authored source/test files for the composed native teaching successor. Includes existing pallidal MRI and appendicular US proposals, graded quiz drafts across41source selections, editorial audit, generator cleanup and plain-text regression fixtures. Partial unpublished source-only recovery. No anatomy geometry, scans, patient data, runtime output, full source snapshot or raw canonical Git ancestry.",
+  "scope": "Three read-only native integration validation tools. Carries the prior filtered authored source backup, not canonical repository ancestry. No scans, patient data, geometry, generated runtime, clinical approval or deployment.",
   "proof": {
-    "focusedQuizTests": 15,
-    "fixtureInputsExcluded": 7,
-    "publicGeometryUnchanged": true,
-    "stockGeneration": false,
-    "installed": false,
-    "clinicalApproval": false
+    "tests": 7,
+    "expectedChangedLessons": 44,
+    "expectedUnchangedLessons": 9892,
+    "actualStaleGenerationRefused": true,
+    "completeBuild": false,
+    "installed": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

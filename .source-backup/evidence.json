@@ -1,8 +1,8 @@
 {
-  "focusedQuizTests": 15,
-  "fixtureInputsExcluded": 7,
-  "publicGeometryUnchanged": true,
-  "stockGeneration": false,
-  "installed": false,
-  "clinicalApproval": false
+  "tests": 7,
+  "expectedChangedLessons": 44,
+  "expectedUnchangedLessons": 9892,
+  "actualStaleGenerationRefused": true,
+  "completeBuild": false,
+  "installed": false
 }
