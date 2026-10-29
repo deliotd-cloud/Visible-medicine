@@ -1,0 +1,66 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T16:47:23.992Z",
+  "sourceIdentity": {
+    "parent": {
+      "path": "F:/VisibleMedicine/staging/20261030-resumable-regression-website/SOURCE_CANDIDATE.json",
+      "sha256": "ae82c1f96dfe55b6a776b85467c6c7740b06821e43dc5ae9c43d42f5c065c10f"
+    },
+    "scope": "Website search cache proposal; five authored files only"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/ClinicalReviewInbox.tsx",
+      "bytes": 39086,
+      "sha256": "cef9c3ed842dddd458cc801bf4b12e2f63694de238e29b90eac98dc369470bf2"
+    },
+    {
+      "path": "lib/clinical-review-search.ts",
+      "bytes": 1379,
+      "sha256": "4891002b3a881176618cbb67dddba4df69ba0fb3fbdd63ed0a3ecbf04f49ffad"
+    },
+    {
+      "path": "tests/clinical-review-search.test.mjs",
+      "bytes": 3265,
+      "sha256": "933de32336f1c8f415a05eb08e637c8bb4a4c5f52c9024abf320b85691b04531"
+    },
+    {
+      "path": "tests/clinical-review-inbox-link-context.test.mjs",
+      "bytes": 10368,
+      "sha256": "c2f356f4137ef5fa12502749b96d974f3bfa96c34f7da2eea9f15590924eb24c"
+    },
+    {
+      "path": "tests/clinical-review-inbox-workbench.test.mjs",
+      "bytes": 12436,
+      "sha256": "3788ed5665797b719c98b887c64df469de274b11453b6d443138dfbee98fd51e"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected website UI/search source and tests. No private review history, scans, clinical approvals, dependency trees or canonical Git ancestry.",
+  "proof": {
+    "tests": 16,
+    "scopedTypes": {
+      "files": 196,
+      "diagnostics": 0
+    },
+    "synthetic": {
+      "rows": 3216,
+      "queries": 10,
+      "matchingResultsEqual": true,
+      "inputRowsUnchanged": true,
+      "baselineNormalizations": 32160,
+      "cachedNormalizations": 3216,
+      "reductionPercent": 90,
+      "browserTimingClaim": false
+    },
+    "installed": false,
+    "fullBuildPassed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
