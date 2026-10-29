@@ -1,0 +1,55 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T21:26:27.036Z",
+  "sourceIdentity": {
+    "candidate": "G:/VisibleMedicine-temp/staging/20261029-mandible-combined-native/atlas",
+    "sourceManifest": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-mandible-generation-verified/SOURCE_AFTER_GENERATION.json",
+      "sha256": "22ad4273725894d769eaa7d76fd21ca2507a9e91b61f1bf393c38e853939fff1"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/launch-contained.mjs",
+      "bytes": 15928,
+      "sha256": "2f871dcce24489808db98d92e51507b5b1ff18e98e8c7fcc1342bdc263974fb5"
+    },
+    {
+      "path": "recipes/parse-supervisor.ps1",
+      "bytes": 585,
+      "sha256": "d4461f174b8b0388087eb06185f634016d61c27d24ffeb4a20c9abeaf3d23e8f"
+    },
+    {
+      "path": "recipes/check-delta.mjs",
+      "bytes": 16902,
+      "sha256": "f0ea6de4f6ed3e294761c482f5bffa5eb048ed6c3851dc31885e6dcafaa51807"
+    },
+    {
+      "path": "recipes/save-generated.mjs",
+      "bytes": 12629,
+      "sha256": "7d39d523a255f109af049b9edfc622ef54f08db604965a39d61cc17a25774c46"
+    },
+    {
+      "path": "recipes/delta-core.mjs",
+      "bytes": 4619,
+      "sha256": "91cee06110daab7f9cc21d8e18e9e8a7bc0b50c1b360ecc4bc2f7cf66cec0423"
+    }
+  ],
+  "removed": [],
+  "scope": "Five generation, comparison and checkpoint recipes only. The53authored Atlas changes remain in their prior verified source backup. Generated teaching/review payloads and exact source manifest stay in local F recovery; no scans, geometry, private references, stored decisions or raw Git ancestry uploaded.",
+  "proof": {
+    "stockSteps": 10,
+    "changedTopics": 21,
+    "unchangedLessons": 9915,
+    "fullTypesPassed": false,
+    "fullBuildPassed": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
