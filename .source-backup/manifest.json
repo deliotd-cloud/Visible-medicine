@@ -1,0 +1,74 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T20:37:42.548Z",
+  "sourceIdentity": {
+    "website": "G:/VisibleMedicine-temp/staging/20261029-combined-website/website",
+    "canonicalWebsiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "parent": {
+      "path": "G:/VisibleMedicine-temp/staging/20261029-combined-website/PREPARATION.json",
+      "sha256": "9183771e6ee06581b449cc555eefcc4e14b03484544b65784cec7e64ec1b8b23"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/HeadAtlasTeaching.tsx",
+      "bytes": 4758,
+      "sha256": "f3ef8a1664b3e3fe103d1f35dc140c08387a16ee708cf1616e35c18d2825fd29"
+    },
+    {
+      "path": "components/HeadAtlasConceptTeaching.tsx",
+      "bytes": 2898,
+      "sha256": "1b3d603c7c058ec27d0f38ed6d74a3217dd2d85117fea36109266e025e01eda3"
+    },
+    {
+      "path": "components/HeadAtlasReferenceTeaching.tsx",
+      "bytes": 8736,
+      "sha256": "a1a37f232a36f3d09c2275774e9ae0f22841af1a73c484bb41ed9b4d2f901520"
+    },
+    {
+      "path": "tests/head-reference-teaching.test.ts",
+      "bytes": 8237,
+      "sha256": "c913c5b3c1ed1ec88b1643d15390953d8e0a6c9f6f6240dcaacc106d91c2010d"
+    },
+    {
+      "path": "tests/head-practice-review.test.ts",
+      "bytes": 29494,
+      "sha256": "4f67c9517f841b6f40908824e3f57e7ced6a5bda1f9ad3f7fd253c78ccfe0fbb"
+    },
+    {
+      "path": "tests/head-gap-concept-teaching.test.ts",
+      "bytes": 11135,
+      "sha256": "9ab90e22ade18a728d9a049566f5cecce2feeccb07b3cef254a957be6569c8c9"
+    },
+    {
+      "path": "tests/head-ct-facial-consumer-execution.test.mjs",
+      "bytes": 8257,
+      "sha256": "70ca62b00861e64a8beeb6148b1797c3bfd23906dbb971ca1f7b90dd2dfa39d6"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected website source/test files for compact linked-teaching notices. No scans, masks, assets, secrets, private records, runtime or raw repository ancestry. This is not a complete project backup.",
+  "proof": {
+    "at": "2026-10-29T20:37:41.928Z",
+    "changedComponents": 3,
+    "updatedExistingTests": 2,
+    "focusedTests": 30,
+    "passed": true,
+    "testEvidence": "Combined run: 29/30 pass. Its only failure was an outdated heading expectation in head-reference-teaching. That expectation was updated and all four tests in that root then passed. Other source inputs were unchanged between runs.",
+    "behaviour": "Short always-visible teaching notices; detailed original scope remains under consistent Scope & sources disclosures. Missing-mask and separate-subject cautions remain visible.",
+    "clinicalContentChanged": false,
+    "sourceRevisionChanged": false,
+    "fullTypesPassed": false,
+    "fullBuildPassed": false,
+    "browserLayoutVerified": false,
+    "installed": false,
+    "ownerPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
