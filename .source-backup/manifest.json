@@ -1,0 +1,86 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-29T03:48:44.446Z",
+  "sourceIdentity": {
+    "kind": "review-delivery-test-role-repair",
+    "websiteSourceSha256": "48549a4b51bdbae10f8ea7f654b688f1f0b79230147ffecd4637c736111bb22a",
+    "unchangedAtlasHead": "a7e73b1dbab5bbf4ed0693fc13120bf986930dce"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/midfoot-current-source.test.mjs",
+      "bytes": 10065,
+      "sha256": "cb8d5b46c79ef65b26de290a86fe1cf4533350dfbc22f83e24a5b40918e3f94f"
+    },
+    {
+      "path": "website/tests/review-history-current-source.test.mjs",
+      "bytes": 4355,
+      "sha256": "8140673d56fcc1cd2cf1f495374827db47c206fbd8c270f85de25de1d5d4b16d"
+    },
+    {
+      "path": "website/tests/review-parser-current-source.test.mjs",
+      "bytes": 3528,
+      "sha256": "3ffeb0564bc9b50b123bb879ea3cd38eb58bb61a11ac575ee358a36a24592714"
+    },
+    {
+      "path": "website/tests/review-history-delivery.test.mjs",
+      "bytes": 444,
+      "sha256": "003c2b0fb4c49d13eeac87a5e22e3a7a5428f52d8c8ddaf16e7f1cad164c4cef"
+    },
+    {
+      "path": "website/tests/fixtures/review-history-delivery.test.mjs.original.raw",
+      "bytes": 3544,
+      "sha256": "65a20a525733241eb078a693fd90551421d9b15df26c9e521e6caf7afb668c0a"
+    },
+    {
+      "path": "website/tests/review-parser-current-delivery.test.mjs",
+      "bytes": 458,
+      "sha256": "259eca34fc583a05480d301fc0c63e83ae4c2975cac0fd4633000ba113e8acca"
+    },
+    {
+      "path": "website/tests/fixtures/review-parser-current-delivery.test.mjs.original.raw",
+      "bytes": 5630,
+      "sha256": "ac99e02ee25cda08522c6e60e3a804d6feb0990c5621bd388e79d6bfe57e41fa"
+    },
+    {
+      "path": "website/tests/midfoot-reasoning-current-delivery.test.mjs",
+      "bytes": 466,
+      "sha256": "e3b8e9ac259d0e899c03b6e51916063c7d76a99ffaf5e86f80d76a691cd1918d"
+    },
+    {
+      "path": "website/tests/fixtures/midfoot-reasoning-current-delivery.test.mjs.original.raw",
+      "bytes": 13424,
+      "sha256": "4759fb9b9ab00f39111706200a6e285ad410806b46208cb6d11208324216fe75"
+    },
+    {
+      "path": "website/tests/review-delivery-historical-replay.mjs",
+      "bytes": 4531,
+      "sha256": "59d3c85ea0fba6b59a6b25078cfb5865f7dbe97dd3c1c1168e0b9f391267ca43"
+    },
+    {
+      "path": "website/tests/fixtures/review-delivery-historical-contexts.json",
+      "bytes": 47739,
+      "sha256": "1da3e329e82d7547e664270b2193f4fee10f9e23e2d04a7635319ce83682cdfe"
+    }
+  ],
+  "removed": [],
+  "scope": "Eleven authored test/helper/fixture files, including three verbatim original test bodies and explicit local replay metadata. No product source, scans, geometry, patient data, decision records, dependency binaries, environment files or canonical history uploaded. Scoped source recovery only.",
+  "proof": {
+    "originalCasesPassed": 5,
+    "currentCasesPassed": 5,
+    "existingTourCasesPassed": 9,
+    "unchangedTypeGraphFiles": 6290,
+    "stockDiscoveryRoots": 1430,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "installed": false,
+    "normalPreviewChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
