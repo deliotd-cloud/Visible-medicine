@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import{hash,json}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-release-campaign',prep=json(root+'/PREPARATION.json'),parent=json(prep.parent.path),site=prep.website,proposal='G:/VisibleMedicine-temp/proposals/20261030-preview-notice-guard/website';
+assert.equal(hash(prep.parent.path),prep.parent.sha256);for(const r of parent.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const notice=site+'/public/media/atlas/NOTICES.md';assert.equal(fs.statSync(notice).size,3536);assert.equal(hash(notice),'c2247722b9a67799ff1a1518945023e5bd270f9b5538f9c0ac37cd5f0c62ee89');
+const expected={'scripts/public-preview-preflight.mjs':'6b95490067e25fb0db5403d41e70e42f5609c65befb2a3876b99a683845c0eb1','tests/public-preview-preflight.test.mjs':'62cebb4438aa88e8b159efba99a38870356109ba456bc3f9feffcb08cc869ddc'};
+for(const[p,digest]of Object.entries(expected)){assert.equal(hash(proposal+'/'+p),digest,p);fs.mkdirSync(path.dirname(root+'/before/'+p),{recursive:true});fs.copyFileSync(site+'/'+p,root+'/before/'+p,fs.constants.COPYFILE_EXCL);fs.copyFileSync(proposal+'/'+p,site+'/'+p);}
+const rows=parent.sourceRows.map(r=>({...r,bytes:fs.statSync(site+'/'+r.path).size,sha256:hash(site+'/'+r.path)}));for(const r of rows)if(!Object.hasOwn(expected,r.path))assert.equal(r.sha256,parent.sourceRows.find(p=>p.path===r.path).sha256,r.path);
+const source={...parent,at:new Date().toISOString(),schema:'vm-preview-notice-successor/1',website:site,parent:prep.parent,sourceRows:rows,changedPaths:Object.keys(expected),addedPaths:[],removedPaths:[],wholeProjectTypesPassed:false,wholeWebsiteProductionBuildPassed:false,wholeSuitePassing:false,productUiAndServerBytesUnchanged:true,clinicalApproval:false,installed:false};
+fs.writeFileSync(root+'/SOURCE.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({changed:source.changedPaths,sourceSha256:hash(root+'/SOURCE.json')}));

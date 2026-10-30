@@ -1,0 +1,64 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-30T20:23:44.089Z",
+  "sourceIdentity": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261030-review-navigation-release-checks/SOURCE.json",
+    "sha256": "43d713dab36f190b8f8a4b2cb55cf403b155018889013c3f33112723454159b9"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/public-preview-preflight.mjs",
+      "bytes": 6650,
+      "sha256": "6b95490067e25fb0db5403d41e70e42f5609c65befb2a3876b99a683845c0eb1"
+    },
+    {
+      "path": "website/tests/public-preview-preflight.test.mjs",
+      "bytes": 9359,
+      "sha256": "62cebb4438aa88e8b159efba99a38870356109ba456bc3f9feffcb08cc869ddc"
+    },
+    {
+      "path": "recipes/prepare-successor.mjs",
+      "bytes": 1904,
+      "sha256": "50291e0ba3e9910a49651bee6305003373265c5204edfe53a2937615bfc817d3"
+    },
+    {
+      "path": "recipes/integrate.mjs",
+      "bytes": 2136,
+      "sha256": "08bc7773d511515efd904150629e6fa4b4c610c5842cac600a2a355d2061a8df"
+    },
+    {
+      "path": "recipes/run.mjs",
+      "bytes": 1956,
+      "sha256": "e2e5d97f0fe72b0947f0d1642bc8cdde796319d8fc8942e9cefb3ae91b27315e"
+    },
+    {
+      "path": "recipes/navigation-fixture.mjs",
+      "bytes": 3962,
+      "sha256": "b424effbbd64bbf387a8559fe8cd30aed492631daf19c595cb74e63be81b97d9"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 11687,
+      "sha256": "1b047f9fb553cdeeb9c4125b628ec90eabab669ef848bc15b305f5b916c97376"
+    }
+  ],
+  "removed": [],
+  "scope": "Two exact public notice preflight guard/test changes and five local verification/recovery recipes only. No clinical records, scans, anatomy geometry, private assets, raw repository ancestry or generated distribution.",
+  "proof": {
+    "focusedPass": 16,
+    "focusedSkip": 1,
+    "stockPartition": 1,
+    "stockPass": 230,
+    "stockFail": 10,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

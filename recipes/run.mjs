@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import{hash,json}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import{guarded}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-release-campaign',pin=root+'/SOURCE.json',source=json(pin),site=source.website,kind=process.argv[2]??'focused',index=Number(process.argv[3]??1);assert(['focused','partition'].includes(kind));assert(Number.isSafeInteger(index)&&index>=1&&index<=32);
+for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const old='F:/VisibleMedicine/staging/20261030-release-repair-website/HISTORICAL_ENVIRONMENT_2.json';assert.equal(hash(old),'bd5fc429483bc9cf7ba26ed5290b1c70bdd6e01cb74d8b9aa18b490dfae973f5');
+const extraEnv={...json(old).environment,VM_CURRENT_SOURCE_RECEIPT:pin,VM_CURRENT_SOURCE_SHA256:hash(pin),VM_WEBSITE_ROOT:site,VM_ATLAS_SOURCE_REPO:source.atlas,ATLAS_SOURCE_REPO:source.atlas,VM_PUBLIC_PREVIEW_SOURCE_ROOT:site,TEMP:root,TMP:root};
+const command=kind==='focused'?'--test --test-concurrency=1 --test-reporter=tap tests/public-preview-preflight.test.mjs tests/website-test-history-preflight.test.mjs':'scripts/run-website-tests.mjs --run --partition '+index+'/32';
+const result=await guarded({site,dir:root+'/checks/'+kind+'-'+index,command,heap:1536,aggregate:2048,minimum:4096,extraEnv});
+for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+fs.writeFileSync(root+'/RESULT-'+kind+'-'+index+'.json',JSON.stringify({...result,kind,index,source:{path:pin,sha256:hash(pin)},sourceUnchanged:true,wholeSuitePassing:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({kind,index,passing:result.passing}));process.exitCode=result.passing?0:1;
