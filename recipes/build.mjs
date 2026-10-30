@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import{hash,json}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import{guarded}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-head-review-recovery',attempt=Number(process.argv[2]??1),sourceFile=process.argv[3]??root+'/SOURCE-2.json',source=json(sourceFile),out=root+'/build-'+attempt;assert(Number.isSafeInteger(attempt)&&attempt>0);assert(json(root+'/FOCUSED_RESULT-2.json').passing&&json(root+'/TYPES_RESULT-1.json').passing);for(const r of source.sourceRows)assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);
+fs.mkdirSync(out);fs.copyFileSync('F:/VisibleMedicine/staging/20261030-release-validation/website-build.mjs',out+'/checker.mjs',fs.constants.COPYFILE_EXCL);
+const result=await guarded({site:source.website,dir:root+'/checks/build-'+attempt,command:out+'/checker.mjs',heap:1536,aggregate:3584,minimum:5632,extraEnv:{TEMP:root,TMP:root,VM_ATLAS_SOURCE_REPO:source.atlas}});
+fs.writeFileSync(root+'/BUILD_RESULT-'+attempt+'.json',JSON.stringify({...result,source:{path:sourceFile,sha256:hash(sourceFile)}},null,2)+'\n',{flag:'wx'});
+const delta=[];for(const r of source.sourceRows){const now=hash(source.website+'/'+r.path);if(now!==r.sha256)delta.push({path:r.path,old:r.sha256,now});}fs.writeFileSync(root+'/BUILD_GENERATED_DELTA-'+attempt+'.json',JSON.stringify(delta,null,2)+'\n',{flag:'wx'});
+for(const d of delta)assert.equal(d.path,'.next/types/routes.d.ts','Unexpected source change by build');
+if(result.passing){const rows=source.sourceRows.map(r=>({...r,bytes:fs.statSync(source.website+'/'+r.path).size,sha256:hash(source.website+'/'+r.path)}));fs.writeFileSync(root+'/SOURCE-BUILT.json',JSON.stringify({...source,at:new Date().toISOString(),sourceRows:rows,preBuildSource:{path:sourceFile,sha256:hash(sourceFile)},buildGeneratedChanges:delta,wholeWebsiteProductionBuildPassed:true,wholeProjectTypesPassed:delta.length===0},null,2)+'\n',{flag:'wx'});}
+console.log(JSON.stringify({passing:result.passing,delta}));process.exitCode=result.passing?0:1;

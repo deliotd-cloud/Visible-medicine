@@ -1,0 +1,7 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import{hash,json}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import{guarded}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-head-review-recovery',attempt=Number(process.argv[2]??1),sourceFile=process.argv[3]??root+'/SOURCE-2.json',source=json(sourceFile),out=root+'/types-full-'+attempt;
+assert(Number.isSafeInteger(attempt)&&attempt>0);for(const r of source.sourceRows)assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);fs.mkdirSync(out);fs.copyFileSync('G:/VisibleMedicine-temp/staging/20261029-combined-website-full-types/types-full-attempt-1/checker.mjs',out+'/checker.mjs',fs.constants.COPYFILE_EXCL);
+const result=await guarded({site:source.website,dir:root+'/checks/types-'+attempt,command:out+'/checker.mjs',heap:3072,aggregate:3584,minimum:5632,extraEnv:{TEMP:root,TMP:root,VM_ATLAS_SOURCE_REPO:source.atlas}});
+for(const r of source.sourceRows)assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);fs.writeFileSync(root+'/TYPES_RESULT-'+attempt+'.json',JSON.stringify({...result,source:{path:sourceFile,sha256:hash(sourceFile)},unchanged:true},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passing:result.passing,attempt}));process.exitCode=result.passing?0:1;

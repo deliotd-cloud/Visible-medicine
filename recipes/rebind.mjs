@@ -1,0 +1,14 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import{hash,json}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import{guarded}from'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-head-review-recovery',source=json(root+'/SOURCE-2.json'),site=source.website,binder='scripts/bind-clinical-review.mjs';
+for(const r of source.sourceRows)if(r.path!==binder)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);fs.mkdirSync(root+'/rebind');
+const result=await guarded({site,dir:root+'/checks/rebind-1',command:root+'/rebind-steps.mjs',heap:1536,aggregate:3584,minimum:5632,extraEnv:{TEMP:root,TMP:root,VM_ATLAS_SOURCE_REPO:source.atlas}});fs.writeFileSync(root+'/REBIND_RESULT.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});assert(result.passing,'Stock Review rebuild failed');
+const allowed=new Set([binder,'atlas-review/manifest.json','atlas-review/integration-inputs.json','atlas-review/content/body-renderer-revision.json','atlas-review/content/review-revisions.json']);
+const viewer=json(site+'/public/atlas-review-viewer/manifest.json'),paths=new Set(source.sourceRows.map(r=>r.path));for(const r of viewer.files)paths.add('public/atlas-review-viewer/'+r.path);
+const rows=[...paths].filter(p=>fs.existsSync(site+'/'+p)).sort().map(p=>({path:p,bytes:fs.statSync(site+'/'+p).size,sha256:hash(site+'/'+p)}));
+const delta=rows.filter(r=>source.sourceRows.find(old=>old.path===r.path)?.sha256!==r.sha256);for(const r of delta)assert(allowed.has(r.path)||r.path.startsWith('public/atlas-review-viewer/'),r.path);
+const removed=source.sourceRows.filter(r=>!paths.has(r.path)||!fs.existsSync(site+'/'+r.path)).map(r=>r.path);for(const p of removed)assert(p.startsWith('public/atlas-review-viewer/'));
+const binding=json(site+'/atlas-review/integration-inputs.json');assert(binding.inputs.some(r=>r.path==='lib/head-teaching-review-recovery.ts'&&r.sha256===hash(site+'/'+r.path)));assert.equal(viewer.websiteIntegrationSha256,binding.sha256);
+fs.writeFileSync(root+'/REBIND_DELTA.json',JSON.stringify({delta,removed,binding:binding.sha256,viewerFiles:viewer.files.length},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(root+'/SOURCE-3.json',JSON.stringify({...source,at:new Date().toISOString(),sourceRows:rows,sourcePaths:rows.map(r=>r.path),changedPaths:[...new Set([...source.changedPaths,...delta.map(r=>r.path)])],removedPaths:removed,reviewBindingSha256:binding.sha256,protectedReviewInputs:binding.inputs.length,viewerFiles:viewer.files.length,previousSource:{path:root+'/SOURCE-2.json',sha256:hash(root+'/SOURCE-2.json')}},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passing:true,changed:delta.length,binding:binding.sha256}));

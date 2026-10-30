@@ -1,0 +1,148 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-30T21:09:40.488Z",
+  "sourceIdentity": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261030-head-review-recovery-ready/SOURCE-BUILT.json",
+    "sha256": "b70a0795547075e7a540a310d552d915f5425de974c23d9059ed33857b2f4042"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadTeachingReviewNotes.tsx",
+      "bytes": 24258,
+      "sha256": "230e3a8848284c7a573f624f26d24daa38230b3af313849ae9e52c2f54fc55f9"
+    },
+    {
+      "path": "website/tests/current-190-coverage.test.mjs",
+      "bytes": 1298,
+      "sha256": "0befb850a2ff3eb86312e35616f1f5f4a7cd23a01b967596e2cb0e7da5fa2372"
+    },
+    {
+      "path": "website/tests/head-cerebellar-review.test.ts",
+      "bytes": 19203,
+      "sha256": "e61d1d591d2eedc72df359c0d8a1e4fb7d8c34e0e8e08523a0636f3dbddca09f"
+    },
+    {
+      "path": "website/tests/head-deep-grey-review.test.ts",
+      "bytes": 18303,
+      "sha256": "8aaa92f0a6183ba3a2537b819c2bdab9fe35cd1b21a84d8317f3a7de8af3629a"
+    },
+    {
+      "path": "website/tests/head-hippocampal-clinical.test.ts",
+      "bytes": 24212,
+      "sha256": "e730e55bd7f889697cff7d99d40a70e42567d59dc38b8ba5e4d00d2fe1bc98fb"
+    },
+    {
+      "path": "website/tests/head-lobar-review.test.ts",
+      "bytes": 21186,
+      "sha256": "adbdadb752c0aa392df8b78a7862d0818024e1b4d2b3fdc49a7df87cea713fdd"
+    },
+    {
+      "path": "website/tests/head-teaching-review-notes.test.ts",
+      "bytes": 8353,
+      "sha256": "072916915f616fe59a83e5f882c8df8facf1c25e96478433edee810789c36c29"
+    },
+    {
+      "path": "website/tests/head-ventricular-review.test.ts",
+      "bytes": 12031,
+      "sha256": "9bd8113fe08a54bd73e0e555b24e15cc95c1a74260e4f9dc670236196bc20f66"
+    },
+    {
+      "path": "website/tests/studio-review-queue-preservation.test.mjs",
+      "bytes": 6315,
+      "sha256": "eae9a58bd2d5da0fdb97a472bc4fa5d07e625e6cf27b22549bd5f516f7a1c2f6"
+    },
+    {
+      "path": "website/lib/head-teaching-review-recovery.ts",
+      "bytes": 2799,
+      "sha256": "7424e4c1ef10d349fdb956e7a62cd5b64659cf61032942d5732a776882ae0fa5"
+    },
+    {
+      "path": "website/tests/head-teaching-review-recovery-lifecycle.test.ts",
+      "bytes": 16319,
+      "sha256": "de43183051d36219f13f7d72f222cc912265775bc4a15097691a9362cb32030b"
+    },
+    {
+      "path": "website/tests/head-teaching-review-recovery.test.ts",
+      "bytes": 5063,
+      "sha256": "606fb04f7bd037efeaa80acc2cf36a21c9ba8338200b9270c42538e7c1f5de68"
+    },
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "bytes": 10320,
+      "sha256": "53fccd918adbc287aa6c93dd5aa0f9835f9104a7183363a3e7633761a5b1245b"
+    },
+    {
+      "path": "recipes/build.mjs",
+      "bytes": 2290,
+      "sha256": "197cc8735204bcb6e26d1093055c1c18598c10941f769f3c73cbe005a5aff7c3"
+    },
+    {
+      "path": "recipes/check.mjs",
+      "bytes": 2276,
+      "sha256": "645fab9b54839fc6394b694e8f18a5f220324cd657baa10658643e9719bf7eee"
+    },
+    {
+      "path": "recipes/integrate.mjs",
+      "bytes": 3474,
+      "sha256": "7751c4f861891717d303f4c719f401ec5fce59dbde8e59425a32de303ec1a156"
+    },
+    {
+      "path": "recipes/navigation-fixture.mjs",
+      "bytes": 3966,
+      "sha256": "f32539b48c3af9a06f86a3dfde6768e4b8ac460e12d32852056419e365c559a1"
+    },
+    {
+      "path": "recipes/prepare.mjs",
+      "bytes": 1908,
+      "sha256": "d7562038143a2d06c92c185cdff226d38a455fdca093cd8eb79180818cac591f"
+    },
+    {
+      "path": "recipes/rebind-steps.mjs",
+      "bytes": 1016,
+      "sha256": "56d6fb4867df55b5ebe18655f9902a73354c284c94a805b9c6a0dc10f79b8ac3"
+    },
+    {
+      "path": "recipes/rebind.mjs",
+      "bytes": 2896,
+      "sha256": "65ab2fd94b653505f2d0b959e64050e0b9a24934c885f5d2947bbf559cb6ecac"
+    },
+    {
+      "path": "recipes/record-live.mjs",
+      "bytes": 1726,
+      "sha256": "82da170144517177903712a3bd42d6e6e43f4c70543abd276b5bfa4298cef8cb"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 12913,
+      "sha256": "93cd570487c4ddfe624f3c27b60ed2d17929590dc2819e58024a2f1b6078923a"
+    },
+    {
+      "path": "recipes/seal-lifecycle.mjs",
+      "bytes": 1075,
+      "sha256": "4603be34a2d13b5673c8906d838f934ae96e60bdb978dfc8d02b47ac16ae7781"
+    },
+    {
+      "path": "recipes/types.mjs",
+      "bytes": 1509,
+      "sha256": "7a3be92604b1e7bc63881c682db9969f71c0ecbaf75316f622d4019b1a2b1e67"
+    }
+  ],
+  "removed": [],
+  "scope": "Authored review-memory recovery component/helper, focused tests, exact public historical test-context repairs, binding recipe and local verification recipes only. Excludes generated private review viewer/derived revisions, scans, source models, private state, source receipts and raw canonical Git ancestry.",
+  "proof": {
+    "focusedTests": 68,
+    "fullTypes": true,
+    "websiteBuild": true,
+    "syntheticBrowserPassed": true,
+    "installed": false,
+    "clinicalApproval": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
