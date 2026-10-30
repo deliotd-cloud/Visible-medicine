@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-30T23:46:18.518Z",
+  "productionBuildPassed": true,
+  "sourceUnchanged": true,
+  "protectedInputsUnchanged": true,
+  "reviewIntegration": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+  "focused": {
+    "uniquePassingTests": 22,
+    "roots": 6,
+    "passingOtherRoots": 20,
+    "elbowRetry": {
+      "tests": 2,
+      "pass": 2,
+      "heapMiB": 1536
+    },
+    "wholeSingleBatchPass": false,
+    "earlierLowHeapFileFailuresRetained": true
+  },
+  "historicalEpochs": [
+    "6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1",
+    "389bd0ca846a42c7f21055f55904bcf5df81a09f",
+    "b79e110d2d28f18993263926ba35aa7a3f478b20"
+  ],
+  "currentAtlas": "c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3",
+  "priorPartitionFailuresRepairedInFocusedRoots": 8,
+  "wholePartitionRerunPending": true,
+  "supplementalNotices": [
+    "@react-three/fiber@9.7.0",
+    "@vitejs/plugin-rsc@0.5.34",
+    "@bufbuild/protobuf@1.10.1"
+  ],
+  "allThreePublicNoticeFilesMatchBuiltOutput": true,
+  "unresolvedNoticeTexts": [
+    "@unpic/core@1.0.3",
+    "unpic@4.2.2"
+  ],
+  "allDistributionCleared": false,
+  "fullTypesPassed": false,
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}
