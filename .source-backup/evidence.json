@@ -1,0 +1,25 @@
+{
+  "buildPassed": true,
+  "focused": {
+    "tests": 91,
+    "pass": 91,
+    "fail": 0,
+    "skipped": 0
+  },
+  "scopedTypes": {
+    "roots": 5,
+    "graph": 1407,
+    "diagnostics": 0,
+    "fullWebsiteTypes": false
+  },
+  "sourceBound": true,
+  "protectedInputsChanged": [
+    "components/HeadAtlasInlineComparison.tsx",
+    "components/HeadAtlasViewer.tsx"
+  ],
+  "clinicalSourceRevisionsUnchanged": true,
+  "syntheticKeyboardBrowserPassed": true,
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}

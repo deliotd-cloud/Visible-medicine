@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-current-release-context',source=root+'/SOURCE.json',receipt=json(source),site=receipt.website;
+const roots=['clinical-review-elbow-arterial-tour.test.ts','renal-tour-epoch-admission.test.mjs','current-atlas-delivery.test.mjs','current-atlas-delivery-replacement.test.mjs','current-review-rebinding.test.mjs','colic-adapter-inverse.test.mjs','head-context-source-inverse.test.mjs','head-epoch-projections.test.mjs','head-delivery-successor-projection.test.mjs','head-model-entry-navigation.test.ts'];
+for(const row of receipt.sourceRows)assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+const dir=root+'/focused-attempt-1';
+const result=await guarded({site,dir,command:'--test --experimental-strip-types --test-concurrency=1 '+roots.map(n=>'tests/'+n).join(' '),heap:1536,aggregate:2048,minimum:4096,extraEnv:{VM_ATLAS_SOURCE_REPO:'G:/VisibleMedicine-temp/staging/20261029-mandible-combined-native/atlas',ATLAS_SOURCE_REPO:'G:/VisibleMedicine-temp/staging/20261029-mandible-combined-native/atlas',TEMP:'G:/VisibleMedicine-temp/tmp',TMP:'G:/VisibleMedicine-temp/tmp'}});
+for(const row of receipt.sourceRows)assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+const output={...result,source:{path:source,sha256:hash(source)},unchanged:true,roots};fs.writeFileSync(root+'/FOCUSED_RESULT-1.json',JSON.stringify(output,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(output));if(!result.passing)process.exitCode=1;

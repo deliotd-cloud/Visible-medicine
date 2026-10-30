@@ -1,0 +1,336 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-30T22:51:45.799Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261030-head-comparison-keyboard-verified/SOURCE.json",
+      "sha256": "8ce45cb871d70897ed3e73d65f39774a31438703d12f999fac32677ddf9bfdb7"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/quick-review-regions/browser-fixture.mjs",
+      "bytes": 3674,
+      "sha256": "56159d60877ebb9bfa8346cb51a719fb912df195b1129c16554e4c7c2991dbf2"
+    },
+    {
+      "path": "recipes/quick-review-regions/build.mjs",
+      "bytes": 1493,
+      "sha256": "cbdddc2aee4e53ca94895c43d2416ffe7b259818a8ce1299c9f2e2316461519b"
+    },
+    {
+      "path": "recipes/quick-review-regions/prepare.mjs",
+      "bytes": 3413,
+      "sha256": "623099ef5dbee9d04ec4f0bf9e09f66949d9173d922d6767b6248da1dbd5162c"
+    },
+    {
+      "path": "recipes/quick-review-regions/scoped-types.mjs",
+      "bytes": 2115,
+      "sha256": "6e15af374160a273507cdb84646c6a6a9ac5fb521f7f37fc76c8e68f58866a52"
+    },
+    {
+      "path": "recipes/release-context/check-2.mjs",
+      "bytes": 1837,
+      "sha256": "469b995cfd3411f72078f2825fbd1a39e3efe68f1a639bc912bcf95ed900b428"
+    },
+    {
+      "path": "recipes/release-context/check.mjs",
+      "bytes": 1871,
+      "sha256": "18593db45cce436c57be0e433f8882e4c5ddc532120828467664097b816d8df1"
+    },
+    {
+      "path": "recipes/release-context/integrate-proposals.mjs",
+      "bytes": 3262,
+      "sha256": "c82ff085c341a6e617762e86afd6c139ef39a85061bfe122a0a2a587c4892818"
+    },
+    {
+      "path": "recipes/release-context/main-contract-repairs.mjs",
+      "bytes": 4209,
+      "sha256": "d0e12d568852407b2aa6993a6192467287fdad42eecfc022515dd0afc280466e"
+    },
+    {
+      "path": "recipes/release-context/prepare.mjs",
+      "bytes": 1895,
+      "sha256": "46b1e7ac229f834297a7d2aaf67b28b699b3bc2863353b15223bcf819b9016b9"
+    },
+    {
+      "path": "recipes/release-context/reseal.mjs",
+      "bytes": 1606,
+      "sha256": "7bcffbff15cb84e1298d775b097224090745e079165487bef0b634eaade8a08d"
+    },
+    {
+      "path": "recipes/release-context/run-partition.mjs",
+      "bytes": 1602,
+      "sha256": "2f25dd158e22cc8ddcb6a952fdc9d5ba58581e38f85277823e2daaa99fe2ebd2"
+    },
+    {
+      "path": "recipes/release-context/save-progress.mjs",
+      "bytes": 11289,
+      "sha256": "77d57d5eeb8ac9eecc230bd20bd6a4fe64ccc33694a7f8a966ae77378bc4f663"
+    },
+    {
+      "path": "recipes/review-release-successor/partition.mjs",
+      "bytes": 1610,
+      "sha256": "7b7ffd18bed7980e97f298aca5b79f1b12c3b4063d50853ba66c3c8d51044dda"
+    },
+    {
+      "path": "recipes/review-release-successor/prepare.mjs",
+      "bytes": 2488,
+      "sha256": "246419da5cddb04c97015749eed3f030567e87f384001c24e9770c6f8775a742"
+    },
+    {
+      "path": "recipes/review-release-successor/save.mjs",
+      "bytes": 11130,
+      "sha256": "e24c104497ba2d235b0339fea3a31c82d69964d281fe41aee4404e4bc43933b4"
+    },
+    {
+      "path": "recipes/review-release-successor/seal-and-check.mjs",
+      "bytes": 2284,
+      "sha256": "d17723d3adc56026176169ba3113977959369e2612be8075580be44aa73a1acb"
+    },
+    {
+      "path": "website/components/clinical-review-quick-start.css",
+      "bytes": 2436,
+      "sha256": "7e14bfff1b1cccec50e2b2c3eaa6f00dc5c4941b53071e75be764a833793a3b0"
+    },
+    {
+      "path": "website/components/ClinicalReviewQuickStart.tsx",
+      "bytes": 4850,
+      "sha256": "0b67438be98e30c46c3d0741f9df4c5895ef73029e790ba0f3730b4ca8855618"
+    },
+    {
+      "path": "website/lib/clinical-review-quick-start.ts",
+      "bytes": 3865,
+      "sha256": "2bab9fad344e46cea5b5f294eea448ce23fdac948752a4df1a59421c9fac2351"
+    },
+    {
+      "path": "website/tests/clinical-review-elbow-arterial-tour.test.ts",
+      "bytes": 26514,
+      "sha256": "c89067baa2b62a5c10a7ebfd874cd0f7b5130ff1af0da247a41f89e72b415aea"
+    },
+    {
+      "path": "website/tests/clinical-review-hand-arterial-xray.test.ts",
+      "bytes": 22459,
+      "sha256": "6d17f5183b6fa179a4ceafdbb61e33cff8561aa5e96aa61b7935b011d7ab5953"
+    },
+    {
+      "path": "website/tests/clinical-review-quick-start-ui.test.mjs",
+      "bytes": 7114,
+      "sha256": "3edbdb1b2d7768b109a32dc0ea7efe8f019530fa8c270b9c72acacd4e2a22752"
+    },
+    {
+      "path": "website/tests/clinical-review-quick-start.test.mjs",
+      "bytes": 7260,
+      "sha256": "02d64e4118245223b049aa888a405a023f8b64c6a3e454adc658c80b0c0b0163"
+    },
+    {
+      "path": "website/tests/clinical-review-short-ciliary-quiz.test.ts",
+      "bytes": 22521,
+      "sha256": "9e7276661973cc4ea1a2f9cab4aa3a5719c97f60edcee61cc7e880e89d3b502d"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery-replacement.test.mjs",
+      "bytes": 1717,
+      "sha256": "ee97c8110daf4757df6b08aaa6f39f03c525d2f1af921c858648a3557e84890b"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.mjs",
+      "bytes": 5159,
+      "sha256": "62831a4e68cdcc3665768782d135c93c1dce77e4f9ad0a6498f9af7cbccfd09b"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 28023,
+      "sha256": "dfd4195012a9ac2661ba28b069416bfb2412d5859c96b71c1149aeacdcd2b2f7"
+    },
+    {
+      "path": "website/tests/current-delivery-predecessor-inverse.mjs",
+      "bytes": 3376,
+      "sha256": "15cf54a67a996987dacd22b27219cd9e11a5108b4fb5f3ce74cd424eeb16bdbb"
+    },
+    {
+      "path": "website/tests/current-review-rebinding.test.mjs",
+      "bytes": 3663,
+      "sha256": "e0eed24fe3aba3bb7b1393634cac0f2fe39608cbd701565350f37d93c654c286"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "9ac1958e67a47a1e18fda108ad7ba79ee7c4eb5894493349fc0722a1f79c4dbc"
+    },
+    {
+      "path": "website/tests/fixtures/review-rebinding-before-head-note-recovery.json",
+      "bytes": 2051,
+      "sha256": "2216d5cd77cdcf3455b7a8a276785b8a8f2e181a8ee7909473f1899e8e0f536e"
+    },
+    {
+      "path": "website/tests/head-delivery-successor-projection.test.mjs",
+      "bytes": 3164,
+      "sha256": "a805d6c264672ef03fc0a786de2cc81ba5895758b4da88f53d98282f494ff578"
+    },
+    {
+      "path": "website/tests/head-epoch-projections.mjs",
+      "bytes": 9523,
+      "sha256": "a1ada1532cf22b59a6a962e13eeaaa91b8a8bc576dd509a29e988e1da6c8a909"
+    },
+    {
+      "path": "website/tests/head-image-tools-test-role.mjs",
+      "bytes": 2651,
+      "sha256": "95b105d3be55661010a53ab3db93e1044df5c3d9c8c874449f5c5423a95ca4da"
+    },
+    {
+      "path": "website/tests/head-model-entry-navigation.test.ts",
+      "bytes": 5872,
+      "sha256": "6dd616312f4fbf34a7ad7ac5d40dea073cf98acacb711ff63faaf00b60e1ff54"
+    },
+    {
+      "path": "website/tests/head-source-context-preservation.mjs",
+      "bytes": 3003,
+      "sha256": "f8434a64619fd58227c0cf784a659f2669cfdcd4758fb66ba80b008d88d4ff70"
+    },
+    {
+      "path": "website/tests/renal-tour-epoch-admission.mjs",
+      "bytes": 18533,
+      "sha256": "a71021f19b4775d9fea0ee47b019d5abe95ad53fb1a5659a1b6a7bf0b46dd5ef"
+    },
+    {
+      "path": "website/tests/renal-tour-epoch-admission.test.mjs",
+      "bytes": 15337,
+      "sha256": "e067d1b37778f40e712d9bb3805c7fcde10b6dfdbfde28a3623a32dfa79c4ef1"
+    },
+    {
+      "path": "website/tests/run-website-tests-diagnostics.test.mjs",
+      "bytes": 6152,
+      "sha256": "d4ec168a233d378181309ee8a10ea173dcd68b44183f1d7d88e4fb2b60776e36"
+    },
+    {
+      "path": "website/tests/tour-replay-current-delivery.test.mjs",
+      "bytes": 8931,
+      "sha256": "39c2890903291d49364b0720223ecb5653e816efb44308b349559c15cc9226d4"
+    },
+    {
+      "path": "website/components/HeadAtlasInlineComparison.tsx",
+      "bytes": 14855,
+      "sha256": "91f51462ab24e2fe90a54b178d9dedd71269f7644a23a222b0ab997281a85fb1"
+    },
+    {
+      "path": "website/components/HeadAtlasViewer.tsx",
+      "bytes": 124930,
+      "sha256": "65407ec32882f84f215f0df3210b0c632452592a0cef63b5c76eb3849c85d159"
+    },
+    {
+      "path": "website/tests/head-inline-commit-lifecycle.test.ts",
+      "bytes": 14233,
+      "sha256": "76daf9b1c569fdbebdb0fdcfba7fb9f03eebf9dc4c5387ea8b5b496492ad4083"
+    },
+    {
+      "path": "website/tests/head-inline-frame.test.ts",
+      "bytes": 23768,
+      "sha256": "850100655575e199fba0da57de9ff1593051a7b131cf1cfcbee202b96e915a85"
+    },
+    {
+      "path": "website/tests/head-inline-comparison.test.ts",
+      "bytes": 13648,
+      "sha256": "034a19fda817c51e264fb759d7c6724089f554038a89e896a3803a95a2ebcf7f"
+    },
+    {
+      "path": "website/tests/head-comparison-source-scope.test.ts",
+      "bytes": 11914,
+      "sha256": "df5dea26c1e21db714e09ef367ae305298c7805a15412ce93d4c0ffd97962334"
+    },
+    {
+      "path": "website/tests/head-comparison-parent-commit.test.ts",
+      "bytes": 10073,
+      "sha256": "94a25d1d7b6738f7dcccf2b07817d8967653ab7baa9909eaf429b45f8ff0d9e6"
+    },
+    {
+      "path": "website/tests/head-inline-limits-keyboard.test.mjs",
+      "bytes": 5934,
+      "sha256": "1f45341c46f745d8f2088161618552a7ee94b30d30efcc2ca7aa697950ed1798"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/prepare.mjs",
+      "bytes": 1762,
+      "sha256": "34f73e627cf167b5833c766094fbd215ec0ab0ebe238611c072c709a77b5b296"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/integrate.mjs",
+      "bytes": 2587,
+      "sha256": "091465af0db91dc8dceeb0c2124a5aa556fec449eaf06e50f9992e4fada45dac"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/check.mjs",
+      "bytes": 1618,
+      "sha256": "c844fa0d21c70333afaeaec0811afa49d1529b1ff96608c83bf4cba534ce1e86"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/check-bound.mjs",
+      "bytes": 1609,
+      "sha256": "ea069b8a19d8c6e634f56d3e5637984ec6933023123ac64e99a29f9967bd78bd"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/build-child.mjs",
+      "bytes": 4298,
+      "sha256": "5928f794aadc00ff01a6dd5a389c421073e2bc16ab14c09a97f4667ecb100dd2"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/build.mjs",
+      "bytes": 1145,
+      "sha256": "c8d89a89f49a4a138e24fdbdb72762277beedeeafebc3404c56b63c5f779863d"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/resume-build.mjs",
+      "bytes": 4724,
+      "sha256": "4db892772f279b8394934973f1c7166429c0f9b2d7b3a64131a4a415d6952100"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/build-only.mjs",
+      "bytes": 433,
+      "sha256": "250428ad9f31e835ea704402b22f854097ee37f5c5076b2339c4dabe676ca639"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/browser-fixture.mjs",
+      "bytes": 6870,
+      "sha256": "26012bfaf242996f71a85ef14509c31b8e81ebb34238068247af8e5efd11544b"
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/save.mjs",
+      "bytes": 11582,
+      "sha256": "67a89f02be8a330402e3c39a4be44a10bc5247a4fdd8ade9889b8651471b6a87"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected authored code, regression fixtures and reproducible recipes only. Adds keyboard Escape and reverse-selection focus fixes to staged CT/MRI–3D comparison. Excludes scans, screenshots, generated anatomy/Review assets, models, private records and raw canonical history. Installed quick-review website is unchanged.",
+  "proof": {
+    "buildPassed": true,
+    "focused": {
+      "tests": 91,
+      "pass": 91,
+      "fail": 0,
+      "skipped": 0
+    },
+    "scopedTypes": {
+      "roots": 5,
+      "graph": 1407,
+      "diagnostics": 0,
+      "fullWebsiteTypes": false
+    },
+    "sourceBound": true,
+    "protectedInputsChanged": [
+      "components/HeadAtlasInlineComparison.tsx",
+      "components/HeadAtlasViewer.tsx"
+    ],
+    "clinicalSourceRevisionsUnchanged": true,
+    "syntheticKeyboardBrowserPassed": true,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
