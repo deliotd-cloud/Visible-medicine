@@ -1,0 +1,20 @@
+.clinical-review-quick-start { margin:.75rem 0 1rem; padding:.8rem 1rem; border:1px solid #c4d4d1; border-radius:8px; background:#fff; color:#132c32; }
+.clinical-review-quick-start-heading,.clinical-review-quick-start-result { display:flex; align-items:center; justify-content:space-between; gap:.5rem 1rem; }
+.clinical-review-quick-start h2 { margin:0; font-size:1.05rem; }
+.clinical-review-quick-start p { margin:.25rem 0; line-height:1.4; font-size:.82rem; color:#51666b; }
+.clinical-review-quick-start-count { white-space:nowrap; font-size:.8rem; color:#395850; }
+.clinical-review-quick-start-controls { display:flex; gap:.5rem 1rem; align-items:end; flex-wrap:wrap; margin:.5rem 0; }
+.clinical-review-quick-start fieldset { display:flex; align-items:center; gap:.6rem; margin:0; padding:0; border:0; }
+.clinical-review-quick-start legend,.clinical-review-quick-start-group { font-size:.78rem; font-weight:650; }
+.clinical-review-quick-start fieldset label { display:inline-flex; align-items:center; gap:.25rem; font-size:.82rem; }
+.clinical-review-quick-start-group { display:flex; align-items:center; gap:.4rem; }
+.clinical-review-quick-start select { max-width:min(22rem,70vw); min-height:36px; padding:.3rem .4rem; border:1px solid #8eaaa5; border-radius:6px; background:white; color:#132c32; }
+.clinical-review-quick-start-result { padding-top:.55rem; border-top:1px solid #d4e1df; }
+.clinical-review-quick-start-result div { min-width:0; }
+.clinical-review-quick-start-result strong,.clinical-review-quick-start-result span,.clinical-review-quick-start-result small { display:block; }
+.clinical-review-quick-start-result strong { font-size:.9rem; }
+.clinical-review-quick-start-result div span,.clinical-review-quick-start-result small { margin-top:.15rem; font-size:.75rem; color:#51666b; }
+.clinical-review-quick-start-result a { flex:none; padding:.5rem .65rem; border-radius:6px; background:#087b6c; color:#fff; font-size:.82rem; font-weight:650; text-decoration:none; }
+.clinical-review-quick-start-result a span { display:inline; color:inherit; }
+.clinical-review-quick-start :is(a,input,select):focus-visible { outline:3px solid #087b6c; outline-offset:3px; }
+@media(max-width:600px) { .clinical-review-quick-start-heading,.clinical-review-quick-start-result { align-items:start; flex-direction:column; } }

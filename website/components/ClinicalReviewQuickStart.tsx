@@ -1,0 +1,57 @@
+'use client';
+
+import { useState } from 'react';
+import { inboxStatusLabels, type InboxItem } from '../lib/clinical-review-inbox-contract';
+import { selectQuickReview, type QuickReviewTrack } from '../lib/clinical-review-quick-start';
+import './clinical-review-quick-start.css';
+
+type Props = { items: readonly InboxItem[]; loading: boolean; scanComplete: boolean };
+
+export function ClinicalReviewQuickStart({ items, loading, scanComplete }: Props) {
+  const [track, setTrack] = useState<QuickReviewTrack>('Anatomy');
+  const [requestedGroup, setRequestedGroup] = useState<string | null>(null);
+  const groups = selectQuickReview(items, track, null, scanComplete).groups;
+  const group = requestedGroup;
+  const selection = selectQuickReview(items, track, group, scanComplete);
+  const item = selection.item;
+
+  return <section className="clinical-review-quick-start" aria-labelledby="clinical-review-quick-start-title">
+    <div className="clinical-review-quick-start-heading">
+      <div><h2 id="clinical-review-quick-start-title">Quick review</h2>
+        <p>Review the model or teaching, confirm once, then use Approve &amp; next. Reported issues appear first.</p></div>
+      <span className="clinical-review-quick-start-count" aria-live="polite">
+        {selection.count} {selection.partial ? 'loaded' : 'total'} matching {selection.count === 1 ? 'worksheet' : 'worksheets'}
+      </span>
+    </div>
+    <div className="clinical-review-quick-start-controls">
+      <fieldset><legend>Review track</legend>
+        {(['Anatomy', 'Teaching'] as const).map(value =>
+          <label key={value}><input type="radio" name="clinical-review-quick-start-track" value={value}
+            checked={track === value} onChange={() => { setTrack(value); setRequestedGroup(null); }} />{value}</label>)}</fieldset>
+      <label className="clinical-review-quick-start-group">Group
+        <select value={group === null ? '' : `g:${group}`} onChange={event => setRequestedGroup(event.target.value === '' ? null : event.target.value.slice(2))}>
+          <option value="">All groups</option>
+          {group !== null && !groups.includes(group) && <option value={`g:${group}`}>{group || 'Unspecified group'}</option>}
+          {groups.map(label => <option key={label} value={`g:${label}`}>{label || 'Unspecified group'}</option>)}
+        </select>
+      </label>
+    </div>
+    {item ? <div className="clinical-review-quick-start-result">
+      <div><strong>{item.title}</strong><span>{item.scopeLabel} · {item.trackLabel} · {inboxStatusLabels[item.status]}</span>
+        {item.status === 're-review' && item.changeReason === 'source-or-teaching' && <small>Source or teaching changed</small>}
+        {item.status === 're-review' && item.changeReason === 'other-review-material' && <small>Other review material changed</small>}
+        {item.status === 're-review' && item.changeReason === 'viewer-only' && <small>Viewer update; check the worksheet</small>}
+        {item.status === 're-review' && item.changeReason === 'unavailable' && <small>Change details unavailable; check the worksheet</small>}
+      </div>
+      <a href={item.href} target="_blank" rel="noopener noreferrer"
+        aria-label={`${item.status === 'in-progress' ? 'Continue' : 'Start'} review of ${item.title}, ${item.scopeLabel}, ${item.trackLabel} (opens in a new tab)`}>
+        {item.status === 'in-progress' ? 'Continue review' : 'Start review'} <span aria-hidden="true">↗</span>
+      </a>
+    </div> : <p className="clinical-review-quick-start-empty">
+      {loading ? 'Scanning for matching worksheets…' : selection.partial
+        ? 'No matching worksheet loaded yet. The scan is incomplete.'
+        : 'No matching worksheets need review in this group.'}
+    </p>}
+    {selection.partial && item && <p className="clinical-review-quick-start-note">The scan is incomplete; this count and suggestion cover loaded worksheets only.</p>}
+  </section>;
+}
