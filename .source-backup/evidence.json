@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-30T22:28:33.044Z",
+  "ui": {
+    "buildPassed": true,
+    "sourceUnchanged": true,
+    "scopedTypes": {
+      "rootFiles": 4,
+      "graphFiles": 198,
+      "diagnostics": 0
+    },
+    "fullTypes": false,
+    "focusedTests": 12,
+    "syntheticBrowserEvidence": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261030-release-context-and-review-regions/UI_CHECKS.json",
+      "sha256": "4f63c704707af8f3705f03fd8e3cf5a53d4f4c76fb74408e1eb763f27c5882d7"
+    },
+    "installed": false
+  },
+  "release": {
+    "priorPartition": {
+      "tests": 335,
+      "pass": 331,
+      "fail": 4,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "priorSourceAndAssetsStable": true,
+    "focused": {
+      "tests": 10,
+      "pass": 10,
+      "fail": 0,
+      "skipped": 0
+    },
+    "repairs": [
+      "Preserve historical53 and current55 complete tour objects",
+      "Grade every authored quiz answer by its displayed label after permutation",
+      "Wait through the runner parent-directory creation interval",
+      "Bind replay to the current import and authentic unchanged historical completion handlers"
+    ],
+    "wholeSuitePassing": false
+  },
+  "normalPreviewChanged": false,
+  "clinicalDecisionsSubmitted": 0
+}
