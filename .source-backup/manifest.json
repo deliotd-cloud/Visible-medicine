@@ -1,0 +1,113 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-30T19:36:18.970Z",
+  "sourceIdentity": {
+    "path": "G:/VisibleMedicine-temp/staging/20261030-native-runtime-integration/WEBSITE_SOURCE.json",
+    "sha256": "4025ba76f8c6736e058040238fd105f757025fa2bf31037231ad606f2486e2f4"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 9702,
+      "sha256": "9bf76f7e9408e4550afd1e73320aa316837be8df9c0559eeca35b37a07162f1d"
+    },
+    {
+      "path": "website/public/media/atlas/NOTICES.md",
+      "bytes": 3536,
+      "sha256": "c2247722b9a67799ff1a1518945023e5bd270f9b5538f9c0ac37cd5f0c62ee89"
+    },
+    {
+      "path": "recipes/commit-source.attempt-1.mjs",
+      "bytes": 3548,
+      "sha256": "08acacf2a3af5665bbe0a7a3af9d18f72ed25c60a61f4da1b02c27ae55a846b9"
+    },
+    {
+      "path": "recipes/commit-source.mjs",
+      "bytes": 4304,
+      "sha256": "d721812f69e34ae7897d5948e9278e5f3b2462fc0a64547440574c3701edc39c"
+    },
+    {
+      "path": "recipes/export.mjs",
+      "bytes": 6420,
+      "sha256": "1760aaebbb3b680ec9df256074cc6073fe9f3fa13d48354c02e6fca22ade9a95"
+    },
+    {
+      "path": "recipes/prepare-stock-recipes.attempt-1.mjs",
+      "bytes": 5926,
+      "sha256": "517dd4782fba300f63810c38087510b523182ace15de0495e9005755a268fabe"
+    },
+    {
+      "path": "recipes/prepare-stock-recipes.mjs",
+      "bytes": 6099,
+      "sha256": "3c517a06e463978e799c78068ad085e0b2389b61902fd840eaffaa21b6839f0b"
+    },
+    {
+      "path": "recipes/prepare-website.mjs",
+      "bytes": 5004,
+      "sha256": "b0d1e65ea9bf4b8e438d14cbd1e210f3a266c2768835cd8f278fc5973ab80934"
+    },
+    {
+      "path": "recipes/repair-inventory-recipe.mjs",
+      "bytes": 2410,
+      "sha256": "c3e00b1273f165503245a8447ac2d411c42c21000bef5637d706ad9ea02c29ae"
+    },
+    {
+      "path": "recipes/repair-review-recipe.mjs",
+      "bytes": 3708,
+      "sha256": "555aef1f84abfc413ffb11b9e935616ea18ccd53fb14a4c1327b1847c9dc6427"
+    },
+    {
+      "path": "recipes/run-after-inventory.mjs",
+      "bytes": 876,
+      "sha256": "333e44354e7829b4f305dc766ca78aabdf5cf0cb4fba16247880209396971e7d"
+    },
+    {
+      "path": "recipes/run-phase.mjs",
+      "bytes": 1819,
+      "sha256": "c333968ab55edf059e183be962cb1c8ed2a99fa9eca40737dc120f95c9643989"
+    },
+    {
+      "path": "recipes/run-remaining-phases.mjs",
+      "bytes": 761,
+      "sha256": "a4310320512d5523914309b6259192ca1276590687b4cbaa66304bf5b222e997"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 13391,
+      "sha256": "787903db9e820b89d5ec8192153b9edff58e1df7851650837074d0edfa7f8ea4"
+    },
+    {
+      "path": "recipes/seal-website.mjs",
+      "bytes": 5745,
+      "sha256": "40905821d1bc7b40ce7674f06411fa77833dd87231daa79047d6e651749bb348"
+    },
+    {
+      "path": "recipes/stock-steps.mjs",
+      "bytes": 17117,
+      "sha256": "dee672f4ff2785e901c7ca1a58decddf7fd5adbc3e3574020c29ef58e09c7808"
+    },
+    {
+      "path": "recipes/triage-review-notices.mjs",
+      "bytes": 2821,
+      "sha256": "faebaf300f1fde43e6f19ba461f1a843c8fee082e986a3c503eb5a76e4ec5014"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected website importer/notice and exact integration/verification/recovery recipes only. Generated viewers, source geometry, scans, masks, private assets/references, review records and raw canonical Git ancestry excluded. Changed native source is retained locally on F with prior source-only backups.",
+  "proof": {
+    "stockIntegrationSteps": 6,
+    "allFourRuntimesSource": "c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3",
+    "sourceFiles": 7261,
+    "reviewInputs": 1860,
+    "fullWebsiteBuild": false,
+    "wholeSuitePassing": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
