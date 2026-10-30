@@ -1,0 +1,75 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-30T18:51:54.990Z",
+  "sourceIdentity": {
+    "path": "G:/VisibleMedicine-temp/staging/20261030-foot-context-layout/SOURCE_CANDIDATE.json",
+    "sha256": "f8cb985cb50ac1d5a8655554774d102f7e613a0a406b1a2dbeaf31b1eabe8400"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/prepare-foot-comparison-local.mjs",
+      "bytes": 15111,
+      "sha256": "e88815122b8da8d2bbaef4ab44ce86e5b17ae9b1374e717404efe338a3890ad6"
+    },
+    {
+      "path": "tests/foot-view-context.test.mjs",
+      "bytes": 6358,
+      "sha256": "b932d5e44ee3ddd21ecc39bb4633ac0bc8e3ca9cf0e824747b35b960e91e2da0"
+    },
+    {
+      "path": "tests/native-focus-review-binding.test.mjs",
+      "bytes": 4736,
+      "sha256": "19cac404f6b7342d6906ef61e01d1946d1e798d37023fc94220e6e4642368036"
+    },
+    {
+      "path": "lib/foot-comparison-manifest.json",
+      "bytes": 20232,
+      "sha256": "2630d8cde5fb8173159776e8bd7377ebeb7ca34e2ef2cb08ff808e68ea6508ab"
+    },
+    {
+      "path": "recipes/prepare.mjs",
+      "bytes": 4530,
+      "sha256": "2ce9c7b295c528823b57374889347703ba7c04f84456fac56486552ff81ea4e8"
+    },
+    {
+      "path": "recipes/verify.mjs",
+      "bytes": 3546,
+      "sha256": "7c899fd903107a7e90a672b085ee5b55d04554a3ed42462032d7160c36b963f3"
+    },
+    {
+      "path": "recipes/browser-server.mjs",
+      "bytes": 6789,
+      "sha256": "58a3174afadc65fd0d41f4c1fed57bb0892e2523398a7357becd43f2772e5c73"
+    },
+    {
+      "path": "recipes/browser-launch.mjs",
+      "bytes": 706,
+      "sha256": "4fdf6847d306770c3e08f815a6ae3f5f7d8d86f9839cb3aba49855e7e8c366ca"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 14770,
+      "sha256": "28dd5da3d263464c8f8d7906326cb24951d9bb325ff6473eff0154b6b2aed19a"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected foot view-context/layout producer, manifest, tests and verification/recovery recipes. Excludes all private specimen payloads, scans, masks, stored reviews, identifiers and raw canonical repository ancestry.",
+  "proof": {
+    "roots": 26,
+    "tests": 119,
+    "pass": 119,
+    "fail": 0,
+    "skipped": 0,
+    "isolatedBrowser": "Actual protected foot asset route in isolated synthetic reviewer fixture: compact/detail continuity, pointer and keyboard navigation, selection visibility and malformed-fragment fallback",
+    "fullWebsiteAcceptance": false,
+    "wholeSuitePassing": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
