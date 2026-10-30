@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-review-release-continuation',pin=process.argv[3]??root+'/SOURCE.json',source=json(pin),site=source.website;
+const attempt=Number(process.argv[2]||1);assert(Number.isSafeInteger(attempt)&&attempt>0);
+const verify=()=>{for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);};verify();
+const old='F:/VisibleMedicine/staging/20261030-release-repair-website/HISTORICAL_ENVIRONMENT_2.json';
+assert.equal(hash(old),'bd5fc429483bc9cf7ba26ed5290b1c70bdd6e01cb74d8b9aa18b490dfae973f5');
+const roots=['clinical-review-elbow-arterial-tour.test.ts','head-disclosure-ed3-role.test.mjs','renal-tour-epoch-admission.test.mjs','release-epoch-composition-preservation.test.mjs'];
+fs.writeFileSync(root+'/FOCUSED_ROOTS-'+attempt+'.json',JSON.stringify(roots,null,2)+'\n',{flag:'wx'});
+const result=await guarded({site,dir:root+'/checks/focused-'+attempt,command:'--test --experimental-strip-types --test-concurrency=1 --test-reporter=tap '+roots.map(p=>'tests/'+p).join(' '),heap:1536,aggregate:2048,minimum:4096,extraEnv:{...json(old).environment,VM_CURRENT_SOURCE_RECEIPT:pin,VM_CURRENT_SOURCE_SHA256:hash(pin),VM_WEBSITE_ROOT:site,VM_ATLAS_SOURCE_REPO:source.atlas,ATLAS_SOURCE_REPO:source.atlas,TEMP:root,TMP:root}});
+verify();fs.writeFileSync(root+'/RESULT-focused-'+attempt+'.json',JSON.stringify({...result,roots,source:{path:pin,sha256:hash(pin)},unchanged:true},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({passing:result.passing,attempt}));process.exitCode=result.passing?0:1;

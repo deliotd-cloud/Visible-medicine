@@ -1,0 +1,31 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-review-release-continuation',site=root+'/website';
+const pin='F:/VisibleMedicine/recovery/checkpoints/20261030-head-review-recovery-ready/SOURCE-BUILT.json';
+assert.equal(hash(pin),'b70a0795547075e7a540a310d552d915f5425de974c23d9059ed33857b2f4042');
+const parent=json(pin),proposal='G:/VisibleMedicine-temp/proposals/20261030-review-release-context-b/website';
+const changed=['tests/clinical-review-elbow-arterial-tour.test.ts','tests/renal-tour-epoch-admission.mjs','tests/head-image-tools-test-role.mjs'];
+assert(!fs.existsSync(site));
+for(const row of parent.sourceRows){
+ assert.equal(hash(parent.website+'/'+row.path),row.sha256,row.path);
+ fs.mkdirSync(path.dirname(site+'/'+row.path),{recursive:true});
+ fs.copyFileSync(parent.website+'/'+row.path,site+'/'+row.path,fs.constants.COPYFILE_EXCL);
+ assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+}
+fs.symlinkSync(fs.realpathSync(parent.website+'/node_modules'),site+'/node_modules','junction');
+fs.symlinkSync(parent.atlas,root+'/atlas','junction');
+const git=(...args)=>execFileSync('git',['-C',site,...args],{encoding:'utf8',windowsHide:true}).trim();
+git('init','--quiet');
+fs.writeFileSync(site+'/.git/objects/info/alternates',execFileSync('git',['-C','F:/VisibleMedicine/website','rev-parse','--path-format=absolute','--git-path','objects'],{encoding:'utf8',windowsHide:true}).trim().replaceAll('\\','/')+'\n',{flag:'wx'});
+git('update-ref','HEAD',parent.websiteHead);git('read-tree','HEAD');
+for(const name of changed)fs.copyFileSync(proposal+'/'+name,site+'/'+name);
+const rows=parent.sourceRows.map(row=>({...row,sha256:hash(site+'/'+row.path)}));
+const delta=rows.filter(row=>row.sha256!==parent.sourceRows.find(old=>old.path===row.path).sha256).map(row=>row.path);
+assert.deepEqual(delta.sort(),changed.sort());
+const result={...parent,schema:'vm-review-release-continuation/1',at:new Date().toISOString(),website:site,parent:{path:pin,sha256:hash(pin)},sourceRows:rows,testOnlyChanged:delta,productionSourceUnchanged:true,installed:false};
+fs.writeFileSync(root+'/SOURCE.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(root+'/PREPARATION.json',JSON.stringify({at:result.at,sourceFiles:rows.length,changed:delta,ownerPreviewChanged:false,privateRuntimeCopied:false,parent:result.parent},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({website:site,sourceFiles:rows.length,changed:delta}));

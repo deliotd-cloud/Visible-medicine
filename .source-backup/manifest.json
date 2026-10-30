@@ -1,0 +1,77 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-30T21:35:42.889Z",
+  "sourceIdentity": {
+    "path": "G:/VisibleMedicine-temp/staging/20261030-review-release-continuation/SOURCE-VERIFIED-SUBSET.json",
+    "sha256": "9f78953ef58562118d495d30687e9bedb700b339a8b67de6858948f31e28b8c6"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "ee571d4f0f0f78c5d8290776ccdda7858cd5026d5455c75e552118818dc29980"
+    },
+    {
+      "path": "website/tests/head-image-tools-test-role.mjs",
+      "bytes": 2651,
+      "sha256": "95b105d3be55661010a53ab3db93e1044df5c3d9c8c874449f5c5423a95ca4da"
+    },
+    {
+      "path": "recipes/check-verified.mjs",
+      "bytes": 2232,
+      "sha256": "e986b62ee75dcb9cf11000b2183a8389983fa6b5fa198438f96ca564fbb13c1d"
+    },
+    {
+      "path": "recipes/check.mjs",
+      "bytes": 1950,
+      "sha256": "81b41460c129953372f4fff4c5c8ebce828a1c33480085ba605cd64ba3617bf6"
+    },
+    {
+      "path": "recipes/prepare.mjs",
+      "bytes": 2751,
+      "sha256": "31b8f0d47a5f798a8cfbf12dd002c1cf1eebd635a5c3b0cf8914bfbb427adc66"
+    },
+    {
+      "path": "recipes/record-live.mjs",
+      "bytes": 792,
+      "sha256": "d00c1bec12dbf53d196c06309ba65bbc8e0d06345dcdb4cc1c82c010986ff6c1"
+    },
+    {
+      "path": "recipes/refresh-delivery-pin.mjs",
+      "bytes": 3542,
+      "sha256": "9b9c7bfa62b9d0c407b6b7f67ba817e421316fca5353d68a44576a5273fceb61"
+    },
+    {
+      "path": "recipes/run-partition.mjs",
+      "bytes": 1840,
+      "sha256": "ea1b36519b3fe61c50798e42f1dd66ee0b4a018ea71cf24870e7fbda43fb0deb"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 9944,
+      "sha256": "3324c771e02a72b5b76a7185f50c5d90192c900ee9f7676edbfa3f3e90bf90ed"
+    },
+    {
+      "path": "recipes/seal-verified-subset.mjs",
+      "bytes": 1868,
+      "sha256": "2575071963549ae202a02dc9d3285d6afc115a227a8009daff632df5a12a1357"
+    }
+  ],
+  "removed": [],
+  "scope": "Two verified test fixture/context corrections and their orchestration recipes. No clinical decisions, generated private review assets, scans, models, runtime state or canonical Git history. The broader release suite is not passing.",
+  "proof": {
+    "focusedTests": 7,
+    "focusedPassed": 7,
+    "staleDeliveryRejected": true,
+    "forgedDeliveryNegatives": 8,
+    "wholeSuitePassing": false,
+    "productionSourceChanged": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
