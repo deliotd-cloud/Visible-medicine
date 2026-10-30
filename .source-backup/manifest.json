@@ -1,0 +1,126 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-30T07:36:03.838Z",
+  "sourceIdentity": {
+    "path": "G:/VisibleMedicine-temp/staging/20261029-native-regression-repair/SOURCE_CANDIDATE.json",
+    "sha256": "a0a81ed79f79beed1c5cff9e4931c0d8e68e38bee646d5f7d3ff34c906d1cfec"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/native-focus-review-binding.test.mjs",
+      "bytes": 4736,
+      "sha256": "677caf3be65daec2fd55e688765a9612b8f7c1e9d733fd13554df0354aa0d6e8"
+    },
+    {
+      "path": "tests/native-head-toolbar-compact.test.mjs",
+      "bytes": 5037,
+      "sha256": "4ad760ad15a3d5b7c1665fefc1cb6393973d08330982fc12a7471bb198bef2f7"
+    },
+    {
+      "path": "tests/native-locate-composed.test.mjs",
+      "bytes": 9117,
+      "sha256": "0f71dda062bb465d0f62b0a64682fec028f6cb2a6ee4f712dd4091429b1d4d0c"
+    },
+    {
+      "path": "tests/neonatal-review-input-path.test.mjs",
+      "bytes": 6550,
+      "sha256": "8e59ff16c6d8c255b7d9039d62eeaafd00f1446b57cccc69e9b5df556fe07d30"
+    },
+    {
+      "path": "tests/fixtures/native-current-regression-before/current-atlas-delivery-a28.json",
+      "bytes": 2051,
+      "sha256": "dcd1db50bab70b7893ca42a02c3ba861bdf5228b0a5d7cd56ba5ecaddb5f207c"
+    },
+    {
+      "path": "tests/native-slice-commit-scope.test.mjs",
+      "bytes": 2868,
+      "sha256": "4b4c24be276cdd8be753ed22da983aa94f48c2f8c31cbcb9c4aee206000b5c6f"
+    },
+    {
+      "path": "tests/native-slice-display-epoch.test.mjs",
+      "bytes": 2885,
+      "sha256": "183684bc02ccc2fb0078c438736a9fcb8f883ec8470201d2e950af57814de8e7"
+    },
+    {
+      "path": "tests/native-slice-historical-tour-bridge.mjs",
+      "bytes": 1725,
+      "sha256": "313292eb22a8816f6936b4f9f44ebf311ee370f51583edcb6ebcd90702d1c35b"
+    },
+    {
+      "path": "scripts/prepare-foot-comparison-local.mjs",
+      "bytes": 14907,
+      "sha256": "b94a2731c9335473f5653dd6fea4c356be9c7b9e71d98127c8ebff36163cdf00"
+    },
+    {
+      "path": "tests/foot-view-context.test.mjs",
+      "bytes": 3097,
+      "sha256": "f62c1dde2371b4be6997e0060cee14e8fbd24cf646fbed7861d1664256168995"
+    },
+    {
+      "path": "lib/foot-comparison-manifest.json",
+      "bytes": 20232,
+      "sha256": "f874cc7b86477daaf92d53f525bfc7cdd81d2cf00321e7b7780ff630789d8343"
+    },
+    {
+      "path": "recipes/native-prepare.mjs",
+      "bytes": 5620,
+      "sha256": "2f53266b9f510b893d96393df08d10d7473b1f6b997d4d291460f3d714bb5718"
+    },
+    {
+      "path": "recipes/native-verify.mjs",
+      "bytes": 3551,
+      "sha256": "cd6e75030d1931d0bc5a39d327d0f4e44de8d2a8fe26c9976a88f7bbf8a0c07a"
+    },
+    {
+      "path": "recipes/foot-prepare.mjs",
+      "bytes": 3243,
+      "sha256": "e3d5d5ec6e11c30169a95a67ce5404357e8a1ee7768c7c4be9bc36a7ab47201a"
+    },
+    {
+      "path": "recipes/foot-verify.mjs",
+      "bytes": 3506,
+      "sha256": "95e7b948a1af0ff86c9bb30c5cf2baee1040f53c9da269166c3f486434c6547c"
+    },
+    {
+      "path": "recipes/browser-server.mjs",
+      "bytes": 6790,
+      "sha256": "28b33df8efb4cb8ebccd5123aec8b98773effddda5f81ea88a5390fb3ab2a47c"
+    },
+    {
+      "path": "recipes/browser-launch.mjs",
+      "bytes": 709,
+      "sha256": "88b3634df46017134e3ca080c4becc1a8d8b308c28ea3aff2ee3cdad66e3d96d"
+    },
+    {
+      "path": "recipes/save.mjs",
+      "bytes": 15767,
+      "sha256": "f3eed9fa1e191ee1c6a24a6e8a160bd537ecb41c85bacb3ddb129009238a044d"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected foot producer, manifest, emitted-code tests, native regression tests/fixtures and local verification/recovery recipes only. Draft source is not fully verified. Excludes all specimens, private asset modules, scans, masks, personal reviews and raw repository ancestry.",
+  "proof": {
+    "sourcePrepared": true,
+    "syntaxChecks": 7,
+    "lightweightTests": 2,
+    "lightweightPassed": 2,
+    "fullFootAttempt": "Resource-stopped; incomplete",
+    "nativeDiagnostic": {
+      "tests": 89,
+      "pass": 83,
+      "fail": 6
+    },
+    "nativeRepair": "Eight test files prepared; complete 26-root rerun not admitted at 3807 MiB / 4096 MiB required",
+    "browserAcceptance": false,
+    "fullBuild": false,
+    "wholeSuitePassing": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

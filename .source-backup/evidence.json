@@ -1,0 +1,17 @@
+{
+  "sourcePrepared": true,
+  "syntaxChecks": 7,
+  "lightweightTests": 2,
+  "lightweightPassed": 2,
+  "fullFootAttempt": "Resource-stopped; incomplete",
+  "nativeDiagnostic": {
+    "tests": 89,
+    "pass": 83,
+    "fail": 6
+  },
+  "nativeRepair": "Eight test files prepared; complete 26-root rerun not admitted at 3807 MiB / 4096 MiB required",
+  "browserAcceptance": false,
+  "fullBuild": false,
+  "wholeSuitePassing": false,
+  "installed": false
+}
