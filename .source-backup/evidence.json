@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-30T23:31:22.411Z",
+  "productionBuildPassed": true,
+  "focused": {
+    "tests": 21,
+    "pass": 21,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "sourceUnchanged": true,
+  "protectedReviewInputs": 1862,
+  "reviewIntegration": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+  "geometryAndTeachingSourceRevisionsUnchanged": true,
+  "observedBuildEnvironments": [
+    "client",
+    "rsc",
+    "ssr"
+  ],
+  "observedPackages": 38,
+  "observedOutputRecords": 781,
+  "finalOutputHashMatches": 780,
+  "outputException": ".assetsignore rewritten after hook; final contents include wrangler.json, .dev.vars and .vite. Retained as an explicit exception, not a matching output.",
+  "rootNoticeScannerGaps": [
+    "@bufbuild/protobuf",
+    "@react-three/fiber",
+    "@unpic/core",
+    "@vitejs/plugin-rsc",
+    "unpic"
+  ],
+  "noticeGapMeaning": "No matching root filename found by this scanner; does not prove the package lacks a licence.",
+  "productionReactAndVinextNoticesVerified": true,
+  "allDistributionCleared": false,
+  "fullTypesPassed": false,
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}
