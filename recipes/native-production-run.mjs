@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-native-production';
+const site='G:/VisibleMedicine-temp/staging/20261029-mandible-combined-native/atlas';
+const receipt='F:/VisibleMedicine/recovery/checkpoints/20261029-mandible-generation-verified/SOURCE_AFTER_GENERATION.json';
+const sha='22ad4273725894d769eaa7d76fd21ca2507a9e91b61f1bf393c38e853939fff1';
+assert.equal(hash(receipt),sha);
+const source=json(receipt),rows=source.sourceRows??source.files;
+assert.equal(rows.length,6500);
+function check(){const differences=[];for(const row of rows){if(!fs.existsSync(site+'/'+row.path)||hash(site+'/'+row.path)!==row.sha256)differences.push(row.path);}return differences;}
+assert.deepEqual(check(),[],'Candidate changed before stock build');
+const build='F:/VisibleMedicine/staging/20261030-spleen-native/build-stock-1.mjs';
+const before={at:new Date().toISOString(),site,source:{path:receipt,sha256:sha},sourceFiles:rows.length,build:{path:build,sha256:hash(build)},script:json(site+'/package.json').scripts.build};
+fs.writeFileSync(root+'/BEFORE.json',JSON.stringify(before,null,2)+'\n',{flag:'wx'});
+const result=await guarded({site,dir:root+'/attempt-1',command:build,heap:768,aggregate:4096,minimum:6144,extraEnv:{TEMP:root,TMP:root}});
+const changed=check();
+const output={...before,finishedAt:new Date().toISOString(),result,sourceDifferences:changed,passing:result.passing&&changed.length===0,installed:false,ownerPreviewChanged:false,clinicalApproval:false};
+fs.writeFileSync(root+'/RESULT.json',JSON.stringify(output,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({passing:output.passing,sourceDifferences:changed,result}));
+process.exitCode=output.passing?0:1;

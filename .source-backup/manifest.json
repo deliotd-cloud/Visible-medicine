@@ -1,0 +1,55 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-30T19:11:59.680Z",
+  "sourceIdentity": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261029-mandible-generation-verified/SOURCE_AFTER_GENERATION.json",
+    "sha256": "22ad4273725894d769eaa7d76fd21ca2507a9e91b61f1bf393c38e853939fff1"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/public/media/atlas/NOTICES.md",
+      "bytes": 3536,
+      "sha256": "c2247722b9a67799ff1a1518945023e5bd270f9b5538f9c0ac37cd5f0c62ee89"
+    },
+    {
+      "path": "recipes/native-production-run.mjs",
+      "bytes": 2071,
+      "sha256": "4e4215f7617bfc70ce8899d27177061b75496976e8cee457fa658e55a4d8f01f"
+    },
+    {
+      "path": "recipes/native-production-verify-notice.mjs",
+      "bytes": 4406,
+      "sha256": "80ea24c59fb55291a4e71bd2a4edac1d30fccf614f354bc4afeed194d71c9dc0"
+    },
+    {
+      "path": "recipes/native-production-save.mjs",
+      "bytes": 12582,
+      "sha256": "6c648cbe401c6266ee98b1bc4210a0967c187544d0f9e3045ef4c9aff863c2fe"
+    },
+    {
+      "path": "recipes/dependency-evidence-audit.mjs",
+      "bytes": 5585,
+      "sha256": "5b3f7c1a22462de04af6f46b1b6ac1eeaffdb09fb08be2ad71a553870c4dd030"
+    }
+  ],
+  "removed": [],
+  "scope": "Five selected source/recipe files: staged preview-notice correction and production build, verification, recovery and read-only dependency-inventory recipes. No scans, masks, private models, identifiers, private decisions, raw canonical Git ancestry or generated distribution binaries.",
+  "proof": {
+    "fullNativeBuildPassed": true,
+    "sourceUnchanged": true,
+    "sourceFiles": 6500,
+    "artifactFiles": 555,
+    "noticeIntegrated": false,
+    "websiteImported": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "commercialClearance": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
