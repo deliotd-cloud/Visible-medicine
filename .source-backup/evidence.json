@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-30T23:08:24.763Z",
+  "precedingPartition": {
+    "tests": 366,
+    "pass": 364,
+    "fail": 2,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceAndAssetsStable": true,
+  "baselinePreservation": {
+    "pass": 2,
+    "fail": 2
+  },
+  "focused": {
+    "tests": 46,
+    "pass": 46,
+    "fail": 0,
+    "skipped": 0
+  },
+  "entireOriginalTestsRetained": true,
+  "explicitLaterDeltasAndNegativeMutationChecks": true,
+  "currentBehaviorTestsUnchanged": true,
+  "applicationAndAllNonTestInputsUnchanged": true,
+  "arbitraryTestRootOverrideRemoved": true,
+  "noticeProductionBuildPassed": true,
+  "exactNoticeInProductionOutput": true,
+  "fullTypesPassed": false,
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}
