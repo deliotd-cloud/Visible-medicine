@@ -1,0 +1,29 @@
+{
+  "lowerPurePass": 9,
+  "lowerClinicalPass": 1,
+  "release19InitialPass": 6,
+  "release19FollowupPass": 13,
+  "release20": {
+    "tests": 38,
+    "pass": 37,
+    "fail": 1,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0
+  },
+  "release20Followup": {
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0
+  },
+  "initialFocusedFailureResolved": true,
+  "sourceRowsUnchanged": 7389,
+  "protectedInputs": 1866,
+  "productChanged": false,
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}

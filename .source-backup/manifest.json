@@ -1,0 +1,312 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T16:27:40.719Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release20-followup/SOURCE.json",
+      "sha256": "a70e361cc0ade780d58f34512702d71b2d5abe36a4c4dee48380e981f59487b2"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-orbital-apex-ct.test.ts",
+      "bytes": 24053,
+      "sha256": "2bc05a944e44140ae85c4b2c885910a7b908979084b9a5b62c90866fd1e67083"
+    },
+    {
+      "path": "website/tests/atlas-thoracoabdominal-quiz-checks.mjs",
+      "bytes": 22284,
+      "sha256": "e1a67b130d283415b2d686ffb0a08ae4c8a598b1eb39c6e0a559385a5e73763e"
+    },
+    {
+      "path": "website/tests/expanded-review-delivery-admission.test.mjs",
+      "bytes": 8603,
+      "sha256": "481fdfe57399cac3163ab3252bfff837e00af05deb1f1b6c88507d50eacbaec5"
+    },
+    {
+      "path": "website/tests/fixtures/release19-expanded/expanded-review-delivery-admission.release18-final.raw",
+      "bytes": 7586,
+      "sha256": "26020fdaef83411a5acfa972ea5811fa3bb794c873784ed456ddd89a9f8088ab"
+    },
+    {
+      "path": "website/tests/release19-expanded-source-inverse.mjs",
+      "bytes": 1527,
+      "sha256": "22017dad171dc0df78049acb4cabf11fec26e39daa00bb94e6076d5699b848be"
+    },
+    {
+      "path": "website/tests/release19-expanded-source-seams.json",
+      "bytes": 3248,
+      "sha256": "5147386c5d7ea6e0c6b2f51621447ddc22dd45ce3fa1354c5b31f22d9c9b2d51"
+    },
+    {
+      "path": "website/tests/current-source-closure-preservation.test.mjs",
+      "bytes": 26288,
+      "sha256": "3b85c9807e37c7245009da1c998e32bbf48f613c79abb309330cb8c94ab7a923"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-deltas.json",
+      "bytes": 4031,
+      "sha256": "12718ad67da3f8cec30d745f199d746790e3b4286382475d19dfe3fee3d7a576"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/closed56-femoral-epoch.test.mjs.raw",
+      "bytes": 10912,
+      "sha256": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/head-disclosure-current-delivery.test.mjs.raw",
+      "bytes": 8351,
+      "sha256": "d9ff129afdaf8ba43d232eb9fbd201bf5a3d4c3327b8970e3c54bd435c44ec22"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/head-manual-recovery-54-to-55-closed.test.mjs.raw",
+      "bytes": 8722,
+      "sha256": "e60a4d22254e3af6da0394822cee26acc52fa8373c67c634400b36f74bf96f9a"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/head-native-history-current-transition.test.mjs.raw",
+      "bytes": 8753,
+      "sha256": "6280d5d8c8bd42447827a29f256acb5e718acd07effb549e9226ddc4b8efd8b4"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/inferior-thyroid-mra-current-delivery.test.mjs.raw",
+      "bytes": 13192,
+      "sha256": "7f28ac68d9e7ac522b20b9122c9760ba497c61775238fc952d8ff4541990e618"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/review-navigation-delivery-preservation.test.mjs.raw",
+      "bytes": 2732,
+      "sha256": "14e5824f2a60c96b4832d7a17416378500fe01d46ac8c7262985ecfa36301119"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/tour-discovery-current-delivery.test.mjs.raw",
+      "bytes": 8122,
+      "sha256": "2c0bc87f3660711894dad3cfe7aa5a638bbe11296c994662c9870a759b9e2fb3"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/ui-teaching-admission-contract.test.mjs.raw",
+      "bytes": 13882,
+      "sha256": "b57e611a7ee77263da554141708e3d3acc5bd8da2aed2664b19a185f6e41f3ab"
+    },
+    {
+      "path": "website/tests/fixtures/release19-closure-historical/ui-teaching-current-delivery.test.mjs.raw",
+      "bytes": 16217,
+      "sha256": "2d654b875fb68520036e2288cad70e08a4a8da885391196f715168f339418a4f"
+    },
+    {
+      "path": "website/tests/fixtures/release20-practice/head-practice-exit-source-seams.json",
+      "bytes": 13098,
+      "sha256": "a49c6c19da2bf3d5cc456736117f94ec1f90a51c04b79850fc81099201a3f4ca"
+    },
+    {
+      "path": "website/tests/fixtures/release20-practice/head-practice-exit.release19.raw",
+      "bytes": 12808,
+      "sha256": "bbf4ea9e8978997ab15a4284b4dc8fa180337b72b299c263c2bf205b9562eaa4"
+    },
+    {
+      "path": "website/tests/head-practice-exit-preservation.test.mjs",
+      "bytes": 6022,
+      "sha256": "11c4d2e40604f8adb989d2c14e2e55e5081d393e8ab17cc228fa51c06efdade8"
+    },
+    {
+      "path": "website/tests/head-practice-exit.test.mjs",
+      "bytes": 19838,
+      "sha256": "6662bbfbe26fc4fb1b59ee78d1efc721cb4ec56a91cc7cbfbac5dc13929669db"
+    },
+    {
+      "path": "website/tests/release20-practice-harness-inverse.mjs",
+      "bytes": 1539,
+      "sha256": "9a5ed3b1b6d38e7d04a9d47a75c45c000694c0bdb575fe266394557beb098a31"
+    },
+    {
+      "path": "website/tests/head-teaching-current.test.ts",
+      "bytes": 2189,
+      "sha256": "c2ed5df59aca52ebfec0fbc43ddb26be19b69ef7d07ba691b99ce67c79563e7e"
+    },
+    {
+      "path": "website/tests/head-teaching-current-source.mjs",
+      "bytes": 5837,
+      "sha256": "8e752318aa5c4b9e0c604516894d4ebae89b89fd2e9133d72561d8ee42749e04"
+    },
+    {
+      "path": "website/tests/clinical-review-abdominal-vessel-reasoning.test.ts",
+      "bytes": 11433,
+      "sha256": "62b99f580ab4b9cc80831a749a8799e5757515291dc27db75715c9b12b9c4b34"
+    },
+    {
+      "path": "website/tests/clinical-review-reasoning.test.ts",
+      "bytes": 4670,
+      "sha256": "46f82548f93be119c280b785ccdfc15dc05a6f7b3c1b103207f670938d95c4e9"
+    },
+    {
+      "path": "website/tests/reasoning-current-source-epoch.mjs",
+      "bytes": 2210,
+      "sha256": "9fa161e90f0816788ca925eeea14fe5e324d6c2655c37568eadd0325baf578b3"
+    },
+    {
+      "path": "website/tests/reasoning-current-source-epoch.test.mjs",
+      "bytes": 1434,
+      "sha256": "1492441a2c9193a795ab6a95dc426772f0319d5607c39bd1c538971737e71d7c"
+    },
+    {
+      "path": "website/tests/clinical-review-coronary-sinus-xray.test.ts",
+      "bytes": 25451,
+      "sha256": "f8aeb59f5b8b3e16c43bdd214697660d12e2b2f55221dc5700a8b5b165c7a409"
+    },
+    {
+      "path": "website/tests/clinical-review-imaging-status.test.ts",
+      "bytes": 10383,
+      "sha256": "c16f0f5bef3584df6b6558c261711bd2b1ec00768d089861007c32fcbedda5c4"
+    },
+    {
+      "path": "website/tests/imaging-status-body-source-inverse.mjs",
+      "bytes": 2653,
+      "sha256": "af198a4bb2c804b061fc7df291ed982ab569658dc1522f984b7a77f6c0e944eb"
+    },
+    {
+      "path": "website/tests/fixtures/imaging-body-learning-to-current.patch",
+      "bytes": 26145,
+      "sha256": "c64a70de2f88f20496e0677ffbff35c1ae2d08a7e87cd2629758688d534868a9"
+    },
+    {
+      "path": "tools/20261031-release20-reasoning/prepare.mjs",
+      "bytes": 4129,
+      "sha256": "03bf52a5895fe86a0506c47cdf1e9511f994e62fd83f7cd607d876c27d2a7dd7"
+    },
+    {
+      "path": "tools/20261031-release20-reasoning/seal.mjs",
+      "bytes": 644,
+      "sha256": "2649ff63f8e22c4b7131f8e7b53174f9f2637ee91f8f0cff4febfc25bbf4a744"
+    },
+    {
+      "path": "tools/20261031-release20-coronary/prepare.mjs",
+      "bytes": 3325,
+      "sha256": "30762e31ef7e416c14a3407e84143af43153aa303a1611278a9906440aa1bde5"
+    },
+    {
+      "path": "tools/20261031-release20-reasoning-followup/prepare.mjs",
+      "bytes": 2013,
+      "sha256": "90c77444c2a483f52b24a077324fb89c8f279c7a3ed6457e23eac6931c2d27d1"
+    },
+    {
+      "path": "tools/release20-main/prepare.mjs",
+      "bytes": 1838,
+      "sha256": "164fa58ef69fdca0c7a61931a787ce970dcf5b23e038578c12305528142970da"
+    },
+    {
+      "path": "tools/release20-main/integrate.mjs",
+      "bytes": 4785,
+      "sha256": "60713cf78d0886177da9400997fe7df43a89d85cc593ae8fcb87110ff7a0a9ae"
+    },
+    {
+      "path": "tools/release20-main/prepare-check.mjs",
+      "bytes": 1260,
+      "sha256": "0df44cbc8bc9b16c2f593457fc4b64add0c4f72685686b6014be38e45acb317f"
+    },
+    {
+      "path": "tools/release20-main/check.mjs",
+      "bytes": 2104,
+      "sha256": "77efe3c9bbd1fd3aa2e87e76a4187a9ad0e2c0f33d080773262dd12695238c62"
+    },
+    {
+      "path": "tools/release20-main/prepare-followup.mjs",
+      "bytes": 1618,
+      "sha256": "6402e3fe8772817abd65da28eccba0010fb40c580718cac2518da8e629f3e42c"
+    },
+    {
+      "path": "tools/release20-main/integrate-followup.mjs",
+      "bytes": 4617,
+      "sha256": "1e482e57ed9ee9669778ace5a1069c060690476e53326f25bee3702cc68de036"
+    },
+    {
+      "path": "tools/release20-main/prepare-followup-check.mjs",
+      "bytes": 764,
+      "sha256": "e11d261395100b8a3d82e9e43a823d4c0249075aac713766bc13ef32f784d91f"
+    },
+    {
+      "path": "tools/release20-main/check-followup.mjs",
+      "bytes": 1819,
+      "sha256": "145be86537c0c8867df911ac6c76d52dd050c682bc9289a3bea5444f5d37cf93"
+    },
+    {
+      "path": "tools/release20-main/save.mjs",
+      "bytes": 11548,
+      "sha256": "636e65119d517c6f345e252984ec20e3cb8ec9f9f0473abc76726b9309d9bfd7"
+    },
+    {
+      "path": "tools/release19-main/check-lower-pure.mjs",
+      "bytes": 2302,
+      "sha256": "641ad5e0812da8d2a7b1403315fdc0038d2ce3201931f790442b698de329945c"
+    },
+    {
+      "path": "tools/release19-main/check-lower-clinical.mjs",
+      "bytes": 1789,
+      "sha256": "757e74b2fa3a8586ab2c99d7b023d3337b8b1c94752cd50e162d669887c14ce7"
+    },
+    {
+      "path": "tools/release19-main/integrate-release19.mjs",
+      "bytes": 5459,
+      "sha256": "5e9f3c0108195323034b88c25083ca27df5c771f952627d03fb2b529bfc32396"
+    },
+    {
+      "path": "tools/release19-main/check-release19.mjs",
+      "bytes": 1862,
+      "sha256": "2157b0b0c9b7c810602f07cbd9a63270df0932254a99a74549b395b05aea1037"
+    },
+    {
+      "path": "tools/release19-main/integrate-release19-followup.mjs",
+      "bytes": 4377,
+      "sha256": "3128d044096e22b043c7efb54295b4373cd273c14f280e1eec6708bb34bca4cd"
+    },
+    {
+      "path": "tools/release19-main/check-release19-pure.mjs",
+      "bytes": 2263,
+      "sha256": "f04782ca9b6591d71c9c43769ea7cfc8e4646f7180dacceaa2df83a04ee7e3a3"
+    },
+    {
+      "path": "tools/release19-main/record-partition20.mjs",
+      "bytes": 1761,
+      "sha256": "0a4310c35af3425f7476d9a3c5a24586a82b4cebf2cdda13ec29a60a5d13b3c2"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected test source, text-only test fixtures and validation recipes only. No scans, patient identifiers, images, meshes, databases, generated runtime or canonical Git ancestry. Scoped source delta; earlier backups retained.",
+  "proof": {
+    "lowerPurePass": 9,
+    "lowerClinicalPass": 1,
+    "release19InitialPass": 6,
+    "release19FollowupPass": 13,
+    "release20": {
+      "tests": 38,
+      "pass": 37,
+      "fail": 1,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "release20Followup": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "initialFocusedFailureResolved": true,
+    "sourceRowsUnchanged": 7389,
+    "protectedInputs": 1866,
+    "productChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

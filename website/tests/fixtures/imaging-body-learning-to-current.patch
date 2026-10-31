@@ -1,0 +1,478 @@
+diff --git a/app/body-explorer.tsx b/app/body-explorer.tsx
+index f1230d63..86bae664 100644
+--- a/app/body-explorer.tsx
++++ b/app/body-explorer.tsx
+@@ -9,7 +9,11 @@ import {useHeadRootSelection,headRootSelection} from './head-selection-channel';
+ import {useBodyRootSelection,bodyRootSelection} from './body-selection-channel';
+ import {useAtlasLearningRootSelection,atlasLearningRootSelection} from './atlas-learning-selection-channel';
+ import { PracticePanelNavigation } from './practice-panel-navigation';
++import { PracticeActionBar } from './practice-action-bar';
++import { PracticeKeyboardPicker } from './practice-keyboard-picker';
++import { TourExploreAttention } from './tour-explore-attention';
+ import { SourceDisplayNotes } from './source-display-notes';
++import { SceneStudyFallback, type SceneStudyFocusRequest } from './scene-study-fallback';
+ import { teachingHeading } from '@/lib/teaching-heading';
+ import { BodySelectionNotice, focusRemovalFeedback } from './body-selection-notice';
+ import { lastSingleRemoval } from '@/lib/contextual-dissection-undo';
+@@ -17,11 +21,15 @@ import { InlineStudy } from './study-surface';
+ import { RegionalGuidedLearning } from './regional-guided-learning';
+ import { WholeBodyGuidedLearning } from './whole-body-guided-learning';
+ import { regionalTourFor,regionalToursFor } from '@/lib/regional-tours';
++import type { RegionalTour } from '@/lib/regional-tours';
++import {noRegionalTourEntry,resolveRegionalTourEntry,type RegionalTourEntry} from '@/lib/regional-tour-entry';
++import {resolveTourExplore,type TourExploreRequest} from '@/lib/tour-explore';
+ import './upper-limb-motor.css';
+ import {
+   useCallback,
+   useEffect,
+   useId,
++  useLayoutEffect,
+   useMemo,
+   useReducer,
+   useRef,
+@@ -260,6 +268,8 @@ const initialSystems: Record<BodySystem, boolean> = {
+ export default function BodyExplorer({
+   initialRegion,
+   studyLink = noStudyLink,
++  tourEntry = noRegionalTourEntry,
++  sourceRevision = '',
+   assetBase = '',
+   presentation = 'standalone',
+   embedded = false,
+@@ -267,6 +277,8 @@ export default function BodyExplorer({
+ }: {
+   initialRegion: string;
+   studyLink?: ParsedStudyLink;
++  tourEntry?: RegionalTourEntry;
++  sourceRevision?: string;
+   assetBase?: string;
+   presentation?: 'standalone' | 'panel';
+   /** Presentation only: the containing website supplies its own brand/header. */
+@@ -280,6 +292,10 @@ export default function BodyExplorer({
+     ? dissectionProfiles[initialRegion]
+     : dissectionProfiles['whole-body'];
+   const appliedStudyLink = useRef(studyLink.status === 'none');
++  const appliedTourEntry = useRef(tourEntry.status === 'none');
++  const initialTourEntry = useRef({entry:tourEntry,sourceRevision});
++  const [entryTour,setEntryTour] = useState<RegionalTour|null>(null);
++  const [entryStep,setEntryStep] = useState<number|undefined>(undefined);
+   const [linkedStudyReady, setLinkedStudyReady] = useState(
+     studyLink.status === 'none',
+   );
+@@ -296,8 +312,13 @@ export default function BodyExplorer({
+   const [catalog, setCatalog] = useState<BodyCatalog | null>(null),
+     [error, setError] = useState(false);
+   const [catalogAttempt, setCatalogAttempt] = useState(0);
+-  const [rendererHealth, setRendererHealth] =
++  const [rendererHealth, setRendererHealthState] =
+     useState<RendererHealth>('starting');
++  const rendererHealthRef = useRef<RendererHealth>('starting');
++  const setRendererHealth = useCallback((health: RendererHealth) => {
++    rendererHealthRef.current = health;
++    setRendererHealthState(health);
++  }, []);
+   const displayReady = rendererReady(rendererHealth);
+   const [selectionNotice, setSelectionNotice] = useState<{
+     id: string;
+@@ -310,6 +331,8 @@ export default function BodyExplorer({
+     [systems, setSystems] = useState(
+       initialRegion === 'whole-body' ? initialSystems : allBodySystems,
+     );
++  const studyInfoAnchor = useRef<HTMLSpanElement>(null);
++  const studyFocusRequest = useRef<SceneStudyFocusRequest | null>(null);
+   const [side, setSide] = useState<string>(() => initialBodySide(initialRegion)),
+     [isolated, setIsolated] = useState(false),
+     [focus, setFocus] = useState(false);
+@@ -324,15 +347,22 @@ export default function BodyExplorer({
+   const cameraCapture = useRef<StudyCamera | null>(null);
+   const cameraRestore = useRef<StudyCamera | null>(null);
+   const [guidedLearning, setGuidedLearning] = useState(false);
++  const [tourExploreAttention, setTourExploreAttention] = useState<TourExploreRequest | null>(null);
++  const tourExplorePanelMarker = useRef<HTMLSpanElement>(null);
++  const guidedScopeRetired=useRef(false);
+   const guidedReturnCamera = useRef<StudyCamera | null>(null);
+   const guidedReturnFocus = useRef<HTMLElement | null>(null);
+   const regionalTour = regionalTourFor(initialRegion);
+   function changeGuidedLearning(active: boolean, reason?: 'mode-switch') {
+     if (active && ((!regionalTour && initialRegion !== 'whole-body') || practice.status === 'active')) return;
+     if (active && !guidedLearning) {
++      guidedScopeRetired.current=false;
+       guidedReturnCamera.current = cameraCapture.current ? structuredClone(cameraCapture.current) : null;
+       guidedReturnFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+     } else if (!active && guidedLearning) {
++      guidedScopeRetired.current=true;
++      setEntryTour(null);
++      setEntryStep(undefined);
+       cameraRestore.current = guidedReturnCamera.current;
+       setReset(n => n + 1);
+       if (reason !== 'mode-switch')
+@@ -461,10 +491,20 @@ export default function BodyExplorer({
+     (hraPelvisOpen && ['pelvis', 'whole-body'].includes(initialRegion)) ||
+     (hraRenalOpen && ['abdomen', 'whole-body'].includes(initialRegion))
+   );
++  useEffect(() => {
++    if (exam || guidedLearning || inlineStudy) studyFocusRequest.current = null;
++  }, [exam, guidedLearning, inlineStudy]);
+   const examTargets = practice.questions.map((q) => q.target);
+   const question = practice.index;
+   const response = practice.responses[question];
+   const answered = !!response;
++  const [practiceCursor, setPracticeCursor] = useState<{
++    sessionId: number; index: number; id: string;
++  } | null>(null);
++  const practiceInput = useRef({
++    sessionId: 0, index: 0, ready: false,
++    keyboardIds: [] as string[], required: [] as string[],
++  });
+   const answer = response?.chosen;
+   const score = practiceScore(practice);
+   const practiceResult =
+@@ -535,6 +575,22 @@ export default function BodyExplorer({
+             appliedStudyLink.current = true;
+             setLinkedStudyReady(true);
+           }
++          if (!appliedTourEntry.current) {
++            // Fresh-load intent is consumed once, before any scene mounts.
++            // Existing study/practice activity always wins; never auto-start.
++            const result=resolveRegionalTourEntry(value,initialRegion,initialTourEntry.current.sourceRevision,initialTourEntry.current.entry,
++              studyLink.status!=='none'||practice.status==='active'||guidedLearning);
++            if(result.status==='ready'){
++              setEntryTour(result.tour);
++              if(result.stepIndex!==undefined)setEntryStep(result.stepIndex);
++              setGuidedLearning(true);
++            }else if(result.status==='rejected'){
++              setLinkIssue(result.reason==='busy'
++                ? 'This tour was not opened because another study or learning activity takes precedence. No tour was substituted.'
++                : 'This tour link is unavailable for the current source, revision or region. No tour was selected. Find the tour again in Guided learning.');
++            }
++            appliedTourEntry.current=true;
++          }
+           setCatalog(value);
+         }
+       })
+@@ -578,11 +634,17 @@ export default function BodyExplorer({
+     [stage, focusedStudy, resolved, systems],
+   );
+   const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
++  const [failureReasons, setFailureReasons] = useState<Record<string, ModelLoadFailure>>({});
+   useHeadRootSelection({nested:inlineStudy,state:
+     exam || workspace.mode === 'practice' ? {status:'blocked',reason:'practice'} :
+     guidedLearning ? {status:'blocked',reason:'guided'} :
+-    !catalog || (!inlineStudy && (!displayReady || (selected && (!loaded.includes(selected.bundle) || failed.includes(selected.bundle)))) )
+-      ? {status:'blocked',reason:'unavailable'} : headRootSelection(catalog,selected)},target=>{
++    !catalog || (!inlineStudy && (!displayReady || (!!selectedId && !selected)))
++      ? {status:'blocked',reason:'unavailable'} :
++    !inlineStudy && selected && failed.includes(selected.bundle)
++      ? {status:'blocked',reason:failureReasons[selected.bundle] ?? 'unavailable'} :
++    !inlineStudy && selected && !loaded.includes(selected.bundle)
++      ? {status:'blocked',reason:'unavailable'} :
++    headRootSelection(catalog,selected)},target=>{
+     if(document.hidden||initialRegion!=='head-neck'||target.kind!=='root'||exam||workspace.mode==='practice'||guidedLearning||inlineStudy||!displayReady||!catalog)return false;
+     const candidate=regionStructures.find(s=>s.id===target.id);
+     const bundle=candidate&&catalog.bundles.find(b=>b.id===candidate.bundle);
+@@ -797,18 +859,32 @@ export default function BodyExplorer({
+     () => anatomyLoadSummary(required, loaded, failed),
+     [required, loaded, failed],
+   );
+-  const [failureReasons, setFailureReasons] = useState<Record<string, ModelLoadFailure>>({});
+   const accessNotice = modelLoadAccessNotice(loadStatus.failed.map((id) => failureReasons[id] ?? 'unavailable'));
+   const pending = loadStatus.pending;
+   const practicePaused =
+     exam &&
+     (pending.length > 0 || loadStatus.failed.length > 0 || !displayReady);
++  // Use displayed catalogue order, never question order, and expose no names.
++  const keyboardIds = useMemo(() => exam && practice.mode === 'find'
++    ? sceneStructures.filter(s => systems[s.system] && !hiddenIds.includes(s.id)
++        && loadStatus.loaded.includes(s.bundle) && !coronaryScene.contextIds.includes(s.id))
++        .map(s => s.id)
++    : [], [exam, practice.mode, sceneStructures, systems, hiddenIds, loadStatus.loaded, coronaryScene.contextIds]);
++  useLayoutEffect(() => {
++    practiceInput.current = { sessionId: practice.id, index: question,
++      ready: exam && !answered && !practicePaused, keyboardIds, required };
++    return () => { practiceInput.current.ready = false; };
++  }, [practice.id, question, exam, answered, practicePaused, keyboardIds, required]);
++  const practiceFocusId = !practicePaused && !answered && practiceCursor
++    && practiceCursor.sessionId === practice.id && practiceCursor.index === question
++    && keyboardIds.includes(practiceCursor.id) ? practiceCursor.id : null;
+   const onLoaded = useCallback(
+     (id: string) => loadDispatch({ type: 'loaded', id }),
+     [],
+   );
+   const onFailure = useCallback(
+     (id: string, reason: ModelLoadFailure = 'unavailable') => {
++      if (practiceInput.current.required.includes(id)) practiceInput.current.ready = false;
+       loadDispatch({ type: 'failed', id });
+       setFailureReasons((v) => ({ ...v, [id]: reason }));
+     },
+@@ -839,8 +915,8 @@ export default function BodyExplorer({
+     }
+   }
+   const applySelection = useCallback(
+-    (id: string, restoreStudyFocus = true) => {
+-      const s = regionStructures.find((item) => item.id === id);
++    (id: string, restoreStudyFocus = true, sourceScope = regionStructures) => {
++      const s = sourceScope.find((item) => item.id === id);
+       if (exam || !s) return;
+       setSelectedId(id, restoreStudyFocus);
+       setSelectionNotice({
+@@ -854,13 +930,47 @@ export default function BodyExplorer({
+       // against that restored state, not the prior render's removed IDs. Leave
+       // already-visible selections unchanged so Undo/Redo history is preserved.
+       setDissection(current =>
+-        resolveDissection(regionStructures, profile, current).removed.some(item => item.id === id)
++        resolveDissection(sourceScope, profile, current).removed.some(item => item.id === id)
+           ? dissectionReducer(current, { type: 'restore', id })
+           : current,
+       );
+     },
+     [regionStructures, profile, exam, setSelectedId],
+   );
++  const committedTourScope=useRef<{catalog:BodyCatalog|null;region:string;guided:boolean;exam:boolean;inlineStudy:boolean;directTour:RegionalTour|null}|null>(null);
++  useLayoutEffect(()=>{
++    committedTourScope.current={catalog,region:initialRegion,guided:guidedLearning,exam,inlineStudy,
++      directTour:whole||regionalToursFor(initialRegion).length>1?null:entryTour??regionalTour};
++    return()=>{committedTourScope.current=null;};
++  },[catalog,initialRegion,guidedLearning,exam,inlineStudy,whole,entryTour,regionalTour]);
++  const exploreTourStop=(request:TourExploreRequest)=>{
++    const current=committedTourScope.current;
++    if(!current||guidedScopeRetired.current||!current.guided||current.exam||current.inlineStudy||
++      !current.catalog||current.catalog!==catalog||current.region!==initialRegion||
++      (current.directTour&&current.directTour!==request.tour))return;
++    const target=resolveTourExplore(current.catalog,current.region,request);
++    if(!target)return;
++    const sourceScope=current.catalog.structures.filter(s=>
++      (current.region==='whole-body'||s.regions.includes(current.region))&&bodySideMatches(s,'both'));
++    if(sourceScope.filter(s=>s.id===target.structure.id).length!==1)return;
++    guidedScopeRetired.current=true;
++    pausedTourImaging.suspend();
++    changeGuidedLearning(false,'mode-switch');
++    chooseWorkspaceMode('explore');
++    // The guided Return camera belongs to Exit. Let the selected source define
++    // the exploration frame after the saved workspace has been restored.
++    cameraRestore.current=null;
++    setSide('both');
++    setDissection(currentState=>dissectionReducer(currentState,
++      current.region==='whole-body'?{type:'free'}:{type:'stage',id:'assembled'}));
++    setSystems(allBodySystems);
++    setGhostRemoved(false);setPlate(false);setFocus(true);setIsolated(true);
++    setInspection(initialInspection);setLayout('spatial');setShowOrigins(false);
++    setExplode(0);setRegionalFraming(true);setView(target.step.view);setZoom(1);
++    applySelection(target.structure.id,false,sourceScope);
++    setTourExploreAttention(request);
++    setReset(n=>n+1);
++  };
+   const linkEntries = useMemo(
+     () => (catalog ? bodyLinkEntries(catalog) : []),
+     [catalog],
+@@ -1237,7 +1347,9 @@ export default function BodyExplorer({
+     } else select(id);
+   }
+   function submitPractice(chosen: string | null) {
+-    if (practicePaused) return;
++    const current = practiceInput.current;
++    if (practicePaused || !current.ready || !rendererReady(rendererHealthRef.current)
++      || current.sessionId !== practice.id || current.index !== question) return;
+     practiceDispatch({
+       type: 'answer',
+       sessionId: practice.id,
+@@ -1245,6 +1357,15 @@ export default function BodyExplorer({
+       chosen,
+     });
+   }
++  function previewPracticeStructure(id: string | null) {
++    const current = practiceInput.current;
++    if (current.sessionId !== practice.id || current.index !== question) return;
++    // Closing during recovery must not restore an unseen cursor afterward.
++    if (id === null) { setPracticeCursor(null); return; }
++    if (!current.ready || !rendererReady(rendererHealthRef.current)
++      || !current.keyboardIds.includes(id)) return;
++    setPracticeCursor({ sessionId: practice.id, index: question, id });
++  }
+   function preset(id: string) {
+     const next = bodyPresetSystems(id);
+     if (exam || !next) return;
+@@ -1900,13 +2021,16 @@ export default function BodyExplorer({
+         canRedo: dissection.future.length > 0,
+       }, undoDissection, redoDissection)}>
+       <PracticeAttention answered={answered} exam={exam} />
++      <TourExploreAttention request={tourExploreAttention} catalog={catalog} region={initialRegion}
++        side={side} selectedId={selectedId} guided={guidedLearning} exam={exam}
++        inlineStudy={inlineStudy} panelMarkerRef={tourExplorePanelMarker} />
+       <header className="body-topbar" data-shared-header={sharedHeader} data-guided-learning={guidedLearning}>
+         {compactComparison ? <details className="atlas-comparison-tools">
+           <summary>3D tools &amp; modes</summary>
+           <div className="atlas-comparison-tools-content">{headerContent}</div>
+         </details> : headerContent}
+       </header>
+-      {guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning key={initialRegion} region={initialRegion} catalog={catalog} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExit={()=>changeGuidedLearning(false)} /> : <>
++      {guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning key={initialRegion} region={initialRegion} initialTour={entryTour?{id:entryTour.id,revision:entryTour.revision,...(entryStep!==undefined?{stepIndex:entryStep}:{})}:undefined} catalog={catalog} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExplore={exploreTourStop} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && (entryTour??regionalTour) ? <RegionalGuidedLearning catalog={catalog} tour={(entryTour??regionalTour)!} initialStep={entryStep} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExplore={exploreTourStop} onExit={()=>changeGuidedLearning(false)} /> : <>
+       <div className="body-layout" hidden={inlineStudy}>
+         <AnatomyControlRail>{railContent}</AnatomyControlRail>
+         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
+@@ -2017,6 +2141,7 @@ export default function BodyExplorer({
+                   reset={reset}
+                   focus={focus}
+                   exam={exam}
++                  practiceFocusId={practiceFocusId}
+                   inspection={exam ? initialInspection : inspection}
+                   cameraBounds={jointCloseUp}
+                   presetBounds={regionalCloseUp}
+@@ -2031,6 +2156,21 @@ export default function BodyExplorer({
+                   onLoaded={onLoaded}
+                   onFailure={onFailure}
+                   onRendererHealth={setRendererHealth}
++                  studyFallback={!exam && !guidedLearning && !inlineStudy ? (
++                    <SceneStudyFallback
++                      selectedName={selected && regionStructures.some(s => s.id === selected.id) ? selected.name : null}
++                      selectionKey={selected && regionStructures.some(s => s.id === selected.id) ? selected.id : null}
++                      scopeKey={`${catalog.version}/${catalog.sourceVersion}/${initialRegion}/${side}`}
++                      infoAnchor={studyInfoAnchor}
++                      requestRef={studyFocusRequest}
++                      checkKind="body"
++                      search={<AtlasSearch catalog={catalog}
++                        localRegionOnly={presentation === 'panel'}
++                        region={initialRegion} side={side as StudySide}
++                        onSelect={select} onWindow={changeStage}
++                        onFocus={changeFocus} onDissect={openNested} />}
++                    />
++                  ) : undefined}
+                 />
+               )}
+               {pending.length > 0 && (
+@@ -2204,6 +2344,8 @@ export default function BodyExplorer({
+         </section>
+         <BodyTeachingVisibility.Provider value={!inlineStudy}>
+         <AnatomyInfoPanel practice={exam}>
++          <span ref={studyInfoAnchor} hidden aria-hidden="true" />
++          <span ref={tourExplorePanelMarker} hidden aria-hidden="true" />
+           <PracticePanelNavigation
+             sessionId={practice.id}
+             index={question}
+@@ -2287,14 +2429,6 @@ export default function BodyExplorer({
+                     </p>
+                   )}
+                   <ReasoningFeedback session={practice} />
+-                  <Button onClick={nextQuestion} disabled={practicePaused}>
+-                    {question + 1 === examTargets.length
+-                      ? 'Finish practice'
+-                      : practice.mode === 'reason'
+-                        ? 'Next question'
+-                        : 'Next structure'}
+-                    <ChevronRight />
+-                  </Button>
+                 </div>
+               ) : (
+                 <>
+@@ -2320,33 +2454,39 @@ export default function BodyExplorer({
+                       ))}
+                     </fieldset>
+                   ) : (
+-                    <div className="body-practice-wait">
++                    <><div className="body-practice-wait">
+                       <Focus />
+                       <span>
+                         Rotate and inspect the model, then select your answer.
+                       </span>
+                     </div>
++                    <PracticeKeyboardPicker key={`${practice.id}-${question}`}
++                      ids={keyboardIds} activeId={practiceFocusId} disabled={practicePaused}
++                      onPreview={previewPracticeStructure} onAnswer={submitPractice} />
++                    </>
+                   )}
+-                  <Button
+-                    size="sm"
+-                    variant="ghost"
+-                    disabled={practicePaused}
+-                    onClick={() => submitPractice(null)}
+-                  >
+-                    Skip & reveal
+-                  </Button>
+                 </>
+               )}
+-              <div className="body-practice-score">
+-                Score{' '}
+-                <strong>
+-                  {score} / {practice.responses.length}
+-                </strong>
+-              </div>
+               <small>
+                 Formative practice only. Targets are chosen from currently
+                 loaded, visible structures; overlap may require rotation.
+               </small>
++              <PracticeActionBar correct={score} answered={practice.responses.length}>
++                {answered ? (
++                  <Button onClick={nextQuestion} disabled={practicePaused}>
++                    {question + 1 === examTargets.length
++                      ? 'Finish practice'
++                      : practice.mode === 'reason'
++                        ? 'Next question'
++                        : 'Next structure'}
++                    <ChevronRight />
++                  </Button>
++                ) : (
++                  <Button size="sm" variant="ghost" disabled={practicePaused} onClick={() => submitPractice(null)}>
++                    Skip & reveal
++                  </Button>
++                )}
++              </PracticeActionBar>
+             </>
+           ) : (
+             <>
+@@ -2485,7 +2625,7 @@ export default function BodyExplorer({
+                     questions
+                   </Button>
+                 </details>
+-                {selected && <QuizNotes structure={selected} />}
++                {selected && <div data-study-check-id={selected.id}><QuizNotes structure={selected} /></div>}
+               </WorkspaceOnly>
+               <BodySelectionNotice
+                 message={selected
+@@ -2551,7 +2691,16 @@ export default function BodyExplorer({
+                       ))}
+                     </ul>
+                     {missedPracticeIds(practiceResult).length > 0 && (
+-                      <>
++                      <p className="vm-practice-note">
++                        Retries respect the current visible, loaded scope and
++                        practice options. Skipped questions count as missed.
++                      </p>
++                    )}
++                    <PracticeActionBar
++                      correct={practiceResult.filter(response => response.target === response.chosen).length}
++                      answered={practiceResult.length}
++                    >
++                      {missedPracticeIds(practiceResult).length > 0 && (
+                         <Button
+                           size="sm"
+                           variant="outline"
+@@ -2560,12 +2709,7 @@ export default function BodyExplorer({
+                         >
+                           Retry missed ({retryCount} available)
+                         </Button>
+-                        <p className="vm-practice-note">
+-                          Retries respect the current visible, loaded scope and
+-                          practice options. Skipped questions count as missed.
+-                        </p>
+-                      </>
+-                    )}
++                      )}
+                     <Button
+                       size="sm"
+                       variant="ghost"
+@@ -2573,6 +2717,7 @@ export default function BodyExplorer({
+                     >
+                       Dismiss results
+                     </Button>
++                    </PracticeActionBar>
+                   </section>
+                 )}
+               </WorkspaceOnly>
+@@ -2587,7 +2732,7 @@ export default function BodyExplorer({
+                       />
+                       {bodySystems[selected.system].name} · {selected.fmaId}
+                     </div>
+-                    <h2 data-structure-study-heading tabIndex={-1}>{selected.name}</h2>
++                    <h2 data-structure-study-heading data-study-selection-id={selected.id} tabIndex={-1}>{selected.name}</h2>
+                     <ReviewStatus structureId={selected.id} />
+                     {!exam && hepaticFor(selected).length > 0 && (
+                       <p className="vm-practice-note">

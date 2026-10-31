@@ -1,0 +1,81 @@
+{
+  "prior": "bbf4ea9e8978997ab15a4284b4dc8fa180337b72b299c263c2bf205b9562eaa4",
+  "current": "6662bbfbe26fc4fb1b59ee78d1efc721cb4ec56a91cc7cbfbac5dc13929669db",
+  "edits": [
+    {
+      "oldStart": 109,
+      "old": "",
+      "new": "import {fileURLToPath,pathToFileURL} from 'node:url';\n"
+    },
+    {
+      "oldStart": 372,
+      "old": "const source=readFileSync(process.env.HEAD_PRACTICE_EXIT_SOURCE??new URL('../components/HeadAtlasViewer.tsx',import.meta.url),'utf8');\n",
+      "new": "const sourcePath=process.env.HEAD_PRACTICE_EXIT_SOURCE??fileURLToPath(new URL('../components/HeadAtlasViewer.tsx',import.meta.url));\nconst source=readFileSync(sourcePath,'utf8');\nconst policySource=readFileSync(new URL('../lib/head-practice-navigation.ts',pathToFileURL(sourcePath)),'utf8');\nconst policyExports={};\nnew Function('exports',ts.transpileModule(policySource,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS}}).outputText)(policyExports);\nconst shouldConfirmHeadPracticeLink=policyExports.shouldConfirmHeadPracticeLink;\nassert.equal(typeof shouldConfirmHeadPracticeLink,'function','execute the actual ordinary-link navigation policy');\n"
+    },
+    {
+      "oldStart": 1041,
+      "old": "const scope=declaration('practiceExitScope'),scopeRef=declaration('practiceExitScopeRef');\n",
+      "new": "const scope=declaration('practiceExitScope'),scopeRef=declaration('practiceExitScopeRef'),practiceLinkRef=declaration('practiceNavigationLinkRef');\n"
+    },
+    {
+      "oldStart": 1340,
+      "old": "const guard=method('canExitPractice'),choose=method('chooseFiles'),close=method('closeAtlas');\nassert(scope&&scopeRef&&commit&&guard&&choose&&close,'extract the actual scope, commit and handlers');\n",
+      "new": "const capture=viewer.body.statements.find(node=>ts.isExpressionStatement(node)&&node.getText(ast).startsWith('useLayoutEffect(')&&node.getText(ast).includes(\"document.addEventListener('click',capture,true)\"));\nconst accepted=method('acceptedPracticeScope'),guard=method('canExitPractice');\nconst cancelReplacement=method('cancelReplacement'),choose=method('chooseFiles'),close=method('closeAtlas');\nassert(scope&&scopeRef&&practiceLinkRef&&commit&&capture&&accepted&&guard&&cancelReplacement&&choose&&close,\n  'extract the actual scope, admission, navigation capture, replacement lifecycle and handlers');\n"
+    },
+    {
+      "oldStart": 2050,
+      "old": "const names=['pkg','study','modality','practice','importGeneration','window','useRef','useLayoutEffect','cancelPackageReads','headViewHistory','pendingHistoryRestoreRef','setLocalSourceState','headSourceAfterCancel','folderSession','failedStudyRef','setStudyLoadFailed','setPackageOpening','setPackage','setStudy','setSelected','setError','setStatus','openLocalHeadPackage','retainFolder','HEAD_MANIFEST_SHA256','setRetainFolder','setActiveId','resetIndexDetails','setQuery','setFamily','setLinkedOnly','setExpanded','setCursor','setGroupLayers','setHiddenLayers','setLayerOpacity','setOverlayGroup','setGroupLabels','setOverlayOpacity','setOverlay','setRegionalCourse','setShowCrosshair','setPracticeOrigin','setLearningPosition','setRightPanel','urlNavigation','setOverlayStatus','setNavigationNotice','openButtonRef','rememberHistoryView'];\nconst program=`return function create(input){const {${names.join(',')}}=input;${scope.getText(ast)}\\n${scopeRef.getText(ast)}\\n${commit.getText(ast)}\\n${guard.getText(ast)}\\n${choose.getText(ast)}\\n${close.getText(ast)}\\nreturn {linkClick:${linkClick},chooseFiles,closeAtlas,scope:practiceExitScope,ref:practiceExitScopeRef};}`;\n",
+      "new": "const names=['pkg','study','modality','practice','importGeneration','window','document','Element','HTMLAnchorElement','shouldConfirmHeadPracticeLink','useRef','useLayoutEffect','cancelPackageReads','headViewHistory','pendingHistoryRestoreRef','setLocalSourceState','headSourceAfterCancel','folderSession','failedStudyRef','setStudyLoadFailed','setPackageOpening','setPackage','setStudy','setSelected','setError','setStatus','openLocalHeadPackage','loadHeadStudy','headStudyLoadingMessage','initialWindow','committedModalityRef','committedRetentionRef','replacementGeneration','replacementRequestRef','prevalidatedStudyRef','setReplacementOpening','setReplacementStatus','setReplacementCancelScope','setReplacementError','setWindowing','HEAD_MANIFEST_SHA256','setRetainFolder','setActiveId','resetIndexDetails','setQuery','setFamily','setLinkedOnly','setExpanded','setCursor','setGroupLayers','setHiddenLayers','setLayerOpacity','setOverlayGroup','setGroupLabels','setOverlayOpacity','setOverlay','setRegionalCourse','setShowCrosshair','setPracticeOrigin','setLearningPosition','setRightPanel','urlNavigation','setOverlayStatus','setNavigationNotice','openButtonRef','rememberHistoryView'];\nconst program=`return function create(input){const {${names.join(',')}}=input;${scope.getText(ast)}\\n${scopeRef.getText(ast)}\\n${practiceLinkRef.getText(ast)}\\n${commit.getText(ast)}\\n${cancelReplacement.getText(ast)}\\n${accepted.getText(ast)}\\n${guard.getText(ast)}\\n${capture.getText(ast)}\\n${choose.getText(ast)}\\n${close.getText(ast)}\\nreturn {linkClick:${linkClick},chooseFiles,closeAtlas,scope:practiceExitScope,ref:practiceExitScopeRef,navigationRef:practiceNavigationLinkRef};}`;\n"
+    },
+    {
+      "oldStart": 3389,
+      "old": "",
+      "new": "class MockElement{constructor(anchor=null){this.anchor=anchor;}closest(){return this.anchor;}}\nclass MockAnchor extends MockElement{constructor(href,target=''){super();this.href=href;this.target=target;}closest(){return this;}hasAttribute(name){return false;}}\n"
+    },
+    {
+      "oldStart": 3390,
+      "old": "function harness(active=true,decision=true){\n",
+      "new": "function harness(active=true,decision=true,options={}){\n"
+    },
+    {
+      "oldStart": 3791,
+      "old": "    window:{location:{hostname:'localhost'},confirm:()=>{effects.push('confirm');return typeof decision==='function'?decision(input):decision;}},\n",
+      "new": "    window:{location:{hostname:'localhost',href:'https://example.test/atlas/ct-head'},confirm:()=>{effects.push('confirm');return typeof decision==='function'?decision(input):decision;}},\n    document:{addEventListener:(name,listener,capture)=>{assert.equal(name,'click');assert.equal(capture,true);input.capture=listener;},removeEventListener:()=>{}},\n    Element:MockElement,HTMLAnchorElement:MockAnchor,shouldConfirmHeadPracticeLink,\n"
+    },
+    {
+      "oldStart": 4417,
+      "old": "    retainFolder:false,HEAD_MANIFEST_SHA256:'revision',urlNavigation:{position:null,invalid:false},\n",
+      "new": "    loadHeadStudy:async()=>{effects.push('load-candidate');return{geometry:{shapeKJI:[8,10,12]},range:[0,100]};},\n    headStudyLoadingMessage:()=> 'Checking candidate',initialWindow:()=>[40,80],\n    committedModalityRef:{current:'CT'},committedRetentionRef:{current:false},\n    replacementGeneration:{current:0},replacementRequestRef:{current:null},prevalidatedStudyRef:{current:null},\n    HEAD_MANIFEST_SHA256:'revision',urlNavigation:{position:null,invalid:false},\n"
+    },
+    {
+      "oldStart": 4699,
+      "old": "",
+      "new": "  Object.assign(input,options);\n"
+    },
+    {
+      "oldStart": 7352,
+      "old": "",
+      "new": "test('ordinary same-tab navigation is captured before it can discard an unsaved set',()=>{\n  const h=harness(true,false),before=structuredClone(h.questions);\n  const anchor=new MockAnchor('https://example.test/atlas/shoulder-3d');\n  const event=h.link({target:new MockElement(anchor)});h.input.capture(event);\n  assert.equal(event.defaultPrevented,true);assert.deepEqual(h.effects,['confirm']);\n  assert.deepEqual(h.questions,before);assert.equal(h.controls.scope.consumed,false);\n});\ntest('accepted ordinary navigation remains retryable if a later handler cancels it',()=>{\n  const h=harness(),anchor=new MockAnchor('https://example.test/atlas/mri-head');\n  const first=h.link({target:new MockElement(anchor)});h.input.capture(first);first.preventDefault();\n  const retry=h.link({target:new MockElement(anchor)});h.input.capture(retry);\n  assert.equal(retry.defaultPrevented,false);assert.equal(h.effects.filter(value=>value==='confirm').length,2);\n  assert.equal(h.controls.scope.consumed,false);\n});\ntest('dedicated comparison link is excluded from capture and uses its own guard',()=>{\n  const h=harness(true,false),anchor=new MockAnchor('https://example.test/atlas/mri-head');\n  h.controls.navigationRef.current=anchor;\n  const event=h.link({target:new MockElement(anchor)});h.input.capture(event);\n  assert.equal(event.defaultPrevented,false);assert.deepEqual(h.effects,[]);\n  h.controls.linkClick(event);assert.equal(event.defaultPrevented,true);assert.deepEqual(h.effects,['confirm']);\n});\n"
+    },
+    {
+      "oldStart": 8831,
+      "old": "  await h.controls.chooseFiles(event);assert.equal(event.target.value,'');assert.deepEqual(h.effects,['confirm']);\n  assert.deepEqual(h.questions,before);assert.equal(h.input.importGeneration.current,4);\n",
+      "new": "  await h.controls.chooseFiles(event);assert.equal(event.target.value,'');\n  assert.equal(h.effects.filter(value=>value==='open:1').length,1,'candidate package checked before confirmation');\n  assert.equal(h.effects.filter(value=>value==='load-candidate').length,1,'native image checked before confirmation');\n  assert.equal(h.effects.filter(value=>value==='confirm').length,1);\n  assert.equal(h.effects.includes('abort'),false);assert.equal(h.effects.includes('end'),false);\n  assert.deepEqual(h.questions,before);assert.equal(h.input.importGeneration.current,4);assert.equal(h.input.pkg.id,'current');\n"
+    },
+    {
+      "oldStart": 10838,
+      "old": "    assert.deepEqual(h.effects,['confirm']);assert.equal(h.questions.draft,'my answer');\n",
+      "new": "    assert.equal(h.effects.filter(value=>value==='confirm').length,1);\n    assert.equal(h.effects.includes('abort'),false);assert.equal(h.effects.includes('end'),false);\n    assert.equal(h.questions.draft,'my answer');\n"
+    },
+    {
+      "oldStart": 12131,
+      "old": "      await h.controls.chooseFiles(h.picker([{name:'approved'}]));assert.equal(h.effects.filter(value=>value==='open:1').length,1);\n",
+      "new": "      await h.controls.chooseFiles(h.picker([{name:'approved'}]));\n      assert.equal(h.effects.filter(value=>value==='open:1').length,2,'each retry verifies its candidate first');\n      assert.equal(h.effects.filter(value=>value==='abort').length,1);\n"
+    },
+    {
+      "oldStart": 12808,
+      "old": "",
+      "new": "test('invalid replacement candidate never asks to discard the current practice',async()=>{\n  let inspected=0;\n  const h=harness(true,true,{openLocalHeadPackage:async()=>{inspected++;throw Error('invalid candidate');}});\n  const before=structuredClone(h.questions),event=h.picker([{name:'invalid'}]);\n  await h.controls.chooseFiles(event);\n  assert.equal(inspected,1);assert.equal(event.target.value,'');\n  assert.equal(h.effects.includes('confirm'),false);assert.equal(h.effects.includes('abort'),false);\n  assert.equal(h.effects.includes('end'),false);assert.equal(h.input.importGeneration.current,4);\n  assert.deepEqual(h.questions,before);assert.equal(h.input.pkg.id,'current');\n});\ntest('modality change during candidate validation retires replacement without a practice prompt',async()=>{\n  let finish;\n  const candidate=new Promise(resolve=>{finish=resolve;});\n  const h=harness(true,true,{loadHeadStudy:()=>candidate});\n  const before=structuredClone(h.questions),event=h.picker([{name:'approved'}]);\n  const pending=h.controls.chooseFiles(event);\n  await Promise.resolve();await Promise.resolve();\n  h.input.committedModalityRef.current='MRI';\n  finish({geometry:{shapeKJI:[8,10,12]},range:[0,100]});\n  await pending;\n  assert.equal(event.target.value,'');assert.equal(h.effects.includes('confirm'),false);\n  assert.equal(h.effects.includes('abort'),false);assert.equal(h.effects.includes('end'),false);\n  assert.deepEqual(h.questions,before);assert.equal(h.input.importGeneration.current,4);\n});\ntest('candidate validation prompts the latest committed practice scope',async()=>{\n  let finish;\n  const candidate=new Promise(resolve=>{finish=resolve;});\n  const h=harness(true,false,{loadHeadStudy:()=>candidate});\n  const before=structuredClone(h.questions),pending=h.controls.chooseFiles(h.picker([{name:'approved'}]));\n  await Promise.resolve();await Promise.resolve();\n  const newer={...h.controls.scope,practice:{...h.input.practice,active:true},pending:false,consumed:false};\n  h.controls.ref.current=newer;\n  finish({geometry:{shapeKJI:[8,10,12]},range:[0,100]});\n  await pending;\n  assert.equal(h.effects.filter(value=>value==='confirm').length,1);\n  assert.equal(h.effects.includes('abort'),false);assert.equal(h.effects.includes('end'),false);\n  assert.deepEqual(h.questions,before);assert.equal(h.input.importGeneration.current,4);\n});\n"
+    }
+  ]
+}

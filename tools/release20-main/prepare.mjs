@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const recipes='G:/VisibleMedicine-temp/proposals/20261031-release20-main',prior='G:/VisibleMedicine-temp/proposals/20261031-release18-main';
+const hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const inputs=['practice','teaching-current','reasoning','coronary'].map(n=>'G:/VisibleMedicine-temp/proposals/20261031-release20-'+n).map(p=>[p,hash(p+'/MANIFEST.json')]);
+let code=fs.readFileSync(prior+'/integrate-release19-followup.mjs','utf8');
+const replace=(from,to)=>{assert.equal(code.split(from).length,2,from);code=code.replace(from,to);};
+replace("parentPath='G:/VisibleMedicine-temp/staging/20261031-release19-initial/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release19-followup'","parentPath='G:/VisibleMedicine-temp/staging/20261031-release19-followup/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release20-initial'");
+replace('9f4a686e1611d66f3c2392bdcc6a6ad83100a55fcdcbb6e06c4a1581334e6f46','8caae595a55d244f579f89853d3d265bcda043fa3aadcb5a247fe8cc7715d686');
+const a=code.indexOf('const inputs=['),b=code.indexOf('const proposals=',a);assert(a>0&&b>a);
+code=code.slice(0,a)+'const inputs='+JSON.stringify(inputs)+';\n'+code.slice(b);
+replace("const m=json(p+'/MANIFEST.json');","const m=json(p+'/MANIFEST.json');\n for(const [name,digest]of Object.entries(m.unchangedHistoricalWitnesses??{}))assert.equal(hash(parent.website+'/'+name),digest,name);");
+replace('vm-release-nineteen-followup-successor/1','vm-release-twenty-initial-successor/1');
+fs.writeFileSync(recipes+'/integrate.mjs',code,{flag:'wx'});
+fs.writeFileSync(recipes+'/INPUTS.json',JSON.stringify(inputs,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({prepared:true,proposals:inputs.length}));

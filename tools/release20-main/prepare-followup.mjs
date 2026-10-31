@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const recipes='G:/VisibleMedicine-temp/proposals/20261031-release20-main',sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+let text=fs.readFileSync(recipes+'/integrate.mjs','utf8');
+const replace=(a,b)=>{assert.equal(text.split(a).length,2,a);text=text.replace(a,b);};
+replace("parentPath='G:/VisibleMedicine-temp/staging/20261031-release19-followup/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release20-initial'","parentPath='G:/VisibleMedicine-temp/staging/20261031-release20-initial/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release20-followup'");
+replace('8caae595a55d244f579f89853d3d265bcda043fa3aadcb5a247fe8cc7715d686','8532b8971db6e4d480645b61354e7fa1b291fe5c8e4862c9e677e1fa67f99edc');
+const inputs=['reasoning-followup','imaging-status'].map(name=>'G:/VisibleMedicine-temp/proposals/20261031-release20-'+name).map(p=>[p,sha(p+'/MANIFEST.json')]);
+const a=text.indexOf('const inputs=['),b=text.indexOf('const proposals=',a);assert(a>0&&b>a);text=text.slice(0,a)+'const inputs='+JSON.stringify(inputs)+';\n'+text.slice(b);
+replace('for(const r of m.files??m.copyPaths)','for(const r of (m.files??m.copyPaths).filter(row=>!m.copyPaths?.every(v=>typeof v===\'string\')||m.copyPaths.includes(row.path)))');
+fs.writeFileSync(recipes+'/integrate-followup.mjs',text,{flag:'wx'});fs.writeFileSync(recipes+'/FOLLOWUP_INPUTS.json',JSON.stringify(inputs,null,2)+'\n',{flag:'wx'});
+console.log('Prepared current reasoning cohort and imaging-status followup.');

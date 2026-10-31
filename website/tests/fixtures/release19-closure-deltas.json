@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "sourceReceiptSha256": "bbebe31d1d2b296937a02d773fd3a09164d2c4ede68f46e52eb5c254321cde02",
+  "changes": [
+    {
+      "name": "head-disclosure-current-delivery.test.mjs",
+      "historicalSha256": "d9ff129afdaf8ba43d232eb9fbd201bf5a3d4c3327b8970e3c54bd435c44ec22",
+      "currentSha256": "054962ebeb2d08b5e496575e5dae3722430c85eb72adf433afabac88f6059722",
+      "delta": {
+        "sha256": "7a8a61ac26e85ed229dfcd4e2c29fe9b1278724fb3d023ea84aeb24e79f8e825",
+        "added": 3,
+        "removed": 3,
+        "cells": 4900
+      }
+    },
+    {
+      "name": "head-manual-recovery-54-to-55-closed.test.mjs",
+      "historicalSha256": "e60a4d22254e3af6da0394822cee26acc52fa8373c67c634400b36f74bf96f9a",
+      "currentSha256": "3f8c85040f3d32037e554e93c9f630d81f3e82420978f9467765a887ee69e0c8",
+      "delta": {
+        "sha256": "e8c99dacb81e6ca625a5ad507e999082b104f9c77564d15c1f84d67a86f1673d",
+        "added": 11,
+        "removed": 3,
+        "cells": 20720
+      }
+    },
+    {
+      "name": "head-native-history-current-transition.test.mjs",
+      "historicalSha256": "6280d5d8c8bd42447827a29f256acb5e718acd07effb549e9226ddc4b8efd8b4",
+      "currentSha256": "9266806b34dd490a7ede8821fd76d648e4252677d579dcab87b179a5d55663c2",
+      "delta": {
+        "sha256": "9723ac21b35b874d3b36e3fe1126f8521e6eee775a3d623757fa9b9d1be1124a",
+        "added": 13,
+        "removed": 2,
+        "cells": 1230
+      }
+    },
+    {
+      "name": "inferior-thyroid-mra-current-delivery.test.mjs",
+      "historicalSha256": "7f28ac68d9e7ac522b20b9122c9760ba497c61775238fc952d8ff4541990e618",
+      "currentSha256": "899c49b63ef39bd308365d3c47348cdacd4a5ab6cc25acd16b07ee1da4b2ec0c",
+      "delta": {
+        "sha256": "2b66ac50e4d262ef39ca784c26bc489716bc959acd55115c2910cec25bc7dc4f",
+        "added": 9,
+        "removed": 0,
+        "cells": 44290
+      }
+    },
+    {
+      "name": "closed56-femoral-epoch.test.mjs",
+      "historicalSha256": "d15ee270c69672f141592ab25b9ce48e1cd4fa969b31177e3d8c047a2ced92f7",
+      "currentSha256": "5070234e61e56cc367f23d94a5f34c53a8c9fbd593d30c52f5ec74f16a274d14",
+      "delta": {
+        "sha256": "0a326f6e9fb1b6e955793297d86d615810ba05459db9baa7cd905032cd0b9db8",
+        "added": 11,
+        "removed": 6,
+        "cells": 17550
+      }
+    },
+    {
+      "name": "review-navigation-delivery-preservation.test.mjs",
+      "historicalSha256": "14e5824f2a60c96b4832d7a17416378500fe01d46ac8c7262985ecfa36301119",
+      "currentSha256": "89e4730eb4750e2cc5b170f83b25a865b02bd7d8efa4f704844b2f5a8c9a65b3",
+      "delta": {
+        "sha256": "a670a7b90f5b913b2f5b3fe0a42b3286acbf528c7fa0ef58293ba4f39c521f62",
+        "added": 3,
+        "removed": 3,
+        "cells": 961
+      }
+    },
+    {
+      "name": "ui-teaching-current-delivery.test.mjs",
+      "historicalSha256": "2d654b875fb68520036e2288cad70e08a4a8da885391196f715168f339418a4f",
+      "currentSha256": "1a7c9da0824b4c52ba40ca308f9ff2924d6f9d375f0ae8d077888dbf1d90eb7d",
+      "delta": {
+        "sha256": "c261ec83b1517062f44c79928bedd9dca17f6a4371525dc2d0c97d3dd4cff3ca",
+        "added": 4,
+        "removed": 4,
+        "cells": 66049
+      }
+    },
+    {
+      "name": "ui-teaching-admission-contract.test.mjs",
+      "historicalSha256": "b57e611a7ee77263da554141708e3d3acc5bd8da2aed2664b19a185f6e41f3ab",
+      "currentSha256": "e8d9febcd6b2a120f21294710bf35e9a7bf80f49ac0de9980d12a6795745b758",
+      "delta": {
+        "sha256": "3328324869936f08f643f6bd15e91d74b626941f7bcfdc72ac9a69c44a600d98",
+        "added": 9,
+        "removed": 0,
+        "cells": 28036
+      }
+    },
+    {
+      "name": "tour-discovery-current-delivery.test.mjs",
+      "historicalSha256": "2c0bc87f3660711894dad3cfe7aa5a638bbe11296c994662c9870a759b9e2fb3",
+      "currentSha256": "4c737580f94bf37777f2c59aad3af0155e9cb25e3d0216c012f79cf147b165bb",
+      "delta": {
+        "sha256": "5704f6cdae13881cb088ab53848e0b29724646bb8c8e2865b6df7289cf1fdd5a",
+        "added": 16,
+        "removed": 2,
+        "cells": 4851
+      }
+    }
+  ]
+}

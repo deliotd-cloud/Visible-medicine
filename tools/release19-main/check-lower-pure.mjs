@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-release18-final',p=root+'/SOURCE.json',digest='bbebe31d1d2b296937a02d773fd3a09164d2c4ede68f46e52eb5c254321cde02',s=json(p);
+const roots=['tests/lower-limb-current-source-roles.test.mjs','tests/lower-limb-display-pin-history.test.mjs','tests/lower-limb-pin-history-source-roles.test.mjs'];
+const verify=()=>{assert.equal(hash(p),digest);for(const r of s.sourceRows)assert.equal(hash(s.website+'/'+r.path),r.sha256,r.path);assert.equal(hash(s.historicalEnvironment.path),s.historicalEnvironment.sha256);};verify();
+const env={...process.env,...json(s.historicalEnvironment.path).environment,VM_CURRENT_SOURCE_RECEIPT:p,VM_CURRENT_SOURCE_SHA256:digest,VM_WEBSITE_ROOT:s.website,VM_ATLAS_SOURCE_REPO:s.atlas,ATLAS_SOURCE_REPO:s.atlas,TEMP:root+'/tmp',TMP:root+'/tmp'};delete env.NODE_TEST_CONTEXT;delete env.NODE_OPTIONS;
+const out=root+'/pure-lower';fs.mkdirSync(out);const a=fs.openSync(out+'/stdout.log','wx'),b=fs.openSync(out+'/stderr.log','wx');
+let result;try{result=spawnSync(process.execPath,['--max-old-space-size=64','--test','--test-reporter=tap','--test-concurrency=1',...roots],{cwd:s.website,env,windowsHide:true,stdio:['ignore',a,b]});}finally{fs.closeSync(a);fs.closeSync(b);}verify();
+const text=fs.readFileSync(out+'/stdout.log','utf8'),counts={};for(const k of ['tests','pass','fail','skipped','cancelled','todo']){const m=[...text.matchAll(new RegExp('^# '+k+' (\\d+)\\r?$','gm'))];if(m.length===1)counts[k]=Number(m[0][1]);}
+const passed=result.status===0&&!result.signal&&!result.error&&counts.tests>0&&counts.tests===counts.pass&&counts.skipped===0;
+fs.writeFileSync(out+'/RESULT.json',JSON.stringify({at:new Date().toISOString(),source:{path:p,sha256:digest},roots,heapMiB:64,status:result.status,signal:result.signal,error:result.error?String(result.error):null,counts,passed,sourceRowsUnchanged:s.sourceRows.length,installed:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passed,counts,evidence:out+'/RESULT.json'}));process.exitCode=passed?0:1;

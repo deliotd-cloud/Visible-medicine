@@ -1,0 +1,46 @@
+{
+  "prior": "26020fdaef83411a5acfa972ea5811fa3bb794c873784ed456ddd89a9f8088ab",
+  "current": "481fdfe57399cac3163ab3252bfff837e00af05deb1f1b6c88507d50eacbaec5",
+  "edits": [
+    {
+      "oldStart": 405,
+      "old": "",
+      "new": "import {restoreRelease19ExpandedSource} from './release19-expanded-source-inverse.mjs';\n"
+    },
+    {
+      "oldStart": 834,
+      "old": "const historicalBytes=restorePreNeckPin2381(currentBytes,preNeckBytes);\n",
+      "new": "const original2381Bytes=read('tests/fixtures/current-ui-delivery-before-9e14/pin.json.raw');\nassert.equal(sha(original2381Bytes),'9313b2135cb50648751e50e49643479ec8bf83f2fe4f787bc2c25d4a632302a1');\nconst historicalBytes=restorePreNeckPin2381(original2381Bytes,preNeckBytes);\n"
+    },
+    {
+      "oldStart": 1012,
+      "old": "",
+      "new": "const original2381Pin=JSON.parse(original2381Bytes);\n"
+    },
+    {
+      "oldStart": 2128,
+      "old": "",
+      "new": " assert.equal(sha(currentBytes),'5210d4032f40a2924b49c247581bead32575996c37d785f018be5909a6fc032a');\n"
+    },
+    {
+      "oldStart": 2190,
+      "old": " assert.equal(currentPin.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');\n assert.equal(currentPin.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');\n assert.equal(currentPin.reviewIntegration,'1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc');\n assert.equal(currentPin.reviewSourceFiles,1562);\n",
+      "new": " assert.equal(original2381Pin.source,'2381efe43b75f8a7fb768a069eecd7268c508dac');\n assert.equal(original2381Pin.sourceTree,'db21ed3dee259c390878450b3495468996a3af85');\n assert.equal(original2381Pin.reviewIntegration,'1a48d6bc674a007b4e6be7ebdb777810ca0f2ee3e373d58b53d22a43ba9babfc');\n assert.equal(original2381Pin.reviewSourceFiles,1562);\n assert.equal(currentPin.source,'c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3');\n assert.equal(currentPin.sourceTree,'d7ead7f3673ddf5c4b68db755b559b08b921eec6');\n assert.equal(currentPin.reviewIntegration,'cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3');\n assert.equal(currentPin.reviewSourceFiles,1647);\n"
+    },
+    {
+      "oldStart": 2708,
+      "old": " assert.equal(binding.inputs.length,1729);assert.equal(sha(JSON.stringify(binding.inputs)),currentPin.reviewIntegration);\n",
+      "new": " assert.equal(binding.inputs.length,1866);assert.equal(sha(JSON.stringify(binding.inputs)),currentPin.reviewIntegration);\n"
+    },
+    {
+      "oldStart": 3378,
+      "old": " const current=restorePreNeckDelivery2381(read('tests/current-atlas-delivery.test.mjs'),\n",
+      "new": " const original2381Delivery=read('tests/fixtures/current-ui-delivery-before-9e14/contract.test.mjs.raw');\n assert.equal(sha(original2381Delivery),'7f745b24ac233d3d9fca6b80a54e5387f2dc50eafa45a372cdb615520473b8b8');\n const current=restorePreNeckDelivery2381(original2381Delivery,\n"
+    },
+    {
+      "oldStart": 4967,
+      "old": " let source=readFileSync(new URL('./expanded-review-delivery-admission.test.mjs',import.meta.url),'utf8');\n",
+      "new": " let source=restoreRelease19ExpandedSource(readFileSync(new URL('./expanded-review-delivery-admission.test.mjs',import.meta.url))).toString('utf8');\n"
+    }
+  ]
+}

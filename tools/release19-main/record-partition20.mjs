@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release19-progress',stage='G:/VisibleMedicine-temp/staging/20261031-release19-initial';
+const run=stage+'/website/.local/website-test-runs/2026-10-31T16-05-48-266Z-ffaecdd7-ca7f-46e3-aa7e-8466ad3a112a';
+const state=json(stage+'/verification-twenty/STATE.json');assert(state.terminal&&state.status==='failed');
+const receipt=json(run+'/receipt.json');assert.equal(receipt.counts.pass,163);assert.equal(receipt.counts.fail,24);assert.equal(receipt.counts.skipped,0);
+const tap=fs.readFileSync(run+'/child.tap','utf8');const failures=[...tap.matchAll(/^not ok (\d+) - ([\s\S]+?)(?=^# Subtest:|^1\.\.|$^)/gm)].map(m=>({index:Number(m[1]),name:m[2].split('\n')[0],location:m[2].match(/location: '([^']+)'/)?.[1],detail:m[2]}));assert.equal(failures.length,24);
+fs.writeFileSync(cp+'/PARTITION20_FAILURES.json',JSON.stringify({at:new Date().toISOString(),source:{path:stage+'/SOURCE.json',sha256:hash(stage+'/SOURCE.json')},counts:receipt.counts,failures},null,2)+'\n',{flag:'wx'});
+fs.mkdirSync(cp+'/partition20');for(const n of ['child.tap','receipt.json','started.json'])fs.copyFileSync(run+'/'+n,cp+'/partition20/'+n,fs.constants.COPYFILE_EXCL);for(const n of ['PLAN.json','SCOPE.json','STATE.json'])fs.copyFileSync(stage+'/verification-twenty/'+n,cp+'/partition20/'+n,fs.constants.COPYFILE_EXCL);
+console.log(JSON.stringify(failures.map(({index,name,location,detail})=>({index,name,location,error:detail.slice(detail.indexOf('  error:'),detail.indexOf('  error:')+450)})),null,2));
