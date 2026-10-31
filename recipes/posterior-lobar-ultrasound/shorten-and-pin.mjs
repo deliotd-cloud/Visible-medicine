@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+import {build} from './atlas/node_modules/esbuild/lib/main.js';
+import {hash} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-posterior-lobar-us',file=root+'/atlas/content/cerebral-lobar-imaging.ts';
+const compiled=await build({entryPoints:[file],bundle:true,platform:'node',format:'cjs',write:false}),module={exports:{}};
+new Function('module','exports',compiled.outputFiles[0].text)(module,module.exports);
+const content=module.exports.cerebralLobarImaging,ids=['frontal','parietal','temporal','occipital'];
+const words=Object.fromEntries(ids.map(id=>[id,content[id].ultrasound.body.trim().split(/\s+/).length]));
+const total=Object.values(words).reduce((a,b)=>a+b,0);assert(total<=200,'Keep the existing source word budget');
+const additions=Object.fromEntries(['temporal','occipital'].map(id=>[id,content[id].ultrasound]));
+const digest=createHash('sha256').update(JSON.stringify(additions)).digest('hex');
+const helper=root+'/atlas/scripts/cerebral-lobar-imaging-history.mjs',previous='bd71b5dc09376eb4ce0241116c2a8ced7e60c3b9e768f160082f31a02496e0db';
+let text=fs.readFileSync(helper,'utf8');assert.equal(text.split(previous).length,2);fs.writeFileSync(helper,text.replace(previous,digest));
+fs.writeFileSync(root+'/CONTENT_PIN.json',JSON.stringify({at:new Date().toISOString(),words,perReferenceWords:total,limit:200,contentSha256:hash(file),posteriorPayloadSha256:digest,priorPosteriorPayloadSha256:previous,helperSha256:hash(helper),earlierFrontalParietalBodiesUnchanged:true},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({words,total,digest,contentSha256:hash(file)}));

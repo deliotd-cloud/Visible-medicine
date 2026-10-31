@@ -1,0 +1,489 @@
+{
+  "schema": "vm-tour-step-source-epoch-inverse/1",
+  "rows": {
+    "components/HeadAtlasLearningLibrary.tsx": {
+      "previousSha256": "d7bebb5e8a4059f8b514779a37046bcab10a2b3ef90c3fe2ed7bcd74ecb31ba4",
+      "currentSha256": "c9a6ae44485b76060bbf8635f9a6cadc7199db1504c529fd4307ee79d99d0fad",
+      "edits": [
+        {
+          "beforeLine": 4,
+          "afterLine": 4,
+          "before": [],
+          "after": [
+            "import type {HeadLearningReturnStep} from '../lib/head-learning-return.ts';\n"
+          ]
+        },
+        {
+          "beforeLine": 21,
+          "afterLine": 22,
+          "before": [
+            "function TourList({sequences,terms=[],modality='all'}:{sequences:Array<{id:string;label:string;concepts:string[]}>;terms?:string[];modality?:TourModality}){\n"
+          ],
+          "after": [
+            "function TourList({sequences,terms=[],modality='all',returnPosition,focusReturnStep}:{sequences:Array<{id:string;label:string;concepts:string[]}>;terms?:string[];modality?:TourModality;returnPosition?:HeadLearningReturnStep;focusReturnStep?:(element:HTMLLIElement|null)=>void}){\n"
+          ]
+        },
+        {
+          "beforeLine": 43,
+          "afterLine": 44,
+          "before": [
+            "      {visible.map(match=><div className={context?'head-linked-matching-step head-linked-contributing-step':'head-linked-matching-step'} key={match.id}>\n"
+          ],
+          "after": [
+            "      {visible.map(match=>{\n",
+            "        const comparison=match.links&&hasSelectedView(match.links,modality)?headGuidedComparisonForStep(sequence.id,match.id):null;\n",
+            "        return <div className={context?'head-linked-matching-step head-linked-contributing-step':'head-linked-matching-step'} key={match.id}>\n"
+          ]
+        },
+        {
+          "beforeLine": 49,
+          "afterLine": 52,
+          "before": [],
+          "after": [
+            "          {comparison&&<a href={comparison.activityHref} aria-label={`Compare views for ${match.label} at step ${match.index+1}`}>Compare views</a>}\n"
+          ]
+        },
+        {
+          "beforeLine": 50,
+          "afterLine": 54,
+          "before": [
+            "      </div>)}\n",
+            "      <details className=\"head-linked-step-preview\" onKeyDown={event=>{\n"
+          ],
+          "after": [
+            "      </div>;})}\n",
+            "      <details className=\"head-linked-step-preview\" open={returnPosition?.sequenceId===sequence.id?true:undefined} onKeyDown={event=>{\n"
+          ]
+        },
+        {
+          "beforeLine": 62,
+          "afterLine": 66,
+          "before": [
+            "          return <li key={id}>\n"
+          ],
+          "after": [
+            "          const returning=returnPosition?.sequenceId===sequence.id&&returnPosition.conceptId===id&&returnPosition.index===index;\n",
+            "          return <li key={id} id={returning?`linked-step-${sequence.id}-${id}`:undefined} tabIndex={returning?-1:undefined} aria-current={returning?'step':undefined} ref={returning?focusReturnStep:undefined}>\n",
+            "            {returning&&<strong className=\"head-linked-return-point\">Return point · Step {index+1}</strong>}\n"
+          ]
+        },
+        {
+          "beforeLine": 77,
+          "afterLine": 83,
+          "before": [
+            "export function HeadAtlasLearningLibrary({initialView='all',initialQuery='',compact=false,fixedView=false,fixedQuery=false,initialPage=1,catalogueSearch}:{initialView?:TourModality;initialQuery?:string;compact?:boolean;fixedView?:boolean;fixedQuery?:boolean;initialPage?:number;catalogueSearch?:string}={}){\n"
+          ],
+          "after": [
+            "export function HeadAtlasLearningLibrary({initialView='all',initialQuery='',compact=false,fixedView=false,fixedQuery=false,initialPage=1,catalogueSearch,returnPosition:requestedReturn}:{initialView?:TourModality;initialQuery?:string;compact?:boolean;fixedView?:boolean;fixedQuery?:boolean;initialPage?:number;catalogueSearch?:string;returnPosition?:HeadLearningReturnStep}={}){\n"
+          ]
+        },
+        {
+          "beforeLine": 80,
+          "afterLine": 86,
+          "before": [],
+          "after": [
+            "  const focusedReturnRef=useRef<string|null>(null);\n"
+          ]
+        },
+        {
+          "beforeLine": 82,
+          "afterLine": 89,
+          "before": [],
+          "after": [
+            "  const comparison=requestedReturn?headGuidedComparisonForStep(requestedReturn.sequenceId,requestedReturn.conceptId):null;\n",
+            "  const returnPosition=comparison&&requestedReturn&&comparison.sourceRevision===requestedReturn.sourceRevision&&comparison.position.index===requestedReturn.index&&query===comparison.sequence.label&&modality==='all'?requestedReturn:undefined;\n",
+            "  const focusReturnStep=(element:HTMLLIElement|null)=>{\n",
+            "    if(!element||focusedReturnRef.current===element.id||window.location.hash!==`#${element.id}`)return;\n",
+            "    focusedReturnRef.current=element.id;\n",
+            "    if(document.activeElement===document.body||document.activeElement===document.documentElement){\n",
+            "      element.focus({preventScroll:true});\n",
+            "      // Finish after route scroll restoration, without moving a user who has already moved on.\n",
+            "      requestAnimationFrame(()=>{if(element.isConnected&&document.activeElement===element&&window.location.hash===`#${element.id}`)element.scrollIntoView({block:'center',behavior:'instant'});});\n",
+            "    }\n",
+            "  };\n"
+          ]
+        },
+        {
+          "beforeLine": 121,
+          "afterLine": 139,
+          "before": [
+            "    <p>Start at step 1 in the existing 3D Atlas, CT or MRI, or expand View steps to open a particular structure. Only mapped modalities are offered. Configured local previews load CT/MRI automatically; otherwise choose the approved atlas folder. Comparisons are between separate, unregistered subjects. These draft links do not track progress or imply completion or clinical approval.</p>\n"
+          ],
+          "after": [
+            "    <p className=\"head-linked-library-intro\">Choose a tour in the existing 3D Atlas, CT or MRI. Open <strong>View steps</strong> to jump to a structure.</p>\n",
+            "    <p className=\"head-linked-library-scope\">Draft comparisons are between separate, unregistered subjects.</p>\n",
+            "    <details className=\"head-linked-library-about\" onKeyDown={event=>{\n",
+            "      if(event.key!=='Escape'||!event.currentTarget.open)return;\n",
+            "      event.preventDefault();event.stopPropagation();event.currentTarget.open=false;\n",
+            "      event.currentTarget.querySelector('summary')?.focus();\n",
+            "    }}>\n",
+            "      <summary>About these tours</summary>\n",
+            "      <p>Only mapped modalities are offered. Configured local previews load CT/MRI automatically; otherwise choose the approved atlas folder. These draft links do not track progress or imply completion or clinical approval.</p>\n",
+            "      <div className=\"head-linked-library-revisions\">\n",
+            "        <section aria-label=\"Sequence review revision\"><h3>Sequence review revision</h3><p>Draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_LEARNING_REVISION}</code>. This identifies the ordered steps, exact source bindings and teaching revision; it is not an approval.</p></section>\n",
+            "        <section aria-label=\"MRI-only sequence review revision\"><h3>MRI-only sequence review revision</h3><p>Separate draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_MRI_LEARNING_REVISION}</code>. No decision from the five CT/MRI sequences or teaching form applies.</p></section>\n",
+            "        <section aria-label=\"Insula sequence review revision\"><h3>Insula sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_INSULA_LEARNING_REVISION}</code>. Earlier teaching or sequence decisions do not approve these steps.</p></section>\n",
+            "        <section aria-label=\"Globe sequence review revision\"><h3>Globe sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_ORBITAL_LEARNING_REVISION}</code>. Earlier comparison, teaching or tour decisions do not approve these steps.</p></section>\n",
+            "        <section aria-label=\"CT-only sequence review revision\"><h3>CT-only sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_BONE_LEARNING_REVISION}</code>. Existing bone-comparison decisions do not approve these tours.</p></section>\n",
+            "        <section aria-label=\"Cerebellar sequence review revision\"><h3>Cerebellar sequence review revision</h3><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CEREBELLAR_LEARNING_REVISION}</code>. Comparison and teaching decisions do not approve this sequence.</p></section>\n",
+            "        <section aria-label=\"Facial sequence scope and review revision\"><h3>Facial sequence scope and review revision</h3><p>Zygomatic masks cover limited regions; the regional mandible mask does not establish whole-bone coverage. Compare generic 3D bones separately. No MRI target, fracture assessment or patient-space registration is provided.</p><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_FACIAL_LEARNING_REVISION}</code>. Existing comparison decisions do not approve these steps.</p></section>\n",
+            "      </div>\n",
+            "    </details>\n"
+          ]
+        },
+        {
+          "beforeLine": 133,
+          "afterLine": 169,
+          "before": [
+            "    {((!compact&&!filtered)||shownBase.length>0)&&<><TourList sequences={shownBase} terms={terms} modality={modality}/>\n",
+            "    <details><summary>Sequence review revision</summary><p>Draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_LEARNING_REVISION}</code>. This identifies the ordered steps, exact source bindings and teaching revision; it is not an approval.</p></details></>}\n",
+            "    {((!compact&&!filtered)||shownMri.length>0)&&<section aria-label=\"MRI-only linked tours\"><h3>MRI-only comparisons · Draft</h3><p>No exact CT target is mapped for these sequences. The callosal mask is partial; step order does not imply a continuous pathway.</p><TourList sequences={shownMri} terms={terms} modality={modality}/><details><summary>MRI-only sequence review revision</summary><p>Separate draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_MRI_LEARNING_REVISION}</code>. No decision from the five CT/MRI sequences or teaching form applies.</p></details></section>}\n",
+            "    {((!compact&&!filtered)||shownInsula.length>0)&&<section aria-label=\"Insula linked tours\"><h3>Insular coverage · Draft</h3><p>Compare both sides without treating regional CT and partial MRI masks as complete boundaries.</p><TourList sequences={shownInsula} terms={terms} modality={modality}/><details><summary>Insula sequence review revision</summary><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_INSULA_LEARNING_REVISION}</code>. Earlier teaching or sequence decisions do not approve these steps.</p></details></section>}\n",
+            "    {((!compact&&!filtered)||shownOrbital.length>0)&&<section aria-label=\"Globe linked tours\"><h3>Globe coverage · Draft</h3><p>Compare left and right globes across CT, partial MRI masks and the existing 3D eyeballs. Eye layers and the optic nerve are not matched by these links.</p><TourList sequences={shownOrbital} terms={terms} modality={modality}/><details><summary>Globe sequence review revision</summary><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_ORBITAL_LEARNING_REVISION}</code>. Earlier comparison, teaching or tour decisions do not approve these steps.</p></details></section>}\n",
+            "    {((!compact&&!filtered)||shownBone.length>0)&&<section aria-label=\"CT-only bone linked tours\"><h3>CT-only bone coverage · Draft</h3><p>These six saved CT masks cover partial regions, not complete bones. Compare the existing generic 3D bones separately. No exact MRI targets or fracture assessment are provided.</p><TourList sequences={shownBone} terms={terms} modality={modality}/><details><summary>CT-only sequence review revision</summary><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_BONE_LEARNING_REVISION}</code>. Existing bone-comparison decisions do not approve these tours.</p></details></section>}\n",
+            "    {((!compact&&!filtered)||shownCerebellar.length>0)&&<section aria-label=\"Cerebellar CT and MRI tours\"><h3>Cerebellar orientation · Draft</h3><p>Native CT/MRI examples only: no exact 3D counterpart is mapped. The MRI vermis has partial coverage.</p><TourList sequences={shownCerebellar} terms={terms} modality={modality}/><details><summary>Cerebellar sequence review revision</summary><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CEREBELLAR_LEARNING_REVISION}</code>. Comparison and teaching decisions do not approve this sequence.</p></details></section>}\n",
+            "    {((!compact&&!filtered)||shownFacial.length>0)&&<><TourList sequences={shownFacial} terms={terms} modality={modality}/><details><summary>Facial sequence scope and review revision</summary><p>Zygomatic masks cover limited regions; the regional mandible mask does not establish whole-bone coverage. Compare generic 3D bones separately. No MRI target, fracture assessment or patient-space registration is provided.</p><p>Independent draft sequence packet <code style={{overflowWrap:'anywhere'}}>{HEAD_CT_FACIAL_LEARNING_REVISION}</code>. Existing comparison decisions do not approve these steps.</p></details></>}\n"
+          ],
+          "after": [
+            "    {((!compact&&!filtered)||shownBase.length>0)&&<><TourList sequences={shownBase} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/>\n",
+            "    </>}\n",
+            "    {((!compact&&!filtered)||shownMri.length>0)&&<section aria-label=\"MRI-only linked tours\"><h3>MRI-only comparisons · Draft</h3><p>No exact CT target is mapped for these sequences. The callosal mask is partial; step order does not imply a continuous pathway.</p><TourList sequences={shownMri} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}\n",
+            "    {((!compact&&!filtered)||shownInsula.length>0)&&<section aria-label=\"Insula linked tours\"><h3>Insular coverage · Draft</h3><p>Compare both sides without treating regional CT and partial MRI masks as complete boundaries.</p><TourList sequences={shownInsula} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}\n",
+            "    {((!compact&&!filtered)||shownOrbital.length>0)&&<section aria-label=\"Globe linked tours\"><h3>Globe coverage · Draft</h3><p>Compare left and right globes across CT, partial MRI masks and the existing 3D eyeballs. Eye layers and the optic nerve are not matched by these links.</p><TourList sequences={shownOrbital} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}\n",
+            "    {((!compact&&!filtered)||shownBone.length>0)&&<section aria-label=\"CT-only bone linked tours\"><h3>CT-only bone coverage · Draft</h3><p>These six saved CT masks cover partial regions, not complete bones. Compare the existing generic 3D bones separately. No exact MRI targets or fracture assessment are provided.</p><TourList sequences={shownBone} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}\n",
+            "    {((!compact&&!filtered)||shownCerebellar.length>0)&&<section aria-label=\"Cerebellar CT and MRI tours\"><h3>Cerebellar orientation · Draft</h3><p>Native CT/MRI examples only: no exact 3D counterpart is mapped. The MRI vermis has partial coverage.</p><TourList sequences={shownCerebellar} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></section>}\n",
+            "    {((!compact&&!filtered)||shownFacial.length>0)&&<><TourList sequences={shownFacial} terms={terms} modality={modality} returnPosition={returnPosition} focusReturnStep={focusReturnStep}/></>}\n"
+          ]
+        }
+      ]
+    },
+    "scripts/bind-clinical-review.mjs": {
+      "previousSha256": "4ba3633773e8456fbe0dba2520d7bb1333e10f6e84010381ccfd56b65e75b016",
+      "currentSha256": "b87838cdf80c09560e50f4ace75f56d829fed8e102015e9b9357fe10d4512c64",
+      "edits": [
+        {
+          "beforeLine": 7,
+          "afterLine": 7,
+          "before": [
+            "const adapterPaths = ['components/GroupedReviewConfirmation.tsx','lib/review-draft-autosave.ts','lib/clinical-review-navigation-guard.ts','scripts/import-clinical-review.mjs','scripts/build-clinical-review-viewer.mjs','scripts/bind-clinical-review.mjs','lib/clinical-review-links.ts','lib/clinical-review-return.ts','lib/clinical-review-fetch.ts','components/review-ui-variants.css','components/ClinicalReviewAreas.tsx','components/clinical-review-areas.css','package-lock.json',\n"
+          ],
+          "after": [
+            "const adapterPaths = ['components/GroupedReviewConfirmation.tsx','lib/review-draft-autosave.ts','lib/clinical-review-navigation-guard.ts','scripts/import-clinical-review.mjs','scripts/build-clinical-review-viewer.mjs','scripts/review-license-notices.mjs','scripts/bind-clinical-review.mjs','lib/clinical-review-links.ts','lib/clinical-review-return.ts','lib/clinical-review-fetch.ts','components/review-ui-variants.css','components/ClinicalReviewAreas.tsx','components/clinical-review-areas.css','package-lock.json',\n"
+          ]
+        },
+        {
+          "beforeLine": 13,
+          "afterLine": 13,
+          "before": [
+            "  'vite.config.ts','scripts/local-atlas-development-plugin.mjs',\n"
+          ],
+          "after": [
+            "  'vite.config.ts','scripts/local-atlas-development-plugin.mjs','scripts/website-distribution-inventory.mjs',\n",
+            "  // Public review branding is part of the exact presentation being reviewed.\n",
+            "  \"components/AtlasPublicBrandImage.tsx\",\"scripts/atlas-public-brand-image-plugin.mjs\",\"public/brand/approved/visible-medicine-lockup-dark.png\",\"public/brand/approved/visible-medicine-lockup-light.png\",\n"
+          ]
+        },
+        {
+          "beforeLine": 50,
+          "afterLine": 52,
+          "before": [
+            "  'lib/head-window-drag.ts','lib/head-practice-navigation.ts',\n"
+          ],
+          "after": [
+            "  'lib/head-window-drag.ts','lib/head-viewport-memory.ts','lib/head-practice-navigation.ts',\n"
+          ]
+        },
+        {
+          "beforeLine": 54,
+          "afterLine": 56,
+          "before": [
+            "  'components/HeadAtlasGuidedLearning.tsx','components/HeadAtlasInlineComparison.tsx','lib/head-inline-comparison.ts','components/HeadAtlasInlineComparisonLoader.tsx','components/HeadTourPlayback.tsx','lib/head-tour-playback.ts',\n"
+          ],
+          "after": [
+            "  'components/HeadAtlasGuidedLearning.tsx','components/HeadAtlasInlineComparison.tsx','lib/head-inline-comparison.ts','components/HeadAtlasInlineComparisonLoader.tsx','components/HeadTourPlayback.tsx','lib/head-tour-playback.ts','lib/head-tour-speed-preference.ts',\n"
+          ]
+        },
+        {
+          "beforeLine": 65,
+          "afterLine": 67,
+          "before": [],
+          "after": [
+            "// Recovery changes the private review presentation and must share its exact binding.\n",
+            "adapterPaths.push('lib/head-teaching-review-recovery.ts');\n"
+          ]
+        }
+      ]
+    },
+    "package.json": {
+      "previousSha256": "087db70291173eca0d547f827e4c49520d767f57a16010ff7fe11e41ec2b93fb",
+      "currentSha256": "f0c8c741411080a5d1dc8d21340f1be415c7da25e3faa5c90794b9ce4e011da1",
+      "edits": [
+        {
+          "beforeLine": 0,
+          "afterLine": 0,
+          "before": [
+            "{\r\n",
+            "  \"name\": \"visible-medicine\",\r\n",
+            "  \"version\": \"0.1.0\",\r\n",
+            "  \"private\": true,\r\n",
+            "  \"engines\": {\r\n",
+            "    \"node\": \">=22.13.0\"\r\n",
+            "  },\r\n",
+            "  \"scripts\": {\r\n",
+            "    \"dev\": \"vinext dev\",\r\n"
+          ],
+          "after": [
+            "{\n",
+            "  \"name\": \"visible-medicine\",\n",
+            "  \"version\": \"0.1.0\",\n",
+            "  \"private\": true,\n",
+            "  \"engines\": {\n",
+            "    \"node\": \">=22.13.0\"\n",
+            "  },\n",
+            "  \"scripts\": {\n",
+            "    \"dev\": \"vinext dev\",\n"
+          ]
+        },
+        {
+          "beforeLine": 10,
+          "afterLine": 10,
+          "before": [
+            "    \"prebuild\": \"node scripts/verify-clinical-review.mjs && node scripts/atlas-model-inventory.mjs --check && npm run verify:atlas-delivery-policy && npm run verify:lecture-body-catalog\",\r\n",
+            "    \"verify:lecture-body-catalog\": \"node scripts/lecture-body-catalog.mjs --check\",\r\n",
+            "    \"verify:atlas-delivery-policy\": \"node --experimental-strip-types scripts/verify-atlas-delivery-policy.mjs\",\r\n"
+          ],
+          "after": [
+            "    \"prebuild\": \"node scripts/native-website-notices.mjs --check && node scripts/verify-clinical-review.mjs && node scripts/atlas-model-inventory.mjs --check && npm run verify:atlas-delivery-policy && npm run verify:lecture-body-catalog\",\n",
+            "    \"verify:lecture-body-catalog\": \"node scripts/lecture-body-catalog.mjs --check\",\n",
+            "    \"verify:atlas-delivery-policy\": \"node --experimental-strip-types scripts/verify-atlas-delivery-policy.mjs\",\n"
+          ]
+        },
+        {
+          "beforeLine": 16,
+          "afterLine": 16,
+          "before": [
+            "    \"start\": \"vinext start\",\r\n",
+            "    \"lint\": \"eslint . --ignore-pattern dist --ignore-pattern .next\",\r\n",
+            "    \"test\": \"node scripts/run-website-tests.mjs --run\",\r\n",
+            "    \"test:list\": \"node scripts/run-website-tests.mjs\",\r\n",
+            "    \"db:generate\": \"drizzle-kit generate\"\r\n",
+            "  },\r\n",
+            "  \"dependencies\": {\r\n",
+            "    \"@base-ui/react\": \"^1.7.0\",\r\n",
+            "    \"@noble/hashes\": \"2.4.0\",\r\n",
+            "    \"@livekit/components-react\": \"^2.9.24\",\r\n",
+            "    \"@livekit/components-styles\": \"^1.2.0\",\r\n",
+            "    \"@react-three/drei\": \"^10.7.8\",\r\n",
+            "    \"@react-three/fiber\": \"^9.7.0\",\r\n",
+            "    \"class-variance-authority\": \"^0.7.1\",\r\n",
+            "    \"clsx\": \"^2.1.1\",\r\n",
+            "    \"drizzle-orm\": \"0.45.2\",\r\n",
+            "    \"livekit-client\": \"^2.22.0\",\r\n",
+            "    \"livekit-server-sdk\": \"^2.18.0\",\r\n",
+            "    \"lucide-react\": \"^1.31.0\",\r\n",
+            "    \"next\": \"16.3.2\",\r\n",
+            "    \"react\": \"19.2.8\",\r\n",
+            "    \"react-dom\": \"19.2.8\",\r\n",
+            "    \"tailwind-merge\": \"^3.6.0\",\r\n",
+            "    \"three\": \"^0.185.1\",\r\n",
+            "    \"three-mesh-bvh\": \"^0.8.3\",\r\n",
+            "    \"three-stdlib\": \"^2.36.1\",\r\n",
+            "    \"tw-animate-css\": \"^1.4.0\"\r\n",
+            "  },\r\n",
+            "  \"devDependencies\": {\r\n",
+            "    \"@cloudflare/vite-plugin\": \"1.53.1\",\r\n",
+            "    \"@cloudflare/workers-types\": \"5.20260823.1\",\r\n",
+            "    \"@openai/sites-vite-plugin\": \"^0.1.0 || ^0.2.0\",\r\n",
+            "    \"@tailwindcss/postcss\": \"4.2.1\",\r\n",
+            "    \"@types/node\": \"22.19.19\",\r\n",
+            "    \"@types/react\": \"19.2.14\",\r\n",
+            "    \"@types/react-dom\": \"19.2.3\",\r\n",
+            "    \"@vitejs/plugin-react\": \"6.0.2\",\r\n",
+            "    \"@vitejs/plugin-rsc\": \"0.5.34\",\r\n",
+            "    \"drizzle-kit\": \"0.31.10\",\r\n",
+            "    \"eslint\": \"9.39.4\",\r\n",
+            "    \"eslint-config-next\": \"16.3.2\",\r\n",
+            "    \"react-server-dom-webpack\": \"19.2.8\",\r\n",
+            "    \"tailwindcss\": \"4.2.1\",\r\n",
+            "    \"typescript\": \"5.9.3\",\r\n",
+            "    \"vinext\": \"1.0.0-beta.8\",\r\n",
+            "    \"vite\": \"8.2.2\",\r\n",
+            "    \"wrangler\": \"4.125.0\"\r\n",
+            "  },\r\n",
+            "  \"type\": \"module\",\r\n",
+            "  \"overrides\": {\r\n",
+            "    \"@esbuild-kit/core-utils\": {\r\n",
+            "      \"esbuild\": \"0.25.12\"\r\n",
+            "    }\r\n",
+            "  }\r\n",
+            "}\r\n"
+          ],
+          "after": [
+            "    \"start\": \"vinext start\",\n",
+            "    \"lint\": \"eslint . --ignore-pattern dist --ignore-pattern .next\",\n",
+            "    \"test\": \"node scripts/run-website-tests.mjs --run\",\n",
+            "    \"test:list\": \"node scripts/run-website-tests.mjs\",\n",
+            "    \"db:generate\": \"drizzle-kit generate\"\n",
+            "  },\n",
+            "  \"dependencies\": {\n",
+            "    \"@base-ui/react\": \"^1.7.0\",\n",
+            "    \"@noble/hashes\": \"2.4.0\",\n",
+            "    \"@livekit/components-react\": \"^2.9.24\",\n",
+            "    \"@livekit/components-styles\": \"^1.2.0\",\n",
+            "    \"@react-three/drei\": \"^10.7.8\",\n",
+            "    \"@react-three/fiber\": \"^9.7.0\",\n",
+            "    \"class-variance-authority\": \"^0.7.1\",\n",
+            "    \"clsx\": \"^2.1.1\",\n",
+            "    \"drizzle-orm\": \"0.45.2\",\n",
+            "    \"livekit-client\": \"^2.22.0\",\n",
+            "    \"livekit-server-sdk\": \"^2.18.0\",\n",
+            "    \"lucide-react\": \"^1.31.0\",\n",
+            "    \"next\": \"16.3.2\",\n",
+            "    \"react\": \"19.2.8\",\n",
+            "    \"react-dom\": \"19.2.8\",\n",
+            "    \"tailwind-merge\": \"^3.6.0\",\n",
+            "    \"three\": \"^0.185.1\",\n",
+            "    \"three-mesh-bvh\": \"^0.8.3\",\n",
+            "    \"three-stdlib\": \"^2.36.1\",\n",
+            "    \"tw-animate-css\": \"^1.4.0\"\n",
+            "  },\n",
+            "  \"devDependencies\": {\n",
+            "    \"@cloudflare/vite-plugin\": \"1.53.1\",\n",
+            "    \"@cloudflare/workers-types\": \"5.20260823.1\",\n",
+            "    \"@openai/sites-vite-plugin\": \"^0.1.0 || ^0.2.0\",\n",
+            "    \"@tailwindcss/postcss\": \"4.2.1\",\n",
+            "    \"@types/node\": \"22.19.19\",\n",
+            "    \"@types/react\": \"19.2.14\",\n",
+            "    \"@types/react-dom\": \"19.2.3\",\n",
+            "    \"@vitejs/plugin-react\": \"6.0.2\",\n",
+            "    \"@vitejs/plugin-rsc\": \"0.5.34\",\n",
+            "    \"drizzle-kit\": \"0.31.10\",\n",
+            "    \"eslint\": \"9.39.4\",\n",
+            "    \"eslint-config-next\": \"16.3.2\",\n",
+            "    \"react-server-dom-webpack\": \"19.2.8\",\n",
+            "    \"tailwindcss\": \"4.2.1\",\n",
+            "    \"typescript\": \"5.9.3\",\n",
+            "    \"vinext\": \"1.0.0-beta.8\",\n",
+            "    \"vite\": \"8.2.2\",\n",
+            "    \"wrangler\": \"4.125.0\"\n",
+            "  },\n",
+            "  \"type\": \"module\",\n",
+            "  \"overrides\": {\n",
+            "    \"@esbuild-kit/core-utils\": {\n",
+            "      \"esbuild\": \"0.25.12\"\n",
+            "    }\n",
+            "  }\n",
+            "}\n"
+          ]
+        }
+      ]
+    },
+    "LICENSES/THIRD_PARTY_NOTICES.md": {
+      "previousSha256": "2ce224dcf5634635b98d88b65d2549c19bc0cdd8fb3236b430f114268a0ba503",
+      "currentSha256": "18e7672df7ce84578715993043c3b1c972f3e1b4b5c49cf67be341e8059fda07",
+      "edits": [
+        {
+          "beforeLine": 0,
+          "afterLine": 0,
+          "before": [],
+          "after": [
+            "# Existing website brand assets — 31 October 2026\n",
+            "\n",
+            "The four logo/mark PNGs and eight icons in `public/brand/approved` and\n",
+            "`public/brand/icons` match the original Visible Medicine brand-pack exports and\n",
+            "the recorded adoption commit. Exact hashes and export mappings are retained in\n",
+            "`native-website/brand-asset-provenance.json`, with the original pack manifest and\n",
+            "README. `node scripts/check-brand-assets.mjs` checks that evidence against the\n",
+            "current files. No artwork was replaced or redrawn.\n",
+            "\n",
+            "This establishes provenance, not a third-party licence grant. The retained pack\n",
+            "README explicitly reserves trademark, font, model-release and other rights\n",
+            "clearance. See `docs/visible-medicine-logo-system.md` for the existing design\n",
+            "constraints and the distinction between raster artwork and true vector masters.\n",
+            "\n",
+            "# Native website JavaScript distribution — 31 October 2026\n",
+            "\n",
+            "The version-bound website software index and complete licence texts are served\n",
+            "at `/licenses/native-website-NOTICES.txt`. It covers the 34 packages observed\n",
+            "in the current client, RSC and SSR JavaScript build, including jose 5.10.0 and\n",
+            "the five LiveKit packages. `native-website/distribution-notices.json` records\n",
+            "exact package metadata, relative installed locations and licence hashes.\n",
+            "`node scripts/native-website-notices.mjs --check` verifies this index during\n",
+            "the normal prebuild check. Updating dependencies requires reviewing the index\n",
+            "against a fresh emitted-module inventory; a prior inventory is not proof of a\n",
+            "future bundle.\n",
+            "\n",
+            "The native-image candidate removes @unpic/react, @unpic/core and unpic from\n",
+            "those emitted JavaScript environments; they remain installed development\n",
+            "dependencies. Earlier notice-gap findings below remain historical evidence.\n",
+            "This software index does not certify other website assets, fonts, anatomy\n",
+            "models, source datasets, hosted-service terms or clinical content. No new\n",
+            "dependency, fee or public deployment is introduced.\n",
+            "\n",
+            "# Native website Vinext software\n",
+            "\n",
+            "Vinext 1.0.0-beta.8 includes code shipped in the website client bundle. It is\n",
+            "licensed under MIT, Copyright (c) 2026 Cloudflare, Inc. The exact installed\n",
+            "licence is retained at `/licenses/native-website-vinext-LICENSE.txt`. This\n",
+            "notice supplements the existing software notices and is not a complete\n",
+            "distribution audit.\n",
+            "\n",
+            "# Native website React software\n",
+            "\n",
+            "React 19.2.8 and React DOM 19.2.8 are used in the native website. Both\n",
+            "are licensed under MIT, Copyright (c) Meta Platforms, Inc. and affiliates.\n",
+            "Their identical complete licence text is retained and served at\n",
+            "`/licenses/native-website-react-LICENSE.txt`. This notice covers these two\n",
+            "packages and does not replace other software or asset notices.\n",
+            "\n"
+          ]
+        },
+        {
+          "beforeLine": 161,
+          "afterLine": 210,
+          "before": [
+            "## Pinned local Geist Mono font — 19 October 2026\n"
+          ],
+          "after": [
+            "## Pinned local Geist Mono font — verified 31 October 2026\n"
+          ]
+        },
+        {
+          "beforeLine": 165,
+          "afterLine": 214,
+          "before": [
+            "The local Latin variable-font file is an exact, unchanged copy of the existing cached and built font: Version 1.701, SHA-256 `5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b`, 23,108 bytes. No font was synthesized, subsetted again, renamed internally or re-encoded. Other scripts use operating-system fallback fonts; no operating-system font is redistributed.\n"
+          ],
+          "after": [
+            "The local Latin variable font is the exact 23,128-byte Google Fonts response retrieved on 31 October 2026 from https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrcdmg.woff2 (SHA-256 `684ad5b531f81d43c1e8c7038262d5db7cdc1f68006e04d6c7769efa8d33c8cc`). The official Google Fonts CSS labels that URL as the Latin subset. The font reports Geist Mono Version 1.701 and a variable weight axis of 100–900. `native-website/geist-mono-provenance.json` records the request, hashes, metadata and prior-file comparison.\n"
+          ]
+        },
+        {
+          "beforeLine": 167,
+          "afterLine": 216,
+          "before": [
+            "Family licence evidence: https://github.com/google/fonts/blob/c5ab61088c14548190abde878e8062f293ba67ac/ofl/geistmono/OFL.txt . The retrieved full text is SHA-256 `1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f`. The original cached Google Fonts download URL was not retained, so this is not an independently restored upstream font-byte provenance claim.\n"
+          ],
+          "after": [
+            "The preceding 23,108-byte local font (SHA-256 `5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b`) had no retained original download URL. Its version, mapped characters and advance widths match this official response, but its historical byte origin remains unverified. No font was synthesized, subsetted again, renamed internally or re-encoded for this replacement. Other scripts use operating-system fallback fonts; no operating-system font is redistributed.\n",
+            "\n",
+            "Family licence evidence: https://github.com/google/fonts/blob/c5ab61088c14548190abde878e8062f293ba67ac/ofl/geistmono/OFL.txt . The retrieved full text is SHA-256 `1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f`.\n"
+          ]
+        },
+        {
+          "beforeLine": 170,
+          "afterLine": 221,
+          "before": [],
+          "after": [
+            "\n",
+            "## Supplemental native website software notices\n",
+            "\n",
+            "Version-bound notices for @react-three/fiber 9.7.0, @vitejs/plugin-rsc 0.5.34 and @bufbuild/protobuf 1.10.1 are retained in `native-website/` and distributed at `/licenses/native-website-supplemental-NOTICES.txt`. The manifest records exact installed metadata hashes, source revisions, and notice hashes. Protocol Buffers retains both the Apache terms and the embedded Google BSD notice.\n",
+            "\n",
+            "This supplements the observed build audit, without claiming complete website clearance. @unpic/core 1.0.3 and unpic 4.2.2 still need exact applicable notice texts; their MIT package metadata alone is not recorded here as a complete notice.\n"
+          ]
+        }
+      ]
+    }
+  }
+}

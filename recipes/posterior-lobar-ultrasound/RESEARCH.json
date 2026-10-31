@@ -1,0 +1,24 @@
+{
+  "schema": "vm-original-teaching-evidence/1",
+  "checkedOn": "2026-10-31",
+  "scope": "Two original short neonatal ultrasound orientation drafts; no images, diagrams, scans, masks or article text imported.",
+  "references": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7897227/",
+      "title": "Goncalves and Hwang, Superficial anatomy of the neonatal cerebrum — an ultrasonographic roadmap",
+      "locations": ["Temporal lobe and Figure 11", "Parieto-occipital sulcus and precuneus and cuneus", "Calcarine sulcus and lingual gyrus", "Acoustic windows"],
+      "support": "Neonatal anterior-fontanel coronal/angled sagittal temporal orientation; lateral sulcus landmark; medial occipital sulci and cuneus/lingual relationship; posterior-fontanel window.",
+      "reuse": "Reference link and factual orientation only. The manuscript carries non-commercial reuse terms; none of its illustrations, images or prose is included as a product asset."
+    },
+    {
+      "url": "https://efsumb.org/wp-content/uploads/2022/03/neonatal_cranial_ultrasound_safety_aspects_update2022_final.pdf",
+      "title": "EFSUMB/ECMUS, Neonatal cranial ultrasound — Safety Aspects (2022)",
+      "locations": ["Pages 1–2: views and acoustic windows"],
+      "support": "Multiplanar neonatal assessment and supplementary posterior-window assessment of the occipital region.",
+      "reuse": "Reference only; no PDF, figures or copied text redistributed."
+    }
+  ],
+  "modelScope": "Existing source-defined temporal compounds omit separate superior temporal and hippocampal selections. Existing occipital surfaces do not separately identify the named gyri. No new mesh or patient transform is introduced.",
+  "clinicalApproval": false,
+  "patientSpaceSynchronization": false
+}
