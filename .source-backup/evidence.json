@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-31T01:34:45.204Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-provenance-and-playback-checks/provenance/SOURCE2.json",
+    "sha256": "04466686ad47a4fcac29511b5cf94883b24c30346763159ad09c51db0088b5d2"
+  },
+  "focused": {
+    "tests": 61,
+    "pass": 61,
+    "fail": 0,
+    "originalHistoricalCases": 2,
+    "roots": [
+      "current-atlas-delivery.test.mjs",
+      "compact-head-provenance.test.mjs",
+      "playback-reasoning-epoch.test.mjs",
+      "head-review-sections-preservation.test.mjs"
+    ]
+  },
+  "earlierFailedAttemptRetained": {
+    "tests": 61,
+    "pass": 60,
+    "fail": 1,
+    "reason": "New assertion expected wording not used by the actual issue-report component; corrected to exact current fail-closed status."
+  },
+  "productUnchanged": true,
+  "buildProductEquivalentTo": {
+    "path": "G:/VisibleMedicine-temp/staging/20261031-studio-outline-roundtrip/SOURCE_READY.json",
+    "sha256": "601e44e5e6cab701aa6b21abc1c422c98a5a0456d5f6a56bfd3c34522d90e52f"
+  },
+  "reviewIntegration": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+  "installedReview": "3648a75bdf7543a29047e74193231fad27afd450d9b0ebc7164393ba2a0d3b2f",
+  "wholeSuitePassing": false,
+  "stockRerunPending": true,
+  "remainingRoots": [
+    "clinical-review-portal-venous-xray.test.ts",
+    "clinical-review-shoulder-girdle-artery-quiz.test.ts",
+    "clinical-review-thoracoacromial-ultrasound.test.ts",
+    "inferior-thyroid-mra-current-delivery.test.mjs",
+    "ui-teaching-admission-contract.test.mjs"
+  ],
+  "remainingEvidence": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-provenance-and-playback-checks/proposal-anatomy/EVIDENCE.md",
+    "sha256": "f83f84e1a8cf31999acaf25cd54b6f95074c77bd156d5c7a2360b983096b3ec9"
+  },
+  "installed": false,
+  "ownerPreviewChanged": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
