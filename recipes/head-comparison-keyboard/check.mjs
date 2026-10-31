@@ -1,0 +1,8 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-head-comparison-followup',pin=root+'/AUTHORED_SOURCE.json',source=json(pin),site=source.website;
+const roots=['head-inline-limits-keyboard.test.mjs','head-inline-commit-lifecycle.test.ts','head-inline-frame.test.ts','head-inline-comparison.test.ts','head-comparison-source-scope.test.ts','head-comparison-parent-commit.test.ts','head-comparison-exit.test.ts','head-atlas-focus.test.ts','imaging-pane-navigation.test.ts'];
+for(const p of roots)assert(fs.existsSync(site+'/tests/'+p),p);const verify=()=>{for(const row of source.sourceRows)assert.equal(hash(site+'/'+row.path),row.sha256,row.path);};verify();
+const result=await guarded({site,dir:root+'/focused-1',command:'--test --experimental-strip-types --test-concurrency=1 '+roots.map(p=>'tests/'+p).join(' '),heap:768,aggregate:2048,minimum:4096,extraEnv:{TEMP:root+'/tmp',TMP:root+'/tmp',VM_ATLAS_SOURCE_REPO:source.atlas,ATLAS_SOURCE_REPO:source.atlas}});verify();
+fs.writeFileSync(root+'/FOCUSED_RESULT-1.json',JSON.stringify({...result,source:{path:pin,sha256:hash(pin)},sourceUnchanged:true,roots},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passing:result.passing}));if(!result.passing)process.exitCode=1;

@@ -1,0 +1,87 @@
+{
+  "schema": "vm-native-website-supplemental-notices/1",
+  "scope": "Three version-bound supplemental software notices; not a whole-website rights clearance.",
+  "entries": [
+    {
+      "name": "@react-three/fiber",
+      "version": "9.7.0",
+      "license": "MIT",
+      "installedPackageJsonSha256": "55c4839a93229f0592357355c66db8dcfa50247a0d1c2201c4b316fa4515d62a",
+      "upstream": {
+        "repo": "pmndrs/react-three-fiber",
+        "ref": "v9.7.0",
+        "packageUrl": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/v9.7.0/packages/fiber/package.json"
+      },
+      "notices": [
+        {
+          "path": "LICENSES/native-website/react-three-fiber-9.7.0-LICENSE.txt",
+          "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a",
+          "sourceUrl": "https://github.com/pmndrs/react-three-fiber/blob/v9.7.0/LICENSE",
+          "sourceFile": "LICENSES/clinical-review/react-three-fiber-LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "@vitejs/plugin-rsc",
+      "version": "0.5.34",
+      "license": "MIT",
+      "installedPackageJsonSha256": "ac393862a23c5e93b3117be58055e26ffb6645c102d228c879194d20fa1bb128",
+      "upstream": {
+        "repo": "vitejs/vite-plugin-react",
+        "ref": "72f1fc7cf003fb0a5309f9238d2d604674298e8c",
+        "packageUrl": "https://raw.githubusercontent.com/vitejs/vite-plugin-react/72f1fc7cf003fb0a5309f9238d2d604674298e8c/packages/plugin-rsc/package.json"
+      },
+      "notices": [
+        {
+          "path": "LICENSES/native-website/vite-plugin-rsc-0.5.34-LICENSE.txt",
+          "sha256": "29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5",
+          "sourceUrl": "https://raw.githubusercontent.com/vitejs/vite-plugin-react/72f1fc7cf003fb0a5309f9238d2d604674298e8c/LICENSE",
+          "sourceFile": null
+        }
+      ]
+    },
+    {
+      "name": "@bufbuild/protobuf",
+      "version": "1.10.1",
+      "license": "(Apache-2.0 AND BSD-3-Clause)",
+      "installedPackageJsonSha256": "e2c9339229089aa0d358904a22aa05a4a7295bdfbfff31e53e19cec8ae26e1f8",
+      "upstream": {
+        "repo": "bufbuild/protobuf-es",
+        "ref": "e31c1b139cf1e7fea2fb914f650af3c28c42ec68",
+        "packageUrl": "https://raw.githubusercontent.com/bufbuild/protobuf-es/e31c1b139cf1e7fea2fb914f650af3c28c42ec68/packages/protobuf/package.json"
+      },
+      "notices": [
+        {
+          "path": "LICENSES/native-website/protobuf-1.10.1-Apache-LICENSE.txt",
+          "sha256": "6da19f017fad6716cbc9c938972ebee29957c295b8a4d51060dfb03da51d8502",
+          "sourceUrl": "https://raw.githubusercontent.com/bufbuild/protobuf-es/e31c1b139cf1e7fea2fb914f650af3c28c42ec68/LICENSE",
+          "sourceFile": null
+        },
+        {
+          "path": "LICENSES/native-website/protobuf-1.10.1-Buf-NOTICE.txt",
+          "sha256": "2e3d677486a638eba6a11df63192f604b231418005fc84ba652a050539c98e1b",
+          "sourceUrl": null,
+          "sourceFile": "node_modules/@bufbuild/protobuf/dist/esm/index.js"
+        },
+        {
+          "path": "LICENSES/native-website/protobuf-1.10.1-Google-BSD-NOTICE.txt",
+          "sha256": "0e952cb110ff6944789fbe47c25b38819a3866c04c7c5cbea8d0c0d8f3a92f0e",
+          "sourceUrl": null,
+          "sourceFile": "node_modules/@bufbuild/protobuf/dist/esm/google/varint.js"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "name": "@unpic/core",
+      "version": "1.0.3",
+      "reason": "Package declares MIT; exact release tree lacks a core/root licence text. Sibling package notices are not assumed to apply."
+    },
+    {
+      "name": "unpic",
+      "version": "4.2.2",
+      "reason": "Package declares MIT; exact published git revision lacks a licence file. No copyright holder or notice invented."
+    }
+  ]
+}
