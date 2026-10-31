@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-native-public-images-ready';
+const original='G:/VisibleMedicine-temp/proposals/20261031-native-images-delivery-tests/MANIFEST.json';
+const manifest=json(original), prepared=json(root+'/PREPARED.json');
+const verified=hash(prepared.parent.path);
+assert.equal(verified,'ff5144cc18cf5ec41af01e99cd319654f89b14d2cd15cf2e08ed881f69df0caf');
+assert.equal(json('G:/VisibleMedicine-temp/staging/20261031-native-public-images/BUILD_RESULT.json').source.sha256,verified);
+assert.equal(manifest.candidateSourceReadySha256,'ff5144cc18cf5ec41af01e99cd319654f89b14d2cd15e08ed881f69df0caf');
+manifest.candidateSourceReadySha256=verified;
+manifest.receiptLabelCorrection={original:{path:original,sha256:hash(original)},reason:'Proposal transcribed a shortened receipt hash. Integration refused before copying files. Corrected against actual source receipt, prepared-copy record and independent build result; proposed file bytes and preimage hashes unchanged.'};
+fs.writeFileSync(root+'/MANIFEST_VERIFIED.json',JSON.stringify(manifest,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({correctedReceiptLabel:true,fileBytesUnchanged:true}));

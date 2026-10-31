@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {execFileSync,spawnSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/proposals/20261031-cervical-temp-portability',site='G:/VisibleMedicine-temp/staging/20261031-release-partition10-final/website';
+const helper=root+'/files/tests/cervical-a01-history-transport.mjs';
+assert.equal(hash(helper),'77c10c49798a14538541499695b6392a7624eed3d5deb89a370b8ad79c2715f6');
+assert.equal(hash(site+'/tests/cervical-a01-history-transport.mjs'),'814a4cc17c2358dd4383993b6fb9253d71d9fae7f8e62a301d77c46e1a02c1b1');
+const free=Number(execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',"[math]::Round((Get-Counter '\\Memory\\Available MBytes').CounterSamples.CookedValue)"],{encoding:'utf8',windowsHide:true}).trim());
+assert(free>=4096,'Need4096MiB available');
+const test=root+'/files/tests/atlas-cervical-a01-current-delivery.test.mjs';fs.copyFileSync(site+'/tests/atlas-cervical-a01-current-delivery.test.mjs',test,fs.constants.COPYFILE_EXCL);
+fs.mkdirSync(root+'/tmp',{recursive:true});
+const run=spawnSync(process.execPath,['--max-old-space-size=384','--test','--test-concurrency=1',test,root+'/files/tests/cervical-a01-temp.test.mjs'],{encoding:'utf8',windowsHide:true,maxBuffer:4*1024*1024,env:{...process.env,TEMP:root+'/tmp',TMP:root+'/tmp',TMPDIR:root+'/tmp',NODE_OPTIONS:'--max-old-space-size=384'}});
+const log=root+'/HISTORICAL.log';fs.writeFileSync(log,(run.stdout??'')+(run.stderr??''),{flag:'wx'});
+assert.equal(hash(helper),'77c10c49798a14538541499695b6392a7624eed3d5deb89a370b8ad79c2715f6');
+const out={at:new Date().toISOString(),availableMiB:free,status:run.status,signal:run.signal,error:run.error?.message??null,helper:{path:helper,sha256:hash(helper)},test:{path:test,sha256:hash(test)},log:{path:log,sha256:hash(log)},passed:run.status===0&&!run.signal&&!run.error,integrated:false,installed:false};
+fs.writeFileSync(root+'/HISTORICAL.json',JSON.stringify(out,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(out));if(!out.passed)process.exitCode=1;
