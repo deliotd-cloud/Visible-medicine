@@ -1,0 +1,124 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T09:57:17.580Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-release-thirteen-repairs/SOURCE.json",
+      "sha256": "5912dd67d94b93dcb4e022345a0240cc691a82e1d31dcb24469b6ef2a2b9c5e6"
+    },
+    "atlasCorrection": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-release-thirteen-repairs/visual-ct/CORRECTION.json",
+      "sha256": "241618f2bcd4e32e2cb1cf56716467239652b0b3eb55c15b5252904bffc3f6a8"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/body-learning-current-admission.test.mjs",
+      "bytes": 7973,
+      "sha256": "84d316dc11ba5090c749ac3faccf872923e779000e0400982363f4142b0403cd"
+    },
+    {
+      "path": "website/tests/current-head-index-whole-role-transition-20261021.test.mjs",
+      "bytes": 18389,
+      "sha256": "7a0395696eb02e89e3fbd6afb605e1248d7e30ca674f517218abe77d5de6fc05"
+    },
+    {
+      "path": "website/tests/elbow-current-lifecycle-preservation.test.mjs",
+      "bytes": 13041,
+      "sha256": "af0c69ba2f74da1f319df782cb4b72451ccb4d366f386b88f4014f1f601343a1"
+    },
+    {
+      "path": "website/tests/clinical-review-hip-muscle-xray.test.ts",
+      "bytes": 18730,
+      "sha256": "cb9221662ce1bee3af3f988f0c75fc0ed259db065d4b629c8807b8d1fe5eca6f"
+    },
+    {
+      "path": "website/tests/clinical-review-nested-duct-xray.test.ts",
+      "bytes": 30262,
+      "sha256": "1031794a082082305ef34125abaebd29a49bb8737e7d64bafbc5ef1c3b978fd9"
+    },
+    {
+      "path": "website/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "bytes": 23429,
+      "sha256": "c6db38e5dc82634e2e440eabd993cfb6a4cdd6064f451ba07fa0d2e2d82f7c17"
+    },
+    {
+      "path": "website/tests/studio-history-proof-current.test.mjs",
+      "bytes": 5642,
+      "sha256": "b1ba539d119fef80224c9cbf0035cc0b79966ed2d92fdf0c74ece1a04e0cc045"
+    },
+    {
+      "path": "website/tests/studio-later-harness-inverse.mjs",
+      "bytes": 5705,
+      "sha256": "59cab791f86037487e846706fce2293bc6187f6a5603d5cb0fc86d1e578a6246"
+    },
+    {
+      "path": "website/tests/head-linked-expansion.test.mjs",
+      "bytes": 19229,
+      "sha256": "5b911fd4859815b25a04aa4fb088a6a4a172e525746f5fd98a2b9022a454808e"
+    },
+    {
+      "path": "website/tests/tour-playback-source-role-inverse.test.mjs",
+      "bytes": 9153,
+      "sha256": "c092ed0cd0e72e8255860fea4d6b62dc83369c260136b5f7a1763ec5819e13e0"
+    },
+    {
+      "path": "website/tests/local-font-distribution.test.mjs",
+      "bytes": 4295,
+      "sha256": "7eb97b0486724d5f7837b4c8919b2937f775b5121640ee72f5aac58f6289e8cf"
+    },
+    {
+      "path": "recipes/release-thirteen/integrate.mjs",
+      "bytes": 5167,
+      "sha256": "00f9e37cd6a0ce6f66b6573e683dd9a4af1c8203c5f207bf1cc898c09a3c2ad8"
+    },
+    {
+      "path": "recipes/release-thirteen/prepare-queue.mjs",
+      "bytes": 2366,
+      "sha256": "ed53fd2669896cd78e4b8a0864f67f41917da0dfa0a4f023364b699f4c8d6292"
+    },
+    {
+      "path": "recipes/release-thirteen/verify-pure.mjs",
+      "bytes": 2234,
+      "sha256": "5fb7daeb6703262cc089744b98a324b2ef80e5f226e31f74bb11e7bf7c4ecb6a"
+    },
+    {
+      "path": "recipes/release-thirteen/prepare-eus-environment.mjs",
+      "bytes": 2180,
+      "sha256": "3665a73aefdacd7ad5bb682bfab22d77a87a797292cbf518c221f89023335c72"
+    },
+    {
+      "path": "recipes/release-thirteen/save-checkpoint.mjs",
+      "bytes": 10552,
+      "sha256": "37e2204deea1c2fba01dd965eb6ad8011f9484f2e5775df516543c29325e2531"
+    },
+    {
+      "path": "recipes/visual-ct/correct-baseline-receipt.mjs",
+      "bytes": 3617,
+      "sha256": "3fc77c67acd4275789b738ad95c2d8c6170905272841d1d120ce712900e0e19b"
+    }
+  ],
+  "removed": [],
+  "scope": "Eleven selected regression test/helper repairs, five orchestration recipes and one metadata-correction recipe only. No whole-project backup, assets, scans, masks, clinical decisions, private references, logs or canonical Git ancestry. Installed product unchanged.",
+  "proof": {
+    "at": "2026-10-31T09:57:12.353Z",
+    "pure": 31,
+    "priorPartition": {
+      "pass": 182,
+      "fail": 17
+    },
+    "runtimePending": true,
+    "websiteMemoryMiB": null,
+    "atlasMemoryMiB": 4048,
+    "clinicalApproval": false,
+    "wholeSuitePassing": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

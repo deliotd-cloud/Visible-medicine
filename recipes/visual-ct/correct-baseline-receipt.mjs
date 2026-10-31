@@ -1,0 +1,18 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const prior='G:/VisibleMedicine-temp/staging/20261031-visual-ct-guidance',root='G:/VisibleMedicine-temp/staging/20261031-visual-ct-guidance-ready',site=root+'/atlas';
+const source=json(prior+'/SOURCE_PREPARED.json'),baseline=json(prior+'/BASELINE.json'),original=json(baseline.receipt.path);
+assert.equal(hash(prior+'/SOURCE_PREPARED.json'),'08c9969078304afe207bf82eff237c630a9f2f9bd1e21ef5e0ffd85cf1ea1006');assert.equal(hash(baseline.receipt.path),baseline.receipt.sha256);assert.equal(baseline.receipt.sha256,'ce1d2306955191af049aa3fb7e55056b1fac0d7cf972f9f626f999b95e376764');assert(!fs.existsSync(root));
+const mismatches=[];for(const r of original.sourceRows){assert.equal(hash(original.site+'/'+r.path),r.sha256,r.path);if(JSON.stringify(baseline.sourceRows.find(x=>x.path===r.path))!==JSON.stringify(r))mismatches.push(r.path);}
+assert.deepEqual(mismatches,['scripts/validate-nested-ct-orientation.mjs']);assert.equal(source.site,prior+'/atlas');
+for(const r of source.sourceRows)assert.equal(hash(source.site+'/'+r.path),r.sha256,r.path);
+fs.mkdirSync(root,{recursive:true});execFileSync('git',['clone','--shared','--no-checkout',original.site,site],{windowsHide:true,stdio:'pipe'});execFileSync('git',['-C',site,'read-tree',baseline.sourceHead],{windowsHide:true});
+for(const r of source.sourceRows){const to=site+'/'+r.path;fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(source.site+'/'+r.path,to,fs.constants.COPYFILE_EXCL);assert.equal(hash(to),r.sha256,r.path);}
+fs.symlinkSync(fs.realpathSync(source.site+'/node_modules'),site+'/node_modules','junction');fs.mkdirSync(root+'/tmp');
+const write=(p,v)=>fs.writeFileSync(root+'/'+p,JSON.stringify(v,null,2)+'\n',{flag:'wx'}),ref=p=>({path:p,sha256:hash(p)});
+write('BASELINE.json',{...baseline,atlas:site,sourceRows:structuredClone(original.sourceRows)});
+write('SOURCE_PREPARED.json',{...source,site,base:{...source.base,receipt:ref(root+'/BASELINE.json')},priorPreparation:ref(prior+'/SOURCE_PREPARED.json'),baselineReceiptCorrectionOnly:true});
+for(const name of ['verify-ready.mjs','review-impact.mjs']){const old=fs.readFileSync(prior+'/'+name,'utf8');assert.equal(old.split(prior).length,2);fs.writeFileSync(root+'/'+name,old.replace(prior,root),{flag:'wx'});}
+write('CORRECTION.json',{at:new Date().toISOString(),source:ref(root+'/SOURCE_PREPARED.json'),prior:ref(prior+'/SOURCE_PREPARED.json'),baseline:ref(root+'/BASELINE.json'),original:baseline.receipt,mismatches,reason:'Preparation accidentally shared an unmodified row object between candidate and baseline inventories. Updating the candidate validator row also changed only the recorded baseline row; the original baseline file and candidate files never changed. Restore independently read original baseline rows in this separate candidate.',allCandidateSourceBytesUnchanged:true,purePassesRetained:ref(prior+'/PURE_CHECKS.json'),sourceFileCount:source.sourceRows.length,canonicalUnchanged:true,installed:false});
+const plan=json(prior+'/VERIFICATION_PLAN.json');write('VERIFICATION_PLAN.json',{...plan,source:ref(root+'/SOURCE_PREPARED.json'),codeFiles:['verify-ready.mjs','review-impact.mjs'].map(p=>ref(root+'/'+p))});
+console.log(JSON.stringify({source:ref(root+'/SOURCE_PREPARED.json'),correction:ref(root+'/CORRECTION.json'),filesUnchanged:source.sourceRows.length}));
