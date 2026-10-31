@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-31T03:23:45.139Z",
+  "focused": {
+    "related": 323,
+    "failed": 0,
+    "skipped": 0,
+    "completeStockSuite": false
+  },
+  "types": {
+    "roots": 4,
+    "graph": 593,
+    "diagnostics": 0,
+    "fullProjectTypes": false
+  },
+  "review": {
+    "candidate": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "inputs": 1866,
+    "viewerFiles": 54,
+    "reviewBuildPassed": true,
+    "changedBoundInput": "components/HeadAtlasInlineComparison.tsx",
+    "installed": "3648a75bdf7543a29047e74193231fad27afd450d9b0ebc7164393ba2a0d3b2f",
+    "clinicalDecisionsChanged": false
+  },
+  "font": {
+    "sha256": "684ad5b531f81d43c1e8c7038262d5db7cdc1f68006e04d6c7769efa8d33c8cc",
+    "pinnedOfficialResponse": true,
+    "previousCachedOriginVerified": false,
+    "coverageAndMetricsPreserved": true,
+    "visualWeights": [
+      400,
+      600,
+      800
+    ],
+    "licenseCopiesUnchanged": true,
+    "blanketRightsClearance": false
+  },
+  "installed": false,
+  "productionBuildPassed": false,
+  "fullSuitePassed": false
+}

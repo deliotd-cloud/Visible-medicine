@@ -1,0 +1,21 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-head-comparison-followup',site=root+'/website',before=json(root+'/AUTHORED_SOURCE.json');
+assert.equal(fs.realpathSync(site).replaceAll('\\','/'),site);assert(!fs.lstatSync(site+'/public/atlas-review-viewer').isSymbolicLink());
+const run=(args)=>execFileSync(process.execPath,args,{cwd:site,stdio:'inherit',windowsHide:true,env:{...process.env,NODE_OPTIONS:'--max-old-space-size=1536'}});
+const original=json(site+'/atlas-review/integration-inputs.json'),bodyBefore=json(site+'/atlas-review/content/body-renderer-revision.json'),shoulderBefore=json(site+'/atlas-review/content/review-revisions.json');
+run(['scripts/bind-clinical-review.mjs']);const bound=json(site+'/atlas-review/integration-inputs.json');assert.equal(bound.inputs.length,original.inputs.length);assert.equal(bound.inputs.length,1861);
+assert.deepEqual(bound.inputs.map(r=>r.path),original.inputs.map(r=>r.path));const changed=bound.inputs.filter((r,i)=>r.sha256!==original.inputs[i].sha256).map(r=>r.path);
+assert.deepEqual(changed.sort(),['components/HeadAtlasInlineComparison.tsx','components/HeadAtlasViewer.tsx'].sort());
+const body=json(site+'/atlas-review/content/body-renderer-revision.json'),shoulder=json(site+'/atlas-review/content/review-revisions.json');
+assert.equal(body.sourceRendererSha256,bodyBefore.sourceRendererSha256);assert.deepEqual(shoulder.sourceRevisions,shoulderBefore.sourceRevisions);
+run(['scripts/build-clinical-review-viewer.mjs']);run(['scripts/verify-clinical-review.mjs']);
+const pinPath=site+'/tests/fixtures/current-atlas-delivery.json',pin=json(pinPath);fs.writeFileSync(root+'/CURRENT_PIN_BEFORE.json',fs.readFileSync(pinPath),{flag:'wx'});pin.reviewIntegration=bound.sha256;for(const p of Object.keys(pin.documents))pin.documents[p]=hash(site+'/'+p);fs.writeFileSync(pinPath,JSON.stringify(pin,null,2)+'\n');
+const ts=createRequire(site+'/package.json')('typescript'),config=ts.readConfigFile(site+'/tsconfig.json',ts.sys.readFile);assert(!config.error);const parsed=ts.parseJsonConfigFileContent(config.config,ts.sys,site),options={...parsed.options,noEmit:true,incremental:false,composite:false,tsBuildInfoFile:undefined};
+const roots=['components/HeadAtlasViewer.tsx','components/HeadAtlasInlineComparison.tsx','components/HeadAtlasInlineComparisonLoader.tsx','lib/head-disclosure-keyboard.ts','lib/imaging-pane-focus.ts'];const host=ts.createCompilerHost(options);host.getCurrentDirectory=()=>site;
+const program=ts.createProgram(roots.map(p=>site+'/'+p),options,host),diagnostics=ts.getPreEmitDiagnostics(program),graph=program.getSourceFiles().map(f=>({path:path.resolve(f.fileName).replaceAll('\\','/'),sha256:hash(f.fileName)}));
+fs.writeFileSync(root+'/SCOPED_TYPES.json',JSON.stringify({at:new Date().toISOString(),roots,graph,diagnosticCount:diagnostics.length,passing:diagnostics.length===0,fullWebsiteTypes:false},null,2)+'\n',{flag:'wx'});if(diagnostics.length){console.log(ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCurrentDirectory:()=>site,getCanonicalFileName:f=>f,getNewLine:()=>"\n"}));throw Error('Scoped types failed');}
+console.log(JSON.stringify({typesPassed:true,roots:roots.length,graph:graph.length}));
+run(['C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js','run','build']);
+const viewer=json(site+'/public/atlas-review-viewer/manifest.json');assert.equal(viewer.websiteIntegrationSha256,bound.sha256);assert.equal(viewer.mode,'production');assert.equal(viewer.personalRecordsIncluded,false);assert.equal(viewer.files.length,54);assert.equal(viewer.packages.length,24);
+fs.writeFileSync(root+'/BINDING.json',JSON.stringify({at:new Date().toISOString(),source:before.atlasHead,prior:original.sha256,current:bound.sha256,inputs:bound.inputs.length,changed,geometryAndTeachingSourceRevisionsUnchanged:true,reviewBundleFiles:viewer.files.length,reviewPackages:viewer.packages.length,typesGraph:graph.length,buildPassed:true},null,2)+'\n',{flag:'wx'});
