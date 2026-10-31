@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-31T19:35:46.840Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-prostate-website/SOURCE.json",
+    "sha256": "69748f41a0cabd199180be76d6466dd1594921f381357cb4e61c6662b5edfc33"
+  },
+  "atlasRevision": "df175264724a98ca4f70de19e1bfabd325084fdb",
+  "review": "8b349bdc9a34ac1d0a1edbc6f5724cfb835995a934f5e3c7cfd9cad0ecd19b46",
+  "modelRevision": "2893fbd51ba45408476908e7e4fffe593f0f6953a1b9013c88269152c0e2ef60",
+  "sourceFiles": 7413,
+  "reviewInputs": 1874,
+  "reviewSourceFiles": 1655,
+  "regionalBuild": true,
+  "privateReviewBuild": true,
+  "fullTypes": true,
+  "fullWebsiteBuild": true,
+  "prostateDeliveryTests": 3,
+  "installedDeliveryTests": 3,
+  "referenceHistoryRepairs": {
+    "groupedPass": 43,
+    "groupedFail": 1,
+    "remainingCasePassedSeparately": true
+  },
+  "wholeSuitePassing": false,
+  "installedLocally": true,
+  "publicDeployment": false,
+  "privateDatabaseFilesUnchanged": 4,
+  "clinicalApproval": false,
+  "patientRegistration": false,
+  "mriCaseConfirmed": false
+}

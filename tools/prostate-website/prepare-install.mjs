@@ -1,0 +1,13 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const base='G:/VisibleMedicine-temp/proposals/20261031-prostate-website',stage='G:/VisibleMedicine-temp/staging/20261031-prostate-website',cp='F:/VisibleMedicine/recovery/checkpoints/20261031-prostate-website/installation',dest=base+'/installation';assert(!fs.existsSync(dest));fs.mkdirSync(dest);fs.mkdirSync(cp);
+const plan=json(stage+'/INSTALL_PLAN.json');assert.equal(plan.conflicts.length,0);assert.equal(hash(plan.source.path),plan.source.sha256);const source=json(plan.source.path);
+for(const r of source.sourceRows)assert.equal(hash(source.website+'/'+r.path),r.sha256,r.path);
+for(const op of plan.operations){const p='F:/VisibleMedicine/website/'+op.path;assert.equal(fs.existsSync(p)?hash(p):null,op.before,op.path);if(op.before){const out=cp+'/source-before/'+op.path;fs.mkdirSync(path.dirname(out),{recursive:true});fs.copyFileSync(p,out,fs.constants.COPYFILE_EXCL);assert.equal(hash(out),op.before);}}
+fs.copyFileSync(plan.source.path,cp+'/SOURCE.json',fs.constants.COPYFILE_EXCL);fs.copyFileSync(stage+'/INSTALL_PLAN.json',cp+'/OPERATIONS.json',fs.constants.COPYFILE_EXCL);
+const oldCp='F:/VisibleMedicine/recovery/checkpoints/20261031-prostate-website/website-window',old=base+'/website-window',runtime=json(oldCp+'/PLAN.json');
+runtime.oldPreview={pid:155316,launcherPid:111156,workerdPid:0,sessionId:54964};runtime.at=new Date().toISOString();runtime.purpose='Install verified original prostate zones and pending owner-requested website improvements locally; no owner-tab refresh or public deployment.';runtime.source=plan.source;runtime.installCandidate=true;runtime.restartSameVersion=false;runtime.consent='Owner requested prostate zonal modelling and continued website/Atlas improvements; saved local cutover permission is true.';
+fs.writeFileSync(cp+'/BEFORE_PLAN.json',JSON.stringify(runtime,null,2)+'\n',{flag:'wx'});
+const after={...runtime,atlasHead:source.atlasHead,reviewBinding:source.review,critical:runtime.critical.map(row=>({...row,sha256:hash(source.website+'/'+path.relative('F:/VisibleMedicine/website',row.path).replaceAll('\\','/'))}))};fs.writeFileSync(cp+'/PLAN.json',JSON.stringify(after,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(dest+'/restart.mjs',fs.readFileSync(old+'/restart.mjs','utf8').replaceAll(old,dest).replaceAll(oldCp,cp).replace('sameInstalledVersion:true','sameInstalledVersion:false'),{flag:'wx'});
+console.log(JSON.stringify({operations:plan.operations.length,backupMiB:plan.beforeBytes/2**20,allSourcesChecked:true}));

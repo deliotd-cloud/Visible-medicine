@@ -1,0 +1,190 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T19:35:47.662Z",
+  "sourceIdentity": {
+    "atlasHead": "df175264724a98ca4f70de19e1bfabd325084fdb",
+    "review": "8b349bdc9a34ac1d0a1edbc6f5724cfb835995a934f5e3c7cfd9cad0ecd19b46"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "sha256": "bc2215540c01eb8675345f5d8c385fc7264fcf2a454167d3e1e60863e746e64b",
+      "bytes": 9767
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "sha256": "6456129543e355e56b628096f74562e6f7bb3a08d1198879f371cf1ba0f91ad2",
+      "bytes": 4552
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "sha256": "fecd942938410f7a2bb4eb2f4710de7d17e3f3e76ac5483719757f172cda6282",
+      "bytes": 5290
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "sha256": "fcb4a06761a183a6b72c5ea373e844b436571754c5813764b6d0603c5369a563",
+      "bytes": 493
+    },
+    {
+      "path": "website/tests/prostate-zonal-delivery.test.mjs",
+      "sha256": "bd0c0e1275a323b8069f43a7fb34e49f0b5db272dcd4191465d4d0d95fcda508",
+      "bytes": 3968
+    },
+    {
+      "path": "website/tests/clinical-review-lower-arterial-tour.test.ts",
+      "sha256": "65f9b693de91ee2c913ff32af05d6fedd8d1419098a0b644e25dce40a9317102",
+      "bytes": 8654
+    },
+    {
+      "path": "website/tests/clinical-review-orbital-ring-ct.test.ts",
+      "sha256": "500a041e7937cba5361766597b87cdbd244058237b0e458123dd08382a1c87a9",
+      "bytes": 20113
+    },
+    {
+      "path": "website/tests/clinical-review-visceral-arterial-xray.test.ts",
+      "sha256": "186b8e62f510321ac1b292ce52a39f6861a0f90c87cd0528434059325743adcb",
+      "bytes": 24384
+    },
+    {
+      "path": "website/tests/deep-plantar-current-transition.test.mjs",
+      "sha256": "f363fb9c0b9530dadd18b561e453df27c920fdc900a9906b23adc9234112bc52",
+      "bytes": 12261
+    },
+    {
+      "path": "website/tests/release-diagnostic-context-inverse.test.mjs",
+      "sha256": "17228b6455c1248cc96f3bd5faf904989790ddd84448c3a3ddb22bd0dd37b069",
+      "bytes": 9273
+    },
+    {
+      "path": "tools/prostate-website/build-window.mjs",
+      "sha256": "7cc1f2ea65910ce269130a095a167bc0bd98a33b14d95e67a28668a8c5026f95",
+      "bytes": 1027
+    },
+    {
+      "path": "tools/prostate-website/complete-website-window.mjs",
+      "sha256": "002cb5f516c6d7a2f491512f397b5c1830436d8ba173674eeb53a207b5221ed2",
+      "bytes": 1305
+    },
+    {
+      "path": "tools/prostate-website/compose.mjs",
+      "sha256": "431b9819fe90480788ce47e48a7c0d61e9cb3cb6a4dabaf4dddbd727dab799c2",
+      "bytes": 3857
+    },
+    {
+      "path": "tools/prostate-website/final-window.mjs",
+      "sha256": "bb8698a7b024ce68be3c8c8c675118eddd1c8f59910ba420f8feee83e1b8fab3",
+      "bytes": 934
+    },
+    {
+      "path": "tools/prostate-website/install.mjs",
+      "sha256": "9f260b30da6cb792f00a9e48a14b8890eab88a399fbc4cd4c226da39a6862325",
+      "bytes": 4951
+    },
+    {
+      "path": "tools/prostate-website/job.mjs",
+      "sha256": "0d6759be6404b8cd0b637c674c024c63b7930ec66811fa278f8a264b43c79a60",
+      "bytes": 1691
+    },
+    {
+      "path": "tools/prostate-website/prepare-build-window.mjs",
+      "sha256": "46b6a26942fb830ef8ebf4f36bbaf97316a98b6226135dcbdeb213ecd2584e34",
+      "bytes": 1150
+    },
+    {
+      "path": "tools/prostate-website/prepare-final-window.mjs",
+      "sha256": "1cd2a0722ccfac406ebfd80d6b8feb7d29d983aa1721988f38ea5890bcff8af6",
+      "bytes": 1539
+    },
+    {
+      "path": "tools/prostate-website/prepare-install.mjs",
+      "sha256": "6b5c09d4edffad824843952a52dce25b4e1588bde2010a1538de1d11fa790c7d",
+      "bytes": 2731
+    },
+    {
+      "path": "tools/prostate-website/prepare-review.mjs",
+      "sha256": "41765f4a403ab6de06b66ead4e2ef53d108ac608811b661ab61654fa3c5da2b9",
+      "bytes": 2626
+    },
+    {
+      "path": "tools/prostate-website/prepare-website-window.mjs",
+      "sha256": "2714453d72b9ab2f957c30b1f895297561286d38ae52cf6b1a2fd307e1ad144c",
+      "bytes": 1393
+    },
+    {
+      "path": "tools/prostate-website/prepare-window.mjs",
+      "sha256": "d24a82995ae38752853dca55a7f6afffbf227243792922bb2b10e80b9dd7c317",
+      "bytes": 1392
+    },
+    {
+      "path": "tools/prostate-website/refresh-native.mjs",
+      "sha256": "e701b6c1b5d74e320927f7ddfbb1237194ffc128c221f18cbca6e3e86c606d61",
+      "bytes": 2593
+    },
+    {
+      "path": "tools/prostate-website/save.mjs",
+      "sha256": "486b4bba8610af59a13441b4564ec8484c91fd66bac06a490a84ec8b35d6a727",
+      "bytes": 5475
+    },
+    {
+      "path": "tools/prostate-website/seal.mjs",
+      "sha256": "da8dcf12de62fecc19cedf2b6929cc9e33637ae1fcdb661dedb0babba59c06a4",
+      "bytes": 4327
+    },
+    {
+      "path": "tools/prostate-website/test-window.mjs",
+      "sha256": "170c7ad77da6d5d4df695524dd725a5dec34720d4df4f260197f8a77ca4cdbf0",
+      "bytes": 856
+    },
+    {
+      "path": "tools/prostate-website/validate.mjs",
+      "sha256": "f332d565f9e57e179eff54fc15ddbbeff2227219b6fc458b4879470154875fac",
+      "bytes": 859
+    },
+    {
+      "path": "tools/prostate-website/website-window.mjs",
+      "sha256": "f20cb1977b978eeedbe42bd4ca76323bb23f118ad92dd1cef071824306ce5856",
+      "bytes": 916
+    }
+  ],
+  "removed": [],
+  "scope": "Selected prostate website integration source, focused test repairs and local build/install recipes only. Excludes scans, masks, private inventory, reference objects, model binaries, databases, credentials, generated bundles and canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "at": "2026-10-31T19:35:46.840Z",
+    "source": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-prostate-website/SOURCE.json",
+      "sha256": "69748f41a0cabd199180be76d6466dd1594921f381357cb4e61c6662b5edfc33"
+    },
+    "atlasRevision": "df175264724a98ca4f70de19e1bfabd325084fdb",
+    "review": "8b349bdc9a34ac1d0a1edbc6f5724cfb835995a934f5e3c7cfd9cad0ecd19b46",
+    "modelRevision": "2893fbd51ba45408476908e7e4fffe593f0f6953a1b9013c88269152c0e2ef60",
+    "sourceFiles": 7413,
+    "reviewInputs": 1874,
+    "reviewSourceFiles": 1655,
+    "regionalBuild": true,
+    "privateReviewBuild": true,
+    "fullTypes": true,
+    "fullWebsiteBuild": true,
+    "prostateDeliveryTests": 3,
+    "installedDeliveryTests": 3,
+    "referenceHistoryRepairs": {
+      "groupedPass": 43,
+      "groupedFail": 1,
+      "remainingCasePassedSeparately": true
+    },
+    "wholeSuitePassing": false,
+    "installedLocally": true,
+    "publicDeployment": false,
+    "privateDatabaseFilesUnchanged": 4,
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "mriCaseConfirmed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

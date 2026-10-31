@@ -1,0 +1,8 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const base='G:/VisibleMedicine-temp/staging/20261031-prostate-website',site=base+'/website',atlas='G:/VisibleMedicine-temp/staging/20261031-prostate-native/atlas';
+const jobs={native:{site:atlas,command:'node_modules/vite/bin/vite.js build --config integration/head-neck/vite.config.mjs',heap:2304,aggregate:3072,minimum:5120},review:{site,command:'scripts/build-clinical-review-viewer.mjs',heap:2304,aggregate:3072,minimum:5120},validation:{site,command:'G:/VisibleMedicine-temp/proposals/20261031-prostate-website/validate.mjs',heap:1024,aggregate:2048,minimum:4096},types:{site,command:'node_modules/typescript/lib/tsc.js --noEmit --incremental false',heap:1536,aggregate:3072,minimum:5120},website:{site,command:'node_modules/vinext/dist/cli.js build',heap:2304,aggregate:3072,minimum:5120}};
+jobs['types-retry']={...jobs.types,heap:3072,aggregate:3584,minimum:5632};
+jobs['website-retry']={...jobs.website,heap:3072,aggregate:3584,minimum:5632};
+jobs['website-final']={...jobs.website,heap:3072,aggregate:4096,minimum:6144};
+const key=process.argv[2],job=jobs[key];assert(job);const result=await guarded({...job,dir:base+'/checks/'+key,extraEnv:{VM_ATLAS_SOURCE_REPO:atlas,ATLAS_SOURCE_REPO:atlas,VM_WEBSITE_ROOT:site,TEMP:base+'/tmp',TMP:base+'/tmp'}});fs.writeFileSync(base+'/checks/'+key+'-RESULT.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({job:key,passing:result.passing}));process.exitCode=result.passing?0:1;
