@@ -1,0 +1,9 @@
+# Adrenal ultrasound draft integration
+
+This proposal contains one teaching file, one focused test and an additive notice. It is not an installed or generated release. Finish visual-CT validation first, then the accepted small-cardiac successor, before composing this independent renal change. Verify the renal file's before hash; the small-cardiac batch must not alter it. Append NOTICE_APPEND.md to the resulting notices file rather than replace prior notices.
+
+Expected authored delta: ultrasound only for renal-inferior-suprarenal-artery and renal-suprarenal-veins, plus two concept-scoped references. Current renal catalog suggests three runtime selections: one right arterial source and both supplied veins. Verify actual bound runtime lessons and review packets before claiming that count as completed. Preserve the defective left artery exclusion, all FMA/source hashes, CT/MRI, clinical lessons, quizzes and model limits.
+
+Run the existing source/review binding checks, regenerate the renderer revision, and compare all nested targets against the immediately preceding generated source. Require three pending-to-draft ultrasound changes, unchanged unrelated lessons, exact current citations in learner and private review output, no imaging approval and rejection of stale revisions. Renderer-driven geometry review changes must be measured conservatively even with identical meshes; do not transfer decisions. Keep historical tests and fixtures intact. The root kidney ultrasound tests concern a different selection and cannot prove this nested adrenal change.
+
+Use the existing memory and single-job controls. Complete runtime generation, focused renal/nested checks, website import, build and desktop verification before proposing installation. No scans, new meshes, patient registration, procedural route, source-media import or clinical approval is included.

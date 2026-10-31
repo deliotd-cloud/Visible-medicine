@@ -1,0 +1,65 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T11:26:41.922Z",
+  "sourceIdentity": {
+    "proposal": {
+      "path": "G:/VisibleMedicine-temp/proposals/20261031-adrenal-ultrasound-commercial/CONTENT_PROPOSAL.json",
+      "sha256": "a16f95f8cb716de4abe154e445137361c72fae093f79709e07f7cae27d192dee"
+    },
+    "content": {
+      "path": "G:/VisibleMedicine-temp/proposals/20261031-adrenal-ultrasound-commercial/atlas/content/renal-teaching.ts",
+      "sha256": "3d9bb0cc120ee240b0d08128429bead7743ee04abc6225dc01f6749083d00e4e"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/renal-teaching.ts",
+      "bytes": 11908,
+      "sha256": "3d9bb0cc120ee240b0d08128429bead7743ee04abc6225dc01f6749083d00e4e"
+    },
+    {
+      "path": "atlas/scripts/test-adrenal-ultrasound-drafts.mjs",
+      "bytes": 4722,
+      "sha256": "03a7c18d6261e7fb46cb9c68a16fc4c9afef284b21597cf5a3b72e5edd7e1663"
+    },
+    {
+      "path": "tools/adrenal-ultrasound/prepare.mjs",
+      "bytes": 4324,
+      "sha256": "f5f5813430291363f1cabf85f692c9bf57b96350a2625a2c3e448753c54e53ac"
+    },
+    {
+      "path": "tools/adrenal-ultrasound/verify.mjs",
+      "bytes": 1576,
+      "sha256": "161c291ef0eba507679a0a12d3061e150fef8130342060fabc760e4b6edff570"
+    },
+    {
+      "path": "tools/adrenal-ultrasound/NOTICE_APPEND.md",
+      "bytes": 1007,
+      "sha256": "612ac42bcdf6f2350373e28470c075fc0b91eb0963e0a794b6f9d4ce3f9107da"
+    },
+    {
+      "path": "tools/adrenal-ultrasound/INTEGRATION_PLAN.md",
+      "bytes": 1872,
+      "sha256": "ea0ec22659a73d7e35bfccfe1d79ee77b29cfbc7397d0f6bef723a82717d6922"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original adrenal ultrasound teaching draft source, tests and ingestion recipes, with attribution. Partial source-only recovery; no scans, third-party article assets, models, private decisions or canonical Git ancestry.",
+  "proof": {
+    "pureTests": 6,
+    "exactPriorTeachingPreserved": true,
+    "concepts": 2,
+    "expectedRuntimeSelections": 3,
+    "runtimeValidated": false,
+    "generated": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

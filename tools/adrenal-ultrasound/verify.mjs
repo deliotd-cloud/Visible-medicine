@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {spawnSync} from 'node:child_process';
+const root='G:/VisibleMedicine-temp/proposals/20261031-adrenal-ultrasound-commercial';
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex'),ref=p=>({path:p,sha256:sha(p)});
+const p=JSON.parse(fs.readFileSync(root+'/CONTENT_PROPOSAL.json'));
+assert.equal(sha(p.base+'/'+p.file),p.before);assert.equal(sha(root+'/atlas/'+p.file),p.after);
+const result=spawnSync(process.execPath,['--max-old-space-size=64','--test','--test-reporter=tap',root+'/atlas/scripts/test-adrenal-ultrasound-drafts.mjs'],{encoding:'utf8',windowsHide:true,maxBuffer:100000,env:{...process.env,VM_ADRENAL_BASELINE:p.base}});
+fs.writeFileSync(root+'/CHECKS.tap',result.stdout+result.stderr,{flag:'wx'});
+assert.equal(result.status,0);assert.equal(result.signal,null);assert.match(result.stdout,/# tests 6/);assert.match(result.stdout,/# pass 6/);assert.match(result.stdout,/# fail 0/);
+const evidence={at:new Date().toISOString(),passed:true,counts:{tests:6,pass:6,fail:0,skipped:0},proposal:ref(root+'/CONTENT_PROPOSAL.json'),log:ref(root+'/CHECKS.tap'),content:ref(root+'/atlas/'+p.file),tests:ref(root+'/atlas/scripts/test-adrenal-ultrasound-drafts.mjs'),notice:ref(root+'/NOTICE_APPEND.md'),expectedRuntimePlacements:3,clinicalApproval:false,runtimeValidated:false,generated:false,installed:false};
+fs.writeFileSync(root+'/VERIFICATION.json',JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(evidence));
