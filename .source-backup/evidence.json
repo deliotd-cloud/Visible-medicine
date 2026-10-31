@@ -1,0 +1,108 @@
+{
+  "at": "2026-10-31T02:18:41.770Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-native-public-images-verified/candidate/SOURCE.json",
+    "sha256": "d55c215953aaf46c59515e4533a93984dc1ce0ecbf1d6a8b0a3fec583dbbc27d"
+  },
+  "builtProductSource": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-native-public-images-verified/build/SOURCE_READY.json",
+    "sha256": "ff5144cc18cf5ec41af01e99cd319654f89b14d2cd15cf2e08ed881f69df0caf"
+  },
+  "focused": {
+    "tests": 64,
+    "pass": 64,
+    "fail": 0,
+    "skipped": 0,
+    "roots": [
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/head-epoch-projections.test.mjs",
+      "tests/site-image.test.mjs",
+      "tests/atlas-public-brand-image.test.mjs"
+    ]
+  },
+  "scopedTypes": {
+    "roots": 9,
+    "graph": 560,
+    "diagnostics": 0,
+    "fullWebsiteTypes": false
+  },
+  "productionBuildPassed": true,
+  "productEquivalentToBuild": true,
+  "distribution": {
+    "evidence": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-native-public-images-verified/build/DISTRIBUTION_RESULT.json",
+      "sha256": "405282d8b26677576ce586bcdcffc495a08f1c469a3bf2c5f98aed4d849b9da7"
+    },
+    "inventoriedEnvironments": [
+      "client",
+      "rsc",
+      "ssr"
+    ],
+    "packageCount": 34,
+    "unpicPackagesAbsent": true,
+    "dependenciesInstalledUnchanged": true,
+    "scope": "Final written JavaScript module inventories; not blanket licensing clearance for all assets or installed dependencies."
+  },
+  "images": {
+    "generatedBrandSourceUnchanged": true,
+    "approvedAssetsUnchanged": true,
+    "actualPublicAssetDeliveryPassed": true,
+    "correctIntrinsicDimensions": true,
+    "upstreamGeneratedFilesNotHandEdited": true
+  },
+  "binding": {
+    "prior": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+    "current": "1f36393188a11f9e8ff56cb54ff3cd9d50c504f3b47de3e21cde422b2104e996",
+    "inputs": 1866,
+    "changed": [
+      "scripts/bind-clinical-review.mjs",
+      "vite.config.ts"
+    ],
+    "added": [
+      "components/AtlasPublicBrandImage.tsx",
+      "public/brand/approved/visible-medicine-lockup-dark.png",
+      "public/brand/approved/visible-medicine-lockup-light.png",
+      "scripts/atlas-public-brand-image-plugin.mjs"
+    ],
+    "geometryAndTeachingSourceRevisionsUnchanged": true,
+    "at": "2026-10-31T02:07:49.608Z",
+    "source": "c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3",
+    "reviewBundleFiles": 54,
+    "reviewPackages": 24,
+    "buildPassed": true,
+    "clinicalApproval": false,
+    "installed": false
+  },
+  "installedReview": "3648a75bdf7543a29047e74193231fad27afd450d9b0ebc7164393ba2a0d3b2f",
+  "clinicalDecisionsChanged": false,
+  "priorStock": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release-partition7-anatomy-final/SOURCE2.json",
+      "sha256": "a4a8e70bd6c17d8960f8f056f64558ced5756095c1a40501d636a6d06dca6356"
+    },
+    "counts": {
+      "tests": 478,
+      "pass": 477,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "terminal": true,
+    "failingRoot": "tests/head-epoch-projections.test.mjs",
+    "repairFocusedPassed": true,
+    "fullRerunPending": true
+  },
+  "proposalReceiptLabelCorrection": {
+    "original": {
+      "path": "G:/VisibleMedicine-temp/proposals/20261031-native-images-delivery-tests/MANIFEST.json",
+      "sha256": "f9026c41a1fc765cef7318d209a4ae2df6e0588075064c19da98782e41154b05"
+    },
+    "reason": "Proposal transcribed a shortened receipt hash. Integration refused before copying files. Corrected against actual source receipt, prepared-copy record and independent build result; proposed file bytes and preimage hashes unchanged."
+  },
+  "wholeSuitePassing": false,
+  "installed": false,
+  "ownerPreviewChanged": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
