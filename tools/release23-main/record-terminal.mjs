@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release23-progress',stage='G:/VisibleMedicine-temp/staging/20261031-release22-repairs';
+const ref=p=>({path:p,sha256:hash(p)}),copy=(from,to)=>{fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);assert.equal(hash(from),hash(to));};
+const types=json(stage+'/types-full-attempt-1/RESULT.json'),focused=json(stage+'/FOCUSED.json');assert(types.result.passing);assert(focused.result.process.terminalObserved);assert(!focused.result.passing);
+for(const name of ['SOURCE.json','COMPOSITION.json','FOCUSED.json'])copy(stage+'/'+name,cp+'/repaired/'+name);
+for(const name of ['runner.stdout.log','runner.stderr.log','PROCESS-TERMINAL.json'])copy(stage+'/focused-1/'+name,cp+'/repaired/focused/'+name);
+copy(stage+'/types-full-attempt-1/RESULT.json',cp+'/repaired/types/RESULT.json');
+for(const name of ['runner.stdout.log','runner.stderr.log','PROCESS-TERMINAL.json'])copy(stage+'/types-full-attempt-1/evidence/'+name,cp+'/repaired/types/'+name);
+const raw=fs.readFileSync('CURRENT_CHECKPOINT.json'),i=JSON.parse(raw),c=i.activeWork.current;fs.writeFileSync(cp+'/INDEX_BEFORE_TERMINAL.json',raw,{flag:'wx'});
+c.activeExecutionSessions=[];c.currentStagedCandidate.focusedChecksPassed=false;c.currentStagedCandidate.fullTypesPassed=true;c.currentReleaseQueue={...c.currentReleaseQueue,state:'partition22-focused34pass1fail-full-types-passed',stage,source:ref(stage+'/SOURCE.json'),focusedNativePending:false};
+c.next='Full unchanged project TypeScript passed; focused13roots35cases34pass1fail preserved at release23-progress/repaired. Repair corpus CT historical/current teaching packet mismatch, then verify the affected root. Separate CT/MRI Clear selection focus proposal needs exact successor adapters and fresh Review binding/build. No test jobs remain active; owner preview unchanged. Preserve full roadmap.';
+i.goal.previousTurn='progress';i.activeWork.updated=new Date().toISOString();i.activeWork.lastUpdated=i.activeWork.updated;saveIndex(i);console.log(JSON.stringify({preserved:cp,types:true,focused:{tests:35,pass:34,fail:1},active:0}));

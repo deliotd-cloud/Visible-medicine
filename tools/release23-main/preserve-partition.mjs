@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release23-progress',stage='G:/VisibleMedicine-temp/staging/20261031-release21-final',queue=stage+'/verification-twentytwo',run=stage+'/website/.local/website-test-runs/2026-10-31T16-54-50-006Z-0396f480-1d20-43ec-94da-5b163204970e';
+const sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>fs.readFileSync(p),json=p=>JSON.parse(read(p));
+const copy=(from,relative)=>{const to=cp+'/'+relative;fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);assert.equal(sha(read(from)),sha(read(to)));return {path:to,sha256:sha(read(to))};};
+assert.equal(json(queue+'/STATE.json').terminal,true);const evidence=[];
+for(const f of ['PLAN.json','SCOPE.json','STATE.json'])evidence.push(copy(queue+'/'+f,'partition22/'+f));
+for(const f of ['receipt.json','child.tap','manifest.json'])evidence.push(copy(run+'/'+f,'partition22/native/'+f));
+evidence.push(copy(stage+'/SOURCE.json','partition22/SOURCE.json'));evidence.push(copy('CURRENT_CHECKPOINT.json','INDEX_START.json'));
+const tap=read(run+'/child.tap').toString(),failures=[...tap.matchAll(/^not ok (\d+) - (.*)$/gm)].map(m=>({number:Number(m[1]),name:m[2],excerpt:tap.slice(m.index,m.index+2500)}));assert.equal(failures.length,6);
+fs.writeFileSync(cp+'/PARTITION22_FAILURES.json',JSON.stringify({counts:json(run+'/receipt.json').counts,failures},null,2)+'\n',{flag:'wx'});fs.writeFileSync(cp+'/EVIDENCE.json',JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({checkpoint:cp,counts:json(run+'/receipt.json').counts}));

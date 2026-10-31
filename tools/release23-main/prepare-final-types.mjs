@@ -1,0 +1,2 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const root='G:/VisibleMedicine-temp/proposals/20261031-release23-main';let code=fs.readFileSync(root+'/check-repaired-types.mjs','utf8').replaceAll('20261031-release22-repairs','20261031-head-clear-final').replace('ee0f74a5372b1d5a876b79f21b7d006104a8f8254e4c40e3eea1745750642991','76bc03dce3e3cd5ac0420f67a6bc1aed48dff24edd4efc9a815195addd139bff');assert(code.includes('heap:3072,aggregate:3584,minimum:5632'));fs.writeFileSync(root+'/check-final-types.mjs',code,{flag:'wx'});

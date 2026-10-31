@@ -1,0 +1,49 @@
+{
+  "originalPartition22": {
+    "tests": 281,
+    "pass": 275,
+    "fail": 6
+  },
+  "originalFullTypes": {
+    "diagnostics": 92,
+    "files": 9,
+    "retained": true
+  },
+  "repairedFullTypes": {
+    "passed": true,
+    "source": "ee0f74a5372b1d5a876b79f21b7d006104a8f8254e4c40e3eea1745750642991",
+    "completeUnchangedProject": true
+  },
+  "repairedFocused": {
+    "tests": 35,
+    "pass": 34,
+    "fail": 1,
+    "skip": 0
+  },
+  "headInitial": {
+    "tests": 85,
+    "pass": 75,
+    "fail": 10,
+    "skip": 0,
+    "remainingFailures": "toolbar test harness omitted actual layout picker"
+  },
+  "headFinalFollowup": {
+    "tests": 16,
+    "pass": 16,
+    "fail": 0,
+    "skip": 0
+  },
+  "corpusCtCurrentDeliveryPassed": true,
+  "reviewBuildPassed": true,
+  "websiteBuildPassed": true,
+  "finalSourceFullTypesDeferred": true,
+  "keyboardBrowser": "Actual extracted handler rendered with React; native Enter for CT and Space for MRI return focus to structure search without scrolling. Synthetic component check, not whole-app acceptance.",
+  "sourceRows": 7394,
+  "protectedInputs": 1866,
+  "changedBoundInputs": [
+    "components/HeadAtlasViewer.tsx"
+  ],
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}

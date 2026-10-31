@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const recipes='G:/VisibleMedicine-temp/proposals/20261031-release23-main',proposal='G:/VisibleMedicine-temp/proposals/20261031-head-toolbar-final',sha=b=>createHash('sha256').update(b).digest('hex');
+let code=fs.readFileSync(recipes+'/integrate.mjs','utf8');code=code.replaceAll('20261031-release21-final','20261031-head-clear-focus').replaceAll('20261031-release22-repairs','20261031-head-clear-final').replaceAll('f15f75ef66aef364b7097d9bc96752663a4fcd44c6730359aafc2f1771497348','889063c7b54d2123a73fa805e529623ea98d731f6ade6dbdb2db5d97825e281a').replace('vm-release-twentytwo-repairs-and-test-types/1','vm-head-clear-final-toolbar-harness/1');
+assert.equal(code.split('const inputs=').length,2);code=code.replace(/const inputs=\[.*\];/,`const inputs=${JSON.stringify([[proposal,sha(fs.readFileSync(proposal+'/MANIFEST.json'))]])};`);
+assert(code.includes("root='G:/VisibleMedicine-temp/staging/20261031-head-clear-final'"));fs.writeFileSync(recipes+'/integrate-final.mjs',code,{flag:'wx'});

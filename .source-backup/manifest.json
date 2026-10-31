@@ -1,0 +1,372 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T17:40:46.045Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-head-clear-final/SOURCE.json",
+      "sha256": "76bc03dce3e3cd5ac0420f67a6bc1aed48dff24edd4efc9a815195addd139bff"
+    },
+    "review": "ee28f53f79ea413c860c054f39628dd2225be13b5856849818d2eaf8da73f59c",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/local-reference-entry-transition.test.mjs",
+      "sha256": "1b6a4421e57926417779c80145e1f79647b190a047a266a65293ac94d0c5a3f2",
+      "bytes": 6134
+    },
+    {
+      "path": "website/tests/release-diagnostic-adjacent-current.test.mjs",
+      "sha256": "9a058a519b62af57abe7e56e1ae7f9a82aa8825337c4ffc67dad6097dd6f7ee4",
+      "bytes": 2544
+    },
+    {
+      "path": "website/tests/clinical-review-limb-nerve-quiz.test.ts",
+      "sha256": "8589d75a333bbf0dda73b49c63b838fb1c596ef604b4bfec7eec9f95a9201d51",
+      "bytes": 21583
+    },
+    {
+      "path": "website/tests/clinical-review-urinary-tract-tour.test.ts",
+      "sha256": "82932cb6f59077aab9f9bc9c7efefb630e94b99ed18eff24dcc2350f1f5d73c1",
+      "bytes": 10063
+    },
+    {
+      "path": "website/tests/fixtures/urinary-regional-tours-9f-to-c32.patch",
+      "sha256": "3530dfde37f48b47961db68485e052f433747a995c38018f0ccb9620012237d9",
+      "bytes": 8480
+    },
+    {
+      "path": "website/tests/corpus-ct-current-delivery.test.mjs",
+      "sha256": "989d9bd122d84c4d02f0b980cbe15843ce73d8e6e08dd77a36a464f34635e9fe",
+      "bytes": 11534
+    },
+    {
+      "path": "website/tests/atlas-saved-review-epoch.ts",
+      "sha256": "12fe9bee89ee01a714fc1cc0e2ad175cc358c75fec8eeb1214d49bd32b2eb21c",
+      "bytes": 4772
+    },
+    {
+      "path": "website/tests/clinical-review-abdominal-eus-current.test.ts",
+      "sha256": "71b7049f733df40e25e0a1cc0fe8dd1dfad00a87e455b4916c3031429f15b51e",
+      "bytes": 16582
+    },
+    {
+      "path": "website/tests/clinical-review-foot-depth.test.ts",
+      "sha256": "882e37eb3c555f5ea45db74d6a5139a2977834f8f57f99a4a4cac1d9ded4c6c8",
+      "bytes": 18146
+    },
+    {
+      "path": "website/tests/clinical-review-knee-stability-guide.test.ts",
+      "sha256": "617c44d2d0efa487e1d3b95382002c30aafb4b386b8d3311c5e60eec1e54aa4e",
+      "bytes": 18403
+    },
+    {
+      "path": "website/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "sha256": "1cd3c23ea33aa33b24356c9825039aedc252fa8a3dc9b7ec1be4c6487b6b50c7",
+      "bytes": 38983
+    },
+    {
+      "path": "website/tests/clinical-review-quick-return-focus.test.ts",
+      "sha256": "59695e19a09d06fb3fe6cc6f7e06ced52dc759a3983be11b4b31eef5a8ff96e9",
+      "bytes": 13651
+    },
+    {
+      "path": "website/tests/clinical-review-specimen-continuous-playback.test.ts",
+      "sha256": "678bb0dbc1f09bb66d5944f3ad78c7205769e4561a227f3e4970b4e543a8a8b3",
+      "bytes": 23423
+    },
+    {
+      "path": "website/tests/head-comparison-parent-commit.test.ts",
+      "sha256": "707cf4958b2cdf87720ad112bb22fff65ced5e0ba477a537eb5ee1c492ab3b3b",
+      "bytes": 10130
+    },
+    {
+      "path": "website/tests/head-reverse-selection-focus.test.ts",
+      "sha256": "c524f00f87c2d47e8d5b2f646d7609bcd902db5606160d5db7a4935312e6606f",
+      "bytes": 11584
+    },
+    {
+      "path": "website/components/HeadAtlasViewer.tsx",
+      "sha256": "4a6ead3cfb9d2e70fcf2cede92a1ebd230758767808c08944a6535624c5f77d9",
+      "bytes": 125111
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "sha256": "f8ddcc6def046b9fa7634941c55c35ebe99f216edffef6c68936fd05c46eae97",
+      "bytes": 35908
+    },
+    {
+      "path": "website/tests/current-delivery-predecessor-inverse.mjs",
+      "sha256": "7bfcf7de04532addaf73364d8cfa28274572191f90f232e32a595a780175896d",
+      "bytes": 8544
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "sha256": "6bdc60742e68447e991ce7451525941106ce1c96e1f6d11acaf81432ff006d9e",
+      "bytes": 2051
+    },
+    {
+      "path": "website/tests/head-clear-focus-history.mjs",
+      "sha256": "2dc930c2f4816fac258b535ceba27d5b18e512495ce2ccbaf3e9d97f37fb50cb",
+      "bytes": 1774
+    },
+    {
+      "path": "website/tests/head-clear-review-binding.test.mjs",
+      "sha256": "9aad55d3423c5cf4b458c306cc2de79785ea64b945ee3d1e4b05558d87fdb306",
+      "bytes": 3872
+    },
+    {
+      "path": "website/tests/head-filtered-layout.test.mjs",
+      "sha256": "ab9a4341a948958728a86d377d072a1d46b8fa1c25059a13b1733b2183e1cd5f",
+      "bytes": 5805
+    },
+    {
+      "path": "website/tests/head-image-layout-control.test.mjs",
+      "sha256": "ed5b50fa1162762e3d54ed1d5e5e03a57ce0ae006638511e99a85fa86ed720f4",
+      "bytes": 11128
+    },
+    {
+      "path": "website/tests/head-layout-history-adapter.test.mjs",
+      "sha256": "a3be228bb1083cd31fc46cdaddf2c878e8801e43ca99e1703c7d2875fe4337c0",
+      "bytes": 8538
+    },
+    {
+      "path": "website/tests/head-toolbar-compact.test.mjs",
+      "sha256": "251e010af4cc7272e2ce5195dc52d986a5df89b3d93ce1ceb9867975e865c130",
+      "bytes": 12824
+    },
+    {
+      "path": "tools/release23-main/browser-focus-harness.mjs",
+      "sha256": "750a6b72441e2cc49207f1320ef490d8b28c523c275aba624ff5fe96c58a2c56",
+      "bytes": 4034
+    },
+    {
+      "path": "tools/release23-main/build-head-final.mjs",
+      "sha256": "2a6d3c5df80c0a679e840e0c6ac2ffa6855ddc26b30f9902d2a5d2d72d5b57f6",
+      "bytes": 2242
+    },
+    {
+      "path": "tools/release23-main/build-head-review.mjs",
+      "sha256": "f135a3b480c3cc37940724563f9698a4977bd5eaad2b2fb336e6eb173fa9cc8a",
+      "bytes": 1618
+    },
+    {
+      "path": "tools/release23-main/build-head-website-larger.mjs",
+      "sha256": "c43a72926f46fb3608b8bbe562b983704e6751667d4b2f449599132e739e7731",
+      "bytes": 2242
+    },
+    {
+      "path": "tools/release23-main/build-head-website.mjs",
+      "sha256": "4bb4ba92456be94d732375e7c3beeccef57012b3eef21826c1af66fc90fa5c72",
+      "bytes": 2242
+    },
+    {
+      "path": "tools/release23-main/check-final-types.mjs",
+      "sha256": "c56482f504100ccbecaf2a678b280fc966d26ceaaf108c8731d386da04c14e87",
+      "bytes": 2364
+    },
+    {
+      "path": "tools/release23-main/check-focused.mjs",
+      "sha256": "c096b842d951106240a5166533610bdcc340849e4838b0a6efe26845ff5d6fef",
+      "bytes": 2380
+    },
+    {
+      "path": "tools/release23-main/check-full-types.mjs",
+      "sha256": "ab2327963e719bc8a47d3ceb0ddff7e69b3f701f5916e4d3d043e4a8f3c76e3f",
+      "bytes": 2313
+    },
+    {
+      "path": "tools/release23-main/check-head-candidate.mjs",
+      "sha256": "e42e7d8a99bc64cdf7f64e3f882cd0ff20195dacb57920ceabe7ff23986d037a",
+      "bytes": 1981
+    },
+    {
+      "path": "tools/release23-main/check-head-final.mjs",
+      "sha256": "955970f3f8adcf7c28d594ebbbbfc58ebcc53c39c5e741f067728ee6533bf2f3",
+      "bytes": 1731
+    },
+    {
+      "path": "tools/release23-main/check-repaired-types.mjs",
+      "sha256": "bceef8df835c646690280eef78276f5ea52794aa250692b9aa36c75a5e4073f8",
+      "bytes": 2365
+    },
+    {
+      "path": "tools/release23-main/inspect-inbox-transition.mjs",
+      "sha256": "8d204dfd13fd3d939f8e4adbb27946ca6aedf9daa34802ecda9b1b723b321102",
+      "bytes": 804
+    },
+    {
+      "path": "tools/release23-main/integrate-final.mjs",
+      "sha256": "34beb5d6228d530a77ff7df232b9f789ac2dbc4f14b4d897fbd800194bf793ef",
+      "bytes": 4630
+    },
+    {
+      "path": "tools/release23-main/integrate.mjs",
+      "sha256": "59b5e1a070a0fd3078d4a22790f887b4c2665fb0d6c974a96a37270342cce5f6",
+      "bytes": 5047
+    },
+    {
+      "path": "tools/release23-main/prepare-active-repair.mjs",
+      "sha256": "fb5a8d12c86c0fc42f498b46404a57d4e75ae4201d1014722457df7be31ac3db",
+      "bytes": 1194
+    },
+    {
+      "path": "tools/release23-main/prepare-checks.mjs",
+      "sha256": "c7e1d26cab70a3873fa4b661d77594861dd37ad0d2b400a1d080e6b9ab63cee4",
+      "bytes": 1515
+    },
+    {
+      "path": "tools/release23-main/prepare-final-check.mjs",
+      "sha256": "195861365d338091ea93cc884913cc32b1437923d15d901ec645a549caad4b42",
+      "bytes": 528
+    },
+    {
+      "path": "tools/release23-main/prepare-final-types.mjs",
+      "sha256": "8b44d6a5bd8ed659b6f8317f6228ccd554b762016b6dce299fa100f8d64b4288",
+      "bytes": 544
+    },
+    {
+      "path": "tools/release23-main/prepare-final.mjs",
+      "sha256": "9641ac823effcac28ff954492bfef0767d3a937d00188e42ba6692737447a35c",
+      "bytes": 1100
+    },
+    {
+      "path": "tools/release23-main/prepare-head-delivery-tests.mjs",
+      "sha256": "3a2cbd22ae35747514e10d47d8a0b0cb17d3e3cfae47db3ebfad7198df84fd33",
+      "bytes": 4094
+    },
+    {
+      "path": "tools/release23-main/prepare-head-focus.mjs",
+      "sha256": "042906ca1a4fdb944a6efe2129d893d38d7b4c87eaa8f710b32a0c0439b61ce5",
+      "bytes": 3095
+    },
+    {
+      "path": "tools/release23-main/prepare-integration.mjs",
+      "sha256": "a168c959ba7c15c454a6ad6a54a64b3e21dcf042cdac8415fa5bfa264145cf89",
+      "bytes": 2964
+    },
+    {
+      "path": "tools/release23-main/prepare-larger-build.mjs",
+      "sha256": "929390cad00a693758fc93223e19a1b9a0fa2a40c0d0349e8be12d36353efe4a",
+      "bytes": 1509
+    },
+    {
+      "path": "tools/release23-main/prepare-next-partition.mjs",
+      "sha256": "d3ff3dc9bb1a350a408917c7be99b9adfeb7be3e0fae6a8f9c06c915587e746d",
+      "bytes": 1733
+    },
+    {
+      "path": "tools/release23-main/prepare-partition.mjs",
+      "sha256": "21bed81b7d1c7539a8410f10c87b8b8199725f395d4361325e2a11b314d5e276",
+      "bytes": 2413
+    },
+    {
+      "path": "tools/release23-main/prepare-preview-window.mjs",
+      "sha256": "8557b3732b06ecba511a7065220e416918e659fe28ddb2c1400d86cd8a64ee19",
+      "bytes": 3369
+    },
+    {
+      "path": "tools/release23-main/prepare-small-repairs.mjs",
+      "sha256": "38279e28f1a615165e3a134bcd6ed835fc2c5401897140d75184cccdee62120b",
+      "bytes": 5877
+    },
+    {
+      "path": "tools/release23-main/preserve-partition.mjs",
+      "sha256": "13196baeb8fd33fe66f7aa382fc48b85b718f64325977d511a3a9d37481b17fb",
+      "bytes": 1735
+    },
+    {
+      "path": "tools/release23-main/record-preview-restored.mjs",
+      "sha256": "c95773a6e1a6a7a7045287bbe2f0ff6c73e6e2f1d5b2b1b0f63aa71d2cafb784",
+      "bytes": 2480
+    },
+    {
+      "path": "tools/release23-main/record-repaired-types-active.mjs",
+      "sha256": "4b46df91ac349ddcc87df7884f61f040ad919ee953a8152ee8884b63f106b2c2",
+      "bytes": 2838
+    },
+    {
+      "path": "tools/release23-main/record-terminal.mjs",
+      "sha256": "d1946fb4e5a307e920c390c268da7e25a825d203da6efad14923cc118a25e6ae",
+      "bytes": 2511
+    },
+    {
+      "path": "tools/release23-main/record-type-active.mjs",
+      "sha256": "65915fe42e32f6c1657b9d0c39af723993c3dbc30895ac3ce25cb4aaa519b38b",
+      "bytes": 2758
+    },
+    {
+      "path": "tools/release23-main/save-checkpoint.mjs",
+      "sha256": "1b2a7ca273ae53e85b8cc8135c977299a64153c20e93563c9caead327cefa4c8",
+      "bytes": 13364
+    },
+    {
+      "path": "tools/release23-main/seal-head-candidate.mjs",
+      "sha256": "cc4220b40c73abc130db1c7a494eaf008e5dacca86d7f91ab4a702f00473c11a",
+      "bytes": 3749
+    },
+    {
+      "path": "tools/release23-main/temporary-build-window.mjs",
+      "sha256": "f0dd2d22b5388a306ad7b77a58bef20026bbc79af40f4c7fc637d0037ff048ca",
+      "bytes": 1469
+    }
+  ],
+  "removed": [],
+  "scope": "Selected website keyboard-focus implementation, test repairs, authenticated text witness and verification recipes. No scans, identifiers, clinical databases, private model assets, generated runtime, secrets or canonical repository ancestry. Scoped source delta only.",
+  "proof": {
+    "originalPartition22": {
+      "tests": 281,
+      "pass": 275,
+      "fail": 6
+    },
+    "originalFullTypes": {
+      "diagnostics": 92,
+      "files": 9,
+      "retained": true
+    },
+    "repairedFullTypes": {
+      "passed": true,
+      "source": "ee0f74a5372b1d5a876b79f21b7d006104a8f8254e4c40e3eea1745750642991",
+      "completeUnchangedProject": true
+    },
+    "repairedFocused": {
+      "tests": 35,
+      "pass": 34,
+      "fail": 1,
+      "skip": 0
+    },
+    "headInitial": {
+      "tests": 85,
+      "pass": 75,
+      "fail": 10,
+      "skip": 0,
+      "remainingFailures": "toolbar test harness omitted actual layout picker"
+    },
+    "headFinalFollowup": {
+      "tests": 16,
+      "pass": 16,
+      "fail": 0,
+      "skip": 0
+    },
+    "corpusCtCurrentDeliveryPassed": true,
+    "reviewBuildPassed": true,
+    "websiteBuildPassed": true,
+    "finalSourceFullTypesDeferred": true,
+    "keyboardBrowser": "Actual extracted handler rendered with React; native Enter for CT and Space for MRI return focus to structure search without scrolling. Synthetic component check, not whole-app acceptance.",
+    "sourceRows": 7394,
+    "protectedInputs": 1866,
+    "changedBoundInputs": [
+      "components/HeadAtlasViewer.tsx"
+    ],
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

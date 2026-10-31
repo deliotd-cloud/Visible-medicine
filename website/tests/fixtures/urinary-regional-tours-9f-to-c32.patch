@@ -1,0 +1,97 @@
+diff --git a/lib/regional-tours.ts b/lib/regional-tours.ts
+index fb65a9c6..d7ba1771 100644
+--- a/lib/regional-tours.ts
++++ b/lib/regional-tours.ts
+@@ -1,9 +1,15 @@
+ import type { BodyCatalog, BodyStructure } from '../app/body-types';
+ import {guidedPlaybackEvidence} from './guided-playback';
++import {quadricepsTour,quadricepsTourMatches} from './quadriceps-tour';
++export {quadricepsTour} from './quadriceps-tour';
+ import {posteriorCalfTour,posteriorCalfTourMatches} from './posterior-calf-tour';
+ export {posteriorCalfTour} from './posterior-calf-tour';
+ import {medialThighTour,medialThighTourMatches} from './medial-thigh-tour';
+ export {medialThighTour} from './medial-thigh-tour';
++import {coccygeusTour,coccygeusTourMatches} from './coccygeus-tour';
++export {coccygeusTour} from './coccygeus-tour';
++import {hamstringTours,hamstringTourMatches} from './hamstring-tours';
++export {hamstringTours} from './hamstring-tours';
+ import {cervicalDiscTour,cervicalDiscTourMatches} from './cervical-disc-tour';
+ export {cervicalDiscTour} from './cervical-disc-tour';
+ import {portalHepaticTour,portalHepaticTourMatches} from './portal-hepatic-tour';
+@@ -34,7 +40,7 @@ import { lumbarTour } from './lumbar-tour';
+ export { lumbarTour } from './lumbar-tour';
+ import { carpalTour } from './carpal-tour';
+ export { carpalTour } from './carpal-tour';
+-import { renalTour } from './renal-tour';
++import { renalTour,renalTourMatches } from './renal-tour';
+ import { pelvicRingTour } from './pelvic-ring-tour';
+ export { pelvicRingTour } from './pelvic-ring-tour';
+ export { renalTour } from './renal-tour';
+@@ -289,19 +295,27 @@ export const malePelvisTour: RegionalTour = {
+     surfaceStep('rectum','Rectum · Posterior relationship',pelvicOrgan('unpaired','rectum'),'left','Finish from the left with the rectum behind the bladder and prostate. The sacrum provides posterior context. Fading adjacent organs improves visibility but does not reveal a validated rectal wall or mesorectal plane.',pelvisReference),
+   ],
+ };
+-export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour,...handVenousTours,coronaryArterialTour,thoracicSpineTour,lowerArterialTour,cardiacVenousTour,upperVenousTour,mesentericTour,lowerNeckTour,forearmArterialTour,orbitalNerveTour,urinaryTractTour,digestiveTractTour,pelvicVenousTour,diaphragmTour,cranialVaultTour,pulmonaryVenousTour,pancreaticArterialTour,elbowArterialTour,portalHepaticTour,cervicalDiscTour,medialThighTour,posteriorCalfTour];
++export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour,...handVenousTours,coronaryArterialTour,thoracicSpineTour,lowerArterialTour,cardiacVenousTour,upperVenousTour,mesentericTour,lowerNeckTour,forearmArterialTour,orbitalNerveTour,urinaryTractTour,digestiveTractTour,pelvicVenousTour,diaphragmTour,cranialVaultTour,pulmonaryVenousTour,pancreaticArterialTour,elbowArterialTour,portalHepaticTour,cervicalDiscTour,medialThighTour,posteriorCalfTour,...hamstringTours,coccygeusTour,quadricepsTour];
+ export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
+ export const regionalToursFor=(region:string)=>regionalTours.filter(t=>t.region===region);
+ export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
+ 
+ /** Resolve exact identities; never substitute a similarly named surface. */
+ export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):BodyStructure[] {
++  if(tour.id===quadricepsTour.id&&!quadricepsTourMatches(catalog,tour))
++    throw Error('The quadriceps guided tour does not match the available anatomy source.');
++  if(tour.id===renalTour.id&&!renalTourMatches(catalog,tour))
++    throw Error('The renal guided tour does not match the available anatomy source.');
+   if(tour.id===posteriorCalfTour.id&&!posteriorCalfTourMatches(catalog,tour))
+     throw Error('The posterior-calf guided tour does not match the available anatomy source.');
+   if(tour.id===lowerVenousTour.id&&!lowerVenousTourMatches(catalog,tour))
+     throw Error('The lower venous guided tour does not match the available anatomy source.');
+   if(tour.id===medialThighTour.id&&!medialThighTourMatches(catalog,tour))
+     throw Error('The medial-thigh guided tour does not match the available anatomy source.');
++  if(tour.id===coccygeusTour.id&&!coccygeusTourMatches(catalog,tour))
++    throw Error('The coccygeus guided tour does not match the available anatomy source.');
++  if(hamstringTours.some(candidate=>candidate.id===tour.id)&&!hamstringTourMatches(catalog,tour))
++    throw Error('The hamstring guided tour does not match the available anatomy source.');
+   if(tour.id===cervicalDiscTour.id&&!cervicalDiscTourMatches(catalog,tour))
+     throw Error('The cervical disc guided tour does not match the available anatomy source.');
+   if(tour.id===portalHepaticTour.id&&!portalHepaticTourMatches(catalog,tour))
+@@ -365,8 +379,7 @@ export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):Bo
+   }
+   return structures;
+ }
+-export function regionalTourFrame(catalog:BodyCatalog,tour:RegionalTour,index?:number) {
+-  const structures=regionalTourStructures(catalog,tour);
++function frameFromResolvedStructures(tour:RegionalTour,structures:BodyStructure[],index?:number) {
+   if(index!==undefined&&(!Number.isInteger(index)||index<0||index>=tour.steps.length))throw Error('Invalid tour step.');
+   const step=index===undefined?undefined:tour.steps[index];
+   // A sequence may revisit one structure from another view. Its overview is
+@@ -378,17 +391,25 @@ export function regionalTourFrame(catalog:BodyCatalog,tour:RegionalTour,index?:n
+   if(!frame)throw Error('Tour camera bounds unavailable.');
+   return frame;
+ }
++export function regionalTourFrame(catalog:BodyCatalog,tour:RegionalTour,index?:number) {
++  return frameFromResolvedStructures(tour,regionalTourStructures(catalog,tour),index);
++}
++/** Admit the exact source once for one learner evaluation. Never retain this result. */
++export function regionalTourResolvedFrames(catalog:BodyCatalog,tour:RegionalTour) {
++  const structures=regionalTourStructures(catalog,tour);
++  return {structures,frames:tour.steps.map((_,index)=>frameFromResolvedStructures(tour,structures,index))};
++}
+ export const regionalTourStepFrames=(catalog:BodyCatalog,tour:RegionalTour)=>
+-  tour.steps.some(s=>s.frameIds)?tour.steps.map((_,i)=>regionalTourFrame(catalog,tour,i)):undefined;
++  tour.steps.some(s=>s.frameIds)?regionalTourResolvedFrames(catalog,tour).frames:undefined;
+ /** Complete sequence plus all visible context is material review evidence. */
+ export function regionalTourEvidence(catalog:BodyCatalog,structureId:string) {
+   return regionalTours.filter(t=>[...t.contextIds,...t.steps.map(s=>s.selectedId)].includes(structureId)).map(tour=>{
+     const structures=regionalTourStructures(catalog,tour);
+     return structuredClone({tour,structures,bundles:catalog.bundles.filter(b=>structures.some(s=>s.bundle===b.id)),
+-      coordinateSystem:catalog.coordinateSystem,sourceVersion:catalog.sourceVersion,frame:regionalTourFrame(catalog,tour),
++      coordinateSystem:catalog.coordinateSystem,sourceVersion:catalog.sourceVersion,frame:frameFromResolvedStructures(tour,structures),
+       transitionMs:1800,transition:'quintic-orbit',separation:0,
+       continuousPlayback:guidedPlaybackEvidence(tour.steps),
+       limitations:regionalTourLimitations(tour),
+-      ...(tour.steps.some(s=>s.frameIds)?{stepFrames:regionalTourStepFrames(catalog,tour)}:{})});
++      ...(tour.steps.some(s=>s.frameIds)?{stepFrames:tour.steps.map((_,index)=>frameFromResolvedStructures(tour,structures,index))}:{})});
+   });
+ }
