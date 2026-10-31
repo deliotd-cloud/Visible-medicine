@@ -1,0 +1,84 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T12:00:36.806Z",
+  "sourceIdentity": {
+    "prepared": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-visual-ct-guidance-ready/SOURCE_PREPARED_REPLAY.json",
+      "sha256": "bba3a7f4b70ef82f4c6e1ceadfb5e7787c91f0bbc08322fb2284850105c6f364"
+    },
+    "state": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-visual-ct-guidance-ready/VERIFICATION_REPLAY_STATE.json",
+      "sha256": "ae24c61ea0e9f2881372484067b216f2a41fb189d24a197f6a4d12173a117c34"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/scripts/exact-component-history.mjs",
+      "bytes": 3798,
+      "sha256": "d510f86890feac5062eab08a8f4e55a08232d4480cf9d858fff352d072235a40"
+    },
+    {
+      "path": "atlas/scripts/validate-nested-ct-orientation.mjs",
+      "bytes": 11285,
+      "sha256": "b7365ba9f46373f8594efc2b84e06868594a68f81ab6d7a171b4141e2f35afad"
+    },
+    {
+      "path": "atlas/scripts/adrenal-ultrasound-history.mjs",
+      "bytes": 4670,
+      "sha256": "c187ee94ed5bbe4289b3cbe7e39436454d48edc26850f943188b4f35f6a10472"
+    },
+    {
+      "path": "atlas/scripts/test-adrenal-ultrasound-history.mjs",
+      "bytes": 6087,
+      "sha256": "316b390c33d25d767ce8f282c808fdfc57bbfe8626b25dcc34a0b142907f8a63"
+    },
+    {
+      "path": "tools/validation-window/prepare-replay.mjs",
+      "bytes": 4769,
+      "sha256": "5ec18a5b48fb1982d1a46c51a8bf1c00654eac2078f329826776f28e1e9f4542"
+    },
+    {
+      "path": "tools/validation-window/verify-replay.mjs",
+      "bytes": 6124,
+      "sha256": "03d6d9161da3490af5bf6453919749385327ece84f912ab1f4be04c7f100e26c"
+    },
+    {
+      "path": "tools/validation-window/relocate-trace.ps1",
+      "bytes": 4172,
+      "sha256": "acd6b120eba4e224e58a5d93717fafb406f181a037dc48134c435ab82d26294a"
+    },
+    {
+      "path": "tools/validation-window/restart.mjs",
+      "bytes": 2355,
+      "sha256": "5509d20325086cac4c24bd2eb71cb9b9ac2f672365c3b66a8e4d1544dd461690"
+    },
+    {
+      "path": "docs/historical-validators-audit.md",
+      "bytes": 4573,
+      "sha256": "a98f846373d634045e9c192d258db5b04d1d7c1e4f9ab7b49302f1abf514cb62"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original historical replay repair, adrenal history tests and local maintenance recipes. Partial source-only recovery; no private review databases, logs, tracing cache, scans, models or canonical Git ancestry.",
+  "proof": {
+    "historicalCTCheckPassed": true,
+    "historicalCTAssertionsUnchanged": true,
+    "replayCompletedChecks": 8,
+    "requiredChecks": 13,
+    "nextFailure": "validate-collicular-teaching: old global binding equality",
+    "adrenalInverseTests": 22,
+    "cacheVerifiedFiles": 6,
+    "cacheLogicalBytes": 2288280000,
+    "sameInstalledVersion": true,
+    "ownerTabsRefreshed": false,
+    "clinicalApproval": false,
+    "fullSuitePassed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
