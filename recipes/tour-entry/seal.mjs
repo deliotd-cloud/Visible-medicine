@@ -1,0 +1,18 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-tour-entry-ready',prepared=json(root+'/PREPARED.json'),parent=json(prepared.parent.path),site=prepared.website;
+assert.equal(hash(prepared.parent.path),prepared.parent.sha256);
+const changes=['tests/regional-tour-entry-delivery.test.mjs','tests/tour-step-source-epoch-inverse.mjs','tests/fixtures-tour-step-source-epoch.json'];
+for(const r of parent.sourceRows)if(!changes.includes(r.path))assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const rows=new Map(parent.sourceRows.map(r=>[r.path,r]));for(const p of changes)rows.set(p,{path:p,sha256:hash(site+'/'+p),bytes:fs.statSync(site+'/'+p).size});
+const source={...parent,schema:'vm-tour-entry-repair-source/1',at:new Date().toISOString(),parent:prepared.parent,website:site,sourceRows:[...rows.values()].sort((a,b)=>a.path.localeCompare(b.path)),authoredPaths:[...new Set([...parent.authoredPaths,...changes])],currentChanges:changes,runtimeUnchangedFromParent:true,installed:false};
+const pin=root+'/SOURCE.json';fs.writeFileSync(pin,JSON.stringify(source,null,2)+'\n',{flag:'wx'});
+const historyFile='F:/VisibleMedicine/staging/20261030-release-repair-website/HISTORICAL_ENVIRONMENT_2.json';assert.equal(hash(historyFile),'bd5fc429483bc9cf7ba26ed5290b1c70bdd6e01cb74d8b9aa18b490dfae973f5');
+const tests=['regional-duration-source-inverse','regional-scope-catalogue-inverse','regional-scope-discovery','studio-draft-scope','studio-course-draft-discard','studio-draft-scope-source-role','regional-tour-entry-delivery'].map(n=>'tests/'+n+'.test.mjs');
+const result=spawnSync(process.execPath,['--max-old-space-size=1024','--test','--test-concurrency=1',...tests],{cwd:site,encoding:'utf8',windowsHide:true,maxBuffer:4*1024*1024,env:{...process.env,...json(historyFile).environment,VM_CURRENT_SOURCE_RECEIPT:pin,VM_CURRENT_SOURCE_SHA256:hash(pin),VM_WEBSITE_ROOT:site,VM_ATLAS_SOURCE_REPO:source.atlas,ATLAS_SOURCE_REPO:source.atlas,VM_PUBLIC_PREVIEW_SOURCE_ROOT:site,TEMP:root+'/tmp',TMP:root+'/tmp'}});
+const log=result.stdout+result.stderr;fs.writeFileSync(root+'/FOCUSED.tap',log,{flag:'wx'});
+assert.equal(result.status,0,log.slice(-7000));assert.match(log,/^ℹ pass 39\r?$/m);assert.match(log,/^ℹ fail 0\r?$/m);
+for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const build='G:/VisibleMedicine-temp/staging/20261031-release-scope-ready/BUILD_RESULT_4096.json';assert(json(build).passing);assert.equal(json(build).source.sha256,prepared.parent.sha256);
+fs.writeFileSync(root+'/VERIFIED.json',JSON.stringify({at:new Date().toISOString(),source:{path:pin,sha256:hash(pin)},tests:{roots:7,pass:39,fail:0,skip:0},productByteIdentity:{parent:prepared.parent,testOnlyPaths:changes,unchangedOtherFiles:parent.sourceRows.length-1},build:{path:build,sha256:hash(build),reusedOnlyForUnchangedProduct:true},sourceUnchanged:true,wholeSuitePassing:false,installed:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({source:hash(pin),files:source.sourceRows.length,focused:39,runtimeUnchanged:true}));

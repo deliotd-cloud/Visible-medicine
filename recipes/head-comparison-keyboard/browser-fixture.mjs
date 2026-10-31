@@ -1,0 +1,34 @@
+import fs from 'node:fs';import http from 'node:http';import {createRequire} from 'node:module';import assert from 'node:assert/strict';
+const root='G:/VisibleMedicine-temp/staging/20261030-head-comparison-followup',site=root+'/website',before='G:/VisibleMedicine-temp/staging/20261030-review-release-successor/website',out=root+'/browser-synthetic';fs.mkdirSync(out,{recursive:true});
+const require=createRequire(site+'/package.json'),ts=require('typescript'),esbuild=require('esbuild');
+const routes=new Map();
+for(const [name,base]of [['before',before],['after',site]]){
+ const source=fs.readFileSync(base+'/components/HeadAtlasViewer.tsx','utf8'),ast=ts.createSourceFile('viewer.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
+ let callback;const walk=n=>{if(ts.isFunctionDeclaration(n)&&n.name?.text==='selectComparisonConcept')callback=n.getText(ast);ts.forEachChild(n,walk);};walk(ast);assert(callback);
+ const code=`import React,{useRef,useState,useMemo} from 'react';import{createRoot}from'react-dom/client';
+ import{HeadAtlasInlineComparison}from${JSON.stringify(base+'/components/HeadAtlasInlineComparison.tsx')};
+ import{headImageConcept as headAtlasConcept,resolveHeadImageConcept as resolveHeadConcept}from${JSON.stringify(base+'/lib/head-image-only-links.ts')};
+ import{HEAD_LINK_REVISION}from${JSON.stringify(base+'/lib/head-atlas-links.ts')};
+ import{focusImagingPane}from${JSON.stringify(base+'/lib/imaging-pane-focus.ts')};
+ const entry=(key,label)=>({id:'mrb.bst.'+key,label:label+' — regional mask',laterality:'midline_or_unpaired',representation:'partial-mask',family:'Brainstem',color:[1,0,0],opacity:{fill:.3,outline:1}});
+ const entries=[entry('pons','Pons'),entry('medulla_oblongata','Medulla oblongata')];
+ function App(){const[conceptId,setConcept]=useState('brainstem-medulla'),[closed,setClosed]=useState(false);
+ const modality='MRI',quizActive=false,study=useMemo(()=>({definition:{entries}}),[]),comparisonOpen=!closed;
+ const comparisonScope=useMemo(()=>({generation:0}),[]),comparisonScopeRef=useRef(comparisonScope),importGeneration=useRef(0),practiceRef=useRef({active:false}),comparisonButtonRef=useRef(null);
+ const showLearningEntry=()=>{},chooseStructure=entry=>setConcept(headAtlasConcept(entry,modality).conceptId);
+ ${callback}
+ return <main className="imaging-workspace-page"><h1>Comparison keyboard check — ${name}</h1><p>Actual comparison component and parent callback; synthetic image/model events only.</p><label>Unrelated note <input /></label><div className="panes"><section className="imaging-workspace-viewer" data-imaging-pane="image" aria-label="Synthetic MRI image viewer" tabIndex={-1}><h2>Image viewer</h2><p>Selected: {conceptId}</p><button ref={comparisonButtonRef} onClick={()=>setClosed(false)}>Open comparison</button><p>No clinical images are loaded.</p></section><aside className="imaging-workspace-info">{!closed&&<HeadAtlasInlineComparison conceptId={conceptId} revision={HEAD_LINK_REVISION} modality="MRI" onSelectConcept={selectComparisonConcept} onClose={()=>setClosed(true)}/>}</aside></div></main>}
+ createRoot(document.getElementById('root')).render(<App/>);`;
+ fs.writeFileSync(out+'/'+name+'.jsx',code);await esbuild.build({stdin:{contents:code,resolveDir:site,loader:'tsx'},bundle:true,platform:'browser',format:'esm',outfile:out+'/'+name+'.js',define:{'process.env.NODE_ENV':'"production"'},logLevel:'silent'});
+ const html=`<!doctype html><html><head><meta charset="utf-8"><title>Comparison keyboard QA ${name}</title><style>*{box-sizing:border-box}body{margin:0;padding:24px;background:#081714;color:#e4eeeb;font:16px system-ui}h1{font-size:22px}.panes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}section,aside{min-width:0;padding:18px;border:1px solid #69877e}button,input,summary{font:inherit;margin:8px 0}button,input{padding:8px}iframe{width:100%;height:180px;border:1px solid #c6a46e;background:#fff}details{margin:16px 0}:focus-visible{outline:3px solid #e5c873;outline-offset:3px}</style></head><body><div id="root"></div><script type="module" src="/${name}.js"></script></body></html>`;
+ routes.set('/'+name,['text/html',html]);routes.set('/'+name+'.js',['text/javascript',fs.readFileSync(out+'/'+name+'.js')]);
+}
+const frameCode=`import{HEAD_SELECTION_PROTOCOL}from${JSON.stringify(site+'/lib/head-live-selection.ts')};import{HEAD_FOCUS_PROTOCOL}from${JSON.stringify(site+'/lib/head-guided-focus.ts')};import{headConceptById}from${JSON.stringify(site+'/lib/head-atlas-links.ts')};import manifest from${JSON.stringify(site+'/public/atlas-runtime/head-neck/manifest.json')};
+ let session='',sequence=0;const origin=location.origin;
+ function send(concept='brainstem-pons'){if(!session)return;const q=new URL(headConceptById(concept).atlasHref,origin).searchParams,id=q.get('part');parent.postMessage({type:HEAD_SELECTION_PROTOCOL,version:1,revision:manifest.sourceCommit,session,sequence:++sequence,status:'selected',selection:{kind:'nested',id,source:q.get('partSource'),laterality:id.split(':')[4],parentId:q.get('structure'),parentSource:q.get('source'),study:q.get('detail')}},origin);}
+ addEventListener('message',e=>{if(e.source!==parent||e.origin!==origin)return;const d=e.data;if(d.type===HEAD_SELECTION_PROTOCOL+'-request'){session=d.session;sequence=0;send();}if(d.type===HEAD_FOCUS_PROTOCOL){parent.postMessage({type:HEAD_FOCUS_PROTOCOL+'-result',version:1,revision:manifest.sourceCommit,session,command:d.command,status:'accepted'},origin);send(d.target.id.endsWith(':pons')?'brainstem-pons':'brainstem-medulla');}});
+ document.getElementById('pons').onclick=()=>send('brainstem-pons');document.getElementById('medulla').onclick=()=>send('brainstem-medulla');parent.postMessage({type:HEAD_SELECTION_PROTOCOL+'-ready',version:1,revision:manifest.sourceCommit},origin);`;
+await esbuild.build({stdin:{contents:frameCode,resolveDir:site,loader:'js'},bundle:true,platform:'browser',format:'esm',outfile:out+'/model.js',logLevel:'silent'});
+routes.set('/model.js',['text/javascript',fs.readFileSync(out+'/model.js')]);routes.set('/atlas-runtime/head-neck/index.html',['text/html','<!doctype html><html><body><p>Synthetic model events</p><button id="pons">Select Pons</button><button id="medulla">Select Medulla</button><script type="module" src="/model.js"></script></body></html>']);
+const server=http.createServer((req,res)=>{const route=routes.get(new URL(req.url,'http://localhost').pathname);if(req.method!=='GET'||!route){res.writeHead(404);res.end();return;}res.setHeader('Content-Type',route[0]);res.setHeader('Cache-Control','no-store');res.end(route[1]);});
+server.listen(0,'127.0.0.1',()=>{const url='http://127.0.0.1:'+server.address().port;fs.writeFileSync(out+'/SERVER.json',JSON.stringify({pid:process.pid,url,syntheticOnly:true,before,site},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({url,pid:process.pid}));});
