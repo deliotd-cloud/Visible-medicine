@@ -1,0 +1,82 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T19:00:32.728Z",
+  "sourceIdentity": {
+    "atlasHead": "df175264724a98ca4f70de19e1bfabd325084fdb",
+    "atlasTree": "e07b52eec6b4eeff4caaa039ab1cdb54828a716d",
+    "modelRevision": "2893fbd51ba45408476908e7e4fffe593f0f6953a1b9013c88269152c0e2ef60"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/prostate-zones.tsx",
+      "bytes": 17296,
+      "sha256": "764791893da78e9d3500f8009d509a2daa673903bbe62fb9006275ad5e4c9ee3"
+    },
+    {
+      "path": "atlas/app/prostate-zones.css",
+      "bytes": 7044,
+      "sha256": "f2e6901ea8065d3e08f94905a94c0f755ff204b130a8fd8d344efea456450687"
+    },
+    {
+      "path": "atlas/app/body-explorer.tsx",
+      "bytes": 138366,
+      "sha256": "a1fbd0cdd2ea10fd9bad4a1e75e0cf13a43868ea580a902d05f499a172ce9eec"
+    },
+    {
+      "path": "atlas/lib/prostate-zones.ts",
+      "bytes": 3422,
+      "sha256": "322c3c753382023eb130b046823ba9bf7f160d25e132671e5c45685306c83c40"
+    },
+    {
+      "path": "atlas/lib/prostate-zone-geometry.ts",
+      "bytes": 7895,
+      "sha256": "53216c0a08a67d1523f74fe17065252ac486b1b002d0e0181e57a1f3b5666b0a"
+    },
+    {
+      "path": "atlas/content/prostate-zones-revision.json",
+      "bytes": 1079,
+      "sha256": "04b185e7fb91d4f3b9367bc3ee40ecead479e0e629b11a3735bc7676e1a6eb39"
+    },
+    {
+      "path": "atlas/integration/head-neck/delivery.ts",
+      "bytes": 6941,
+      "sha256": "6fb963cb136ef1522182d2157a17a8fc17d8ebbd940b19ebab04158bfa2301cc"
+    },
+    {
+      "path": "atlas/scripts/test-prostate-zones.mjs",
+      "bytes": 4602,
+      "sha256": "67adb1b723e206e4aed1ae89d9dc897e6ac567845ad37fca87250660f4860cdc"
+    },
+    {
+      "path": "atlas/scripts/pin-prostate-zones.mjs",
+      "bytes": 1244,
+      "sha256": "8814590df905a59336cc2ebe99afcb27e985aac679256430063a19d83ec3788b"
+    },
+    {
+      "path": "atlas/docs/PROSTATE_ZONES.md",
+      "bytes": 4782,
+      "sha256": "39c416c7c1070f985de32b7e21e050d1dd3a6c269ccf956b48097270ba34e209"
+    },
+    {
+      "path": "atlas/LICENSES/prostate-zones-original.md",
+      "bytes": 847,
+      "sha256": "bd781cdcb0cdf1a32a42bf7f8fda345c0053f1885badad303a58657cabf6dfaa"
+    }
+  ],
+  "removed": [],
+  "scope": "Eleven selected original prostate zonal source, UI, integration, tests and licensing files. Original schematic only; no MRI data, masks, scan inventory, anatomical asset files or canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "geometryTests": 6,
+    "focusedTypes": true,
+    "regionalBuild": true,
+    "clinicalApproval": false,
+    "patientRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
