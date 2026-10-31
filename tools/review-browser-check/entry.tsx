@@ -1,0 +1,8 @@
+import React,{useState} from 'react';import {createRoot} from 'react-dom/client';import {ClinicalReviewQuickStart} from 'vm-quick-start';
+const revision='b'.repeat(64);
+const row=(key:string,title:string,scopeLabel:string,trackLabel='Anatomy',status='not-started',route='shoulder')=>({key,title,scopeLabel,trackLabel,status,area:'structures',capability:'decision',revision,href:`/workspace/atlas-review/${route}?structure=${encodeURIComponent(key)}&revision=${revision}`});
+const items=[row('synthetic-supraspinatus','Supraspinatus','Dedicated shoulder · shoulder · muscle · FMA48921,FMA48922 · right','Anatomy','changes-required'),row('synthetic-biceps','Biceps long head','Dedicated shoulder · shoulder · muscle · FMA37662 · right','Anatomy','in-progress'),row('synthetic-patella','Patella','Whole body · leg · bone · FMA24486 · left','Anatomy','not-started','body'),row('synthetic-supra-teaching','Supraspinatus','Dedicated shoulder · shoulder · muscle · FMA48921,FMA48922 · right','Teaching','not-started')];
+const initial={items,loading:false,scanComplete:true,filtersActive:false};
+function App(){const[props,setProps]=useState(initial);(window as any).__qa={setProps:(patch:any)=>setProps(current=>({...current,...patch})),reset:()=>setProps(initial),items,revision};return <ClinicalReviewQuickStart {...props as any}/>;}
+createRoot(document.getElementById('root')!).render(<App/>);
+document.addEventListener('click',event=>{const link=(event.target as Element).closest('a');if(link){event.preventDefault();(window as any).__qaNavigation={href:link.getAttribute('href'),target:link.getAttribute('target')};}});

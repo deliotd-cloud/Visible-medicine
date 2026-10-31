@@ -1,0 +1,67 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T11:36:15.325Z",
+  "sourceIdentity": {
+    "componentSources": [
+      {
+        "path": "G:/VisibleMedicine-temp/staging/20261031-review-quick-status/website/components/ClinicalReviewQuickStart.tsx",
+        "sha256": "1afff0a94c3d6fbefd55d3816de8c8e4ad22481d78db109d37e970eafa6eee63"
+      },
+      {
+        "path": "G:/VisibleMedicine-temp/staging/20261031-review-quick-status/website/components/clinical-review-quick-start.css",
+        "sha256": "7e14bfff1b1cccec50e2b2c3eaa6f00dc5c4941b53071e75be764a833793a3b0"
+      },
+      {
+        "path": "G:/VisibleMedicine-temp/staging/20261031-review-quick-status/website/lib/clinical-review-inbox-contract.ts",
+        "sha256": "3a25a2de31d24be58cd2903f13aeff325eaf0850c05d7da0edeb25af2df1159b"
+      },
+      {
+        "path": "G:/VisibleMedicine-temp/proposals/20261031-review-multiple-source-ids/website/lib/clinical-review-quick-start.ts",
+        "sha256": "2af7b7b7cb8ae6c44527a86ddd48c4c965a816c276cfb51ed7326946ee2c436e"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tools/review-browser-check/build.mjs",
+      "bytes": 3032,
+      "sha256": "0f316b6a59e885f63c8a03274bcfc77900e267e710e75424ac49bc781791135f"
+    },
+    {
+      "path": "tools/review-browser-check/entry.tsx",
+      "bytes": 1634,
+      "sha256": "2c1cdae2cf015f31f3640388fece2c9e4bf22596e8046d71fa88063f16450342"
+    },
+    {
+      "path": "tools/review-browser-check/serve.mjs",
+      "bytes": 969,
+      "sha256": "080e537cd65ba3323e5cf3fba93d8ab1ce6d39df964fecd16971a4652f4149a3"
+    },
+    {
+      "path": "tools/review-browser-check/finalize.mjs",
+      "bytes": 2557,
+      "sha256": "96e14a49fdaa81fb5f2abd23d6cf038a5d4899d3902ef81db4a70a8c03fe5098"
+    },
+    {
+      "path": "tools/review-browser-check/README.md",
+      "bytes": 2090,
+      "sha256": "8b0b7caed0c11a15a776a176eab141cabafce6fa77da19ed56f35d67d8dd604e"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original synthetic Quick review browser QA source. Partial source-only recovery; no actual reviews, patient data, scans, third-party bundles or canonical Git ancestry.",
+  "proof": {
+    "browserCases": 11,
+    "syntheticOnly": true,
+    "fullApplication": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

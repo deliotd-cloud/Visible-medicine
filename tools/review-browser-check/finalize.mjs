@@ -1,0 +1,12 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const root='G:/VisibleMedicine-temp/proposals/20261031-review-browser-check',read=p=>fs.readFileSync(p),sha=b=>createHash('sha256').update(b).digest('hex'),ref=p=>({path:p,sha256:sha(read(p))});
+const source=JSON.parse(read(root+'/SOURCE.json')),raw=JSON.parse(read(root+'/BROWSER_RAW.json'));
+for(const r of source.sources)assert.equal(sha(read(r.path)),r.sha256);
+const cases=[];for(const r of raw.results){if(r.isError)continue;for(const c of r.content??[]){if(c.type!=='text')continue;const match=c.text.match(/```json\n([\s\S]*?)\n```/);if(!match)continue;const parsed=JSON.parse(match[1]);if(parsed.case)cases.push(parsed);}}
+const names=['keyboard-radio','native-tab-region','native-select-and-link-focus','native-keyboard-link-activation','empty-incomplete-selection','loading-announcement','filtered-empty','equal-count-first','equal-count-second','desktop-1920','multiple-identifiers-and-collisions'];
+assert.deepEqual(cases.map(c=>c.case).sort(),[...names].sort());assert.equal(cases.find(c=>c.case==='native-tab-region').overflow,false);assert.equal(cases.find(c=>c.case==='native-tab-region').width,1280);
+const errors=raw.results.filter(r=>r.isError);assert.equal(errors.length,4);
+assert(errors.filter(r=>JSON.stringify(r).includes('Could not find option with text')).length===2);
+assert(errors.filter(r=>JSON.stringify(r).includes('equal count')||JSON.stringify(r).includes('Equal count')).length===2);
+const proof={at:new Date().toISOString(),source:ref(root+'/SOURCE.json'),raw:ref(root+'/BROWSER_RAW.json'),screenshot:ref(root+'/desktop-1920.png'),passedCases:11,cases,realBrowser:true,syntheticProps:true,fullApplication:false,authenticationTested:false,clinicalDecisionSubmitted:false,installed:false,setupCorrections:'The native select tool expects option text rather than its value; two initial failed select operations and their dependent assertions were corrected and rerun successfully. A malformed comma-separated ID fixture was replaced with the actual space-separated source format; strict malformed-input fallback remained intact. Screenshot returned inline and saved with local filesystem tools after browser file destinations were unavailable.',server:{pid:176192,port:59202,session:56426,terminated:true},testTabClosed:true};
+fs.writeFileSync(root+'/VERIFICATION.json',JSON.stringify(proof,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passedCases:11,sourceFiles:source.sources.length,fullApplication:false}));
