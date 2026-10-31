@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-31T03:39:41.508Z",
+  "assets": {
+    "files": 12,
+    "sourceMasters": 2,
+    "originalPackByteMatches": true,
+    "adoptionCommit": "ff984ea1f714594f2d93aad332f25073156a8e13",
+    "commitByteMatches": true,
+    "recipeInspectedNotRerun": true,
+    "artworkChanged": false,
+    "blanketRightsClearance": false
+  },
+  "checks": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "negativeCases": [
+      "same-size logo byte change",
+      "additional unrecorded asset",
+      "changed original manifest"
+    ],
+    "allProtectedInputsUnchanged": true,
+    "fullSuitePassed": false
+  },
+  "installed": false,
+  "fullBuildPassed": false
+}
