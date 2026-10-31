@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {runInNewContext} from 'node:vm';import {createHash} from 'node:crypto';import {spawnSync} from 'node:child_process';
+import {beforeSmallCardiacImaging} from '../20261031-small-cardiac-history/atlas/scripts/small-cardiac-imaging-history.mjs';
+const root='G:/VisibleMedicine-temp/proposals/20261031-small-cardiac-imaging',worker='G:/VisibleMedicine-temp/proposals/20261031-small-cardiac-history';
+const read=p=>fs.readFileSync(p),sha=b=>createHash('sha256').update(b).digest('hex'),ref=p=>({path:p,sha256:sha(read(p))});
+const p=JSON.parse(read(root+'/CONTENT_PROPOSAL.json')),ts=createRequire(p.base+'/package.json')('typescript');
+const load=file=>{const module={exports:{}};const result=ts.transpileModule(read(file).toString(),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS},reportDiagnostics:true});assert.equal(result.diagnostics?.length??0,0);runInNewContext(result.outputText,{module,exports:module.exports});return JSON.parse(JSON.stringify(module.exports));};
+const old=load(p.base+'/'+p.file),now=load(root+'/atlas/'+p.file),prior=beforeSmallCardiacImaging(now.coronaryVenousConcepts,now.coronaryVenousTeachingReferences);
+assert.deepEqual(prior.concepts,old.coronaryVenousConcepts);assert.deepEqual(prior.references,old.coronaryVenousTeachingReferences);
+assert.equal(sha(read(p.base+'/'+p.file)),p.before);assert.equal(sha(read(root+'/atlas/'+p.file)),p.after);
+const test=worker+'/atlas/scripts/test-small-cardiac-imaging-history.mjs';
+const r=spawnSync(process.execPath,['--max-old-space-size=64',test,root+'/atlas/'+p.file],{encoding:'utf8',windowsHide:true,maxBuffer:1024*1024});
+const log=root+'/HISTORY_CHECK.log';fs.writeFileSync(log,(r.stdout??'')+(r.stderr??''),{flag:'wx'});assert.equal(r.status,0);assert.equal(r.signal,null);assert(!r.error);
+const result=JSON.parse(r.stdout);assert.equal(result.mutationsRejected,8);assert(result.passed&&result.sourcePinned&&result.priorPreserved);
+const evidence={at:new Date().toISOString(),passed:true,fullAuthoredInverseExact:true,oldSource:ref(p.base+'/'+p.file),newSource:ref(root+'/atlas/'+p.file),helper:ref(worker+'/atlas/scripts/small-cardiac-imaging-history.mjs'),test:ref(test),log:ref(log),mutationsRejected:8,realRuntimePacketComparison:false,fullBuild:false,installed:false};
+fs.writeFileSync(root+'/HISTORY_VERIFICATION.json',JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passed:true,exactFullAuthoredInverse:true,mutationsRejected:8}));

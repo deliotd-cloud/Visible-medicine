@@ -1,0 +1,100 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T10:57:47.066Z",
+  "sourceIdentity": {
+    "contentSha256": "58450129c96996aade485026fe8ff2eea88474ad4cf78de4f0c0ec00dc12e0b6",
+    "basePreparedSha256": "ffd68a2fcb3b5b0e4ff8acff5bc43e31ea6399159588be1eb2643a9b5531354c",
+    "overlaySha256": "fbd4ffa91abaa29999f439fc0410887544ea9a0b3a19c30788aaf1e6f50ccb9c"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/coronary-venous-teaching.ts",
+      "bytes": 8658,
+      "sha256": "58450129c96996aade485026fe8ff2eea88474ad4cf78de4f0c0ec00dc12e0b6"
+    },
+    {
+      "path": "atlas/scripts/test-small-cardiac-imaging.mjs",
+      "bytes": 4256,
+      "sha256": "de2770f36e135d9ef97ff6e9999b1759df1b6f6dcb470ccc1c9b8331acfd512c"
+    },
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 371473,
+      "sha256": "44b5c311aac9ddd878e445536cab1163720b013892bf584d502efbd20f0ff88b"
+    },
+    {
+      "path": "atlas/scripts/validate-coronary-venous.mjs",
+      "bytes": 9540,
+      "sha256": "a4369e0c8d2ae63fc7f4b9edbbb4022e1b8c1ae9baa67bcfa1e3ed3a5220489d"
+    },
+    {
+      "path": "atlas/scripts/validate-coronary-sinus-ultrasound.mjs",
+      "bytes": 5116,
+      "sha256": "8c4271734902b080c037c533f84b8e954afa0568d34c9ba2f95ffa5b891f4f8d"
+    },
+    {
+      "path": "atlas/scripts/small-cardiac-imaging-history.mjs",
+      "bytes": 2471,
+      "sha256": "5a65293a6ab844a0fcbc351bf45f750f6cdae94108144cbfffe396d35becd164"
+    },
+    {
+      "path": "atlas/scripts/test-small-cardiac-imaging-history.mjs",
+      "bytes": 2315,
+      "sha256": "0b7687520fcf901293e692d80b20c7ef93c46352a7439854eb6bd483f86ad301"
+    },
+    {
+      "path": "tools/small-cardiac-imaging/prepare-content.mjs",
+      "bytes": 3917,
+      "sha256": "dee064d0bf3c3d27efd59c3d7af1acec707fb48507eea9d6f2ed960ff8a4a42c"
+    },
+    {
+      "path": "tools/small-cardiac-imaging/verify-content.mjs",
+      "bytes": 2374,
+      "sha256": "970098819128f5b969c28b6190d3f1149ca2f3a25d82fa318087981ff2ef579a"
+    },
+    {
+      "path": "tools/small-cardiac-imaging/verify-history-proposal.mjs",
+      "bytes": 2591,
+      "sha256": "208143e3633e30d9b4a341e9f7fefb55281e60de6a3d45eed773d157fe562904"
+    },
+    {
+      "path": "tools/small-cardiac-imaging/INTEGRATION_PLAN.md",
+      "bytes": 2417,
+      "sha256": "8f94eae6318d63ca0338714fafaa8a2b8f9e5db280160253e24161db0f01642f"
+    },
+    {
+      "path": "tools/small-cardiac-imaging/NOTICE_APPEND.md",
+      "bytes": 621,
+      "sha256": "360276c240db01777d937f0574f5276a7787e797ff51092ce69c05ba99cae024"
+    },
+    {
+      "path": "tools/review-multiple-source-ids/verify-ui-composition.mjs",
+      "bytes": 2634,
+      "sha256": "eb5cd34230206c398880be41b07fe954ea6a6a82f9184c2d33c9dc97a1fa234b"
+    },
+    {
+      "path": "tools/review-multiple-source-ids/UI_PROBE.test.mjs",
+      "bytes": 15498,
+      "sha256": "9aa2fd59669e1023cf258aff41c9ff2a2addcf1b9d75a01bdc440bbec1a62e0a"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original small cardiac vein X-ray and ultrasound draft teaching, exact historical comparison helpers, notices, integration recipes and Quick review composition probes. Partial source-only recovery; excludes all patient data, source anatomy meshes and private decisions.",
+  "proof": {
+    "contentChecks": 5,
+    "exactAuthoredInverse": true,
+    "rejectedMutations": 8,
+    "uiCompositionChecks": 12,
+    "fullRuntimeValidation": false,
+    "fullTypesOrBuild": false,
+    "clinicalApproval": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

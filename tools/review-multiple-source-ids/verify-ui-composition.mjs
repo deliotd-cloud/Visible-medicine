@@ -1,0 +1,17 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';import {createHash} from 'node:crypto';
+const root='G:/VisibleMedicine-temp/proposals/20261031-review-multiple-source-ids';
+const read=p=>fs.readFileSync(p),sha=b=>createHash('sha256').update(b).digest('hex'),ref=p=>({path:p,sha256:sha(read(p))});
+const proposal=JSON.parse(read(root+'/PROPOSAL.json')),base=proposal.base;
+const source=read(base+'/tests/clinical-review-quick-start-ui.test.mjs').toString();
+const from="const source = readFileSync(path, 'utf8');",to="const source = readFileSync(relative === '../lib/clinical-review-quick-start.ts' ? process.env.VM_QUICK_START_HELPER : path, 'utf8');";
+assert.equal(source.split(from).length,2);const probe=source.replace(from,to);assert.equal(probe.replace(to,from),source);
+const probePath=root+'/UI_PROBE.test.mjs';fs.writeFileSync(probePath,probe,{flag:'wx'});
+const helper=root+'/website/lib/clinical-review-quick-start.ts';assert.equal(sha(read(helper)),proposal.rows.find(r=>r.path==='lib/clinical-review-quick-start.ts').after);
+const component=ref(base+'/components/ClinicalReviewQuickStart.tsx');
+const result=spawnSync(process.execPath,['--max-old-space-size=64','--test','--test-concurrency=1','--test-reporter=tap',probePath],{encoding:'utf8',windowsHide:true,maxBuffer:1024*1024,env:{...process.env,NODE_OPTIONS:'--max-old-space-size=64',VM_WEBSITE_ROOT:base,VM_QUICK_START_HELPER:helper,TEMP:root,TMP:root}});
+const log=root+'/UI_COMPOSITION.tap';fs.writeFileSync(log,(result.stdout??'')+(result.stderr??''),{flag:'wx'});
+const counts=Object.fromEntries(['tests','pass','fail','skipped','cancelled','todo'].map(key=>[key,Number((result.stdout??'').match(new RegExp('^# '+key+' (\\d+)','m'))?.[1])]));
+assert.equal(sha(read(component.path)),component.sha256);assert.equal(sha(read(helper)),proposal.rows.find(r=>r.path==='lib/clinical-review-quick-start.ts').after);
+const passed=result.status===0&&result.signal===null&&!result.error&&counts.tests===12&&counts.pass===12&&['fail','skipped','cancelled','todo'].every(k=>counts[k]===0);
+fs.writeFileSync(root+'/UI_COMPOSITION.json',JSON.stringify({at:new Date().toISOString(),passed,counts,status:result.status,signal:result.signal,error:result.error?.message??null,log:ref(log),probe:ref(probePath),originalTests:ref(base+'/tests/clinical-review-quick-start-ui.test.mjs'),component,helper:ref(helper),all12ExistingCaseBodiesUnchanged:true,realBrowser:false,fullBuild:false,installed:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({passed,counts,realBrowser:false}));process.exitCode=passed?0:1;

@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {spawnSync} from 'node:child_process';
+const root='G:/VisibleMedicine-temp/proposals/20261031-small-cardiac-imaging';
+const read=p=>fs.readFileSync(p),sha=b=>createHash('sha256').update(b).digest('hex'),ref=p=>({path:p,sha256:sha(read(p))});
+const proposal=JSON.parse(read(root+'/CONTENT_PROPOSAL.json'));
+assert.equal(sha(read(proposal.base+'/'+proposal.file)),proposal.before);assert.equal(sha(read(root+'/atlas/'+proposal.file)),proposal.after);
+const notice='LICENSES/THIRD_PARTY_NOTICES.md',dest=root+'/atlas/'+notice;
+fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,Buffer.concat([read(proposal.base+'/'+notice),read(root+'/NOTICE_APPEND.md')]),{flag:'wx'});
+const r=spawnSync(process.execPath,['--max-old-space-size=64','--test','--test-concurrency=1','--test-reporter=tap',root+'/atlas/scripts/test-small-cardiac-imaging.mjs'],{encoding:'utf8',windowsHide:true,maxBuffer:1024*1024,env:{...process.env,NODE_OPTIONS:'--max-old-space-size=64',VM_CORONARY_BASELINE:proposal.base,TEMP:root,TMP:root}});
+const log=root+'/CHECKS.tap';fs.writeFileSync(log,(r.stdout??'')+(r.stderr??''),{flag:'wx'});
+const counts=Object.fromEntries(['tests','pass','fail','skipped','cancelled','todo'].map(key=>[key,Number((r.stdout??'').match(new RegExp('^# '+key+' (\\d+)','m'))?.[1])]));
+const paths=[proposal.file,'scripts/test-small-cardiac-imaging.mjs',notice];
+const result={at:new Date().toISOString(),proposal:ref(root+'/CONTENT_PROPOSAL.json'),status:r.status,signal:r.signal,error:r.error?.message??null,counts,log:ref(log),paths:paths.map(file=>({path:file,before:fs.existsSync(proposal.base+'/'+file)?sha(read(proposal.base+'/'+file)):null,after:sha(read(root+'/atlas/'+file)),bytes:read(root+'/atlas/'+file).length})),allPriorContentPreserved:true,runtimeValidated:false,reviewRevisionsGenerated:false,installed:false,clinicalApproval:false};
+result.passed=r.status===0&&r.signal===null&&!r.error&&counts.tests===5&&counts.pass===5&&['fail','skipped','cancelled','todo'].every(k=>counts[k]===0);
+fs.writeFileSync(root+'/CONTENT_VERIFICATION.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passed:result.passed,counts,syntaxAndPureOnly:true}));process.exitCode=result.passed?0:1;
