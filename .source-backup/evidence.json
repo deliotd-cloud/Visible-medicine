@@ -1,0 +1,32 @@
+{
+  "keyboardTests": 29,
+  "focusedTypes": true,
+  "keyboardBrowserChecks": true,
+  "keyboardInstalled": false,
+  "release26Original": {
+    "tests": 334,
+    "pass": 327,
+    "fail": 7
+  },
+  "firstFocused": {
+    "tests": 13,
+    "pass": 11,
+    "fail": 2
+  },
+  "correctedFollowup": {
+    "supervisor": {
+      "code": 0,
+      "signal": null
+    },
+    "process": {
+      "at": "2026-10-31T20:46:56.3725323Z",
+      "exitCode": 0,
+      "interrupted": false,
+      "stopReason": null,
+      "runnerPid": 147752,
+      "terminalObserved": true
+    },
+    "passing": true
+  },
+  "wholeSuitePassing": false
+}

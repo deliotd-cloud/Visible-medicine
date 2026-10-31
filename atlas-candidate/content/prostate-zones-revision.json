@@ -1,0 +1,41 @@
+{
+  "schema": "vm.prostate-zones-source/1",
+  "canonicalization": "UTF-8/LF",
+  "sha256": "a4b7fbed005fa7c60cee5e34e509060c391223b638e25f66c1e4f9b88b991ac8",
+  "inputs": [
+    {
+      "file": "LICENSES/prostate-zones-original.md",
+      "sha256": "bd781cdcb0cdf1a32a42bf7f8fda345c0053f1885badad303a58657cabf6dfaa"
+    },
+    {
+      "file": "app/camera-keyboard.css",
+      "sha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
+    },
+    {
+      "file": "app/prostate-zones.css",
+      "sha256": "096cf0f99940ce0553cd7714d882c4f7e5e33460cd33fcc1990c51aa8e935fa9"
+    },
+    {
+      "file": "app/prostate-zones.tsx",
+      "sha256": "898d7598f8533d7150f73cbc973a82d16b9e179531c822d06b468c892064c801"
+    },
+    {
+      "file": "docs/PROSTATE_ZONES.md",
+      "sha256": "43ce08f3e3004ea357fc5f859efed433e604ed2005c69ebe263cb7aa5efe543f"
+    },
+    {
+      "file": "lib/camera-keyboard.ts",
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "file": "lib/prostate-zone-geometry.ts",
+      "sha256": "53216c0a08a67d1523f74fe17065252ac486b1b002d0e0181e57a1f3b5666b0a"
+    },
+    {
+      "file": "lib/prostate-zones.ts",
+      "sha256": "322c3c753382023eb130b046823ba9bf7f160d25e132671e5c45685306c83c40"
+    }
+  ],
+  "clinicalReview": "pending",
+  "patientSpaceRegistration": null
+}

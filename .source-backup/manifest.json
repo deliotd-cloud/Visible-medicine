@@ -1,0 +1,167 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T20:47:40.449Z",
+  "sourceIdentity": {
+    "installedAtlas": "df175264724a98ca4f70de19e1bfabd325084fdb",
+    "installedReview": "8b349bdc9a34ac1d0a1edbc6f5724cfb835995a934f5e3c7cfd9cad0ecd19b46",
+    "prostateCandidate": "a4b7fbed005fa7c60cee5e34e509060c391223b638e25f66c1e4f9b88b991ac8"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas-candidate/app/prostate-zones.tsx",
+      "sha256": "49a24276618a23437b553af17473c3e917ac49db18598a0f2d5072aa71afb39b",
+      "bytes": 18453
+    },
+    {
+      "path": "atlas-candidate/app/prostate-zones.css",
+      "sha256": "dd674a9499e43093385c8f850a1e2f9d9f19883bd0d9d61830ba16cb121037b2",
+      "bytes": 7291
+    },
+    {
+      "path": "atlas-candidate/lib/prostate-zone-geometry.ts",
+      "sha256": "ef08a60e6a60e487f21d21d4909fcd4b9d12fd7a20cee09bc6cdd32a8287cbbf",
+      "bytes": 8021
+    },
+    {
+      "path": "atlas-candidate/lib/prostate-zones.ts",
+      "sha256": "151e3170e6dd7a644009c5f7bc2e65cf35bf10e1f83ea1b14f8f1eca2afde262",
+      "bytes": 3485
+    },
+    {
+      "path": "atlas-candidate/lib/camera-keyboard.ts",
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e",
+      "bytes": 9666
+    },
+    {
+      "path": "atlas-candidate/app/camera-keyboard.css",
+      "sha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de",
+      "bytes": 882
+    },
+    {
+      "path": "atlas-candidate/content/prostate-zones-revision.json",
+      "sha256": "3fef05c659db52be52f3556862808e893053c8ae28ded561710d120ef440b8ef",
+      "bytes": 1352
+    },
+    {
+      "path": "atlas-candidate/docs/PROSTATE_ZONES.md",
+      "sha256": "d3cf575f8e940356a4879a112c1634868b14ae775260474440dd2673ac79c904",
+      "bytes": 5292
+    },
+    {
+      "path": "atlas-candidate/LICENSES/prostate-zones-original.md",
+      "sha256": "124b6a8fe98fc8407b2c9a3bf1f2385aaa2573250e420372805c54d03c75452b",
+      "bytes": 856
+    },
+    {
+      "path": "atlas-candidate/scripts/pin-prostate-zones.mjs",
+      "sha256": "d34c97f531fb04497b15b57c22657a53cd58d167caf710f15515a18edbd07fc4",
+      "bytes": 1324
+    },
+    {
+      "path": "atlas-candidate/scripts/test-prostate-zones.mjs",
+      "sha256": "3fbef20cd17584c567429042dfefeab78ab67ad67ac7a01866efaab2a13b6f7d",
+      "bytes": 4652
+    },
+    {
+      "path": "website/tests/atlas-nested-ct-orientation.test.ts",
+      "sha256": "79fb8916101b08ff38d4e170a2cf9c7a9e8ab652faf6ea308a9c665185fe3aa9",
+      "bytes": 16550
+    },
+    {
+      "path": "website/tests/cervical-a28-current-delivery.test.mjs",
+      "sha256": "4ef05ae20d1bee0398b48a578f8d26bd10c9d5f54fbe3c2b7ed9d85edb9645b3",
+      "bytes": 13513
+    },
+    {
+      "path": "website/tests/clinical-review-regional-tour.test.ts",
+      "sha256": "b5c1ab324266ed445b864564c10261ab7ec101ae34510ce296e891791f51db93",
+      "bytes": 28158
+    },
+    {
+      "path": "website/tests/fda-reference-website-material.test.mjs",
+      "sha256": "011267f5787a38f4c20cf55dca1519b9fb988033397318c6f52afe8fcad0c1b7",
+      "bytes": 20497
+    },
+    {
+      "path": "tools/keyboard/check.mjs",
+      "sha256": "fb6e619a56bebbe90949d3a2ed66cf0a14e664f843589a086e5431d4ca9cfffc",
+      "bytes": 1184
+    },
+    {
+      "path": "tools/keyboard/run-check.mjs",
+      "sha256": "80e9de11d9e35d2868ec9041f4bcb651f6912c2f237888c781b586b4f81fca11",
+      "bytes": 577
+    },
+    {
+      "path": "tools/keyboard/build-preview.mjs",
+      "sha256": "082ae82f244c4a331130fd9617b7cf32ba1092898f47d9791187f40d930cdd66",
+      "bytes": 2246
+    },
+    {
+      "path": "tools/keyboard/save.mjs",
+      "sha256": "4c322a58344b20101dcb7ea171d337c79b47526ec503f4107c3edc970ed44fc7",
+      "bytes": 8227
+    },
+    {
+      "path": "tools/keyboard/finalize.mjs",
+      "sha256": "9577819ce73a3679a1241b87ef08e62cb82cf461c5f77139c68e1373245cbba7",
+      "bytes": 6347
+    },
+    {
+      "path": "tools/release/run-focused.mjs",
+      "sha256": "9a3f7cba7ce8fd15e321493705eefa1f15b122bc9b5d3a290cb8632dae7fb0c7",
+      "bytes": 2645
+    },
+    {
+      "path": "tools/release/run-corrections.mjs",
+      "sha256": "41df09bc76ff55eaab3d94bfdf50f867cda556f19acffa7d5fdbf6eacabd79c8",
+      "bytes": 2604
+    },
+    {
+      "path": "tools/release/run-ct-closure.mjs",
+      "sha256": "9919f4c9bda915b503fd8f04205e1824cc64c3221c91bf1c2d54cb71fd48d0c5",
+      "bytes": 2561
+    }
+  ],
+  "removed": [],
+  "scope": "Selected authored prostate candidate source and regression tests/recipes. Keyboard candidate is not installed. No scans, masks, private references, screenshots, databases, generated models, credentials or canonical Git ancestry. This is not a whole-project backup.",
+  "proof": {
+    "keyboardTests": 29,
+    "focusedTypes": true,
+    "keyboardBrowserChecks": true,
+    "keyboardInstalled": false,
+    "release26Original": {
+      "tests": 334,
+      "pass": 327,
+      "fail": 7
+    },
+    "firstFocused": {
+      "tests": 13,
+      "pass": 11,
+      "fail": 2
+    },
+    "correctedFollowup": {
+      "supervisor": {
+        "code": 0,
+        "signal": null
+      },
+      "process": {
+        "at": "2026-10-31T20:46:56.3725323Z",
+        "exitCode": 0,
+        "interrupted": false,
+        "stopReason": null,
+        "runnerPid": 147752,
+        "terminalObserved": true
+      },
+      "passing": true
+    },
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
