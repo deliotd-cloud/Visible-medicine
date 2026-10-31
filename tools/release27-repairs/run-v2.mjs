@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const stage='G:/VisibleMedicine-temp/staging/20261031-release27-repaired-v2',sourcePath=stage+'/SOURCE.json',sourceHash=hash(sourcePath),s=json(sourcePath);
+assert.equal(s.testsOnly,true);assert.equal(s.currentChanges.length,9);
+for(const row of s.sourceRows)assert.equal(hash(s.website+'/'+row.path),row.sha256,row.path);
+const key=process.argv[2]??'focused';assert(['focused','partition27','partition27retry'].includes(key));
+const command=key==='focused'?'--test --test-concurrency=1 '+s.followupChangedTests.join(' '):'scripts/run-website-tests.mjs --run --partition 27/32';
+fs.mkdirSync(stage+'/tmp',{recursive:true});
+const result=await guarded({site:s.website,command,dir:stage+'/checks/'+key,heap:1024,aggregate:2048,minimum:4096,extraEnv:{VM_ATLAS_SOURCE_REPO:s.atlas,ATLAS_SOURCE_REPO:s.atlas,TEMP:stage+'/tmp',TMP:stage+'/tmp'}});
+assert.equal(hash(sourcePath),sourceHash);for(const row of s.sourceRows)assert.equal(hash(s.website+'/'+row.path),row.sha256,'After job '+row.path);
+fs.writeFileSync(stage+'/'+key+'-RESULT.json',JSON.stringify({at:new Date().toISOString(),source:{path:sourcePath,sha256:sourceHash},...result,sourceDrift:false,wholeSuitePassing:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({key,passing:result.passing,sourceDrift:false}));process.exitCode=result.passing?0:1;

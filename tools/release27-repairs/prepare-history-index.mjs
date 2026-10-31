@@ -1,0 +1,20 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const stage='G:/VisibleMedicine-temp/staging/20261031-release27-repaired-v2',s=json(stage+'/SOURCE.json'),site=s.website;
+const git=(...args)=>execFileSync('git',['-C',site,...args],{encoding:'utf8',windowsHide:true}).trim();
+assert.equal(git('rev-parse','--show-toplevel').replaceAll('\\','/'),site);
+assert.equal(git('rev-parse','HEAD'),'b953ff3f5f1891599cb6e91cb91311d9d6006270');
+for(const r of s.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256);
+const before=fs.existsSync(site+'/.git/index')?hash(site+'/.git/index'):null;
+git('read-tree','HEAD');
+const {assertWebsiteTestHistory}=await import('file:///'+site+'/scripts/website-test-history-preflight.mjs');
+const history=assertWebsiteTestHistory(site);
+const {verifyPublicPreviewAssets}=await import('file:///'+site+'/scripts/public-preview-preflight.mjs');
+verifyPublicPreviewAssets('F:/VisibleMedicine/website');
+const names=['3d-detail-preview.jpg','ct-preview.png','mri-preview.png','ultrasound-preview.jpg','xray-preview.png'];
+const publicPreviews=[];
+for(const name of names){const p='public/media/atlas/'+name,original='F:/VisibleMedicine/website/'+p,dest=site+'/'+p;assert(fs.lstatSync(original).isFile()&&!fs.lstatSync(original).isSymbolicLink());if(fs.existsSync(dest))assert.equal(hash(original),hash(dest));else fs.copyFileSync(original,dest,fs.constants.COPYFILE_EXCL);publicPreviews.push({path:p,sha256:hash(dest)});}
+verifyPublicPreviewAssets(site);
+for(const r of s.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256);
+fs.writeFileSync(stage+'/HISTORY_CONTEXT.json',JSON.stringify({at:new Date().toISOString(),head:git('rev-parse','HEAD'),indexBefore:before,indexAfter:hash(site+'/.git/index'),history,publicPreviews,existingAdmittedPreviewCopiesOnly:true,sourceRowsUnchanged:s.sourceRows.length,canonicalUnchanged:true},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({isolatedHistoryReady:true,...history,publicPreviews:publicPreviews.length,sourceRowsUnchanged:s.sourceRows.length}));

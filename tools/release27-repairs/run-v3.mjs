@@ -1,0 +1,12 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const stage='G:/VisibleMedicine-temp/staging/20261031-release27-repaired-v3',sourcePath=stage+'/SOURCE.json',sourceHash=hash(sourcePath),s=json(sourcePath);
+const key=process.argv[2]??'focused';assert(['focused','focusedretry'].includes(key));
+assert.equal(s.currentChanges.length,10);for(const r of s.sourceRows)assert.equal(hash(s.website+'/'+r.path),r.sha256);
+const notice='F:/VisibleMedicine/staging/20261025-viewer-notice-roles-source/LOCAL_ONLY/inputs.json';
+assert.equal(hash(notice),'b3f27a2c38e38c99f9dac73e4ec6ce7e3f61b9d6d069182bb8e416783b46bd77');
+fs.mkdirSync(stage+'/tmp',{recursive:true});const command='--test --test-concurrency=1 '+s.followupChangedTests.join(' ');
+const result=await guarded({site:s.website,command,dir:stage+'/checks/'+key,heap:1024,aggregate:2048,minimum:4096,extraEnv:{VM_ATLAS_SOURCE_REPO:s.atlas,ATLAS_SOURCE_REPO:s.atlas,VM_NOTICE_LOCAL_EVIDENCE:notice,VM_NOTICE_ADMISSION_WEBSITE:'F:/VisibleMedicine/staging/20261020-combined-website-ui/website',TEMP:stage+'/tmp',TMP:stage+'/tmp'}});
+assert.equal(hash(sourcePath),sourceHash);for(const r of s.sourceRows)assert.equal(hash(s.website+'/'+r.path),r.sha256);
+fs.writeFileSync(stage+'/'+key+'-RESULT.json',JSON.stringify({at:new Date().toISOString(),source:{path:sourcePath,sha256:sourceHash},...result,sourceDrift:false,wholeSuitePassing:false,fullPartitionRerun:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passing:result.passing,sourceDrift:false}));process.exitCode=result.passing?0:1;

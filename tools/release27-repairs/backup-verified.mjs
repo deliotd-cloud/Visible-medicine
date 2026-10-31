@@ -1,0 +1,18 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {backup,read} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/source-only-backup-20261019.mjs';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const root='G:/VisibleMedicine-temp/proposals/20261031-release27-main',cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release27-repairs';
+const saved=json(cp+'/checkpoint.json'),source=json(cp+'/SOURCE.json');
+assert.equal(json(cp+'/focusedretry-RESULT.json').passing,true);
+const selected=new Map(source.currentChanges.map(p=>['website/'+p,'F:/VisibleMedicine/website/'+p]));
+for(const p of ['prepare-repairs.mjs','prepare-stage.mjs','prepare-v2.mjs','prepare-v3.mjs','prepare-history-index.mjs','run-v2.mjs','run-v3.mjs','save-verified.mjs','backup-verified.mjs'])selected.set('tools/release27-repairs/'+p,root+'/'+p);
+for(const p of source.currentChanges)assert.equal(hash(selected.get('website/'+p)),hash(cp+'/source/website/'+p));
+const files=[...selected].map(([path,p])=>({path,sha256:hash(p),bytes:fs.statSync(p).size}));
+const verifySource=()=>{for(const r of files)assert.equal(hash(selected.get(r.path)),r.sha256,r.path);};
+const receipt=backup({root:root+'/selected-source-backup',repo:root+'/selected-source-backup.git',branch:'backup/release27-test-repairs-20261031',files,bytesFor:p=>read(selected.get(p)),sourceIdentity:{atlasHead:saved.atlasHead,review:saved.review},scope:'Ten source-only regression-test repairs and nine bounded verification/integration recipes. Excludes MRI lookup records, scans, masks, screenshots, database records, credentials, binary assets and canonical Git ancestry. Not a whole-project or patient-data backup.',proof:{testsOnly:true,focusedPassing:true,fullPartitionRerun:false,wholeSuitePassing:false,clinicalApproval:false,patientRegistration:false,publicDeployment:false},verifySource});
+assert.equal(receipt.sourceBackupVerified,true);fs.copyFileSync(root+'/selected-source-backup/github-backup.json',cp+'/github-backup.json',fs.constants.COPYFILE_EXCL);
+const ref={path:cp+'/github-backup.json',sha256:hash(cp+'/github-backup.json')},i=json('CURRENT_CHECKPOINT.json');
+i.activeWork.current.latestSourceOnlyBackup={...ref,branch:receipt.branch,head:receipt.head,scope:'Ten tests and nine recipes only, independently fetched and byte-verified; no scans or private data.'};i.activeWork.lastUpdated=new Date().toISOString();saveIndex(i);
+fs.writeFileSync(cp+'/SOURCE_BACKUP_SAVED.json',JSON.stringify({at:new Date().toISOString(),receipt:ref,indexSha256:hash('CURRENT_CHECKPOINT.json'),selectedPaths:files.length,wholeProjectBackup:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({sourceBackupVerified:true,branch:receipt.branch,files:files.length}));

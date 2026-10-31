@@ -1,0 +1,123 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T22:33:08.877Z",
+  "sourceIdentity": {
+    "atlasHead": "4e67ef78f57269747e40a864d70c3c5ac2390860",
+    "review": "18a189d28c91823b9a83da4c3813b9359020bd84ad4f96d47932f71a178a7981"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-wayfinding.test.mjs",
+      "sha256": "e359f2909540e8301d3ced951c0aadc19a5b47563862d16dc8ffd82f0539a33b",
+      "bytes": 7079
+    },
+    {
+      "path": "website/tests/head-practice-navigation-delivery.test.mjs",
+      "sha256": "13e38040237a3715125bca7b96789f5a62e0d98146ebb76418f205003dd4b1d3",
+      "bytes": 7068
+    },
+    {
+      "path": "website/tests/clinical-review-lower-limb-connective-xray.test.ts",
+      "sha256": "945bfb662d3b051adbdc6e1959cb3f48352b6ad83bc18523e161ff8094e2dd09",
+      "bytes": 22512
+    },
+    {
+      "path": "website/tests/runtime-family-forward-inverse.test.mjs",
+      "sha256": "3ab327e73a55ef03e685cfbed451a021728e294bee71b1bd3481ad1569168a36",
+      "bytes": 6671
+    },
+    {
+      "path": "website/tests/atlas-foot-cerebral-teaching.test.ts",
+      "sha256": "99d8f30938a99c14fae74d1bb68f926a3ad11427511020be50db13e67ffa02b5",
+      "bytes": 9209
+    },
+    {
+      "path": "website/tests/head-clear-review-binding.test.mjs",
+      "sha256": "65264f0a6dc6ee14eeb3ef6d0ecbdccd70c59aa9ae024741704a518996f37240",
+      "bytes": 6247
+    },
+    {
+      "path": "website/tests/lower-arterial-current-delivery.test.mjs",
+      "sha256": "52fa93f6452af4fac8975dec5cf05c596cff6bd1f4f434daddd30e15eb92fa0d",
+      "bytes": 21929
+    },
+    {
+      "path": "website/tests/posterior-fossa-integration-register.test.mjs",
+      "sha256": "16efb73ae77cfd0bf1de22d28823ac42d54233c442bbd116068c1f041e84ac20",
+      "bytes": 13415
+    },
+    {
+      "path": "website/tests/clinical-review-thigh-avulsion-xray.test.ts",
+      "sha256": "b305038e1bcecb08f816c7fafad779028f99af2cabf5b62f364863c2c10efec9",
+      "bytes": 21768
+    },
+    {
+      "path": "website/tests/release-epoch-composition-preservation.test.mjs",
+      "sha256": "f0d0b7495fa5366c79c01a1686cb439ba8dc5c18f5a2bae5a89ae270f883b43b",
+      "bytes": 22686
+    },
+    {
+      "path": "tools/release27-repairs/prepare-repairs.mjs",
+      "sha256": "2ffc8a05e8347bbb0ad492937a7a0b31a84d29067ec5853345444f5f466a5eb5",
+      "bytes": 5028
+    },
+    {
+      "path": "tools/release27-repairs/prepare-stage.mjs",
+      "sha256": "d0771bf4e6a3deb48db5534809750f18308cc7abe1e4a371aab97740615dca16",
+      "bytes": 4241
+    },
+    {
+      "path": "tools/release27-repairs/prepare-v2.mjs",
+      "sha256": "70926a91faf2ea604e19de395e699a571ae6bfd8192170d845845b93840803eb",
+      "bytes": 4002
+    },
+    {
+      "path": "tools/release27-repairs/prepare-v3.mjs",
+      "sha256": "868d853e29cff454a9687ad96fbf723d269a89ae6dbe126b57edc55dfd6ca903",
+      "bytes": 2822
+    },
+    {
+      "path": "tools/release27-repairs/prepare-history-index.mjs",
+      "sha256": "d32b69980ba3938caa2a6e14e3813a48781002375773e8d0672b8398e2cb6b87",
+      "bytes": 2248
+    },
+    {
+      "path": "tools/release27-repairs/run-v2.mjs",
+      "sha256": "c4e3ba80b7b4b955357d273cdd1c17ea8ff66a77793fb77f8d23564a0b3872fd",
+      "bytes": 1705
+    },
+    {
+      "path": "tools/release27-repairs/run-v3.mjs",
+      "sha256": "1ac3bb8dfbc0d7288b64bd911ab9a6eeca9fa87fe85ae5fba4ccdc823b1b331d",
+      "bytes": 1883
+    },
+    {
+      "path": "tools/release27-repairs/save-verified.mjs",
+      "sha256": "9bdeef740b0f6f190a8197a75c4e7104120b7fcdead18d8f9ca10c296ea20f54",
+      "bytes": 8652
+    },
+    {
+      "path": "tools/release27-repairs/backup-verified.mjs",
+      "sha256": "7b9a19000eb4833e024ba576d54ba9527f98ef2cb8f3139dba5ed777e43490e7",
+      "bytes": 3006
+    }
+  ],
+  "removed": [],
+  "scope": "Ten source-only regression-test repairs and nine bounded verification/integration recipes. Excludes MRI lookup records, scans, masks, screenshots, database records, credentials, binary assets and canonical Git ancestry. Not a whole-project or patient-data backup.",
+  "proof": {
+    "testsOnly": true,
+    "focusedPassing": true,
+    "fullPartitionRerun": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "publicDeployment": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
