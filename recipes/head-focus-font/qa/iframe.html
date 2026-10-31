@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Synthetic model</title>
+<style>body{font:14px system-ui;padding:8px;margin:0;background:#eef5fb}button{padding:8px}</style>
+<button id="choose">Select Midbrain in synthetic model</button><p id="state">Waiting for comparison session</p>
+<script>
+const config=parent.__fixtureTargets;let session='',sequence=0;
+function send(concept){if(!session)return;parent.postMessage({type:config.selectionProtocol,version:1,revision:config.sourceRevision,session,sequence:++sequence,status:'selected',selection:config[concept]},location.origin);document.getElementById('state').textContent=`${concept} selected · sequence ${sequence}`;}
+window.addEventListener('message',event=>{
+  if(event.origin!==location.origin||event.source!==parent)return;
+  const data=event.data;
+  if(data?.type===config.selectionProtocol+'-request'&&data.version===1){session=data.session;sequence=0;send('pons');}
+  if(data?.type===config.focusProtocol&&data.version===1&&data.revision===config.sourceRevision&&data.session===session){
+    parent.postMessage({type:config.focusProtocol+'-result',version:1,revision:config.sourceRevision,session,command:data.command,status:'accepted'},location.origin);
+    send(data.target.id===config.midbrain.id?'midbrain':'pons');
+  }
+});
+document.getElementById('choose').addEventListener('click',()=>send('midbrain'));
+parent.postMessage({type:config.selectionProtocol+'-ready',version:1,revision:config.sourceRevision},location.origin);
+</script></html>

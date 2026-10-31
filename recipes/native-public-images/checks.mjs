@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {hash, json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root = 'G:/VisibleMedicine-temp/staging/20261031-native-public-images', pin = root + '/AUTHORED_SOURCE.json';
+const source = json(pin), site = source.website;
+const verify = () => {for (const r of source.sourceRows) assert.equal(hash(site + '/' + r.path), r.sha256, r.path);};
+verify();
+const result = spawnSync(process.execPath, ['--max-old-space-size=384', '--experimental-strip-types', '--test', '--test-isolation=none', '--test-concurrency=1', '--test-reporter=tap', 'tests/site-image.test.mjs', 'tests/atlas-public-brand-image.test.mjs'], {cwd: site, encoding: 'utf8', windowsHide: true, timeout: 180000, maxBuffer: 2 * 1024 * 1024, env: {...process.env, TEMP: root + '/tmp', TMP: root + '/tmp'}});
+fs.writeFileSync(root + '/FOCUSED.tap', result.stdout ?? '', {flag: 'wx'});
+fs.writeFileSync(root + '/FOCUSED.stderr.log', result.stderr ?? '', {flag: 'wx'});
+const counts = Object.fromEntries(['tests', 'pass', 'fail', 'cancelled', 'skipped', 'todo'].map(k => [k, Number((result.stdout ?? '').match(new RegExp('^# ' + k + ' (\\d+)\\r?$', 'm'))?.[1] ?? -1)]));
+verify();
+const passing = result.status === 0 && counts.tests === 12 && counts.pass === 12 && ['fail', 'cancelled', 'skipped', 'todo'].every(k => counts[k] === 0);
+fs.writeFileSync(root + '/FOCUSED_RESULT.json', JSON.stringify({at: new Date().toISOString(), source: {path: pin, sha256: hash(pin)}, counts, status: result.status, error: result.error?.message ?? null, sourceUnchanged: true, passing, scope: 'Public artwork attributes, actual Brand rendering, exact static assets, route guards and Vite pre-transform; full build remains pending.', installed: false}, null, 2) + '\n', {flag: 'wx'});
+console.log(JSON.stringify({counts, passing}));
+assert(passing);
