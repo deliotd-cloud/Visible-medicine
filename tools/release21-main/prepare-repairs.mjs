@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const root='G:/VisibleMedicine-temp/proposals/20261031-release21-main',sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+let code=fs.readFileSync('G:/VisibleMedicine-temp/proposals/20261031-release20-main/integrate-followup.mjs','utf8');
+const replace=(a,b)=>{assert.equal(code.split(a).length,2,a);code=code.replace(a,b);};
+replace("parentPath='G:/VisibleMedicine-temp/staging/20261031-release20-initial/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release20-followup'","parentPath='G:/VisibleMedicine-temp/staging/20261031-release20-followup/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release20-final'");
+replace('8532b8971db6e4d480645b61354e7fa1b291fe5c8e4862c9e677e1fa67f99edc','a70e361cc0ade780d58f34512702d71b2d5abe36a4c4dee48380e981f59487b2');
+const inputs=['leg-venous','upper-limb'].map(name=>'G:/VisibleMedicine-temp/proposals/20261031-release20-'+name).map(p=>[p,sha(p+'/MANIFEST.json')]);
+const a=code.indexOf('const inputs=['),b=code.indexOf('const proposals=',a);assert(a>0&&b>a);code=code.slice(0,a)+'const inputs='+JSON.stringify(inputs)+';\n'+code.slice(b);
+replace('(m.files??m.copyPaths).filter','(m.files??(m.file?[{path:m.file,beforeSha256:m.beforeSha256,afterSha256:m.afterSha256}]:m.copyPaths)).filter');
+fs.writeFileSync(root+'/integrate-repairs.mjs',code,{flag:'wx'});fs.writeFileSync(root+'/INPUTS.json',JSON.stringify(inputs,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({proposals:inputs.length}));

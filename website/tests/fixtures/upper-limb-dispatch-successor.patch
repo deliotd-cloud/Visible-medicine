@@ -1,0 +1,197 @@
+diff --git a/app/body-content.ts b/app/body-content.ts
+index 695e5dba..e238adb6 100644
+--- a/app/body-content.ts
++++ b/app/body-content.ts
+@@ -1,5 +1,12 @@
++import { kidneyOrientationLesson } from '../lib/kidney-orientation';
++import { nasalBoneSurfaceImagingLesson } from '../lib/nasal-bone-surface-imaging';
++import { abdominalArterialUltrasoundLesson } from '../lib/abdominal-arterial-ultrasound';
++import { bodyPancreaticVenousUsLesson } from '../lib/body-pancreatic-venous-us';
++import {bodyOrbitalCtLesson} from '../lib/body-orbital-ct';
+ import {dentalMriLesson} from '../lib/dental-mri';
++import {dentalCtLesson} from '../lib/dental-ct';
+ import {craniofacialCalcificationCtLesson} from '../lib/craniofacial-calcification-ct';
++import {stylohyoidMriContextLesson} from '../lib/stylohyoid-mri-context';
+ import {footArterialProjectionXrayLesson} from '../lib/foot-arterial-projection-xray';
+ import {footVenousArchXrayLesson} from '../lib/foot-venous-arch-xray';
+ import { intracranialArterialUsLesson } from '../lib/intracranial-arterial-us';
+@@ -10,14 +17,18 @@ import { handVesselXrayLesson } from '../lib/hand-vessel-xray';
+ import { lowerLimbConnectiveXrayLesson } from '../lib/lower-limb-connective-xray';
+ import { pectoralBranchUltrasoundLesson } from '../lib/pectoral-branch-ultrasound';
+ import { ileocolicArteryUltrasoundLesson } from '../lib/ileocolic-artery-ultrasound';
++import { appendicularArteryUltrasoundLesson } from '../lib/appendicular-artery-ultrasound';
+ import { colicArteryUltrasoundLesson } from '../lib/colic-artery-ultrasound';
++import { neckLandmarkXrayLesson } from '../lib/neck-landmark-xray';
+ import { arterialEvidenceLimitLesson } from '../lib/arterial-evidence-limits';
+ import { dorsalHandUltrasoundLesson } from '../lib/dorsal-hand-ultrasound';
++import { digitalVeinUltrasoundLesson } from '../lib/digital-vein-ultrasound';
+ import { laryngealInletImagingLesson } from '../lib/laryngeal-inlet-imaging';
+ import { orbitalSupportQuizLesson } from '../lib/orbital-support-quiz';
+ import { ocularSupportQuizLesson } from '../lib/ocular-support-quiz';
+ import { nasalCartilageQuizLesson } from '../lib/nasal-cartilage-quiz';
+ import { nasalCartilageMriLesson } from '../lib/nasal-cartilage-mri';
++import { nasalCartilageCtLesson } from '../lib/nasal-cartilage-ct';
+ import { commissuralLandmarkQuizLesson } from '../lib/commissural-landmark-quiz';
+ import { footVariantQuizLesson } from '../lib/foot-variant-quiz';
+ import { abdominalEusOrientationLesson } from '../lib/abdominal-eus-orientation';
+@@ -56,6 +67,7 @@ import { mesentericVesselTeachingLesson } from '../lib/mesenteric-vessel-teachin
+ import { pancreaticVesselTeachingLesson } from '../lib/pancreatic-vessel-teaching';
+ import { pharyngealMuscleTeachingLesson } from '../lib/pharyngeal-muscle-teaching';
+ import { pharyngealConstrictorImagingLesson } from '../lib/pharyngeal-constrictor-imaging';
++import { pharyngealMriLesson } from '../lib/pharyngeal-mri';
+ import { salpingopharyngeusMriLesson } from '../lib/salpingopharyngeus-mri';
+ import { vocalTissueTeachingLesson } from '../lib/vocal-tissue-teaching';
+ import { thoracicSystemicTeachingLesson } from '../lib/thoracic-systemic-teaching';
+@@ -114,6 +126,7 @@ import { spinalBoneUltrasoundLesson } from '../lib/spinal-bone-ultrasound';
+ import { hyoidEpiglottisUltrasoundLesson } from '../lib/hyoid-epiglottis-ultrasound';
+ import { cranialBoneXrayLesson } from '../lib/cranial-bone-xray';
+ import { facialBoneXrayLesson } from '../lib/facial-bone-xray';
++import { mandibleXrayLesson } from '../lib/mandible-xray';
+ import { suprascapularVesselUltrasoundLesson } from '../lib/suprascapular-vessel-ultrasound';
+ import { deepBrainCoreLesson } from '../lib/deep-brain-core-teaching';
+ import { footSurfaceImagingLesson } from '../lib/foot-surface-imaging';
+@@ -122,6 +135,7 @@ import { toeBoneUltrasoundLesson } from '../lib/toe-bone-ultrasound';
+ import { footUltrasoundFollowupLesson } from '../lib/foot-ultrasound-followup';
+ import { deepPlantarUltrasoundLesson } from '../lib/deep-plantar-ultrasound';
+ import { superficialMedialPlantarUltrasoundLesson } from '../lib/superficial-medial-plantar-ultrasound';
++import { foreheadNerveUltrasoundLesson } from '../lib/forehead-nerve-ultrasound';
+ import { lacrimalDrainageUltrasoundLesson } from '../lib/lacrimal-drainage-ultrasound';
+ import { abdominalRadialEusLesson } from '../lib/abdominal-radial-eus';
+ import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
+@@ -129,6 +143,7 @@ import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
+ import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
+ import { coronaryArterialUsLesson } from '../lib/coronary-arterial-us';
+ import { lacrimalDrainageImagingLesson } from '../lib/lacrimal-drainage-imaging';
++import { tongueImagingLesson } from '../lib/tongue-imaging';
+ import { laryngealImagingLesson } from '../lib/laryngeal-imaging';
+ import { laryngealMuscleTeachingLesson } from '../lib/laryngeal-muscle-teaching';
+ import { thoracicBranchImagingLesson } from '../lib/thoracic-branch-imaging';
+@@ -266,6 +281,7 @@ import { suprahyoidMuscleQuizLesson } from '../lib/suprahyoid-muscle-quiz';
+ import { thoracoacromialQuizLesson } from '../lib/thoracoacromial-quiz';
+ import { shoulderGirdleArteryQuizLesson } from '../lib/shoulder-girdle-artery-quiz';
+ import { neuroOrganQuizLesson } from '../lib/neuro-organ-quiz';
++import { oralRecallQuizLesson } from '../lib/oral-recall-quiz';
+ import { scapularMuscleQuizLesson } from '../lib/scapular-muscle-quiz';
+ import { upperLimbCompletionQuizLesson } from '../lib/upper-limb-completion-quiz';
+ import { regionalMuscleCompletionQuizLesson } from '../lib/regional-muscle-completion-quiz';
+@@ -294,6 +310,7 @@ import { shoulderArterialCtLesson } from '../lib/shoulder-arterial-ct';
+ import { handArterialCtLesson } from '../lib/hand-arterial-ct';
+ import { handArterialUltrasoundLesson } from '../lib/hand-arterial-ultrasound';
+ import { circleWillisImagingLesson } from '../lib/circle-willis-imaging';
++import { longBoneImagingLesson } from '../lib/long-bone-imaging';
+ import { kneeImagingLesson } from '../lib/knee-imaging';
+ import { bodyXrayLesson } from '../lib/xray-teaching';
+ import { spineImagingLesson } from '../lib/spine-imaging';
+@@ -427,12 +444,28 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
+ 
+ /** Readiness belongs to the authoring branch, never inferred from its title. */
+ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
++  const kidneyOrientation = kidneyOrientationLesson(s, tab);
++  if (kidneyOrientation) return kidneyOrientation;
++  const nasalSurface = nasalBoneSurfaceImagingLesson(s, tab);
++  if (nasalSurface) return nasalSurface;
++  const abdominalArterialUs = abdominalArterialUltrasoundLesson(s, tab);
++  if (abdominalArterialUs) return abdominalArterialUs;
++  const pancreaticVenousUs = bodyPancreaticVenousUsLesson(s, tab);
++  if (pancreaticVenousUs) return pancreaticVenousUs;
++  const orbitalCtOrientation = bodyOrbitalCtLesson(s, tab);
++  if (orbitalCtOrientation) return orbitalCtOrientation;
+   const dentalMri=dentalMriLesson(s,tab);
+   if(dentalMri)return dentalMri;
++  const dentalCt=dentalCtLesson(s,tab);
++  if(dentalCt)return dentalCt;
++  const stylohyoidMriContext=stylohyoidMriContextLesson(s,tab);
++  if(stylohyoidMriContext)return stylohyoidMriContext;
+   const craniofacialCalcificationCt=craniofacialCalcificationCtLesson(s,tab);
+   if(craniofacialCalcificationCt)return craniofacialCalcificationCt;
+   const arterialEvidenceLimit=arterialEvidenceLimitLesson(s,tab);
+   if(arterialEvidenceLimit)return arterialEvidenceLimit;
++  const neckLandmarkXray = neckLandmarkXrayLesson(s, tab);
++  if (neckLandmarkXray) return neckLandmarkXray;
+   const footArterialProjectionXray=footArterialProjectionXrayLesson(s,tab);
+   if(footArterialProjectionXray)return footArterialProjectionXray;
+   const footVenousArchXray=footVenousArchXrayLesson(s,tab);
+@@ -450,6 +483,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+   if (connectiveProjectionXray) return connectiveProjectionXray;
+   const nasalMri = nasalCartilageMriLesson(s, tab);
+   if (nasalMri) return nasalMri;
++  const nasalCt = nasalCartilageCtLesson(s, tab);
++  if (nasalCt) return nasalCt;
+   const lowerLimbConnectiveXray = lowerLimbConnectiveXrayLesson(s, tab);
+   if (lowerLimbConnectiveXray) return lowerLimbConnectiveXray;
+   const nasalQuiz = nasalCartilageQuizLesson(s, tab);
+@@ -460,6 +495,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+   if (pectoralUltrasound) return pectoralUltrasound;
+   const ileocolicUltrasound = ileocolicArteryUltrasoundLesson(s, tab);
+   if (ileocolicUltrasound) return ileocolicUltrasound;
++  const appendicularUltrasound = appendicularArteryUltrasoundLesson(s, tab);
++  if (appendicularUltrasound) return appendicularUltrasound;
+   const colicUltrasound = colicArteryUltrasoundLesson(s, tab);
+   if (colicUltrasound) return colicUltrasound;
+   const orbitalSupportQuiz = orbitalSupportQuizLesson(s, tab);
+@@ -492,6 +529,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+   if (elbowArterialUltrasound) return elbowArterialUltrasound;
+   const pharyngealImaging = pharyngealConstrictorImagingLesson(s, tab);
+   if (pharyngealImaging) return pharyngealImaging;
++  const pharyngealMri = pharyngealMriLesson(s, tab);
++  if (pharyngealMri) return pharyngealMri;
+   const salpingopharyngeusMri = salpingopharyngeusMriLesson(s, tab);
+   if (salpingopharyngeusMri) return salpingopharyngeusMri;
+   const thoracicSystemic = thoracicSystemicTeachingLesson(s, tab);
+@@ -512,6 +551,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+   if (deepPlantarUltrasound) return deepPlantarUltrasound;
+   const superficialMedialPlantarUltrasound = superficialMedialPlantarUltrasoundLesson(s, tab);
+   if (superficialMedialPlantarUltrasound) return superficialMedialPlantarUltrasound;
++  const foreheadNerveUltrasound = foreheadNerveUltrasoundLesson(s, tab);
++  if (foreheadNerveUltrasound) return foreheadNerveUltrasound;
+   const lacrimalDrainageUltrasound = lacrimalDrainageUltrasoundLesson(s, tab);
+   if (lacrimalDrainageUltrasound) return lacrimalDrainageUltrasound;
+   const abdominalRadialEus = abdominalRadialEusLesson(s, tab);
+@@ -599,6 +640,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+   if (shoulderGirdleArteryQuiz) return shoulderGirdleArteryQuiz;
+   const neuroOrganQuiz = neuroOrganQuizLesson(s, tab);
+   if (neuroOrganQuiz) return neuroOrganQuiz;
++  const oralRecallQuiz = oralRecallQuizLesson(s, tab);
++  if (oralRecallQuiz) return oralRecallQuiz;
+   const scapularMuscleQuiz = scapularMuscleQuizLesson(s, tab);
+   if (scapularMuscleQuiz) return scapularMuscleQuiz;
+   const upperLimbCompletionQuiz = upperLimbCompletionQuizLesson(s, tab);
+@@ -768,6 +811,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+   if (hyoidEpiglottisUltrasound) return hyoidEpiglottisUltrasound;
+   const cranialBoneXray = cranialBoneXrayLesson(s, tab);
+   if (cranialBoneXray) return cranialBoneXray;
++  const mandibleXray = mandibleXrayLesson(s, tab);
++  if (mandibleXray) return mandibleXray;
+   const facialBoneXray = facialBoneXrayLesson(s, tab);
+   if (facialBoneXray) return facialBoneXray;
+   const suprascapularVesselUltrasound = suprascapularVesselUltrasoundLesson(s, tab);
+@@ -792,8 +837,12 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+   if (thoracoacromialUltrasound) return thoracoacromialUltrasound;
+   const dorsalHandUltrasound = dorsalHandUltrasoundLesson(s, tab);
+   if (dorsalHandUltrasound) return dorsalHandUltrasound;
++  const digitalVeinUltrasound = digitalVeinUltrasoundLesson(s, tab);
++  if (digitalVeinUltrasound) return digitalVeinUltrasound;
+   const laryngealInletImaging = laryngealInletImagingLesson(s, tab);
+   if (laryngealInletImaging) return laryngealInletImaging;
++  const tongueImaging = tongueImagingLesson(s, tab);
++  if (tongueImaging) return tongueImaging;
+   const laryngealImaging = laryngealImagingLesson(s, tab);
+   if (laryngealImaging) return laryngealImaging;
+   const anteriorCardiacPathology = anteriorCardiacPathologyLesson(s, tab);
+@@ -809,6 +858,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+   const shortCiliary = shortCiliaryLesson(s, tab);
+   if (shortCiliary) return shortCiliary;
+   const neckTeaching = neckTeachingLesson(s, tab);
++  const longBoneImaging = longBoneImagingLesson(s, tab);
++  if (longBoneImaging) return longBoneImaging;
+   const majorBoneImaging = majorBoneImagingLesson(s, tab);
+   const connectiveImaging = connectiveImagingLesson(s, tab);
+   if (connectiveImaging) return connectiveImaging;
+@@ -1355,6 +1406,7 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+           title: 'Function',
+           body: functions[s.fmaId],
+           note: 'Draft teaching note · clinical/editorial review pending.',
++          ...(s.fmaId === 'FMA50801' ? {citations: ['https://openstax.org/books/anatomy-and-physiology-2e/pages/13-2-the-central-nervous-system']} : {}),
+         }
+       : {
+           readiness: 'pending',

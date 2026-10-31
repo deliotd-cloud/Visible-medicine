@@ -1,0 +1,83 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T16:35:19.905Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release20-final/SOURCE.json",
+      "sha256": "d538614316ced49e4151e03cb3a5f7594f79dc896b97248b69fc06450108fc92"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-leg-venous-xray.test.ts",
+      "sha256": "a8738db451d0726f999c6133665fabbabf87c1d7533a14e25797d90be179336e",
+      "bytes": 24549
+    },
+    {
+      "path": "website/tests/clinical-review-upper-limb-completion-quiz.test.ts",
+      "sha256": "9466382d419bf750a8de2691e5ef04b11463b58eaeab88ec397c2bf2f04b7ed9",
+      "bytes": 13989
+    },
+    {
+      "path": "website/tests/fixtures/upper-limb-dispatch-successor.patch",
+      "sha256": "a0f14d351d1ca4b51f29bb89cfd343af1b64b0c66fdd726728379bae8e8f3bc6",
+      "bytes": 13359
+    },
+    {
+      "path": "tools/release21-main/prepare-partition.mjs",
+      "sha256": "55e2f371c2b3cb4205ff27944627c0bc2b42c4450b436e2ae152bdb63a96f71f",
+      "bytes": 2357
+    },
+    {
+      "path": "tools/release21-main/record-active.mjs",
+      "sha256": "e7a5a26452fa90095b17aa4e3d5ffd25e68e8969d13342574caacafbf8cc3fd2",
+      "bytes": 2060
+    },
+    {
+      "path": "tools/release21-main/prepare-repairs.mjs",
+      "sha256": "a24810bec4a047d5df06a4f6d07699bd2f00a4ac70ffe8041f967f44fd89f514",
+      "bytes": 1592
+    },
+    {
+      "path": "tools/release21-main/integrate-repairs.mjs",
+      "sha256": "e91563465c1f75731e760dd1e2a449d67ae9752be90966bb262fb0154086f43d",
+      "bytes": 4682
+    },
+    {
+      "path": "tools/release21-main/prepare-final-check.mjs",
+      "sha256": "37fa3200e0f882bb5fddc840769a7fafb90244e8bba0744bcee55a40548aac96",
+      "bytes": 849
+    },
+    {
+      "path": "tools/release21-main/check-final.mjs",
+      "sha256": "bfd36f29020c536ec30834f64cdfc02f7972896a312322594a5c45c639246f60",
+      "bytes": 1834
+    },
+    {
+      "path": "tools/release21-main/save-prepared.mjs",
+      "sha256": "5be948d020815bdcd1448eaaa48bce21a99276e739bd572014e2a8c952192b6a",
+      "bytes": 8752
+    }
+  ],
+  "removed": [],
+  "scope": "Selected test source, a text-only historical Git patch and validation recipes. No scans, patient identifiers, models, databases, generated runtime or canonical Git ancestry. Scoped source delta only.",
+  "proof": {
+    "repairSourceFiles": 3,
+    "sourceRowsVerified": 7390,
+    "protectedInputs": 1866,
+    "focusedNativePending": true,
+    "productChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

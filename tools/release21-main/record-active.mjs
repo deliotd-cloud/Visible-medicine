@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release21-progress',queue='G:/VisibleMedicine-temp/staging/20261031-release20-followup/verification-twentyone';
+const state=json(queue+'/STATE.json');assert.equal(state.status,'running');assert.equal(state.coordinatorPid,89504);
+const pids=JSON.parse(execFileSync('powershell.exe',['-NoProfile','-Command','Get-Process -Id 89504,81528,90472 -ErrorAction Stop | Select-Object -ExpandProperty Id | ConvertTo-Json -Compress'],{encoding:'utf8',windowsHide:true}));assert.deepEqual(pids.sort((a,b)=>a-b),[81528,89504,90472]);
+const raw=fs.readFileSync('CURRENT_CHECKPOINT.json'),i=JSON.parse(raw),at=new Date().toISOString();fs.mkdirSync(cp,{recursive:true});fs.writeFileSync(cp+'/INDEX_START.json',raw,{flag:'wx'});
+const active={at,sessionId:94737,coordinatorPid:89504,stepPid:81528,supervisorPid:90472,evidence:queue+'/attempts/partition-21-aLxrQg/evidence',step:'partition-21',state:'running-observed-revalidate'};
+fs.writeFileSync(cp+'/ACTIVE.json',JSON.stringify(active,null,2)+'\n',{flag:'wx'});i.activeWork.current.activeExecutionSessions=[active];
+i.activeWork.current.next='Observe current partition21 native session94737 and do not start another heavy job while its handles remain live. Two exclusive final partition20 proposals are assigned to history_reader_pilot (upper-limb quiz) and release16_ui_checks (leg-venous X-ray). On terminal retain original evidence and integrate/verify these proposals; keep full roadmap active and owner preview unchanged.';
+i.activeWork.updated=at;i.activeWork.lastUpdated=at;saveIndex(i);console.log(JSON.stringify({recorded:cp+'/ACTIVE.json',sha256:hash(cp+'/ACTIVE.json')}));
