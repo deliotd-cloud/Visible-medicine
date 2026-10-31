@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-release-notices-successor',site=root+'/website',pin='G:/VisibleMedicine-temp/staging/20261030-website-distribution-audit/SOURCE-2.json',parent=json(pin),proposal='G:/VisibleMedicine-temp/proposals/20261030-partition4-epoch-successor/website';
+const tests=['nine-history-dispatch.mjs','atlas190-current-delivery.test.mjs','clinical-review-elbow-us-followup.test.ts','colic-current-admission.test.mjs'].map(p=>'tests/'+p);
+for(const p of tests){assert.equal(hash(site+'/'+p),parent.sourceRows.find(r=>r.path===p).sha256,p);fs.copyFileSync(proposal+'/'+p,site+'/'+p);}
+const changedPaths=['app/credits/page.tsx','LICENSES/THIRD_PARTY_NOTICES.md',...tests].sort(),addedPaths=['public/licenses/native-website-supplemental-NOTICES.txt','tests/native-website-supplemental-notices.test.mjs',...fs.readdirSync(site+'/LICENSES/native-website').map(p=>'LICENSES/native-website/'+p)].sort();
+for(const row of parent.sourceRows)if(!changedPaths.includes(row.path))assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+for(const row of json(site+'/atlas-review/integration-inputs.json').inputs)assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+const paths=[...new Set([...parent.sourcePaths,...addedPaths])].sort(),source={...parent,at:new Date().toISOString(),website:site,parent:{path:pin,sha256:hash(pin)},changedPaths,addedPaths,sourcePaths:paths,sourceRows:paths.map(p=>({path:p,sha256:hash(site+'/'+p),bytes:fs.statSync(site+'/'+p).size})),protectedInputsUnchanged:true,fullBuildPassed:false,wholeSuitePassing:false,installed:false};delete source.binding;
+fs.writeFileSync(root+'/SOURCE.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({source:hash(root+'/SOURCE.json'),changed:changedPaths.length,added:addedPaths.length,protectedInputsUnchanged:true}));

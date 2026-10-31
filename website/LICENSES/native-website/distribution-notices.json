@@ -1,0 +1,496 @@
+{
+  "schema": "vm-native-website-distribution-notices/1",
+  "scope": "Exact 34 emitted JavaScript packages in the cited final client, RSC, and SSR inventory. Other website assets and hosted services are outside this inventory.",
+  "distributionInventorySha256": "405282d8b26677576ce586bcdcffc495a08f1c469a3bf2c5f98aed4d849b9da7",
+  "packages": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.7",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@babel/runtime/package.json",
+      "packageJsonSha256": "8c4bf20c55e3f3a93df034b12746bf72185cf2acb0ef52847a3465d6e67c61e7",
+      "repository": "https://github.com/babel/babel",
+      "texts": [
+        {
+          "path": "node_modules/@babel/runtime/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ]
+    },
+    {
+      "name": "@base-ui/react",
+      "version": "1.7.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@base-ui/react/package.json",
+      "packageJsonSha256": "e0edeb865fbb7b8675c28cc5f7e316b5d0f79f018fb7fe717dd8c666c77653a2",
+      "repository": "https://github.com/mui/base-ui",
+      "texts": [
+        {
+          "path": "node_modules/@base-ui/react/LICENSE",
+          "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a"
+        }
+      ]
+    },
+    {
+      "name": "@base-ui/utils",
+      "version": "0.3.2",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@base-ui/utils/package.json",
+      "packageJsonSha256": "d7838436f2b42434fc238a4c6c532963b4dda25c70dc5fb39869f20bf8e3454f",
+      "repository": "https://github.com/mui/base-ui",
+      "texts": [
+        {
+          "path": "node_modules/@base-ui/utils/LICENSE",
+          "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a"
+        }
+      ]
+    },
+    {
+      "name": "@bufbuild/protobuf",
+      "version": "1.10.1",
+      "license": "(Apache-2.0 AND BSD-3-Clause)",
+      "packageJsonPath": "node_modules/@bufbuild/protobuf/package.json",
+      "packageJsonSha256": "e2c9339229089aa0d358904a22aa05a4a7295bdfbfff31e53e19cec8ae26e1f8",
+      "repository": "https://github.com/bufbuild/protobuf-es",
+      "texts": [
+        {
+          "path": "LICENSES/native-website/protobuf-1.10.1-Apache-LICENSE.txt",
+          "sha256": "6da19f017fad6716cbc9c938972ebee29957c295b8a4d51060dfb03da51d8502",
+          "sourceUrl": "https://raw.githubusercontent.com/bufbuild/protobuf-es/e31c1b139cf1e7fea2fb914f650af3c28c42ec68/LICENSE"
+        },
+        {
+          "path": "LICENSES/native-website/protobuf-1.10.1-Buf-NOTICE.txt",
+          "sha256": "2e3d677486a638eba6a11df63192f604b231418005fc84ba652a050539c98e1b",
+          "sourceUrl": null
+        },
+        {
+          "path": "LICENSES/native-website/protobuf-1.10.1-Google-BSD-NOTICE.txt",
+          "sha256": "0e952cb110ff6944789fbe47c25b38819a3866c04c7c5cbea8d0c0d8f3a92f0e",
+          "sourceUrl": null
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@floating-ui/core/package.json",
+      "packageJsonSha256": "2f24216dd2a32b10e6c868173832a0667c3cdbee92886797b219aadac48d8b99",
+      "repository": "https://github.com/floating-ui/floating-ui",
+      "texts": [
+        {
+          "path": "node_modules/@floating-ui/core/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@floating-ui/react-dom/node_modules/@floating-ui/dom/package.json",
+      "packageJsonSha256": "59643af1b1bfc5a80b172c21ccbe21ea56eaa0115378f6077d9934458db25ac1",
+      "repository": "https://github.com/floating-ui/floating-ui",
+      "texts": [
+        {
+          "path": "node_modules/@floating-ui/react-dom/node_modules/@floating-ui/dom/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@floating-ui/react-dom/package.json",
+      "packageJsonSha256": "cec22283072350feca124ff36678d69127725048cdca2a4cf0deb75d69dba3a8",
+      "repository": "https://github.com/floating-ui/floating-ui",
+      "texts": [
+        {
+          "path": "node_modules/@floating-ui/react-dom/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@floating-ui/utils/package.json",
+      "packageJsonSha256": "b2138e8855520f4313f26ace0d93a9a9c9e6a862f0299a5aeaccb2370dd1bf40",
+      "repository": "https://github.com/floating-ui/floating-ui",
+      "texts": [
+        {
+          "path": "node_modules/@floating-ui/utils/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@livekit/components-react",
+      "version": "2.9.24",
+      "license": "Apache-2.0",
+      "packageJsonPath": "node_modules/@livekit/components-react/package.json",
+      "packageJsonSha256": "9eb5a1cc213e8db765cdab59154e63de4caace5ba79020568532f98f9cd86463",
+      "repository": "https://github.com/livekit/components-js",
+      "texts": [
+        {
+          "path": "node_modules/@livekit/components-react/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "name": "@livekit/components-styles",
+      "version": "1.2.0",
+      "license": "Apache-2.0",
+      "packageJsonPath": "node_modules/@livekit/components-styles/package.json",
+      "packageJsonSha256": "1e6fff929291b5bd2145c18e40c7a9a443a2888215dad343abed7bf5ab481985",
+      "repository": "https://github.com/livekit/components-js",
+      "texts": [
+        {
+          "path": "node_modules/@livekit/components-styles/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "name": "@livekit/protocol",
+      "version": "1.48.0",
+      "license": "Apache-2.0",
+      "packageJsonPath": "node_modules/livekit-server-sdk/node_modules/@livekit/protocol/package.json",
+      "packageJsonSha256": "72643edd3c1693bc29bc3c1db38b0f9a41cb2b590b350d517729434e051532fe",
+      "repository": "https://github.com/livekit/protocol",
+      "texts": [
+        {
+          "path": "node_modules/livekit-server-sdk/node_modules/@livekit/protocol/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "name": "@noble/hashes",
+      "version": "2.4.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@noble/hashes/package.json",
+      "packageJsonSha256": "3e361734f5269de162fa362483d7f45dee7efb533ec217157945338f7591baaf",
+      "repository": "https://github.com/paulmillr/noble-hashes",
+      "texts": [
+        {
+          "path": "node_modules/@noble/hashes/LICENSE",
+          "sha256": "4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec"
+        }
+      ]
+    },
+    {
+      "name": "@react-three/drei",
+      "version": "10.7.8",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@react-three/drei/package.json",
+      "packageJsonSha256": "7e38b2dec648fc3841c20f4e545fa531417fcc594e1a03a9ebecd577dedf3f31",
+      "repository": "https://github.com/pmndrs/drei",
+      "texts": [
+        {
+          "path": "node_modules/@react-three/drei/LICENSE",
+          "sha256": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8"
+        }
+      ]
+    },
+    {
+      "name": "@react-three/fiber",
+      "version": "9.7.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@react-three/fiber/package.json",
+      "packageJsonSha256": "55c4839a93229f0592357355c66db8dcfa50247a0d1c2201c4b316fa4515d62a",
+      "repository": "https://github.com/pmndrs/react-three-fiber",
+      "texts": [
+        {
+          "path": "LICENSES/native-website/react-three-fiber-9.7.0-LICENSE.txt",
+          "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a",
+          "sourceUrl": "https://github.com/pmndrs/react-three-fiber/blob/v9.7.0/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vitejs/plugin-rsc",
+      "version": "0.5.34",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/@vitejs/plugin-rsc/package.json",
+      "packageJsonSha256": "ac393862a23c5e93b3117be58055e26ffb6645c102d228c879194d20fa1bb128",
+      "repository": "https://github.com/vitejs/vite-plugin-react",
+      "texts": [
+        {
+          "path": "LICENSES/native-website/vite-plugin-rsc-0.5.34-LICENSE.txt",
+          "sha256": "29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5",
+          "sourceUrl": "https://raw.githubusercontent.com/vitejs/vite-plugin-react/72f1fc7cf003fb0a5309f9238d2d604674298e8c/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "license": "Apache-2.0",
+      "packageJsonPath": "node_modules/class-variance-authority/package.json",
+      "packageJsonSha256": "f487885eb010b36aec829ab8fb5fc845918006c4633e3c88c750e73bd35c6381",
+      "repository": "https://github.com/joe-bell/cva",
+      "texts": [
+        {
+          "path": "node_modules/class-variance-authority/LICENSE",
+          "sha256": "0ccbf956cffc8dcf515809433cb5242ee67c94513d46e48c261d68d0880de406"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/clsx/package.json",
+      "packageJsonSha256": "a5e616b9883177fb47c1fca22b6a4ab42be1c3ed6ffae8595a5c7d88630eeec2",
+      "repository": null,
+      "texts": [
+        {
+          "path": "node_modules/clsx/license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "name": "its-fine",
+      "version": "2.1.1",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/its-fine/package.json",
+      "packageJsonSha256": "97c65cc11d8ec38c071bcf1e37ea13c5da651c5ee1f439b422b5d375cf117b9a",
+      "repository": "https://github.com/pmndrs/its-fine",
+      "texts": [
+        {
+          "path": "node_modules/its-fine/LICENSE",
+          "sha256": "643123eeb38f154d93cb8323e1289a648d3f343b411a9340453c010e325d0c82"
+        }
+      ]
+    },
+    {
+      "name": "jose",
+      "version": "5.10.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/livekit-server-sdk/node_modules/jose/package.json",
+      "packageJsonSha256": "3cb0f73674b50b4e99f35c883e10c9e541e3b8d20368825379515547af1d804d",
+      "repository": null,
+      "texts": [
+        {
+          "path": "node_modules/livekit-server-sdk/node_modules/jose/LICENSE.md",
+          "sha256": "8078b0829d6c3e9ecde2f003e1966e4cad3efc6e7a640efbab0313cc166b1af1"
+        }
+      ]
+    },
+    {
+      "name": "livekit-client",
+      "version": "2.22.0",
+      "license": "Apache-2.0",
+      "packageJsonPath": "node_modules/livekit-client/package.json",
+      "packageJsonSha256": "db5f5d74d778b437f97ef0499a8d116ded93add7e87926ba93faf9e9e9e5bbb9",
+      "repository": "https://github.com/livekit/client-sdk-js",
+      "texts": [
+        {
+          "path": "node_modules/livekit-client/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        }
+      ]
+    },
+    {
+      "name": "livekit-server-sdk",
+      "version": "2.18.0",
+      "license": "Apache-2.0",
+      "packageJsonPath": "node_modules/livekit-server-sdk/package.json",
+      "packageJsonSha256": "561140460bf13445d4da220a4ba932187fefabe47efd40cbddd9ac35dc884273",
+      "repository": "https://github.com/livekit/node-sdks",
+      "texts": [
+        {
+          "path": "node_modules/livekit-server-sdk/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.31.0",
+      "license": "ISC",
+      "packageJsonPath": "node_modules/lucide-react/package.json",
+      "packageJsonSha256": "b356bf035eaa75c7b710c82bec2a34546a73e86bb1678467d4ca29946590df77",
+      "repository": "https://github.com/lucide-icons/lucide",
+      "texts": [
+        {
+          "path": "node_modules/lucide-react/LICENSE",
+          "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.8",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/react-dom/package.json",
+      "packageJsonSha256": "7c82f0967114d4b5d38b1f07e543af87c9919e8d3243f9604004819319cb2200",
+      "repository": "https://github.com/react/react",
+      "texts": [
+        {
+          "path": "node_modules/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-server-dom-webpack",
+      "version": "19.2.8",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/react-server-dom-webpack/package.json",
+      "packageJsonSha256": "01876fc4c79780370574579eff057d32d6cf909e5e342b87d63661ff19baf8ef",
+      "repository": "https://github.com/react/react",
+      "texts": [
+        {
+          "path": "node_modules/react-server-dom-webpack/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-use-measure",
+      "version": "2.1.7",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/react-use-measure/package.json",
+      "packageJsonSha256": "a333d0e78edb65ebc66e9ff5a44199dd446754f3ff0f18760b5b124233dbb852",
+      "repository": "https://github.com/pmndrs/react-use-measure",
+      "texts": [
+        {
+          "path": "node_modules/react-use-measure/LICENSE",
+          "sha256": "1f9038eff8dbd6505a26f9d6830cc6da2b87ab1a9305d1100884986e9c11a31a"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "19.2.8",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/react/package.json",
+      "packageJsonSha256": "e40c3ed9b633c9ecf188e09a4be309780a1ea0a9c068278a30ff6a27e7b2dbb6",
+      "repository": "https://github.com/react/react",
+      "texts": [
+        {
+          "path": "node_modules/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/scheduler/package.json",
+      "packageJsonSha256": "393bb96b7e481bf50189a1a02c7e0e7f4d01acba5abc6fbe7d214638624462fc",
+      "repository": "https://github.com/facebook/react",
+      "texts": [
+        {
+          "path": "node_modules/scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "suspend-react",
+      "version": "0.1.3",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/suspend-react/package.json",
+      "packageJsonSha256": "69ae8a1a5bdc088a46a7dfbbb3162145b3cbc2f448815bbfcfcf94d23e1e6031",
+      "repository": null,
+      "texts": [
+        {
+          "path": "node_modules/suspend-react/LICENSE",
+          "sha256": "997e79b828d8b85d6f18730c8dbf58074811360a199506bd84e1263e17c227a2"
+        }
+      ]
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.6.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/tailwind-merge/package.json",
+      "packageJsonSha256": "dd8a34386cdd58744a48027a30fc75103d8bf246cbbb4aa90f0b2333b25818b6",
+      "repository": "https://github.com/dcastil/tailwind-merge",
+      "texts": [
+        {
+          "path": "node_modules/tailwind-merge/LICENSE.md",
+          "sha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+        }
+      ]
+    },
+    {
+      "name": "three-stdlib",
+      "version": "2.36.1",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/three-stdlib/package.json",
+      "packageJsonSha256": "a9e0fc21ca2978776b273b04b6b6c82e3edb69a74452c1c6d03551c2ac63b364",
+      "repository": "https://github.com/pmndrs/three-stdlib",
+      "texts": [
+        {
+          "path": "node_modules/three-stdlib/LICENSE",
+          "sha256": "28eb7edf059a39094aa3d169db1fec46ac4a6279c921a90f965828d92ec86e79"
+        }
+      ]
+    },
+    {
+      "name": "three",
+      "version": "0.185.1",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/three/package.json",
+      "packageJsonSha256": "1d5c438acdc1fe5a52fb8ede2e417afd91fec91d22275c40f7b739591b24e4df",
+      "repository": "https://github.com/mrdoob/three.js",
+      "texts": [
+        {
+          "path": "node_modules/three/LICENSE",
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        }
+      ]
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/use-sync-external-store/package.json",
+      "packageJsonSha256": "ba3694aec166f2f53612c4978bc85fb31dd4eee75a2eccc1ad1a1cc49c9428d2",
+      "repository": "https://github.com/react/react",
+      "texts": [
+        {
+          "path": "node_modules/use-sync-external-store/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "vinext",
+      "version": "1.0.0-beta.8",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/vinext/package.json",
+      "packageJsonSha256": "c5563e8430c11e889387222cc07c8a9d08da911dc41e4273a7297ef06265b6f6",
+      "repository": "https://github.com/cloudflare/vinext",
+      "texts": [
+        {
+          "path": "node_modules/vinext/LICENSE",
+          "sha256": "19a7b85046eb77c8ab308c68569abbbb59235814297b9c95dc90480f71ec7198"
+        }
+      ]
+    },
+    {
+      "name": "zustand",
+      "version": "5.0.15",
+      "license": "MIT",
+      "packageJsonPath": "node_modules/zustand/package.json",
+      "packageJsonSha256": "b53b4d5e7f6baeb1e832792390354f8af54edaefbd6fe23b490a4d2d2e37dff1",
+      "repository": "https://github.com/pmndrs/zustand",
+      "texts": [
+        {
+          "path": "node_modules/zustand/LICENSE",
+          "sha256": "c1e6e266563517467b1bf874817d23e426f3149252bd7d42758cd697514b8417"
+        }
+      ]
+    }
+  ]
+}
