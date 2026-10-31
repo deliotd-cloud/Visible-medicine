@@ -1,0 +1,87 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T10:42:30.811Z",
+  "sourceIdentity": {
+    "proposalSha256": "6ddb0d4a171492b974b29c3120eafd791b96904d06acae332faaac6c3e849507",
+    "parentSourceSha256": "c4f7e16e9b8324e78e7d37dda618f4481773664b76e168b8c90fb435049b9cc0"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/clinical-review-quick-start.ts",
+      "bytes": 6284,
+      "sha256": "2af7b7b7cb8ae6c44527a86ddd48c4c965a816c276cfb51ed7326946ee2c436e"
+    },
+    {
+      "path": "website/tests/clinical-review-quick-start.test.mjs",
+      "bytes": 14552,
+      "sha256": "905b49efe2c9ff8d315c3a33fcc6097e27ef0426444577cf159f92dba410cb9d"
+    },
+    {
+      "path": "tools/review-multiple-source-ids/prepare.mjs",
+      "bytes": 2017,
+      "sha256": "2785148ec66fec2b911291663a57ede7ef91830a87669b6e1c7bafb3973b6142"
+    },
+    {
+      "path": "tools/review-multiple-source-ids/verify.mjs",
+      "bytes": 4016,
+      "sha256": "139d59c62f62dd08998809a218b841c66711aa66974c5afb955bcd02e643e8fe"
+    },
+    {
+      "path": "tools/review-multiple-source-ids/finalize-verification.mjs",
+      "bytes": 2396,
+      "sha256": "9fcf4d00527b43b2b6d3773647a4efd0b7d89d946dd768285dcd5f0fde1294da"
+    },
+    {
+      "path": "tools/review-multiple-source-ids/new-cases.mjs",
+      "bytes": 3069,
+      "sha256": "1da076b64d8ac5f1d2bd1c86b948c522be2712ea0bd0bd8b23a0345db9c01f14"
+    },
+    {
+      "path": "tools/validation/memory-admission.mjs",
+      "bytes": 1019,
+      "sha256": "81a53c4c5f93b5d88b595f65258d404dddaf5ea6b81a5c3d884943b125320954"
+    },
+    {
+      "path": "tools/validation/memory-admission.test.mjs",
+      "bytes": 2290,
+      "sha256": "327b227c3faa22980fdf5bd79a38a4990755a31f37bf9225cb3af60d30d4abb1"
+    },
+    {
+      "path": "tools/validation/native-memory.mjs",
+      "bytes": 454,
+      "sha256": "565b2a00dfa9bcd075b55b48866430394727b4d0ab34f5e8f5f4ded56522f807"
+    },
+    {
+      "path": "tools/validation/native-memory.test.mjs",
+      "bytes": 1490,
+      "sha256": "9f2957da6691d3ef09b1daa509fe3d7127991fe161c21edc6288920e1a4a5c57"
+    },
+    {
+      "path": "tools/recovery/recovery-text-compression.mjs",
+      "bytes": 4023,
+      "sha256": "132b6ce6150caebf35e46652e9adc87b62f4b21d9086681696962e22707a1866"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected Quick review display correction and original low-memory validation/recovery helper source. Other product work, data, dependencies and private histories are not included.",
+  "proof": {
+    "proposalSha256": "6ddb0d4a171492b974b29c3120eafd791b96904d06acae332faaac6c3e849507",
+    "verificationSha256": "96aa15f63a152cd4bae478da4df827552716d6a4f6043a02f39b30bda04651c5",
+    "beforePass": 12,
+    "beforeFail": 2,
+    "afterPass": 14,
+    "afterFail": 0,
+    "existingCasesUnchanged": 11,
+    "admissionHelperTests": 9,
+    "clinicalApproval": false,
+    "fullBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
