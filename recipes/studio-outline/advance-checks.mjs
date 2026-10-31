@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-studio-outline-roundtrip',pin=root+'/SOURCE_FINAL.json',s=json(pin),site=s.website;
+for(const r of s.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const old='62a6c880bdc7d4ec35393d8dbc580022176b17f5e7a1dc913da39b325c6dc6a0',next=hash(site+'/components/StudioCourseEditor.tsx');assert.equal(next,'b6b82e486236319c8bc37fd2d805a223d771a3374467bedb6f360312c72793cb');
+const historical='tests/studio-draft-dependency-source.mjs',added='tests/studio-outline-draft-dependency-source.mjs',test='tests/studio-course-draft-discard.test.mjs';
+const code=fs.readFileSync(site+'/'+historical,'utf8');assert.equal(code.split(old).length,2);
+const note='// Current outline-return editor binding. The original cf587b source loader remains unchanged for historical replay.\n';
+fs.writeFileSync(site+'/'+added,note+code.replace(old,next),{flag:'wx'});
+const body=fs.readFileSync(site+'/'+test,'utf8');assert.equal(body.split("'./studio-draft-dependency-source.mjs'").length,2);fs.writeFileSync(site+'/'+test,body.replace("'./studio-draft-dependency-source.mjs'","'./studio-outline-draft-dependency-source.mjs'"));
+const base=json(s.parent.path),oldRows=new Map(base.sourceRows.map(r=>[r.path,r.sha256])),paths=[...s.sourcePaths,added].sort(),rows=paths.map(path=>({path,sha256:hash(site+'/'+path),bytes:fs.statSync(site+'/'+path).size}));
+const result={...s,at:new Date().toISOString(),priorAttempt:{path:pin,sha256:hash(pin),result:{path:root+'/FOCUSED_RESULT.json',sha256:hash(root+'/FOCUSED_RESULT.json')}},sourceRows:rows,sourcePaths:paths,addedPaths:rows.filter(r=>!oldRows.has(r.path)).map(r=>r.path),changedPaths:rows.filter(r=>oldRows.has(r.path)&&oldRows.get(r.path)!==r.sha256).map(r=>r.path),currentDraftDependencyBinding:{historicalLoader:{path:historical,sha256:hash(site+'/'+historical)},currentLoader:{path:added,sha256:hash(site+'/'+added)},onlyBindingChanged:'components/StudioCourseEditor.tsx',from:old,to:next,originalAssertionsUnchanged:true},wholeSuitePassing:false};
+fs.writeFileSync(root+'/SOURCE_READY.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+let runner=fs.readFileSync(root+'/focused.mjs','utf8').replace("pin=root+'/SOURCE_FINAL.json'","pin=root+'/SOURCE_READY.json'").replaceAll('/FOCUSED','/FOCUSED2');fs.writeFileSync(root+'/focused-2.mjs',runner,{flag:'wx'});
+console.log(JSON.stringify({sourceSha256:hash(root+'/SOURCE_READY.json'),historicalLoaderUnchanged:hash(site+'/'+historical)===s.sourceRows.find(r=>r.path===historical).sha256,productUnchanged:s.sourceRows.filter(r=>!r.path.startsWith('tests/')).every(r=>hash(site+'/'+r.path)===r.sha256)}));

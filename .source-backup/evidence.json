@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-31T01:23:08.147Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-studio-outline-and-head-history/head/SOURCE2.json",
+    "sha256": "35c26870f679ba19d0fb1c212c2a61ecb1c8ee072e187d11c360c9e6aeb9cd6f"
+  },
+  "studioSource": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-studio-outline-and-head-history/studio/SOURCE_READY.json",
+    "sha256": "601e44e5e6cab701aa6b21abc1c422c98a5a0456d5f6a56bfd3c34522d90e52f"
+  },
+  "studio": {
+    "focused": 106,
+    "scopedTypesPassed": true,
+    "fullProjectTypesPassed": false,
+    "productionBuildPassed": true,
+    "syntheticBrowserChecks": 5,
+    "signedInAcceptance": false,
+    "behavior": "Title and content-kind filters survive course to editor to course. Clear removes returned filter parameters. Exact course matching and existing authoring access remain."
+  },
+  "head": {
+    "focused": 197,
+    "productChanged": false,
+    "actualLayoutSelectTested": true
+  },
+  "stock": {
+    "partition6": {
+      "pass": 212,
+      "fail": 0
+    },
+    "partition7": {
+      "pass": 265,
+      "fail": 213
+    },
+    "laterFocusedRepairsPass": 197,
+    "stockRerunPending": true,
+    "remainingGroups": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-studio-outline-and-head-history/release-audit/AUDIT.md",
+      "sha256": "2b123e92edb63561a649d791f30b4c887c40134b1823aeccf0db9c433ac651e2"
+    }
+  },
+  "buildAndBrowserProductEquivalenceVerified": true,
+  "reviewIntegration": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+  "installedReview": "3648a75bdf7543a29047e74193231fad27afd450d9b0ebc7164393ba2a0d3b2f",
+  "protectedReviewUnchanged": true,
+  "wholeSuitePassing": false,
+  "installed": false,
+  "ownerPreviewChanged": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
