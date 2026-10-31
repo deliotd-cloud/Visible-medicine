@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-studio-outline-roundtrip',site=root+'/website',initial=json(root+'/SOURCE.json'),pin=initial.parent.path,base=json(pin),addon='G:/VisibleMedicine-temp/proposals/20261031-studio-outline-roundtrip/harness-addon';
+const m=json(addon+'/MANIFEST.json');assert.equal(m.baseline.sha256,hash(root+'/SOURCE.json'));
+for(const row of m.rows){assert(/^tests\/studio-[a-z0-9-]+\.test\.(?:mjs|ts)$/.test(row.path));assert.equal(hash(site+'/'+row.path),row.baseSha256);assert.equal(hash(addon+'/website/'+row.path),row.sha256);fs.copyFileSync(addon+'/website/'+row.path,site+'/'+row.path);}
+const old=new Map(base.sourceRows.map(r=>[r.path,r.sha256])),rows=initial.sourceRows.map(r=>({path:r.path,sha256:hash(site+'/'+r.path),bytes:fs.statSync(site+'/'+r.path).size}));
+const changed=rows.filter(r=>old.has(r.path)&&old.get(r.path)!==r.sha256).map(r=>r.path),added=rows.filter(r=>!old.has(r.path)).map(r=>r.path);
+const binding=json(site+'/atlas-review/integration-inputs.json');for(const r of binding.inputs)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const source={...initial,at:new Date().toISOString(),parent:{path:pin,sha256:hash(pin)},initialStaging:{path:root+'/SOURCE.json',sha256:hash(root+'/SOURCE.json')},harnessAddon:{path:addon+'/MANIFEST.json',sha256:hash(addon+'/MANIFEST.json')},mainCorrections:['Builder direct entry tolerates omitted searchParams; adds direct-entry and access-refusal regressions.'],sourceRows:rows,sourcePaths:rows.map(r=>r.path),changedPaths:changed,addedPaths:added,reviewBindingUnchanged:true,installed:false};
+fs.writeFileSync(root+'/SOURCE_FINAL.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({sha256:hash(root+'/SOURCE_FINAL.json'),changed:changed.length,added:added.length,protectedReviewUnchanged:true}));

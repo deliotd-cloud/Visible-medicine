@@ -1,0 +1,58 @@
+{
+  "at": "2026-10-31T01:51:43.453Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-anatomy-release-epochs/verified/SOURCE2.json",
+    "sha256": "a4a8e70bd6c17d8960f8f056f64558ced5756095c1a40501d636a6d06dca6356"
+  },
+  "focused": {
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "originalHistoricalCases": 4,
+    "roots": [
+      "clinical-review-portal-venous-xray.test.ts",
+      "clinical-review-portal-venous-current-admission.test.mjs",
+      "portal-current-shoulder-source.test.mjs",
+      "clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "clinical-review-thoracoacromial-ultrasound.test.ts",
+      "inferior-thyroid-mra-current-delivery.test.mjs",
+      "ui-teaching-admission-contract.test.mjs",
+      "clinical-epoch-batch-d-preservation.test.mjs"
+    ]
+  },
+  "portal": {
+    "historicalPlacements": 9936,
+    "changedPlacements": 4,
+    "historicalPackets": 1104,
+    "changedPackets": 4,
+    "staleAndForgedRefusalsVerified": true,
+    "currentTeachingAndBoundReviewVerified": true
+  },
+  "shoulder": {
+    "quizSelections": 8,
+    "ultrasoundSelections": 6
+  },
+  "thyroid": {
+    "historicalPendingMraTargets": 2,
+    "currentImportedDispatcherVerified": true
+  },
+  "productUnchanged": true,
+  "buildProductEquivalentTo": {
+    "path": "G:/VisibleMedicine-temp/staging/20261031-studio-outline-roundtrip/SOURCE_READY.json",
+    "sha256": "601e44e5e6cab701aa6b21abc1c422c98a5a0456d5f6a56bfd3c34522d90e52f"
+  },
+  "reviewIntegration": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+  "installedReview": "3648a75bdf7543a29047e74193231fad27afd450d9b0ebc7164393ba2a0d3b2f",
+  "failedAttemptsRetained": true,
+  "licenceEvidence": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-anatomy-release-epochs/licence-evidence/EVIDENCE.json",
+    "sha256": "a8afebb74610ec8e82de351aab0c0425b1db2b44117feabecc47978fb72eb19d"
+  },
+  "licenceFinding": "Both installed unpic package versions match official npm tarballs. Exact applicable notice texts remain unverified; no clearance. Resolve notice applicability or remove use through the owned source pipeline.",
+  "wholeSuitePassing": false,
+  "stockRerunPending": true,
+  "installed": false,
+  "ownerPreviewChanged": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
