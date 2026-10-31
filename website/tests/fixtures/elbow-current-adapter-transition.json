@@ -1,0 +1,48 @@
+{
+  "schema": "vm-elbow-current-adapter-transition/1",
+  "beforeSha256": "2634cef4dc4e8c916cbe82d6ccb1d7d8068db259fb6b9f28dd8d3be11f8e6f65",
+  "afterSha256": "281e69d3ce22f0571a87c4ea0c041ff28900588bb03f64e8184104837cfdf230",
+  "beforeLines": 49,
+  "afterLines": 74,
+  "seams": [
+    {
+      "beforeStart": 5,
+      "afterStart": 5,
+      "before": [],
+      "after": [
+        "export function restoreLaterElbowEpoch(bytes){\n",
+        " const witness=readFileSync(new URL('./fixtures/elbow-later-current-epoch-seams.json',import.meta.url));\n",
+        " assert.equal(sha(witness),'f7983f44becf2327d02ccd9fe3b157e4d53b23c84bb542cd2f362f05e07acbc4',\n",
+        "  'Exact independently witnessed later elbow seams');\n",
+        " const proof=JSON.parse(witness);\n",
+        " assert.equal(proof.schema,'vm-elbow-later-current-epoch-seams/1');\n",
+        " assert.equal(proof.currentSha256,'eddc3c4ae42e954aba37176ac0eeda8549b8e676c99702b03adcab8cb5e064bb');\n",
+        " assert.equal(proof.historicalSha256,'8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776');\n",
+        " assert.equal(sha(bytes),proof.currentSha256,'Exact later elbow source bytes');\n",
+        " const text=bytes.toString('utf8');\n",
+        " assert.deepEqual(Buffer.from(text),bytes,'Lossless later elbow UTF-8 source');\n",
+        " const lines=text.match(/[^\\n]*\\n|[^\\n]+$/g)||[];\n",
+        " assert.equal(lines.length,proof.currentLines);\n",
+        " assert.equal(proof.seams.length,6,'Only six declared later elbow hunks');\n",
+        " for(const seam of [...proof.seams].reverse()){\n",
+        "  assert.deepEqual(lines.slice(seam.afterStart,seam.afterStart+seam.after.length),seam.after,\n",
+        "   'Exact later elbow hunk');\n",
+        "  lines.splice(seam.afterStart,seam.after.length,...seam.before);\n",
+        " }\n",
+        " assert.equal(lines.length,proof.historicalLines);\n",
+        " const restored=Buffer.from(lines.join(''));\n",
+        " assert.equal(sha(restored),proof.historicalSha256,'Earlier current elbow role recovered exactly');\n",
+        " return restored;\n",
+        "}\n"
+      ]
+    },
+    {
+      "beforeStart": 32,
+      "afterStart": 56,
+      "before": [],
+      "after": [
+        " if(name==='clinical-review-elbow-us-followup.test.ts')currentBytes=restoreLaterElbowEpoch(currentBytes);\n"
+      ]
+    }
+  ]
+}

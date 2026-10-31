@@ -1,0 +1,193 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T13:37:53.370Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release14-inverses/SOURCE.json",
+      "sha256": "79e1fd2c00d770a75ff365ba761423b7f37bc42006b38c3eb9b0650458ed0079"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-abdominal-fold-ultrasound.test.ts",
+      "sha256": "f4adaa89ed0f39adca1f91ddca6d35f076267f299fdfe075267c41634485bb8a",
+      "bytes": 10877
+    },
+    {
+      "path": "website/tests/abdominal-fold-title-transition.mjs",
+      "sha256": "d43fd2841e026b6796a7089ad3939779081f734dd7f2b40b8840f0d52e6e2ebd",
+      "bytes": 1365
+    },
+    {
+      "path": "website/tests/abdominal-fold-title-transition.test.mjs",
+      "sha256": "0e69158513cf52d52178d42a3613119fce1b1865b727c5c5bc30476bf35f5f52",
+      "bytes": 1775
+    },
+    {
+      "path": "website/tests/current-private-review-binding.test.mjs",
+      "sha256": "d3175708025de9568968135dc04795827af494e8c6531d3b274ae3ed625a8c4f",
+      "bytes": 13888
+    },
+    {
+      "path": "website/tests/clinical-review-colic-arterial-xray.test.ts",
+      "sha256": "5ec048fe4cf32fd2480334355610bae3fc411d1ff68f3f0e0560639b5f2e088c",
+      "bytes": 24003
+    },
+    {
+      "path": "website/tests/clinical-review-femoral-venous-xray.test.ts",
+      "sha256": "a1b4d75239f6c876e29ce9a3859ccf2e79cf93497d3090be762808d0b033c3d3",
+      "bytes": 22868
+    },
+    {
+      "path": "website/tests/admission-current-guide-epoch.mjs",
+      "sha256": "9b1248bac4e0b82c7800ea1adcab20df27dc65b24ebdc5c0eacdd663620e122a",
+      "bytes": 2529
+    },
+    {
+      "path": "website/tests/head-practice-exit-later-viewer.mjs",
+      "sha256": "b017eb03d2a4bde28ddc278ec5115734b21ca2cd8b1a5c661a3a99b4726f6408",
+      "bytes": 4234
+    },
+    {
+      "path": "website/tests/head-practice-exit-current-viewer.mjs",
+      "sha256": "eb546800a5e3d3e3a373ee71602eacb0975a3e22ae9b8d82521ce2c31d35cbb8",
+      "bytes": 2993
+    },
+    {
+      "path": "website/tests/current-epoch-source-adapter.mjs",
+      "sha256": "281e69d3ce22f0571a87c4ea0c041ff28900588bb03f64e8184104837cfdf230",
+      "bytes": 5650
+    },
+    {
+      "path": "website/tests/arterial-current-role-inverse.mjs",
+      "sha256": "d7bb578aac3161f89f319437f6b208af7cf2133f3874a1054e6d1855cd567194",
+      "bytes": 5529
+    },
+    {
+      "path": "website/tests/elbow-us-followup-preservation.test.mjs",
+      "sha256": "1af22c0a7ad53d96feeb4ff790444e607dfbea3e8b4f2b37ff9a556024ffd5ac",
+      "bytes": 13795
+    },
+    {
+      "path": "website/tests/fixtures/elbow-later-current-epoch-seams.json",
+      "sha256": "f7983f44becf2327d02ccd9fe3b157e4d53b23c84bb542cd2f362f05e07acbc4",
+      "bytes": 3430
+    },
+    {
+      "path": "website/tests/fixtures/elbow-current-adapter-transition.json",
+      "sha256": "b8ae542c0d144dc9313a32cd401734309729ccdf433f1d439a53789d516e3003",
+      "bytes": 2415
+    },
+    {
+      "path": "tools/release14/analyze.mjs",
+      "sha256": "06de6d0eccebd09ce9f509f374753132e614a02dac881c050c0a00b1d163e693",
+      "bytes": 4051
+    },
+    {
+      "path": "tools/release14/check-abdominal.mjs",
+      "sha256": "b387e4207b23c73133e2d71990be8d10614c5c991afd0a11915a795a4ae2518e",
+      "bytes": 1912
+    },
+    {
+      "path": "tools/release14/check-inverse-baseline.mjs",
+      "sha256": "c0e02619e40be82790d14e556591352787fd5da96082c91c007f42309f5d73d0",
+      "bytes": 728
+    },
+    {
+      "path": "tools/release14/check-inverses.mjs",
+      "sha256": "cf05be228712716ee09fe5f469b9248a0725d607ce35f7ada85249c7e746faaf",
+      "bytes": 2075
+    },
+    {
+      "path": "tools/release14/check-review-admissions.mjs",
+      "sha256": "10c165c78bf4d2bbdd267c6bbb0d7b7aa0822b7c1c28b52077d51eec06596a0c",
+      "bytes": 1965
+    },
+    {
+      "path": "tools/release14/integrate-inverses.mjs",
+      "sha256": "fc50aaa01f22acf00a0bea02d40c488fcf4fb9c7e64966a37b578319308bd299",
+      "bytes": 3599
+    },
+    {
+      "path": "tools/release14/prepare-abdominal.mjs",
+      "sha256": "8cfa1ae4a9360d6a24beac1cf072a289afd553182d5159c5e284a3833b3211a8",
+      "bytes": 3727
+    },
+    {
+      "path": "tools/release14/prepare-inverse-check.mjs",
+      "sha256": "f6556458821c123378ff2e0a6a2cd6473ccd680e8b638f760a1fef1fe5e92494",
+      "bytes": 1162
+    },
+    {
+      "path": "tools/release14/prepare-inverses.mjs",
+      "sha256": "05d37c72fa257af1c2c3deb30ebaefee1deaac7bc5ffcaa6dd9fd584e7caa745",
+      "bytes": 1451
+    },
+    {
+      "path": "tools/release14/prepare-preview-window.mjs",
+      "sha256": "6ce4d757ac20acb595b4067acd48e1de92b8beedc39f0f21e2d01e61185cab7f",
+      "bytes": 2370
+    },
+    {
+      "path": "tools/release14/prepare-review-admissions.mjs",
+      "sha256": "d895ccf1fcbf623044e2bed8ac313f92388ed222f28a8708f98152117a6d6c32",
+      "bytes": 3607
+    },
+    {
+      "path": "tools/release14/record-window.mjs",
+      "sha256": "15c26e3f5c38b2088e223f139402acc70b5b44a07cc6f0a501fa94038abc1663",
+      "bytes": 1876
+    },
+    {
+      "path": "tools/release14/run-inverse-baseline.mjs",
+      "sha256": "732166c8f2319b126892b00268f2c3c1c5b3164758a06f157660a50e1e1e7e87",
+      "bytes": 2102
+    },
+    {
+      "path": "tools/release14/save.mjs",
+      "sha256": "e45ee7139883bc55870af6a399fe4912af1ba08a3b1e92279094a9119be6ea2d",
+      "bytes": 10057
+    },
+    {
+      "path": "tools/release14/stop-preview.ps1",
+      "sha256": "d06e41b8068bec5379526ea21f8dea2e50e79ff196ef03ce79ebe10ecc23f99d",
+      "bytes": 2281
+    },
+    {
+      "path": "tools/release14/preview-window/restart.mjs",
+      "sha256": "fba7320099fca391a6351ffd59e474391539499821c6096f347eb5fde281baf8",
+      "bytes": 2377
+    },
+    {
+      "path": "tools/release14/preview-window/health.ps1",
+      "sha256": "fc5124f206c527cdaea78f967e91b9e9d38f0ce6f6746bb052c4b1f88cddc224",
+      "bytes": 1452
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original validation tests, exact source-transition fixtures and coordinator scripts only. No scans, images, meshes, private databases, logs, generated Atlas data or raw canonical Git ancestry. This is a repair delta; historical dependencies remain required.",
+  "proof": {
+    "targetedFailuresFixed": 9,
+    "focusedTests": 50,
+    "passed": 39,
+    "failed": 11,
+    "remainingFailuresReproducedBeforeRepair": true,
+    "newRegressionsObserved": false,
+    "sourceRows": 7333,
+    "productSourceChanged": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "installedCandidate": false,
+    "sameInstalledPreviewRestored": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

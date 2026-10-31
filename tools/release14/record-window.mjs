@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release14-repair-progress',i=json('CURRENT_CHECKPOINT.json'),c=i.activeWork.current,prior=json(cp+'/INDEX_START.json');assert.deepEqual(i,prior);
+c.pendingSmallCardiacImaging={history:{path:cp+'/INDEX_START.json',sha256:hash(cp+'/INDEX_START.json'),jsonPath:'activeWork.current.pendingSmallCardiacImaging'},allPriorEvidenceRetained:true,state:'passed',checks:17,installed:false,canonicalIntegrated:false,websiteImported:false,clinicalApproval:false,successor:c.pendingAdrenalUltrasound.frozen.source};
+c.currentInstalled.preview.state='temporarily-stopped-authorized-checks';c.currentInstalled.preview.stopEvidence={path:cp+'/preview-window/STOPPED.json',sha256:hash(cp+'/preview-window/STOPPED.json')};
+c.activeExecutionSessions=[{sessionId:49155,kind:'focused-release14-checks',evidence:'G:/VisibleMedicine-temp/staging/20261031-release14-review-admissions/focused-review-admissions-1',restorePreviewWith:'G:/VisibleMedicine-temp/proposals/20261031-release-fourteen-main/preview-window/restart.mjs'}];
+c.next='Complete guarded release14 review/admission checks, then remaining exact historical adapters. Restore the same installed website before ending the turn. Preserve full goal, frozen drafts and separate clinical review.';
+i.activeWork.updated=new Date().toISOString();assert(Buffer.byteLength(JSON.stringify(i)+'\n')<=fs.statSync('CURRENT_CHECKPOINT.json').size);saveIndex(i);console.log(JSON.stringify({recorded:true,indexBytes:Buffer.byteLength(JSON.stringify(i)+'\n')}));

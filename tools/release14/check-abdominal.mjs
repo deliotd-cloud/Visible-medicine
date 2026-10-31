@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-release14-abdominal',sourcePath=root+'/SOURCE.json',sourceHash='ce86d67fb5f1d19de38cc6332d0d7d9a2673a883f9bfa09e2db59a389a6be5cb';
+assert.equal(hash(sourcePath),sourceHash);const source=json(sourcePath);
+const verify=()=>{assert.equal(hash(sourcePath),sourceHash);for(const row of source.sourceRows)assert.equal(hash(source.website+'/'+row.path),row.sha256,row.path);return source.sourceRows.length;};
+const before=verify();assert.equal(hash(source.historicalEnvironment.path),source.historicalEnvironment.sha256);
+const result=await guarded({site:source.website,dir:root+'/focused-abdominal-1',command:'--test --experimental-strip-types --test-reporter=tap --test-concurrency=1 tests/clinical-review-abdominal-fold-ultrasound.test.ts tests/abdominal-fold-title-transition.test.mjs',heap:1024,aggregate:2048,minimum:4096,extraEnv:{...json(source.historicalEnvironment.path).environment,VM_CURRENT_SOURCE_RECEIPT:sourcePath,VM_CURRENT_SOURCE_SHA256:sourceHash,VM_WEBSITE_ROOT:source.website,VM_ATLAS_SOURCE_REPO:source.atlas,ATLAS_SOURCE_REPO:source.atlas,VM_PUBLIC_PREVIEW_SOURCE_ROOT:source.website,TEMP:root+'/tmp',TMP:root+'/tmp'}});
+const after=verify();const record={at:new Date().toISOString(),source:{path:sourcePath,sha256:sourceHash},beforeRows:before,afterRows:after,result,installed:false};fs.writeFileSync(root+'/FOCUSED_ABDOMINAL.json',JSON.stringify(record,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(record));process.exitCode=result.passing?0:1;

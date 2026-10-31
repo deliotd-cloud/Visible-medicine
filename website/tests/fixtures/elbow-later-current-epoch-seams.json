@@ -1,0 +1,78 @@
+{
+  "schema": "vm-elbow-later-current-epoch-seams/1",
+  "historicalSha256": "8f16b3d999c5ee2964a5cce9d936debfeb5df51f8b3d50f6fa43183bf46f7776",
+  "currentSha256": "eddc3c4ae42e954aba37176ac0eeda8549b8e676c99702b03adcab8cb5e064bb",
+  "historicalLines": 467,
+  "currentLines": 476,
+  "seams": [
+    {
+      "beforeStart": 12,
+      "afterStart": 12,
+      "before": [],
+      "after": [
+        "import {assertCurrentRenalSourceBinding,assertRenalTourEpoch} from './renal-tour-epoch-admission.mjs';\n"
+      ]
+    },
+    {
+      "beforeStart": 14,
+      "afterStart": 15,
+      "before": [],
+      "after": [
+        "import {assertHistoricalShoulderSourceRole} from './historical-shoulder-source-role.mjs';\n"
+      ]
+    },
+    {
+      "beforeStart": 260,
+      "afterStart": 262,
+      "before": [
+        "  assert.equal(checkedCurrent.runtimeSources.shoulder,'190a63238eadcf906abe89dcbb6a67c88afe70b9',\n",
+        "    'Earlier non-head runtime source remains pinned');\n",
+        "  assert.equal(git(['merge-base',checkedCurrent.runtimeSources.shoulder,checkedCurrent.source]).toString().trim(),\n",
+        "    checkedCurrent.runtimeSources.shoulder,'Earlier 190a runtime epoch precedes current Review');\n"
+      ],
+      "after": [
+        "  const b79Root='F:/VisibleMedicine/staging/20261024-cervical-vascular-website/website';\n",
+        "  const b79PinBytes=readFileSync(b79Root+'/tests/fixtures/current-atlas-delivery.json');\n",
+        "  assert.equal(sha(b79PinBytes),'c6ae4cccc92593ab75982b1d0ad1c10f3ee2b4f408c85e86bf0a94460365bad0');\n",
+        "  const b79Pin=JSON.parse(b79PinBytes.toString());\n",
+        "  assert.equal(b79Pin.source,'b79e110d2d28f18993263926ba35aa7a3f478b20');\n",
+        "  for(const path of ['public/atlas-runtime/shoulder/manifest.json','public/atlas-runtime/shoulder/source-inputs.json'])\n",
+        "    assert.equal(sha(readFileSync(b79Root+'/'+path)),b79Pin.documents[path],path+' authenticated b79 artifact');\n",
+        "  const historicalShoulder=assertHistoricalShoulderSourceRole(b79Pin);\n",
+        "  assert.equal(git(['merge-base',historicalShoulder,checkedCurrent.source]).toString().trim(),\n",
+        "    historicalShoulder,'Earlier 190a runtime epoch precedes current Review');\n"
+      ]
+    },
+    {
+      "beforeStart": 266,
+      "afterStart": 274,
+      "before": [
+        "  assert.equal(git(['rev-parse','HEAD:lib/regional-tours.ts']).toString().trim(),'fb65a9c68d8753fc1789c7e6281e36c2889e0136');\n"
+      ],
+      "after": [
+        "  const renalBoundary=assertCurrentRenalSourceBinding();\n",
+        "  assert.equal(git(['rev-parse','HEAD:lib/regional-tours.ts']).toString().trim(),renalBoundary.gitBlob);\n"
+      ]
+    },
+    {
+      "beforeStart": 269,
+      "afterStart": 278,
+      "before": [
+        "  assert.equal(regionalRecord.sourceSha256,'88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97');\n"
+      ],
+      "after": [
+        "  assert.equal(regionalRecord.sourceSha256,renalBoundary.sha256);\n"
+      ]
+    },
+    {
+      "beforeStart": 274,
+      "afterStart": 283,
+      "before": [
+        "  assert.deepEqual(currentImport.regionalTours,api.regionalTours,'current delivery retains closed 9f tours');\n"
+      ],
+      "after": [
+        "  assertRenalTourEpoch(api.regionalTours,currentImport.regionalTours);\n"
+      ]
+    }
+  ]
+}
