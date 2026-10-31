@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-saved-plan-ready',source=json(root+'/PRODUCTION_INPUTS.json'),site=source.website;
+for(const row of source.files)assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+const ts=createRequire(site+'/package.json')('typescript'),config=ts.readConfigFile(site+'/tsconfig.json',ts.sys.readFile);assert(!config.error);
+const parsed=ts.parseJsonConfigFileContent(config.config,ts.sys,site);assert.equal(parsed.errors.length,0);assert.equal(parsed.options.strict,true);
+const options={...parsed.options,noEmit:true,incremental:false,composite:false,tsBuildInfoFile:undefined};
+const roots=['components/HeadAtlasSavedStudyPlan.tsx'];
+const host=ts.createCompilerHost(options);host.getCurrentDirectory=()=>site;
+const program=ts.createProgram(roots.map(p=>site+'/'+p),options,host),diagnostics=ts.getPreEmitDiagnostics(program);
+const graph=program.getSourceFiles().map(f=>({path:path.resolve(f.fileName).replaceAll('\\','/'),sha256:hash(f.fileName)}));
+const result={at:new Date().toISOString(),source:{path:root+'/PRODUCTION_INPUTS.json',sha256:hash(root+'/PRODUCTION_INPUTS.json')},roots,graph,diagnosticCount:diagnostics.length,passing:diagnostics.length===0,scope:'Saved-study-plan component and its real imported graph; not full website types.',moduleSubstitutions:false};
+fs.writeFileSync(root+'/SCOPED_TYPES.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});if(diagnostics.length)console.log(ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCurrentDirectory:()=>site,getCanonicalFileName:f=>f,getNewLine:()=>"\n"}));
+console.log(JSON.stringify({passing:result.passing,roots:roots.length,graph:graph.length,diagnosticCount:diagnostics.length}));if(diagnostics.length)process.exitCode=1;
