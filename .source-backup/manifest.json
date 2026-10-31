@@ -1,0 +1,204 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T23:13:55.345Z",
+  "sourceIdentity": {
+    "atlasHead": "f949979e975b6260575a7fd72901bcc2aec0be05",
+    "atlasTree": "5bbcbb1d87fff2037048dcbaa1c041caa1fa1501",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "review": "5148eedc162c15c6f7e954654ae608a87589a1a43f790750e6275bb7ead5a975",
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-prostate-selection/SOURCE.json",
+      "sha256": "852afb04f18d704224de0d7af37135a64ed6cac337ae68c6767df570a38abb1b"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-explorer.tsx",
+      "sha256": "2c2ee451cb65fee14cafc0809589dc8adf72a3d698d040a0bc4d7ae39034b149",
+      "bytes": 138439
+    },
+    {
+      "path": "atlas/app/imaging-link.tsx",
+      "sha256": "8a87460b3c8e30f49ccbeed4112971d8c16f0979d2ca8a65d29003ce65cefe9b",
+      "bytes": 6482
+    },
+    {
+      "path": "atlas/app/prostate-education-link.ts",
+      "sha256": "92d4d38e6efee3c20030fd985bf9832e8aac6cf7f519c5ad5758e986244768ea",
+      "bytes": 3174
+    },
+    {
+      "path": "atlas/app/prostate-zones.tsx",
+      "sha256": "c29b21a744f85aba0afa36a84cedbb269e867492f394d4f38a61e4ac2b235a26",
+      "bytes": 19211
+    },
+    {
+      "path": "atlas/content/body-renderer-revision.json",
+      "sha256": "bc825d6753130e70c12fe66761e19ade9d1ce064db66b9a3ce1512b7b1c14dcf",
+      "bytes": 228045
+    },
+    {
+      "path": "atlas/content/prostate-zones-revision.json",
+      "sha256": "cc6b9c37235e2f51947cb81e05113e613c8d2fb04f3764897e37ca9a648730bf",
+      "bytes": 2750
+    },
+    {
+      "path": "atlas/docs/PROSTATE_ZONES.md",
+      "sha256": "5ab1f22cbd35192dc84d21ec0353cac8f864d7cbe11638d7971c6802b5390924",
+      "bytes": 6688
+    },
+    {
+      "path": "atlas/lib/anatomy-link-registry.ts",
+      "sha256": "cb69329833c32eba0f754cb02af307cfac725d49a5131af1c41d0ba3ad35452f",
+      "bytes": 4690
+    },
+    {
+      "path": "atlas/lib/learning-resource-types.ts",
+      "sha256": "c587f32cbe4fadfe1b89502e9fbf7d08c740156b286382582bb2013feb1423de",
+      "bytes": 3830
+    },
+    {
+      "path": "atlas/lib/learning-resources.ts",
+      "sha256": "3a8ea0524ba752837b6a17409b58ee6d4e1d0a876614008dd7789793795001dd",
+      "bytes": 18517
+    },
+    {
+      "path": "atlas/lib/prostate-education-binding.ts",
+      "sha256": "f6bd75b450e257e2de02924812b82b2e8c612b62da475d3d338cf7207ca64fdf",
+      "bytes": 3055
+    },
+    {
+      "path": "atlas/scripts/pin-prostate-zones.mjs",
+      "sha256": "76daf9e830364db706224703f3c74635bb6ed8ee8c420965b0f17aded7d4cade",
+      "bytes": 1605
+    },
+    {
+      "path": "atlas/scripts/test-imaging-link-status.mjs",
+      "sha256": "71fdfd068ca4fca9b38690bbf48e2d23cc81c52dc10f1b725af338a593f3f520",
+      "bytes": 4406
+    },
+    {
+      "path": "atlas/scripts/test-prostate-education-hook.mjs",
+      "sha256": "801f02f0671eb411fb105fd64fe1aae21a64b514ca8c25070e4d2012889570a8",
+      "bytes": 10312
+    },
+    {
+      "path": "atlas/scripts/test-prostate-education.mjs",
+      "sha256": "c427e3ad8b114e6e1ab8b978805efc9291f583ec0ce688c14d8f053f1fe251bd",
+      "bytes": 8350
+    },
+    {
+      "path": "website/docs/anatomy-coverage/independent.json",
+      "sha256": "eb096b8383427b1f6f674f38ff242a4289b9f97ddca14fbfa72d395265488d8a",
+      "bytes": 772784
+    },
+    {
+      "path": "website/docs/anatomy-coverage/index.json",
+      "sha256": "61d1d557992a853df66ab0bd2db4fd9f53ef6568201f08e5e7d69ec5d5c97ce9",
+      "bytes": 155371
+    },
+    {
+      "path": "website/docs/anatomy-coverage/nested.json",
+      "sha256": "ed68346678670bca8f8ac0e35e74c4dcbb82ba699e5e0e1c9cec9dddf1602323",
+      "bytes": 789644
+    },
+    {
+      "path": "website/docs/anatomy-coverage/reference.json",
+      "sha256": "7124bdd4c57ab00a1132a2e19e14baae9bb8ee33c646f22bf11d6ee3e36c94af",
+      "bytes": 154089
+    },
+    {
+      "path": "website/docs/anatomy-coverage/root.json",
+      "sha256": "4141f767c479b2e5d982f787c4f63109a525b3504f0b5476e6ec3cb9a67abcbe",
+      "bytes": 1067871
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "sha256": "5d19c4b8caf48591cfdb5c41cd548970fe8ed6955c16d345a3d2256fea90afa4",
+      "bytes": 5290
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "sha256": "f06883bab798f2d3498fda97a1e845490174baa0ef80723fc045b622aade4b15",
+      "bytes": 493
+    },
+    {
+      "path": "website/lib/atlas-model-inventory.json",
+      "sha256": "2fff73f4067fbad15372ee0f844ea0b714ee601243fc2381362da56a6343f892",
+      "bytes": 33492
+    },
+    {
+      "path": "website/lib/lecture-body-catalog.json",
+      "sha256": "9ca21fc2a24fadbf2deb102cf772760806dadc5a543e21c29de4a85fd8e51721",
+      "bytes": 181273
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "sha256": "7b3d08da9c33047c651f8126976c22c7f616889657757b54677039e3a09f43be",
+      "bytes": 4552
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "sha256": "0c555556f482e2ad077c0241f17b740e7a79e7fbd729d1530091431136e0cd0f",
+      "bytes": 9767
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.mjs",
+      "sha256": "3b022e0691d774ca06e8986ec1a9f628ba5a54b0315b82b2f98e2f5d466f7ce1",
+      "bytes": 5159
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "sha256": "bc66f8df330ffb125d676611b7a3b3cb99aa2524e3fff4b8665a35b765f2000e",
+      "bytes": 41478
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-4e67ef78-validator.txt",
+      "sha256": "28a55e25160ada89024213b734ad1a25030399da823785ea8e20be78af8c0f62",
+      "bytes": 5159
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-4e67ef78.json",
+      "sha256": "bea765f3f12032df4ce39111287425e280e8ff0dd3b1980c5b1543c4bddf0a5e",
+      "bytes": 2051
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-4e67ef78.txt",
+      "sha256": "f8b46236d3f032943204af44295a34ad805e7f402ade2378d08fe1b6fe915bc4",
+      "bytes": 39053
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "sha256": "5b9a8e1c98edefc8d934f40a66ad916cd9b914c7b5f0c699ca9c8b0632c3344a",
+      "bytes": 2051
+    },
+    {
+      "path": "website/tests/prostate-zonal-delivery.test.mjs",
+      "sha256": "53406d6c4ccbdb850cf3be7c31ed2cdd7e202d84ca3ad5a23a6a466f9d2c5dc2",
+      "bytes": 5442
+    }
+  ],
+  "removed": [],
+  "scope": "Thirty-three selected native and website source, test and non-patient coverage metadata files for the installed prostate selection milestone. Native files preserve committed LF bytes, verified equivalent to the clean Windows CRLF checkout. Excludes generated runtime bundles, binary models, scans, masks, private databases, MRI lookup records, credentials, screenshots and canonical Git ancestry. This is a selected-source recovery checkpoint, not a whole-project or patient-data backup.",
+  "proof": {
+    "installedLocally": true,
+    "nativeBuildPassing": true,
+    "reviewBuildPassing": true,
+    "websiteBuildPassing": true,
+    "focusedWebsiteTests": 58,
+    "focusedWebsiteFailures": 0,
+    "installedBrowserPassing": true,
+    "realMriPaired": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "publicDeployment": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
