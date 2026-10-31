@@ -1,0 +1,75 @@
+{
+  "schema": "vm-inbox-return-focus-current-inverse/1",
+  "path": "components/ClinicalReviewInbox.tsx",
+  "beforeSha256": "3d465094abf32796d8baa72d0f131011873d989d7ac8ce9c0a0517cb289c1299",
+  "afterSha256": "bf300c65bb4b6af2482ecad157d160e3a95d72d60e10ecca2e34926171e01ec4",
+  "edits": [
+    {
+      "beforeLine": 62,
+      "afterLine": 62,
+      "before": [
+        "type ReturnFocus = Pick<PaginationContext, 'generation' | 'viewEpoch' | 'context' | 'revision'> & { origin: Element };\n"
+      ],
+      "after": [
+        "type ReturnFocus = Pick<PaginationContext, 'generation' | 'viewEpoch' | 'context' | 'revision'> & { origin: Element; target: 'results' | 'quick' };\n"
+      ]
+    },
+    {
+      "beforeLine": 102,
+      "afterLine": 102,
+      "before": [],
+      "after": [
+        "  const quickReviewLink = useRef<HTMLAnchorElement | null>(null);\n"
+      ]
+    },
+    {
+      "beforeLine": 133,
+      "afterLine": 134,
+      "before": [
+        "      if (origin && (resultsList.current?.contains(origin) || resultsPager.current?.contains(origin))) pendingReturnFocus.current = {\n",
+        "        origin, generation: id, viewEpoch: paginationViewEpoch.current, context: previous.context, revision: previous.revision,\n"
+      ],
+      "after": [
+        "      if (origin && (resultsList.current?.contains(origin) || resultsPager.current?.contains(origin) || origin === quickReviewLink.current)) pendingReturnFocus.current = {\n",
+        "        origin, target: origin === quickReviewLink.current ? 'quick' : 'results', generation: id, viewEpoch: paginationViewEpoch.current, context: previous.context, revision: previous.revision,\n"
+      ]
+    },
+    {
+      "beforeLine": 344,
+      "afterLine": 345,
+      "before": [
+        "    if (returned && current.current.phase === 'complete') {\n"
+      ],
+      "after": [
+        "    if (returned?.target === 'results' && current.current.phase === 'complete') {\n"
+      ]
+    },
+    {
+      "beforeLine": 385,
+      "afterLine": 386,
+      "before": [],
+      "after": [
+        "  };\n",
+        "  const commitQuickReviewHeading = (node: HTMLHeadingElement | null) => {\n",
+        "    const returned = pendingReturnFocus.current;\n",
+        "    if (!node || !returned || returned.target !== 'quick' || current.current.phase !== 'complete') return;\n",
+        "    pendingReturnFocus.current = null;\n",
+        "    if (mounted.current && viewActive() && returned.generation === pageContext.generation &&\n",
+        "      returned.viewEpoch === pageContext.viewEpoch && returned.context === pageContext.context &&\n",
+        "      returned.revision === pageContext.revision && !returned.origin.isConnected &&\n",
+        "      typeof document !== 'undefined' && document.activeElement === document.body)\n",
+        "      node.focus({ preventScroll: true });\n"
+      ]
+    },
+    {
+      "beforeLine": 440,
+      "afterLine": 451,
+      "before": [
+        "    <ClinicalReviewQuickStart items={scan.phase === 'invalid' ? [] : scan.items} loading={scan.phase === 'loading'} scanComplete={scan.phase === 'complete'} />\n"
+      ],
+      "after": [
+        "    <ClinicalReviewQuickStart items={scan.phase === 'invalid' ? [] : scan.items} loading={scan.phase === 'loading'} scanComplete={scan.phase === 'complete'} linkRef={quickReviewLink} headingRef={commitQuickReviewHeading} />\n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-release-scope-ready',prepared=json(root+'/PREPARED.json'),parent=json(prepared.parent.path),site=prepared.website;
+assert.equal(hash(prepared.parent.path),prepared.parent.sha256);
+const changes=['tests/regional-duration-source-inverse.mjs','tests/regional-scope-catalogue-inverse.mjs','tests/regional-scope-catalogue-inverse.test.mjs','tests/studio-draft-scope.test.mjs','tests/studio-draft-scope-source-role.test.mjs'];
+for(const r of parent.sourceRows)if(!changes.includes(r.path))assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const args=['--max-old-space-size=1024','--test','tests/regional-duration-source-inverse.test.mjs','tests/regional-scope-catalogue-inverse.test.mjs','tests/regional-scope-discovery.test.mjs','tests/studio-draft-scope.test.mjs','tests/studio-course-draft-discard.test.mjs','tests/studio-draft-scope-source-role.test.mjs'];
+const log=execFileSync(process.execPath,args,{cwd:site,encoding:'utf8',windowsHide:true});assert.match(log,/^ℹ pass 30\r?$/m);assert.match(log,/^ℹ fail 0\r?$/m);fs.writeFileSync(root+'/FOCUSED.tap',log,{flag:'wx'});
+const rows=new Map(parent.sourceRows.map(r=>[r.path,r]));for(const p of changes)rows.set(p,{path:p,sha256:hash(site+'/'+p),bytes:fs.statSync(site+'/'+p).size});
+const source={...parent,schema:'vm-release-scope-repair-source/1',at:new Date().toISOString(),parent:prepared.parent,website:site,sourceRows:[...rows.values()].sort((a,b)=>a.path.localeCompare(b.path)),authoredPaths:[...new Set([...parent.authoredPaths,...changes])],currentChanges:changes,runtimeUnchangedFromParent:true,installed:false};
+fs.writeFileSync(root+'/SOURCE.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({source:hash(root+'/SOURCE.json'),files:source.sourceRows.length,focused:30,changes:changes.length,runtimeUnchanged:true}));
