@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-31T00:10:38.521Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-review-navigation-and-import-audit/SOURCE.json",
+    "sha256": "0d74e47ec0192e78e78a1ce0cf28aa1ff5dafa8e33fd6502eeaebf5fac07ca1a"
+  },
+  "focusedTests": 18,
+  "scopedTypeGraph": 198,
+  "scopedTypesPassed": true,
+  "fullTypesPassed": false,
+  "productionBuildPassed": true,
+  "buildAttempt": 3,
+  "earlierNativeBuildFailuresRetained": true,
+  "successfulBuildLimits": {
+    "heapMiB": 1536,
+    "aggregateMiB": 4096,
+    "minimumAvailableMiB": 6144
+  },
+  "browser": {
+    "synthetic": true,
+    "width": 1280,
+    "height": 720,
+    "regionFiltering": true,
+    "collisionsRemainDistinct": true,
+    "exactDestination": true,
+    "refreshPreservesGroup": true,
+    "keyboardTrackSwitch": true,
+    "temporaryTabAndServerClosed": true,
+    "clinicalActions": 0
+  },
+  "installedInboxObservedReadOnly": true,
+  "installedInboxFullAcceptance": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261030-quick-review-local-install/BROWSER_ACCEPTANCE.json",
+    "sha256": "a47bbe546197595da92e90fd343522632750e8e8c1e4845b086ee0d3fa9841af"
+  },
+  "integrationUnchanged": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+  "installed": false,
+  "importAudit": {
+    "source": "c62dcfae5cf9e0d6a48120e5e4673f1199ce2efbd5a399aac252f0c849aa12fa",
+    "edges": 95,
+    "generated": 39,
+    "platform": 56,
+    "unexplainedWithinRecordedEdges": 0,
+    "licensingCleared": false
+  },
+  "release": {
+    "source": "2ef834f9fc79c5ec3921a8920e691ce504d5dea88bf4849de2428b7abda9fe91",
+    "partition4": {
+      "tests": 235,
+      "pass": 235,
+      "fail": 0
+    },
+    "partition5": {
+      "tests": 336,
+      "pass": 330,
+      "fail": 6
+    },
+    "terminal": true,
+    "sourceDrift": false,
+    "assetDrift": false,
+    "repairProposalTested": false
+  },
+  "wholeSuitePassing": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
