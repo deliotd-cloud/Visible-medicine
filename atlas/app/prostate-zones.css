@@ -1,0 +1,151 @@
+.prostate-zones {
+  --pz-ink: #173735;
+  --pz-muted: #566b66;
+  --pz-line: #dce9e2;
+  --pz-teal: #126d64;
+  color: var(--pz-ink);
+  background: #fbfcf8;
+  border: 1px solid var(--pz-line);
+  border-radius: 22px;
+  padding: clamp(1rem, 2vw, 1.6rem);
+  box-shadow: 0 18px 50px rgba(28, 70, 62, .08);
+}
+.prostate-zones * { box-sizing: border-box; }
+.prostate-zones-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; margin-bottom: 1.3rem; }
+.prostate-zones-eyebrow { margin: 0 0 .35rem; color: var(--pz-teal); font-size: .75rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+.prostate-zones h2 { margin: 0; font-size: clamp(1.6rem, 2.8vw, 2.25rem); line-height: 1.16; letter-spacing: -.025em; }
+.prostate-zones-header p:last-child { margin: .5rem 0 0; color: var(--pz-muted); }
+.prostate-zones button { color: var(--pz-ink); cursor: pointer; font: inherit; }
+.prostate-zones button:focus-visible, .prostate-zones input:focus-visible, .prostate-zones summary:focus-visible, .prostate-zones a:focus-visible { outline: 3px solid #0e8b80; outline-offset: 3px; }
+.prostate-zones-close { flex: none; border: 1px solid #b9d3c8; background: #fff; border-radius: 999px; padding: .65rem 1rem; font-weight: 650 !important; }
+.prostate-zones-close:hover, .prostate-zones-actions button:hover, .prostate-zones-view-controls button:hover { background: #e8f5ef; }
+.prostate-zones-workbench { display: grid; grid-template-columns: minmax(0, 1fr) minmax(235px, 300px); gap: 1rem; align-items: start; }
+.prostate-zones-main { min-width: 0; }
+.prostate-zones-toolbar, .prostate-zones-view-controls { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; border: 1px solid var(--pz-line); background: white; padding: .7rem; }
+.prostate-zones-toolbar { border-radius: 16px 16px 0 0; border-bottom: 0; }
+.prostate-zones-picks, .prostate-zones-actions, .prostate-zones-view-controls > div { display: flex; flex-wrap: wrap; gap: .4rem; }
+.prostate-zones-picks { flex: 1 1 420px; }
+.prostate-zones-actions { flex: 0 1 auto; }
+.prostate-zones-picks button, .prostate-zones-actions button, .prostate-zones-view-controls button { border: 1px solid #cdded6; background: #fff; border-radius: 9px; min-height: 38px; padding: .35rem .65rem; font-size: .84rem; font-weight: 600; white-space: nowrap; }
+.prostate-zones-picks button.is-selected, .prostate-zones-view-controls button[aria-pressed="true"] { border-color: var(--pz-teal); background: #e6f4ed; box-shadow: inset 0 0 0 1px var(--pz-teal); }
+.prostate-zones-swatch, .prostate-zones-info-swatch { display: inline-block; width: .8rem; height: .8rem; border: 1px solid rgba(0, 0, 0, .13); border-radius: 50%; margin-right: .4rem; vertical-align: -.05rem; }
+.prostate-zones-button-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.prostate-zones-canvas { position: relative; height: clamp(300px, calc(100dvh - 400px), 500px); min-height: 300px; overflow: hidden; border: 1px solid var(--pz-line); background: #f7f7f1; }
+.prostate-zones-canvas > div:first-child { width: 100%; height: 100%; }
+.prostate-zones-canvas-fallback { display: grid; place-items: center; height: 100%; padding: 2rem; margin: 0; color: var(--pz-muted); text-align: center; }
+.prostate-zone-label { display: inline-block; border: 1px solid rgba(5, 71, 66, .23); border-radius: 999px; padding: .28rem .45rem; background: rgba(255, 255, 255, .91); color: #143f3c; font-size: .72rem; font-weight: 760; box-shadow: 0 2px 10px rgba(17, 59, 54, .13); }
+.prostate-zone-label.is-selected { background: #0b665e; border-color: #0b665e; color: white; }
+.prostate-zones-orientation { position: absolute; inset: 0; z-index: 2; pointer-events: none; color: #134f4b; font-size: .73rem; font-weight: 800; }
+.prostate-zones-orientation span { position: absolute; display: grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: rgba(255,255,255,.89); border: 1px solid #bcd8ce; }
+.prostate-zones-orientation .top { top: .6rem; left: calc(50% - .8rem); }
+.prostate-zones-orientation .bottom { bottom: .6rem; left: calc(50% - .8rem); }
+.prostate-zones-orientation .left { left: .6rem; top: calc(50% - .8rem); }
+.prostate-zones-orientation .right { right: .6rem; top: calc(50% - .8rem); }
+.prostate-zones-view-note { position: absolute; bottom: .55rem; left: .65rem; z-index: 2; border-radius: 7px; padding: .26rem .45rem; margin: 0; background: rgba(255,255,255,.91); color: #325c56; font-size: .74rem; }
+.prostate-zones-view-controls { border-radius: 0 0 16px 16px; border-top: 0; justify-content: space-between; }
+.prostate-zones-keyboard-help { margin: 0; padding: .45rem .7rem; border-inline: 1px solid var(--pz-line); background: #fff; color: #38534e; font-size: .76rem; line-height: 1.45; }
+.prostate-zones-view-controls label { color: #244d47; font-size: .82rem; font-weight: 650; }
+.prostate-zones-check { display: inline-flex; gap: .38rem; align-items: center; white-space: nowrap; }
+.prostate-zones-check input { accent-color: var(--pz-teal); width: 1rem; height: 1rem; }
+.prostate-zones-slider { display: inline-flex; gap: .4rem; align-items: center; white-space: nowrap; }
+.prostate-zones-slider input { accent-color: var(--pz-teal); width: clamp(75px, 10vw, 120px); }
+.prostate-zones-slider output { min-width: 2.5rem; color: var(--pz-muted); font-variant-numeric: tabular-nums; }
+.prostate-zones-info { border: 1px solid var(--pz-line); border-radius: 16px; background: #fff; padding: 1.2rem; box-shadow: 0 8px 25px rgba(39, 75, 68, .05); }
+.prostate-zones-info-label { margin: 0 0 .4rem !important; color: var(--pz-teal) !important; font-size: .76rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+.prostate-zones-info h3 { margin: 0 0 1rem; font-size: 1.25rem; line-height: 1.2; }
+.prostate-zones-info h4 { margin: 1.1rem 0 .3rem; font-size: .88rem; color: #1c615a; }
+.prostate-zones-info p { margin: .4rem 0; line-height: 1.5; color: #38534e; font-size: .9rem; }
+.prostate-zones-info .prostate-zones-limit { margin: 1.15rem 0; padding: .75rem; border-left: 3px solid #6ba69a; border-radius: 0 8px 8px 0; background: #eff7f2; font-size: .83rem; }
+.prostate-zones-info details { border-top: 1px solid var(--pz-line); padding-top: .75rem; font-size: .82rem; }
+.prostate-zones-info summary { cursor: pointer; color: var(--pz-teal); font-weight: 650; }
+.prostate-zones-info dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .45rem .6rem; }
+.prostate-zones-info dt { color: var(--pz-muted); }
+.prostate-zones-info dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.prostate-zones-info a { color: #086e64; text-decoration: underline; text-underline-offset: .15em; }
+@media (max-width: 920px) { .prostate-zones-workbench { grid-template-columns: 1fr; } .prostate-zones-info { max-width: none; } }
+@media (max-width: 620px) { .prostate-zones { border-radius: 14px; padding: .75rem; } .prostate-zones-header { flex-wrap: wrap; } .prostate-zones-close { width: 100%; } .prostate-zones-canvas { height: 390px; } .prostate-zones-button-name { display: none; } .prostate-zones-view-controls { align-items: flex-start; } }
+
+/* The contained desktop study uses the host height. Only the teaching panel
+   scrolls in an ordinary embed; a short or magnified embed can scroll the
+   whole study so no controls are cut off. Standalone and phone flow stay above. */
+@media (min-width: 921px) {
+  .body-app[data-presentation='panel']:has(> .prostate-zones:not([hidden])) { overflow-y: hidden; }
+  .body-app[data-presentation='panel'] > .prostate-zones {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 6px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-header {
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-header > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 10px;
+    min-width: 0;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-eyebrow { margin: 0; font-size: .67rem; }
+  .body-app[data-presentation='panel'] .prostate-zones h2 { font-size: 1.25rem; }
+  .body-app[data-presentation='panel'] .prostate-zones-header p:last-child {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-close { padding: .4rem .7rem; font-size: .8rem; }
+  .body-app[data-presentation='panel'] .prostate-zones-workbench {
+    grid-template-columns: minmax(0, 1fr) minmax(235px, 270px);
+    gap: 8px;
+    min-height: 348px;
+    align-items: stretch;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-main {
+    display: grid;
+    grid-template-rows: auto minmax(200px, 500px) auto auto;
+    align-content: start;
+    min-height: 0;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-toolbar,
+  .body-app[data-presentation='panel'] .prostate-zones-view-controls {
+    gap: 4px 8px;
+    padding: 4px 6px;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-picks { flex: 1 1 auto; }
+  .body-app[data-presentation='panel'] .prostate-zones-picks,
+  .body-app[data-presentation='panel'] .prostate-zones-actions,
+  .body-app[data-presentation='panel'] .prostate-zones-view-controls > div { gap: 4px; }
+  .body-app[data-presentation='panel'] .prostate-zones-picks button,
+  .body-app[data-presentation='panel'] .prostate-zones-actions button,
+  .body-app[data-presentation='panel'] .prostate-zones-view-controls button {
+    min-height: 30px;
+    padding: .2rem .45rem;
+    font-size: .77rem;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-canvas { height: auto; min-height: 200px; }
+  .body-app[data-presentation='panel'] .prostate-zones-keyboard-help {
+    padding: .2rem .5rem;
+    font-size: .72rem;
+    line-height: 1.25;
+  }
+  .body-app[data-presentation='panel'] .prostate-zones-slider input { width: clamp(70px, 8vw, 108px); }
+  .body-app[data-presentation='panel'] .prostate-zones-info {
+    min-height: 0;
+    overflow-y: auto;
+    padding: .75rem;
+    overscroll-behavior: contain;
+  }
+}
