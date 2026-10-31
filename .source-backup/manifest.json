@@ -1,0 +1,166 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T18:03:25.272Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release24-successor/SOURCE.json",
+      "sha256": "95c8c8e702868a6b051b2289f34a23753854ad1d73605cbb4bb073a0c6887382"
+    },
+    "review": "ee28f53f79ea413c860c054f39628dd2225be13b5856849818d2eaf8da73f59c",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "previousBackup": "backup/release23-head-focus-20261031"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-arm-arterial-xray.test.ts",
+      "sha256": "b5f3348f9db80393839a19626c435a25278519def67e2bf5da9d2eba359610de",
+      "bytes": 24543
+    },
+    {
+      "path": "website/tests/clinical-review-forearm-branch-xray.test.ts",
+      "sha256": "e34eb3c564ff34955331fc040f175bcd33e601a230b4adf6b6392dd40a1e4d89",
+      "bytes": 21686
+    },
+    {
+      "path": "website/tests/corpus-xray-v2-current-delivery.test.mjs",
+      "sha256": "2a4e84e9b8a40dfad9477547074c41431615b12ab9a1f7ea8d09704fe2d527cb",
+      "bytes": 11388
+    },
+    {
+      "path": "website/tests/ui-teaching-current-delivery.test.mjs",
+      "sha256": "1669a7c9d6b4173a7660dade731915af115701c7a33ca598b2ddfb8a4ea4a232",
+      "bytes": 17097
+    },
+    {
+      "path": "website/tests/fixtures/release24-role-successors.json",
+      "sha256": "d27e530e6485c06e5c0aa5d493157dc9797052f3830c083a1bc94d907677aee8",
+      "bytes": 1599
+    },
+    {
+      "path": "website/tests/corpus-ui-role-preservation.test.mjs",
+      "sha256": "f45edd4950b6dd381fd854a0c3a71dbc4c81880f5f4fb5fdd5b1fbaa8fd10d27",
+      "bytes": 17478
+    },
+    {
+      "path": "website/tests/atlas-shoulder-arterial-imaging-checks.mjs",
+      "sha256": "e01f717cce4c1da24a44ed872d2b39cd411ba4ca3a5566532a9008c9fd79e06b",
+      "bytes": 17272
+    },
+    {
+      "path": "website/tests/atlas-pre-plantar-arterial-mri-history.ts",
+      "sha256": "703b11afa91f1b5c529974faaaadccae4e94ae01edd0744e4168924989396124",
+      "bytes": 3202
+    },
+    {
+      "path": "website/tests/carpal-reasoning-current-delivery.test.mjs",
+      "sha256": "d64e260aa1a4080651f291c99fac42886e28042675427058cb418a5a2f07ca53",
+      "bytes": 29607
+    },
+    {
+      "path": "website/tests/clinical-review-longus-colli-quiz.test.ts",
+      "sha256": "1c263f1cf5d660ba7720a082d5dcf14fb111791aa895d5c3702161a334c07e48",
+      "bytes": 9056
+    },
+    {
+      "path": "website/tests/clinical-review-suprahyoid-quiz.test.ts",
+      "sha256": "f25d9a9eb74a4f7f813a3fd75774987ccf70ef45b52a70c5a17b675a616729b3",
+      "bytes": 10549
+    },
+    {
+      "path": "website/tests/fda-reference-current-delivery.test.mjs",
+      "sha256": "67e295176f47f2bc503951998f61ba3ab88880e35fcdc40c5c79d6b84b25b38d",
+      "bytes": 9113
+    },
+    {
+      "path": "website/tests/arterial-epoch-preservation.test.mjs",
+      "sha256": "7302efc0e353a2a9e15ef0ccf2ec0c9d7079e4a6c025e5dfd5806f6ebd558c15",
+      "bytes": 1117
+    },
+    {
+      "path": "website/tests/arterial-epoch-context-seam.mjs",
+      "sha256": "065a13f6cb5936066cbe004893c8d4d9d2fd4a1919f0c4d1d1a51193d3182380",
+      "bytes": 6992
+    },
+    {
+      "path": "tools/release24-main/backup.mjs",
+      "sha256": "af055a3a401ce1ecd70a5725475c7bf27996b8f1c46b92fddfabced3a5d7c30c",
+      "bytes": 2726
+    },
+    {
+      "path": "tools/release24-main/check-hra.mjs",
+      "sha256": "7634fb75595e5d770db92c6179e96efb5559d23c269156b0199cb80dcfad3a1d",
+      "bytes": 3054
+    },
+    {
+      "path": "tools/release24-main/check-successor.mjs",
+      "sha256": "583653b9dc51ac817681546d8dbb273e417042df6427a29b880f05a40dd4bff9",
+      "bytes": 1902
+    },
+    {
+      "path": "tools/release24-main/check-types.mjs",
+      "sha256": "bb5b4b64a98e669cd9ca992f173db4466f9d15e8b2cc6a1161e1a93cfdb88c09",
+      "bytes": 2439
+    },
+    {
+      "path": "tools/release24-main/check.mjs",
+      "sha256": "822d1f6a206926906f8f215656386feaea81c4d5d904f9825a6056f5518e8937",
+      "bytes": 2099
+    },
+    {
+      "path": "tools/release24-main/integrate-successor.mjs",
+      "sha256": "171b2af1dcd1906ae7692af298a7eff76f3bc3acea70cc5b1847ee2c5b01b0e4",
+      "bytes": 4064
+    },
+    {
+      "path": "tools/release24-main/integrate.mjs",
+      "sha256": "1065fe4a86b6126010fc4bb7941edb982580f4ce4ac568e062c83097ffd8f09c",
+      "bytes": 4375
+    },
+    {
+      "path": "tools/release24-main/prepare-main.mjs",
+      "sha256": "5ca986c2fad7a450a859efb967f2402b5db04d959c69effe8fb74d055fd6a25d",
+      "bytes": 6615
+    },
+    {
+      "path": "tools/release24-main/prepare-successor.mjs",
+      "sha256": "a570f8fb64cb3a99f96ab1fe6aa9d2134c0f68f055d7204aaf2ce14dba42a17d",
+      "bytes": 1992
+    },
+    {
+      "path": "tools/release24-main/prepare-types.mjs",
+      "sha256": "27122caf26db9a8d7754417bf77e2e3b1842c18dcd078d31ec172e23f2c4c567",
+      "bytes": 1104
+    },
+    {
+      "path": "tools/release24-main/record-partition.mjs",
+      "sha256": "0ccfa990eb0d7fc9fc9d9882e252717fa1d3d4742dbcb21dac220fcaff46d3f8",
+      "bytes": 3385
+    },
+    {
+      "path": "tools/release24-main/record-running.mjs",
+      "sha256": "4a2202cbaecf9150fd50716d321919e1025fbc164d25db80abecd0f628f3c3cc",
+      "bytes": 2947
+    }
+  ],
+  "removed": [],
+  "scope": "Selected website test-context repairs, exact historical successor proof and verification recipes. Source delta only. No scans, identifiers, databases, model assets, generated runtime, secrets or canonical repository ancestry. Candidate checks pending; backup does not imply acceptance.",
+  "proof": {
+    "originalPartition23": {
+      "tests": 267,
+      "pass": 254,
+      "fail": 13
+    },
+    "correctedHraChecks": 8,
+    "productAndReviewUnchanged": true,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "vm-corpus-ui-source-role-successors/1",
+  "records": {
+    "corpus-xray-v2-current-delivery.test.mjs": {
+      "fixture": "corpus-cranio-before/corpus-xray-v2-current-delivery.test.mjs.raw",
+      "priorSha256": "28be69bc03dd3b78665ccf5947fb2fd33077654ed6a26bf03bad6bf9c3e6207e",
+      "currentSha256": "2a4e84e9b8a40dfad9477547074c41431615b12ab9a1f7ea8d09704fe2d527cb",
+      "hunkHashes": [
+        "27238af41549402094c9f7af22cb9ca28fc3bc042f95effeff27137fe41995e1"
+      ]
+    },
+    "tour-discovery-current-delivery.test.mjs": {
+      "fixture": "current-source-closure-before/tour-discovery-current-delivery.test.mjs.raw",
+      "priorSha256": "6f48857ab2f7e4167348091bdd60fb60d9d3106f399548650aad593660c61956",
+      "currentSha256": "4c737580f94bf37777f2c59aad3af0155e9cb25e3d0216c012f79cf147b165bb",
+      "hunkHashes": [
+        "2289b8b7baf24b32a40d8cf32ba9627e03d151bbda38d7e9ddc62a088b574d20",
+        "733dba37e4f5f91a11ff8c2c9ff05252999fcba52cae174fd586cc472ae0e54a",
+        "b4c05ef676563483b3acb62b1ca5c4dcb01cd087fda795cf4a408f05d4a5ad56"
+      ]
+    },
+    "ui-teaching-current-delivery.test.mjs": {
+      "fixture": "current-source-closure-before/ui-teaching-current-delivery.test.mjs.raw",
+      "priorSha256": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7",
+      "currentSha256": "1669a7c9d6b4173a7660dade731915af115701c7a33ca598b2ddfb8a4ea4a232",
+      "hunkHashes": [
+        "1867ef63c7f899f188b22c2eb795180f0ceb731d288f80dc25371b9eaec2fba2",
+        "35c150fd557a858b410257ec5d63ecebf589353d284179082d503bb17a987abd"
+      ]
+    }
+  }
+}
