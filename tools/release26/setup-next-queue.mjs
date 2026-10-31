@@ -1,0 +1,8 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-release26',own='G:/VisibleMedicine-temp/proposals/20261031-release26-main',cp='F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser';
+const source=root+'/SOURCE4.json',proof=root+'/FINAL_FOCUSED.json',recipe='G:/VisibleMedicine-temp/proposals/20261031-release26-queue/prepare-next.mjs';assert(json(proof).result.passing);assert.equal(hash(recipe),'347f1f2f291b9586704173924725b4c50b8b626449aa65ff6d99ea2435116dd9');
+fs.copyFileSync(recipe,own+'/prepare-next-queue.mjs',fs.constants.COPYFILE_EXCL);
+const output=execFileSync(process.execPath,['--max-old-space-size=192',own+'/prepare-next-queue.mjs'],{encoding:'utf8',windowsHide:true,env:{...process.env,FINAL_SOURCE:source,FINAL_SOURCE_SHA256:hash(source),FOCUSED_RECEIPT:proof,FOCUSED_RECEIPT_SHA256:hash(proof)}});const prepared=JSON.parse(output);assert.equal(prepared.next.id,'partition-26');
+const sealed=execFileSync(process.execPath,['--max-old-space-size=192',prepared.prepared+'/run-release.mjs','--seal'],{encoding:'utf8',windowsHide:true});
+fs.writeFileSync(cp+'/QUEUE_PREPARED.json',JSON.stringify({at:new Date().toISOString(),...prepared,plan:{path:prepared.prepared+'/PLAN.json',sha256:hash(prepared.prepared+'/PLAN.json')},sealOutput:sealed,executed:false,wholeSuitePassing:false},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({prepared:prepared.prepared,next:'partition-26',executed:false}));

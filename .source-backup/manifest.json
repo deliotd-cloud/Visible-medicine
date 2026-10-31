@@ -1,0 +1,224 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T20:22:29.529Z",
+  "sourceIdentity": {
+    "atlasHead": "df175264724a98ca4f70de19e1bfabd325084fdb",
+    "review": "8b349bdc9a34ac1d0a1edbc6f5724cfb835995a934f5e3c7cfd9cad0ecd19b46"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/current-atlas-delivery.mjs",
+      "sha256": "28a55e25160ada89024213b734ad1a25030399da823785ea8e20be78af8c0f62",
+      "bytes": 5159
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "sha256": "3f2ab1cf5b849aeda74da653aed280a4e752d8ccdab0f2379da929f2bdb55553",
+      "bytes": 37527
+    },
+    {
+      "path": "website/tests/prostate-current-delivery-transition.test.mjs",
+      "sha256": "382b4153c667cd39bd91d4d538399df92c83a984be19a686a71774cebdd22058",
+      "bytes": 5144
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "sha256": "911d132b2415402da9c30ac210d246c0efeee954af192458a460c00cec56259b",
+      "bytes": 2051
+    },
+    {
+      "path": "website/tests/fixtures/prostate-preimage/current-atlas-delivery.mjs.raw",
+      "sha256": "62831a4e68cdcc3665768782d135c93c1dce77e4f9ad0a6498f9af7cbccfd09b",
+      "bytes": 5159
+    },
+    {
+      "path": "website/tests/fixtures/prostate-preimage/current-atlas-delivery.test.mjs.raw",
+      "sha256": "f8ddcc6def046b9fa7634941c55c35ebe99f216edffef6c68936fd05c46eae97",
+      "bytes": 35908
+    },
+    {
+      "path": "website/tests/fixtures/prostate-preimage/current-atlas-delivery.json.raw",
+      "sha256": "6bdc60742e68447e991ce7451525941106ce1c96e1f6d11acaf81432ff006d9e",
+      "bytes": 2051
+    },
+    {
+      "path": "website/tests/atlas-a01-current-preservation.test.mjs",
+      "sha256": "3caf5c763f3e788f88640276ed9310cd0fa7284dd370f5446441e348880544f7",
+      "bytes": 7022
+    },
+    {
+      "path": "website/tests/fda-reference-review-links.test.mjs",
+      "sha256": "1f52309c07673533991daf61190b3cbff1f7efc8e5b1d68aa625eb9a94b195b0",
+      "bytes": 3070
+    },
+    {
+      "path": "website/tests/fda-reference-current-delivery.test.mjs",
+      "sha256": "27f8a39144c46d64c5b5f9359de1994137e6169977d1fd9cd28d1269e6ce12b2",
+      "bytes": 10940
+    },
+    {
+      "path": "website/tests/renal-tour-epoch-admission.mjs",
+      "sha256": "aa676c15cb03363d925590d530d36b05c87ea22bf44d0dfa252ef6ea0072ecb5",
+      "bytes": 18981
+    },
+    {
+      "path": "website/tests/clinical-review-forearm-vascular-xray.test.ts",
+      "sha256": "ff9dbb204a439683b95eb94ecd026bb60e86db0fdf45acbd971d548f1aa42342",
+      "bytes": 29747
+    },
+    {
+      "path": "website/tests/clinical-review-teaching-heading.test.ts",
+      "sha256": "a8428adab2bd8f6d39ff3319f537345098a4dc7e5494b196df7f92dd8c8bbe30",
+      "bytes": 8929
+    },
+    {
+      "path": "website/tests/clinical-review-vocal-tissue-teaching.test.ts",
+      "sha256": "418684fcea62cb8eb647281875357571509d1ffc984937e52bc61e6e0b42f75a",
+      "bytes": 11131
+    },
+    {
+      "path": "website/tests/shoulder-current-role-inverse.mjs",
+      "sha256": "92a1ff7635a523aef3b32a395b19561413136d6c37778a99c1d00e67b3cdf761",
+      "bytes": 5878
+    },
+    {
+      "path": "website/tests/head-feature-source-roles.mjs",
+      "sha256": "dc6d405c0ba33650c865b95b79c8098c5816e77e318162e8733cec6297740850",
+      "bytes": 7173
+    },
+    {
+      "path": "tools/release26/check-inverse.mjs",
+      "sha256": "88c568bd82b1b3f2882826914f62bcd4613a6e58d299049acb9576656827c2d2",
+      "bytes": 1555
+    },
+    {
+      "path": "tools/release26/final-focused.mjs",
+      "sha256": "a51d41fa68ab236112fab57247d6f499f8236bf49567f94155191ff335a2403d",
+      "bytes": 2998
+    },
+    {
+      "path": "tools/release26/finalize-index.mjs",
+      "sha256": "2fb230f04dd66f66351bfe6a8287168d0533a902558cbf5a48b70e2dd4bec60f",
+      "bytes": 6490
+    },
+    {
+      "path": "tools/release26/followup.mjs",
+      "sha256": "2cb3b811446cec74e0f2d0f0511f3fdf76bfe1c2f8822f83e6da07f4dab99298",
+      "bytes": 2844
+    },
+    {
+      "path": "tools/release26/head-history.mjs",
+      "sha256": "40fac51c7288bf2ac46ce94c5c65d05735212ef483c75356fc15883ed5b62478",
+      "bytes": 1982
+    },
+    {
+      "path": "tools/release26/light-and-successor.mjs",
+      "sha256": "e45c311646ca1e7ed7592bf6760976a7b420abec3d129773519d78d8435b7c81",
+      "bytes": 2769
+    },
+    {
+      "path": "tools/release26/light-guard.mjs",
+      "sha256": "19f431e14d102419471c882dd2d1e260075a17e6174702773651e8ebb0d322a3",
+      "bytes": 4502
+    },
+    {
+      "path": "tools/release26/prepare-next-queue.mjs",
+      "sha256": "347f1f2f291b9586704173924725b4c50b8b626449aa65ff6d99ea2435116dd9",
+      "bytes": 9209
+    },
+    {
+      "path": "tools/release26/prepare-window.mjs",
+      "sha256": "a38cffa4e0ff80c2ef6717eeacc10dd26b7bbe8910c97d82614ff196fe209fd9",
+      "bytes": 2029
+    },
+    {
+      "path": "tools/release26/prepare.mjs",
+      "sha256": "34095b91276895c66cdd3d64016179f05b4917d58197b996011adbf1b30c55c2",
+      "bytes": 1800
+    },
+    {
+      "path": "tools/release26/restart-readback.mjs",
+      "sha256": "21621a8dd1106a4c376838fc62e0d2ba8e36fc3e91d252f6aabf772be0bedf3c",
+      "bytes": 2010
+    },
+    {
+      "path": "tools/release26/run-focused.mjs",
+      "sha256": "13cac997a5b63be95c8bd3b16777e4f09f76744547a33a51507256f785c81c4d",
+      "bytes": 1923
+    },
+    {
+      "path": "tools/release26/save-browser-evidence.mjs",
+      "sha256": "37ca792f87dcec529f29dd3add4298624e6299b6cb9d252919dc952b201c11f1",
+      "bytes": 5088
+    },
+    {
+      "path": "tools/release26/save.mjs",
+      "sha256": "147c03e814b6ed62e5d1c53518cfc465c2e07dd30dec1e9939cb8afa2cb968e7",
+      "bytes": 5186
+    },
+    {
+      "path": "tools/release26/seal.mjs",
+      "sha256": "da74d21c0b960e6624d029ba0a751ac204728d0c709530db740d7960e32b9888",
+      "bytes": 3026
+    },
+    {
+      "path": "tools/release26/setup-next-queue.mjs",
+      "sha256": "ff6c39edcd71dd20482eb22fb268a3fdaef1cdb9213349e913b1454dbe58d429",
+      "bytes": 1707
+    },
+    {
+      "path": "tools/release26/window.mjs",
+      "sha256": "d5c8bc7d95efbf70c52db14fdae58bf496c0c78e5c4dab36ef9fba522f45cc1b",
+      "bytes": 821
+    }
+  ],
+  "removed": [],
+  "scope": "Selected release regression sources and local verification recipes only; no scans, medical screenshots, masks, private browser evidence, databases, credentials, binaries or canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "at": "2026-10-31T20:22:28.756Z",
+    "installedAtlas": "df175264724a98ca4f70de19e1bfabd325084fdb",
+    "review": "8b349bdc9a34ac1d0a1edbc6f5724cfb835995a934f5e3c7cfd9cad0ecd19b46",
+    "testSource": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/FINAL_SOURCE.json",
+      "sha256": "d40c4e398f5b069206d11b3035d6f72853c33ca20a1a61d34bfdbd7653dd2d0e"
+    },
+    "focused": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/FINAL_RESULT.json",
+      "sha256": "8d9024b01071308035b474bbdb8a0fb7b97e49025766576fb48a693c5e4d0b74"
+    },
+    "counts": {
+      "tests": 84,
+      "pass": 84,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "inverse": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/INVERSE_CHECK.json",
+      "sha256": "9b89fba6eec6f2ea30f9247c29b6d14f76d7f09d3bbad6da52456d58e1e71d99"
+    },
+    "testInstallation": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/TEST_INSTALLATION.json",
+      "sha256": "e833e85218019191270488f0c7f067ba67b6d249187688c3eeca164fcdd50e5a"
+    },
+    "previewRestored": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/preview-window/RESTART_READBACK.json",
+      "sha256": "b627d9cfb1fbc032cebb14ae9c609b1f3d7bcfa23c0e37b8b7b3d4bc5272e13f"
+    },
+    "nextQueue": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/QUEUE_PREPARED.json",
+      "sha256": "1d9081c20a2eb130c012a4565606678257fd743ecb4b74250c64b0df74cb8b5a"
+    },
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "publicDeployment": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

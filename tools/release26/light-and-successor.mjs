@@ -1,0 +1,14 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const here='G:/VisibleMedicine-temp/proposals/20261031-release26-main',root='G:/VisibleMedicine-temp/staging/20261031-release26',source=json(root+'/SOURCE.json');
+const p='tests/fda-reference-current-delivery.test.mjs',proposal='G:/VisibleMedicine-temp/proposals/20261031-release26-history';const manifest=json(proposal+'/MANIFEST.json');const m=manifest.proposedRows.find(row=>row.path===p);assert(m);
+assert.equal(hash(source.website+'/'+p),m.baseSha256);assert.equal(hash(proposal+'/'+p),m.proposedSha256);fs.copyFileSync(proposal+'/'+p,source.website+'/'+p);
+const row=source.sourceRows.find(row=>row.path===p);row.sha256=m.proposedSha256;row.bytes=fs.statSync(source.website+'/'+p).size;source.currentChanges.push(p);source.changes.push({...row,beforeSha256:m.baseSha256});source.parent={path:root+'/SOURCE.json',sha256:hash(root+'/SOURCE.json')};source.at=new Date().toISOString();
+for(const row of source.sourceRows)assert.equal(hash(source.website+'/'+row.path),row.sha256,row.path);fs.writeFileSync(root+'/SOURCE2.json',JSON.stringify(source,null,2)+'\n',{flag:'wx'});
+const original='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';let text=fs.readFileSync(original,'utf8');const change=(a,b)=>{assert.equal(text.split(a).length,2,a);text=text.replace(a,b);};
+change("'./seal-simple-website-successor.mjs'","'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/seal-simple-website-successor.mjs'");
+change("'./native-website-integration-stage-20261025.mjs'","'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/native-website-integration-stage-20261025.mjs'");
+change('assert([3072,3584,4096].includes(aggregate))','assert([1536,3072,3584,4096].includes(aggregate))');change('assert([5120,5632,6144].includes(minimum))','assert([3584,5120,5632,6144].includes(minimum))');
+fs.writeFileSync(here+'/light-guard.mjs',text,{flag:'wx'});
+fs.writeFileSync(here+'/LIGHT_GUARD.json',JSON.stringify({source:{path:original,sha256:hash(original)},derived:{path:here+'/light-guard.mjs',sha256:hash(here+'/light-guard.mjs')},aggregateMiB:1536,minimumFreeMiB:3584,reserveMiB:2048,heapMiB:768,processJobCommitTimeControlsUnchanged:true,reason:'Sequential focused test files use smaller native job; preserved 2GiB free reserve.'},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({source:root+'/SOURCE2.json',sha256:hash(root+'/SOURCE2.json'),changes:source.changes.length}));

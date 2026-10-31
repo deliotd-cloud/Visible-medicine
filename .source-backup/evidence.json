@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-31T20:22:28.756Z",
+  "installedAtlas": "df175264724a98ca4f70de19e1bfabd325084fdb",
+  "review": "8b349bdc9a34ac1d0a1edbc6f5724cfb835995a934f5e3c7cfd9cad0ecd19b46",
+  "testSource": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/FINAL_SOURCE.json",
+    "sha256": "d40c4e398f5b069206d11b3035d6f72853c33ca20a1a61d34bfdbd7653dd2d0e"
+  },
+  "focused": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/FINAL_RESULT.json",
+    "sha256": "8d9024b01071308035b474bbdb8a0fb7b97e49025766576fb48a693c5e4d0b74"
+  },
+  "counts": {
+    "tests": 84,
+    "pass": 84,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "inverse": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/INVERSE_CHECK.json",
+    "sha256": "9b89fba6eec6f2ea30f9247c29b6d14f76d7f09d3bbad6da52456d58e1e71d99"
+  },
+  "testInstallation": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/TEST_INSTALLATION.json",
+    "sha256": "e833e85218019191270488f0c7f067ba67b6d249187688c3eeca164fcdd50e5a"
+  },
+  "previewRestored": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/preview-window/RESTART_READBACK.json",
+    "sha256": "b627d9cfb1fbc032cebb14ae9c609b1f3d7bcfa23c0e37b8b7b3d4bc5272e13f"
+  },
+  "nextQueue": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-head-learning-browser/QUEUE_PREPARED.json",
+    "sha256": "1d9081c20a2eb130c012a4565606678257fd743ecb4b74250c64b0df74cb8b5a"
+  },
+  "wholeSuitePassing": false,
+  "clinicalApproval": false,
+  "patientRegistration": false,
+  "publicDeployment": false
+}
