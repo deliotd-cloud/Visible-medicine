@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-31T00:22:23.459Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-release-partition5-focused/SOURCE.json",
+    "sha256": "be9f3485fb1476a8520ecf1a1004ca9d2063940876a576b9babfdd7254a45130"
+  },
+  "focusedRoots": 4,
+  "focusedPassing": 4,
+  "historicalCasesReplayed": 11,
+  "historicalOriginalBodiesUnchanged": true,
+  "exactHistoricalWebsiteAndAtlasChecks": true,
+  "currentDeliveryCheckedSeparately": true,
+  "unchangedProductBuild": {
+    "path": "G:/VisibleMedicine-temp/staging/20261031-review-readable-groups/BUILD_RESULT-3.json",
+    "sha256": "b9df089b6d2109db7aee5f31005322b2035dc876108a357a54121f8f8b9ab186"
+  },
+  "allProductInputsUnchanged": true,
+  "protectedInputsUnchanged": true,
+  "reviewIntegration": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+  "priorSixFailureRepairFocused": true,
+  "wholeSuitePassing": false,
+  "installed": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
