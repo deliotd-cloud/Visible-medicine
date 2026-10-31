@@ -1,0 +1,43 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T23:38:00.513Z",
+  "sourceIdentity": {
+    "atlasHead": "f949979e975b6260575a7fd72901bcc2aec0be05",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "review": "5148eedc162c15c6f7e954654ae608a87589a1a43f790750e6275bb7ead5a975",
+    "sourceSha256": "b3d8d9e843df03c6c28bf3169b850fcde7998bdedfa44340bd814780e0105b16"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "sha256": "d2e2af8460e3b757b612f5943932be364bef1895d26a3cd5653225a0b7646a4c",
+      "bytes": 42490
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-ui.test.mjs",
+      "sha256": "4d2125a22aacc40c1828bd3594011df9d58e3389d8864a63de56ee01196bb186",
+      "bytes": 28439
+    }
+  ],
+  "removed": [],
+  "scope": "Two selected website component and test files for bounded Clinical Review queue read-ahead. Excludes scans, masks, private records, databases, MRI lookup information, screenshots, generated assets and canonical Git ancestry. This is a selected-source checkpoint, not a complete project backup.",
+  "proof": {
+    "installedLocally": true,
+    "focusedTests": 100,
+    "focusedFailures": 0,
+    "websiteBuildPassing": true,
+    "syntheticBrowserFull133PageScanPassing": true,
+    "maximumConcurrentReads": 2,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "publicDeployment": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
