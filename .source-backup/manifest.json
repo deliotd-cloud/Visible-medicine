@@ -1,0 +1,258 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T14:57:54.077Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release16-final/SOURCE.json",
+      "sha256": "ec5e332400ad3744044342deb9f7c6d80de0d1ab432107f96c0a5d221faecc8b"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-abdominal-quiz.test.ts",
+      "sha256": "a504a6a124ff7ffc16d937ea58e64e7acabcbeed32eeef88789badc8561fef2e",
+      "bytes": 4937
+    },
+    {
+      "path": "website/tests/abdominal-quiz-kidney-successor-1031.mjs",
+      "sha256": "9dfc559aeab571dab803172e71a121f0bb8583f03d84e9384db47c244f783bed",
+      "bytes": 2729
+    },
+    {
+      "path": "website/tests/clinical-review-wave2-preservation.test.mjs",
+      "sha256": "d062eba44671ec037352cf78558f6003af7e1982d4e5265d1c53e62b8eba178d",
+      "bytes": 3346
+    },
+    {
+      "path": "website/tests/clinical-review-iliac-venous-xray.test.ts",
+      "sha256": "10e58f2b174f7feddcfbda25a68e2916f72abbdd09e357613e0246da2eda1b95",
+      "bytes": 9777
+    },
+    {
+      "path": "website/tests/abdominal-quiz-kidney-successor-1031.test.mjs",
+      "sha256": "368ad055236109b0a42f9636583c71d3117bd5177bd8c94b3f0542a143029c52",
+      "bytes": 1049
+    },
+    {
+      "path": "website/tests/clinical-review-spinal-disc-quiz.test.ts",
+      "sha256": "6bfb3c4bad0c2b095b0ccefe9bb1fdb090fc645f05fa586e809c47f80068aca9",
+      "bytes": 28193
+    },
+    {
+      "path": "website/tests/tour-reading-current-delivery.test.mjs",
+      "sha256": "c1a407b3e61166accb4b50d02381eebb1ae0cae8c1f1a359c616543425074a73",
+      "bytes": 28021
+    },
+    {
+      "path": "website/tests/atlas-thoracic-core-reasoning.test.ts",
+      "sha256": "c8bb0b76711836bb2bed5accd8a44fb5504d94caf095a529a19175e928eaf21b",
+      "bytes": 9532
+    },
+    {
+      "path": "website/tests/atlas-emitted-teaching-async.ts",
+      "sha256": "72d412d4b17f8fa944bb90653da0dcd910fbc16eaadc6a5748fc65ab68a75597",
+      "bytes": 1425
+    },
+    {
+      "path": "website/tests/git-snapshot-reader.mjs",
+      "sha256": "cf636eef120e6d09d7968d6cfbb7506c25b9bd1926220d1ca64498380b3eb44b",
+      "bytes": 8688
+    },
+    {
+      "path": "website/tests/git-snapshot-reader.test.mjs",
+      "sha256": "ae52ed6dff394003b31c33f3e8a1bdc97c2dc4bf76eeb4ac3115b393d2e841c7",
+      "bytes": 5452
+    },
+    {
+      "path": "website/tests/body-learning-issue-preservation.test.mjs",
+      "sha256": "8a6caa8519728a0e5f40361e9df202187e2d5a757ac2e44261ba30b8af97bde5",
+      "bytes": 5253
+    },
+    {
+      "path": "website/tests/current-proof-corrections-preservation.test.mjs",
+      "sha256": "1520a854049de0f27fc8f124ee45314e48f822a9f9ddf406b49b16bc6640696b",
+      "bytes": 6417
+    },
+    {
+      "path": "website/tests/regional-link-role-preservation-20261021.test.mjs",
+      "sha256": "6e64ba5920afb472ae8993bbfe7665d31aa1ee5a579bb362489b15bbdbc417a8",
+      "bytes": 8601
+    },
+    {
+      "path": "website/tests/release16-preservation-line-delta.mjs",
+      "sha256": "ba5a711b783ff73262c0eafe994f32cac0afb84f6166742b6f501db2171fb935",
+      "bytes": 1615
+    },
+    {
+      "path": "website/tests/release16-preservation-line-delta.test.mjs",
+      "sha256": "4263cb63edf01f702f13afc97b279e3573781c8f444fa4733c95a619b9189fee",
+      "bytes": 436
+    },
+    {
+      "path": "website/tests/fixtures/intracranial-us-ea5d.test.mjs.raw",
+      "sha256": "ea5d9ff5c989be5eb5b4ddb211487fb0e594754339c214acde5da6f99974279b",
+      "bytes": 34668
+    },
+    {
+      "path": "website/tests/fixtures/regional-mri-inline-6467.test.ts.raw",
+      "sha256": "6467bfb098644b04464969d98cbae9f8ca2974d9a54c320d29af39c1c419e716",
+      "bytes": 22859
+    },
+    {
+      "path": "website/tests/fixtures/regional-reference-index-bc6c.test.ts.raw",
+      "sha256": "bc6c4172fe97f496320cb4d3170c83aeccbaa68f6b13b9786804fb2dd0f2e589",
+      "bytes": 17422
+    },
+    {
+      "path": "website/tests/head-binding-role-preservation-20261021.test.mjs",
+      "sha256": "1c2da07a959555701925c229ab2dc6cda853ca993497e982cb3f7a1d28afe603",
+      "bytes": 20382
+    },
+    {
+      "path": "website/tests/head-surface-review-binding.test.mjs",
+      "sha256": "b5c1e0b0110552032b75fd4f746e65f06629587668c168888a5b5ba9180238f4",
+      "bytes": 7613
+    },
+    {
+      "path": "tools/release16/benchmark.mjs",
+      "sha256": "e9968bbf019a85cdbafceaf7626aae36d531afea860cae144d2b910339068b09",
+      "bytes": 2363
+    },
+    {
+      "path": "tools/release16/check-final.mjs",
+      "sha256": "f7c2f564643971eb908ffceca135f697590c06359bec9d3fb0d9c6732dd1496c",
+      "bytes": 2127
+    },
+    {
+      "path": "tools/release16/check.mjs",
+      "sha256": "252f3d6bf2b42135236762d936f6fcd52fad8649b6b4713f35a6a157ca943ef8",
+      "bytes": 2127
+    },
+    {
+      "path": "tools/release16/finalize-quiz.mjs",
+      "sha256": "3cb8725b508faad7e214479a389e89f030db95e8015b42b8c72534ed9ea77af1",
+      "bytes": 3603
+    },
+    {
+      "path": "tools/release16/integrate-final.mjs",
+      "sha256": "dd0d531a41f5e8cf925b74e0dc5fe251f8cafd9fc73d6b22c4fe4fb36337382c",
+      "bytes": 4087
+    },
+    {
+      "path": "tools/release16/integrate.mjs",
+      "sha256": "9e68bd36fe06e0664d0a190b50b5b086da52136bad07b3631529cda92292bc84",
+      "bytes": 4605
+    },
+    {
+      "path": "tools/release16/prepare-clinical.mjs",
+      "sha256": "3136941210fce38675a3669b5e5ec263b60498ebb8eda925e76b4c7281181a93",
+      "bytes": 6502
+    },
+    {
+      "path": "tools/release16/prepare-preservation.mjs",
+      "sha256": "2ebd4c879ec968f8b397513adc4daa0ac52a85bccdf7a651f54450e65d9ca933",
+      "bytes": 1648
+    },
+    {
+      "path": "tools/release16/prepare-queue-inner.mjs",
+      "sha256": "22e3b53e88b5fd12bf6f8bde7c83c8a975f39cd1709aac0e12cb786fbf86779c",
+      "bytes": 2975
+    },
+    {
+      "path": "tools/release16/prepare-queue.mjs",
+      "sha256": "dca44fc093a0dbd479474bec58d02e2220645b37e9add9181ba173ffcb1be133",
+      "bytes": 805
+    },
+    {
+      "path": "tools/release16/prepare-window.mjs",
+      "sha256": "3aff15d8d098b3e67f5f5f47bb82caee3759f7634cd59cf169c24bb8e123d6af",
+      "bytes": 2814
+    },
+    {
+      "path": "tools/release16/record-active.mjs",
+      "sha256": "1fdfd4b0dce93f6fb49a27896a883e3eaf316602c1d1753a1017c9fc72448a84",
+      "bytes": 960
+    },
+    {
+      "path": "tools/release16/record-evidence.mjs",
+      "sha256": "c263fdc5952bd2e94abecc33e0c907a15952d30fb5e1122ce799c0372b34c000",
+      "bytes": 2717
+    },
+    {
+      "path": "tools/release16/save.mjs",
+      "sha256": "cc052188aea457df962cb1405b8eb2540ebe117a92519060c77ea74a39dfe26f",
+      "bytes": 10900
+    },
+    {
+      "path": "tools/release16/track-final.mjs",
+      "sha256": "8a89a9d3be5bdafed587f683a0f4db12d62c2bdc47e292ec57590a21f1887baf",
+      "bytes": 1044
+    },
+    {
+      "path": "tools/release16/track-focused.mjs",
+      "sha256": "8d2fd060cfb6c34c0d2c6bcdc8e97352e72c32562816d03ed3efe02b6bfa931d",
+      "bytes": 1045
+    },
+    {
+      "path": "tools/release16/track.mjs",
+      "sha256": "cedd8935cd1d7ee3958b913302f457ea5c3ba9476a0b2cc1b32afe364d8b8c08",
+      "bytes": 1468
+    },
+    {
+      "path": "tools/release16/preview-window/restart.mjs",
+      "sha256": "68566b87eeaad98dc5a3b5becb0d333929f0e32e4bf4922cb0fbc566fd428310",
+      "bytes": 2363
+    },
+    {
+      "path": "tools/release16/preview-window/health.ps1",
+      "sha256": "22c23b575b138c90f8ba77d5fa2e117d292b06f41a35b852b242aff49e82e66f",
+      "bytes": 1445
+    },
+    {
+      "path": "tools/thoracic-pilot/proof.mjs",
+      "sha256": "ff44d3bb60d57a23336102d9d27108e334d7be48682554b18f83fdb575424b63",
+      "bytes": 2026
+    },
+    {
+      "path": "tools/thoracic-pilot/helper-proof.mjs",
+      "sha256": "e3082598cf878b3394cab2aa4dbda7f677a0ebc8f984c031bd7b971da7593b51",
+      "bytes": 1725
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original validation scripts, test source/helpers and historical test fixtures only. No scans, models, patient identifiers, private databases, images, generated runtime or canonical Git ancestry. Scoped source delta, not whole-project backup.",
+  "proof": {
+    "release16IdentifiedFailures": 14,
+    "focused": {
+      "tests": 43,
+      "pass": 43,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "roots": 14,
+    "sourceRows": 7349,
+    "thoracicComparison": {
+      "baselineMs": 162396.8826,
+      "pilotMs": 25824.5609,
+      "sameTestCases": 2,
+      "retainedAssertionLines": 36,
+      "singleTrial": true
+    },
+    "productUnchanged": true,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "publicDeployment": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

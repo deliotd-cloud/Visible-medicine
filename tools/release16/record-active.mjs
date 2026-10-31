@@ -1,0 +1,4 @@
+import fs from 'node:fs';import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const i=json('CURRENT_CHECKPOINT.json'),c=i.activeWork.current,cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release16-progress',stop=cp+'/preview-window/STOPPED.json';
+c.currentInstalled.preview.state='temporarily-stopped-authorized-checks';c.currentInstalled.preview.stopEvidence={path:stop,sha256:hash(stop)};
+c.activeExecutionSessions=[{sessionId:59079,supervisorPid:186580,evidence:'G:/VisibleMedicine-temp/proposals/20261031-release16-main/benchmark-baseline',step:'thoracic-baseline-comparison',state:'started-observed-revalidate'}];i.activeWork.updated=new Date().toISOString();saveIndex(i);console.log('Saved preview recovery and active test handle.');

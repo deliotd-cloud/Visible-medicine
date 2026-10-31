@@ -1,0 +1,25 @@
+{
+  "release16IdentifiedFailures": 14,
+  "focused": {
+    "tests": 43,
+    "pass": 43,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "roots": 14,
+  "sourceRows": 7349,
+  "thoracicComparison": {
+    "baselineMs": 162396.8826,
+    "pilotMs": 25824.5609,
+    "sameTestCases": 2,
+    "retainedAssertionLines": 36,
+    "singleTrial": true
+  },
+  "productUnchanged": true,
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
