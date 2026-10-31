@@ -1,0 +1,128 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T12:25:02.396Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-visual-ct-guidance-ready/SOURCE_PREPARED_REFERENCE_HISTORY.json",
+      "sha256": "1d4ce710b556516a76dfe2ca1566db8f0fcda9a8b7308bad593d184162ebcc86"
+    },
+    "state": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-visual-ct-guidance-ready/VERIFICATION_REFERENCE_HISTORY_STATE.json",
+      "sha256": "76c7edaae5479d4bdda39641ad00abc7efd06437ce6d3ea60ce9a98b235b5635"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/scripts/validate-collicular-teaching.mjs",
+      "bytes": 9124,
+      "sha256": "da13cebf94780898478b5d8c38df63a9905f4cfa05b4428820df00138875b133"
+    },
+    {
+      "path": "atlas/scripts/validate-superior-temporal-mri.mjs",
+      "bytes": 8645,
+      "sha256": "0d52c55438795b0815dfd9d447b0f13f2e9c8adaf537bdb95bcec0a6e462425b"
+    },
+    {
+      "path": "atlas/scripts/validate-nested-teaching.mjs",
+      "bytes": 38154,
+      "sha256": "ec8d32022dedfc8c09304bb5155c8a15ffff01e691f116614c2ab3718fe43694"
+    },
+    {
+      "path": "atlas/scripts/adrenal-ultrasound-history.mjs",
+      "bytes": 4797,
+      "sha256": "5377d567184ceef6ea6470faa7da87bec525577e118420f7085597768104b40b"
+    },
+    {
+      "path": "atlas/scripts/test-adrenal-ultrasound-history.mjs",
+      "bytes": 7040,
+      "sha256": "a37f14178db8e46aed12b158ea4ae7600f8ea9ed006ee05096587a11c569053f"
+    },
+    {
+      "path": "tools/current-history/prepare.mjs",
+      "bytes": 4292,
+      "sha256": "ca929615557d9a65924e090f14d47afc115cddd50a47f1d2a3543070f28d0ebc"
+    },
+    {
+      "path": "tools/current-history/verify.mjs",
+      "bytes": 6160,
+      "sha256": "66528171a87d86c324660c99d505554095b2260c7c3a4fd359588405aa36fda3"
+    },
+    {
+      "path": "tools/current-history/freeze.mjs",
+      "bytes": 4147,
+      "sha256": "b075e1e124ecba4692d1fc039140d355cab10b1e8ea1addab7ad9a922d25bdd0"
+    },
+    {
+      "path": "tools/current-history/prepare-corpus.mjs",
+      "bytes": 4749,
+      "sha256": "83e9356378b34580c8e2252e2e73f02d3486c1ee8426ed413f8c153e986f899b"
+    },
+    {
+      "path": "tools/current-history/verify-corpus.mjs",
+      "bytes": 6156,
+      "sha256": "52cc934e82d0b71e476e8c33f0a4d231c3635081af72428f7117b360560b4bce"
+    },
+    {
+      "path": "tools/current-history/freeze-corpus.mjs",
+      "bytes": 4510,
+      "sha256": "1639f32754573e2b4896aeba2a7299639a3c54ccace97d83de9c0463ca867713"
+    },
+    {
+      "path": "tools/current-history/prepare-references.mjs",
+      "bytes": 4451,
+      "sha256": "cc577f903fdf7bbdaaf297af29397df3c67ba2448ebf04107c9775dfe6397cb4"
+    },
+    {
+      "path": "tools/current-history/verify-references.mjs",
+      "bytes": 6168,
+      "sha256": "3bcfa7b88cf6299c350ec9a8def38048e5aa556631f849d649153cc35c8b8823"
+    },
+    {
+      "path": "tools/current-history/freeze-references.mjs",
+      "bytes": 4528,
+      "sha256": "82416051c588f67b9adf2fae0c032041d437c9dc3e00831d4f46baeafc7d4138"
+    },
+    {
+      "path": "tools/adrenal-runtime/verify.mjs",
+      "bytes": 4031,
+      "sha256": "1e0a7a6eef04261a43454a463157b4fed21765303dba493f789d053b78d4b12c"
+    },
+    {
+      "path": "tools/current-history/preview-window/restart.mjs",
+      "bytes": 2375,
+      "sha256": "01ea2452e0bbc037d22e467151f851606f2b88e2b67d5ae20473c28077ec395e"
+    },
+    {
+      "path": "tools/current-history/preview-window/record-stopped.mjs",
+      "bytes": 2031,
+      "sha256": "9efc62381ccbdbb98b40041050f0bf376124a09ceee9ab568a14b8b1210c4640"
+    },
+    {
+      "path": "tools/current-history/prepare-preview-window.mjs",
+      "bytes": 1722,
+      "sha256": "9ce290cbbfc0a75ee05f2f578913867622658948199e7842c23478fad122751f"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original validator/helper/test/recipe source files only. No scans, models, private databases, logs, generated teaching, or canonical Git ancestry.",
+  "proof": {
+    "completedChecks": 13,
+    "requiredChecks": 13,
+    "validationState": "passed",
+    "wholeCandidatePassed": true,
+    "frozen": true,
+    "historicalGraphsSeparate": true,
+    "liveTargetChecksRetained": true,
+    "adrenalRegressionBeforeFailures": 1,
+    "adrenalTestsAfter": 23,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
