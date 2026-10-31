@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-31T09:23:59.886Z",
+  "priorPartition": {
+    "pass": 155,
+    "fail": 10
+  },
+  "pureBefore": {
+    "pass": 18,
+    "fail": 1
+  },
+  "clinicalBefore": {
+    "pass": 4,
+    "fail": 2
+  },
+  "studioCurrent": {
+    "pass": 2,
+    "fail": 0
+  },
+  "remaining": "Two revised clinical roots and source-matched release partitions awaiting runtime confirmation.",
+  "productUnchanged": true,
+  "wholeSuitePassing": false,
+  "installed": false
+}

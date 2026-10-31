@@ -1,0 +1,128 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T09:24:02.919Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-release-twelve-repairs/SOURCE.json",
+      "sha256": "e464d5ac847dfe8fcc1885eb0b05ad5db89ac6d84f1af0ac44dc6f2259de9a5f"
+    },
+    "parent": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-release-twelve-repairs/before/SOURCE.json",
+      "sha256": "59bef410c6765f00f2ec890b103887eb534b2fe48441dc516c11e6c7cc7c21b6"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-saved-review-epoch.ts",
+      "bytes": 4728,
+      "sha256": "5b1df50910bf8e9f7c2d0d36f39c87743760d8c3fd95547de0a960caab8fadc9"
+    },
+    {
+      "path": "website/tests/atlas-saved-review-epoch.test.ts",
+      "bytes": 3035,
+      "sha256": "2d558004304b38257c38ecc4be8b15717fc9dc52a2b7a3f635a66418f71b8f99"
+    },
+    {
+      "path": "website/tests/body-learning-contract-preservation.test.mjs",
+      "bytes": 4990,
+      "sha256": "5bbe9c3317a02523d6a864097d8613ee76b7b758327d99a75ab2dd8ae82db454"
+    },
+    {
+      "path": "website/tests/clinical-review-six-admissions-contract.test.mjs",
+      "bytes": 13144,
+      "sha256": "5da51abb8a1ec1e10a6e277ea2e8f200d42e511b91b35b71fb518cb68f4c0674"
+    },
+    {
+      "path": "website/tests/sql-current-source-binding.test.mjs",
+      "bytes": 5532,
+      "sha256": "f778cba30c78d31e6c32efe8611da52f1ca47e6d404eac1a57b2102c5054931f"
+    },
+    {
+      "path": "website/tests/clinical-review-abdominal-eus-current.test.ts",
+      "bytes": 16588,
+      "sha256": "a1c06615208ba19407d066afa70a4feb1813df4e7642d63255b987c1e0db7a33"
+    },
+    {
+      "path": "website/tests/clinical-review-neonatal-cranial-us.test.ts",
+      "bytes": 38989,
+      "sha256": "580ae98c49856e2df9ce130cd544480126861eaae80a1ab70a98f4c0212d5999"
+    },
+    {
+      "path": "website/tests/clinical-review-pulmonary-venous-teaching.test.ts",
+      "bytes": 13772,
+      "sha256": "22bf8dc31716d7b2e79fefc959ce05e478ae7c0667dc362ab045b7193d479e63"
+    },
+    {
+      "path": "website/tests/current-delivery-admission-485.test.mjs",
+      "bytes": 10871,
+      "sha256": "c2261e589d78edd5d374fb02061bad2f41b909288a110d5e4def2722295eb45f"
+    },
+    {
+      "path": "website/tests/studio-history-controller-migration.test.mjs",
+      "bytes": 9690,
+      "sha256": "62fbe86753f9dc826e24d9daf1c6576fe18c88f8ebb4e43022e77efd653e803b"
+    },
+    {
+      "path": "recipes/release-twelve/integrate-followup.mjs",
+      "bytes": 4176,
+      "sha256": "335022c373af58ebfbb600a8b9b1cc4938fc22f5b6b1acd000d0589b0c84f4c3"
+    },
+    {
+      "path": "recipes/release-twelve/prepare-followup-queue.mjs",
+      "bytes": 2602,
+      "sha256": "a04f47f04566d83878e71aa27be27a3cac67486a03168982bb7ca3fb676f6bf6"
+    },
+    {
+      "path": "recipes/release-twelve/verify-studio-final.mjs",
+      "bytes": 1697,
+      "sha256": "6adaab6d9618871c46e65e31d4c4217d68215c9cd36e7efb7838e49ae89e11ac"
+    },
+    {
+      "path": "recipes/release-twelve/verify-clinical.mjs",
+      "bytes": 2457,
+      "sha256": "70b792cf94f070f7508263af5616f7a6a5b38f4ea91c76dfcad6a609349b0c41"
+    },
+    {
+      "path": "recipes/release-twelve/correct-pure-report.mjs",
+      "bytes": 1265,
+      "sha256": "b19396ff9c50df8e62688e05ac154656139225a565c3be36639f121e45d816a1"
+    },
+    {
+      "path": "recipes/release-twelve/save-checkpoint.mjs",
+      "bytes": 9684,
+      "sha256": "bb020ffcf5cbe80e521d2e145f80196196e23c01f3b3ef2be4ed2c4c44fc6add"
+    }
+  ],
+  "removed": [],
+  "scope": "Ten selected regression-test/helper corrections and six integration/checkpoint recipes only. Not a whole-project backup or full-suite pass. No scans, masks, images, clinical decisions, model assets, private references, logs or canonical Git ancestry. Installed product remains unchanged.",
+  "proof": {
+    "at": "2026-10-31T09:23:59.886Z",
+    "priorPartition": {
+      "pass": 155,
+      "fail": 10
+    },
+    "pureBefore": {
+      "pass": 18,
+      "fail": 1
+    },
+    "clinicalBefore": {
+      "pass": 4,
+      "fail": 2
+    },
+    "studioCurrent": {
+      "pass": 2,
+      "fail": 0
+    },
+    "remaining": "Two revised clinical roots and source-matched release partitions awaiting runtime confirmation.",
+    "productUnchanged": true,
+    "wholeSuitePassing": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

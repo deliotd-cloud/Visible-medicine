@@ -1,0 +1,85 @@
+import assert from 'node:assert/strict';import test from 'node:test';import {readFileSync} from 'node:fs';import {createHash} from 'node:crypto';
+import {join} from 'node:path';import {pathToFileURL} from 'node:url';
+const sourceRoot=process.env.VM_WEBSITE_ROOT;
+const helper=name=>sourceRoot?pathToFileURL(join(sourceRoot,'tests',name)).href:new URL('./'+name,import.meta.url).href;
+const {reconstructCourseDetailsBeforeFocus}=await import(helper('studio-course-details-focus-inverse.mjs'));
+const {restoreReleaseCueDetailsForm}=await import(helper('studio-release-cue-details-form-inverse.mjs'));
+const read=p=>readFileSync(sourceRoot?join(sourceRoot,p):new URL('../'+p,import.meta.url));
+function original(name){const row=JSON.parse(read('tests/fixtures/desktop-navigation-52/'+name+'.json'));assert.equal(row.schema,'vm-exact-source-preimage-json-1');assert.equal(row.path,'tests/'+name);const bytes=Buffer.from(row.text);assert.equal(bytes.length,row.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),row.sha256);return bytes;}
+test('legacy controller behaviors retain original assertions; only public argument preflight migrates',()=>{
+ const b=original('studio-course-history-controller.test.mjs');assert.equal(createHash('sha256').update(b).digest('hex'),'6f359f9a7204fe7d3d2e862d25aedef035ce92b9cefcd470571ffa32b1a24421');
+ const replace=(s,a,c)=>{assert.equal(s.split(a).length,2);return s.replace(a,c);};let text=b.toString();
+ text=replace(text,"const baseline = candidate.replace('window.history.pushState(null,', 'window.history.pushState(window.history.state,');","const externalState = '{ ...window.history.state, __vinext_externalHistoryState: true }';\nconst baseline = candidate.replace(`window.history.pushState(${externalState},`, 'window.history.pushState(window.history.state,');");
+ text=replace(text,"  assert.equal(candidate.replace('window.history.pushState(null,', 'window.history.pushState(window.history.state,'), baseline);","  assert.equal(candidate.replace(`window.history.pushState(${externalState},`, 'window.history.pushState(window.history.state,'), baseline);");
+ text=replace(text,'  assert.match(candidate, /window\\.history\\.pushState\\(null, "",/);','  assert.match(candidate, /window\\.history\\.pushState\\(\\{ \\.\\.\\.window\\.history\\.state, __vinext_externalHistoryState: true \\}, "",/);');
+ assert.equal(read('tests/studio-course-history-controller.test.mjs').toString().replaceAll('\r\n','\n'),text.replaceAll('\r\n','\n'));
+});
+test('course details form preserves its frozen body outside exact tab and history-navigation seams',()=>{
+ const b=original('studio-course-details-form.test.mjs');assert.equal(createHash('sha256').update(b).digest('hex'),'af77ec0d9df08474c6f199e4e1c33cd9b43dc4a13e9f897d82c7d7b631b321d5');let text=b.toString();
+ for(const target of ['tree','opened']){const before=`walk(${target}, node => node.props['aria-controls'] === 'course-review').props['aria-pressed']`,after=`walk(${target}, node => node.props.role === 'tab' && node.props['aria-controls'] === 'course-review').props['aria-selected']`;assert.equal(text.split(before).length,2);text=text.replace(before,after);}
+ const exact=(s,from,to)=>{assert.equal(s.split(from).length,2,`Unique declared seam: ${from.slice(0,55)}`);return s.replace(from,to);};
+ const setup=[
+  "  const oldWindow = Object.getOwnPropertyDescriptor(globalThis, 'window');",
+  '  const historyWrites = [];',
+  '  const location = new URL(`http://localhost/studio/courses/${encodeURIComponent(course.id)}?keep=1&pane=review#outline`);',
+  "  Object.defineProperty(globalThis, 'window', {configurable:true, writable:true, value:{",
+  "    location, history:{state:{existing:'retained'}, pushState(state, _title, url) {",
+  '      historyWrites.push({state,url}); location.href = new URL(url, location.href).href;',
+  '    }},',
+  '  }});',
+ ].join('\n')+'\n';
+ const laterCourse="const course = {id: 'course/1', code: 'SYN-001', title: 'Original title', description: 'Original course description for learners.', workbookCount: 0};";
+ const originalCourse="const course = {id: 'course/1', title: 'Original title', description: 'Original course description for learners.'};";
+ const inverse=candidate=>{let current=candidate.replaceAll('\r\n','\n');
+ current=exact(current,"name === '../lib/studio-mutation-context.ts' ? stableMutationContext : name === '../lib/studio-outline-navigation.ts' ? compile('lib/studio-outline-navigation.ts', {}) : mocks[name] ?? require(name)",
+  "name === '../lib/studio-mutation-context.ts' ? stableMutationContext : mocks[name] ?? require(name)");
+ current=exact(current,'  const received=[], directoryCalls=[], authPaths=[];\n  const directory = compile(\'lib/studio-course-directory.ts\', {});\n','  const received=[];\n');
+ current=exact(current,"    '@/lib/studio-course-directory':{getStudioCourseDirectory:(courses, query, page)=>{\n      directoryCalls.push({courses, query, page});\n      return directory.getStudioCourseDirectory(courses, query, page);\n    }},\n",'');
+ current=exact(current,"'../../chatgpt-auth':{requireChatGPTUser:async path=>{authPaths.push(path);return identity;}}",
+  "'../../chatgpt-auth':{requireChatGPTUser:async()=>identity}");
+ current=exact(current,"'../../../chatgpt-auth':{requireChatGPTUser:async path=>{authPaths.push(path);return identity;}}",
+  "'../../../chatgpt-auth':{requireChatGPTUser:async()=>identity}");
+ current=exact(current,"list.default({searchParams:Promise.resolve({new:'1',q:'Original',page:'1'})})",
+  "list.default({searchParams:Promise.resolve({new:'1'})})");
+ current=exact(current,"  assert.deepEqual(authPaths,['/studio/courses',`/studio/courses/${encodeURIComponent(course.id)}`]);\n",'');
+ current=exact(current,"  assert.deepEqual(directoryCalls,[{courses:snapshot.courses,query:'Original',page:'1'}]);\n",'');
+ current=exact(current,"  assert.equal(directory.getStudioCourseDirectory(snapshot.courses,'Original','1').matchingCount,1);\n",'');
+ current=exact(current,"  for(const auth of received)assert.deepEqual(auth,{userId:'edu:synthetic-user',externalSubject:'sites:synthetic-user',email:identity.email,displayName:identity.displayName});",
+  "  for(const auth of received)assert.equal(auth.userId,'edu:synthetic-user');");
+ current=exact(current,laterCourse,originalCourse);
+ current=exact(current,setup,'');
+ current=exact(current,', routes, historyWrites, renderEditor()',', routes, renderEditor()');
+ current=exact(current,"dispose() {globalThis.fetch = oldFetch;if(oldWindow)Object.defineProperty(globalThis,'window',oldWindow);else delete globalThis.window;}",
+  'dispose() {globalThis.fetch = oldFetch;}');
+ current=exact(current,"test('course options expose a bounded details form in Content and preserve the duplicate option and unrelated URL state'",
+  "test('course options expose a bounded details form and preserve the active pane and duplicate option'");
+ current=exact(current,"walk(opened, node => node.props.role === 'tab' && node.props['aria-controls'] === 'course-content').props['aria-selected']",
+  "walk(opened, node => node.props.role === 'tab' && node.props['aria-controls'] === 'course-review').props['aria-selected']");
+ for(const added of [
+  "    assert.equal(walk(opened, node => node.props.id === 'course-review').props.hidden, true);\n",
+  "    assert.deepEqual(h.historyWrites, [{state:{existing:'retained',__vinext_externalHistoryState:true},url:`/studio/courses/${encodeURIComponent(course.id)}?keep=1&pane=content#outline`}]);\n",
+  "    assert.equal(h.historyWrites.length, 1, 'Hiding details does not create another pane entry');\n",
+ ])current=exact(current,added,'');
+ return current;};
+ const current=read('tests/studio-course-details-form.test.mjs').toString();
+ const restored=inverse(reconstructCourseDetailsBeforeFocus(restoreReleaseCueDetailsForm(current)));
+ const expected=text.replaceAll('\r\n','\n');
+ assert.equal(restored,expected,'complete frozen course details source');
+ const changedDirectory=current.replace("directoryCalls.push({courses, query, page});",
+  "directoryCalls.push({courses, query, page:'forged'});");
+ assert.notEqual(changedDirectory,current);
+ assert.throws(()=>inverse(reconstructCourseDetailsBeforeFocus(restoreReleaseCueDetailsForm(changedDirectory))),/Unique declared seam/);
+ const changedAuth=current.replace("externalSubject:'sites:synthetic-user'","externalSubject:'sites:foreign-user'");
+ assert.notEqual(changedAuth,current);
+ assert.throws(()=>inverse(reconstructCourseDetailsBeforeFocus(restoreReleaseCueDetailsForm(changedAuth))),/Unique declared seam/);
+ const changedCourse=current.replace("code: 'SYN-001'","code: 'FOREIGN'");
+ assert.notEqual(changedCourse,current);
+ assert.throws(()=>inverse(reconstructCourseDetailsBeforeFocus(restoreReleaseCueDetailsForm(changedCourse))),/Unique declared seam/);
+ const forged=current.replace("__vinext_externalHistoryState:true},url:","__vinext_externalHistoryState:false},url:");
+ assert.notEqual(forged,current,'Mutation must alter admitted history assertion');
+ assert.throws(()=>inverse(reconstructCourseDetailsBeforeFocus(restoreReleaseCueDetailsForm(forged))),/Unique declared seam/);
+ const forgedFocus=current.replace("toggle.props.onClick({currentTarget:{closest:()=>({open:true,querySelector:()=>({focus(){}})})}});",'toggle.props.onClick();');
+ assert.notEqual(forgedFocus,current,'Focus mutation must change the admitted current source');
+ assert.throws(()=>reconstructCourseDetailsBeforeFocus(forgedFocus),/One exact later focus seam/);
+ assert.throws(()=>reconstructCourseDetailsBeforeFocus(current+'\n// foreign assertion\n',reconstructCourseDetailsBeforeFocus(current)),/Whole before-focus source restored/);
+});
