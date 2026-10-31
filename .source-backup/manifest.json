@@ -1,0 +1,1610 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T04:34:45.524Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-desktop-and-teaching-inventory/release/SOURCE.json",
+      "sha256": "aba4be7a7c7e479afb8ffd32fb4d182ad9223f321f404b92548c97e694d64436"
+    },
+    "atlas": "c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "recipes/anatomy-release-epochs/advance.mjs",
+      "sha256": "ccdd1e68c9e320ec1d7ff7ae65282167a021656ff0b295b1217a30db971c121e",
+      "bytes": 5617
+    },
+    {
+      "path": "recipes/anatomy-release-epochs/focused-2.mjs",
+      "sha256": "5e1cd1d4bb3a47e733e3a5b81b8cdf269fa153fba74a539d9fed6585374043bb",
+      "bytes": 2234
+    },
+    {
+      "path": "recipes/anatomy-release-epochs/focused.mjs",
+      "sha256": "f621aaeaea345e629e8ec0e20fb74eb85114b2ba4eec7b7a8607958762c1e3d6",
+      "bytes": 2181
+    },
+    {
+      "path": "recipes/anatomy-release-epochs/prepare.mjs",
+      "sha256": "9baf7a92c0e5265c4d520d6bb3062596a32d3671df82f6b9be9618e7520acb27",
+      "bytes": 3760
+    },
+    {
+      "path": "recipes/anatomy-release-epochs/release-queue.mjs",
+      "sha256": "f9521232147945f20bd7c87939b0bea584bd08e856d5eaad2403980da27ad9b2",
+      "bytes": 3309
+    },
+    {
+      "path": "recipes/anatomy-release-epochs/save.mjs",
+      "sha256": "e6db64e6707ae2eb3f7f484a0ba21df83a9a0d449208b17ea941972472bde3a6",
+      "bytes": 11748
+    },
+    {
+      "path": "recipes/brand-provenance/prepare.mjs",
+      "sha256": "c85c776aba0e0f4777ac6112a216a25d1de57f73ec7d9809c0aba85a1c7d2eee",
+      "bytes": 4668
+    },
+    {
+      "path": "recipes/brand-provenance/save.mjs",
+      "sha256": "a3be4876afd933ffdfd42166c4e4c85448aa4ec43971ca7dca699be4a9be28fb",
+      "bytes": 10995
+    },
+    {
+      "path": "recipes/brand-provenance/seal.mjs",
+      "sha256": "f7170841e493e98efa1626a779e5b110d9f5e31f965429a4e1aceb163fa06256",
+      "bytes": 2503
+    },
+    {
+      "path": "recipes/current-delivery-count/focused.mjs",
+      "sha256": "751262a28921b48ff185e2f914d969d746bd6f894925a37ed9a8798f2840c803",
+      "bytes": 2378
+    },
+    {
+      "path": "recipes/current-delivery-count/prepare.mjs",
+      "sha256": "54ebb5cf2110dec679bccf1a664347eb123a21ae6b07881bc8f9b6bf7e1cfff0",
+      "bytes": 3763
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/browser-fixture.mjs",
+      "sha256": "26012bfaf242996f71a85ef14509c31b8e81ebb34238068247af8e5efd11544b",
+      "bytes": 6870
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/build-child.mjs",
+      "sha256": "5928f794aadc00ff01a6dd5a389c421073e2bc16ab14c09a97f4667ecb100dd2",
+      "bytes": 4298
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/build-only.mjs",
+      "sha256": "250428ad9f31e835ea704402b22f854097ee37f5c5076b2339c4dabe676ca639",
+      "bytes": 433
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/build.mjs",
+      "sha256": "c8d89a89f49a4a138e24fdbdb72762277beedeeafebc3404c56b63c5f779863d",
+      "bytes": 1145
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/check-bound.mjs",
+      "sha256": "ea069b8a19d8c6e634f56d3e5637984ec6933023123ac64e99a29f9967bd78bd",
+      "bytes": 1609
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/check.mjs",
+      "sha256": "c844fa0d21c70333afaeaec0811afa49d1529b1ff96608c83bf4cba534ce1e86",
+      "bytes": 1618
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/integrate.mjs",
+      "sha256": "091465af0db91dc8dceeb0c2124a5aa556fec449eaf06e50f9992e4fada45dac",
+      "bytes": 2587
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/prepare.mjs",
+      "sha256": "34f73e627cf167b5833c766094fbd215ec0ab0ebe238611c072c709a77b5b296",
+      "bytes": 1762
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/resume-build.mjs",
+      "sha256": "4db892772f279b8394934973f1c7166429c0f9b2d7b3a64131a4a415d6952100",
+      "bytes": 4724
+    },
+    {
+      "path": "recipes/head-comparison-keyboard/save.mjs",
+      "sha256": "67a89f02be8a330402e3c39a4be44a10bc5247a4fdd8ade9889b8651471b6a87",
+      "bytes": 11582
+    },
+    {
+      "path": "recipes/head-focus-font/integrate-tests.mjs",
+      "sha256": "3f685929b56b7102d632ea00c2953c6becefec6f8a2bb5178c529c287db5fdd5",
+      "bytes": 1519
+    },
+    {
+      "path": "recipes/head-focus-font/prepare.mjs",
+      "sha256": "920e619c705cb5b01395a827483f7577f9fe00301b0efccdf404ccca2148223d",
+      "bytes": 1832
+    },
+    {
+      "path": "recipes/head-focus-font/qa/build.mjs",
+      "sha256": "5f030acdebdcace652e90e581e1c21708a6771fd91936b6fc4f6b7b03f787f4c",
+      "bytes": 1638
+    },
+    {
+      "path": "recipes/head-focus-font/qa/client.tsx",
+      "sha256": "8ea9f3fc61644b150ad4015bd05805d40702ee37ecb1cfe0024701591ac05352",
+      "bytes": 2892
+    },
+    {
+      "path": "recipes/head-focus-font/qa/iframe.html",
+      "sha256": "37f0ff4d00dafb2d27c0cfb33bd355c9ada8dd24af1cce568e4315e0958579cf",
+      "bytes": 1520
+    },
+    {
+      "path": "recipes/head-focus-font/qa/index.html",
+      "sha256": "5ecfbd8b655c7907989574401028dfe5d34d11b4e8e4f8ccbed24942fe6ccfb0",
+      "bytes": 905
+    },
+    {
+      "path": "recipes/head-focus-font/qa/server.mjs",
+      "sha256": "a38b4b385482ac9d01e51e6bb6824337fe7c9528a7300922184f8627b204976d",
+      "bytes": 1144
+    },
+    {
+      "path": "recipes/head-focus-font/rebind.mjs",
+      "sha256": "1ab93054ffe8d77cb950724c1dc1cc85061d7d3abf91757fca7af4ac906bf583",
+      "bytes": 675
+    },
+    {
+      "path": "recipes/head-focus-font/save.mjs",
+      "sha256": "25fb0a9971b514330659fa4262cd8e2ac2c3b1220b619982d732610790dce892",
+      "bytes": 12923
+    },
+    {
+      "path": "recipes/head-focus-font/scoped-types.mjs",
+      "sha256": "57e2f500e93bbefe018a67733f2e2d2d600267fc36a3adf34ca5e3979d359225",
+      "bytes": 2164
+    },
+    {
+      "path": "recipes/head-focus-font/seal.mjs",
+      "sha256": "955fa823c929a1249089bcb45214a66b4adbe5ed257bc8cbf9315b2f01c72d3a",
+      "bytes": 2685
+    },
+    {
+      "path": "recipes/head-history-loaders/focused-2.mjs",
+      "sha256": "210a0ca8c4f638028e96cd71c6a18140b88abae789b0864bb66fb44083bfbf4c",
+      "bytes": 2346
+    },
+    {
+      "path": "recipes/head-history-loaders/focused.mjs",
+      "sha256": "3df377a4657af94db62d1e89f665b029f504cddbee125addda7052bfd5e5d319",
+      "bytes": 2340
+    },
+    {
+      "path": "recipes/head-history-loaders/prepare.mjs",
+      "sha256": "4059981c21c1f13bd3f8e3db0d3d7ef64d82c87e9866b209887ea469c1427ba9",
+      "bytes": 3295
+    },
+    {
+      "path": "recipes/native-images-ready/correct-receipt-label.mjs",
+      "sha256": "f41afc3c800dcc81c928c8cfe662680c445cc9890daf60cdb36a71ae86cdbd3b",
+      "bytes": 1403
+    },
+    {
+      "path": "recipes/native-images-ready/focused.mjs",
+      "sha256": "d91aae1ed2737fab208fff9f1593e5d2cdaa11181139887626a3e70740897c54",
+      "bytes": 2159
+    },
+    {
+      "path": "recipes/native-images-ready/integrate.mjs",
+      "sha256": "5d69bdf7dc38b6503a2ff0e290ad24e2e769b5a198b95f556fdea03ed581f707",
+      "bytes": 3390
+    },
+    {
+      "path": "recipes/native-images-ready/prepare.mjs",
+      "sha256": "e36347a1067e487015abebdf50ee2525ed19d078504cd1b162d5af29c0c3ee77",
+      "bytes": 2188
+    },
+    {
+      "path": "recipes/native-images-ready/release-queue.mjs",
+      "sha256": "030e63c21006f2253b859cf2f7c3f5d55e3cf112ce6e5a32eed71f99053b170e",
+      "bytes": 3759
+    },
+    {
+      "path": "recipes/native-images-ready/save.mjs",
+      "sha256": "88c20135ecbc498b46e8a808ca07c533c0a58372b000f88e62efd4b8cea2663d",
+      "bytes": 13309
+    },
+    {
+      "path": "recipes/native-public-images/audit-build.mjs",
+      "sha256": "4441dbe82bee52be3104944723c43c854098d5ad773bebc86754c94132773dd5",
+      "bytes": 3164
+    },
+    {
+      "path": "recipes/native-public-images/build-child.mjs",
+      "sha256": "7e21825406f046fb97395f4fb03bec04b36df404b35fce2db31ab7b1f42dffe8",
+      "bytes": 4632
+    },
+    {
+      "path": "recipes/native-public-images/build.mjs",
+      "sha256": "ba377a9c035a0043cb20972f9df4e163deccf11760edf029bb87a586947d048f",
+      "bytes": 1901
+    },
+    {
+      "path": "recipes/native-public-images/check-assets.mjs",
+      "sha256": "94efb7d4f04babba1079f94f8519ab87a5e898249e1a6fa4eaf2392399d4126d",
+      "bytes": 1795
+    },
+    {
+      "path": "recipes/native-public-images/checks.mjs",
+      "sha256": "4ddde243562be97f2264b7a08ef0ebe1aac0ed1566d78fa12eec6a3c34200554",
+      "bytes": 2001
+    },
+    {
+      "path": "recipes/native-public-images/integrate.mjs",
+      "sha256": "abbc7dde24d61f37d72d3578aed5032f8431a2092456627f5efef455775a101f",
+      "bytes": 4468
+    },
+    {
+      "path": "recipes/native-public-images/prepare.mjs",
+      "sha256": "03b93b5e824d5304e08c77bbe6b6665a039b19aceded2b883b3a76d885f45f72",
+      "bytes": 3200
+    },
+    {
+      "path": "recipes/native-public-images/scoped-types.mjs",
+      "sha256": "906e82ebd098c49bda180d513d042102c478ef847d342f65159410aa347ead28",
+      "bytes": 2239
+    },
+    {
+      "path": "recipes/native-website-react-notice/build-only.mjs",
+      "sha256": "044dfb61036474770738dd85654d9e82e2a5065515f4d7c84804e113f7248d91",
+      "bytes": 429
+    },
+    {
+      "path": "recipes/native-website-react-notice/build.mjs",
+      "sha256": "fec6af2cb40eebb90eeecc69f689f98d295a483d9f31a8a9300aa6aa665db195",
+      "bytes": 1674
+    },
+    {
+      "path": "recipes/native-website-react-notice/integrate.mjs",
+      "sha256": "45c169e968a301de262a66e8fc5734b878b2ac263237be6dcb006c2de950ee9d",
+      "bytes": 3176
+    },
+    {
+      "path": "recipes/native-website-react-notice/prepare.mjs",
+      "sha256": "7e462a0dc8fd42fb903f4801858e6240b5f8ad3c31e3ff40dc8342af65bc36d5",
+      "bytes": 1758
+    },
+    {
+      "path": "recipes/native-website-react-notice/save.mjs",
+      "sha256": "608332c58bad1e93d2e22cf9947fc3a4b3fc354a11231110002da5946e5ddb8d",
+      "bytes": 8710
+    },
+    {
+      "path": "recipes/provenance-and-playback/focused-2.mjs",
+      "sha256": "90ee5e11776f87ee65bc352386c48ec4ad320fab1a0da60e8fd2f7aae19845b1",
+      "bytes": 2500
+    },
+    {
+      "path": "recipes/provenance-and-playback/focused.mjs",
+      "sha256": "d7f2b4f0a28f29a94e5ae69379e3a89604a6ad73e859806a17375d026b087612",
+      "bytes": 2494
+    },
+    {
+      "path": "recipes/provenance-and-playback/prepare.mjs",
+      "sha256": "d81c77ce41efd305b9de7435aaa668e9f5001d89ec97f195920553edeb9dc665",
+      "bytes": 4711
+    },
+    {
+      "path": "recipes/provenance-and-playback/repair-current-copy.mjs",
+      "sha256": "2f9555d0682d895c4f65cf6a69a4ea0bf3188e5737efc3265e1336c69bac142b",
+      "bytes": 1848
+    },
+    {
+      "path": "recipes/provenance-and-playback/save.mjs",
+      "sha256": "2d521aff58ba8013390efcb948cd611c772cffa1855774049a2990f255c99727",
+      "bytes": 10069
+    },
+    {
+      "path": "recipes/quick-review-regions/browser-fixture.mjs",
+      "sha256": "56159d60877ebb9bfa8346cb51a719fb912df195b1129c16554e4c7c2991dbf2",
+      "bytes": 3674
+    },
+    {
+      "path": "recipes/quick-review-regions/build.mjs",
+      "sha256": "cbdddc2aee4e53ca94895c43d2416ffe7b259818a8ce1299c9f2e2316461519b",
+      "bytes": 1493
+    },
+    {
+      "path": "recipes/quick-review-regions/prepare.mjs",
+      "sha256": "623099ef5dbee9d04ec4f0bf9e09f66949d9173d922d6767b6248da1dbd5162c",
+      "bytes": 3413
+    },
+    {
+      "path": "recipes/quick-review-regions/scoped-types.mjs",
+      "sha256": "6e15af374160a273507cdb84646c6a6a9ac5fb521f7f37fc76c8e68f58866a52",
+      "bytes": 2115
+    },
+    {
+      "path": "recipes/readable-review-groups/browser-fixture.mjs",
+      "sha256": "993bfe7078c2fa9deca4d3fa8d1e664e61b1d0c4cd255c4dd2c160c004d41ca0",
+      "bytes": 4042
+    },
+    {
+      "path": "recipes/readable-review-groups/build-2.mjs",
+      "sha256": "dbad33c6b5df37fb7ab3759bdaaf6a5e391c4a6904618b129024eb6fa9841839",
+      "bytes": 1340
+    },
+    {
+      "path": "recipes/readable-review-groups/build-3.mjs",
+      "sha256": "126732f48b1c6dede4464f2cf85d93238be355a20f7cc20d6fdb55bb42754a7d",
+      "bytes": 1342
+    },
+    {
+      "path": "recipes/readable-review-groups/build-diagnostic-3.mjs",
+      "sha256": "5d9f78421eb7df41d182b0363ce8e80d8e1218aa692f954eeef7b78e9115b8c5",
+      "bytes": 855
+    },
+    {
+      "path": "recipes/readable-review-groups/build-diagnostic.mjs",
+      "sha256": "a82b560b46e49595fdd1dd0645e019dfb37013ecacc15e42179d34d007f34eee",
+      "bytes": 855
+    },
+    {
+      "path": "recipes/readable-review-groups/build-only.mjs",
+      "sha256": "a61b1542d2b5d07d6d73ffe6d824275fdf912ae0b9e90e209b093d51bd5571e4",
+      "bytes": 433
+    },
+    {
+      "path": "recipes/readable-review-groups/build.mjs",
+      "sha256": "ebc8fc44d38aadf5a91f953c225d75ec8cfa693f41587ceced769753558f098a",
+      "bytes": 1334
+    },
+    {
+      "path": "recipes/readable-review-groups/prepare.mjs",
+      "sha256": "aa2dca1e5c94fdc980d758dcd2987e53df1634fd6c12d6629b9af4e6fd38b11b",
+      "bytes": 3591
+    },
+    {
+      "path": "recipes/readable-review-groups/save.mjs",
+      "sha256": "e4f101b174e9f3086ef755f7a17b68be8e9a3e34835a59441e933c68b20c2e24",
+      "bytes": 12224
+    },
+    {
+      "path": "recipes/readable-review-groups/scoped-types.mjs",
+      "sha256": "d8a669488e5f50519f004e2bb8bdc539033c0ab31a30f9b28ae82602f9fc72a9",
+      "bytes": 2115
+    },
+    {
+      "path": "recipes/release-context/check-2.mjs",
+      "sha256": "469b995cfd3411f72078f2825fbd1a39e3efe68f1a639bc912bcf95ed900b428",
+      "bytes": 1837
+    },
+    {
+      "path": "recipes/release-context/check.mjs",
+      "sha256": "18593db45cce436c57be0e433f8882e4c5ddc532120828467664097b816d8df1",
+      "bytes": 1871
+    },
+    {
+      "path": "recipes/release-context/integrate-proposals.mjs",
+      "sha256": "c82ff085c341a6e617762e86afd6c139ef39a85061bfe122a0a2a587c4892818",
+      "bytes": 3262
+    },
+    {
+      "path": "recipes/release-context/main-contract-repairs.mjs",
+      "sha256": "d0e12d568852407b2aa6993a6192467287fdad42eecfc022515dd0afc280466e",
+      "bytes": 4209
+    },
+    {
+      "path": "recipes/release-context/prepare.mjs",
+      "sha256": "46b1e7ac229f834297a7d2aaf67b28b699b3bc2863353b15223bcf819b9016b9",
+      "bytes": 1895
+    },
+    {
+      "path": "recipes/release-context/reseal.mjs",
+      "sha256": "7bcffbff15cb84e1298d775b097224090745e079165487bef0b634eaade8a08d",
+      "bytes": 1606
+    },
+    {
+      "path": "recipes/release-context/run-partition.mjs",
+      "sha256": "2f25dd158e22cc8ddcb6a952fdc9d5ba58581e38f85277823e2daaa99fe2ebd2",
+      "bytes": 1602
+    },
+    {
+      "path": "recipes/release-context/save-progress.mjs",
+      "sha256": "77d57d5eeb8ac9eecc230bd20bd6a4fe64ccc33694a7f8a966ae77378bc4f663",
+      "bytes": 11289
+    },
+    {
+      "path": "recipes/release-lecture-preservation/check.mjs",
+      "sha256": "6305aa2b85ae28d152ef4332d303c4e31b3241a5112bf18c7c1090a79df8a9b9",
+      "bytes": 1757
+    },
+    {
+      "path": "recipes/release-lecture-preservation/integrate.mjs",
+      "sha256": "7c5d6d0283832b0cd491914482d6730c15490a138ae9fa84ab6d3837d2a8b17c",
+      "bytes": 2494
+    },
+    {
+      "path": "recipes/release-lecture-preservation/prepare.mjs",
+      "sha256": "72eebc335e158692b5c398549b686710409208dd2a94f7aa9d717c3d887b635c",
+      "bytes": 1762
+    },
+    {
+      "path": "recipes/release-lecture-preservation/release-queue.mjs",
+      "sha256": "7ca20e0b4ea4973a8c6c67a339164a2a3d863412bb9cc55d3399acef1588edf5",
+      "bytes": 2841
+    },
+    {
+      "path": "recipes/release-lecture-preservation/save.mjs",
+      "sha256": "20415789cf3cf40e4b52673f90fb2f0300dbb9fbee06144a8249acec2e70ead2",
+      "bytes": 9393
+    },
+    {
+      "path": "recipes/release-notices-successor/add-notices.mjs",
+      "sha256": "4cb5a9f77d89dea2d60c2c9e29b04f6cf90d4435a6ad0140dc87b31ddcdfd13f",
+      "bytes": 5566
+    },
+    {
+      "path": "recipes/release-notices-successor/build-only.mjs",
+      "sha256": "9327e437f349d6b8b7c60d9187cf58a8a0918f93aeabaac0f7bf0ef828dc2abd",
+      "bytes": 434
+    },
+    {
+      "path": "recipes/release-notices-successor/build.mjs",
+      "sha256": "f4d3767487d2a3d884cffba59e0361257a4f8074a1d997a93af2cbedc73e8ee4",
+      "bytes": 1596
+    },
+    {
+      "path": "recipes/release-notices-successor/check-2.mjs",
+      "sha256": "f4e5a7858468a1fecffa33fe6bd79cf1279ae599681e2eb25097301420fba868",
+      "bytes": 1825
+    },
+    {
+      "path": "recipes/release-notices-successor/check-elbow-3.mjs",
+      "sha256": "78a3a4efa1db928e41db58c92e60067fb0e96d0199f80211dfe756148a71e417",
+      "bytes": 1637
+    },
+    {
+      "path": "recipes/release-notices-successor/check-elbow-4.mjs",
+      "sha256": "8a543e74191da3e670c0d7f12d179b3c455bba232e33375ae4dc5a5cffb41655",
+      "bytes": 1638
+    },
+    {
+      "path": "recipes/release-notices-successor/check.mjs",
+      "sha256": "39c70fd8b8e60fc8d750ec95cb7bcaa0b149dc733b8f9c68fdefc541db7e59ec",
+      "bytes": 1825
+    },
+    {
+      "path": "recipes/release-notices-successor/integrate.mjs",
+      "sha256": "e506617e5e9ccb1166030f5677a2f0be33ab4b26ac57da726a7cfdbd6fe539b6",
+      "bytes": 2097
+    },
+    {
+      "path": "recipes/release-notices-successor/prepare.mjs",
+      "sha256": "cb9351675b80e8be36a9042176583557b96beb2c4e6e3af3805e834451867a6b",
+      "bytes": 1767
+    },
+    {
+      "path": "recipes/release-notices-successor/release-queue.mjs",
+      "sha256": "06aa00ee1503aa78179fdfb61d791a831d4f63548a216335e7c5c7b313e096bf",
+      "bytes": 2887
+    },
+    {
+      "path": "recipes/release-notices-successor/save.mjs",
+      "sha256": "cfca1702ec3fb165617210bddbe7c742d36c1522d75a672a4a681e81fb9b6643",
+      "bytes": 9832
+    },
+    {
+      "path": "recipes/release-partition5/check-only.mjs",
+      "sha256": "5a2c84c6160a438f54174dc059081fdb3a228805e14953e547cac1a4b98e8afc",
+      "bytes": 616
+    },
+    {
+      "path": "recipes/release-partition5/check.mjs",
+      "sha256": "a7c2e97d31d7c1129d7b5a8804a17e20f5be9d5dede32e79aeee077b8b6a003f",
+      "bytes": 1172
+    },
+    {
+      "path": "recipes/release-partition5/prepare.mjs",
+      "sha256": "a5e8af9efe0cdba6fb8cc928817d01701708f63cc05a1ffd0ba8f05ee82e5eac",
+      "bytes": 3316
+    },
+    {
+      "path": "recipes/release-partition5/release-queue.mjs",
+      "sha256": "5990115a9947802308acca938b5478f989d57c8dcb9a5d67b0e70c1b86893a1c",
+      "bytes": 2990
+    },
+    {
+      "path": "recipes/release-partition5/save.mjs",
+      "sha256": "de3e7f910cc9559d9d9f90d670efd8bff76c6251a0f89bfc736a0f2124c6ef24",
+      "bytes": 9537
+    },
+    {
+      "path": "recipes/release-partition6/check-only.mjs",
+      "sha256": "e8ff49c91b63cbb6fd1b17c5cec25112e44e5ab46136ae94a8443928e885ea2c",
+      "bytes": 698
+    },
+    {
+      "path": "recipes/release-partition6/check.mjs",
+      "sha256": "70228ab3f05b752d7c715eba1bff9df53c47c032ca350212ce97db946f9c4f17",
+      "bytes": 1178
+    },
+    {
+      "path": "recipes/release-partition6/prepare.mjs",
+      "sha256": "12cd139cdc87db58dc6d4c8ff21bc3cadfd479b5dbcdb0ea9b99c90d2b2fdbfb",
+      "bytes": 4617
+    },
+    {
+      "path": "recipes/release-partition6/save.mjs",
+      "sha256": "ef6cffa8cb3fe216ec43e877df51905b74fc8ac0ce8533a60906a3aae5d06456",
+      "bytes": 11136
+    },
+    {
+      "path": "recipes/release-scope/audit-build.mjs",
+      "sha256": "cf1f3d2e7d9b78817bffa5ad1b9b81cf98ec8da93ae0d9567ca64f86bf70674e",
+      "bytes": 3528
+    },
+    {
+      "path": "recipes/release-scope/prepare.mjs",
+      "sha256": "6e5e59803d1b03c8f5b992ea63059bf28868b50074e67c0f2c9038e4023539b4",
+      "bytes": 1792
+    },
+    {
+      "path": "recipes/release-scope/save.mjs",
+      "sha256": "fb38fc3d80864b4c0a3fc9b94f79af643e5c09179ef1ea2122d8d054b9c18739",
+      "bytes": 12268
+    },
+    {
+      "path": "recipes/release-scope/seal.mjs",
+      "sha256": "8f35851cce167e28558d1bc1d5aab59955cf08686f88323da8cd1d65b26664d3",
+      "bytes": 2138
+    },
+    {
+      "path": "recipes/review-continuity/integrate.mjs",
+      "sha256": "760d5ee63fc3c2190e27242392709014489424c24eea9d4e1a8ed4137f37d44d",
+      "bytes": 2844
+    },
+    {
+      "path": "recipes/review-continuity/prepare.mjs",
+      "sha256": "c4ca6f9acb91097085bf7117e18bc4b1fb000f8247dccda30b5f377d884e10a0",
+      "bytes": 2551
+    },
+    {
+      "path": "recipes/review-continuity/qa/fixture.tsx",
+      "sha256": "226483d0e725d953713a4dccd5c0d9c7c005116d1cf548fd57273246fcb909f5",
+      "bytes": 2483
+    },
+    {
+      "path": "recipes/review-continuity/qa/serve.mjs",
+      "sha256": "b39745f75c1fb9cd963e0d5899ca5a4e179c5e5e75c84c400227901390c15729",
+      "bytes": 3302
+    },
+    {
+      "path": "recipes/review-continuity/save.mjs",
+      "sha256": "99cea86d42c68f1356e7378085c92af2fa077792f8c4d2a432a7bd40442def23",
+      "bytes": 10405
+    },
+    {
+      "path": "recipes/review-continuity/scoped-types.mjs",
+      "sha256": "f99c5987556bb1d218ff8dd21d6048abf7ed59a08a84abd93099d72783cd36b1",
+      "bytes": 2093
+    },
+    {
+      "path": "recipes/review-release-successor/partition.mjs",
+      "sha256": "7b7ffd18bed7980e97f298aca5b79f1b12c3b4063d50853ba66c3c8d51044dda",
+      "bytes": 1610
+    },
+    {
+      "path": "recipes/review-release-successor/prepare.mjs",
+      "sha256": "246419da5cddb04c97015749eed3f030567e87f384001c24e9770c6f8775a742",
+      "bytes": 2488
+    },
+    {
+      "path": "recipes/review-release-successor/save.mjs",
+      "sha256": "e24c104497ba2d235b0339fea3a31c82d69964d281fe41aee4404e4bc43933b4",
+      "bytes": 11130
+    },
+    {
+      "path": "recipes/review-release-successor/seal-and-check.mjs",
+      "sha256": "d17723d3adc56026176169ba3113977959369e2612be8075580be44aa73a1acb",
+      "bytes": 2284
+    },
+    {
+      "path": "recipes/saved-plan/build-4096.mjs",
+      "sha256": "10fcb6bcbaec45d9cc624c023a5a4af0f963a9653f4706a165668e58f032380e",
+      "bytes": 1523
+    },
+    {
+      "path": "recipes/saved-plan/build-child-4096.mjs",
+      "sha256": "ab4b8a46d6c6777493f1d1a5ed0acf603d26489837a269407ff66581db45f365",
+      "bytes": 659
+    },
+    {
+      "path": "recipes/saved-plan/finish-checks.mjs",
+      "sha256": "ff5860b32bdee4f8170d0ddb3d5be60cbbe3810d43d0f2c4d9327393e4f89e7b",
+      "bytes": 3079
+    },
+    {
+      "path": "recipes/saved-plan/prepare.mjs",
+      "sha256": "d4a860df0132d0bdf2e8ecad193f97507ac7e8a562aa5144f456713d3f8a5078",
+      "bytes": 1789
+    },
+    {
+      "path": "recipes/saved-plan/scoped-types.mjs",
+      "sha256": "3ced81c248a446e56a692c31ce674ecf8e22c9e5fbccc6b38892109b5d3a0a2e",
+      "bytes": 2045
+    },
+    {
+      "path": "recipes/saved-plan/verify.mjs",
+      "sha256": "018f8ea98f6b74470d031dc0a791d686de82856fad4c58841e4b302b8bccca81",
+      "bytes": 2648
+    },
+    {
+      "path": "recipes/studio-outline/advance-checks.mjs",
+      "sha256": "38b0f6d2bda1c66e5fd0ac7deae926b88b59404dc60bff54e021cc8d0938ad39",
+      "bytes": 2871
+    },
+    {
+      "path": "recipes/studio-outline/browser-fixture.mjs",
+      "sha256": "d711f0e09a8c36af0addb2ae76cd5811a5928faf5fc0167641ab6545c1362382",
+      "bytes": 5217
+    },
+    {
+      "path": "recipes/studio-outline/build-2.mjs",
+      "sha256": "eed2053ff992b94a6e347683e33e42c985bea3c1ead4e8b4b8b397f1d35bc922",
+      "bytes": 1623
+    },
+    {
+      "path": "recipes/studio-outline/build-3.mjs",
+      "sha256": "0a4bc0735198ae79a339b4f48e2efa2b5c7d02b90d017b93828d86d3138a45b1",
+      "bytes": 1305
+    },
+    {
+      "path": "recipes/studio-outline/build-only.mjs",
+      "sha256": "e34dd8345ab3a9a094ef79dbd8a163bef327eb6cd69e5f00467a631565139079",
+      "bytes": 661
+    },
+    {
+      "path": "recipes/studio-outline/finalize-source.mjs",
+      "sha256": "f1e4d8f6058222492189e9ed183cdd43675ed3774cccd406c9e4b4be5f325588",
+      "bytes": 2053
+    },
+    {
+      "path": "recipes/studio-outline/focused-2.mjs",
+      "sha256": "bb856fd25de3745201af5d038bf886aa3bf2fd33d9d444217afc0253a84f275e",
+      "bytes": 3000
+    },
+    {
+      "path": "recipes/studio-outline/focused.mjs",
+      "sha256": "5f54610084b6ae51c83c9d13a4abb17575ba947c6b4b05a0e528b17af67226b7",
+      "bytes": 2995
+    },
+    {
+      "path": "recipes/studio-outline/prepare.mjs",
+      "sha256": "19ebb61643b2035618bdaf7f440ef97058f3bac20aa1d490cc6698838cf97a34",
+      "bytes": 3873
+    },
+    {
+      "path": "recipes/studio-outline/save.mjs",
+      "sha256": "9010843732f9081545fb444e1a4652b09ff2e4f9b8b7d262f04a71bc7eb6b037",
+      "bytes": 11573
+    },
+    {
+      "path": "recipes/studio-outline/types-2.mjs",
+      "sha256": "4474befa1ce04a900ce3c31d53c54b73fdd8ab98c698fbe5e517fc36bef458f5",
+      "bytes": 2103
+    },
+    {
+      "path": "recipes/studio-outline/types.mjs",
+      "sha256": "75fa8b11312bbda04395a267daab7ed7593d93b7a16739b05f8ba70e34c00f76",
+      "bytes": 1990
+    },
+    {
+      "path": "recipes/studio-outline/verify-build-2.mjs",
+      "sha256": "c6674feb0d834db3182d73c8d01a0998cfff8a7e26ac2652893df71f6717d4ab",
+      "bytes": 1572
+    },
+    {
+      "path": "recipes/studio-outline/verify-build.mjs",
+      "sha256": "48518b3af0f0117a0e935a45576c3edc2732b92dd79f4ff88ceb25218074e965",
+      "bytes": 1568
+    },
+    {
+      "path": "recipes/study-plan-release/prepare.mjs",
+      "sha256": "aaf4cf1a6288f9de72c2084bc6257dc83a1fe511cedd955bf064e2c24f54c5be",
+      "bytes": 1797
+    },
+    {
+      "path": "recipes/study-plan-release/release-queue.mjs",
+      "sha256": "3e548b586f0b6af03742e323ef7283fccc5a13c34f9ac9905a169a66b36b3dff",
+      "bytes": 3606
+    },
+    {
+      "path": "recipes/study-plan-release/save.mjs",
+      "sha256": "380918b218642e750861d7addaf7728c9433e2a06b6b03651b2572c14a6883ed",
+      "bytes": 11873
+    },
+    {
+      "path": "recipes/study-plan-release/seal.mjs",
+      "sha256": "7f7e006e4b1855d0f0f0ce0dbb85a1a6e4a883b230d0ceccd868ad819643025d",
+      "bytes": 2848
+    },
+    {
+      "path": "recipes/tour-entry/prepare.mjs",
+      "sha256": "e692aafa3586723e45c0ba05222a5c0529b1fae7271e9df7ed652136ac58c325",
+      "bytes": 1792
+    },
+    {
+      "path": "recipes/tour-entry/seal.mjs",
+      "sha256": "e46d973ecd2f340a6fea9a0dc88f6178d3b679db8f5bdc32ff3cc2ab211f9fcb",
+      "bytes": 3316
+    },
+    {
+      "path": "recipes/website-distribution-audit/add-vinext-notice.mjs",
+      "sha256": "1494a71bfa1053fce7ebe878299525abe4c1d00f85db73c82bced263277c504c",
+      "bytes": 2365
+    },
+    {
+      "path": "recipes/website-distribution-audit/build-2.mjs",
+      "sha256": "791944da77906fadf0f0b10a1147ea5fb893d0c6d2ccb1b8c096b3351a7f78c1",
+      "bytes": 1460
+    },
+    {
+      "path": "recipes/website-distribution-audit/build-child-2.mjs",
+      "sha256": "b3dfefe72205468afb8d929dce09c601b76600b58f458af153e6cfc97010ea9f",
+      "bytes": 3824
+    },
+    {
+      "path": "recipes/website-distribution-audit/check-final.mjs",
+      "sha256": "e74a5e1fdf9d175fd929077b0fc03dc194ac3f7633aef4cb8ef525e761ba5d28",
+      "bytes": 1272
+    },
+    {
+      "path": "recipes/website-distribution-audit/integrate.mjs",
+      "sha256": "a0f2e2eb4d42dae55081a6d05a089afe935107827187d55c7e6d809eb74a3f0d",
+      "bytes": 2183
+    },
+    {
+      "path": "recipes/website-distribution-audit/prepare.mjs",
+      "sha256": "850f105d72f3167569727529267e15e86eda59388f49185ac80388d1b2b0de46",
+      "bytes": 1768
+    },
+    {
+      "path": "recipes/website-distribution-audit/reconcile.mjs",
+      "sha256": "982a46dcbf0461cdefc295a035f6416a54184ee9f8917da5b084496fb80c26bb",
+      "bytes": 4556
+    },
+    {
+      "path": "recipes/website-distribution-audit/save.mjs",
+      "sha256": "279bb7859514704efd4da537137973fccf4d185f456533c952bea82c6d0dad45",
+      "bytes": 11279
+    },
+    {
+      "path": "website/app/brand-preview/page.tsx",
+      "sha256": "029fd50e018df984080865396de4a4175dd31c4cd668a5ea6d6a131eaa45e1a1",
+      "bytes": 2025
+    },
+    {
+      "path": "website/app/credits/page.tsx",
+      "sha256": "91f5e7f5eee8bc5aa7f67b445e3c78c8acb48c53a1be2a9d0a1b7eaee83f475e",
+      "bytes": 5000
+    },
+    {
+      "path": "website/app/splash-preview/page.tsx",
+      "sha256": "ab6b5a0f88428095c4d0b855cb48e73d4ce6538e676e17573912f93ef38f96bc",
+      "bytes": 2809
+    },
+    {
+      "path": "website/app/studio/workbooks/[workbookId]/builder/page.tsx",
+      "sha256": "8f4513a21111e96c1baad3400ef34562c5389522aa0abc65758ae1d315eb117f",
+      "bytes": 3347
+    },
+    {
+      "path": "website/components/AtlasModalityCards.tsx",
+      "sha256": "ccd59924a14addc2066dc3738b2b913337981e65376a1de620ac34597b79939e",
+      "bytes": 2762
+    },
+    {
+      "path": "website/components/AtlasPublicBrandImage.tsx",
+      "sha256": "cd85fd413818388ba4cc033f02165c8b65717cc490b97a84bbb18c2014e6c79e",
+      "bytes": 881
+    },
+    {
+      "path": "website/components/BrandLockup.tsx",
+      "sha256": "b159782da71726540694e2d099092c503c0536e973411c93acee8ad6b3e0944f",
+      "bytes": 888
+    },
+    {
+      "path": "website/components/CinematicFilm.tsx",
+      "sha256": "249ba6057ef7de5c5cb0a4ba4c6aa11cd27108b4b20b9b3ef724947e678ea765",
+      "bytes": 8796
+    },
+    {
+      "path": "website/components/clinical-review-quick-start.css",
+      "sha256": "7e14bfff1b1cccec50e2b2c3eaa6f00dc5c4941b53071e75be764a833793a3b0",
+      "bytes": 2436
+    },
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "sha256": "bf300c65bb4b6af2482ecad157d160e3a95d72d60e10ecca2e34926171e01ec4",
+      "bytes": 40926
+    },
+    {
+      "path": "website/components/ClinicalReviewQuickStart.tsx",
+      "sha256": "c18b0250a4b824d8eb9519f7962351aef7225dab350bfc24d64ac4a603738626",
+      "bytes": 4959
+    },
+    {
+      "path": "website/components/HeadAtlasInlineComparison.tsx",
+      "sha256": "01cb27b46a034bc50f21ec6b639f736e4d12c86b14f92b527d02adbba7c6081e",
+      "bytes": 18102
+    },
+    {
+      "path": "website/components/HeadAtlasSavedStudyPlan.tsx",
+      "sha256": "bd78b7c1881caf8486e0d8fe2e52275727dd2a4178ef1d8a056071957e14d2de",
+      "bytes": 8841
+    },
+    {
+      "path": "website/components/HeadAtlasViewer.tsx",
+      "sha256": "65407ec32882f84f215f0df3210b0c632452592a0cef63b5c76eb3849c85d159",
+      "bytes": 124930
+    },
+    {
+      "path": "website/components/SiteImage.tsx",
+      "sha256": "ce01438fce8dbce2e5d95898a0d6806041094e74d6f320608ee9a2520865dfc9",
+      "bytes": 510
+    },
+    {
+      "path": "website/components/SplashScreen.tsx",
+      "sha256": "207b4e837769fc8b429fac26a9e1f25a1a4d79f22a78726d6f0c1046d8773c9b",
+      "bytes": 5121
+    },
+    {
+      "path": "website/components/StudioCourseEditor.tsx",
+      "sha256": "b6b82e486236319c8bc37fd2d805a223d771a3374467bedb6f360312c72793cb",
+      "bytes": 24755
+    },
+    {
+      "path": "website/docs/visible-medicine-logo-system.md",
+      "sha256": "890babbe69e5366bdb7490a2d70172c5aad46cc32322fe07f60e453db4c830ea",
+      "bytes": 2831
+    },
+    {
+      "path": "website/lib/clinical-review-quick-start.ts",
+      "sha256": "920f0adbf005c4fe1e15ec50021be7f6d8d2f7f5ba4c0f46fa75ed0bca175914",
+      "bytes": 6183
+    },
+    {
+      "path": "website/lib/site-image.ts",
+      "sha256": "1db93dd8d0854ba04e6e51f486c9c9afd1a844d21a77352acef369b0a8449a87",
+      "bytes": 4940
+    },
+    {
+      "path": "website/lib/studio-outline-navigation.ts",
+      "sha256": "a558604a106d415b6ee8e065340da075d7487a6170b53738d461be00e9829b82",
+      "bytes": 2265
+    },
+    {
+      "path": "website/LICENSES/geist-mono-OFL.txt",
+      "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f",
+      "bytes": 4387
+    },
+    {
+      "path": "website/LICENSES/native-website/brand-asset-provenance.json",
+      "sha256": "ee652f71319579c8429a04da24b92ff7a5858e0c562e043833d5c966d11126e2",
+      "bytes": 4863
+    },
+    {
+      "path": "website/LICENSES/native-website/brand-pack-manifest.csv",
+      "sha256": "734f46320e7c575f5f9a5f2240ba3ffbbd224326989ab6ba98a45625c949aac1",
+      "bytes": 6917
+    },
+    {
+      "path": "website/LICENSES/native-website/brand-pack-README.md",
+      "sha256": "a3e8f68e2d794f1c223f93d753c2c989b282ea4764bc942731dfb11d0af33e29",
+      "bytes": 3095
+    },
+    {
+      "path": "website/LICENSES/native-website/distribution-notices.json",
+      "sha256": "32984614efdb97c0b5550df81f21cbbea6dde97cf6b53ea35edb993be5c51449",
+      "bytes": 19229
+    },
+    {
+      "path": "website/LICENSES/native-website/geist-mono-provenance.json",
+      "sha256": "c5dbe1816967c2025525b0235df72d0bfb7b3aae4f1dc9250a4b6712f5defdcc",
+      "bytes": 1481
+    },
+    {
+      "path": "website/LICENSES/native-website/protobuf-1.10.1-Apache-LICENSE.txt",
+      "sha256": "6da19f017fad6716cbc9c938972ebee29957c295b8a4d51060dfb03da51d8502",
+      "bytes": 11357
+    },
+    {
+      "path": "website/LICENSES/native-website/protobuf-1.10.1-Buf-NOTICE.txt",
+      "sha256": "2e3d677486a638eba6a11df63192f604b231418005fc84ba652a050539c98e1b",
+      "bytes": 605
+    },
+    {
+      "path": "website/LICENSES/native-website/protobuf-1.10.1-Google-BSD-NOTICE.txt",
+      "sha256": "0e952cb110ff6944789fbe47c25b38819a3866c04c7c5cbea8d0c0d8f3a92f0e",
+      "bytes": 1812
+    },
+    {
+      "path": "website/LICENSES/native-website/react-three-fiber-9.7.0-LICENSE.txt",
+      "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a",
+      "bytes": 1072
+    },
+    {
+      "path": "website/LICENSES/native-website/supplemental-manifest.json",
+      "sha256": "9448d3a41598e5bf1b97f0ada3c0d4560509b43349d4c88857a53fdb60cc4f6f",
+      "bytes": 3760
+    },
+    {
+      "path": "website/LICENSES/native-website/vite-plugin-rsc-0.5.34-LICENSE.txt",
+      "sha256": "29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5",
+      "bytes": 1103
+    },
+    {
+      "path": "website/LICENSES/THIRD_PARTY_NOTICES.md",
+      "sha256": "18e7672df7ce84578715993043c3b1c972f3e1b4b5c49cf67be341e8059fda07",
+      "bytes": 15035
+    },
+    {
+      "path": "website/package.json",
+      "sha256": "f0c8c741411080a5d1dc8d21340f1be415c7da25e3faa5c90794b9ce4e011da1",
+      "bytes": 2582
+    },
+    {
+      "path": "website/public/fonts/geist-mono-latin.woff2",
+      "sha256": "684ad5b531f81d43c1e8c7038262d5db7cdc1f68006e04d6c7769efa8d33c8cc",
+      "bytes": 23128
+    },
+    {
+      "path": "website/public/licenses/geist-mono-OFL.txt",
+      "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f",
+      "bytes": 4387
+    },
+    {
+      "path": "website/public/licenses/native-website-NOTICES.txt",
+      "sha256": "0adff3c16c1f503411f30ce6bd261c07300905f0d069e46bfedd8f894260d24d",
+      "bytes": 118765
+    },
+    {
+      "path": "website/public/licenses/native-website-react-LICENSE.txt",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "bytes": 1088
+    },
+    {
+      "path": "website/public/licenses/native-website-supplemental-NOTICES.txt",
+      "sha256": "518eee60033b520ad831003f805a6f8f8984ef7782d9b6e27ede3506b3b316ea",
+      "bytes": 16658
+    },
+    {
+      "path": "website/public/licenses/native-website-vinext-LICENSE.txt",
+      "sha256": "19a7b85046eb77c8ab308c68569abbbb59235814297b9c95dc90480f71ec7198",
+      "bytes": 1073
+    },
+    {
+      "path": "website/scripts/atlas-public-brand-image-plugin.mjs",
+      "sha256": "eeff8fc36b0c4989d8b6c3ddb00e0b52d06197d30b5814ca7fa803d4bffdfcdc",
+      "bytes": 1366
+    },
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "sha256": "b87838cdf80c09560e50f4ace75f56d829fed8e102015e9b9357fe10d4512c64",
+      "bytes": 10646
+    },
+    {
+      "path": "website/scripts/check-brand-assets.mjs",
+      "sha256": "42f93e7b0fe30f585861d3f16470d2df053e713bedd5e6afbe19c00a0a208100",
+      "bytes": 2330
+    },
+    {
+      "path": "website/scripts/native-website-notices.mjs",
+      "sha256": "da9372350fc3f8cc53eff3b268554e1d0fef6f32b7d0279dcfa0ce31eb7c1215",
+      "bytes": 6006
+    },
+    {
+      "path": "website/scripts/website-distribution-inventory.mjs",
+      "sha256": "89bff3d0889a8177f4bddf448edafe200ec53161cfeb37867bce8a76049ef7d1",
+      "bytes": 9594
+    },
+    {
+      "path": "website/tests/atlas-public-brand-image.test.mjs",
+      "sha256": "921a1bca0145da0272096d67c6f1debf52d1e360271dcceb1f5339831f1ba74e",
+      "bytes": 7791
+    },
+    {
+      "path": "website/tests/atlas-runtime-expansion-binding.test.mjs",
+      "sha256": "17511dd60e1554cd6421132b2af023f70b3ced7311d6c02c8823a702a20ea66b",
+      "bytes": 292
+    },
+    {
+      "path": "website/tests/atlas190-current-delivery.test.mjs",
+      "sha256": "ec166cd78dc38bdc6e9de0ecb1d3b6a98acf16f10289dc6f96d1c9d27699bb7c",
+      "bytes": 11918
+    },
+    {
+      "path": "website/tests/clinical-epoch-batch-d-preservation.test.mjs",
+      "sha256": "57fb08d6df210b7e613334119cd80163393941a0f4d145e5006873a79eb08065",
+      "bytes": 6177
+    },
+    {
+      "path": "website/tests/clinical-pancreatic-portal-composition.mjs",
+      "sha256": "5ba31f6fc8b0cb1169774a0d3137678dcae57e53168a8d0e150d827a5d80c6c5",
+      "bytes": 5632
+    },
+    {
+      "path": "website/tests/clinical-question-role-preservation-20261021.test.mjs",
+      "sha256": "c038295dd7946abd320aa2b0d782a00ab4e39ee166dd9f9e8630872d6430bd05",
+      "bytes": 18286
+    },
+    {
+      "path": "website/tests/clinical-review-elbow-arterial-tour.test.ts",
+      "sha256": "c89067baa2b62a5c10a7ebfd874cd0f7b5130ff1af0da247a41f89e72b415aea",
+      "bytes": 26514
+    },
+    {
+      "path": "website/tests/clinical-review-elbow-us-followup.test.ts",
+      "sha256": "eddc3c4ae42e954aba37176ac0eeda8549b8e676c99702b03adcab8cb5e064bb",
+      "bytes": 37287
+    },
+    {
+      "path": "website/tests/clinical-review-hand-arterial-xray.test.ts",
+      "sha256": "6d17f5183b6fa179a4ceafdbb61e33cff8561aa5e96aa61b7935b011d7ab5953",
+      "bytes": 22459
+    },
+    {
+      "path": "website/tests/clinical-review-nasal-bone-surface-imaging.test.ts",
+      "sha256": "63e334244d03d0541ef56703a3e33ef79119768dc4a62fe9f82a60eae75b8f63",
+      "bytes": 312
+    },
+    {
+      "path": "website/tests/clinical-review-portal-venous-xray.test.ts",
+      "sha256": "b6ae9238429bc47f4166b81a0079a536ea8fb2b204e1e9aeb924dbc4c060ca9e",
+      "bytes": 24898
+    },
+    {
+      "path": "website/tests/clinical-review-quick-return-focus.test.ts",
+      "sha256": "ed7c1ccc17b234b3c41e798b3d7ba05709e102234e8b0b19f610ff100fbd616f",
+      "bytes": 12469
+    },
+    {
+      "path": "website/tests/clinical-review-quick-start-ui.test.mjs",
+      "sha256": "a93620a62c544840488aea99eca598106af1c010c07ae93ec22e25101fe94b3e",
+      "bytes": 9529
+    },
+    {
+      "path": "website/tests/clinical-review-quick-start.test.mjs",
+      "sha256": "a35bdf7364b6289aba706445e148580a3b97c606fa9114bf59cf7a492cfd4cbe",
+      "bytes": 11415
+    },
+    {
+      "path": "website/tests/clinical-review-short-ciliary-quiz.test.ts",
+      "sha256": "9e7276661973cc4ea1a2f9cab4aa3a5719c97f60edcee61cc7e880e89d3b502d",
+      "bytes": 22521
+    },
+    {
+      "path": "website/tests/clinical-review-shoulder-ct.test.ts",
+      "sha256": "40fcf1314d398965c26ba65baa64108bd6f8b84efe2d3060e8bc8b48ba7136cf",
+      "bytes": 5540
+    },
+    {
+      "path": "website/tests/clinical-review-shoulder-girdle-artery-quiz.test.ts",
+      "sha256": "7d3b3ca848d6d8df8f82357feabb95b2bd4d5a98cd4b5f7f51a894da6a851c8e",
+      "bytes": 8827
+    },
+    {
+      "path": "website/tests/clinical-review-thoracoacromial-ultrasound.test.ts",
+      "sha256": "b65a8a255c5790fbc89a975da23f3b38c13152d78b14f51f429da77a9849519f",
+      "bytes": 13149
+    },
+    {
+      "path": "website/tests/colic-current-admission.test.mjs",
+      "sha256": "9d89e8670848650a0318014e3cb6e79aab74f5fa2cabfb252ca08da895590e99",
+      "bytes": 14063
+    },
+    {
+      "path": "website/tests/colic-fa1-historical-closure.test.mjs",
+      "sha256": "8f08f02652b108e7320691b048e701aab92e59855689b199b241941cae01889e",
+      "bytes": 283
+    },
+    {
+      "path": "website/tests/compact-head-provenance.test.mjs",
+      "sha256": "9ab8d1eda6f58bd969c9015ca69686c5d1a1611c35d2fed349fe4f231664d965",
+      "bytes": 9997
+    },
+    {
+      "path": "website/tests/current-atlas-delivery-help-transition.test.mjs",
+      "sha256": "44036501849247ce21375b7cae03160303ef689f6b4ee3e6b66d60ffc828cdf9",
+      "bytes": 314
+    },
+    {
+      "path": "website/tests/current-atlas-delivery-replacement.test.mjs",
+      "sha256": "ee97c8110daf4757df6b08aaa6f39f03c525d2f1af921c858648a3557e84890b",
+      "bytes": 1717
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.mjs",
+      "sha256": "62831a4e68cdcc3665768782d135c93c1dce77e4f9ad0a6498f9af7cbccfd09b",
+      "bytes": 5159
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "sha256": "2bb765ce69cd47ca7821ba2320ac16659f9c0fc154939d82772228f75ec5f67d",
+      "bytes": 35791
+    },
+    {
+      "path": "website/tests/current-delivery-predecessor-inverse.mjs",
+      "sha256": "19b737005f9156c3f6ca1af377543e2ff55be63996d935481faf8f6fc44dac13",
+      "bytes": 7489
+    },
+    {
+      "path": "website/tests/current-review-rebinding.test.mjs",
+      "sha256": "e0eed24fe3aba3bb7b1393634cac0f2fe39608cbd701565350f37d93c654c286",
+      "bytes": 3663
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-distribution-count.mjs.raw",
+      "sha256": "dfd4195012a9ac2661ba28b069416bfb2412d5859c96b71c1149aeacdcd2b2f7",
+      "bytes": 28023
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "sha256": "5210d4032f40a2924b49c247581bead32575996c37d785f018be5909a6fc032a",
+      "bytes": 2051
+    },
+    {
+      "path": "website/tests/fixtures/lecture-body-loader-later-deltas.json",
+      "sha256": "51781f3aa6099a76485f1c377f21c0985d198a5b434fbf60e87a34ae2a0404d5",
+      "bytes": 7415
+    },
+    {
+      "path": "website/tests/fixtures/portal-before-shoulder-source-1031.ts.raw",
+      "sha256": "2c9e5f98988eeb9276e09acccf1ea5461aec00f98c9dc8af8b009c9f2add5ba5",
+      "bytes": 23915
+    },
+    {
+      "path": "website/tests/fixtures/review-rebinding-before-head-note-recovery.json",
+      "sha256": "2216d5cd77cdcf3455b7a8a276785b8a8f2e181a8ee7909473f1899e8e0f536e",
+      "bytes": 2051
+    },
+    {
+      "path": "website/tests/fixtures-tour-step-source-epoch.json",
+      "sha256": "91dae7d2fede475ced4be910851319fb47213f6d38625ee38bfaaa68c57c6c66",
+      "bytes": 36151
+    },
+    {
+      "path": "website/tests/head-atlas-import.test.ts",
+      "sha256": "5ba6647f5f1df156f1dcaddc5281b62632ca6db49d110f68bd5991936770330f",
+      "bytes": 9330
+    },
+    {
+      "path": "website/tests/head-comparison-parent-commit.test.ts",
+      "sha256": "94a25d1d7b6738f7dcccf2b07817d8967653ab7baa9909eaf429b45f8ff0d9e6",
+      "bytes": 10073
+    },
+    {
+      "path": "website/tests/head-comparison-source-scope.test.ts",
+      "sha256": "df5dea26c1e21db714e09ef367ae305298c7805a15412ce93d4c0ffd97962334",
+      "bytes": 11914
+    },
+    {
+      "path": "website/tests/head-delivery-successor-projection.test.mjs",
+      "sha256": "a805d6c264672ef03fc0a786de2cc81ba5895758b4da88f53d98282f494ff578",
+      "bytes": 3164
+    },
+    {
+      "path": "website/tests/head-epoch-projections.mjs",
+      "sha256": "c4e93356fdd99e3228bcb2e69e9bd7f23e74cdb3dc577e5c88b491070246cf67",
+      "bytes": 13255
+    },
+    {
+      "path": "website/tests/head-epoch-projections.test.mjs",
+      "sha256": "1f3e7db99b473eb0fd8bdda7bc283ed4a0971a8f3b0888202fc40cd40ca7ac61",
+      "bytes": 1464
+    },
+    {
+      "path": "website/tests/head-history-flow-inverse.mjs",
+      "sha256": "3a8cfc88e2e0b8998366a1a459e57d383c0bcf18c64195b04e279c3a23e9ad51",
+      "bytes": 3502
+    },
+    {
+      "path": "website/tests/head-image-history-anchor-harness.test.mjs",
+      "sha256": "1ef8b03bdb7851b34942b105da5e5664c409b161342f7ea12afa3fcf688cf792",
+      "bytes": 3538
+    },
+    {
+      "path": "website/tests/head-image-history.test.ts",
+      "sha256": "feffec52b348dcf945b8126f8f8d27776817281cb4716bf72ac792ec78859983",
+      "bytes": 203573
+    },
+    {
+      "path": "website/tests/head-image-tools-test-role.mjs",
+      "sha256": "95b105d3be55661010a53ab3db93e1044df5c3d9c8c874449f5c5423a95ca4da",
+      "bytes": 2651
+    },
+    {
+      "path": "website/tests/head-inline-commit-lifecycle.test.ts",
+      "sha256": "76daf9b1c569fdbebdb0fdcfba7fb9f03eebf9dc4c5387ea8b5b496492ad4083",
+      "bytes": 14233
+    },
+    {
+      "path": "website/tests/head-inline-comparison.test.ts",
+      "sha256": "034a19fda817c51e264fb759d7c6724089f554038a89e896a3803a95a2ebcf7f",
+      "bytes": 13648
+    },
+    {
+      "path": "website/tests/head-inline-frame.test.ts",
+      "sha256": "850100655575e199fba0da57de9ff1593051a7b131cf1cfcbee202b96e915a85",
+      "bytes": 23768
+    },
+    {
+      "path": "website/tests/head-inline-limits-keyboard.test.mjs",
+      "sha256": "1f45341c46f745d8f2088161618552a7ee94b30d30efcc2ca7aa697950ed1798",
+      "bytes": 5934
+    },
+    {
+      "path": "website/tests/head-model-entry-navigation.test.ts",
+      "sha256": "6dd616312f4fbf34a7ad7ac5d40dea073cf98acacb711ff63faaf00b60e1ff54",
+      "bytes": 5872
+    },
+    {
+      "path": "website/tests/head-practice-exit-preservation.test.mjs",
+      "sha256": "92bd376287ce7f80bd7edb2a87a83185c4d3492d52409ee843bbf936d6e7c3d6",
+      "bytes": 3415
+    },
+    {
+      "path": "website/tests/head-reverse-focus-delivery-inverse.test.mjs",
+      "sha256": "8e3c3fc2d1a94dbcef837e8493566056e50bed8091806562e2535ef951dbfa55",
+      "bytes": 5438
+    },
+    {
+      "path": "website/tests/head-reverse-selection-focus.test.ts",
+      "sha256": "fdfec50294b71bdd112d1071d4affcf2b99ff8a6867ccd51a1fea7bb876da312",
+      "bytes": 11573
+    },
+    {
+      "path": "website/tests/head-review-sections-preservation.test.mjs",
+      "sha256": "a0ec3ce1106a5072aa5ada250c24871aebf59735385cf51bd765784b6c915799",
+      "bytes": 2363
+    },
+    {
+      "path": "website/tests/head-saved-study-plan-ui.test.ts",
+      "sha256": "3fd81a6a126003f46e7536988e7a7debb67c046b007f653f609531c4af51a4a8",
+      "bytes": 20017
+    },
+    {
+      "path": "website/tests/head-source-context-preservation.mjs",
+      "sha256": "f8434a64619fd58227c0cf784a659f2669cfdcd4758fb66ba80b008d88d4ff70",
+      "bytes": 3003
+    },
+    {
+      "path": "website/tests/head-study-website-historical-source.test.mjs",
+      "sha256": "90c9090059cfa89c238f45e2b2da2472a0a7fa17d47f949c679d039216de55be",
+      "bytes": 3353
+    },
+    {
+      "path": "website/tests/head-view-history-client-replacement.test.mjs",
+      "sha256": "1216a14b247a30e69e5dff985693a27144d147ac1ba5da138a6ba5820f0ef351",
+      "bytes": 24830
+    },
+    {
+      "path": "website/tests/head-view-history-client.test.mjs",
+      "sha256": "119f9520882b3c51c59cd957020797a9526c4e136df0fd6b4cd96838cec00418",
+      "bytes": 25818
+    },
+    {
+      "path": "website/tests/head-viewer-feedback.test.mjs",
+      "sha256": "9167788a98504cdf656339a35fe0fc6b8fbd890e412ab9652734e8e6f22e748c",
+      "bytes": 9729
+    },
+    {
+      "path": "website/tests/imaging-presentation.test.mjs",
+      "sha256": "b8759b92109408ad937727b029b667e3d698d17dcefb8d0194995a5ec81dc5e2",
+      "bytes": 12078
+    },
+    {
+      "path": "website/tests/inbox-return-focus-current-inverse.json",
+      "sha256": "69a921f5c0ae5c007c4aef3449ffb917c4cee2909c3a32a70245e6f7568e0623",
+      "bytes": 3462
+    },
+    {
+      "path": "website/tests/inbox-return-focus-current-inverse.mjs",
+      "sha256": "c20e41db36d4025fae4cecb98b3c07056314ac4d881fca36aae3d3c52ee93f4e",
+      "bytes": 2018
+    },
+    {
+      "path": "website/tests/inferior-thyroid-mra-current-delivery.test.mjs",
+      "sha256": "899c49b63ef39bd308365d3c47348cdacd4a5ab6cc25acd16b07ee1da4b2ec0c",
+      "bytes": 13620
+    },
+    {
+      "path": "website/tests/lecture-body-loader-preservation.test.mjs",
+      "sha256": "5dd3f67d3dd2c6fcadc6df8bbed85c066901df9395ee3045d25ae8797f557895",
+      "bytes": 4903
+    },
+    {
+      "path": "website/tests/native-website-notices.test.mjs",
+      "sha256": "d0bcc493370d4ff665d691087f44a90d204acec5577d164ccab3c14784c8ae89",
+      "bytes": 4851
+    },
+    {
+      "path": "website/tests/native-website-supplemental-notices.test.mjs",
+      "sha256": "8aa452a017b710239764d5d7f4c07eacebe15694f5671cdc474626c58907fe34",
+      "bytes": 3152
+    },
+    {
+      "path": "website/tests/nine-history-dispatch.mjs",
+      "sha256": "7d7ecafa8d4179b1acbb3649b770db785f808edc31fdfd658acedd1aa3f8e3c6",
+      "bytes": 12424
+    },
+    {
+      "path": "website/tests/partition5-history-context.mjs",
+      "sha256": "c3425b60c337fb748a3125fc191c554ad103112c4aee784ba5e0d31623f150c6",
+      "bytes": 6570
+    },
+    {
+      "path": "website/tests/partition6-history-context.mjs",
+      "sha256": "9e4ebb8315469e1ee1b291b6e26899f86d14fe241fd2b9ea37fa153d2191f8f0",
+      "bytes": 8930
+    },
+    {
+      "path": "website/tests/partition7-anatomy-history.mjs",
+      "sha256": "b658c3e1dbd4bec31fa7fc1c662c687cfb61e46958f4d09370c099c1a465df6d",
+      "bytes": 3937
+    },
+    {
+      "path": "website/tests/playback-reasoning-epoch.mjs",
+      "sha256": "960360d676390e8c1276a50e3ca5d15e4d1904aed20f877a1eab0dc70e4c22ae",
+      "bytes": 5812
+    },
+    {
+      "path": "website/tests/playback-reasoning-epoch.test.mjs",
+      "sha256": "53fae28995ba7b083d263e05d0da7b172c02f302c6eaa800daab6ddfc9a41520",
+      "bytes": 2397
+    },
+    {
+      "path": "website/tests/portal-current-shoulder-source.test.mjs",
+      "sha256": "7eab6db2103bbc59aad121b865ba2b8ba84b4bd6de8c21068bed21c78c76e164",
+      "bytes": 1446
+    },
+    {
+      "path": "website/tests/regional-duration-source-inverse.mjs",
+      "sha256": "f71a21cf349365bad967701966fbabd9d9f4e96ac532637d459c3310a9610879",
+      "bytes": 1466
+    },
+    {
+      "path": "website/tests/regional-scope-catalogue-inverse.mjs",
+      "sha256": "fc0de76d95ea043e22497bb376f7959e7e565236975b4b9d92435f52b828323e",
+      "bytes": 1664
+    },
+    {
+      "path": "website/tests/regional-scope-catalogue-inverse.test.mjs",
+      "sha256": "ac005b68102ee886b119ef4e3003a8237730a49081a682f5e17e9346b6d79f1e",
+      "bytes": 1681
+    },
+    {
+      "path": "website/tests/regional-tour-entry-delivery.test.mjs",
+      "sha256": "b29813ed4cefe49e5ec6c4eb7625037dccc5019e7b59699d26b0d66bb1c65dfd",
+      "bytes": 17742
+    },
+    {
+      "path": "website/tests/renal-tour-epoch-admission.mjs",
+      "sha256": "a71021f19b4775d9fea0ee47b019d5abe95ad53fb1a5659a1b6a7bf0b46dd5ef",
+      "bytes": 18533
+    },
+    {
+      "path": "website/tests/renal-tour-epoch-admission.test.mjs",
+      "sha256": "e067d1b37778f40e712d9bb3805c7fcde10b6dfdbfde28a3623a32dfa79c4ef1",
+      "bytes": 15337
+    },
+    {
+      "path": "website/tests/review-successor-source-role.test.mjs",
+      "sha256": "91da1ce04f425d07bc7aaba43cdbbc39c398b5d252f9edbf3926e760e5e5b5ec",
+      "bytes": 2092
+    },
+    {
+      "path": "website/tests/run-website-tests-diagnostics.test.mjs",
+      "sha256": "d4ec168a233d378181309ee8a10ea173dcd68b44183f1d7d88e4fb2b60776e36",
+      "bytes": 6152
+    },
+    {
+      "path": "website/tests/site-image.test.mjs",
+      "sha256": "6fbd95e18f1e55620cd1dd9a613f94945f4213f72fd13a8e383cf864375f1de0",
+      "bytes": 10235
+    },
+    {
+      "path": "website/tests/studio-course-details-focus.test.mjs",
+      "sha256": "fcbf647ef2d7d1eb3b03616b77e33ed891e8dee5aa21e5d0642ac926ad6dd3dc",
+      "bytes": 8720
+    },
+    {
+      "path": "website/tests/studio-course-details-form.test.mjs",
+      "sha256": "491fb5b4bec8dae8644a9e75e58cf204ba639889838de351508a33ca897ba312",
+      "bytes": 22101
+    },
+    {
+      "path": "website/tests/studio-course-draft-discard.test.mjs",
+      "sha256": "51ba669cd0f0462f77623e373d34998ab11830636d89bf74484fa4d6b0b8cce1",
+      "bytes": 17887
+    },
+    {
+      "path": "website/tests/studio-course-editor-keyboard.test.mjs",
+      "sha256": "f0477e6115c8afda858e601a7db1f95bc88102e07f1e5c16d2d698273b0d324c",
+      "bytes": 17391
+    },
+    {
+      "path": "website/tests/studio-course-editor.test.ts",
+      "sha256": "ad54f163a198713cc4fe7ea47438f9c1a8fc62181ccada44a57638e87158f8f6",
+      "bytes": 12482
+    },
+    {
+      "path": "website/tests/studio-course-history.test.mjs",
+      "sha256": "28fb3cb2eb818f7f17f01287418ab17e764ba5023a7edeb3f0c55eaee796ec2a",
+      "bytes": 10216
+    },
+    {
+      "path": "website/tests/studio-course-options.test.mjs",
+      "sha256": "1b25f09073513ffdf0998e0f5cd2cd35f204be406b5b5637c94bb32a8b73d79a",
+      "bytes": 4733
+    },
+    {
+      "path": "website/tests/studio-course-outline-find.test.mjs",
+      "sha256": "36541f87f0906995dae269eb914071522a4359ce3a7f5233f6b1881c82d216e9",
+      "bytes": 12121
+    },
+    {
+      "path": "website/tests/studio-course-outline-link-names.test.mjs",
+      "sha256": "ce22407cd5158fa3113a57082d885220f2302c30e46c6a5ea22c9d54d9869f5e",
+      "bytes": 4012
+    },
+    {
+      "path": "website/tests/studio-course-outline-order.test.mjs",
+      "sha256": "c84a2691bf30f502be9dd49c7856f221918e971f3df388f3094cf2c98b14dd24",
+      "bytes": 6984
+    },
+    {
+      "path": "website/tests/studio-course-popstate-focus.test.mjs",
+      "sha256": "c439aa2dbfa171e40b0f988c3c611877fa8a54bba4b05ba308079e7b0f8a684a",
+      "bytes": 5420
+    },
+    {
+      "path": "website/tests/studio-course-preview-focus.test.mjs",
+      "sha256": "f49c0b86c9325fbec8410362fd981a583fd847c431723d049f5692da2c6ce93d",
+      "bytes": 10046
+    },
+    {
+      "path": "website/tests/studio-course-recovery-notice.test.mjs",
+      "sha256": "7af6a5d68eb37ca7f5fb1c843c17c79e521a15f1a93baf7bff15b36f6ca612f9",
+      "bytes": 6972
+    },
+    {
+      "path": "website/tests/studio-course-switch-details.test.mjs",
+      "sha256": "7c36e03fac6bc2581a4a156bae6c2ed4f90cc2ca6a7117b3d532c3fb359504e2",
+      "bytes": 6243
+    },
+    {
+      "path": "website/tests/studio-draft-scope-source-role.test.mjs",
+      "sha256": "433209a25aeb48fa56babc007997bfae2c80761774c8576f3e854f5cefed5280",
+      "bytes": 1530
+    },
+    {
+      "path": "website/tests/studio-draft-scope.test.mjs",
+      "sha256": "a84450de92e506488d78abc89a447f4e153e083043cedc4847d26962a8f12be3",
+      "bytes": 17404
+    },
+    {
+      "path": "website/tests/studio-outline-draft-dependency-source.mjs",
+      "sha256": "0e25e6cde83e320e4a84f9c99d7918867546564f1e7e4fd4c1948ec1ec374603",
+      "bytes": 2701
+    },
+    {
+      "path": "website/tests/studio-outline-helper-loader.mjs",
+      "sha256": "0b00fb48e6510e4ca5ebd3ed073b7d95ecf1a3a2f689985b53b9766d48ce3306",
+      "bytes": 631
+    },
+    {
+      "path": "website/tests/studio-outline-navigation.test.mjs",
+      "sha256": "a6660ccd3252e0a8af0083bef4115dd5ea462fe194e08eda1265e0676c8d2e5e",
+      "bytes": 7654
+    },
+    {
+      "path": "website/tests/studio-release-draft-cue.test.mjs",
+      "sha256": "b9c9ec57f49f62f885cc4405b263112cb7991d17773bbcdc78593dfac99d0182",
+      "bytes": 11922
+    },
+    {
+      "path": "website/tests/thyroid-ui-admission-history-1031.mjs",
+      "sha256": "cafc1b814e58ad334fffdd86fd0914da4cd116d874463723205c8c1e941ce07f",
+      "bytes": 9835
+    },
+    {
+      "path": "website/tests/tour-replay-current-delivery.test.mjs",
+      "sha256": "39c2890903291d49364b0720223ecb5653e816efb44308b349559c15cc9226d4",
+      "bytes": 8931
+    },
+    {
+      "path": "website/tests/tour-step-source-epoch-inverse.mjs",
+      "sha256": "04debe06b8554037492d2165646a578a9721be4280575caf45b5c42e73134f46",
+      "bytes": 3437
+    },
+    {
+      "path": "website/tests/ui-teaching-admission-contract.test.mjs",
+      "sha256": "e8d9febcd6b2a120f21294710bf35e9a7bf80f49ac0de9980d12a6795745b758",
+      "bytes": 14295
+    },
+    {
+      "path": "website/tests/website-brand-provenance.test.mjs",
+      "sha256": "2b6b95251cd829e33ad42cdae6ab3cfb6c4197daae486bdee3cb44bae98fd3e5",
+      "bytes": 1334
+    },
+    {
+      "path": "website/tests/website-distribution-inventory.test.mjs",
+      "sha256": "dc4d2f4fb3296e87ec181e1438d0f431f3793d5b0c8ac18f9b6ceca0a19e21ce",
+      "bytes": 8242
+    },
+    {
+      "path": "website/tests/website-geist-provenance.test.mjs",
+      "sha256": "0aac6fa408900502341487b0a294b4681f9e3b8f42d26215fd088f4c9c8bfd94",
+      "bytes": 1501
+    },
+    {
+      "path": "website/vite.config.ts",
+      "sha256": "8c23591ccfae39c114e468be277cf6a44a02f53bacc9f0534df802a1fe77c89c",
+      "bytes": 4828
+    },
+    {
+      "path": "recipes/current-teaching-inventory/probe.mjs",
+      "sha256": "217dae3e6b31e5541dcf70f198363ef7a9a27c8244f898058a6390b407ceed77",
+      "bytes": 2209
+    },
+    {
+      "path": "recipes/current-teaching-inventory/quiz-probe.mjs",
+      "sha256": "25c1cb7c3ac6f9aecaa1a9e3350a7371df4ea3ea288915f6facdd5841155b6dd",
+      "bytes": 2181
+    },
+    {
+      "path": "recipes/current-teaching-inventory/verify-desktop.mjs",
+      "sha256": "5d95734838d9e66f66fb976df71caff6d0f8966c58c6c4e1dbc4ca1f45960ec5",
+      "bytes": 4055
+    },
+    {
+      "path": "recipes/current-teaching-inventory/save-audit.mjs",
+      "sha256": "b44ea42f2fa1ebfa240c30273f1a4d3ae34412c103ff3dd2a92eb9e4d0e27324",
+      "bytes": 14106
+    },
+    {
+      "path": "docs/current-root-teaching-inventory.md",
+      "sha256": "5b36c7032be975aa5f67aba8450a7ede33c6c88aa1b476a68712cbe4b9edb302",
+      "bytes": 3296
+    },
+    {
+      "path": "docs/current-root-quiz-scope.md",
+      "sha256": "3468453ce0be76d3423f5e09876ed821ba8110273b8f53f1c0b8ba4efbb30757",
+      "bytes": 3731
+    },
+    {
+      "path": "docs/pharyngeal-ct-evidence.md",
+      "sha256": "685edf755b2169b1e358a2f16cbffdba9c6513d507b6b57cdf6ec1ef19669c02",
+      "bytes": 3919
+    }
+  ],
+  "removed": [],
+  "scope": "Selected authored source and original audit recipes/notes. No scans, masks, models, private observations, clinical decisions, release logs or canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "at": "2026-10-31T04:34:42.693Z",
+    "productChanged": false,
+    "installedDesktopChecks": 7,
+    "bodyRootPlacements": 9936,
+    "clinicalApproval": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

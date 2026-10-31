@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261030-current-release-context',prior=json(root+'/SOURCE.json'),site=prior.website;
+const sourceRows=prior.sourceRows.map(r=>({...r,bytes:fs.statSync(site+'/'+r.path).size,sha256:hash(site+'/'+r.path)}));
+const changes=sourceRows.filter(row=>row.sha256!==prior.sourceRows.find(r=>r.path===row.path).sha256);assert.deepEqual(changes.map(r=>r.path).sort(),['tests/current-atlas-delivery.mjs','tests/current-review-rebinding.test.mjs']);
+fs.mkdirSync(root+'/tmp',{recursive:true});
+fs.writeFileSync(root+'/SOURCE-2.json',JSON.stringify({...prior,at:new Date().toISOString(),previous:{path:root+'/SOURCE.json',sha256:hash(root+'/SOURCE.json')},sourceRows,changedPaths:[...new Set([...prior.changedPaths,...changes.map(r=>r.path)])]},null,2)+'\n',{flag:'wx'});
+let run=fs.readFileSync(root+'/check.mjs','utf8').replace("source=root+'/SOURCE.json'","source=root+'/SOURCE-2.json'").replaceAll('focused-attempt-1','focused-attempt-2').replaceAll('FOCUSED_RESULT-1','FOCUSED_RESULT-2').replace('heap:1536,aggregate:2048,minimum:4096','heap:2048,aggregate:3072,minimum:5120').replaceAll("'G:/VisibleMedicine-temp/tmp'","root+'/tmp'");
+assert(run.includes('SOURCE-2.json'));fs.writeFileSync(root+'/check-2.mjs',run,{flag:'wx'});
+console.log(JSON.stringify({sourceSha256:hash(root+'/SOURCE-2.json'),changes:changes.map(r=>r.path),tempCreated:true}));

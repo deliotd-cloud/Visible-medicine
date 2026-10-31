@@ -1,0 +1,121 @@
+{
+  "schema": "vm-brand-asset-provenance/1",
+  "verifiedAt": "2026-10-31T03:36:47.155Z",
+  "scope": "Four existing website logo/mark PNGs and eight existing icons; exact byte provenance only.",
+  "recordedAdoption": {
+    "commit": "ff984ea1f714594f2d93aad332f25073156a8e13",
+    "subject": "Adopt approved Visible Medicine identity",
+    "newOwnerApprovalRecorded": false
+  },
+  "brandPack": {
+    "name": "Visible-Medicine-Brand-Pack-v1",
+    "manifest": {
+      "path": "LICENSES/native-website/brand-pack-manifest.csv",
+      "sha256": "734f46320e7c575f5f9a5f2240ba3ffbbd224326989ab6ba98a45625c949aac1"
+    },
+    "readme": {
+      "path": "LICENSES/native-website/brand-pack-README.md",
+      "sha256": "a3e8f68e2d794f1c223f93d753c2c989b282ea4764bc942731dfb11d0af33e29"
+    },
+    "sourceMasters": [
+      {
+        "file": "SOURCE-MASTERS/visible-medicine-dark-approved-original.png",
+        "bytes": 957767,
+        "sha256": "cd0778447a7878459c28a9846e8ce186b196a60bd8f572be7f4b09814f4213e9",
+        "sha256Verified": true,
+        "bundledHere": false
+      },
+      {
+        "file": "SOURCE-MASTERS/visible-medicine-light-approved-original.png",
+        "bytes": 910184,
+        "sha256": "0a2ee579993c56dcca936e0d1e511412e3d9926a9952e78c63df36b8a9795542",
+        "sha256Verified": true,
+        "bundledHere": false
+      }
+    ]
+  },
+  "recipe": {
+    "repositoryPath": "scripts/build_logo_pack.py",
+    "commit": "ff984ea1f714594f2d93aad332f25073156a8e13",
+    "sha256": "11bf0833a6606ecfb1d037cebfafe43c5aad4fb548f28eca4cd0228369e9604c",
+    "rerun": false
+  },
+  "assets": [
+    {
+      "path": "public/brand/approved/visible-medicine-lockup-dark.png",
+      "bytes": 111431,
+      "sha256": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
+      "brandPackPath": "PNG/TRANSPARENT/visible-medicine-dark-transparent-1024px.png"
+    },
+    {
+      "path": "public/brand/approved/visible-medicine-lockup-light.png",
+      "bytes": 121818,
+      "sha256": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
+      "brandPackPath": "PNG/TRANSPARENT/visible-medicine-light-transparent-1024px.png"
+    },
+    {
+      "path": "public/brand/approved/visible-medicine-mark-dark-theme.png",
+      "bytes": 76177,
+      "sha256": "fc97836b267d4fb792fac53e0406a42fb5c997920cd5fdcff3ffe3e829249e62",
+      "brandPackPath": "PNG/MARK/visible-medicine-mark-light-ink-transparent-512.png"
+    },
+    {
+      "path": "public/brand/approved/visible-medicine-mark-light-theme.png",
+      "bytes": 73264,
+      "sha256": "19d5f6a5a5ddffe5580265d1e15519fe2a8a81f3d92a5efa4c1087dff5fc1651",
+      "brandPackPath": "PNG/MARK/visible-medicine-mark-dark-ink-transparent-512.png"
+    },
+    {
+      "path": "public/brand/icons/apple-touch-icon.png",
+      "bytes": 10964,
+      "sha256": "98a5b87d1d822d6a22d0593c8e5293daf49ab35a101e4bc0e01c1c8dcf0a6334",
+      "brandPackPath": "PNG/ICONS/apple-touch-icon-180x180.png"
+    },
+    {
+      "path": "public/brand/icons/favicon-16x16.png",
+      "bytes": 521,
+      "sha256": "8e367eca7d3d76b63db59b8675066cdc4869fa0632c927c6751ea5a3cca0b63f",
+      "brandPackPath": "PNG/ICONS/favicon-16x16.png"
+    },
+    {
+      "path": "public/brand/icons/favicon-32x32.png",
+      "bytes": 1194,
+      "sha256": "d25e8ae901ce476ec6f15f8b4b55c3971ce18e0c80522b222ff467e84415874f",
+      "brandPackPath": "PNG/ICONS/favicon-32x32.png"
+    },
+    {
+      "path": "public/brand/icons/favicon-48x48.png",
+      "bytes": 1940,
+      "sha256": "89eec9e0d7dd87a61ea42db138934da779a90c5e473e8be826ed35afa972ba8f",
+      "brandPackPath": "PNG/ICONS/favicon-48x48.png"
+    },
+    {
+      "path": "public/brand/icons/favicon.ico",
+      "bytes": 35315,
+      "sha256": "b8b4b55fbf53119678b8b9a638379a6c27e3a8c95e51a6aa0d8b204d2ea09afc",
+      "brandPackPath": "WEB/visible-medicine-favicon.ico"
+    },
+    {
+      "path": "public/brand/icons/pwa-icon-192x192.png",
+      "bytes": 11785,
+      "sha256": "0238c15a50f6a1028028ab84a496a06ae82c8bb4cc5a8532c88c9dbc0d9f0dff",
+      "brandPackPath": "PNG/ICONS/pwa-icon-192x192.png"
+    },
+    {
+      "path": "public/brand/icons/pwa-icon-512x512.png",
+      "bytes": 55487,
+      "sha256": "3d085c29fe79795f2ec50809c821ae322e7a359c305b2c2d2785de218c3a0662",
+      "brandPackPath": "PNG/ICONS/pwa-icon-512x512.png"
+    },
+    {
+      "path": "public/brand/icons/pwa-maskable-icon-512x512.png",
+      "bytes": 38667,
+      "sha256": "87f6c614cbb00a1ec54ee43216003ea903f0df53cabe70624959da5a82a145be",
+      "brandPackPath": "PNG/ICONS/pwa-maskable-icon-512x512.png"
+    }
+  ],
+  "rights": "The brand-pack README does not grant trademark, font, model-release or third-party rights. This record verifies existing asset provenance, not blanket commercial or public-release clearance.",
+  "artworkChanged": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
