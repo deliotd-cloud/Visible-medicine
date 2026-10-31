@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-native-public-images',site=root+'/website',source=json(root+'/AUTHORED_SOURCE.json');
+for(const row of source.sourceRows)assert.equal(hash(site+'/'+row.path),row.sha256,row.path);
+const ts=createRequire(site+'/package.json')('typescript'),config=ts.readConfigFile(site+'/tsconfig.json',ts.sys.readFile);assert(!config.error);
+const parsed=ts.parseJsonConfigFileContent(config.config,ts.sys,site),options={...parsed.options,noEmit:true,incremental:false,composite:false,tsBuildInfoFile:undefined};
+const roots=['app/brand-preview/page.tsx','app/splash-preview/page.tsx','components/AtlasModalityCards.tsx','components/BrandLockup.tsx','components/CinematicFilm.tsx','components/SplashScreen.tsx','components/SiteImage.tsx','components/AtlasPublicBrandImage.tsx','lib/site-image.ts'];
+for(const file of roots)assert(fs.existsSync(site+'/'+file),file);
+const host=ts.createCompilerHost(options);host.getCurrentDirectory=()=>site;
+const program=ts.createProgram(roots.map(p=>site+'/'+p),options,host);const diagnostics=ts.getPreEmitDiagnostics(program);
+const graph=program.getSourceFiles().map(f=>({path:path.resolve(f.fileName).replaceAll('\\','/'),sha256:hash(f.fileName)}));
+const result={at:new Date().toISOString(),source:{path:root+'/AUTHORED_SOURCE.json',sha256:hash(root+'/AUTHORED_SOURCE.json')},roots,graph,diagnosticCount:diagnostics.length,passing:diagnostics.length===0,scope:'Nine image component/caller roots and imported graph; not full website types.'};
+fs.writeFileSync(root+'/SCOPED_TYPES.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});if(diagnostics.length)console.log(ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCurrentDirectory:()=>site,getCanonicalFileName:f=>f,getNewLine:()=>"\n"}));
+console.log(JSON.stringify({passing:result.passing,roots:roots.length,graph:graph.length,diagnosticCount:diagnostics.length}));if(diagnostics.length)process.exitCode=1;

@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {guarded} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/run-native-build-balanced-guarded-20261025.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-review-readable-groups',source=json(root+'/SOURCE.json'),site=source.website;
+assert(json('G:/VisibleMedicine-temp/staging/20261030-release-notices-successor/RELEASE_QUEUE.json').terminal);
+assert(json(root+'/SCOPED_TYPES.json').passing);
+const verify=()=>{for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);};verify();
+const result=await guarded({site,dir:root+'/build-3',command:root+'/build-diagnostic-3.mjs',heap:1536,aggregate:4096,minimum:6144,extraEnv:{TEMP:root+'/tmp',TMP:root+'/tmp',VM_ATLAS_SOURCE_REPO:source.atlas,ATLAS_SOURCE_REPO:source.atlas}});verify();
+fs.writeFileSync(root+'/BUILD_RESULT-3.json',JSON.stringify({...result,source:{path:root+'/SOURCE.json',sha256:hash(root+'/SOURCE.json')},sourceUnchanged:true,installed:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({passing:result.passing}));if(!result.passing)process.exitCode=1;
