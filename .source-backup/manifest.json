@@ -1,0 +1,82 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T11:11:55.660Z",
+  "sourceIdentity": {
+    "admissionPlan": {
+      "path": "G:/VisibleMedicine-temp/proposals/20261031-current-queue-admission/PLAN.json",
+      "sha256": "d9adc5c24fb10682d0ef0dec7e06822c4ea77957c913f9f412eba11850f38fd5"
+    },
+    "comparison": {
+      "path": "G:/VisibleMedicine-temp/proposals/20261031-small-cardiac-runtime-compare/compare.mjs",
+      "sha256": "17058d01e1924657687141a9763a2c897f70b625d40e830ad46ec2d5fcaef6f7"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tools/cache/move-cache.ps1",
+      "bytes": 5817,
+      "sha256": "6155efada57cb5949a22ef2ffc4494e14bbb0f7774673d3c477dc6aeff4c0fd2"
+    },
+    {
+      "path": "tools/current-queue-admission/current-queue.mjs",
+      "bytes": 2187,
+      "sha256": "05961ae894e537c32a2d67460208049ee94ce827ede9162f4b97db28ea357bce"
+    },
+    {
+      "path": "tools/current-queue-admission/current-queue.test.mjs",
+      "bytes": 3676,
+      "sha256": "b8e1d8d9477de1d193b37bfa63abcec6810beb8a45879e75851fe497179c8dd2"
+    },
+    {
+      "path": "tools/current-queue-admission/prepare.mjs",
+      "bytes": 4263,
+      "sha256": "e22c24f828f5c4c5292a9282227d83a03323e07abb1725b201f06938f1eacc1b"
+    },
+    {
+      "path": "tools/current-queue-admission/verify-current-queue.mjs",
+      "bytes": 6023,
+      "sha256": "1f4ffa8fc0e188ff5328ae0d577e05d9c8e38fe1b789c220eb69b6a54fb0b599"
+    },
+    {
+      "path": "tools/current-queue-admission/freeze-verified.mjs",
+      "bytes": 4068,
+      "sha256": "19d474849e44d4f6ee80c288903b8998a8e8d43f0f2cf06c0c634ea7965f149e"
+    },
+    {
+      "path": "tools/small-cardiac-runtime-compare/compare.mjs",
+      "bytes": 17160,
+      "sha256": "17058d01e1924657687141a9763a2c897f70b625d40e830ad46ec2d5fcaef6f7"
+    },
+    {
+      "path": "tools/small-cardiac-runtime-compare/main-review.mjs",
+      "bytes": 2259,
+      "sha256": "3a2a2079354cdcbb6f68667d0705d7a4731de095789a68eaf890dbdfa3b7b3c5"
+    },
+    {
+      "path": "tools/small-cardiac-runtime-compare/HANDOFF.md",
+      "bytes": 3523,
+      "sha256": "75acbd641a43e4563d6f39d3614f82f10e49df79c648f10aabc504da561b860a"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original validation admission, runtime comparison and cache relocation source. Partial source-only recovery, without private data, third-party models, caches or canonical Git ancestry.",
+  "proof": {
+    "queueAdmissionTests": 9,
+    "commandsAndSourceChecksUnchanged": true,
+    "comparisonSyntaxPass": true,
+    "unverifiedBaselineRejectionPass": true,
+    "comparisonRuntimePending": true,
+    "cacheFilesByteVerified": 271,
+    "cacheLogicalBytes": 137196357,
+    "observedFreedBytes": 137883648,
+    "installedChanged": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
