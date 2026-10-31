@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-release-partition7-provenance-check',prior=json(root+'/SOURCE.json'),file='tests/compact-head-provenance.test.mjs',p=prior.website+'/'+file;
+for(const r of prior.sourceRows)assert.equal(hash(prior.website+'/'+r.path),r.sha256,r.path);
+fs.copyFileSync(p,root+'/compact-head-provenance-before-copy-fix.mjs.raw',fs.constants.COPYFILE_EXCL);
+let s=fs.readFileSync(p,'utf8');const old='assert.match(html,/Unconfirmed|unconfirmed|selection|context/i);';assert.equal(s.split(old).length,2);
+s=s.replace(old,'assert.match(html,/<p role="status">The current structure or source could not be confirmed\\. Select it again, then reopen this panel\\.<\\/p>/);');fs.writeFileSync(p,s);
+const rows=prior.sourceRows.map(r=>r.path===file?{...r,sha256:hash(p),bytes:fs.statSync(p).size}:r);for(const r of rows)assert.equal(hash(prior.website+'/'+r.path),r.sha256,r.path);
+fs.writeFileSync(root+'/SOURCE2.json',JSON.stringify({...prior,at:new Date().toISOString(),parent:{path:root+'/SOURCE.json',sha256:hash(root+'/SOURCE.json')},sourceRows:rows,repair:'Match actual fail-closed issue-report status. New assertion only; original historical tests preserved.',preimage:{path:root+'/compact-head-provenance-before-copy-fix.mjs.raw',sha256:hash(root+'/compact-head-provenance-before-copy-fix.mjs.raw')}},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(root+'/focused-2.mjs',fs.readFileSync(root+'/focused.mjs','utf8').replace("pin=root+'/SOURCE.json'","pin=root+'/SOURCE2.json'").replaceAll('/FOCUSED','/FOCUSED2'),{flag:'wx'});console.log(JSON.stringify({sourceSha256:hash(root+'/SOURCE2.json')}));

@@ -1,0 +1,38 @@
+import Image from "./SiteImage";
+
+type BrandLockupProps = {
+  priority?: boolean;
+  tone?: "light" | "dark";
+  sizes?: string;
+};
+
+const lockups = {
+  light: {
+    src: "/brand/approved/visible-medicine-lockup-light.png",
+    width: 1024,
+    height: 217,
+  },
+  dark: {
+    src: "/brand/approved/visible-medicine-lockup-dark.png",
+    width: 1024,
+    height: 205,
+  },
+} as const;
+
+export function BrandLockup({ priority = false, tone = "light", sizes = "(max-width: 760px) 168px, 214px" }: BrandLockupProps) {
+  const lockup = lockups[tone];
+
+  return (
+    <span className={`brand-lockup brand-lockup-${tone}`} aria-label="Visible Medicine, by Elivion">
+      <Image
+        className="brand-lockup-image"
+        src={lockup.src}
+        alt=""
+        width={lockup.width}
+        height={lockup.height}
+        priority={priority}
+        sizes={sizes}
+      />
+    </span>
+  );
+}

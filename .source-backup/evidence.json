@@ -1,0 +1,64 @@
+{
+  "at": "2026-10-31T02:49:34.924Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-review-continuity-verified/SOURCE.json",
+    "sha256": "ef17831d310bc3f21c5770ea2293a201134c491c221baa0c41fa6af9681e5195"
+  },
+  "focused": {
+    "inbox": 57,
+    "noticesCreditsReleaseRepairs": 15,
+    "total": 72,
+    "failed": 0,
+    "skipped": 0
+  },
+  "types": {
+    "roots": 3,
+    "graph": 557,
+    "diagnostics": 0,
+    "fullProjectTypes": false
+  },
+  "browser": {
+    "evidence": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-review-continuity-verified/qa/BROWSER_RESULT.json",
+      "sha256": "ea0e4b52f94479536a895249e657f801110a4758fd81e66cf2ad79dd7720e61f"
+    },
+    "screenshot": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-review-continuity-verified/qa/quick-review-focus.png",
+      "sha256": "8701000597a8ea929e6d21272bc2dbeaa623719b0431abc217ca7695add29b11"
+    },
+    "baselineFocusLostReproduced": true,
+    "removedLinkFocusRecovered": true,
+    "movedFocusPreserved": true,
+    "survivingLinkFocusPreserved": true,
+    "syntheticOnly": true,
+    "realSignedInAcceptance": false
+  },
+  "prebuild": {
+    "passed": true,
+    "log": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-review-continuity-verified/PREBUILD.log",
+      "sha256": "d0f750adf382300d03c957d64c951868b2142706fce26677c4d546694043cddc"
+    },
+    "models": 137,
+    "modelPaths": 144,
+    "lectureRows": 1104,
+    "packageNotices": 34
+  },
+  "productionBuild": {
+    "passed": false,
+    "started": false,
+    "reason": "Available memory4891MiB remains below the established5632MiB admission minimum; no retry launched."
+  },
+  "review": {
+    "candidate": "1f36393188a11f9e8ff56cb54ff3cd9d50c504f3b47de3e21cde422b2104e996",
+    "installed": "3648a75bdf7543a29047e74193231fad27afd450d9b0ebc7164393ba2a0d3b2f",
+    "protectedInputBytesUnchanged": true,
+    "clinicalDecisionsChanged": false
+  },
+  "testRepairsIntegrated": true,
+  "fullStockRerunPending": true,
+  "wholeSuitePassing": false,
+  "installed": false,
+  "ownerPreviewChanged": false,
+  "publicDeployment": false
+}
