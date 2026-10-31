@@ -1,0 +1,20 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import path from 'node:path';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const stage='G:/VisibleMedicine-temp/staging/20261031-release16-final',root='G:/VisibleMedicine-temp/proposals/20261031-release18-main';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release18-progress',run=stage+'/website/.local/website-test-runs/2026-10-31T15-05-47-151Z-45d05937-ccc4-4abc-9b8f-32c89082d81c';
+const state=json(stage+'/verification-eighteen/STATE.json');assert(state.terminal&&state.status==='failed');
+const tap=fs.readFileSync(run+'/child.tap','utf8'),counts={};
+for(const name of ['tests','pass','fail','skipped','cancelled','todo']){const matches=[...tap.matchAll(new RegExp('^# '+name+' (\\d+)\\r?$','gm'))];assert.equal(matches.length,1);counts[name]=Number(matches[0][1]);}
+assert.equal(counts.tests,199);assert.equal(counts.fail,11);
+const failures=[...tap.matchAll(/^not ok (\d+) - ([\s\S]+?)(?=^# Subtest:|^1\.\.|$^)/gm)].map(m=>({index:Number(m[1]),name:m[2].split('\n')[0],location:m[2].match(/location: '([^']+)'/)?.[1],detail:m[2]}));
+assert.equal(failures.length,counts.fail);
+fs.mkdirSync(cp,{recursive:true});const write=(p,v)=>fs.writeFileSync(p,typeof v==='string'?v:JSON.stringify(v,null,2)+'\n',{flag:'wx'}),ref=p=>({path:p,sha256:hash(p)});
+write(cp+'/INDEX_START.json',fs.readFileSync('CURRENT_CHECKPOINT.json','utf8'));
+write(cp+'/FAILURES.json',{at:new Date().toISOString(),source:ref(stage+'/SOURCE.json'),state:ref(stage+'/verification-eighteen/STATE.json'),tap:ref(run+'/child.tap'),counts,failures});
+for(const name of ['child.tap','receipt.json','started.json'])if(fs.existsSync(run+'/'+name))fs.copyFileSync(run+'/'+name,cp+'/'+name,fs.constants.COPYFILE_EXCL);
+const i=json('CURRENT_CHECKPOINT.json'),c=i.activeWork.current;c.activeExecutionSessions=[];
+c.currentReleaseQueue.state='partition18-terminal-repairing';c.currentReleaseQueue.partition18={counts,evidence:ref(cp+'/FAILURES.json'),accepted:false};
+c.next='Partition18 completed: 188pass/11fail/0skip. Repair exact historical/current source mismatches without weakening original proofs. Proposed spinal runtime correction and continuous-guide repair pending focused native checks; hand-reader performance pilot awaits isolated native verification. Keep installed website unchanged and available; all71requirements/eightideas remain active.';
+i.goal.previousTurn='progress';saveIndex(i);
+console.log(JSON.stringify({counts,failures:failures.map(({index,name,location})=>({index,name,location})),checkpoint:cp}));

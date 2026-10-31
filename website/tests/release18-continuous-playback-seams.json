@@ -1,0 +1,47 @@
+{
+  "schema": "vm-release18-continuous-playback-exact-seams/1",
+  "baselineSha256": "bcfce60a62b8a63841badbee0741ff78d5c08d09ba1d9da890d22d5d87098d24",
+  "successorSha256": "6df5f1aca55129508bd12a7a60c7857666d090c083f2cd77654e991fc248e3b0",
+  "hunks": [
+    {
+      "at": 6263,
+      "before": "  assert.equal(liveCommit,reviewedCurrentCommit,'Website delivery must bind the reviewed parser source');\r\n",
+      "after": "  assert.equal(git(['merge-base',reviewedCurrentCommit,liveCommit]).toString().trim(),reviewedCurrentCommit,\r\n    'Reviewed parser source remains an exact ancestor of current delivery');\r\n  assert.equal(git(['rev-parse',`${reviewedCurrentCommit}^{tree}`]).toString().trim(),\r\n    '0dd97cc55ef9aff3493b91752309d1d661c0b0c8','Authenticated reviewed parser tree');\r\n"
+    },
+    {
+      "at": 10193,
+      "before": "  assertCurrentTourDelivery(renal.regionalTours,imported.regionalTours,{atlasRoot:atlas,sourceCommit:liveCommit});\r\n",
+      "after": "  const reviewed=await exactSourceHistoryApi(reviewedCurrentCommit,'regional-tour-review');\r\n  assertLatestTourDelivery(renal.regionalTours,reviewed.regionalTours,\r\n    {atlasRoot:atlas,sourceCommit:'5e75b9ce7e46fed291748108edd7565c97dee101'});\r\n  assert.deepEqual(imported.regionalTours.slice(0,reviewed.regionalTours.length),reviewed.regionalTours,\r\n    'All 53 historically reviewed tours remain exact and ordered');\r\n  assert.equal(imported.regionalTours.length,55,'Current source admits the two later authored tours');\r\n  assert.deepEqual(imported.regionalTours.slice(53).map((tour:any)=>tour.id),\r\n    ['coccygeus-pelvic-landmarks','right-knee-quadriceps-to-tibia'],\r\n    'Both later tour identities remain exact and ordered');\r\n"
+    },
+    {
+      "at": 14646,
+      "before": "  assert.equal(liveCommit,reviewedCurrentCommit,'Website delivery must bind the reviewed parser source');\r\n",
+      "after": "  assert.equal(git(['merge-base',reviewedCurrentCommit,liveCommit]).toString().trim(),reviewedCurrentCommit,\r\n    'Reviewed parser source remains an exact ancestor of current delivery');\r\n"
+    },
+    {
+      "at": 15365,
+      "before": "",
+      "after": "  const reviewed=await exactSourceHistoryApi(reviewedCurrentCommit,'regional-tour-review');\r\n"
+    },
+    {
+      "at": 17033,
+      "before": "  assertCurrentTourDelivery(renal.regionalTours,current.regionalTours,{atlasRoot:atlas,sourceCommit:liveCommit});\r\n",
+      "after": "  assertLatestTourDelivery(renal.regionalTours,reviewed.regionalTours,\r\n    {atlasRoot:atlas,sourceCommit:'5e75b9ce7e46fed291748108edd7565c97dee101'});\r\n  assert.deepEqual(current.regionalTours.slice(0,reviewed.regionalTours.length),reviewed.regionalTours,\r\n    'Reviewed 53-tour bank remains the exact current prefix');\r\n  assert.equal(current.regionalTours.length,55,'Current Review carries both later source-bound tours');\r\n"
+    },
+    {
+      "at": 19018,
+      "before": "",
+      "after": "    const atReviewed=wire(await reviewed.bodyReviewMaterial(structure.id));\r\n"
+    },
+    {
+      "at": 19237,
+      "before": "    assert(before&&atEpoch&&atPlayback&&atRenal&&after&&imported,structure.id);packets++;\r\n",
+      "after": "    assert(before&&atEpoch&&atPlayback&&atRenal&&atReviewed&&after&&imported,structure.id);packets++;\r\n"
+    },
+    {
+      "at": 20793,
+      "before": "    assertCurrentGuidedReviewAdditions(atRenal.guidedTours,after.guidedTours,current.regionalTours);\r\n    assertCompleteGuidedReview(structure.id,atRenal.guidedTours,after.guidedTours,current.regionalTours);\r\n",
+      "after": "    assertCurrentGuidedReviewAdditions(atRenal.guidedTours,atReviewed.guidedTours,reviewed.regionalTours);\r\n    assertCompleteGuidedReview(structure.id,atRenal.guidedTours,atReviewed.guidedTours,reviewed.regionalTours);\r\n    assert.deepEqual(after.guidedTours.slice(0,atReviewed.guidedTours.length),atReviewed.guidedTours,\r\n      `${structure.id}: reviewed guide packets remain the exact current prefix`);\r\n    const expectedCurrentTours=current.regionalTours.filter((tour:any)=>\r\n      [...tour.contextIds,...tour.steps.map((step:any)=>step.selectedId)].includes(structure.id));\r\n    assert.deepEqual(after.guidedTours.map((evidence:any)=>evidence.tour),expectedCurrentTours,\r\n      `${structure.id}: all and only current authored tours reach Review in source order`);\r\n"
+    }
+  ]
+}

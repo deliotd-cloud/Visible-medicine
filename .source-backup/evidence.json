@@ -1,0 +1,47 @@
+{
+  "partition17": {
+    "pass": 206,
+    "fail": 0,
+    "skipped": 1,
+    "accepted": false,
+    "limitation": "Windows symlink privilege unavailable"
+  },
+  "partition18": {
+    "tests": 199,
+    "pass": 188,
+    "fail": 11,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0
+  },
+  "initialFocused": {
+    "tests": 10,
+    "pass": 8,
+    "fail": 2,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0
+  },
+  "initialTwoFailuresReproducedOnUnchangedBaseline": true,
+  "handPilot": {
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "handTiming": {
+    "baselineCaseSumMs": 472089.4202,
+    "pilotTotalMs": 139535.0706,
+    "singleTrial": true
+  },
+  "combinedFocused": {
+    "state": "running",
+    "sessionId": 78988
+  },
+  "productChanged": false,
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}

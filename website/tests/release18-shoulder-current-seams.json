@@ -1,0 +1,44 @@
+{
+  "clinical-review-shoulder-ct.test.ts": {
+    "prior": "f36524c1d89314e3e3d8cf1274106f6dde644da695b8ece84e9ec3cc0fc40a99",
+    "current": "40fcf1314d398965c26ba65baa64108bd6f8b84efe2d3060e8bc8b48ba7136cf",
+    "edits": [
+      {
+        "oldStart": 892,
+        "old": "  assert.equal(pin.runtimeSources.shoulder,'190a63238eadcf906abe89dcbb6a67c88afe70b9');\n",
+        "new": "  assert.equal(pin.runtimeSources.shoulder,review.revision);\n"
+      },
+      {
+        "oldStart": 2364,
+        "old": "  assert.equal(currentDispatchSha,'26320b064b5648f4f5b6ca8c123806a02dedefb761b894935707559d530882fc');\n  assert.equal(createHash('sha256').update(committed(pin.runtimeSources.shoulder,'app/body-content.ts')).digest('hex'),\n",
+        "new": "  assert.equal(createHash('sha256').update(committed('6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1','app/body-content.ts')).digest('hex'),\n    '26320b064b5648f4f5b6ca8c123806a02dedefb761b894935707559d530882fc','Historical dispatcher remains exact');\n  assert.equal(currentDispatchSha,'b1caa890e8c341256f17f86f22f8646e447d8e78620c7d0b2ee193fc16bf2c95','Current c32 dispatcher remains exact');\n  assert.equal(createHash('sha256').update(committed('190a63238eadcf906abe89dcbb6a67c88afe70b9','app/body-content.ts')).digest('hex'),\n"
+      }
+    ]
+  },
+  "clinical-review-shoulder-girdle-artery-quiz.test.ts": {
+    "prior": "d1414974a356a1015d93b55fd8853f3ef780c19ed5c97667c5968344e06e88e5",
+    "current": "7d3b3ca848d6d8df8f82357feabb95b2bd4d5a98cd4b5f7f51a894da6a851c8e",
+    "edits": [
+      {
+        "oldStart": 2102,
+        "old": " assert.equal(pin.runtimeSources.shoulder,revision);\n",
+        "new": " assert.equal(pin.runtimeSources.shoulder,pin.source);\n"
+      },
+      {
+        "oldStart": 3033,
+        "old": "",
+        "new": "  assert.deepEqual(committed(pin.source,path),current,path+' unchanged through current delivery');\n"
+      },
+      {
+        "oldStart": 3354,
+        "old": "",
+        "new": " assert.equal(sha(committed('6d7a356ae949e13f2ff4bf1fec610ee6ae7762c1','app/body-content.ts')),\n  '26320b064b5648f4f5b6ca8c123806a02dedefb761b894935707559d530882fc',\n  'Retained shoulder admission dispatcher source remains exact');\n"
+      },
+      {
+        "oldStart": 3427,
+        "old": " assert.equal(currentDispatch,'26320b064b5648f4f5b6ca8c123806a02dedefb761b894935707559d530882fc');\n",
+        "new": " assert.equal(currentDispatch,'b1caa890e8c341256f17f86f22f8646e447d8e78620c7d0b2ee193fc16bf2c95');\n"
+      }
+    ]
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T15:34:38.201Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release18-combined/SOURCE.json",
+      "sha256": "0d00a5413e4c9d6aff5dcfa6e37762fdf88750274dad473833d027278d933e60"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-spinal-disc-ultrasound.test.ts",
+      "sha256": "c333add4417b9e7b686e2a51947f2d884aadf4dd9b84d67aa2746d168f288803",
+      "bytes": 10336
+    },
+    {
+      "path": "website/tests/spinal-current-runtime-inverse-1031.mjs",
+      "sha256": "9805781276cc75d716a6539f1df95eee0e7ad24b925abc38ab5770c5d78a60d4",
+      "bytes": 1469
+    },
+    {
+      "path": "website/tests/question-source-family-inverse.mjs",
+      "sha256": "48d89324ec000e3c715ef69e9b56ee687940891961bf42ab68ea8c73f8d6bffa",
+      "bytes": 4345
+    },
+    {
+      "path": "website/tests/spinal-current-runtime-inverse-1031.test.mjs",
+      "sha256": "344732d4dc88e0842f1a2dd22c7a425dc34e8b7941ee55d14b514b4d7ec037ad",
+      "bytes": 1271
+    },
+    {
+      "path": "website/tests/current-review-rebinding.test.mjs",
+      "sha256": "f5962edc70bfcb0e02a6d8f6a3fc64f523bd264696c46f2fd62161f7a068a9bd",
+      "bytes": 5276
+    },
+    {
+      "path": "website/tests/clinical-review-leg-arterial-xray.test.ts",
+      "sha256": "0475c002797824dac77d183bc5fffffbca37a8bf6605d9d480d637c70dab5124",
+      "bytes": 26134
+    },
+    {
+      "path": "website/tests/atlas-hand-vessel-xray-history-api.mjs",
+      "sha256": "bd809f5ce77be3ccaa908620d8ec853d7ab124760665aa243c67a8d8a2a81298",
+      "bytes": 4311
+    },
+    {
+      "path": "website/tests/clinical-review-continuous-guided-playback.test.ts",
+      "sha256": "6df5f1aca55129508bd12a7a60c7857666d090c083f2cd77654e991fc248e3b0",
+      "bytes": 24612
+    },
+    {
+      "path": "website/tests/adjacent-current-role-inverse.mjs",
+      "sha256": "a288f6eddd7e6241903b8a8c5a10d8601eb83a320108f4076ea5746b088cfe9a",
+      "bytes": 20432
+    },
+    {
+      "path": "website/tests/playback-reasoning-epoch.test.mjs",
+      "sha256": "5454a595d840d0f3ef9cc0bf8685d2718ea9002f4e17803e5059922735831f29",
+      "bytes": 2835
+    },
+    {
+      "path": "website/tests/tour-playback-source-role-inverse.test.mjs",
+      "sha256": "09f0c602e5636080fa37a538eda77880e9f800ead6878126150151e9755a865a",
+      "bytes": 9286
+    },
+    {
+      "path": "website/tests/nine-history-original-adjacent-current-tour-source-roles.mjs",
+      "sha256": "65b42584b9e8efd2bf721155f119f2a27410d07dd1b11e33c29c56f719863ad1",
+      "bytes": 6233
+    },
+    {
+      "path": "website/tests/release18-continuous-playback-inverse.mjs",
+      "sha256": "9c4046b85a70cba3ed1ce31011b4ac0c65a3f5b065acf8203c434948c75360d3",
+      "bytes": 2768
+    },
+    {
+      "path": "website/tests/release18-continuous-playback-seams.json",
+      "sha256": "496c394b79ab8157bedeff70eaf7c5727300ca95275339dba50e547571606293",
+      "bytes": 4443
+    },
+    {
+      "path": "website/tests/body-learning-layout-history-preservation.test.mjs",
+      "sha256": "6a3f3959cc06faeee9dac18da0cff34508787deec6e259b26e34896623fe6ba7",
+      "bytes": 13180
+    },
+    {
+      "path": "website/tests/connective-xray-original-preservation.test.mjs",
+      "sha256": "28bb02d0fcc36c38bad652402bd7ba5e42f79471cc1d37af215306a8bc017704",
+      "bytes": 5309
+    },
+    {
+      "path": "website/tests/fixtures/release18-provider-before-head-tools.mjs.raw",
+      "sha256": "6367c7c6361f3bf858f27bf30850b35bf397c7ad6d7fc455c9f865d548773f9d",
+      "bytes": 10036
+    },
+    {
+      "path": "website/tests/fixtures/release18-provider-before-compose-later.mjs.raw",
+      "sha256": "707db26812327fb29ed63642c65b5ca6f0e7fc55d12995421ff718223b18ef0c",
+      "bytes": 8554
+    },
+    {
+      "path": "website/tests/fixtures/release18-shoulder-before-expansion.mjs.raw",
+      "sha256": "546349e8c57caf01b9fac4bbb72ba1d1faf8a5f2a98c4fba7c29f3dc794e3b81",
+      "bytes": 7012
+    },
+    {
+      "path": "website/tests/fixtures/release18-connective-7aa5.test.ts.raw",
+      "sha256": "7aa5be85013096667406747701dc40b50bec69e22a676f2163b4680a773904d3",
+      "bytes": 21119
+    },
+    {
+      "path": "website/tests/shoulder-source-family-inverse.mjs",
+      "sha256": "13d16b6d12016bd5abdef57f4a9851faae566cff55de141d1d55001dd7f44d4a",
+      "bytes": 5491
+    },
+    {
+      "path": "website/tests/release18-shoulder-current-inverse.mjs",
+      "sha256": "025aa1dfa6c1873a4dcbd5f50a01f50710994d28cc6ed641c1a88d8cc4e83a1b",
+      "bytes": 1550
+    },
+    {
+      "path": "website/tests/release18-shoulder-current-seams.json",
+      "sha256": "a683ec2455d48f9ed38a7c4bc51823e3372c44a5b0f8de5787ee9666ce1225b6",
+      "bytes": 2554
+    },
+    {
+      "path": "website/tests/fixtures/release18-shoulder-prior/clinical-review-shoulder-ct.test.ts.raw",
+      "sha256": "f36524c1d89314e3e3d8cf1274106f6dde644da695b8ece84e9ec3cc0fc40a99",
+      "bytes": 5267
+    },
+    {
+      "path": "website/tests/fixtures/release18-shoulder-prior/clinical-review-shoulder-girdle-artery-quiz.test.ts.raw",
+      "sha256": "d1414974a356a1015d93b55fd8853f3ef780c19ed5c97667c5968344e06e88e5",
+      "bytes": 8494
+    },
+    {
+      "path": "tools/release18/check-combined.mjs",
+      "sha256": "f54ee2226897089daff57671e9d7e37cce31a26e51e6e49db4a9095a8064684c",
+      "bytes": 2626
+    },
+    {
+      "path": "tools/release18/check-initial.mjs",
+      "sha256": "43df43b37801416d7e98dd9bb5431d5331a65ef75b0607c95c2be5b643ba1e07",
+      "bytes": 2050
+    },
+    {
+      "path": "tools/release18/integrate-combined.mjs",
+      "sha256": "7816e55c85f21b70747c030710fc126de5f38ce1339905988fd66b882fe656cc",
+      "bytes": 4459
+    },
+    {
+      "path": "tools/release18/integrate-initial.mjs",
+      "sha256": "b7f18b953c26f5f8bafe72a2ae11bdaf791012aa3e50935829b5eea558d20c2a",
+      "bytes": 4230
+    },
+    {
+      "path": "tools/release18/prepare-combined-check.mjs",
+      "sha256": "e67f45964d4c82affe333bf5f4212bc74be52b4e0da25738bff2136068e5db48",
+      "bytes": 1673
+    },
+    {
+      "path": "tools/release18/prepare-combined.mjs",
+      "sha256": "7615c334b5c9ef0903711e86188a69e51fb199ea39105c964b560bf2a83c4781",
+      "bytes": 2152
+    },
+    {
+      "path": "tools/release18/prepare-leg.mjs",
+      "sha256": "5266c3ec4060792c15bcc6c674132efdc3483c30aec420754273fbdbc91633c8",
+      "bytes": 1578
+    },
+    {
+      "path": "tools/release18/prepare-rebinding.mjs",
+      "sha256": "396a79163072339b22ff4ebb6ec8b338162fec63ae543aa84d8e81199e40dd32",
+      "bytes": 3249
+    },
+    {
+      "path": "tools/release18/prepare-spinal-preservation.mjs",
+      "sha256": "86e6eb8a64d975f44835366680e5f8286be04fe6bb50ac58d4f653d0f6b929c7",
+      "bytes": 3748
+    },
+    {
+      "path": "tools/release18/prepare-spinal.mjs",
+      "sha256": "9292dd6fb4e8a35595e9bdefe7d2943f064a87fa50a3a7dd62653168f73c354c",
+      "bytes": 2426
+    },
+    {
+      "path": "tools/release18/record-terminal.mjs",
+      "sha256": "1a0822fb08b336ebb94e3620871a6cb1d73f5d8115a2e6db1301c9c56d610228",
+      "bytes": 2796
+    },
+    {
+      "path": "tools/release18/save.mjs",
+      "sha256": "c7613d2ee074f1183964655e0dc981613af923f206e18a534d96e129b3e96d60",
+      "bytes": 11330
+    },
+    {
+      "path": "tools/release18/track-focused.mjs",
+      "sha256": "651bb479b53006a117df9e519d57f3768251696ee65adf839819b189fa195e02",
+      "bytes": 1170
+    },
+    {
+      "path": "tools/hand-reader/run-hand-pilot.mjs",
+      "sha256": "314633e4fafa7044233adcdb0dbf0dafe8dfb801511b7f775f3c68dd825127f9",
+      "bytes": 2515
+    },
+    {
+      "path": "tools/hand-reader/run-guarded-hand-pilot.mjs",
+      "sha256": "ed3cfd0ac732949fa2321e139e7835d157f97f760dcfb4f0e4cb83301b60b551",
+      "bytes": 3802
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original test source, text-only historical test fixtures and validation scripts. No scans, models, patient identifiers, private databases, images, generated runtime or canonical Git ancestry. Scoped source delta only.",
+  "proof": {
+    "partition17": {
+      "pass": 206,
+      "fail": 0,
+      "skipped": 1,
+      "accepted": false,
+      "limitation": "Windows symlink privilege unavailable"
+    },
+    "partition18": {
+      "tests": 199,
+      "pass": 188,
+      "fail": 11,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "initialFocused": {
+      "tests": 10,
+      "pass": 8,
+      "fail": 2,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "initialTwoFailuresReproducedOnUnchangedBaseline": true,
+    "handPilot": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "handTiming": {
+      "baselineCaseSumMs": 472089.4202,
+      "pilotTotalMs": 139535.0706,
+      "singleTrial": true
+    },
+    "combinedFocused": {
+      "state": "running",
+      "sessionId": 78988
+    },
+    "productChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
