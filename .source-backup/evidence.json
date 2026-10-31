@@ -1,0 +1,73 @@
+{
+  "at": "2026-10-31T18:20:36.852Z",
+  "source": {
+    "path": "G:/VisibleMedicine-temp/staging/20261031-release24-complete-repairs/SOURCE.json",
+    "sha256": "324a9f6be1bddc0befbda2b3fcda19a1dff32ebb10ce7e9f1f231d41ad1b821a"
+  },
+  "sourceRows": 7396,
+  "protectedInputs": 1866,
+  "review": "ee28f53f79ea413c860c054f39628dd2225be13b5856849818d2eaf8da73f59c",
+  "originalPartition23": {
+    "tests": 267,
+    "pass": 254,
+    "fail": 13
+  },
+  "finalFocused": {
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "skip": 0
+  },
+  "historicalHra": {
+    "tests": 8,
+    "pass": 8
+  },
+  "arterialAndPelvicFollowup": {
+    "tests": 5,
+    "pass": 5
+  },
+  "fullTypes": {
+    "receipt": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-release24-progress/verified/full-types/RESULT.json",
+      "sha256": "00f422408491f3ad8723acb5f80a92cd66d7561a8ee88b44bddb79eeee78a8b9"
+    },
+    "passing": true,
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release24-final/SOURCE.json",
+      "sha256": "d263623090a6e6872c47da7d70c3f2402c32b8caf7adec2e89ebdf2cf7a2b10a"
+    },
+    "subsequentChangedPaths": [
+      "tests/corpus-ui-role-preservation.test.mjs",
+      "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "tests/fixtures/release24-role-successors.json",
+      "tests/ui-teaching-current-delivery.test.mjs"
+    ],
+    "exactCurrentSourceRerun": false
+  },
+  "priorBuild": {
+    "receipt": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-head-clear-final/website-build-1/RESULT.json",
+      "sha256": "e17bdc352edaeae3236bee1233e3eb40dfe7107aa606c4f668a0f8d28916deff"
+    },
+    "subsequentChangedPaths": [
+      "tests/arterial-epoch-context-seam.mjs",
+      "tests/arterial-epoch-preservation.test.mjs",
+      "tests/atlas-pre-plantar-arterial-mri-history.ts",
+      "tests/atlas-shoulder-arterial-imaging-checks.mjs",
+      "tests/carpal-reasoning-current-delivery.test.mjs",
+      "tests/clinical-review-arm-arterial-xray.test.ts",
+      "tests/clinical-review-forearm-branch-xray.test.ts",
+      "tests/clinical-review-longus-colli-quiz.test.ts",
+      "tests/clinical-review-suprahyoid-quiz.test.ts",
+      "tests/corpus-ui-role-preservation.test.mjs",
+      "tests/corpus-xray-v2-current-delivery.test.mjs",
+      "tests/fda-reference-current-delivery.test.mjs",
+      "tests/fixtures/release24-role-successors.json",
+      "tests/ui-teaching-current-delivery.test.mjs"
+    ],
+    "productFilesUnchanged": true
+  },
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}

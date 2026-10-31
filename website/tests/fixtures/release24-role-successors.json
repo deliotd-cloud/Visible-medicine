@@ -1,0 +1,38 @@
+{
+  "schema": "vm-corpus-ui-source-role-successors/1",
+  "records": {
+    "corpus-xray-v2-current-delivery.test.mjs": {
+      "fixture": "corpus-cranio-before/corpus-xray-v2-current-delivery.test.mjs.raw",
+      "priorSha256": "28be69bc03dd3b78665ccf5947fb2fd33077654ed6a26bf03bad6bf9c3e6207e",
+      "currentSha256": "b1dd8917b0dcb32572fc8e86f008e86acf7b5288b845aae7c8e6636da401abd5",
+      "hunkHashes": [
+        "27238af41549402094c9f7af22cb9ca28fc3bc042f95effeff27137fe41995e1",
+        "a46851c99ee49b381454844296d463c49e0cf483fe58f53d6cad08ea59088933",
+        "eb785c2afd4fa682642757b364c096dedf55715c4675a9f877d2109ce3576a42",
+        "fd6b771e61a17306e609c29bdecdfb67b0b941d905b40813abb6d32a5a7ff269",
+        "53ee0a7dbae9fde44c0ae77434b601dfb8fbff57664aaa6c1543c3b7d8e1acfd"
+      ]
+    },
+    "tour-discovery-current-delivery.test.mjs": {
+      "fixture": "current-source-closure-before/tour-discovery-current-delivery.test.mjs.raw",
+      "priorSha256": "6f48857ab2f7e4167348091bdd60fb60d9d3106f399548650aad593660c61956",
+      "currentSha256": "4c737580f94bf37777f2c59aad3af0155e9cb25e3d0216c012f79cf147b165bb",
+      "hunkHashes": [
+        "2289b8b7baf24b32a40d8cf32ba9627e03d151bbda38d7e9ddc62a088b574d20",
+        "733dba37e4f5f91a11ff8c2c9ff05252999fcba52cae174fd586cc472ae0e54a",
+        "b4c05ef676563483b3acb62b1ca5c4dcb01cd087fda795cf4a408f05d4a5ad56"
+      ]
+    },
+    "ui-teaching-current-delivery.test.mjs": {
+      "fixture": "current-source-closure-before/ui-teaching-current-delivery.test.mjs.raw",
+      "priorSha256": "8d585dd4af1fa8e5c3ed6256e822cdffa9dbbff0e09428aebeb1bf26961b5ed7",
+      "currentSha256": "254127d0cae37eb63630d390761be323a044ffa7ed5e0844f3f6a7508bb692fc",
+      "hunkHashes": [
+        "e95b1f4d51cd375d4213eedc0e81570d46b0a6c82b74e81a7e26d0ba246f717b",
+        "35c150fd557a858b410257ec5d63ecebf589353d284179082d503bb17a987abd",
+        "7c273beafbdab12b1ed6736e27fc6c2f7b5e7f31a8806f5933c0c5e197b9a299",
+        "fc66e2edc75d75f052bca6a207a4cd43fbd7531e97967956cd8c3da4cdc1c3cf"
+      ]
+    }
+  }
+}
