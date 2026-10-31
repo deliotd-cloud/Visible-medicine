@@ -1,0 +1,43 @@
+{
+  "schema": "vm-girdle-family-later-renal-source-seams/1",
+  "priorSourceSha256": "78850a6971b9f44907ef303dadac564408c6dfa34dbfe9295a940fd7f8f35288",
+  "currentSourceSha256": "f3947bb370e3fa79a8929c7d57d5dd65dc809e6104bbdcdddd1e8e65231b52ae",
+  "priorLines": 337,
+  "currentLines": 338,
+  "seams": [
+    {
+      "beforeStart": 1,
+      "afterStart": 1,
+      "before": [],
+      "after": [
+        "import {assertRenalTourEpoch} from './renal-tour-epoch-admission.mjs';\n"
+      ]
+    },
+    {
+      "beforeStart": 243,
+      "afterStart": 244,
+      "before": [
+        " assert.deepEqual(current.structures,live.structures);assert.deepEqual(live.structures,old.structures);\n"
+      ],
+      "after": [
+        " assert.deepEqual(current.structures,live.structures);assert.deepEqual(epoch.structures,old.structures);\n"
+      ]
+    },
+    {
+      "beforeStart": 245,
+      "afterStart": 246,
+      "before": [
+        " assert.deepEqual(live.dissectionProfiles,old.dissectionProfiles);\n",
+        " assert.deepEqual(current.regionalTours,live.regionalTours);assert.deepEqual(live.regionalTours,old.regionalTours);\n",
+        " assert.equal(current.regionalTours.length,51);\n",
+        " assert.equal(current.regionalTours.reduce((count:number,tour:any)=>count+tour.steps.length,0),309);\n"
+      ],
+      "after": [
+        " assert.deepEqual(epoch.dissectionProfiles,old.dissectionProfiles);\n",
+        " assert.deepEqual(current.regionalTours,live.regionalTours);assertRenalTourEpoch(old.regionalTours,live.regionalTours);\n",
+        " assert.equal(current.regionalTours.length,53);\n",
+        " assert.equal(current.regionalTours.reduce((count:number,tour:any)=>count+tour.steps.length,0),317);\n"
+      ]
+    }
+  ]
+}

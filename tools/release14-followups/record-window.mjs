@@ -1,0 +1,7 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release14-followup-progress',i=json('CURRENT_CHECKPOINT.json'),c=i.activeWork.current;assert.deepEqual(i,json(cp+'/INDEX_START.json'));
+c.currentInstalled.preview.state='temporarily-stopped-authorized-checks';c.currentInstalled.preview.stopEvidence={path:cp+'/preview-window/STOPPED.json',sha256:hash(cp+'/preview-window/STOPPED.json')};c.activeExecutionSessions=[];
+c.next='Complete the hand source-transition repair and rerun the native verification using the supported adjacent-clinical wrapper. First focused batch is terminal (43 pass,3 fail; one was the original module called without its wrapper environment). Restore the unchanged installed preview with G:/VisibleMedicine-temp/proposals/20261031-release14-followups-main/preview-window/restart.mjs before ending the turn. All broader roadmap requirements remain active.';
+i.activeWork.updated=new Date().toISOString();assert(Buffer.byteLength(JSON.stringify(i)+'\n')<=fs.statSync('CURRENT_CHECKPOINT.json').size);saveIndex(i);console.log(JSON.stringify({recorded:true,indexBytes:Buffer.byteLength(JSON.stringify(i)+'\n')}));

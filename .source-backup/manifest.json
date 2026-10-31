@@ -1,0 +1,180 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T14:13:14.653Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release14-shoulder-ready/SOURCE.json",
+      "sha256": "829a9e18ae29068659bd5bde8f9016daa5680fcb3efecd01fa39913de179498e"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-structure-current-role-inverse.mjs",
+      "sha256": "799e0acb85318267f03ef4470f2d6125e4cfcb5c1ec0effc7ae52cfd3bb7d3e8",
+      "bytes": 2846
+    },
+    {
+      "path": "website/tests/current-epoch-source-adapter.mjs",
+      "sha256": "40302d39bb9f100ae9d0868993cce241423316ac1101d6d04d17ff0a63541306",
+      "bytes": 7218
+    },
+    {
+      "path": "website/tests/elbow-us-followup-preservation.test.mjs",
+      "sha256": "ad333307ca5fd96d95fb032ae88fcae618ae52442cfc9083305de6bb569da589",
+      "bytes": 15172
+    },
+    {
+      "path": "website/tests/fixtures/forearm-current-adapter-transition.json",
+      "sha256": "d9647c121469a245479c4c4886f08de832d7cad56747596954d93305febf0571",
+      "bytes": 2395
+    },
+    {
+      "path": "website/tests/fixtures/forearm-later-current-epoch-seams.json",
+      "sha256": "5174d574b3dcb0299bedaa8d4ce398347fc43ab3dee3fa2a9482cbf094cd7258",
+      "bytes": 2646
+    },
+    {
+      "path": "website/tests/release-diagnostic-context-inverse.mjs",
+      "sha256": "bb6c69b7fde4ca47239b1992db05ba98dde368938b75f9b7fd3229e8c6fefa52",
+      "bytes": 6841
+    },
+    {
+      "path": "website/tests/release-diagnostic-context-inverse.test.mjs",
+      "sha256": "ae4fb79af840a94bd09163662077000ac30a689c6d39320f26ce4f853b1a1ed9",
+      "bytes": 7710
+    },
+    {
+      "path": "website/tests/hand-current-role-inverse.mjs",
+      "sha256": "96ded2458f64dd0f39d119e7385f886c55818d0e4427946da78bd1ca245ba4e7",
+      "bytes": 4525
+    },
+    {
+      "path": "website/tests/shoulder-current-role-inverse.mjs",
+      "sha256": "be50daa1e37c6ca24e47d0a4a025ff7cd949b149fa76f03c793f2f9686734f11",
+      "bytes": 3968
+    },
+    {
+      "path": "proposals/family-successor/tests/clinical-family-prior-current-inverse.mjs",
+      "sha256": "26b415fdf24efc37c4e071cf509edce4eb0ea7dc9b6ec181295787cdbdeb3752",
+      "bytes": 5348
+    },
+    {
+      "path": "proposals/family-successor/tests/fixtures/arterial-family-later-current-source-seams.json",
+      "sha256": "dfbc1043e4f67041190ac4e3c0490385eb5746734788d52363241483ba2cbf0b",
+      "bytes": 3643
+    },
+    {
+      "path": "proposals/family-successor/tests/fixtures/venous-family-later-guide-source-seams.json",
+      "sha256": "5d8cad904dc606a887ed6207c2bfc5ece59bdf282bdb17db77555ccf62ebfa64",
+      "bytes": 1738
+    },
+    {
+      "path": "proposals/family-successor/tests/fixtures/girdle-family-later-renal-source-seams.json",
+      "sha256": "3049150d43a3cd1ef8e79e2b42ae3b08296b6d2152316a574a12f44986073d97",
+      "bytes": 1731
+    },
+    {
+      "path": "proposals/family-successor/tests/three-family-successor-proof.mjs",
+      "sha256": "0374c03e823823d057ee595e0dcc5d52805d993aba1408b81614efa2cd9aed34",
+      "bytes": 3639
+    },
+    {
+      "path": "tools/release14-followups/analyze.mjs",
+      "sha256": "cc9c81bd3c126c1098af42e346cfc149e43dca34fcff9a5e60b20d129b3d0d20",
+      "bytes": 2851
+    },
+    {
+      "path": "tools/release14-followups/check.mjs",
+      "sha256": "db3f9eb94b39bbff6195ecd2aac556a5e930e72fb85ea505af25a9d8566ca29e",
+      "bytes": 2360
+    },
+    {
+      "path": "tools/release14-followups/integrate-hand.mjs",
+      "sha256": "672fe2575a0c33731686e1ab228c5a526ca21556bc730f65e6574671719d2360",
+      "bytes": 3700
+    },
+    {
+      "path": "tools/release14-followups/integrate-shoulder.mjs",
+      "sha256": "8d9b346a2a6f6dfa087d570453d2ff2e6522e8faca93843f1adb1b06f2c1e292",
+      "bytes": 3713
+    },
+    {
+      "path": "tools/release14-followups/prepare-hand.mjs",
+      "sha256": "c4129f3f9992ae20310ecda885615e9a571eb6d749f1cefb7da443a4a9585a2c",
+      "bytes": 1342
+    },
+    {
+      "path": "tools/release14-followups/prepare-queue.mjs",
+      "sha256": "f51a5cf501681f125c08320d2a818cae979be3393b99a82106e2831badd365ec",
+      "bytes": 2977
+    },
+    {
+      "path": "tools/release14-followups/prepare-shoulder.mjs",
+      "sha256": "c8534d6ce5437f57920747ec2fe0fbd0cba186c76692a6f5aa1eb890de5d426c",
+      "bytes": 1067
+    },
+    {
+      "path": "tools/release14-followups/prepare-window.mjs",
+      "sha256": "fb327bd5e54581d32a2cec7d3f1c4fa3e97073dfae64bdc33d1acf043785f2ec",
+      "bytes": 2369
+    },
+    {
+      "path": "tools/release14-followups/prepare.mjs",
+      "sha256": "421ae989c1b11d9cc4f611596fddd7cda7dc9bc721e51b35ffc9cddfeccbd4cc",
+      "bytes": 3887
+    },
+    {
+      "path": "tools/release14-followups/record-window.mjs",
+      "sha256": "67729c85dbd1b2d7bf258ef010be74174e2adec5bbf9d3a1225a5810f4aacccd",
+      "bytes": 1476
+    },
+    {
+      "path": "tools/release14-followups/save.mjs",
+      "sha256": "f42b9fcf4261f33ed89771d6afadd8b944b42116ad05d0836bee579f11f0b439",
+      "bytes": 12175
+    },
+    {
+      "path": "tools/release14-followups/preview-window/restart.mjs",
+      "sha256": "56f1b5cb02aaccb9574d0d8561bf6759967d7166bfcc27462ad63a368a18f9e6",
+      "bytes": 2382
+    },
+    {
+      "path": "tools/release14-followups/preview-window/health.ps1",
+      "sha256": "4dad8b05e60a54b91d1ca24b9ffbe675ceeacb962669be0cd25991ea2ecee98e",
+      "bytes": 1454
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original validation tests, source-transition fixtures and coordinator scripts only. No scans, images, meshes, private databases, logs, generated Atlas data or raw canonical Git ancestry. Repair delta; historical dependencies remain required.",
+  "proof": {
+    "resolvedPreviousFailures": 11,
+    "focusedTests": 46,
+    "focusedPassed": 46,
+    "focusedFailed": 0,
+    "sourceRows": 7335,
+    "broaderCounts": {
+      "tests": 200,
+      "pass": 199,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "broaderState": "failed",
+    "productSourceChanged": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "installedCandidate": false,
+    "sameInstalledPreviewRestored": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

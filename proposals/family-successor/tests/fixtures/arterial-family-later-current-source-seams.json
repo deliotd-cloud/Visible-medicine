@@ -1,0 +1,82 @@
+{
+  "schema": "vm-arterial-family-later-current-source-seams/1",
+  "priorSourceSha256": "79f3d0da5c4a192719522bc5979f03b0ec48add178c0071bc152d9c7354a67a8",
+  "currentSourceSha256": "d512d615f13fa82369837d747f3237aa5ca66030a2c9b6c6d277c2bdd327cf29",
+  "priorLines": 306,
+  "currentLines": 324,
+  "seams": [
+    {
+      "beforeStart": 12,
+      "afterStart": 12,
+      "before": [],
+      "after": [
+        "const introductionCommit='aba5a0025e7d001d8b5b7c8876122f0ad2eead62';\n",
+        "const introductionTree='4642d6220401d67b5bf64225932aafd46abab222';\n",
+        "const shoulderCitationEpoch='7978478992f54ea68e0f53c3d195c459c7b80068';\n"
+      ]
+    },
+    {
+      "beforeStart": 187,
+      "afterStart": 190,
+      "before": [
+        "  const featureCommit=git(['log','--diff-filter=A','-1','--format=%H','--',teachingPaths[0]]).toString().trim();\n",
+        "  assert.match(featureCommit,/^[a-f0-9]{40}$/);\n"
+      ],
+      "after": [
+        "  const featureCommit=introductionCommit;\n",
+        "  assert.equal(git(['rev-parse',`${featureCommit}^{tree}`]).toString().trim(),introductionTree);\n",
+        "  assert.equal(git(['log','--diff-filter=A','-1','--format=%H','--',teachingPaths[0]]).toString().trim(),featureCommit);\n",
+        "  assert.equal(git(['merge-base',atlasBaseline,featureCommit]).toString().trim(),atlasBaseline);\n",
+        "  assert.equal(git(['merge-base',shoulderCitationEpoch,liveCommit]).toString().trim(),shoulderCitationEpoch);\n"
+      ]
+    },
+    {
+      "beforeStart": 204,
+      "afterStart": 210,
+      "before": [
+        "  assert.deepEqual(imported.structures,current.structures);\n",
+        "  assert.deepEqual(imported.dissectionProfiles,current.dissectionProfiles);\n"
+      ],
+      "after": [
+        "  assert.deepEqual(imported.structures,live.structures);\n",
+        "  assert.deepEqual(imported.dissectionProfiles,live.dissectionProfiles);\n",
+        "  assert.deepEqual(imported.contentTabs,live.contentTabs);\n",
+        "  for(const path of ['app/anatomy-data.ts','lib/legacy-shoulder-references.ts'])\n",
+        "    assert.deepEqual(committed(liveCommit,path),committed(shoulderCitationEpoch,path),\n",
+        "      `${path}: exact later shoulder citation source`);\n",
+        "  for(const path of teachingPaths)\n",
+        "    assert.deepEqual(committed(liveCommit,path),committed(featureCommit,path),\n",
+        "      `${path}: femoral introduction lesson source retained`);\n"
+      ]
+    },
+    {
+      "beforeStart": 228,
+      "afterStart": 241,
+      "before": [
+        "      assert.deepEqual(imported.bodyLesson(structure,tab),current.bodyLesson(structure,tab),`${id}:${tab}: imported`);\n"
+      ],
+      "after": [
+        "      assert.deepEqual(imported.bodyLesson(structure,tab),live.bodyLesson(structure,tab),`${id}:${tab}: exact current imported/source lesson`);\n",
+        "    assert.deepEqual(imported.bodyLesson(structure,'xray'),current.bodyLesson(structure,'xray'),`${id}: original X-ray lesson retained`);\n"
+      ]
+    },
+    {
+      "beforeStart": 255,
+      "afterStart": 269,
+      "before": [],
+      "after": [
+        "      assert.deepEqual(imported.bodyLesson(structure,tab),live.bodyLesson(structure,tab),\n",
+        "        `${structure.id}:${tab}: current imported/source lesson`);\n"
+      ]
+    },
+    {
+      "beforeStart": 261,
+      "afterStart": 277,
+      "before": [],
+      "after": [
+        "    assert.deepEqual(wire(await imported.bodyReviewMaterial(structure.id)),\n",
+        "      wire(await live.bodyReviewMaterial(structure.id)),`${structure.id}: current imported/source packet`);\n"
+      ]
+    }
+  ]
+}

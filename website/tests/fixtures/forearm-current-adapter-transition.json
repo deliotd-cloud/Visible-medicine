@@ -1,0 +1,48 @@
+{
+  "schema": "vm-forearm-current-adapter-transition/1",
+  "beforeSha256": "281e69d3ce22f0571a87c4ea0c041ff28900588bb03f64e8184104837cfdf230",
+  "afterSha256": "40302d39bb9f100ae9d0868993cce241423316ac1101d6d04d17ff0a63541306",
+  "beforeLines": 74,
+  "afterLines": 99,
+  "seams": [
+    {
+      "beforeStart": 27,
+      "afterStart": 27,
+      "before": [],
+      "after": [
+        " return restored;\n",
+        "}\n",
+        "export function restoreLaterForearmEpoch(bytes){\n",
+        " const witness=readFileSync(new URL('./fixtures/forearm-later-current-epoch-seams.json',import.meta.url));\n",
+        " assert.equal(sha(witness),'5174d574b3dcb0299bedaa8d4ce398347fc43ab3dee3fa2a9482cbf094cd7258',\n",
+        "  'Exact independently witnessed later forearm seams');\n",
+        " const proof=JSON.parse(witness);\n",
+        " assert.equal(proof.schema,'vm-forearm-later-current-epoch-seams/1');\n",
+        " assert.equal(proof.currentSha256,'b6df69f8035211bf2ee253fa2d216cb598259e771917eefa44a468506cbcf85f');\n",
+        " assert.equal(proof.historicalSha256,'90b1c26a19220053633a277b10d94b74c4d3c2f6ebc6e3cd8ccf4bccdd2fdda4');\n",
+        " assert.equal(sha(bytes),proof.currentSha256,'Exact later forearm source bytes');\n",
+        " const text=bytes.toString('utf8');\n",
+        " assert.deepEqual(Buffer.from(text),bytes,'Lossless later forearm UTF-8 source');\n",
+        " const lines=text.match(/[^\\n]*\\n|[^\\n]+$/g)||[];\n",
+        " assert.equal(lines.length,proof.currentLines);\n",
+        " assert.equal(proof.seams.length,6,'Only six declared later forearm hunks');\n",
+        " for(const seam of [...proof.seams].reverse()){\n",
+        "  assert.deepEqual(lines.slice(seam.afterStart,seam.afterStart+seam.after.length),seam.after,\n",
+        "   'Exact later forearm hunk');\n",
+        "  lines.splice(seam.afterStart,seam.after.length,...seam.before);\n",
+        " }\n",
+        " assert.equal(lines.length,proof.historicalLines);\n",
+        " const restored=Buffer.from(lines.join(''));\n",
+        " assert.equal(sha(restored),proof.historicalSha256,'Earlier current forearm role recovered exactly');\n"
+      ]
+    },
+    {
+      "beforeStart": 57,
+      "afterStart": 81,
+      "before": [],
+      "after": [
+        " if(name==='clinical-review-forearm-vascular-xray.test.ts')currentBytes=restoreLaterForearmEpoch(currentBytes);\n"
+      ]
+    }
+  ]
+}
