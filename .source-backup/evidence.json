@@ -1,0 +1,39 @@
+{
+  "focused20": {
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skip": 0
+  },
+  "partition21": {
+    "tests": 207,
+    "pass": 204,
+    "fail": 3,
+    "skip": 0,
+    "originalPreserved": true
+  },
+  "focused21Initial": {
+    "tests": 30,
+    "pass": 28,
+    "fail": 2,
+    "skip": 0
+  },
+  "imageFollowup": {
+    "tests": 21,
+    "pass": 20,
+    "fail": 1,
+    "skip": 0
+  },
+  "finalHubAndImage": {
+    "tests": 21,
+    "pass": 21,
+    "fail": 0,
+    "skip": 0
+  },
+  "sourceRows": 7391,
+  "protectedInputs": 1866,
+  "ui": "All five modality cards use concise descriptions; full original guidance moved to collapsed image/availability notes. Actual component rendered in isolated browser at1280x900; images loaded and disclosure expanded without horizontal overflow. Not an installed whole-app check.",
+  "installed": false,
+  "wholeSuitePassing": false,
+  "clinicalApproval": false
+}

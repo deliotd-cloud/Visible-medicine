@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const root='G:/VisibleMedicine-temp/proposals/20261031-release22-main',sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+let code=fs.readFileSync(root+'/integrate.mjs','utf8');const replace=(a,b)=>{assert.equal(code.split(a).length,2,a);code=code.replace(a,b);};
+replace("parentPath='G:/VisibleMedicine-temp/staging/20261031-release20-final/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release21-repairs'","parentPath='G:/VisibleMedicine-temp/staging/20261031-release21-repairs/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release21-followup'");
+replace('d538614316ced49e4151e03cb3a5f7594f79dc896b97248b69fc06450108fc92','d1d66172d076c92f6d32167ad98f487e22d6c13ac6e942d072557421771c3c77');
+const inputs=['G:/VisibleMedicine-temp/proposals/20261031-atlas-hub-image-tests'].map(p=>[p,sha(p+'/MANIFEST.json')]);
+const a=code.indexOf('const inputs='),b=code.indexOf('const proposals=',a);code=code.slice(0,a)+'const inputs='+JSON.stringify(inputs)+';\n'+code.slice(b);
+replace('productUnchanged:false','productUnchanged:true');
+fs.writeFileSync(root+'/integrate-followup.mjs',code,{flag:'wx'});
+console.log(JSON.stringify({proposals:inputs.length}));

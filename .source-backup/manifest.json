@@ -1,0 +1,187 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T16:56:12.944Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release21-final/SOURCE.json",
+      "sha256": "f15f75ef66aef364b7097d9bc96752663a4fcd44c6730359aafc2f1771497348"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-adductor-longus-xray.test.ts",
+      "sha256": "93fe32e24cc892a5e8ca011889593592a04c8154a32c5af6a25422e4c4388831",
+      "bytes": 21031
+    },
+    {
+      "path": "website/tests/head-separate-comparison.test.ts",
+      "sha256": "ef54eb708c16a6f24fbf80dcb69d018ffe027dd3f22138ff0033a0c0696bc05c",
+      "bytes": 6280
+    },
+    {
+      "path": "website/tests/neonatal-review-input-path.test.mjs",
+      "sha256": "42a51443d71fd72ed281c226b11d6e8451fd57e596c87c5ec4018010fc5e1141",
+      "bytes": 7044
+    },
+    {
+      "path": "website/components/AtlasModalityCards.tsx",
+      "sha256": "fafdf6ef2b0319cf1307b33d8e8301fd613d046c1b6102cd0c3a59dee6060c47",
+      "bytes": 2840
+    },
+    {
+      "path": "website/tests/atlas-navigation.test.ts",
+      "sha256": "9fc560509b5b33f985220c758db4b199e88a4fbb4b12900a450ec4dee357bf87",
+      "bytes": 13961
+    },
+    {
+      "path": "website/tests/public-copy-review.test.ts",
+      "sha256": "75b81f4e342a73eaa0e7743892ff11ee7b7858623d0412a5dd87b7df15bf477b",
+      "bytes": 7853
+    },
+    {
+      "path": "website/tests/site-image.test.mjs",
+      "sha256": "c2823dd09096e4c0d1241253f3e14ac98c6e99d96bc02a2d0ec5fbe1016051a2",
+      "bytes": 10662
+    },
+    {
+      "path": "website/tests/fixtures/site-image-initial-atlas-cards.tsx.raw",
+      "sha256": "ccd59924a14addc2066dc3738b2b913337981e65376a1de620ac34597b79939e",
+      "bytes": 2762
+    },
+    {
+      "path": "tools/release22-main/check-final.mjs",
+      "sha256": "768d2957324f1f5ed324b0521fbbc82bf8801c0ae8187f728fe65e0a82e0255d",
+      "bytes": 1823
+    },
+    {
+      "path": "tools/release22-main/check-followup.mjs",
+      "sha256": "55ebd6332a483797e71e9887dda1b5233d7b3b5e587630c81a47edf1d1de03b4",
+      "bytes": 1826
+    },
+    {
+      "path": "tools/release22-main/check-repairs.mjs",
+      "sha256": "1355795e07f361db68a9ecbffada8b56b0630a0826e9441c5182b4443c582ae6",
+      "bytes": 1935
+    },
+    {
+      "path": "tools/release22-main/integrate-final.mjs",
+      "sha256": "56ed31a1acc03ab54b2469ef99a9e5c5b88ac710b71b52d781a79b834ff1a521",
+      "bytes": 4617
+    },
+    {
+      "path": "tools/release22-main/integrate-followup.mjs",
+      "sha256": "c42c422eda30f716d3b0c9271ac9663fc6ad1bbda74aa46631d855820432b603",
+      "bytes": 4621
+    },
+    {
+      "path": "tools/release22-main/integrate.mjs",
+      "sha256": "709ec440ca0ee0065ba252d59a7041dabc0154fe7430cfed5992769a6447f749",
+      "bytes": 4882
+    },
+    {
+      "path": "tools/release22-main/prepare-check-followup.mjs",
+      "sha256": "9286bb7bc31a416e099e2f8a5f39ee7d7f37e5a4b1a24790354f76feae2e1ec2",
+      "bytes": 799
+    },
+    {
+      "path": "tools/release22-main/prepare-final-and-queue.mjs",
+      "sha256": "e0627aae77f56123227503353238c747b3ce4fd55610dcc5d9c150a9592a8fa2",
+      "bytes": 1894
+    },
+    {
+      "path": "tools/release22-main/prepare-followup.mjs",
+      "sha256": "54714a646d3caf2fcaa1d2136bb81e52b2bb75c7b79b1b84af99b24e90da5762",
+      "bytes": 1302
+    },
+    {
+      "path": "tools/release22-main/prepare-image-history.mjs",
+      "sha256": "e9fc1f344d65a0b65e4febc00a8eb48d6108805b9908fa5ab989e48806e07c18",
+      "bytes": 3810
+    },
+    {
+      "path": "tools/release22-main/prepare-image-test-alignment.mjs",
+      "sha256": "906d760cfb9026234e64b7989875383c54ca869c2fa6e04c92e108433c11a1cd",
+      "bytes": 2158
+    },
+    {
+      "path": "tools/release22-main/prepare-integration.mjs",
+      "sha256": "09028ce83d49e3cdc104c93baad201e48d902e48756d16e5c6849e4b99e5d5d3",
+      "bytes": 2559
+    },
+    {
+      "path": "tools/release22-main/prepare-partition.mjs",
+      "sha256": "9cdc31c585aa87bd07d0cac60a4dc5ea5c5ca1f0bd98b978bfe48cc701a4f7a5",
+      "bytes": 2392
+    },
+    {
+      "path": "tools/release22-main/prepare-ui.mjs",
+      "sha256": "e95d0089441b0efed89071321e9f47ffabd083c6f8185fc9e522fd516d3c3980",
+      "bytes": 2710
+    },
+    {
+      "path": "tools/release22-main/preserve-results.mjs",
+      "sha256": "5fdd39301fe6f73fbe244802a5deb990bee5f8b950c624078f43bb3edeebc47c",
+      "bytes": 2178
+    },
+    {
+      "path": "tools/release22-main/render-ui.mjs",
+      "sha256": "239e147285b4866bdec4e76a742e190a7e0f1b30d263bbd49c80967a68a81029",
+      "bytes": 2760
+    },
+    {
+      "path": "tools/release22-main/save-checkpoint.mjs",
+      "sha256": "ba38c22c8b782715af284056835fb5a8ebec4f20a3faf8ba27471084c2b2a762",
+      "bytes": 9740
+    }
+  ],
+  "removed": [],
+  "scope": "Selected website component and test source, one authenticated historical text witness and verification recipes. No scans, identifiers, datasets, databases, generated runtime, credentials or canonical Git ancestry. This is a scoped source delta, not a whole-project backup.",
+  "proof": {
+    "focused20": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skip": 0
+    },
+    "partition21": {
+      "tests": 207,
+      "pass": 204,
+      "fail": 3,
+      "skip": 0,
+      "originalPreserved": true
+    },
+    "focused21Initial": {
+      "tests": 30,
+      "pass": 28,
+      "fail": 2,
+      "skip": 0
+    },
+    "imageFollowup": {
+      "tests": 21,
+      "pass": 20,
+      "fail": 1,
+      "skip": 0
+    },
+    "finalHubAndImage": {
+      "tests": 21,
+      "pass": 21,
+      "fail": 0,
+      "skip": 0
+    },
+    "sourceRows": 7391,
+    "protectedInputs": 1866,
+    "ui": "All five modality cards use concise descriptions; full original guidance moved to collapsed image/availability notes. Actual component rendered in isolated browser at1280x900; images loaded and disclosure expanded without horizontal overflow. Not an installed whole-app check.",
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,18 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release22-progress',stage='G:/VisibleMedicine-temp/staging/20261031-release20-followup',queue=stage+'/verification-twentyone',run=stage+'/website/.local/website-test-runs/2026-10-31T16-30-12-253Z-44293a34-080e-4c5d-ac41-8d3233e4deab',focused='G:/VisibleMedicine-temp/staging/20261031-release20-final';
+const sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>fs.readFileSync(p),json=p=>JSON.parse(read(p));
+const copy=(from,relative)=>{const to=cp+'/'+relative;fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);assert.equal(sha(read(from)),sha(read(to)));return {path:to,sha256:sha(read(to))};};
+assert.equal(json(queue+'/STATE.json').terminal,true);assert.equal(json(focused+'/FOCUSED.json').result.passing,true);
+const evidence=[];
+for(const f of ['PLAN.json','SCOPE.json','STATE.json'])evidence.push(copy(queue+'/'+f,'partition21/'+f));
+for(const f of ['receipt.json','child.tap','manifest.json'])evidence.push(copy(run+'/'+f,'partition21/native/'+f));
+evidence.push(copy(stage+'/SOURCE.json','partition21/SOURCE.json'));
+for(const f of ['SOURCE.json','FOCUSED.json'])evidence.push(copy(focused+'/'+f,'focused20/'+f));
+for(const f of ['runner.stdout.log','PROCESS-TERMINAL.json'])evidence.push(copy(focused+'/focused-1/'+f,'focused20/'+f));
+evidence.push(copy('CURRENT_CHECKPOINT.json','INDEX_START.json'));
+const tap=read(run+'/child.tap').toString();
+const failures=[...tap.matchAll(/^not ok (\d+) - (.*)$/gm)].map((m,i,all)=>({number:Number(m[1]),name:m[2],excerpt:tap.slice(m.index,m.index+1800)}));
+assert.equal(failures.length,3);
+fs.writeFileSync(cp+'/PARTITION21_FAILURES.json',JSON.stringify({counts:json(run+'/receipt.json').counts,failures},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(cp+'/EVIDENCE.json',JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({checkpoint:cp,partition21:json(run+'/receipt.json').counts,focused20:'3 passed,0 failed,0 skipped',evidence:evidence.length}));

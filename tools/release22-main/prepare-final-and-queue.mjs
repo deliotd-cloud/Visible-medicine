@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const root='G:/VisibleMedicine-temp/proposals/20261031-release22-main';
+let check=fs.readFileSync(root+'/check-followup.mjs','utf8');
+check=check.replaceAll('20261031-release21-followup','20261031-release21-final').replaceAll('d32838ba53f570721d3dc230e573a0395d61e7ec28be85029a532059de069c98','f15f75ef66aef364b7097d9bc96752663a4fcd44c6730359aafc2f1771497348');
+fs.writeFileSync(root+'/check-final.mjs',check,{flag:'wx'});
+let queue=fs.readFileSync('G:/VisibleMedicine-temp/proposals/20261031-release21-main/prepare-partition.mjs','utf8');
+queue=queue.replaceAll('20261031-release19-initial/verification-twenty','20261031-release20-followup/verification-twentyone').replaceAll("stage='G:/VisibleMedicine-temp/staging/20261031-release20-followup',root=stage+'/verification-twentyone'","stage='G:/VisibleMedicine-temp/staging/20261031-release21-final',root=stage+'/verification-twentytwo'").replaceAll('a70e361cc0ade780d58f34512702d71b2d5abe36a4c4dee48380e981f59487b2','f15f75ef66aef364b7097d9bc96752663a4fcd44c6730359aafc2f1771497348');
+queue=queue.replaceAll("replaceAll('G:/VisibleMedicine-temp/staging/20261031-release19-initial',stage)","replaceAll('G:/VisibleMedicine-temp/staging/20261031-release20-followup',stage)").replaceAll('9f4a686e1611d66f3c2392bdcc6a6ad83100a55fcdcbb6e06c4a1581334e6f46','a70e361cc0ade780d58f34512702d71b2d5abe36a4c4dee48380e981f59487b2').replaceAll("steps[0].id,'partition-21'","steps[0].id,'partition-22'").replaceAll('Continue independent release diagnostics while two current delivery repairs are prepared.','Continue source-specific release diagnostics after focused historical delivery repairs and compact Atlas hub verification.');
+assert(queue.includes("stage='G:/VisibleMedicine-temp/staging/20261031-release21-final'"));
+fs.writeFileSync(root+'/prepare-partition.mjs',queue,{flag:'wx'});
