@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const release='G:/VisibleMedicine-temp/staging/20261031-release-partition13-bounded/verification',stage='G:/VisibleMedicine-temp/staging/20261031-small-cardiac-ready',cp='F:/VisibleMedicine/recovery/checkpoints/20261031-cardiac-runtime-checks';
+const index=json('CURRENT_CHECKPOINT.json'),c=index.activeWork.current,r=json(release+'/STATE.json'),a=json(stage+'/VERIFICATION_STATE.json');
+fs.writeFileSync(cp+'/INDEX_VALIDATION_START.json',fs.readFileSync('CURRENT_CHECKPOINT.json'),{flag:'wx'});
+c.currentReleaseQueue={...c.currentReleaseQueue,state:r.status,terminal:r.terminal,completed:r.completed.map(x=>x.id),next:r.current.id,receipt:{path:release+'/STATE.json',sha256:hash(release+'/STATE.json')}};
+c.activeExecutionSessions=a.terminal?[]:[{purpose:'Cardiac Atlas validation',sessionId:14460,pid:a.pid,stateFile:stage+'/VERIFICATION_STATE.json'}];
+c.pendingSmallCardiacImaging.state=a.state;c.next='Finish the running cardiac validation, restore the same installed local website and save its exact outcomes. Website partition13 passed203checks; partition14 is next. Keep the complete roadmap active.';
+saveIndex(index);console.log(JSON.stringify({release:r.status,websiteTests:r.completed[0].receipt.counts.pass,atlas:a.state,checks:a.completed.length}));

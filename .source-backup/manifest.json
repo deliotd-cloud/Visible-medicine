@@ -1,0 +1,222 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T12:59:41.470Z",
+  "sourceIdentity": {
+    "atlas": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-small-cardiac-ready/SOURCE_PREPARED_V3.json",
+      "sha256": "84e86bda11ccc897c8237d65458ea990b00fa419b4d4274f9cab24c22448fc41"
+    },
+    "atlasState": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-small-cardiac-ready/VERIFICATION_V3_STATE.json",
+      "sha256": "ca96789b55ae32ee5dc469125e143dda2437cd820872deadceb0bc1a5a31b00d"
+    },
+    "website": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release-partition13-repairs/SOURCE.json",
+      "sha256": "5912dd67d94b93dcb4e022345a0240cc691a82e1d31dcb24469b6ef2a2b9c5e6"
+    },
+    "websiteState": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release-partition13-bounded/verification/STATE.json",
+      "sha256": "aa3a753fb28106a53e0a0d0c3f31ba4f694d620dbb5def6efea46d798371fe56"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/coronary-venous-teaching.ts",
+      "bytes": 8658,
+      "sha256": "58450129c96996aade485026fe8ff2eea88474ad4cf78de4f0c0ec00dc12e0b6"
+    },
+    {
+      "path": "atlas/scripts/test-small-cardiac-imaging.mjs",
+      "bytes": 4256,
+      "sha256": "de2770f36e135d9ef97ff6e9999b1759df1b6f6dcb470ccc1c9b8331acfd512c"
+    },
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 371473,
+      "sha256": "44b5c311aac9ddd878e445536cab1163720b013892bf584d502efbd20f0ff88b"
+    },
+    {
+      "path": "atlas/scripts/validate-coronary-venous.mjs",
+      "bytes": 9540,
+      "sha256": "a4369e0c8d2ae63fc7f4b9edbbb4022e1b8c1ae9baa67bcfa1e3ed3a5220489d"
+    },
+    {
+      "path": "atlas/scripts/validate-coronary-sinus-ultrasound.mjs",
+      "bytes": 5116,
+      "sha256": "8c4271734902b080c037c533f84b8e954afa0568d34c9ba2f95ffa5b891f4f8d"
+    },
+    {
+      "path": "atlas/scripts/small-cardiac-imaging-history.mjs",
+      "bytes": 2471,
+      "sha256": "5a65293a6ab844a0fcbc351bf45f750f6cdae94108144cbfffe396d35becd164"
+    },
+    {
+      "path": "atlas/scripts/test-small-cardiac-imaging-history.mjs",
+      "bytes": 2315,
+      "sha256": "0b7687520fcf901293e692d80b20c7ef93c46352a7439854eb6bd483f86ad301"
+    },
+    {
+      "path": "atlas/scripts/validate-nested-teaching.mjs",
+      "bytes": 39496,
+      "sha256": "9b4613262e2b60c8759f89676c68006d29d2b9772f3cb44e43b39f60bc9bee32"
+    },
+    {
+      "path": "tools/cardiac-current-baseline/compare.mjs",
+      "bytes": 19442,
+      "sha256": "0b5d14d5cfd85d9c64b6b6c557c61410631b124a5c89f8dbd0a16b52c3169666"
+    },
+    {
+      "path": "tools/bounded-release/run-release.mjs",
+      "bytes": 9817,
+      "sha256": "2284c55704487afe2feffe271c7dbc597d14ebb6ddccd9d180bcc4ba933bf009"
+    },
+    {
+      "path": "tools/bounded-release/runner.mjs",
+      "bytes": 4311,
+      "sha256": "e3c0d061e29c06f0e1beb3520a1de779cc7c7113f10eab724dc848ad90343faf"
+    },
+    {
+      "path": "tools/bounded-release/runner.test.mjs",
+      "bytes": 7339,
+      "sha256": "92c9ce379b9ce546df3af930cc96221bf76854e5a59eec94d1c8ddbf715f1d92"
+    },
+    {
+      "path": "tools/bounded-release/guarded-step.mjs",
+      "bytes": 1799,
+      "sha256": "5a3b33392f98bb1d8da824f2edd4ea0893b1a74aed8f88faa2d591132f9fbbe4"
+    },
+    {
+      "path": "tools/bounded-release/one-step-admission.mjs",
+      "bytes": 630,
+      "sha256": "0db4233e00442e7e243d3e9d2597f9df5632e68e8a8a0a0ccc9b8ff6ed039aeb"
+    },
+    {
+      "path": "tools/bounded-release/one-step-admission.test.mjs",
+      "bytes": 3307,
+      "sha256": "97c44f8d2524a0536473896a41a665f237b42c54f189efd32c539bfcf02a1bcd"
+    },
+    {
+      "path": "tools/cardiac-integration/prepare.mjs",
+      "bytes": 4306,
+      "sha256": "6e5bf3c8d179db4872d40313c4e889f497dc9908cd58d647e27ef6378fb47ce1"
+    },
+    {
+      "path": "tools/cardiac-integration/resume-prepare.mjs",
+      "bytes": 3155,
+      "sha256": "fbabf505db9c9bfec21d907f6189b1020817b46768677b897ad9b7fb5ac62353"
+    },
+    {
+      "path": "tools/cardiac-integration/prepare-checks.mjs",
+      "bytes": 1469,
+      "sha256": "0efa348b8b9e4e0c18826bec47415a5029d3aafd62a892b844fff04595a4addf"
+    },
+    {
+      "path": "tools/cardiac-integration/compare-generated.mjs",
+      "bytes": 1708,
+      "sha256": "43e1d78c3e4434af1ab62655ace209b57cffcd6bcf1df6e5162870acf27abb94"
+    },
+    {
+      "path": "tools/cardiac-integration/verify.mjs",
+      "bytes": 6276,
+      "sha256": "c7756d4b69ebd524a17469c2da460e4b6c019c3947aae1392ecf311aedde94a1"
+    },
+    {
+      "path": "tools/cardiac-integration/seal.mjs",
+      "bytes": 1606,
+      "sha256": "adb5389136a8a6fd1b25eeeda9c5ba2cf16e839385a0d8b51345899e6657a72f"
+    },
+    {
+      "path": "tools/cardiac-integration/freeze.mjs",
+      "bytes": 4101,
+      "sha256": "40b5c203072cb786b5816b5e9a48d2f8323d17c2edc89159adb5fccbde7f3aa8"
+    },
+    {
+      "path": "tools/cardiac-integration/prepare-preview-window.mjs",
+      "bytes": 1719,
+      "sha256": "4506ff2fa6da0f2657ae1569d412097c2b4b1f09b184b0f34dee370a52d40e63"
+    },
+    {
+      "path": "tools/cardiac-integration/record-start.mjs",
+      "bytes": 2871,
+      "sha256": "4482ab26fe7e13f57f6d6e18672766a3ba1cfbd41e4c65f82b5e39a4383c9cf7"
+    },
+    {
+      "path": "tools/cardiac-integration/record-validation.mjs",
+      "bytes": 1556,
+      "sha256": "6f491c269a1d1bbec565e3280018ffdd904352c6a3c7b94856372993932e2c0e"
+    },
+    {
+      "path": "tools/cardiac-integration/preview-window/restart.mjs",
+      "bytes": 2372,
+      "sha256": "d5df2685bacf0a9cde63e485d1978b1a2945854cefa09d11f63bf28e492a1db3"
+    },
+    {
+      "path": "tools/cardiac-integration/prepare-retry.mjs",
+      "bytes": 3824,
+      "sha256": "2943fad0a7ef356bfec3485c2291d2f5d9d5ed5c63907acdbb76fd8ced9b905c"
+    },
+    {
+      "path": "tools/cardiac-integration/verify-v2.mjs",
+      "bytes": 6328,
+      "sha256": "c8761f7b71f2822de3cd2abb3d35e43d5da7e85b2e0ed54d4f28056d4ed85b57"
+    },
+    {
+      "path": "tools/cardiac-integration/compare-generated-v2.mjs",
+      "bytes": 1711,
+      "sha256": "debb05cfe760af5296b606df4eba53dadb34e97b02c8115fdcb612b35b7c6822"
+    },
+    {
+      "path": "tools/cardiac-integration/freeze-v2.mjs",
+      "bytes": 4113,
+      "sha256": "b8dd2335a3d34665839617008c626e9c8e5c2305013936b7f819ebfedcd6a16d"
+    },
+    {
+      "path": "tools/cardiac-integration/prepare-corpus-retry.mjs",
+      "bytes": 5630,
+      "sha256": "4a6452da07834d0dc8daecd3987704c98ec013c7cc3f2a3f5bc1440a1eff0a76"
+    },
+    {
+      "path": "tools/cardiac-integration/verify-v3.mjs",
+      "bytes": 6455,
+      "sha256": "b2d43c10db565fdd05b65c7d0f5bf5e2d7517a88e84e832ebdbcf9d00fd249b1"
+    },
+    {
+      "path": "tools/cardiac-integration/compare-generated-v3.mjs",
+      "bytes": 1711,
+      "sha256": "855fa3fd0138f8e33020244666282b1cebf3bc7739a0cc07d8975520cc5b67f0"
+    },
+    {
+      "path": "tools/cardiac-integration/freeze-v3.mjs",
+      "bytes": 4245,
+      "sha256": "641dd374b895425547946caab242fa1ef40ef137469cfc7901460a73e8483285"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original teaching, notices, validation and integration source only. No scans, models, private databases, logs, generated Atlas data or canonical Git ancestry.",
+  "proof": {
+    "websitePartition": 13,
+    "websiteTests": 203,
+    "websiteFailures": 0,
+    "nextPartition": 14,
+    "wholeSuitePassing": false,
+    "boundedRunnerTests": 17,
+    "atlasCompletedChecks": 17,
+    "atlasRequiredChecks": 17,
+    "atlasState": "passed",
+    "atlasPassed": true,
+    "frozen": true,
+    "lessons": {
+      "newDrafts": 2,
+      "unchanged": 970
+    },
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

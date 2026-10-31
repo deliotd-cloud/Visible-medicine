@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-small-cardiac-ready',site=root+'/atlas',ref=p=>({path:p,sha256:hash(p)});
+assert.equal(hash(root+'/SOURCE_PREPARED.json'),'f5186e32b83857ed810c8a453156d7f9782d537cb3216d6fe16d109007c430a6');
+const catalog=json(site+'/public/models/bodyparts3d/coronary-venous/catalog.json'),rows=[];
+for(const part of catalog.structures)for(const source of part.sources){assert(/^FJ\d+$/.test(source.file));const before='F:/VisibleMedicine/work/bodyparts3d/partof/'+source.file+'.obj',target=root+'/work/bodyparts3d/partof/'+source.file+'.obj';assert.equal(hash(before),source.sha256);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(before,target,fs.constants.COPYFILE_EXCL);assert.equal(hash(target),source.sha256);rows.push({path:target,source:before,sha256:source.sha256,bytes:fs.statSync(target).size});}
+assert.equal(rows.length,3);fs.writeFileSync(root+'/SOURCE_OBJECTS.json',JSON.stringify({at:new Date().toISOString(),sourceCatalog:ref(site+'/public/models/bodyparts3d/coronary-venous/catalog.json'),files:rows,originalLicensedDataset:true,noNewGeometry:true},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({rawModelInputs:3,catalogMatched:true}));
