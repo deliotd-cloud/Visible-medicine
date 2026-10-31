@@ -1,0 +1,171 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T13:18:52.261Z",
+  "sourceIdentity": {
+    "atlas": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-adrenal-ready/SOURCE_PREPARED_COMPARISON.json",
+      "sha256": "9b2b49be745d91ec9568a2d21962a80c806055b40ba3ae2f3c962a0be015ec92"
+    },
+    "state": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-adrenal-ready/VERIFICATION_V2_STATE.json",
+      "sha256": "064e0a0dcbb080973efb8253b991493a4d49f5164b191f68f1102729102ed36a"
+    },
+    "website": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release-partition13-repairs/SOURCE.json",
+      "sha256": "5912dd67d94b93dcb4e022345a0240cc691a82e1d31dcb24469b6ef2a2b9c5e6"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/renal-teaching.ts",
+      "bytes": 11908,
+      "sha256": "3d9bb0cc120ee240b0d08128429bead7743ee04abc6225dc01f6749083d00e4e"
+    },
+    {
+      "path": "atlas/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 372311,
+      "sha256": "4c0bb9993c8d89d8410cff382e8179cad3a801deecdb6b48f9b3a7b9f29b2da4"
+    },
+    {
+      "path": "atlas/scripts/validate-nested-teaching.mjs",
+      "bytes": 42599,
+      "sha256": "320b37b5ddcb661c0bfdadadad210c79183fa95731395e4ce3ec2f460cdb3e5e"
+    },
+    {
+      "path": "atlas/scripts/adrenal-ultrasound-history.mjs",
+      "bytes": 4928,
+      "sha256": "0a9a7557b9a8fbade2824f937170e1a3f795290eca2da72af5be65c9fe9b2b6a"
+    },
+    {
+      "path": "atlas/scripts/test-adrenal-ultrasound-history.mjs",
+      "bytes": 7618,
+      "sha256": "78f06abe1280ca4aae3163d16d783e1b38d10378a3e7b3ce31c8383d302ed76e"
+    },
+    {
+      "path": "atlas/scripts/test-adrenal-ultrasound-drafts.mjs",
+      "bytes": 4722,
+      "sha256": "03a7c18d6261e7fb46cb9c68a16fc4c9afef284b21597cf5a3b72e5edd7e1663"
+    },
+    {
+      "path": "tools/adrenal-integration/prepare.mjs",
+      "bytes": 4602,
+      "sha256": "a7570b6cd9634c6a8b81319f79050a96dd038da4b32888552f343911322d95ee"
+    },
+    {
+      "path": "tools/adrenal-integration/resume-prepare.mjs",
+      "bytes": 4538,
+      "sha256": "3a82bb6066947410be9ab0cd7884d2970be862b1224f7c64586f451d8615d705"
+    },
+    {
+      "path": "tools/adrenal-integration/flatten.mjs",
+      "bytes": 2830,
+      "sha256": "cb1852c180ece921f2e8520da645bac374589053fd45fe66ab5d99f16d2d5149"
+    },
+    {
+      "path": "tools/adrenal-integration/prepare-runtime.mjs",
+      "bytes": 4835,
+      "sha256": "de3b64fcfdc6a944e78752ae8df0f4ed75817478aa36069a9684e1e92a870c2c"
+    },
+    {
+      "path": "tools/adrenal-integration/verify.mjs",
+      "bytes": 6654,
+      "sha256": "44a811ccc29b917ab43c472d62a5cf19bd7cbc7bf80eafb129498ea1113faf73"
+    },
+    {
+      "path": "tools/adrenal-integration/compare.mjs",
+      "bytes": 11747,
+      "sha256": "3ae0825f7ea4c287dd4fd3a9b12d976700d28b88093426fb58d8dc0f954aa15c"
+    },
+    {
+      "path": "tools/adrenal-integration/compare-generated.mjs",
+      "bytes": 1065,
+      "sha256": "576a4ef9c3e0a55ff8cffac3c7aa1a4082062137e01db145a4b3422a1eee94b6"
+    },
+    {
+      "path": "tools/adrenal-integration/freeze.mjs",
+      "bytes": 4201,
+      "sha256": "3245bcecb479a5986249fb5497524a448c550626c535cda6fb730b1c4742a62a"
+    },
+    {
+      "path": "tools/adrenal-integration/record-start.mjs",
+      "bytes": 1036,
+      "sha256": "2321a1dba8520a53fdcc79777f708c8d1f0e26e8ada66b122ad349bdd5a19db3"
+    },
+    {
+      "path": "tools/adrenal-integration/record-atlas.mjs",
+      "bytes": 1876,
+      "sha256": "a850736a6e0af331db4165ca975276b6df513a0ce1e81201ea45ff68b19c8b30"
+    },
+    {
+      "path": "tools/adrenal-integration/prepare-comparison-retry.mjs",
+      "bytes": 4603,
+      "sha256": "078613390cd17118b2445ee87768eed9cacf6fc7fbcff8a1d279f8a147d6113e"
+    },
+    {
+      "path": "tools/adrenal-integration/verify-v2.mjs",
+      "bytes": 6677,
+      "sha256": "89a6c4f98f9a3f2e8a1bf0e8b20e6af8b6f64e21bffee54b3614410ea8e23eff"
+    },
+    {
+      "path": "tools/adrenal-integration/compare-v2.mjs",
+      "bytes": 12128,
+      "sha256": "f0788e471dc98e234779cf8cfc07d91500c9cf7fdc52e81d0e9bd7480cee5de5"
+    },
+    {
+      "path": "tools/adrenal-integration/compare-generated-v2.mjs",
+      "bytes": 1082,
+      "sha256": "d37aa881ddfa93bd175d717f435bd7523825722eb88912acb91d52086cd209bd"
+    },
+    {
+      "path": "tools/adrenal-integration/freeze-v2.mjs",
+      "bytes": 4249,
+      "sha256": "d2fc4b2cef8b97e6cdaa05e4b68e45dd529813a698bda7f17d553e3578d73c82"
+    },
+    {
+      "path": "tools/adrenal-integration/verify-abdominal.mjs",
+      "bytes": 1539,
+      "sha256": "3c2bd183e25d565c949c77046fe046bd9d89014b3fe394f9df65202c56ca45a3"
+    },
+    {
+      "path": "website/tests/clinical-review-abdominal-fold-ultrasound.test.ts",
+      "bytes": 10877,
+      "sha256": "f4adaa89ed0f39adca1f91ddca6d35f076267f299fdfe075267c41634485bb8a"
+    },
+    {
+      "path": "website/tests/abdominal-fold-title-transition.mjs",
+      "bytes": 1365,
+      "sha256": "d43fd2841e026b6796a7089ad3939779081f734dd7f2b40b8840f0d52e6e2ebd"
+    },
+    {
+      "path": "website/tests/abdominal-fold-title-transition.test.mjs",
+      "bytes": 1775,
+      "sha256": "0e69158513cf52d52178d42a3613119fce1b1865b727c5c5bc30476bf35f5f52"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original teaching, notices, tests and integration source only. No scans, models, private databases, local test logs, generated Atlas data or canonical Git ancestry.",
+  "proof": {
+    "atlasCompletedChecks": 18,
+    "atlasRequiredChecks": 18,
+    "atlasState": "passed",
+    "atlasPassed": true,
+    "frozen": true,
+    "changedLessons": 3,
+    "unchangedLessons": 969,
+    "websitePartition": 14,
+    "websiteTests": 203,
+    "websitePassed": 193,
+    "websiteFailed": 9,
+    "websiteSkipped": 1,
+    "wholeSuitePassing": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
