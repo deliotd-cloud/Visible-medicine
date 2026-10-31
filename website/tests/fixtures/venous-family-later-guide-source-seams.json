@@ -1,0 +1,42 @@
+{
+  "schema": "vm-venous-family-later-guide-source-seams/1",
+  "priorSourceSha256": "4faaa1d2a8b97ae3933f5acb889d5c5447dee2487d23676e21650b889fabef0e",
+  "currentSourceSha256": "a1b4d75239f6c876e29ce9a3859ccf2e79cf93497d3090be762808d0b033c3d3",
+  "priorLines": 308,
+  "currentLines": 315,
+  "seams": [
+    {
+      "beforeStart": 1,
+      "afterStart": 1,
+      "before": [],
+      "after": [
+        "import {assertAdmissionCurrentGuideEpoch} from './admission-current-guide-epoch.mjs';\n"
+      ]
+    },
+    {
+      "beforeStart": 205,
+      "afterStart": 206,
+      "before": [],
+      "after": [
+        "  assertAdmissionCurrentGuideEpoch({kind:'femoral',featureCommit,liveCommit,atlas,\n",
+        "    manifest:json('atlas-review/manifest.json'),git});\n",
+        "  assert.throws(()=>assertAdmissionCurrentGuideEpoch({kind:'femoral',featureCommit,liveCommit,atlas,\n",
+        "    manifest:json('atlas-review/manifest.json'),git,\n",
+        "    readImported:path=>path==='app/anatomy-data.ts'?Buffer.from('forged anatomy source'):readFileSync('atlas-review/'+path)}),\n",
+        "    /imported source hash/,'Forged current guide source refused');\n"
+      ]
+    },
+    {
+      "beforeStart": 206,
+      "afterStart": 213,
+      "before": [
+        "  assert.deepEqual(imported.structures,current.structures);\n",
+        "  assert.deepEqual(imported.dissectionProfiles,current.dissectionProfiles);\n"
+      ],
+      "after": [
+        "  assert.deepEqual(imported.structures,live.structures,'Current imported structures match authenticated live epoch');\n",
+        "  assert.deepEqual(imported.dissectionProfiles,live.dissectionProfiles,'Current imported dissection matches authenticated live epoch');\n"
+      ]
+    }
+  ]
+}

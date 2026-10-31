@@ -1,0 +1,185 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T14:30:31.883Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release14-family-epoch-ready/SOURCE.json",
+      "sha256": "162396d752cd48e440f89dc51b953947380ffcd4fbae7cd697677be89d7580a1"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-family-prior-current-inverse.mjs",
+      "sha256": "26b415fdf24efc37c4e071cf509edce4eb0ea7dc9b6ec181295787cdbdeb3752",
+      "bytes": 5348
+    },
+    {
+      "path": "website/tests/fixtures/arterial-family-later-current-source-seams.json",
+      "sha256": "dfbc1043e4f67041190ac4e3c0490385eb5746734788d52363241483ba2cbf0b",
+      "bytes": 3643
+    },
+    {
+      "path": "website/tests/fixtures/venous-family-later-guide-source-seams.json",
+      "sha256": "5d8cad904dc606a887ed6207c2bfc5ece59bdf282bdb17db77555ccf62ebfa64",
+      "bytes": 1738
+    },
+    {
+      "path": "website/tests/fixtures/girdle-family-later-renal-source-seams.json",
+      "sha256": "3049150d43a3cd1ef8e79e2b42ae3b08296b6d2152316a574a12f44986073d97",
+      "bytes": 1731
+    },
+    {
+      "path": "website/tests/closed56-femoral-epoch.test.mjs",
+      "sha256": "5070234e61e56cc367f23d94a5f34c53a8c9fbd593d30c52f5ec74f16a274d14",
+      "bytes": 11005
+    },
+    {
+      "path": "website/tests/closed56-current-role.test.mjs",
+      "sha256": "c25214c1dc3d28fe6c1c365364f44e58b0541cdfdb0c6d5a5fb560af0c007bb4",
+      "bytes": 3887
+    },
+    {
+      "path": "website/tests/closed56-femoral-epoch-history-1031.mjs",
+      "sha256": "9f6260969cc5e023f3e1a64cde0a9d3f7fb70ed7f2b58f9ffdb83b0516357b48",
+      "bytes": 3728
+    },
+    {
+      "path": "tools/family-native/analyze.mjs",
+      "sha256": "452a07cc8a4ca0a91c0ce1ae821adb91c78efc876a0df84536e32cc4a2d3342d",
+      "bytes": 3431
+    },
+    {
+      "path": "tools/family-native/check-epoch.mjs",
+      "sha256": "ef4ba7fbbafdbd222bcc97a8fb04624221c0c25d935d121ab1671040fb130ad2",
+      "bytes": 2080
+    },
+    {
+      "path": "tools/family-native/check.mjs",
+      "sha256": "2036783cbb0444f427d49ed82f451263aded299ea935ccfcf8bff915165e68e9",
+      "bytes": 2038
+    },
+    {
+      "path": "tools/family-native/integrate-epoch.mjs",
+      "sha256": "240d26415ad8a9bd28f39aee049d18ca2cd0f681f5a65be7c3b9c163906c9027",
+      "bytes": 3695
+    },
+    {
+      "path": "tools/family-native/integrate.mjs",
+      "sha256": "bfa672748e3441f54b3a1d86278b4ff91b110e746b64d12b337d3ead73a94f9d",
+      "bytes": 3696
+    },
+    {
+      "path": "tools/family-native/prepare-epoch-check.mjs",
+      "sha256": "509ffed14191837664a665269d744621393a95471417eb1896736c66ec4c1683",
+      "bytes": 573
+    },
+    {
+      "path": "tools/family-native/prepare-epoch.mjs",
+      "sha256": "9685e701a0ecf866c8d244babe97143e067b34de38b14f76451d1805f6c33067",
+      "bytes": 1722
+    },
+    {
+      "path": "tools/family-native/prepare-next-queue-inner.mjs",
+      "sha256": "8084e1382eb212044161ac1407e48ffe5e80697e7dddde53e0228410f449115d",
+      "bytes": 2986
+    },
+    {
+      "path": "tools/family-native/prepare-next-queue.mjs",
+      "sha256": "7a89163715b1d097bb08fcdc8d5f4200aa7923833079575202e7b0342151f192",
+      "bytes": 938
+    },
+    {
+      "path": "tools/family-native/prepare-queue-inner.mjs",
+      "sha256": "c28a2b1079b67eba89bddd182012e8479e4bdcc35f2dabee4584a713333d4165",
+      "bytes": 2980
+    },
+    {
+      "path": "tools/family-native/prepare-queue.mjs",
+      "sha256": "8fc7eb632809ed59fcd37b42c1f1b4d60a1bd32659ddcffe7770fe390ae175a6",
+      "bytes": 982
+    },
+    {
+      "path": "tools/family-native/prepare-window.mjs",
+      "sha256": "31b7a108510195031284ab2ac458aa7e5a80e513f0df586771d1c9944465e3ca",
+      "bytes": 2391
+    },
+    {
+      "path": "tools/family-native/prepare.mjs",
+      "sha256": "2e89c73e55bc91a1f820da823a927ee333be3287efcd8206de6f15ccf1012c44",
+      "bytes": 1897
+    },
+    {
+      "path": "tools/family-native/record-release.mjs",
+      "sha256": "01e348e8542297f1c9446cc22b3c49d7a0b51a072b594ea8ce317e91a36986d3",
+      "bytes": 855
+    },
+    {
+      "path": "tools/family-native/record-window.mjs",
+      "sha256": "3b947cc4edad367bc3e0de7fbd173ccae3aa773055786d316c6f7335e3ece2af",
+      "bytes": 1522
+    },
+    {
+      "path": "tools/family-native/save.mjs",
+      "sha256": "c38370e8f35cac64115fef9daf063a4f9de3664e624e0070782c18a9ebd8a439",
+      "bytes": 10946
+    },
+    {
+      "path": "tools/family-native/preview-window/restart.mjs",
+      "sha256": "ad631679bf0ae5999f4754ae1f89d02b1264c1eaddb877cccc1cd0f17c02e467",
+      "bytes": 2364
+    },
+    {
+      "path": "tools/family-native/preview-window/health.ps1",
+      "sha256": "4d8f5f2f482c231c646541b320652b5f8556302bf42674a42464653a29d51c5a",
+      "bytes": 1449
+    },
+    {
+      "path": "proposals/history-reader/git-snapshot-reader.mjs",
+      "sha256": "9b00aee3099caa1ffef0f741e773076881a5732512256c54706e7497cec8b328",
+      "bytes": 5181
+    },
+    {
+      "path": "proposals/history-reader/git-snapshot-reader.test.mjs",
+      "sha256": "3ef400f0b4592f67df118d7b993dac68a9249c98c51a50c910c9efe411068fcb",
+      "bytes": 5385
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original test helpers, fixtures, coordinator recipes and isolated history-reader proposal only. No patient data, scans, models, images, generated runtime, private databases or raw canonical Git ancestry. Repair delta, not whole-project backup.",
+  "proof": {
+    "familyAdmissionRepairVerified": true,
+    "focused": {
+      "tests": 20,
+      "pass": 20,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "broaderPartition": 15,
+    "broader": {
+      "tests": 203,
+      "pass": 202,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 1,
+      "todo": 0
+    },
+    "historyReaderPureChecks": 3,
+    "historyReaderIntegrated": false,
+    "sourceRows": 7339,
+    "wholeSuitePassing": false,
+    "installed": false,
+    "clinicalApproval": false,
+    "publicDeployment": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
