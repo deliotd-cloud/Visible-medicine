@@ -1,0 +1,62 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T10:09:39.224Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-review-quick-status/SOURCE.json",
+      "sha256": "c4f7e16e9b8324e78e7d37dda618f4481773664b76e168b8c90fb435049b9cc0"
+    }
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewQuickStart.tsx",
+      "bytes": 5600,
+      "sha256": "1afff0a94c3d6fbefd55d3816de8c8e4ad22481d78db109d37e970eafa6eee63"
+    },
+    {
+      "path": "website/tests/clinical-review-quick-start-ui.test.mjs",
+      "bytes": 15407,
+      "sha256": "08fc78fa28e2a17a5e58dcc8a0cb6a28bed7d4e517228d0f988670f4044dda65"
+    },
+    {
+      "path": "recipes/review-quick-status/prepare.mjs",
+      "bytes": 3735,
+      "sha256": "c6a7e6469ae8e9a21004ba651ffdceafcad1d61cb465c960068c0dafe1faf96d"
+    },
+    {
+      "path": "recipes/review-quick-status/verify.mjs",
+      "bytes": 3920,
+      "sha256": "289b81723253aac7a77264a3acdf28298c975dd224bfcd58b4da010fddbe5b12"
+    },
+    {
+      "path": "recipes/review-quick-status/save.mjs",
+      "bytes": 9410,
+      "sha256": "66f4e4201899e2c0a5bfb0f3ce35c6f848decf68a1830d6f699aeb55c8a643a8"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected Quick review component, behavioral regression test and three source preparation/verification/recovery recipes. No assets, scans, masks, decisions, private references, logs or canonical history. Not a whole-project backup. No installed or clinical change.",
+  "proof": {
+    "at": "2026-10-31T10:09:36.253Z",
+    "counterfactual": {
+      "pass": 9,
+      "fail": 3
+    },
+    "after": {
+      "pass": 23,
+      "fail": 0
+    },
+    "originalCasesRetained": 9,
+    "reviewInputsUnchanged": 1866,
+    "fullTypesOrBuild": false,
+    "screenReaderSpeechVerified": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
