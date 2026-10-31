@@ -1,0 +1,56 @@
+{
+  "lecture-repository.test.ts": [
+    {
+      "at": 24122,
+      "before": "",
+      "after": "test(\"withdrawn lecture history remains unavailable to staff and allocated learners while evidence is retained\", async (t) => {\n  const {sqlite, repository} = harness();\n  t.after(() => sqlite.close());\n  await publishFlow(repository);\n  sqlite.prepare(\"INSERT INTO enrolments VALUES ('course-1',?,'active')\").run(LEARNER.userId);\n  sqlite.prepare(\"INSERT INTO workbook_assignments VALUES ('withdrawal-assignment',?,?,'active')\").run(WORKBOOK_ID, LEARNER.userId);\n  assert.equal((await repository.getPublishedLecture(LEARNER, WORKBOOK_ID)).manifest.workbook.id, WORKBOOK_ID);\n  const preserved = sqlite.prepare(\"SELECT manifest_json,integrity_hash,version FROM lecture_versions WHERE workbook_id=?\").get(WORKBOOK_ID);\n  sqlite.prepare(\"UPDATE workbooks SET status='withdrawn' WHERE id=?\").run(WORKBOOK_ID);\n  await assert.rejects(() => repository.getPublishedLecture(AUTHOR, WORKBOOK_ID), (error: any) => error.status === 404);\n  await assert.rejects(() => repository.getPublishedLecture(LEARNER, WORKBOOK_ID), (error: any) => error.status === 403);\n  assert.deepEqual(sqlite.prepare(\"SELECT manifest_json,integrity_hash,version FROM lecture_versions WHERE workbook_id=?\").get(WORKBOOK_ID), preserved);\n});\n"
+    }
+  ],
+  "related-lectures.test.ts": [
+    {
+      "at": 641,
+      "before": "",
+      "after": "import * as structureGuides from '../lib/head-structure-guides.ts';\n"
+    },
+    {
+      "at": 2044,
+      "before": "  new Function('require','module','exports',code)((name:string)=>name.endsWith('.css')?{}:name in mocks?mocks[name]:requireNode(name),module,module.exports);\n",
+      "after": "  new Function('require','module','exports',code)((name:string)=>name.endsWith('.css')?{}:name in mocks?mocks[name]:name==='@/lib/head-structure-guides'?structureGuides:requireNode(name),module,module.exports);\n"
+    },
+    {
+      "at": 24023,
+      "before": "  assert.match(emptyHtml,/No accessible linked slides/);\n",
+      "after": "  assert.match(emptyHtml,/No lecture slides to show/);\n"
+    },
+    {
+      "at": 24778,
+      "before": "    'next/link':({children,...props}:any)=>React.createElement('a',props,children),\n",
+      "after": "    'next/link':({children,prefetch:_,...props}:any)=>React.createElement('a',props,children),\n"
+    },
+    {
+      "at": 26410,
+      "before": "  assert.match(html,/No accessible linked slides/);\n",
+      "after": "  assert.match(html,/No lecture slides to show/);\n"
+    },
+    {
+      "at": 27544,
+      "before": "",
+      "after": "test('related guided learning stays collapsed and renders only exact registered step links',async()=>{\n  for(const id of [conceptId,'limbic-left-amygdala','bone-left-parietal','cerebellum-vermis']){\n    const reference=anatomy.createLectureAnatomyReference(id);assert(reference);\n    const guides=structureGuides.headStructureGuides(id,reference.headRevision);assert(guides.length);\n    const html=renderToStaticMarkup(await structurePage()({searchParams:Promise.resolve({concept:id,headRevision:reference.headRevision})}));\n    const section=html.match(/<details class=\"structure-learning-guides\">([\\s\\S]*?)<\\/details>/)?.[1];assert(section);\n    assert(section.startsWith('<summary>Guided learning · Draft</summary>'));\n    assert.doesNotMatch(html,/<details[^>]*open/);\n    assert.equal((section.match(/<li>/g)??[]).length,guides.length);\n    assert.equal((section.match(/<a /g)??[]).length,guides.reduce((sum,guide)=>sum+guide.views.length,0));\n    for(const guide of guides){\n      assert(section.includes(`<strong>${guide.label}</strong><span>Step ${guide.step} of ${guide.total}</span>`));\n      for(const view of guide.views){\n        assert(section.includes(`href=\"${view.href.replaceAll('&','&amp;')}\"`));\n        assert(section.includes(`aria-label=\"${view.label}: ${guide.label}, step ${guide.step} of ${guide.total}\"`));\n      }\n    }\n    assert.match(section,/availability and access separately/);\n    assert.match(section,/do not record progress or align scans/);\n    assert.doesNotMatch(section,/autoplay|target=|iframe|data-primary/);\n    assert(html.indexOf('structure-learning-guides')<html.indexOf('Learn this in context'));\n  }\n});\n\ntest('invalid or repeated source values cannot reveal a guided-learning entry',async()=>{\n  for(const params of [\n    {concept:conceptId,headRevision:hash},\n    {concept:[conceptId,conceptId],headRevision:pin.headRevision},\n    {concept:conceptId,headRevision:[pin.headRevision,pin.headRevision]},\n    {concept:'unknown',headRevision:pin.headRevision},\n  ]){\n    const html=renderToStaticMarkup(await structurePage()({searchParams:Promise.resolve(params)}));\n    assert.match(html,/Structure link unavailable/);\n    assert.doesNotMatch(html,/structure-learning-guides|headTour=|headStep=|headRevision=/);\n  }\n});\n\n"
+    },
+    {
+      "at": 29969,
+      "before": "",
+      "after": "  let secondary='/learn/related-anatomy?concept=brainstem-pons&headRevision='+pin.headRevision;\n  let availability:'complete'|'partial'='complete',includeRow=true;\n"
+    },
+    {
+      "at": 30301,
+      "before": "    '@/lib/platform-governance':{searchEducation:async(q:string)=>{calls.push(q);return [{kind:'Anatomy concept',title:'Pons',summary:'Reference anatomy',href:'/learn/related-anatomy?concept=brainstem-pons&headRevision='+pin.headRevision,meta:'Source-bound concept'}];}},\n",
+      "after": "    '@/lib/public-education-search':{searchPublicEducation:async(q:string)=>{calls.push(q);return {availability,results:includeRow?[{kind:'Anatomy concept',title:'Pons',summary:'Reference anatomy',href:'/atlas/head-neck-3d?concept=brainstem-pons',learningHref:secondary,meta:'Source-bound concept'}]:[]};}},\n"
+    },
+    {
+      "at": 31075,
+      "before": "",
+      "after": "  assert.match(html,/href=\"\\/atlas\\/head-neck-3d\\?concept=brainstem-pons\"/);\n  assert.match(html,/class=\"search-related-link\"[^>]+href=\"\\/learn\\/related-anatomy\\?concept=brainstem-pons/);\n  assert.match(html,/Related teaching →/);\n  for(const refused of ['/learn/related-anatomy-other?concept=brainstem-pons','//foreign.invalid/learn/related-anatomy?x=1','https://foreign.invalid/learn/related-anatomy?x=1']){\n    secondary=refused;\n    const refusedHtml=renderToStaticMarkup(await page({searchParams:Promise.resolve({q:'Pons'})}));\n    assert.doesNotMatch(refusedHtml,/class=\"search-related-link\"/);\n    assert.match(refusedHtml,/href=\"\\/atlas\\/head-neck-3d\\?concept=brainstem-pons\"/);\n  }\n  availability='partial';secondary='/learn/related-anatomy?concept=brainstem-pons&headRevision='+pin.headRevision;\n  const partialRows=renderToStaticMarkup(await page({searchParams:Promise.resolve({q:'Pons'})}));\n  assert.match(partialRows,/Some results are temporarily unavailable/);\n  assert.match(partialRows,/Explore structure/);\n  includeRow=false;\n  const partialEmpty=renderToStaticMarkup(await page({searchParams:Promise.resolve({q:'Pons',kind:'courses'})}));\n  assert.match(partialEmpty,/temporarily unavailable/);\n  assert.doesNotMatch(partialEmpty,/No courses matched/);\n  availability='complete';\n  const completeEmpty=renderToStaticMarkup(await page({searchParams:Promise.resolve({q:'Pons',kind:'courses'})}));\n  assert.match(completeEmpty,/No courses matched/);\n"
+    }
+  ]
+}

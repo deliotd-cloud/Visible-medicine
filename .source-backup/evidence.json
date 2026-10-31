@@ -1,0 +1,46 @@
+{
+  "at": "2026-10-31T00:49:49.986Z",
+  "source": {
+    "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-release-six-focused-and-image-audit/SOURCE.json",
+    "sha256": "ecdf590078ef0d9561f833564f048b907ca4d363f9632f8f051a5213389ec974"
+  },
+  "focused": {
+    "tests": 21,
+    "pass": 21,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0
+  },
+  "roots": 6,
+  "historicalCasesReplayed": 12,
+  "currentShortCiliaryCasesExecuted": 3,
+  "shortCiliaryHistoricalExecutionPassed": false,
+  "shortCiliaryOriginalSourceWitnessPreserved": true,
+  "currentMountedViewerCases": 6,
+  "shoulderDraftChecksRetained": 8,
+  "allProductInputsUnchanged": true,
+  "protectedInputsUnchanged": true,
+  "unchangedProductBuild": {
+    "path": "G:/VisibleMedicine-temp/staging/20261031-review-readable-groups/BUILD_RESULT-3.json",
+    "sha256": "b9df089b6d2109db7aee5f31005322b2035dc876108a357a54121f8f8b9ab186"
+  },
+  "reviewIntegration": "d98623af51b216359fdd7385148ca0beaa46f0c3866ae9f867202a48770d5799",
+  "imageCandidate": {
+    "buildPassed": true,
+    "focusedTests": 7,
+    "scopedTypesPassed": true,
+    "browserTested": false,
+    "objectiveMet": false,
+    "unpicStillPresent": true,
+    "reason": "Generated Review brand still imports next/image. Proposal held; no licence-clearance claim or generated-source edits.",
+    "evidence": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-release-six-focused-and-image-audit/image/DISTRIBUTION_RESULT.json",
+      "sha256": "0352bc0ccafb905a677247496dc575d90b5a844a45df819e65569bd50d6c7f85"
+    }
+  },
+  "wholeSuitePassing": false,
+  "installed": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
