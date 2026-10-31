@@ -1,0 +1,70 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {backup} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/source-only-backup-20261019.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+import {validateChecklist,renderChecklist} from 'file:///F:/VisibleMedicine/website/scripts/refresh-completion-checklist.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-release-scope-ready',site=root+'/website',source=json(root+'/SOURCE.json');
+const prior='F:/VisibleMedicine/recovery/checkpoints/20261031-brand-provenance-verified';
+const cp='F:/VisibleMedicine/recovery/checkpoints/20261031-release-scope-built',canonical='F:/VisibleMedicine/website';
+const proposal='G:/VisibleMedicine-temp/proposals/20261031-tour-entry-source-repair';
+const read=p=>fs.readFileSync(p),ref=p=>({path:p,sha256:hash(p)});
+const write=(p,v)=>{fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,Buffer.isBuffer(v)?v:typeof v==='string'?v:JSON.stringify(v,null,2)+'\n',{flag:'wx'});};
+function verify(){
+ assert.equal(hash(root+'/SOURCE.json'),'54710c2197a88d4ebe9c4309b9efc0e6dcf60f2d963e2c10d3c7bbce69992a6b');
+ for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+ for(const r of json(site+'/atlas-review/integration-inputs.json').inputs)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+ assert.equal(json(canonical+'/atlas-review/integration-inputs.json').sha256,'3648a75bdf7543a29047e74193231fad27afd450d9b0ebc7164393ba2a0d3b2f');
+ assert.equal(execFileSync('git',['-C',canonical,'rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).trim(),'b953ff3f5f1891599cb6e91cb91311d9d6006270');
+ assert(json(root+'/BUILD_RESULT_4096.json').passing);assert(json(root+'/BUILD_RESULT_4096.json').sourceUnchanged);
+ assert.equal(json(root+'/DISTRIBUTION_RESULT.json').packageCount,34);
+ const tap=read(root+'/FOCUSED.tap').toString();assert.match(tap,/^ℹ pass 30\r?$/m);assert.match(tap,/^ℹ fail 0\r?$/m);
+}
+verify();assert(!fs.existsSync(cp));const at=new Date().toISOString();
+write(cp+'/INDEX_BEFORE.json',read('CURRENT_CHECKPOINT.json'));
+for(const p of ['SOURCE.json','PREPARED.json','FOCUSED.tap','REGIONAL_CONSUMER.tap','BUILD_RESULT.json','BUILD_RESULT_4096.json','BUILD_CHILD_4096.json','DISTRIBUTION_RESULT.json','build-4096/PROCESS-TERMINAL.json','build-4096/CONFIGURATION.json','build-4096/MEMORY-BEFORE.json','build-4096/memory.jsonl','build-4096/runner.stdout.log','build-4096/runner.stderr.log','build-1/PROCESS-TERMINAL.json','build-1/runner.stderr.log'])write(cp+'/'+p,read(root+'/'+p));
+for(const entry of json(root+'/DISTRIBUTION_RESULT.json').environments)write(cp+'/audit-metadata/'+path.basename(entry.inventory.path),read(entry.inventory.path));
+const campaign='G:/VisibleMedicine-temp/staging/20261031-brand-provenance';
+for(const p of ['RELEASE_QUEUE.json','PARTITION_RESULT-7.json','partition-7/PROCESS-TERMINAL.json'])write(cp+'/prior-stock/'+p,read(campaign+'/'+p));
+for(const p of ['tests/regional-tour-entry-delivery.test.mjs','tests/tour-step-source-epoch-inverse.mjs','tests/fixtures-tour-step-source-epoch.json','REGIONAL_TOUR_REPAIR_AFTER_FIX.tap'])write(cp+'/pending-tour-entry/'+p,read(proposal+'/'+p));
+for(const p of ['RESULT.json','verify.mjs','local-only/observations.json'])write(cp+'/local-only/head-practice/'+p,read('G:/VisibleMedicine-temp/staging/20261031-head-practice-live/'+p));
+write(cp+'/head-handoff-findings.md',read('G:/VisibleMedicine-temp/proposals/20261031-head-handoff-gap/findings.md'));
+const proof={at,source:ref(cp+'/SOURCE.json'),tests:{focused:{pass:30,fail:0,skip:0,roots:6},stockPredecessor:{pass:161,fail:2,skip:0,partition:'7/32',source:source.parent},adjacentConsumer:{pass:7,fail:1},proposal:{passedInWorkerFixture:9,integrated:false},wholeSuitePassing:false},build:{passed:true,receipt:ref(cp+'/BUILD_RESULT_4096.json'),sourceUnchanged:true,aggregateLimitMiB:4096,reserveMiB:2048,earlier3584TrialFailed:true},distribution:{receipt:ref(cp+'/DISTRIBUTION_RESULT.json'),environments:3,files:782,packages:34,unpicAbsent:true,wholeAssetLicenceAuditComplete:false},installedQuickReview:{previousInstallation:ref('F:/VisibleMedicine/recovery/checkpoints/20261030-quick-review-local-install/checkpoint.json'),visibleRecheck:true,controls:['Quick review','Anatomy','Teaching','Group','Start review','Approve & next instructions'],newDecisions:0,restarted:false,previewPid:106988},nativePractice:{localOnly:ref(cp+'/local-only/head-practice/RESULT.json'),functionalSteps:9,scope:'Installed CT/MRI practice and semantic concept continuity only; installed viewer differs from staged viewer. No patient-space registration or clinical approval asserted.'},installed:false,publicDeployment:false,clinicalApproval:false};
+write(cp+'/VERIFICATION.json',proof);
+const selected=new Map();function collect(dir,prefix=''){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=prefix+e.name;if(e.isDirectory())collect(dir+'/'+e.name,p+'/');else selected.set(p,dir+'/'+e.name);}}collect(prior+'/selected-source');
+for(const p of source.currentChanges)selected.set('website/'+p,site+'/'+p);
+for(const p of ['prepare.mjs','seal.mjs','audit-build.mjs','save.mjs'])selected.set('recipes/release-scope/'+p,root+'/'+p);
+for(const [p,file] of selected)write(cp+'/selected-source/'+p,read(file));
+const files=[...selected].map(([p,file])=>({path:p,sha256:hash(file),bytes:fs.statSync(file).size}));
+let sourceBackup;
+try{backup({root:cp+'/source-only-backup',repo:root+'/source-only-backup.git',branch:'backup/release-scope-20261031',files,bytesFor:p=>read(selected.get(p)),sourceIdentity:{source:proof.source},scope:'Selected authored source, tests and public notices/provenance only. No scans, masks, models, private review decisions, actual browser observations or canonical Git ancestry. Not a whole-project backup; no deployment or clinical approval.',proof:{at,focused:proof.tests.focused,buildPassed:true,wholeSuitePassing:false,installed:false},verifySource:verify});sourceBackup={...ref(cp+'/source-only-backup/github-backup.json'),verified:true};}
+catch(error){write(cp+'/SOURCE_BACKUP_FAILURE.json',{at,error:String(error),verified:false});sourceBackup={...ref(cp+'/SOURCE_BACKUP_FAILURE.json'),verified:false};}
+const next='Quick review remains installed and available. Staged source54710c21 passes production build and30focused tests; full stock suite remains open. Integrate saved tour-entry test-only proposal into a new successor, resolving its hardcoded current-receipt binding without circular hashes; preserve original assertions and byte-exact epoch proofs. Then run applicable release checks and continue the complete71-requirement/eight-idea roadmap. No clinical approvals or new installation.';
+const checkpoint={schema:'vm-release-scope-built-checkpoint/1',at,source:proof.source,verification:ref(cp+'/VERIFICATION.json'),prior:ref(prior+'/checkpoint.json'),sourceBackup,next,installed:false,wholeSuitePassing:false};write(cp+'/checkpoint.json',checkpoint);
+const cpRef=ref(cp+'/checkpoint.json'),index=json('CURRENT_CHECKPOINT.json'),v=index.activeWork.current;
+v.latestCheckpoint=cpRef;if(sourceBackup.verified)v.latestSourceOnlyBackup=sourceBackup;
+v.currentStagedCandidate={stage:root,source:proof.source,review:source.review,runtimeUnchangedFromParent:true,buildPassed:true,installed:false};
+v.latestBuildTrial={checkpoint:cpRef,terminal:true,passed:true,sourceUnchanged:true};
+v.pendingReleaseScope={checkpoint:cpRef,focusedPassed:30,fullBuildPassed:true,consumerRepairPending:true,wholeSuitePassing:false,installed:false};
+v.latestReleaseQueue={path:cp+'/prior-stock/RELEASE_QUEUE.json',terminal:true,counts:proof.tests.stockPredecessor,wholeSuitePassing:false};
+v.activeExecutionSessions=[];v.next=next;index.next=next;
+v.beforeFurtherWork='Source54710c21 fullbuild4096 is terminal exit0,782inventoried files/34packages;30focused tests pass. Prior stock partition7 terminal161pass2fail, adjacent consumer7pass1fail. Worker tour-entry proposal9/9 fixture pass is saved in latest checkpoint but not integrated: repair hardcoded current receipt binding before successor tests. Installed Review3648/PID106988 unchanged and quick review visibly verified. Native CT/MRI9-step QA local-only. No known temporary jobs remain.';
+v.lastUpdated=at;index.activeWork.updated=at;index.activeWork.lastUpdated=at;index.goal.previousTurn='progress';
+index.historyArchive={...ref(cp+'/INDEX_BEFORE.json'),allHistoryRetained:true,format:'Full prior index at original JSON paths, preserving its archive chain. Omitted fields are historical records, not approval or completion.'};
+for(const key of ['pendingHeadReverseFocus','pendingGeistFont','pendingReviewReturnFocus','pendingBrandProvenance','pendingWebsitePackageNotices']){if(Buffer.byteLength(JSON.stringify(index)+'\n')<=fs.statSync('CURRENT_CHECKPOINT.json').size-1024)break;delete v[key];}
+assert(Buffer.byteLength(JSON.stringify(index)+'\n')<=fs.statSync('CURRENT_CHECKPOINT.json').size);
+const cf=canonical+'/docs/completion-checklist.json',mf=canonical+'/docs/completion-checklist.md',c=json(cf),old=structuredClone(c);
+assert.equal(c.revision,420);assert.equal(read(mf).toString(),renderChecklist(old));write(cp+'/CHECKLIST_BEFORE.json',read(cf));
+c.revision=421;c.updatedAt=at.slice(0,10);c.roots.releasescope=cp;
+for(const id of ['REL-01','REL-02'])c.items.find(i=>i.id===id).evidence.push('releasescope:checkpoint.json');
+c.changeLog.unshift({revision:421,date:c.updatedAt,change:'Staged source54710c21 passes full website build,30focused tests and final client/RSC/SSR distribution verification(782files,34packages). Earlier3584MiB build failure retained; successful4096MiB trial kept2048MiB system reserve. Predecessor stock partition7 finished161pass2fail; both repaired in focused tests. Adjacent tour-entry consumer7pass1fail; worker9/9 repair remains an unintegrated proposal. Actual installed CT/MRI practice verified in9functional steps, evidence local-only. Quick review remains installed and visible; no new decisions/restart. Full suite, broader rights audit and clinical review remain open.'});
+validateChecklist(c);assert.equal(c.items.length,71);assert.equal(c.items.filter(i=>i.scope==='optional').length,8);assert.deepEqual(c.items.map(({id,status})=>({id,status})),old.items.map(({id,status})=>({id,status})));
+fs.writeFileSync(cf,JSON.stringify(c,null,2)+'\n');fs.writeFileSync(mf,renderChecklist(c));saveIndex(index);
+const intro='## Current: staged website build verified; quick review available — 31 October 2026\n\nStaged source54710c21 passes the full website build and30focused checks;782built files/34packages audited. Installed quick review stays available. Full release suite remains open; a tour-entry test repair is saved for integration. Actual installed CT/MRI practice passes9functional checks with local-only evidence.\n\nCheckpoint:'+cp+'/checkpoint.json ('+cpRef.sha256+').\n\n';
+write(cp+'/WORKSPACE_MAP_BEFORE.md',read('WORKSPACE_MAP.md'));const map=Buffer.from(intro+'Website F:/VisibleMedicine/website; Atlas F:/VisibleMedicine/atlas. Candidate '+root+'. Checklist421 retains71requirements/eightideas. No known temporary jobs.\n'),size=fs.statSync('WORKSPACE_MAP.md').size;assert(map.length<=size);
+const fd=fs.openSync('WORKSPACE_MAP.md','r+');try{fs.writeSync(fd,Buffer.concat([map,Buffer.alloc(size-map.length,32)]));fs.fsyncSync(fd);}finally{fs.closeSync(fd);}
+const master=canonical+'/docs/master-plan.md';write(cp+'/MASTER_PREFIX_ROLLBACK.json',{path:master,previous:ref(master),prefix:intro,method:'Remove exact prefix and verify previous bytes.'});fs.writeFileSync(master,intro+read(master).toString());
+write(cp+'/SAVED.json',{checkpoint:cpRef,sourceBackup,checklist:421,index:ref('CURRENT_CHECKPOINT.json'),goalActive:true,ownerPreviewChanged:false});
+console.log(JSON.stringify({checkpoint:cpRef,sourceBackup,checklist:421,selectedFiles:files.length,ownerPreviewChanged:false}));
