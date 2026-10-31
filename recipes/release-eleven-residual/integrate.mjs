@@ -1,0 +1,43 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const proposal='G:/VisibleMedicine-temp/proposals/20261031-release-eleven-residual';
+const prior='G:/VisibleMedicine-temp/staging/20261031-release-partition11-repairs';
+const root='G:/VisibleMedicine-temp/staging/20261031-release-partition11-final',site=root+'/website';
+const pin=prior+'/SOURCE.json';
+assert.equal(hash(pin),'79f451df9dde58cd70a72eb6560d05fd74f8b421897405bd4ae82e6756304bb4');
+const parent=json(pin),main=json(proposal+'/MAIN_PROPOSAL.json'),worker=json(proposal+'/RESULT.json');
+const patches=[...main.files,{path:worker.source.path,before:worker.source.sha256,after:worker.proposal.sha256}];
+assert.equal(patches.length,3);assert.equal(main.parent.sha256,hash(pin));
+assert(!fs.existsSync(root));
+const terminal=json('G:/VisibleMedicine-temp/proposals/20261031-resumable-release/STATE.json');
+assert(terminal.terminal&&terminal.status==='failed');
+for(const p of patches){assert(p.path.startsWith('tests/'));assert.equal(hash(proposal+'/files/'+p.path),p.after);assert.equal(parent.sourceRows.find(r=>r.path===p.path)?.sha256,p.before);}
+const allowed=new Map(patches.map(p=>[p.path,p]));
+const rows=[];
+for(const row of parent.sourceRows){
+ assert.equal(hash(parent.website+'/'+row.path),row.sha256,row.path);
+ const patch=allowed.get(row.path),from=patch?proposal+'/files/'+row.path:parent.website+'/'+row.path;
+ const dest=site+'/'+row.path;fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(from,dest,fs.constants.COPYFILE_EXCL);
+ const expected=patch?.after??row.sha256;assert.equal(hash(dest),expected,row.path);
+ rows.push(patch?{...row,sha256:expected,bytes:fs.statSync(dest).size}:row);
+}
+fs.symlinkSync(fs.realpathSync(parent.website+'/node_modules'),site+'/node_modules','junction');
+fs.symlinkSync(parent.atlas,root+'/atlas','junction');fs.mkdirSync(root+'/tmp');
+const git=(...args)=>execFileSync('git',['-C',site,...args],{encoding:'utf8',windowsHide:true}).trim();
+git('init','--quiet');
+const objects=execFileSync('git',['-C','F:/VisibleMedicine/website','rev-parse','--path-format=absolute','--git-path','objects'],{encoding:'utf8',windowsHide:true}).trim().replaceAll('\\','/');
+fs.writeFileSync(site+'/.git/objects/info/alternates',objects+'\n',{flag:'wx'});
+git('update-ref','HEAD',parent.websiteHead);git('read-tree','HEAD');
+const inputs=json(site+'/atlas-review/integration-inputs.json');assert.equal(inputs.sha256,parent.review);
+for(const row of inputs.inputs)assert.equal(hash(site+'/'+row.path),row.sha256,'Review input '+row.path);
+fs.copyFileSync(pin,root+'/PARENT_SOURCE.json',fs.constants.COPYFILE_EXCL);
+assert.equal(hash(parent.historicalEnvironment.path),parent.historicalEnvironment.sha256);
+fs.copyFileSync(parent.historicalEnvironment.path,root+'/HISTORICAL_ENVIRONMENT.json',fs.constants.COPYFILE_EXCL);
+const write=(name,value)=>fs.writeFileSync(root+'/'+name,JSON.stringify(value,null,2)+'\n',{flag:'wx'});
+const source={...parent,schema:'vm-release-eleven-residual-successor/1',at:new Date().toISOString(),parent:{path:pin,sha256:hash(pin)},website:site,sourceRows:rows,currentChanges:patches.map(p=>p.path),authoredPaths:[...new Set([...parent.authoredPaths,...patches.map(p=>p.path)])],historicalEnvironment:{path:root+'/HISTORICAL_ENVIRONMENT.json',sha256:hash(root+'/HISTORICAL_ENVIRONMENT.json')},runtimeUnchangedFromParent:true,installed:false};
+write('SOURCE.json',source);
+write('COMPOSITION.json',{at:new Date().toISOString(),source:{path:root+'/SOURCE.json',sha256:hash(root+'/SOURCE.json')},parent:{path:pin,sha256:hash(pin)},changed:patches,sourceFiles:rows.length,protectedInputs:inputs.inputs.length,productUnchanged:true,rootRosterUnchanged:true,independentSourceCopies:true,installed:false,wholeSuitePassing:false});
+console.log(JSON.stringify({source:{path:root+'/SOURCE.json',sha256:hash(root+'/SOURCE.json')},changed:patches.length,protectedInputs:inputs.inputs.length,installed:false}));

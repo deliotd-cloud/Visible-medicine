@@ -1,0 +1,7 @@
+# Complete release follow-up inverse: cervical successor
+
+The frozen partition-11 candidate's `tests/atlas-cervical-epoch-preservation.test.mjs` is SHA-256 `4d8ff2445019a1ab272e166b23b2246d83681154127e29e83e269ea2a6a6e8e1`. The older three-root inverse expected its previous SHA-256 `bb3c2bb8b360b9d6bbba2e809525366afd5d827f27e9d61e54d01a78e2d28754`, so it failed before checking the original. The adjacent, already pinned five-followup preservation test records exactly three cervical successor edits: `readFileSync` aliasing, a `cervical-delivery-roles.mjs` import, and a collector-only wrapper.
+
+The proposed file applies those three inverse edits through the five-followup role inventory. It binds that inventory to SHA-256 `7a82b36f76b883fb16df1af64adeb329f7ff7418658131fcda2060f9c0201bfb`, requires the current cervical root's exact hash and exact edit lines, and requires the restored bytes to match the original `bb3c...` hash. It then performs the unchanged historical inverse to the `ff62...` fixture and keeps both original refusal-mutation loops. No historical epoch hash or assertion changes.
+
+Overlay only `files/tests/complete-release-followup-preservation.test.mjs` into a fresh candidate that contains its unchanged adjacent five-followups test and fixtures. Run the focused root and original source-matched partition in the main verifier when memory is available. This proposal received syntax-only verification; no runtime pass, build, clinical or installation claim.

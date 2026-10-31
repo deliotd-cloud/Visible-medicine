@@ -1,0 +1,18 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261031-saved-plan-ready',prepared=json(root+'/PREPARED.json'),parent=json(prepared.parent.path),site=prepared.website;
+assert.equal(hash(prepared.parent.path),prepared.parent.sha256);
+const changes=['components/HeadAtlasSavedStudyPlan.tsx','tests/head-saved-study-plan-ui.test.ts'];
+for(const r of parent.sourceRows)if(!changes.includes(r.path))assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const review=json(site+'/atlas-review/integration-inputs.json');for(const r of review.inputs)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+const rows=parent.sourceRows.map(r=>changes.includes(r.path)?{path:r.path,sha256:hash(site+'/'+r.path),bytes:fs.statSync(site+'/'+r.path).size}:r);
+const source={...parent,schema:'vm-saved-plan-visibility-source/1',at:new Date().toISOString(),parent:prepared.parent,website:site,sourceRows:rows,authoredPaths:[...new Set([...parent.authoredPaths,...changes])],currentChanges:changes,runtimeUnchangedFromParent:false,installed:false};
+const pin=root+'/SOURCE.json';fs.writeFileSync(pin,JSON.stringify(source,null,2)+'\n',{flag:'wx'});
+const tests=['head-study-plan','head-saved-study-plan-ui','head-study-set','head-study-set-order','head-study-set-order-ui','head-study-set-ui','head-study-set-navigation'].map(n=>'tests/'+n+'.test.ts');
+const result=spawnSync(process.execPath,['--max-old-space-size=1024','--experimental-strip-types','--test','--test-concurrency=1',...tests],{cwd:site,encoding:'utf8',windowsHide:true,maxBuffer:4*1024*1024,env:{...process.env,TEMP:root+'/tmp',TMP:root+'/tmp'}});
+const log=result.stdout+result.stderr;fs.writeFileSync(root+'/FOCUSED.tap',log,{flag:'wx'});
+assert.equal(result.status,0,log.slice(-7000));assert.match(log,/^ℹ fail 0\r?$/m);assert.match(log,/^ℹ skipped 0\r?$/m);
+const passes=Number(log.match(/^ℹ pass (\d+)\r?$/m)?.[1]);assert(passes>=16);
+for(const r of source.sourceRows)assert.equal(hash(site+'/'+r.path),r.sha256,r.path);
+fs.writeFileSync(root+'/FOCUSED_RESULT.json',JSON.stringify({at:new Date().toISOString(),source:{path:pin,sha256:hash(pin)},roots:tests,pass:passes,fail:0,skip:0,protectedReviewInputsUnchanged:true,unchangedOtherFiles:rows.length-changes.length,installed:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({source:hash(pin),files:rows.length,focused:passes,reviewUnchanged:true,installed:false}));
