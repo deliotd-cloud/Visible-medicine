@@ -1,0 +1,93 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T09:39:46.742Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "F:/VisibleMedicine/recovery/checkpoints/20261031-visual-ct-guidance-prepared/SOURCE_PREPARED.json",
+      "sha256": "08c9969078304afe207bf82eff237c630a9f2f9bd1e21ef5e0ffd85cf1ea1006"
+    },
+    "base": "09c42674b81c884ca419e6af7b43f2ef0977185b"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/nested-ct-orientation.ts",
+      "bytes": 4920,
+      "sha256": "4737352c9be2e3478020b7d60d3557741a8b8208ed584afe98b16eb25d332ae1"
+    },
+    {
+      "path": "atlas/scripts/nested-ct-orientation-history.mjs",
+      "bytes": 2190,
+      "sha256": "b439da783d5e414d3e43742cf69d530da5e3ccb0736c81743b2442105f136c72"
+    },
+    {
+      "path": "atlas/scripts/nested-visual-ct-history.mjs",
+      "bytes": 3593,
+      "sha256": "76ff2eed79f1fd1eeae1d99474f8c2646b71f65301e4089a646eaa563a833ce6"
+    },
+    {
+      "path": "atlas/scripts/test-nested-visual-ct-guidance.mjs",
+      "bytes": 4585,
+      "sha256": "308e53e68052fedf32989b5a9ef7b5e625f7e7ba8663e0467f02a5ef78849b84"
+    },
+    {
+      "path": "atlas/docs/visual-ct-guidance-evidence.md",
+      "bytes": 2323,
+      "sha256": "54831e8af1f2b0602fcd9193b7cb7b49f6be8fc103b2f4fb355c70d0f31a40b8"
+    },
+    {
+      "path": "atlas/scripts/validate-nested-ct-orientation.mjs",
+      "bytes": 12161,
+      "sha256": "88ad0062593910686332c7a93bf5f197a3764d69e9c99a99782623a0c631e6f0"
+    },
+    {
+      "path": "recipes/visual-ct/prepare.mjs",
+      "bytes": 4555,
+      "sha256": "80cfff7ffd9f34be0039aee2d64eefcd5fe1d99b24a2d1d883348811f92d77a3"
+    },
+    {
+      "path": "recipes/visual-ct/prepare-validation.mjs",
+      "bytes": 3849,
+      "sha256": "e541a3506ee7cc6c01091a621adbdc298f37a21e38b7abea9e51d2621577e46f"
+    },
+    {
+      "path": "recipes/visual-ct/verify-pure.mjs",
+      "bytes": 2165,
+      "sha256": "3079307a49a885d18f04901f3ceb36ac18ab2a8507ecadf943234c26d01fbf1e"
+    },
+    {
+      "path": "recipes/visual-ct/save-prepared.mjs",
+      "bytes": 9337,
+      "sha256": "8b05ecbe21aafa809db01054e7c24ea3a365c622bed130b3a4dc50f67e29767f"
+    },
+    {
+      "path": "recipes/visual-ct/verify-ready.mjs",
+      "bytes": 5308,
+      "sha256": "827f9e55aaa1d723dba6482ebe269071e548d32bd2aeb555ac6416e6318d3f02"
+    },
+    {
+      "path": "recipes/visual-ct/review-impact.mjs",
+      "bytes": 4401,
+      "sha256": "8e60d62baebbb9889dcb86718b66dc388f1c9463b357217a1b7200135f5d961c"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original CT teaching edits, citations, regression helpers and preparation recipes only. Three source/pure checks and five syntax checks passed; full Atlas generation/runtime verification and clinical review remain pending. No scans, images, masks, model assets, medical decisions, private references or raw canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "at": "2026-10-31T09:39:44.073Z",
+    "conceptsReworded": 2,
+    "placementsExpected": 3,
+    "bodyWords": 113,
+    "purePasses": 3,
+    "syntaxPasses": 5,
+    "runtimeValidated": false,
+    "clinicalApproval": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
