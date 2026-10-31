@@ -1,0 +1,14 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const root='G:/VisibleMedicine-temp/proposals/20261031-release18-main',proposal='G:/VisibleMedicine-temp/proposals/20261031-release18-lower';
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const m=JSON.parse(fs.readFileSync(proposal+'/MANIFEST.json'));
+assert.equal(sha(m.historicalCompositionWitness),m.files.find(r=>r.path.endsWith('release-epoch-composition-preservation.test.mjs.raw')).afterSha256);
+for(const name of ['lower-limb-display-pin-history.mjs','lower-limb-display-pin-history.test.mjs'])assert.equal(sha(m.baseline+'/tests/'+name),sha(proposal+'/tests/fixtures/release18-lower/'+name+'.raw'));
+let code=fs.readFileSync(root+'/integrate-combined.mjs','utf8');
+code=code.replace("parentPath='G:/VisibleMedicine-temp/staging/20261031-release18-initial/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release18-combined'","parentPath='G:/VisibleMedicine-temp/staging/20261031-release18-followup/SOURCE.json',root='G:/VisibleMedicine-temp/staging/20261031-release18-final'");
+code=code.replace('e82ff1d95774fc56c2c376f1d86e0a3ea2754592b663fbfbeec178a67266372b','3ec8df9072c64c1e72f69313e94e6b8e81ecbb72c287df00f5a724e1a1140c43');
+const start=code.indexOf('const inputs=['),end=code.indexOf('const proposals=',start);assert(start>0&&end>start);
+code=code.slice(0,start)+'const inputs='+JSON.stringify([[proposal,sha(proposal+'/MANIFEST.json')]])+';\n'+code.slice(end);
+code=code.replace('r.before??m.before?.[r.path]??null','r.beforeSha256??r.before??m.before?.[r.path]??null').replace('r.after??r.sha256','r.afterSha256??r.after??r.sha256');
+code=code.replace('vm-release-eighteen-combined-successor/1','vm-release-eighteen-final-successor/1');
+fs.writeFileSync(root+'/integrate-lower.mjs',code,{flag:'wx'});console.log('Prepared lower-limb successor with authentic witnesses.');

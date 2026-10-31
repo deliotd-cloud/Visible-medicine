@@ -1,0 +1,191 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-31T15:51:40.347Z",
+  "sourceIdentity": {
+    "source": {
+      "path": "G:/VisibleMedicine-temp/staging/20261031-release18-final/SOURCE.json",
+      "sha256": "bbebe31d1d2b296937a02d773fd3a09164d2c4ede68f46e52eb5c254321cde02"
+    },
+    "review": "cd2912d0b7ba9458cba4eba9bb8a5321d49262602c5ead9f959a9d43946251a3",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-abdominal-spatial-reasoning.test.ts",
+      "sha256": "f6a689825ad80d961556916a8cf2352dd00e18ea1b07e2c1a82cc79f089ac30b",
+      "bytes": 16564
+    },
+    {
+      "path": "website/tests/abdominal-spatial-saved-epoch.mjs",
+      "sha256": "3cf387acdd2dafcc7edabfef0d9c1d530e873797ee0a897dd9fa2f3ef953f27d",
+      "bytes": 3406
+    },
+    {
+      "path": "website/tests/clinical-review-foot-depth.test.ts",
+      "sha256": "ca31c9fe1c8173f910dbc84a1173e43e2ecbed131b434e7190a0fbeea6dc1e05",
+      "bytes": 18152
+    },
+    {
+      "path": "website/tests/nine-history-original-adjacent-current-tour-source-roles.mjs",
+      "sha256": "66cb2d654960cb270564da64478a21672ff84fddba89b6b56f6a56d2450eb99c",
+      "bytes": 6109
+    },
+    {
+      "path": "website/tests/release18-continuous-helper-preservation.test.mjs",
+      "sha256": "a1cf8e8c6bbc1d86906b61b3c7e28e8e81f390cf16943dba6cf533f973ed93ea",
+      "bytes": 1716
+    },
+    {
+      "path": "website/tests/fixtures/release18-lower/display-pin-c32-succession.json",
+      "sha256": "d11bf0d9f1daf4b0cc784181f871195730ba65be257fc8e3dcf0ae86c13c2c39",
+      "bytes": 6173
+    },
+    {
+      "path": "website/tests/fixtures/release18-lower/lower-limb-display-pin-history.mjs.raw",
+      "sha256": "948ca66d04c9a4c5b5ab6a82d1f2ed488d82f0b6ba00320dce70807d57734fa7",
+      "bytes": 6035
+    },
+    {
+      "path": "website/tests/fixtures/release18-lower/lower-limb-display-pin-history.test.mjs.raw",
+      "sha256": "e8581483d1f6823e30bc4517ff067dbc7da50d94d849d9ac3d3e26edd8fcf5a9",
+      "bytes": 3572
+    },
+    {
+      "path": "website/tests/fixtures/release18-lower/release-epoch-composition-preservation.test.mjs.raw",
+      "sha256": "0bc8ab0d9928b19bac75b36ffc8a0870d0e6cc4b7aba5fd7487dce553fc49a9a",
+      "bytes": 19498
+    },
+    {
+      "path": "website/tests/lower-limb-current-source-roles.test.mjs",
+      "sha256": "aadede861359ff51b9f20550be200c27c4cec08278698cbe40eb6ad310d89c0e",
+      "bytes": 6644
+    },
+    {
+      "path": "website/tests/lower-limb-display-pin-history.mjs",
+      "sha256": "7f3ed89f31d418cfba38ef1ee081a90c5530ef65c77c32e5ed66c70605e47e8d",
+      "bytes": 7627
+    },
+    {
+      "path": "website/tests/lower-limb-display-pin-history.test.mjs",
+      "sha256": "ac1ee1d8a8a0f93baab2c0324d753eeac55ebd93c134c7b14849f2db7f1a4f2d",
+      "bytes": 4677
+    },
+    {
+      "path": "website/tests/lower-limb-pin-history-source-roles.test.mjs",
+      "sha256": "a40dd14f9b6d69e10681a1e6fdc7339a5b6b94ce6439eda0cb23ec43dd41daf7",
+      "bytes": 6212
+    },
+    {
+      "path": "website/tests/release18-lower-composition-inverse.mjs",
+      "sha256": "2c4a9038e02ec47309a50d2f078cac291803bb773a6a2c0e4840d3871b03b1c0",
+      "bytes": 1803
+    },
+    {
+      "path": "website/tests/release18-lower-history-inverse.mjs",
+      "sha256": "2ea8b1ca2af0ef0dacf8d21066485a4677126c984f19e4e09513de86ca403b54",
+      "bytes": 1626
+    },
+    {
+      "path": "website/tests/release18-lower-history-seams.json",
+      "sha256": "cfa850dadc8ec51b665fe30de8123990b66d4ae02725cbe258904598d803001f",
+      "bytes": 4785
+    },
+    {
+      "path": "tools/release18-followup/prepare-dispatch.mjs",
+      "sha256": "01122bb66d5f3f5a83df2b489e7bd6179037578fbca10b30d3978f041326696a",
+      "bytes": 3418
+    },
+    {
+      "path": "tools/release18-followup/prepare-followup.mjs",
+      "sha256": "7920672c82b3c114e133557a4901f612ae0c17ddc7b4eeff6a3a6c05229545c7",
+      "bytes": 2178
+    },
+    {
+      "path": "tools/release18-followup/integrate-followup.mjs",
+      "sha256": "56a3c3eecf0ead7d24040d14135ec8b6d1a5c34a50ff27075d3ba5d1bd0b343f",
+      "bytes": 4580
+    },
+    {
+      "path": "tools/release18-followup/prepare-followup-check.mjs",
+      "sha256": "533a68fbc1e48a24cfa612ad95a052c078be3585399111469156011d050a27fc",
+      "bytes": 962
+    },
+    {
+      "path": "tools/release18-followup/check-followup.mjs",
+      "sha256": "93101eff4c95ba524b6e27e1588abe26b060629fa2b6de49fbb1de8a5b8b03b9",
+      "bytes": 1943
+    },
+    {
+      "path": "tools/release18-followup/track-followup.mjs",
+      "sha256": "6d40f6dc7a18f5674bcad50aab94b206e942cb206b8c266e8300852bbd75add2",
+      "bytes": 1561
+    },
+    {
+      "path": "tools/release18-followup/prepare-partition19.mjs",
+      "sha256": "aeecd98fb080b59313ab6125a2faeca7e93650c7c0281d0d1a4f177628aa96f1",
+      "bytes": 2265
+    },
+    {
+      "path": "tools/release18-followup/prepare-lower.mjs",
+      "sha256": "8111f24c6442fb3ead3dbbb3d756c7a9bc4602bc3e72fbb251255f951e5b842b",
+      "bytes": 1937
+    },
+    {
+      "path": "tools/release18-followup/integrate-lower.mjs",
+      "sha256": "745e99b35d9c251463ac96143f065a4742ebf9eb121dcd673a8286777da39512",
+      "bytes": 4182
+    },
+    {
+      "path": "tools/release18-followup/prepare-lower-check.mjs",
+      "sha256": "5e57ecb325076ce92efe69027d5044362efec080ee02007679464c562f35b97a",
+      "bytes": 920
+    },
+    {
+      "path": "tools/release18-followup/check-lower.mjs",
+      "sha256": "9b804ec9c634ec76a5c10e8182e56e6aba63620b6408c0629f4ebbcb94e75d7f",
+      "bytes": 1936
+    },
+    {
+      "path": "tools/release18-followup/save-followup.mjs",
+      "sha256": "88c15a02224ae080befe3c266b811230fc501136da5d4220173c488d24064d66",
+      "bytes": 10297
+    }
+  ],
+  "removed": [],
+  "scope": "Selected original test source, text-only test fixtures and validation recipes. No scans, patient identifiers, images, models, databases, generated runtime or canonical Git ancestry. Scoped source delta only; prior backups retained.",
+  "proof": {
+    "combined": {
+      "tests": 40,
+      "pass": 37,
+      "fail": 3,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "followup": {
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "historicalTourCasesInsideWrapper": 4,
+    "followupSourceRowsUnchanged": 7363,
+    "lowerRepairPrepared": true,
+    "lowerNativePassed": false,
+    "partition19": "running-observed",
+    "sourceOnlyCandidate": true,
+    "productChanged": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

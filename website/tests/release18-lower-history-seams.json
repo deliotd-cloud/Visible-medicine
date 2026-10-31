@@ -1,0 +1,49 @@
+{
+  "lower-limb-display-pin-history.mjs": {
+    "prior": "948ca66d04c9a4c5b5ab6a82d1f2ed488d82f0b6ba00320dce70807d57734fa7",
+    "current": "7f3ed89f31d418cfba38ef1ee081a90c5530ef65c77c32e5ed66c70605e47e8d",
+    "edits": [
+      {
+        "oldStart": 158,
+        "old": "",
+        "new": "import {readFileSync} from 'node:fs';\n"
+      },
+      {
+        "oldStart": 2959,
+        "old": "",
+        "new": "const successionBytes=readFileSync(new URL('./fixtures/release18-lower/display-pin-c32-succession.json',import.meta.url));\nassert.equal(sha(successionBytes),'d11bf0d9f1daf4b0cc784181f871195730ba65be257fc8e3dcf0ae86c13c2c39',\n 'Authenticated post-b79 display-pin succession');\nconst succession=JSON.parse(successionBytes);\nassert.equal(succession.schema,'vm-lower-display-pin-c32-succession/1');\nassert.equal(succession.from,'b79e110d2d28f18993263926ba35aa7a3f478b20');\nassert.equal(succession.to,'c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3');\nassert.equal(succession.path,file);\nassert.equal(succession.fromSha256,laterPinEpochs.at(-1)[1]);\nassert.equal(succession.toSha256,'34c9aadb624d2b8dd073736c997ad7d87d8aef549755ca2d8ef46706b590acb7');\nassert.equal(succession.rows.length,21,'Every subsequent pin-changing source commit is declared');\n"
+      },
+      {
+        "oldStart": 5700,
+        "old": " assert.equal(sha(currentBytes),laterPinEpochs.at(-1)[1],'Current pin document must equal the complete declared later source epoch');\n assert.deepEqual(current,previous,'Unrecognized later display-pin changes require a new explicit source-bound history, not a widened allowance');\n",
+        "new": " assert.equal(sha(readGit(succession.from,file)),succession.fromSha256,'Complete authenticated b79 document');\n assert.equal(revision,succession.to,'Exact current source epoch');\n for(const row of succession.rows){\n  const source=readGit(row.commit,file);\n  assert.equal(sha(source),row.sha256,'Exact subsequent display-pin bytes: '+row.commit);\n  const next=map(source),ids=changed(previous,next);\n  assert.equal(ids.length,row.changedCount,'Exact subsequent pin-change count: '+row.commit);\n  assert.equal(sha(JSON.stringify(ids)),row.changedIdsSha256,'Exact subsequent changed IDs: '+row.commit);\n  transitions.push({source:row.commit,ids});previous=next;\n }\n assert.equal(succession.rows.at(-1).commit,revision,'No terminal source omitted');\n assert.equal(sha(currentBytes),succession.toSha256,'Current imported document must equal the complete declared source epoch');\n assert.deepEqual(current,previous,'Unrecognized current display-pin changes require an explicit source-bound history');\n"
+      }
+    ]
+  },
+  "lower-limb-display-pin-history.test.mjs": {
+    "prior": "e8581483d1f6823e30bc4517ff067dbc7da50d94d849d9ac3d3e26edd8fcf5a9",
+    "current": "ac1ee1d8a8a0f93baab2c0324d753eeac55ebd93c134c7b14849f2db7f1a4f2d",
+    "edits": [
+      {
+        "oldStart": 861,
+        "old": "",
+        "new": "const succession=JSON.parse(readFileSync(new URL('./fixtures/release18-lower/display-pin-c32-succession.json',import.meta.url)));\n"
+      },
+      {
+        "oldStart": 1779,
+        "old": "test('all1104 exact pins retain two colic, three neck, five renal and eleven later source revisions',()=>{\n",
+        "new": "test('all1104 exact pins retain the original fourteen transitions and every source revision through c32',()=>{\n"
+      },
+      {
+        "oldStart": 1974,
+        "old": " assert.deepEqual(result.transitions.map(r=>r.ids.length),[2,3,5,22,6,3,8,6,8,12,12,12,20,8]);\n",
+        "new": " assert.deepEqual(result.transitions.slice(0,14).map(r=>r.ids.length),[2,3,5,22,6,3,8,6,8,12,12,12,20,8],\n  'All original historical pin transitions remain exact');\n assert.deepEqual(result.transitions.slice(14).map(r=>r.ids.length),succession.rows.map(r=>r.changedCount));\n assert.deepEqual(result.transitions.slice(14).map(r=>r.source),succession.rows.map(r=>r.commit));\n const commits=execFileSync('git',['log','--reverse','--format=%H',succession.from+'..'+CURRENT_ATLAS_REVISION,\n  '--','content/body-review-display-pins.json'],{cwd:root,encoding:'utf8',windowsHide:true,\n  env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).trim().split('\\n');\n assert.deepEqual(commits,succession.rows.map(r=>r.commit),'Every actual subsequent pin-changing commit admitted');\n assert.equal(sha(bytes),succession.toSha256,'Current imported full document');\n"
+      },
+      {
+        "oldStart": 3352,
+        "old": "",
+        "new": " const firstLater=succession.rows[0].commit;\n assert.throws(()=>exactDisplayPinHistory({...input,\n  readGit:(commit,p)=>commit===firstLater?git(succession.from,p):git(commit,p)}),\n  /Exact subsequent display-pin bytes/);\n"
+      }
+    ]
+  }
+}

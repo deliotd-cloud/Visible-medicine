@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {json,hash} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+import {saveIndex} from 'file:///F:/VisibleMedicine/staging/20261028-head-search-comparison-recipes/state.mjs';
+const i=json('CURRENT_CHECKPOINT.json'),c=i.activeWork.current,root='G:/VisibleMedicine-temp/staging/20261031-release18-followup';
+assert(json('G:/VisibleMedicine-temp/staging/20261031-release18-combined/FOCUSED.json').result.process.terminalObserved);
+assert.equal(json(root+'/focused-1/STARTED.json').runnerPid,183396);
+c.activeExecutionSessions=[{sessionId:49914,coordinatorPid:178440,supervisorPid:137564,runnerPid:183396,step:'release18-four-focused',evidence:root+'/focused-1',state:'started-observed-revalidate'}];
+c.currentReleaseQueue.state='combined-terminal-followup-running';
+c.currentReleaseQueue.repairCandidate={stage:root,source:{path:root+'/SOURCE.json',sha256:hash(root+'/SOURCE.json')},installed:false};
+c.next='Observe focused session49914: abdominal full historical/current behavior, foot depth, unchanged authentic historical dispatcher and new current helper. Combined17-root terminal37pass/3fail preserved in FOCUSED.json. Two lower-limb source-role failures assigned to release16_ui_checks in isolated release18-lower proposal. Keep installed preview unchanged. Full roadmap and release queue remain active.';
+saveIndex(i);console.log('Recorded actual running follow-up; prior combined run terminal.');
