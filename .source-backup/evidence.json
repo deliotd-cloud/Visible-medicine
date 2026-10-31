@@ -1,0 +1,20 @@
+{
+  "atlasHead": "4bb8f236a4cd57448342cbe4aa7b1641aff9743a",
+  "atlasTree": "eb6c154e2edaeb9e35825348748ef5971ff0d350",
+  "modelRevision": "a4b7fbed005fa7c60cee5e34e509060c391223b638e25f66c1e4f9b88b991ac8",
+  "review": "d0a7ed974587db9174577d3ed21a9c1af83f47ea954d733042d50788961035f8",
+  "builds": {
+    "native": true,
+    "review": true,
+    "website": true
+  },
+  "focused": {
+    "tests": 55,
+    "pass": 55,
+    "fail": 0
+  },
+  "wholeSuitePassing": false,
+  "clinicalApproval": false,
+  "patientRegistration": false,
+  "publicDeployment": false
+}
