@@ -1,0 +1,72 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T10:50:50.737Z",
+  "sourceIdentity": {
+    "websiteSource": "ad7457a339b3174bf6d645e31f5c99458efb3c12139566825b83ef21bc0f9157",
+    "native": "7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/atlas-catalog-types.mjs",
+      "bytes": 5904,
+      "sha256": "ded2a0c0d0fe72263d2eaaf95fb811b554f2119944948ce8b00c3f7de65d2aa5"
+    },
+    {
+      "path": "website/scripts/atlas-catalog-declaration-template.mjs",
+      "bytes": 1166,
+      "sha256": "2c40e56a29e3c6b6393bc7ce39790e4ed84b6e58c900eb1399b3c92b4ff3c09b"
+    },
+    {
+      "path": "website/scripts/atlas-compiler-artifact-plugin.mjs",
+      "bytes": 2891,
+      "sha256": "1a5a7c0b9d40646cb85ae28cce7e2c348f7dc555b7b65a32c77aec6e115d10d2"
+    },
+    {
+      "path": "website/tests/atlas-compiler-artifact-plugin.test.mjs",
+      "bytes": 4084,
+      "sha256": "8910f655fb32dc9e5cd6f6d1ef73382b9e6088eec422b63cb197d29eb1ba4b63"
+    },
+    {
+      "path": "website/vite.config.ts",
+      "bytes": 4978,
+      "sha256": "11ec2ec8aec293aacd88b118f7b965e513711c13c0f1c3300e31f14d716c5c53"
+    },
+    {
+      "path": "audit.mjs",
+      "bytes": 4575,
+      "sha256": "8a80603e900dac9933e4cfeb1e774e444e2d53d286269394f62b6bcd7e9cc032"
+    },
+    {
+      "path": "checks.mjs",
+      "bytes": 3983,
+      "sha256": "3b14d6ace41995b5ff9201946a7cadba27cb69eec0e189edc7829fca0df9c623"
+    },
+    {
+      "path": "run.mjs",
+      "bytes": 1675,
+      "sha256": "23a25664a0eeeb1719a8b069e11f53269fa493519c193aa3fa29b7f2550b98e1"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 2837,
+      "sha256": "52c9e7c2230e2243c41182abbe8e5456213fdadd4b17ea1a31f1392263fa66e6"
+    }
+  ],
+  "removed": [],
+  "scope": "Nine selected packaging/audit source and test files. No model binaries, scans, masks, identifiers, private references, screenshots, user decisions, credentials or canonical Git ancestry. This is an unintegrated source overlay, not a complete project backup or deployed release.",
+  "proof": {
+    "focusedTests": 14,
+    "packagingRehearsal": true,
+    "manifestFiles": 222,
+    "packages": 22,
+    "fullWebsiteBuild": false,
+    "integrated": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
