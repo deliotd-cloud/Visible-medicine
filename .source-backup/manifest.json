@@ -1,0 +1,55 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T21:51:42.481Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "7b2e5accf8538f3ffef396f95b0a206b06a76c1b",
+    "candidateBinding": "b5d53a2f8c8eb630631b55830f0547929221c47e6bbd80e063d69c0d991f75bb",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/HeadAtlasComparisonNavigation.tsx",
+      "sha256": "4c0ca54d0f5f3f5ff401bc565bfa49c076554dc9a864af4f17d7aa980f603d5d",
+      "bytes": 10043
+    },
+    {
+      "path": "app/atlas/head-neck-3d/head-learning.css",
+      "sha256": "185ec62f14881125aaf5bde906e415457d6a4a03db3143dc9c56979a36770c4a",
+      "bytes": 20004
+    },
+    {
+      "path": "tests/head-comparison-paused-row.test.mjs",
+      "sha256": "a0a697a8cb313bb08a5b6f2060bf8e6929e10fe5cd480d5eb9f5604fc55ae7a7",
+      "bytes": 4698
+    },
+    {
+      "path": "tests/head-link-menu-keyboard.test.mjs",
+      "sha256": "3b99f0079c6f659cd87b1f91614caf7c2a542e3b9e6d25a0a87014b3aa98af86",
+      "bytes": 10184
+    }
+  ],
+  "removed": [],
+  "scope": "Four selected source files for a prepared compact desktop comparison row during guided learning and practice. Includes regression tests. No runtime bundles, models, scans, masks, private records or raw Git ancestry. Full Review generation, full website types/build and installed viewer acceptance remain pending.",
+  "proof": {
+    "distinctVerifiedCases": 72,
+    "recheckRoot": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0
+    },
+    "isolatedBrowserLayout": true,
+    "realViewerAcceptance": false,
+    "fullBuild": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
