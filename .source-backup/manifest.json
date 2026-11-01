@@ -1,0 +1,44 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T13:54:16.248Z",
+  "sourceIdentity": {
+    "nativeHead": "c881cc45a1b0c0f2f617130738e9b1f2597af54e",
+    "parent": "056ea3561a8d61fc2d11c4caa01b7bd553c16a65",
+    "tree": "552218b5c8aa9760b6066c5765a2cb2b4edb794e"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 4592,
+      "sha256": "2706c6fd19340dff3bc6bf0da4e39fd875e3d7de59d11e25d63131f9e8932c3d"
+    },
+    {
+      "path": "public/models/bodyparts3d/full-body/catalog.d.json.ts",
+      "bytes": 360,
+      "sha256": "c408c0e16e6c29abf6854d54556a3495aecb757a132fb1b15282ad8307370103"
+    }
+  ],
+  "removed": [],
+  "scope": "Two selected source files: Git line-ending rules and generated compiler declaration. No model geometry, patient data, masks, private records or canonical Git ancestry. Other Atlas source and website changes are not included in this small checkpoint.",
+  "proof": {
+    "checkoutModes": [
+      "true",
+      "false"
+    ],
+    "nativeCatalogTests": 4,
+    "fullNativeTypes": true,
+    "nativeRuntimeBuilt": true,
+    "websiteAssembled": true,
+    "matchingReviewBuilt": true,
+    "websiteTypes": false,
+    "websiteProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
