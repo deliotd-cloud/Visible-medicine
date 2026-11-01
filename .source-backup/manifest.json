@@ -1,0 +1,30 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T11:20:03.353Z",
+  "sourceIdentity": {
+    "native": "e32617ef2ed8690472e797d791a061fa3b1985b4",
+    "websiteSource": "2f654df39243feffd22f1950512f054b7e259b075f6e53bb29ef5760df471251"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-compiler-artifact-plugin.test.mjs",
+      "bytes": 4553,
+      "sha256": "1599970e9dc22ba74556505c62c14c1ad26dea378fb5591bd379087914c2c02d"
+    }
+  ],
+  "removed": [],
+  "scope": "One synthetic packaging test source file; no fixture data, scans, private references, source-model binaries, credentials or canonical Git ancestry. Remaining complete-delivery and production-build checks are not claimed complete.",
+  "proof": {
+    "focusedPassingCases": 7,
+    "temporaryFixtureCleanupVerified": true,
+    "fullAcceptance": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
