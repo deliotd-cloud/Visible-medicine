@@ -1,0 +1,69 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T00:12:13.091Z",
+  "sourceIdentity": {
+    "atlasHead": "f949979e975b6260575a7fd72901bcc2aec0be05",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "review": "5148eedc162c15c6f7e954654ae608a87589a1a43f790750e6275bb7ead5a975",
+    "sourceSha256": "6aded0c28d62dcdc72ba4b7e9048332f8da5e92c6087b90dcf44215acdc1e16f"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "sha256": "2e96397f4db6cc95ef551099352a3d1a531117c6fb7400e7936fe04d8f8476fc",
+      "bytes": 42506
+    },
+    {
+      "path": "website/lib/clinical-review-inbox.ts",
+      "sha256": "1fffcbe7359402765d1fad4b98744047e10a242c83cebbb61d02e96007a29bc7",
+      "bytes": 10154
+    },
+    {
+      "path": "website/lib/head-hippocampal-clinical.ts",
+      "sha256": "e12b049a5ebdf4fe6e8cd37244f8d0caeea20258347f984aef6a3bcb30369472",
+      "bytes": 6387
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-batching.test.mjs",
+      "sha256": "f9457667df643b07c338432bacc0e298e79c3cf737ccdacb64a180afdb73132c",
+      "bytes": 12374
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-ui.test.mjs",
+      "sha256": "7aaab41a0ea20fc0608d9db7cdeb3644716ac9fc4064aecc2e1cb608db98e023",
+      "bytes": 28916
+    },
+    {
+      "path": "website/tests/fixtures/inbox-before-batching.ts.raw",
+      "sha256": "060b4451447121dc91e616d40af6b68f0707ca83453936ecea4703cc26e7b365",
+      "bytes": 9588
+    },
+    {
+      "path": "website/tests/head-hippocampal-current-source.test.mjs",
+      "sha256": "30e736ed7343b51cfe72c4d805db89b892bfad1832b35b1635f1476bf41c3f71",
+      "bytes": 5809
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected staged code/test files for bounded Clinical Review batching and exact current hippocampal packet identity. Not installed. Excludes scans, masks, private records, databases, MRI lookup, screenshots, generated assets and canonical repository ancestry. Not a complete project backup.",
+  "proof": {
+    "installedLocally": false,
+    "focusedTests": 130,
+    "focusedFailures": 0,
+    "negativeControlPassing": true,
+    "syntheticBrowser67PagesPassing": true,
+    "configuredTypesPassing": false,
+    "websiteBuildPassing": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "publicDeployment": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
