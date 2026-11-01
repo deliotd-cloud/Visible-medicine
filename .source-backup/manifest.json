@@ -1,0 +1,51 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T23:03:21.355Z",
+  "sourceIdentity": {
+    "nativeBaseline": "7b2e5accf8538f3ffef396f95b0a206b06a76c1b",
+    "candidateContentSha256": "8e833459d5b893ae94835b50e0e041d216f5467acc46a5ead13583e0ab7dd117",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/cricothyroid-teaching.ts",
+      "sha256": "8e833459d5b893ae94835b50e0e041d216f5467acc46a5ead13583e0ab7dd117",
+      "bytes": 6801
+    },
+    {
+      "path": "review-evidence/test-cricothyroid-ultrasound.mjs",
+      "sha256": "344d0a36fc581ed6bae59a62627f2e3a0b62bbea2b3a9a428485ea53c92fbfc6",
+      "bytes": 3327
+    },
+    {
+      "path": "review-evidence/test-bindings.mjs",
+      "sha256": "0d7dd1d9317196e855175a8ee1261aa4f6a235c312ba92a511f718dfad41dc5d",
+      "bytes": 3405
+    },
+    {
+      "path": "docs/CRICOTHYROID_ULTRASOUND_PROPOSAL.md",
+      "sha256": "79570a88e3984a5d9cc9f60e674fb572249b1dff8ee0d166901990ff9347a3f8",
+      "bytes": 1852
+    }
+  ],
+  "removed": [],
+  "scope": "Original proposed cricothyroid ultrasound paragraph and source references, with local proposal checks. Not installed or clinically approved. No source figures, datasets, scans, masks or private records.",
+  "proof": {
+    "stagedOnly": true,
+    "isolatedModuleTestPassed": true,
+    "all108NestedBindingsCompared": true,
+    "changedPlacements": 4,
+    "unchangedPlacements": 968,
+    "negativeIdentityChecks": 12,
+    "clinicalApproval": false,
+    "productionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
