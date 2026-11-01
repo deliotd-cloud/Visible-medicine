@@ -1,0 +1,171 @@
+'use client';
+import {headImageHref} from '../lib/head-atlas-navigation';
+
+import {useLayoutEffect,useRef,useState} from 'react';
+import {headLabel} from '../lib/head-atlas-display';
+import {HEAD_LINK_REVISION,type HeadModality} from '../lib/head-atlas-links';
+import {headImageConcept} from '../lib/head-image-only-links';
+import type {HeadEntry} from '../lib/head-atlas-import';
+import type {HeadPracticeReviewItem,PracticeMode,PracticeOutcome} from '../lib/head-atlas-practice';
+import {HeadAtlasTeaching} from './HeadAtlasTeaching';
+import {headPracticeGuides} from '../lib/head-practice-learning';
+import type {HeadLearningPosition} from '../lib/head-atlas-learning';
+import {filterHeadPracticeReview,headReviewIdentity,reviewOutcomeFilter,type HeadReviewOutcomeFilter} from '../lib/head-practice-review-filter';
+import {HEAD_STUDY_SET_LIMIT} from '../lib/head-study-set';
+
+type Props = {
+  items: HeadPracticeReviewItem[];
+  modality: HeadModality;
+  revision: string;
+  active: boolean;
+  finished: boolean;
+  label?: 'Review original set'|'Review follow-up set';
+  onReviewEntry?: (entry: HeadEntry) => void;
+  onReviewGuide?: (position: HeadLearningPosition, entry: HeadEntry) => void;
+  onPracticeEntries?: (entries: HeadEntry[], mode: PracticeMode) => boolean;
+  studySet?: {entries: readonly HeadEntry[]; onAdd: (entries: HeadEntry[]) => number|false};
+};
+
+const outcomeLabels = {
+  correct: 'Correct first attempt',
+  incorrect: 'Incorrect first attempt',
+  revealed: 'Answer revealed',
+  unanswered: 'Unanswered',
+} as const;
+
+/** Only explicit feedback may expose learning or semantic comparison links. */
+export function HeadAtlasPracticeFeedback({entry,outcome,modality,revision,active,finished}:{
+  entry:HeadEntry|null;outcome:PracticeOutcome|null;modality:HeadModality;revision:string;active:boolean;finished:boolean;
+}) {
+  if(!active||finished||!entry||!['correct','incorrect','revealed'].includes(outcome??'')||revision!==HEAD_LINK_REVISION)return null;
+  const concept=headImageConcept(entry,modality);
+  if(!concept)return null;
+  const otherHref=headImageHref(modality==='CT'?'MRI':'CT',concept.conceptId,null,revision);
+  return <details key={`${entry.id}:${modality}:${revision}`} className="head-practice-review head-practice-feedback-learning">
+    <summary>Learn &amp; compare this structure</summary>
+    <p>Optional learning after your answer; your first-attempt score stays unchanged.</p>
+    <nav aria-label={`Compare ${headLabel(entry)} after answering`}>
+      {concept.atlasHref?<a href={concept.atlasHref} target="_blank" rel="noopener noreferrer">Existing 3D Atlas (new tab)</a>:<span>No exact 3D part mapped.</span>}
+      {otherHref&&<a href={otherHref} target="_blank" rel="noopener noreferrer">{modality==='CT'?'MRI':'CT'} anatomy (new tab)</a>}
+      {headPracticeGuides(entry,modality,revision).map(guide=><a key={guide.id} href={guide.href} target="_blank" rel="noopener noreferrer">Guided learning: {guide.label} (new tab)</a>)}
+    </nav>
+    <p>Return to this tab to continue the question set. Configured local previews load the approved scan automatically; otherwise choose the approved atlas folder in the new tab. These are separate, unregistered subjects, not matching slice positions.</p>
+    <p>{concept.scopeNote}</p>
+    <HeadAtlasTeaching conceptId={concept.conceptId} modality={modality} revision={revision}/>
+  </details>;
+}
+
+/** Session-only review of the current study's completed set. */
+export function HeadAtlasPracticeReview({items,modality,revision,active,finished,label,onReviewEntry,onReviewGuide,onPracticeEntries,studySet}:Props) {
+  const identity=headReviewIdentity(items,modality,revision,label??'Review this set')+`:${active}:${finished}`;
+  const [filters,setFilters]=useState<{identity:string;search:string;outcome:HeadReviewOutcomeFilter}>(()=>({identity,search:'',outcome:'all'}));
+  const [practice,setPractice]=useState<{identity:string;mode:PracticeMode;notice:string}>(()=>({identity,mode:'locate',notice:''}));
+  const [setNotice,setSetNotice]=useState<{identity:string;search:string;outcome:HeadReviewOutcomeFilter;studySet:Props['studySet'];accepted:readonly HeadEntry[]|null;message:string}>(
+    ()=>({identity,search:'',outcome:'all',studySet,accepted:null,message:''}));
+  const searchRef=useRef<HTMLInputElement>(null);
+  const filterSummaryRef=useRef<HTMLElement>(null);
+  const current=filters.identity===identity?filters:{identity,search:'',outcome:'all' as const};
+  const currentPractice=practice.identity===identity?practice:{identity,mode:'locate' as const,notice:''};
+  const currentSetNotice=setNotice.identity===identity&&setNotice.search===current.search&&
+    setNotice.outcome===current.outcome&&(setNotice.studySet===studySet||
+      !!setNotice.accepted?.length&&!!studySet&&setNotice.accepted.every(entry=>studySet.entries.includes(entry)))?setNotice:
+    {identity,search:current.search,outcome:current.outcome,studySet,accepted:null,message:''};
+  if(filters.identity!==identity)setFilters(current);
+  if(practice.identity!==identity)setPractice(currentPractice);
+  if(setNotice.identity!==identity)setSetNotice(currentSetNotice);
+  const visit={identity,items,entries:items.map(item=>item.entry),search:current.search,outcome:current.outcome,mode:currentPractice.mode,
+    active,finished,onPracticeEntries,studySet,practiceClaimed:false,addClaimed:false};
+  const rendered=useRef<typeof visit|null>(null);
+  useLayoutEffect(()=>{
+    rendered.current=visit;
+    return ()=>{if(rendered.current===visit)rendered.current=null;};
+  });
+  const entriesUnchanged=()=>visit.entries.length===items.length&&visit.entries.every((entry,index)=>entry===items[index]?.entry);
+  if(active||!finished||!items.length)return null;
+  const correct=items.filter(item=>item.outcome==='correct').length;
+  const visible=filterHeadPracticeReview(items,current.search,current.outcome);
+  const missed:HeadEntry[]=[];
+  const seen=new Set<HeadEntry>();
+  for(const {item} of visible){
+    if(!['incorrect','revealed','unanswered'].includes(item.outcome)||seen.has(item.entry))continue;
+    seen.add(item.entry);missed.push(item.entry);
+  }
+  const newMissed=studySet?missed.filter(entry=>!studySet.entries.includes(entry)):[];
+  const remaining=studySet?Math.max(0,HEAD_STUDY_SET_LIMIT-studySet.entries.length):0;
+  const additions=newMissed.slice(0,remaining);
+  const addVisibleMissed=()=>{
+    const latest=rendered.current;
+    if(!latest||latest!==visit||!entriesUnchanged()||latest.identity!==identity||latest.items!==items||
+      headReviewIdentity(items,modality,revision,label??'Review this set')+`:${active}:${finished}`!==identity||
+      latest.search!==current.search||latest.outcome!==current.outcome||latest.studySet!==studySet||
+      latest.active||!latest.finished||!studySet||!additions.length||latest.addClaimed)return;
+    // The add button may disable or change its label when the set updates.
+    // Leave keyboard focus on the stable disclosure that owns these controls.
+    filterSummaryRef.current?.focus({preventScroll:true});
+    latest.addClaimed=true;
+    const added=studySet.onAdd([...additions]);
+    if(added===false||added===0)latest.addClaimed=false;
+    setSetNotice({...currentSetNotice,studySet,accepted:added!==false&&added>0?additions.slice(0,added):null,
+      message:added===false?'Study set could not be updated. Review these results and try again.':
+      added>0?`${added} visible missed ${added===1?'structure':'structures'} added to My study set.`:'No visible missed structures were added. Review the current study set.'});
+  };
+  const practiseVisible=()=>{
+    const latest=rendered.current;
+    if(!latest||latest!==visit||!entriesUnchanged()||latest.identity!==identity||latest.items!==items||
+      headReviewIdentity(items,modality,revision,label??'Review this set')+`:${active}:${finished}`!==identity||
+      latest.search!==current.search||latest.outcome!==current.outcome||latest.mode!==currentPractice.mode||
+      latest.onPracticeEntries!==onPracticeEntries||latest.active||!latest.finished||!missed.length||latest.practiceClaimed)return;
+    latest.practiceClaimed=true;
+    if(onPracticeEntries?.(missed,currentPractice.mode)===false){
+      latest.practiceClaimed=false;
+      setPractice({...currentPractice,notice:'Practice could not start. This review has not changed.'});
+    }else setPractice({...currentPractice,notice:''});
+  };
+  return <details className="head-practice-review">
+    <summary>{label??'Review this set'}</summary>
+    <p>First attempts stay in this session; retries do not replace them. Some masks cover only part of a structure. CT, MRI and the existing 3D Atlas use separate, unregistered subjects.</p>
+    <p>{items.length-correct} to revisit · {correct} correct first attempts. Linked teaching notes are drafts; opening them does not change your score.</p>
+    <details className="head-practice-review-filters">
+      <summary ref={filterSummaryRef}>Filter results</summary>
+      <label>Search for structure <input ref={searchRef} type="search" value={current.search} onChange={event=>{setFilters({...current,search:event.currentTarget.value});setSetNotice({...currentSetNotice,message:''});}}/></label>
+      <label>Outcome <select value={current.outcome} onChange={event=>{setFilters({...current,outcome:reviewOutcomeFilter(event.currentTarget.value)});setSetNotice({...currentSetNotice,message:''});}}>
+        <option value="all">All results</option><option value="needs-review">Needs review</option><option value="correct">Correct first attempt</option>
+      </select></label>
+      <button type="button" onClick={()=>{setFilters({...current,search:'',outcome:'all'});setSetNotice({...currentSetNotice,message:''});searchRef.current?.focus();}}>Clear filters</button>
+      {onPracticeEntries&&<>
+        <label>Practice style <select value={currentPractice.mode} onChange={event=>setPractice({...currentPractice,mode:event.currentTarget.value as PracticeMode,notice:''})}>
+          <option value="locate">Locate on scan</option><option value="label">Choose label</option><option value="recall">Type label</option>
+        </select></label>
+        <button type="button" disabled={missed.length===0} onClick={practiseVisible}>Practise visible missed structures ({missed.length})</button>
+        <p role="status" aria-live="polite">{currentPractice.notice}</p>
+      </>}
+      {studySet&&<>
+        <button type="button" disabled={additions.length===0} onClick={addVisibleMissed}>Add visible missed to My study set ({additions.length})</button>
+        <p role="status" aria-live="polite">{currentSetNotice.message||(
+          newMissed.length===0?'No new visible missed structures to add.':remaining===0?'My study set is full. Remove an item there to add a missed structure.':
+          additions.length<newMissed.length?`${additions.length} of ${newMissed.length} new visible missed structures fit. Existing entries stay in place.`:
+          `${additions.length} new visible missed ${additions.length===1?'structure':'structures'} can be added. Existing entries stay in place.`
+        )} This does not start practice, save a plan or change your score.</p>
+      </>}
+    </details>
+    <p aria-live="polite">{visible.length} of {items.length} results visible</p>
+    {visible.length===0&&<p>No results match these filters.</p>}
+    <ol>{visible.map(({item:{entry,outcome},index})=>{
+      const label=headLabel(entry);
+      const concept=revision===HEAD_LINK_REVISION?headImageConcept(entry,modality):null;
+      const otherHref=concept?headImageHref(modality==='CT'?'MRI':'CT',concept.conceptId,null,revision):null;
+      const otherLabel=modality==='CT'?'MRI':'CT';
+      return <li key={`${entry.id}:${index}`} value={index+1}>
+        <span>{label} — {outcomeLabels[outcome]}</span>
+        {onReviewEntry&&<button type="button" aria-label={`Review ${label} on this scan`} onClick={()=>onReviewEntry(entry)}>Review on this scan</button>}
+        {concept&&<nav aria-label={`Compare ${label}`}>
+          {concept.atlasHref?<a href={concept.atlasHref} target="_blank" rel="noopener noreferrer">Compare in existing 3D</a>:<span>No exact 3D part mapped.</span>}
+          {otherHref&&<a href={otherHref} target="_blank" rel="noopener noreferrer">Compare on {otherLabel}</a>}
+          {headPracticeGuides(entry,modality,revision).map(guide=><span key={guide.id}><a href={guide.href} target="_blank" rel="noopener noreferrer">Guided learning: {guide.label} (new tab)</a>{onReviewGuide&&<button type="button" onClick={()=>onReviewGuide(guide.position,entry)}>Learn on this scan: {guide.label}</button>}</span>)}
+        </nav>}
+        {concept&&!concept.atlasHref&&<p>{concept.scopeNote}</p>}
+        {concept&&outcome!=='correct'&&<HeadAtlasTeaching conceptId={concept.conceptId} modality={modality} revision={revision}/>}
+      </li>;
+    })}</ol>
+  </details>;
+}

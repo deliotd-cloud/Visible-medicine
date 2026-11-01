@@ -1,0 +1,39 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T17:50:55.320Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "cecfb6e65625556da4bba4c57ac63be0cefed2558b55f95138c26907c97c39a5"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadAtlasPracticeReview.tsx",
+      "bytes": 12867,
+      "sha256": "a1390404181f7532c0311ffd3eeeb1fa1ef69f148a9517da783fa21f20190510"
+    },
+    {
+      "path": "website/tests/head-review-study-set-ui.test.ts",
+      "bytes": 12142,
+      "sha256": "281a9b6a44bbe18f54375f3d9ec3b44672f0a749a65bfcc698a3af191bd11665"
+    }
+  ],
+  "removed": [],
+  "scope": "Two selected practice-review component/test sources. No scans, masks, model binaries, credentials, clinical decisions, private objects, project ancestry or browser media. Not a whole-project backup.",
+  "proof": {
+    "focusedTests": 43,
+    "focusedPassing": true,
+    "negativeControlFailures": 2,
+    "scopedTypes": 423,
+    "actualReactSyntheticBrowser": true,
+    "reviewRebindingRequired": true,
+    "fullProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
