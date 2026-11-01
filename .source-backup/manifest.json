@@ -1,0 +1,95 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T09:16:44.554Z",
+  "sourceIdentity": {
+    "native": "7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc",
+    "tree": "2e742b31600a6da39af99558d07ff6986fec6b9e",
+    "runtimeManifest": "432799dadd4b89f0bc614513bbcc902b9195c0ae6a765c750373a2a498bb61cb"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "delivery/plan.mjs",
+      "bytes": 8937,
+      "sha256": "c1d5ad4dd8503ba94a945b893cc102637bd4fb1f202f8948b6956b25bf0f2723"
+    },
+    {
+      "path": "delivery/prepare.mjs",
+      "bytes": 1272,
+      "sha256": "c6889c5a1920e93fe56de3a87d33cf89c4191f6cc9bdeb24035eec709a47125b"
+    },
+    {
+      "path": "delivery/assemble.mjs",
+      "bytes": 4108,
+      "sha256": "9300d762327eb4953637049bc556c7394ec05706e9293a317573506b4403bbc8"
+    },
+    {
+      "path": "delivery/verify.mjs",
+      "bytes": 4320,
+      "sha256": "da1675f7edd2b683c777fb2b118ccaf6dcadd5a5bf69064a4859301e758b82ea"
+    },
+    {
+      "path": "delivery/run.mjs",
+      "bytes": 4175,
+      "sha256": "2b4bcc8cb5c373aa99dee5bc79e57ba96f21903b0421330569fcafef6740da2b"
+    },
+    {
+      "path": "delivery/focus-import-delivery.test.mjs",
+      "bytes": 1760,
+      "sha256": "702f1c69b4d0df166deb89765c84f0f7b9f19d9998fffe9ae8c7b16543c9742c"
+    },
+    {
+      "path": "delivery/plan.test.mjs",
+      "bytes": 3880,
+      "sha256": "8270a319235d5916dcb45676e56b1ac008ee9e5f024228bc80b8029f32de993e"
+    },
+    {
+      "path": "delivery/reuse-native.mjs",
+      "bytes": 6324,
+      "sha256": "920c9cbb8185e81d5a3a6c89c79c7c6136754924c48544f141291432fe20d117"
+    },
+    {
+      "path": "delivery/reuse-native.test.mjs",
+      "bytes": 3231,
+      "sha256": "2d81c4a4b91c0bc725f246880ff06b6d7afbcd51cafe81f0d759c12ebbc3399f"
+    },
+    {
+      "path": "delivery/preflight-reuse.mjs",
+      "bytes": 2152,
+      "sha256": "de145ebdbe03aed69823e158d2f780aaee815fde5e231209c63226f14ef63155"
+    },
+    {
+      "path": "runtime/build-export.mjs",
+      "bytes": 3301,
+      "sha256": "5b14bad3fadb2c39f881c15473cf45e1d833fec7bdf9128a205e90c7521abee6"
+    },
+    {
+      "path": "runtime/run-guarded.mjs",
+      "bytes": 719,
+      "sha256": "7c9c3d0811cf02052361161ddfff147d03877bbf5dd200e8e64ebd47c9301700"
+    },
+    {
+      "path": "runtime/serve-browser.mjs",
+      "bytes": 1873,
+      "sha256": "b2408af37f17a83cd25cc2ccbdda0b34b2836919454c2efc8d62984a278ee1bb"
+    }
+  ],
+  "removed": [],
+  "scope": "Thirteen selected delivery and runtime verification source files. No scans, medical images, model binaries, private packets, review decisions, browser evidence, credentials or canonical repository ancestry. This is a source-only recovery checkpoint, not a whole-project backup.",
+  "proof": {
+    "nativeRuntimeBuilt": true,
+    "sourceInputs": 1608,
+    "exportedFiles": 222,
+    "recipeTests": 9,
+    "builtProstateFocusBrowserCheck": true,
+    "websiteBuilt": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

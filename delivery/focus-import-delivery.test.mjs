@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+const root=process.env.VM_CATALOG_DELIVERY_ATTEMPT;
+assert(root&&/^G:\/VisibleMedicine-temp\/staging\/20261101-focus-delivery\/attempt-[1-9]\d*$/.test(root));
+const site=root+'/website',native='G:/VisibleMedicine-temp/staging/20261101-focus-native-integration/atlas';
+const sha=file=>createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const json=file=>JSON.parse(fs.readFileSync(file,'utf8'));
+test('focus helper is imported and bound once to the exact prostate review presentation',()=>{
+ const manifest=json(site+'/atlas-review/manifest.json'),binding=json(site+'/atlas-review/integration-inputs.json');
+ assert.equal(manifest.revision,'7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc');assert.equal(binding.sourceCommit,manifest.revision);
+ const rows=manifest.files.filter(row=>row.path==='app/study-return-focus.ts');assert.equal(rows.length,1);
+ assert.equal(rows[0].sourceSha256,sha(native+'/app/study-return-focus.ts'));
+ assert.equal(rows[0].importedSha256,sha(site+'/atlas-review/app/study-return-focus.ts'));
+ const pin=json(site+'/atlas-review/content/prostate-zones-revision.json');
+ assert.equal(pin.inputs.filter(row=>row.file==='app/study-return-focus.ts').length,1);
+ assert.equal(pin.inputs.find(row=>row.file==='app/study-return-focus.ts').sha256,rows[0].sourceSha256);
+ assert.equal(binding.inputs.filter(row=>row.path==='atlas-review/app/study-return-focus.ts').length,1);
+ assert.equal(binding.inputs.find(row=>row.path==='atlas-review/app/study-return-focus.ts').sha256,rows[0].importedSha256);
+ assert.equal(pin.clinicalReview,'pending');assert.equal(pin.patientSpaceRegistration,null);
+});
