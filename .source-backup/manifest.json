@@ -1,0 +1,57 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T00:37:48.069Z",
+  "sourceIdentity": {
+    "atlasHead": "c0818c9e959544f04b54ef914ec62040f6cac2b3",
+    "atlasTree": "dd9852dd608bdb323ef968e78cd12adbb3e9eca9",
+    "base": "f949979e975b6260575a7fd72901bcc2aec0be05"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/lib/nested-learning-anatomy.ts",
+      "sha256": "0f5f617833744a71ad86a766b8ab243fb6e3ec0a34636bf0283ff4d0d1e32448",
+      "bytes": 4188
+    },
+    {
+      "path": "atlas/content/body-renderer-revision.json",
+      "sha256": "e75e2528bb6b44372bfda1fe737da71fcdfc905214f0f4c828dc784b577f05bc",
+      "bytes": 228045
+    },
+    {
+      "path": "atlas/tests/nested-learning-study-types.ts",
+      "sha256": "ee3c31baa6d08e907f95f1a6e0e8230fd815a2c0b6c3ea1deb7793f2c0a6d112",
+      "bytes": 917
+    },
+    {
+      "path": "website/tests/clinical-review-cervical-disc-tour.test.ts",
+      "sha256": "80d1804820ca8e3f95305305a15ef711bae798c5cf39c6b670e2a006530e95a9",
+      "bytes": 33577
+    },
+    {
+      "path": "website/tests/clinical-review-regional-tour.test.ts",
+      "sha256": "16b329e04f1ddd218c9304274179e1dc759dbe36f4467f9d003b688e3fcda07d",
+      "bytes": 28201
+    }
+  ],
+  "removed": [],
+  "scope": "Five selected source/test files for native study type boundaries and portable review test harnesses. Candidate only; not installed. No scans, masks, private records, generated runtime assets or raw canonical repository ancestry. Not a complete project backup.",
+  "proof": {
+    "nativeTypeChecks": true,
+    "nestedLearningChecks": 7980,
+    "negativeControl": true,
+    "unchangedEmittedJavaScript": true,
+    "regionalBuild": true,
+    "websiteTypes": false,
+    "websiteBuild": false,
+    "installed": false,
+    "clinicalApproval": false,
+    "patientRegistration": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
