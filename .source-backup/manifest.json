@@ -1,0 +1,78 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T11:17:16.068Z",
+  "sourceIdentity": {
+    "native": "e32617ef2ed8690472e797d791a061fa3b1985b4",
+    "websiteSource": "74e25a0cf0d1abf65ee864beef4513e7a13ee0f7689672f834860103c0b9e28d"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/vite.config.ts",
+      "bytes": 4978,
+      "sha256": "11ec2ec8aec293aacd88b118f7b965e513711c13c0f1c3300e31f14d716c5c53"
+    },
+    {
+      "path": "website/scripts/atlas-catalog-declaration-template.mjs",
+      "bytes": 1166,
+      "sha256": "2c40e56a29e3c6b6393bc7ce39790e4ed84b6e58c900eb1399b3c92b4ff3c09b"
+    },
+    {
+      "path": "website/scripts/atlas-catalog-types.mjs",
+      "bytes": 5904,
+      "sha256": "ded2a0c0d0fe72263d2eaaf95fb811b554f2119944948ce8b00c3f7de65d2aa5"
+    },
+    {
+      "path": "website/scripts/atlas-compiler-artifact-plugin.mjs",
+      "bytes": 2891,
+      "sha256": "1a5a7c0b9d40646cb85ae28cce7e2c348f7dc555b7b65a32c77aec6e115d10d2"
+    },
+    {
+      "path": "website/tests/atlas-compiler-artifact-plugin.test.mjs",
+      "bytes": 4084,
+      "sha256": "8910f655fb32dc9e5cd6f6d1ef73382b9e6088eec422b63cb197d29eb1ba4b63"
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 10403,
+      "sha256": "b79c1bdefe808ea44f64ec1809cf6a021b45f83f5c1cb2b14a1d92b4229dee60"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "b0834d57c9deb033fb7daeebe2c0c85ed4c859788a82e4097fa380587e202789"
+    },
+    {
+      "path": "recipes/plan.mjs",
+      "bytes": 2974,
+      "sha256": "d8d9c52375555e3879b830a4dd16edd9dade3321dca2f63c506953ddee856e35"
+    },
+    {
+      "path": "recipes/prepare.mjs",
+      "bytes": 3701,
+      "sha256": "d82609cba7c30b74dacf6081ac3b773307144ee11ca8b30fba7500a5795d65d5"
+    },
+    {
+      "path": "recipes/assemble.mjs",
+      "bytes": 6316,
+      "sha256": "359b5df532bf088a61a83d4eca32acd4286224ba210aa835ee5c485298979afb"
+    }
+  ],
+  "removed": [],
+  "scope": "Ten selected website integration/packaging source and preparation recipe files only. No patient images, masks, private references, model binaries, rendered Review artifacts, browser evidence, credentials or canonical Git ancestry. Source assembly is complete; complete delivery remains unverified pending matching Review and website builds.",
+  "proof": {
+    "sourceAssemblyComplete": true,
+    "successfulFocusedCases": 11,
+    "coverageSourceCheck": true,
+    "completeDeliveryContractPending": true,
+    "reviewBuilt": false,
+    "websiteBuilt": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
