@@ -1,0 +1,103 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T03:56:28.192Z",
+  "sourceIdentity": {
+    "head": "32c000e5b9afb20503f3ce37c25ec119f0eaa3ab",
+    "tree": "14a052fb82da297c6eba038a5763fa9af45d5e43",
+    "modelRevision": "708d0ddc6de5765531689ae363018c31e13deaa2bdb6ab020045bd9277e8b7ac",
+    "renderer": "7c685a5555959540be7e18c572199abc03c9fb2b213f43e1c178f537941a0302",
+    "geometryChanged": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/prostate-zones.tsx",
+      "sha256": "6b277644cada20ab6866acd84168d05b07c1d22f8c09ddfb1d760adb7d171fa4",
+      "bytes": 20205
+    },
+    {
+      "path": "atlas/app/prostate-zones.css",
+      "sha256": "db45aeafba057e95602043dd1b97207db632e0e4eb66bbd47263235c38b2127b",
+      "bytes": 11801
+    },
+    {
+      "path": "atlas/content/body-renderer-revision.json",
+      "sha256": "da2daf337a9c0b833e6f7c82ebe7e21bb32c5912e60acde4d63881a689bd601e",
+      "bytes": 228330
+    },
+    {
+      "path": "atlas/content/prostate-zones-revision.json",
+      "sha256": "6ba71e16b31c19bf85d85de042adc70b0e22a0adf909df38c61c6fad5375554a",
+      "bytes": 3035
+    },
+    {
+      "path": "atlas/scripts/test-prostate-section-visibility.mjs",
+      "sha256": "d8f6669b163043177870c17ee549582443a65f4c04f602001a7e4f974b05fda6",
+      "bytes": 7456
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "sha256": "6777b6079a354bb4196c78c0799e99afbfe9497a8f44c768787a86dc2cc6a234",
+      "bytes": 9767
+    },
+    {
+      "path": "website/lib/prostate-review-presentation.json",
+      "sha256": "cebe088bce9466943e90b33ca2aa61e60cd6c5ddb4a20aebdf30ca36220a7b4e",
+      "bytes": 208
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "sha256": "04365bd1b3375bdd79e9067af0d02ea8d37df4be9bd0fed86ff12ae49383ed4a",
+      "bytes": 4552
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "sha256": "712daa46eca534b7f8401ef9536aeccf0d24d1002bf8d3b1e743bb5a2bc69a24",
+      "bytes": 5290
+    },
+    {
+      "path": "website/docs/anatomy-coverage/index.json",
+      "sha256": "1cd7ce845a4514519b5fae27dd3405b4cdb16574284c942e28c09a24910122e8",
+      "bytes": 155371
+    },
+    {
+      "path": "website/docs/anatomy-coverage/root.json",
+      "sha256": "77aa4326779b53e6a4bb2b45da2f985ab188b033994f0283afb5fa672d370df1",
+      "bytes": 1067871
+    },
+    {
+      "path": "website/docs/anatomy-coverage/nested.json",
+      "sha256": "3f67e392ec336e92408f6ba9a75d1c523cd0cfdae7827e7c56a2e2d90a737c3a",
+      "bytes": 789644
+    },
+    {
+      "path": "website/docs/anatomy-coverage/independent.json",
+      "sha256": "10cadaa4939f580a927f4df1267034230ce40c6736c102da3517b3dcb43520e7",
+      "bytes": 772784
+    },
+    {
+      "path": "website/docs/anatomy-coverage/reference.json",
+      "sha256": "7df6b43fbdfe9bca5b14ef3da762b0f63ed5e84fa6c978d174e11fd4adfd378f",
+      "bytes": 154089
+    }
+  ],
+  "removed": [],
+  "scope": "Fourteen selected source/test and generated non-patient anatomy-coverage/presentation metadata files. No scans, original mesh assets, private decisions, identifiers or raw canonical Git ancestry. Full delivery pending.",
+  "proof": {
+    "checks": {
+      "geometry": 6,
+      "teaching": 12,
+      "section": 3,
+      "binding-tests": 10
+    },
+    "focusedTypes": true,
+    "fullWebsiteBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
