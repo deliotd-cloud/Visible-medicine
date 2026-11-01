@@ -1,0 +1,62 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T02:48:40.280Z",
+  "sourceIdentity": {
+    "head": "3989be165904c30146d673e5fb4bf81fae241fac"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "docs/anatomy-coverage/index.json",
+      "sha256": "b15c22728c74e69949090ddcb67f3941de93605d8d7a6bcb1cb28524b1ced1ff",
+      "bytes": 155371
+    },
+    {
+      "path": "docs/anatomy-coverage/root.json",
+      "sha256": "48441ac9a93b86aade0895047ef35a2d8861846dfac5fa0b47bc21f8277e9427",
+      "bytes": 1067871
+    },
+    {
+      "path": "docs/anatomy-coverage/nested.json",
+      "sha256": "4af325f6a2dc86733f0c7b5d63372502fda1567951596f35bb3a4ebd74f6c819",
+      "bytes": 789644
+    },
+    {
+      "path": "docs/anatomy-coverage/independent.json",
+      "sha256": "2b2e8f1e724f610302b3ad9ebb74c33a056753f0e09f5f0df510cadc54954ffc",
+      "bytes": 772784
+    },
+    {
+      "path": "docs/anatomy-coverage/reference.json",
+      "sha256": "82a235ea3c133ae927d4e7f58b4c1b2eb14d2d7b7dcf11a5c1a8aa6af6fe2310",
+      "bytes": 154089
+    },
+    {
+      "path": "scripts/check-anatomy-coverage.mjs",
+      "sha256": "1de8303551e76bbe4de00923c17e53bedbb3ff06f8c23613b2c7fce8ce71b025",
+      "bytes": 4552
+    },
+    {
+      "path": "lib/anatomy-coverage-view.ts",
+      "sha256": "9723beac69c810fa28ac7740afd206ae57de8d9c1e2c4edd7be75f3633ce71ec",
+      "bytes": 5290
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected anatomy-inventory source metadata/checker/view files. No scans, identifiers, private records, assets or raw repository ancestry. Staged source metadata only; not a generated or installed website.",
+  "proof": {
+    "exactNativeRevision": true,
+    "sourceInputs": 172,
+    "countsAndAssessmentUnchanged": true,
+    "coverageVerificationPassed": true,
+    "fullWebsiteTypes": false,
+    "fullWebsiteBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
