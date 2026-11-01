@@ -1,0 +1,50 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T06:10:38.632Z",
+  "sourceIdentity": {
+    "nativeHead": "d567863a5a8af08b3bbbfa22adf512a389cdc3a3",
+    "teachingSnapshots": "40f4926b368ce5209d3fe74a298bb12018dd2b026afaae9069e2cdf09987023e"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/audit-teaching-quality.mjs",
+      "bytes": 6055,
+      "sha256": "7c1282c9f7cce0adb40b0b46b7b47e0eb17b0f7649094f7ea169cb0e531ae063"
+    },
+    {
+      "path": "scripts/test-teaching-quality-cli.mjs",
+      "bytes": 5525,
+      "sha256": "34c9c1699ea1038d7efb3474868487804645697585b26cb0e9463507b344cdf0"
+    },
+    {
+      "path": "scripts/teaching-quality-report.mjs",
+      "bytes": 6455,
+      "sha256": "fbdeda8e674a0445cf35ca84d62bd6b56516dc307f44b380481621dbfa16e8dc"
+    },
+    {
+      "path": "scripts/test-teaching-quality-report.mjs",
+      "bytes": 5657,
+      "sha256": "e8303989f55ccc51f5afc88d9565b1b0dc7c00ec61bd123c163c68efce246d98"
+    },
+    {
+      "path": "docs/TEACHING_QUALITY_AUDIT.md",
+      "bytes": 1424,
+      "sha256": "e9850d9652947e9f9f73ebe77e48812fd4d9c644cbf6b6a2a6e8c81a2a6d540d"
+    }
+  ],
+  "removed": [],
+  "scope": "Five audit-tool, focused-test and documentation source files only, including two unchanged dependencies. No model assets, scans, masks, identifiers, private references, owner decisions or original repository history. Not a whole-project backup.",
+  "proof": {
+    "focusedTests": 12,
+    "actualSnapshotLessons": 9936,
+    "unchangedAuditFindings": true,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
