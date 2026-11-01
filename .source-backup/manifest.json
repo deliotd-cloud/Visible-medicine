@@ -1,0 +1,51 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T11:30:46.231Z",
+  "sourceIdentity": {
+    "native": "e32617ef2ed8690472e797d791a061fa3b1985b4",
+    "websiteSource": "2f654df39243feffd22f1950512f054b7e259b075f6e53bb29ef5760df471251"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "contract.mjs",
+      "bytes": 3636,
+      "sha256": "0c640c054def7c5270a4a73746ccd6299d7dcdef283be40c828d241a028930a8"
+    },
+    {
+      "path": "contract.test.mjs",
+      "bytes": 3246,
+      "sha256": "b9b2c027f5249ffc2db8518a0052cd5b600ace24e1765325a229190a684f37ed"
+    },
+    {
+      "path": "fixtures/predecessor-contract.txt",
+      "bytes": 46495,
+      "sha256": "fd43f7a5bed8893e3921a797c663f3dae3b24d7a80a34c9919484fe3ae9cb99f"
+    },
+    {
+      "path": "fixtures/predecessor-viewer.json",
+      "bytes": 11762,
+      "sha256": "d75b686bd9cd4b1eedd24d7be03d1ccb645f54f51c1de157e9d3e07d9507b1f2"
+    },
+    {
+      "path": "fixtures/predecessor-pin.json",
+      "bytes": 2051,
+      "sha256": "28a61b13fd687bec60758956105c2e997bb8d59222551a48bd2ed73a365b9231"
+    }
+  ],
+  "removed": [],
+  "scope": "Five bounded release-transition helper/test/immutable test-fixture files only. No patient data, models, private references, user decisions, browser state or canonical Git ancestry. The helper is tested but has not advanced the website delivery pin or installed a release.",
+  "proof": {
+    "focusedPassingCases": 5,
+    "websiteUnchanged": true,
+    "reviewBuild": false,
+    "pinAdvanced": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
