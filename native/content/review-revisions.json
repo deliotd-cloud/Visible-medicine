@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "modelHash": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+  "display": [
+    [
+      "scripts/glb-lossless-codec.mjs",
+      "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224"
+    ],
+    [
+      "scripts/compress-model-delivery.mjs",
+      "b18e1c9b00891f31190f8f3ccc02287500673fab48d9e74f0490cc68e9fbddf4"
+    ],
+    [
+      "app/anatomy-scene.tsx",
+      "dd49944c4343b5d91c18127528ac2ac7d889e4e80a55c051840babc63b88282c"
+    ],
+    [
+      "app/scene-label-layer.tsx",
+      "8e6ce78a2c26a305bc9d491b660a8f3c9ed9578e1f4983dbf75c3a4d3fe61be8"
+    ],
+    [
+      "app/scene-label-layer.css",
+      "c1b5e4c0d80d818e30feb54e451b944ad9e4ea9baec431fd63769ed4d7bccf7f"
+    ],
+    [
+      "lib/scene-label-size.ts",
+      "60be0562f205e4c956c1b9293ea577412cc397525da154ec84e6a0d120e90cb3"
+    ],
+    [
+      "lib/scene-label-focus.ts",
+      "469ad6a6517bab66ea2c50ae445c489d62fb62f706e067220c484d857cb76f0d"
+    ],
+    [
+      "lib/model-load-failure.ts",
+      "c9f7e0dbc6ebeaf8bfd758373c04ecd3bcccdf2394e77861e1a263fc1b7c9814"
+    ],
+    [
+      "lib/screen-label-layout.ts",
+      "87854b4e74d2e98a928a2bd9e8b2450214fa16e7a339036f3838d7d848fe927a"
+    ],
+    [
+      "lib/label-depth.ts",
+      "906cc9824891e2bb39be431274990ab7895891aa7add7784fa0824e19a5c674b"
+    ],
+    [
+      "app/anatomy-canvas.tsx",
+      "667fc0843d6057dd50766eea3ba6ae7aac72332913332aae233f2ee87bc91547"
+    ],
+    [
+      "lib/anatomy-root-session.ts",
+      "1f5a99620d56c1e33708afbcf8ad608c124aed23e2fb4f21adbb4da27837fac2"
+    ],
+    [
+      "app/scene-recovery.tsx",
+      "121b9ec5964c6e2da5a6db061d5e772da2496eed9bae2326c1549be9d2911796"
+    ],
+    [
+      "app/scene-recovery.css",
+      "6f8ee5a0abf4ae97411ceb05a912efe948ad91d0709d3cbfc65dd28e1a97ed01"
+    ],
+    [
+      "app/scene-study-fallback.tsx",
+      "0c6ce97b4f1d2018a61ce6a2a633736863ebbc2d171da7d69827199a4a3a38c2"
+    ],
+    [
+      "lib/renderer-health.ts",
+      "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
+    ],
+    [
+      "app/anatomy-tissue.tsx",
+      "e2a281af72d26bcd13f0a575476cacbb7d4233a0d485971867f69f91387f323c"
+    ],
+    [
+      "app/fitted-camera.tsx",
+      "f9d7aa3b4ef534eeebb02f8bb3736898d0255062ecb7597a7d56493472fb54c6"
+    ],
+    [
+      "lib/camera-keyboard.ts",
+      "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    ],
+    [
+      "app/camera-keyboard.css",
+      "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
+    ],
+    [
+      "app/shoulder-explorer.tsx",
+      "481e875e771185cc93a9f7d30e101b09d7a6012d3abedfc6efe185d6570daab2"
+    ],
+    [
+      "lib/shoulder-search.ts",
+      "f5a1c27bb90d4ac3c1ab2029a24ce94ed2f03edac911a241ef442e1ac00757b1"
+    ],
+    [
+      "lib/shoulder-tours.ts",
+      "bf0a2d5c8c3dc940bf10c2848743bdd41a855a0bf6711e095adf716f955fac67"
+    ],
+    [
+      "lib/guided-playback.ts",
+      "1b1ae6ec85e81bf058465085c5ab29a738919c18d0e697b0f774347e83d5fd3c"
+    ],
+    [
+      "lib/tour-camera.ts",
+      "616b2e1ba047ec760129532922922a166baa02fcb53a253582d91a5982587467"
+    ],
+    [
+      "app/shoulder-tour-player.tsx",
+      "5ecd296dcf93127265c0908135708ce456b5583c08c278e99257d36aae4e4400"
+    ],
+    [
+      "app/shoulder-tour-player.css",
+      "cab61989340b515193dfa507a8224d63c24798ed64150d8a2130114303301700"
+    ],
+    [
+      "app/tour-imaging-notes.tsx",
+      "f6ca24f0d0f00bc2b4fc002d5cc46297181ec8d8d1072aa9c768780f35e0f232"
+    ],
+    [
+      "app/tour-imaging-notes.css",
+      "6f9a9de31b7866fb2a7382cdd811b0ebc3e618fa5d8b52f17d744859197a865c"
+    ],
+    [
+      "app/structure-quick-check.tsx",
+      "5e88b3ae3f2a50322285bdab316a51fc335da03cee94bc87e5292c45352f8e62"
+    ],
+    [
+      "app/structure-quick-check.css",
+      "fb0ae0d036f91d13bd0d6a82c335159c1f3620c8d0301e63724f369c5e836942"
+    ],
+    [
+      "app/shoulder-workspace.css",
+      "8214b33fe1942727ba3ff6221bdb29f4812421ed1d14745053466d37a981e072"
+    ],
+    [
+      "app/atlas-workspace.tsx",
+      "0785f499c3e9d6a6ee83eb0ccb396956ad8a61599563f8f17b373e59f5786520"
+    ],
+    [
+      "app/workspace-session.ts",
+      "7a2a73775b9eebebc50df257cc520f2f33499ebb7130f496a4b2cdfb46fc379a"
+    ],
+    [
+      "app/atlas-workspace.css",
+      "7a67f05c597c69ef37fbce1a0c63492b45fb9ac1da671c32af15504d2a64779a"
+    ],
+    [
+      "app/atlas-panel.css",
+      "384e9ac467389d9e55ab695e1f6899d6742ac03834ab5da1bdc7c7fd7e46e478"
+    ],
+    [
+      "lib/atlas-panel-layout.ts",
+      "8285d84094cc4d3aaab02dbf89360f4e60ad23856cff2bb69faf3a6240c3c23f"
+    ],
+    [
+      "lib/atlas-note-navigation.ts",
+      "99b6c8a4d774670e4fd71e1ddc086a78eb6f36739bf726ee63a8959ac0490ba6"
+    ],
+    [
+      "app/anatomy-control-rail.tsx",
+      "955463bf3bb3d0b658f2b31e36de3de92c0a9ccd8c8ff145f2a8f627ade961ed"
+    ],
+    [
+      "app/body-explorer.css",
+      "98fbce0ff8572b6f2055b42e2199bbfe5ca37e322743cb36adabc3ac98e0d2e9"
+    ],
+    [
+      "lib/atlas-navigation.ts",
+      "a8d79020c9d9283dfc50f7055b7c8015746a8f13962267c41f63accb200cdb39"
+    ],
+    [
+      "lib/anatomy-search.ts",
+      "e9398dc47500154d91f96f0974e95c8bf7c3a88a8423e3e05261a6d651606f4a"
+    ],
+    [
+      "app/globals.css",
+      "c0b5616ff8bd0c4579f762fa0e895562645289ec6ead7bbc029ae4791cb61ea3"
+    ],
+    [
+      "lib/explode-layout.mjs",
+      "d5790bc375114b906fdede4e430764df3fc0ff3ce71fba02ed87fec45129dff3"
+    ],
+    [
+      "lib/body-arrangement.ts",
+      "5946d4bd5eb1797562309c7469e73d0e6594e88b883c8a4c45344c7d43206c59"
+    ],
+    [
+      "lib/shoulder-arrangement.ts",
+      "4652e8112b700ea5ef34e58ffd9bc5a1fa35e51fe423876db01deff2c1f6ef5a"
+    ],
+    [
+      "app/explode-style-select.tsx",
+      "6629a4b69c6ced08c9f1d6c251d9fbda7d40f369ecf25e5f9c0cc0bf7428e085"
+    ],
+    [
+      "app/explode-style-select.css",
+      "de9ea836cd62f2c2090d2d971e3f248a6b606681a63b47c15957b67a623b4b9a"
+    ],
+    [
+      "lib/inspection-state.ts",
+      "9034b6b6447248feb1b64374f403539b9572c01dd2db68574dd66fafcfd795e7"
+    ],
+    [
+      "lib/selection-visibility.ts",
+      "d08344cef574acc33d4527f0161a99b10fd42364c53fa8cdc2877a055bcec8f6"
+    ],
+    [
+      "app/selection-visibility-notice.tsx",
+      "3d1df340df0d0698de56da0c449f2b75020df44125d10f38566bb25b1c1ab39f"
+    ],
+    [
+      "app/selection-visibility.css",
+      "2a5d482d10cbc725100ce98cac41267d759e64f123d79b218b664096b9aebb58"
+    ],
+    [
+      "lib/anatomy-practice.ts",
+      "6cc60a21919341e2dda7b56305c595f02e23eeb499b06191646e763de916a051"
+    ],
+    [
+      "lib/inspection-geometry.ts",
+      "b1262f894eb05a4ab8a4c136d8b12bc5a179869f4e87140f96cc226b1f7b48b1"
+    ],
+    [
+      "app/inspection-controls.tsx",
+      "a4f51d9e92359c296e4fdbe3359f91cf59d70d06ac653d09029d217fa3c8c7d8"
+    ],
+    [
+      "app/inspection.css",
+      "70a60f780e8d20643267526ca460805c1f8cae1c77e83b2fcf553e413ed350e4"
+    ],
+    [
+      "lib/study-camera.ts",
+      "83743439ea9ff1d9560cc470aa1f2a8f4552c410fe94edc74ab8411f149be8d1"
+    ],
+    [
+      "lib/study-views.ts",
+      "86504e3a67ec3982b43c211dd01c928e41002b1459b50ff018146b3ee5ad738a"
+    ],
+    [
+      "app/study-views.tsx",
+      "6d1e76308517cc89bfa007344b68fa7b575729cc2a2733276627843eee1bdfcf"
+    ],
+    [
+      "app/study-views.css",
+      "990575bf75078182028c3ed0c30985d842e7814623b82f99e7aa69a761a54f8e"
+    ],
+    [
+      "lib/anatomy-coordinates.ts",
+      "211009737314d001b8c48034afa28fbec91481c55ce22a4bbc83b0fa80bcc1bf"
+    ],
+    [
+      "lib/anatomy-link-registry.ts",
+      "cb69329833c32eba0f754cb02af307cfac725d49a5131af1c41d0ba3ad35452f"
+    ],
+    [
+      "lib/imaging-sync.ts",
+      "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147"
+    ],
+    [
+      "app/imaging-link.tsx",
+      "8a87460b3c8e30f49ccbeed4112971d8c16f0979d2ca8a65d29003ce65cefe9b"
+    ],
+    [
+      "app/imaging-link.css",
+      "ee0cd87e6ee32c14d6fad90bd3c739240d126eac026b9ac5cfd194a61cef1dc2"
+    ]
+  ],
+  "revisions": {
+    "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
+      "geometry": "341c120df0c08eae23056d21cc21e938ff0a4ca62ba6bc3b0a5a6e355d510a31",
+      "teaching": "53e96d91f1e04f9e80e527a9bd303dbc5a9003383677aac81b9a61d7becfa044",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
+      "geometry": "ed00cc2acfc70df4776d8d0f2c178cc3ed1fb49e80e9dc2e347d10a0fc70335c",
+      "teaching": "5891f99f607b2c188193edb01e7a2a3d0a28bd247ff5913a691b5c70ec7aa14c",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
+      "geometry": "9f28dc50ea6f6936a49ddd5937261f396408dabe0ca3624bd00e4cc0d8b25429",
+      "teaching": "fa4738ab22303819877aa2569725288834a8213517faca54045e7c34dadc5165",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
+      "geometry": "2ff3140c5693b79bf6c36484dbb3f66909e73c80a0d8ff8a2a23856deb9b416a",
+      "teaching": "d5e4eaf5cdf2ecd09b4acdbb76352926128f1f584346d97bfd5507fe4c70c02e",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
+      "geometry": "c544ad83a914eaa05b5caccbdf12419a3614cf734ffbf08fa0ccde86100f5785",
+      "teaching": "1e38271e8043462de6684738e714e4750a7b9b93a0be405228576645f40072ac",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
+      "geometry": "76698342e533e20747bac788c481d90321dc65dc090f51ba773b685cf43a5992",
+      "teaching": "165140a97fd30879a656ffdb8683d04e53f1e175bac29bcef8f6c9c94108e99d",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
+      "geometry": "1ac994e7f686aaf4159bb5a2f6a4720ae74ead8e5c28434fa2e767ea971bd071",
+      "teaching": "faf39a33f7e5c6e42f638003089f817a8dec107821cdb14c7cbcacb807870c86",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
+      "geometry": "8cff2c8b2c882c72a07e7880ab628bd12e188291ef06ec24aff65584dca01149",
+      "teaching": "c353a50b5636442084231e3ee05469c0c40d3e612f5b062e1b70b432adc7d090",
+      "imaging": null
+    },
+    "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
+      "geometry": "32d810caf4166c3fa1f59298858f15f7607b2dfb20871424bc1b2bc646cccffb",
+      "teaching": "4fbac1d8c853bb81e125a30243ca2c552fb139873c0f7ff6ff7de6e4e77d9c9f",
+      "imaging": null
+    }
+  }
+}

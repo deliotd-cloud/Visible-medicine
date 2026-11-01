@@ -1,0 +1,182 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T05:12:52.987Z",
+  "sourceIdentity": {
+    "nativeHead": "d567863a5a8af08b3bbbfa22adf512a389cdc3a3",
+    "base": "32c000e5b9afb20503f3ce37c25ec119f0eaa3ab"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "native/app/body-content.ts",
+      "bytes": 86144,
+      "sha256": "c8852da61b57eb9fb571c57571f26651d8796b9c96bceb256985495ac80f1829"
+    },
+    {
+      "path": "native/content/body-renderer-revision.json",
+      "bytes": 228600,
+      "sha256": "fe2f7355522faaf6536dd0a6f5c51d429db26ab8712e3824fac171bae54ab36a"
+    },
+    {
+      "path": "native/content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "038b1910139eb655d9074565ae68aa42c668aea284e2be59bc3e7f11915de414"
+    },
+    {
+      "path": "native/content/paratubal-ct.ts",
+      "bytes": 1858,
+      "sha256": "dfc9ab595068d04f8788e17d120308d8f9b34df65730adc15db7284818f8ddb2"
+    },
+    {
+      "path": "native/content/regional-teaching/abdomen.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/foot.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/forearm.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/hand.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/head-neck.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/head-neck.json",
+      "bytes": 2543056,
+      "sha256": "5d9c17496989596f94fa8a296a2b786bc1e549166be4a80e38c217fe505dba59"
+    },
+    {
+      "path": "native/content/regional-teaching/leg.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/pelvis.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/shoulder-arm.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/spine.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/thigh.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/regional-teaching/thorax.d.json.ts",
+      "bytes": 219,
+      "sha256": "5be2b51b4bdce6f55fd2e7cd3930caec47360ec6b2ced64a7c2e9a034c329eb6"
+    },
+    {
+      "path": "native/content/review-revisions.json",
+      "bytes": 10328,
+      "sha256": "1f9eea1762cf566dc57266a337c105e147a3e2c9d3c5f1084661786d13b57b16"
+    },
+    {
+      "path": "native/docs/PARATUBAL_CT_DRAFT.md",
+      "bytes": 2105,
+      "sha256": "7ca510ccc4ea9ca2b022ec9e49af142dc567826bf74e82aabc0227996188eff7"
+    },
+    {
+      "path": "native/docs/REGIONAL_TEACHING_TYPES.md",
+      "bytes": 1782,
+      "sha256": "2036d7cb57f9d9ea843b0b7dffb765676137c35df83c52c33a8112081e53f0e0"
+    },
+    {
+      "path": "native/lib/paratubal-ct.ts",
+      "bytes": 1765,
+      "sha256": "95c1393a73ce1a553ecb41345f40d86ef6d21119a946c7f42fc35cfcedb2e327"
+    },
+    {
+      "path": "native/package.json",
+      "bytes": 90023,
+      "sha256": "28042680d42e4ffb45a051b6a85a548efcabb5e7f0d8f04bbe13a2a43bf7ab1b"
+    },
+    {
+      "path": "native/scripts/regional-teaching-snapshots.mjs",
+      "bytes": 6065,
+      "sha256": "03c446f565b095a6c76bf8a3b5238402f207874b75b667c91313d7c8b4751aeb"
+    },
+    {
+      "path": "native/scripts/test-paratubal-ct.mjs",
+      "bytes": 4073,
+      "sha256": "f4bce09c06f6b628c4d89109f1d86c6e5ffd0d600ed81be3ba8612bcfefe3a07"
+    },
+    {
+      "path": "native/scripts/test-regional-teaching-freshness.mjs",
+      "bytes": 3462,
+      "sha256": "4bff83d74dd86c38d6c3b2d9986158eebae0ac0e87e7e33434a00387da95134c"
+    },
+    {
+      "path": "native/scripts/test-regional-teaching-types.mjs",
+      "bytes": 2085,
+      "sha256": "716d40c61e52eebd001d651512ad408cfa779ac2ad2eb4062634bc37870de01d"
+    },
+    {
+      "path": "native/tsconfig.json",
+      "bytes": 757,
+      "sha256": "932d45e037ec8cacf00e2241df553817ef70d0ef9574113d2b471d19078517b3"
+    },
+    {
+      "path": "native/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "native/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 372311,
+      "sha256": "4c0bb9993c8d89d8410cff382e8179cad3a801deecdb6b48f9b3a7b9f29b2da4"
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 10403,
+      "sha256": "f729a6f64e2c430add84a62167e83f072851d629c66638a4ce199aa3fe931123"
+    },
+    {
+      "path": "website/tsconfig.json",
+      "bytes": 862,
+      "sha256": "6226b58e7bdee66540cb5b21cab0074bd1a8aaeda9e6ac7db56ecb241c279ad2"
+    },
+    {
+      "path": "website/tests/regional-teaching-declarations.test.mjs",
+      "bytes": 2522,
+      "sha256": "0969ffbc0d979c76f7ffbd82bb406079b66ad7504622f11bd138c9618d141573"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected public-source native teaching/type and review-fingerprint updates, licenses, and website importer/compiler/test source. No scans, meshes, private packets, decisions, environment files, or original repository history. Not a complete website backup.",
+  "proof": {
+    "focusedTests": 13,
+    "nativeChecks": 8,
+    "geometryChanged": false,
+    "installed": false,
+    "fullWebsiteTypes": false,
+    "fullWebsiteBuild": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
