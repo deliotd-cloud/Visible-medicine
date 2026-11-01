@@ -1,0 +1,74 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T07:49:53.037Z",
+  "sourceIdentity": {
+    "native": "1a00bd0825f74672299d032b21710eebf031aa80",
+    "tree": "701d0e01a61b5606ae600343d20537bfc9a2ae96",
+    "parent": "b688ddd0c1fb6392ba8e8d7890142d750c8100f1",
+    "renderer": "f8689d67c8a8d653b06b11620c4a6ef36879a1ac47a15f7b78681c2844041321"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 228888,
+      "sha256": "6fb358a3656f66899e82781aadb25aa8307c10f4bd7929ff60f23ae4ca86b318"
+    },
+    {
+      "path": "content/renal-teaching.ts",
+      "bytes": 12093,
+      "sha256": "33d383933f0e5456e8fb4b4877aa627341711d7dd461487a7ffa779bd28b3b8a"
+    },
+    {
+      "path": "content/renal-venous-xray.ts",
+      "bytes": 2077,
+      "sha256": "a9f5253779aa5fc57647710044ffca554efb2fb885fdf24f70e32d7be685192d"
+    },
+    {
+      "path": "docs/RENAL_VENOUS_XRAY.md",
+      "bytes": 2510,
+      "sha256": "4ee52f08a330259841c497f2643bd7097806014f65815711e1b0ff0863992fa5"
+    },
+    {
+      "path": "docs/nested-review-validation.json",
+      "bytes": 3409,
+      "sha256": "9349aa84ad3ee5e527ec80b462c428b43496c0f0fa818b0f407c80ba2de9d092"
+    },
+    {
+      "path": "scripts/validate-nested-teaching.mjs",
+      "bytes": 52146,
+      "sha256": "f0e14f0959a3404a1af9da1af64d691d743069371ab49a972ff99e8d859c9878"
+    },
+    {
+      "path": "verification/review-materials.mjs",
+      "bytes": 2734,
+      "sha256": "ce50d8e5a25b7ff887128a5ac2e0730e6328ac2c5ffe64eb47a7b6af905a6505"
+    },
+    {
+      "path": "verification/review-compare.mjs",
+      "bytes": 2724,
+      "sha256": "a9a80c6ef88107db0cee0633698fd43c4333435be83ad14a559f748467afb1c5"
+    },
+    {
+      "path": "verification/native-checks.mjs",
+      "bytes": 3376,
+      "sha256": "0cb830f8cc59ecffd14cc6add7ebc4140382bed0475d7a357c58c010942a6670"
+    }
+  ],
+  "removed": [],
+  "scope": "Nine selected teaching, attribution, generated non-patient review metadata and validation/verification source files. No scans, masks, model binaries, private references, actual decisions, credentials or canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "teachingAssertions": 11091,
+    "reviewContexts": 108,
+    "sourceBundles": 26,
+    "scopedContentTypes": true,
+    "changedTeachingRevisions": 4,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
