@@ -1,0 +1,74 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T16:26:07.009Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "b9c140735c9c6ea6962ea080f24d27cda08350a3de36f65a468c9c9d4abd6938"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/cervical-vascular-current-delivery.test.mjs",
+      "bytes": 24323,
+      "sha256": "6f1126213e8f75999e76fe335949a4074e2025d3e6cffae2e692257c21ed6d46"
+    },
+    {
+      "path": "website/tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 12400,
+      "sha256": "3e515a39568c97fe65976a3fbac51cfcb9597f55d0018cdbbb1b6736d1513d5c"
+    },
+    {
+      "path": "website/tests/digital-vein-current-delivery.test.mjs",
+      "bytes": 8855,
+      "sha256": "68332a45bc62cb17c9e0fc5bb4630d748ea7e4112239abaa6dda09d1b0833c51"
+    },
+    {
+      "path": "website/tests/historical-review-ae84-preservation.test.mjs",
+      "bytes": 5451,
+      "sha256": "c598f0a960c86773d95c73673f6fccafbe0dd0325b57a39aba08003b0a1701e7"
+    },
+    {
+      "path": "website/tests/reference-catalogue-historical-delivery.test.mjs",
+      "bytes": 4675,
+      "sha256": "5e9772d8591c6e6cbbb28f75ec7c762739d260530a0386c4cad31127f6218077"
+    },
+    {
+      "path": "website/tests/cervical-vascular-historical-context.mjs",
+      "bytes": 5727,
+      "sha256": "da306158f9bef3e96b21cdc21c1a652365e68d09f2581ad94d36e3475572ff0c"
+    },
+    {
+      "path": "website/tests/digital-vein-role-context.mjs",
+      "bytes": 7320,
+      "sha256": "0e6f9cdb8d96fe1c1187bdf0f01326171442c3d5b370c0569149e212bb906906"
+    },
+    {
+      "path": "website/tests/fixtures/cervical-vascular-delivery-roles/original.test.mjs.raw",
+      "bytes": 20410,
+      "sha256": "4ba964cf66b56e2bdc24a78ace3b9d1e48b8fa53b855ed581c93a984fae98f78"
+    },
+    {
+      "path": "website/tests/fixtures/digital-vein-role-replay/original.mjs.raw",
+      "bytes": 15027,
+      "sha256": "b308e76aeafab40626557cfd08a1fa048cacf4cb643d2c7ecb5baf43d2357448"
+    }
+  ],
+  "removed": [],
+  "scope": "Nine selected test sources/helpers and inert public Atlas test originals only. No scans, masks, model binaries, credentials, clinical decisions, private objects, raw project ancestry or browser media. Not a whole-project backup.",
+  "proof": {
+    "cervicalCases": 5,
+    "digitalVeinCases": 6,
+    "desktopRelatedPass": 14,
+    "desktopRelatedFail": 1,
+    "preexistingColicFailure": true,
+    "productionByteIdentical": true,
+    "fullProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
