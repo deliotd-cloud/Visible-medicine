@@ -1,0 +1,139 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T09:37:34.175Z",
+  "sourceIdentity": {
+    "native": "7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc",
+    "tree": "2e742b31600a6da39af99558d07ff6986fec6b9e",
+    "assembledSource": "d27aa69ba8206988e7b35d2086e68f869272080e12351428b396593a282a33ac",
+    "reviewBinding": "b19cc36239128192dc21bd32857bec87e03131c4c9f50a89ccecf51fac17420c"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/current-atlas-delivery.mjs",
+      "bytes": 5159,
+      "sha256": "3984ba7d68de7651d7611b8c9f403a02a61e72ece2023837c3ed24a94b07c4a4"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 46495,
+      "sha256": "fd43f7a5bed8893e3921a797c663f3dae3b24d7a80a34c9919484fe3ae9cb99f"
+    },
+    {
+      "path": "website/tests/prostate-zonal-delivery.test.mjs",
+      "bytes": 5986,
+      "sha256": "1cb20d1828d0273834d1334591c68c497e2958192dc937ff746e5fcc82eabd67"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox.test.ts",
+      "bytes": 14036,
+      "sha256": "6d58da638acaa96f95af55e4d3e57d9d70472edc7ab9279c2e5e3788fd2553e3"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "28a61b13fd687bec60758956105c2e997bb8d59222551a48bd2ed73a365b9231"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-focus.json",
+      "bytes": 2051,
+      "sha256": "21e2b6ae6f430baa96ed8c1e10a3c34cc0f83a89ab54b48abdf03699fffc7aa5"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-focus.txt",
+      "bytes": 42522,
+      "sha256": "40a2da2823d58f728d41f12da12b4cc429853ddd8ef9eb002e19e5cf771e9ecb"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-focus-helper.txt",
+      "bytes": 5159,
+      "sha256": "3b022e0691d774ca06e8986ec1a9f628ba5a54b0315b82b2f98e2f5d466f7ce1"
+    },
+    {
+      "path": "delivery/plan.mjs",
+      "bytes": 9356,
+      "sha256": "227b7125f2e204678b293725e044b9bc5ef1b18662e50a5e5b23a1754094c057"
+    },
+    {
+      "path": "delivery/plan.test.mjs",
+      "bytes": 4606,
+      "sha256": "3febca49f74ae4ab110ac737a711367587eee58b0aadf77f6497e664048a0054"
+    },
+    {
+      "path": "delivery/assemble.mjs",
+      "bytes": 4136,
+      "sha256": "294fdcaf8609d79ae75adddb6ebc84c4faca3a3f10e824fcf2448d28524cfb80"
+    },
+    {
+      "path": "delivery/verify.mjs",
+      "bytes": 5441,
+      "sha256": "5f81187ed31c4b6f3063e4ae64fc9ad5133a3d92e5b2c239bfff585e04449945"
+    },
+    {
+      "path": "verification/run-guarded.mjs",
+      "bytes": 3202,
+      "sha256": "3b4d9a6ccbbcc2153739f0d2d3188618f8e43c9114004ca72bbd8fca8ad2d396"
+    },
+    {
+      "path": "verification/resume-assembly.mjs",
+      "bytes": 3697,
+      "sha256": "e68134266c303b4a05c5f9f9d2bd8f93f000cfec8fb3c3d7f3594934f37a88b7"
+    },
+    {
+      "path": "verification/review-checks.mjs",
+      "bytes": 3380,
+      "sha256": "a39d640f9081c589fab8c3069fad450122c766064dd4289db5182549f44f0d83"
+    },
+    {
+      "path": "verification/resume-focused.mjs",
+      "bytes": 2421,
+      "sha256": "5fbb502de7a1ce3232c785d40055003213b5183baa611e0e4bcbf05c793644dd"
+    },
+    {
+      "path": "verification/focused-final.mjs",
+      "bytes": 2675,
+      "sha256": "8fabfba8c4f1b1a36e0546b4b9bf1d672bd5d9a14374f3d3165e80aaef6f2ca5"
+    },
+    {
+      "path": "verification/run-focused-final.mjs",
+      "bytes": 1069,
+      "sha256": "4b4aed1a89d0263ed2703c2d8467957e36c8231f7712d187192e366b17676b82"
+    },
+    {
+      "path": "verification/inbox-final.mjs",
+      "bytes": 1964,
+      "sha256": "757c722f6cbd93c21182351cce22ed04ac2520c00e3b7dcbaadcb6ecf9d56610"
+    },
+    {
+      "path": "verification/run-inbox-final.mjs",
+      "bytes": 1048,
+      "sha256": "4541e6e38d62244e1eecb694bdcac62db7b9f03d86bda8c2dbc42ec1a2ab6618"
+    },
+    {
+      "path": "verification/prepare-website-types.mjs",
+      "bytes": 4395,
+      "sha256": "659875871f079459e7be88a0d61a18a0c036f18e148fcad15cae4643cdc424a7"
+    }
+  ],
+  "removed": [],
+  "scope": "Twenty-one selected delivery tests, immutable historical test fixtures and verification recipes. No scans, masks, model binaries, private clinical packets, browser evidence, credentials, personal review decisions or canonical Git ancestry. Source-only recovery, not a whole-project backup.",
+  "proof": {
+    "nativeFullTypes": true,
+    "matchingRuntimeAndReviewBuilt": true,
+    "focusedTestTotals": {
+      "catalog-declarations-final": 4,
+      "delivery-final": 79,
+      "inbox-verified": 121
+    },
+    "fullWebsiteTypes": false,
+    "fullWebsiteBuild": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

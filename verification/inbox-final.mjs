@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261101-focus-delivery/attempt-1',site=root+'/website';assert.equal(process.cwd().replaceAll('\\','/'),site);
+const original=fs.readFileSync(root+'/logs/inbox-final.log','utf8');assert.match(original,/ℹ tests 121/);assert.match(original,/ℹ pass 120/);assert.match(original,/ℹ fail 1/);
+const ui=['ui','auto-return','filter-recovery','scan-focus','deferred-return','return-context','pagination-focus','return-pager-focus','failure-focus','page-reconcile','filter-history','link-context'].map(key=>'tests/clinical-review-inbox-'+key+'.test.mjs');
+const r=spawnSync(process.execPath,['--experimental-strip-types','--test','--test-concurrency=1',...ui,'tests/clinical-review-quick-start-ui.test.mjs','tests/clinical-review-inbox-batching.test.mjs','tests/clinical-review-inbox.test.ts','tests/clinical-review-inbox-priority-server.test.ts','tests/clinical-review-inbox-material-reuse.test.mjs'],{encoding:'utf8',windowsHide:true,maxBuffer:6e6});
+fs.writeFileSync(root+'/logs/inbox-verified.log',(r.stdout??'')+(r.stderr??''),{flag:'wx'});assert.equal(r.status,0);assert(!r.error&&!r.signal);
+const checks=['review-verify-final','catalog-declarations-final','delivery-final','inbox-verified'].map(phase=>({phase,logSha256:hash(root+'/logs/'+phase+'.log')}));
+fs.writeFileSync(root+'/FOCUSED_CHECKS.json',JSON.stringify({at:new Date().toISOString(),passing:true,source:'7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc',checks,reviewBinding:json(site+'/atlas-review/integration-inputs.json').sha256,retainedFailures:['focused-checks','focused-checks-v2','focused-final'],fullWebsiteTypes:false,fullWebsiteBuild:false,installed:false},null,2)+'\n',{flag:'wx'});

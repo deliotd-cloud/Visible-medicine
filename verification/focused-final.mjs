@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const root='G:/VisibleMedicine-temp/staging/20261101-focus-delivery/attempt-1',site=root+'/website';
+assert.equal(process.cwd().replaceAll('\\','/'),site);assert.equal(process.env.VM_CATALOG_DELIVERY_ATTEMPT,root);
+assert(json(root+'/review-build-RESULT.json').passing);assert(json(root+'/assemble-v2-RESULT.json').passing);
+assert.equal(hash(site+'/public/atlas-review-viewer/manifest.json'),'d75b686bd9cd4b1eedd24d7be03d1ccb645f54f51c1de157e9d3e07d9507b1f2');
+const run=(name,args)=>{const r=spawnSync(process.execPath,args,{cwd:site,encoding:'utf8',windowsHide:true,maxBuffer:6e6});fs.writeFileSync(root+'/logs/'+name+'.log',(r.stdout??'')+(r.stderr??''),{flag:'wx'});assert.equal(r.status,0,name+' failed');assert(!r.error&&!r.signal);return{phase:name,logSha256:hash(root+'/logs/'+name+'.log')};};
+const checks=[];
+checks.push(run('review-verify-final',['scripts/verify-clinical-review.mjs']));
+checks.push(run('catalog-declarations-final',['--test','tests/atlas-catalog-types.test.mjs']));
+checks.push(run('delivery-final',['--experimental-strip-types','--test','--test-concurrency=1','tests/current-atlas-delivery.test.mjs','tests/prostate-zonal-delivery.test.mjs','tests/prostate-review-binding.test.mjs','tests/prostate-review-inspection.test.mjs','tests/hepatic-coverage-binding.test.mjs','tests/renal-coverage-binding.test.mjs','tests/head-hippocampal-current-source.test.mjs','G:/VisibleMedicine-temp/proposals/20261101-focus-delivery/focus-import-delivery.test.mjs']));
+const ui=['ui','auto-return','filter-recovery','scan-focus','deferred-return','return-context','pagination-focus','return-pager-focus','failure-focus','page-reconcile','filter-history','link-context'].map(key=>'tests/clinical-review-inbox-'+key+'.test.mjs');
+checks.push(run('inbox-final',['--experimental-strip-types','--test','--test-concurrency=1',...ui,'tests/clinical-review-quick-start-ui.test.mjs','tests/clinical-review-inbox-batching.test.mjs','tests/clinical-review-inbox.test.ts','tests/clinical-review-inbox-priority-server.test.ts','tests/clinical-review-inbox-material-reuse.test.mjs']));
+fs.writeFileSync(root+'/FOCUSED_CHECKS.json',JSON.stringify({at:new Date().toISOString(),passing:true,source:'7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc',checks,reviewBinding:json(site+'/atlas-review/integration-inputs.json').sha256,fullWebsiteTypes:false,fullWebsiteBuild:false,installed:false},null,2)+'\n',{flag:'wx'});
