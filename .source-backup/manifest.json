@@ -1,0 +1,68 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T22:47:15.214Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "7b2e5accf8538f3ffef396f95b0a206b06a76c1b",
+    "reviewBinding": "a7cc044562c24001acf11b8ff5a2b972325f2ea37607ab02ab564fad7c474501",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/HeadAtlasTeaching.tsx",
+      "sha256": "a84f6548fd8ef1c241e6ea28096d59cb5e30890d495fd356a8d0a8007f69235b",
+      "bytes": 5152
+    },
+    {
+      "path": "app/atlas/guided-learning/compare/page.tsx",
+      "sha256": "2a2eaaece482b9ab441c9bf8785b556d7c542e28e186b631e5a9c383201d76b5",
+      "bytes": 4672
+    },
+    {
+      "path": "app/atlas/guided-learning/compare/compare.css",
+      "sha256": "3cf997663aa5f2e43fc0bb6c3897c81c1480a168af58e6b7fa3771fbc9f70b00",
+      "bytes": 3097
+    },
+    {
+      "path": "tests/head-guided-comparison-page.test.ts",
+      "sha256": "ee303a31c084a6445d3b57374339dc5866d1ce709b58c5c2e63deac829799959",
+      "bytes": 7252
+    },
+    {
+      "path": "tests/head-comparison-teaching.test.ts",
+      "sha256": "7adf47926e298e015f0c58c4e703c88bded6f6e30cf4e63eaf40a5d244b9b7b4",
+      "bytes": 6101
+    },
+    {
+      "path": "tests/head-comparison-teaching-loader.ts",
+      "sha256": "cff2b5b4c618d9b8d2f63007c96d99a236a57a834f746aec4076e98e0e63fe86",
+      "bytes": 1359
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "sha256": "671ba00fdd791f5d2b36b09584b15236bc5f4d54858c315bb1fe5a193af3a145",
+      "bytes": 2051
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected source/test files bringing existing source-bound CT/MRI teaching into mapped comparison activities.19 focused cases,60 delivery cases and stock Review pass. Teaching text, revisions, source guards and clinical status unchanged. No scans, models, private records or raw Git ancestry.",
+  "proof": {
+    "focusedCases": 19,
+    "deliveryCases": 60,
+    "reviewBuild": true,
+    "reviewPackages": 24,
+    "reviewFiles": 63,
+    "actualComponentRenderedInTests": true,
+    "fullScanBrowserSession": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
