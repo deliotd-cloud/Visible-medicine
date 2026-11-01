@@ -1,0 +1,68 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T02:04:08.547Z",
+  "sourceIdentity": {
+    "atlasBase": "c0818c9e959544f04b54ef914ec62040f6cac2b3",
+    "modelRevision": "ddadc348f1602818bbca63c31f1b8ffecbc39cea0feecb3a01ef7e818af9f68e",
+    "manifestSha256": "c4df0992598e4777524872c4dc8adfefbcb9098029ccb93aefafe3283e984b76"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/prostate-zones.css",
+      "sha256": "64dd39a16aef25a76b761bf24663306721dd4b8c8a761a5c21acbe068212c27e",
+      "bytes": 11185
+    },
+    {
+      "path": "app/prostate-zones.tsx",
+      "sha256": "3191c14d08dc7a554f782df90688540db7a4a83068cd0a2492fa032e9d622f67",
+      "bytes": 19337
+    },
+    {
+      "path": "docs/PROSTATE_ZONES.md",
+      "sha256": "1841d27d727ba8560e753eeda69e15d01beb8123c08005186026cee57e3f3f92",
+      "bytes": 7982
+    },
+    {
+      "path": "scripts/pin-prostate-zones.mjs",
+      "sha256": "a6cc129036e97effa50d143145ce48aed9f876f0f87da7b4fd0b1d991361c5db",
+      "bytes": 1672
+    },
+    {
+      "path": "content/prostate-zones-revision.json",
+      "sha256": "ed43f3328fd4e433841858c6b33bad7e6172dcfc7e00d85d7699a70c7dffeac9",
+      "bytes": 3035
+    },
+    {
+      "path": "app/prostate-mri-teaching.tsx",
+      "sha256": "cc67105d5056bd17125d5c63df0255fda713a70e89eaa0795e44978db93a68e3",
+      "bytes": 2872
+    },
+    {
+      "path": "lib/prostate-mri-teaching.ts",
+      "sha256": "194950897f169b110d3779836a059a968f88ad40fd7b9dee72b9ae584d7801bd",
+      "bytes": 4139
+    },
+    {
+      "path": "scripts/test-prostate-mri-teaching.mjs",
+      "sha256": "7448b0551a9c878a5fb90b7a11c49b3fba260dc4cfe7c9342fa6caeaedd56e3a",
+      "bytes": 7639
+    }
+  ],
+  "removed": [],
+  "scope": "Eight original prostate MRI teaching source/test/revision files only. Isolated draft, not installed or clinically approved. No scans, masks, copied external figures, full repository or raw ancestry.",
+  "proof": {
+    "focusedTests": 11,
+    "invertedGradingRejected": 5,
+    "focusedTypes": true,
+    "browserComponentOnly": true,
+    "fullNativeBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
