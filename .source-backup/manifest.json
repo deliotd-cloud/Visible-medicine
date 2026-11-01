@@ -1,0 +1,56 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T01:07:32.218Z",
+  "sourceIdentity": {
+    "kind": "isolated-website-source-overlay",
+    "checkpointSha256": "67e3f1642ce8ac188e927cf0892ed95b82f1d40f87fd894ac8afe1a917c318a8",
+    "baseSourceManifestSha256": "f9bd897b2be264583a87d603ed42380af3c952ad2420d22193fb79c4fccf2d56"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/clinical-review-quick-start.ts",
+      "sha256": "1427cf6d17355163db2ecdaf8bbcf19076d85590d9090add4069043d81aebb85",
+      "bytes": 6691
+    },
+    {
+      "path": "website/components/ClinicalReviewQuickStart.tsx",
+      "sha256": "c54999b1d1dea0cf923a6fabf05ce4d575426b56bc907b3aa48cd32f99222652",
+      "bytes": 5833
+    },
+    {
+      "path": "website/components/clinical-review-quick-start.css",
+      "sha256": "5376ce29ae497f6b9a40f16738767eb71309ccbf1324c8c9dc16f3e7c576f63d",
+      "bytes": 3040
+    },
+    {
+      "path": "website/tests/clinical-review-quick-start.test.mjs",
+      "sha256": "2c8adefb07611653b21536d9bc3707b76141143f46225c0d445c2b6b272503e7",
+      "bytes": 13833
+    },
+    {
+      "path": "website/tests/clinical-review-quick-start-ui.test.mjs",
+      "sha256": "9ee2fd550e22bfeefdad25b036ed405f1aedaa8f48c19174b3956e4d18cd309a",
+      "bytes": 13957
+    }
+  ],
+  "removed": [],
+  "scope": "Five selected website source/test files for concise Quick Review group choices and accessible complete-name disclosure. No installed delivery, whole-project backup, patient data, scans, model assets, clinical decisions or raw canonical Git ancestry.",
+  "proof": {
+    "focusedTests": 23,
+    "expectedOriginalSourceFailures": 3,
+    "focusedComponentTypes": true,
+    "syntheticDesktopBrowser": true,
+    "textScalePercent": 200,
+    "installed": false,
+    "fullWebsiteTypes": false,
+    "fullWebsiteBuild": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

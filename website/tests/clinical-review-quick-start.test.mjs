@@ -1,0 +1,214 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
+import { runInNewContext } from 'node:vm';
+import { test } from 'node:test';
+import { fileURLToPath } from 'node:url';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const website = root;
+const require = createRequire(`${website}/package.json`);
+const ts = require('typescript');
+const source = readFileSync(`${root}/lib/clinical-review-quick-start.ts`, 'utf8');
+const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
+const module = { exports: {} };
+runInNewContext(compiled, { module, exports: module.exports });
+const { selectQuickReview } = module.exports;
+const revision = 'a'.repeat(64);
+const make = (key, status = 'not-started', overrides = {}) => ({
+  key, title: `Structure ${key}`, area: 'structures', scopeLabel: 'Right shoulder · Right',
+  href: `/workspace/atlas-review/body?selection=${key}&revision=${revision}`,
+  trackLabel: 'Anatomy', revision, status, capability: 'decision', ...overrides,
+});
+
+test('groups use exact source scope labels and retain exact href, track and revision', () => {
+  const left = make('left', 'in-progress', { scopeLabel: 'Left shoulder · Left',
+    trackLabel: 'Teaching', href: `/workspace/atlas-review/body?selection=left&revision=${revision}&t=teaching` });
+  const right = make('right', 'changes-required');
+  const result = selectQuickReview([left, right], 'Teaching', null, null, true);
+  assert.deepEqual([...result.groups], ['Left shoulder · Left']);
+  assert.equal(result.count, 1);
+  assert.strictEqual(result.item, left);
+  assert.equal(result.item.href, left.href);
+  assert.equal(result.item.revision, revision);
+  assert.equal(selectQuickReview([left, right], 'Anatomy', null, 'Left shoulder · Left', true).count, 0);
+});
+
+test('priority is changes required, re-review, in progress, then not started', () => {
+  const rows = ['not-started', 'in-progress', 're-review', 'changes-required'].map((status, i) => make(String(i), status));
+  for (let index = 3; index >= 0; index--) {
+    const result = selectQuickReview(rows.slice(0, index + 1), 'Anatomy', null, null, true);
+    assert.strictEqual(result.item, rows[index]);
+  }
+});
+
+test('excludes recorded, unavailable, inspection, corrections, missing revisions and other areas', () => {
+  const excluded = [
+    make('approved', 'approval-recorded'), make('unavailable', 'unavailable', { revision: null }),
+    make('inspection', 'inspection-required'), make('inspection-capability', 'changes-required', { capability: 'inspection-only' }),
+    make('corrections', 'changes-required', { capability: 'corrections' }),
+    make('null', 'changes-required', { revision: null }),
+    make('bad-revision', 'changes-required', { revision: 'not-a-revision' }),
+    make('short-revision', 'changes-required', { revision: 'a'.repeat(63) }),
+    make('head', 'changes-required', { area: 'head-learning' }),
+  ];
+  const result = selectQuickReview(excluded, 'Anatomy', null, null, true);
+  assert.equal(result.count, 0);
+  assert.equal(result.item, null);
+  assert.deepEqual([...result.groups], []);
+});
+
+test('loaded count stays partial until scan completion', () => {
+  const rows = [make('one'), make('two')];
+  const partial = selectQuickReview(rows, 'Anatomy', null, null, false);
+  assert.equal(partial.count, 2);
+  assert.equal(partial.groups[0], 'Right shoulder · Right');
+  assert.equal(partial.partial, true);
+  assert.equal(selectQuickReview(rows, 'Anatomy', null, null, true).partial, false);
+});
+
+
+test('whole-body FMA scopes collapse into known regions without changing exact groups or hrefs', () => {
+  const rows = Array.from({ length: 120 }, (_, index) => make(`fma-${index}`, 'not-started', {
+    scopeLabel: `Whole body · ${index % 2 ? 'head-neck' : 'thorax'} · nerves · FMA${10000 + index} · right`,
+    href: `/workspace/atlas-review/body?structure=fma-${index}&revision=${revision}`,
+  }));
+  const all = selectQuickReview(rows, 'Anatomy', null, null, true);
+  assert.equal(all.groups.length, 120);
+  assert.deepEqual([...all.regions.map(region => region.id)], ['body:head-neck', 'body:thorax']);
+  const head = selectQuickReview(rows, 'Anatomy', 'body:head-neck', null, true);
+  assert.equal(head.groups.length, 60);
+  assert.equal(head.count, 60);
+  assert.strictEqual(head.item, rows[1]);
+  assert.equal(head.item.href, rows[1].href);
+  assert.equal(selectQuickReview(rows, 'Anatomy', 'body:head-neck', rows[0].scopeLabel, true).count, 0);
+});
+
+test('known source areas, multi-region rows and Other fallback retain every eligible row', () => {
+  const rows = [
+    make('shoulder', 'in-progress', { href: '/workspace/atlas-review/shoulder?structure=shoulder', scopeLabel: 'Dedicated shoulder · Rotator cuff · muscles · FMA123 · right' }),
+    make('nested', 're-review', { href: '/workspace/atlas-review/nested?parent=eye', scopeLabel: 'Eye · internal study · right' }),
+    make('specimen', 'changes-required', { href: '/workspace/atlas-review/specimens?specimen=renal', scopeLabel: 'Renal specimen · donor · right' }),
+    make('both', 'not-started', { scopeLabel: 'Whole body · spine · thorax · nervous · FMA567 · midline' }),
+    make('future', 'not-started', { scopeLabel: 'Whole body · future-region · nervous · FMA999 · right' }),
+    make('missing', 'not-started', { scopeLabel: '' }),
+  ];
+  const all = selectQuickReview(rows, 'Anatomy', null, null, false);
+  assert.equal(all.count, rows.length); assert.equal(all.partial, true);
+  assert.deepEqual([...all.regions.map(r => r.id)], ['shoulder', 'body:thorax', 'body:spine', 'nested', 'specimens', 'other']);
+  for (const region of ['shoulder', 'nested', 'specimens', 'body:thorax', 'body:spine']) {
+    const selected = selectQuickReview(rows, 'Anatomy', region, null, true);
+    assert.equal(selected.count, 1);
+    assert.equal(selected.item.href, rows.find(row => row === selected.item).href);
+  }
+  assert.equal(selectQuickReview(rows, 'Anatomy', 'other', null, true).count, 2);
+  assert.equal(selectQuickReview(rows, 'Anatomy', 'other', '', true).item.key, 'missing');
+});
+
+
+
+test('every current whole-body catalogue region has its human-readable option', () => {
+  // Exact IDs and names from the full-body public catalogue (1,022 structures).
+  const expected = [
+    ['head-neck', 'Head & neck'], ['thorax', 'Thorax'], ['abdomen', 'Abdomen'],
+    ['pelvis', 'Pelvis & hip'], ['shoulder-arm', 'Shoulder & arm'],
+    ['forearm', 'Elbow & forearm'], ['hand', 'Wrist & hand'],
+    ['thigh', 'Hip & thigh'], ['leg', 'Knee & leg'], ['foot', 'Ankle & foot'],
+    ['spine', 'Spine & back'],
+  ];
+  const rows = expected.map(([id]) => make(id, 'not-started', {
+    scopeLabel: `Whole body · ${id} · nerves · FMA123 · right`,
+  }));
+  const selected = selectQuickReview(rows, 'Anatomy', null, null, true);
+  assert.deepEqual([...selected.regions.map(region => [region.id, region.label])], expected.map(([id, label]) => [`body:${id}`, label]));
+  assert.equal(selected.count, expected.length);
+  for (const [id] of expected) assert.equal(selectQuickReview(rows, 'Anatomy', `body:${id}`, null, true).count, 1);
+});
+
+test('group options use structure titles and source context while exact keys still filter', () => {
+  const left = make('left', 'in-progress', { title: 'Renal artery (source group)',
+    scopeLabel: 'Whole body · abdomen · vessels · FMA3789 · left' });
+  const right = make('right', 'changes-required', { title: 'Renal artery (source group)',
+    scopeLabel: 'Whole body · abdomen · vessels · FMA3790 · right' });
+  const selected = selectQuickReview([left, right], 'Anatomy', 'body:abdomen', null, false);
+  assert.deepEqual([...selected.groupOptions.map(option => option.key)], [...selected.groups]);
+  assert.equal(selected.partial, true);
+  assert.match(selected.groupOptions[0].label, /Renal artery \(source group\)/);
+  assert.match(selected.groupOptions[0].label, /Abdomen/);
+  assert.doesNotMatch(selected.groupOptions[0].label, /FMA\d+/);
+  assert.notEqual(selected.groupOptions[0].label, selected.groupOptions[1].label);
+  assert.strictEqual(selectQuickReview([left, right], 'Anatomy', 'body:abdomen', left.scopeLabel, true).item, left);
+  assert.strictEqual(selectQuickReview([left, right], 'Anatomy', 'body:abdomen', right.scopeLabel, true).item, right);
+});
+
+test('colliding readable labels retain original scope and never merge groups', () => {
+  const first = make('first', 'not-started', { title: 'Artery', scopeLabel: 'Whole body · abdomen · vessels · FMA101 · right' });
+  const second = make('second', 'changes-required', { title: 'Artery', scopeLabel: 'Whole body · abdomen · vessels · FMA102 · right' });
+  const result = selectQuickReview([first, second], 'Anatomy', 'body:abdomen', null, true);
+  assert.equal(result.groups.length, 2);
+  assert.equal(result.groupOptions.length, 2);
+  for (const option of result.groupOptions) assert.match(option.label, new RegExp(option.key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  assert.notEqual(result.groupOptions[0].label, result.groupOptions[1].label);
+  assert.equal(selectQuickReview([first, second], 'Anatomy', null, first.scopeLabel, true).count, 1);
+});
+
+test('unknown scopes and every title qualifier stay explicit', () => {
+  const unknown = make('unknown', 'not-started', { title: 'Partial structure', scopeLabel: 'Whole body · future-region · nerves · FMA999 · right' });
+  const missing = make('missing', 'not-started', { title: 'Independent specimen', scopeLabel: '' });
+  const shared = make('shared', 'not-started', { title: 'Second source-group structure', scopeLabel: '' });
+  const result = selectQuickReview([unknown, missing, shared], 'Anatomy', 'other', null, true);
+  assert.match(result.groupOptions.find(option => option.key === unknown.scopeLabel).label, /Unrecognized source scope: Whole body · future-region · nerves · FMA999 · right/);
+  const unspecified = result.groupOptions.find(option => option.key === '');
+  assert.match(unspecified.label, /Independent specimen/);
+  assert.match(unspecified.label, /Second source-group structure/);
+  assert.match(unspecified.label, /Unspecified group/);
+});
+
+test('same-group qualifiers survive and malformed known scopes retain their original tokens', () => {
+  const group = 'Whole body · abdomen · vessels · FMA3789 · right';
+  const rows = [
+    make('artery', 'not-started', { title: 'Renal artery (source group)', scopeLabel: group }),
+    make('branch', 'in-progress', { title: 'Partial branch', scopeLabel: group }),
+    make('malformed', 'not-started', { title: 'Uncertain vessel', scopeLabel: 'Whole body · abdomen · vessels · FMA3789 · right · extra' }),
+  ];
+  const options = selectQuickReview(rows, 'Anatomy', 'body:abdomen', null, true).groupOptions;
+  const shared = options.find(option => option.key === group);
+  assert.match(shared.label, /Renal artery \(source group\)/);
+  assert.match(shared.label, /Partial branch/);
+  assert.doesNotMatch(shared.label, /FMA3789/);
+  const malformed = options.find(option => option.key === rows[2].scopeLabel);
+  assert.match(malformed.label, /Unrecognized source scope: Whole body · abdomen · vessels · FMA3789 · right · extra/);
+  assert.equal(selectQuickReview(rows, 'Anatomy', 'body:abdomen', group, true).count, 2);
+});
+
+test('large specimen groups have compact choices and retain every full name without changing the next review', () => {
+  const scope = 'Whole source limb · synthetic-limb · right-source-report';
+  const rows = Array.from({ length: 64 }, (_, index) => make(`limb-${index}`, index === 40 ? 'changes-required' : 'not-started', {
+    title: index === 63 ? 'Last structure (partial source group)' : `Structure ${index}`, scopeLabel: scope,
+    href: `/workspace/atlas-review/specimens?specimen=synthetic-limb&structure=${index}`,
+  }));
+  const result = selectQuickReview([...rows, { ...rows[0], key: 'duplicate-name' }], 'Anatomy', 'specimens', scope, false);
+  const option = result.groupOptions[0];
+  assert.equal(option.key, scope);
+  assert.equal(option.label, `Structure 0, Structure 1 + 62 more · ${scope}`);
+  assert.equal(option.titles.length, 64);
+  assert.deepEqual([...option.titles], rows.map(item => item.title));
+  assert.strictEqual(result.item, rows[40]);
+  assert.equal(result.count, 65); assert.equal(result.partial, true);
+});
+
+test('valid grouped FMA identifiers are readable while malformed and colliding scopes stay distinguishable', () => {
+  const scope = 'Dedicated shoulder · Lateral shoulder · muscles · FMA34680 FMA34682 FMA34684 · right';
+  const rows = [make('deltoid', 'not-started', { title: 'Deltoid', scopeLabel: scope, href: '/workspace/atlas-review/shoulder?structure=deltoid' })];
+  const result = selectQuickReview(rows, 'Anatomy', 'shoulder', scope, true);
+  assert.equal(result.groupOptions[0].label, 'Deltoid · Dedicated shoulder · Lateral shoulder · muscles · right');
+  assert.strictEqual(result.item, rows[0]); assert.equal(result.groups[0], scope);
+  const other = { ...rows[0], key: 'other', scopeLabel: scope.replace('FMA34684', 'FMA999') };
+  const collision = selectQuickReview([...rows, other], 'Anatomy', 'shoulder', null, true);
+  assert.notEqual(collision.groupOptions[0].label, collision.groupOptions[1].label);
+  for (const option of collision.groupOptions) assert(option.label.includes(option.key));
+  for (const malformed of ['FMA34680 unknown', 'FMA34680, FMA34682', 'FMA34680  FMA34682']) {
+    const bad = { ...rows[0], scopeLabel: scope.replace('FMA34680 FMA34682 FMA34684', malformed) };
+    assert(selectQuickReview([bad], 'Anatomy', 'shoulder', null, true).groupOptions[0].label.includes(`Unrecognized source scope: ${bad.scopeLabel}`));
+  }
+});
