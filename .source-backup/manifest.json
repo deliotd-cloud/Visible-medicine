@@ -1,0 +1,68 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T18:58:07.095Z",
+  "sourceIdentity": {
+    "kind": "website-coverage-binding-stage",
+    "nativeRevision": "c75c72a4ad92ed15cc617361e6d40812696966ab",
+    "sourceSha256": "04c51bcc1e6e6676684b574447eb77d1eb3a61c8cd4a03978c1225bf03f67692",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "docs/anatomy-coverage/independent.json",
+      "sha256": "aa883d4c434f948e1d32003712a7d6e841cff76b7ad87a25bed86104ee74b2ff",
+      "bytes": 772784
+    },
+    {
+      "path": "docs/anatomy-coverage/index.json",
+      "sha256": "9e4ae431b17b09d7b4f9673fd21704eebefa2c65894fc47f632b3723fb5a1df7",
+      "bytes": 155587
+    },
+    {
+      "path": "docs/anatomy-coverage/nested.json",
+      "sha256": "474693d2e79feec73c52ed36b19d68975c25ab7ffad894ad198cc5b4f407c1fb",
+      "bytes": 789860
+    },
+    {
+      "path": "docs/anatomy-coverage/reference.json",
+      "sha256": "b8346bd578c2dc30133143745b332eacfb5215610d2fffee11d91eb0e4ee1f85",
+      "bytes": 154089
+    },
+    {
+      "path": "docs/anatomy-coverage/root.json",
+      "sha256": "6d1500563446b6bc3eac3bef642eb59814f3475f1713a403ca755d3eccbfe714",
+      "bytes": 1067871
+    },
+    {
+      "path": "lib/anatomy-coverage-view.ts",
+      "sha256": "2e054df95a6004855aa98704bfaa625e9a85e9ac512287c1493ba2ef31c7ed09",
+      "bytes": 5290
+    },
+    {
+      "path": "scripts/check-anatomy-coverage.mjs",
+      "sha256": "78dbb516fc50df377d40760def2fc0eb5967c55e5eb7df461844b4467ed1f414",
+      "bytes": 4552
+    }
+  ],
+  "removed": [],
+  "scope": "Seven source and anatomy-inventory files for the exact thyroid MRI integration candidate. Contains metadata and authored code only; no scans, private references, model binaries or canonical Git ancestry. Review runtime and full website builds remain pending. Not a complete project backup.",
+  "proof": {
+    "coverageScopes": 4,
+    "sourceInputs": 174,
+    "importedSourceInputs": 148,
+    "metadataSourceInputs": 26,
+    "invalidProjectionsRejected": 8,
+    "reviewInputs": 1920,
+    "jointSourceInputsVerified": 7,
+    "anatomicalCompletenessProven": false,
+    "clinicalApproval": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
