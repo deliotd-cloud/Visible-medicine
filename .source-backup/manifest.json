@@ -1,0 +1,59 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T18:08:19.921Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "proposal": "418d4fc18b095375f2657e99be25c9d76af0f38954fcc2b115b816c7fdb26d5e"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/inferior-thyroid-mri.ts",
+      "sha256": "468f6fc1ddc5c20246f12d76429c8538dea51556c1d95c5656c0224db7eb71c2",
+      "bytes": 1077
+    },
+    {
+      "path": "atlas/content/inferior-thyroid-mri-pins.json",
+      "sha256": "f87b9fb7b43a64386037b4f75feb36df76d2faf22a10039ff8f4f946dd91f177",
+      "bytes": 7790
+    },
+    {
+      "path": "atlas/lib/inferior-thyroid-mri.ts",
+      "sha256": "017794d2bdf5368f0bd5882ba6b4f4e89f9ea052ab1cf878a5a3408feaf0d63c",
+      "bytes": 1143
+    },
+    {
+      "path": "atlas/scripts/test-inferior-thyroid-mri.mjs",
+      "sha256": "18c791c09801c62ec2a73dfecda683082425d711b733a4b4b2134a4d19d9963d",
+      "bytes": 4749
+    },
+    {
+      "path": "atlas/app/body-content.ts",
+      "sha256": "e5d729ede934223488cbc3211b755557fd068caa3ac392cc3f66224e1c3d52bd",
+      "bytes": 86745
+    },
+    {
+      "path": "atlas/docs/INFERIOR_THYROID_MRI_PROPOSAL.md",
+      "sha256": "18af0d553635a5cced76eeae11c5933094b6cad7cdaa9b0a6f57980be6f988b9",
+      "bytes": 2388
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected original teaching/resolver/test/reference sources only. No scans, masks, article figures or PDF, models, private references, credentials, clinical decisions or project ancestry. Not a whole-project backup.",
+  "proof": {
+    "focusedPass": 4,
+    "changedLessons": 2,
+    "unchangedLessons": 9934,
+    "sourceIdentityRefusals": true,
+    "typeFiles": 573,
+    "diagnostics": 0,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
