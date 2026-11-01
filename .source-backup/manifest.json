@@ -1,0 +1,46 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T17:39:25.506Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "9210097d058f2dd36cb2245279c7078a04e6d19c429b1fcc35f8d8c2bdd8d5b5"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/deepbrain-foot-roles.mjs",
+      "bytes": 8487,
+      "sha256": "fb2d2aa0e5567f40d6498533a18264cb95bc7d4d9296b801bf356db57d869faf"
+    },
+    {
+      "path": "website/tests/foot-legacy-history-witness.mjs",
+      "bytes": 5257,
+      "sha256": "f56b15794cf7efd72902dd6a4e1c93015824201037dbfecf20c607e9ca658ad0"
+    },
+    {
+      "path": "website/tests/foot-legacy-history-witness.unit.test.mjs",
+      "bytes": 2442,
+      "sha256": "064a9266a1ae8c03fb50f63bf038d74c2f65058ccb59b1f825fcae1e3ea8b6b4"
+    }
+  ],
+  "removed": [],
+  "scope": "Three selected foot-history regression sources only. No local witness, evidence, scans, masks, model binaries, credentials, clinical decisions, private objects, project ancestry or browser media. Not a whole-project backup.",
+  "proof": {
+    "focusedTests": 10,
+    "focusedPassing": true,
+    "scopedTypes": 203,
+    "actualOriginalFootChildPass": 2,
+    "actualOriginalDeepBrainChildPass": 1,
+    "actualInvalidWitnessRejections": 3,
+    "reviewBindingUnchanged": true,
+    "productUnchanged": true,
+    "fullProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
