@@ -1,0 +1,151 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T21:22:06.049Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "7b2e5accf8538f3ffef396f95b0a206b06a76c1b",
+    "atlasTree": "29fb4ec503f2a29f8c282b3ab10087e01d2f1095",
+    "reviewBinding": "2ae7f4307dc962073bbfe37e63bfc2785f467a93f0d83338d97c33f4ff7522af"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "docs/anatomy-coverage/independent.json",
+      "sha256": "928191cace0140e0b72405211b544cff9ae5ec8ab5ba674ab87529cf5e59bc34",
+      "bytes": 772784
+    },
+    {
+      "path": "docs/anatomy-coverage/index.json",
+      "sha256": "7f406d1ee6eee2eb780c10b38cae97685c9ec983c11b319ba1fd418106298301",
+      "bytes": 155587
+    },
+    {
+      "path": "docs/anatomy-coverage/nested.json",
+      "sha256": "421d0442a2a5217f307d78f4b866deb712b6f1893a2300aeb3787287282a9f72",
+      "bytes": 789860
+    },
+    {
+      "path": "docs/anatomy-coverage/reference.json",
+      "sha256": "5f5876f7df5ff079c281fc1977551bd92b0a4e8ea0675af51c4d35c20389cd0a",
+      "bytes": 154089
+    },
+    {
+      "path": "docs/anatomy-coverage/root.json",
+      "sha256": "89d7547850ae331b1335964f1d32f4d621bc11d252716ff72c87dd5467b72c8e",
+      "bytes": 1067871
+    },
+    {
+      "path": "lib/anatomy-coverage-view.ts",
+      "sha256": "2ee217c41fe004407a6a84e9cf484a76c507145bb4e7d28643f6fb170ad8d78c",
+      "bytes": 5290
+    },
+    {
+      "path": "lib/atlas-delivery-policy.ts",
+      "sha256": "23978c26c8d025b704c24fd34e4df9ba0ff13197f77e0fc6ad8dcb07ef41ed7d",
+      "bytes": 493
+    },
+    {
+      "path": "lib/atlas-model-inventory.json",
+      "sha256": "0bcbd052054e7186ab6972b338b1658675c088822689c30c1979d8ed56342bcd",
+      "bytes": 33492
+    },
+    {
+      "path": "lib/atlas-related-joint-studies.ts",
+      "sha256": "6199215fe30f0491849a842d1e8cf1c898f8c023d86ec946334834afaccc1b01",
+      "bytes": 3532
+    },
+    {
+      "path": "lib/lecture-body-catalog.json",
+      "sha256": "e62f91e71a7639fe932d08d6bfdbdfd6c0a9391e0a4b63213015e9bcb06cd75b",
+      "bytes": 181273
+    },
+    {
+      "path": "lib/prostate-review-presentation.json",
+      "sha256": "ba35d18d5183913c71f5c93421c1b1e71cdaf6cf8e97ab545378b1866a2ce321",
+      "bytes": 208
+    },
+    {
+      "path": "scripts/check-anatomy-coverage.mjs",
+      "sha256": "98dfc1764f72263406844f0f33a72de7e52005bd5b4ccaffa77f6d3bbd402fb1",
+      "bytes": 4552
+    },
+    {
+      "path": "scripts/import-clinical-review.mjs",
+      "sha256": "feb971824acd5c011ed6e3b360539e544e59bef68e47a8d7135f3358f5f3aa6a",
+      "bytes": 11390
+    },
+    {
+      "path": "tests/atlas-related-joint-studies.test.mjs",
+      "sha256": "0919c28e1cb704c4dd6c9958ebac4fe6ea1130d53abe736cab9ea4f4de55e69d",
+      "bytes": 9713
+    },
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "sha256": "2fa1d086bf39e57b0b943435be7d19b6b1c0f8b8a48e58fe44fb70657a3a3f6f",
+      "bytes": 49171
+    },
+    {
+      "path": "tests/current-thyroid-delivery.test.mjs",
+      "sha256": "17aba68c1beaeba0e37ef053ebbe672186b09070e9165702321248a1a43252e0",
+      "bytes": 2771
+    },
+    {
+      "path": "tests/current-tour-delivery.test.mjs",
+      "sha256": "c41f360c1fe38f41c47b3cda43adbf449b60e94ecef7e6d021e8df4e0fbb2911",
+      "bytes": 3771
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-before-tour.json",
+      "sha256": "4b45b802688748ab372a492f2df25e7dfa980baf992c578712770cbb933bdc0f",
+      "bytes": 2051
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-before-tour.txt",
+      "sha256": "bda9401394df7f9ddc8dfe77225356165b4114b7e0411dd3940147f8421f83d1",
+      "bytes": 49171
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "sha256": "aa3149648ebf073e7e8929ad2fb178a6817a0eec8cdf461a4daa1240eecc2f97",
+      "bytes": 2051
+    },
+    {
+      "path": "tests/fixtures/current-thyroid-delivery-before-tour.txt",
+      "sha256": "32b77e3717355b49e4018f41addb0d9419358c71d6b44441ed0b2fa8ffaf17f9",
+      "bytes": 2755
+    },
+    {
+      "path": "tests/current-tour-panel-delivery.test.mjs",
+      "sha256": "c8c3c148f496eb479f1ff70d08e2668e306e5e7174d7f5db38c23f994cf2762a",
+      "bytes": 3441
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-before-panel.txt",
+      "sha256": "c164ee59ac7e99443169cfb896fffbfbb55a76630a202b12cbc92652ef9ed1a5",
+      "bytes": 49171
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-before-panel.json",
+      "sha256": "e51b7ba7a800ccd49ad8a78f64d0316b6ace2ebf135f60163d4204be103a8679",
+      "bytes": 2051
+    }
+  ],
+  "removed": [],
+  "scope": "Twenty-four explicit website integration, coverage and regression-source files for the guided-tour desktop sidebar. Selected-source checkpoint only, not a whole-project backup. No models, scans, identifiers, private records, authentication data, generated viewer bundles or original Git ancestry.",
+  "proof": {
+    "stockSourceAndRuntimeBinding": true,
+    "stockReviewBuild": true,
+    "focusedCases": 103,
+    "fullWebsiteTypes": true,
+    "productionBuild": true,
+    "installed": false,
+    "clinicalApproval": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

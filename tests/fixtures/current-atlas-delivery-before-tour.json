@@ -1,0 +1,29 @@
+{
+  "schema": "vm-current-atlas-test-delivery-2",
+  "source": "c75c72a4ad92ed15cc617361e6d40812696966ab",
+  "sourceTree": "c60c18bd5f4c17a2b054702897d4263a056bb6e0",
+  "runtimeSources": {
+    "head-neck": "c75c72a4ad92ed15cc617361e6d40812696966ab",
+    "shoulder": "c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3",
+    "lower-limb": "c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3",
+    "female-pelvis": "c32bc81cf0fd7ec22fa83e8b1365019297f9a0b3"
+  },
+  "reviewIntegration": "acf5bb81acf256d038064a4fb179d16bc2a3e80aeb019b04c5281dea17eb9504",
+  "reviewSourceFiles": 1686,
+  "viewerFiles": 63,
+  "viewerPackages": 24,
+  "documents": {
+    "atlas-review/manifest.json": "423647b812135db23176890bf1afc1539b0bb43f54d0a249dbdf8d197d172248",
+    "atlas-review/integration-inputs.json": "ccfe473044160325ae51f2ecfef0c9e3f542dbc71f83049ae7c59def0e089c4f",
+    "public/atlas-review-viewer/manifest.json": "e706abc19c8dabf6a18bd53217821c39d206213f566f06d4bde830a6fa4b2268",
+    "lib/atlas-model-inventory.json": "a9c16e1be9fcc03d891731d4d79b35e5bc4dbfbbffe5d8e736460bd0866cebcb",
+    "public/atlas-runtime/head-neck/manifest.json": "100c410ce0387288c0adbdb79e29866a6460723b763bc576434120e78c40e58c",
+    "public/atlas-runtime/head-neck/source-inputs.json": "02e4f2520bf32a21c57625b9c72657a2b341376debe3335dd491513f31540a8c",
+    "public/atlas-runtime/shoulder/manifest.json": "ba6f90e52d0e73de46c98101089e72aa2394e4c930ee379a338c2626a9502b4e",
+    "public/atlas-runtime/shoulder/source-inputs.json": "de3cee5c4417e2645be444009d2867fd7e30de4ff8b1a87344d2bac5db7f2954",
+    "public/atlas-runtime/lower-limb/manifest.json": "5a87219a812bfd1e8183ef01ae0ba3005b923af12faf862eddd7f4a24aa52a0e",
+    "public/atlas-runtime/lower-limb/source-inputs.json": "ba4af071bc2b80e7bb2038a44e4c7119a140850df646e799b724872933a725ca",
+    "public/atlas-runtime/female-pelvis/manifest.json": "1ec7ab8f1405e20429bd099c775a0db1d42bf840f4eec7463cc8107f7931813e",
+    "public/atlas-runtime/female-pelvis/source-inputs.json": "9e288243678be03443d4a8ef7335c8f31b23b40158409eee4ed0cbe76a31c5bc"
+  }
+}
