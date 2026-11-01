@@ -1,0 +1,59 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T16:37:16.497Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "c5981574f59a27c459a09d9fe205581a38e2c0d80364fbad4de1d91f88aec961"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/HeadLearningBookmark.tsx",
+      "bytes": 9632,
+      "sha256": "574ab3091dc1ff2c257daf9c75792a380aee78ed4ca1b58975139bcbc7db27a2"
+    },
+    {
+      "path": "website/tests/colic-current-admission.test.mjs",
+      "bytes": 14828,
+      "sha256": "71f6589bea0bd223d6cb97c7f4a1bad48aa169ba65962b131240329a8499683e"
+    },
+    {
+      "path": "website/tests/head-learning-bookmark-ui.test.ts",
+      "bytes": 24755,
+      "sha256": "a3c83145387c52d851c15be51557d49b8d69b9b707169d8aa4120e10030978d2"
+    },
+    {
+      "path": "website/tests/historical-review-ae84-preservation.test.mjs",
+      "bytes": 6677,
+      "sha256": "e1463c5c53ae52ed8496be4a524a8ad1988ea22ac3610407dd356633166888a9"
+    },
+    {
+      "path": "website/tests/colic-role-contract-20261101.mjs",
+      "bytes": 9304,
+      "sha256": "7d76e74f102023f64e89c39774ae6a5fd1967245543ffc5bfb3575a73a8a77f2"
+    },
+    {
+      "path": "website/tests/fixtures/colic-role-contract-20261101/colic-current-admission.c32-original.mjs.raw",
+      "bytes": 14063,
+      "sha256": "9d89e8670848650a0318014e3cb6e79aab74f5fa2cabfb252ca08da895590e99"
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected website bookmark/test/helper sources and an inert public Atlas test original only. No scans, masks, model binaries, credentials, clinical decisions, private objects, raw project ancestry or browser media. Not a whole-project backup.",
+  "proof": {
+    "bookmarkTests": 30,
+    "colicAndDesktopTests": 15,
+    "focusedPassing": true,
+    "scopedTypes": 231,
+    "browserKeyboardVerified": true,
+    "reviewBindingUnchanged": true,
+    "fullProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
