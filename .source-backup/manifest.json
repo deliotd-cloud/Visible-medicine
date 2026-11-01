@@ -1,0 +1,88 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T19:12:08.284Z",
+  "sourceIdentity": {
+    "kind": "coherent-website-source-candidate",
+    "nativeRevision": "c75c72a4ad92ed15cc617361e6d40812696966ab",
+    "sourceSha256": "e6f982a51461980abe8e4eb60c481484a9177556ac94f43d887fc0aa2ef3915f",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "lib/atlas-delivery-policy.ts",
+      "sha256": "2f1e8c2e02b435a5a470aac381512738545be1138c5535f8e029edf7556d287c",
+      "bytes": 493
+    },
+    {
+      "path": "lib/atlas-model-inventory.json",
+      "sha256": "a9c16e1be9fcc03d891731d4d79b35e5bc4dbfbbffe5d8e736460bd0866cebcb",
+      "bytes": 33492
+    },
+    {
+      "path": "lib/atlas-related-joint-studies.ts",
+      "sha256": "06fb42de65a6518f781c73b2fded9aaacdd975b4f520fc6756300eccf8ba26f6",
+      "bytes": 3532
+    },
+    {
+      "path": "lib/lecture-body-catalog.json",
+      "sha256": "6713e6bfa79e44041744533196d446f03a6e44a6f28d2a77bc059f7df1321d5c",
+      "bytes": 181273
+    },
+    {
+      "path": "tests/atlas-related-joint-studies.test.mjs",
+      "sha256": "bc36bd2494b5a335b90d42721e040145f7059bcf90bf2602421e7fb2290ceda7",
+      "bytes": 9713
+    },
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "sha256": "bda9401394df7f9ddc8dfe77225356165b4114b7e0411dd3940147f8421f83d1",
+      "bytes": 49171
+    },
+    {
+      "path": "tests/current-renderer-delivery.test.mjs",
+      "sha256": "36bda8d74d9ee2a14d19bc5c2029f1fc91de4cd908a9d0516033e807596b49f0",
+      "bytes": 1946
+    },
+    {
+      "path": "tests/current-thyroid-delivery.test.mjs",
+      "sha256": "32b77e3717355b49e4018f41addb0d9419358c71d6b44441ed0b2fa8ffaf17f9",
+      "bytes": 2755
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-before-thyroid.json",
+      "sha256": "41219f01228e06c124ee71d21fa8be1c1f40faba0c3d03f1f2af303534dc27ce",
+      "bytes": 2051
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-before-thyroid.txt",
+      "sha256": "4d95ac3844f81cb2384c6ca870958fe3e4c85e8e46f4357255dbfd3e1747a7d0",
+      "bytes": 49171
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "sha256": "4b45b802688748ab372a492f2df25e7dfa980baf992c578712770cbb933bdc0f",
+      "bytes": 2051
+    }
+  ],
+  "removed": [],
+  "scope": "Selected website integration source, current delivery proof and preserved historical tests. Matching native runtime and Review builds passed; full website types/build and remaining release acceptance are still pending. No scans, private references, model binaries, generated viewer bundles or raw canonical Git history. Not a complete project backup.",
+  "proof": {
+    "nativeRuntimeBuilt": true,
+    "nativeFullTypes": 4735,
+    "reviewBuilt": true,
+    "reviewFiles": 63,
+    "reviewPackages": 24,
+    "focusedPass": 99,
+    "focusedFail": 0,
+    "sourceBoundJointInputs": 7,
+    "clinicalApproval": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
