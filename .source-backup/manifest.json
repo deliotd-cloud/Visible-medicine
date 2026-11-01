@@ -1,0 +1,58 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T16:54:35.018Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "4f58c02397fa937006e25aaa566f56553511e2b4831e93060a700b4e8c4d7c0e"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-genicular-ultrasound.test.ts",
+      "bytes": 18424,
+      "sha256": "56e192ed2d20b5789126c45bdd9baad2d903ef5427e618a8e4cba652ddf8a533"
+    },
+    {
+      "path": "website/tests/clinical-review-pancreatic-arterial-xray.test.ts",
+      "bytes": 25686,
+      "sha256": "79bba0792544fda6123caa0a452e7b768ab69516025cb926369f9dd727b6c607"
+    },
+    {
+      "path": "website/tests/clinical-review-thigh-depth.test.ts",
+      "bytes": 22746,
+      "sha256": "cc562a4813731f7511e87000048a9f0bd74590c41883b3deab0bfce7235b0b57"
+    },
+    {
+      "path": "website/tests/genicular-current-preservation.test.mjs",
+      "bytes": 6522,
+      "sha256": "41227ca40466758a6417a2031f999485c08a7030e26cd7c41f39fae73e8992b8"
+    },
+    {
+      "path": "website/tests/fixtures/clinical-review-genicular-ultrasound.before-epoch-split.ts.raw",
+      "bytes": 16134,
+      "sha256": "0c410ba6fa730323952ae8c1f242bb8c2d192a2edc2d3606067a2f32dbb2949b"
+    },
+    {
+      "path": "website/tests/genicular-epoch-split-inverse.mjs",
+      "bytes": 6322,
+      "sha256": "d7d9942edd00c92480f6afab2585b01c6a0693c647333b2acbd32ba02c51de76"
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected test/helper files including one inert public-source test original. No scans, masks, model binaries, credentials, clinical decisions, private objects, project ancestry or browser media. Not a whole-project backup.",
+  "proof": {
+    "focusedTests": 8,
+    "focusedPassing": true,
+    "scopedTypes": 212,
+    "reviewBindingUnchanged": true,
+    "productUnchanged": true,
+    "fullProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
