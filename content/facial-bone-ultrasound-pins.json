@@ -1,0 +1,326 @@
+{
+  "baseline": "e32617ef2ed8690472e797d791a061fa3b1985b4",
+  "regionalSnapshotSha256": "5d9c17496989596f94fa8a296a2b786bc1e549166be4a80e38c217fe505dba59",
+  "entries": [
+    {
+      "family": "maxilla",
+      "identity": {
+        "anchor": [
+          0.20491400361061096,
+          6.958700180053711,
+          1.0374200344085693
+        ],
+        "bounds": {
+          "max": [
+            0.45795199275016785,
+            7.332900524139404,
+            1.328800082206726
+          ],
+          "min": [
+            -0.03067930042743683,
+            6.639899730682373,
+            0.7681400179862976
+          ]
+        },
+        "bundle": "head-neck-skeleton",
+        "category": "bone",
+        "center": [
+          0.2136363461613655,
+          6.986400127410889,
+          1.0484700500965118
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA53650",
+        "id": "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+        "laterality": "left",
+        "name": "Left maxilla",
+        "nodeName": "FMA53650",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "sourceName": "left maxilla",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3269",
+            "sha256": "ba97a37d471d6db65bca375a6413fd09e69e102017fb8a104d07255212d1b576"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "zygoma",
+      "identity": {
+        "anchor": [
+          0.5002149939537048,
+          7.050500392913818,
+          0.9170100688934326
+        ],
+        "bounds": {
+          "max": [
+            0.6324440240859985,
+            7.3673996925354,
+            1.1143200397491455
+          ],
+          "min": [
+            0.31893298029899597,
+            6.80620002746582,
+            0.7174299359321594
+          ]
+        },
+        "bundle": "head-neck-skeleton",
+        "category": "bone",
+        "center": [
+          0.47568850219249725,
+          7.08679986000061,
+          0.9158749878406525
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA52893",
+        "id": "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+        "laterality": "left",
+        "name": "Left zygomatic bone",
+        "nodeName": "FMA52893",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "sourceName": "left zygomatic bone",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3287",
+            "sha256": "eb4176b5641daa0f68da7190b1d3e3c26716cdb3b4337b2c8ecd39dfd47618a1"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "mandible",
+      "identity": {
+        "anchor": [
+          -0.22634099423885345,
+          6.529200553894043,
+          0.8416999578475952
+        ],
+        "bounds": {
+          "max": [
+            0.5255410075187683,
+            7.060999870300293,
+            1.238319993019104
+          ],
+          "min": [
+            -0.5384590029716492,
+            6.216300010681152,
+            0.3985369801521301
+          ]
+        },
+        "bundle": "head-neck-skeleton",
+        "category": "bone",
+        "center": [
+          -0.00645899772644043,
+          6.638649940490723,
+          0.8184284865856171
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA52748",
+        "id": "vm:anatomy:body:head-neck:midline:bone:mandible",
+        "laterality": "midline",
+        "name": "Mandible",
+        "nodeName": "FMA52748",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "sourceName": "mandible",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3289",
+            "sha256": "c38102c34660e2b767a7b95a341380bf4a52c754c6235fcd322be5c7b8cb1745"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "maxilla",
+      "identity": {
+        "anchor": [
+          -0.22227899730205536,
+          6.961999416351318,
+          1.0361300706863403
+        ],
+        "bounds": {
+          "max": [
+            -0.0025105399545282125,
+            7.333499908447266,
+            1.3402900695800781
+          ],
+          "min": [
+            -0.47610700130462646,
+            6.639899730682373,
+            0.793739914894104
+          ]
+        },
+        "bundle": "head-neck-skeleton",
+        "category": "bone",
+        "center": [
+          -0.23930877062957734,
+          6.986699819564819,
+          1.067014992237091
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA53649",
+        "id": "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+        "laterality": "right",
+        "name": "Right maxilla",
+        "nodeName": "FMA53649",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "sourceName": "right maxilla",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3375",
+            "sha256": "99fde288184e5d9ccb08ff5547fc1a693b2ef0d6a12a80e47b711f51bd3f7906"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "zygoma",
+      "identity": {
+        "anchor": [
+          -0.5084459781646729,
+          7.049399375915527,
+          0.9226499795913696
+        ],
+        "bounds": {
+          "max": [
+            -0.33234599232673645,
+            7.366400241851807,
+            1.114530086517334
+          ],
+          "min": [
+            -0.645779013633728,
+            6.806400299072266,
+            0.717739999294281
+          ]
+        },
+        "bundle": "head-neck-skeleton",
+        "category": "bone",
+        "center": [
+          -0.48906250298023224,
+          7.086400270462036,
+          0.9161350429058075
+        ],
+        "coverageNote": null,
+        "fmaId": "FMA52892",
+        "id": "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+        "laterality": "right",
+        "name": "Right zygomatic bone",
+        "nodeName": "FMA52892",
+        "provenance": {
+          "license": "CC-BY-4.0",
+          "method": "licensed-source-mesh",
+          "recovered": false,
+          "sourceVersion": "4.0"
+        },
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "sourceName": "right zygomatic bone",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3392",
+            "sha256": "bda976acce1517ed5349e8a0ad8d71922c148b95bdde18381a5d808f690c3c0f"
+          }
+        ],
+        "system": "skeleton",
+        "validation": {
+          "anatomicalReview": false,
+          "status": "unvalidated"
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    }
+  ]
+}

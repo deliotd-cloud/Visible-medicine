@@ -1,0 +1,63 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T11:55:39.996Z",
+  "sourceIdentity": {
+    "native": "1f1a916b3bd044f8eaf70fff13c73ea319704303",
+    "parent": "e32617ef2ed8690472e797d791a061fa3b1985b4"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/body-content.ts",
+      "bytes": 86342,
+      "sha256": "e079659fc45a24480dae25955cb2f17d0e0a1093d5f1e0134b7d5008d6def448"
+    },
+    {
+      "path": "content/facial-bone-ultrasound-pins.json",
+      "bytes": 10017,
+      "sha256": "4bff7e9b3ea6987d019872d3d85d872c33744b72c2ff835312d544d0852a91fa"
+    },
+    {
+      "path": "content/facial-bone-ultrasound.ts",
+      "bytes": 2984,
+      "sha256": "b18cd2b0952a8a06c4620767ea91a2d04aebe3ace7c486af3f3bce452964f6d1"
+    },
+    {
+      "path": "content/regional-teaching/head-neck.json",
+      "bytes": 2546688,
+      "sha256": "e06308e6c5a393fec0f1ff4e0dbdf353f3044f0cd7d6df4b330b06c8fdc408a1"
+    },
+    {
+      "path": "docs/FACIAL_BONE_ULTRASOUND.md",
+      "bytes": 3833,
+      "sha256": "6a5be5a0ca3ecc38bcf7ced0ef0cfba8b4b2ec31bab025b22b1db6ff1cb2b578"
+    },
+    {
+      "path": "lib/facial-bone-ultrasound.ts",
+      "bytes": 1272,
+      "sha256": "95c67ad632b9f55b9b45ddb90e19d806392a9817b008ac50af4237f2a625b786"
+    },
+    {
+      "path": "scripts/test-facial-bone-ultrasound.mjs",
+      "bytes": 4523,
+      "sha256": "df05aee593af6115137e2423929da6bdd3d53f9375980609def031f2aab5a763"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected source files for five original facial-bone ultrasound lessons, exact source binding, public teaching snapshot, test and documentation. No scans, models, patient records, private reference media or canonical repository ancestry. This native candidate is uninstalled and clinically unapproved.",
+  "proof": {
+    "focusedPassingCases": 6,
+    "targetLessons": 5,
+    "lessonsPreserved": 9931,
+    "generated": true,
+    "fullBuild": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
