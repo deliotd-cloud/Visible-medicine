@@ -1,0 +1,62 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T07:24:26.089Z",
+  "sourceIdentity": {
+    "nativeHead": "b688ddd0c1fb6392ba8e8d7890142d750c8100f1",
+    "baseline": [
+      {
+        "path": "content/renal-teaching.ts",
+        "sha256": "3d9bb0cc120ee240b0d08128429bead7743ee04abc6225dc01f6749083d00e4e"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/renal-venous-xray.ts",
+      "bytes": 2077,
+      "sha256": "a9f5253779aa5fc57647710044ffca554efb2fb885fdf24f70e32d7be685192d"
+    },
+    {
+      "path": "content/renal-teaching.ts",
+      "bytes": 12093,
+      "sha256": "33d383933f0e5456e8fb4b4877aa627341711d7dd461487a7ffa779bd28b3b8a"
+    },
+    {
+      "path": "docs/RENAL_VENOUS_XRAY.md",
+      "bytes": 2510,
+      "sha256": "4ee52f08a330259841c497f2643bd7097806014f65815711e1b0ff0863992fa5"
+    },
+    {
+      "path": "verification/prepare.mjs",
+      "bytes": 3687,
+      "sha256": "a1fa2df6338a8684507cc8d6dad00b6fe6f7ab30c66c7c79636ec3cf8c93a9e6"
+    },
+    {
+      "path": "verification/inspect-source.mjs",
+      "bytes": 3694,
+      "sha256": "eac413a13b3be50c5e4dd2fd8b82152fee12c053107a29e3757d09ecdb07d61c"
+    },
+    {
+      "path": "verification/verify.test.mjs",
+      "bytes": 4545,
+      "sha256": "b52337d2ebe13c7630ee76853870cd26ef4bb55affcf8a497a7750024994c3ed"
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected authored teaching, attribution, preparation and verification files. No scans, masks, private references, model assets, owner decisions or raw repository history. Not a whole-project backup.",
+  "proof": {
+    "focusedChecks": 5,
+    "sourceSelections": 4,
+    "concepts": 2,
+    "otherConceptTopicPlacementsPreserved": 682,
+    "staleIdentityMutationsRejected": 12,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
