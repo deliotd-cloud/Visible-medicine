@@ -1,0 +1,64 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T13:22:20.667Z",
+  "sourceIdentity": {
+    "nativeHead": "056ea3561a8d61fc2d11c4caa01b7bd553c16a65",
+    "parent": "91e85538f85b85aaa88bfa7dba01c948cb0ee155",
+    "tree": "3b9a8902211c5dca567ed58c41ea0d47ed85321f"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/body-content.ts",
+      "bytes": 86564,
+      "sha256": "70477b714a8787af2264f16e32125cd6dce627ec880d106b2dd1a0388eb82d65"
+    },
+    {
+      "path": "content/airway-membrane-ultrasound-pins.json",
+      "bytes": 7395,
+      "sha256": "c9cd8bec2cb514df4781b1500e2e9ab3db0b7364b2624dc1141b39bf661d3d70"
+    },
+    {
+      "path": "content/airway-membrane-ultrasound.ts",
+      "bytes": 2216,
+      "sha256": "2a33ef4f55bb87f7e2480465325b94867abe564370dce7d554ad4987f0bf19b1"
+    },
+    {
+      "path": "content/regional-teaching/head-neck.json",
+      "bytes": 2549087,
+      "sha256": "de4918a8ae9c5bbaabfb993b14fcc1be78a532c4e3ba0aa4933900db4671dcd9"
+    },
+    {
+      "path": "docs/AIRWAY_MEMBRANE_ULTRASOUND.md",
+      "bytes": 1928,
+      "sha256": "d2ae429f6c600acebbe3c1c60a5b5962b34cb0db5ac565d156be36807ddf29e8"
+    },
+    {
+      "path": "lib/airway-membrane-ultrasound.ts",
+      "bytes": 1282,
+      "sha256": "494b0a17faa30efe68120354ca1128a8a438fde338e8e5972d4f6f8050a60cf0"
+    },
+    {
+      "path": "scripts/test-airway-membrane-ultrasound.mjs",
+      "bytes": 3092,
+      "sha256": "35271806648c29b14b261c48db2bcc6dfc12db0429610d83fdeb873351d9faf2"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected authored teaching/resolver/test/documentation source files, including a generated teaching snapshot and public source-identity pins. No models, patient images, masks, identifiers, private records or canonical repository ancestry. Original factual synthesis links to references without importing their figures or text. Unreviewed draft, not installed.",
+  "proof": {
+    "focusedTests": 4,
+    "scopedTypes": true,
+    "changedLessons": 3,
+    "preservedLessons": 9933,
+    "fullNativeTypes": false,
+    "nativeRuntimeBuilt": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
