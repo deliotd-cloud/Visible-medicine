@@ -1,0 +1,88 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T07:04:11.013Z",
+  "sourceIdentity": {
+    "native": "b688ddd0c1fb6392ba8e8d7890142d750c8100f1",
+    "websiteSource": "9412dcb2aa53e4732138b622a74a8fe6f14fa0e9a90a03f05ab773cf41829bf7",
+    "reviewBinding": "5cf7e8819d832c86f1ebfd813c567dd7514265b7103c0dae8ad3cd25cc0741f8"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 10403,
+      "sha256": "7dc54659da9637b518af193dd04b03904268ab358e11207e8ff4c3b794d8cccc"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "369146bc74cc999268a826d012097a6b5457b2d0feb824f59f25fc3df3d99a80"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "cd7c1985b4bc32809a1cfc80a207771e232abe04dbedae7e700c819c81d79257"
+    },
+    {
+      "path": "website/tests/hepatic-coverage-binding.test.mjs",
+      "bytes": 2154,
+      "sha256": "55bbb6ec37901131d6eac626fdd00c283f5acbcd3bb710644e210e2869113bd3"
+    },
+    {
+      "path": "website/docs/anatomy-coverage/index.json",
+      "bytes": 155481,
+      "sha256": "5d52abf641edf67a8d87aef45f931ab049c8740df1cbb5abb2e7cb539c9b41ba"
+    },
+    {
+      "path": "website/docs/anatomy-coverage/root.json",
+      "bytes": 1067871,
+      "sha256": "7bc9447de4b315c486eb4238081338040f62482cc636832838ca163f51d6e065"
+    },
+    {
+      "path": "website/docs/anatomy-coverage/nested.json",
+      "bytes": 789754,
+      "sha256": "69f849789ca084c3bbc6ab8676633cec5dcca4ccdd483b078d349fedf24c1509"
+    },
+    {
+      "path": "website/docs/anatomy-coverage/independent.json",
+      "bytes": 772784,
+      "sha256": "4ffca98c9c6e6b6f75f65301aa21b802f6e25f46a12a93d5b0fb7d29c98a5d1e"
+    },
+    {
+      "path": "website/docs/anatomy-coverage/reference.json",
+      "bytes": 154089,
+      "sha256": "d1687b240eae5cbc3b120000f6cb5a907292f7d9051f6983d2bee71f175d85ad"
+    },
+    {
+      "path": "verification/coverage.mjs",
+      "bytes": 8670,
+      "sha256": "8d5e1688533b62e8cfeeec6f08ec65d0012beb49a70729243a4ee6bdc3528ed0"
+    },
+    {
+      "path": "verification/coverage-finish.mjs",
+      "bytes": 8998,
+      "sha256": "a637741d9a4f10351e66c54b1a49babbfa318df72c111a292d1dc48952971f80"
+    },
+    {
+      "path": "verification/source-final.mjs",
+      "bytes": 4012,
+      "sha256": "1931bc5da3e65cb6cd1f7ea5bbdcf92166166a839b837a1dfa3c6ae8af6d18d1"
+    }
+  ],
+  "removed": [],
+  "scope": "Twelve selected website source, coverage metadata and verification files only. No scans, private packets, actual decisions, model binaries, credentials, raw repository ancestry or clinical approval. Not a whole-project backup. Two added coverage tests await final rerun.",
+  "proof": {
+    "focusedTestsPassed": 17,
+    "coverageMeaningUnchanged": true,
+    "sourceHashesVerified": 1673,
+    "boundHashesVerified": 1906,
+    "newCoverageTestsPending": true,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
