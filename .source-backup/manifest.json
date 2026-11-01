@@ -1,0 +1,104 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T03:30:03.568Z",
+  "sourceIdentity": {
+    "nativeHead": "57ec5d5ff9fd5e5962a7ffd6f46a08c221d39429"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/workspace/atlas-review/prostate/page.tsx",
+      "bytes": 3830,
+      "sha256": "01805b454d30dda428c9f75ca0bc0c1fa358d1a4cbf050f57f6e2dda55f48a5d"
+    },
+    {
+      "path": "website/app/api/atlas-review/prostate/route.ts",
+      "bytes": 521,
+      "sha256": "d63f8055fab809c302abf3698f620f96e19fa19b3f25e469593099d2b5a9bcbc"
+    },
+    {
+      "path": "website/lib/prostate-review-contract.ts",
+      "bytes": 6102,
+      "sha256": "01483e63d51674936bd03cc5aa30c8181952847e7ae31f8ce723d590e9a1f96e"
+    },
+    {
+      "path": "website/lib/prostate-review-store.ts",
+      "bytes": 2725,
+      "sha256": "7218041318d4761cb827f0b48c28eb7a9f081408ceaf6ff070100b8261d153fa"
+    },
+    {
+      "path": "website/lib/prostate-review-api.ts",
+      "bytes": 5149,
+      "sha256": "a0aed3b643813d2d9f932f6b0989a204d0a8f2d27a4b431fb5f2cf4e12f48fe7"
+    },
+    {
+      "path": "website/lib/prostate-review-inbox.ts",
+      "bytes": 2165,
+      "sha256": "6ac5a2437a925cbb1c09904ee3962ea4685f1d842f6ec06ccf1e0440e56b4af7"
+    },
+    {
+      "path": "website/lib/prostate-review-material.ts",
+      "bytes": 3789,
+      "sha256": "3cb26bd523693721b9bfabfcbe1437817f6738f8b3549d6f7cfa8ecec15cb2a6"
+    },
+    {
+      "path": "website/lib/clinical-review-extra-inbox.ts",
+      "bytes": 22229,
+      "sha256": "6758a230cde42abef8b93e7a79a7b61fbc716967e660fae4d677bd1e2b6a88db"
+    },
+    {
+      "path": "website/components/ProstateReviewNotes.tsx",
+      "bytes": 19559,
+      "sha256": "5fdebcdc405cb9687c3beac3fde8538a5f862adee9a36a115ee3254a91c04b10"
+    },
+    {
+      "path": "website/components/prostate-review-notes.css",
+      "bytes": 2108,
+      "sha256": "04eac7d79e853c06325cf1ae4c1b532976f9f015e45654450f6966ba27088d3d"
+    },
+    {
+      "path": "website/tests/prostate-review-decisions.test.mjs",
+      "bytes": 9062,
+      "sha256": "0157d27aeb06e9e4de7acc353f27934a75f88b67421f57a56557cf4e28442fb8"
+    },
+    {
+      "path": "website/tests/prostate-review-inbox.test.mjs",
+      "bytes": 3953,
+      "sha256": "faf254f5b6f3d1c49c4dd49531ad8de7325ee88d8958a5b792fb810f9dcf850c"
+    },
+    {
+      "path": "website/tests/prostate-review-ui.test.ts",
+      "bytes": 14107,
+      "sha256": "f9490d6c584b8f564852b21983a3e84cc2fd1de9b905550a443cac50053bdecd"
+    },
+    {
+      "path": "website/tests/prostate-review-inspection.test.mjs",
+      "bytes": 15625,
+      "sha256": "81612228d06f5e6a7564d8d5511e9552af85afbbf43172239a72de70ba35a347"
+    },
+    {
+      "path": "website/tests/clinical-review-extra-inbox.test.ts",
+      "bytes": 24839,
+      "sha256": "ee64a64b66decec87818a1a561c086e5994ee1ec0c6103237217b87e98907950"
+    }
+  ],
+  "removed": [],
+  "scope": "15 selected website source/test files for grouped prostate review decisions. No scans, masks, patient identifiers, owner notes, private records, generated assets or raw canonical ancestry. Candidate uninstalled.",
+  "proof": {
+    "checks": {
+      "backend": 6,
+      "inspection": 7,
+      "existing": 8,
+      "ui2": 8
+    },
+    "syntheticBrowser": true,
+    "fullWebsiteBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
