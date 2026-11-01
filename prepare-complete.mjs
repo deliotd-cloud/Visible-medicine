@@ -1,0 +1,14 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const own='G:/VisibleMedicine-temp/proposals/20261101-hepatic-website';let code=fs.readFileSync(own+'/source-final.mjs','utf8');
+code="import {pathToFileURL} from 'node:url';\n"+code;
+assert(code.includes("await import(site+'/scripts/verify-prostate-review-presentation.mjs')"));
+code=code.replace("await import(site+'/scripts/verify-prostate-review-presentation.mjs')","await import(pathToFileURL(site+'/scripts/verify-prostate-review-presentation.mjs').href)");
+const old="run('hepatic-coverage-binding-fixed',['--test','--test-reporter=tap','--test-concurrency=1','tests/hepatic-coverage-binding.test.mjs']);";assert.equal(code.split(old).length,2);
+code=code.replace(old,`const tap=fs.readFileSync(root+'/logs/hepatic-coverage-binding-fixed.log','utf8');
+const totals=Object.fromEntries([...tap.matchAll(/^# (tests|pass|fail|cancelled|skipped|todo) (\\d+)\\r?$/gm)].map(([,name,value])=>[name,Number(value)]));
+assert.deepEqual(totals,{tests:2,pass:2,fail:0,cancelled:0,skipped:0,todo:0});
+checks.push({name:'hepatic-coverage-binding-fixed',logSha256:hash(root+'/logs/hepatic-coverage-binding-fixed.log')});`);
+fs.writeFileSync(own+'/source-complete.mjs',code,{flag:'wx'});
+const guarded='G:/VisibleMedicine-temp/proposals/20261101-type-repairs';
+const entry=fs.readFileSync(guarded+'/run-hepatic-website-source.mjs','utf8').replace("dir:root+'/checks/source'","dir:root+'/checks/source-complete'").replace('/source-checks.mjs','/source-complete.mjs').replace('/SOURCE_RESULT.json','/SOURCE_COMPLETE_RESULT.json');
+fs.writeFileSync(guarded+'/run-hepatic-website-complete.mjs',entry,{flag:'wx'});

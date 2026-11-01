@@ -1,0 +1,72 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T07:13:06.254Z",
+  "sourceIdentity": {
+    "atlasHead": "b688ddd0c1fb6392ba8e8d7890142d750c8100f1",
+    "websiteSource": "9412dcb2aa53e4732138b622a74a8fe6f14fa0e9a90a03f05ab773cf41829bf7",
+    "reviewBinding": "5cf7e8819d832c86f1ebfd813c567dd7514265b7103c0dae8ad3cd25cc0741f8"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "plan.mjs",
+      "bytes": 8268,
+      "sha256": "d418e3925b52abd967be8d3e12aa1366a1e9641f904f7a9a919f89ea933893c6"
+    },
+    {
+      "path": "prepare.mjs",
+      "bytes": 1274,
+      "sha256": "0732a9757ef3e326c854b1872c6a406fb144332ee03338c99e6da3a88399e822"
+    },
+    {
+      "path": "assemble.mjs",
+      "bytes": 3017,
+      "sha256": "76c93ddc128d43f1e3854524d3b6f88cc2ef3beaed6da857128bda1513c2831a"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 4148,
+      "sha256": "8421ffdd46b075f54616a7ac96bde14a962602995269bbc720c25256d8dced2b"
+    },
+    {
+      "path": "run.mjs",
+      "bytes": 3147,
+      "sha256": "b7dd3db8c1603ef20d1b9c5ca225af852e7284d8b917273c3f1c3ff5d8402ffc"
+    },
+    {
+      "path": "plan.test.mjs",
+      "bytes": 4347,
+      "sha256": "768095d1b6e43942727f424255e5d6febd212c733f8a7d2e11c8481019df5bec"
+    },
+    {
+      "path": "verify-complete.mjs",
+      "bytes": 958,
+      "sha256": "bdf824eef12001d1d3bc6ada72496b62a6c7c3ccfcbb48d76caab5545f6d4c1f"
+    },
+    {
+      "path": "source-complete.mjs",
+      "bytes": 4369,
+      "sha256": "4ce2e7d5275507a6b35cd15217ec676137f4818a3d445f78853b6792febd8e6f"
+    },
+    {
+      "path": "prepare-complete.mjs",
+      "bytes": 1666,
+      "sha256": "71896b17756c7f3f05b2a1aec9232a2387306cd554213d0683c1d6c57f67e68a"
+    }
+  ],
+  "removed": [],
+  "scope": "Nine delivery and verification recipe source files only. No scans, masks, private packets, actual review decisions, model assets, credentials or repository ancestry. Not a whole-project backup.",
+  "proof": {
+    "recipeTests": 6,
+    "websiteFocusedTests": 19,
+    "sourcePathsVerified": 7479,
+    "fullBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
