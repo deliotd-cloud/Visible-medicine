@@ -1,0 +1,56 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T21:10:18.370Z",
+  "sourceIdentity": {
+    "atlasHead": "7b2e5accf8538f3ffef396f95b0a206b06a76c1b",
+    "atlasTree": "29fb4ec503f2a29f8c282b3ab10087e01d2f1095"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/atlas-workspace.css",
+      "sha256": "55d8771ef75addf16d0ab7ea2b763600503516644a4f0c162608d094dda26a4c",
+      "bytes": 15782
+    },
+    {
+      "path": "app/regional-guided-learning.css",
+      "sha256": "141bb102386e24db5b908dab9fc3fbf4db926436c34ee39609b633fbf5d4086a",
+      "bytes": 4987
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "sha256": "bffb689448ebb61c2cacd535fb6376fecf2b3476af38ad15fe098db45321c783",
+      "bytes": 230648
+    },
+    {
+      "path": "docs/requirement-audit.json",
+      "sha256": "7e1ef5c797bfdef8bdf08f0cb7165a0fd4f4191b8405cb7055700457dab271cf",
+      "bytes": 270659
+    },
+    {
+      "path": "scripts/test-desktop-atlas-density.mjs",
+      "sha256": "03f53d645c71555aadc639f372a3297aaea8205ac2272f1fed324dd834184271",
+      "bytes": 6680
+    },
+    {
+      "path": "scripts/test-guided-panel-layout.mjs",
+      "sha256": "c936a7c39fa0ca33bcf4f0b9f73ffdb12735c3370aea899bd53f073b292b219d",
+      "bytes": 6637
+    }
+  ],
+  "removed": [],
+  "scope": "Six explicit CSS, layout assertion and generated source-binding/inventory documents for the desktop guided-tour sidebar. Selected source checkpoint only, not a whole-project backup. No original repository ancestry, models, scans, private records or clinical approvals.",
+  "proof": {
+    "focusedTests": 8,
+    "mountedBeforeAfterBrowser": true,
+    "controlledRendererAndSyntheticQuestion": true,
+    "websiteInstalled": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
