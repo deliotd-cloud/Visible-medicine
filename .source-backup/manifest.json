@@ -1,0 +1,38 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T12:54:05.471Z",
+  "sourceIdentity": {
+    "baseNative": "dd25f3f0fe0994a3410f81d0f6427dc76cb95a78",
+    "baselineModuleAudit": "0ea8a1dc24abad2941ce1404441f32ce64221bb5a4edc48f201e6460aa305702"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "integration/module-audit.mjs",
+      "bytes": 6135,
+      "sha256": "e5ab53573174d750518b10bade301ed07e2615e5705f5d46b6d297136ca94640"
+    },
+    {
+      "path": "scripts/test-module-audit.mjs",
+      "bytes": 4482,
+      "sha256": "071c8313efcd56948a0bee9b2a4071d19307d6bd6c47888d0fe63f492105a80a"
+    }
+  ],
+  "removed": [],
+  "scope": "Two selected original source/test files for bounded source fingerprint generation. Proposed patch only, not integrated or installed. No models, scans, masks, private records, media or canonical Git ancestry.",
+  "proof": {
+    "equivalenceTests": 4,
+    "portableTests": 5,
+    "comparedSourceFiles": 1589,
+    "isolatedPeakRssReductionKiB": 16220,
+    "fullBuild": false,
+    "applied": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
