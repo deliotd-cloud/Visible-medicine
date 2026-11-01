@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Synthetic Atlas focus checks</title>
+<style>body{font:17px system-ui;max-width:850px;margin:40px auto;padding:24px;background:#fafafa;color:#133b42}button{padding:10px}li{margin:10px 0}.pass{color:#18603b}.fail{color:#b32121}#fixture{border:1px solid #ccc;padding:16px}</style>
+<h1>Synthetic Atlas focus checks</h1><p>Tests the staged focus helper with browser DOM elements. No Atlas content or patient data. This does not validate a built Atlas.</p>
+<button id="run">Run focus checks</button><p id="summary" role="status">Ready</p><ol id="results"></ol><div id="fixture"></div>
+<script type="module">
+import {restoreStudyFocus} from './study-return-focus.js';
+const fixture=document.querySelector('#fixture'), results=document.querySelector('#results'), summary=document.querySelector('#summary');
+const tests=[];
+const check=(name,run)=>tests.push({name,run});
+const assert=(value,message)=>{if(!value)throw Error(message)};
+function scene(doc=document){
+ const root=doc.createElement('div');root.className='body-app';
+ root.innerHTML='<button role="radio" aria-checked="true">Explore</button><div class="drawer"><button class="launcher">Prostate zones</button></div><input aria-label="Another active control">';
+ (doc===document?fixture:doc.body).append(root);
+ doc.body.tabIndex=-1;doc.body.focus();
+ return {root,doc,mode:root.querySelector('[role="radio"]'),drawer:root.querySelector('.drawer'),launcher:root.querySelector('.launcher'),input:root.querySelector('input')};
+}
+check('Closed compact panel returns focus to Explore',()=>{const s=scene();s.launcher.focus();s.drawer.hidden=true;assert(restoreStudyFocus(s.root),'fallback did not run');assert(document.activeElement===s.mode,'mode not focused')});
+check('Visible desktop launcher keeps focus',()=>{const s=scene();s.launcher.focus();assert(!restoreStudyFocus(s.root),'unexpected fallback');assert(document.activeElement===s.launcher,'launcher lost focus')});
+check('Another live control keeps focus',()=>{const s=scene();s.input.focus();assert(!restoreStudyFocus(s.root),'unexpected fallback');assert(document.activeElement===s.input,'input lost focus')});
+check('Disconnected study root is skipped',()=>{const s=scene();s.root.remove();assert(!restoreStudyFocus(s.root),'disconnected fallback')});
+for(const [name,change] of [
+ ['Hidden target',s=>s.mode.hidden=true],['Hidden ancestor',s=>s.root.hidden=true],
+ ['CSS visibility hidden',s=>s.mode.style.visibility='hidden'],['Inert ancestor',s=>s.root.inert=true],
+ ['ARIA-hidden ancestor',s=>s.root.setAttribute('aria-hidden','true')],['Disabled target',s=>s.mode.disabled=true],
+ ['ARIA-disabled ancestor',s=>s.root.setAttribute('aria-disabled','true')],['Missing current mode',s=>s.mode.remove()]
+])check(name+' is skipped',()=>{const s=scene();change(s);assert(!restoreStudyFocus(s.root),'unavailable target accepted')});
+check('Fallback stays inside the current Atlas root',()=>{const first=scene(),second=scene();assert(restoreStudyFocus(second.root),'fallback did not run');assert(document.activeElement===second.mode&&document.activeElement!==first.mode,'wrong root focused')});
+check('Embedded Atlas uses its own document',()=>{const frame=document.createElement('iframe');fixture.append(frame);const s=scene(frame.contentDocument);assert(restoreStudyFocus(s.root),'iframe fallback did not run');assert(s.doc.activeElement===s.mode,'wrong owner document');frame.remove()});
+document.querySelector('#run').onclick=()=>{
+ results.replaceChildren();let passed=0;
+ for(const test of tests){fixture.replaceChildren();const item=document.createElement('li');try{test.run();item.textContent='PASS — '+test.name;item.className='pass';passed++}catch(e){item.textContent='FAIL — '+test.name+': '+e.message;item.className='fail'}results.append(item)}
+ fixture.replaceChildren();summary.textContent=`${passed}/${tests.length} browser DOM focus checks passed`;summary.dataset.passed=String(passed);summary.dataset.total=String(tests.length);
+};
+</script></html>

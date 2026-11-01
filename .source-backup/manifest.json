@@ -1,0 +1,84 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T08:16:43.243Z",
+  "sourceIdentity": {
+    "baseline": "1a00bd0825f74672299d032b21710eebf031aa80",
+    "before": [
+      {
+        "path": "app/study-surface.tsx",
+        "sha256": "635f4058e1418aa16bdb7e8a01047037ccf37682565227adefb207c2ecba9e6e"
+      },
+      {
+        "path": "app/prostate-zones.tsx",
+        "sha256": "6b277644cada20ab6866acd84168d05b07c1d22f8c09ddfb1d760adb7d171fa4"
+      }
+    ],
+    "after": [
+      {
+        "path": "app/study-return-focus.ts",
+        "sha256": "2003214a7309b85b14683fc8871cfa292eb80bf9c67845f7646cf98baf7cf546"
+      },
+      {
+        "path": "app/study-surface.tsx",
+        "sha256": "b37b582cb77c35d18f0dded3413723327c3f7f17d49460ba45edea1807e68f2b"
+      },
+      {
+        "path": "app/prostate-zones.tsx",
+        "sha256": "b6eefb5024dc2b608a8d01fcbc3a2be34ea7d54f5dbfea6ade07f32d09739991"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "source/app/study-return-focus.ts",
+      "bytes": 987,
+      "sha256": "2003214a7309b85b14683fc8871cfa292eb80bf9c67845f7646cf98baf7cf546"
+    },
+    {
+      "path": "source/app/study-surface.tsx",
+      "bytes": 3305,
+      "sha256": "b37b582cb77c35d18f0dded3413723327c3f7f17d49460ba45edea1807e68f2b"
+    },
+    {
+      "path": "source/app/prostate-zones.tsx",
+      "bytes": 20469,
+      "sha256": "b6eefb5024dc2b608a8d01fcbc3a2be34ea7d54f5dbfea6ade07f32d09739991"
+    },
+    {
+      "path": "tests/study-return-focus.test.mjs",
+      "bytes": 3362,
+      "sha256": "a0ef616901f6efae6f201a767080c066e86e518af610640b965bcb3524d257b0"
+    },
+    {
+      "path": "tests/prostate-close-integration.test.mjs",
+      "bytes": 3442,
+      "sha256": "4936d6eef68ac6541b88b187743dbb2b0ebbdc2655887da3b460ef180697a623"
+    },
+    {
+      "path": "browser/focus.html",
+      "bytes": 4039,
+      "sha256": "f67a5f4e8109889792502e0d61db8960c681b046113a882cabbedbc33766a758"
+    },
+    {
+      "path": "browser/serve-focus.mjs",
+      "bytes": 1073,
+      "sha256": "d1af08c9eabefe7692a17db221b9b9fef06180ce58743a800e1e14fe525db362"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected staged focus-fix and synthetic regression source files. Full build/integration pending; not installed. No scans, model binaries, review decisions, private browser evidence, credentials or canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "focusedNodeTests": 16,
+    "browserDOMTests": 14,
+    "sourceReviewed": true,
+    "installed": false,
+    "fullBuild": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
