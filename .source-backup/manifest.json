@@ -1,0 +1,69 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T14:41:45.709Z",
+  "sourceIdentity": {
+    "native": "c881cc45a1b0c0f2f617130738e9b1f2597af54e",
+    "websiteSource": "0c78c11d8284e907d5eaa6c97a91392ba0f04d220517c2ce02f9a615f2c51f6d"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/components/ClinicalReviewInbox.tsx",
+      "bytes": 43433,
+      "sha256": "9255dbaca710df644449cb4bc538042ec6bbc6b81de23d4734f408ccf73d1e50"
+    },
+    {
+      "path": "website/tests/review-successor-source-role.test.mjs",
+      "bytes": 2793,
+      "sha256": "fa6fd9f1b8283c4465da26c8f95398076cf0656103a02c2bf550b8e458e867f4"
+    },
+    {
+      "path": "website/tests/clinical-review-wayfinding.test.mjs",
+      "bytes": 7203,
+      "sha256": "596f37a49021debc46bf00e3fed146ad5f5f747c2349643e8e2987ed61b30bc3"
+    },
+    {
+      "path": "website/tests/toolbar-current-source-role.mjs",
+      "bytes": 9124,
+      "sha256": "5c07bed3afd3ca8fb713192c9dee75d9ecb94c913fed3d9858af884463de5182"
+    },
+    {
+      "path": "website/tests/clinical-review-inbox-prefetch-invalidation.test.mjs",
+      "bytes": 7673,
+      "sha256": "87cdbaf6cb22ef84e2efae0ef71479a8faf62acd873542d54c62b0c680a3cbe2"
+    },
+    {
+      "path": "website/tests/inbox-request-recovery-inverse.mjs",
+      "bytes": 1474,
+      "sha256": "fdcaa0af10a3eaca2a40fa4e38e9aa95d40401a043df48131c4e479663f6306c"
+    },
+    {
+      "path": "website/tests/fixtures/inbox-request-recovery-inverse.json",
+      "bytes": 80291,
+      "sha256": "e118bc77f1e0583b35f5b4b5a9f644efe5e0558a4dc76b949a380998ea18e10e"
+    },
+    {
+      "path": "website/tests/fixtures/toolbar-current-atlas-delivery-54.mjs.raw",
+      "bytes": 5092,
+      "sha256": "02dd815603c922dedbdc5a5fce270fbda736b81220e335d750dcbec1124c833e"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight selected website component, regression test and exact historical-source reconstruction files only. No patient scans, masks, model binaries, private packets, browser evidence, credentials, decisions or raw canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "newRaceCases": 8,
+    "existingRecoveryCases": 32,
+    "focusedDeliveryAndHistoricalCases": 85,
+    "oldComponentFailsNewCases": 5,
+    "scopedTypes": true,
+    "historicalSpinalFullTheorem": true,
+    "fullWebsiteBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
