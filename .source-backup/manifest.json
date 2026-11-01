@@ -1,0 +1,48 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T20:33:08.149Z",
+  "sourceIdentity": {
+    "atlasHead": "544e6c63a3428f6a8b24243fee46f6772037396a",
+    "atlasTree": "07c25bbdebefb9f82f01d41d103b46c884e8a098"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/regional-guided-learning.tsx",
+      "sha256": "6c98c55e226e547bc10c7e2394b95f608bc2d02eb12cdd0c0a637ce8541d969e",
+      "bytes": 20387
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "sha256": "00596eb8d2559d35750911ea2d1a47e9733ca23b9fcc7a20920d99e8727e388f",
+      "bytes": 230648
+    },
+    {
+      "path": "docs/requirement-audit.json",
+      "sha256": "c1568185b67f4a3c7e5429ff05cb71cf5485986991c4aae03ca4cfd486cb0ecb",
+      "bytes": 270659
+    },
+    {
+      "path": "scripts/test-regional-tour-player.mjs",
+      "sha256": "d9599daeeb824e3476c9fe67bb03f25cb2ade94622931b5fd2399ba2e853b745",
+      "bytes": 145292
+    }
+  ],
+  "removed": [],
+  "scope": "Four explicit native Atlas component, test and generated source-binding/coverage documents for retaining a written answer across renderer recovery. Selected-source checkpoint only. No original repository ancestry, models, scans, private decisions, local logs, or clinical approvals.",
+  "proof": {
+    "focusedTests": 95,
+    "fullNativeTypes": true,
+    "mountedBeforeAfterBrowser": true,
+    "controlledRendererAndSyntheticTeaching": true,
+    "sourceAccessFailuresRemainGated": true,
+    "websiteInstalled": false,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
