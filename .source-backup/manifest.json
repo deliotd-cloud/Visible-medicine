@@ -1,0 +1,103 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T15:22:06.566Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "ba0b7398a13b7d00c005352de0fa1ec7418036071602b252bf314b4452d1aaeb"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-back-topic-completion.test.ts",
+      "bytes": 18278,
+      "sha256": "82888ca42fe8b2901a85d54acaecae830ab3504a288f7518406d205dc527e0b7"
+    },
+    {
+      "path": "website/tests/atlas-foot-notice-epoch.test.ts",
+      "bytes": 13382,
+      "sha256": "6b341f71c399de45dfc10f3ab5c0b72801b5c0532d8472de567c1f1b97f3cdc3"
+    },
+    {
+      "path": "website/tests/clinical-review-deep-hip-depth.test.ts",
+      "bytes": 23144,
+      "sha256": "d868cfff6aa642c65b65e30658ea597afdf27ebca6615b9513ff48228edf5718"
+    },
+    {
+      "path": "website/tests/viewer-notice-roles.mjs",
+      "bytes": 35733,
+      "sha256": "f54a4801e28274735e2168b0aa6da103e4a6b8064ee2be1197e4739ac6da81c3"
+    },
+    {
+      "path": "website/tests/atlas-nested-practice-expansion.test.ts",
+      "bytes": 6104,
+      "sha256": "2d67b42d14c204d5bd0759d19ed4ecc711dee7ecd9f7ed77d9aea4d610ad26f4"
+    },
+    {
+      "path": "website/lib/atlas-related-joint-studies.ts",
+      "bytes": 3532,
+      "sha256": "03501d6f045b1bafe60936b5cc4b27ea090adf98981bd4292ab1246b233e88ff"
+    },
+    {
+      "path": "website/tests/atlas-related-joint-studies.test.mjs",
+      "bytes": 9713,
+      "sha256": "be6774a6b945798b08e250178cbd0077aedbd2b42bcb0090d1e1ec9ada7bf5a8"
+    },
+    {
+      "path": "atlas/content/body-renderer-revision.json",
+      "bytes": 230210,
+      "sha256": "d9d60699f9d309ab56f2844f4da5233c9b02d10d7005cc51b95ba308880e0d63"
+    },
+    {
+      "path": "atlas/integration/head-neck/vite.config.mjs",
+      "bytes": 1918,
+      "sha256": "0ab1f2f53676bbc26b54fb30596273e4e0c0ede3d19e3c1732e4816ccbea2be9"
+    },
+    {
+      "path": "atlas/package.json",
+      "bytes": 90452,
+      "sha256": "976eeef5d3a0400c56f2ce88fcad944fac2d11d48e5049cd006ae0f952fae517"
+    },
+    {
+      "path": "atlas/scripts/export-content.mjs",
+      "bytes": 1394,
+      "sha256": "09ee1ce6ce7d36fd25879a5f8f76c5f60cf4073dc3fce2a956124e1ec90afee8"
+    },
+    {
+      "path": "atlas/scripts/export-head-neck-module.mjs",
+      "bytes": 4867,
+      "sha256": "bd6c9953417c8522fc420659c843a388b5b9d8a631f4d93770ad7b260d1d724e"
+    },
+    {
+      "path": "atlas/scripts/require-body-renderer-seal.mjs",
+      "bytes": 806,
+      "sha256": "0b8c97f5efa237211cf2d52cf07207c71d8f36254f4c15c74b8c352a4a8dbf36"
+    },
+    {
+      "path": "atlas/scripts/test-renderer-seal-gates.mjs",
+      "bytes": 6292,
+      "sha256": "80ac351d0783320b23d87fc6da1b50d31c6dc88828528eab4c01472e9a066e4d"
+    }
+  ],
+  "removed": [],
+  "scope": "Fourteen selected Atlas/website source, revision-metadata and regression files only. No scans, masks, model binaries, credentials, decisions, browser media, private packets or raw project Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "nativeGateTests": 5,
+    "reviewContexts": 1574,
+    "focusedWebsite": {
+      "tests": 44,
+      "pass": 43,
+      "fail": 1,
+      "remaining": "Explicit legacy fixture prerequisite missing; no skip/substitution"
+    },
+    "jointScopedTypes": true,
+    "parentWebsiteBuildAndFullTypes": true,
+    "latestSuccessorFullBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
