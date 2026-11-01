@@ -1,0 +1,65 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T10:37:58.325Z",
+  "sourceIdentity": {
+    "native": "7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc",
+    "tree": "2e742b31600a6da39af99558d07ff6986fec6b9e"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/prostate-orientation.tsx",
+      "bytes": 2701,
+      "sha256": "f60f3c48ea832c968f598c661447545cc2785e337a660138061cf101d3f7468b"
+    },
+    {
+      "path": "atlas/lib/prostate-orientation.ts",
+      "bytes": 2554,
+      "sha256": "1d7f60aa61628014247c22707f0db3c3be7bb4d90de0beb9023f54147e6e87ce"
+    },
+    {
+      "path": "atlas/app/prostate-zones.tsx",
+      "bytes": 21043,
+      "sha256": "6938ff7afeba109d6bd6dea9d52d97ff3f05cf22e630718a2422322113f91bab"
+    },
+    {
+      "path": "atlas/app/prostate-zones.css",
+      "bytes": 12669,
+      "sha256": "7331f39e45bcee84992e98fc14ac201f6c9c6d24de34809ce7bbd6e30a308f92"
+    },
+    {
+      "path": "atlas/scripts/pin-prostate-zones.mjs",
+      "bytes": 1766,
+      "sha256": "ee77e5f94bd921102cb09b472d1a66e32ac5716dfeee70b0efdee3a0c0e6dd45"
+    },
+    {
+      "path": "atlas/scripts/test-prostate-orientation.mjs",
+      "bytes": 5498,
+      "sha256": "21eb8d1dfbbe9b77240d9e4e26698057a020ab3fad0aa640be9ce5439a6c6722"
+    },
+    {
+      "path": "atlas/scripts/test-prostate-orientation-component.mjs",
+      "bytes": 5587,
+      "sha256": "6a8c23a439acba526f7f060e45b50761fe3186fbed6b3fda2aa4830bb54fd50c"
+    },
+    {
+      "path": "atlas/docs/PROSTATE_ZONES.md",
+      "bytes": 8934,
+      "sha256": "dbe99e43f4a18f589f6fe63da4ab7f773988d16af6ebb0393bedfdc81a67d2a0"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight selected original prostate orientation source/test/document files. No patient images, masks, private references, model binaries, browser evidence, decisions, credentials or canonical Git ancestry. This is a source-only overlay, not a whole-project backup or installed release.",
+  "proof": {
+    "focusedPassingCases": 13,
+    "integrated": false,
+    "fullNativeTypes": false,
+    "browserAcceptance": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
