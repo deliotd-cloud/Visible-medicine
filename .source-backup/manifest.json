@@ -1,0 +1,106 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T12:41:27.583Z",
+  "sourceIdentity": {
+    "websiteSourceBase": "2f654df39243feffd22f1950512f054b7e259b075f6e53bb29ef5760df471251"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "lib/review-inbox-request.ts",
+      "bytes": 3007,
+      "sha256": "11eb0b702f9ac146d4f6cc1ccf90a5583779b22b604841cbc2afaa7fe5045751"
+    },
+    {
+      "path": "tests/review-inbox-request.test.ts",
+      "bytes": 6935,
+      "sha256": "d6c4d2bb9d87421e0540bedda92b361852bcc856a24ea0216109dff1d5db2dfd"
+    },
+    {
+      "path": "components/ClinicalReviewInbox.tsx",
+      "bytes": 42862,
+      "sha256": "52e9996f3046335865af3aba7a5963f53b49d9366a611142263f8c64ea2a282f"
+    },
+    {
+      "path": "tests/clinical-review-inbox-auto-return.test.mjs",
+      "bytes": 12652,
+      "sha256": "e6e9c6b99f0108123daba14c198e0d447f5875c52af979ddc419d98684105809"
+    },
+    {
+      "path": "tests/clinical-review-inbox-deferred-return.test.mjs",
+      "bytes": 18619,
+      "sha256": "55e8f4c96f549c07035a4695c11f38ac8e54e88ff06c320481133ec70433cbe6"
+    },
+    {
+      "path": "tests/clinical-review-inbox-failure-focus.test.mjs",
+      "bytes": 13352,
+      "sha256": "0fe7e527996a95edf4724680d2684790345cf0b0e7eb090bb7b22990eaf43469"
+    },
+    {
+      "path": "tests/clinical-review-inbox-filter-recovery.test.mjs",
+      "bytes": 9583,
+      "sha256": "8fab8d367913bf04bb7e34636de44ae1c50318193c9b20e03847302888ea433d"
+    },
+    {
+      "path": "tests/clinical-review-inbox-link-context.test.mjs",
+      "bytes": 10579,
+      "sha256": "895203a5d8d3605fae8b183cf48c944682c31ebc3d308fe56299441f9979d986"
+    },
+    {
+      "path": "tests/clinical-review-inbox-page-reconcile.test.mjs",
+      "bytes": 9479,
+      "sha256": "0e75d00a7fa127994fe38b64337640727c4c3c11c59e4bfd8be844ef47f34329"
+    },
+    {
+      "path": "tests/clinical-review-inbox-pagination-focus.test.mjs",
+      "bytes": 9249,
+      "sha256": "a85dfe1546638b2915651acf25cc6c1c4cedfd2f5ccf81dfa45ad8cdbca442e7"
+    },
+    {
+      "path": "tests/clinical-review-inbox-priority.test.mjs",
+      "bytes": 9253,
+      "sha256": "9fa88411c406e96452007dcd10c832a666a0bd11f43b7ece714b87317957cf1d"
+    },
+    {
+      "path": "tests/clinical-review-inbox-return-context.test.mjs",
+      "bytes": 12063,
+      "sha256": "4b86dfd81d8ac247774c5b1d7a3880623ce289701dfb67b3084125981be6c801"
+    },
+    {
+      "path": "tests/clinical-review-inbox-return-pager-focus.test.mjs",
+      "bytes": 11985,
+      "sha256": "9a512ba40c8910fa0d37367c71474a3982b3d43102d1d6b88db812b68cdb8bdb"
+    },
+    {
+      "path": "tests/clinical-review-inbox-scan-focus.test.mjs",
+      "bytes": 7773,
+      "sha256": "3b64fc76ff22fc9bc9930434e0c2e1c48f90331908edeeefb6b7d589da1765db"
+    },
+    {
+      "path": "tests/clinical-review-inbox-ui.test.mjs",
+      "bytes": 32449,
+      "sha256": "e1a966f2d24efdff03e279dfa0a3247b0e2d0af6c863a87128c0fc0a1609c5cf"
+    },
+    {
+      "path": "tests/clinical-review-inbox-workbench.test.mjs",
+      "bytes": 12647,
+      "sha256": "c8e63dd3306e6bd517ec8c645b7d741e8974cc0457b25a4a89a5fd01db3c245e"
+    }
+  ],
+  "removed": [],
+  "scope": "Sixteen selected authored inbox request/component/test files only; excludes scans, masks, models, private decisions, secrets, reference media and canonical Git ancestry. Local candidate only; not installed or clinically approved.",
+  "proof": {
+    "focusedTests": 110,
+    "scopedTypes": true,
+    "syntheticBrowser": true,
+    "fullWebsiteTypes": false,
+    "productionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
