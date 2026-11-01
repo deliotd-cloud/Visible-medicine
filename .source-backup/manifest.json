@@ -1,0 +1,55 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T05:59:31.126Z",
+  "sourceIdentity": {
+    "atlasHead": "d567863a5a8af08b3bbbfa22adf512a389cdc3a3",
+    "websiteSource": "3a34c12b01f9543d5834bdd9e86f051d95e274a55765de84c3c470341958933f"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "plan.mjs",
+      "bytes": 5140,
+      "sha256": "653dcbd46377cad44c1c6b3a66a639eb5c78d70ccf387cf4f5afee5e5f2372b2"
+    },
+    {
+      "path": "prepare.mjs",
+      "bytes": 1274,
+      "sha256": "c95159facce9e935889b361a91ac28e641a90a53cd03edca136586c59fc7eb60"
+    },
+    {
+      "path": "assemble.mjs",
+      "bytes": 3084,
+      "sha256": "efb7c3db697f6613275d1e3e69bd41b6ef575793d82cc8202e4c7f656d6f38c0"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 4133,
+      "sha256": "bab42ae4dc8daab9c96d25c23ac1ef4539e6455eea1ea2c9cf59155ac8b04189"
+    },
+    {
+      "path": "run.mjs",
+      "bytes": 3090,
+      "sha256": "e30c0201c3af81d2e0e5b9b5adddeb3d9a17fe848b5ea11d64ba9543fb89f994"
+    },
+    {
+      "path": "plan.test.mjs",
+      "bytes": 1679,
+      "sha256": "ba4fef575d8e514cda5a6403c812f6f0e23590a9b6c0e7d1d82320d83716443f"
+    }
+  ],
+  "removed": [],
+  "scope": "Six local integration/verification recipe source files only. No product assets, scans, masks, private references, decisions, credentials or original repository history. Not a full website backup.",
+  "proof": {
+    "recipeTests": 3,
+    "verifiedSourcePaths": 7477,
+    "fullChecksRun": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
