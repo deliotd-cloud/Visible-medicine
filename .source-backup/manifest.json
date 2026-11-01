@@ -1,0 +1,55 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T12:16:43.948Z",
+  "sourceIdentity": {
+    "native": "dd25f3f0fe0994a3410f81d0f6427dc76cb95a78",
+    "parent": "1f1a916b3bd044f8eaf70fff13c73ea319704303"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "docs/NATIVE_CATALOG_TYPES.md",
+      "bytes": 1799,
+      "sha256": "9ed9d9afc167e4bc0558306d4de290197a9e9379d4a4d7ff6ed7329baa205a11"
+    },
+    {
+      "path": "integration/module-audit.mjs",
+      "bytes": 5670,
+      "sha256": "0ea8a1dc24abad2941ce1404441f32ce64221bb5a4edc48f201e6460aa305702"
+    },
+    {
+      "path": "package.json",
+      "bytes": 90400,
+      "sha256": "d0bb9ab4a89be03f1850115ebacb0944217fbaf14465954e343c70ddd82ad26f"
+    },
+    {
+      "path": "public/models/bodyparts3d/full-body/catalog.d.json.ts",
+      "bytes": 360,
+      "sha256": "5b14d0235294ad41b0c228962072b22244c24afee598faf0596fda408284d728"
+    },
+    {
+      "path": "scripts/native-catalog-types.mjs",
+      "bytes": 4894,
+      "sha256": "3767264ae0e078fd96ba28d539e58e77321e89e05fe55e3471a2b717aa99bc54"
+    },
+    {
+      "path": "scripts/test-native-catalog-types.mjs",
+      "bytes": 9743,
+      "sha256": "0edfbadfe8f4e44498515fb2a694faa367085ebf2317ef2948e6d243db89a52f"
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected compiler/check/build-wiring/documentation source files only. No model meshes, scans, masks, patient records, private reference media or canonical Git ancestry. Compiler optimization is not installed or clinically approved.",
+  "proof": {
+    "focusedTests": 4,
+    "fullNativeTypes": true,
+    "nativeRuntimeBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
