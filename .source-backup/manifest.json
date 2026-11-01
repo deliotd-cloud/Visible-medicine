@@ -1,0 +1,39 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T06:32:24.116Z",
+  "sourceIdentity": {
+    "nativeHead": "d567863a5a8af08b3bbbfa22adf512a389cdc3a3",
+    "overlay": "20261101-hepatic-vascular-xray",
+    "rendererSha256": "d85164b6a232c34fc3f960acd2f79aa69c2a23ab91987c475b54d13b8db8cef6"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "render.mjs",
+      "sha256": "d85164b6a232c34fc3f960acd2f79aa69c2a23ab91987c475b54d13b8db8cef6",
+      "bytes": 4924
+    },
+    {
+      "path": "verify.test.mjs",
+      "sha256": "99076cbc1d3ddd4f82315ddb75a4123bbf3382dd76ed8c1865bfd5fc6f02a155",
+      "bytes": 4590
+    }
+  ],
+  "removed": [],
+  "scope": "Two original verification source files only. No scans, model assets, private references, review decisions, clinical content, evidence HTML or repository ancestry. Not a complete project backup.",
+  "proof": {
+    "tests": 6,
+    "actualComponentSsr": true,
+    "selections": 5,
+    "authoredDraftSelections": 4,
+    "browser": false,
+    "fullTypes": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
