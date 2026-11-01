@@ -1,0 +1,41 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T21:38:52.872Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "7b2e5accf8538f3ffef396f95b0a206b06a76c1b",
+    "reviewBinding": "2ae7f4307dc962073bbfe37e63bfc2785f467a93f0d83338d97c33f4ff7522af"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/atlas-um-guided-dissection.test.ts",
+      "sha256": "22dcedf666b275aa339ff90f2581933d249678e86c4a3b22e4bcaafb806153d6",
+      "bytes": 26118
+    }
+  ],
+  "removed": [],
+  "scope": "One regression-test source file. Full prior assertions retained, with complete committed notice equality and existing fixed notice hash required for the current source. No runtime/model/scan/mask/private records/original Git ancestry.",
+  "proof": {
+    "originalBatch": {
+      "tests": 16,
+      "pass": 15,
+      "fail": 1
+    },
+    "repairedWholeRoot": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0
+    },
+    "distinctVerifiedCases": 16,
+    "productUnchanged": true,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
