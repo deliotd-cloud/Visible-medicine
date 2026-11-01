@@ -1,0 +1,58 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T08:38:57.964Z",
+  "sourceIdentity": {
+    "parent": "1a00bd0825f74672299d032b21710eebf031aa80",
+    "tree": "701d0e01a61b5606ae600343d20537bfc9a2ae96",
+    "prepared": "7e755a140a76b580f6b012501d675e5b24fb81f19f9567b4be2cb18d36f8e696",
+    "rawSourceVerified": "b63a6c337e6dfbd38f5bd454c7975a41f97025a90301fb4d7b8a1a0fc1a2adb0"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/study-surface.tsx",
+      "bytes": 3305,
+      "sha256": "b37b582cb77c35d18f0dded3413723327c3f7f17d49460ba45edea1807e68f2b"
+    },
+    {
+      "path": "atlas/app/study-return-focus.ts",
+      "bytes": 987,
+      "sha256": "2003214a7309b85b14683fc8871cfa292eb80bf9c67845f7646cf98baf7cf546"
+    },
+    {
+      "path": "atlas/app/prostate-zones.tsx",
+      "bytes": 20469,
+      "sha256": "b6eefb5024dc2b608a8d01fcbc3a2be34ea7d54f5dbfea6ade07f32d09739991"
+    },
+    {
+      "path": "atlas/scripts/test-prostate-close-integration.mjs",
+      "bytes": 3428,
+      "sha256": "d075ae62f7baa7b4e16be45108c5d5768aba50599ecef1545a25003f8242202f"
+    },
+    {
+      "path": "atlas/scripts/test-study-return-focus.mjs",
+      "bytes": 3355,
+      "sha256": "03bd8c08bca30a27f741c80aaa7b9d0aa384598bade94ca829a96974dad11eca"
+    },
+    {
+      "path": "verification/verify-hippocampal.mjs",
+      "bytes": 2152,
+      "sha256": "c58447a857c2a1a3c4b2c3a7de8989db20e3d8f82c8066d0203a01f2c6bd0a8c"
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected Atlas focus-integration and read-only source-validation files. Native renderer regeneration, full type/build checks and website installation remain pending. No review decisions, screenshots, private browser evidence, scans, model binaries, credentials or canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "nativeFocusedTests": 16,
+    "onlyIntendedFivePaths": true,
+    "unchangedParentVerified": true,
+    "installed": false,
+    "fullBuild": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
