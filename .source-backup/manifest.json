@@ -1,0 +1,48 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T22:26:17.441Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "7b2e5accf8538f3ffef396f95b0a206b06a76c1b",
+    "reviewBinding": "39910b45b3b4324d00b13ca46e47609a92da597eb0e17e87b8c540b1a6081d8c",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/HeadAtlasPracticeReview.tsx",
+      "sha256": "8ce6ede137dd1bbb8d6b963740239c6d8dcfab12c231af5ccb96bdb992796ff6",
+      "bytes": 13347
+    },
+    {
+      "path": "tests/head-practice-review.test.ts",
+      "sha256": "0b100dafdd5ea82145b38e3552c5a03f06f2a44f9c0dc917d81214b707244e32",
+      "bytes": 33158
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "sha256": "5968722638ec3de597ffdc1a84820970a4e0a05896ab82257b7b5280cf789839",
+      "bytes": 2051
+    }
+  ],
+  "removed": [],
+  "scope": "Three selected source/test files making CT/MRI practice comparison and learning links structure-specific for assistive navigation. Actual component browser accessibility and keyboard checks, 39 focused cases, 60 delivery cases and stock Review build pass. Full website build and installation recorded separately. No models, scans, private records or raw Git ancestry.",
+  "proof": {
+    "focusedCases": 39,
+    "deliveryCases": 60,
+    "reviewBuild": true,
+    "reviewPackages": 24,
+    "reviewFiles": 63,
+    "actualComponentBrowserAccessibility": true,
+    "fullScanBrowserSession": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
