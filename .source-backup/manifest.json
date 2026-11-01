@@ -1,0 +1,58 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T22:01:27.029Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "7b2e5accf8538f3ffef396f95b0a206b06a76c1b",
+    "reviewBinding": "b5d53a2f8c8eb630631b55830f0547929221c47e6bbd80e063d69c0d991f75bb",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/HeadAtlasComparisonNavigation.tsx",
+      "sha256": "4c0ca54d0f5f3f5ff401bc565bfa49c076554dc9a864af4f17d7aa980f603d5d",
+      "bytes": 10043
+    },
+    {
+      "path": "app/atlas/head-neck-3d/head-learning.css",
+      "sha256": "185ec62f14881125aaf5bde906e415457d6a4a03db3143dc9c56979a36770c4a",
+      "bytes": 20004
+    },
+    {
+      "path": "tests/head-comparison-paused-row.test.mjs",
+      "sha256": "a0a697a8cb313bb08a5b6f2060bf8e6929e10fe5cd480d5eb9f5604fc55ae7a7",
+      "bytes": 4698
+    },
+    {
+      "path": "tests/head-link-menu-keyboard.test.mjs",
+      "sha256": "3b99f0079c6f659cd87b1f91614caf7c2a542e3b9e6d25a0a87014b3aa98af86",
+      "bytes": 10184
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "sha256": "90dea154faea4463161870df8430f91688889dfca156aa1cd5cc2ef9ce8b2004",
+      "bytes": 2051
+    }
+  ],
+  "removed": [],
+  "scope": "Five selected source/test files for a compact desktop comparison status row. Review stock build/verification and source/runtime delivery checks pass. Full configured website types, complete production build, real viewer acceptance and installation remain pending. No runtime bundles, models, scans, masks, private records or raw ancestry.",
+  "proof": {
+    "focusedUiCases": 72,
+    "deliveryCases": 60,
+    "reviewBuild": true,
+    "reviewPackages": 24,
+    "reviewFiles": 63,
+    "fullWebsiteTypes": false,
+    "fullProductionBuild": false,
+    "installed": false,
+    "wholeSuitePassing": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
