@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const own='G:/VisibleMedicine-temp/proposals/20261101-focus-release29',source=json(own+'/VERIFIED_REPAIRS.json').source;
+assert.equal(hash(source.path),source.sha256);const seal=json(source.path);
+const wrapper=seal.website+'/tests/spinal-historical-replay.test.mjs',original=fs.readFileSync(wrapper,'utf8');
+const from="['--max-old-space-size=3072','--test',",to="['--max-old-space-size=3072','--test-reporter=tap','--test',";
+assert.equal(original.split(from).length,2);const changed=original.replace(from,to);
+assert.equal(changed.replace(to,from),original,'Only inner reporter is changed for diagnosis');
+fs.writeFileSync(own+'/spinal-diagnostic.mjs',changed,{flag:'wx'});
+fs.writeFileSync(own+'/SPINAL_DIAGNOSTIC_PLAN.json',JSON.stringify({at:new Date().toISOString(),source,originalWrapper:{path:wrapper,sha256:hash(wrapper)},diagnostic:{path:own+'/spinal-diagnostic.mjs',sha256:hash(own+'/spinal-diagnostic.mjs')},onlyChange:'Add --test-reporter=tap to the inner Node test invocation to expose child exit status; all wrapper and immutable theorem assertions remain exact.',applicationSourceChanged:false},null,2)+'\n',{flag:'wx'});

@@ -1,0 +1,67 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T10:16:22.509Z",
+  "sourceIdentity": {
+    "native": "7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc",
+    "tree": "2e742b31600a6da39af99558d07ff6986fec6b9e",
+    "websiteSource": "ad7457a339b3174bf6d645e31f5c99458efb3c12139566825b83ef21bc0f9157"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/clinical-review-lower-limb-connective-xray.test.ts",
+      "bytes": 23639,
+      "sha256": "8078f8af2484b4bdf12e2c0b10dbafd184236b02384ede9c2ffbb941e99cddb4"
+    },
+    {
+      "path": "website/tests/tour-delivery-preservation.test.mjs",
+      "bytes": 1964,
+      "sha256": "bbbee412bbcd16a28b9d5c0e57b1d0b2f67eed20c19d805c7c7f77cdd6b37849"
+    },
+    {
+      "path": "website/tests/fixtures/tour-delivery-preservation/reader.json",
+      "bytes": 14359,
+      "sha256": "5fe02f871049c057d5446b787e0ec76155ba921edb90bbf6c1d22e42c80dd39f"
+    },
+    {
+      "path": "verification/restore-history.mjs",
+      "bytes": 2520,
+      "sha256": "93ba53bd687c8cd81b11991077f2b20f2d5ba957e324b754665638a3458aa87f"
+    },
+    {
+      "path": "verification/focused.mjs",
+      "bytes": 2276,
+      "sha256": "9bffd4898bc1838f285fb95bd2f492c86df637fe2f86a829647b94871d71a478"
+    },
+    {
+      "path": "verification/final-focused.mjs",
+      "bytes": 2042,
+      "sha256": "b84fb768f7a63368781257f28a408ede6fb910b96208b3fb3c5ddc50ab643f50"
+    },
+    {
+      "path": "verification/prepare-final-focused.mjs",
+      "bytes": 1360,
+      "sha256": "7e05bb183391676e8eefdb677842f5cde029ce6efa36151f6916f9ed788c949f"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected test, fixture and verification recipe files only. No patient scans, masks, model binaries, private packets, browser evidence, credentials, decisions or canonical Git ancestry. This is source-only recovery, not a whole-project backup.",
+  "proof": {
+    "stock": {
+      "tests": 253,
+      "pass": 249,
+      "fail": 4
+    },
+    "focusedPassingCases": 17,
+    "remainingHistoricalSpinalCrash": 3221226505,
+    "fullWebsiteTypes": false,
+    "fullWebsiteBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
