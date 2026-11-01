@@ -1,0 +1,47 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T19:53:09.342Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "c75c72a4ad92ed15cc617361e6d40812696966ab",
+    "reviewBinding": "acf5bb81acf256d038064a4fb179d16bc2a3e80aeb019b04c5281dea17eb9504"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "components/ClinicalReviewInbox.tsx",
+      "sha256": "1da855fb3574508def55b86995f4ad0c62dfe0e5ea3951e1e45150652f9fae92",
+      "bytes": 43580
+    },
+    {
+      "path": "components/ClinicalReviewQuickStart.tsx",
+      "sha256": "46179c77806a0b3b6e6751579736afea7059f1b1f7f543ed1397048c34b8b8f9",
+      "bytes": 6053
+    },
+    {
+      "path": "tests/clinical-review-inbox-first-load.test.mjs",
+      "sha256": "89374750d0a66c1f6c1bc70d3b64eb169d1a1bb12578d7540bcdc79592307902",
+      "bytes": 1394
+    },
+    {
+      "path": "tests/clinical-review-quick-start-ui.test.mjs",
+      "sha256": "97f1623d04a73e78e21f0435bbf623b4cbfdafe71b8fa844dfda05623a5c7e96",
+      "bytes": 15450
+    }
+  ],
+  "removed": [],
+  "scope": "Four explicit website UI/test source files for the Clinical Review initial loading screen. This is a selected-source checkpoint, not a whole-project or private-data backup. No model, scan, records, secrets, generated output or canonical Git ancestry included.",
+  "proof": {
+    "focusedTests": 54,
+    "scopedTypeFiles": 199,
+    "typeErrors": 0,
+    "reviewBindingUnchanged": true,
+    "stockReviewVerifierPassed": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
