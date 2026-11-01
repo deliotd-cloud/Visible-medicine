@@ -1,0 +1,62 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T07:58:04.822Z",
+  "sourceIdentity": {
+    "targetNative": "1a00bd0825f74672299d032b21710eebf031aa80",
+    "preparedSource": "f640f124cea933ff6a1e898a8b2bb3012b1ad5d98899dc379b4459b66128b1be",
+    "currentImportedNative": "b688ddd0c1fb6392ba8e8d7890142d750c8100f1"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 10403,
+      "sha256": "bacbe332d9af57daec8ba2c86db0b08838d804f5d73aaab260c07a6f2b3a268b"
+    },
+    {
+      "path": "website/tests/renal-coverage-binding.test.mjs",
+      "bytes": 2146,
+      "sha256": "96a829e2473f11ea7cbf085e6114da91fbe668e6e66fc3f6005b87f09865049f"
+    },
+    {
+      "path": "verification/prepare.mjs",
+      "bytes": 3092,
+      "sha256": "c089691b9d35e11706fac76edd42eaa116489ac006d854ec5f71edb1c2338376"
+    },
+    {
+      "path": "verification/coverage.mjs",
+      "bytes": 9121,
+      "sha256": "213381712e6e31bfa7a58f3575555cfc93fce85522faf2e6ad669f5dbfa1e432"
+    },
+    {
+      "path": "verification/source-checks.mjs",
+      "bytes": 3948,
+      "sha256": "05ace8a5e2557709a067a8f3fe0841edeed515cb7c69b18f86c4d08211a8ba9c"
+    },
+    {
+      "path": "verification/verify-preparation.mjs",
+      "bytes": 3878,
+      "sha256": "4a8be3b1992d279c3f9b58d0f020f8d958680a921e58ba80817c3891af2aa5e3"
+    },
+    {
+      "path": "verification/run-checks.mjs",
+      "bytes": 627,
+      "sha256": "160ff68fffb0aa97161f8c8e57e2dcd2fbc9443a67e1c26681f869dd3615c02c"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected integration and regression source files only. Import and guarded checks remain pending. No scans, private packets, review decisions, model binaries, credentials or canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "sourceCopyVerified": true,
+    "sourcePaths": 7480,
+    "guardedChecksAdmitted": false,
+    "imported": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
