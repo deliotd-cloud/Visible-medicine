@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {hash,json} from 'file:///C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/bounded-source-hash-20261026.mjs';
+const own='G:/VisibleMedicine-temp/proposals/20261101-renal-native-integration';
+const root='G:/VisibleMedicine-temp/staging/20261101-renal-native-integration',plan=json(root+'/PREPARED.json');
+const permitted=['validate-nested-teaching.mjs','renal-xray-history.mjs'];
+const names=fs.readdirSync(own+'/validation-overlay/scripts');assert(names.includes(permitted[0]));assert(names.every(n=>permitted.includes(n)));
+const files=names.map(name=>{const rel='scripts/'+name,target=path.join(plan.atlas,rel),source=path.join(own,'validation-overlay',rel);const before=fs.existsSync(target)?hash(target):null;fs.copyFileSync(source,target);return {path:rel,before,after:hash(target),source};});
+fs.writeFileSync(root+'/VALIDATION_SOURCE.json',JSON.stringify({at:new Date().toISOString(),files},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({validationFiles:files.length}));

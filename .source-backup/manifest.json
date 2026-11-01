@@ -1,0 +1,100 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T07:40:10.188Z",
+  "sourceIdentity": {
+    "baseHead": "b688ddd0c1fb6392ba8e8d7890142d750c8100f1",
+    "candidate": "G:/VisibleMedicine-temp/staging/20261101-renal-native-integration/atlas",
+    "state": "uncommitted-source-integration; full native validation pending",
+    "changes": [
+      {
+        "path": "content/renal-teaching.ts",
+        "sha256": "33d383933f0e5456e8fb4b4877aa627341711d7dd461487a7ffa779bd28b3b8a"
+      },
+      {
+        "path": "content/renal-venous-xray.ts",
+        "sha256": "a9f5253779aa5fc57647710044ffca554efb2fb885fdf24f70e32d7be685192d"
+      },
+      {
+        "path": "docs/RENAL_VENOUS_XRAY.md",
+        "sha256": "4ee52f08a330259841c497f2643bd7097806014f65815711e1b0ff0863992fa5"
+      },
+      {
+        "path": "scripts/validate-nested-teaching.mjs",
+        "sha256": "f0e14f0959a3404a1af9da1af64d691d743069371ab49a972ff99e8d859c9878"
+      }
+    ]
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/renal-teaching.ts",
+      "bytes": 12093,
+      "sha256": "33d383933f0e5456e8fb4b4877aa627341711d7dd461487a7ffa779bd28b3b8a"
+    },
+    {
+      "path": "content/renal-venous-xray.ts",
+      "bytes": 2077,
+      "sha256": "a9f5253779aa5fc57647710044ffca554efb2fb885fdf24f70e32d7be685192d"
+    },
+    {
+      "path": "docs/RENAL_VENOUS_XRAY.md",
+      "bytes": 2510,
+      "sha256": "4ee52f08a330259841c497f2643bd7097806014f65815711e1b0ff0863992fa5"
+    },
+    {
+      "path": "scripts/validate-nested-teaching.mjs",
+      "bytes": 52146,
+      "sha256": "f0e14f0959a3404a1af9da1af64d691d743069371ab49a972ff99e8d859c9878"
+    },
+    {
+      "path": "verification/prepare.mjs",
+      "bytes": 3792,
+      "sha256": "3996436876a2ba1aa85597e5036d708f73b7be0b20e4800bd32e9f08e667f1b1"
+    },
+    {
+      "path": "verification/apply-validation.mjs",
+      "bytes": 1128,
+      "sha256": "c5f17a03cb351673ec62a3e6fd77adab8e9a1c8dc50241de30bef26dc50c4a84"
+    },
+    {
+      "path": "verification/native-checks.mjs",
+      "bytes": 3376,
+      "sha256": "0cb830f8cc59ecffd14cc6add7ebc4140382bed0475d7a357c58c010942a6670"
+    },
+    {
+      "path": "verification/review-materials.mjs",
+      "bytes": 2734,
+      "sha256": "ce50d8e5a25b7ff887128a5ac2e0730e6328ac2c5ffe64eb47a7b6af905a6505"
+    },
+    {
+      "path": "verification/review-compare.mjs",
+      "bytes": 2724,
+      "sha256": "a9a80c6ef88107db0cee0633698fd43c4333435be83ad14a559f748467afb1c5"
+    },
+    {
+      "path": "verification/inspect-candidate.mjs",
+      "bytes": 3692,
+      "sha256": "4f1ac657d3d55ba139252e05d7f8d00fdc0d419df24c4de87b6112bda2655127"
+    },
+    {
+      "path": "verification/source-checks.test.mjs",
+      "bytes": 2770,
+      "sha256": "497b9b99485a0463b65230b722b8d977e817cef3ee06ee7cf572c805636bb646"
+    }
+  ],
+  "removed": [],
+  "scope": "Eleven selected teaching, documentation and validation/verification source files. No scans, masks, model binaries, private references, actual decisions, credentials or canonical Git ancestry. Not a whole-project backup.",
+  "proof": {
+    "sourceIntegrationChecks": 3,
+    "conceptTopicPlacements": 684,
+    "staleIdentitiesRejected": 12,
+    "nativeChecksNotAdmitted": true,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
