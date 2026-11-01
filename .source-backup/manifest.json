@@ -1,0 +1,48 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T17:21:03.463Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "c1f5b9a8193c81ebe72d4789e7ee0437b4f6ef31515087adef0dfd3982e87134"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-um-guided-dissection.test.ts",
+      "bytes": 25911,
+      "sha256": "0fbff0131a2691da436c40a8ad73e45260a075a5db8812b591693a6ca4e1fc21"
+    },
+    {
+      "path": "website/tests/um-guided-epoch-original.test.ts.raw",
+      "bytes": 20431,
+      "sha256": "1f535be0ae6444db00d51e5709acf927c7a3060602a50fecda505fd563f66392"
+    },
+    {
+      "path": "website/tests/um-guided-epoch-preservation.test.mjs",
+      "bytes": 1690,
+      "sha256": "d2f89d18462060a581b1ee656e3dc28ec40cf8a4be21c466ce1161a83f916992"
+    },
+    {
+      "path": "website/tests/um-guided-epoch-split-inverse.mjs",
+      "bytes": 15919,
+      "sha256": "b1b10c13b3a2d9ecbbf689a0c10058bd53ef70bfd2d1305dfac9e2bf9c64e99b"
+    }
+  ],
+  "removed": [],
+  "scope": "Four selected guided-dissection test/helper sources including one inert original public-source test. No scans, masks, model binaries, credentials, clinical decisions, private objects, project ancestry or browser media. Not a whole-project backup.",
+  "proof": {
+    "focusedTests": 8,
+    "focusedPassing": true,
+    "scopedTypes": 197,
+    "reviewBindingUnchanged": true,
+    "productUnchanged": true,
+    "fullProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
