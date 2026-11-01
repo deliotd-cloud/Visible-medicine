@@ -1,0 +1,98 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T15:47:30.366Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "4675869279ca8e90da902f00fe83ecd4f86c82efb0ce9dd542743f21c0d12981"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 11390,
+      "sha256": "627491cdf7d8d0404dff0aa78d7322b68c6cecee53c9bfe7c46fbfc8574c6243"
+    },
+    {
+      "path": "website/scripts/verify-native-body-renderer-seal.mjs",
+      "bytes": 4356,
+      "sha256": "34203afe87973d213a276a291a743a36989f9bffb94374b7ef9752a8f2a705fe"
+    },
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "bytes": 11508,
+      "sha256": "e79fd6db689352ae9a763af5b0e947ff8cc8fb59ce4683f31511ca1590a41413"
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "6f09fc7ee461e8d37a89fc198f62858fabe04b0015142c18ec45c8727ef164f5"
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "290edaf67fdd6a2a244ce78737b374724bc54136797f86e0898501f5a24f5719"
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "bytes": 493,
+      "sha256": "6fcc4340e59d2a9bb4a2400ba0c715efd8bf63827980d0720b447d51a6fc9b80"
+    },
+    {
+      "path": "website/lib/atlas-related-joint-studies.ts",
+      "bytes": 3532,
+      "sha256": "497d10726a5c81e254cf8b69732138dce74b8db9add62bfbaf39108b7d0fc27e"
+    },
+    {
+      "path": "website/tests/atlas-related-joint-studies.test.mjs",
+      "bytes": 9713,
+      "sha256": "143a72a7aff32c4ce679f403025f49fac92b2f49f6046403a6b6e40b1cab81ce"
+    },
+    {
+      "path": "website/tests/clinical-review-renderer-seal-gate.test.mjs",
+      "bytes": 3725,
+      "sha256": "06aa0883444b70ae50a85628213a6d956dc903dbe18931b4380b8ca7514a8bed"
+    },
+    {
+      "path": "website/tests/current-renderer-delivery.test.mjs",
+      "bytes": 1927,
+      "sha256": "5625857bb80cdd9da4e7d03d53b246141e80bac502a0f6d7daab07ca4dd10e49"
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "bytes": 49171,
+      "sha256": "4d95ac3844f81cb2384c6ca870958fe3e4c85e8e46f4357255dbfd3e1747a7d0"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "bytes": 2051,
+      "sha256": "41219f01228e06c124ee71d21fa8be1c1f40faba0c3d03f1f2af303534dc27ce"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-renderer-seal.txt",
+      "bytes": 49146,
+      "sha256": "0c01664ba5e7d41c8ac82890561e156c64ba0f6d3da2c4310bad5ec40dc763b5"
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery-before-renderer-seal.json",
+      "bytes": 2051,
+      "sha256": "b58f72a9cb55f161280dccfc33f113be4ae78965726f916a93c7539b73623d5a"
+    }
+  ],
+  "removed": [],
+  "scope": "Fourteen selected website importer, binding, source-pin and regression files only. No source scans, masks, model binaries, credentials, clinical decisions, private objects, raw repository ancestry or browser media. Not a whole-project backup.",
+  "proof": {
+    "fullNativeTypes": true,
+    "nativeRuntimeAndReviewBuilt": true,
+    "focusedTests": 98,
+    "fullWebsiteTypes": true,
+    "diagnostics": 0,
+    "fullWebsiteProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
