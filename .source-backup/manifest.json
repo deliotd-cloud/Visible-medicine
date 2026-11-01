@@ -1,0 +1,45 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T01:32:28.541Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "c0818c9e959544f04b54ef914ec62040f6cac2b3",
+    "candidateSha256": "f7e8c78fde2143e77500221c27b4dc4bbfec88ef3882a72a97dc358f724a4d5d"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/arterial-a01-history-transport.mjs",
+      "sha256": "928b4ac1bff8eeba25df2216c0b047afc37e6a272f5e82be5458387ce284409f",
+      "bytes": 7078
+    },
+    {
+      "path": "tests/atlas-arterial-a01-current-delivery.test.mjs",
+      "sha256": "2442547a740cfab76bbdee4e603c1495e5933765419208a59cb6fff80e6a1005",
+      "bytes": 18951
+    },
+    {
+      "path": "tests/cervical-delivery-role-integrity.test.mjs",
+      "sha256": "d65f3bd83f5b2457371d6a540c8134ef9172e84307e6ebe9912a8a14666016c0",
+      "bytes": 6007
+    },
+    {
+      "path": "tests/clinical-review-brain-connections-reasoning.test.ts",
+      "sha256": "bb52fbedc25a499d3adcb94ea19caa58c3db18096434d80c43778def809cb82a",
+      "bytes": 13361
+    }
+  ],
+  "removed": [],
+  "scope": "Four test-source files only. Current website update remains an uninstalled candidate. No patient data, generated Atlas model, whole repository or raw canonical ancestry.",
+  "proof": {
+    "arterialFocusedResultSha256": "3174b146d4acffb508a0723672f06ce41b75ad84390c89ef65109172f734d532",
+    "precedingFocusedResultSha256": "259d558968995bc22ae95e06f7407bff567e7649fddb87f6096aab793643e51f",
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
