@@ -1,0 +1,59 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T03:38:11.966Z",
+  "sourceIdentity": {
+    "nativeHead": "57ec5d5ff9fd5e5962a7ffd6f46a08c221d39429",
+    "presentationRevision": "d5636e2592ad348bb8cb62f28aa7a393408f6cfd1f23063ce6d6fdd3102441a0"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/bind-clinical-review.mjs",
+      "sha256": "ce74356b054542414e2d3edad8f5f9b22fa7bc9811d38b1c04a31e8e2d3a6463",
+      "bytes": 11461
+    },
+    {
+      "path": "website/scripts/verify-clinical-review.mjs",
+      "sha256": "7be08ca644a5b47d22b41cb545e78c9ddd6b180fb416ac0236d24862e91b370e",
+      "bytes": 1964
+    },
+    {
+      "path": "website/scripts/verify-prostate-review-presentation.mjs",
+      "sha256": "4d4b83b1d579285181112880b94789f97986ddadad31123ffafdabaa91956660",
+      "bytes": 1917
+    },
+    {
+      "path": "website/lib/prostate-review-material.ts",
+      "sha256": "b25ac3225e67b15d46c940d981e10ea34f249f5b06134650cc4e1842f6f8a340",
+      "bytes": 4476
+    },
+    {
+      "path": "website/lib/prostate-review-presentation.json",
+      "sha256": "f50fd49d3e9b3d39e00175ca35198d25bd998165d644deb84d82571562d35b63",
+      "bytes": 208
+    },
+    {
+      "path": "website/tests/prostate-review-binding.test.mjs",
+      "sha256": "e9badc691a74103db5a92e3b4c8f36a06c7cb7411881e6873dba03594dd6d2aa",
+      "bytes": 4764
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected source/test and compact generated presentation metadata files. No images, scans, masks, private decisions, patient identifiers or raw canonical ancestry. Full delivery is pending.",
+  "proof": {
+    "checks": {
+      "binding": 3,
+      "material-inbox": 9,
+      "api-ui": 12
+    },
+    "focusedTypes": true,
+    "fullWebsiteBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
