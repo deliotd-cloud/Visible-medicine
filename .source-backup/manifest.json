@@ -1,0 +1,125 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T23:44:13.761Z",
+  "sourceIdentity": {
+    "native": "ad82a5a96d8303c54eeea3926a6df8d31f9ae611",
+    "tree": "f49ef690ebdb0e78dfd3b0f32802d369ccf5daf4",
+    "websiteBase": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "review": "d2d0d7d05620c96de29dd4aa361b7fa7b965ad7521dd887000a2fbc4895321bd",
+    "installed": true
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/body-renderer-revision.json",
+      "sha256": "1be9b24ef34f32fe7e3f44f54aaa49edd1eb98932db16e7ea976c4f4e8eb832f",
+      "bytes": 230648
+    },
+    {
+      "path": "atlas/content/cricothyroid-teaching.ts",
+      "sha256": "8e833459d5b893ae94835b50e0e041d216f5467acc46a5ead13583e0ab7dd117",
+      "bytes": 6801
+    },
+    {
+      "path": "atlas/docs/nested-review-validation.json",
+      "sha256": "85e97ae1e23c36461adc4e8ba3ef8ef781070cfd571c563211d28a7c2297c166",
+      "bytes": 3409
+    },
+    {
+      "path": "atlas/package.json",
+      "sha256": "d0d2ea37b89945af6456b634ef8a7469c2c6400d46efe46ca103a247d43c0adb",
+      "bytes": 90854
+    },
+    {
+      "path": "atlas/scripts/validate-nested-teaching.mjs",
+      "sha256": "7bca88ee1fa2c6b21b4f3895191069a12ba0d63cf0c9cc08e64da5538e0a78d4",
+      "bytes": 53219
+    },
+    {
+      "path": "atlas/scripts/cricothyroid-ultrasound-history.mjs",
+      "sha256": "b27117dcca00fc129cfc74e9b3c1099e1f5701d94ed1d16e419ba8a21735fed3",
+      "bytes": 1963
+    },
+    {
+      "path": "atlas/scripts/test-cricothyroid-imaging-current.mjs",
+      "sha256": "9fe685d0c2656e9294a79a7d7b090f5224d01029148d9234b1b73361870dcaec",
+      "bytes": 9251
+    },
+    {
+      "path": "atlas/scripts/test-cricothyroid-ultrasound.mjs",
+      "sha256": "3a4eaf9dc72a50372f9649c9c1983534e63dd76d144f03ed538d71a2af2b6638",
+      "bytes": 7556
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "sha256": "a6470618f1602e3b3457ad36c4157713f99cb9cd1dc011166c61b3aa2ba21446",
+      "bytes": 11390
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "sha256": "5839f3809041708ebec68b37cb2a9a2ce24746b96894ce62c7f0655a2270384f",
+      "bytes": 4552
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "sha256": "15fb2b6b0c3cfe128f74a52992f5a18938b72aca7d6bedaf3913921bd105a5a1",
+      "bytes": 5290
+    },
+    {
+      "path": "website/lib/atlas-delivery-policy.ts",
+      "sha256": "cee7c3a06458ead61e354589a7eba470fbe5910be9bc53c034873988b938d87e",
+      "bytes": 493
+    },
+    {
+      "path": "website/lib/atlas-related-joint-studies.ts",
+      "sha256": "0559944de777b75d6909ac98a6ff0430a24d2bfd4fa7dd3d8659575c9e0b8730",
+      "bytes": 3532
+    },
+    {
+      "path": "website/lib/prostate-review-presentation.json",
+      "sha256": "edfeb91453f42de38f12a7c34329e9d3fdb7ad695fc6e775cb3a0145a7115e1e",
+      "bytes": 208
+    },
+    {
+      "path": "website/tests/atlas-related-joint-studies.test.mjs",
+      "sha256": "06302fca89e401e8eab952a15409f89b7ab41b83da8003c13842d5c131e52535",
+      "bytes": 9713
+    },
+    {
+      "path": "website/tests/current-atlas-delivery.test.mjs",
+      "sha256": "eaee483ca3b52942a5ed09e64714b11139478deb4c4305b2c01a24e0c371c3be",
+      "bytes": 49171
+    },
+    {
+      "path": "website/tests/current-tour-delivery.test.mjs",
+      "sha256": "9b5bfb9996d09ca2a014a45e718f990dd8c099fd29ec1944f3ce638333820219",
+      "bytes": 3771
+    },
+    {
+      "path": "website/tests/fixtures/current-atlas-delivery.json",
+      "sha256": "d8e6e623fc3516d1fe62d2d6f2cc2266f630bee20489e88750934734ef17268e",
+      "bytes": 2051
+    }
+  ],
+  "removed": [],
+  "scope": "18 selected native and website source/test files for the locally installed cricothyroid ultrasound teaching integration. Generated website artifacts and complete recovery remain local. Not a whole-project or data backup. No scans, meshes, masks, private records, private reference files or raw canonical ancestry.",
+  "proof": {
+    "nativeFullTypes": true,
+    "websiteFullTypes": true,
+    "websiteFocusedCases": 70,
+    "productionBuild": true,
+    "stockReviewVerified": true,
+    "teachingRenderedInCandidateAndInstalledBrowser": true,
+    "authenticatedModelRenderingVerified": false,
+    "installed": true,
+    "clinicalApproval": false,
+    "spatialRegistration": false,
+    "publicDeployment": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
