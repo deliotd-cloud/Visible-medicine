@@ -1,0 +1,82 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T08:55:08.964Z",
+  "sourceIdentity": {
+    "head": "7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc",
+    "tree": "2e742b31600a6da39af99558d07ff6986fec6b9e",
+    "sourceRecord": "ca4e5e355ccd5e5a4b620a41ba656f91a455e03d83298aacaf0d4cdee2d7d16d"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/prostate-zones.tsx",
+      "bytes": 20469,
+      "sha256": "b6eefb5024dc2b608a8d01fcbc3a2be34ea7d54f5dbfea6ade07f32d09739991"
+    },
+    {
+      "path": "atlas/app/study-return-focus.ts",
+      "bytes": 987,
+      "sha256": "2003214a7309b85b14683fc8871cfa292eb80bf9c67845f7646cf98baf7cf546"
+    },
+    {
+      "path": "atlas/app/study-surface.tsx",
+      "bytes": 3305,
+      "sha256": "b37b582cb77c35d18f0dded3413723327c3f7f17d49460ba45edea1807e68f2b"
+    },
+    {
+      "path": "atlas/scripts/pin-prostate-zones.mjs",
+      "bytes": 1701,
+      "sha256": "7c153f1b5680187cf2bb9091b374bfeff952931538a2454d6d5c72daf747e1f4"
+    },
+    {
+      "path": "atlas/scripts/test-prostate-close-integration.mjs",
+      "bytes": 3428,
+      "sha256": "d075ae62f7baa7b4e16be45108c5d5768aba50599ecef1545a25003f8242202f"
+    },
+    {
+      "path": "atlas/scripts/test-prostate-focus-pin.mjs",
+      "bytes": 1723,
+      "sha256": "77425f0cef1acb35cf09dff4c3b72bccd56cbd4352df715ce4f396306604e818"
+    },
+    {
+      "path": "atlas/scripts/test-study-return-focus.mjs",
+      "bytes": 3355,
+      "sha256": "03bd8c08bca30a27f741c80aaa7b9d0aa384598bade94ca829a96974dad11eca"
+    },
+    {
+      "path": "verification/native-checks.mjs",
+      "bytes": 7481,
+      "sha256": "d9d115234efeb12ee7b1000b7e0d803b93246d1a0de2e5ec0b5c9ce461c4bb6c"
+    },
+    {
+      "path": "verification/review-materials.mjs",
+      "bytes": 2733,
+      "sha256": "74f1badb486dbeb74da7522cbfc41fb543647b3621e778a6926e096cf3a21b57"
+    },
+    {
+      "path": "verification/review-compare.mjs",
+      "bytes": 2062,
+      "sha256": "042be8344283d2276c08815c943090b1b2787e9bf7f0522ec06499f3ed591348"
+    },
+    {
+      "path": "verification/types-only.mjs",
+      "bytes": 2681,
+      "sha256": "8019c3c146ebbeaa4f8ddd9a0907db784d29d26fd5a6108e1d0660e39d2e8dfb"
+    }
+  ],
+  "removed": [],
+  "scope": "Eleven selected native focus/revision source and verification files. No scans, models, private references, browser evidence, decisions, credentials or canonical Git ancestry. Source-only recovery, not a whole-project backup. No clinical approval, registration, complete build or installation claim.",
+  "proof": {
+    "nativePhasesPassed": 19,
+    "scopedComponentTypes": true,
+    "fullTypes": false,
+    "fullBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,81 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {execFileSync,spawnSync} from 'node:child_process';
+import {prostateRevision} from 'file:///G:/VisibleMedicine-temp/staging/20261101-focus-native-integration/atlas/scripts/pin-prostate-zones.mjs';
+const proposal='G:/VisibleMedicine-temp/proposals/20261101-focus-native-validation';
+const candidate='G:/VisibleMedicine-temp/staging/20261101-focus-native-integration';
+const atlas=candidate+'/atlas';
+const parent='G:/VisibleMedicine-temp/staging/20261101-renal-native-integration/atlas';
+const evidence=process.env.VM_FOCUS_RUN_DIR;assert(evidence&&evidence.startsWith(proposal+'/runs/')&&fs.existsSync(evidence));
+const hash=file=>createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const json=file=>JSON.parse(fs.readFileSync(file,'utf8'));
+const git=(cwd,...args)=>execFileSync('git',args,{cwd,encoding:'utf8',windowsHide:true,timeout:15000}).trimEnd();
+const prep=json(candidate+'/PREPARED.json');
+const extension=json(candidate+'/FOCUS_PIN_EXTENSION.json');
+const rawSource=json(candidate+'/RAW_SOURCE_VERIFIED.json');
+assert.equal(prep.baselineHead,'1a00bd0825f74672299d032b21710eebf031aa80');
+assert.equal(rawSource.candidateHead,prep.baselineHead);assert.equal(rawSource.parentHead,prep.baselineHead);
+assert.equal(rawSource.candidateBaselineTree,prep.baselineTree);
+assert.equal(git(atlas,'rev-parse','HEAD'),prep.baselineHead);
+assert.equal(git(parent,'rev-parse','HEAD'),prep.baselineHead);
+assert.equal(git(parent,'status','--porcelain','--untracked-files=all'),'','Parent must remain clean');
+const expected=[
+ ' M app/prostate-zones.tsx',' M app/study-surface.tsx',
+ ' M scripts/pin-prostate-zones.mjs','?? app/study-return-focus.ts',
+ '?? scripts/test-prostate-close-integration.mjs','?? scripts/test-prostate-focus-pin.mjs','?? scripts/test-study-return-focus.mjs'
+];
+assert.deepEqual(git(atlas,'status','--porcelain','--untracked-files=all').split(/\r?\n/).sort(),expected.sort(),'Candidate delta must be exactly seven paths');
+assert.deepEqual([...prep.diffPaths,...extension.changes.map(x=>x.path)].sort(),expected.map(s=>s.slice(3)).sort());
+for(const row of prep.after)assert.equal(hash(atlas+'/'+row.path),row.sha256,row.path);
+for(const row of prep.parentBefore)assert.equal(hash(parent+'/'+row.path),row.sha256,'Parent '+row.path);
+for(const row of extension.changes){assert.equal(hash(atlas+'/'+row.path),row.sha256,row.path);if(row.parentSha256)assert.equal(hash(parent+'/'+row.path),row.parentSha256,'Parent '+row.path);else assert(!fs.existsSync(parent+'/'+row.path));}
+assert.equal(extension.generatedPinPending,true);
+assert.equal(hash(atlas+'/content/prostate-zones-revision.json'),hash(parent+'/content/prostate-zones-revision.json'));
+assert.equal(hash(atlas+'/content/body-renderer-revision.json'),hash(parent+'/content/body-renderer-revision.json'));
+for(const name of ['nested-review-bindings.json','nested-teaching-bindings.v1.json'])assert.equal(hash(atlas+'/content/'+name),hash(parent+'/content/'+name));
+const baseline={head:prep.baselineHead,paths:prep.after,prostatePin:hash(atlas+'/content/prostate-zones-revision.json'),renderer:json(atlas+'/content/body-renderer-revision.json').sha256};
+fs.writeFileSync(evidence+'/PREFLIGHT.json',JSON.stringify(baseline,null,2)+'\n',{flag:'wx'});
+const runs=[];
+function run(name,args){
+ const result=spawnSync(process.execPath,['--max-old-space-size=512',...args],{cwd:atlas,encoding:'utf8',windowsHide:true,maxBuffer:8e6,env:process.env});
+ const log=evidence+'/'+name+'.log';fs.writeFileSync(log,(result.stdout??'')+'\n'+(result.stderr??''),{flag:'wx'});
+ const terminal={name,args,code:result.status,signal:result.signal,error:result.error?String(result.error):null,logSha256:hash(log)};
+ fs.writeFileSync(evidence+'/'+name+'-terminal.json',JSON.stringify(terminal,null,2)+'\n',{flag:'wx'});
+ assert.equal(result.status,0,name+' failed; inspect bounded log');assert(!result.error&&!result.signal);runs.push(terminal);console.log(name+' passed');
+}
+run('prostate-revision-regenerate',['scripts/pin-prostate-zones.mjs']);
+const oldPin=json(parent+'/content/prostate-zones-revision.json'),newPin=json(atlas+'/content/prostate-zones-revision.json');
+assert.deepEqual(newPin,prostateRevision(atlas));assert.notEqual(oldPin.sha256,newPin.sha256);
+assert.equal(newPin.clinicalReview,'pending');assert.equal(newPin.patientSpaceRegistration,null);
+assert.deepEqual(newPin.inputs.map(x=>x.file).filter(x=>x!=='app/study-return-focus.ts'),oldPin.inputs.map(x=>x.file));
+const changedPinInputs=[];
+const oldInputs=new Map(oldPin.inputs.map(x=>[x.file,x.sha256]));
+for(const row of newPin.inputs)if(oldInputs.get(row.file)!==row.sha256)changedPinInputs.push(row.file);
+assert.deepEqual(changedPinInputs.sort(),['app/prostate-zones.tsx','app/study-return-focus.ts']);
+run('prostate-focus-pin-regression',['--test','scripts/test-prostate-focus-pin.mjs']);
+run('prostate-zones',['--test','scripts/test-prostate-zones.mjs']);
+run('prostate-education',['--test','scripts/test-prostate-education.mjs']);
+run('prostate-education-hook',['--test','scripts/test-prostate-education-hook.mjs']);
+run('prostate-mri-teaching',['--test','scripts/test-prostate-mri-teaching.mjs']);
+run('renderer-regenerate',['scripts/body-renderer-revisions.mjs']);
+run('renderer-check',['scripts/body-renderer-revisions.mjs','--check']);
+assert.notEqual(json(atlas+'/content/body-renderer-revision.json').sha256,baseline.renderer);
+run('regional-snapshot-freshness',['scripts/regional-teaching-snapshots.mjs','--check']);
+run('body-display-pins',['scripts/generate-body-review-display-pins.mjs','--check']);
+run('shoulder-review-revisions',['scripts/review-revisions.mjs','--check']);
+run('nested-link-bindings',['scripts/generate-nested-review-bindings.mjs','--check']);
+run('nested-teaching-source-pins',['scripts/pin-nested-teaching.mjs','--check']);
+run('nested-teaching-current-and-history',['scripts/validate-nested-teaching.mjs']);
+run('nested-review-context',['scripts/validate-nested-review.mjs']);
+for(const name of ['nested-review-bindings.json','nested-teaching-bindings.v1.json'])assert.equal(hash(atlas+'/content/'+name),hash(parent+'/content/'+name));
+run('review-materials-before',[proposal+'/review-materials.mjs','before']);
+run('review-materials-after',[proposal+'/review-materials.mjs','after']);
+run('review-materials-compare',[proposal+'/review-compare.mjs']);
+fs.mkdirSync(atlas+'/.local',{recursive:true});
+const scoped={extends:'../tsconfig.json',compilerOptions:{incremental:false},include:['../app/study-return-focus.ts','../app/study-surface.tsx','../app/prostate-zones.tsx'],exclude:[]};
+const scopedName='tsconfig.focus-native-'+evidence.split('/').at(-1)+'.json';
+const config=atlas+'/.local/'+scopedName;fs.writeFileSync(config,JSON.stringify(scoped,null,2)+'\n',{flag:'wx'});
+run('focused-semantic-types',['node_modules/typescript/bin/tsc','--project','.local/'+scopedName,'--pretty','false']);
+const report={at:new Date().toISOString(),runs,prostate:{oldRevision:oldPin.sha256,newRevision:newPin.sha256,changedInputs:changedPinInputs},renderer:{before:baseline.renderer,after:json(atlas+'/content/body-renderer-revision.json').sha256},review:json(evidence+'/REVIEW_COMPARISON.json'),scopedTypes:true,wholeAtlasTypes:false,fullBuild:false,installed:false,clinicalApproval:false};
+fs.writeFileSync(evidence+'/CHECKS_COMPLETE.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});
