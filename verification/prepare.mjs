@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const root='G:/VisibleMedicine-temp/staging/20261101-focus-website',site=root+'/website';
+const sourcePath='G:/VisibleMedicine-temp/staging/20261101-renal-website/PREPARED_WEBSITE.json';
+const nativePath='G:/VisibleMedicine-temp/staging/20261101-focus-native-integration/NATIVE_SOURCE.json';
+const hash=file=>createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const json=file=>JSON.parse(fs.readFileSync(file,'utf8'));
+const source=json(sourcePath),native=json(nativePath);
+const git=(...args)=>execFileSync('git',['-C',native.atlas,...args],{encoding:'utf8',windowsHide:true}).trim();
+assert.equal(source.schema,'vm.prepared-website-not-imported/1');assert.equal(source.sourceRows.length,7480);
+assert.equal(source.targetNative,'1a00bd0825f74672299d032b21710eebf031aa80');
+assert.equal(source.currentImportedNative,'b688ddd0c1fb6392ba8e8d7890142d750c8100f1');
+assert.equal(native.head,'7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc');
+assert.equal(native.parent,source.targetNative);assert.equal(git('rev-parse','HEAD'),native.head);
+assert.equal(git('rev-parse','HEAD^{tree}'),native.tree);assert.equal(git('status','--porcelain','--untracked-files=all'),'');
+assert.equal(json(source.website+'/atlas-review/manifest.json').revision,source.currentImportedNative);
+assert(!fs.existsSync(root),'Never overwrite a prepared website');
+const child=(base,relative)=>{assert(relative&&!relative.includes('\\')&&!relative.includes(':')&&!path.isAbsolute(relative)&&relative.split('/').every(p=>p&&p!=='.'&&p!=='..'));const p=path.resolve(base,relative);assert(p.startsWith(path.resolve(base)+path.sep));return p;};
+for(const row of source.sourceRows){const file=child(source.website,row.path);assert.equal(hash(file),row.sha256,'Frozen source drift: '+row.path);assert.equal(fs.statSync(file).size,row.bytes,'Frozen source size drift: '+row.path);}
+fs.mkdirSync(site,{recursive:true});
+for(const row of source.sourceRows){const from=child(source.website,row.path),to=child(site,row.path);fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to,fs.constants.COPYFILE_EXCL);assert.equal(hash(to),row.sha256,row.path);}
+fs.symlinkSync(fs.realpathSync(source.website+'/node_modules'),site+'/node_modules','junction');
+for(const dir of ['tmp','logs','checks'])fs.mkdirSync(root+'/'+dir);
+const importer=site+'/scripts/import-clinical-review.mjs',old=fs.readFileSync(importer,'utf8');
+const needle="const revision = '"+source.targetNative+"';";assert.equal(old.split(needle).length,2);
+fs.copyFileSync(importer,root+'/IMPORTER_BEFORE.mjs',fs.constants.COPYFILE_EXCL);
+fs.writeFileSync(importer,old.replace(needle,"const revision = '"+native.head+"';"));
+const receipt={schema:'vm.focus-website-preparation/1',at:new Date().toISOString(),website:site,native:native.atlas,nativeHead:native.head,nativeTree:native.tree,nativeSource:{path:nativePath,sha256:hash(nativePath)},parent:{path:sourcePath,sha256:hash(sourcePath),website:source.website,sourceRows:source.sourceRows.length,currentImportedNative:source.currentImportedNative,targetNative:source.targetNative},sourcePaths:source.sourceRows.length,initialMutation:{path:'scripts/import-clinical-review.mjs',beforeSha256:hash(root+'/IMPORTER_BEFORE.mjs'),afterSha256:hash(importer),scope:'Exact Atlas source revision only'},privateHeldPacketsRemainLocal:true,imported:false,coverageGenerated:false,reviewBindingRegenerated:false,fullBuild:false,installed:false,clinicalApproval:false};
+fs.writeFileSync(root+'/PREPARATION.json',JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({sourcePaths:receipt.sourcePaths,website:site,imported:false,installed:false}));

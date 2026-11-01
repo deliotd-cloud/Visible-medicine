@@ -1,0 +1,58 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T09:01:18.334Z",
+  "sourceIdentity": {
+    "atlasHead": "7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc",
+    "atlasTree": "2e742b31600a6da39af99558d07ff6986fec6b9e",
+    "sourceRecord": "5b92c78d38b32e1f2549cd46ef45966b04259945f0289cffdf4a5d212e5742e4",
+    "reviewBinding": "b19cc36239128192dc21bd32857bec87e03131c4c9f50a89ccecf51fac17420c"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "bytes": 10403,
+      "sha256": "2debc91137d4327d93688a110ff62f9cc60957a2501d22009c8f1e80ee7c578a"
+    },
+    {
+      "path": "website/tests/prostate-review-binding.test.mjs",
+      "bytes": 4978,
+      "sha256": "9d29a036c84c6f96270b6198897a64aa5b983cb523f6def8aa85428fb9a4324d"
+    },
+    {
+      "path": "verification/prepare.mjs",
+      "bytes": 3837,
+      "sha256": "9b5af3be79e6c0df13cbc6a3b6d8e0294e55e875d4cd4992b95cf8971c9fd4d1"
+    },
+    {
+      "path": "verification/source-checks.mjs",
+      "bytes": 4724,
+      "sha256": "0a659221acca6e57af24d156f80ade4226d6c8401613cc159224ec2baffbd325"
+    },
+    {
+      "path": "verification/coverage.mjs",
+      "bytes": 9123,
+      "sha256": "4159da82f436c9c96882400e8dc6f63ebc3605db1dc1a46b59b506669d1bcd28"
+    },
+    {
+      "path": "verification/focus-import-binding.test.mjs",
+      "bytes": 1877,
+      "sha256": "085256bd64ed43fc2f827b3781db746b5603e31367e1ed8afaa4b1ca2c7e1fb1"
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected website import/binding-test and source-verification files. No private datasets, scans, model binaries, private packets, review decisions, browser evidence, credentials or repository ancestry. Not a whole-project backup; complete build and installation pending.",
+  "proof": {
+    "focusedTests": 25,
+    "importedSourceFiles": 1675,
+    "boundInputs": 1908,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
