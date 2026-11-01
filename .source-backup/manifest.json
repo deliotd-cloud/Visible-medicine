@@ -1,0 +1,37 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T20:11:25.120Z",
+  "sourceIdentity": {
+    "atlasHead": "8df90c28f2d75f8367b6817973239cd06213a1c4",
+    "atlasTree": "2cec3d9a390ac6a323ed29dd9e813ffb4a9553bd",
+    "parent": "c75c72a4ad92ed15cc617361e6d40812696966ab"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "docs/CURRENT_STATUS.md",
+      "sha256": "14e7e9b132ba50fb52bd83550aac3016ae1f2f846d4d7c402365347748c43047",
+      "bytes": 9870
+    },
+    {
+      "path": "docs/requirement-audit.json",
+      "sha256": "11827ab0b1c6423ea7661843a40683fcea6e58f272bdcbbfaee17adafba419ca",
+      "bytes": 270659
+    }
+  ],
+  "removed": [],
+  "scope": "Two generated source coverage documents only, regenerated against the existing Atlas and validated by the stock generator and17 focused cases. No new medical content or clinical approval. This is selected-source recovery, not a full-project/private-data backup; no canonical Git ancestry is pushed.",
+  "proof": {
+    "stockGenerator": true,
+    "stockCheck": true,
+    "focusedTests": 17,
+    "websiteRuntimeUnchanged": true,
+    "wholeSuitePassing": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
