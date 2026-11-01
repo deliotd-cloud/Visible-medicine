@@ -1,0 +1,94 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T18:28:47.649Z",
+  "sourceIdentity": {
+    "native": "c75c72a4ad92ed15cc617361e6d40812696966ab",
+    "source": "6e0e331035ba964d25c19c2ee37b8a1e2dc5cd7b37a983306ae3294f461c4641"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/body-content.ts",
+      "sha256": "e5d729ede934223488cbc3211b755557fd068caa3ac392cc3f66224e1c3d52bd",
+      "bytes": 86745
+    },
+    {
+      "path": "atlas/content/body-renderer-revision.json",
+      "sha256": "0cc7b27aa008dcf58dd5737e3ec7accb199fccaf07c4f4ef34ec4595dd38331f",
+      "bytes": 230648
+    },
+    {
+      "path": "atlas/content/body-review-display-pins.json",
+      "sha256": "11ed74f3ae847e40ec28c9bb0d856fec4974ffd63e33301e4b39d2f1c2ad64c1",
+      "bytes": 203217
+    },
+    {
+      "path": "atlas/content/regional-teaching/head-neck.json",
+      "sha256": "46341adee60e8e85c657abf973faa86244afb1e1ab4999a444210836967da1be",
+      "bytes": 2547605
+    },
+    {
+      "path": "atlas/package.json",
+      "sha256": "913033f7b974fd7564b2518ed60d70e9e9bc10b4a7344a62a79b96be7b6b9c55",
+      "bytes": 90715
+    },
+    {
+      "path": "atlas/scripts/generate-body-review-display-pins.mjs",
+      "sha256": "fd070b51e7d9d0f84fab79be61d0458c97ff32be25759b3f6e9da5df9bee41b5",
+      "bytes": 2715
+    },
+    {
+      "path": "atlas/scripts/test-arterial-evidence-limits.mjs",
+      "sha256": "bed74d79914cc4646986b6e0c48b95ff4f66a430ff092fe1f8ce614537b59ee7",
+      "bytes": 9036
+    },
+    {
+      "path": "atlas/content/inferior-thyroid-mri-pins.json",
+      "sha256": "f87b9fb7b43a64386037b4f75feb36df76d2faf22a10039ff8f4f946dd91f177",
+      "bytes": 7790
+    },
+    {
+      "path": "atlas/content/inferior-thyroid-mri.ts",
+      "sha256": "468f6fc1ddc5c20246f12d76429c8538dea51556c1d95c5656c0224db7eb71c2",
+      "bytes": 1077
+    },
+    {
+      "path": "atlas/docs/INFERIOR_THYROID_MRI_PROPOSAL.md",
+      "sha256": "34ca6533e9d9fe8482d83b1ea848732e4a755418b2773447b48a0a888c11ab91",
+      "bytes": 3043
+    },
+    {
+      "path": "atlas/lib/inferior-thyroid-mri.ts",
+      "sha256": "017794d2bdf5368f0bd5882ba6b4f4e89f9ea052ab1cf878a5a3408feaf0d63c",
+      "bytes": 1143
+    },
+    {
+      "path": "atlas/scripts/test-inferior-thyroid-mri-review.mjs",
+      "sha256": "bf2bc3824d4ca5a1fcdcf15e5d8543b39ace5883f15b34b68f9e6010af9d013b",
+      "bytes": 8986
+    },
+    {
+      "path": "atlas/scripts/test-inferior-thyroid-mri.mjs",
+      "sha256": "b29e2a792e5528a0d76a96e7e61f35e6d68c88cdee3836f6bf8067264fa7bf09",
+      "bytes": 5768
+    }
+  ],
+  "removed": [],
+  "scope": "Thirteen selected native code, original teaching, public-source identity, generated teaching/review record and test files. No scans, masks, article media, binary models, credentials, patient data, private decisions or project ancestry. Not a whole-project backup.",
+  "proof": {
+    "stockGeneratedAndChecked": true,
+    "currentReview": true,
+    "historicalAssertionsRetained": true,
+    "staleReviewPinsRepaired": 8,
+    "newMriDrafts": 2,
+    "fullBuild": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
