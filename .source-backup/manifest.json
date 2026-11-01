@@ -1,0 +1,100 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T06:48:54.466Z",
+  "sourceIdentity": {
+    "native": "b688ddd0c1fb6392ba8e8d7890142d750c8100f1",
+    "tree": "5570ea23bad79e6dbbd842518ff53298faee5a66",
+    "parent": "d567863a5a8af08b3bbbfa22adf512a389cdc3a3",
+    "renderer": "fa7d83f62f41dee9262b12f0fbbefbe4ce7dd7a6558c3404d14debcb863d33ad"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 228746,
+      "sha256": "79f1b35258767afb342e882c09f488d351f863e19035f21a0c808f15b1ad9edc"
+    },
+    {
+      "path": "content/hepatic-teaching.ts",
+      "bytes": 9934,
+      "sha256": "6f4c574322ac9a7c32758f8bb85c9f043e0b88714c4f9028bafd75d00bc79c26"
+    },
+    {
+      "path": "content/hepatic-vascular-xray.ts",
+      "bytes": 2093,
+      "sha256": "c027150a0d74dd27bc495604252beb6895c4e07f815e6c91fe6383e54895b497"
+    },
+    {
+      "path": "content/nested-teaching.ts",
+      "bytes": 42309,
+      "sha256": "c1fc8ac45d71a8d1f5a0458546fa2bdcc59c965698d5892ad47efb1962110600"
+    },
+    {
+      "path": "docs/HEPATIC_VASCULAR_XRAY.md",
+      "bytes": 1544,
+      "sha256": "f15326a6517850d4c90ddb61dd39c420bc677ceefc11cf2b1d2b6be0e6cca27a"
+    },
+    {
+      "path": "docs/TEACHING_QUALITY_AUDIT.md",
+      "bytes": 1424,
+      "sha256": "e9850d9652947e9f9f73ebe77e48812fd4d9c644cbf6b6a2a6e8c81a2a6d540d"
+    },
+    {
+      "path": "docs/nested-review-validation.json",
+      "bytes": 3409,
+      "sha256": "6c0f94e09565514780dce2cf7f8e10b915fc2ca0004fa14b1cd4fa7a6339fa48"
+    },
+    {
+      "path": "scripts/audit-teaching-quality.mjs",
+      "bytes": 6055,
+      "sha256": "7c1282c9f7cce0adb40b0b46b7b47e0eb17b0f7649094f7ea169cb0e531ae063"
+    },
+    {
+      "path": "scripts/pin-nested-teaching.mjs",
+      "bytes": 4706,
+      "sha256": "da7eb1224d3f5afb4eb4a0b07a380b5a1f4f3d767405636c813ce51374ccf479"
+    },
+    {
+      "path": "scripts/test-teaching-quality-cli.mjs",
+      "bytes": 5525,
+      "sha256": "34c9c1699ea1038d7efb3474868487804645697585b26cb0e9463507b344cdf0"
+    },
+    {
+      "path": "scripts/validate-nested-teaching.mjs",
+      "bytes": 46539,
+      "sha256": "fedeb73095e7f62ad78c615b2f4709153c4789951666531fd4a43633eec5a507"
+    },
+    {
+      "path": "verification/review-materials.mjs",
+      "bytes": 2733,
+      "sha256": "1c6b385863dd0f3e260ed75f9174d3026e3059f9e83b7dd4c406a0f12754d1f5"
+    },
+    {
+      "path": "verification/review-compare.mjs",
+      "bytes": 2763,
+      "sha256": "6c35f0da208211edc99bedb0fcab9da299a672097c03374f7ae52cb2dce1e549"
+    },
+    {
+      "path": "verification/final-checks.mjs",
+      "bytes": 2128,
+      "sha256": "622f5a9522e38b199abd27c728f249308be486d0f1c2c41ed0b2450d9cb16631"
+    }
+  ],
+  "removed": [],
+  "scope": "Fourteen selected authored teaching, source-reference, audit, generator, documentation and verification files only. No scans, private references, model binaries, actual review decisions, credentials or repository ancestry. Not a complete project backup.",
+  "proof": {
+    "nestedTeachingAssertions": 10909,
+    "nestedReviewContexts": 108,
+    "auditTests": 12,
+    "scopedContentTypes": true,
+    "changedTeachingRevisions": 4,
+    "standardPinCommand": true,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

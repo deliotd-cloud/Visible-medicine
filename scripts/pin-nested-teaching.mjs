@@ -1,0 +1,123 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
+import { runInNewContext } from 'node:vm';
+import { build } from './workspace-component-test-build.mjs';
+const require = createRequire(import.meta.url);
+const compiled = await build({
+  stdin: {
+    contents:
+      "export { bodyDisplayCatalog } from './lib/body-display-catalog'; export { nestedStudyTargets } from './lib/nested-anatomy'; export { nestedConcepts } from './content/nested-teaching'; export { picaSourceFiles } from './content/pica-source-teaching';",
+    resolveDir: process.cwd(),
+    loader: 'ts',
+  },
+  bundle: true,
+  platform: 'node',
+  format: 'cjs',
+  write: false,
+});
+const scope = { exports: {} };
+runInNewContext(compiled.outputFiles[0].text, {
+  module: scope,
+  exports: scope.exports,
+  require,
+});
+// Load teaching through the existing workspace TypeScript resolver as well.
+// Node's type stripping alone does not resolve its extensionless local imports.
+// Restore host-realm metadata before strict comparisons; preserve undefined.
+const { nestedConcepts, picaSourceFiles } = structuredClone({
+  nestedConcepts: scope.exports.nestedConcepts,
+  picaSourceFiles: scope.exports.picaSourceFiles,
+});
+const catalog = scope.exports.bodyDisplayCatalog(
+  JSON.parse(
+    await readFile('public/models/bodyparts3d/full-body/catalog.json'),
+  ),
+);
+// Femoral and explicitly authored MCA/PICA source lessons have supplemental pins.
+// Neither belongs to this
+// immutable 71-binding corpus; never exclude arbitrary unmatched targets.
+assert.deepEqual(
+  nestedConcepts.filter(c => c.study === 'cranial-artery-components').map(c => c.id),
+  ['mca-source-fj1662', 'mca-source-fj1663', 'mca-source-fj1692',...picaSourceFiles.map(f=>'pica-source-'+f.file.toLowerCase())],
+  'Only the explicit supplemental source-file lessons are admitted; no parent inheritance',
+);
+const targets = scope.exports.nestedStudyTargets(catalog).filter(
+  t => !['femoral-components', 'cranial-artery-components'].includes(t.study),
+);
+const bindings = targets.map((target) => {
+  const matches = nestedConcepts.filter(
+    (c) =>
+      c.study === target.study && c.fmaIds.includes(target.structure.fmaId),
+  );
+  if (matches.length !== 1)
+    throw Error('Expected one explicit lesson for ' + target.structureId);
+  return {
+    conceptId: matches[0].id,
+    study: target.study,
+    sourceHash: target.sourceHash,
+    parentId: target.parentId,
+    parentHash: target.parentHash,
+    structure: target.structure,
+  };
+});
+const parents = [...new Set(targets.map((t) => t.parentId))].map((id) =>
+  catalog.structures.find((s) => s.id === id),
+);
+const result = {
+  schemaVersion: 1,
+  purpose:
+    'Draft teaching bindings only; not clinical approval or imaging registration',
+  parents,
+  bindings,
+};
+const path = 'content/nested-teaching-bindings.v1.json';
+const text = JSON.stringify(result, null, 2) + '\n';
+if (process.argv.includes('--check')) {
+  if ((await readFile(path, 'utf8')) !== text)
+    throw Error(
+      'Nested teaching source bindings changed; explicit editorial review and repinning required',
+    );
+} else {
+  // Never overwrite existing pins automatically. A source change needs deliberate review.
+  const existing = await readFile(path, 'utf8').catch((e) => {
+    if (e.code !== 'ENOENT') throw e;
+    return null;
+  });
+  if (existing !== null && existing !== text) {
+    if (!process.argv.includes('--extend-only'))
+      throw Error(
+        'Existing teaching pins differ; do not migrate them automatically',
+      );
+    const previous = JSON.parse(existing);
+    assert.equal(previous.schemaVersion, result.schemaVersion);
+    assert.equal(previous.purpose, result.purpose);
+    // Explicit editorial extension only. Never rewrite/rebind an existing lesson.
+    for (const parent of previous.parents)
+      assert.deepEqual(
+        JSON.parse(
+          JSON.stringify(result.parents.find((p) => p.id === parent.id)),
+        ),
+        parent,
+      );
+    for (const binding of previous.bindings)
+      assert.deepEqual(
+        JSON.parse(
+          JSON.stringify(
+            result.bindings.find(
+              (b) =>
+                b.study === binding.study &&
+                b.parentId === binding.parentId &&
+                b.structure.id === binding.structure.id,
+            ),
+          ),
+        ),
+        binding,
+      );
+    assert(result.bindings.length > previous.bindings.length);
+  }
+  await writeFile(path, text);
+}
+console.log(
+  `Verified ${bindings.length} source-bound nested representations and ${parents.length} parents for ${nestedConcepts.length} teaching concepts; no approvals created.`,
+);
