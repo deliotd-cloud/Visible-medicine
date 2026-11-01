@@ -1,0 +1,73 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T11:08:23.730Z",
+  "sourceIdentity": {
+    "native": "e32617ef2ed8690472e797d791a061fa3b1985b4",
+    "tree": "89d5ec3eb886429325d6c8e768960ab73293a5fa",
+    "prostateRevision": "70b6c0b4065dd2a9d550bece8574efee24dd535af5c4f0fbced3324a04f6f70e"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/prostate-orientation.tsx",
+      "sha256": "f60f3c48ea832c968f598c661447545cc2785e337a660138061cf101d3f7468b",
+      "bytes": 2701
+    },
+    {
+      "path": "atlas/app/prostate-zones.css",
+      "sha256": "7331f39e45bcee84992e98fc14ac201f6c9c6d24de34809ce7bbd6e30a308f92",
+      "bytes": 12669
+    },
+    {
+      "path": "atlas/app/prostate-zones.tsx",
+      "sha256": "6938ff7afeba109d6bd6dea9d52d97ff3f05cf22e630718a2422322113f91bab",
+      "bytes": 21043
+    },
+    {
+      "path": "atlas/content/prostate-zones-revision.json",
+      "sha256": "8767da967ae4bdd0e1b9cbb2fc37ea9248490fc249f129dbc0b16b6df35c4412",
+      "bytes": 3457
+    },
+    {
+      "path": "atlas/docs/PROSTATE_ZONES.md",
+      "sha256": "dbe99e43f4a18f589f6fe63da4ab7f773988d16af6ebb0393bedfdc81a67d2a0",
+      "bytes": 8934
+    },
+    {
+      "path": "atlas/lib/prostate-orientation.ts",
+      "sha256": "1d7f60aa61628014247c22707f0db3c3be7bb4d90de0beb9023f54147e6e87ce",
+      "bytes": 2554
+    },
+    {
+      "path": "atlas/scripts/pin-prostate-zones.mjs",
+      "sha256": "ee77e5f94bd921102cb09b472d1a66e32ac5716dfeee70b0efdee3a0c0e6dd45",
+      "bytes": 1766
+    },
+    {
+      "path": "atlas/scripts/test-prostate-orientation-component.mjs",
+      "sha256": "6a8c23a439acba526f7f060e45b50761fe3186fbed6b3fda2aa4830bb54fd50c",
+      "bytes": 5587
+    },
+    {
+      "path": "atlas/scripts/test-prostate-orientation.mjs",
+      "sha256": "21eb8d1dfbbe9b77240d9e4e26698057a020ab3fad0aa640be9ce5439a6c6722",
+      "bytes": 5498
+    }
+  ],
+  "removed": [],
+  "scope": "Nine selected prostate orientation source/test/document and generated source-pin files. No patient images, masks, private references, geometry binaries, browser evidence, decisions, credentials or canonical Git ancestry. This is a verified native-source checkpoint, not a whole-project backup or installed website release.",
+  "proof": {
+    "focusedPassingCases": 13,
+    "fullNativeTypes": true,
+    "nativeRuntimeBuilt": true,
+    "browserChecks": true,
+    "websiteImported": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
