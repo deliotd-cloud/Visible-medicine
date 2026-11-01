@@ -1,0 +1,61 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T07:30:22.458Z",
+  "sourceIdentity": {
+    "nativeHead": "b688ddd0c1fb6392ba8e8d7890142d750c8100f1",
+    "overlayCheckpointSha256": "323fa61b358a5604a1d9dcc7f9a528459fdd52e390b455b4a48b9fb96be7c050"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "prepare.mjs",
+      "bytes": 2535,
+      "sha256": "a156ce36ede87ec4b11d64596014cc63f5ef6156f825dca69e29874d2cc265c0"
+    },
+    {
+      "path": "render.mjs",
+      "bytes": 4897,
+      "sha256": "65f9663e947dfec5d18656fad22675b23bd560f7d6d81a7730e6db9433020085"
+    },
+    {
+      "path": "verify.test.mjs",
+      "bytes": 4627,
+      "sha256": "40bc0c8c6b6e3780eb27a8694150b761277fc8663d7a575edad3701d81e726d5"
+    },
+    {
+      "path": "run.mjs",
+      "bytes": 1664,
+      "sha256": "ebababe8cbb507d24f307b06d20f09ce06c0d89b228a693b174ffd0702f97124"
+    },
+    {
+      "path": "wait-for-budget.mjs",
+      "bytes": 1329,
+      "sha256": "d45a9b9f7a12d70818f84e0593876e00588827ad15c94caff7c756cb77c71b1d"
+    },
+    {
+      "path": "wait-for-budget.test.mjs",
+      "bytes": 1227,
+      "sha256": "f156444f7e611933af6448165c549e59405498a02e2e25c61131e5daf7aadf47"
+    },
+    {
+      "path": "run-renal-learner-stable.mjs",
+      "bytes": 1447,
+      "sha256": "094d9400742929ffe88553accf565703faa649a8b76330a616e795302fed625e"
+    }
+  ],
+  "removed": [],
+  "scope": "Seven selected authored verification/runner files only. No model assets, scans, private references, decisions, rendered evidence or raw repository ancestry. Not a whole-project backup.",
+  "proof": {
+    "learnerRenderTests": 6,
+    "resourceAdmissionTests": 3,
+    "browser": false,
+    "fullTypes": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

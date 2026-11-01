@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {waitForBudget} from '../20261101-renal-learner-checks/wait-for-budget.mjs';
+import {guarded} from '../20261101-prostate-mri-teaching/guarded-small-job.mjs';
+const own='G:/VisibleMedicine-temp/proposals/20261101-renal-learner-checks';
+assert(!fs.existsSync(own+'/RESULT.json'));assert(!fs.existsSync(own+'/guarded'));
+const budget=await waitForBudget({minimum:3072,aggregate:1024,sample:async()=>JSON.parse(execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command','Get-CimInstance Win32_PerfFormattedData_PerfOS_Memory | Select-Object AvailableMBytes,PercentCommittedBytesInUse | ConvertTo-Json -Compress'],{encoding:'utf8',windowsHide:true,timeout:5000}))});
+fs.writeFileSync(own+'/BUDGET_WAIT.json',JSON.stringify(budget,null,2)+'\n',{flag:'wx'});
+assert(budget.ready,'Budget did not stabilize within30seconds; restore installed preview.');
+fs.mkdirSync(own+'/tmp',{recursive:true});
+const result=await guarded({site:'G:/VisibleMedicine-temp/staging/20261101-hepatic-native-integration/atlas',dir:own+'/guarded',command:own+'/run.mjs',heap:512,aggregate:1024,minimum:3072,extraEnv:{TEMP:own+'/tmp',TMP:own+'/tmp'}});
+fs.writeFileSync(own+'/GUARDED_RESULT.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+assert(result.passing,'Preserve the failure or admission refusal; restore installed preview.');
