@@ -1,0 +1,72 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T23:24:05.150Z",
+  "sourceIdentity": {
+    "native": "ad82a5a96d8303c54eeea3926a6df8d31f9ae611",
+    "tree": "f49ef690ebdb0e78dfd3b0f32802d369ccf5daf4",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/content/body-renderer-revision.json",
+      "sha256": "1be9b24ef34f32fe7e3f44f54aaa49edd1eb98932db16e7ea976c4f4e8eb832f",
+      "bytes": 230648
+    },
+    {
+      "path": "atlas/content/cricothyroid-teaching.ts",
+      "sha256": "8e833459d5b893ae94835b50e0e041d216f5467acc46a5ead13583e0ab7dd117",
+      "bytes": 6801
+    },
+    {
+      "path": "atlas/docs/nested-review-validation.json",
+      "sha256": "85e97ae1e23c36461adc4e8ba3ef8ef781070cfd571c563211d28a7c2297c166",
+      "bytes": 3409
+    },
+    {
+      "path": "atlas/package.json",
+      "sha256": "d0d2ea37b89945af6456b634ef8a7469c2c6400d46efe46ca103a247d43c0adb",
+      "bytes": 90854
+    },
+    {
+      "path": "atlas/scripts/validate-nested-teaching.mjs",
+      "sha256": "7bca88ee1fa2c6b21b4f3895191069a12ba0d63cf0c9cc08e64da5538e0a78d4",
+      "bytes": 53219
+    },
+    {
+      "path": "atlas/scripts/cricothyroid-ultrasound-history.mjs",
+      "sha256": "b27117dcca00fc129cfc74e9b3c1099e1f5701d94ed1d16e419ba8a21735fed3",
+      "bytes": 1963
+    },
+    {
+      "path": "atlas/scripts/test-cricothyroid-imaging-current.mjs",
+      "sha256": "9fe685d0c2656e9294a79a7d7b090f5224d01029148d9234b1b73361870dcaec",
+      "bytes": 9251
+    },
+    {
+      "path": "atlas/scripts/test-cricothyroid-ultrasound.mjs",
+      "sha256": "3a4eaf9dc72a50372f9649c9c1983534e63dd76d144f03ed538d71a2af2b6638",
+      "bytes": 7556
+    }
+  ],
+  "removed": [],
+  "scope": "Eight selected native source, generated revision and regression files for the cricothyroid ultrasound teaching addition. This is a tested candidate, not the installed website or a full-project/data backup. No scans, models, masks, user records or raw canonical ancestry.",
+  "proof": {
+    "nativeFullTypeCheck": true,
+    "currentTeachingAndReviewPassed": true,
+    "nestedHistoricalTeachingPassed": true,
+    "changedLessons": 4,
+    "unchangedLessons": 968,
+    "reviewPacketsCompared": 108,
+    "websiteImportedSourceVerified": true,
+    "clinicalApproval": false,
+    "productionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
