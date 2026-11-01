@@ -1,0 +1,64 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T20:08:02.024Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "atlasHead": "c75c72a4ad92ed15cc617361e6d40812696966ab",
+    "reviewBinding": "acf5bb81acf256d038064a4fb179d16bc2a3e80aeb019b04c5281dea17eb9504"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/run-website-tests.mjs",
+      "sha256": "0eeb2721ccb5f91afff283d29c46982ba6928d85eade3d28e94e8275134ecb86",
+      "bytes": 21008
+    },
+    {
+      "path": "scripts/test-evidence-directory.mjs",
+      "sha256": "4cfb7a5702d2efcb7a62cd846f1911eef6cd9d00001ff19d401237a028175d5a",
+      "bytes": 2095
+    },
+    {
+      "path": "tests/viewer-notice-roles.mjs",
+      "sha256": "ca8c60097f4efcccfd62fb27b327f3d83e83905dd0594b3cb8a98171513487fa",
+      "bytes": 35768
+    },
+    {
+      "path": "tests/deepbrain-foot-roles.mjs",
+      "sha256": "a5d78481e2fc48db3117168720efd9115991a26b29a60836aed5e7b4f7d79705",
+      "bytes": 8522
+    },
+    {
+      "path": "tests/test-evidence-directory.test.mjs",
+      "sha256": "aaac4d09910185f8bc0af8081078b764314241df5257992c2128fca6cc93eacf",
+      "bytes": 3995
+    },
+    {
+      "path": "tests/test-evidence-transport-preservation.test.mjs",
+      "sha256": "5d5f0501196a054696565c787464c3ac29b81afb36e64e6494e24f6e421386f8",
+      "bytes": 2705
+    },
+    {
+      "path": "docs/TEST_EVIDENCE_STORAGE.md",
+      "sha256": "94f9adaf9535fc97c663d8efb8a7b3eab00c0e381e546ac2f0680ed8e20b4046",
+      "bytes": 1650
+    }
+  ],
+  "removed": [],
+  "scope": "Seven explicit development script, test and documentation files allowing local test evidence on another drive. Selected-source recovery only; no entire-project ancestry, patient data, models, logs, local witnesses, secrets or clinical approvals.",
+  "proof": {
+    "focusedTests": 25,
+    "installedTests": 7,
+    "historicalNotice": 1,
+    "historicalFoot": 2,
+    "wholeSuitePassing": false,
+    "reviewBindingUnchanged": true,
+    "previewUnchanged": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
