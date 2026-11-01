@@ -1,0 +1,174 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T03:15:27.378Z",
+  "sourceIdentity": {
+    "nativeHead": "57ec5d5ff9fd5e5962a7ffd6f46a08c221d39429",
+    "modelRevision": "0aa30ef1db22d8c0dac17b2399c649b49cccdea4dccf2aa72b509c4002b21c3c"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas/app/prostate-mri-teaching.tsx",
+      "sha256": "cc67105d5056bd17125d5c63df0255fda713a70e89eaa0795e44978db93a68e3",
+      "bytes": 2872
+    },
+    {
+      "path": "atlas/app/prostate-zones.css",
+      "sha256": "1f215aa0882d6d4374973d56cc8f75a098b7985162ed8c2aa686b78491d2d18f",
+      "bytes": 11219
+    },
+    {
+      "path": "atlas/app/prostate-zones.tsx",
+      "sha256": "60ffdba03be17e51b851b07cc2304f172fd7fb2cc6d45fc3bb1a27276ca9d816",
+      "bytes": 19429
+    },
+    {
+      "path": "atlas/content/body-renderer-revision.json",
+      "sha256": "ca7b6b34fb4dedb2e00f1228b85aa4d0a7006bb00187f2f157dcbd876bf2a5cb",
+      "bytes": 228330
+    },
+    {
+      "path": "atlas/content/prostate-zones-revision.json",
+      "sha256": "b476b3faeae7b51a289ae1772b35fc05740fd149e93d54831626126554304e93",
+      "bytes": 3035
+    },
+    {
+      "path": "atlas/docs/PROSTATE_ZONES.md",
+      "sha256": "1841d27d727ba8560e753eeda69e15d01beb8123c08005186026cee57e3f3f92",
+      "bytes": 7982
+    },
+    {
+      "path": "atlas/lib/prostate-mri-teaching.ts",
+      "sha256": "194950897f169b110d3779836a059a968f88ad40fd7b9dee72b9ae584d7801bd",
+      "bytes": 4139
+    },
+    {
+      "path": "atlas/lib/prostate-zones.ts",
+      "sha256": "ea39c94c79b01c66b04b0c3060944fc444afeaa7adbeafa91879bc560c9245f4",
+      "bytes": 3444
+    },
+    {
+      "path": "atlas/scripts/pin-prostate-zones.mjs",
+      "sha256": "a6cc129036e97effa50d143145ce48aed9f876f0f87da7b4fd0b1d991361c5db",
+      "bytes": 1672
+    },
+    {
+      "path": "atlas/scripts/test-prostate-mri-teaching.mjs",
+      "sha256": "45978136ab33588d1623e18066db5c4d80c6db44fe667a417a726a87b6aed088",
+      "bytes": 8993
+    },
+    {
+      "path": "website/app/workspace/atlas-review/prostate/page.tsx",
+      "sha256": "e09aa09784ad945c465d31e53c19b0aeeb1fdc1d2a827d38aa93054e79611226",
+      "bytes": 3481
+    },
+    {
+      "path": "website/app/workspace/atlas-review/prostate/prostate-review.css",
+      "sha256": "6c251997510c0bcb5bdde0e740bcfcdea5495c26890d1d53415d61c7a9414e81",
+      "bytes": 1466
+    },
+    {
+      "path": "website/docs/anatomy-coverage/independent.json",
+      "sha256": "d3afb5a75c4a74b122505cbabde3ad6140d7063b1778c23099fe38aebbba6776",
+      "bytes": 772784
+    },
+    {
+      "path": "website/docs/anatomy-coverage/index.json",
+      "sha256": "95d8689e7fe04a4274afa6615dfc93408dbbb1210d5cd111acf13a52eba2337c",
+      "bytes": 155371
+    },
+    {
+      "path": "website/docs/anatomy-coverage/nested.json",
+      "sha256": "60b17f16df3a13f8449364410485d92fe5dfde9328eb508209218666afc315b7",
+      "bytes": 789644
+    },
+    {
+      "path": "website/docs/anatomy-coverage/reference.json",
+      "sha256": "a0edf4b05264e1dbc5155b241e554b67faf869083d03396e94bca4e0751abeaa",
+      "bytes": 154089
+    },
+    {
+      "path": "website/docs/anatomy-coverage/root.json",
+      "sha256": "4a9f4a7626b53db6949a3b534f982f3ccbf6c8129de47a3db5efa3028039eecf",
+      "bytes": 1067871
+    },
+    {
+      "path": "website/lib/anatomy-coverage-view.ts",
+      "sha256": "d29fd3f62edaef6a07e769a27081b93e43f7efcdac11a19585b61ddeac473d53",
+      "bytes": 5290
+    },
+    {
+      "path": "website/lib/clinical-review-extra-inbox.ts",
+      "sha256": "8f6d61d34a533a73d4a63dd3b6738dbae499a78514578ab4469a164d8ad22899",
+      "bytes": 22205
+    },
+    {
+      "path": "website/lib/clinical-review-inbox-contract.ts",
+      "sha256": "6fe6e9fbbc771965ef295e6dea23e2b1b6ae4e801847c2dfcaeb163abff0cd3d",
+      "bytes": 4678
+    },
+    {
+      "path": "website/lib/prostate-review-link.ts",
+      "sha256": "bd946b8586a5702c1a9d5d42b01662841aa14545d4b718287a78b69efe5a8c12",
+      "bytes": 932
+    },
+    {
+      "path": "website/lib/prostate-review-material.ts",
+      "sha256": "f04ef4291a7c37d6b26d9f1698f716f9543979299a0910af1f730524a6248c5d",
+      "bytes": 4187
+    },
+    {
+      "path": "website/scripts/check-anatomy-coverage.mjs",
+      "sha256": "eb65ac339e86e1f840c4ad7c1f268bc4be543db2bcee36fdfc58d5eb0cebbe69",
+      "bytes": 4552
+    },
+    {
+      "path": "website/scripts/clinical-review-viewer/main.tsx",
+      "sha256": "b122d48e8712d575544a6720aca52643f93cd985f85e1f130d16e154ce2ef522",
+      "bytes": 2173
+    },
+    {
+      "path": "website/scripts/clinical-review-viewer/prostate-viewer.css",
+      "sha256": "2cfbc88612f9222640c1edf2085a6c60c9a9bf1924b9f21087ffea19503be1d1",
+      "bytes": 1190
+    },
+    {
+      "path": "website/scripts/clinical-review-viewer/prostate-viewer.tsx",
+      "sha256": "785b4873a982e4f72281a5cf4c6da5aadb4499fac5054ec1539cc211080927a9",
+      "bytes": 1489
+    },
+    {
+      "path": "website/scripts/import-clinical-review.mjs",
+      "sha256": "51318a6699cb36bc8ae623241d4c610f0b303965d1300e41f29f143ab249dfca",
+      "bytes": 9767
+    },
+    {
+      "path": "website/tests/clinical-review-extra-inbox.test.ts",
+      "sha256": "b52424109b4f1622eda49524b3ec4595a558b933c41764de4b7ebb35d359eff1",
+      "bytes": 24846
+    },
+    {
+      "path": "website/tests/prostate-review-inspection.test.mjs",
+      "sha256": "c68ec09c605841efe12d9a987e18150ac164ebd91e6e4330d181d251d6587e4e",
+      "bytes": 15189
+    }
+  ],
+  "removed": [],
+  "scope": "Selected prostate/Clinical Review source, tests and source-inventory metadata only. No scans, patient identifiers, private records, geometry assets, node_modules or raw canonical repository ancestry. Staged inspection UI; saved decisions and full generated website verification remain pending.",
+  "proof": {
+    "focusedTests": 15,
+    "nativeTeachingTests": 12,
+    "existingInventorySources": 172,
+    "syntheticBrowser": true,
+    "finalModelRevision": "0aa30ef1db22d8c0dac17b2399c649b49cccdea4dccf2aa72b509c4002b21c3c",
+    "installed": false,
+    "clinicalDecisionsImplemented": false,
+    "fullWebsiteBuild": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

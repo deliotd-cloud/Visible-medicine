@@ -1,0 +1,22 @@
+.review-prostate-model {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 100dvh;
+}
+.review-prostate-model > button { align-self: flex-start; margin: 1rem; }
+/* Teaching is shown once, alongside the frame in the private review page. */
+.review-prostate-model .prostate-zones-info,
+.review-prostate-model .prostate-zones-close,
+.review-prostate-model .prostate-zones-header p:last-child { display: none; }
+.review-prostate-model > .prostate-zones {
+  flex: 1 1 0; min-width: 0; min-height: 0; display: grid;
+  grid-template-rows: auto minmax(0, 1fr); gap: .5rem;
+  overflow: auto; padding: .6rem; border: 0; border-radius: 0; box-shadow: none;
+}
+.review-prostate-model .prostate-zones-header { align-items: center; margin: 0; gap: .5rem; }
+.review-prostate-model .prostate-zones h2 { font-size: 1.2rem; }
+.review-prostate-model .prostate-zones-workbench { grid-template-columns: minmax(0, 1fr); min-height: 350px; align-items: stretch; }
+.review-prostate-model .prostate-zones-main { display: grid; grid-template-rows: auto minmax(180px, 1fr) auto auto; min-height: 0; }
+.review-prostate-model .prostate-zones-canvas { height: auto; min-height: 180px; }
