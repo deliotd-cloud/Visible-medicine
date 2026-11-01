@@ -1,0 +1,77 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T23:56:56.543Z",
+  "sourceIdentity": {
+    "native": "ad82a5a96d8303c54eeea3926a6df8d31f9ae611",
+    "websiteBase": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "review": "d2d0d7d05620c96de29dd4aa361b7fa7b965ad7521dd887000a2fbc4895321bd",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/atlas-navigation.ts",
+      "sha256": "4bd19818a8d1723d924d8a0d8c42a03af44b16afe23759b4380722054665f108",
+      "bytes": 7140
+    },
+    {
+      "path": "website/app/atlas/ct/page.tsx",
+      "sha256": "7fd31c0c5bf0e1486dd9f74fb1b56e7120a3300c7101305b77f3cc22b91f9687",
+      "bytes": 595
+    },
+    {
+      "path": "website/app/atlas/mri/page.tsx",
+      "sha256": "60d0391479d39548f4ad1f5cc1909a26e508ec25857d0290be07b6859112c3de",
+      "bytes": 611
+    },
+    {
+      "path": "website/app/atlas/ultrasound/page.tsx",
+      "sha256": "9c2d020bc35f124dcf4c019a253514c547d4fd06b49c7703451961376202bb21",
+      "bytes": 524
+    },
+    {
+      "path": "website/app/atlas/x-ray/page.tsx",
+      "sha256": "71202230130b4bbedbc7c0ced66e40d5301d525174ad229bbc3bb45bb36f7aa2",
+      "bytes": 519
+    },
+    {
+      "path": "website/components/ImagingAtlasPage.tsx",
+      "sha256": "d6363f4190926eea2b65887f9d9822861224f300d885794275dee314a2602dc8",
+      "bytes": 2446
+    },
+    {
+      "path": "website/components/UltrasoundLocalAtlas.tsx",
+      "sha256": "88be6124fcf8ae1280c98b10f53f3d0cbff273e62f06340ea68d74e767f0fed2",
+      "bytes": 27214
+    },
+    {
+      "path": "website/tests/atlas-navigation.test.ts",
+      "sha256": "e80e1ed930c0764f8fe279d1ce02c8a4dcdf4941173e1e3cbdf1cebd7d03531c",
+      "bytes": 14150
+    },
+    {
+      "path": "website/tests/imaging-region-navigation.test.mjs",
+      "sha256": "2d6af8bde18bcd919b44e48916df4c209e32a0d7b4ab9c44e0cbed95f8e29ea1",
+      "bytes": 8912
+    }
+  ],
+  "removed": [],
+  "scope": "Nine selected website source and test files for invalid imaging-region navigation and obsolete ultrasound folder-picker refusal. Staged only; full configured types and production build await memory. No scans, masks, models, private records or raw canonical Git ancestry; not a full-project/data backup.",
+  "proof": {
+    "focusedCases": 45,
+    "parentRegressionFailures": 11,
+    "actualHttpCases": 24,
+    "candidateBrowser": true,
+    "protectedReviewInputsUnchanged": 1920,
+    "fullTypes": false,
+    "productionBuild": false,
+    "installed": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
