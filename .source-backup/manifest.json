@@ -1,0 +1,34 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T18:49:44.496Z",
+  "sourceIdentity": {
+    "kind": "website-source-import-stage",
+    "nativeRevision": "c75c72a4ad92ed15cc617361e6d40812696966ab",
+    "sourceSha256": "5eb38fd862202c1335e5e798ce6c901b1db16f264efd72668fee6c56fdc40be8",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "scripts/import-clinical-review.mjs",
+      "sha256": "f002821685f7565660ad817a47539697f68c4698a17b9574e46422bc7ab62e10",
+      "bytes": 11390
+    }
+  ],
+  "removed": [],
+  "scope": "One updated website importer, pinned to the verified native thyroid MRI source. This is an uninstalled source-integration stage; runtime export, Review rebinding/build and website acceptance remain pending. No scans, models, private references, canonical ancestry or complete project backup.",
+  "proof": {
+    "importedFiles": 1686,
+    "acceptedRecords": 10,
+    "alteredRecordsRejected": 10,
+    "focusFixPreserved": true,
+    "runtimeUnchanged": true,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
