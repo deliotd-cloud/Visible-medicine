@@ -1,0 +1,34 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T01:49:10.205Z",
+  "sourceIdentity": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "installationSha256": "3668ba8a119b1bbfe97c9d96606e4203b520ab6d1b397e0e1cdb66db1cf7bfd2"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "app/my-learning/page.tsx",
+      "sha256": "e8d981f35af31eb858264a8ac52f5c1ce62fca7c2fd5f58ed329322b4460fff3",
+      "bytes": 9759
+    },
+    {
+      "path": "tests/my-learning-availability.test.mjs",
+      "sha256": "9eef9493d4e7f140cca167c0473952d4597099b040ae4dc410f8444a172fb148",
+      "bytes": 10969
+    }
+  ],
+  "removed": [],
+  "scope": "Two saved-learning source/test files only. No account records, scans, generated geometry, whole repository or raw canonical ancestry. Small UI change installed locally.",
+  "proof": {
+    "testsSha256": "3f163fc3d353f9470c0bb385bae16b85c438e9d67e558b36f09f8f3c4219fa6d",
+    "tests": 12,
+    "fullWebsiteBuild": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
