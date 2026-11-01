@@ -1,0 +1,23 @@
+{
+  "schema": "vm.prostate-zonal-historical-role/1",
+  "source": "7d3ab00f500a738d4f2d261ca6cd768e7f6ce1bc",
+  "revision": "bcb94d540dbcc011219aaeabd24dede3d9667eb6ff1470b66db52201354c0c7f",
+  "receipt": "F:\\VisibleMedicine\\recovery\\checkpoints\\20261101-release29-regression-followup\\SOURCE_VERIFIED_REPAIRS.json",
+  "receiptSha256": "ad7457a339b3174bf6d645e31f5c99458efb3c12139566825b83ef21bc0f9157",
+  "originalSha256": "1cb20d1828d0273834d1334591c68c497e2958192dc937ff746e5fcc82eabd67",
+  "files": {
+    "atlas-review/manifest.json": "bedef6d5c217d668a9fb7d8de52ae478db321fe8855bdf07e9634ab706d695cf",
+    "public/atlas-runtime/head-neck/manifest.json": "432799dadd4b89f0bc614513bbcc902b9195c0ae6a765c750373a2a498bb61cb",
+    "public/atlas-runtime/head-neck/source-inputs.json": "9b52fe895a8d05dd2d800d773d40ed9f5838a22094da1f6f0e5c20dbaf8c52bd",
+    "lib/atlas-model-inventory.json": "33468d8d036ef26dcfda0136f2a4c4e475750431d69f0255ecf0f069c0ba7def",
+    "atlas-review/app/prostate-zones.tsx": "b6eefb5024dc2b608a8d01fcbc3a2be34ea7d54f5dbfea6ade07f32d09739991",
+    "atlas-review/app/prostate-zones.css": "db45aeafba057e95602043dd1b97207db632e0e4eb66bbd47263235c38b2127b",
+    "atlas-review/app/prostate-education-link.ts": "92d4d38e6efee3c20030fd985bf9832e8aac6cf7f519c5ad5758e986244768ea",
+    "atlas-review/lib/prostate-education-binding.ts": "f6bd75b450e257e2de02924812b82b2e8c612b62da475d3d338cf7207ca64fdf",
+    "atlas-review/lib/prostate-zones.ts": "ea39c94c79b01c66b04b0c3060944fc444afeaa7adbeafa91879bc560c9245f4",
+    "atlas-review/lib/prostate-zone-geometry.ts": "53216c0a08a67d1523f74fe17065252ac486b1b002d0e0181e57a1f3b5666b0a",
+    "atlas-review/content/prostate-zones-revision.json": "c3b9ae4daeebf815ff5f4edcd2900a79b397896a4bc3497919e2270723bb27c5",
+    "atlas-review/content/body-renderer-revision.json": "8d19545fa8af52985d6c3746c45a577ef33b5bc8dc47e22a825fa567bce8fe60"
+  },
+  "transport": "Each declared website path is stored only as website/<path>.raw; bytes unchanged."
+}

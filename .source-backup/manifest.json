@@ -1,0 +1,124 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-01T16:06:17.783Z",
+  "sourceIdentity": {
+    "native": "0d9750af66d92aa5a421b34ac6d0c8dd3e5bfd66",
+    "websiteSource": "d0f8a2d1ddcc17293dfb83681457a138cead893d6aa3982bcf44982a957f3595"
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/tests/atlas-coronary-venous.test.ts",
+      "bytes": 7447,
+      "sha256": "851a33d9000f54017f9811e78e950f3160fd0761c2f0118c0c6484bff082b6d1"
+    },
+    {
+      "path": "website/tests/guided-lecture-ui.test.ts",
+      "bytes": 7600,
+      "sha256": "3fa29a3febcab827880ec5e94a5d72337e341a09231a0edb10d83883dcc15474"
+    },
+    {
+      "path": "website/tests/prostate-zonal-delivery.test.mjs",
+      "bytes": 6221,
+      "sha256": "0265cbdb1ee0eb8ad06b78b1c1d3fb093881cf5ad4ff98dd874cb905a05c7495"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/context.json",
+      "bytes": 2006,
+      "sha256": "47fec36c84ed968e01789e0b80ea0bde0be54fc08b22ba5e7ea14e40cba9728c"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/prostate-zonal-delivery.test.mjs.raw",
+      "bytes": 5986,
+      "sha256": "1cb20d1828d0273834d1334591c68c497e2958192dc937ff746e5fcc82eabd67"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/app/prostate-education-link.ts.raw",
+      "bytes": 3174,
+      "sha256": "92d4d38e6efee3c20030fd985bf9832e8aac6cf7f519c5ad5758e986244768ea"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/app/prostate-zones.css.raw",
+      "bytes": 11801,
+      "sha256": "db45aeafba057e95602043dd1b97207db632e0e4eb66bbd47263235c38b2127b"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/app/prostate-zones.tsx.raw",
+      "bytes": 20469,
+      "sha256": "b6eefb5024dc2b608a8d01fcbc3a2be34ea7d54f5dbfea6ade07f32d09739991"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/content/body-renderer-revision.json.raw",
+      "bytes": 229219,
+      "sha256": "8d19545fa8af52985d6c3746c45a577ef33b5bc8dc47e22a825fa567bce8fe60"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/content/prostate-zones-revision.json.raw",
+      "bytes": 3174,
+      "sha256": "c3b9ae4daeebf815ff5f4edcd2900a79b397896a4bc3497919e2270723bb27c5"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/lib/prostate-education-binding.ts.raw",
+      "bytes": 3055,
+      "sha256": "f6bd75b450e257e2de02924812b82b2e8c612b62da475d3d338cf7207ca64fdf"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/lib/prostate-zone-geometry.ts.raw",
+      "bytes": 7895,
+      "sha256": "53216c0a08a67d1523f74fe17065252ac486b1b002d0e0181e57a1f3b5666b0a"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/lib/prostate-zones.ts.raw",
+      "bytes": 3444,
+      "sha256": "ea39c94c79b01c66b04b0c3060944fc444afeaa7adbeafa91879bc560c9245f4"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/atlas-review/manifest.json.raw",
+      "bytes": 407475,
+      "sha256": "bedef6d5c217d668a9fb7d8de52ae478db321fe8855bdf07e9634ab706d695cf"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/lib/atlas-model-inventory.json.raw",
+      "bytes": 33492,
+      "sha256": "33468d8d036ef26dcfda0136f2a4c4e475750431d69f0255ecf0f069c0ba7def"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/public/atlas-runtime/head-neck/manifest.json.raw",
+      "bytes": 630597,
+      "sha256": "432799dadd4b89f0bc614513bbcc902b9195c0ae6a765c750373a2a498bb61cb"
+    },
+    {
+      "path": "website/tests/fixtures/prostate-zonal-focus/website/public/atlas-runtime/head-neck/source-inputs.json.raw",
+      "bytes": 220780,
+      "sha256": "9b52fe895a8d05dd2d800d773d40ed9f5838a22094da1f6f0e5c20dbaf8c52bd"
+    },
+    {
+      "path": "website/tests/prostate-zonal-current-cases.mjs",
+      "bytes": 11370,
+      "sha256": "7f91d9b87f54586b35e31829465d923ff209bf2c75bd7c151895897fc3f155af"
+    },
+    {
+      "path": "website/tests/prostate-zonal-historical-context.mjs",
+      "bytes": 2681,
+      "sha256": "9ee0f92de8f5107c4f207395993edef641a019e1e7cc367f944242b1e7e256e6"
+    }
+  ],
+  "removed": [],
+  "scope": "Nineteen selected regression sources and inert historical public-Atlas source/manifest fixtures only. No scans, masks, model binaries, credentials, clinical decisions, private objects, raw project ancestry or browser media. Not a whole-project backup.",
+  "proof": {
+    "guidedCases": 10,
+    "coronaryCases": 5,
+    "prostateCases": 8,
+    "focusedPassing": true,
+    "changedTestTypes": true,
+    "productionByteIdentical": true,
+    "fullProductionBuild": false,
+    "installed": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
