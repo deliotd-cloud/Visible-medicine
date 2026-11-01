@@ -1,0 +1,89 @@
+{
+  "schema": "vm.prostate-zones-source/1",
+  "canonicalization": "UTF-8/LF",
+  "sha256": "48e2027c28543dd59dc61a60a56f2d45d82e7b87f280b28f01e2ae323f7e9cf7",
+  "inputs": [
+    {
+      "file": "LICENSES/prostate-zones-original.md",
+      "sha256": "bd781cdcb0cdf1a32a42bf7f8fda345c0053f1885badad303a58657cabf6dfaa"
+    },
+    {
+      "file": "app/camera-keyboard.css",
+      "sha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
+    },
+    {
+      "file": "app/imaging-link.css",
+      "sha256": "ee0cd87e6ee32c14d6fad90bd3c739240d126eac026b9ac5cfd194a61cef1dc2"
+    },
+    {
+      "file": "app/imaging-link.tsx",
+      "sha256": "8a87460b3c8e30f49ccbeed4112971d8c16f0979d2ca8a65d29003ce65cefe9b"
+    },
+    {
+      "file": "app/prostate-education-link.ts",
+      "sha256": "92d4d38e6efee3c20030fd985bf9832e8aac6cf7f519c5ad5758e986244768ea"
+    },
+    {
+      "file": "app/prostate-mri-teaching.tsx",
+      "sha256": "cc67105d5056bd17125d5c63df0255fda713a70e89eaa0795e44978db93a68e3"
+    },
+    {
+      "file": "app/prostate-zones.css",
+      "sha256": "64dd39a16aef25a76b761bf24663306721dd4b8c8a761a5c21acbe068212c27e"
+    },
+    {
+      "file": "app/prostate-zones.tsx",
+      "sha256": "60ffdba03be17e51b851b07cc2304f172fd7fb2cc6d45fc3bb1a27276ca9d816"
+    },
+    {
+      "file": "docs/PROSTATE_ZONES.md",
+      "sha256": "1841d27d727ba8560e753eeda69e15d01beb8123c08005186026cee57e3f3f92"
+    },
+    {
+      "file": "lib/anatomy-link-registry.ts",
+      "sha256": "cb69329833c32eba0f754cb02af307cfac725d49a5131af1c41d0ba3ad35452f"
+    },
+    {
+      "file": "lib/camera-keyboard.ts",
+      "sha256": "47d9ea06a7b43ee613ad734767daaf567b765f3b931efb8f8c3b680026a3909e"
+    },
+    {
+      "file": "lib/didanix-atlas-adapter.ts",
+      "sha256": "a3035a986d57d6d261d61f9f2a4c28c1ae5b74869e016a97412bcf0ab6947b11"
+    },
+    {
+      "file": "lib/imaging-sync.ts",
+      "sha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147"
+    },
+    {
+      "file": "lib/learning-resource-types.ts",
+      "sha256": "c587f32cbe4fadfe1b89502e9fbf7d08c740156b286382582bb2013feb1423de"
+    },
+    {
+      "file": "lib/learning-resources.ts",
+      "sha256": "3a8ea0524ba752837b6a17409b58ee6d4e1d0a876614008dd7789793795001dd"
+    },
+    {
+      "file": "lib/prostate-education-binding.ts",
+      "sha256": "f6bd75b450e257e2de02924812b82b2e8c612b62da475d3d338cf7207ca64fdf"
+    },
+    {
+      "file": "lib/prostate-mri-teaching.ts",
+      "sha256": "194950897f169b110d3779836a059a968f88ad40fd7b9dee72b9ae584d7801bd"
+    },
+    {
+      "file": "lib/prostate-zone-geometry.ts",
+      "sha256": "53216c0a08a67d1523f74fe17065252ac486b1b002d0e0181e57a1f3b5666b0a"
+    },
+    {
+      "file": "lib/prostate-zones.ts",
+      "sha256": "322c3c753382023eb130b046823ba9bf7f160d25e132671e5c45685306c83c40"
+    },
+    {
+      "file": "lib/root-education-api.ts",
+      "sha256": "a4b99210c33d5cbfe21ee5d0f850150ccf688f6b2b81c38ae180e1f2c2eaad3c"
+    }
+  ],
+  "clinicalReview": "pending",
+  "patientSpaceRegistration": null
+}
