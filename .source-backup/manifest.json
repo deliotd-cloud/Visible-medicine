@@ -1,0 +1,39 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-02T00:08:08.762Z",
+  "sourceIdentity": {
+    "native": "ad82a5a96d8303c54eeea3926a6df8d31f9ae611",
+    "review": "d2d0d7d05620c96de29dd4aa361b7fa7b965ad7521dd887000a2fbc4895321bd",
+    "installed": true
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/refresh-completion-checklist.mjs",
+      "sha256": "0c2a2f9a9b6eecd016b91a9c7f36e76ba43b5cb98809f23a194e404167dc808e",
+      "bytes": 28114
+    },
+    {
+      "path": "website/tests/completion-checklist-installed-contract.test.mjs",
+      "sha256": "929f090ef75f38bb92fc75d6b409ae37a38a805bcff09b430b1bfce52e76cc11",
+      "bytes": 17358
+    }
+  ],
+  "removed": [],
+  "scope": "Two source/test files supporting explicit local-file Atlas readback without claiming signed-in browser acceptance. No checklist local evidence paths, scans, models, private records, canonical ancestry or deployment.",
+  "proof": {
+    "focusedCases": 34,
+    "fullFileClosure": true,
+    "verifiedFileCount": 2281,
+    "protectedInputs": 1920,
+    "evidenceReferences": 473,
+    "clinicalApproval": false,
+    "authenticatedBrowserVerified": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
