@@ -1,0 +1,18 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
+type Snapshot = {
+  organization: { name: string };
+  gates: Array<{ key: string; label: string; owner: string; evidence: string; status: string; recordedEvidence: string; recordedOwner: string; reviewedAt: string | null }>;
+  readyCount: number;
+  activationAllowed: boolean;
+  activationReason: string;
+  integrations: Record<string, string>;
+};
+
+export function PilotReadinessPanel({ initialSnapshot }: { initialSnapshot: Snapshot }) {
+  const [snapshot, setSnapshot] = useState(initialSnapshot); const [busyKey, setBusyKey] = useState(""); const [error, setError] = useState("");
+  async function save(event: FormEvent<HTMLFormElement>, gateKey: string) { event.preventDefault(); setBusyKey(gateKey); setError(""); try { const form = new FormData(event.currentTarget); const response = await fetch("/api/platform/readiness", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "save-check", gateKey, status: form.get("status"), owner: form.get("owner"), evidence: form.get("evidence") }) }); const body = await response.json() as Snapshot & { error?: string }; if (!response.ok) throw new Error(body.error ?? "The readiness gate could not be saved."); setSnapshot(body); } catch (caught) { setError(caught instanceof Error ? caught.message : "The readiness gate could not be saved."); } finally { setBusyKey(""); } }
+  return <div className="readiness-workspace"><section className="readiness-summary"><div><span>Readiness evidence</span><b>{snapshot.readyCount} / {snapshot.gates.length}</b><p>gates recorded ready</p></div><div className="activation-lock"><span>Activation lock</span><b>{snapshot.activationAllowed ? "Eligible" : "Locked"}</b><p>{snapshot.activationReason.replaceAll("_", " ").toLowerCase()}</p></div>{Object.entries(snapshot.integrations).map(([name, status]) => <div key={name}><span>{name.replace(/([A-Z])/g, " $1")}</span><b>{status.replaceAll("-", " ")}</b></div>)}</section>{error && <p className="form-error" role="alert">{error}</p>}<section className="readiness-gates"><header><div><p className="section-index">Controlled launch gates</p><h2>Evidence before activation.</h2></div><p>Recording a gate as ready does not activate the platform. The non-live lock remains enforced.</p></header>{snapshot.gates.map((gate) => <details className={`readiness-gate ${gate.status}`} key={gate.key}><summary><span>{gate.status === "ready" ? "✓" : "○"}</span><div><b>{gate.label}</b><small>{gate.recordedOwner || gate.owner} · {gate.status.replaceAll("-", " ")}</small></div><p>{gate.evidence}</p></summary><form onSubmit={(event) => void save(event, gate.key)}><div className="two-fields"><label><span>Status</span><select name="status" defaultValue={gate.status}><option value="not-started">Not started</option><option value="in-progress">In progress</option><option value="ready">Ready</option><option value="blocked">Blocked</option><option value="not-applicable">Not applicable</option></select></label><label><span>Accountable owner</span><input name="owner" defaultValue={gate.recordedOwner || gate.owner} required /></label></div><label><span>Evidence or blocker</span><textarea name="evidence" defaultValue={gate.recordedEvidence} placeholder="Record the review, test, policy or decision—not credentials or patient information." /></label><button disabled={busyKey === gate.key}>{busyKey === gate.key ? "Saving…" : "Save readiness evidence"}</button></form></details>)}</section><p><a href="/api/platform/report">Export organisation learning CSV →</a></p></div>;
+}

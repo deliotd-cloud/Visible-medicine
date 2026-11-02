@@ -1,0 +1,51 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-02T01:00:09.460Z",
+  "sourceIdentity": {
+    "native": "ad82a5a96d8303c54eeea3926a6df8d31f9ae611",
+    "review": "d2d0d7d05620c96de29dd4aa361b7fa7b965ad7521dd887000a2fbc4895321bd",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/lib/institution-operations.ts",
+      "sha256": "262a3f61f7b5297bebfbd79140626143044b1b33264f1ed65bb6ba9f99361026",
+      "bytes": 25247
+    },
+    {
+      "path": "website/components/PilotReadinessPanel.tsx",
+      "sha256": "3afa711b4335f061b9eb448a47b902f5efafda76fb11564d72a012dfd82d3ffa",
+      "bytes": 3629
+    },
+    {
+      "path": "website/tests/institution-readiness-isolation.test.mjs",
+      "sha256": "b33f8ce613ae4f1317c27649b329d4d3330774462e83125c32dab0d14c573189",
+      "bytes": 9051
+    },
+    {
+      "path": "website/tests/readiness-panel-boundary.test.mjs",
+      "sha256": "922ae30e0b9ea5f168c3b328fbee9e2731beb587b30376826fd4db86e6caf97b",
+      "bytes": 2376
+    }
+  ],
+  "removed": [],
+  "scope": "Four selected website source/test files for organisation-scoped readiness and administrator access. Staged only. No real application records, scans, private data or raw canonical ancestry.",
+  "proof": {
+    "focusedCases": 85,
+    "parentRegressionFailures": 5,
+    "actualServiceWithSyntheticBoundaries": true,
+    "actualComponentServerRendering": true,
+    "authenticatedBrowser": false,
+    "realApplicationRecordsAccessed": false,
+    "protectedInputsUnchanged": 1920,
+    "fullTypes": false,
+    "productionBuild": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
