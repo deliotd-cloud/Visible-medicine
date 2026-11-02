@@ -1,0 +1,33 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-02T01:17:35.836Z",
+  "sourceIdentity": {
+    "native": "ad82a5a96d8303c54eeea3926a6df8d31f9ae611",
+    "review": "d2d0d7d05620c96de29dd4aa361b7fa7b965ad7521dd887000a2fbc4895321bd",
+    "installed": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/app/workspace/atlas-review/website-review.css",
+      "sha256": "4b7aea06a060a2ea2b534c323d2e2dc1491d0c0168628a0499281baa047e363a",
+      "bytes": 6878
+    }
+  ],
+  "removed": [],
+  "scope": "One proposed website stylesheet for compact desktop Clinical Review spacing. Source only: no captured DOM, review history, screenshots, patient assets or canonical Git ancestry. Requires a rebuilt versioned Review package before installation.",
+  "proof": {
+    "isolatedLayoutWidth": 1280,
+    "verticalSpaceSaved": 195.0625,
+    "textUnchanged": true,
+    "horizontalOverflow": false,
+    "installed": false,
+    "fullBuild": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
