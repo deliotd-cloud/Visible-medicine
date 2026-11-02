@@ -1,0 +1,41 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-11-02T00:12:28.355Z",
+  "sourceIdentity": {
+    "native": "ad82a5a96d8303c54eeea3926a6df8d31f9ae611",
+    "review": "d2d0d7d05620c96de29dd4aa361b7fa7b965ad7521dd887000a2fbc4895321bd",
+    "installed": true
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "website/scripts/refresh-completion-checklist.mjs",
+      "sha256": "0c2a2f9a9b6eecd016b91a9c7f36e76ba43b5cb98809f23a194e404167dc808e",
+      "bytes": 28114
+    },
+    {
+      "path": "website/tests/completion-checklist-installed-contract.test.mjs",
+      "sha256": "929f090ef75f38bb92fc75d6b409ae37a38a805bcff09b430b1bfce52e76cc11",
+      "bytes": 17358
+    },
+    {
+      "path": "website/tests/completion-checklist-local-import.test.mjs",
+      "sha256": "0c2b53769a206d1b04c0d0035c93e56a1113072ac56a63cea60b7b891b0d08e2",
+      "bytes": 3436
+    }
+  ],
+  "removed": [],
+  "scope": "Three checker/test source files including exact current-verifier compatibility binding. No private references or data, models, scan derivatives or canonical ancestry.",
+  "proof": {
+    "newContractCases": 34,
+    "unchangedHistoricalCases": 19,
+    "originalAssertionsPreserved": true,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
